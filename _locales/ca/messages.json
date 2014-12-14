@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"ajuda",
+    "description":"ajuda"
+  },
+  "titelimage":{
+    "message":"Imatge de fons",
+    "description":"Imatge de fons"
+  },
+  "shortcutalllights":{
+    "message":"canviar les llums i apagada per tots els tabuladors oberts.",
+    "description":"canviar les llums i apagada per tots els tabuladors oberts."
+  },
+  "lastchecked":{
+    "message":"Darrera versió comprovada el",
+    "description":"Última versió comprovat en"
+  },
+  "visualeffects":{
+    "message":"Efectes Visuals",
+    "description":"Efectes visuals"
+  },
+  "titelshortcutlight":{
+    "message":"Tecla de mètode abreujat",
+    "description":"Tecla de drecera"
+  },
+  "titledonatebutton":{
+    "message":"Dóna",
+    "description":"Donar"
+  },
+  "titellikebar":{
+    "message":"Barra \"m'agrada\"",
+    "description":"Bar els agrada"
+  },
+  "desmousespotlightt":{
+    "message":"Permet vostè fer clic a través de la pantalla fosca quan les llums estan apagats.",
+    "description":"Permet vostè fer clic a través de la pantalla fosca quan les llums estan apagats."
+  },
+  "desambilight4color":{
+    "message":"4 colors triats per a la vora del vídeo:",
+    "description":"4 choosen colors al seu voltant el vídeo:"
+  },
+  "lockentername":{
+    "message":"Sisplau, escrigui el mot de pas",
+    "description":"Si us plau, introdueixi la seva contrasenya"
+  },
+  "desnoflash":{
+    "message":"No fer servir aquesta característica.",
+    "description":"No fer servir aquesta característica."
+  },
+  "desdynamicblocks":{
+    "message":"Blocs",
+    "description":"Blocs"
+  },
+  "titeleye":{
+    "message":"Protecció per als ulls",
+    "description":"Protecció per als ulls"
+  },
+  "titelcinemaontop":{
+    "message":"Mode de pel·lícula de teatre: la capa \"llums fora\" Mostra només la part superior de la finestra.",
+    "description":"Mode de pel·lícula de teatre: la capa \"llums fora\" Mostra només la part superior de la finestra."
+  },
+  "desmousespotlightc":{
+    "message":"Si el llum està apagat, pots seleccionar una àrea per enfocar un element.",
+    "description":"Si la llum és fora, vostè pot seleccionar una zona per centrar un element."
+  },
+  "titelrememberpage":{
+    "message":"Recordeu la pàgina",
+    "description":"Recordeu la pàgina"
+  },
+  "desmousespotlighta":{
+    "message":"Si la llum està apagada, il·lumina el voltant del cursor.",
+    "description":"Si la llum és fora, mostren un focus al voltant el cursor del ratolí."
+  },
+  "desmousespotlighto":{
+    "message":"Ús normal (desactiva la configuració del ratolí més avall)",
+    "description":"Ús normal (desactiva la configuració del ratolí més avall)"
+  },
+  "desplaylist":{
+    "message":"Mostra la llista de reproducció de YouTube al lloc web de YouTube.",
+    "description":"Mostra la llista de reproducció de YouTube en el lloc web de YouTube."
+  },
+  "desambilightfixcolor":{
+    "message":"Un color sòlid:",
+    "description":"Un color sòlid:"
+  },
+  "desuntil":{
+    "message":"fins a",
+    "description":"fins a"
+  },
+  "desconfirmpassword":{
+    "message":"Confirma paraula de pas",
+    "description":"Confirmar contrasenya"
+  },
+  "desautoplayonly":{
+    "message":"Esmorteir site (s només el següent vídeo):",
+    "description":"Esmorteir site (s només el següent vídeo):"
+  },
+  "helpeyeprotection":{
+    "message":"Permetent 'Protecció ocular' impossibilitarà automàticament el tret 'Auto play'.",
+    "description":"Permetent 'Protecció ocular' impossibilitarà automàticament el tret 'Auto play'."
+  },
+  "skipremember":{
+    "message":"Salti's això i ara, obriu la pàgina d'opció",
+    "description":"Salti's això i ara, obriu la pàgina d'opció"
+  },
+  "optiontimesaved":{
+    "message":"Temps desat correctament!",
+    "description":"Temps es guarda amb èxit!"
+  },
+  "titelvideoheadline":{
+    "message":"Títol del vídeo",
+    "description":"Títol de vídeo"
+  },
+  "translateme":{
+    "message":"Ajuda'ns a traduir",
+    "description":"Ajudar a traduir"
+  },
+  "despassword":{
+    "message":"Demana una contrasenya per ser introduït abans d'encendre els llums cap enrere.",
+    "description":"Demana una contrasenya per ser introduït abans d'encendre els llums cap enrere."
+  },
+  "helpautoplay":{
+    "message":"L' opció de 'Protecció d'ulls' és activada. Per a poder usar aquesta funció, abans cal desactivar la 'Protecció d'ulls'.",
+    "description":"La \"protecció dels ulls\" està habilitat. Utilitzar la següent característica, desactiveu l'opció \"Protecció dels ulls\"."
+  },
+  "name":{
+    "message":"Apaga els llums",
+    "description":"Apagar els llums"
+  },
+  "changelog":{
+    "message":"Canvi de registre",
+    "description":"changelog enllaç"
+  },
+  "optionpagetitle":{
+    "message":"Apaga els llums - Opcions",
+    "description":"Títol de la pàgina opció"
+  },
+  "optionpasswordsaved":{
+    "message":"Mot de pas desat correctament!",
+    "description":"Contrasenya se salva amb èxit!"
+  },
+  "desdynamicspace":{
+    "message":"Camp d'estels",
+    "description":"Univers espacial"
+  },
+  "deseastereggs":{
+    "message":"Un bonus en aquesta extensió.",
+    "description":"Una gratificació a aquesta ampliació."
+  },
+  "settings":{
+    "message":"Configuració",
+    "description":"Configuració"
+  },
+  "desspotlightradius":{
+    "message":"és el diàmetre de la llanterna de cerca.",
+    "description":"és el diàmetre de la llanterna de cerca."
+  },
+  "titelsync":{
+    "message":"Sincronització",
+    "description":"Sincronització"
+  },
+  "right":{
+    "message":"dreta",
+    "description":"dret"
+  },
+  "titeldynamic":{
+    "message":"Fons dinàmic",
+    "description":"Fons dinàmic"
+  },
+  "deslikebutton":{
+    "message":"Mostra els botons de \"m'agrada\" i \"no m'agrada\" de YouTube per aquest vídeo.",
+    "description":"Mostrar com & desagrada botons de YouTube per a aquest vídeo."
+  },
+  "titelmouse":{
+    "message":"Ratolí",
+    "description":"Ratolí"
+  },
+  "titellessmore":{
+    "message":"Ensenya menys",
+    "description":"Mostrar menys"
+  },
+  "desshortcutlight":{
+    "message":"Activar les dreceres de teclat per sota.",
+    "description":"Activar les dreceres de teclat per sota."
+  },
+  "titelinfobar":{
+    "message":"Barra d'informació",
+    "description":"Barra d'informació"
+  },
+  "descontextmenus":{
+    "message":"Mostra el menú de context per enfocar un tema.",
+    "description":"Mostra el menú de context per centrar un element."
+  },
+  "titelcontextmenus":{
+    "message":"Menú contextual",
+    "description":"Menú de context"
+  },
+  "titelplaylist":{
+    "message":"Llista de reproducció",
+    "description":"Llista de reproducció"
+  },
+  "desatmosphereonly":{
+    "message":"Utilitza el tret d'il·luminació ambient només el lloc de vídeo següent:",
+    "description":"Utilitza el tret d'il·luminació ambient només el lloc de vídeo següent:"
+  },
+  "recflash":{
+    "message":"Recomanat",
+    "description":"Recomanat"
+  },
+  "desenterpassword":{
+    "message":"Introduïu la vostra contrasenya en el quadre següent:",
+    "description":"Introduïu la vostra contrasenya en el quadre següent:"
+  },
+  "titelblurradius":{
+    "message":"El radi de difuminat",
+    "description":"El radi d'entelar"
+  },
+  "version":{
+    "message":"Versió",
+    "description":"Text número de versió"
+  },
+  "shortcutdark":{
+    "message":"d'enfosquir la pantalla (augmentar opacitat).",
+    "description":"d'enfosquir la pantalla (augmentar opacitat)."
+  },
+  "dessharebutton":{
+    "message":"Mostra els botons de compartir de YouTube per aquest vídeo.",
+    "description":"Mostra els botons de porció de YouTube per a aquest vídeo."
+  },
+  "shortcutbright":{
+    "message":"per alegrar la pantalla (disminuir opacitat).",
+    "description":"per alegrar la pantalla (disminuir opacitat)."
+  },
+  "titelalllightsoff":{
+    "message":"Tots els tabuladors oberts",
+    "description":"Tots els tabuladors oberts"
+  },
+  "desreadera":{
+    "message":"Quan els llums s'apaguin, mostra sempre la barra d'intensitat d'ombra.",
+    "description":"Mostra sempre la barra de penombra nivell quan apaguen els llums."
+  },
+  "rememberrate":{
+    "message":"Taxa",
+    "description":"Taxa"
+  },
+  "desautoplay":{
+    "message":"Automàticament enfosqueix el fons en fer clic al botó de reproducció i viceversa.",
+    "description":"Esmorteir el fons automàticament quan facis clic al botó de reproducció i versus."
+  },
+  "titelscreen":{
+    "message":"Pantalla",
+    "description":"Pantalla"
+  },
+  "desflash":{
+    "message":"Mostra tots els objectes Flash.",
+    "description":"Mostrar tots els objectes de Flash."
+  },
+  "titelhead":{
+    "message":"Canal",
+    "description":"Canal"
+  },
+  "pageatitle":{
+    "message":"Apagar els llums",
+    "description":"Apagar els llums"
+  },
+  "desaddvideobutton":{
+    "message":"Mostra el botó de \"afegeix\" d'aquest vídeo de YouTube.",
+    "description":"Mostra el botó Afegeix des d'aquest vídeo de YouTube."
+  },
+  "shortcuteyeprotection":{
+    "message":"per permetre\/impossibilitar el tret de protecció ocular.",
+    "description":"per permetre\/impossibilitar el tret de protecció ocular."
+  },
+  "titelfadein":{
+    "message":"Intensificar",
+    "description":"Esvanir-se en"
+  },
+  "desreadern":{
+    "message":"Mai mostris la barra d'intensitat d'ombra.",
+    "description":"Mai no mostrar el bar de nivell de penombra."
+  },
+  "titelmaxqualityyoutube":{
+    "message":"S'estableix automàticament en aquesta resolució:",
+    "description":"S'estableix automàticament en aquesta resolució:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"Els valors positius incrementen la mida de l'ombra, i els negatius la disminueixen.",
+    "description":"Valors positius augmentar la mida de l'ombra, valors negatius disminuir la mida."
+  },
+  "titelon":{
+    "message":"Engegat",
+    "description":"En"
+  },
+  "videotitle":{
+    "message":"Enfocament d'aquest vídeo",
+    "description":"Centrar aquest vídeo"
+  },
+  "warningtextambilight":{
+    "message":"Si és incapaç de rebre dades de vídeo per la norma de seguretat d'un lloc, llavors mostrarà el color sòlid escollides en el seu lloc.",
+    "description":"Si és incapaç de rebre dades de vídeo per la norma de seguretat d'un lloc, llavors mostrarà el color sòlid escollides en el seu lloc."
+  },
+  "desdynamiccloud":{
+    "message":"Animated Clouds",
+    "description":"Animated Clouds"
+  },
+  "desconfirmtimesaver":{
+    "message":"Confirma el temps del protector de pantalla",
+    "description":"Confirmar el temps d'estalvi de pantalla"
+  },
+  "deslikebar":{
+    "message":"Mostra els agrada\/desagrada bar sota vídeos de YouTube.",
+    "description":"Mostra els agrada\/desagrada bar sota vídeos de YouTube."
+  },
+  "titelautoplay":{
+    "message":"Reproducció automàtica",
+    "description":"AutoPlay"
+  },
+  "top":{
+    "message":"dalt",
+    "description":"part superior"
+  },
+  "titelspreadradius":{
+    "message":"El radi de distàcia",
+    "description":"El radi de propagació"
+  },
+  "installadblocker":{
+    "message":"Utilitzar amb una extensió de Adblocker.",
+    "description":"Utilitzar amb una extensió de Adblocker."
+  },
+  "titelsharebutton":{
+    "message":"Comparteix Botons",
+    "description":"Compartir botons"
+  },
+  "titelcolor":{
+    "message":"Color",
+    "description":"Color"
+  },
+  "titeldownloadbutton":{
+    "message":"Baixa aquesta nova versió!",
+    "description":"Baixar aquesta actualització!"
+  },
+  "pagetitle":{
+    "message":"Enfosqueix aquesta pàgina.",
+    "description":"Enfosquir aquesta pàgina"
+  },
+  "titelambilight":{
+    "message":"Il·luminació d'ambient",
+    "description":"Il·luminació d'ambient"
+  },
+  "titelshowmore":{
+    "message":"Ensenya més",
+    "description":"Mostra'n més"
+  },
+  "desviewcount":{
+    "message":"Mostra el nombre de visualitzacions d'aquest vídeo.",
+    "description":"Mostra el nombre de visualització per a aquest vídeo."
+  },
+  "titelautowidthyoutube":{
+    "message":"Estableix automàticament l'intèrpret de YouTube per la mida més gran.",
+    "description":"Estableix automàticament l'intèrpret de YouTube per la mida més gran."
+  },
+  "desconfirmtime":{
+    "message":"Confirma el temps",
+    "description":"Confirmar hora"
+  },
+  "titelupgrade":{
+    "message":"Canvia a versió més nova",
+    "description":"Actualització"
+  },
+  "lockwrongpassword":{
+    "message":"Mot de pas erroni. Torna-hi, si et plau",
+    "description":"Clau erronea, intenteu-ho novament."
+  },
+  "titelsyncbrowser":{
+    "message":"Sincronitza la configuració d'extensió amb el seu altre navegador.",
+    "description":"Sincronitza la configuració d'extensió amb el seu altre navegador."
+  },
+  "deletebutton":{
+    "message":"Esborra",
+    "description":"Suprimir"
+  },
+  "eyedivon":{
+    "message":"SUCCESSIVAMENT",
+    "description":"SUCCESSIVAMENT"
+  },
+  "eyedivoff":{
+    "message":"FORA",
+    "description":"FORA"
+  },
+  "deshead":{
+    "message":"Mostra la barra de canal de YouTube o el nom.",
+    "description":"Mostra la barra de canal de YouTube o el nom."
+  },
+  "shortcutsavingopacity":{
+    "message":"per salvar aquest valor d'opacitat",
+    "description":"per salvar aquest valor d'opacitat"
+  },
+  "desinfobar":{
+    "message":"Mostrar la informació de descripció sobre el vídeo.",
+    "description":"Mostrar la descripció informació sobre el vídeo."
+  },
+  "titellamp":{
+    "message":"Bombeta",
+    "description":"Bombeta"
+  },
+  "desambilightvarcolor":{
+    "message":"Agafa el color del vídeo.",
+    "description":"Prendre el color des del vídeo."
+  },
+  "showremember":{
+    "message":"no tornis a mostrar aquest recordatori quan obri la pàgina d'opcions.",
+    "description":"no mostra aquesta pàgina recorda una altra vegada quan vaig obrir la pàgina d'opció."
+  },
+  "donatepromotext":{
+    "message":"Si pots fer una donació de qualsevol quantitat, t'ho agrairé moltíssim!",
+    "description":"Si vostè pot fer una donació de qualsevol suma, ho apreciaria enormement!"
+  },
+  "titelblur":{
+    "message":"Desdibuixar la resta",
+    "description":"Desdibuixar la resta"
+  },
+  "desdynamicraindrops":{
+    "message":"Gotes d'aigua",
+    "description":"Gotes de pluja"
+  },
+  "desalllightsoff":{
+    "message":"Fent clic al botó de llum will tanca els llums encès\/apagat en tots els tabuladors oberts quan aquesta opció està activada.",
+    "description":"Fent clic al botó de llum will tanca els llums encès\/apagat en tots els tabuladors oberts quan aquesta opció està activada."
+  },
+  "optionecosaversaved":{
+    "message":"Número de segons desats correctament!",
+    "description":"Segons està guardada amb èxit!"
+  },
+  "titelreader":{
+    "message":"Barra d'intensitat d'ombra",
+    "description":"Penombra nivell Bar"
+  },
+  "deseyen":{
+    "message":"L'ús normal (els llums s'apaguen quan es fa clic a la icona de la bombeta).",
+    "description":"Ús normal (llums sortir quan fa clic a la icona de llum)."
+  },
+  "enjoyshare":{
+    "message":"Gaudir d'aquesta ampliació i compartir amb altres persones que creieu que li ho agrairan.",
+    "description":"Gaudir d'aquesta ampliació i compartir amb altres persones que creieu que li ho agrairan."
+  },
+  "shortcuttotl":{
+    "message":"canviar les llums i apagada.",
+    "description":"canviar les llums i apagada."
+  },
+  "deseyea":{
+    "message":"Automàticament enfosquir el fons quan s'obri una pàgina.",
+    "description":"Esmorteir el fons automàticament en obrir una pàgina."
+  },
+  "basicsettings":{
+    "message":"Bàsics",
+    "description":"Conceptes bàsics"
+  },
+  "hoveroptionapply":{
+    "message":"s'apliquen",
+    "description":"s'apliquen"
+  },
+  "reportbug":{
+    "message":"Notifica un problema",
+    "description":"Informe un assumpte"
+  },
+  "destime":{
+    "message":"Llums apagats durant el temps següent:",
+    "description":"Llums entre els següents horaris:"
+  },
+  "guide":{
+    "message":"Guia de benvinguda de TOtL",
+    "description":"Guia de benvinguda TOtL"
+  },
+  "deseyealist":{
+    "message":"Esmorteir el fons automàticament quan obriu les pàgines següents es:",
+    "description":"Esmorteir el fons automàticament quan obriu les pàgines següents es:"
+  },
+  "titellikebutton":{
+    "message":"Botons de \"m'agrada\" i \"no m'agrada\".",
+    "description":"Com & desagrada botons"
+  },
+  "titelpageaction":{
+    "message":"Amaga icona de la bombeta",
+    "description":"amagar icona de pageaction"
+  },
+  "friendlyremember":{
+    "message":"Amistós Recordeu...",
+    "description":"Amistós Recordeu..."
+  },
+  "desfadein":{
+    "message":"Mostra l'efecte d'intensificació.",
+    "description":"Mostra l'esvanir-se en vigor."
+  },
+  "warning":{
+    "message":"Avís!",
+    "description":"Advertència!"
+  },
+  "deseyetimesaver":{
+    "message":"Quan una pàgina està inactiva (cap ratolí o el teclat aportació) durant el temps especificat a continuació, la pàgina automàticament anirà fosc.",
+    "description":"Quan una pàgina està inactiva (cap ratolí o el teclat aportació) durant el temps especificat a continuació, la pàgina automàticament anirà fosc."
+  },
+  "titelsuggestions":{
+    "message":"Suggeriments",
+    "description":"Suggeriments"
+  },
+  "advancedoptions":{
+    "message":"Opcions Avançades",
+    "description":"Opcions avançades"
+  },
+  "dessuggestions":{
+    "message":"Mostra els suggeriments del web de YouTube.",
+    "description":"Mostra els suggeriments de la web de YouTube."
+  },
+  "titelflash":{
+    "message":"Detecció de Flash",
+    "description":"Detecció de flaix"
+  },
+  "desambilight":{
+    "message":"Et mostra l'efecte  d'il·luminació ambiental del vídeo actual.",
+    "description":"Mostrar l'efecte ambient d'il·luminació de la reproducció de vídeo actual."
+  },
+  "productshare":{
+    "message":"Comparteix",
+    "description":"Compartir"
+  },
+  "addbutton":{
+    "message":"Afegeix",
+    "description":"Afegir"
+  },
+  "reportlist":{
+    "message":"(vegeu la llista)",
+    "description":"Veure la llista completa"
+  },
+  "desdynamicfishtank":{
+    "message":"Peixera",
+    "description":"Peixera"
+  },
+  "longdonatetext":{
+    "message":"Em revaloraria realment si vostè pot donar a mi per mantenir viu per als altres usuaris de nous aquesta ampliació de navegador. Ja sigui en $1 $ o $$ 100, el seu suport és immensament apreciat!",
+    "description":"Em revaloraria realment si vostè pot donar a mi per mantenir viu per als altres usuaris de nous aquesta ampliació de navegador. Ja sigui en $1 $ o $$ 100, el seu suport és immensament apreciat!"
+  },
+  "deshardflash":{
+    "message":"Mostrar tots els objectes de Flash, saltant-se el filtre d'URL. Això arreglarà problemes amb alguns reproductors de vídeo s'amaguen, però també mostrarà anuncis.",
+    "description":"Mostrar tots els objectes de Flash, saltant-se el filtre d'URL. Això arreglarà problemes amb alguns reproductors de vídeo s'amaguen, però també mostrarà anuncis."
+  },
+  "desfadeout":{
+    "message":"Mostra l'efecte de fos de sortida..",
+    "description":"Mostra l'esvanir-se sortir efecte."
+  },
+  "optionwrongimg":{
+    "message":"Arxiu d'imatge no és vàlid!",
+    "description":"Arxiu d'imatge no és vàlid!"
+  },
+  "desvideoheadline":{
+    "message":"Mostra i inverteix el color del títol de vídeo.",
+    "description":"Mostra i inverteix el color del títol vídeo."
+  },
+  "desrememberpage":{
+    "message":"Si aquesta opció està activada, li mostrarà no la pàgina recorda.",
+    "description":"Si aquesta opció està activada, li mostrarà no la pàgina recorda."
+  },
+  "description":{
+    "message":"Tota la pàgina s'enfosquirà, així pots veure el vídeo com si estiguessis al cinema.",
+    "description":"Tota la pàgina es ser esvaint a les fosques, per que pugui veure el vídeo com si estigués en el cinema."
+  },
+  "titelviewcount":{
+    "message":"Número de Visualitzacions",
+    "description":"Nombre de visites"
+  },
+  "titelopacity":{
+    "message":"Opacitat",
+    "description":"Opacitat"
+  },
+  "titelqualityyoutube":{
+    "message":"Estableix automàticament la qualitat dels vídeos de YouTube.",
+    "description":"Estableix automàticament la qualitat dels vídeos de YouTube."
+  },
+  "shortcutopacity":{
+    "message":"per restaurar a la foscor conjunt (opacitat) configuració.",
+    "description":"per restaurar a la foscor conjunt (opacitat) configuració."
+  },
+  "desambilightrangeblurradius":{
+    "message":"L'ombrejat: a més valor, més definit; a menys valor, més difuminat.",
+    "description":"Si conjunt un valor més baix l'ombra serà fort, el més alt el número, el més borrosa serà."
+  },
+  "titeladdvideobutton":{
+    "message":"Botó d'afegir",
+    "description":"Afegir botó"
+  },
+  "titelpassword":{
+    "message":"Protecció per mot de pas",
+    "description":"Protecció de contrasenya"
+  },
+  "titeldownloadupgrade":{
+    "message":"L'actualització afegeix suport per a centrar-se imatges seleccionades i mostrarà una galeria d'imatges en el lloc.",
+    "description":"L'actualització afegeix suport per a centrar-se imatges seleccionades i mostrarà una galeria d'imatges en el lloc."
+  },
+  "titelfadeout":{
+    "message":"Dissipar",
+    "description":"Fosa de sortida"
+  },
+  "eastereggsquestion":{
+    "message":"T'agraden les sales de cinema de veritat?",
+    "description":"T'agrada un cinema real?"
+  },
+  "bottom":{
+    "message":"baix",
+    "description":"fons"
+  },
+  "dessaver":{
+    "message":"Protector de pantalla:",
+    "description":"Estalvi de pantalla:"
+  },
+  "hoveroptiondyn5":{
+    "message":"amb volant",
+    "description":"amb volant"
+  },
+  "pagestillloading":{
+    "message":"Encara s'està carregant la pàgina?",
+    "description":"Encara s'està carregant la pàgina?"
+  },
+  "titeloff":{
+    "message":"Apagat",
+    "description":"Fora"
+  },
+  "titeleastereggs":{
+    "message":"Ous de Pasqua",
+    "description":"Ous de Pasqua"
+  },
+  "textfoot":{
+    "message":"Aquest programari està llicenciat sota la GPL CC-GNU. Per veure una còpia d'aquesta llicència, visiteu",
+    "description":"Aquest programari es concedeix una llicència sota la CC-GNU GPL. Per veure una còpia d'aquesta llicència, visiti"
+  },
+  "left":{
+    "message":"esquerra",
+    "description":"esquerra"
+  },
+  "titelnighttheme":{
+    "message":"Mode de nit",
+    "description":"Mode de nit"
+  },
+  "desnighttheme":{
+    "message":"Mostra el botó de canvi de nit sota la pàgina web per fer la pàgina clara o fosca.",
+    "description":"Mostra el botó de canvi de nit sota la pàgina web per fer la pàgina clara o fosca."
+  },
+  "nightoptions":{
+    "message":"Mode de nit",
+    "description":"Mode de nit"
+  },
+  "desnightonly":{
+    "message":"Mostrar el Mode de nit lloc (s només el següents):",
+    "description":"Mostrar el Mode de nit lloc (s només el següents):"
+  },
+  "desnightenabletheme":{
+    "message":"Quan obriu una pàgina nova que anar automàtica al mode de nit.",
+    "description":"Quan obriu una pàgina nova que anar automàtica al mode de nit."
+  },
+  "titellampregular":{
+    "message":"Show always the lamp icon in the omnibox",
+    "description":"Show always the lamp icon in the omnibox"
+  },
+  "titellampvideo":{
+    "message":"Show the lamp icon only if a video player is detected",
+    "description":"Show the lamp icon only if a video player is detected"
+  },
+  "upgradecontexttitle":{
+    "message":"We have added some new features for you",
+    "description":"We have added some new features for you"
+  },
+  "upgradecontextmessage":{
+    "message":"That make this extension even more amazing",
+    "description":"That make this extension even more amazing"
+  },
+  "upgradecontextitemta":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "upgradecontextitemma":{
+    "message":"light off with your hand",
+    "description":"light off with your hand"
+  },
+  "upgradecontextitemtb":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition"
+  },
+  "upgradecontextitemmb":{
+    "message":"Control the web page more accurately",
+    "description":"Control the web page more accurately"
+  },
+  "upgradefbshare":{
+    "message":"Facebook Share",
+    "description":"Facebook Share"
+  },
+  "upgradetwshare":{
+    "message":"Tweet",
+    "description":"Tweet"
+  },
+  "ratetitle":{
+    "message":"Please rate & review my extension",
+    "description":"Please rate & review my extension"
+  },
+  "ratedes":{
+    "message":"And let everyone know about this great extension!",
+    "description":"And let everyone know about this great extension!"
+  },
+  "rateitema":{
+    "message":"Rate 5 stars",
+    "description":"Rate 5 stars"
+  },
+  "titelreset":{
+    "message":"Reset settings",
+    "description":"Reset settings"
+  },
+  "resetbrowserextension":{
+    "message":"Reset the Turn Off the Lights settings",
+    "description":"Reset the Turn Off the Lights settings"
+  },
+  "desautoplaydelay":{
+    "message":"Brighten again the background when the video ended after",
+    "description":"Brighten again the background when the video ended after"
+  },
+  "desautoplaydelayend":{
+    "message":"seconds",
+    "description":"seconds"
+  },
+  "motionoptions":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "desmotion":{
+    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
+    "description":"Camera Motion"
+  },
+  "trymotion":{
+    "message":"Try it yourself!",
+    "description":"Try it yourself!"
+  },
+  "destrymotion":{
+    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc.",
+    "description":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
+  },
+  "howworkmotion":{
+    "message":"How does it work?",
+    "description":"How does it work?"
+  },
+  "step1description":{
+    "message":"Enable the Camera Motion feature",
+    "description":"Enable the Camera Motion feature"
+  },
+  "step2description":{
+    "message":"Move your hand (or fist) from the top to bottom",
+    "description":"Move your hand (or fist) from the top to bottom"
+  },
+  "step3description":{
+    "message":"Then the black layer slide automatically down.",
+    "description":"Then the black layer slide automatically down."
+  },
+  "desmotionChecklist":{
+    "message":"Checklist:",
+    "description":"Checklist:"
+  },
+  "des1checkmotion":{
+    "message":"Make sure your room is not dark and that it have enough light.",
+    "description":"Make sure your room is not dark and that it have enough light."
+  },
+  "des2checkmotion":{
+    "message":"Your camera must not receive direct sunlight.",
+    "description":"Your camera must not receive direct sunlight."
+  },
+  "des3checkmotion":{
+    "message":"You use a front facing camera.",
+    "description":"You use a front facing camera."
+  },
+  "titellinear":{
+    "message":"Linear",
+    "description":"Linear"
+  },
+  "titelcolora":{
+    "message":"Color A",
+    "description":"Color A"
+  },
+  "titelcolorb":{
+    "message":"Color B",
+    "description":"Color B"
+  },
+  "speechoption":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"Speech",
+    "description":"Speech"
+  },
+  "desspeech":{
+    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
+    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+  },
+  "desspeech1command":{
+    "message":"turn off the lights",
+    "description":"turn off the lights"
+  },
+  "desspeech2command":{
+    "message":"turn on the lights",
+    "description":"turn on the lights"
+  },
+  "desspeech3command":{
+    "message":"play video",
+    "description":"play video"
+  },
+  "desspeech4command":{
+    "message":"pause video",
+    "description":"pause video"
+  },
+  "desspeechdialect":{
+    "message":"Choose your speech dialect:",
+    "description":"Choose your speech dialect:"
+  },
+  "desatmosvivid":{
+    "message":"Vivid atmosphere effects on YouTube, require",
+    "description":"Vivid atmosphere effects on YouTube, require"
+  },
+  "help":{
+    "message":"Ajuda",
+    "description":"Ajuda"
+  },
+  "about":{
+    "message":"Sobre",
+    "description":"Sobre"
+  },
+  "desspeechonly":{
+    "message":"Activate the Speech Recognition only the following site(s):",
+    "description":"Activate the Speech Recognition only the following site(s):"
+  },
+  "descammotiononly":{
+    "message":"Activate the Camera Motion only on the following site(s):",
+    "description":"Activate the Camera Motion only on the following site(s):"
+  },
+  "titelcamera":{
+    "message":"Camera",
+    "description":"Camera"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautoplayblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser.",
+    "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
+  },
+  "desbrowsersupport":{
+    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
+    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+  },
+  "titelsupportatmos":{
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+  },
+  "titelseeonline":{
+    "message":"See online for more examples",
+    "description":"See online for more examples"
+  },
+  "titelvideosample":{
+    "message":"Video Sample",
+    "description":"Video Sample"
+  },
+  "titelwebsite":{
+    "message":"Website",
+    "description":"Website"
+  },
+  "titeldeveloper":{
+    "message":"Developer",
+    "description":"Developer"
+  },
+  "titelrightsreserved":{
+    "message":"Some rights reserved.",
+    "description":"Some rights reserved."
+  },
+  "desbrowserextension":{
+    "message":"browser extension",
+    "description":"browser extension"
+  },
+  "desapitext":{
+    "message":"Wiki API for Website Developer",
+    "description":"Wiki API for Website Developer"
+  },
+  "desbrowsertheme":{
+    "message":"browser theme",
+    "description":"browser theme"
+  },
+  "desproject":{
+    "message":"project",
+    "description":"project"
+  },
+  "titelapideveloper":{
+    "message":"API Developer",
+    "description":"API Developer"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki about the Atmosphere Lighting feature",
+    "description":"Wiki about the Atmosphere Lighting feature"
+  }
+}

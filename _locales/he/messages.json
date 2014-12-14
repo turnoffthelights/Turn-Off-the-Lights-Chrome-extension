@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"עזרה",
+    "description":"עזרה"
+  },
+  "titelimage":{
+    "message":"תמונת רקע",
+    "description":"תמונת רקע"
+  },
+  "shortcutalllights":{
+    "message":"כדי להחליף בין אורות דלוקים\/כבויים בכל הלשוניות הפתוחות.",
+    "description":"כדי להחליף את האורות\/ביטול של כל הכרטיסיות הפתוחות."
+  },
+  "lastchecked":{
+    "message":"נבדק לאחרונה על גירסה",
+    "description":"הגירסה העדכנית ביותר להסתודד"
+  },
+  "visualeffects":{
+    "message":"אפקטים חזותיים",
+    "description":"אפקטים חזותיים"
+  },
+  "titelshortcutlight":{
+    "message":"מקש קיצור",
+    "description":"מקש קיצור"
+  },
+  "titledonatebutton":{
+    "message":"תרומה",
+    "description":"תרום"
+  },
+  "titellikebar":{
+    "message":"סרגל ה'לייק'",
+    "description":"כמו בר"
+  },
+  "desmousespotlightt":{
+    "message":"מאפשר לכם ללחוץ מבעד למסך המוחשך כאשר האורות כבויים.",
+    "description":"מאפשר לחץ דרך המסך הכהה כאשר האורות כבויים."
+  },
+  "desambilight4color":{
+    "message":"4 צבעים נבחרים מסביב לווידאו:",
+    "description":"4 צבעים סקין סביב הווידאו:"
+  },
+  "lockentername":{
+    "message":"אנא הכנס את סיסמתך.",
+    "description":"אנא הכניסו את הסיסמה שלך"
+  },
+  "desnoflash":{
+    "message":"לא להשתמש בתכונה זו.",
+    "description":"לא להשתמש בתכונה זו."
+  },
+  "desdynamicblocks":{
+    "message":"בלוקים",
+    "description":"רחובות"
+  },
+  "titeleye":{
+    "message":"הגנה לעיניים",
+    "description":"הגנה העין"
+  },
+  "titelcinemaontop":{
+    "message":"מצב סרט קולנוע: מציג את שכבת ה-'כיבוי אורות' רק בחלק העליון של החלון.",
+    "description":"מצב סרט קולנוע: זה להראות את השכבה 'מאיר את' רק בראש החלון."
+  },
+  "desmousespotlightc":{
+    "message":"אם האור כבוי, ניתן לבחור אזור להתמקדות על פריט.",
+    "description":"אם הנורית כבויה, באפשרותך לבחור אזור למקד את פריט."
+  },
+  "titelrememberpage":{
+    "message":"זכירת העמוד",
+    "description":"זוכר את דף"
+  },
+  "desmousespotlighta":{
+    "message":"אם האורות כבויים, להציג זרקור סביב סמן העכבר.",
+    "description":"אם הנורית כבויה, הצג זרקור סביב סמן העכבר."
+  },
+  "desmousespotlighto":{
+    "message":"שימוש רגיל (מנטרל את הגדרות העכבר למטה)",
+    "description":"בשימוש רגיל (מבטל את הגדרות העכבר למטה)"
+  },
+  "desplaylist":{
+    "message":"הצג את רשימת ההשמעה של יוטיוב באתר יוטיוב",
+    "description":"הצג את רשימת ההשמעה YouTube באתר YouTube."
+  },
+  "desambilightfixcolor":{
+    "message":"צבע אחיד:",
+    "description":"צבע אחיד:"
+  },
+  "desuntil":{
+    "message":"עד ש",
+    "description":"עד"
+  },
+  "desconfirmpassword":{
+    "message":"אישור סיסמה",
+    "description":"אשר את הסיסמה"
+  },
+  "desautoplayonly":{
+    "message":"עמעום רק באתרי הסרטים הבאים:",
+    "description":"עמעם רק את האתר הסרטונים הבאים:"
+  },
+  "helpeyeprotection":{
+    "message":"הפעלת 'הגנה העין' מבטלות באופן אוטומטי את התכונה 'הפעלה אוטומטית'.",
+    "description":"הפעלת 'הגנה העין' מבטלות באופן אוטומטי את התכונה 'הפעלה אוטומטית'."
+  },
+  "skipremember":{
+    "message":"לדלג על זה, לפתוח עכשיו את הדף באפשרות",
+    "description":"לדלג על זה, לפתוח עכשיו את הדף באפשרות"
+  },
+  "optiontimesaved":{
+    "message":"הזמן נשמר בהצלחה!",
+    "description":"זמן נשמר בהצלחה!"
+  },
+  "titelvideoheadline":{
+    "message":"כותרת הסרטון",
+    "description":"הכותרת וידאו"
+  },
+  "translateme":{
+    "message":"עזור לתרגם",
+    "description":". תעזרי לי"
+  },
+  "despassword":{
+    "message":"דרוש סיסמה כדי להזין לפני הפעלת את האורות בחזרה.",
+    "description":"דרוש סיסמה כדי להזין לפני הפעלת את האורות בחזרה."
+  },
+  "helpautoplay":{
+    "message":"'עין הגנה' מופעלת. להשתמש מתחת תכונה, בטל את האפשרות 'עין הגנה'.",
+    "description":"'עין הגנה' מופעלת. להשתמש מתחת תכונה, בטל את האפשרות 'עין הגנה'."
+  },
+  "name":{
+    "message":"לכבות את האורות",
+    "description":"לכבות את האורות"
+  },
+  "changelog":{
+    "message":"לוג שינויים",
+    "description":"רשימת שינויים בקישור"
+  },
+  "optionpagetitle":{
+    "message":"Turn Off the Lights - אפשרויות",
+    "description":"כותרת הדף באפשרות"
+  },
+  "optionpasswordsaved":{
+    "message":"הסיסמה נשמרה בהצלחה!",
+    "description":"הסיסמה נשמר בהצלחה!"
+  },
+  "desdynamicspace":{
+    "message":"מרחב היקום",
+    "description":"מרחב היקום"
+  },
+  "deseastereggs":{
+    "message":"בונוס בהרחבה זו.",
+    "description":"בונוס של הרחבה זו."
+  },
+  "settings":{
+    "message":"הגדרות",
+    "description":"הגדרות"
+  },
+  "desspotlightradius":{
+    "message":"זה הקוטר של המנורה חיפוש.",
+    "description":"זה הקוטר של המנורה חיפוש."
+  },
+  "titelsync":{
+    "message":"סינכרון",
+    "description":"סינכרון"
+  },
+  "right":{
+    "message":"ימין",
+    "description":"נכון"
+  },
+  "titeldynamic":{
+    "message":"רקע דינאמי",
+    "description":"רקע דינאמי"
+  },
+  "deslikebutton":{
+    "message":"הצג את סרגל ה'לייק' \/ 'דיסלייק' בסרטון הזה",
+    "description":"להראות כמו & אוהב את הכפתורים של YouTube עבור וידאו זה."
+  },
+  "titelmouse":{
+    "message":"עכבר",
+    "description":"העכבר"
+  },
+  "titellessmore":{
+    "message":"הצג פחות",
+    "description":"הצג פחות"
+  },
+  "desshortcutlight":{
+    "message":"אפשור מקשי קיצור מקלדת שלהלן.",
+    "description":"הפעל את קיצורי המקשים שלהלן."
+  },
+  "titelinfobar":{
+    "message":"סרגל המידע",
+    "description":"סרגל המידע"
+  },
+  "descontextmenus":{
+    "message":"הצג תפריט כדי להתמקד על פריט.",
+    "description":"הצג את תפריט ההקשר כדי למקד את פריט."
+  },
+  "titelcontextmenus":{
+    "message":"תפריט הקשר",
+    "description":"תפריט תלוי-הקשר"
+  },
+  "titelplaylist":{
+    "message":"רשימת השמעה",
+    "description":"רשימת השמעה"
+  },
+  "desatmosphereonly":{
+    "message":"להשתמש בתכונה תאורת אווירה רק וידאו באתר הבא:",
+    "description":"להשתמש בתכונה תאורת אווירה רק וידאו באתר הבא:"
+  },
+  "recflash":{
+    "message":"מומלץ",
+    "description":"מומלץ"
+  },
+  "desenterpassword":{
+    "message":"הזן את הסיסמה בתיבה שלהלן:",
+    "description":"הזן את הסיסמה בתיבה שלהלן:"
+  },
+  "titelblurradius":{
+    "message":"רדיוס העמעום",
+    "description":"רדיוס טשטוש"
+  },
+  "version":{
+    "message":"גירסא",
+    "description":"הטקסט מספר גירסה"
+  },
+  "shortcutdark":{
+    "message":"כדי להכהות את המסך (עלייה אטימות).",
+    "description":"כדי להכהות את המסך (עלייה אטימות)."
+  },
+  "dessharebutton":{
+    "message":"הצג את לחצן השיתוף של יוטיוב עבור הסרטון הזה",
+    "description":"הצג את הלחצנים נתח של YouTube עבור וידאו זה."
+  },
+  "shortcutbright":{
+    "message":"כדי להאיר את המסך (ירידה אטימות).",
+    "description":"כדי להאיר את המסך (ירידה אטימות)."
+  },
+  "titelalllightsoff":{
+    "message":"כל הכרטיסיות הפתוחות",
+    "description":"כל הכרטיסיות הפתוחות"
+  },
+  "desreadera":{
+    "message":"הצג תמיד את סרגל העמימות כאשר האורות כבים.",
+    "description":"הצג תמיד הבר רמת העמימות כאשר האורות כבים."
+  },
+  "rememberrate":{
+    "message":"קצב",
+    "description":"קצב"
+  },
+  "desautoplay":{
+    "message":"עמעם את הרקע באופן אוטומטי כאשר לוחצים על לחצן הניגון, ולהפך.",
+    "description":"עמום ברקע באופן אוטומטי כאשר תלחץ על כפתור play, לעומת."
+  },
+  "titelscreen":{
+    "message":"מסך",
+    "description":"מסך"
+  },
+  "desflash":{
+    "message":"הצג את כל אובייקטי הפלאש בעמוד",
+    "description":"הצג את כל אובייקטי Flash."
+  },
+  "titelhead":{
+    "message":"ערוץ",
+    "description":"ערוץ"
+  },
+  "pageatitle":{
+    "message":"לכבות את האורות",
+    "description":"לכבות את האורות"
+  },
+  "desaddvideobutton":{
+    "message":"הראה את לחצן ההוספה מסרטון ה-YouTube הזה",
+    "description":"הצג לחצן הוסף וידאו YouTube הזה."
+  },
+  "shortcuteyeprotection":{
+    "message":"כדי להפעיל\/להשבית תכונת הגנה העין.",
+    "description":"כדי להפעיל\/להשבית תכונת הגנה העין."
+  },
+  "titelfadein":{
+    "message":"עמעם פנימה",
+    "description":"עמעום"
+  },
+  "desreadern":{
+    "message":"לעולם אל תציג את סרגל העמימות.",
+    "description":"אף פעם לא מראים הבר רמת העמימות."
+  },
+  "titelmaxqualityyoutube":{
+    "message":"באופן אוטומטי מוגדר החלטה זו:",
+    "description":"באופן אוטומטי מוגדר החלטה זו:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"ערכים חיוביים מגדילים את גודל הצל, ערכים שליליים מקטינים אותו.",
+    "description":"ערכים חיוביים מגדילים את גודל הצל, ערכים שליליים להקטין את הגודל."
+  },
+  "titelon":{
+    "message":"פועל",
+    "description":"על"
+  },
+  "videotitle":{
+    "message":"התמקד על הסרטון הזה",
+    "description":"למקד את הוידאו הזה"
+  },
+  "warningtextambilight":{
+    "message":"אם אין אפשרות לקבל נתוני וידאו כלל אבטחה של אתר, ואז זה יראה מוצק הצבע שבחרת במקום.",
+    "description":"אם אין אפשרות לקבל נתוני וידאו כלל אבטחה של אתר, ואז זה יראה מוצק הצבע שבחרת במקום."
+  },
+  "desdynamiccloud":{
+    "message":"Animated Clouds",
+    "description":"Animated Clouds"
+  },
+  "desconfirmtimesaver":{
+    "message":"אישור זמן שומר המסך",
+    "description":"לאשר את זמן שומר מסך"
+  },
+  "deslikebar":{
+    "message":"הצגת סרגל ה-אהבתי\/לא אהבתי מתחת לסרטוני YouTube.",
+    "description":"הצג כמו\/סלידה בר תחת קטעי וידאו."
+  },
+  "titelautoplay":{
+    "message":"ניגון אוטומטי",
+    "description":"הפעלה אוטומטית"
+  },
+  "top":{
+    "message":"עליון",
+    "description":"העליון"
+  },
+  "titelspreadradius":{
+    "message":"רדיוס ההתפשטות",
+    "description":"רדיוס כפולה"
+  },
+  "installadblocker":{
+    "message":"שימוש עם הרחבת חוסם פרסומות.",
+    "description":"השתמש בסיומת Adblocker."
+  },
+  "titelsharebutton":{
+    "message":"כפתורי שיתוף",
+    "description":"כפתורי שיתוף"
+  },
+  "titelcolor":{
+    "message":"צבע",
+    "description":"צבע"
+  },
+  "titeldownloadbutton":{
+    "message":"להוריד את השדרוג!",
+    "description":"להוריד את השדרוג!"
+  },
+  "pagetitle":{
+    "message":"הכהה את הדף הנוכחי",
+    "description":"דארקן בדף זה"
+  },
+  "titelambilight":{
+    "message":"תאורת אווירה",
+    "description":"תאורת אווירה"
+  },
+  "titelshowmore":{
+    "message":"הצג יותר",
+    "description":"הצג יותר"
+  },
+  "desviewcount":{
+    "message":"הצג את מספר התצוגה עבור וידאו זה.",
+    "description":"הצג את מספר תצוגה עבור וידאו זה."
+  },
+  "titelautowidthyoutube":{
+    "message":"להגדיר באופן אוטומטי את השחקן YouTube לגודל גדול יותר.",
+    "description":"להגדיר באופן אוטומטי את השחקן YouTube לגודל גדול יותר."
+  },
+  "desconfirmtime":{
+    "message":"לאשר את מועד",
+    "description":"לאשר את מועד"
+  },
+  "titelupgrade":{
+    "message":"שדרג",
+    "description":"שדרוג"
+  },
+  "lockwrongpassword":{
+    "message":"טעות בסיסמא, אנא הכנס שנית.",
+    "description":"הלא נכון סיסמה, אנא נסה שנית."
+  },
+  "titelsyncbrowser":{
+    "message":"לסנכרן את ההגדרות הרחבה לדפדפן אחרים.",
+    "description":"לסנכרן את ההגדרות הרחבה לדפדפן אחרים."
+  },
+  "deletebutton":{
+    "message":"מחק",
+    "description":"מחק"
+  },
+  "eyedivon":{
+    "message":"אן",
+    "description":"אן"
+  },
+  "eyedivoff":{
+    "message":".",
+    "description":"."
+  },
+  "deshead":{
+    "message":"הצג את סרגל הערוצים או השם באתר יוטיוב",
+    "description":"הצג סרגל ערוץ YouTube או השם."
+  },
+  "shortcutsavingopacity":{
+    "message":"כדי לשמור את ערך אטימות",
+    "description":"כדי לשמור את ערך אטימות"
+  },
+  "desinfobar":{
+    "message":"הצג את תאור הסרטון",
+    "description":"הצג את תיאור מידע על הסרטון."
+  },
+  "titellamp":{
+    "message":"נורה",
+    "description":"הנורה"
+  },
+  "desambilightvarcolor":{
+    "message":"קח את הצבע מהסרט.",
+    "description":"קח את הצבע של הווידאו."
+  },
+  "showremember":{
+    "message":". לא תראה בדף זה זכור שוב כאשר אני פותח את הדף באפשרות",
+    "description":". לא תראה בדף זה זכור שוב כאשר אני פותח את הדף באפשרות"
+  },
+  "donatepromotext":{
+    "message":"אם תוכלו לתרום, סכום כלשהו, אעריך זאת מאד!",
+    "description":"אם ניתן לבצע תרומה של כל סכום, אני אעריך את זה מאוד!"
+  },
+  "titelblur":{
+    "message":"לטשטש את השאר",
+    "description":"לטשטש את השאר"
+  },
+  "desdynamicraindrops":{
+    "message":"טיפות גשם",
+    "description":"טיפות גשם"
+  },
+  "desalllightsoff":{
+    "message":"לחיצה על לחצן המנורה יהיה למתג את האורות על כל הכרטיסיות הפתוחות כאשר אפשרות זו מופעלת.",
+    "description":"לחיצה על לחצן המנורה יהיה למתג את האורות על כל הכרטיסיות הפתוחות כאשר אפשרות זו מופעלת."
+  },
+  "optionecosaversaved":{
+    "message":"שניות נשמר בהצלחה!",
+    "description":"שניות נשמר בהצלחה!"
+  },
+  "titelreader":{
+    "message":"סרגל עמימות",
+    "description":"הבר רמת העמימות"
+  },
+  "deseyen":{
+    "message":"שימוש רגיל (האורות כבים כאשר לוחצים על סמל הנורה)",
+    "description":"בשימוש רגיל (כשההצגה תתחיל בעת לחיצה על סמל המנורה)."
+  },
+  "enjoyshare":{
+    "message":"ליהנות הרחבה זו ולשתף אותו עם אחרים, מי אתה חושב יעריך את זה.",
+    "description":"ליהנות הרחבה זו ולשתף אותו עם אחרים, מי אתה חושב יעריך את זה."
+  },
+  "shortcuttotl":{
+    "message":"כדי להחליף את האורות\/ביטול.",
+    "description":"כדי להחליף את האורות\/ביטול."
+  },
+  "deseyea":{
+    "message":"עמעם את הרקע אוטומטית כאשר נפתח דף",
+    "description":"עמום ברקע באופן אוטומטי בעת פתיחת דף."
+  },
+  "basicsettings":{
+    "message":"יסודות",
+    "description":"יסודות"
+  },
+  "hoveroptionapply":{
+    "message":"החל",
+    "description":"החל"
+  },
+  "reportbug":{
+    "message":"דווח על בעיה",
+    "description":"לדווח על בעיה המתעוררת"
+  },
+  "destime":{
+    "message":"האורות בזמנים הבאים:",
+    "description":"האורות בזמנים הבאים:"
+  },
+  "guide":{
+    "message":". ברוך הבא TOtL מדריך",
+    "description":". ברוך הבא TOtL מדריך"
+  },
+  "deseyealist":{
+    "message":"לעמעם את הרקע באופן אוטומטי בעת פתיחת הדף הבא:",
+    "description":"לעמעם את הרקע באופן אוטומטי בעת פתיחת הדף הבא:"
+  },
+  "titellikebutton":{
+    "message":"כפתורי 'לייק' ו'דיסלייק'",
+    "description":"כמו & אוהב כפתורים"
+  },
+  "titelpageaction":{
+    "message":"הסתרת סמל המנורה",
+    "description":"להסתיר את סמל pageaction"
+  },
+  "friendlyremember":{
+    "message":"ידידותי זוכר...",
+    "description":"ידידותי זוכר..."
+  },
+  "desfadein":{
+    "message":"הראה את אפקט העמעום",
+    "description":"הצג העמעום בתוקף."
+  },
+  "warning":{
+    "message":"אזהרה!",
+    "description":"אזהרה!"
+  },
+  "deseyetimesaver":{
+    "message":"כאשר דף אינו פעיל (קלט ללא עכבר או לוח מקשים) בפעם המפורט להלן, הדף באופן אוטומטי יחשיך.",
+    "description":"כאשר דף אינו פעיל (קלט ללא עכבר או לוח מקשים) בפעם המפורט להלן, הדף באופן אוטומטי יחשיך."
+  },
+  "titelsuggestions":{
+    "message":"הצעות",
+    "description":"הצעות"
+  },
+  "advancedoptions":{
+    "message":"אפשרויות מתקדמות",
+    "description":"אפשרויות מתקדמות"
+  },
+  "dessuggestions":{
+    "message":"הצג הצעות מאתר YouTube.",
+    "description":"הצג את ההצעות של אתר YouTube."
+  },
+  "titelflash":{
+    "message":"איתור פלאש",
+    "description":"זיהוי פלאש"
+  },
+  "desambilight":{
+    "message":". אראה לך את השפעת תאורת אווירה משחק הווידאו הנוכחי.",
+    "description":". אראה לך את השפעת תאורת אווירה משחק הווידאו הנוכחי."
+  },
+  "productshare":{
+    "message":"שתף",
+    "description":"שיתוף"
+  },
+  "addbutton":{
+    "message":"הוסף",
+    "description":"להוסיף"
+  },
+  "reportlist":{
+    "message":"(ראה רשימה)",
+    "description":"לראות את הרשימה המלאה בנושא"
+  },
+  "desdynamicfishtank":{
+    "message":"אקווריום",
+    "description":"אקווריום"
+  },
+  "longdonatetext":{
+    "message":". אני באמת אעריך אם תוכל לתרום לי לשמור על ההרחבה לדפדפן זו בחיים עבור משתמשים חדשים אחרים. בין אם זה $$ 1 או $100 דולר, מוערכת לאין שיעור התמיכה שלך!",
+    "description":". אני באמת אעריך אם תוכל לתרום לי לשמור על ההרחבה לדפדפן זו בחיים עבור משתמשים חדשים אחרים. בין אם זה $$ 1 או $100 דולר, מוערכת לאין שיעור התמיכה שלך!"
+  },
+  "deshardflash":{
+    "message":"הצג את כל אובייקטי Flash, דילוג על המסנן ' כתובת URL '. זה יהיה לתקן את בעיות עם כמה נגני וידאו שיהיו מוסתרות, אך גם תציג מודעות.",
+    "description":"הצג את כל אובייקטי Flash, דילוג על המסנן ' כתובת URL '. זה יהיה לתקן את בעיות עם כמה נגני וידאו שיהיו מוסתרות, אך גם תציג מודעות."
+  },
+  "desfadeout":{
+    "message":"הצג את אפקט הדהייה",
+    "description":"הצג עמעום אפקט."
+  },
+  "optionwrongimg":{
+    "message":"קובץ התמונה לא חוקי!",
+    "description":"קובץ התמונה לא חוקי!"
+  },
+  "desvideoheadline":{
+    "message":"הצג והפוך את צבע כותרת הסרטון",
+    "description":". תראה, להפוך את הצבע של הכותרת וידאו."
+  },
+  "desrememberpage":{
+    "message":"אם אפשרות זו מופעלת, זה יראה לך לא זכור הדף.",
+    "description":"אם אפשרות זו מופעלת, זה יראה לך לא זכור הדף."
+  },
+  "description":{
+    "message":"העמוד כולו יעומעם לאפלה, כדי שתוכלו לצפות בסרטון כאילו הייתם בקולנוע.",
+    "description":"הדף כולו נמוגה אל אפל, כך שתוכל לצפות הוידאו כאילו היית בקולנוע."
+  },
+  "titelviewcount":{
+    "message":"מספר צפיות",
+    "description":"מספר צפיות"
+  },
+  "titelopacity":{
+    "message":"אטימות",
+    "description":"אטימות"
+  },
+  "titelqualityyoutube":{
+    "message":"להגדיר באופן אוטומטי את האיכות של קטעי וידאו.",
+    "description":"להגדיר באופן אוטומטי את האיכות של קטעי וידאו."
+  },
+  "shortcutopacity":{
+    "message":"כדי לשחזר החושך set (אטימות) הגדרת.",
+    "description":"כדי לשחזר החושך set (אטימות) הגדרת."
+  },
+  "desambilightrangeblurradius":{
+    "message":"כלל שהערך שבחרת יהיה נמוך יותר,כך הצל יהיה חד יותר, וככל שהערך שבחרת יהיה גבוהה יותר, כך הצל יהיה מעומעם יותר.",
+    "description":"אם ערך נמוך הצל יהיו חדים, ככל שהמספר גבוה יותר, שמימין יותר זה יהיה."
+  },
+  "titeladdvideobutton":{
+    "message":"לחצן ההוספה",
+    "description":"הוספת לחצן"
+  },
+  "titelpassword":{
+    "message":"הגנה באמצעות סיסמה",
+    "description":"הגנה באמצעות סיסמה"
+  },
+  "titeldownloadupgrade":{
+    "message":"השדרוג מוסיף תמיכה עבור התמקדות לתמונות הנבחרות, ויציג גלריה של תמונות באתר.",
+    "description":"השדרוג מוסיף תמיכה עבור התמקדות לתמונות הנבחרות, ויציג גלריה של תמונות באתר."
+  },
+  "titelfadeout":{
+    "message":"לדהות",
+    "description":"עמעום"
+  },
+  "eastereggsquestion":{
+    "message":"אתה אוהב קולנוע אמיתי?",
+    "description":"אתה אוהב קולנוע אמיתי?"
+  },
+  "bottom":{
+    "message":"תחתון",
+    "description":"התחתון"
+  },
+  "dessaver":{
+    "message":"שומר מסך:",
+    "description":"שומר מסך:"
+  },
+  "hoveroptiondyn5":{
+    "message":"עם מטוסים",
+    "description":"עם מטוסים"
+  },
+  "pagestillloading":{
+    "message":"הדף עדיין עולה?",
+    "description":"הדף עדיין עולה?"
+  },
+  "titeloff":{
+    "message":"מכובה",
+    "description":"."
+  },
+  "titeleastereggs":{
+    "message":"ביצי פסחא",
+    "description":"ביצי פסחא"
+  },
+  "textfoot":{
+    "message":"התוכנה הזו פועלת תחת רשיון - CC-GNU GPL . בכדי לראות את עותק הרשיון , אנא בקרו ב",
+    "description":"תוכנה זו הוא בעל רישיון CC-GNU GPL. כדי להציג עותק של רישיון זה, בקר"
+  },
+  "left":{
+    "message":"שמאל",
+    "description":"שמאל"
+  },
+  "titelnighttheme":{
+    "message":"מצב לילה",
+    "description":"מצב לילה"
+  },
+  "desnighttheme":{
+    "message":"הצג לחצן בורר בלילה מתחת לדף האינטרנט כדי להפוך את העמוד כהים או בהירים.",
+    "description":"הצג לחצן בורר בלילה מתחת לדף האינטרנט כדי להפוך את העמוד כהים או בהירים."
+  },
+  "nightoptions":{
+    "message":"מצב לילה",
+    "description":"מצב לילה"
+  },
+  "desnightonly":{
+    "message":"הצג מצב לילה רק את האתר הבא:",
+    "description":"הצג מצב לילה רק את האתר הבא:"
+  },
+  "desnightenabletheme":{
+    "message":"כאשר אתה פותח דף חדש זה הולך אוטומטית מצב לילה.",
+    "description":"כאשר אתה פותח דף חדש זה הולך אוטומטית מצב לילה."
+  },
+  "titellampregular":{
+    "message":"הראה תמיד את אייקון המנורה בשורת הכתובת",
+    "description":"הראה תמיד את אייקון המנורה בשורת הכתובת"
+  },
+  "titellampvideo":{
+    "message":"הראה את אייקון המנורה רק אם אותר וידאו",
+    "description":"הראה את אייקון המנורה רק אם אותר וידאו"
+  },
+  "upgradecontexttitle":{
+    "message":"We have added some new features for you",
+    "description":"We have added some new features for you"
+  },
+  "upgradecontextmessage":{
+    "message":"That make this extension even more amazing",
+    "description":"That make this extension even more amazing"
+  },
+  "upgradecontextitemta":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "upgradecontextitemma":{
+    "message":"light off with your hand",
+    "description":"light off with your hand"
+  },
+  "upgradecontextitemtb":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition"
+  },
+  "upgradecontextitemmb":{
+    "message":"Control the web page more accurately",
+    "description":"Control the web page more accurately"
+  },
+  "upgradefbshare":{
+    "message":"Facebook Share",
+    "description":"Facebook Share"
+  },
+  "upgradetwshare":{
+    "message":"Tweet",
+    "description":"Tweet"
+  },
+  "ratetitle":{
+    "message":"Please rate & review my extension",
+    "description":"Please rate & review my extension"
+  },
+  "ratedes":{
+    "message":"And let everyone know about this great extension!",
+    "description":"And let everyone know about this great extension!"
+  },
+  "rateitema":{
+    "message":"Rate 5 stars",
+    "description":"Rate 5 stars"
+  },
+  "titelreset":{
+    "message":"Reset settings",
+    "description":"Reset settings"
+  },
+  "resetbrowserextension":{
+    "message":"Reset the Turn Off the Lights settings",
+    "description":"Reset the Turn Off the Lights settings"
+  },
+  "desautoplaydelay":{
+    "message":"Brighten again the background when the video ended after",
+    "description":"Brighten again the background when the video ended after"
+  },
+  "desautoplaydelayend":{
+    "message":"seconds",
+    "description":"seconds"
+  },
+  "motionoptions":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "desmotion":{
+    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
+    "description":"Camera Motion"
+  },
+  "trymotion":{
+    "message":"Try it yourself!",
+    "description":"Try it yourself!"
+  },
+  "destrymotion":{
+    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc.",
+    "description":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
+  },
+  "howworkmotion":{
+    "message":"איך זה עובד?",
+    "description":"איך זה עובד?"
+  },
+  "step1description":{
+    "message":"Enable the Camera Motion feature",
+    "description":"Enable the Camera Motion feature"
+  },
+  "step2description":{
+    "message":"Move your hand (or fist) from the top to bottom",
+    "description":"Move your hand (or fist) from the top to bottom"
+  },
+  "step3description":{
+    "message":"Then the black layer slide automatically down.",
+    "description":"Then the black layer slide automatically down."
+  },
+  "desmotionChecklist":{
+    "message":"Checklist:",
+    "description":"Checklist:"
+  },
+  "des1checkmotion":{
+    "message":"Make sure your room is not dark and that it have enough light.",
+    "description":"Make sure your room is not dark and that it have enough light."
+  },
+  "des2checkmotion":{
+    "message":"Your camera must not receive direct sunlight.",
+    "description":"Your camera must not receive direct sunlight."
+  },
+  "des3checkmotion":{
+    "message":"You use a front facing camera.",
+    "description":"You use a front facing camera."
+  },
+  "titellinear":{
+    "message":"Linear",
+    "description":"Linear"
+  },
+  "titelcolora":{
+    "message":"Color A",
+    "description":"Color A"
+  },
+  "titelcolorb":{
+    "message":"Color B",
+    "description":"Color B"
+  },
+  "speechoption":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"Speech",
+    "description":"Speech"
+  },
+  "desspeech":{
+    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
+    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+  },
+  "desspeech1command":{
+    "message":"turn off the lights",
+    "description":"turn off the lights"
+  },
+  "desspeech2command":{
+    "message":"turn on the lights",
+    "description":"turn on the lights"
+  },
+  "desspeech3command":{
+    "message":"play video",
+    "description":"play video"
+  },
+  "desspeech4command":{
+    "message":"pause video",
+    "description":"pause video"
+  },
+  "desspeechdialect":{
+    "message":"Choose your speech dialect:",
+    "description":"Choose your speech dialect:"
+  },
+  "desatmosvivid":{
+    "message":"Vivid atmosphere effects on YouTube, require",
+    "description":"Vivid atmosphere effects on YouTube, require"
+  },
+  "help":{
+    "message":"עזרה",
+    "description":"עזרה"
+  },
+  "about":{
+    "message":"אודות",
+    "description":"אודות"
+  },
+  "desspeechonly":{
+    "message":"Activate the Speech Recognition only the following site(s):",
+    "description":"Activate the Speech Recognition only the following site(s):"
+  },
+  "descammotiononly":{
+    "message":"Activate the Camera Motion only on the following site(s):",
+    "description":"Activate the Camera Motion only on the following site(s):"
+  },
+  "titelcamera":{
+    "message":"Camera",
+    "description":"Camera"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautoplayblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser.",
+    "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
+  },
+  "desbrowsersupport":{
+    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
+    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+  },
+  "titelsupportatmos":{
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+  },
+  "titelseeonline":{
+    "message":"See online for more examples",
+    "description":"See online for more examples"
+  },
+  "titelvideosample":{
+    "message":"Video Sample",
+    "description":"Video Sample"
+  },
+  "titelwebsite":{
+    "message":"Website",
+    "description":"Website"
+  },
+  "titeldeveloper":{
+    "message":"Developer",
+    "description":"Developer"
+  },
+  "titelrightsreserved":{
+    "message":"Some rights reserved.",
+    "description":"Some rights reserved."
+  },
+  "desbrowserextension":{
+    "message":"browser extension",
+    "description":"browser extension"
+  },
+  "desapitext":{
+    "message":"Wiki API for Website Developer",
+    "description":"Wiki API for Website Developer"
+  },
+  "desbrowsertheme":{
+    "message":"browser theme",
+    "description":"browser theme"
+  },
+  "desproject":{
+    "message":"project",
+    "description":"project"
+  },
+  "titelapideveloper":{
+    "message":"API Developer",
+    "description":"API Developer"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki about the Atmosphere Lighting feature",
+    "description":"Wiki about the Atmosphere Lighting feature"
+  }
+}

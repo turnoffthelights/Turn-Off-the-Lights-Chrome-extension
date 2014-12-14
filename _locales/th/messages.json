@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"ช่วยเหลือ",
+    "description":"วิธีใช้"
+  },
+  "titelimage":{
+    "message":"ภาพพื้นหลัง",
+    "description":"ภาพพื้นหลัง"
+  },
+  "shortcutalllights":{
+    "message":"เมื่อต้องการเปิดปิดไฟสำหรับแท็บที่เปิดอยู่ทั้งหมด",
+    "description":"เมื่อต้องสลับไฟ\/ปิดสำหรับแท็บที่เปิดอยู่ทั้งหมด"
+  },
+  "lastchecked":{
+    "message":"ตรวจสอบเป็นรุ่นล่าสุดแล้ว",
+    "description":"รุ่นล่าสุดตรวจสอบใน"
+  },
+  "visualeffects":{
+    "message":"ลักษณะการแสดงผล",
+    "description":"ลักษณะการแสดงผล"
+  },
+  "titelshortcutlight":{
+    "message":"ปุ่มทางลัด",
+    "description":"แป้นพิมพ์ลัด"
+  },
+  "titledonatebutton":{
+    "message":"บริจาค",
+    "description":"บริจาค"
+  },
+  "titellikebar":{
+    "message":"แถบชอบ",
+    "description":"ชอบบาร์"
+  },
+  "desmousespotlightt":{
+    "message":"อนุญาตให้คุณคลิกไปยังที่มืดของหน้าจอเมื่อมีการปิดไฟ",
+    "description":"ช่วยให้คุณสามารถคลิกผ่านหน้าจอภาพที่มืดลงเมื่อปิดไฟ"
+  },
+  "desambilight4color":{
+    "message":"มี4 สีให้เลือกรอบๆวิดีโอ:",
+    "description":"สีที่ 4 เลือกรอบวิดีโอ:"
+  },
+  "lockentername":{
+    "message":"โปรดใส่รหัสผ่านของคุณ",
+    "description":"โปรดใส่รหัสผ่านของคุณ"
+  },
+  "desnoflash":{
+    "message":"ไม่ใช้ฟีเจอร์นี้",
+    "description":"ไม่ใช้คุณลักษณะนี้"
+  },
+  "desdynamicblocks":{
+    "message":"บล็อก",
+    "description":"บล็อก"
+  },
+  "titeleye":{
+    "message":"อุปกรณ์ป้องกันดวงตา",
+    "description":"ป้องกันตา"
+  },
+  "titelcinemaontop":{
+    "message":"โหมดโรงภาพยนตร์: จะแสดง 'ไฟปิด' บนหน้าต่างเท่านั้น",
+    "description":"โหมดภาพยนตร์โรงภาพยนตร์: มันแสดงชั้น 'ไฟปิด' บนหน้าต่างเท่านั้น"
+  },
+  "desmousespotlightc":{
+    "message":"เมื่อปิดไฟ คุณสามารถเลือกพื้นที่ที่จะให้โฟกัสบนวัตถุนั้น",
+    "description":"ถ้าไฟไม่ออก คุณสามารถเลือกพื้นที่การโฟกัสสินค้า"
+  },
+  "titelrememberpage":{
+    "message":"จดจำเพจนี้",
+    "description":"จำหน้า"
+  },
+  "desmousespotlighta":{
+    "message":"เมื่อปิดไฟ จะมีการแสดงสปอตไลท์รอบ ๆ เคอร์เซอร์ของเมาส์",
+    "description":"ถ้าไฟไม่ออก แสดงสปอตไลท์รอบเคอร์เซอร์ของเมาส์"
+  },
+  "desmousespotlighto":{
+    "message":"ตัวเลือกสำหรับพฤติกรรมการใช้เมาส์ (ปิดการใช้งานด้วยการตั้งค่าเมาส์ที่อยู่ด้านล่าง)",
+    "description":"ใช้งานปกติ (ปิดใช้งานการตั้งค่าเมาส์ด้านล่าง)"
+  },
+  "desplaylist":{
+    "message":"แสดงภาพเพลย์ลิสต์.",
+    "description":"แสดงรายการที่เล่น YouTube บนเว็บไซต์ YouTube"
+  },
+  "desambilightfixcolor":{
+    "message":"สีทึบ:",
+    "description":"สีทึบ:"
+  },
+  "desuntil":{
+    "message":"จนถึง",
+    "description":"จนถึง"
+  },
+  "desconfirmpassword":{
+    "message":"ยืนยันรหัสผ่าน",
+    "description":"ยืนยันรหัสผ่าน"
+  },
+  "desautoplayonly":{
+    "message":"ให้สลัวลงกับไซต์ของวิดีโอเท่านั้น:",
+    "description":"มิติเท่านั้นต่อวิดีโอ site(s):"
+  },
+  "helpeyeprotection":{
+    "message":"จะเปิดการใช้งาน 'การปกป้องสายตา' โดยอัตโนมัติแล้วจะปิดใช้งานคุณลักษณะ 'เล่นอัตโนมัติ'",
+    "description":"เปิดใช้งาน 'การป้องกันตา' จะโดยอัตโนมัติปิดใช้งานคุณลักษณะ 'เล่นอัตโนมัติ'"
+  },
+  "skipremember":{
+    "message":"ข้ามไป แล้วเปิดหน้าตัวเลือกเดี๋ยวนี้",
+    "description":"ข้ามนี้ และเปิดหน้าตัวเลือกขณะนี้"
+  },
+  "optiontimesaved":{
+    "message":"ได้บันทึกเวลาเรียบร้อยแล้ว!",
+    "description":"เวลาถูกบันทึกเรียบร้อย"
+  },
+  "titelvideoheadline":{
+    "message":"ชื่อวิดีโอ",
+    "description":"ชื่อเรื่องวิดีโอ"
+  },
+  "translateme":{
+    "message":"ช่วยแปล",
+    "description":"ช่วยแปล"
+  },
+  "despassword":{
+    "message":"ต้องการรหัสผ่านป้อนก่อนที่จะเปิดไฟย้อนกลับ",
+    "description":"ต้องการรหัสผ่านป้อนก่อนที่จะเปิดไฟย้อนกลับ"
+  },
+  "helpautoplay":{
+    "message":"อุปกรณ์ป้องกันดวงตา",
+    "description":"'ตาป้องกัน' จะเปิดใช้งาน ใช้ด้านล่างคุณลักษณะ ปิดใช้งานตัวเลือก 'ตาป้องกัน'"
+  },
+  "name":{
+    "message":"ปิดไฟ",
+    "description":"ปิดไฟ"
+  },
+  "changelog":{
+    "message":"บันทึกการเปลี่ยนแปลง",
+    "description":"ล็อกการเปลี่ยนแปลงการเชื่อมโยง"
+  },
+  "optionpagetitle":{
+    "message":"Turn Off the Lights - ตัวเลือก",
+    "description":"ชื่อหน้าตัวเลือก"
+  },
+  "optionpasswordsaved":{
+    "message":"บันทึกรหัสผ่านเรียบร้อยแล้ว",
+    "description":"บันทึกรหัสผ่านเรียบร้อยแล้ว"
+  },
+  "desdynamicspace":{
+    "message":"อวกาศจักรวาล",
+    "description":"อวกาศจักรวาล"
+  },
+  "deseastereggs":{
+    "message":"โบนัสในส่วนขยายนี้",
+    "description":"โบนัสในส่วนขยายนี้"
+  },
+  "settings":{
+    "message":"การตั้งค่า",
+    "description":"การตั้งค่า"
+  },
+  "desspotlightradius":{
+    "message":"เส้นผ่าศูนย์กลางของโคมไฟค้นหาได้",
+    "description":"เส้นผ่าศูนย์กลางของโคมไฟค้นหาได้"
+  },
+  "titelsync":{
+    "message":"ซิงค์",
+    "description":"ซิงค์"
+  },
+  "right":{
+    "message":"ขวา",
+    "description":"ขวา"
+  },
+  "titeldynamic":{
+    "message":"พื้นหลังแบบไดนามิก",
+    "description":"พื้นหลังแบบไดนามิก"
+  },
+  "deslikebutton":{
+    "message":"แสดงปุ่มชอบและไม่ชอบของ YouTube สำหรับวิดีโอนี้",
+    "description":"แสดงคล้าย & แต่ไม่ชอบปุ่มของ YouTube วิดีโอนี้"
+  },
+  "titelmouse":{
+    "message":"เมาส์",
+    "description":"เมาส์"
+  },
+  "titellessmore":{
+    "message":"แสดงน้อยลง",
+    "description":"แสดงน้อยลง"
+  },
+  "desshortcutlight":{
+    "message":"เปิดใช้งานแป้นพิมพ์ลัดที่อยู่ข้างล่าง",
+    "description":"เปิดใช้งานแป้นพิมพ์ลัดต่อไปนี้"
+  },
+  "titelinfobar":{
+    "message":"ข้อมูลบาร์",
+    "description":"แถบข้อมูล"
+  },
+  "descontextmenus":{
+    "message":"แสดงเมนูบริบทจะเน้นรายการ",
+    "description":"แสดงเมนูบริบทเพื่อสินค้า"
+  },
+  "titelcontextmenus":{
+    "message":"เนื้อหารายการ",
+    "description":"เมนูบริบท"
+  },
+  "titelplaylist":{
+    "message":"เพลย์ลิสต์",
+    "description":"รายการที่เล่น"
+  },
+  "desatmosphereonly":{
+    "message":"ใช้คุณลักษณะแสงบรรยากาศเฉพาะวิดีโอไซต์ต่อไปนี้:",
+    "description":"ใช้คุณลักษณะแสงบรรยากาศเฉพาะวิดีโอไซต์ต่อไปนี้:"
+  },
+  "recflash":{
+    "message":"ขอแนะนำ",
+    "description":"ขอแนะนำ"
+  },
+  "desenterpassword":{
+    "message":"ป้อนรหัสผ่านในกล่องด้านล่าง:",
+    "description":"ป้อนรหัสผ่านในกล่องด้านล่าง:"
+  },
+  "titelblurradius":{
+    "message":"เบลอเป็นรัศมี",
+    "description":"รัศมีเบลอ"
+  },
+  "version":{
+    "message":"รูปแบบที่",
+    "description":"ข้อความหมายเลขเวอร์ชัน"
+  },
+  "shortcutdark":{
+    "message":"ทำให้หน้าจอมืดลง (เพิ่มความทึบแสง)",
+    "description":"การ darken จอ (เพิ่มความทึบแสง)"
+  },
+  "dessharebutton":{
+    "message":"แสดงปุ่มหุ้นของ YouTube สำหรับวิดีโอนี้",
+    "description":"แสดงปุ่มที่ใช้ร่วมกันของ YouTube สำหรับวิดีโอนี้"
+  },
+  "shortcutbright":{
+    "message":"ทำให้หน้าจอสว่างขึ้น (ความทึบแสงลดลง)",
+    "description":"เพิ่มสีสันให้หน้าจอ (ความทึบแสงลดลง)"
+  },
+  "titelalllightsoff":{
+    "message":"เปิดแท็บทั้งหมด",
+    "description":"เปิดแท็บทั้งหมด"
+  },
+  "desreadera":{
+    "message":"เสมอแสดงแถบระดับความหมองเมื่อไฟออกไปข้างนอก",
+    "description":"แสดงแถบระดับ dimness เสมอเมื่อแสงออกไป"
+  },
+  "rememberrate":{
+    "message":"ให้คะแนน",
+    "description":"อัตรา"
+  },
+  "desautoplay":{
+    "message":"ดับไฟอัตโนมัติเมื่อกดเล่นในยูทูป.",
+    "description":"มิติพื้นหลังโดยอัตโนมัติ เมื่อคุณคลิกที่ปุ่มเล่น และเมื่อเทียบกับ"
+  },
+  "titelscreen":{
+    "message":"หน้าจอ",
+    "description":"หน้าจอ"
+  },
+  "desflash":{
+    "message":"แสดงแฟลชทั้งหมด.",
+    "description":"แสดงวัตถุทั้งหมดแฟลช"
+  },
+  "titelhead":{
+    "message":"แชนแนล",
+    "description":"ช่อง"
+  },
+  "pageatitle":{
+    "message":"ปิดไฟ",
+    "description":"ปิดไฟ"
+  },
+  "desaddvideobutton":{
+    "message":"แสดงปุ่มเพิ่มจากวิดีโอนี้ใน YouTube",
+    "description":"แสดงปุ่มเพิ่มจากนี้วิดีโอ YouTube"
+  },
+  "shortcuteyeprotection":{
+    "message":"เปิด\/ปิดการใช้งานของคุณลักษณะการปกป้องสายตา",
+    "description":"การเปิดใช้งาน\/ปิดใช้งานคุณลักษณะการป้องกันตา"
+  },
+  "titelfadein":{
+    "message":"การดับไฟ",
+    "description":"ค่อย ๆ"
+  },
+  "desreadern":{
+    "message":"ไม่ต้องแสดงแถบระดับความดำมืด",
+    "description":"ไม่ต้องแสดงแถบระดับ dimness"
+  },
+  "titelmaxqualityyoutube":{
+    "message":"ตั้งค่าความละเอียดโดยอัตโนมัติ:",
+    "description":"ตั้งความละเอียดนี้โดยอัตโนมัติ:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"ค่าบวกเพิ่มขนาดของเงา ลบค่าลดขนาด",
+    "description":"ค่าบวกเพิ่มขนาดของเงา ลบค่าลดขนาด"
+  },
+  "titelon":{
+    "message":"เปิด",
+    "description":"บน"
+  },
+  "videotitle":{
+    "message":"โฟกัสภาพนี้",
+    "description":"โฟกัสวิดีโอนี้"
+  },
+  "warningtextambilight":{
+    "message":"ถ้าไม่สามารถรับข้อมูลวิดีโอเนื่องจากกฎความปลอดภัยของเว็บไซต์ แล้วมันจะแสดงสีทึบท่านแทน",
+    "description":"ถ้าไม่สามารถรับข้อมูลวิดีโอเนื่องจากกฎความปลอดภัยของเว็บไซต์ แล้วมันจะแสดงสีทึบท่านแทน"
+  },
+  "desdynamiccloud":{
+    "message":"เมฆแบบเคลื่อนไหว",
+    "description":"เมฆแบบเคลื่อนไหว"
+  },
+  "desconfirmtimesaver":{
+    "message":"ยืนยันเวลาของโปรแกรมถนอมหน้าจอ",
+    "description":"ยืนยันเวลาโปรแกรมรักษาหน้าจอ"
+  },
+  "deslikebar":{
+    "message":"แสดงแถบชอบ\/ไม่ชอบใต้วิดีโอของ YouTube",
+    "description":"แสดงชอบ\/ไม่ชอบแถบใต้วิดีโอ YouTube"
+  },
+  "titelautoplay":{
+    "message":"ออโต้",
+    "description":"'เล่นอัตโนมัติ'"
+  },
+  "top":{
+    "message":"ด้านบน",
+    "description":"ด้านบน"
+  },
+  "titelspreadradius":{
+    "message":"กระจายเป็นรัศมี",
+    "description":"รัศมีการแพร่กระจาย"
+  },
+  "installadblocker":{
+    "message":"ใช้ร่วมกับส่วนขยาย Adblocker ",
+    "description":"ใช้กับนามสกุล Adblocker"
+  },
+  "titelsharebutton":{
+    "message":"ปุ่ม Share",
+    "description":"ปุ่มที่ใช้ร่วมกัน"
+  },
+  "titelcolor":{
+    "message":"สี",
+    "description":"สี"
+  },
+  "titeldownloadbutton":{
+    "message":"ดาวน์โหลดเพื่ออัพเกรด!",
+    "description":"ดาวน์โหลดการปรับรุ่นนี้"
+  },
+  "pagetitle":{
+    "message":"เข้มหน้านี้",
+    "description":"Darken หน้านี้"
+  },
+  "titelambilight":{
+    "message":"แสงของบรรยากาศรอบๆ",
+    "description":"แสงบรรยากาศ"
+  },
+  "titelshowmore":{
+    "message":"แสดงเพิ่มเติม",
+    "description":"ดูเพิ่มเติม"
+  },
+  "desviewcount":{
+    "message":"แสดงจำนวนของมุมมองสำหรับวิดีโอนี้",
+    "description":"แสดงหมายเลขของมุมมองสำหรับวิดีโอนี้"
+  },
+  "titelautowidthyoutube":{
+    "message":"ตั้งค่าการเล่น YouTube ให้เป็นขนาดใหญ่โดยอัตโนมัติ",
+    "description":"ตั้งค่าเครื่องเล่น YouTube โดยอัตโนมัติขนาดใหญ่"
+  },
+  "desconfirmtime":{
+    "message":"ยืนยันเวลา",
+    "description":"ยืนยันเวลา"
+  },
+  "titelupgrade":{
+    "message":"อัพเกรด",
+    "description":"อัพเกรด"
+  },
+  "lockwrongpassword":{
+    "message":"รหัสผ่านที่ไม่ถูกต้อง กรุณาลองอีกครั้ง",
+    "description":"รหัสผ่านที่ไม่ถูกต้อง กรุณาลองอีกครั้ง"
+  },
+  "titelsyncbrowser":{
+    "message":"เชื่อมโยงการตั้งค่าส่วนขยายด้วยเบราว์เซอร์อื่นๆของคุณ",
+    "description":"ตรงการตั้งค่าส่วนขยายกับเบราว์เซอร์ของคุณ"
+  },
+  "deletebutton":{
+    "message":"ลบ",
+    "description":"ลบ"
+  },
+  "eyedivon":{
+    "message":"เปิด",
+    "description":"ใน"
+  },
+  "eyedivoff":{
+    "message":"ปิด",
+    "description":"ปิด"
+  },
+  "deshead":{
+    "message":"แสดงแถบแชนแนล.",
+    "description":"แสดงแถบช่อง YouTube หรือชื่อ"
+  },
+  "shortcutsavingopacity":{
+    "message":"บันทึกค่าความทึบแสงนี้",
+    "description":"บันทึกค่าความทึบแสงนี้"
+  },
+  "desinfobar":{
+    "message":"แสดงข้อมูลคำอธิบายเกี่ยวกับวิดีโอ",
+    "description":"แสดงข้อมูลรายละเอียดเกี่ยวกับวิดีโอ"
+  },
+  "titellamp":{
+    "message":"หลอดไฟ",
+    "description":"หลอดไฟ"
+  },
+  "desambilightvarcolor":{
+    "message":"ใช้สีจากวิดีโอ",
+    "description":"ใช้สีจากวิดีโอ"
+  },
+  "showremember":{
+    "message":"ไม่แสดงจำหน้านี้อีกเมื่อเปิดหน้าตัวเลือก",
+    "description":"ไม่แสดงจำหน้านี้อีกเมื่อเปิดหน้าตัวเลือก"
+  },
+  "donatepromotext":{
+    "message":"หากคุณสามารถทำให้การบริจาคของจำนวนเงินที่ให้ฉันขอบคุณมันอย่างมาก!",
+    "description":"ถ้าคุณสามารถทำการบริจาคของยอด ฉันจะขอบคุณมันอย่างกว้างขวาง"
+  },
+  "titelblur":{
+    "message":"เบลอส่วนที่เหลือ",
+    "description":"เบลอส่วนเหลือ"
+  },
+  "desdynamicraindrops":{
+    "message":"ฝนตก",
+    "description":"ฝน"
+  },
+  "desalllightsoff":{
+    "message":"คลิกที่ปุ่มไฟจะสลับไฟบน\/ปิดบนแท็บที่เปิดอยู่ทั้งหมดเมื่อเปิดใช้งานตัวเลือกนี้",
+    "description":"คลิกที่ปุ่มไฟจะสลับไฟบน\/ปิดบนแท็บที่เปิดอยู่ทั้งหมดเมื่อเปิดใช้งานตัวเลือกนี้"
+  },
+  "optionecosaversaved":{
+    "message":"บันทึกเวลาเรียบร้อยแล้ว!",
+    "description":"วินาทีถูกบันทึกเรียบร้อย"
+  },
+  "titelreader":{
+    "message":"บาร์ระดับความดำมืด",
+    "description":"บาร์ระดับ dimness"
+  },
+  "deseyen":{
+    "message":"ปกติใช้ (ไฟออกไปเมื่อคุณคลิกที่ไอคอนหลอด)",
+    "description":"ใช้งานปกติ (ไฟออกไปเมื่อคุณคลิกที่ไอคอนไฟ)"
+  },
+  "enjoyshare":{
+    "message":"เพลิดเพลินกับส่วนขยายนี้ และแชร์ให้กับคนที่คุณคิดว่าเขาจะประทับใจกับมัน",
+    "description":"เพลิดเพลินกับส่วนขยายนี้ และร่วมกับผู้อื่นที่คุณคิดว่า จะขอบคุณมัน"
+  },
+  "shortcuttotl":{
+    "message":"เพื่อสลับระหว่างเปิด\/ปิดไฟ",
+    "description":"เมื่อต้องสลับไฟเปิด\/ปิด"
+  },
+  "deseyea":{
+    "message":"สลัวพื้นหลังโดยอัตโนมัติเมื่อเปิดหน้า",
+    "description":"มิติพื้นหลังโดยอัตโนมัติเมื่อเปิดเพจ"
+  },
+  "basicsettings":{
+    "message":"ข้อมูลพื้นฐานเกี่ยวกับ",
+    "description":"พื้นฐาน"
+  },
+  "hoveroptionapply":{
+    "message":"นำไปใช้",
+    "description":"นำไปใช้"
+  },
+  "reportbug":{
+    "message":"รายงานปัญหา",
+    "description":"รายงานปัญหา"
+  },
+  "destime":{
+    "message":"ไฟปิดระหว่างเวลาต่อไปนี้:",
+    "description":"ไฟปิดระหว่างเวลาต่อไปนี้:"
+  },
+  "guide":{
+    "message":"ยินดีต้อนรับสู่ไกด์ของ TOtL",
+    "description":"ยินดีต้อนรับ TOtL แนะนำ"
+  },
+  "deseyealist":{
+    "message":"หรี่พื้นหลังโดยอัตโนมัติเมื่อเปิดเพจที่ต่อไปนี้:",
+    "description":"มิติพื้นหลังโดยอัตโนมัติเมื่อเปิดเพจที่ต่อไปนี้:"
+  },
+  "titellikebutton":{
+    "message":"ปุ่ม ชอบ & ไม่ชอบ",
+    "description":"ชอบ & แต่ไม่ชอบปุ่ม"
+  },
+  "titelpageaction":{
+    "message":"โคมไฟซ่อนไอคอน",
+    "description":"ซ่อนไอคอน pageaction"
+  },
+  "friendlyremember":{
+    "message":"จดจำเพื่อน...",
+    "description":"มิตรจำ..."
+  },
+  "desfadein":{
+    "message":"แสดงเอฟเฟ็คต์การดับไฟ.",
+    "description":"แสดงค่อย ๆ ปรากฏผล"
+  },
+  "warning":{
+    "message":"คำเตือน",
+    "description":"คำเตือน"
+  },
+  "deseyetimesaver":{
+    "message":"เมื่อเพจที่ไม่ได้ใช้งาน (ไม่มีเมาส์หรือแป้นพิมพ์ป้อน) สำหรับเวลาระบุไว้ด้านล่าง หน้าจะมืดไปโดยอัตโนมัติ",
+    "description":"เมื่อเพจที่ไม่ได้ใช้งาน (ไม่มีเมาส์หรือแป้นพิมพ์ป้อน) สำหรับเวลาระบุไว้ด้านล่าง หน้าจะอัตโนมัติไปมืด"
+  },
+  "titelsuggestions":{
+    "message":"ข้อเสนอแนะ",
+    "description":"คำแนะนำ"
+  },
+  "advancedoptions":{
+    "message":"ตัวเลือกขั้นสูง",
+    "description":"ตัวเลือกขั้นสูง"
+  },
+  "dessuggestions":{
+    "message":"แสดงคำแนะนำของ YouTube เว็บไซต์",
+    "description":"แสดงคำแนะนำของเว็บไซต์ YouTube"
+  },
+  "titelflash":{
+    "message":"แฟลช",
+    "description":"ตรวจจับแฟลช"
+  },
+  "desambilight":{
+    "message":"แสดงผลแสงบรรยากาศปัจจุบันเล่นวิดีโอ",
+    "description":"แสดงผลแสงบรรยากาศปัจจุบันเล่นวิดีโอ"
+  },
+  "productshare":{
+    "message":"ใช้ร่วมกัน",
+    "description":"ใช้ร่วมกัน"
+  },
+  "addbutton":{
+    "message":"เพิ่ม",
+    "description":"เพิ่ม"
+  },
+  "reportlist":{
+    "message":"(ดูรายการ)",
+    "description":"ดูฉบับเต็มรายการ"
+  },
+  "desdynamicfishtank":{
+    "message":"ตู้ปลา",
+    "description":"ถังปลา"
+  },
+  "longdonatetext":{
+    "message":"ฉันอย่างแท้จริงจะขอบคุณถ้าคุณสามารถบริจาคไปมีชีวิตอยู่สำหรับผู้ใหม่ส่วนขยายเบราว์เซอร์นี้ ไม่ว่าจะเป็น $$ 1 หรือ $$ 100 อย่างกว้างขวางการชื่นชมสนับสนุนของคุณ",
+    "description":"ฉันอย่างแท้จริงจะขอบคุณถ้าคุณสามารถบริจาคไปมีชีวิตอยู่สำหรับผู้ใหม่ส่วนขยายเบราว์เซอร์นี้ ไม่ว่าจะเป็น $$ 1 หรือ $$ 100 อย่างกว้างขวางการชื่นชมสนับสนุนของคุณ"
+  },
+  "deshardflash":{
+    "message":"แสดงวัตถุ Flash ทั้งหมด ข้ามกรอง URL นี้จะแก้ไขปัญหากับบางเครื่องเล่นวิดีโอที่ถูกซ่อน แต่ยังจะแสดงโฆษณา",
+    "description":"แสดงวัตถุ Flash ทั้งหมด ข้ามกรอง URL นี้จะแก้ไขปัญหากับบางเครื่องเล่นวิดีโอที่ถูกซ่อน แต่ยังจะแสดงโฆษณา"
+  },
+  "desfadeout":{
+    "message":"แสดงเอฟเฟ็คต์การเปิดไฟ.",
+    "description":"แสดงเลือนผล"
+  },
+  "optionwrongimg":{
+    "message":"ไฟล์รูปภาพไม่ถูกต้อง!",
+    "description":"ไฟล์รูปภาพไม่ถูกต้อง"
+  },
+  "desvideoheadline":{
+    "message":"การแสดงและสลับสีของชื่อวิดีโอ",
+    "description":"แสดง และสลับสีของชื่อเรื่องวิดีโอ"
+  },
+  "desrememberpage":{
+    "message":"ถ้าเปิดตัวเลือกนี้ มันจะแสดงหน้าจำไม่",
+    "description":"ถ้าเปิดตัวเลือกนี้ มันจะแสดงหน้าจำไม่"
+  },
+  "description":{
+    "message":"หน้าเพจจะมืดลง เสมือนชมวิดิโอในโรงภาพยนต์.",
+    "description":"หน้าทั้งหมดจะเป็นเฟดเป็นมืด เพื่อให้คุณสามารถดูวิดีโอเป็นถ้าคุณอยู่ในโรงภาพยนตร์"
+  },
+  "titelviewcount":{
+    "message":"จำนวนผู้เข้าชม",
+    "description":"หลายมุมมอง"
+  },
+  "titelopacity":{
+    "message":"ความทึบ",
+    "description":"ความทึบแสง"
+  },
+  "titelqualityyoutube":{
+    "message":"ตั้งค่าคุณภาพของวิดีโอ YouTube โดยอัตโนมัติ",
+    "description":"ตั้งค่าคุณภาพของวิดีโอ YouTube โดยอัตโนมัติ"
+  },
+  "shortcutopacity":{
+    "message":"การคืนค่าการตั้งค่ามืด (ทึบ)",
+    "description":"การคืนค่าการตั้งค่ามืด (ทึบ) ตั้ง"
+  },
+  "desambilightrangeblurradius":{
+    "message":"ถ้าตั้งค่าเป็นค่าที่ต่ำลงเงาจะเป็นคม เลขสูง ไม่คมชัดมากขึ้นจะ",
+    "description":"ถ้าตั้งค่าล่างเงาจะเป็นคม เลขสูง ไม่คมชัดมากขึ้นจะ"
+  },
+  "titeladdvideobutton":{
+    "message":"เพิ่มปุ่ม",
+    "description":"เพิ่มปุ่ม"
+  },
+  "titelpassword":{
+    "message":"การป้องกันรหัสผ่าน",
+    "description":"การป้องกันรหัสผ่าน"
+  },
+  "titeldownloadupgrade":{
+    "message":"การอัพเกรดเพิ่มการสนับสนุนสำหรับการเน้นภาพที่เลือก และจะแสดงเก็บรูปภาพบนเว็บไซต์",
+    "description":"การอัพเกรดเพิ่มการสนับสนุนสำหรับการเน้นภาพที่เลือก และจะแสดงเก็บรูปภาพบนเว็บไซต์"
+  },
+  "titelfadeout":{
+    "message":"การเปิดไฟ",
+    "description":"เลือนหาย"
+  },
+  "eastereggsquestion":{
+    "message":"คุณชอบดูหนังในโรงหนังรึเปล่า?",
+    "description":"คุณชอบหนังจริงหรือไม่"
+  },
+  "bottom":{
+    "message":"ด้านล่าง",
+    "description":"ด้านล่าง"
+  },
+  "dessaver":{
+    "message":"โปรแกรมถนอมหน้าจอ:",
+    "description":"โปรแกรมรักษาหน้าจอ:"
+  },
+  "hoveroptiondyn5":{
+    "message":"อย่างรวดเร็ว",
+    "description":"พร้อมบิน"
+  },
+  "pagestillloading":{
+    "message":"ยังโหลดหน้านี้ไม่เสร็จ ?",
+    "description":"ยังโหลดหน้า"
+  },
+  "titeloff":{
+    "message":"ปิด",
+    "description":"ปิด"
+  },
+  "titeleastereggs":{
+    "message":"ไข่อีสเตอร์",
+    "description":"ไข่อีสเตอร์"
+  },
+  "textfoot":{
+    "message":"ซอฟแวร์ที่มาและอนุญาต CC - GNU GPL หากต้องการดูสำเนาใบอนุญาตนี้โปรดเยี่ยมชม",
+    "description":"ซอฟต์แวร์นี้ได้รับใบอนุญาตภายใต้ GPL CC GNU เมื่อต้องการดูสำเนาของใบอนุญาตนี้"
+  },
+  "left":{
+    "message":"ซ้าย",
+    "description":"ซ้าย"
+  },
+  "titelnighttheme":{
+    "message":"โหมดกลางคืน",
+    "description":"โหมดกลางคืน"
+  },
+  "desnighttheme":{
+    "message":"แสดงปุ่มสลับเป็นโหมดกลางคืนที่ด้านล่างของเว็บไซต์เพื่อสลับระหว่างมืดและสว่าง",
+    "description":"แสดงปุ่มสลับเป็นโหมดกลางคืนที่ด้านล่างของเว็บไซต์เพื่อสลับระหว่างมืดและสว่าง"
+  },
+  "nightoptions":{
+    "message":"โหมดกลางคืน",
+    "description":"โหมดกลางคืน"
+  },
+  "desnightonly":{
+    "message":"แสดงโหมดกลางคืนเท่านั้นสำหรับไซต์ต่อไปนี้:",
+    "description":"แสดงโหมดกลางคืนเท่านั้นสำหรับไซต์ต่อไปนี้:"
+  },
+  "desnightenabletheme":{
+    "message":"เมื่อคุณเปิดหน้าใหม่ จะเข้าสู่โหมดกลางคืนโดยอัตโนมัติ",
+    "description":"เมื่อคุณเปิดหน้าใหม่ จะเข้าสู่โหมดกลางคืนโดยอัตโนมัติ"
+  },
+  "titellampregular":{
+    "message":"แสดงไอคอนไฟเสมอใน omnibox",
+    "description":"แสดงไอคอนไฟเสมอใน omnibox"
+  },
+  "titellampvideo":{
+    "message":"แสดงไอคอนไฟเมื่อมีการตรวจพบเครื่องเล่นวิดีโอเท่านั้น",
+    "description":"แสดงไอคอนไฟเมื่อมีการตรวจพบเครื่องเล่นวิดีโอเท่านั้น"
+  },
+  "upgradecontexttitle":{
+    "message":"เราได้เพิ่มคุณลักษณะใหม่บางอย่างสำหรับคุณ",
+    "description":"เราได้เพิ่มคุณลักษณะใหม่บางอย่างสำหรับคุณ"
+  },
+  "upgradecontextmessage":{
+    "message":"ที่ทำให้ส่วนขยายนี้น่าทึ่งมาก",
+    "description":"ที่ทำให้ส่วนขยายนี้น่าทึ่งมาก"
+  },
+  "upgradecontextitemta":{
+    "message":"การเคลื่อนไหวกล้อง",
+    "description":"การเคลื่อนไหวกล้อง"
+  },
+  "upgradecontextitemma":{
+    "message":"ปิดไฟด้วยมือของคุณ",
+    "description":"ปิดไฟด้วยมือของคุณ"
+  },
+  "upgradecontextitemtb":{
+    "message":"การเรียนรู้จดจำเสียง",
+    "description":"การเรียนรู้จดจำเสียง"
+  },
+  "upgradecontextitemmb":{
+    "message":"ควบคุมเว็บเพจได้แม่นยำมากขึ้น",
+    "description":"ควบคุมเว็บเพจได้แม่นยำมากขึ้น"
+  },
+  "upgradefbshare":{
+    "message":"แชร์ไปยังเฟสบุ๊ค",
+    "description":"แชร์ไปยังเฟสบุ๊ค"
+  },
+  "upgradetwshare":{
+    "message":"ทวีท",
+    "description":"ทวีท"
+  },
+  "ratetitle":{
+    "message":"กรุณาให้คะแนนและรีวิวส่วนขยายของฉันด้วย",
+    "description":"กรุณาให้คะแนนและรีวิวส่วนขยายของฉันด้วย"
+  },
+  "ratedes":{
+    "message":"และให้ทุกคนทราบเกี่ยวกับส่วนขยายดีๆ แบบนี้!",
+    "description":"และให้ทุกคนทราบเกี่ยวกับส่วนขยายดีๆ แบบนี้!"
+  },
+  "rateitema":{
+    "message":"ให้คะแนน 5 ดาว",
+    "description":"ให้คะแนน 5 ดาว"
+  },
+  "titelreset":{
+    "message":"ตั้งค่าใหม่",
+    "description":"ตั้งค่าใหม่"
+  },
+  "resetbrowserextension":{
+    "message":"ตั้งค่า Turn Off the Lights ใหม่",
+    "description":"ตั้งค่า Turn Off the Lights ใหม่"
+  },
+  "desautoplaydelay":{
+    "message":"เพิ่มความสว่างเบื้องหลังอีกหลังจากสิ้นสุดวิดีโอ",
+    "description":"เพิ่มความสว่างเบื้องหลังอีกหลังจากสิ้นสุดวิดีโอ"
+  },
+  "desautoplaydelayend":{
+    "message":"วินาที",
+    "description":"วินาที"
+  },
+  "motionoptions":{
+    "message":"การเคลื่อนไหวกล้อง",
+    "description":"การเคลื่อนไหวกล้อง"
+  },
+  "desmotion":{
+    "message":"เปิดใช้งานการเคลื่อนไหวของกล้องเพื่อให้หน้าเว็บสามารถมืดลงด้วยการกวาดมือลง",
+    "description":"การเคลื่อนไหวกล้อง"
+  },
+  "trymotion":{
+    "message":"ลองด้วยตัวคุณเอง!",
+    "description":"ลองด้วยตัวคุณเอง!"
+  },
+  "destrymotion":{
+    "message":"ซึ่งนั่นเป็นสิ่งที่ดี และสิ่งที่ดีไปกว่านั้นคือทั้งหมดสามารถใช้ได้ทุกที่ แม้ใน YouTube เว็บไซต์ข่าว ฯลฯ",
+    "description":"ซึ่งนั่นเป็นสิ่งที่ดี และสิ่งที่ดีไปกว่านั้นคือทั้งหมดสามารถใช้ได้ทุกที่ แม้ใน YouTube เว็บไซต์ข่าว ฯลฯ"
+  },
+  "howworkmotion":{
+    "message":"มันทำงานอย่างไร?",
+    "description":"มันทำงานอย่างไร?"
+  },
+  "step1description":{
+    "message":"เปิดใช้งานคุณลักษณะการเคลื่อนไหวของกล้อง",
+    "description":"เปิดใช้งานคุณลักษณะการเคลื่อนไหวของกล้อง"
+  },
+  "step2description":{
+    "message":"ย้ายมือของคุณ (หรือกำปั้น) จากด้านบนลงล่าง",
+    "description":"ย้ายมือของคุณ (หรือกำปั้น) จากด้านบนลงล่าง"
+  },
+  "step3description":{
+    "message":"แล้วสไลด์สีดำจะเลื่อนลงมาโดยอัตโนมัติ",
+    "description":"แล้วสไลด์สีดำจะเลื่อนลงมาโดยอัตโนมัติ"
+  },
+  "desmotionChecklist":{
+    "message":"รายการตรวจสอบ:",
+    "description":"รายการตรวจสอบ:"
+  },
+  "des1checkmotion":{
+    "message":"คุณต้องแน่ใจว่า ห้องของคุณไม่มืดไปและมีแสงสว่างที่เพียงพอ",
+    "description":"คุณต้องแน่ใจว่า ห้องของคุณไม่มืดไปและมีแสงสว่างที่เพียงพอ"
+  },
+  "des2checkmotion":{
+    "message":"กล้องของคุณต้องไม่ได้รับแสงแดดโดยตรง",
+    "description":"กล้องของคุณต้องไม่ได้รับแสงแดดโดยตรง"
+  },
+  "des3checkmotion":{
+    "message":"คุณใช้กล้องหน้า",
+    "description":"คุณใช้กล้องหน้า"
+  },
+  "titellinear":{
+    "message":"เส้นตรง",
+    "description":"เส้นตรง"
+  },
+  "titelcolora":{
+    "message":"สี A",
+    "description":"สี A"
+  },
+  "titelcolorb":{
+    "message":"สี B",
+    "description":"สี B"
+  },
+  "speechoption":{
+    "message":"การเรียนรู้จดจำเสียง",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"คำพูด",
+    "description":"คำพูด"
+  },
+  "desspeech":{
+    "message":"เมื่อคุณได้เปิดใช้งานตัวเลือกนี้ คุณสามารถพูดกับโคมไฟของเบราว์เซอร์ และคุณสามารถพูดคำสั่งต่อไปนี้:",
+    "description":"เมื่อคุณได้เปิดใช้งานตัวเลือกนี้ คุณสามารถพูดกับโคมไฟของเบราว์เซอร์ และคุณสามารถพูดคำสั่งต่อไปนี้:"
+  },
+  "desspeech1command":{
+    "message":"ปิดไฟ",
+    "description":"ปิดไฟ"
+  },
+  "desspeech2command":{
+    "message":"เปิดไฟ",
+    "description":"เปิดไฟ"
+  },
+  "desspeech3command":{
+    "message":"เล่นวิดีโอ",
+    "description":"เล่นวิดีโอ"
+  },
+  "desspeech4command":{
+    "message":"หยุดวิดีโอชั่วคราว",
+    "description":"หยุดวิดีโอชั่วคราว"
+  },
+  "desspeechdialect":{
+    "message":"เลือกภาษาของเสียง:",
+    "description":"เลือกภาษาของเสียง:"
+  },
+  "desatmosvivid":{
+    "message":"ต้องการการเปิดใช้บรรยากาศสดใสใน YouTube",
+    "description":"ต้องการการเปิดใช้บรรยากาศสดใสใน YouTube"
+  },
+  "help":{
+    "message":"ช่วยเหลือ",
+    "description":"ช่วยเหลือ"
+  },
+  "about":{
+    "message":"เกี่ยวกับ",
+    "description":"เกี่ยวกับ"
+  },
+  "desspeechonly":{
+    "message":"เรียกใช้การรู้จำเสียงเพียงเว็บไซต์ต่อไปนี้:",
+    "description":"เรียกใช้การรู้จำเสียงเพียงเว็บไซต์ต่อไปนี้:"
+  },
+  "descammotiononly":{
+    "message":"เรียกใช้การเคลื่อนไหวกล้องเพียงเว็บไซต์ต่อไปนี้:",
+    "description":"เรียกใช้การเคลื่อนไหวกล้องเพียงเว็บไซต์ต่อไปนี้:"
+  },
+  "titelcamera":{
+    "message":"กล้องถ่ายรูป",
+    "description":"กล้องถ่ายรูป"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautoplayblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"เพิ่มชุดรูปแบบสีเข้มกับเบราว์เซอร์ของคุณเพื่อตกแต่ง ชุดรูปแบบปรากฏขึ้นรอบๆ ขอบของเบราว์เซอร์",
+    "description":"เพิ่มชุดรูปแบบสีเข้มกับเบราว์เซอร์ของคุณเพื่อตกแต่ง ชุดรูปแบบปรากฏขึ้นรอบๆ ขอบของเบราว์เซอร์"
+  },
+  "desbrowsersupport":{
+    "message":"เบราว์เซอร์นี้ไม่สนับสนุนคุณลักษณะนี้ กรุณาตรวจสอบให้แน่ใจว่าคุณใช้รุ่นล่าสุดของเบราว์เซอร์นี้บนคอมพิวเตอร์ของคุณ",
+    "description":"เบราว์เซอร์นี้ไม่สนับสนุนคุณลักษณะนี้ กรุณาตรวจสอบให้แน่ใจว่าคุณใช้รุ่นล่าสุดของเบราว์เซอร์นี้บนคอมพิวเตอร์ของคุณ"
+  },
+  "titelsupportatmos":{
+    "message":"สนับสนุนเฉพาะ HTML5 <video> และเครื่องเล่น YouTube แบบ HTML5 และใช้ GPU จากการ์ดแสดงผล",
+    "description":"สนับสนุนเฉพาะ HTML5 <video> และเครื่องเล่น YouTube แบบ HTML5 และใช้ GPU จากการ์ดแสดงผล"
+  },
+  "titelseeonline":{
+    "message":"ดูออนไลน์สำหรับตัวอย่างเพิ่มเติม",
+    "description":"ดูออนไลน์สำหรับตัวอย่างเพิ่มเติม"
+  },
+  "titelvideosample":{
+    "message":"ตัวอย่างวิดีโอ",
+    "description":"ตัวอย่างวิดีโอ"
+  },
+  "titelwebsite":{
+    "message":"เว็บไซต์",
+    "description":"เว็บไซต์"
+  },
+  "titeldeveloper":{
+    "message":"นักพัฒนา",
+    "description":"นักพัฒนา"
+  },
+  "titelrightsreserved":{
+    "message":"สงวนลิขสิทธิ์บางประการ",
+    "description":"สงวนลิขสิทธิ์บางประการ"
+  },
+  "desbrowserextension":{
+    "message":"ส่วนขยายของเบราว์เซอร์",
+    "description":"ส่วนขยายของเบราว์เซอร์"
+  },
+  "desapitext":{
+    "message":"วิกิ API สำหรับนักพัฒนาเว็บไซต์",
+    "description":"วิกิ API สำหรับนักพัฒนาเว็บไซต์"
+  },
+  "desbrowsertheme":{
+    "message":"ธีมของเบราว์เซอร์",
+    "description":"ธีมของเบราว์เซอร์"
+  },
+  "desproject":{
+    "message":"โครงการ",
+    "description":"โครงการ"
+  },
+  "titelapideveloper":{
+    "message":"นักพัฒนา API",
+    "description":"นักพัฒนา API"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki เกี่ยวกับคุณลักษณะแสงบรรยากาศ",
+    "description":"Wiki เกี่ยวกับคุณลักษณะแสงบรรยากาศ"
+  }
+}

@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"Hilfe",
+    "description":"Hilfe"
+  },
+  "titelimage":{
+    "message":"Hintergrundbild",
+    "description":"Hintergrundbild"
+  },
+  "shortcutalllights":{
+    "message":"um für alle offenen Reiter das Licht ein-\/auszuschalten.",
+    "description":"um für alle offenen Reiter das Licht ein-\/auszuschalten."
+  },
+  "lastchecked":{
+    "message":"Neuste Version geprüft am",
+    "description":"Neueste Version überprüft"
+  },
+  "visualeffects":{
+    "message":"Visuelle Effekte",
+    "description":"Visuelle Effekte"
+  },
+  "titelshortcutlight":{
+    "message":"Tastenkombination",
+    "description":"Tastenkombination"
+  },
+  "titledonatebutton":{
+    "message":"Spenden",
+    "description":"Spenden"
+  },
+  "titellikebar":{
+    "message":"»Gefällt mir«-Leiste",
+    "description":"»Gefällt mir«-Leiste"
+  },
+  "desmousespotlightt":{
+    "message":"Ermöglicht Ihnen durch den abgedunkelten Bildschirmbereich zu klicken, wenn die Lichter aus sind.",
+    "description":"Können Sie durch auf dem abgedunkelten Bildschirm zu klicken, wenn die Lichter aus sind."
+  },
+  "desambilight4color":{
+    "message":"Vier ausgewählte Farben rund um das Video:",
+    "description":"4 ausgewählte Farben um das Video:"
+  },
+  "lockentername":{
+    "message":"Bitte geben Sie Ihr Passwort",
+    "description":"Bitte geben Sie Ihr Passwort"
+  },
+  "desnoflash":{
+    "message":"Diese Funktion nicht benutzen.",
+    "description":"Diese Funktion nicht benutzen."
+  },
+  "desdynamicblocks":{
+    "message":"Blöcke",
+    "description":"Blöcke"
+  },
+  "titeleye":{
+    "message":"Augenschutz",
+    "description":"Augenschutz"
+  },
+  "titelcinemaontop":{
+    "message":"Kinomodus: nur der obere Teil des Fensters wird verdunkelt.",
+    "description":"Movie Theater-Modus: es den 'lights off'-Layer nur auf der Oberseite des Fensters anzuzeigen."
+  },
+  "desmousespotlightc":{
+    "message":"Wenn das Licht ausgeschaltet ist, können Sie einen Bereich auswählen, um ein Element auswählen.",
+    "description":"Wenn das Licht ausgeschaltet ist, können Sie einen Bereich zu konzentrieren, ein Element auswählen."
+  },
+  "titelrememberpage":{
+    "message":"Erinnerungsseite",
+    "description":"Erinnerungsseite"
+  },
+  "desmousespotlighta":{
+    "message":"Bei ausgeschaltetem Licht ein Spotlight um den Mauszeiger anzeigen.",
+    "description":"Wenn das Licht aus ist, zeigen Sie ein Schlaglicht auf den Mauscursor."
+  },
+  "desmousespotlighto":{
+    "message":"Standard-Mausverhalten (deaktiviert die Maus-Einstellungen unten)",
+    "description":"Normaler Gebrauch (deaktiviert die Maus-Einstellungen unten)"
+  },
+  "desplaylist":{
+    "message":"Die YouTube-Wiedergabeliste auf der YouTube-Internetseite anzeigen.",
+    "description":"Die YouTube-Wiedergabeliste auf der YouTube-Internetseite anzeigen."
+  },
+  "desambilightfixcolor":{
+    "message":"Eine Volltonfarbe:",
+    "description":"Einfarbig:"
+  },
+  "desuntil":{
+    "message":"bis",
+    "description":"bis"
+  },
+  "desconfirmpassword":{
+    "message":"Passwort bestätigen",
+    "description":"Kennwort bestätigen"
+  },
+  "desautoplayonly":{
+    "message":"Nur die folgende(n) Video-Seite(n) abdunkeln:",
+    "description":"Dim nur die folgenden video-Sites:"
+  },
+  "helpeyeprotection":{
+    "message":"Das Aktivieren des \"Augenschutzes\" deaktiviert die \"Automatische Wiedergabe\"-Funktion.",
+    "description":"Aktivieren \"Augenschutz\" wird das Feature \"Automatische Wiedergabe\" automatisch deaktiviert."
+  },
+  "skipremember":{
+    "message":"Das hier überspringen und sofort die Optionsseite öffnen.",
+    "description":"Das hier überspringen und sofort die Optionsseite öffnen."
+  },
+  "optiontimesaved":{
+    "message":"Zeit erfolgreich gespeichert!",
+    "description":"Zeit wird erfolgreich gespeichert!"
+  },
+  "titelvideoheadline":{
+    "message":"Filmtitel",
+    "description":"Videotitel"
+  },
+  "translateme":{
+    "message":"Beim Übersetzen helfen",
+    "description":"Beim Übersetzen helfen"
+  },
+  "despassword":{
+    "message":"Die Eingabe eines Passwortes verlangen, bevor das Licht wieder eingeschaltet wird.",
+    "description":"Benötigen Sie ein Passwort eingegeben werden, bevor das Licht wieder einschalten."
+  },
+  "helpautoplay":{
+    "message":"Der »Augenschutz« ist aktiviert. Um die folgende Option zu benutzen, »Augenschutz«-Funktion bitte deaktivieren.",
+    "description":"Der »Augenschutz« ist aktiviert. Um die folgende Option zu benutzen, »Augenschutz«-Funktion bitte deaktivieren."
+  },
+  "name":{
+    "message":"Turn Off the Lights",
+    "description":"Schalten Sie das Licht"
+  },
+  "changelog":{
+    "message":"Änderungsprotokoll",
+    "description":"Changelog link"
+  },
+  "optionpagetitle":{
+    "message":"Turn Off the Lights - Optionen",
+    "description":"Option-Seitentitel"
+  },
+  "optionpasswordsaved":{
+    "message":"Passwort erfolgreich gespeichert!",
+    "description":"Passwort wird erfolgreich gespeichert!"
+  },
+  "desdynamicspace":{
+    "message":"Universum",
+    "description":"Space Universe"
+  },
+  "deseastereggs":{
+    "message":"Ein kleiner Spass.",
+    "description":"Ein Bonus in dieser Erweiterung."
+  },
+  "settings":{
+    "message":"Einstellungen",
+    "description":"Einstellungen"
+  },
+  "desspotlightradius":{
+    "message":"ist der Durchmesser der Suchlampe.",
+    "description":"ist der Durchmesser der Lampe suchen."
+  },
+  "titelsync":{
+    "message":"Synchronisation",
+    "description":"Sync"
+  },
+  "right":{
+    "message":"rechts",
+    "description":"rechts"
+  },
+  "titeldynamic":{
+    "message":"Dynamischer Hintergrund",
+    "description":"Dynamischer Hintergrund"
+  },
+  "deslikebutton":{
+    "message":"»Gefällt mir« & »Gefällt mir nicht«-Knöpfe von YouTube für dieses Video anzeigen.",
+    "description":"»Gefällt mir« & »Gefällt mir nicht«-Knöpfe von YouTube für dieses Video anzeigen."
+  },
+  "titelmouse":{
+    "message":"Maus",
+    "description":"Maus"
+  },
+  "titellessmore":{
+    "message":"Weniger",
+    "description":"Weniger anzeigen"
+  },
+  "desshortcutlight":{
+    "message":"Folgende Tastenkombinationen aktivieren.",
+    "description":"Aktivieren Sie die folgenden Tastenkombinationen."
+  },
+  "titelinfobar":{
+    "message":"Videobeschreibung",
+    "description":"Infoleiste"
+  },
+  "descontextmenus":{
+    "message":"Zeigt einen Eintrag im Kontextmenü, um die jeweilige Seite zu verdunkeln.",
+    "description":"Zeigen Sie im Kontextmenü ein Elements zu konzentrieren."
+  },
+  "titelcontextmenus":{
+    "message":"Kontextmenü",
+    "description":"Kontextmenü"
+  },
+  "titelplaylist":{
+    "message":"Wiedergabeliste",
+    "description":"Wiedergabeliste"
+  },
+  "desatmosphereonly":{
+    "message":"Die Stimmungsbeleuchtung nur auf folgenden Seiten benutzen:",
+    "description":"Die Stimmungsbeleuchtung nur auf folgenden Seiten benutzen:"
+  },
+  "recflash":{
+    "message":"Empfohlen",
+    "description":"Empfohlen"
+  },
+  "desenterpassword":{
+    "message":"Geben Sie Ihr Kennwort in das Feld unten ein:",
+    "description":"Geben Sie Ihr Kennwort in das Feld unten ein:"
+  },
+  "titelblurradius":{
+    "message":"Der Eintrübenradius",
+    "description":"Der Eintrübenradius"
+  },
+  "version":{
+    "message":"Version",
+    "description":"Version Nummer text"
+  },
+  "shortcutdark":{
+    "message":"zum Abdunkeln von des Bildschirms (Erhöhung der Deckkraft).",
+    "description":"zum Abdunkeln von des Bildschirms (Erhöhung der Deckkraft)."
+  },
+  "dessharebutton":{
+    "message":"Den YouTube-Teilenknopf für dieses Video anzeigen.",
+    "description":"Den YouTube-Teilenknopf für dieses Video anzeigen."
+  },
+  "shortcutbright":{
+    "message":"um den Bildschirm (Verringerung der Deckkraft) zu erhellen.",
+    "description":"um den Bildschirm (Verringerung der Deckkraft) zu erhellen."
+  },
+  "titelalllightsoff":{
+    "message":"Alle geöffneten Reiter",
+    "description":"Alle geöffneten Reiter"
+  },
+  "desreadera":{
+    "message":"Immer, wenn die Lichter ausgehen, die Abdunkelleiste anzeigen.",
+    "description":"Immer zeigen Sie die Verdunkelung-Ebene-Leiste an, wenn die Lichter ausgehen."
+  },
+  "rememberrate":{
+    "message":"Bewertung",
+    "description":"Bewertung"
+  },
+  "desautoplay":{
+    "message":"Automatisch abdunkeln, beim Drücken des Wiedergabeknopfes und umgekehrt.",
+    "description":"Automatisch abdunkeln, beim Drücken des Wiedergabeknopfes und umgekehrt."
+  },
+  "titelscreen":{
+    "message":"Bildschirm",
+    "description":"Bildschirm"
+  },
+  "desflash":{
+    "message":"Zeigt alle Flash-Objekte an.",
+    "description":"Alle Flash-Objekte anzeigen."
+  },
+  "titelhead":{
+    "message":"Kanal",
+    "description":"Kanal"
+  },
+  "pageatitle":{
+    "message":"Schalten Sie das Licht",
+    "description":"Schalten Sie das Licht"
+  },
+  "desaddvideobutton":{
+    "message":"Den Hinzufügenknopf von diesem YouTube-Video anzeigen.",
+    "description":"Den Hinzufügenknopf von diesem YouTube-Video anzeigen."
+  },
+  "shortcuteyeprotection":{
+    "message":"zur De-\/Aktivierung des Augenschutzes.",
+    "description":"Aktivieren\/Deaktivieren der Schutzfunktion des Auges."
+  },
+  "titelfadein":{
+    "message":"Einblenden",
+    "description":"Einblenden"
+  },
+  "desreadern":{
+    "message":"Die Abdunkelleiste nie anzeigen.",
+    "description":"Nie zeigen Sie die Verdunkelung-Ebene-Leiste."
+  },
+  "titelmaxqualityyoutube":{
+    "message":"Auflösung automatisch einstellen auf:",
+    "description":"Auflösung automatisch einstellen auf:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"Positive Werte erhöhen die Größe des Schattens, negative Werte verringern die Größe.",
+    "description":"Positive Werte erhöhen Sie die Größe des Schattens, negative Werte verkleinern."
+  },
+  "titelon":{
+    "message":"An",
+    "description":"Auf"
+  },
+  "videotitle":{
+    "message":"Fokusiere dieses Video",
+    "description":"Schwerpunkt dieses video"
+  },
+  "warningtextambilight":{
+    "message":"Wenn keine Videodaten wegen einer Sicherheitsregel der Seite empfangen werden können, wird stattdessen die ausgewählte Farbe angezeigt.",
+    "description":"Wenn es keine Videodaten wegen einer Website Sicherheitsregel empfangen kann, wird es stattdessen solide Farbe zeigen."
+  },
+  "desdynamiccloud":{
+    "message":"Animierte Clouds",
+    "description":"Animierte Clouds"
+  },
+  "desconfirmtimesaver":{
+    "message":"Bestätigen Sie die Zeit des Bildschirmschoners:",
+    "description":"Screen-Saver-Zeit zu bestätigen"
+  },
+  "deslikebar":{
+    "message":"»Gefällt mir« & »Gefällt mir nicht«-Leiste unter YouTube-Videos anzeigen.",
+    "description":"»Gefällt mir« & »Gefällt mir nicht«-Leiste unter YouTube-Videos anzeigen."
+  },
+  "titelautoplay":{
+    "message":"Automatische Wiedergabe",
+    "description":"Automatische Wiedergabe"
+  },
+  "top":{
+    "message":"oben",
+    "description":"Nach oben"
+  },
+  "titelspreadradius":{
+    "message":"Ausdehnungsradius",
+    "description":"Der Spread-radius"
+  },
+  "installadblocker":{
+    "message":"Mit einer Adblocker-Erweiterung verwenden.",
+    "description":"Mit der Erweiterung Adblocker verwenden."
+  },
+  "titelsharebutton":{
+    "message":"Teilenknöpfe",
+    "description":"Teilenknöpfe"
+  },
+  "titelcolor":{
+    "message":"Farbe",
+    "description":"Farbe"
+  },
+  "titeldownloadbutton":{
+    "message":"Diese Erweitern herunterladen!",
+    "description":"Diese Erweitern herunterladen!"
+  },
+  "pagetitle":{
+    "message":"Diese Seite verdunkeln",
+    "description":"Diese Seite zu verdunkeln"
+  },
+  "titelambilight":{
+    "message":"Stimmungsbeleuchtung",
+    "description":"Stimmungsbeleuchtung"
+  },
+  "titelshowmore":{
+    "message":"Mehr anzeigen",
+    "description":"Mehr zeigen"
+  },
+  "desviewcount":{
+    "message":"Die Häufigkeit der Aufrufe für dieses Video anzeigen",
+    "description":"Die Häufigkeit der Aufrufe für dieses Video anzeigen"
+  },
+  "titelautowidthyoutube":{
+    "message":"YouTube-Player automatisch auf die große Variante einstellen.",
+    "description":"Automatisch den YouTube-Player auf die größere Größe festgelegt."
+  },
+  "desconfirmtime":{
+    "message":"Zeit bestätigen",
+    "description":"Zeit zu bestätigen"
+  },
+  "titelupgrade":{
+    "message":"Erweitern",
+    "description":"Erweitern"
+  },
+  "lockwrongpassword":{
+    "message":"Falsches Passwort, bitte versuch es erneut",
+    "description":"Falsches Passwort, bitte versuchen Sie es erneut."
+  },
+  "titelsyncbrowser":{
+    "message":"Erweiterungs-Einstellungen mit anderen Browser synchronisieren.",
+    "description":"Synchronisieren Sie die Erweiterungseinstellungen mit Ihrem anderen Browser."
+  },
+  "deletebutton":{
+    "message":"Löschen",
+    "description":"Löschen"
+  },
+  "eyedivon":{
+    "message":"An",
+    "description":"An"
+  },
+  "eyedivoff":{
+    "message":"Aus",
+    "description":"Aus"
+  },
+  "deshead":{
+    "message":"YouTube-Kanalleiste oder den Namen anzeigen.",
+    "description":"Zeigen Sie die YouTube Channel-Bar oder den Namen."
+  },
+  "shortcutsavingopacity":{
+    "message":"um die Deckkrafteinstellung zu speichern",
+    "description":"um diese Opacity-Wert zu speichern"
+  },
+  "desinfobar":{
+    "message":"Videobeschreibung anzeigen.",
+    "description":"Zeigen Sie die Beschreibungsinformationen zum Video."
+  },
+  "titellamp":{
+    "message":"Gluehbirne",
+    "description":"Birne"
+  },
+  "desambilightvarcolor":{
+    "message":"Die Farbe aus dem Video übernehmen.",
+    "description":"Nehmen Sie die Farbe aus dem Video."
+  },
+  "showremember":{
+    "message":"Diese Erinnerungsseite nicht wieder anzeigen, wenn ich die Optionsseite öffne.",
+    "description":"Diese Erinnerungsseite nicht wieder anzeigen, wenn ich die Optionsseite öffne."
+  },
+  "donatepromotext":{
+    "message":"Wenn Sie einen einen Betrag in beliebiger Höhe spenden könnten, würde ich es ungemein zu schätzen wissen!",
+    "description":"Wenn Sie eine Spende von jede Menge machen können, würde ich es begrüßen, immens!"
+  },
+  "titelblur":{
+    "message":"Alles andere eintrüben",
+    "description":"Alles andere eintrüben"
+  },
+  "desdynamicraindrops":{
+    "message":"Regentropfen",
+    "description":"Regentropfen"
+  },
+  "desalllightsoff":{
+    "message":"Durch Klicken auf den Lampenknopf wird das Licht auf allen geöffneten Reiter ein-\/ausgeschaltet, wenn diese Option aktiviert ist.",
+    "description":"Durch Klicken auf den Lampenknopf wird das Licht auf allen geöffneten Reiter ein-\/ausgeschaltet, wenn diese Option aktiviert ist."
+  },
+  "optionecosaversaved":{
+    "message":"Die Sekunden wurden erfolgreich gespeichert!",
+    "description":"Sekunden wird erfolgreich gespeichert!"
+  },
+  "titelreader":{
+    "message":"Abdunkelleiste",
+    "description":"Düsternis Ebene Bar"
+  },
+  "deseyen":{
+    "message":"Normale Anwendung (Lichter gehen aus, wenn sie das Lampensymbol anklicken).",
+    "description":"Normalem Gebrauch (Lichter gehen aus wenn Sie klicken auf das Symbol \"Lampe\")."
+  },
+  "enjoyshare":{
+    "message":"Haben Sie viel Spaß mit dieser Erweiterung und teilen Sie diese mit Anderen, die diese Erweiterung auch schätzen könnten.",
+    "description":"Genießen Sie diese Erweiterung und teilen Sie es mit anderen, die Sie denken, es zu schätzen."
+  },
+  "shortcuttotl":{
+    "message":"um die Lichter ein-und auszuschalten.",
+    "description":"Wechseln Sie die Lichter ein-und ausschalten."
+  },
+  "deseyea":{
+    "message":"Automatisch den Hintergrund beim Öffnen einer Seite abdunkeln.",
+    "description":"Hintergrund dim automatisch beim Öffnen einer Seite."
+  },
+  "basicsettings":{
+    "message":"Basis",
+    "description":"Grundlagen"
+  },
+  "hoveroptionapply":{
+    "message":"Übernehmen",
+    "description":"gelten"
+  },
+  "reportbug":{
+    "message":"Problem melden",
+    "description":"Ein Problem melden"
+  },
+  "destime":{
+    "message":"Zwischen diesen Zeiten 'Lichter aus':",
+    "description":"Lichter aus-zwischen den folgenden Zeiten:"
+  },
+  "guide":{
+    "message":"TOtL-Willkommensleitfaden",
+    "description":"Bewohnbare Welcome Guide"
+  },
+  "deseyealist":{
+    "message":"Den Hintergrund automatisch beim Öffnen der folgenden Seite(n) abdunkeln:",
+    "description":"Hintergrund dim automatisch beim Öffnen der folgenden Seiten:"
+  },
+  "titellikebutton":{
+    "message":"»Gefällt mir« & »Gefällt mir nicht«-Knöpfe",
+    "description":"»Gefällt mir« & »Gefällt mir nicht«-Knöpfe"
+  },
+  "titelpageaction":{
+    "message":"Das Lampensymbol in der Adressleiste ausblenden",
+    "description":"Pageaction-Symbol ausblenden"
+  },
+  "friendlyremember":{
+    "message":"Freundliche Erinnerung …",
+    "description":"Freundliche Erinnerung …"
+  },
+  "desfadein":{
+    "message":"Den Einblendeffekt anzeigen.",
+    "description":"Den Einblendeffekt anzeigen."
+  },
+  "warning":{
+    "message":"Warnung!",
+    "description":"Warnung!"
+  },
+  "deseyetimesaver":{
+    "message":"Wenn eine Seite, für die unten angegebene Zeit inaktiv ist (keine Maus- oder Tastatureingabe) , wird diese automatisch abgedunkelt.",
+    "description":"Wenn eine Seite inaktiv ist (keine Maus oder Tastatur Eingabe) zum unten angegebenen mal die Seite wird automatisch dunkel."
+  },
+  "titelsuggestions":{
+    "message":"Vorschläge",
+    "description":"Vorschläge"
+  },
+  "advancedoptions":{
+    "message":"Erweiterte Einstellungen",
+    "description":"Erweiterte Optionen"
+  },
+  "dessuggestions":{
+    "message":"YouTube-Vorschläge anzeigen.",
+    "description":"Zeigen Sie die Vorschläge der YouTube-Website."
+  },
+  "titelflash":{
+    "message":"Flash-Erkennung",
+    "description":"Flash Detection"
+  },
+  "desambilight":{
+    "message":"Den Stimmungsbeleuchtungseffekt des gerade laufenden Videos anzeigen.",
+    "description":"Den Stimmungsbeleuchtungseffekt des gerade laufenden Videos anzeigen."
+  },
+  "productshare":{
+    "message":"Helfer",
+    "description":"Freigeben"
+  },
+  "addbutton":{
+    "message":"Hinzufügen",
+    "description":"Hinzufügen"
+  },
+  "reportlist":{
+    "message":"Letzte bekannte Probleme",
+    "description":"Die vollständige Problemliste ansehen"
+  },
+  "desdynamicfishtank":{
+    "message":"Aquarium",
+    "description":"Fish Tank"
+  },
+  "longdonatetext":{
+    "message":"Ich wäre wirklich dankbar, wenn Sie einen gewissen Betrag spenden würden, damit ich diese Browser-Erweiterung für andere, neue Benutzer weiter aufrecht erhalten kann. Es ist egal ob es 1,00 € oder 100,00 € sind - Ihre Unterstützung ist sehr willkommen!",
+    "description":"Ich wäre wirklich dankbar, wenn Sie mich um diese Browsererweiterung für die anderen neuen Benutzer lebendig zu halten Spenden können. Ob es $$ 1 oder $$ 100, ist Ihre Unterstützung sehr willkommen!"
+  },
+  "deshardflash":{
+    "message":"Alle Flash-Objekte anzeigen, den Adressfilter überspringen. Das behebt Probleme mit nicht angezeigten Filmwiedergaben, führt jedoch auch zur Anzeige von Werbung.",
+    "description":"Zeigen Sie alle Flash-Objekte, überspringen den URL-Filter. Dies behebt Probleme mit einige video-Player, versteckt, sondern wird auch anzeigen."
+  },
+  "desfadeout":{
+    "message":"Den Ausblendeffekt anzeigen.",
+    "description":"Den Ausblendeffekt anzeigen."
+  },
+  "optionwrongimg":{
+    "message":"Ungültige Bilddatei!",
+    "description":"Ungültige Bilddatei!"
+  },
+  "desvideoheadline":{
+    "message":"Den Titel des Videos in umgekehrter Farbe anzeigen.",
+    "description":"Zeigen Sie und invertieren Sie die Farbe von den Videotitel."
+  },
+  "desrememberpage":{
+    "message":"Wenn diese Option aktiviert ist, wird Ihnen die Erinnerungsseite nicht angezeigt.",
+    "description":"Wenn diese Option aktiviert ist, wird Ihnen die Erinnerungsseite nicht angezeigt."
+  },
+  "description":{
+    "message":"Die ganze Seite wird abgedunkelt, sodass sie Videos wie im Kino ansehen können.",
+    "description":"Die gesamte Seite wird zu dunkel, verblassen, so Sie das Video sehen können, als wären Sie im Kino."
+  },
+  "titelviewcount":{
+    "message":"Anzahl der Ansichten",
+    "description":"Anzahl der Ansichten"
+  },
+  "titelopacity":{
+    "message":"Deckkraft",
+    "description":"Deckkraft"
+  },
+  "titelqualityyoutube":{
+    "message":"Automatisch die Qualität von YouTube-Videos einstellen.",
+    "description":"Automatisch festgelegt, die Qualität von YouTube-Videos."
+  },
+  "shortcutopacity":{
+    "message":"wieder die Dunkelheit (Deckkraft) einstellen.",
+    "description":"wieder die Set Dunkelheit (Deckkraft) einstellen."
+  },
+  "desambilightrangeblurradius":{
+    "message":"Je kleiner der Wert, desto schärfer, je größer der Wert, desto verschwommener wird der Schatten sein.",
+    "description":"Wenn ein niedrigerer Wert der Schatten scharf gesetzt wird, je höher die Zahl, die mehr verwischt werden."
+  },
+  "titeladdvideobutton":{
+    "message":"»Hinzufügen«-Knopf",
+    "description":"»Hinzufügen«-Knopf"
+  },
+  "titelpassword":{
+    "message":"Passwortschutz",
+    "description":"Passwortschutz"
+  },
+  "titeldownloadupgrade":{
+    "message":"Diese Erweiterung bietet Unterstützung für die Fokussierung ausgewählter Bilder und zeigt eine Galerie von Bildern auf der Internetseite.",
+    "description":"Diese Erweiterung bietet Unterstützung für die Fokussierung ausgewählter Bilder und zeigt eine Galerie von Bildern auf der Internetseite."
+  },
+  "titelfadeout":{
+    "message":"Ausblenden",
+    "description":"Ausblenden"
+  },
+  "eastereggsquestion":{
+    "message":"Mögen Sie echtes Kino?",
+    "description":"Mögen Sie echtes Kino?"
+  },
+  "bottom":{
+    "message":"unten",
+    "description":"unten"
+  },
+  "dessaver":{
+    "message":"Bildschirmschoner:",
+    "description":"Bildschirmschoner:"
+  },
+  "hoveroptiondyn5":{
+    "message":"im Flug",
+    "description":"fliegende"
+  },
+  "pagestillloading":{
+    "message":"Die Seite lädt noch.",
+    "description":"Geladen die Seite wird noch?"
+  },
+  "titeloff":{
+    "message":"Aus",
+    "description":"Aus"
+  },
+  "titeleastereggs":{
+    "message":"Easter Eggs",
+    "description":"Ostereier"
+  },
+  "textfoot":{
+    "message":"Diese Anwendung ist unter der CC-GNU GPL lizenziert. Um eine Kopie dieser Lizenz einzusehen, bitte folgende Seite besuchen",
+    "description":"Diese Anwendung ist unter der CC-GNU GPL lizenziert. Um eine Kopie dieser Lizenz einzusehen, bitte folgende Seite besuchen"
+  },
+  "left":{
+    "message":"links",
+    "description":"Links"
+  },
+  "titelnighttheme":{
+    "message":"Nachtmodus",
+    "description":"Nachtmodus"
+  },
+  "desnighttheme":{
+    "message":"Den Nachtschalter unten auf der Internetseite anzeigen, um die Seite abzudunkeln oder aufzuhellen.",
+    "description":"Den Nachtschalter unten auf der Internetseite anzeigen, um die Seite abzudunkeln oder aufzuhellen."
+  },
+  "nightoptions":{
+    "message":"Nachtmodus",
+    "description":"Nachtmodus"
+  },
+  "desnightonly":{
+    "message":"Den Nachtmodus nur auf der\/den folgende(n) Seite(n) anzeigen:",
+    "description":"Den Nachtmodus nur auf der\/den folgende(n) Seite(n) anzeigen:"
+  },
+  "desnightenabletheme":{
+    "message":"Wenn Sie eine neue Seite öffnen, schaltet es automatisch in den Nachtmodus.",
+    "description":"Wenn Sie eine neue Seite öffnen, schaltet es automatisch in den Nachtmodus."
+  },
+  "titellampregular":{
+    "message":"Lampensymbol immer in der Adressleiste anzeigen",
+    "description":"Lampensymbol immer in der Adressleiste anzeigen"
+  },
+  "titellampvideo":{
+    "message":"Lampensymbol nur anzeigen, wenn die Filmwiedergabe erkannt wird",
+    "description":"Lampensymbol nur anzeigen, wenn die Filmwiedergabe erkannt wird"
+  },
+  "upgradecontexttitle":{
+    "message":"Wir haben einige neue Funktionen für Sie hinzugefügt",
+    "description":"Wir haben einige neue Funktionen für Sie hinzugefügt"
+  },
+  "upgradecontextmessage":{
+    "message":"Das macht diese Erweiterung noch erstaunlicher",
+    "description":"Das macht diese Erweiterung noch erstaunlicher"
+  },
+  "upgradecontextitemta":{
+    "message":"Kamerabewegung",
+    "description":"Kamerabewegung"
+  },
+  "upgradecontextitemma":{
+    "message":"Licht mit der Hand ausschalten",
+    "description":"Licht mit der Hand ausschalten"
+  },
+  "upgradecontextitemtb":{
+    "message":"Spracherkennung",
+    "description":"Spracherkennung"
+  },
+  "upgradecontextitemmb":{
+    "message":"Kontrollieren Sie die Webseite genauer",
+    "description":"Kontrollieren Sie die Webseite genauer"
+  },
+  "upgradefbshare":{
+    "message":"Auf Facebook teilen",
+    "description":"Auf Facebook teilen"
+  },
+  "upgradetwshare":{
+    "message":"Tweet",
+    "description":"Tweet"
+  },
+  "ratetitle":{
+    "message":"Bitte meine Erweiterung bewerten und rezensieren",
+    "description":"Bitte meine Erweiterung bewerten und rezensieren"
+  },
+  "ratedes":{
+    "message":"Und lassen Sie jeden von dieser großartigen Erweiterung wissen!",
+    "description":"Und lassen Sie jeden von dieser großartigen Erweiterung wissen!"
+  },
+  "rateitema":{
+    "message":"Mit 5 Sternen bewerten",
+    "description":"Mit 5 Sternen bewerten"
+  },
+  "titelreset":{
+    "message":"Einstellungen zurücksetzen",
+    "description":"Einstellungen zurücksetzen"
+  },
+  "resetbrowserextension":{
+    "message":"»Turn Off the Lights«-Einstellungen zurücksetzen",
+    "description":"»Turn Off the Lights«-Einstellungen zurücksetzen"
+  },
+  "desautoplaydelay":{
+    "message":"Nach dem Ende des Films, den Hintergrund wieder aufhellen, nach",
+    "description":"Nach dem Ende des Films, den Hintergrund wieder aufhellen, nach"
+  },
+  "desautoplaydelayend":{
+    "message":"Sekunden",
+    "description":"Sekunden"
+  },
+  "motionoptions":{
+    "message":"Kamerabewegung",
+    "description":"Kamerabewegung"
+  },
+  "desmotion":{
+    "message":"Kamerabewegung aktivieren, so dass die Internetseite, mit einer Handbewegung nach unten, verdunkelt werden kann.",
+    "description":"Kamerabewegung"
+  },
+  "trymotion":{
+    "message":"Probieren Sie es selbst aus!",
+    "description":"Probieren Sie es selbst aus!"
+  },
+  "destrymotion":{
+    "message":"Das ist einfach großartig und das Beste ist, dass es überall funktioniert. Auch auf Youtube, Nachrichtenseiten, usw.",
+    "description":"Das ist einfach großartig und das Beste ist, dass es überall funktioniert. Auch auf Youtube, Nachrichtenseiten, usw."
+  },
+  "howworkmotion":{
+    "message":"Wie funktioniert es?",
+    "description":"Wie funktioniert es?"
+  },
+  "step1description":{
+    "message":"Kamerabewegungsfunktion aktivieren",
+    "description":"Kamerabewegungsfunktion aktivieren"
+  },
+  "step2description":{
+    "message":"Ihre Hand (oder Faust) von oben nach unten bewegen",
+    "description":"Ihre Hand (oder Faust) von oben nach unten bewegen"
+  },
+  "step3description":{
+    "message":"Dann senkt sich automatisch der schwarze Vorhang.",
+    "description":"Dann senkt sich automatisch der schwarze Vorhang."
+  },
+  "desmotionChecklist":{
+    "message":"Kontrollliste:",
+    "description":"Kontrollliste:"
+  },
+  "des1checkmotion":{
+    "message":"Stellen Sie sicher, dass Ihr Raum hell genug ist.",
+    "description":"Stellen Sie sicher, dass Ihr Raum hell genug ist."
+  },
+  "des2checkmotion":{
+    "message":"Die Kamera darf keine direkte Sonneneinstrahlung erhalten.",
+    "description":"Die Kamera darf keine direkte Sonneneinstrahlung erhalten."
+  },
+  "des3checkmotion":{
+    "message":"Sie verwenden eine dem Gesicht zugewandte Kamera.",
+    "description":"Sie verwenden eine dem Gesicht zugewandte Kamera."
+  },
+  "titellinear":{
+    "message":"Linear",
+    "description":"Linear"
+  },
+  "titelcolora":{
+    "message":"Farbe A",
+    "description":"Farbe A"
+  },
+  "titelcolorb":{
+    "message":"Farbe B",
+    "description":"Farbe B"
+  },
+  "speechoption":{
+    "message":"Spracherkennung",
+    "description":"Spracherkennung "
+  },
+  "titelspeech":{
+    "message":"Sprache",
+    "description":"Sprache"
+  },
+  "desspeech":{
+    "message":"Wenn Sie diese Option aktiviert haben, können Sie zum Lampensymbols sprechen. Sie können die folgenden Befehle sprechen:",
+    "description":"Wenn Sie diese Option aktiviert haben, können Sie zum Lampensymbols sprechen. Sie können die folgenden Befehle sprechen:"
+  },
+  "desspeech1command":{
+    "message":"Licht ausschalten",
+    "description":"Licht ausschalten"
+  },
+  "desspeech2command":{
+    "message":"Licht ausschalten",
+    "description":"Licht ausschalten"
+  },
+  "desspeech3command":{
+    "message":"Video abspielen",
+    "description":"Video abspielen"
+  },
+  "desspeech4command":{
+    "message":"Video anhalten",
+    "description":"Video anhalten"
+  },
+  "desspeechdialect":{
+    "message":"Ihre Sprache auswählen:",
+    "description":"Ihre Sprache auswählen:"
+  },
+  "desatmosvivid":{
+    "message":"Lebendige Stimmungseffekte auf Youtube erzwingen",
+    "description":"Lebendige Stimmungseffekte auf Youtube erzwingen"
+  },
+  "help":{
+    "message":"Hilfe",
+    "description":"Hilfe"
+  },
+  "about":{
+    "message":"Über",
+    "description":"Über"
+  },
+  "desspeechonly":{
+    "message":"Nur für die folgenden Seiten die Spracherkennung aktivieren:",
+    "description":"Nur für die folgenden Seiten die Spracherkennung aktivieren:"
+  },
+  "descammotiononly":{
+    "message":"Nur für die folgenden Seiten die Kamerabewegung aktivieren:",
+    "description":"Nur für die folgenden Seiten die Kamerabewegung aktivieren:"
+  },
+  "titelcamera":{
+    "message":"Kamera",
+    "description":"Kamera"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Positivliste",
+    "description":"Positivliste"
+  },
+  "titelautoplayblacklist":{
+    "message":"Negativliste",
+    "description":"Negativliste"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Dem Browser ein dunkles Thema hinzufügen. Das Thema erscheint um den Rand des Browsers.",
+    "description":"Dem Browser ein dunkles Thema hinzufügen. Das Thema erscheint um den Rand des Browsers."
+  },
+  "desbrowsersupport":{
+    "message":"Ihr Browser unterstützt diese Funktion noch nicht. Stellen Sie bitte sicher, dass Sie die aktuellste Browser-Version auf Ihrem Rechner installiert haben. ",
+    "description":"Ihr Browser unterstützt diese Funktion noch nicht. Stellen Sie bitte sicher, dass Sie die aktuellste Browser-Version auf Ihrem Rechner installiert haben. "
+  },
+  "titelsupportatmos":{
+    "message":"Unterstützt nur HTML5-<video> und den YouTube-HTML5-Spieler. Und es benutzt die GPU Ihrer Grafikkarte.",
+    "description":"Unterstützt nur HTML5-<video> und den YouTube-HTML5-Spieler. Und es benutzt die GPU Ihrer Grafikkarte."
+  },
+  "titelseeonline":{
+    "message":"Weitere Beispiele finden Sie im Internet",
+    "description":"Weitere Beispiele finden Sie im Internet"
+  },
+  "titelvideosample":{
+    "message":"Beispielvideo",
+    "description":"Beispielvideo"
+  },
+  "titelwebsite":{
+    "message":"Internetseite",
+    "description":"Internetseite"
+  },
+  "titeldeveloper":{
+    "message":"Entwickler",
+    "description":"Entwickler"
+  },
+  "titelrightsreserved":{
+    "message":"Einige Rechte vorbehalten.",
+    "description":"Einige Rechte vorbehalten."
+  },
+  "desbrowserextension":{
+    "message":"Browser-Erweiterung",
+    "description":"Browser-Erweiterung"
+  },
+  "desapitext":{
+    "message":"Wiki-API für Internetseitenentwickler",
+    "description":"Wiki-API für Internetseitenentwickler"
+  },
+  "desbrowsertheme":{
+    "message":"Browser-Thema",
+    "description":"Browser-Thema"
+  },
+  "desproject":{
+    "message":"Projekt",
+    "description":"Projekt"
+  },
+  "titelapideveloper":{
+    "message":"API-Entwickler",
+    "description":"API-Entwickler"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki über die Funktion der Stimmungsbeleuchtung",
+    "description":"Wiki über die Funktion der Stimmungsbeleuchtung"
+  }
+}

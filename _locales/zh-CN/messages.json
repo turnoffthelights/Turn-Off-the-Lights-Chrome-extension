@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"帮助",
+    "description":"帮助"
+  },
+  "titelimage":{
+    "message":"背景图片",
+    "description":"背景图像"
+  },
+  "shortcutalllights":{
+    "message":"为所有打开的选项卡切换灯开关。",
+    "description":"若要切换打开\/关闭灯对于所有打开的选项卡。"
+  },
+  "lastchecked":{
+    "message":"检测到最新版本",
+    "description":"签的最新版本"
+  },
+  "visualeffects":{
+    "message":"视觉效果",
+    "description":"视觉效果"
+  },
+  "titelshortcutlight":{
+    "message":"快捷键",
+    "description":"快捷方式键"
+  },
+  "titledonatebutton":{
+    "message":"捐款",
+    "description":"捐赠"
+  },
+  "titellikebar":{
+    "message":"点赞指数",
+    "description":"喜欢酒吧"
+  },
+  "desmousespotlightt":{
+    "message":"当屏幕关闭时允许您点击屏幕",
+    "description":"允许您通过屏幕变暗的灯都关的时候单击。"
+  },
+  "desambilight4color":{
+    "message":"选择 4 种环绕在视频周围的颜色。",
+    "description":"在视频周边 4 选择颜色："
+  },
+  "lockentername":{
+    "message":"请输入你的密码",
+    "description":"请输入您的密码"
+  },
+  "desnoflash":{
+    "message":"不要使用此功能。",
+    "description":"不使用此功能。"
+  },
+  "desdynamicblocks":{
+    "message":"区块",
+    "description":"块"
+  },
+  "titeleye":{
+    "message":"视力保护",
+    "description":"保护眼睛"
+  },
+  "titelcinemaontop":{
+    "message":"电影剧场模式：在窗口顶部只显示 灯关闭状态 图层。",
+    "description":"电影剧场模式： 它只有窗口上显示的 '灯关闭图层。"
+  },
+  "desmousespotlightc":{
+    "message":"如果灯光关闭，您可以选择一个区域来关注一个事物。",
+    "description":"如果光是关闭的您可以选择一个区域来重点项目。"
+  },
+  "titelrememberpage":{
+    "message":"记住网页",
+    "description":"记得页"
+  },
+  "desmousespotlighta":{
+    "message":"在关灯的情况下，在鼠标周围显示一个光圈。",
+    "description":"如果光是关闭的显示鼠标光标周围的聚光灯。"
+  },
+  "desmousespotlighto":{
+    "message":"默认鼠标行为（禁用下面的鼠标设置）",
+    "description":"正常使用 （将禁用下面的鼠标设置）"
+  },
+  "desplaylist":{
+    "message":"显示YouTube播放列表",
+    "description":"在 YouTube 网站上显示的 YouTube 播放列表。"
+  },
+  "desambilightfixcolor":{
+    "message":"纯颜色",
+    "description":"一种固体颜色："
+  },
+  "desuntil":{
+    "message":"直到",
+    "description":"直到"
+  },
+  "desconfirmpassword":{
+    "message":"确认密码",
+    "description":"确认密码"
+  },
+  "desautoplayonly":{
+    "message":"只有在以下视频站点变暗：",
+    "description":"暗只有以下视频站点："
+  },
+  "helpeyeprotection":{
+    "message":"启用 护眼功能 将自动禁用 自动播放功能。",
+    "description":"启用保护眼睛将自动禁用自动播放功能。"
+  },
+  "skipremember":{
+    "message":"跳过这项，立即打开选项页",
+    "description":"跳过这一点，和现在打开选项页"
+  },
+  "optiontimesaved":{
+    "message":"时间已保存。",
+    "description":"时间是已成功保存 ！"
+  },
+  "titelvideoheadline":{
+    "message":"影片标题",
+    "description":"视频标题"
+  },
+  "translateme":{
+    "message":"帮助我们翻译",
+    "description":"帮助翻译"
+  },
+  "despassword":{
+    "message":"开灯之前需要输入的密码。",
+    "description":"需要开灯之前输入的密码。"
+  },
+  "helpautoplay":{
+    "message":"“视力保护”已经启用。要使用下面的功能，请先禁用“视力保护”模式",
+    "description":"'眼睛防护处于启用状态。使用下面的功能，禁用 '眼睛防护选项。"
+  },
+  "name":{
+    "message":"关灯看视频",
+    "description":"关灯"
+  },
+  "changelog":{
+    "message":"更新日志",
+    "description":"更新日志链接"
+  },
+  "optionpagetitle":{
+    "message":"关灯看视频 - 选项",
+    "description":"选项页面标题"
+  },
+  "optionpasswordsaved":{
+    "message":"密码已保存。",
+    "description":"成功保存密码 ！"
+  },
+  "desdynamicspace":{
+    "message":"Space Universe",
+    "description":"空间的宇宙"
+  },
+  "deseastereggs":{
+    "message":"好处",
+    "description":"在此扩展中的奖金。"
+  },
+  "settings":{
+    "message":"设置",
+    "description":"设置"
+  },
+  "desspotlightradius":{
+    "message":"is the diameter of the search lamp.",
+    "description":"是的搜索灯直径。"
+  },
+  "titelsync":{
+    "message":"同步",
+    "description":"同步"
+  },
+  "right":{
+    "message":"右侧",
+    "description":"权利"
+  },
+  "titeldynamic":{
+    "message":"动态背景",
+    "description":"动态背景"
+  },
+  "deslikebutton":{
+    "message":"显示YouTube上视频的 顶\/踩 按钮",
+    "description":"显示类似 & 不喜欢此视频的 youtube 上的按钮。"
+  },
+  "titelmouse":{
+    "message":"鼠标",
+    "description":"鼠标"
+  },
+  "titellessmore":{
+    "message":"显示更少内容",
+    "description":"显示较少"
+  },
+  "desshortcutlight":{
+    "message":"启用键盘上的快捷键。",
+    "description":"启用下面的键盘快捷方式。"
+  },
+  "titelinfobar":{
+    "message":"信息栏",
+    "description":"信息栏"
+  },
+  "descontextmenus":{
+    "message":"显示上下文菜单重点的项目。",
+    "description":"显示要重点项目的上下文菜单。"
+  },
+  "titelcontextmenus":{
+    "message":"上下文菜单",
+    "description":"上下文菜单"
+  },
+  "titelplaylist":{
+    "message":"播放列表",
+    "description":"播放列表"
+  },
+  "desatmosphereonly":{
+    "message":"只在以下视频网站使用气氛照明功能：",
+    "description":"使用气氛照明功能只有以下视频网站："
+  },
+  "recflash":{
+    "message":"建议",
+    "description":"建议"
+  },
+  "desenterpassword":{
+    "message":"在下面的框中输入您的密码：",
+    "description":"在下面的框中输入您的密码："
+  },
+  "titelblurradius":{
+    "message":"模糊半径",
+    "description":"模糊半径"
+  },
+  "version":{
+    "message":"版本",
+    "description":"版本号码文本"
+  },
+  "shortcutdark":{
+    "message":"屏幕暗化（增加透明度）。",
+    "description":"要变暗屏幕 （增加透明度）。"
+  },
+  "dessharebutton":{
+    "message":"显示视频的分享按钮",
+    "description":"显示此视频的 YouTube 分享按钮。"
+  },
+  "shortcutbright":{
+    "message":"照亮屏幕 （减少不透明度）。",
+    "description":"照亮屏幕 （减少不透明度）。"
+  },
+  "titelalllightsoff":{
+    "message":"所有打开的选项卡",
+    "description":"所有打开的选项卡"
+  },
+  "desreadera":{
+    "message":"关灯后永远显示暗度调节",
+    "description":"当灯光熄灭时始终显示在昏暗的水平栏。"
+  },
+  "rememberrate":{
+    "message":"率",
+    "description":"率"
+  },
+  "desautoplay":{
+    "message":"单击播放按钮时自动调暗背景",
+    "description":"当您单击播放按钮，与比较，自动调暗背景。"
+  },
+  "titelscreen":{
+    "message":"屏幕",
+    "description":"屏幕"
+  },
+  "desflash":{
+    "message":"显示所有Flash对象",
+    "description":"显示所有的 Flash 对象。"
+  },
+  "titelhead":{
+    "message":"频道",
+    "description":"通道"
+  },
+  "pageatitle":{
+    "message":"关灯",
+    "description":"关灯"
+  },
+  "desaddvideobutton":{
+    "message":"在这个 YouTube 视频上显示添加按钮。",
+    "description":"显示添加按钮从这个 YouTube 视频。"
+  },
+  "shortcuteyeprotection":{
+    "message":"要启用或禁用视力保护功能。",
+    "description":"要启用\/禁用眼睛保护功能。"
+  },
+  "titelfadein":{
+    "message":"淡入",
+    "description":"淡入"
+  },
+  "desreadern":{
+    "message":"不显示暗度调节",
+    "description":"从不显示在昏暗的水平栏。"
+  },
+  "titelmaxqualityyoutube":{
+    "message":"自动设置为此分辨率：",
+    "description":"自动设置为这项决议："
+  },
+  "desambilightrangespreadradius":{
+    "message":"值越大，阴影越大，反之亦然。",
+    "description":"正值增加阴影的大小，负数的值减小大小。"
+  },
+  "titelon":{
+    "message":"开启",
+    "description":"关于"
+  },
+  "videotitle":{
+    "message":"焦点影片",
+    "description":"关注这段视频"
+  },
+  "warningtextambilight":{
+    "message":"如果因为站点的安全条例而不能接收视频数据，则显示所选的纯色。",
+    "description":"如果它不能接收视频数据，由于网站的安全规则，然后它反而将显示所选的固体颜色。"
+  },
+  "desdynamiccloud":{
+    "message":"Animated Clouds",
+    "description":"Animated Clouds"
+  },
+  "desconfirmtimesaver":{
+    "message":"确认屏幕保护程序时间",
+    "description":"确认屏幕保护程序时间"
+  },
+  "deslikebar":{
+    "message":"显示YouTube 视频下的“like\/dislike”项目 。",
+    "description":"显示像\/不喜欢酒吧下 YouTube 视频。"
+  },
+  "titelautoplay":{
+    "message":"自动播放",
+    "description":"自动播放"
+  },
+  "top":{
+    "message":"顶部",
+    "description":"返回页首"
+  },
+  "titelspreadradius":{
+    "message":"范围半径",
+    "description":"传播半径"
+  },
+  "installadblocker":{
+    "message":"使用带有 Adblocker 扩展名。",
+    "description":"使用带有 Adblocker 扩展名。"
+  },
+  "titelsharebutton":{
+    "message":"分享按钮",
+    "description":"分享按钮"
+  },
+  "titelcolor":{
+    "message":"颜色",
+    "description":"颜色"
+  },
+  "titeldownloadbutton":{
+    "message":"下载此升级 ！",
+    "description":"下载此升级 ！"
+  },
+  "pagetitle":{
+    "message":"较深此页",
+    "description":"变暗此页"
+  },
+  "titelambilight":{
+    "message":"背光",
+    "description":"气氛照明"
+  },
+  "titelshowmore":{
+    "message":"显示更多",
+    "description":"显示更多"
+  },
+  "desviewcount":{
+    "message":"显示该视频的浏览次数",
+    "description":"显示此视频的视图的数目。"
+  },
+  "titelautowidthyoutube":{
+    "message":"自动将 YouTube 播放器设置为更大的大小。",
+    "description":"自动将 YouTube 播放器设置为更大的大小。"
+  },
+  "desconfirmtime":{
+    "message":"确认时间",
+    "description":"确认时间"
+  },
+  "titelupgrade":{
+    "message":"升级",
+    "description":"升级"
+  },
+  "lockwrongpassword":{
+    "message":"密码错误，请重新输入。",
+    "description":"错误的密码，请再试一次。"
+  },
+  "titelsyncbrowser":{
+    "message":"同步您的其他浏览器的扩展设置。",
+    "description":"同步您的其他浏览器的扩展设置。"
+  },
+  "deletebutton":{
+    "message":"删除",
+    "description":"删除"
+  },
+  "eyedivon":{
+    "message":"ON",
+    "description":"ON"
+  },
+  "eyedivoff":{
+    "message":"关闭",
+    "description":"关闭"
+  },
+  "deshead":{
+    "message":"显示YouTube频道栏或名称",
+    "description":"显示的 YouTube 频道栏或名称。"
+  },
+  "shortcutsavingopacity":{
+    "message":"要保存此不透明度值",
+    "description":"要保存此不透明度值"
+  },
+  "desinfobar":{
+    "message":"显示视频的描述信息",
+    "description":"显示视频的描述信息。"
+  },
+  "titellamp":{
+    "message":"灯泡",
+    "description":"灯泡"
+  },
+  "desambilightvarcolor":{
+    "message":"从视频中自动取出颜色。",
+    "description":"采取从视频的颜色。"
+  },
+  "showremember":{
+    "message":"不会显示此记住页再次打开选项页时。",
+    "description":"不会显示此记住页再次打开选项页时。"
+  },
+  "donatepromotext":{
+    "message":"如果你可以做出任何款项捐赠，我会非常感激！",
+    "description":"如果你可以使任何数额的捐赠，我会非常感激 ！"
+  },
+  "titelblur":{
+    "message":"模糊其余",
+    "description":"模糊其余"
+  },
+  "desdynamicraindrops":{
+    "message":"雨滴",
+    "description":"雨滴"
+  },
+  "desalllightsoff":{
+    "message":"当启用此选项，单击灯按钮将切换打开\/关闭所有打开的选项卡上的指示灯。",
+    "description":"当启用此选项，单击灯按钮将切换打开\/关闭所有打开的选项卡上的指示灯。"
+  },
+  "optionecosaversaved":{
+    "message":"秒是已成功保存 ！",
+    "description":"秒是已成功保存 ！"
+  },
+  "titelreader":{
+    "message":"暗度调节",
+    "description":"昏暗的水平栏"
+  },
+  "deseyen":{
+    "message":"正常使用（灯光熄灭时，您按一下灯图标）。",
+    "description":"(灯光熄灭，当您单击灯图标） 的正常使用。"
+  },
+  "enjoyshare":{
+    "message":"享受此扩展并共享与其他人你觉得会很感激。",
+    "description":"享受此扩展并共享与其他人你觉得会很感激。"
+  },
+  "shortcuttotl":{
+    "message":"若要切换灯打开\/关闭。",
+    "description":"若要切换灯打开\/关闭。"
+  },
+  "deseyea":{
+    "message":"暗淡的背景时自动打开一个页面。",
+    "description":"打开网页时，会自动变暗背景。"
+  },
+  "basicsettings":{
+    "message":"基础知识",
+    "description":"基础知识"
+  },
+  "hoveroptionapply":{
+    "message":"适用",
+    "description":"适用"
+  },
+  "reportbug":{
+    "message":"报告问题",
+    "description":"报告问题"
+  },
+  "destime":{
+    "message":"灯关之间下列时间：",
+    "description":"灯关之间下列时间："
+  },
+  "guide":{
+    "message":"关灯看视频欢迎向导",
+    "description":"TOtL 欢迎指南"
+  },
+  "deseyealist":{
+    "message":"打开以下页面时，会自动变暗背景：",
+    "description":"打开以下页面时，会自动变暗背景："
+  },
+  "titellikebutton":{
+    "message":"顶\/踩 按钮",
+    "description":"喜欢 & 不喜欢按钮"
+  },
+  "titelpageaction":{
+    "message":"隐藏灯图标",
+    "description":"隐藏 pageaction 图标"
+  },
+  "friendlyremember":{
+    "message":"还记得友好......",
+    "description":"还记得友好......"
+  },
+  "desfadein":{
+    "message":"显示淡入效果",
+    "description":"实际上显示淡入淡出。"
+  },
+  "warning":{
+    "message":"警告！",
+    "description":"警告 ！"
+  },
+  "deseyetimesaver":{
+    "message":"当页处于非活动状态 (没有鼠标或键盘输入) 低于指定的时间，页面将自动转暗。",
+    "description":"当页处于非活动状态 (没有鼠标或键盘输入) 低于指定的时间，页面将自动转暗。"
+  },
+  "titelsuggestions":{
+    "message":"建议",
+    "description":"建议"
+  },
+  "advancedoptions":{
+    "message":"高级选项",
+    "description":"高级的选项"
+  },
+  "dessuggestions":{
+    "message":"显示YouTube网站的建议。",
+    "description":"显示的 YouTube 网站的各项建议。"
+  },
+  "titelflash":{
+    "message":"Flash检测",
+    "description":"Flash 检测"
+  },
+  "desambilight":{
+    "message":"在正在播放的视频周围使用背光效果。",
+    "description":"显示您的当前播放视频的氛围照明效果。"
+  },
+  "productshare":{
+    "message":"分享",
+    "description":"共享"
+  },
+  "addbutton":{
+    "message":"添加",
+    "description":"添加"
+  },
+  "reportlist":{
+    "message":"(见名单)",
+    "description":"查看全部问题列表"
+  },
+  "desdynamicfishtank":{
+    "message":"鱼缸",
+    "description":"鱼缸"
+  },
+  "longdonatetext":{
+    "message":"我会很感激如果你可以捐给我留着这个浏览器扩展为其他新用户还活着。无论是 $$ 1 或 $$ 100，是非常感激您的支持 ！",
+    "description":"我会很感激如果你可以捐给我留着这个浏览器扩展为其他新用户还活着。无论是 $$ 1 或 $$ 100，是非常感激您的支持 ！"
+  },
+  "deshardflash":{
+    "message":"显示所有的 Flash 对象，跳过 URL 筛选器。这将修复被隐藏的有些视频播放器的问题，但也会显示广告。",
+    "description":"显示所有的 Flash 对象，跳过 URL 筛选器。这将修复被隐藏的有些视频播放器的问题，但也会显示广告。"
+  },
+  "desfadeout":{
+    "message":"显示淡出效果",
+    "description":"显示淡出效果。"
+  },
+  "optionwrongimg":{
+    "message":"无效的图像文件 ！",
+    "description":"无效的图像文件 ！"
+  },
+  "desvideoheadline":{
+    "message":"展和颠倒的视频标题的颜色。",
+    "description":"显示和反转视频标题的颜色。"
+  },
+  "desrememberpage":{
+    "message":"如果启用了此选项，则它将显示你不是记住页。",
+    "description":"如果启用了此选项，则它将显示你不是记住页。"
+  },
+  "description":{
+    "message":"观看视频时调暗页面，仿佛置身电影院",
+    "description":"所以，如果你是在电影院里，你可以看视频也会褪色到暗，整个页面。"
+  },
+  "titelviewcount":{
+    "message":"浏览次数",
+    "description":"若干意见"
+  },
+  "titelopacity":{
+    "message":"透明度",
+    "description":"不透明度"
+  },
+  "titelqualityyoutube":{
+    "message":"自动设置的 YouTube 视频质量。",
+    "description":"自动设置的 YouTube 视频质量。"
+  },
+  "shortcutopacity":{
+    "message":"若要还原到集黑暗 （透明度） 设置。",
+    "description":"若要还原到集黑暗 （透明度） 设置。"
+  },
+  "desambilightrangeblurradius":{
+    "message":"值越低，模糊越小，越高则模糊越大。",
+    "description":"如果设置较低的值阴影将锋利，数字越高，越来越模糊它将。"
+  },
+  "titeladdvideobutton":{
+    "message":"添加按钮",
+    "description":"添加按钮"
+  },
+  "titelpassword":{
+    "message":"密码保护",
+    "description":"密码保护"
+  },
+  "titeldownloadupgrade":{
+    "message":"升级添加支持重点选中的图像，并将在网站上显示的图像的画廊。",
+    "description":"升级添加支持重点选中的图像，并将在网站上显示的图像的画廊。"
+  },
+  "titelfadeout":{
+    "message":"淡出",
+    "description":"淡出"
+  },
+  "eastereggsquestion":{
+    "message":"想获得在电影院中的感觉么？",
+    "description":"你喜欢一个真正的电影剧场吗？"
+  },
+  "bottom":{
+    "message":"底部",
+    "description":"底部"
+  },
+  "dessaver":{
+    "message":"屏幕保护程序：",
+    "description":"屏幕保护程序："
+  },
+  "hoveroptiondyn5":{
+    "message":"与飞行",
+    "description":"与飞行"
+  },
+  "pagestillloading":{
+    "message":"页面仍在加载？",
+    "description":"仍在加载页吗？"
+  },
+  "titeloff":{
+    "message":"关",
+    "description":"关闭"
+  },
+  "titeleastereggs":{
+    "message":"复活节彩蛋",
+    "description":"复活节彩蛋"
+  },
+  "textfoot":{
+    "message":"本软件的授权遵守CC - GNU通用公共许可协议。要查看本许可协议，请访问",
+    "description":"此软件是 CC GNU GPL 许可。若要查看此许可证的副本，请访问"
+  },
+  "left":{
+    "message":"左侧",
+    "description":"左"
+  },
+  "titelnighttheme":{
+    "message":"夜间模式",
+    "description":"夜间模式"
+  },
+  "desnighttheme":{
+    "message":"显示以下 web 页后，可以使页面暗或较亮的夜开关按钮。",
+    "description":"显示以下 web 页后，可以使页面暗或较亮的夜开关按钮。"
+  },
+  "nightoptions":{
+    "message":"夜间模式",
+    "description":"夜间模式"
+  },
+  "desnightonly":{
+    "message":"显示夜间模式只有以下站点：",
+    "description":"显示夜间模式只有以下站点："
+  },
+  "desnightenabletheme":{
+    "message":"当您打开一个新页面时它去自动夜间模式。",
+    "description":"当您打开一个新页面时它去自动夜间模式。"
+  },
+  "titellampregular":{
+    "message":"在地址栏总是显示灯图标",
+    "description":"在地址栏总是显示灯图标"
+  },
+  "titellampvideo":{
+    "message":"检测到有视频播放器才显示灯图标",
+    "description":"检测到有视频播放器才显示灯图标"
+  },
+  "upgradecontexttitle":{
+    "message":"我们为您提供了一些新的功能特点",
+    "description":"我们为您提供了一些新的功能特点"
+  },
+  "upgradecontextmessage":{
+    "message":"让这个扩展更令人惊讶",
+    "description":"让这个扩展更令人惊讶"
+  },
+  "upgradecontextitemta":{
+    "message":"摄像头手势感应",
+    "description":"摄像头手势感应"
+  },
+  "upgradecontextitemma":{
+    "message":"手势关灯",
+    "description":"手势关灯"
+  },
+  "upgradecontextitemtb":{
+    "message":"语音识别",
+    "description":"语音识别"
+  },
+  "upgradecontextitemmb":{
+    "message":"更准确地控制 web 页",
+    "description":"更准确地控制 web 页"
+  },
+  "upgradefbshare":{
+    "message":"Facebook 分享",
+    "description":"Facebook 分享"
+  },
+  "upgradetwshare":{
+    "message":"Tweet",
+    "description":"Tweet"
+  },
+  "ratetitle":{
+    "message":"请为我的扩展打分和评价",
+    "description":"请为我的扩展打分和评价"
+  },
+  "ratedes":{
+    "message":"以及让更多的人知道我们和这个优秀的扩展",
+    "description":"以及让更多的人知道我们和这个优秀的扩展"
+  },
+  "rateitema":{
+    "message":"打5分",
+    "description":"打5分"
+  },
+  "titelreset":{
+    "message":"重置",
+    "description":"重置"
+  },
+  "resetbrowserextension":{
+    "message":"重置Turn Off the Lights扩展的设置",
+    "description":"重置Turn Off the Lights扩展的设置"
+  },
+  "desautoplaydelay":{
+    "message":"播放结束后自动点亮背景",
+    "description":"播放结束后自动点亮背景"
+  },
+  "desautoplaydelayend":{
+    "message":"秒",
+    "description":"秒"
+  },
+  "motionoptions":{
+    "message":"摄像头手势感应",
+    "description":"摄像头手势感应"
+  },
+  "desmotion":{
+    "message":"启用摄像头动作感应，当手往下扫动以使背景变暗（关灯）",
+    "description":"摄像头手势感应"
+  },
+  "trymotion":{
+    "message":"自己试试 ！",
+    "description":"自己试试 ！"
+  },
+  "destrymotion":{
+    "message":"这非常棒，特别是它能在任何页面生效，即使是YouTube，新闻网站，等等。",
+    "description":"这非常棒，特别是它能在任何页面生效，即使是YouTube，新闻网站，等等。"
+  },
+  "howworkmotion":{
+    "message":"它是如何运作的？",
+    "description":"它是如何运作的？"
+  },
+  "step1description":{
+    "message":"启用摄像头动作（手势）感应",
+    "description":"启用摄像头动作（手势）感应"
+  },
+  "step2description":{
+    "message":"Move your hand (or fist) from the top to bottom",
+    "description":"Move your hand (or fist) from the top to bottom"
+  },
+  "step3description":{
+    "message":"然后黑色图层会自动向下滑动。",
+    "description":"然后黑色图层会自动向下滑动。"
+  },
+  "desmotionChecklist":{
+    "message":"清单",
+    "description":"清单"
+  },
+  "des1checkmotion":{
+    "message":"请确保您的房间光线充足，不过于昏暗。",
+    "description":"请确保您的房间光线充足，不过于昏暗。"
+  },
+  "des2checkmotion":{
+    "message":"避免您的摄像头阳光直射。",
+    "description":"避免您的摄像头阳光直射。"
+  },
+  "des3checkmotion":{
+    "message":"您使用前置摄像头。",
+    "description":"您使用前置摄像头。"
+  },
+  "titellinear":{
+    "message":"线性",
+    "description":"线性"
+  },
+  "titelcolora":{
+    "message":"颜色 A",
+    "description":"颜色 A"
+  },
+  "titelcolorb":{
+    "message":"颜色 B",
+    "description":"颜色 B"
+  },
+  "speechoption":{
+    "message":"语音识别",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"语音",
+    "description":"语音"
+  },
+  "desspeech":{
+    "message":"当您已启用此选项时，你可以对浏览器的灯说话，比如下面的命令：",
+    "description":"当您已启用此选项时，你可以对浏览器的灯说话，比如下面的命令："
+  },
+  "desspeech1command":{
+    "message":"关灯",
+    "description":"关灯"
+  },
+  "desspeech2command":{
+    "message":"开灯",
+    "description":"开灯"
+  },
+  "desspeech3command":{
+    "message":"播放视频",
+    "description":"播放视频"
+  },
+  "desspeech4command":{
+    "message":"暂停视频",
+    "description":"暂停视频"
+  },
+  "desspeechdialect":{
+    "message":"选择你的语音方言：",
+    "description":"选择你的语音方言："
+  },
+  "desatmosvivid":{
+    "message":"Vivid atmosphere effects on YouTube, require",
+    "description":"Vivid atmosphere effects on YouTube, require"
+  },
+  "help":{
+    "message":"帮助",
+    "description":"帮助"
+  },
+  "about":{
+    "message":"关于",
+    "description":"关于"
+  },
+  "desspeechonly":{
+    "message":"仅在以下地点启用语音识别",
+    "description":"仅在以下地点启用语音识别"
+  },
+  "descammotiononly":{
+    "message":"仅在以下地点启用摄像头手势感应：",
+    "description":"仅在以下地点启用摄像头手势感应："
+  },
+  "titelcamera":{
+    "message":"摄像头",
+    "description":"摄像头"
+  },
+  "titelautoplaywhitelist":{
+    "message":"白名单",
+    "description":"白名单"
+  },
+  "titelautoplayblacklist":{
+    "message":"黑名单",
+    "description":"黑名单"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser.",
+    "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
+  },
+  "desbrowsersupport":{
+    "message":"此浏览器暂时不支持但此功能。请确保您在您的计算机上安装最新的浏览器版本。",
+    "description":"此浏览器暂时不支持但此功能。请确保您在您的计算机上安装最新的浏览器版本。"
+  },
+  "titelsupportatmos":{
+    "message":"只支持HTML5<video>标签以及Youtube Html5播放器。并且，将使用显卡的GPU。",
+    "description":"只支持HTML5<video>标签以及Youtube Html5播放器。并且，将使用显卡的GPU。"
+  },
+  "titelseeonline":{
+    "message":"在线浏览更多示例。",
+    "description":"在线浏览更多示例。"
+  },
+  "titelvideosample":{
+    "message":"视频示例",
+    "description":"视频示例"
+  },
+  "titelwebsite":{
+    "message":"网站",
+    "description":"网站"
+  },
+  "titeldeveloper":{
+    "message":"开发者",
+    "description":"开发者"
+  },
+  "titelrightsreserved":{
+    "message":"保留部分权力",
+    "description":"保留部分权力"
+  },
+  "desbrowserextension":{
+    "message":"浏览器扩展",
+    "description":"浏览器扩展"
+  },
+  "desapitext":{
+    "message":"提供给网站开发者的Wiki API",
+    "description":"提供给网站开发者的Wiki API"
+  },
+  "desbrowsertheme":{
+    "message":"浏览器主题",
+    "description":"浏览器主题"
+  },
+  "desproject":{
+    "message":"项目",
+    "description":"项目"
+  },
+  "titelapideveloper":{
+    "message":"API 开发者",
+    "description":"API 开发者"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki about the Atmosphere Lighting feature",
+    "description":"Wiki about the Atmosphere Lighting feature"
+  }
+}

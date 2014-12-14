@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"hjälp",
+    "description":"Hjälp"
+  },
+  "titelimage":{
+    "message":"Bakgrundsbild",
+    "description":"Bakgrundsbild"
+  },
+  "shortcutalllights":{
+    "message":"för att växla ljuset på\/av för alla öppna flikar.",
+    "description":"för att växla ljuset på\/av för alla öppna flikar."
+  },
+  "lastchecked":{
+    "message":"Senaste version kollad den",
+    "description":"Senaste versionen kontrollerades på"
+  },
+  "visualeffects":{
+    "message":"Visuella Effekter",
+    "description":"Visuella effekter"
+  },
+  "titelshortcutlight":{
+    "message":"Tangentbordsgenväg",
+    "description":"Kortkommando"
+  },
+  "titledonatebutton":{
+    "message":"Donera",
+    "description":"Donera"
+  },
+  "titellikebar":{
+    "message":"Gillamätaren",
+    "description":"Gillar Bar"
+  },
+  "desmousespotlightt":{
+    "message":"Låter dig klicka igenom mörka lagret när lamporna är släckta.",
+    "description":"Låter dig klicka igenom mörka lagret när lamporna är släckta."
+  },
+  "desambilight4color":{
+    "message":"4 valda färger runt videon:",
+    "description":"4 valda färger runt videon:"
+  },
+  "lockentername":{
+    "message":"Var god ange ditt lösenord",
+    "description":"Ange ditt lösenord"
+  },
+  "desnoflash":{
+    "message":"Använd inte denna funktion.",
+    "description":"Använd inte denna funktion."
+  },
+  "desdynamicblocks":{
+    "message":"Block",
+    "description":"Block"
+  },
+  "titeleye":{
+    "message":"Ögonskydd",
+    "description":"Ögonskydd"
+  },
+  "titelcinemaontop":{
+    "message":"Movie theater läge: det visar \"lyser av\" lagret endast på toppen av fönstret.",
+    "description":"Movie theater läge: det visar \"lyser av\" lagret endast på toppen av fönstret."
+  },
+  "desmousespotlightc":{
+    "message":"Om ljuset är av kan du markera ett område att fokusera på.",
+    "description":"Om ljuset är avstängd, kan du välja ett område att fokusera ett objekt."
+  },
+  "titelrememberpage":{
+    "message":"Kom ihåg sida",
+    "description":"Kom ihåg sida"
+  },
+  "desmousespotlighta":{
+    "message":"Om belysningen är avstängd, visa ljus runt muspekaren.",
+    "description":"Om ljuset är avstängd, Visa en ficklampa runt muspekaren."
+  },
+  "desmousespotlighto":{
+    "message":"Normal användning (inaktiverar musinställningarna nedan)",
+    "description":"Normal användning (inaktiverar musinställningarna nedan)"
+  },
+  "desplaylist":{
+    "message":"Visa spellistan på YouTube.",
+    "description":"Visa YouTube-spellistan på YouTube-webbplatsen."
+  },
+  "desambilightfixcolor":{
+    "message":"En solid färg:",
+    "description":"En färg:"
+  },
+  "desuntil":{
+    "message":"tills",
+    "description":"fram till"
+  },
+  "desconfirmpassword":{
+    "message":"Bekräfta lösenord",
+    "description":"Bekräfta lösenord"
+  },
+  "desautoplayonly":{
+    "message":"Dimma endast följande video sidor:",
+    "description":"Dimma endast följande video sidor:"
+  },
+  "helpeyeprotection":{
+    "message":"Aktivera \"Öga skydd\" inaktiverar automatiskt funktionen \"Auto play\".",
+    "description":"Aktivera \"Öga skydd\" inaktiverar automatiskt funktionen \"Auto play\"."
+  },
+  "skipremember":{
+    "message":"Hoppa över detta och öppna sidan inställningar",
+    "description":"Hoppa över detta och nu öppna sidan alternativ"
+  },
+  "optiontimesaved":{
+    "message":"Tiden sparades framgångsrikt!",
+    "description":"Tid har sparats!"
+  },
+  "titelvideoheadline":{
+    "message":"Videonamn",
+    "description":"Videofilm"
+  },
+  "translateme":{
+    "message":"Hjälp till med översättning",
+    "description":"Hjälpa till att översätta"
+  },
+  "despassword":{
+    "message":"Kräv ett lösenord att bli angett innan du slår lamporna på igen.",
+    "description":"Kräv ett lösenord att bli angett innan du slår lamporna på igen."
+  },
+  "helpautoplay":{
+    "message":"\"Ögonskyddet\" är aktiverat. För att använda funktionerna nedan, inaktivera alternativet \"Ögonskydd\".",
+    "description":"\"Ögonskyddet\" är aktiverat. För att använda funktionerna nedan, inaktivera alternativet \"Ögonskydd\"."
+  },
+  "name":{
+    "message":"Turn Off the Lights",
+    "description":"Turn Off the Lights"
+  },
+  "changelog":{
+    "message":"Ändringslogg",
+    "description":"ändringslogg länk"
+  },
+  "optionpagetitle":{
+    "message":"Turn Off the Lights - Alternativ",
+    "description":"Alternativet sidrubrik"
+  },
+  "optionpasswordsaved":{
+    "message":"Lösenordet sparades framgångsrikt!",
+    "description":"Lösenordet har sparats!"
+  },
+  "desdynamicspace":{
+    "message":"Rymden",
+    "description":"Rymden"
+  },
+  "deseastereggs":{
+    "message":"Om du klickar på T tangenten aktiverar en gömd funktion.",
+    "description":"Om du klickar på T tangenten aktiverar en gömd funktion."
+  },
+  "settings":{
+    "message":"Inställningar",
+    "description":"Inställningar"
+  },
+  "desspotlightradius":{
+    "message":"är diametern på ficklampan.",
+    "description":"är diametern på ficklampan."
+  },
+  "titelsync":{
+    "message":"Synk",
+    "description":"Sync"
+  },
+  "right":{
+    "message":"höger",
+    "description":"rätt"
+  },
+  "titeldynamic":{
+    "message":"Dynamisk Bakgrund",
+    "description":"Dynamiska bakgrunden"
+  },
+  "deslikebutton":{
+    "message":"Visa YouTubes Gilla- & Ogillaknappar för denna video.",
+    "description":"Visa liknande & ogillar knappar på YouTube för denna video."
+  },
+  "titelmouse":{
+    "message":"Mus",
+    "description":"Mus"
+  },
+  "titellessmore":{
+    "message":"Visa mindre",
+    "description":"Visa mindre"
+  },
+  "desshortcutlight":{
+    "message":"Aktivera kortkommandona nedan.",
+    "description":"Aktivera kortkommandona nedan."
+  },
+  "titelinfobar":{
+    "message":"Informationsfält",
+    "description":"Informationsfältet"
+  },
+  "descontextmenus":{
+    "message":"Visa snabbmenyn för att fokusera ett objekt.",
+    "description":"Visa en kontextmeny att fokusera ett objekt."
+  },
+  "titelcontextmenus":{
+    "message":"Snabbmeny",
+    "description":"Sammanhangsmenyn"
+  },
+  "titelplaylist":{
+    "message":"Spellista",
+    "description":"Spellista"
+  },
+  "desatmosphereonly":{
+    "message":"Använda funktionen atmosfär belysning endast på följande video sidor:",
+    "description":"Använda funktionen atmosfär belysning endast på följande video webbplats:"
+  },
+  "recflash":{
+    "message":"Rekommenderat",
+    "description":"Rekommenderas"
+  },
+  "desenterpassword":{
+    "message":"Ange ditt lösenord i rutan nedan:",
+    "description":"Ange ditt lösenord i rutan nedan:"
+  },
+  "titelblurradius":{
+    "message":"Oskärpa",
+    "description":"Oskärpa radie"
+  },
+  "version":{
+    "message":"Version",
+    "description":"Text för version"
+  },
+  "shortcutdark":{
+    "message":"för att öka hur mörk skärmen är (öka opacitet).",
+    "description":"mörkare skärmen (ökning opacitet)."
+  },
+  "dessharebutton":{
+    "message":"Visa YouTubes delningsknappar för denna video.",
+    "description":"Visa knapparna andel av YouTube för denna video."
+  },
+  "shortcutbright":{
+    "message":"för att öka hur ljust skärmen är (minska opacitet).",
+    "description":"att lysa upp skärmen (minskning opacitet)."
+  },
+  "titelalllightsoff":{
+    "message":"Alla öppna flikar",
+    "description":"Alla öppna flikar"
+  },
+  "desreadera":{
+    "message":"Visa alltid dämpningsreglaget när ljuset släcks.",
+    "description":"Alltid visa inställningsfältet dunklet när ljuset slocknar."
+  },
+  "rememberrate":{
+    "message":"Betygsätt",
+    "description":"Kurs"
+  },
+  "desautoplay":{
+    "message":"Dämpa bakgrunden automatiskt när du trycker på spela upp och gör den ljus när du klickar någon annanstans.",
+    "description":"Dim automatiskt i bakgrunden när du klickar på play-knappen och kontra."
+  },
+  "titelscreen":{
+    "message":"Skärm",
+    "description":"Skärmen"
+  },
+  "desflash":{
+    "message":"Visa alla Flash-objekt.",
+    "description":"Visa alla Flash-objekt."
+  },
+  "titelhead":{
+    "message":"Kanal",
+    "description":"Kanal"
+  },
+  "pageatitle":{
+    "message":"Släck ljuset",
+    "description":"Släck ljuset"
+  },
+  "desaddvideobutton":{
+    "message":"Visa Lägg till-knappen på YouTube för denna video.",
+    "description":"Visa knappen Lägg till från denna YouTube video."
+  },
+  "shortcuteyeprotection":{
+    "message":"för att aktivera\/inaktivera funktionen ögonskydd.",
+    "description":"att aktivera\/inaktivera funktionen öga skydd."
+  },
+  "titelfadein":{
+    "message":"Tona in",
+    "description":"Tona In"
+  },
+  "desreadern":{
+    "message":"Visa aldrig dämpningsreglaget.",
+    "description":"Visa aldrig dunklet inställningsfältet."
+  },
+  "titelmaxqualityyoutube":{
+    "message":"Sätt automatiskt till denna resolution:",
+    "description":"Anges automatiskt till denna resolution:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"Positiva värden ökar skuggans storlek, negativa minskar den.",
+    "description":"Positiva värden öka storleken på skuggan, negativa värden minska storleken."
+  },
+  "titelon":{
+    "message":"På",
+    "description":"På"
+  },
+  "videotitle":{
+    "message":"Fokusera på denna video",
+    "description":"Fokus denna video"
+  },
+  "warningtextambilight":{
+    "message":"Om det inte går att ta emot video data på grund av en regel på en webbplats, då visar det den valda färgen istället.",
+    "description":"Om det inte går att ta emot video data på grund av regel för en webbplats, då visar det den valda färgen istället."
+  },
+  "desdynamiccloud":{
+    "message":"Animerade moln",
+    "description":"Animerade moln"
+  },
+  "desconfirmtimesaver":{
+    "message":"Bekräfta tid för skärmsläckare",
+    "description":"Bekräfta skärm sparare tid"
+  },
+  "deslikebar":{
+    "message":"Visa gillar\/ogillar bar under YouTube-videor.",
+    "description":"Visa de gillar\/ogillar bar under YouTube-videor."
+  },
+  "titelautoplay":{
+    "message":"Automatisk uppspelning",
+    "description":"Autoplay"
+  },
+  "top":{
+    "message":"topp",
+    "description":"Top"
+  },
+  "titelspreadradius":{
+    "message":"Spridningsradien",
+    "description":"Spridningen radie"
+  },
+  "installadblocker":{
+    "message":"Använd tillägget Adblock",
+    "description":"Använd med filtillägget Adblocker."
+  },
+  "titelsharebutton":{
+    "message":"Delningsknappar",
+    "description":"Dela knappar"
+  },
+  "titelcolor":{
+    "message":"Färg",
+    "description":"Färg"
+  },
+  "titeldownloadbutton":{
+    "message":"Ladda ner den här uppgraderingen!",
+    "description":"Ladda ner denna uppgradering!"
+  },
+  "pagetitle":{
+    "message":"Dämpa denna sida",
+    "description":"Mörkare sidan"
+  },
+  "titelambilight":{
+    "message":"Bakgrundsbelysning",
+    "description":"Atmosfär belysning"
+  },
+  "titelshowmore":{
+    "message":"Visa mer",
+    "description":"Visa mer"
+  },
+  "desviewcount":{
+    "message":"Visa antalet visningar för den här videon.",
+    "description":"Visa numret för denna video."
+  },
+  "titelautowidthyoutube":{
+    "message":"Sätt automatiskt YouTube-spelaren till större storlek.",
+    "description":"Automatiskt in YouTube-spelaren till större storlek."
+  },
+  "desconfirmtime":{
+    "message":"Bekräfta tid",
+    "description":"Bekräfta tid"
+  },
+  "titelupgrade":{
+    "message":"Uppgradera",
+    "description":"Uppgradera"
+  },
+  "lockwrongpassword":{
+    "message":"Fel lösenord, var god försök igen.",
+    "description":"Fel lösenord, försök igen."
+  },
+  "titelsyncbrowser":{
+    "message":"Synkronisera inställningarna med andra webbläsare.",
+    "description":"Synkronisera inställningarna förlängning med andra webbläsare."
+  },
+  "deletebutton":{
+    "message":"Ta bort",
+    "description":"Ta bort"
+  },
+  "eyedivon":{
+    "message":"PÅ",
+    "description":"PÅ"
+  },
+  "eyedivoff":{
+    "message":"AV",
+    "description":"OFF"
+  },
+  "deshead":{
+    "message":"Visa kanalmenyn.",
+    "description":"Visa YouTube Kanalfältet eller namnet."
+  },
+  "shortcutsavingopacity":{
+    "message":"Spara denna opacitetsvärde",
+    "description":"Spara denna opacitetsvärde"
+  },
+  "desinfobar":{
+    "message":"Visa videons beskrivning.",
+    "description":"Visa Beskrivning information om video."
+  },
+  "titellamp":{
+    "message":"Lampa",
+    "description":"Lampa"
+  },
+  "desambilightvarcolor":{
+    "message":"Ta färgen från videon.",
+    "description":"Ta färgen från videon."
+  },
+  "showremember":{
+    "message":"visar inte kom ihåg sidan igen när jag öppnar sidan inställningar.",
+    "description":"visar inte ihåg sidan igen när jag öppnar sidan alternativ."
+  },
+  "donatepromotext":{
+    "message":"Om du kan donera lite pengar skulle jag uppskatta det oerhört mycket!",
+    "description":"Om du kan göra en donation av eventuella belopp som, skulle jag uppskatta enormt!"
+  },
+  "titelblur":{
+    "message":"Sudda resten",
+    "description":"Oskärpa resten"
+  },
+  "desdynamicraindrops":{
+    "message":"Regndroppar",
+    "description":"Regndroppar"
+  },
+  "desalllightsoff":{
+    "message":"Klickar du på lampan so kommer den att växla på\/av lamporna på alla öppna flikar när alternativet är aktiverat.",
+    "description":"Klicka på lampan att växla på\/av lamporna på alla öppna flikar när alternativet är aktiverat."
+  },
+  "optionecosaversaved":{
+    "message":"Sekunder sparades framgångsrikt!",
+    "description":"Sekunder har sparats!"
+  },
+  "titelreader":{
+    "message":"Dämpningsreglage",
+    "description":"Dunklet nivå Bar"
+  },
+  "deseyen":{
+    "message":"Normal användning (ljuset släcks när du klickar på lampikonen).",
+    "description":"Normal användning (ljuset släcks när du klickar på ikonen lampa)."
+  },
+  "enjoyshare":{
+    "message":"Njut av detta tillägg och dela den med andra som du tror kommer att uppskatta den.",
+    "description":"Njut av denna förlängning och dela den med andra som du tror kommer att uppskatta den."
+  },
+  "shortcuttotl":{
+    "message":"för att växla ljus på\/av.",
+    "description":"att växla ljus på\/av."
+  },
+  "deseyea":{
+    "message":"Dämpa bakgrunden automatiskt när en sida öppnas.",
+    "description":"Dim automatiskt i bakgrunden när du öppnar en sida."
+  },
+  "basicsettings":{
+    "message":"Grunderna",
+    "description":"Grunderna"
+  },
+  "hoveroptionapply":{
+    "message":"tillämpa",
+    "description":"tillämpa"
+  },
+  "reportbug":{
+    "message":"Rapportera ett problem",
+    "description":"Rapportera ett problem"
+  },
+  "destime":{
+    "message":"Ljuset av mellan följande tider:",
+    "description":"Lights off mellan följande tider:"
+  },
+  "guide":{
+    "message":"TOtL Välkomstguide",
+    "description":"TOtL Välkommen Guide"
+  },
+  "deseyealist":{
+    "message":"Dimma automatiskt bakgrunden när du öppnar de följande sidorna:",
+    "description":"Dim automatiskt i bakgrunden när du öppnar de följande sidorna:"
+  },
+  "titellikebutton":{
+    "message":"Gilla- och Ogillaknappar",
+    "description":"Gillar & ogillar knappar"
+  },
+  "titelpageaction":{
+    "message":"Dölj lampikonen",
+    "description":"dölja pageaction ikonen"
+  },
+  "friendlyremember":{
+    "message":"Vänlig minns...",
+    "description":"Vänlig minns..."
+  },
+  "desfadein":{
+    "message":"Visa tona in-effekten",
+    "description":"Visa toningen i praktiken."
+  },
+  "warning":{
+    "message":"Varning!",
+    "description":"Varning!"
+  },
+  "deseyetimesaver":{
+    "message":"När en sida är inaktiv (ingen mus eller tangentbord inmatning) för den tid som anges nedan, sidan kommer automatiskt att bli mörk.",
+    "description":"När en sida är inaktiv (ingen mus eller tangentbord ingång) för den tid som anges nedan, sidan kommer automatiskt att gå mörka."
+  },
+  "titelsuggestions":{
+    "message":"Förslag",
+    "description":"Förslag"
+  },
+  "advancedoptions":{
+    "message":"Avancerade Alternativ",
+    "description":"Avancerade alternativ"
+  },
+  "dessuggestions":{
+    "message":"Visa förslag från YouTube.",
+    "description":"Visa förslag på YouTube-webbplatsen."
+  },
+  "titelflash":{
+    "message":"Flashdetektion",
+    "description":"Flash upptäckt"
+  },
+  "desambilight":{
+    "message":"Visa bakgrundsbelysning för videon som spelas.",
+    "description":"Visa dig atmosfär belysning effekten av den aktuella spela videon."
+  },
+  "productshare":{
+    "message":"Prylar",
+    "description":"Andel"
+  },
+  "addbutton":{
+    "message":"Lägg till",
+    "description":"Lägg till"
+  },
+  "reportlist":{
+    "message":"(se lista)",
+    "description":"Se listan över hela frågan"
+  },
+  "desdynamicfishtank":{
+    "message":"Akvarium",
+    "description":"Fish Tank"
+  },
+  "longdonatetext":{
+    "message":"Jag skulle verkligen uppskatta om du kan donera till mig för att hålla detta tillägg levande för nya användare. Även om det är $$ 1 eller $$ 100, uppskattas ert stöd enormt!",
+    "description":"Jag skulle verkligen uppskatta om du kan donera mig för att hålla denna webbläsare förlängning levande för andra nya användare. Om det är $$ 1 eller $$ 100, uppskattas ert stöd enormt!"
+  },
+  "deshardflash":{
+    "message":"Visa alla Flash-objekt, hoppa över URL filtret. Detta kommer att åtgärda problem med vissa videospelare som är dolda, men kommer också att visa annonser.",
+    "description":"Visa alla Flash-objekt, hoppa över det URL filtret. Detta kommer att åtgärda problem med vissa videospelare som är dold, men kommer också att visa annonser."
+  },
+  "desfadeout":{
+    "message":"Visa tona ut-effekten.",
+    "description":"Visa tona ut effekten."
+  },
+  "optionwrongimg":{
+    "message":"Ogiltig bildfil!",
+    "description":"Ogiltig bildfil!"
+  },
+  "desvideoheadline":{
+    "message":"Visa och invertera färgen på videotiteln.",
+    "description":"Visa och Invertera färgen på videofilmen."
+  },
+  "desrememberpage":{
+    "message":"Om detta alternativet är aktiverat, kommer det inte visa dig kom ihåg sidan.",
+    "description":"Om detta alternativ är aktiverat, kommer det visa dig inte ihåg sidan."
+  },
+  "description":{
+    "message":"Hela sidan kommer att dämpas, så att du kan se videon som om du vore på bio.",
+    "description":"Hela sidan kommer bleknar till mörk, så du kan titta på videon som om du var på bio."
+  },
+  "titelviewcount":{
+    "message":"Antal visningar",
+    "description":"Antal visningar"
+  },
+  "titelopacity":{
+    "message":"Opacitet",
+    "description":"Opacitet"
+  },
+  "titelqualityyoutube":{
+    "message":"Ställer automatiskt in kvaliteten på YouTube-videor.",
+    "description":"Automatiskt ställa in kvaliteten på YouTube-videor."
+  },
+  "shortcutopacity":{
+    "message":"för att återställa till set mörker (opacitet) inställning.",
+    "description":"att återställa till set mörkret (opacitet) inställning."
+  },
+  "desambilightrangeblurradius":{
+    "message":"Ett lågt värde skärper skuggan, ett högre värde gör skuggan suddigare.",
+    "description":"Om ett lägre värde skuggan kommer att skarpa, ju högre siffra, den mer suddig blir."
+  },
+  "titeladdvideobutton":{
+    "message":"Lägg till knapp",
+    "description":"Lägg till-knapp"
+  },
+  "titelpassword":{
+    "message":"Lösenordsskydd",
+    "description":"Lösenordsskydd"
+  },
+  "titeldownloadupgrade":{
+    "message":"Uppgraderingen lägger till stöd för fokusering på valda bilder och visar ett galleri av bilder på webbplatsen.",
+    "description":"Uppgraderingen lägger till stöd för fokusering valda bilder och visar ett galleri av bilder på webbplatsen."
+  },
+  "titelfadeout":{
+    "message":"Tona ut",
+    "description":"Tona ut"
+  },
+  "eastereggsquestion":{
+    "message":"Gillar du en riktig biosalong?",
+    "description":"Gillar du en riktig biograf?"
+  },
+  "bottom":{
+    "message":"botten",
+    "description":"botten"
+  },
+  "dessaver":{
+    "message":"Skärmsläckare",
+    "description":"Skärmsläckare:"
+  },
+  "hoveroptiondyn5":{
+    "message":"med flygande",
+    "description":"med flygande"
+  },
+  "pagestillloading":{
+    "message":"Laddar sidan fortfarande?",
+    "description":"Sidan laddas fortfarande?"
+  },
+  "titeloff":{
+    "message":"Av",
+    "description":"Off"
+  },
+  "titeleastereggs":{
+    "message":"Easter eggs",
+    "description":"Påskägg"
+  },
+  "textfoot":{
+    "message":"Denna programvara är licensierad under CC-GNU GPL. För att se en kopia av denna licens, besök",
+    "description":"Denna programvara är licensierad under CC-GNU GPL. Om du vill visa en kopia av denna licens, besök"
+  },
+  "left":{
+    "message":"vänster",
+    "description":"vänster"
+  },
+  "titelnighttheme":{
+    "message":"Nattläge",
+    "description":"Nattläge"
+  },
+  "desnighttheme":{
+    "message":"Visa knappen natt switch under webbsidan för att göra sidan mörka eller ljusa.",
+    "description":"Visa knappen natt switch under webbsidan för att göra sidan mörka eller ljusa."
+  },
+  "nightoptions":{
+    "message":"Nattläge",
+    "description":"Nattläge"
+  },
+  "desnightonly":{
+    "message":"Visa nattläget endast på följande sidor:",
+    "description":"Visa nattläget endast på följande sidor:"
+  },
+  "desnightenabletheme":{
+    "message":"När du öppnar en ny sida går den automatiskt till nattläge.",
+    "description":"När du öppnar en ny sida går den automatiskt till nattläge."
+  },
+  "titellampregular":{
+    "message":"Visa alltid lampikonen i adressfältet",
+    "description":"Visa alltid lampikonen i adressfältet"
+  },
+  "titellampvideo":{
+    "message":"Visa bara lampikonen om en videospelare hittas",
+    "description":"Visa bara lampikonen om en videospelare hittas"
+  },
+  "upgradecontexttitle":{
+    "message":"Vi har lagt till lite nya funktioner åt dig",
+    "description":"Vi har lagt till lite nya funktioner åt dig"
+  },
+  "upgradecontextmessage":{
+    "message":"Som gör det här tillägget ännu mer fantastiskt",
+    "description":"Som gör det här tillägget ännu mer fantastiskt"
+  },
+  "upgradecontextitemta":{
+    "message":"Kamerarörelse",
+    "description":"Kamerarörelse"
+  },
+  "upgradecontextitemma":{
+    "message":"släck ljuset med din hand",
+    "description":"släck ljuset med din hand"
+  },
+  "upgradecontextitemtb":{
+    "message":"Taligenkänning",
+    "description":"Taligenkänning"
+  },
+  "upgradecontextitemmb":{
+    "message":"Kontrollera hemsidan med mer precision",
+    "description":"Kontrollera hemsidan med mer precision"
+  },
+  "upgradefbshare":{
+    "message":"Dela på Facebook",
+    "description":"Dela på Facebook"
+  },
+  "upgradetwshare":{
+    "message":"Twittra",
+    "description":"Twittra"
+  },
+  "ratetitle":{
+    "message":"Betygsätt och recensera gärna mitt tillägg",
+    "description":"Betygsätt och recensera gärna mitt tillägg"
+  },
+  "ratedes":{
+    "message":"Och berätta om detta supertillägg för alla!",
+    "description":"Och berätta om detta supertillägg för alla!"
+  },
+  "rateitema":{
+    "message":"Ge 5 stjärnor",
+    "description":"Ge 5 stjärnor"
+  },
+  "titelreset":{
+    "message":"Återställ inställningar",
+    "description":"Återställ inställningar"
+  },
+  "resetbrowserextension":{
+    "message":"Återställ 'Släck ljusen'-inställningar",
+    "description":"Återställ 'Släck ljusen'-inställningar"
+  },
+  "desautoplaydelay":{
+    "message":"Belys bakgrunden igen när videon slutar efter",
+    "description":"Belys bakgrunden igen när videon slutar efter"
+  },
+  "desautoplaydelayend":{
+    "message":"sekunder",
+    "description":"sekunder"
+  },
+  "motionoptions":{
+    "message":"Kamerarörelse",
+    "description":"Kamerarörelse"
+  },
+  "desmotion":{
+    "message":"Aktivera Kamerarörelse så att webbsidor kan mörklägga genom att svepa neråt med handen.",
+    "description":"Kamerarörelse"
+  },
+  "trymotion":{
+    "message":"Prova det själv!",
+    "description":"Prova det själv!"
+  },
+  "destrymotion":{
+    "message":"Det är superbra, och det bästa är att det fungerar överallt. Till och med på YouTube, nyhetssidor o.s.v.",
+    "description":"Det är superbra, och det bästa är att det fungerar överallt. Till och med på YouTube, nyhetssidor o.s.v."
+  },
+  "howworkmotion":{
+    "message":"Hur funkar det?",
+    "description":"Hur funkar det?"
+  },
+  "step1description":{
+    "message":"Aktivera funktionen för kamerarörelse",
+    "description":"Aktivera funktionen för kamerarörelse"
+  },
+  "step2description":{
+    "message":"Rör din hand (eller knytnäve) uppifrån och ner",
+    "description":"Rör din hand (eller knytnäve) uppifrån och ner"
+  },
+  "step3description":{
+    "message":"Då kommer det svarta lagret automatiskt åka ner.",
+    "description":"Då kommer det svarta lagret automatiskt åka ner."
+  },
+  "desmotionChecklist":{
+    "message":"Checklista:",
+    "description":"Checklista:"
+  },
+  "des1checkmotion":{
+    "message":"Kontrollera att rummet inte är mörkt och att det får tillräckligt med ljus.",
+    "description":"Kontrollera att rummet inte är mörkt och att det får tillräckligt med ljus."
+  },
+  "des2checkmotion":{
+    "message":"Din kamera kan inte exponeras för direkt solljus.",
+    "description":"Din kamera kan inte exponeras för direkt solljus."
+  },
+  "des3checkmotion":{
+    "message":"Du använder en framåtriktad kamera.",
+    "description":"Du använder en framåtriktad kamera."
+  },
+  "titellinear":{
+    "message":"Linjär",
+    "description":"Linjär"
+  },
+  "titelcolora":{
+    "message":"Färg A",
+    "description":"Färg A"
+  },
+  "titelcolorb":{
+    "message":"Färg B",
+    "description":"Färg B"
+  },
+  "speechoption":{
+    "message":"Taligenkänning",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"Tal",
+    "description":"Tal"
+  },
+  "desspeech":{
+    "message":"När du aktiverat detta alternativ kan du prata med webbläsarlampan. Du kan säga följande kommandon:",
+    "description":"När du aktiverat detta alternativ kan du prata med webbläsarlampan. Du kan säga följande kommandon:"
+  },
+  "desspeech1command":{
+    "message":"slå av ljuset",
+    "description":"slå av ljuset"
+  },
+  "desspeech2command":{
+    "message":"slå på ljuset",
+    "description":"slå på ljuset"
+  },
+  "desspeech3command":{
+    "message":"spela video",
+    "description":"spela video"
+  },
+  "desspeech4command":{
+    "message":"pausa video",
+    "description":"pausa video"
+  },
+  "desspeechdialect":{
+    "message":"Välj din dialekt:",
+    "description":"Välj din dialekt:"
+  },
+  "desatmosvivid":{
+    "message":"Levande atmosfäreffekter på YouTube, kräver",
+    "description":"Levande atmosfäreffekter på YouTube, kräver"
+  },
+  "help":{
+    "message":"Hjälp",
+    "description":"Hjälp"
+  },
+  "about":{
+    "message":"Om",
+    "description":"Om"
+  },
+  "desspeechonly":{
+    "message":"Aktivera taligenkänning enbart på följande sidor:",
+    "description":"Aktivera taligenkänning enbart på följande sidor:"
+  },
+  "descammotiononly":{
+    "message":"Aktivera Kameraföljning på följande sidor:",
+    "description":"Aktivera Kameraföljning på följande sidor:"
+  },
+  "titelcamera":{
+    "message":"Kamera",
+    "description":"Kamera"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautoplayblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Lägg till ett mörkt tema till din webbläsare, temat kommer att visas runt kanten på din webbläsare.",
+    "description":"Lägg till ett mörkt tema till din webbläsare, temat kommer att visas runt kanten på din webbläsare."
+  },
+  "desbrowsersupport":{
+    "message":"Den här webbläsaren stöder inte ännu denna funktion. Kontrollera att du har den senaste versionen av din webbläsare.",
+    "description":"Den här webbläsaren stöder inte ännu denna funktion. Kontrollera att du har den senaste versionen av din webbläsare."
+  },
+  "titelsupportatmos":{
+    "message":"Stöder endast HTML5 <video> och YouTube HTML5 Videospelare. Och den använder GPU från ditt grafikkort.",
+    "description":"Stöder endast HTML5 <video> och YouTube HTML5 Videospelare. Och den använder GPU från ditt grafikkort."
+  },
+  "titelseeonline":{
+    "message":"Se online för fler exempel",
+    "description":"Se online för fler exempel"
+  },
+  "titelvideosample":{
+    "message":"Video",
+    "description":"Video"
+  },
+  "titelwebsite":{
+    "message":"Hemsida",
+    "description":"Hemsida"
+  },
+  "titeldeveloper":{
+    "message":"Utvecklare",
+    "description":"Utvecklare"
+  },
+  "titelrightsreserved":{
+    "message":"Några rättigheter reserverade.",
+    "description":"Några rättigheter reserverade."
+  },
+  "desbrowserextension":{
+    "message":"webbläsartillägg",
+    "description":"webbläsartillägg"
+  },
+  "desapitext":{
+    "message":"Wiki API för webbutvecklare",
+    "description":"Wiki API för webbutvecklare"
+  },
+  "desbrowsertheme":{
+    "message":"webbläsartema",
+    "description":"webbläsartema"
+  },
+  "desproject":{
+    "message":"projekt",
+    "description":"projekt"
+  },
+  "titelapideveloper":{
+    "message":"API Utvecklare",
+    "description":"API Utvecklare"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki om Atmosfärljus-funktionen",
+    "description":"Wiki om Atmosfärljus-funktionen"
+  }
+}

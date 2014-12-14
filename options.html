@@ -1,0 +1,811 @@
+<!--
+//================================================
+/*
+
+Turn Off the Lights
+The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
+Copyright (C) 2014 Stefan vd
+www.stefanvd.net
+www.turnoffthelights.com
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.0/
+
+*/
+//================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title data-i18n="optionpagetitle">Turn Off the Lights - Options</title>
+<link rel="stylesheet" type="text/css" href="css/options.css">
+<script type="text/javascript" src="js/options.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="js/analytics.js"></script>
+
+<div id="remembershare">
+<div id="productrememberimage"><img id="rememberlamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div>
+<div id="remembersharecenter">
+<h2><span data-i18n="friendlyremember"></span></h2>
+<div class="remembertext"><span data-i18n="longdonatetext"></span></div>
+<a href="http://www.turnoffthelights.com/donate.html" target="_blank" id="rememberboxdonate" data-i18n="titledonatebutton"></a>
+<br>
+<br>
+<br>
+<div class="remembertext"><span data-i18n="enjoyshare"></span></div>
+<a id="rememberboxrate" href="https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn" target="_blank"><span data-i18n="rememberrate"></span> 5 &#9733;</a>
+<a id="rememberboxgoogle">Google+</a>
+<a id="rememberboxfacebook">Facebook</a>
+<a id="rememberboxtwitter">Twitter</a>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<div id="divcheckboxskipremember">
+	<input id="firstcheckboxskipremember" type="checkbox"><span data-i18n="showremember"></span> <button id="skipremember" data-i18n="skipremember"></button>
+</div>
+</div>
+</div>
+
+
+<div id="loading">
+<div id="loadingcenter">
+<div id="productwelcomeimageload"><img id="loadinglamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div>
+<div id="progressbar"><div id="progress"><div id="pbaranim"></div></div></div>
+</div>
+<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="http://www.turnoffthelights.com/support.php" target="blank" data-i18n="pagehelp"></a>!</span>
+</div>
+
+<div id="main-content">
+	<div id="navbar-container">
+	<br>
+	<a href="http://www.turnoffthelights.com" target="blank" class="brand"><div id="productwelcomeimage"><img id="welcomelamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div></a>
+	<div id="productsettingtitel" data-i18n="settings"></div>
+	<br><br><br>	
+	<ul id="navbar">
+		<li><a id="tabbasic" data-tab="#tab1" class="navbar-item navbar-item-selected"><span data-i18n="basicsettings"></span></a></li>
+		<li><a id="tabvisual" data-tab="#tab2" class="navbar-item"><span data-i18n="visualeffects"></span></a></li>
+		<li><a id="tabadvan" data-tab="#tab3" class="navbar-item"><span data-i18n="advancedoptions"></span></a></li>
+		<li><a id="tabnight" data-tab="#tab5" class="navbar-item"><span data-i18n="nightoptions"></span></a></li>
+		<li><a id="tabmotion" data-tab="#tab7" class="navbar-item"><span data-i18n="motionoptions"></span></a></li>
+		<li><a id="tabspeech" data-tab="#tab8" class="navbar-item"><span data-i18n="speechoption"></span></a></li>
+		<li><a id="tabguide" data-tab="#tab4" class="navbar-item"><span data-i18n="guide"></span></a></li>
+		<li><a id="tabshare" data-tab="#tab6" class="navbar-item"><span data-i18n="productshare"></span></a></li>
+		<li><a id="tabhelp" data-tab="#tab9" class="navbar-item"><span data-i18n="help"></span></a></li>
+	</ul>
+	</div>
+	<div id="mainview">
+	<div id="managed-prefs-banner">
+		<span id="managed-prefs-icon">
+			<a class="donatebutton" target="_blank" href="http://www.turnoffthelights.com/donate.html" data-i18n="titledonatebutton"></a>
+		</span>
+		<span id="managed-prefs-text" data-i18n="donatepromotext"></span>
+		<div id="managed-prefs-text-close"><span style="display:none;">Close</span></div>
+    </div>
+		<div id="mainview-content">
+			<div id="tab1" class="page">
+			<h1 data-i18n="basicsettings"></h1>
+			<header>
+			<a id="shareboxrate" href="https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn" target="_blank"><span data-i18n="rememberrate"></span> 5 &#9733;</a> <a id="shareboxgoogle">Google+</a> <a id="shareboxfacebook">Facebook</a> <a id="shareboxtwitter">Twitter</a>
+			</header>
+				<br>
+				<div id="example1"></div>
+				<div id="stefanvddynamicbackground"></div>
+				<table class="youtubepreview">
+					<tr>
+						<td class="viewpanel">
+						<iframe id="dont-turn-off-the-lights" class="youtube-player" width="340" height="195" src="" frameborder="0" allowfullscreen></iframe>
+						<div id="sampletitle" class="youtubetitel">Stefan vd</div>
+						<div id="samplechannel" class="youtube_container_head">	
+						<script src="https://apis.google.com/js/platform.js"></script>
+						<div class="g-ytsubscribe" data-channel="stefanvdlive" data-layout="full" data-count="default"></div>
+						</div>
+						<div id="videochannel" class="youtube_video_head">
+						<div class="youtubevideobutton"><span>55 videos</span></div>
+						</div>
+						<div id="samplelikebar" class="youtuberating">
+							<div id="sampleview" class="youtubeviewnumbers">4,301,189</div>
+							<div class="youtuberatingsparkbarlikes" style="width: 100.0%"></div>
+							<div class="youtuberatingsparkbardislikes" style="width: 0.0%"></div>
+							<span class="youtuberatinglikesdislikes"><img alt="Like" height="8" src="images/like.png" width="8"> 4k <img alt="Dislike" height="8" src="images/dislike.png" width="8"> 0</span>
+						</div>
+						<br>
+						<div id="sampledislikebutton" class="youtubelikebar">
+						<div class="youtubelikebutton"><img alt="Like" height="20" src="images/like.png" width="20"><span>Like</span></div>
+						<div class="youtubedislikebutton"><img alt="Dislike" height="20" src="images/dislike.png" width="20"></div>
+						</div>
+						<div id="samplesharebutton" class="youtubesharebutton"><span>Share</span></div>
+						<div id="sampleaddbutton" class="youtubeaddtobutton"><span>Add to</span></div>
+						<div id="sampleinforbar" class="youtubeinforbar">
+						<div class="youtubecommentsupload">Published on Sep 22, 2011</div>
+						<div class="youtubecommentsdescribe">The new introduction video from Stefan vd.</div>	
+						</div>
+						</td>
+						<td class="suggpanel">
+						<div id="samplesug" class="youtubesuggestionbar">
+						<table>
+							<tr>
+								<td><div class="youtubevideoframegeen"></div></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan vd video: update now in air</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td><div class="youtubevideoframeblue"></div></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Speech feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td><div class="youtubevideoframeyellow"></div></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Night Mode feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td><div class="youtubevideoframered"></div></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Cam Motion feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+							</tr>
+						</table>
+						</div>
+						</td>
+					</tr>
+				</table>
+				<section>
+				<h3 data-i18n="titelscreen"></h3>
+				<div>
+					<div id="customHomePageGroup">
+						<div class="radio">
+							<label>
+								<input id="lightimagen" type="radio" name="lightimage" value="never">
+								<span data-i18n="titelcolor"></span>:
+								<input id="lightcolor" type="color" class="color">
+								<span data-i18n="titelblur"></span>:
+								<input id="blur" type="checkbox">
+							</label>
+						</div>
+						<div class="dimrange">
+						<span data-i18n="titelopacity"></span>:
+						<input type="range" id="slider" min="0" max="100" step="1" value="0"><input type="number" id="interval" min="0" max="100" step="1" value="0" maxlength="3" size="4">
+						</div>
+					</div>
+					<div>
+						<div class="radio">
+							<label>
+								<input id="lightimagelin" type="radio" name="lightimage" value="linear">
+								<span data-i18n="titellinear"></span>:
+								<select id="linearsq">
+									<option value="top" data-i18n="top"></option>
+									<option value="bottom" data-i18n="bottom"></option>
+									<option value="right" data-i18n="right"></option>
+									<option value="left" data-i18n="left"></option>
+								</select>
+								<span data-i18n="titelcolora"></span>
+								<input id="colora" type="color" class="color">
+								<input type="number" id="intervallina" min="0" max="100" step="1" value="0" maxlength="3" size="4">
+								<span data-i18n="titelcolorb"></span>
+								<input id="colorb" type="color" class="color">
+								<input type="number" id="intervallinb" min="0" max="100" step="1" value="0" maxlength="3" size="4">
+							</label>
+						</div>
+					</div>
+					<div id="customHomePageGroup">
+						<div class="radio">
+							<label>
+								<input id="lightimagea" type="radio" name="lightimage" value="only">
+								<span data-i18n="titelimage"></span>:
+							</label>
+						</div>
+						<div>
+							<button id="wallpapershow" data-i18n="titellessmore"></button>
+							<button id="wallpaperhide" data-i18n="titelshowmore"></button>
+							<input id="lightimage" type="url" pattern="https?://.+">
+						</div>
+					</div>
+					<div id="imagegallery" style="display:none;">
+					<img id="totlswallpaper1" alt="Screenshot1" height="70" src="images/totlminis1.png" width="100" class="imageshaduw">
+					<img id="totlswallpaper2" alt="Screenshot2" height="70" src="images/totlminis2.png" width="100" class="imageshaduw">
+					<img id="totlswallpaper3" alt="Screenshot3" height="70" src="images/totlminis3.png" width="100" class="imageshaduw">
+					<img id="totlswallpaper4" alt="Screenshot4" height="70" src="images/totlminis4.png" width="100" class="imageshaduw">
+					<img id="totlswallpaper5" alt="Screenshot5" height="70" src="images/totlminis5.png" width="100" class="imageshaduw">
+					</div>
+					<div id="customHomePageGroup" style="display:none;">
+						<label>
+								<input id="dynamic1" type="radio" name="dynamicbackground">
+								<span data-i18n="desdynamicfishtank"></span>
+						</label>
+						<label>
+								<input id="dynamic2" type="radio" name="dynamicbackground">
+								<span data-i18n="desdynamicblocks"></span>
+						</label>
+						<label>
+								<input id="dynamic3" type="radio" name="dynamicbackground">
+								<span data-i18n="desdynamicraindrops"></span>
+						</label>
+						<label>
+								<input id="dynamic4" type="radio" name="dynamicbackground">
+								<span data-i18n="desdynamiccloud"></span>
+						</label>
+						<label>
+								<input id="dynamic5" type="radio" name="dynamicbackground">
+								<span data-i18n="desdynamicspace"></span>
+						</label>
+					</div>
+					<div id="customHomePageGroup">
+						<div class="radio">
+							<label>
+								<input id="dynamic" type="checkbox">
+								<span data-i18n="titeldynamic"></span>:
+							</label>
+						</div>
+						<div>
+							<button id="dynamicshow" data-i18n="titellessmore"></button>
+							<button id="dynamichide" data-i18n="titelshowmore"></button>
+							<input id="lightdynamic" type="text" readonly>
+						</div>
+					</div>
+					<div id="dynamicgallery" style="display:none;">
+					<div class="hoveroptionbox">
+					<div class="hoveroptiondyn1"><div class="dyn1showme"><br><button id="totldynpaper1" data-i18n="hoveroptionapply"></button></div></div>									
+					<img alt="Dynshot1" height="70" src="images/totldyn1.png" width="100" class="dynamicshaduw">
+					</div>
+					
+					<div class="hoveroptionbox">
+					<div class="hoveroptiondyn2"><div class="dyn2showme"><br><button id="totldynpaper2" data-i18n="hoveroptionapply"></button></div></div>					
+					<img alt="Dynshot2" height="70" src="images/totldyn2.png" width="100" class="dynamicshaduw">
+					</div>					
+					
+					<div class="hoveroptionbox">
+					<div class="hoveroptiondyn3"><div class="dyn3showme"><br><button id="totldynpaper3" data-i18n="hoveroptionapply"></button></div></div>					
+					<img alt="Dynshot3" height="70" src="images/totldyn3.png" width="100" class="dynamicshaduw">
+					</div>
+					
+					<div class="hoveroptionbox">
+					<div class="hoveroptiondyn4"><div class="dyn4showme"><br><button id="totldynpaper4" data-i18n="hoveroptionapply"></button></div></div>					
+					<img alt="Dynshot4" height="70" src="images/totldyn4.png" width="100" class="dynamicshaduw">
+					</div>
+					
+					<div class="hoveroptionbox">
+					<div class="hoveroptiondyn5"><div class="dyn5showme"><input id="hoveroptiondyn5" type="checkbox"><span data-i18n="hoveroptiondyn5"></span><br><button id="totldynpaper5" data-i18n="hoveroptionapply"></button></div></div>					
+					<img alt="Dynshot5" height="70" src="images/totldyn5.png" width="100" class="dynamicshaduw">
+					</div>
+					
+					</div>					
+				</div>
+				</section>
+				<section>			
+				<h3 data-i18n="titelautoplay"></h3>
+				<div>
+				<div id="helpautoplay" class="helpwhatproblem" data-i18n="helpautoplay"></div>
+				<label class="checkbox"><input id="autoplay" type="checkbox"><span data-i18n="desautoplay"></span></label>
+				<label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="autoplaydelay" type="checkbox"><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</label>
+				<div class="grey-text"><span>HTML5 &amp; YouTube&#8482; video</span></div>
+				
+				<label class="checkbox"><input id="autoplayonly" type="checkbox"><span data-i18n="desautoplayonly"></span></label>
+				<label class="radio"><input id="autoplaychecklistwhite" type="radio" name="autoplaychecklist" value="true"><span data-i18n="titelautoplaywhitelist"></span>&nbsp;&nbsp;&nbsp;<input id="autoplaychecklistblack" type="radio" name="autoplaychecklist" value="black"><span data-i18n="titelautoplayblacklist"></span></label>
+				
+				  <table id="autoplaywhitelist">
+ 				   <tr>
+ 				     <td><span data-i18n="titelwebsite"></span>:</td>
+  				     <td><input id="autoplaywebsiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+ 				     <td><button id="autoplayaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+ 				   </tr>
+ 				   <tr>
+				      <td colspan="2"><select id="autoplayDomainsBox" name="autoplayentryList" size="3" multiple=""></select></td>
+				      <td valign="center"><button id="autoplayremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				    </tr>
+				  </table>
+				
+				</div>
+				</section>
+				<section>
+				<h3>YouTube&#8482;</h3>
+				<div>
+					<table class="tablefirstyt">
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelplaylist"></span></label></td>
+							<td><label class="checkbox"><input id="playlist" type="checkbox"><span data-i18n="desplaylist"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelinfobar"></span></label></td>
+							<td><label class="checkbox"><input id="infobar" type="checkbox"><span data-i18n="desinfobar"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titellikebutton"></span></label></td>
+							<td><label class="checkbox"><input id="likebutton" type="checkbox"><span data-i18n="deslikebutton"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titeladdvideobutton"></span></label></td>
+							<td><label class="checkbox"><input id="addvideobutton" type="checkbox"><span data-i18n="desaddvideobutton"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelhead"></span></label></td>
+							<td><label class="checkbox"><input id="head" type="checkbox"><span data-i18n="deshead"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelsharebutton"></span></label></td>
+							<td><label class="checkbox"><input id="sharebutton" type="checkbox"><span data-i18n="dessharebutton"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelsuggestions"></span></label></td>
+							<td><label class="checkbox"><input id="suggestions" type="checkbox"><span data-i18n="dessuggestions"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelvideoheadline"></span></label></td>
+							<td><label class="checkbox"><input id="videoheadline" type="checkbox"><span data-i18n="desvideoheadline"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titelviewcount"></span></label></td>
+							<td><label class="checkbox"><input id="viewcount" type="checkbox"><span data-i18n="desviewcount"></span></label></td>
+						</tr>
+						<tr>
+							<td><label class="checkbox"><span class="item" data-i18n="titellikebar"></span></label></td>
+							<td><label class="checkbox"><input id="likebar" type="checkbox"><span data-i18n="deslikebar"></span></label></td>
+						</tr>
+					</table>
+				</div>
+				</section>
+				<section>
+				<h3></h3>				
+				<div><table>
+				<tr><td><label class="checkbox"><input id="autowidthyoutube" type="checkbox"><span data-i18n="titelautowidthyoutube"></span></label></td></tr>
+				<tr><td><label class="checkbox"><input id="customqualityyoutube" type="checkbox"><span data-i18n="titelqualityyoutube"></span></label>
+				<label class="checkbox"><span data-i18n="titelmaxqualityyoutube"></span>
+				<select id="youtubequality">
+					<option value="highres">highres</option>
+					<option value="hd1080">1080p</option>
+					<option value="hd720">720p</option>
+					<option value="large">480p</option>
+					<option value="medium">360p</option>
+					<option value="small">240p</option>
+					<option value="tiny">144p</option>
+					<option value="default">default</option>
+				</select></label></td></tr>
+				<tr><td><label class="checkbox"><input id="cinemaontop" type="checkbox"><span data-i18n="titelcinemaontop"></span></label></td></tr>
+				</table>				
+				</div>
+				</section>
+			</div>
+			<div id="tab2" class="page hidden">
+				<h1 data-i18n="visualeffects"></h1>
+				<br>
+				<div id="example2"></div>
+				<section>
+				<div>
+				<br><br>
+				<video id="beeld" controls width="640" height="360" preload="none" poster="http://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360.jpg">
+					<source src="http://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.mp4" type="video/mp4">
+					<source src="http://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.ogv" type="video/ogv">
+				</video>
+				<br><br><br><br>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelambilight"></h3>
+				<div>
+				<div class="switch">
+				<div class="grey-text"><span data-i18n="titelon"></span></div>
+				<input type="range" min="0" max="1" step="1" value="0" name="onoffrange" id="onoffrange">
+				<div class="grey-text"><span data-i18n="titeloff"></span></div>
+				</div>
+				<div class="grey-text"><span data-i18n="titelvideosample"></span>: <span>Big Buck Bunny &copy; Copyright 2008 Blender Foundation.</span></div>
+				<a href="http://www.youtube.com/user/StefanvdLive?feature=totloptionpagechrome" target="blank"><span data-i18n="titelseeonline"></span></a><br><br>
+				<label class="checkbox"><input id="ambilight" type="checkbox"><span data-i18n="desambilight"></span></label>
+				<div class="grey-text"><span data-i18n="titelsupportatmos"></span></div>					
+				<br>
+				<div>
+					<label class="radio"><input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed"><span data-i18n="desambilightfixcolor"></span> <input id="ambilightcolorhex" type="color" class="color"></label>					
+					<label class="radio"><input id="ambilight4color" type="radio" name="ambilightcolor" value="4"><span data-i18n="desambilight4color"></span><br><span data-i18n="top"></span> <input id="ambilight1colorhex" type="color" class="color"> <span data-i18n="bottom"></span> <input id="ambilight2colorhex" type="color" class="color"> <span data-i18n="right"></span> <input id="ambilight3colorhex" type="color" class="color"> <span data-i18n="left"></span> <input id="ambilight4colorhex" type="color" class="color"></label>
+					<label class="radio"><input id="ambilightvarcolor" type="radio" name="ambilightcolor" value="real"><span data-i18n="desambilightvarcolor"></span>
+					<br>
+					<div id="showwarningambilight" class="warningambilight">
+					<span class="warning" data-i18n="warning"></span><br><span data-i18n="warningtextambilight"></span>
+					<span><a href="http://www.turnoffthelights.com/browser/atmosphere-lighting.html" target="blank"><span data-i18n="titelwikiatmos"></span></a>.</span>
+					</div>
+					</label>
+				</div>
+				<div>
+					<div class="radio">
+						<label>
+						<table>
+							<tr>
+								<td><span class="item" data-i18n="titelblurradius"></span></td>
+								<td><input type="range" min="30" max="250" step="1" value="0" name="arangeblur" id="arangeblur"></td>
+								<td><input type="number" min="30" max="250" step="1" value="0" name="ambilightrangeblurradius" id="ambilightrangeblurradius" maxlength="3" size="4"></td>
+								</tr>								
+						</table>
+						</label>
+						<span data-i18n="desambilightrangeblurradius"></span>
+					</div>
+					<div class="radio">
+						<label>
+						<table>
+							<tr>
+								<td><span class="item" data-i18n="titelspreadradius"></span></td>
+								<td><input type="range" min="0" max="50" step="1" value="0" name="arangespread" id="arangespread"></td>
+								<td><input type="number" min="0" max="50" step="1" value="0" name="ambilightrangespreadradius" id="ambilightrangespreadradius" maxlength="3" size="4"></td>
+								</tr>								
+						</table>
+						</label>
+						<span data-i18n="desambilightrangespreadradius"></span>
+					</div>
+				<label class="checkbox"><input id="atmosvivid" type="checkbox"><span data-i18n="desatmosvivid"></span>: <a href="https://www.youtube.com/html5" target="_blank">YouTube HTML5</a></label>
+				<br>
+				<label class="checkbox"><input id="atmosphereonly" type="checkbox"><span data-i18n="desatmosphereonly"></span></label>
+				  <table id="atmospherewhitelist">
+ 				   <tr>
+ 				     <td><span data-i18n="titelwebsite"></span>:</td>
+  				     <td><input id="atmospherewebsiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+ 				     <td><button id="atmosphereaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+ 				   </tr>
+ 				   <tr>
+				      <td colspan="2"><select id="atmosphereDomainsBox" name="atmosphereentryList" size="3" multiple=""></select></td>
+				      <td valign="center"><button id="atmosphereremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				    </tr>
+				  </table>
+					
+				</div>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelfadein"></h3>
+				<div><label class="checkbox"><input id="fadein" type="checkbox"><span data-i18n="desfadein"></span></label></div>
+				</section>
+				<section>
+				<h3 data-i18n="titelfadeout"></h3>
+				<div><label class="checkbox"><input id="fadeout" type="checkbox"><span data-i18n="desfadeout"></span></label></div>
+				</section>
+			</div>
+			<div id="tab3" class="page hidden">
+				<h1 data-i18n="advancedoptions"></h1>
+				<section>
+				<h3 id="titelflash" data-i18n="titelflash"></h3>
+				<div>
+				<label class="radio"><input id="noflash" type="radio" name="af" value="normal"><span data-i18n="desnoflash"></span></label>
+				<label class="radio"><input id="flash" type="radio" name="af" value="easy"><span data-i18n="desflash"></span> <span data-i18n="recflash" class="item"></span></label>
+				<label class="radio"><input id="hardflash" type="radio" name="af" value="hard"><span data-i18n="deshardflash"></span>&nbsp;<span class="superscript">BETA</span><br><a href="http://www.stefanvd.net/project/totlrecommends.htm" target="blank"><span data-i18n="installadblocker"></span></a></label>
+				<div class="grey-text"><span>Support: &lt;object&gt;, &lt;embed&gt;, &lt;applet&gt;, &lt;iframe&gt;.</span></div></div>
+				</section>
+				<section>
+				<h3 data-i18n="titelreader"></h3>
+				<div>
+					<label class="radio"><input id="readera" type="radio" name="reader" value="only"><span data-i18n="desreadera"></span></label>
+					<label class="radio"><input id="readern" type="radio" name="reader" value="never"><span data-i18n="desreadern"></span></label>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titeleye"></h3>
+				<div>
+				<div id="helpeyeprotection" class="helpwhatproblem" data-i18n="helpeyeprotection"></div>
+					<label class="radio"><input id="eyen" type="radio" name="eye" value="never"><span data-i18n="deseyen"></span></label>
+					<label class="radio"><input id="eyea" type="radio" name="eye" value="always"><span data-i18n="deseyea"></span></label>
+					<label class="radio"><input id="eyealist" type="radio" name="eye" value="alwayslist"><span data-i18n="deseyealist"></span></label>
+				  <table id="EyeWhitelist">
+ 				   <tr>
+ 				     <td><span data-i18n="titelwebsite"></span>:</td>
+  				     <td><input id="websiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+ 				     <td><button id="addbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+ 				   </tr>
+ 				   <tr>
+				      <td colspan="2"><select id="excludedDomainsBox" name="entryList" size="10" multiple=""></select></td>
+				      <td valign="center"><button id="removebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				    </tr>
+				  </table>
+				  <div class="ecogreen">
+					  <div id="logogreen"><img alt="Green" src="images/green.png"><br>Green</div>
+					  <label class="checkbox"><input id="ecosaver" type="checkbox"><span data-i18n="dessaver"></span></label>
+					  <div id="Eyesaver">
+						<span data-i18n="deseyetimesaver"></span><br>
+						<input id="ecosavertime" type="number" name="saver" min="0" max="900" step="1" value="0" maxlength="3" size="4"> <button id="confirmtimesaver" data-i18n="desconfirmtimesaver"></button>
+				      </div>
+				  </div>
+				  <label class="checkbox"><input id="nighttime" type="checkbox"><span data-i18n="destime"></span></label>
+				  <div id="Eyetime">
+				      <input id="begintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="endtime" type="time" name="time"><button id="confirmtime" data-i18n="desconfirmtime"></button>
+				  </div>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelshortcutlight"></h3>
+				<div><label class="checkbox"><input id="shortcutlight" type="checkbox"><span data-i18n="desshortcutlight"></span></label>
+				<ul>
+				<li><label class="checkbox"><span>Ctrl + Shift + L</span> <span data-i18n="shortcuttotl"></span></label></li>
+				<li><label class="checkbox"><span>Alt + F8</span> <span data-i18n="shortcutopacity"></span></label></li>
+				<li><label class="checkbox"><span>Alt + F9</span> <span data-i18n="shortcutsavingopacity"></span></label></li>
+				<li><label class="checkbox"><span>Alt + F10</span> <span data-i18n="shortcuteyeprotection"></span></label></li>
+				<li><label class="checkbox"><span>Alt + &uarr;</span> <span data-i18n="shortcutdark"></span></label></li>
+				<li><label class="checkbox"><span>Alt + &darr;</span> <span data-i18n="shortcutbright"></span></label></li>
+				<li><label class="checkbox"><span>Alt + *</span> <span data-i18n="shortcutalllights"></span></label></li>
+				</ul>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelcontextmenus"></h3>
+				<div><label class="checkbox"><input id="contextmenus" type="checkbox"><span data-i18n="descontextmenus"></span></label></div>
+				</section>
+				<section>
+				<h3 data-i18n="titeleastereggs"></h3>
+				<div><label class="checkbox"><input id="eastereggs" type="checkbox"><span data-i18n="deseastereggs"></span></label></div>
+				</section>
+				<section>
+				<h3 data-i18n="titellamp"></h3>
+				<div>
+					<label class="radio"><input id="pageaction" type="radio" name="lampbutton" value="off"><span data-i18n="titelpageaction"></span></label>
+					<label class="radio"><input id="lampregular" type="radio" name="lampbutton" value="off"><span data-i18n="titellampregular"></span></label>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelalllightsoff"></h3>
+				<div><label class="checkbox"><input id="alllightsoff" type="checkbox"><span data-i18n="desalllightsoff"></span></label></div>
+				</section>		
+				<section>
+				<h3 data-i18n="titelmouse"></h3>
+				<div>
+					<label class="radio"><input id="mousespotlighto" type="radio" name="mousespotlight" value="off"><span data-i18n="desmousespotlighto"></span></label>
+					<label class="radio"><input id="mousespotlighta" type="radio" name="mousespotlight" value="auto"><span data-i18n="desmousespotlighta"></span>
+					<br>
+					<span data-i18n="desspotlightradius"></span> <input type="number" min="5" max="250" step="1" value="0" name="spotlightradiusnumber" id="spotlightradius" maxlength="3" size="4">px 
+					</label>
+					<label class="radio"><input id="mousespotlightc" type="radio" name="mousespotlight" value="custom"><span data-i18n="desmousespotlightc"></span></label>
+					<label class="radio"><input id="mousespotlightt" type="radio" name="mousespotlight" value="custom"><span data-i18n="desmousespotlightt"></span></label>	
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelpassword"></h3>
+				<div>
+					<label class="checkbox"><input id="password" type="checkbox"><span data-i18n="desenterpassword"></span></label>			
+					<label class="checkbox"><input id="enterpassword" type="password"><button id="confirmpassword" data-i18n="desconfirmpassword"></button><br><span data-i18n="despassword"></span></label>
+				</div>
+				</section>
+				<section>
+				<h3 data-i18n="titelrememberpage"></h3>
+				<div><label class="checkbox"><input id="optionskipremember" type="checkbox"><span data-i18n="desrememberpage"></span></label></div>
+				</section>						
+				<section>
+				<h3 data-i18n="titelapideveloper"></h3>
+				<div class="grey-text"><span>Turn Off the Lights <a href="http://www.turnoffthelights.com/APIwebsite.html" target="blank"><span data-i18n="desapitext"></span></a>.</span></div>
+				</section>
+				<section>
+				<h3 data-i18n="titelsync"></h3>
+				<div class="grey-text"><span data-i18n="titelsyncbrowser"></span></div>
+				</section>
+				<section>			
+				<h3 data-i18n="titelupgrade"></h3>
+				<div>
+					<label class="checkbox"><span class="item">Ambient Aurea browser extension</span><br><span data-i18n="titeldownloadupgrade"></span></label>
+					<p>
+					<button id="aadownload" data-i18n="titeldownloadbutton"></button>
+					<span class="grey-text"><span data-i18n="desproject"></span> <a href="http://www.stefanvd.net/project/ambientaurea.htm" target="blank">Ambient Aurea</a> <span data-i18n="desbrowserextension"></span>.</span>
+					</p>
+					<br>
+					<label class="checkbox"><span class="item">Turn Off the Lights browser theme</span><br><span data-i18n="titeldownloadthemeupgrade"></span></label>
+					<p>
+					<button id="themedownload" data-i18n="titeldownloadbutton"></button>
+					<span class="grey-text"><span data-i18n="desproject"></span> <a href="http://www.turnoffthelights.com" target="blank">Turn Off the Lights</a> <span data-i18n="desbrowsertheme"></span>.</span>
+					</p>
+				</div>
+				</section>
+				<section>			
+				<h3 data-i18n="titelreset"></h3>
+				<div>
+					<label class="checkbox"><button id="resettotl" data-i18n="resetbrowserextension"></button></label>
+				</div>
+				</section>
+			</div>
+			<div id="tab5" class="page hidden">
+				<h1 data-i18n="nightoptions"></h1>
+				<section>			
+				<br>
+				<br>	
+				<label id="stefanvdnighttheme">
+					<input type="checkbox" />
+					<span id="stefanvdnightthemeslider">
+						<span class="sun"><span></span></span>
+						<span class="night"><span></span></span>
+						<span id="sliderblock"><span id="stefanvdnighti">&#x2261;</span></span>
+					</span>
+				</label>
+				<br>
+				</section>
+				<section>
+				<h3 data-i18n="titelnighttheme"></h3>
+				<div>
+				<label class="checkbox"><input id="nighttheme" type="checkbox"><span data-i18n="desnighttheme"></span></label>
+				<label class="checkbox"><input id="nightonly" type="checkbox"><span data-i18n="desnightonly"></span></label>
+				  <table id="nightwhitelist">
+ 				   <tr>
+ 				     <td><span data-i18n="titelwebsite"></span>:</td>
+  				     <td><input id="nightwebsiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+ 				     <td><button id="nightaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+ 				   </tr>
+ 				   <tr>
+				      <td colspan="2"><select id="nightDomainsBox" name="nightentryList" size="3" multiple=""></select></td>
+				      <td valign="center"><button id="nightremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				    </tr>
+				  </table>
+				<label class="checkbox"><input id="nightenabletheme" type="checkbox"><span data-i18n="desnightenabletheme"></span></label>
+				</div>
+				</section>
+			</div>
+			<div id="tab7" class="page hidden">
+			<h1 data-i18n="motionoptions"></h1>
+			<section>
+				<h3 data-i18n="titelcamera"></h3>
+				<div>
+					<div id="helpcameramotion" class="helpwhatproblem" data-i18n="desbrowsersupport" style="display: none;"></div>
+					<label class="checkbox"><input id="motion" type="checkbox"><span data-i18n="desmotion"></span></label>
+					<a href="http://www.stefanvd.net/" target="blank"><span data-i18n="trymotion"></span></a> <span data-i18n="destrymotion"></span>
+					<br><br>
+					<canvas width="0" height="0" id="motioncanvas"></canvas>
+					<canvas width="0" height="0" id="motioncomp"></canvas>
+					<br>
+					<video id="motionvideo" width="320" height="240" autoplay>Your browser does not support the video tag.</video>
+					<br>
+					<label class="checkbox"><input id="cammotiononly" type="checkbox"><span data-i18n="descammotiononly"></span></label>
+					<table id="cammotionwhitelist">
+					<tr>
+						<td><span data-i18n="titelwebsite"></span>:</td>
+						<td><input id="cammotionwebsiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+						<td><button id="cammotionaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+					</tr>
+					<tr>
+						<td colspan="2"><select id="cammotionDomainsBox" name="nightentryList" size="3" multiple=""></select></td>
+						<td valign="center"><button id="cammotionremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+						</tr>
+					</table>
+				</div>
+				</section>
+				<section>
+				<div>
+					<h1><span data-i18n="howworkmotion"></span></h1>
+				<div class="motionworks">
+					<div class="step">
+						<div class="stepdescription">1. <span data-i18n="step1description"></span></div>
+						<div id="tablet">
+							<div class="camera enablecameralamp"></div>
+							<div class="monitor">
+								<div class="screencanvas"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="step">
+						<div class="stepdescription">2. <span data-i18n="step2description"></span></div>
+							<div class="handgreep">
+								<div class="hand">
+									<div class="fingera"></div>
+									<div class="fingerb"></div>
+									<div class="fingerc"></div>
+									<div class="fingerd"></div>
+									<div class="fingere"></div>
+									<div class="palm"></div>
+								</div>
+							</div>
+						<div id="tablet">
+							<div class="camera"></div>
+							<div class="monitor">
+								<div class="screencanvas"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="step">
+						<div class="stepdescription">3. <span data-i18n="step3description"></span></div>
+						<div id="tablet">
+							<div class="camera"></div>
+							<div class="monitor">
+								<div class="screencanvas">
+									<div class="screendimmer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<label class="cameracheclist"><span data-i18n="desmotionChecklist"></span></label>
+				<br>
+				<ul>
+					<li><span data-i18n="des1checkmotion"></span></li>
+					<li><span data-i18n="des2checkmotion"></span></li>
+					<li><span data-i18n="des3checkmotion"></span></li>
+				</ul>
+				<div id="stefanmotion"></div>
+				</div>
+			</section>	
+			</div>
+			<div id="tab8" class="page hidden">
+			<h1 data-i18n="speechoption"></h1>
+			<section>
+				<h3 data-i18n="titelspeech"></h3>
+				<div>
+				<div id="helpspeech" class="helpwhatproblem" data-i18n="desbrowsersupport" style="display: none;"></div>
+				<label class="checkbox"><input id="speech" type="checkbox"><span data-i18n="desspeech"></span></label>
+				<ul>
+					<li><span data-i18n="desspeech1command"></span></li>
+					<li><span data-i18n="desspeech2command"></span></li>
+					<li><span data-i18n="desspeech3command"></span></li>
+					<li><span data-i18n="desspeech4command"></span></li>
+				</ul>
+				<label class="checkbox"><span data-i18n="desspeechdialect"></span></label>
+				<select id="select_language"></select>&nbsp;&nbsp;<select id="select_dialect"></select>
+				<br>
+				<br>
+				<label class="checkbox"><input id="speechonly" type="checkbox"><span data-i18n="desspeechonly"></span></label>
+				<table id="speechwhitelist">
+				<tr>
+					<td><span data-i18n="titelwebsite"></span>:</td>
+					<td><input id="speechwebsiteurl" type="url" required pattern="https?://.+" placeholder="http://www.example.com"></td>
+					<td><button id="speechaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+				</tr>
+				<tr>
+					<td colspan="2"><select id="speechDomainsBox" name="speechentryList" size="3" multiple=""></select></td>
+					<td valign="center"><button id="speechremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				</tr>
+				</table>
+				</div>
+			</section>
+				<div id="stefanvdspeechbox">
+					<div class="stefanvdspeechloading" id="speechicon">
+					<div class="speechicon">
+						<div class="_Xu">
+							<span class="_Kv"></span>
+							<div class="_kR">
+								<span class="_lw"></span>
+								<span class="_ew"></span>
+							</div>
+						</div>
+					</div>
+					<div class="stefanvdspeechbrand"></div>
+				</div>
+				<div id="stefanvdspeechsaidtext"></div>
+			</div>
+			</div>
+			<div id="tab9" class="page hidden">
+			<h1 data-i18n="about"></h1>
+			<section>
+				<div>
+				<label class="checkbox"><h4>Turn Off the Lights™</h4>
+						<span data-i18n="version"></span> <span id="version_number"></span>
+						<br><span data-i18n="description"></span>
+				</label>
+				<br>
+				<label class="checkbox"><span data-i18n="titelwebsite"></span>: <a href="http://www.turnoffthelights.com" target="_blank">www.turnoffthelights.com</a></label>
+				<label class="checkbox"><span data-i18n="titeldeveloper"></span>: <a href="http://www.stefanvd.net" target="_blank">www.stefanvd.net</a></label>
+				<br>
+				<button id="buttonreportissue" data-i18n="reportbug"></button><button id="buttonchangelog" data-i18n="changelog"></button><button id="buttonreportlist" data-i18n="reportlist"></button><button id="buttontranslateme" data-i18n="translateme"></button>
+				<br><br><br><br><br><br>
+				<div class="grey-text">
+				Turn Off the Lights<br>
+				<span class="style_bold">&copy; <span id="yearnow"></span> Stefan vd. <span data-i18n="titelrightsreserved"></span></span><br>
+				<span class="license" data-i18n="textfoot"></span> <a href="http://creativecommons.org/licenses/GPL/2.0/">GPL 2.0</a>.
+				</div>
+				</div>
+			</section>
+			</div>
+		</div>
+			<div id="tab4" class="page hidden">
+				<iframe id="welcomeguide" src="" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
+			</div>
+			<div id="tab6" class="page hidden">
+				<iframe id="welcomeshare" src="" width="100%" height="100%" frameBorder="0" scrolling="yes"></iframe>
+			</div>
+</div>			
+<script type="text/javascript" src="js/options-bottom.js"></script>
+<script type="text/javascript" src="js/translate.js"></script>
+</body>
+</html>

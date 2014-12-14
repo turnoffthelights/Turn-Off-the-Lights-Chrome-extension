@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_name__",
+  "short_name": "TOtL",
+  "version": "3.0.0.21",
+  "description": "__MSG_description__",
+  "homepage_url": "http://www.turnoffthelights.com",
+  "icons": { "16": "icons/icon16.png",
+             "32": "icons/icon32.png",
+             "48": "icons/icon48.png",
+             "128": "icons/icon128.png"
+           },
+  "default_locale": "en",
+  "page_action": {
+      "default_title": "__MSG_pageatitle__",
+	  "default_icon": {
+      "19": "icons/icon1.png",
+      "38": "icons/icon38.png"
+    }
+  },
+  "background": {
+    "page": "background.html",
+	"persistent": false
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; img-src *; object-src 'self'",
+  "web_accessible_resources": [
+    "images/minimize_on.png",
+    "images/minimize.png",
+    "icons/icon16.png",
+	"js/injected.js",
+	"images/theater.jpg"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css" : ["css/light.css"],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "commands": {
+    "_execute_page_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "MacCtrl+Shift+L"
+      }
+    }
+  },
+  "options_page": "options.html",
+  "minimum_chrome_version": "30",
+  "permissions": [ "http://*/*", "https://*/*", "contextMenus", "notifications", "tabs", "storage" ]
+}

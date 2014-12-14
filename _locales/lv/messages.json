@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"palīgā",
+    "description":"palīgā"
+  },
+  "titelimage":{
+    "message":"Fona attēls",
+    "description":"Fona attēls"
+  },
+  "shortcutalllights":{
+    "message":"lai pārslēgtu gaismas ieslēgšanu\/izslēgšanu visām atvērtajām cilnēm.",
+    "description":"lai pārslēgtu gaismas ieslēgšanu\/izslēgšanu visām atvērtajām cilnēm."
+  },
+  "lastchecked":{
+    "message":"Pēdējā versija pārbaudīta",
+    "description":"Pēdējā versija pārbaudīta"
+  },
+  "visualeffects":{
+    "message":"Vizuālie Efekti",
+    "description":"Vizuālos efektus"
+  },
+  "titelshortcutlight":{
+    "message":"Īsinājumtaustiņš",
+    "description":"Īsinājumtaustiņš"
+  },
+  "titledonatebutton":{
+    "message":"Ziedot",
+    "description":"Ziedot"
+  },
+  "titellikebar":{
+    "message":"Patīk josla",
+    "description":"Patīk josla"
+  },
+  "desmousespotlightt":{
+    "message":"Atļauj kliķšķināt cauri tumšajam ekrānam, kad gaismas ir izslēgtas.",
+    "description":"Atļauj kliķšķināt cauri tumšajam ekrānam, kad gaismas ir izslēgtas."
+  },
+  "desambilight4color":{
+    "message":"4 izvēlētās krāsas ap video:",
+    "description":"4 izvēlētās krāsas ap video:"
+  },
+  "lockentername":{
+    "message":"Lūdzu, ievadiet savu paroli",
+    "description":"Lūdzu, ievadiet savu paroli"
+  },
+  "desnoflash":{
+    "message":"Nelietojies šo funkciju.",
+    "description":"Nelietojies šo funkciju."
+  },
+  "desdynamicblocks":{
+    "message":"Bloki",
+    "description":"Bloki"
+  },
+  "titeleye":{
+    "message":"Acu aizsardzība",
+    "description":"Acu aizsardzība"
+  },
+  "titelcinemaontop":{
+    "message":"Filmas kinozāles režīms: Tas rāda 'gaismas izslēgtas' slāni tikai loga ausģpusē.",
+    "description":"Filmas kinozāles režīms: Tas rāda 'gaismas izslēgtas' slāni tikai loga ausģpusē."
+  },
+  "desmousespotlightc":{
+    "message":"Ja gaisma ir izslēgta, varat atlasīt laukumu, lai koncentrētos uz vienuma.",
+    "description":"Ja gaisma ir izslēgta, varat atlasīt laukumu, lai koncentrētos uz vienuma."
+  },
+  "titelrememberpage":{
+    "message":"Atcerēties lapu",
+    "description":"Atcerēties lapu"
+  },
+  "desmousespotlighta":{
+    "message":"Ja gaisma ir izslēgta, rādīt apgaismojumu ap peles kursoru.",
+    "description":"Ja gaisma ir izslēgta, rādīt apgaismojumu ap peles kursoru."
+  },
+  "desmousespotlighto":{
+    "message":"Normālos ekspluatācijas apstākļos (atspējo peles iestatījumus)",
+    "description":"Normālos ekspluatācijas apstākļos (atspējo peles iestatījumus)"
+  },
+  "desplaylist":{
+    "message":"Rādīt YouTube playlist uz YouTube mājas lapā.",
+    "description":"Rādīt YouTube playlist uz YouTube mājas lapā."
+  },
+  "desambilightfixcolor":{
+    "message":"Tīrtoņa krāsu:",
+    "description":"Tīrtoņa krāsu:"
+  },
+  "desuntil":{
+    "message":"līdz",
+    "description":"līdz"
+  },
+  "desconfirmpassword":{
+    "message":"Apstipriniet paroli",
+    "description":"Apstipriniet paroli"
+  },
+  "desautoplayonly":{
+    "message":"Aptumšošt tikai sekojošajās video vietnē(ēs):",
+    "description":"Aptumšošt tikai sekojošajās video vietnē(ēs):"
+  },
+  "helpeyeprotection":{
+    "message":"Iespējojot \"Acu aizsardzība\" automātiski atspējos 'automātiski atskaņot' funkciju.",
+    "description":"Iespējojot \"Acu aizsardzība\" automātiski atspējos 'automātiski atskaņot' funkciju."
+  },
+  "skipremember":{
+    "message":"Izlaist šo un tagad atvērt opciju lapu",
+    "description":"Izlaist šo un tagad atvērt opciju lapu"
+  },
+  "optiontimesaved":{
+    "message":"Laiks ir veiksmīgi saglabāts!",
+    "description":"Laiks ir veiksmīgi saglabāts!"
+  },
+  "titelvideoheadline":{
+    "message":"Video sadaļa",
+    "description":"Video sadaļa"
+  },
+  "translateme":{
+    "message":"Palīdzēt tulkot",
+    "description":"Palīdzēt tulkot"
+  },
+  "despassword":{
+    "message":"Prasīt, lai parole būtu ievadīta pirms gaismas slēgšanas atpakaļ.",
+    "description":"Prasīt, lai parole būtu ievadīta pirms gaismas slēgšanas atpakaļ."
+  },
+  "helpautoplay":{
+    "message":"'Acu Aizsardzība' ir ieslēgta. Lai izmantotu zemāk redzamo funkciju, izslēdziet 'Acu aizsardzības' opciju.",
+    "description":"'Acu Aizsardzība' ir ieslēgta. Lai izmantotu zemāk redzamo funkciju, izslēdziet 'Acu aizsardzības' opciju."
+  },
+  "name":{
+    "message":"Izslēdziet gaismu",
+    "description":"Izslēdziet gaismu"
+  },
+  "changelog":{
+    "message":"Izmaiņu žurnāls",
+    "description":"changelog saite"
+  },
+  "optionpagetitle":{
+    "message":"Turn Off the Lights - Iespējas",
+    "description":"Opcija lappuses virsrakstu"
+  },
+  "optionpasswordsaved":{
+    "message":"Parole ir veiksmīgi saglabāta!",
+    "description":"Parole ir veiksmīgi saglabāta!"
+  },
+  "desdynamicspace":{
+    "message":"Visuma telpa",
+    "description":"Visuma telpa"
+  },
+  "deseastereggs":{
+    "message":"Bonus šajā paplašinājumā.",
+    "description":"Bonus šajā paplašinājumā."
+  },
+  "settings":{
+    "message":"Uzstādījumi",
+    "description":"Uzstādījumi"
+  },
+  "desspotlightradius":{
+    "message":"ir meklēšanas luktura diametrs.",
+    "description":"ir meklēšanas luktura diametrs."
+  },
+  "titelsync":{
+    "message":"Sinhronizēt",
+    "description":"Sinhronizēt"
+  },
+  "right":{
+    "message":"pa labi",
+    "description":"pa labi"
+  },
+  "titeldynamic":{
+    "message":"Dinamisks fons",
+    "description":"Dinamisks fons"
+  },
+  "deslikebutton":{
+    "message":"Rādīt patīk un nepatīk pogas YouTube par šo video.",
+    "description":"Rādīt patīk un nepatīk pogas YouTube par šo video."
+  },
+  "titelmouse":{
+    "message":"Pele",
+    "description":"Pele"
+  },
+  "titellessmore":{
+    "message":"Rādīt mazāk",
+    "description":"Rādīt mazāk"
+  },
+  "desshortcutlight":{
+    "message":"Iespējotu tastatūras īsinājumtaustiņi zemāk.",
+    "description":"Iespējotu tastatūras īsinājumtaustiņi zemāk."
+  },
+  "titelinfobar":{
+    "message":"Informācijas josla",
+    "description":"Informācijas josla"
+  },
+  "descontextmenus":{
+    "message":"Rādīt konteksta izvēlne koncentrēties objektu.",
+    "description":"Rādīt konteksta izvēlne koncentrēties objektu."
+  },
+  "titelcontextmenus":{
+    "message":"Konteksta izvēlne",
+    "description":"Konteksta izvēlne"
+  },
+  "titelplaylist":{
+    "message":"Atskaņošanas saraksts",
+    "description":"Atskaņošanas saraksts"
+  },
+  "desatmosphereonly":{
+    "message":"Izmantot atmosfērā apgaismojuma funkciju tikai šādā video vietnē:",
+    "description":"Izmantot atmosfērā apgaismojuma funkciju tikai šādā video vietnē:"
+  },
+  "recflash":{
+    "message":"Ieteicams",
+    "description":"Ieteicams"
+  },
+  "desenterpassword":{
+    "message":"Ievadiet savu paroli šajā lodziņā:",
+    "description":"Ievadiet savu paroli šajā lodziņā:"
+  },
+  "titelblurradius":{
+    "message":"Aizmiglošanas rādiuss",
+    "description":"Aizmiglošanas rādiuss"
+  },
+  "version":{
+    "message":"Versiju",
+    "description":"Numuru teksta versija"
+  },
+  "shortcutdark":{
+    "message":"lai padarītu tumšāku ekrānu (palieliniet necaurredzamību).",
+    "description":"lai padarītu tumšāku ekrānu (palieliniet necaurredzamību)."
+  },
+  "dessharebutton":{
+    "message":"Rādīt daļu pogas YouTube par šo video.",
+    "description":"Rādīt daļu pogas YouTube par šo video."
+  },
+  "shortcutbright":{
+    "message":"lai padarītu spilgtāku ekrānu (samaziniet necaurredzamību).",
+    "description":"lai padarītu spilgtāku ekrānu (samaziniet necaurredzamību)."
+  },
+  "titelalllightsoff":{
+    "message":"Visas atvērtās cilnes",
+    "description":"Visas atvērtās cilnes"
+  },
+  "desreadera":{
+    "message":"Vienmēr rādīt izgaišanas līmeni joslu, kad nodziest gaismas.",
+    "description":"Vienmēr rādīt izgaišanas līmeni joslu, kad nodziest gaismas."
+  },
+  "rememberrate":{
+    "message":"Vērtēt",
+    "description":"Vērtēt"
+  },
+  "desautoplay":{
+    "message":"Apgaismojums automātiski izslēdzas, fonā, kad jūs noklikšķiniet uz atskaņošanas pogas un pret.",
+    "description":"Apgaismojums automātiski izslēdzas, fonā, kad jūs noklikšķiniet uz atskaņošanas pogas un pret."
+  },
+  "titelscreen":{
+    "message":"Ekrāns",
+    "description":"Ekrāns"
+  },
+  "desflash":{
+    "message":"Rādīt visu Flash objektiem.",
+    "description":"Rādīt visu Flash objektiem."
+  },
+  "titelhead":{
+    "message":"Kanāls",
+    "description":"Kanāls"
+  },
+  "pageatitle":{
+    "message":"Izslēdziet gaismu",
+    "description":"Izslēdziet gaismu"
+  },
+  "desaddvideobutton":{
+    "message":"Rādīt pievienot pogu no šī YouTube video.",
+    "description":"Rādīt pievienot pogu no šī YouTube video."
+  },
+  "shortcuteyeprotection":{
+    "message":"lai iespējot\/atspējot acu aizsardzības funkciju.",
+    "description":"lai iespējot\/atspējot acu aizsardzības funkciju."
+  },
+  "titelfadein":{
+    "message":"Iegaismot",
+    "description":"Iegaismot"
+  },
+  "desreadern":{
+    "message":"Nekad nerādīt krēsla līmeni bar.",
+    "description":"Nekad nerādīt krēsla līmeni bar."
+  },
+  "titelmaxqualityyoutube":{
+    "message":"Automātiski iestatīts uz šo rezolūciju:",
+    "description":"Automātiski iestatīts uz šo rezolūciju:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"Pozitīvas vērtības palielināt ēnu, negatīvas vērtības lieluma samazināšana.",
+    "description":"Pozitīvas vērtības palielināt ēnu, negatīvas vērtības lieluma samazināšana."
+  },
+  "titelon":{
+    "message":"Par",
+    "description":"Par"
+  },
+  "videotitle":{
+    "message":"Focus šo video",
+    "description":"Focus šo video"
+  },
+  "warningtextambilight":{
+    "message":"Ja nevar saņemt video datu dēļ vietnes drošības noteikums, tad tā tiks rādīta izvēlētā tīrtoņa krāsas vietā.",
+    "description":"Ja nevar saņemt video datu dēļ vietnes drošības noteikums, tad tā tiks rādīta izvēlētā tīrtoņa krāsas vietā."
+  },
+  "desdynamiccloud":{
+    "message":"Animated Clouds",
+    "description":"Animated Clouds"
+  },
+  "desconfirmtimesaver":{
+    "message":"Apstiprināt ekrāna saudzētāju laiks",
+    "description":"Apstiprināt ekrāna saudzētāju laiks"
+  },
+  "deslikebar":{
+    "message":"Rādīt patīk\/nepatīk joslā zem YouTube video.",
+    "description":"Rādīt patīk\/nepatīk joslā zem YouTube video."
+  },
+  "titelautoplay":{
+    "message":"Automātiskā atskaņošana",
+    "description":"Automātiskā atskaņošana"
+  },
+  "top":{
+    "message":"augšā",
+    "description":"augšā"
+  },
+  "titelspreadradius":{
+    "message":"Izplatības rādiusa",
+    "description":"Izplatības rādiusa"
+  },
+  "installadblocker":{
+    "message":"Izmantot ar Adblocker paplašinājumu.",
+    "description":"Izmantot ar Adblocker paplašinājumu."
+  },
+  "titelsharebutton":{
+    "message":"Daļu pogas",
+    "description":"Daļu pogas"
+  },
+  "titelcolor":{
+    "message":"Krāsu",
+    "description":"Krāsu"
+  },
+  "titeldownloadbutton":{
+    "message":"Lejupielādēt šo jauninājumu!",
+    "description":"Lejupielādēt šo jauninājumu!"
+  },
+  "pagetitle":{
+    "message":"Tumšāka šo lapu",
+    "description":"Tumšāka šo lapu"
+  },
+  "titelambilight":{
+    "message":"Atmosfēra apgaismojums",
+    "description":"Atmosfēra apgaismojums"
+  },
+  "titelshowmore":{
+    "message":"Parādīt vairāk",
+    "description":"Parādīt vairāk"
+  },
+  "desviewcount":{
+    "message":"Rādīt skaitu, uzskata šim video.",
+    "description":"Rādīt skaitu, uzskata šim video."
+  },
+  "titelautowidthyoutube":{
+    "message":"Automātiski iestatīts YouTube player lielākiem izmēriem.",
+    "description":"Automātiski iestatīts YouTube player lielākiem izmēriem."
+  },
+  "desconfirmtime":{
+    "message":"Apstipriniet laiku",
+    "description":"Apstipriniet laiku"
+  },
+  "titelupgrade":{
+    "message":"Jaunināt",
+    "description":"Jaunināt"
+  },
+  "lockwrongpassword":{
+    "message":"Nepareizu paroli, lūdzu, mēģiniet vēlreiz.",
+    "description":"Nepareizu paroli, lūdzu, mēģiniet vēlreiz."
+  },
+  "titelsyncbrowser":{
+    "message":"Sinhronizēt ar citu pārlūkprogrammu paplašinājuma iestatījumus.",
+    "description":"Sinhronizēt ar citu pārlūkprogrammu paplašinājuma iestatījumus."
+  },
+  "deletebutton":{
+    "message":"Dzēst",
+    "description":"Dzēst"
+  },
+  "eyedivon":{
+    "message":"TĀLĀK",
+    "description":"TĀLĀK"
+  },
+  "eyedivoff":{
+    "message":"IZSLĒGTS",
+    "description":"IZSLĒGTS"
+  },
+  "deshead":{
+    "message":"Rādīt YouTube kanāls bārā vai nosaukumu.",
+    "description":"Rādīt YouTube kanāls bārā vai nosaukumu."
+  },
+  "shortcutsavingopacity":{
+    "message":"lai saglabātu šo necaurspīdības vērtība",
+    "description":"lai saglabātu šo necaurspīdības vērtība"
+  },
+  "desinfobar":{
+    "message":"Parādīt aprakstu informācija par video.",
+    "description":"Parādīt aprakstu informācija par video."
+  },
+  "titellamp":{
+    "message":"Sīpola",
+    "description":"Sīpola"
+  },
+  "desambilightvarcolor":{
+    "message":"Veikt krāsu no video.",
+    "description":"Veikt krāsu no video."
+  },
+  "showremember":{
+    "message":"neparāda šo lapu, atcerieties vēlreiz atverot opciju lapā.",
+    "description":"neparāda šo lapu, atcerieties vēlreiz atverot opciju lapā."
+  },
+  "donatepromotext":{
+    "message":"Ja jūs varat veikt ziedojumu par jebkuru summu, I'd appreciate it ļoti!",
+    "description":"Ja jūs varat veikt ziedojumu par jebkuru summu, I'd appreciate it ļoti!"
+  },
+  "titelblur":{
+    "message":"Pārējie aizmiglot",
+    "description":"Pārējie aizmiglot"
+  },
+  "desdynamicraindrops":{
+    "message":"Lietus lāses",
+    "description":"Lietus lāses"
+  },
+  "desalllightsoff":{
+    "message":"Noklikšķinot uz lampas pogu pārslēgs gaismas on\/off uz visās atvērtajām cilnēm, kad šī opcija ir iespējota.",
+    "description":"Noklikšķinot uz lampas pogu pārslēgs gaismas on\/off uz visās atvērtajām cilnēm, kad šī opcija ir iespējota."
+  },
+  "optionecosaversaved":{
+    "message":"Sekundes ir veiksmīgi saglabātas!",
+    "description":"Sekundes ir veiksmīgi saglabātas!"
+  },
+  "titelreader":{
+    "message":"Krēsla līmenis Bar",
+    "description":"Krēsla līmenis Bar"
+  },
+  "deseyen":{
+    "message":"Normālos lietošanas (nodziest gaisma, kad jūs noklikšķiniet uz lampu ikonas).",
+    "description":"Normālos lietošanas (nodziest gaisma, kad jūs noklikšķiniet uz lampu ikonas)."
+  },
+  "enjoyshare":{
+    "message":"Izbaudiet šo paplašinājumu un koplietojiet to ar citiem kuri novērtēs to.",
+    "description":"Izbaudiet šo paplašinājumu un koplietojiet to ar citiem kuri novērtēs to."
+  },
+  "shortcuttotl":{
+    "message":"lai ieslēgtu gaismu ieslēgšana\/izslēgšana.",
+    "description":"lai ieslēgtu gaismu ieslēgšana\/izslēgšana."
+  },
+  "deseyea":{
+    "message":"Apgaismojums automātiski izslēdzas, fonā atverot lapu.",
+    "description":"Apgaismojums automātiski izslēdzas, fonā atverot lapu."
+  },
+  "basicsettings":{
+    "message":"Pamati",
+    "description":"Pamati"
+  },
+  "hoveroptionapply":{
+    "message":"lietot",
+    "description":"lietot"
+  },
+  "reportbug":{
+    "message":"Ziņot par problēmu",
+    "description":"Ziņot par problēmu"
+  },
+  "destime":{
+    "message":"Izslēgt gaismas starp sekojošiem laikiem:",
+    "description":"Izslēgt gaismas starp sekojošiem laikiem:"
+  },
+  "guide":{
+    "message":"TOtL Laipni pavadonis",
+    "description":"TOtL Laipni pavadonis"
+  },
+  "deseyealist":{
+    "message":"Automātiski padara tumšu fonu, kad atver sekojošo lapu(as):",
+    "description":"Automātiski padara tumšu fonu, kad atver sekojošo lapu(as):"
+  },
+  "titellikebutton":{
+    "message":"Tāpat kā & Nepatika Buttons",
+    "description":"Tāpat kā & Nepatika Buttons"
+  },
+  "titelpageaction":{
+    "message":"Slēpt lampas ikonu",
+    "description":"pageaction ikonas paslēpšana"
+  },
+  "friendlyremember":{
+    "message":"Draudzīgs atgādinājums...",
+    "description":"Draudzīgs atgādinājums..."
+  },
+  "desfadein":{
+    "message":"Rādīt izbalināt spēkā.",
+    "description":"Rādīt izbalināt spēkā."
+  },
+  "warning":{
+    "message":"Brīdinājums!",
+    "description":"Brīdinājums!"
+  },
+  "deseyetimesaver":{
+    "message":"Kad lapa ir neaktīva (nav peles vai tastatūras ievades) uz noteikto laiku, lapa automātiski paliks tumša.",
+    "description":"Kad lapa ir neaktīva (nav peles vai tastatūras ievades) uz noteikto laiku, lapa automātiski paliks tumša."
+  },
+  "titelsuggestions":{
+    "message":"Ieteikumi",
+    "description":"Ieteikumi"
+  },
+  "advancedoptions":{
+    "message":"Papildu opcijas",
+    "description":"Papildu opcijas"
+  },
+  "dessuggestions":{
+    "message":"Rādīt ieteikumi YouTube mājas lapā.",
+    "description":"Rādīt ieteikumi YouTube mājas lapā."
+  },
+  "titelflash":{
+    "message":"Flash atklāšana",
+    "description":"Flash atklāšana"
+  },
+  "desambilight":{
+    "message":"Parādīs patreiz atskaņoto video atmosfērā apgaismojuma efektu.",
+    "description":"Parādīs patreiz atskaņoto video atmosfērā apgaismojuma efektu."
+  },
+  "productshare":{
+    "message":"Dalīties",
+    "description":"Dalīties"
+  },
+  "addbutton":{
+    "message":"Pievienot",
+    "description":"Pievienot"
+  },
+  "reportlist":{
+    "message":"(skatīt sarakstu)",
+    "description":"Skatīt pilnu jautājumu sarakstu"
+  },
+  "desdynamicfishtank":{
+    "message":"Zivju tvertnes",
+    "description":"Zivju tvertnes"
+  },
+  "longdonatetext":{
+    "message":"Es tiešām novērtētu, ja tu varētu man noziedot, lai turētu šo pārlūkprogrammas paplašinājumu dzīvu priekš citiem jauniem lietotājiem. Vai tas ir $$1 vai $$100, tavs atbalsts ir ļoti novērtēts!",
+    "description":"Es tiešām novērtētu, ja tu varētu man noziedot, lai turētu šo pārlūkprogrammas paplašinājumu dzīvu priekš citiem jauniem lietotājiem. Vai tas ir $$1 vai $$100, tavs atbalsts ir ļoti novērtēts!"
+  },
+  "deshardflash":{
+    "message":"Rādīt visus Flash objektus, izlaižot URL filtru. Šis salabos problēmas ar dažiem video atskaņotājiem kuras tiek slēptas, bet rādīs arī reklāmas.",
+    "description":"Rādīt visus Flash objektus, izlaižot URL filtru. Šis salabos problēmas ar dažiem video atskaņotājiem kuras tiek slēptas, bet rādīs arī reklāmas."
+  },
+  "desfadeout":{
+    "message":"Rādīt mazināsies ietekme.",
+    "description":"Rādīt mazināsies ietekme."
+  },
+  "optionwrongimg":{
+    "message":"Nederīgs attēlu fails!",
+    "description":"Nederīgs attēlu fails!"
+  },
+  "desvideoheadline":{
+    "message":"Parādīt un invertcukura krāsas video titulu.",
+    "description":"Parādīt un invertcukura krāsas video titulu."
+  },
+  "desrememberpage":{
+    "message":"Ja šī opcija ir ieslēgta, tā neatvērs (atcerēties) lapu.",
+    "description":"Ja šī opcija ir iespējota, tas parādīs ne atcerēties lapā."
+  },
+  "description":{
+    "message":"Visa lapa tiks izgaist līdz tumši, lai jūs varētu skatīties video kā, ja Jums ir kino.",
+    "description":"Visa lapa tiks izgaist līdz tumši, lai jūs varētu skatīties video kā, ja Jums ir kino."
+  },
+  "titelviewcount":{
+    "message":"Skaits Skatīts",
+    "description":"Skaits Skatīts"
+  },
+  "titelopacity":{
+    "message":"Necaurredzamība",
+    "description":"Necaurredzamība"
+  },
+  "titelqualityyoutube":{
+    "message":"Automātiski iestatīt Youtube video kvalitāti.",
+    "description":"Automātiski iestatīt Youtube video kvalitāti."
+  },
+  "shortcutopacity":{
+    "message":"lai atjaunotu iestatījumu kopas tumsā (necaurredzamība).",
+    "description":"lai atjaunotu iestatījumu kopas tumsā (necaurredzamība)."
+  },
+  "desambilightrangeblurradius":{
+    "message":"Ja iestati uz zemāku vērtību ēnās būs spilgtas, jo lielāks skaitlis, jo vairāk miglota tā būs.",
+    "description":"Ja ēnu zemāku vērtību kopa būs straujš, jo lielāks skaitlis, jo vairāk neskaidra tā būs."
+  },
+  "titeladdvideobutton":{
+    "message":"Pievienot pogu",
+    "description":"Pievienot pogu"
+  },
+  "titelpassword":{
+    "message":"Paroles Aizsardzība",
+    "description":"Paroles Aizsardzība"
+  },
+  "titeldownloadupgrade":{
+    "message":"Jauninājums pievieno atbalstu koncentrējot izvēlēto attēlu, un parādīs galeriju ar attēlie vietnē.",
+    "description":"Jauninājums pievieno atbalstu koncentrējot izvēlēto attēlu, un parādīs galeriju ar attēlie vietnē."
+  },
+  "titelfadeout":{
+    "message":"Izgaist",
+    "description":"Izgaist"
+  },
+  "eastereggsquestion":{
+    "message":"Vai jums patīk reāla kinoteātris",
+    "description":"Vai jums patīk reāla kinoteātris"
+  },
+  "bottom":{
+    "message":"apakša",
+    "description":"apakša"
+  },
+  "dessaver":{
+    "message":"Ekrānsaudzētājs:",
+    "description":"Ekrānsaudzētājs:"
+  },
+  "hoveroptiondyn5":{
+    "message":"ar lidošanu",
+    "description":"ar lidošanu"
+  },
+  "pagestillloading":{
+    "message":"Lapa joprojās lādējas?",
+    "description":"Lapa joprojās lādējas?"
+  },
+  "titeloff":{
+    "message":"Izslēgts",
+    "description":"Izslēgts"
+  },
+  "titeleastereggs":{
+    "message":"Lieldienu Olas",
+    "description":"Lieldienu Olas"
+  },
+  "textfoot":{
+    "message":"Šī programmatūra ir licencēta saskaņā ar CC-GNU GPL. Lai apskatītu šīs Licences kopiju, apmeklējiet",
+    "description":"Šī programmatūra ir licencēta saskaņā ar CC-GNU GPL. Lai apskatītu šīs Licences kopiju, apmeklējiet"
+  },
+  "left":{
+    "message":"kreisajā pusē",
+    "description":"kreisajā pusē"
+  },
+  "titelnighttheme":{
+    "message":"Nakts režīms",
+    "description":"Nakts režīms"
+  },
+  "desnighttheme":{
+    "message":"Rādīt nakts slēdža pogu zemāk mājas lapā, lai padarītu lapu tumšu vai gaišāku.",
+    "description":"Rādīt nakts slēdža pogu zemāk mājas lapā, lai padarītu lapu tumšu vai gaišāku."
+  },
+  "nightoptions":{
+    "message":"Nakts režīms",
+    "description":"Nakts režīms"
+  },
+  "desnightonly":{
+    "message":"Rādīt nakts režīmu tikai sekojošā(ās) vietnē(ēs):",
+    "description":"Rādīt nakts režīmu tikai sekojošā(ās) vietnē(ēs):"
+  },
+  "desnightenabletheme":{
+    "message":"Atverot jaunu lapu tā automātiski pāriet nakts režīmā.",
+    "description":"Atverot jaunu lapu tā automātiski pāriet nakts režīmā."
+  },
+  "titellampregular":{
+    "message":"Show always the lamp icon in the omnibox",
+    "description":"Show always the lamp icon in the omnibox"
+  },
+  "titellampvideo":{
+    "message":"Show the lamp icon only if a video player is detected",
+    "description":"Show the lamp icon only if a video player is detected"
+  },
+  "upgradecontexttitle":{
+    "message":"We have added some new features for you",
+    "description":"We have added some new features for you"
+  },
+  "upgradecontextmessage":{
+    "message":"That make this extension even more amazing",
+    "description":"That make this extension even more amazing"
+  },
+  "upgradecontextitemta":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "upgradecontextitemma":{
+    "message":"light off with your hand",
+    "description":"light off with your hand"
+  },
+  "upgradecontextitemtb":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition"
+  },
+  "upgradecontextitemmb":{
+    "message":"Control the web page more accurately",
+    "description":"Control the web page more accurately"
+  },
+  "upgradefbshare":{
+    "message":"Facebook Share",
+    "description":"Facebook Share"
+  },
+  "upgradetwshare":{
+    "message":"Tweet",
+    "description":"Tweet"
+  },
+  "ratetitle":{
+    "message":"Please rate & review my extension",
+    "description":"Please rate & review my extension"
+  },
+  "ratedes":{
+    "message":"And let everyone know about this great extension!",
+    "description":"And let everyone know about this great extension!"
+  },
+  "rateitema":{
+    "message":"Rate 5 stars",
+    "description":"Rate 5 stars"
+  },
+  "titelreset":{
+    "message":"Reset settings",
+    "description":"Reset settings"
+  },
+  "resetbrowserextension":{
+    "message":"Reset the Turn Off the Lights settings",
+    "description":"Reset the Turn Off the Lights settings"
+  },
+  "desautoplaydelay":{
+    "message":"Brighten again the background when the video ended after",
+    "description":"Brighten again the background when the video ended after"
+  },
+  "desautoplaydelayend":{
+    "message":"seconds",
+    "description":"seconds"
+  },
+  "motionoptions":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "desmotion":{
+    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
+    "description":"Camera Motion"
+  },
+  "trymotion":{
+    "message":"Try it yourself!",
+    "description":"Try it yourself!"
+  },
+  "destrymotion":{
+    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc.",
+    "description":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
+  },
+  "howworkmotion":{
+    "message":"How does it work?",
+    "description":"How does it work?"
+  },
+  "step1description":{
+    "message":"Enable the Camera Motion feature",
+    "description":"Enable the Camera Motion feature"
+  },
+  "step2description":{
+    "message":"Move your hand (or fist) from the top to bottom",
+    "description":"Move your hand (or fist) from the top to bottom"
+  },
+  "step3description":{
+    "message":"Then the black layer slide automatically down.",
+    "description":"Then the black layer slide automatically down."
+  },
+  "desmotionChecklist":{
+    "message":"Checklist:",
+    "description":"Checklist:"
+  },
+  "des1checkmotion":{
+    "message":"Make sure your room is not dark and that it have enough light.",
+    "description":"Make sure your room is not dark and that it have enough light."
+  },
+  "des2checkmotion":{
+    "message":"Your camera must not receive direct sunlight.",
+    "description":"Your camera must not receive direct sunlight."
+  },
+  "des3checkmotion":{
+    "message":"You use a front facing camera.",
+    "description":"You use a front facing camera."
+  },
+  "titellinear":{
+    "message":"Linear",
+    "description":"Linear"
+  },
+  "titelcolora":{
+    "message":"Color A",
+    "description":"Color A"
+  },
+  "titelcolorb":{
+    "message":"Color B",
+    "description":"Color B"
+  },
+  "speechoption":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"Speech",
+    "description":"Speech"
+  },
+  "desspeech":{
+    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
+    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+  },
+  "desspeech1command":{
+    "message":"turn off the lights",
+    "description":"turn off the lights"
+  },
+  "desspeech2command":{
+    "message":"turn on the lights",
+    "description":"turn on the lights"
+  },
+  "desspeech3command":{
+    "message":"play video",
+    "description":"play video"
+  },
+  "desspeech4command":{
+    "message":"pause video",
+    "description":"pause video"
+  },
+  "desspeechdialect":{
+    "message":"Choose your speech dialect:",
+    "description":"Choose your speech dialect:"
+  },
+  "desatmosvivid":{
+    "message":"Vivid atmosphere effects on YouTube, require",
+    "description":"Vivid atmosphere effects on YouTube, require"
+  },
+  "help":{
+    "message":"palīgā",
+    "description":"palīgā"
+  },
+  "about":{
+    "message":"Par",
+    "description":"Par"
+  },
+  "desspeechonly":{
+    "message":"Activate the Speech Recognition only the following site(s):",
+    "description":"Activate the Speech Recognition only the following site(s):"
+  },
+  "descammotiononly":{
+    "message":"Activate the Camera Motion only on the following site(s):",
+    "description":"Activate the Camera Motion only on the following site(s):"
+  },
+  "titelcamera":{
+    "message":"Camera",
+    "description":"Camera"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautoplayblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser.",
+    "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
+  },
+  "desbrowsersupport":{
+    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
+    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+  },
+  "titelsupportatmos":{
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+  },
+  "titelseeonline":{
+    "message":"See online for more examples",
+    "description":"See online for more examples"
+  },
+  "titelvideosample":{
+    "message":"Video Sample",
+    "description":"Video Sample"
+  },
+  "titelwebsite":{
+    "message":"Website",
+    "description":"Website"
+  },
+  "titeldeveloper":{
+    "message":"Developer",
+    "description":"Developer"
+  },
+  "titelrightsreserved":{
+    "message":"Some rights reserved.",
+    "description":"Some rights reserved."
+  },
+  "desbrowserextension":{
+    "message":"browser extension",
+    "description":"browser extension"
+  },
+  "desapitext":{
+    "message":"Wiki API for Website Developer",
+    "description":"Wiki API for Website Developer"
+  },
+  "desbrowsertheme":{
+    "message":"browser theme",
+    "description":"browser theme"
+  },
+  "desproject":{
+    "message":"project",
+    "description":"project"
+  },
+  "titelapideveloper":{
+    "message":"API Developer",
+    "description":"API Developer"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki about the Atmosphere Lighting feature",
+    "description":"Wiki about the Atmosphere Lighting feature"
+  }
+}

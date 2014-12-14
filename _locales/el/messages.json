@@ -1,0 +1,906 @@
+{
+  "pagehelp":{
+    "message":"Βοήθεια",
+    "description":"Βοήθεια"
+  },
+  "titelimage":{
+    "message":"Εικόνα φόντου",
+    "description":"Εικόνα φόντου"
+  },
+  "shortcutalllights":{
+    "message":"για να εναλλάξετε τα φώτα on\/off για όλες τις ανοιχτές καρτέλες.",
+    "description":"για να εναλλάξετε τα φώτα on\/off για όλες τις ανοιχτές καρτέλες."
+  },
+  "lastchecked":{
+    "message":"Τελευταία έκδοση ελέγχονται σε",
+    "description":"Τελευταία έκδοση ελέγχονται σε"
+  },
+  "visualeffects":{
+    "message":"Οπτικά Εφέ",
+    "description":"Οπτικά εφέ"
+  },
+  "titelshortcutlight":{
+    "message":"Πλήκτρο συντόμευσης",
+    "description":"Πλήκτρο συντόμευσης"
+  },
+  "titledonatebutton":{
+    "message":"Δωρίσουν",
+    "description":"Δωρίσουν"
+  },
+  "titellikebar":{
+    "message":"Γραμμή Αρέσκειας",
+    "description":"Όπως μπαρ"
+  },
+  "desmousespotlightt":{
+    "message":"Επιτρέπει σε σας για να κάνετε κλικ μέσα από το σκοτεινό οθόνη όταν τα φώτα είναι ανοικτά.",
+    "description":"Επιτρέπει σε σας για να κάνετε κλικ μέσα από το σκοτεινό οθόνη όταν τα φώτα είναι ανοικτά."
+  },
+  "desambilight4color":{
+    "message":"4 επιλεγμένα χρώματα γύρω από το βίντεο:",
+    "description":"4 χρώματα επιλέξει γύρω από το βίντεο:"
+  },
+  "lockentername":{
+    "message":"Παρακαλώ εισάγετε τον κωδικό σας",
+    "description":"Παρακαλώ εισάγετε τον κωδικό σας"
+  },
+  "desnoflash":{
+    "message":"Μην χρησιμοποιήσετε αυτήν τη δυνατότητα.",
+    "description":"Μην χρησιμοποιήσετε αυτήν τη δυνατότητα."
+  },
+  "desdynamicblocks":{
+    "message":"Κουτιά",
+    "description":"Μπλοκ"
+  },
+  "titeleye":{
+    "message":"Προστασία των ματιών",
+    "description":"Προστασία ματιών"
+  },
+  "titelcinemaontop":{
+    "message":"Λειτουργία κινηματογράφου: δείχνει το στρώμα \"Απενεργοποιημένα φώτα\" μόνο στην κορυφή του παραθύρου.",
+    "description":"Ταινία θέατρο λειτουργία: αυτό δείχνουν το «φώτα» στρώμα μόνο στην κορυφή του παραθύρου."
+  },
+  "desmousespotlightc":{
+    "message":"Αν το φως είναι απενεργοποιημένη, μπορείτε να επιλέξετε μια περιοχή να εστιάσω ένα στοιχείο.",
+    "description":"Αν το φως είναι απενεργοποιημένη, μπορείτε να επιλέξετε μια περιοχή να εστιάσω ένα στοιχείο."
+  },
+  "titelrememberpage":{
+    "message":"Θυμηθείτε σελίδα",
+    "description":"Θυμηθείτε σελίδα"
+  },
+  "desmousespotlighta":{
+    "message":"Εάν η λυχνία είναι σβηστή, δείχνουν ένα επίκεντρο γύρω από το δείκτη του ποντικιού.",
+    "description":"Εάν η λυχνία είναι σβηστή, δείχνουν ένα επίκεντρο γύρω από το δείκτη του ποντικιού."
+  },
+  "desmousespotlighto":{
+    "message":"Κανονική χρήση (απενεργοποιεί τις παρακάτω ρυθμίσεις ποντικιού)",
+    "description":"Κανονική χρήση (απενεργοποιεί τις παρακάτω ρυθμίσεις ποντικιού)"
+  },
+  "desplaylist":{
+    "message":"Δείτε τη λίστα αναπαραγωγής του YouTube στην ιστοσελίδα YouTube.",
+    "description":"Εμφάνιση της λίστας αναπαραγωγής του YouTube στην ιστοσελίδα του YouTube."
+  },
+  "desambilightfixcolor":{
+    "message":"Ένα στερεό χρώμα:",
+    "description":"Ένα στερεό χρώμα:"
+  },
+  "desuntil":{
+    "message":"μέχρι",
+    "description":"μέχρι"
+  },
+  "desconfirmpassword":{
+    "message":"Επιβεβαίωση κωδικού",
+    "description":"Επιβεβαίωση κωδικού"
+  },
+  "desautoplayonly":{
+    "message":"Σβήσε τα φώτα μόνο στις ακόλουθες ιστοσελίδες βίντεο:",
+    "description":"Αμυδρό μόνο το παρακάτω βίντεο περιοχή:"
+  },
+  "helpeyeprotection":{
+    "message":"Ενεργοποίηση «Προστασίας των ματιών» αυτόματα θα απενεργοποιήσει το χαρακτηριστικό 'Auto play'.",
+    "description":"Ενεργοποίηση «Προστασίας των ματιών» αυτόματα θα απενεργοποιήσει το χαρακτηριστικό 'Auto play'."
+  },
+  "skipremember":{
+    "message":"Παραλείψτε αυτό και τώρα ανοίξτε τη σελίδα επιλογών",
+    "description":"Παραλείψετε αυτό, και να ανοίξετε τώρα τη σελίδα επιλογή"
+  },
+  "optiontimesaved":{
+    "message":"Ο χρόνος αποθηκεύτηκε επιτυχώς!",
+    "description":"Ο χρόνος είναι αποθηκευμένο με επιτυχία!"
+  },
+  "titelvideoheadline":{
+    "message":"Τίτλος Βίντεο",
+    "description":"Βίντεο τίτλος"
+  },
+  "translateme":{
+    "message":"Βοηθήστε να μεταφραστεί",
+    "description":"Βοηθήστε να μεταφραστεί"
+  },
+  "despassword":{
+    "message":"Απαιτούν έναν κωδικό πρόσβασης που πρέπει να εγγραφούν πριν από την στροφή τα φώτα πίσω επάνω.",
+    "description":"Απαιτούν έναν κωδικό πρόσβασης που πρέπει να εγγραφούν πριν από την στροφή τα φώτα πίσω επάνω."
+  },
+  "helpautoplay":{
+    "message":"Το μάτι προστασία ενεργοποιείται. Για να χρησιμοποιήσετε το παρακάτω χαρακτηριστικό, απενεργοποιήστε την επιλογή «Μάτι προστασία».",
+    "description":"Το μάτι προστασία ενεργοποιείται. Για να χρησιμοποιήσετε το παρακάτω χαρακτηριστικό, απενεργοποιήστε την επιλογή «Μάτι προστασία»."
+  },
+  "name":{
+    "message":"Σβήνετε τα φώτα",
+    "description":"Σβήνετε τα φώτα"
+  },
+  "changelog":{
+    "message":"Αρχείο αλλαγών",
+    "description":"changelog σύνδεση"
+  },
+  "optionpagetitle":{
+    "message":"Turn Off the Lights - Επιλογές",
+    "description":"Επιλογή τίτλου σελίδας"
+  },
+  "optionpasswordsaved":{
+    "message":"Κωδικός πρόσβασης σώζεται με επιτυχία!",
+    "description":"Κωδικός πρόσβασης σώζεται με επιτυχία!"
+  },
+  "desdynamicspace":{
+    "message":"Διάστημα σύμπαν",
+    "description":"Διάστημα σύμπαν"
+  },
+  "deseastereggs":{
+    "message":"Ένα μπόνους στην εν λόγω παράταση.",
+    "description":"Ένα μπόνους στην εν λόγω παράταση."
+  },
+  "settings":{
+    "message":"Ρυθμίσεις",
+    "description":"Ρυθμίσεις"
+  },
+  "desspotlightradius":{
+    "message":"είναι η διάμετρος του φανού αναζήτηση.",
+    "description":"είναι η διάμετρος του φανού αναζήτηση."
+  },
+  "titelsync":{
+    "message":"Συγχρονισμού",
+    "description":"Συγχρονισμού"
+  },
+  "right":{
+    "message":"δικαίωμα",
+    "description":"δικαίωμα"
+  },
+  "titeldynamic":{
+    "message":"Δυναμική φόντο",
+    "description":"Δυναμική φόντο"
+  },
+  "deslikebutton":{
+    "message":"Δείτε τα like και dislike κουμπιά του YouTube για αυτό το βίντεο.",
+    "description":"Εμφάνιση παρόμοια & αντιπαθούν κουμπιά του YouTube για αυτό το βίντεο."
+  },
+  "titelmouse":{
+    "message":"Ποντίκι",
+    "description":"Ποντίκι"
+  },
+  "titellessmore":{
+    "message":"Δείξε λιγότερα",
+    "description":"Δείξε λιγότερα"
+  },
+  "desshortcutlight":{
+    "message":"Ενεργοποιήσετε τις παρακάτω συντομεύσεις πληκτρολογίου.",
+    "description":"Ενεργοποιήσετε τις παρακάτω συντομεύσεις πληκτρολογίου."
+  },
+  "titelinfobar":{
+    "message":"Μπάρα πληροφοριών",
+    "description":"Γραμμή πληροφοριών"
+  },
+  "descontextmenus":{
+    "message":"Εμφάνιση του μενού περιβάλλοντος για να επικεντρωθείτε σε ένα στοιχείο.",
+    "description":"Εμφάνιση μενού περιβάλλοντος για να επικεντρωθεί ένα στοιχείο."
+  },
+  "titelcontextmenus":{
+    "message":"Μενού",
+    "description":"Μενού περιβάλλοντος"
+  },
+  "titelplaylist":{
+    "message":"Λίστα αναπαραγωγής",
+    "description":"Λίστα αναπαραγωγής"
+  },
+  "desatmosphereonly":{
+    "message":"Χρησιμοποιήστε τη δυνατότητα φωτισμού ατμόσφαιρα μόνο την ακόλουθη τοποθεσία της βίντεο:",
+    "description":"Χρησιμοποιήστε τη δυνατότητα φωτισμού ατμόσφαιρα μόνο την ακόλουθη τοποθεσία της βίντεο:"
+  },
+  "recflash":{
+    "message":"Συνιστάται",
+    "description":"Συνιστάται"
+  },
+  "desenterpassword":{
+    "message":"Εισάγετε τον κωδικό σας στο παρακάτω πλαίσιο:",
+    "description":"Εισάγετε τον κωδικό σας στο παρακάτω πλαίσιο:"
+  },
+  "titelblurradius":{
+    "message":"Η θαμπάδα ακτίνα",
+    "description":"Η θαμπάδα ακτίνα"
+  },
+  "version":{
+    "message":"Έκδοση",
+    "description":"Έκδοση κειμένων αριθμών"
+  },
+  "shortcutdark":{
+    "message":"να σκουραίνει την οθόνη (αύξηση αδιαφάνεια).",
+    "description":"να σκουραίνει την οθόνη (αύξηση αδιαφάνεια)."
+  },
+  "dessharebutton":{
+    "message":"Δείτε τα κουμπιά share του YouTube για αυτό το βίντεο.",
+    "description":"Δείχνουν τα κουμπιά μερίδιο του YouTube για αυτό το βίντεο."
+  },
+  "shortcutbright":{
+    "message":"να φωτίζουν την οθόνη (μείωση αδιαφάνεια).",
+    "description":"να φωτίζουν την οθόνη (μείωση αδιαφάνεια)."
+  },
+  "titelalllightsoff":{
+    "message":"Όλων των ανοικτών καρτελών",
+    "description":"Όλων των ανοικτών καρτελών"
+  },
+  "desreadera":{
+    "message":"Να εμφανίζεται πάντα η μπάρα επιπέδου αμυδρότητας όταν τα φώτα σβήνουν.",
+    "description":"Πάντα να δείξει ο αμυδρότητα επίπεδο μπαρ, όταν τα φώτα σβήνουν."
+  },
+  "rememberrate":{
+    "message":"Ποσοστό",
+    "description":"Ποσοστό"
+  },
+  "desautoplay":{
+    "message":"Αυτόματα σκοτεινιάζει το παρασκήνιο όταν κάνετε κλικ στο κουμπί αναπαραγωγής και αντίθετα.",
+    "description":"Αυτόματα να αμυδρό παρασκήνιο, όταν κάνετε κλικ στο κουμπί play και έναντι."
+  },
+  "titelscreen":{
+    "message":"Οθόνη",
+    "description":"Οθόνη"
+  },
+  "desflash":{
+    "message":"Προβολή όλων των αντικειμένων Flash.",
+    "description":"Εμφάνιση όλων των αντικειμένων Flash."
+  },
+  "titelhead":{
+    "message":"Κανάλι",
+    "description":"Κανάλι"
+  },
+  "pageatitle":{
+    "message":"Σβήνετε τα φώτα",
+    "description":"Σβήνετε τα φώτα"
+  },
+  "desaddvideobutton":{
+    "message":"Δείτε το κουμπί \"Προσθήκη\" από αυτό το βίντεο YouTube.",
+    "description":"Δείτε το κουμπί \"Προσθήκη\" από αυτό το βίντεο YouTube."
+  },
+  "shortcuteyeprotection":{
+    "message":"να ενεργοποιήσετε\/απενεργοποιήσετε τη λειτουργία προστασίας ματιών.",
+    "description":"να ενεργοποιήσετε\/απενεργοποιήσετε τη λειτουργία προστασίας ματιών."
+  },
+  "titelfadein":{
+    "message":"Fade In",
+    "description":"Fade In"
+  },
+  "desreadern":{
+    "message":"Να μην εμφανίζεται ποτέ η μπάρα επιπέδου αμυδρότητας.",
+    "description":"Ποτέ δεν δείχνουν ο αμυδρότητα επίπεδο μπαρ."
+  },
+  "titelmaxqualityyoutube":{
+    "message":"Να τίθεται αυτόματα σε αυτό το ψήφισμα:",
+    "description":"Να τίθεται αυτόματα σε αυτό το ψήφισμα:"
+  },
+  "desambilightrangespreadradius":{
+    "message":"Θετικές τιμές αυξάνουν το μέγεθος της σκιάς, αρνητικές τιμές μειώνουν το μέγεθος.",
+    "description":"Θετικές τιμές αυξάνουν το μέγεθος της σκιάς, αρνητικές τιμές μειώνουν το μέγεθος."
+  },
+  "titelon":{
+    "message":"Για",
+    "description":"Για"
+  },
+  "videotitle":{
+    "message":"Focus σε αυτό το βίντεο",
+    "description":"Εστίαση αυτό το βίντεο"
+  },
+  "warningtextambilight":{
+    "message":"Αν είναι σε θέση να λάβει βίντεο δεδομένα λόγω του κανόνα ασφαλείας μιας τοποθεσίας, κατόπιν θα παρουσιάσει το επιλεγμένες αμιγές χρώμα αντί.",
+    "description":"Αν είναι σε θέση να λάβει βίντεο δεδομένα λόγω του κανόνα ασφαλείας μιας τοποθεσίας, κατόπιν θα παρουσιάσει το επιλεγμένες αμιγές χρώμα αντί."
+  },
+  "desdynamiccloud":{
+    "message":"Animated Clouds",
+    "description":"Animated Clouds"
+  },
+  "desconfirmtimesaver":{
+    "message":"Επιβεβαιώσει χρόνος προφύλαξη οθόνης",
+    "description":"Επιβεβαιώσει χρόνος προφύλαξη οθόνης"
+  },
+  "deslikebar":{
+    "message":"Εμφάνιση του αρέσει\/αρέσει μπαρ κάτω από το βίντεο YouTube.",
+    "description":"Εμφάνιση του αρέσει\/αρέσει μπαρ κάτω από το βίντεο YouTube."
+  },
+  "titelautoplay":{
+    "message":"Αυτόματη αναπαραγωγή",
+    "description":"Αυτόματο παιχνίδι"
+  },
+  "top":{
+    "message":"κορυφή",
+    "description":"κορυφή"
+  },
+  "titelspreadradius":{
+    "message":"Η ακτίνα εξάπλωση",
+    "description":"Η ακτίνα εξάπλωση"
+  },
+  "installadblocker":{
+    "message":"Χρησιμοποιήστε με επέκταση: Adblocker.",
+    "description":"Χρησιμοποιήστε με επέκταση: Adblocker."
+  },
+  "titelsharebutton":{
+    "message":"Κουμπιά share",
+    "description":"Κουμπιά μοιραστείτε"
+  },
+  "titelcolor":{
+    "message":"Χρώμα",
+    "description":"Χρώμα"
+  },
+  "titeldownloadbutton":{
+    "message":"Λήψη αυτής της αναβάθμισης!",
+    "description":"Λήψη αυτής της αναβάθμισης!"
+  },
+  "pagetitle":{
+    "message":"Πιο σκούρο σε αυτή τη σελίδα",
+    "description":"Σκουρύνει αυτή τη σελίδα"
+  },
+  "titelambilight":{
+    "message":"Ατμόσφαιρα φωτισμού",
+    "description":"Ατμόσφαιρα φωτισμού"
+  },
+  "titelshowmore":{
+    "message":"Εμφάνισε περισσότερα",
+    "description":"Εμφάνισε περισσότερα"
+  },
+  "desviewcount":{
+    "message":"Εμφανίζεται ο αριθμός της προβολής για αυτό το βίντεο.",
+    "description":"Εμφανίζεται ο αριθμός της προβολής για αυτό το βίντεο."
+  },
+  "titelautowidthyoutube":{
+    "message":"Ορίζουν αυτόματα ο παίκτης YouTube για το μεγαλύτερο μέγεθος.",
+    "description":"Ορίζουν αυτόματα ο παίκτης YouTube για το μεγαλύτερο μέγεθος."
+  },
+  "desconfirmtime":{
+    "message":"Επιβεβαιώνουν το χρόνο",
+    "description":"Επιβεβαιώνουν το χρόνο"
+  },
+  "titelupgrade":{
+    "message":"Αναβάθμιση",
+    "description":"Αναβάθμιση"
+  },
+  "lockwrongpassword":{
+    "message":"Λάθος κωδικό πρόσβασης, παρακαλώ προσπαθήστε ξανά.",
+    "description":"Λάθος κωδικό πρόσβασης, παρακαλώ προσπαθήστε ξανά."
+  },
+  "titelsyncbrowser":{
+    "message":"Συγχρονίστε τις ρυθμίσεις επέκτασης με σας άλλο browser.",
+    "description":"Συγχρονίστε τις ρυθμίσεις επέκτασης με σας άλλο browser."
+  },
+  "deletebutton":{
+    "message":"Διαγραφή",
+    "description":"Διαγραφή"
+  },
+  "eyedivon":{
+    "message":"ON",
+    "description":"ON"
+  },
+  "eyedivoff":{
+    "message":"ΜΑΚΡΙΆ",
+    "description":"ΜΑΚΡΙΆ"
+  },
+  "deshead":{
+    "message":"Δείτε την μπάρα YouTube Channel ή το όνομα.",
+    "description":"Εμφάνιση γραμμή YouTube κανάλι ή το όνομα."
+  },
+  "shortcutsavingopacity":{
+    "message":"για να αποθηκεύσετε αυτή τιμή αδιαφάνεια",
+    "description":"για να αποθηκεύσετε αυτή τιμή αδιαφάνεια"
+  },
+  "desinfobar":{
+    "message":"Δείτε τις πληροφορίες σχετικά με την περιγραφή του βίντεο.",
+    "description":"Δείξει τις πληροφορίες περιγραφή σχετικά με το βίντεο."
+  },
+  "titellamp":{
+    "message":"Λάμπα",
+    "description":"Λάμπα"
+  },
+  "desambilightvarcolor":{
+    "message":"Πάρτε το χρώμα από το βίντεο.",
+    "description":"Πάρτε το χρώμα από το βίντεο."
+  },
+  "showremember":{
+    "message":"δεν εμφανίζει αυτή τη σελίδα θυμηθείτε και πάλι όταν ανοίγω την προαίρεση σελίδα.",
+    "description":"δεν εμφανίζει αυτή τη σελίδα θυμηθείτε και πάλι όταν ανοίγω την προαίρεση σελίδα."
+  },
+  "donatepromotext":{
+    "message":"Εάν μπορείτε να κάνετε μια δωρεά οποιουδήποτε ποσού, θα το εκτιμούσα πάρα πολύ!",
+    "description":"Αν μπορείτε να κάνετε μια δωρεά οποιουδήποτε ποσού, εγώ θα το εκτιμούσα πάρα πολύ!"
+  },
+  "titelblur":{
+    "message":"Θάμπωμα το υπόλοιπο",
+    "description":"Θάμπωμα το υπόλοιπο"
+  },
+  "desdynamicraindrops":{
+    "message":"Σταγόνες βροχής",
+    "description":"Σταγόνες βροχής"
+  },
+  "desalllightsoff":{
+    "message":"Κλικ στο κουμπί λαμπτήρας εναλλάσσει τα φώτα ενεργοποίηση\/απενεργοποίηση όλων των ανοιχτών καρτελών όταν αυτή η επιλογή είναι ενεργοποιημένη.",
+    "description":"Κλικ στο κουμπί λαμπτήρας εναλλάσσει τα φώτα ενεργοποίηση\/απενεργοποίηση όλων των ανοιχτών καρτελών όταν αυτή η επιλογή είναι ενεργοποιημένη."
+  },
+  "optionecosaversaved":{
+    "message":"Δευτερόλεπτα είναι αποθηκευμένο με επιτυχία!",
+    "description":"Δευτερόλεπτα είναι αποθηκευμένο με επιτυχία!"
+  },
+  "titelreader":{
+    "message":"Μπάρα επιπέδου αμυδρότητας",
+    "description":"Μπαρ επίπεδο αμυδρότητα"
+  },
+  "deseyen":{
+    "message":"Κανονική χρήση (Τα φώτα σβήνουν όταν κάνετε κλικ στο εικονίδιο του λαμπτήρα).",
+    "description":"Κανονική χρήση (φώτα σβήνουν όταν κάνετε κλικ στο εικονίδιο λαμπτήρα)."
+  },
+  "enjoyshare":{
+    "message":"Απολαύστε αυτή η επέκταση και να το μοιραστείτε με άλλους που νομίζετε ότι θα το εκτιμούσα.",
+    "description":"Απολαύστε αυτή η επέκταση και να το μοιραστείτε με άλλους που νομίζετε ότι θα το εκτιμούσα."
+  },
+  "shortcuttotl":{
+    "message":"για να εναλλάξετε τα φώτα, on\/off.",
+    "description":"για να εναλλάξετε τα φώτα, on\/off."
+  },
+  "deseyea":{
+    "message":"Να γίνεται αυτόματα αμυδρό το παρασκήνιο όταν ανοίγει μια σελίδα.",
+    "description":"Αυτόματα αμυδρό παρασκήνιο κατά το άνοιγμα μιας σελίδας."
+  },
+  "basicsettings":{
+    "message":"Βασικά",
+    "description":"Βασικά"
+  },
+  "hoveroptionapply":{
+    "message":"ισχύουν",
+    "description":"ισχύουν"
+  },
+  "reportbug":{
+    "message":"Αναφορά προβλήματος",
+    "description":"Αναφέρω ένα πρόβλημα"
+  },
+  "destime":{
+    "message":"Φώτα μακριά μεταξύ τις ακόλουθες ώρες:",
+    "description":"Φώτα μακριά μεταξύ τις ακόλουθες ώρες:"
+  },
+  "guide":{
+    "message":"TOtL Καλώς ήρθατε Οδηγός",
+    "description":"TOtL Καλώς ήρθατε Οδηγός"
+  },
+  "deseyealist":{
+    "message":"Αυτόματα αμυδρό παρασκήνιο όταν ανοίγετε τις ακόλουθες σελίδες:",
+    "description":"Αυτόματα αμυδρό παρασκήνιο όταν ανοίγετε τις ακόλουθες σελίδες:"
+  },
+  "titellikebutton":{
+    "message":"Κουμπιά Like & Dislike",
+    "description":"Όπως & αντιπαθούν κουμπιά"
+  },
+  "titelpageaction":{
+    "message":"Απόκρυψη εικονιδίου λαμπτήρα",
+    "description":"Απόκρυψη εικονίδιο pageaction"
+  },
+  "friendlyremember":{
+    "message":"Θυμόμαστε φιλικό...",
+    "description":"Θυμόμαστε φιλικό..."
+  },
+  "desfadein":{
+    "message":"Δείτε το αποτέλεσμα fade in.",
+    "description":"Δείχνουν το fade σε ισχύ."
+  },
+  "warning":{
+    "message":"Προειδοποίηση!",
+    "description":"Προειδοποίηση!"
+  },
+  "deseyetimesaver":{
+    "message":"Όταν μια σελίδα είναι ανενεργά (δεν ποντίκι ή πληκτρολόγιο εισόδου) για τη στιγμή που αναφέρονται παρακάτω, η σελίδα θα αυτόματα πάει σκοτεινή.",
+    "description":"Όταν μια σελίδα είναι ανενεργά (δεν ποντίκι ή πληκτρολόγιο εισόδου) για τη στιγμή που αναφέρονται παρακάτω, η σελίδα θα αυτόματα πάει σκοτεινή."
+  },
+  "titelsuggestions":{
+    "message":"Προτάσεις",
+    "description":"Προτάσεις"
+  },
+  "advancedoptions":{
+    "message":"Επιλογές για προχωρημένους",
+    "description":"Προηγμένες επιλογές"
+  },
+  "dessuggestions":{
+    "message":"Δείτε τις προτάσεις της ιστοσελίδας YouTube.",
+    "description":"Δείτε τις προτάσεις της ιστοσελίδας YouTube."
+  },
+  "titelflash":{
+    "message":"Ανίχνευση Flash",
+    "description":"Flash ανίχνευση"
+  },
+  "desambilight":{
+    "message":"Σας δείξει το εφέ φωτισμού ατμόσφαιρα του τρέχουσα παίζοντας βίντεο.",
+    "description":"Σας δείξει το εφέ φωτισμού ατμόσφαιρα του τρέχουσα παίζοντας βίντεο."
+  },
+  "productshare":{
+    "message":"Μερίδιο",
+    "description":"Μερίδιο"
+  },
+  "addbutton":{
+    "message":"Προσθήκη",
+    "description":"Προσθέστε"
+  },
+  "reportlist":{
+    "message":"(βλέπε κατάλογο)",
+    "description":"Δείτε τη λίστα γεμάτος θέμα"
+  },
+  "desdynamicfishtank":{
+    "message":"Δεξαμενή ψαριών",
+    "description":"Δεξαμενή ψαριών"
+  },
+  "longdonatetext":{
+    "message":"Θα εκτιμούσα πραγματικά εάν μπορείτε να δωρίσετε μου για τη διαιώνιση αυτής επέκταση του προγράμματος περιήγησης για τους άλλους νέους χρήστες. Είτε πρόκειται για $$ 1 ή $$ 100, υποστήριξη σας είναι πάρα πολύ εκτίμησα!",
+    "description":"Θα εκτιμούσα πραγματικά εάν μπορείτε να δωρίσετε μου για τη διαιώνιση αυτής επέκταση του προγράμματος περιήγησης για τους άλλους νέους χρήστες. Είτε πρόκειται για $$ 1 ή $$ 100, υποστήριξη σας είναι πάρα πολύ εκτίμησα!"
+  },
+  "deshardflash":{
+    "message":"Εμφάνιση όλων των αντικειμένων Flash, παρακάμπτοντας το φίλτρο URL. Αυτό θα καθορίσει τα προβλήματα με κάποια προγράμματα αναπαραγωγής βίντεο που κρύβεται, αλλά επίσης θα εμφανίζει διαφημίσεις.",
+    "description":"Εμφάνιση όλων των αντικειμένων Flash, παρακάμπτοντας το φίλτρο URL. Αυτό θα καθορίσει τα προβλήματα με κάποια προγράμματα αναπαραγωγής βίντεο που κρύβεται, αλλά επίσης θα εμφανίζει διαφημίσεις."
+  },
+  "desfadeout":{
+    "message":"Δείτε το αποτέλεσμα fade out.",
+    "description":"Δείχνουν την εξασθενίστε έξω επίδραση."
+  },
+  "optionwrongimg":{
+    "message":"Μη έγκυρη εικόνα αρχείο!",
+    "description":"Μη έγκυρη εικόνα αρχείο!"
+  },
+  "desvideoheadline":{
+    "message":"Δείτε και αναστρέψτε το χρώμα του τίτλου βίντεο.",
+    "description":"Εμφάνιση και αναστρέψτε το χρώμα του βίντεο τίτλου."
+  },
+  "desrememberpage":{
+    "message":"Εάν αυτή η επιλογή είναι ενεργοποιημένη, θα σας δείξει σελίδα δεν θυμάμαι.",
+    "description":"Εάν αυτή η επιλογή είναι ενεργοποιημένη, θα σας δείξει σελίδα δεν θυμάμαι."
+  },
+  "description":{
+    "message":"Ολόκληρη η σελίδα θα σκοτεινιάσει, ώστε να μπορείτε να παρακολουθήσετε το βίντεο σαν να είσαστε στο σινεμά.",
+    "description":"Ολόκληρη η σελίδα θα χάνεσαι σε σκοτεινό, έτσι μπορείτε να παρακολουθήσετε το βίντεο σαν ήσαστε στον κινηματογράφο."
+  },
+  "titelviewcount":{
+    "message":"Αριθμός των Views",
+    "description":"Αριθμός απόψεων"
+  },
+  "titelopacity":{
+    "message":"Αδιαφάνεια",
+    "description":"Αδιαφάνεια"
+  },
+  "titelqualityyoutube":{
+    "message":"Αυτόματα να ρυθμίσετε την ποιότητα του βίντεο YouTube.",
+    "description":"Αυτόματα να ρυθμίσετε την ποιότητα του βίντεο YouTube."
+  },
+  "shortcutopacity":{
+    "message":"να επαναφέρετε το σύνολο σκοτάδι (αδιαφάνεια) ρύθμιση.",
+    "description":"να επαναφέρετε το σύνολο σκοτάδι (αδιαφάνεια) ρύθμιση."
+  },
+  "desambilightrangeblurradius":{
+    "message":"Εάν οριστεί σε χαμηλότερη τιμή σκιά θα είναι απότομη, όσο υψηλότερος ο αριθμός, η πιο θολή θα είναι.",
+    "description":"Εάν το σύνολο σε χαμηλότερη τιμή σκιά θα είναι απότομη, όσο υψηλότερος ο αριθμός, η πιο θολή θα είναι."
+  },
+  "titeladdvideobutton":{
+    "message":"Κουμπί \"Προσθήκη\"",
+    "description":"Κουμπί \"Προσθήκη\""
+  },
+  "titelpassword":{
+    "message":"Προστασία με κωδικό πρόσβασης",
+    "description":"Προστασία με κωδικό πρόσβασης"
+  },
+  "titeldownloadupgrade":{
+    "message":"Την αναβάθμιση προσθέτει υποστήριξη για την εστίαση των επιλεγμένων εικόνων, και θα εμφανίσει μια στοά των εικόνων στο χώρο.",
+    "description":"Την αναβάθμιση προσθέτει υποστήριξη για την εστίαση των επιλεγμένων εικόνων, και θα εμφανίσει μια στοά των εικόνων στο χώρο."
+  },
+  "titelfadeout":{
+    "message":"Fade Out",
+    "description":"Fade Out"
+  },
+  "eastereggsquestion":{
+    "message":"Σας αρέσει το πραγματικό σινεμά;",
+    "description":"Σας αρέσει το πραγματικό σινεμά;"
+  },
+  "bottom":{
+    "message":"κάτω μέρος",
+    "description":"κάτω μέρος"
+  },
+  "dessaver":{
+    "message":"Προφύλαξη οθόνης:",
+    "description":"Προφύλαξη οθόνης:"
+  },
+  "hoveroptiondyn5":{
+    "message":"με πέταγμα",
+    "description":"με πέταγμα"
+  },
+  "pagestillloading":{
+    "message":"The σελίδα is φόρτωση ακόμα;",
+    "description":"The σελίδα is φόρτωση ακόμα;"
+  },
+  "titeloff":{
+    "message":"Μακριά",
+    "description":"Μακριά"
+  },
+  "titeleastereggs":{
+    "message":"Πασχαλινά αυγά",
+    "description":"Πασχαλινά αυγά"
+  },
+  "textfoot":{
+    "message":"Αυτό το λογισμικό υπό την άδεια CC-GNU GPL. Για να δείτε ένα αντίγραφο αυτής της άδειας, επισκεφτείτε",
+    "description":"Αυτό το λογισμικό είναι με άδεια CC-GNU GPL. Για να δείτε ένα αντίγραφο αυτής της άδειας χρήσης, επισκεφθείτε"
+  },
+  "left":{
+    "message":"αριστερά",
+    "description":"αριστερά"
+  },
+  "titelnighttheme":{
+    "message":"Νυχτερινή λειτουργία",
+    "description":"Νυχτερινή λειτουργία"
+  },
+  "desnighttheme":{
+    "message":"Εμφάνιση κουμπιού διακόπτης νύχτα κάτω από την ιστοσελίδα για να κάνει την σελίδα σκοτάδι ή φως.",
+    "description":"Εμφάνιση κουμπιού διακόπτης νύχτα κάτω από την ιστοσελίδα για να κάνει την σελίδα σκοτάδι ή φως."
+  },
+  "nightoptions":{
+    "message":"Νυχτερινή λειτουργία",
+    "description":"Νυχτερινή λειτουργία"
+  },
+  "desnightonly":{
+    "message":"Δείχνουν τη νυχτερινή λειτουργία μόνο ιστοδελίδες παρακάτω:",
+    "description":"Δείχνουν τη νυχτερινή λειτουργία μόνο ιστοδελίδες παρακάτω:"
+  },
+  "desnightenabletheme":{
+    "message":"Όταν ανοίγετε μια νέα σελίδα πάει αυτόματα να τη νυχτερινή λειτουργία.",
+    "description":"Όταν ανοίγετε μια νέα σελίδα πάει αυτόματα να τη νυχτερινή λειτουργία."
+  },
+  "titellampregular":{
+    "message":"Show always the lamp icon in the omnibox",
+    "description":"Show always the lamp icon in the omnibox"
+  },
+  "titellampvideo":{
+    "message":"Show the lamp icon only if a video player is detected",
+    "description":"Show the lamp icon only if a video player is detected"
+  },
+  "upgradecontexttitle":{
+    "message":"We have added some new features for you",
+    "description":"We have added some new features for you"
+  },
+  "upgradecontextmessage":{
+    "message":"That make this extension even more amazing",
+    "description":"That make this extension even more amazing"
+  },
+  "upgradecontextitemta":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "upgradecontextitemma":{
+    "message":"light off with your hand",
+    "description":"light off with your hand"
+  },
+  "upgradecontextitemtb":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition"
+  },
+  "upgradecontextitemmb":{
+    "message":"Control the web page more accurately",
+    "description":"Control the web page more accurately"
+  },
+  "upgradefbshare":{
+    "message":"Facebook Share",
+    "description":"Facebook Share"
+  },
+  "upgradetwshare":{
+    "message":"Tweet",
+    "description":"Tweet"
+  },
+  "ratetitle":{
+    "message":"Please rate & review my extension",
+    "description":"Please rate & review my extension"
+  },
+  "ratedes":{
+    "message":"And let everyone know about this great extension!",
+    "description":"And let everyone know about this great extension!"
+  },
+  "rateitema":{
+    "message":"Rate 5 stars",
+    "description":"Rate 5 stars"
+  },
+  "titelreset":{
+    "message":"Επαναφορά ρυθμίσεων",
+    "description":"Επαναφορά ρυθμίσεων"
+  },
+  "resetbrowserextension":{
+    "message":"Reset the Turn Off the Lights settings",
+    "description":"Reset the Turn Off the Lights settings"
+  },
+  "desautoplaydelay":{
+    "message":"Brighten again the background when the video ended after",
+    "description":"Brighten again the background when the video ended after"
+  },
+  "desautoplaydelayend":{
+    "message":"δευτερόλεπτα",
+    "description":"δευτερόλεπτα"
+  },
+  "motionoptions":{
+    "message":"Camera Motion",
+    "description":"Camera Motion"
+  },
+  "desmotion":{
+    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
+    "description":"Camera Motion"
+  },
+  "trymotion":{
+    "message":"Try it yourself!",
+    "description":"Try it yourself!"
+  },
+  "destrymotion":{
+    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc.",
+    "description":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
+  },
+  "howworkmotion":{
+    "message":"Πως λειτουργεί;",
+    "description":"Πως λειτουργεί;"
+  },
+  "step1description":{
+    "message":"Enable the Camera Motion feature",
+    "description":"Enable the Camera Motion feature"
+  },
+  "step2description":{
+    "message":"Move your hand (or fist) from the top to bottom",
+    "description":"Move your hand (or fist) from the top to bottom"
+  },
+  "step3description":{
+    "message":"Then the black layer slide automatically down.",
+    "description":"Then the black layer slide automatically down."
+  },
+  "desmotionChecklist":{
+    "message":"Checklist:",
+    "description":"Checklist:"
+  },
+  "des1checkmotion":{
+    "message":"Make sure your room is not dark and that it have enough light.",
+    "description":"Make sure your room is not dark and that it have enough light."
+  },
+  "des2checkmotion":{
+    "message":"Your camera must not receive direct sunlight.",
+    "description":"Your camera must not receive direct sunlight."
+  },
+  "des3checkmotion":{
+    "message":"You use a front facing camera.",
+    "description":"You use a front facing camera."
+  },
+  "titellinear":{
+    "message":"Linear",
+    "description":"Linear"
+  },
+  "titelcolora":{
+    "message":"Χρώμα Α",
+    "description":"Χρώμα Α"
+  },
+  "titelcolorb":{
+    "message":"Χρώμα B",
+    "description":"Χρώμα B"
+  },
+  "speechoption":{
+    "message":"Speech Recognition",
+    "description":"Speech Recognition "
+  },
+  "titelspeech":{
+    "message":"Ομιλία",
+    "description":"Ομιλία"
+  },
+  "desspeech":{
+    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
+    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+  },
+  "desspeech1command":{
+    "message":"turn off the lights",
+    "description":"turn off the lights"
+  },
+  "desspeech2command":{
+    "message":"turn on the lights",
+    "description":"turn on the lights"
+  },
+  "desspeech3command":{
+    "message":"αναπαραγωγή βίντεο",
+    "description":"αναπαραγωγή βίντεο"
+  },
+  "desspeech4command":{
+    "message":"παύση βίντεο",
+    "description":"παύση βίντεο"
+  },
+  "desspeechdialect":{
+    "message":"Choose your speech dialect:",
+    "description":"Choose your speech dialect:"
+  },
+  "desatmosvivid":{
+    "message":"Vivid atmosphere effects on YouTube, require",
+    "description":"Vivid atmosphere effects on YouTube, require"
+  },
+  "help":{
+    "message":"Βοήθεια",
+    "description":"Βοήθεια"
+  },
+  "about":{
+    "message":"Σχετικά με",
+    "description":"Σχετικά με"
+  },
+  "desspeechonly":{
+    "message":"Activate the Speech Recognition only the following site(s):",
+    "description":"Activate the Speech Recognition only the following site(s):"
+  },
+  "descammotiononly":{
+    "message":"Activate the Camera Motion only on the following site(s):",
+    "description":"Activate the Camera Motion only on the following site(s):"
+  },
+  "titelcamera":{
+    "message":"Κάμερα",
+    "description":"Κάμερα"
+  },
+  "titelautoplaywhitelist":{
+    "message":"Λευκή Λίστα",
+    "description":"Λευκή Λίστα"
+  },
+  "titelautoplayblacklist":{
+    "message":"Μαύρη Λίστα",
+    "description":"Μαύρη Λίστα"
+  },
+  "titeldownloadthemeupgrade":{
+    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser.",
+    "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
+  },
+  "desbrowsersupport":{
+    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
+    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+  },
+  "titelsupportatmos":{
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+  },
+  "titelseeonline":{
+    "message":"See online for more examples",
+    "description":"See online for more examples"
+  },
+  "titelvideosample":{
+    "message":"Video Sample",
+    "description":"Video Sample"
+  },
+  "titelwebsite":{
+    "message":"Ιστοσελίδα",
+    "description":"Ιστοσελίδα"
+  },
+  "titeldeveloper":{
+    "message":"Προγραμματιστής",
+    "description":"Προγραμματιστής"
+  },
+  "titelrightsreserved":{
+    "message":"Κατοχυρωμένα κάποια δικαιώματα.",
+    "description":"Κατοχυρωμένα κάποια δικαιώματα."
+  },
+  "desbrowserextension":{
+    "message":"επέκταση περιηγητή",
+    "description":"επέκταση περιηγητή"
+  },
+  "desapitext":{
+    "message":"Wiki API για τον Προγραμματιστή Ιστοσελίδας",
+    "description":"Wiki API για τον Προγραμματιστή Ιστοσελίδας"
+  },
+  "desbrowsertheme":{
+    "message":"θέμα περιηγητή",
+    "description":"θέμα περιηγητή"
+  },
+  "desproject":{
+    "message":"έργο",
+    "description":"έργο"
+  },
+  "titelapideveloper":{
+    "message":"Προγραμματιστής API",
+    "description":"Προγραμματιστής API"
+  },
+  "titelwikiatmos":{
+    "message":"Wiki about the Atmosphere Lighting feature",
+    "description":"Wiki about the Atmosphere Lighting feature"
+  }
+}
