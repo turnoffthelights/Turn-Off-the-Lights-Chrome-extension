@@ -60,7 +60,7 @@
     "description":"Film theater mode: itu menunjukkan lapisan 'lampu ' hanya di bagian atas jendela."
   },
   "desmousespotlightc":{
-    "message":"Jika cahaya mati, Anda dapat memilih area yang difokuskan.",
+    "message":"Jika cahaya mati, Anda dapat memilih area untuk difokuskan.",
     "description":"Jika cahaya tidak aktif, Anda dapat memilih area fokus item."
   },
   "titelrememberpage":{
@@ -92,7 +92,7 @@
     "description":"Konfirmasi password"
   },
   "desautoplayonly":{
-    "message":"Peredupan layar hanya pada situs video berikut:",
+    "message":"Redupkan layar hanya pada situs video berikut:",
     "description":"Remang-remang hanya situs video berikut:"
   },
   "helpeyeprotection":{
@@ -336,7 +336,7 @@
     "description":"Warna"
   },
   "titeldownloadbutton":{
-    "message":"Men-download Upgrade ini!",
+    "message":"Unduh upgrade ini!",
     "description":"Men-download Upgrade ini!"
   },
   "pagetitle":{
@@ -456,7 +456,7 @@
     "description":"Dasar-dasar"
   },
   "hoveroptionapply":{
-    "message":"menerapkan",
+    "message":"terapkan",
     "description":"menerapkan"
   },
   "reportbug":{
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Nyalakan Gerak Kamera sehingga halaman web dapat menggelap dengan lambaian tangan ke bawah.",
-    "description":"Gerakan Kamera"
+    "description":"Nyalakan Gerak Kamera sehingga halaman web dapat menggelap dengan lambaian tangan ke bawah."
   },
   "trymotion":{
     "message":"Cobalah sendiri!",
@@ -820,8 +820,8 @@
     "description":"Atmosfer yang jelas berpengaruh pada YouTube, dibutuhkan"
   },
   "help":{
-    "message":"Tolong",
-    "description":"Tolong"
+    "message":"Bantuan",
+    "description":"Bantuan"
   },
   "about":{
     "message":"Tentang",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Wiki tentang fitur Pencahayaan Atmosfir",
     "description":"Wiki tentang fitur Pencahayaan Atmosfir"
+  },
+  "sharemenusharetitle":{
+    "message":"Bagikan",
+    "description":"Bagikan"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Panduan Awal",
+    "description":"Panduan Awal"
+  },
+  "sharemenutellafriend":{
+    "message":"Beritahu Teman",
+    "description":"Beritahu Teman"
+  },
+  "sharemenusendatweet":{
+    "message":"Kirim Tweet",
+    "description":"Kirim Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Kirim ke Facebook",
+    "description":"Kirim ke Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Kirim ke Google +",
+    "description":"Kirim ke Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Nilai ekstensi ini",
+    "description":"Nilai ekstensi ini"
+  },
+  "sharemenudonatetitle":{
+    "message":"Dukung Pengembangan",
+    "description":"Dukung Pengembangan"
   }
 }

@@ -200,8 +200,8 @@
     "description":"Lista de Reprodução"
   },
   "desatmosphereonly":{
-    "message":"Use o recurso de iluminação de atmosfera apenas nos seguintes sites:",
-    "description":"Use o recurso de iluminação de atmosfera apenas nos seguintes sites:"
+    "message":"Use o recurso de Iluminação Ambiente apenas nos seguintes sites:",
+    "description":"Use o recurso de Iluminação Ambiente apenas nos seguintes sites:"
   },
   "recflash":{
     "message":"Recomendado",
@@ -344,8 +344,8 @@
     "description":"Escurecer esta página"
   },
   "titelambilight":{
-    "message":"Iluminação ambiente",
-    "description":"Iluminação ambiente"
+    "message":"Iluminação Ambiente",
+    "description":"Iluminação Ambiente"
   },
   "titelshowmore":{
     "message":"Mostrar mais",
@@ -516,8 +516,8 @@
     "description":"Detector de Flash"
   },
   "desambilight":{
-    "message":"Mostrar o efeito Ambilight no vídeo atual",
-    "description":"Mostrar o efeito Ambilight no vídeo atual"
+    "message":"Mostrar o efeito de Iluminação Ambiente no vídeo atual",
+    "description":"Mostrar o efeito de Iluminação Ambiente no vídeo atual"
   },
   "productshare":{
     "message":"Compartilhe",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Ativar o Movimento da Câmera para que seja possível escurecer a pagina com um deslizar de mão para baixo.",
-    "description":"Movimento de Câmera"
+    "description":"Ativar o Movimento da Câmera para que seja possível escurecer a pagina com um deslizar de mão para baixo."
   },
   "trymotion":{
     "message":"Tente você mesmo!",
@@ -900,7 +900,39 @@
     "description":"Desenvolvedor de API"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Wiki sobre o recurso de Iluminação Ambiente",
+    "description":"Wiki sobre o recurso de Iluminação Ambiente"
+  },
+  "sharemenusharetitle":{
+    "message":"Compartilhar isso",
+    "description":"Compartilhar isso"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Guia de Boas-vindas",
+    "description":"Guia de Boas-vindas"
+  },
+  "sharemenutellafriend":{
+    "message":"Indicar a um amigo",
+    "description":"Indicar a um amigo"
+  },
+  "sharemenusendatweet":{
+    "message":"Enviar um Tweet",
+    "description":"Enviar um Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Postar no Facebook",
+    "description":"Postar no Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Postar no Google +",
+    "description":"Postar no Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Classificar esta extensão",
+    "description":"Classificar esta extensão"
+  },
+  "sharemenudonatetitle":{
+    "message":"Apoiar o Desenvolvimento",
+    "description":"Apoiar o Desenvolvimento"
   }
 }

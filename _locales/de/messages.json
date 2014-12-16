@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Kamerabewegung aktivieren, so dass die Internetseite, mit einer Handbewegung nach unten, verdunkelt werden kann.",
-    "description":"Kamerabewegung"
+    "description":"Kamerabewegung aktivieren, so dass die Internetseite, mit einer Handbewegung nach unten, verdunkelt werden kann."
   },
   "trymotion":{
     "message":"Probieren Sie es selbst aus!",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Wiki über die Funktion der Stimmungsbeleuchtung",
     "description":"Wiki über die Funktion der Stimmungsbeleuchtung"
+  },
+  "sharemenusharetitle":{
+    "message":"Mitteilen",
+    "description":"Mitteilen"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Erste Schritte",
+    "description":"Erste Schritte"
+  },
+  "sharemenutellafriend":{
+    "message":"Weiterempfehlen",
+    "description":"Weiterempfehlen"
+  },
+  "sharemenusendatweet":{
+    "message":"Einen Tweet senden",
+    "description":"Einen Tweet senden"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Auf Facebook veröffentlichen",
+    "description":"Auf Facebook veröffentlichen"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Auf Google+ veröffentlichen",
+    "description":"Auf Google+ veröffentlichen"
+  },
+  "sharemenuratetitle":{
+    "message":"Diese Erweiterung bewerten",
+    "description":"Diese Erweiterung bewerten"
+  },
+  "sharemenudonatetitle":{
+    "message":"Spenden",
+    "description":"Spenden"
   }
 }

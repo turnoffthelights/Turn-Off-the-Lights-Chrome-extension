@@ -55,6 +55,28 @@ likebar = response['likebar'];
 // if (y >= 1000){q[i].style.zIndex = 'auto';}
 // }
 
+
+// detect if no -webkit-transform:translateZ(0) used, if so
+// remove this and place the 'none' value
+var w = document.getElementsByTagName('*');
+for(var i = 0; i < w.length; i++ ) {
+if (w[i].currentStyle){var t = w[i].currentStyle["-webkit-transform"] ||
+         w[i].currentStyle["-moz-transform"] ||
+         w[i].currentStyle["-ms-transform"] ||
+         w[i].currentStyle["-o-transform"] ||
+         w[i].currentStyle["transform"]
+}
+else if (window.getComputedStyle){
+var st = document.defaultView.getComputedStyle(w[i], null);
+var t = st.getPropertyValue("-webkit-transform") ||
+         st.getPropertyValue("-moz-transform") ||
+         st.getPropertyValue("-ms-transform") ||
+         st.getPropertyValue("-o-transform") ||
+         st.getPropertyValue("transform")
+}
+if (t == "matrix(1, 0, 0, 1, 0, 0)"){ w[i].style.webkitTransform = 'none'; w[i].style.MozTransform = 'none'; w[i].style.msTransform = 'none'; w[i].style.OTransform = 'none'; w[i].style.transform = 'none';}
+}
+
 // YouTube options
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 

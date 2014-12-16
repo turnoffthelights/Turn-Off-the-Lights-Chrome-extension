@@ -28,7 +28,7 @@
     "description":"Doar"
   },
   "titellikebar":{
-    "message":"Barra do Gosto\/Não Gosto",
+    "message":"Barra de \"Gosto\"",
     "description":"Barra do Gosto\/Não Gosto"
   },
   "desmousespotlightt":{
@@ -92,8 +92,8 @@
     "description":"Confirmar palavra-passe"
   },
   "desautoplayonly":{
-    "message":"Escurecer apenas o(s) seguinte(s) site(s):",
-    "description":"Escurecer apenas o(s) seguinte(s) site(s):"
+    "message":"Só desvanecer o(s) seguinte(s) site(s) de vídeo:",
+    "description":"Só desvanecer o(s) seguinte(s) site(s) de vídeo:"
   },
   "helpeyeprotection":{
     "message":"Ao permitir a 'Proteção para os Olhos' irá desactivar automaticamente o recurso de 'Auto play'.",
@@ -121,7 +121,7 @@
   },
   "helpautoplay":{
     "message":"A 'Protecção para os Olhos' está activada. Para usar o recurso abaixo, desactive a opção 'Protecção para os Olhos'.",
-    "description":"A 'Protecção para os Olhos' está activada. Para usar o recurso abaixo, desactive a opção 'Protecção para os Olhos'."
+    "description":"A 'Proteção para os Olhos' está ativada. Para utilizar a função abaixo, desative a opção 'Proteção para os Olhos'."
   },
   "name":{
     "message":"Turn Off the Ligths",
@@ -312,8 +312,8 @@
     "description":"Mostrar a barra gosto\/não gosto nos vídeos do YouTube."
   },
   "titelautoplay":{
-    "message":"Começar Automaticamente",
-    "description":"Reprodução automática"
+    "message":"Reprodução Automática",
+    "description":"Reproduzir automaticamente"
   },
   "top":{
     "message":"início",
@@ -412,7 +412,7 @@
     "description":"não mostrar  novamente esta página do lembre-se quando eu abrir a página de opções."
   },
   "donatepromotext":{
-    "message":"Se poder fazer uma doação de qualquer quantia, eu agradeceria imensamente!",
+    "message":"Se puder fazer uma doação, seja de qualquer valor for, eu agradeço imenso!",
     "description":"Se você poderá fazer uma doação de qualquer quantia, nós agradeceríamos imenso!"
   },
   "titelblur":{
@@ -420,8 +420,8 @@
     "description":"Desfocar o resto"
   },
   "desdynamicraindrops":{
-    "message":"Pingos de chuva",
-    "description":"Pingos de chuva"
+    "message":"Gotas de chuva",
+    "description":"Gotas de chuva"
   },
   "desalllightsoff":{
     "message":"Ao clicar no botão da lâmpada irá alternar as luzes de ligar\/desligar em todos os separadores abertos quando esta opção estiver activada.",
@@ -588,7 +588,7 @@
     "description":"Adicionar Botão"
   },
   "titelpassword":{
-    "message":"Protecção por Palavra-chave",
+    "message":"Proteção por palavra-passe",
     "description":"Protecção por Palavra-chave"
   },
   "titeldownloadupgrade":{
@@ -716,8 +716,8 @@
     "description":"Redefinir as definições do Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Iluminar o fundo quando parar de jogar, após",
-    "description":"Iluminar o fundo quando parar de jogar, após"
+    "message":"Iluminar novamente o fundo quando o vídeo terminar, depois de",
+    "description":"Iluminar novamente o fundo quando o vídeo terminar, depois de"
   },
   "desautoplaydelayend":{
     "message":"segundos",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Active o Movimento da Câmara para que seja possível escurecer a página web com o deslizar da mão para baixo.",
-    "description":"Movimento da Câmara"
+    "description":"Active o Movimento da Câmara para que seja possível escurecer a página web com o deslizar da mão para baixo."
   },
   "trymotion":{
     "message":"Tente você mesmo!",
@@ -824,8 +824,8 @@
     "description":"Ajuda"
   },
   "about":{
-    "message":"Acerca",
-    "description":"Acerca"
+    "message":"Sobre",
+    "description":"Sobre"
   },
   "desspeechonly":{
     "message":"Activar o Reconhecimento de Fala apenas no(s) seguinte(s) site(s):",
@@ -840,12 +840,12 @@
     "description":"Câmara"
   },
   "titelautoplaywhitelist":{
-    "message":"Lista branca",
-    "description":"Lista branca"
+    "message":"Lista Branca",
+    "description":"Lista Branca"
   },
   "titelautoplayblacklist":{
-    "message":"Lista negra",
-    "description":"Lista negra"
+    "message":"Lista Negra",
+    "description":"Lista Negra"
   },
   "titeldownloadthemeupgrade":{
     "message":"Adicione um tema escuro ao seu browser para o embelezar. O tema aparecerá ao redor da borda do browser.",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Wiki sobre a funcionalidade Atmosphere Lighting",
     "description":"Wiki sobre a funcionalidade Atmosphere Lighting"
+  },
+  "sharemenusharetitle":{
+    "message":"Partilhar isto",
+    "description":"Partilhar isto"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Guia de Boas-vindas",
+    "description":"Guia de Boas-vindas"
+  },
+  "sharemenutellafriend":{
+    "message":"Indique a Um Amigo",
+    "description":"Indique a Um Amigo"
+  },
+  "sharemenusendatweet":{
+    "message":"Envie um Tweet",
+    "description":"Envie um Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Post no Facebook",
+    "description":"Post no Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Post no Google +",
+    "description":"Post no Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Classifique esta extensão",
+    "description":"Classifique esta extensão"
+  },
+  "sharemenudonatetitle":{
+    "message":"Apoiar o Desenvolvimento",
+    "description":"Apoiar o Desenvolvimento"
   }
 }

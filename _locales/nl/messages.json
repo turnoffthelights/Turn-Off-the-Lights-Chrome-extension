@@ -4,8 +4,8 @@
     "description":"Help"
   },
   "titelimage":{
-    "message":"Achtergrond afbeelding",
-    "description":"Achtergrond afbeelding"
+    "message":"Achtergrondafbeelding",
+    "description":"Achtergrondafbeelding"
   },
   "shortcutalllights":{
     "message":"om de verlichting aan of uit te schakelen van alle openstaande tabbladen.",
@@ -40,8 +40,8 @@
     "description":"4 gekozen kleuren rond de video speler:"
   },
   "lockentername":{
-    "message":"Voer jouw wachtwoord in",
-    "description":"Voer jouw wachtwoord in"
+    "message":"Voer uw wachtwoord in",
+    "description":"Voer uw wachtwoord in"
   },
   "desnoflash":{
     "message":"Gebruik deze functie niet.",
@@ -56,8 +56,8 @@
     "description":"Oogbescherming"
   },
   "titelcinemaontop":{
-    "message":"Bioscoop modus: toont de laag 'lichten uit' alleen aan de bovenkant van het venster.",
-    "description":"Bioscoop modus: toont de laag 'lichten uit' alleen aan de bovenkant van het venster."
+    "message":"Bioscoopmodus: toont de laag 'lichten uit' alleen aan de bovenkant van het venster.",
+    "description":"Bioscoopmodus: toont de laag 'lichten uit' alleen aan de bovenkant van het venster."
   },
   "desmousespotlightc":{
     "message":"Als het licht uit is, kan je een gebied selecteren dat niet donker wordt.",
@@ -104,8 +104,8 @@
     "description":"Sla dit over, en open nu de optie pagina"
   },
   "optiontimesaved":{
-    "message":"Tijd is succesvol opgeslagen!",
-    "description":"Tijd is succesvol opgeslagen!"
+    "message":"Tijd is met succes opgeslagen!",
+    "description":"Tijd is met succes opgeslagen!"
   },
   "titelvideoheadline":{
     "message":"Titel van de video",
@@ -232,8 +232,8 @@
     "description":"om het scherm te verhelderen (verlaag de opaciteit)."
   },
   "titelalllightsoff":{
-    "message":"Alle openstaande tabbladen",
-    "description":"Alle openstaande tabbladen"
+    "message":"Alle geopende tabbladen",
+    "description":"Alle geopende tabbladen"
   },
   "desreadera":{
     "message":"Toon altijd de dim niveau balk als de lichten uit gaan.",
@@ -348,32 +348,32 @@
     "description":"Sfeerverlichting"
   },
   "titelshowmore":{
-    "message":"Toon meer",
-    "description":"Toon meer"
+    "message":"Meer tonen",
+    "description":"Meer tonen"
   },
   "desviewcount":{
-    "message":"Toon het aantal weergaven voor deze video.",
-    "description":"Toon het aantal weergaven voor deze video."
+    "message":"Het aantal weergaven voor deze video tonen",
+    "description":"Het aantal weergaven voor deze video tonen"
   },
   "titelautowidthyoutube":{
-    "message":"Stel automatisch de YouTube-speler in op een grotere maat.",
-    "description":"Stel automatisch de YouTube-speler in op een grotere maat."
+    "message":"Automatisch de YouTube-speler op de grotere grootte instellen",
+    "description":"Automatisch de YouTube-speler op de grotere grootte instellen"
   },
   "desconfirmtime":{
     "message":"Bevestig de tijd",
     "description":"Bevestig de tijd"
   },
   "titelupgrade":{
-    "message":"Upgrade",
-    "description":"Upgrade"
+    "message":"Upgraden",
+    "description":"Upgraden"
   },
   "lockwrongpassword":{
-    "message":"Fout wachtwoord, probeer het opnieuw.",
-    "description":"Fout wachtwoord, probeer het opnieuw."
+    "message":"Onjuist wachtwoord, probeer het opnieuw.",
+    "description":"Onjuist wachtwoord, probeer het opnieuw."
   },
   "titelsyncbrowser":{
-    "message":"Synchroniseer de uitbreidingsinstellingen met je andere browser.",
-    "description":"Synchroniseer de uitbreidingsinstellingen met je andere browser."
+    "message":"Synchroniseer de extensie-instellingen met uw andere browser.",
+    "description":"Synchroniseer de extensie-instellingen met uw andere browser."
   },
   "deletebutton":{
     "message":"Verwijderen",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Schakel de Camera Beweging kenmerk in, om het mogelijk te maken de webpagina te dimmen door de beweging van je hand naar beneden.",
-    "description":"Camera Beweging"
+    "description":"Schakel de Camera Beweging kenmerk in, om het mogelijk te maken de webpagina te dimmen door de beweging van je hand naar beneden."
   },
   "trymotion":{
     "message":"Probeer het zelf!",
@@ -760,16 +760,16 @@
     "description":"Controlelijst:"
   },
   "des1checkmotion":{
-    "message":"Zorg ervoor dat uw kamer is niet te donker en dat er voldoende licht is.",
-    "description":"Zorg ervoor dat uw kamer is niet te donker en dat er voldoende licht is."
+    "message":"Zorg ervoor dat uw kamer niet donker is en genoeg licht heeft.",
+    "description":"Zorg ervoor dat uw kamer niet donker is en genoeg licht heeft."
   },
   "des2checkmotion":{
-    "message":"Uw camera geen direct zonlicht ontvangt.",
-    "description":"Uw camera geen direct zonlicht ontvangt."
+    "message":"Uw camera mag geen direct zonlicht ontvangen.",
+    "description":"Uw camera mag geen direct zonlicht ontvangen."
   },
   "des3checkmotion":{
-    "message":"Je gebruikt een camera aan de voorkant.",
-    "description":"Je gebruikt een camera aan de voorkant."
+    "message":"U gebruikt een camera aan de voorkant.",
+    "description":"U gebruikt een camera aan de voorkant."
   },
   "titellinear":{
     "message":"Lineair",
@@ -792,8 +792,8 @@
     "description":"Spraak"
   },
   "desspeech":{
-    "message":"Wanneer je deze optie heeft inschakelt, kunt je praten tegen de browser-lamp. En kunt je de volgende opdrachten zeggen:",
-    "description":"Wanneer je deze optie heeft inschakelt, kunt je praten tegen de browser-lamp. En kunt je de volgende opdrachten zeggen:"
+    "message":"Als u deze optie hebt ingeschakeld, kunt u tegen de browserlamp praten. U kunt dan de volgende opdrachten geven:",
+    "description":"Als u deze optie hebt ingeschakeld, kunt u tegen de browserlamp praten. U kunt dan de volgende opdrachten geven:"
   },
   "desspeech1command":{
     "message":"doe de lichten uit",
@@ -812,12 +812,12 @@
     "description":"pauze video"
   },
   "desspeechdialect":{
-    "message":"Kies uw spraak dialect:",
-    "description":"Kies uw spraak dialect:"
+    "message":"Kies uw spraakdialect:",
+    "description":"Kies uw spraakdialect:"
   },
   "desatmosvivid":{
-    "message":"Levendige sfeer effecten enkel op YouTube, vereist",
-    "description":"Levendige sfeer effecten enkel op YouTube, vereist"
+    "message":"Levendige sfeereffecten op YouTube vereisen",
+    "description":"Levendige sfeereffecten op YouTube vereisen"
   },
   "help":{
     "message":"Help",
@@ -828,12 +828,12 @@
     "description":"Over"
   },
   "desspeechonly":{
-    "message":"Activeer de Spraakherkenning kenmerk alleen op de volgende sites:",
-    "description":"Activeer de Spraakherkenning kenmerk alleen op de volgende sites:"
+    "message":"De functie Spraakherkenning alleen op de volgende website(s) activeren:",
+    "description":"De functie Spraakherkenning alleen op de volgende website(s) activeren:"
   },
   "descammotiononly":{
-    "message":"Activeert de Camera Motion kenmerk alleen op de volgende sites:",
-    "description":"Activeert de Camera Motion kenmerk alleen op de volgende sites:"
+    "message":"De functie Camerabeweging alleen op de volgende website(s) activeren:",
+    "description":"De functie Camerabeweging alleen op de volgende website(s) activeren:"
   },
   "titelcamera":{
     "message":"Camera",
@@ -864,8 +864,8 @@
     "description":"Zie online voor meer voorbeelden"
   },
   "titelvideosample":{
-    "message":"Video voorbeeld",
-    "description":"Video voorbeeld"
+    "message":"Videovoorbeeld",
+    "description":"Videovoorbeeld"
   },
   "titelwebsite":{
     "message":"Website",
@@ -880,16 +880,16 @@
     "description":"Sommige rechten voorbehouden."
   },
   "desbrowserextension":{
-    "message":"Browser extensie",
-    "description":"Browser extensie"
+    "message":"browserextensie",
+    "description":"browserextensie"
   },
   "desapitext":{
-    "message":"Wiki API voor Website ontwikkelaar",
-    "description":"Wiki API voor Website ontwikkelaar"
+    "message":"Wiki-API voor websiteontwikkelaar",
+    "description":"Wiki-API voor websiteontwikkelaar"
   },
   "desbrowsertheme":{
-    "message":"browser thema",
-    "description":"browser thema"
+    "message":"browserthema",
+    "description":"browserthema"
   },
   "desproject":{
     "message":"project",
@@ -900,7 +900,39 @@
     "description":"API-ontwikkelaar"
   },
   "titelwikiatmos":{
-    "message":"Wiki over de sfeer verlichting functie",
-    "description":"Wiki over de sfeer verlichting functie"
+    "message":"Wiki over de sfeerverlichtingsfunctie",
+    "description":"Wiki over de sfeerverlichtingsfunctie"
+  },
+  "sharemenusharetitle":{
+    "message":"Dit delen",
+    "description":"Dit delen"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Welkomsthandleiding",
+    "description":"Welkomsthandleiding"
+  },
+  "sharemenutellafriend":{
+    "message":"Een vriend(in) vertellen",
+    "description":"Een vriend(in) vertellen"
+  },
+  "sharemenusendatweet":{
+    "message":"Een Tweet verzenden",
+    "description":"Een Tweet verzenden"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Plaatsen op Facebook",
+    "description":"Plaatsen op Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Plaatsen op Google+",
+    "description":"Plaatsen op Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Deze extensie beoordelen",
+    "description":"Deze extensie beoordelen"
+  },
+  "sharemenudonatetitle":{
+    "message":"Ontwikkeling steunen",
+    "description":"Ontwikkeling steunen"
   }
 }

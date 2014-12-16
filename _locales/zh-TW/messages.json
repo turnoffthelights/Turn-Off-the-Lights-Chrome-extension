@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"請啟動攝影動態來使手向下滑動達到網頁變暗之方式成真",
-    "description":"攝影動態"
+    "description":"請啟動攝影動態來使手向下滑動達到網頁變暗之方式成真"
   },
   "trymotion":{
     "message":"您自己試試!",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"有關氣氛光源功能之Wiki",
     "description":"有關氣氛光源功能之Wiki"
+  },
+  "sharemenusharetitle":{
+    "message":"這個分享",
+    "description":"這個分享"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"歡迎使用指南",
+    "description":"歡迎使用指南"
+  },
+  "sharemenutellafriend":{
+    "message":"告訴朋友",
+    "description":"告訴朋友"
+  },
+  "sharemenusendatweet":{
+    "message":"發送 Tweet",
+    "description":"發送 Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"於Facebook 上發佈",
+    "description":"於Facebook 上發佈"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"於 Google +上發佈",
+    "description":"於 Google +上發佈"
+  },
+  "sharemenuratetitle":{
+    "message":"擴充功能評分",
+    "description":"擴充功能評分"
+  },
+  "sharemenudonatetitle":{
+    "message":"支援開發",
+    "description":"支援開發"
   }
 }

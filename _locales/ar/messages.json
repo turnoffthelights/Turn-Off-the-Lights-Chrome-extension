@@ -16,8 +16,8 @@
     "description":"آخر إصدار تم فحصه في"
   },
   "visualeffects":{
-    "message":"التأثيرات البصرية",
-    "description":"تأثيرات بصرية"
+    "message":"المؤثرات البصرية",
+    "description":"المؤثرات البصرية"
   },
   "titelshortcutlight":{
     "message":"مفتاح الاختصار",
@@ -124,7 +124,7 @@
     "description":"تم تمكين حماية العين. لاستخدام الخاصية بالأسفل، قم بتعطيل خيار 'حماية العين'."
   },
   "name":{
-    "message":"إطفاء الأنوار",
+    "message":"Turn Off the Lights",
     "description":"إطفاء الأنوار"
   },
   "changelog":{
@@ -132,7 +132,7 @@
     "description":"رابط سجل التغيير"
   },
   "optionpagetitle":{
-    "message":"إطفاء الأنوار - الخيارات",
+    "message":"Turn Off the Lights - الخيارات",
     "description":"عنوان صفحة الخيار"
   },
   "optionpasswordsaved":{
@@ -348,8 +348,8 @@
     "description":"الضوء المحيط"
   },
   "titelshowmore":{
-    "message":"إظهار المزيد",
-    "description":"إظهار المزيد"
+    "message":"عرض المزيد",
+    "description":"عرض المزيد"
   },
   "desviewcount":{
     "message":"إظهار عدد المشاهدات لهذا لفيديو.",
@@ -568,8 +568,8 @@
     "description":"عدد المشاهدات"
   },
   "titelopacity":{
-    "message":"التعتيم",
-    "description":"التعتيم"
+    "message":"الشفافية",
+    "description":"الشفافية"
   },
   "titelqualityyoutube":{
     "message":"تعيين جودة فيديوهات اليوتيوب تلقائياً.",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"فعل حركة الكاميرا بهذا سيجعل الصفحة تغمق مع سحب الصفحة للأسفل.",
-    "description":"حركة الكاميرا"
+    "description":"فعل حركة الكاميرا بهذا سيجعل الصفحة تغمق مع سحب الصفحة للأسفل."
   },
   "trymotion":{
     "message":"جربها بنفسك",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"مقالة ويكي حول ميزة إضاءة المحيط الخارجي",
     "description":"مقالة ويكي حول ميزة إضاءة المحيط الخارجي"
+  },
+  "sharemenusharetitle":{
+    "message":"مشاركة",
+    "description":"مشاركة"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"دليل الترحيب",
+    "description":"دليل الترحيب"
+  },
+  "sharemenutellafriend":{
+    "message":"أخبر صديق",
+    "description":"أخبر صديق"
+  },
+  "sharemenusendatweet":{
+    "message":"إرسال تغريدة",
+    "description":"إرسال تغريدة"
+  },
+  "sharemenupostonfacebook":{
+    "message":"مشاركة على الفيس بوك",
+    "description":"مشاركة على الفيس بوك"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"النشر في جوجل +",
+    "description":"النشر في جوجل +"
+  },
+  "sharemenuratetitle":{
+    "message":"قيم هذا الامتداد",
+    "description":"قيم هذا الامتداد"
+  },
+  "sharemenudonatetitle":{
+    "message":"دعم التنمية",
+    "description":"دعم التنمية"
   }
 }

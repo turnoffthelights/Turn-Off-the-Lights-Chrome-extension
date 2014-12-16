@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Включить движение камеры для возможности приглушить свет жестом руки вниз.",
-    "description":"Движение камеры"
+    "description":"Включить движение камеры для возможности приглушить свет жестом руки вниз."
   },
   "trymotion":{
     "message":"Попробуйте сами!",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Wiki о функции атмосферного освещения",
     "description":"Wiki о функции атмосферного освещения"
+  },
+  "sharemenusharetitle":{
+    "message":"Поделиться",
+    "description":"Поделиться"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Начальное руководство",
+    "description":"Начальное руководство"
+  },
+  "sharemenutellafriend":{
+    "message":"Рассказать друзьям",
+    "description":"Рассказать друзьям"
+  },
+  "sharemenusendatweet":{
+    "message":"Отправить твит",
+    "description":"Отправить твит"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Пост на Facebook",
+    "description":"Пост на Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Пост на Google +",
+    "description":"Пост на Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Оценить это расширение",
+    "description":"Оценить это расширение"
+  },
+  "sharemenudonatetitle":{
+    "message":"Поддержать разработчика",
+    "description":"Поддержать разработчика"
   }
 }

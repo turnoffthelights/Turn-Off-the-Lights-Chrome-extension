@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Activez le Mouvement de caméra pour que la page web puisse s'assombrir avec un geste de la main vers le bas.",
-    "description":"Mouvement de caméra"
+    "description":"Activez le Mouvement de caméra pour que la page web puisse s'assombrir avec un geste de la main vers le bas."
   },
   "trymotion":{
     "message":"Essayez par vous-même !",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Wiki de la fonctionnalité de Lumière d'ambiance",
     "description":"Wiki de la fonctionnalité de Lumière d'ambiance"
+  },
+  "sharemenusharetitle":{
+    "message":"Partager l'extension",
+    "description":"Partager l'extension"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Guide pour bien débuter",
+    "description":"Guide pour bien débuter"
+  },
+  "sharemenutellafriend":{
+    "message":"Envoyer par e-mail",
+    "description":"Envoyer par e-mail"
+  },
+  "sharemenusendatweet":{
+    "message":"sur Twitter",
+    "description":"sur Twitter"
+  },
+  "sharemenupostonfacebook":{
+    "message":"sur Facebook",
+    "description":"sur Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"sur Google+",
+    "description":"sur Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Noter cette extension",
+    "description":"Noter cette extension"
+  },
+  "sharemenudonatetitle":{
+    "message":"Soutenir son développement",
+    "description":"Soutenir son développement"
   }
 }

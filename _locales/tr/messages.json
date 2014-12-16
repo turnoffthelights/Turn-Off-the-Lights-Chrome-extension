@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Elinizi aşağı çekme hareketiyle sayfayı karartmak için Kamera Hareketi'ni etkinleştirin.",
-    "description":"Kamera Hareketi"
+    "description":"Elinizi aşağı çekme hareketiyle sayfayı karartmak için Kamera Hareketi'ni etkinleştirin."
   },
   "trymotion":{
     "message":"Kendiniz deneyin!",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Atmosfer Aydınlatma özelliği hakkında bilgi",
     "description":"Atmosfer Aydınlatma özelliği hakkında bilgi"
+  },
+  "sharemenusharetitle":{
+    "message":"Bunu paylaş",
+    "description":"Bunu paylaş"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Hoşgeldiniz Kılavuzu",
+    "description":"Hoşgeldiniz Kılavuzu"
+  },
+  "sharemenutellafriend":{
+    "message":"Bir Arkadaşına Bahset",
+    "description":"Bir Arkadaşına Bahset"
+  },
+  "sharemenusendatweet":{
+    "message":"Bir Tweet Gönder",
+    "description":"Bir Tweet Gönder"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Facebook'ta Paylaş",
+    "description":"Facebook'ta Paylaş"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Google+'ta Paylaş",
+    "description":"Google+'ta Paylaş"
+  },
+  "sharemenuratetitle":{
+    "message":"Eklentiyi Derecelendir",
+    "description":"Eklentiyi Derecelendir"
+  },
+  "sharemenudonatetitle":{
+    "message":"Geliştirici Desteği",
+    "description":"Geliştirici Desteği"
   }
 }

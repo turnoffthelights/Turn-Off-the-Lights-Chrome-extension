@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Attiva il Movimento alla Webcam così che la pagina web possa scurirsi con uno scorrimento della mano.",
-    "description":"Movimento alla Webcam"
+    "description":"Attiva il Movimento alla Webcam così che la pagina web possa scurirsi con uno scorrimento della mano."
   },
   "trymotion":{
     "message":"Provalo da te!",
@@ -902,5 +902,37 @@
   "titelwikiatmos":{
     "message":"Wiki sulla funzione di Illuminazione d'Atmosfera",
     "description":"Wiki sulla funzione di Illuminazione d'Atmosfera"
+  },
+  "sharemenusharetitle":{
+    "message":"Condividi",
+    "description":"Condividi"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Guida di Benvenuto",
+    "description":"Guida di Benvenuto"
+  },
+  "sharemenutellafriend":{
+    "message":"Dillo a un amico",
+    "description":"Dillo a un amico"
+  },
+  "sharemenusendatweet":{
+    "message":"Invia un Tweet",
+    "description":"Invia un Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Posta su Facebook",
+    "description":"Posta su Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Posta su Google+",
+    "description":"Posta su Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Valuta questa estensione",
+    "description":"Valuta questa estensione"
+  },
+  "sharemenudonatetitle":{
+    "message":"Sosteni lo sviluppo",
+    "description":"Sosteni lo sviluppo"
   }
 }
