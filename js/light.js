@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -680,6 +680,13 @@ for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('sidedock') > -1) 
 
 var elems = document.getElementsByTagName('div'), i;
 for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('title') > -1) {elems[i].style.zIndex = 1001;}}
+
+//fixed 16/01/2015
+var elems = document.getElementsByTagName('div'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('target') > -1) {elems[i].style.zIndex = 1001;}}
+
+var elems = document.getElementsByTagName('div'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('video') > -1) {elems[i].style.zIndex = 1001;}}
 }
 
 // Dailymotion, fixed show video

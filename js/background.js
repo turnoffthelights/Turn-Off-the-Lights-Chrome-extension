@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -33,7 +33,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 var a = chrome.i18n.getMessage("@@extension_id");
 var b = "bfbmjmiodbnnpllbbbfblcplfjjepjdn"
 if (a != b){
-	chrome.tabs.create({url: "http://www.turnoffthelights.com/extension/baduser.html", selected:true});
+var manifestData = chrome.runtime.getManifest();
+chrome.tabs.create({url: "http://www.turnoffthelights.com/extension/baduser.html"+"?totl=" + manifestData.version + "", selected:true});
 } else {
 
 chrome.extension.onMessage.addListener(function request(request,sender,sendResponse){

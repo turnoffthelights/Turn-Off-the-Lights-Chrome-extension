@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2014 Stefan vd
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -582,20 +582,8 @@ chrome.storage.local.set({"countremember": countremember});
     }
 
     // display version number
-    function displayVersionNumber() {
-        try {
-          var xhr = new XMLHttpRequest();
-          xhr.open("GET", chrome.extension.getURL('manifest.json'), false);
-          xhr.onreadystatechange = function() {
-            if(this.readyState == 4) {
-              var theManifest = JSON.parse(this.responseText);
-              $("version_number").innerText = theManifest.version;
-            }
-          };
-          xhr.send();
-        } catch (ex) {} // silently fail
-    }
-    displayVersionNumber();
+	var manifestData = chrome.runtime.getManifest();
+	$("version_number").innerText = manifestData.version;
 
 // Excluded domains - sort these alphabetically
 var excludedDomains = items["excludedDomains"];
