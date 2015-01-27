@@ -29,17 +29,17 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 (ytCinema = {
 	players: {objs: [], active: 0},
-	messageEvent: document.createEvent("Event"),
+	messageEvent: new Event("ytCinemaMessage"),
 	playerStateChange: function (stateId) {
 		var message = document.getElementById("ytCinemaMessage"),
 			stateIO = "playerStateChange:".concat(stateId);
 		if (message && message.innerText !== stateIO) {
 			message.innerText = stateIO;
-			try{ message.dispatchEvent(this.messageEvent); }catch(e){}
+			message.dispatchEvent(ytCinema.messageEvent);
 		}
 	},
 	initialize: function () {
-		this.messageEvent.initEvent("ytCinemaMessage", true, true);
+		this.messageEvent;
 		window.addEventListener("load", initvideoinject, false);
 		initvideoinject();
 		function initvideoinject(e) {
@@ -94,10 +94,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					};				
 
 					// New Mutation Summary API Reference
-					if (typeof WebKitMutationObserver == "function") {
+					var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+					if (typeof MutationObserver == "function") {
 						// setup MutationSummary observer
 						var videolist = document.querySelector('body');
-						var observer = new WebKitMutationObserver(function(mutations, observer) {
+						var observer = new MutationObserver(function(mutations, observer) {
 						triggerDOMChanges();
 						});
 					
@@ -109,8 +110,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						});
 					} else {
 						// setup DOM event listeners
-						document.addEventListener("DOMNodeRemoved", triggerDOMChanges, false);
-						document.addEventListener("DOMNodeInserted", triggerDOMChanges, false);
+						// document.addEventListener("DOMNodeRemoved", triggerDOMChanges, false);
+						// document.addEventListener("DOMNodeInserted", triggerDOMChanges, false);
 					}
 					
 				}(this.ytCinema));				

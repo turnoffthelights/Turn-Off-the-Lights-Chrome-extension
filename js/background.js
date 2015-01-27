@@ -88,6 +88,30 @@ chrome.tabs.query({}, function (tabs) {
         }
     );
 }
+else if (request.name == "nmcustomx") {
+if(request.value){chrome.storage.local.set({"nmcustomx": request.value});}
+}
+else if (request.name == "nmcustomy") {
+if(request.value){chrome.storage.local.set({"nmcustomy": request.value});}
+}
+else if (request.name == "mastertabdark") {
+if(request.value == 'true'){
+	chrome.tabs.query({}, function (tabs) {
+				for (var i = 0; i < tabs.length; i++) {
+					chrome.tabs.executeScript(tabs[i].id, {file: "js/removelight.js"});
+				}
+			}
+		);
+}
+else{
+	chrome.tabs.query({}, function (tabs) {
+				for (var i = 0; i < tabs.length; i++) {
+					chrome.tabs.executeScript(tabs[i].id, {file: "js/golight.js"});
+				}
+			}
+		);
+}
+}
 return true;
 });
 
@@ -112,12 +136,7 @@ chrome.storage.local.get(['alllightsoff'], function(chromeset){
 if ((chromeset["alllightsoff"]!="true") && (chromeset["alllightsoff"]!=true)){
 chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {console.error(chrome.runtime.lastError.message);}});
 } else {
-chrome.tabs.query({}, function (tabs) {
-            for (var i = 0; i < tabs.length; i++) {
-				chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {console.error(chrome.runtime.lastError.message);}});
-            }
-        }
-    );
+chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {console.error(chrome.runtime.lastError.message);}});
 }
 });
 });

@@ -28,7 +28,6 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id) { return document.getElementById(id); }
-
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	var sp = document.getElementById('movie_player');
 	var video = document.querySelector('video');
@@ -37,8 +36,7 @@ if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*y
 		sp.playVideo();
 	} else if (typeof(video.pause) === "function") {
 		video.play();
-	}	
-	
+	}
 } else{
 	var htmlplayer = document.getElementsByTagName("video");
 	if (htmlplayer !== null) {

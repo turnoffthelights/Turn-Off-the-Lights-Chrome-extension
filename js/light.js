@@ -764,9 +764,6 @@ if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideop
 		var totlreaderbar = $('totlreaderbar');
 		if(totlreaderbar) {document.body.removeChild(totlreaderbar);}
 		
-		var totlcloud = $('stefanvdlightcloud');
-		if(totlcloud) {document.body.removeChild(totlcloud);}
-		
 		// remove help div
 		var stefanvdlightareoffcustom = $('stefanvdlightareoffcustom');
 		if(stefanvdlightareoffcustom) {
@@ -854,9 +851,9 @@ colorb = response['colorb'];
 intervallinb = response['intervallinb'];
  
 // Show all Flash objects -> Flash detection
-function R(w){
+function flashobjects(){
 try{
-var d=w.document,j,i,t,T,N,b,r=1,C;
+var d=window.document,j,i,t,T,N,b,r=1,C;
 for(j=0;t=['object','embed','applet','iframe'][j];++j)
 {
 T=d.getElementsByTagName(t);
@@ -873,9 +870,7 @@ return r
 if(flash == 'true'){
 intelligentvideodetection();
 
-R(self);
-var i,x;
-for(i=0;x=frames[i];++i)R(x)
+flashobjects();
 } else if(hardflash == 'true'){
 intelligentvideodetection();
 
@@ -910,7 +905,7 @@ var pwon2 = $('stefanvdlightareoffpw');
 	removenewdynamic();
 }
 
-// Paswoord enable
+// Password enable
 var pwon = $('stefanvdlightareoffpw');
 if(password == 'true'){
 	if(pwon){
@@ -1363,6 +1358,9 @@ if(stretchable)  {
 		
 		// blur effect
 		if(blur == 'true'){
+			// disable for on YouTube website
+			if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}
+			else{
 			/*chrome.extension.sendMessage({name: 'currenttabforblur'}, function(response) {
 				var img = response.screenshotUrl;
 				var newblur = document.createElement('img');
@@ -1414,6 +1412,7 @@ if(document.height !== undefined) {
 }
 exports.screenshotPage=screenshotPage;exports.doScreenshot=doScreenshot;})(window);
 doScreenshot();
+			}
 		}
 
 /////////// Turn Off the Lights reader slider
@@ -1456,9 +1455,13 @@ doScreenshot();
 	var totlreaderbardiv3 = document.createElement('div');
 	totlreaderbardiv3.setAttribute('id','__totl-box-info');
 	totlreaderbardiv3.className = '__totl-box-title';
-	totlreaderbardiv3.style.backgroundImage = 'url('+chrome.extension.getURL("/icons/icon16.png")+')';
 	totlreaderbardiv3.addEventListener('click', function (e) {toggle_small()}, true);
 	totlreaderbardiv2.appendChild(totlreaderbardiv3);
+	var totlreaderbarimagelogo = document.createElement('img');
+	totlreaderbarimagelogo.className = '__totl-icon';
+	if(window.devicePixelRatio >= 2){totlreaderbarimagelogo.src = chrome.extension.getURL("/icons/icon16@2x.png");}
+	else {totlreaderbarimagelogo.src = chrome.extension.getURL("/icons/icon16.png");}
+	totlreaderbardiv3.appendChild(totlreaderbarimagelogo);
 	var totlreaderbarspan1 = document.createElement('span');
 	totlreaderbarspan1.className = '__totl-nowrap';
 	totlreaderbardiv3.appendChild(totlreaderbarspan1);

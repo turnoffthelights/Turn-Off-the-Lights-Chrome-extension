@@ -194,6 +194,40 @@ function save_options(){
 	else chrome.storage.local.set({"autoplaychecklistwhite": 'false'});
 	if($('autoplaychecklistblack').checked)chrome.storage.local.set({"autoplaychecklistblack": 'true'});
 	else chrome.storage.local.set({"autoplaychecklistblack": 'false'});
+	if($('autostop').checked)chrome.storage.local.set({"autostop": 'true'});
+	else chrome.storage.local.set({"autostop": 'false'});
+	if($('autostoponly').checked)chrome.storage.local.set({"autostoponly": 'true'});
+	else chrome.storage.local.set({"autostoponly": 'false'});
+	if($('autostopchecklistwhite').checked)chrome.storage.local.set({"autostopchecklistwhite": 'true'});
+	else chrome.storage.local.set({"autostopchecklistwhite": 'false'});
+	if($('autostopchecklistblack').checked)chrome.storage.local.set({"autostopchecklistblack": 'true'});
+	else chrome.storage.local.set({"autostopchecklistblack": 'false'});
+	if($('nighthover').checked)chrome.storage.local.set({"nighthover": 'true'});
+	else chrome.storage.local.set({"nighthover": 'false'});
+	if($('nightmodechecklistwhite').checked)chrome.storage.local.set({"nightmodechecklistwhite": 'true'});
+	else chrome.storage.local.set({"nightmodechecklistwhite": 'false'});
+	if($('nightmodechecklistblack').checked)chrome.storage.local.set({"nightmodechecklistblack": 'true'});
+	else chrome.storage.local.set({"nightmodechecklistblack": 'false'});
+	if($('nmtopleft').checked)chrome.storage.local.set({"nmtopleft": 'true'});
+	else chrome.storage.local.set({"nmtopleft": 'false'});
+	if($('nmtopright').checked)chrome.storage.local.set({"nmtopright": 'true'});
+	else chrome.storage.local.set({"nmtopright": 'false'});
+	if($('nmbottomright').checked)chrome.storage.local.set({"nmbottomright": 'true'});
+	else chrome.storage.local.set({"nmbottomright": 'false'});
+	if($('nmbottomleft').checked)chrome.storage.local.set({"nmbottomleft": 'true'});
+	else chrome.storage.local.set({"nmbottomleft": 'false'});
+	if($('nmcustom').checked)chrome.storage.local.set({"nmcustom": 'true'});
+	else chrome.storage.local.set({"nmcustom": 'false'});
+	if($('nightactivetime').checked)chrome.storage.local.set({"nightactivetime": 'true'});
+	else chrome.storage.local.set({"nightactivetime": 'false'});
+	chrome.storage.local.set({"nmbegintime": $('nmbegintime').value});
+	chrome.storage.local.set({"nmendtime": $('nmendtime').value});
+	if($('lampandnightmode').checked)chrome.storage.local.set({"lampandnightmode": 'true'});
+	else chrome.storage.local.set({"lampandnightmode": 'false'});	
+	if($('eyechecklistwhite').checked)chrome.storage.local.set({"eyechecklistwhite": 'true'});
+	else chrome.storage.local.set({"eyechecklistwhite": 'false'});
+	if($('eyechecklistblack').checked)chrome.storage.local.set({"eyechecklistblack": 'true'});
+	else chrome.storage.local.set({"eyechecklistblack": 'false'});
 
 // Excluded domains
 var excludedDomainsBox = $("excludedDomainsBox");
@@ -223,7 +257,7 @@ for (var i = 0; i < nightDomainsBox.length; i++)
 	nightDomains[nightDomainsBox.options[i].value] = true;
     chrome.storage.local.set({"nightDomains": JSON.stringify(nightDomains)});
 	
-// night Excluded domains
+// cammotion Excluded domains
 var cammotionDomainsBox = $("cammotionDomainsBox");
 var cammotionDomains = {};
 for (var i = 0; i < cammotionDomainsBox.length; i++)
@@ -236,6 +270,13 @@ var speechDomains = {};
 for (var i = 0; i < speechDomainsBox.length; i++)
 	speechDomains[speechDomainsBox.options[i].value] = true;
     chrome.storage.local.set({"speechDomains": JSON.stringify(speechDomains)});
+
+// autostop Excluded domains
+var autostopDomainsBox = $("autostopDomainsBox");
+var autostopDomains = {};
+for (var i = 0; i < autostopDomainsBox.length; i++)
+	autostopDomains[autostopDomainsBox.options[i].value] = true;
+    chrome.storage.local.set({"autostopDomains": JSON.stringify(autostopDomains)});
 }
 
 // Option to read current value from chrome.storage
@@ -338,6 +379,37 @@ chrome.storage.local.get(['autoplaychecklistwhite', 'autoplaychecklistblack'], f
 	}
 });
 
+chrome.storage.local.get(['autostopchecklistwhite', 'autostopchecklistblack'], function(items){ // find no localstore autostop whitelist
+	if(!items['autostopchecklistwhite']&&!items['autostopchecklistblack']){
+	chrome.storage.local.set({"autostopchecklistwhite": 'true'}); // then default true
+	chrome.storage.local.set({"autostopchecklistblack": 'false'}); // then default false
+	}
+});
+
+chrome.storage.local.get(['nightmodechecklistwhite', 'nightmodechecklistblack'], function(items){ // find no localstore nightmode whitelist
+	if(!items['nightmodechecklistwhite']&&!items['nightmodechecklistblack']){
+	chrome.storage.local.set({"nightmodechecklistwhite": 'true'}); // then default true
+	chrome.storage.local.set({"nightmodechecklistblack": 'false'}); // then default false
+	}
+});
+
+chrome.storage.local.get(['nmtopleft', 'nmtopright', 'nmbottomright','nmbottomleft','nmcustom'], function(items){ // find no localstore eye
+	if(!items['nmtopleft']&&!items['nmtopright']&&!items['nmbottomright']&&!items['nmbottomleft']&&!items['nmcustom']){
+	chrome.storage.local.set({"nmtopleft": 'false'}); // then default false
+	chrome.storage.local.set({"nmtopright": 'false'}); // then default false
+	chrome.storage.local.set({"nmbottomright": 'false'}); // then default false
+	chrome.storage.local.set({"nmbottomleft": 'true'}); // then default true
+	chrome.storage.local.set({"nmcustom": 'false'}); // then default false
+	}
+});
+
+chrome.storage.local.get(['eyechecklistwhite', 'eyechecklistblack'], function(items){ // find no localstore eye whitelist
+	if(!items['eyechecklistwhite']&&!items['eyechecklistblack']){
+	chrome.storage.local.set({"eyechecklistwhite": 'true'}); // then default true
+	chrome.storage.local.set({"eyechecklistblack": 'false'}); // then default false
+	}
+});
+
 function read_options(){
 // speech
 var langs =
@@ -423,7 +495,7 @@ $("select_language").addEventListener('click', function () {updateCountry();},fa
 $("select_language").addEventListener('change', function() {updateCountry();save_options();});
 $("select_dialect").addEventListener('change', function() {save_options();});
 
-	chrome.storage.local.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack'], function(items){
+	chrome.storage.local.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite'], function(items){
 		if(items['interval'])$('interval').value = items['interval'];
 		else $('interval').value = 80;
 		if(items['lightcolor']){$('lightcolor').value = items['lightcolor'];}
@@ -540,6 +612,30 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		else{$('speechonly').checked = false;}
 		if(items['autoplaychecklistwhite'] == 'true'){$('autoplaychecklistwhite').checked = true;}
 		if(items['autoplaychecklistblack'] == 'true'){$('autoplaychecklistblack').checked = true;}
+		if(items['reviewedlastonversion'] == chrome.runtime.getManifest().version){$("sectionreviewbox").style.display = "none";}
+		if(items['applastonversion'] == chrome.runtime.getManifest().version){$("sectionauroraplayerappbox").style.display = "none";}
+		if(items['autostop'] == 'true')$('autostop').checked = true;
+		if(items['autostoponly'] == 'true'){$('autostoponly').checked = true;}
+		else{$('autostoponly').checked = false;}
+		if(items['autostopchecklistwhite'] == 'true'){$('autostopchecklistwhite').checked = true;}
+		if(items['autostopchecklistblack'] == 'true'){$('autostopchecklistblack').checked = true;}
+		if(items['nighthover'] == 'true')$('nighthover').checked = true;
+		if(items['nightmodechecklistwhite'] == 'true'){$('nightmodechecklistwhite').checked = true;}
+		if(items['nightmodechecklistblack'] == 'true'){$('nightmodechecklistblack').checked = true;}
+		if(items['nmtopleft'] == 'true'){$('nmtopleft').checked = true;}
+		if(items['nmtopright'] == 'true'){$('nmtopright').checked = true;}
+		if(items['nmbottomright'] == 'true'){$('nmbottomright').checked = true;}
+		if(items['nmbottomleft'] == 'true'){$('nmbottomleft').checked = true;}
+		if(items['nmcustom'] == 'true'){$('nmcustom').checked = true;}
+		if(items['nightactivetime'] == 'true'){$('nightactivetime').checked = true;}
+		if(items['nmbegintime']){$('nmbegintime').value = items['nmbegintime'];}
+		else {$('nmbegintime').value = "21:00";}
+		if(items['nmendtime']){$('nmendtime').value = items['nmendtime'];}
+		else {$('nmendtime').value = "23:45";}
+		if(items['lampandnightmode'] == 'true'){$('lampandnightmode').checked = true;}
+		else{$('lampandnightmode').checked = false;}
+		if(items['eyechecklistwhite'] == 'true'){$('eyechecklistwhite').checked = true;}
+		if(items['eyechecklistblack'] == 'true'){$('eyechecklistblack').checked = true;}	
 
 // show remember page
 var countremember = items['countremember'];
@@ -692,14 +788,25 @@ if(typeof speechDomains == "string") {
 		appendToListBox("speechDomainsBox", srbuf[i]);
     }
 	
-	test(); // everthing readed, do the "test"
-	});
+// autostop - Excluded domains - sort these alphabetically
+var autostopDomains = items["autostopDomains"];
+if(typeof autostopDomains == "undefined")
+autostopDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+		
+if(typeof autostopDomains == "string") {
+	autostopDomains = JSON.parse(autostopDomains);
+	var asbuf = [];
+	for(var domain in autostopDomains)
+		asbuf.push(domain);
+        asbuf.sort();
+	for(var i = 0; i < asbuf.length; i++)
+		appendToListBox("autostopDomainsBox", asbuf[i]);
+    }
 	
+	test(); // everything readed, do the "test"
+	});// chrome storage end
 
-	
-	
 } // end read
-
 
 
 // animation browser engine
@@ -1032,7 +1139,7 @@ function cammotionremoveSelectedExcludedDomain() {
     save_options();
 }
 
-// whitelist cam motion domain
+// whitelist speech domain
 function speechaddWhitelistDomain() {
     var domain = $("speechwebsiteurl").value;
     appendToListBox("speechDomainsBox", domain);
@@ -1044,6 +1151,22 @@ function speechremoveSelectedExcludedDomain() {
     for (var i = speechDomainsBox.length-1; i >= 0; i--) {
         if (speechDomainsBox.options[i].selected)
             speechDomainsBox.remove(i);
+    }
+    save_options();
+}
+
+// whitelist autostop domain
+function autostopaddWhitelistDomain() {
+    var domain = $("autostopwebsiteurl").value;
+    appendToListBox("autostopDomainsBox", domain);
+    save_options();
+}
+
+function autostopremoveSelectedExcludedDomain() {
+    var autostopDomainsBox = $("autostopDomainsBox");
+    for (var i = autostopDomainsBox.length-1; i >= 0; i--) {
+        if (autostopDomainsBox.options[i].selected)
+            autostopDomainsBox.remove(i);
     }
     save_options();
 }
@@ -1142,9 +1265,9 @@ $('example2').style.background = 'linear-gradient(to ' + linearsq.options[linear
 $('mousespotlighta').disabled = true;$('mousespotlightc').disabled = true;$('mousespotlighto').checked = true;
 }
 
-if(eyen.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "none";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').disabled = false;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "none";}
-else if(eyea.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";}
-else if(eyealist.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = false;$('websiteurl').disabled = false;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = false;$('removebutton').disabled = false;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";}
+if(eyen.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "none";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').disabled = false;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "none";$('eyechecklistwhite').disabled = true;$('eyechecklistblack').disabled = true;}
+else if(eyea.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";$('eyechecklistwhite').disabled = true;$('eyechecklistblack').disabled = true;}
+else if(eyealist.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "";$('excludedDomainsBox').disabled = false;$('websiteurl').disabled = false;$('autoplay').checked = false;$('autoplaydelay').disabled = true;$('autoplaydelaytime').disabled = true;$('addbutton').disabled = false;$('removebutton').disabled = false;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "";$('eyechecklistwhite').disabled = false;$('eyechecklistblack').disabled = false;}
 
 if(mousespotlighto.checked == true)
 {$('eastereggs').disabled = false;} // eastereggs OFF
@@ -1179,8 +1302,8 @@ if(atmosphereonly.checked == true)
 else{$('atmosphereonly').checked = false;$('atmosphereDomainsBox').disabled = true;$('atmospherewebsiteurl').disabled = true;$('atmosphereaddbutton').disabled = true;$('atmosphereremovebutton').disabled = true;}
 
 if(nightonly.checked == true)
-{$('nightonly').checked = true;$('nightDomainsBox').disabled = false;$('nightwebsiteurl').disabled = false;$('nightaddbutton').disabled = false;$('nightremovebutton').disabled = false;}
-else{$('nightonly').checked = false;$('nightDomainsBox').disabled = true;$('nightwebsiteurl').disabled = true;$('nightaddbutton').disabled = true;$('nightremovebutton').disabled = true;}
+{$('nightonly').checked = true;$('nightDomainsBox').disabled = false;$('nightwebsiteurl').disabled = false;$('nightaddbutton').disabled = false;$('nightremovebutton').disabled = false;$('nightmodechecklistwhite').disabled = false;$('nightmodechecklistblack').disabled = false;}
+else{$('nightonly').checked = false;$('nightDomainsBox').disabled = true;$('nightwebsiteurl').disabled = true;$('nightaddbutton').disabled = true;$('nightremovebutton').disabled = true;$('nightmodechecklistwhite').disabled = true;$('nightmodechecklistblack').disabled = true;}
 
 if(autoplay.checked == true)
 {$('eyen').checked = true;$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;}
@@ -1202,6 +1325,14 @@ if(speechonly.checked == true)
 {$('speechonly').checked = true;$('speechDomainsBox').disabled = false;$('speechwebsiteurl').disabled = false;$('speechaddbutton').disabled = false;$('speechremovebutton').disabled = false;}
 else{$('speechonly').checked = false;$('speechDomainsBox').disabled = true;$('speechwebsiteurl').disabled = true;$('speechaddbutton').disabled = true;$('speechremovebutton').disabled = true;}
 
+if(nightactivetime.checked == true){$('nmbegintime').disabled = false;$('nmendtime').disabled = false;$('nmconfirmtime').disabled = false;}
+else{$('nmbegintime').disabled = true;$('nmendtime').disabled = true;$('nmconfirmtime').disabled = true;}
+
+if(nighttheme.checked == true){$('lampandnightmode').disabled = false;}
+else{$('lampandnightmode').disabled = true;}
+
+if(autostoponly.checked == true){$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;}
+else{$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;}
 }
 
 function dynamictest(){
@@ -1579,7 +1710,8 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
 function writeinlog(text){
 var currentdate = new Date();
 var datetime = "Last Action: " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
-document.getElementById('stefanmotion').innerHTML = datetime + " " + text +"<br>" + document.getElementById('stefanmotion').innerHTML;
+var para = document.createElement("p");para.textContent = datetime + " " + text;
+var container = document.getElementById('stefanmotion');container.insertBefore(para, container.firstChild);
 }
 
 });
@@ -1612,11 +1744,13 @@ navigator.getUserMedia({audio:false,video:true},function(stream){
         video.src = window.URL.createObjectURL(stream);
         // video.addEventListener('play', function(){ intervalID = window.setInterval(dump,1000/25); console.log("RUN A"); });
        
-},function(){ console.log('Something is wrong here! Check your camera!'); })
+},function(){
+//console.log('Something is wrong here! Check your camera!');
+})
 
 } else {
 	// remove everything
-	document.getElementById('stefanmotion').innerHTML = "";
+	document.getElementById('stefanmotion').textContent = "";
 
 	if(localMediaStream){
 		if($("motionvideo")){
@@ -1873,6 +2007,9 @@ $("confirmtime").addEventListener('click', function() {save_options();var option
 // Save password
 $("confirmpassword").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionpasswordsaved');alert(optionpastemp);});
 
+// Save time
+$("nmconfirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');alert(optiontimetemp);});
+
 // Save KB download
 $("tabbasic").addEventListener('click', function() {OFFworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabvisual").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
@@ -1883,7 +2020,7 @@ $("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari()
 $("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "http://www.turnoffthelights.com/extension/chromeguide.html";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
 $("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "http://www.turnoffthelights.com/extension/fan.html";$("managed-prefs-banner").style.display = "none";});
 
-$("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support.php");});
+$("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support");});
 $("buttonchangelog").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/chromechangelog.html");});
 $("buttonreportlist").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/issueslist.html");});
 $("buttontranslateme").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/translate.html");});
@@ -1892,6 +2029,9 @@ function ONworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "";}
 function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "http://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}
 
 // Download Upgrade
+$("fndownload").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie");});
+$("ppdownload").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp");});
+$("zodownload").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd");});
 $("aadownload").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa");});
 
 $("themedownload").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca");});
@@ -1945,7 +2085,7 @@ $("nightremovebutton").addEventListener('click', function() {nightremoveSelected
 // cam motion Add website
 $("cammotionaddbutton").addEventListener('click', function() {cammotionaddWhitelistDomain();});
 
-// speech Remove website
+// cam motion Remove website
 $("cammotionremovebutton").addEventListener('click', function() {cammotionremoveSelectedExcludedDomain();});
 
 // speech Add website
@@ -1954,17 +2094,32 @@ $("speechaddbutton").addEventListener('click', function() {speechaddWhitelistDom
 // speech Remove website
 $("speechremovebutton").addEventListener('click', function() {speechremoveSelectedExcludedDomain();});
 
+// autostop Add website
+$("autostopaddbutton").addEventListener('click', function() {autostopaddWhitelistDomain();});
+
+// autostop Remove website
+$("autostopremovebutton").addEventListener('click', function() {autostopremoveSelectedExcludedDomain();});
+
 // Reset settings
 $("resettotl").addEventListener('click', function() {chrome.storage.local.clear();location.reload();});
 
 // linearsq
 $("linearsq").addEventListener('click', function() {test();save_options();});
 
+// Review box
+$("war").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews", "_blank");$("sectionreviewbox").style.display = "none";chrome.storage.local.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
+$("nt").addEventListener('click', function() {$("sectionreviewbox").style.display = "none";chrome.storage.local.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
+
+// Aurora Player app box
+$("apgetapp").addEventListener('click', function() {window.open("http://www.stefanvd.net/project/auroraplayer.htm", "_blank");$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
+$("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
+
 // retina check
 if(window.devicePixelRatio >= 2) {
 $("loadinglamp").src = "icons/icon16@2x.png";$("loadinglamp").style.width = "16px"; $("loadinglamp").style.height = "16px";
 $("welcomelamp").src = "icons/icon16@2x.png";$("welcomelamp").style.width = "16px"; $("welcomelamp").style.height = "16px";
 $("rememberlamp").src = "icons/icon16@2x.png";$("rememberlamp").style.width = "16px"; $("rememberlamp").style.height = "16px";
+$("auroraplayericon").src = "images/aurora-player_32x32@2x.png";
 }
 
 // browser check

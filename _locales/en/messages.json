@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Support Development",
     "description":"Support Development"
-  }  
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing automatically the video when I open a web page.",
+    "description":"Stop playing automatically the video when I open a web page."
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensures that your opinion counts",
+    "description":"Ensures that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download Now the app",
+    "description":"Download Now the app"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This show you the real time stock market information.",
+    "description":"This show you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Switch position",
+    "description":"Switch position"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Click, hold and move it to your own screen location.",
+    "description":"Click, hold and move it to your own screen location."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Activate the stop playing automatically the video only on the following site(s):",
+    "description":"Activate the stop playing automatically the video only on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  }
 }

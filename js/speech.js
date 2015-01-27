@@ -102,6 +102,7 @@ var i18nldesspeech1command = chrome.i18n.getMessage("desspeech1command"); // tur
 var i18nldesspeech2command = chrome.i18n.getMessage("desspeech2command"); // turn on the lights
 var i18nldesspeech3command = chrome.i18n.getMessage("desspeech3command"); // play video
 var i18nldesspeech4command = chrome.i18n.getMessage("desspeech4command"); // pause video
+var i18nldesspeech5command = chrome.i18n.getMessage("desspeech5command"); // browser lamp
 
 	recognition.onresult = function(event) {
     var interim_transcript = '';

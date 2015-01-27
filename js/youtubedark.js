@@ -28,7 +28,6 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id) { return document.getElementById(id); }
-
 var currenturl = location.protocol + '//' + location.host;
 if((currenturl.substring(0, 23) == 'https://apis.google.com')|| (currenturl.substring(0, 27) == 'https://plus.googleapis.com')){
 

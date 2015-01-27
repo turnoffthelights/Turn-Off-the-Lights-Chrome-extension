@@ -28,12 +28,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id) { return document.getElementById(id); }
-var div = null, fadein = null, fadeout = null;
+var div = null, fadein = null, fadeout = null, readera = null, dynamic = null;
 
 /////////// Option page settings
-chrome.extension.sendMessage({comando:'totlrequest'}, function(response){
-fadein = response.fadein;
-fadeout = response.fadeout;
+chrome.storage.local.get(['fadein','fadeout','readera','dynamic'], function(response){
+fadein = response['fadein'];
+fadeout = response['fadeout'];
+readera = response['readera'];
+dynamic = response['dynamic'];
+
 	// Black div on
 	var blackon = $('stefanvdlightareoff1');
 
@@ -70,9 +73,6 @@ fadeout = response.fadeout;
 		var totlreaderbar = $('totlreaderbar');
 		if(totlreaderbar) {document.body.removeChild(totlreaderbar);}
 		
-		var totlcloud = $('stefanvdlightcloud');
-		if(totlcloud) {document.body.removeChild(totlcloud);}
-		
 		// remove help div
 		var stefanvdlightareoffcustom = $('stefanvdlightareoffcustom');
 		if(stefanvdlightareoffcustom) {
@@ -83,7 +83,7 @@ fadeout = response.fadeout;
 		
 		// YouTube video title (set back to default)
 		var eowtitle = $('eow-title');
-		if(eowtitle){$('eow-title').style.color = '#333';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
+		if(eowtitle){$('eow-title').style.color = 'black';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
 		
 		var watchheadlinetitle = $('watch-headline-title');  // new youtube watch7
 		if(watchheadlinetitle){$('watch-headline-title').style.zIndex = 'auto';$('watch-headline-title').style.position = 'relative';}
@@ -96,7 +96,9 @@ fadeout = response.fadeout;
 		if(eowtitle){$('eow-title').style.color = '#333';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
 		span = document.getElementsByTagName('span'); 
 		for(var i = 0; i < span.length; i++ )
-		{if(span[i].className == ('watch-view-count')) {span[i].style.color = '#333';span[i].style.zIndex = 'auto';span[i].style.position = 'relative';}}
+		{if(span[i].className == ('watch-view-count ')) {span[i].style.color = '#333';span[i].style.zIndex = 'auto';span[i].style.position = 'relative';}}
+		var watch7viewsinfo = $('watch7-views-info'); // new youtube watch7 september 2013
+		if(watch7viewsinfo){$('watch7-views-info').style.zIndex = 'auto';$('watch7-views-info').style.color = '#333';}
 	}
 	
 	function removenewframe() {
@@ -212,9 +214,7 @@ try {
 
     //  When finished, make sure the DIVElementById is set to remove element
     if (DIVElementById.style.opacity = '0')
-    {document.body.removeChild(DIVElementById);removenewframe();
-	document.location.reload(true); // reload current web page
-	}
+    {document.body.removeChild(DIVElementById);removenewframe();}
   }
 //control opacity for all <div>
 var div = document.querySelectorAll('div.stefanvdlightareoff');

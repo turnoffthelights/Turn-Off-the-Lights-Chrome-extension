@@ -28,7 +28,6 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id) { return document.getElementById(id); }
-
 var stefanvdspeechbox = $('stefanvdspeechbox');
 if(!stefanvdspeechbox){
 var newspeechbox = document.createElement('div');
