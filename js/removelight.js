@@ -99,6 +99,9 @@ dynamic = response['dynamic'];
 		{if(span[i].className == ('watch-view-count ')) {span[i].style.color = '#333';span[i].style.zIndex = 'auto';span[i].style.position = 'relative';}}
 		var watch7viewsinfo = $('watch7-views-info'); // new youtube watch7 september 2013
 		if(watch7viewsinfo){$('watch7-views-info').style.zIndex = 'auto';$('watch7-views-info').style.color = '#333';}
+		div = document.getElementsByTagName('a'); 
+		for(var i = 0; i < div.length; i++ )
+		{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = '#333';}}
 	}
 	
 	function removenewframe() {
