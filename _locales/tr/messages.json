@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Geliştirici Desteği",
     "description":"Geliştirici Desteği"
+  },
+  "titelautostop":{
+    "message":"Oto-Dur",
+    "description":"Oto-Dur"
+  },
+  "desautostop":{
+    "message":"Web sayfasını açtığımda otomatik olarak videoyu durdur.",
+    "description":"Web sayfasını açtığımda otomatik olarak videoyu durdur."
+  },
+  "areyouhappy":{
+    "message":"Turn Off the Lights sizi mutlu etti mi?",
+    "description":"Turn Off the Lights sizi mutlu etti mi?"
+  },
+  "tellothers":{
+    "message":"Size ayar yapma imkanı tanır",
+    "description":"Size ayar yapma imkanı tanır"
+  },
+  "nothanks":{
+    "message":"Hayır, teşekkürler",
+    "description":"Hayır, teşekkürler"
+  },
+  "writeareview":{
+    "message":"Bir Yorum Yaz",
+    "description":"Bir Yorum Yaz"
+  },
+  "desauroraplayer":{
+    "message":"Oynatıcı çevre aydınlatması da bilgisayarınız için kullanılabilir.",
+    "description":"Oynatıcı çevre aydınlatması da bilgisayarınız için kullanılabilir."
+  },
+  "downloadtheapp":{
+    "message":"Hemen uygulamayı indir",
+    "description":"Hemen uygulamayı indir"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Web içeriğini daha rahat okuyabilmek için zoom butonunu kullanabilirsiniz.",
+    "description":"Web içeriğini daha rahat okuyabilmek için zoom butonunu kullanabilirsiniz."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Google websitenize siyah menu çubuğunu geri ekleyin.",
+    "description":"Google websitenize siyah menu çubuğunu geri ekleyin."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Bu sana gerçek zamanlı borsa bilgileri gösterir.",
+    "description":"Bu sana gerçek zamanlı borsa bilgileri gösterir."
+  },
+  "titelnightmodeposition":{
+    "message":"Anahtar konumu",
+    "description":"Anahtar konumu"
+  },
+  "nmtopleft":{
+    "message":"Sol Üst",
+    "description":"Sol Üst"
+  },
+  "nmtopright":{
+    "message":"Sağ Üst",
+    "description":"Sağ Üst"
+  },
+  "nmbottomright":{
+    "message":"Sağ Alt",
+    "description":"Sağ Alt"
+  },
+  "nmbottomleft":{
+    "message":"Sol Alt",
+    "description":"Sol Alt"
+  },
+  "nmcustom":{
+    "message":"Tıklayıp basılı tutarak ekranınızda istediğiniz yere taşıyın.",
+    "description":"Tıklayıp basılı tutarak ekranınızda istediğiniz yere taşıyın."
+  },
+  "desnighthover":{
+    "message":"Web sayfasında saydam düğmeyi göster.",
+    "description":"Web sayfasında saydam düğmeyi göster."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Beyaz liste",
+    "description":"Beyaz liste"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Kara liste",
+    "description":"Kara liste"
+  },
+  "desautostoponly":{
+    "message":"Şu sitelerde; otomatik video durdurmayı etkinleştir.",
+    "description":"Şu sitelerde; otomatik video durdurmayı etkinleştir."
+  },
+  "titelautostopwhitelist":{
+    "message":"Beyaz liste",
+    "description":"Beyaz liste"
+  },
+  "titelautostopblacklist":{
+    "message":"Kara liste",
+    "description":"Kara liste"
+  },
+  "desnightactivetime":{
+    "message":"Şu zamanlar arasında anahtar görünür olacak:",
+    "description":"Şu zamanlar arasında anahtar görünür olacak:"
+  },
+  "deslampandnightmode":{
+    "message":"\"Gri Lamba\" düğmesini tıklayarak, \"Gece Modu\" seçeneği aktive edin.",
+    "description":"\"Gri Lamba\" düğmesini tıklayarak, \"Gece Modu\" seçeneği aktive edin."
+  },
+  "titeleyewhitelist":{
+    "message":"Beyaz liste",
+    "description":"Beyaz liste"
+  },
+  "titeleyeblacklist":{
+    "message":"Kara liste",
+    "description":"Kara liste"
+  },
+  "desspeech5command":{
+    "message":"Tarayıcı Lambası",
+    "description":"Tarayıcı Lambası"
   }
 }

@@ -480,8 +480,8 @@
     "description":"好き\/嫌いのボタン"
   },
   "titelpageaction":{
-    "message":"電球マークを隠す",
-    "description":"オムニボックスにランプのアイコンを非表示"
+    "message":"電球マークを表示しない",
+    "description":"Omnibox に電球マークを表示しない"
   },
   "friendlyremember":{
     "message":"ともだちを忘れない...",
@@ -568,7 +568,7 @@
     "description":"ビューの数"
   },
   "titelopacity":{
-    "message":"不透明度",
+    "message":"透明度",
     "description":"不透明度"
   },
   "titelqualityyoutube":{
@@ -656,8 +656,8 @@
     "description":"新しく開いたページを、自動でナイトモードに設定する。"
   },
   "titellampregular":{
-    "message":"電球マークを常に URL バーの omnibox に表示する",
-    "description":"電球マークを常に URL バーの omnibox に表示する"
+    "message":"電球マークを常に URL バーの omnibox に表示",
+    "description":"電球マークを常に URL バーの omnibox に表示"
   },
   "titellampvideo":{
     "message":"動画プレーヤーを検知したときだけ、電球マークを表示",
@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"開発をサポートする",
     "description":"開発のサポート"
+  },
+  "titelautostop":{
+    "message":"自動停止",
+    "description":"自動停止"
+  },
+  "desautostop":{
+    "message":"Web ページを開いたときに自動的にビデオの再生を停止します。",
+    "description":"Web ページを開いたときに自動的にビデオの再生を停止します。"
+  },
+  "areyouhappy":{
+    "message":"Turn Off the Lightsに満足していますか？",
+    "description":"Turn Off the Lightsに満足していますか？"
+  },
+  "tellothers":{
+    "message":"あなたの意見を大切にします",
+    "description":"あなたの意見を大切にします"
+  },
+  "nothanks":{
+    "message":"遠慮する",
+    "description":"遠慮する"
+  },
+  "writeareview":{
+    "message":"レビューを書く",
+    "description":"レビューを書く"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"アプリを今すぐダウンロードします。",
+    "description":"アプリを今すぐダウンロードします。"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"これは、リアルタイムの株式市場の情報を表示します。",
+    "description":"これは、リアルタイムの株式市場の情報を表示します。"
+  },
+  "titelnightmodeposition":{
+    "message":"スイッチの位置",
+    "description":"スイッチの位置"
+  },
+  "nmtopleft":{
+    "message":"左上",
+    "description":"左上"
+  },
+  "nmtopright":{
+    "message":"右上",
+    "description":"右上"
+  },
+  "nmbottomright":{
+    "message":"右下",
+    "description":"右下"
+  },
+  "nmbottomleft":{
+    "message":"左下",
+    "description":"左下"
+  },
+  "nmcustom":{
+    "message":"Click, hold and move it to your own screen location.",
+    "description":"Click, hold and move it to your own screen location."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"ホワイトリスト",
+    "description":"ホワイトリスト"
+  },
+  "titelnightmodeblacklist":{
+    "message":"ブラックリスト",
+    "description":"ブラックリスト"
+  },
+  "desautostoponly":{
+    "message":"ビデオの自動再生停止は次のサイトでのみ有効です。",
+    "description":"ビデオの自動再生停止は次のサイトでのみ有効です。"
+  },
+  "titelautostopwhitelist":{
+    "message":"ホワイトリスト",
+    "description":"ホワイトリスト"
+  },
+  "titelautostopblacklist":{
+    "message":"ブラックリスト",
+    "description":"ブラックリスト"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"ホワイトリスト",
+    "description":"ホワイトリスト"
+  },
+  "titeleyeblacklist":{
+    "message":"ブラックリスト",
+    "description":"ブラックリスト"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
   }
 }

@@ -29,31 +29,23 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 (ytCinema = {
 	players: {objs: [], active: 0},
-	messageEvent: new Event("ytCinemaMessage"),
+	messageEvent: document.createEvent("Event"),
 	playerStateChange: function (stateId) {
 		var message = document.getElementById("ytCinemaMessage"),
 			stateIO = "playerStateChange:".concat(stateId);
-		if (message && message.innerText !== stateIO) {
-			message.innerText = stateIO;
+		if (message && message.textContent !== stateIO) {
+			message.textContent = stateIO;
 			message.dispatchEvent(ytCinema.messageEvent);
 		}
 	},
 	initialize: function () {
-		this.messageEvent;
+		this.messageEvent.initEvent("ytCinemaMessage", true, true);
 		window.addEventListener("load", initvideoinject, false);
 		initvideoinject();
 		function initvideoinject(e) {
 			var youtubeplayer = document.getElementById("movie_player") || null;
 			var htmlplayer = document.getElementsByTagName("video") || false;
 
-			if (youtubeplayer !== null) { // YouTube video element
-				var interval = setInterval(function () {
-					if (youtubeplayer.pause || youtubeplayer.pauseVideo) {
-						clearInterval(interval);
-						if (youtubeplayer.pauseVideo) {youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange");}
-					}
-				}, 10);
-			}
 			if (htmlplayer && htmlplayer.length > 0) { // HTML5 video elements
 				var setPlayerEvents = function(players) {
 					for(var j=0; j<players.length; j++) {
@@ -115,6 +107,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					}
 					
 				}(this.ytCinema));				
+			}
+			if (youtubeplayer !== null) { // YouTube video element
+				var interval = setInterval(function () {
+					if (youtubeplayer.pause || youtubeplayer.pauseVideo) {
+						clearInterval(interval);
+						if (youtubeplayer.pauseVideo) {youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange");}
+					}
+				}, 10);
 			}
 		}
 	}

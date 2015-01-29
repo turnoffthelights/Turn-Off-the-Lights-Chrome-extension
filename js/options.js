@@ -619,7 +619,7 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		else{$('autostoponly').checked = false;}
 		if(items['autostopchecklistwhite'] == 'true'){$('autostopchecklistwhite').checked = true;}
 		if(items['autostopchecklistblack'] == 'true'){$('autostopchecklistblack').checked = true;}
-		if(items['nighthover'] == 'true')$('nighthover').checked = true;
+		if(items['nighthover'] == 'true'){$('nighthover').checked = true;}
 		if(items['nightmodechecklistwhite'] == 'true'){$('nightmodechecklistwhite').checked = true;}
 		if(items['nightmodechecklistblack'] == 'true'){$('nightmodechecklistblack').checked = true;}
 		if(items['nmtopleft'] == 'true'){$('nmtopleft').checked = true;}
@@ -635,7 +635,7 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		if(items['lampandnightmode'] == 'true'){$('lampandnightmode').checked = true;}
 		else{$('lampandnightmode').checked = false;}
 		if(items['eyechecklistwhite'] == 'true'){$('eyechecklistwhite').checked = true;}
-		if(items['eyechecklistblack'] == 'true'){$('eyechecklistblack').checked = true;}	
+		if(items['eyechecklistblack'] == 'true'){$('eyechecklistblack').checked = true;}
 
 // show remember page
 var countremember = items['countremember'];
@@ -1246,7 +1246,7 @@ else{$('sampleaddbutton').style.zIndex = 1;$('sampleaddbutton').style.position =
 
 if(likebar.checked == true)
 {$('samplelikebar').style.zIndex = 101;$('samplelikebar').style.position = 'relative';}
-else{$('samplelikebar').style.zIndex = 2;$('samplelikebar').style.position = 'relative';}
+else{$('samplelikebar').style.zIndex = 'auto';$('samplelikebar').style.position = 'relative';}
 
 /* --- end YouTube preview --- */
 if(ambilight.checked == true)
@@ -1833,6 +1833,7 @@ var i18nldesspeech1command = chrome.i18n.getMessage("desspeech1command"); // tur
 var i18nldesspeech2command = chrome.i18n.getMessage("desspeech2command"); // turn on the lights
 var i18nldesspeech3command = chrome.i18n.getMessage("desspeech3command"); // play video
 var i18nldesspeech4command = chrome.i18n.getMessage("desspeech4command"); // pause video
+var i18nldesspeech5command = chrome.i18n.getMessage("desspeech5command"); // browser lamp
 
 	recognition.onresult = function(event) {
     var interim_transcript = '';
@@ -1963,7 +1964,7 @@ function getImage(url) {
 	save_options();
 	};
     bkimage.onerror = function() {
-	var optionwrongimg = chrome.i18n.getMessage('optionwrongimg');alert(optionwrongimg);
+	var optionwrongimg = chrome.i18n.getMessage('optionwrongimg');window.alert(optionwrongimg);
 	$('lightimagea').checked = true;
 	$('lightimage').value = 'http://www.turnoffthelights.com/extension/images/theater.jpg';
 	$('example1').style.background = 'url(http://www.turnoffthelights.com/extension/images/theater.jpg)';
@@ -2002,13 +2003,13 @@ $("addbutton").addEventListener('click', function() {addWhitelistDomain();});
 $("removebutton").addEventListener('click', function() {removeSelectedExcludedDomain();});
 
 // Save time
-$("confirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');alert(optiontimetemp);});
+$("confirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');window.alert(optiontimetemp);});
 
 // Save password
-$("confirmpassword").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionpasswordsaved');alert(optionpastemp);});
+$("confirmpassword").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionpasswordsaved');window.alert(optionpastemp);});
 
 // Save time
-$("nmconfirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');alert(optiontimetemp);});
+$("nmconfirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');window.alert(optiontimetemp);});
 
 // Save KB download
 $("tabbasic").addEventListener('click', function() {OFFworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
@@ -2037,7 +2038,7 @@ $("aadownload").addEventListener('click', function() {window.open("https://chrom
 $("themedownload").addEventListener('click', function() {window.open("https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca");});
 
 // Save password
-$("confirmtimesaver").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionecosaversaved');alert(optionpastemp);});
+$("confirmtimesaver").addEventListener('click', function() {save_options();var optionpastemp = chrome.i18n.getMessage('optionecosaversaved');window.alert(optionpastemp);});
 
 // Check screenshot
 $("wallpaperhide").addEventListener('click', function() {$("imagegallery").style.display = "";$("wallpapershow").style.display = "";$("wallpaperhide").style.display = "none";});

@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"دعم التنمية",
     "description":"دعم التنمية"
+  },
+  "titelautostop":{
+    "message":"ايقاف تلقائي",
+    "description":"ايقاف تلقائي"
+  },
+  "desautostop":{
+    "message":"قم بإيقاف التشغيل التلقائي للفيديو عند فتح صفحة الويب.",
+    "description":"قم بإيقاف التشغيل التلقائي للفيديو عند فتح صفحة الويب."
+  },
+  "areyouhappy":{
+    "message":"هل أنت سعيداً ببرنامج \"اغلق الإضاءة\"؟",
+    "description":"هل أنت سعيداً ببرنامج \"اغلق الإضاءة\"؟"
+  },
+  "tellothers":{
+    "message":"نضمن لكم الاهتمام بارائكم",
+    "description":"نضمن لكم الاهتمام بارائكم"
+  },
+  "nothanks":{
+    "message":"بدون شكر",
+    "description":"بدون شكر"
+  },
+  "writeareview":{
+    "message":"اكتب مراجعة",
+    "description":"اكتب مراجعة"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Click, hold and move it to your own screen location.",
+    "description":"Click, hold and move it to your own screen location."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"القائمة البيضاء",
+    "description":"القائمة البيضاء"
+  },
+  "titelnightmodeblacklist":{
+    "message":"القائمة السوداء",
+    "description":"القائمة السوداء"
+  },
+  "desautostoponly":{
+    "message":"Activate the stop playing automatically the video only on the following site(s):",
+    "description":"Activate the stop playing automatically the video only on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"القائمة البيضاء",
+    "description":"القائمة البيضاء"
+  },
+  "titelautostopblacklist":{
+    "message":"القائمة السوداء",
+    "description":"القائمة السوداء"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"القائمة البيضاء",
+    "description":"القائمة البيضاء"
+  },
+  "titeleyeblacklist":{
+    "message":"القائمة السوداء",
+    "description":"القائمة السوداء"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
   }
 }

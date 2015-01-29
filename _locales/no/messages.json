@@ -300,8 +300,8 @@
     "description":"Hvis det ikke kan motta video data på grunn av sikkerhetsregelen for et nettsted, så vil det vise den valgte heldekkende fargen i stedet."
   },
   "desdynamiccloud":{
-    "message":"Animated Clouds",
-    "description":"Animated Clouds"
+    "message":"Animert skyer",
+    "description":"Animert skyer"
   },
   "desconfirmtimesaver":{
     "message":"Bekreft skjermsparer tid",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Aktivere kamerabevegelse for å gjøre det mulig å dempe websiden med et sveip med en hånd.",
-    "description":"Kamerabevegelse"
+    "description":"Aktivere kamerabevegelse for å gjøre det mulig å dempe websiden med et sveip med en hånd."
   },
   "trymotion":{
     "message":"Prøv det selv!",
@@ -748,8 +748,8 @@
     "description":"Aktiver funksjon for kamerabevegelse"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Flytt hånden (eller neve) fra toppen til bunnen",
+    "description":"Flytt hånden (eller neve) fra toppen til bunnen"
   },
   "step3description":{
     "message":"Da sklir det sorte laget automatisk ned.",
@@ -900,7 +900,151 @@
     "description":"API-utvikler"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Wiki om funksjonen atmosfærebelysning",
+    "description":"Wiki om funksjonen atmosfærebelysning"
+  },
+  "sharemenusharetitle":{
+    "message":"Del dette",
+    "description":"Del dette"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Velkomstguide",
+    "description":"Velkomstguide"
+  },
+  "sharemenutellafriend":{
+    "message":"Tips en venn",
+    "description":"Tips en venn"
+  },
+  "sharemenusendatweet":{
+    "message":"Send en Tweet",
+    "description":"Send en Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Post på Facebook",
+    "description":"Post på Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Post på Google +",
+    "description":"Post på Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Rangér dette tillegget",
+    "description":"Rangér dette tillegget"
+  },
+  "sharemenudonatetitle":{
+    "message":"Støtt viderutvikling",
+    "description":"Støtt viderutvikling"
+  },
+  "titelautostop":{
+    "message":"AutoStopp",
+    "description":"AutoStopp"
+  },
+  "desautostop":{
+    "message":"Stopp avspilling automatisk når jeg åpner en web-side.",
+    "description":"Stopp avspilling automatisk når jeg åpner en web-side."
+  },
+  "areyouhappy":{
+    "message":"Er du fornøyd med Turn Off the Lights?",
+    "description":"Er du fornøyd med Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Garanterer at din mening teller",
+    "description":"Garanterer at din mening teller"
+  },
+  "nothanks":{
+    "message":"Nei takk",
+    "description":"Nei takk"
+  },
+  "writeareview":{
+    "message":"Skriv en omtale",
+    "description":"Skriv en omtale"
+  },
+  "desauroraplayer":{
+    "message":"Omgivelseslys-spilleren er også tilgjengelig for datamaskiner.",
+    "description":"Omgivelseslys-spilleren er også tilgjengelig for datamaskiner."
+  },
+  "downloadtheapp":{
+    "message":"Last ned appen nå",
+    "description":"Last ned appen nå"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom inn eller ut på websiden ved å bruke zoomeknappen for behageligere lesing.",
+    "description":"Zoom inn eller ut på websiden ved å bruke zoomeknappen for behageligere lesing."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Legg tilbake den svarte menylinjen på Googles nettside.",
+    "description":"Legg tilbake den svarte menylinjen på Googles nettside."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Dette viser i sanntid aksjemarkedsinformasjon.",
+    "description":"Dette viser i sanntid aksjemarkedsinformasjon."
+  },
+  "titelnightmodeposition":{
+    "message":"Bytt posisjon",
+    "description":"Bytt posisjon"
+  },
+  "nmtopleft":{
+    "message":"Øverst til venstre",
+    "description":"Øverst til venstre"
+  },
+  "nmtopright":{
+    "message":"Øverst til høyre",
+    "description":"Øverst til høyre"
+  },
+  "nmbottomright":{
+    "message":"Nederst til høyre",
+    "description":"Nederst til høyre"
+  },
+  "nmbottomleft":{
+    "message":"Nederst til Venstre",
+    "description":"Nederst til Venstre"
+  },
+  "nmcustom":{
+    "message":"Klikk, hold og flytt den til din egen plasseringen på skjermen.",
+    "description":"Klikk, hold og flytt den til din egen plasseringen på skjermen."
+  },
+  "desnighthover":{
+    "message":"Vis en gjennomsiktig bryter på nettsiden.",
+    "description":"Vis en gjennomsiktig bryter på nettsiden."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Hviteliste",
+    "description":"Hviteliste"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Svarteliste",
+    "description":"Svarteliste"
+  },
+  "desautostoponly":{
+    "message":"Aktiver Stopp videoavspilling automatisk kun på følgende steder:",
+    "description":"Aktiver Stopp videoavspilling automatisk kun på følgende steder:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Hviteliste",
+    "description":"Hviteliste"
+  },
+  "titelautostopblacklist":{
+    "message":"Svarteliste",
+    "description":"Svarteliste"
+  },
+  "desnightactivetime":{
+    "message":"Bryteren vises mellom følgende tider:",
+    "description":"Bryteren vises mellom følgende tider:"
+  },
+  "deslampandnightmode":{
+    "message":"Aktiver alternativet \"Nattmodus\" når du klikker på den grå lampeknappen.",
+    "description":"Aktiver alternativet \"Nattmodus\" når du klikker på den grå lampeknappen."
+  },
+  "titeleyewhitelist":{
+    "message":"Hviteliste",
+    "description":"Hviteliste"
+  },
+  "titeleyeblacklist":{
+    "message":"Svarteliste",
+    "description":"Svarteliste"
+  },
+  "desspeech5command":{
+    "message":"nettleser lampe",
+    "description":"nettleser lampe"
   }
 }

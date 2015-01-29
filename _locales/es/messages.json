@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Apoyar el desarrollo",
     "description":"Apoyar el desarrollo"
+  },
+  "titelautostop":{
+    "message":"Autostop",
+    "description":"Autostop"
+  },
+  "desautostop":{
+    "message":"Deja de reproducir automáticamente el vídeo cuando abro una página web.",
+    "description":"Deja de reproducir automáticamente el vídeo cuando abro una página web."
+  },
+  "areyouhappy":{
+    "message":"¿Estás contento con Turn Off the Lights?",
+    "description":"¿Estás contento con Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Asegura que tu opinión cuenta",
+    "description":"Asegura que tu opinión cuenta"
+  },
+  "nothanks":{
+    "message":"No, gracias",
+    "description":"No, gracias"
+  },
+  "writeareview":{
+    "message":"Escribir una reseña",
+    "description":"Escribir una reseña"
+  },
+  "desauroraplayer":{
+    "message":"El reproductor de luz ambiental también está disponible para tu ordenador.",
+    "description":"El reproductor de luz ambiental también está disponible para tu ordenador."
+  },
+  "downloadtheapp":{
+    "message":"Descargar la aplicación ahora",
+    "description":"Descargar la aplicación ahora"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Acerca o aleja el contenido web usando el botón de zoom para una lectura más cómoda.",
+    "description":"Acerca o aleja el contenido web usando el botón de zoom para una lectura más cómoda."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Añade de nuevo la barra de menú negra en el sitio de Google.",
+    "description":"Añade de nuevo la barra de menú negra en el sitio de Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Esto te muestra la información bursátil en tiempo real.",
+    "description":"Esto te muestra la información bursátil en tiempo real."
+  },
+  "titelnightmodeposition":{
+    "message":"Posición del interruptor",
+    "description":"Posición del interruptor"
+  },
+  "nmtopleft":{
+    "message":"Arriba a la izquierda",
+    "description":"Arriba a la izquierda"
+  },
+  "nmtopright":{
+    "message":"Arriba a la derecha",
+    "description":"Arriba a la derecha"
+  },
+  "nmbottomright":{
+    "message":"Abajo a la derecha",
+    "description":"Abajo a la derecha"
+  },
+  "nmbottomleft":{
+    "message":"Abajo a la izquierda",
+    "description":"Abajo a la izquierda"
+  },
+  "nmcustom":{
+    "message":"Haz clic, mantén y muévelo a tu propia ubicación en la pantalla.",
+    "description":"Haz clic, mantén y muévelo a tu propia ubicación en la pantalla."
+  },
+  "desnighthover":{
+    "message":"Mostrar el interruptor transparente en la página web.",
+    "description":"Mostrar el interruptor transparente en la página web."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Lista blanca",
+    "description":"Lista blanca"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
+  },
+  "desautostoponly":{
+    "message":"Activar la detención de la reproducción automática del vídeo solo en los siguientes sitios:",
+    "description":"Activar la detención de la reproducción automática del vídeo solo en los siguientes sitios:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Lista blanca",
+    "description":"Lista blanca"
+  },
+  "titelautostopblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
+  },
+  "desnightactivetime":{
+    "message":"El interruptor estará visible entre las siguientes horas:",
+    "description":"El interruptor estará visible entre las siguientes horas:"
+  },
+  "deslampandnightmode":{
+    "message":"Activar el modo nocturno al hacer clic en el botón de la lámpara gris.",
+    "description":"Activar el modo nocturno al hacer clic en el botón de la lámpara gris."
+  },
+  "titeleyewhitelist":{
+    "message":"Lista blanca",
+    "description":"Lista blanca"
+  },
+  "titeleyeblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
+  },
+  "desspeech5command":{
+    "message":"lámpara del navegador",
+    "description":"lámpara del navegador"
   }
 }

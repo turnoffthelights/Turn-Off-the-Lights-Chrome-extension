@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"동작 인식을 활성화하면 손을 쓸어내려 웹 페이지를 어둡게 할 수 있습니다.",
-    "description":"모션 인식"
+    "description":"동작 인식을 활성화하면 손을 쓸어내려 웹 페이지를 어둡게 할 수 있습니다."
   },
   "trymotion":{
     "message":"직접 시도해보세요!",
@@ -902,5 +902,149 @@
   "titelwikiatmos":{
     "message":"분위기 조명에 대해 위키에서 검색해보기",
     "description":"분위기 조명에 대해 위키에서 검색해보기"
+  },
+  "sharemenusharetitle":{
+    "message":"공유하기",
+    "description":"공유하기"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"환영 가이드",
+    "description":"환영 가이드"
+  },
+  "sharemenutellafriend":{
+    "message":"친구에게 알려주기",
+    "description":"친구에게 알려주기"
+  },
+  "sharemenusendatweet":{
+    "message":"트윗하기",
+    "description":"트윗하기"
+  },
+  "sharemenupostonfacebook":{
+    "message":"페이스북에서 공유",
+    "description":"페이스북에서 공유"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Google +에서 공유",
+    "description":"Google +에서 공유"
+  },
+  "sharemenuratetitle":{
+    "message":"평점주기",
+    "description":"평점주기"
+  },
+  "sharemenudonatetitle":{
+    "message":"개발자를 지원하기",
+    "description":"개발자를 지원하기"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensures that your opinion counts",
+    "description":"Ensures that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Click, hold and move it to your own screen location.",
+    "description":"Click, hold and move it to your own screen location."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"허용된 사이트 목록",
+    "description":"허용된 사이트 목록"
+  },
+  "titelnightmodeblacklist":{
+    "message":"금지된 사이트 목록",
+    "description":"금지된 사이트 목록"
+  },
+  "desautostoponly":{
+    "message":"Activate the stop playing automatically the video only on the following site(s):",
+    "description":"Activate the stop playing automatically the video only on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"허용된 사이트 목록",
+    "description":"허용된 사이트 목록"
+  },
+  "titelautostopblacklist":{
+    "message":"금지된 사이트 목록",
+    "description":"금지된 사이트 목록"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"허용된 사이트 목록",
+    "description":"허용된 사이트 목록"
+  },
+  "titeleyeblacklist":{
+    "message":"금지된 사이트 목록",
+    "description":"금지된 사이트 목록"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
   }
 }

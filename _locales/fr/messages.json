@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Soutenir son développement",
     "description":"Soutenir son développement"
+  },
+  "titelautostop":{
+    "message":"Arrêt automatique",
+    "description":"Arrêt automatique"
+  },
+  "desautostop":{
+    "message":"Arrêter automatiquement la lecture de la vidéo lorsque j'ouvre une nouvelle page web.",
+    "description":"Arrêter automatiquement la lecture de la vidéo lorsque j'ouvre une nouvelle page web."
+  },
+  "areyouhappy":{
+    "message":"Êtes-vous satisfait par Turn Off the Lights ?",
+    "description":"Êtes-vous satisfait par Turn Off the Lights ?"
+  },
+  "tellothers":{
+    "message":"Soyez assuré que votre avis compte",
+    "description":"Soyez assuré que votre avis compte"
+  },
+  "nothanks":{
+    "message":"Non merci",
+    "description":"Non merci"
+  },
+  "writeareview":{
+    "message":"Écrire un commentaire",
+    "description":"Écrire un commentaire"
+  },
+  "desauroraplayer":{
+    "message":"Le lecteur de Lumière d'ambiance est également disponible pour votre ordinateur.",
+    "description":"Le lecteur de Lumière d'ambiance est également disponible pour votre ordinateur."
+  },
+  "downloadtheapp":{
+    "message":"Téléchargez dès maintenant l'appli",
+    "description":"Téléchargez dès maintenant l'appli"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoomez ou dézoomez sur un contenu web en utilisant le bouton de zoom pour une lecture plus confortable.",
+    "description":"Zoomez ou dézoomez sur un contenu web en utilisant le bouton de zoom pour une lecture plus confortable."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Ajouter à l'arrière la barre de menu sur le site web de Google.",
+    "description":"Ajouter à l'arrière la barre de menu sur le site web de Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Ceci vous montre en temps réel le stock restant sur le marché.",
+    "description":"Ceci vous montre en temps réel le stock restant sur le marché."
+  },
+  "titelnightmodeposition":{
+    "message":"Position de l'interrupteur",
+    "description":"Position de l'interrupteur"
+  },
+  "nmtopleft":{
+    "message":"En haut à gauche",
+    "description":"En haut à gauche"
+  },
+  "nmtopright":{
+    "message":"En haut à droite",
+    "description":"En haut à droite"
+  },
+  "nmbottomright":{
+    "message":"En bas à droite",
+    "description":"En bas à droite"
+  },
+  "nmbottomleft":{
+    "message":"En bas à gauche",
+    "description":"En bas à gauche"
+  },
+  "nmcustom":{
+    "message":"Cliquez et maintenez enfoncé le bouton, tout en le déplaçant à l'endroit où vous voulez le placer à l'écran. Relâchez. C'est prêt !",
+    "description":"Cliquez et maintenez enfoncé le bouton, tout en le déplaçant à l'endroit où vous voulez le placer à l'écran. Relâchez. C'est prêt !"
+  },
+  "desnighthover":{
+    "message":"Afficher le bouton transparent sur les pages web.",
+    "description":"Afficher le bouton transparent sur les pages web."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Liste blanche",
+    "description":"Liste blanche"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Liste noire",
+    "description":"Liste noire"
+  },
+  "desautostoponly":{
+    "message":"Activer l'arrêt automatique de la lecture des vidéos seulement sur le(s) site(s) web suivant(s) :",
+    "description":"Activer l'arrêt automatique de la lecture des vidéos seulement sur le(s) site(s) web suivant(s) :"
+  },
+  "titelautostopwhitelist":{
+    "message":"Liste blanche",
+    "description":"Liste blanche"
+  },
+  "titelautostopblacklist":{
+    "message":"Liste noire",
+    "description":"Liste noire"
+  },
+  "desnightactivetime":{
+    "message":"Le changement s'effectuera pour la période suivante :",
+    "description":"Le changement s'effectuera pour la période suivante :"
+  },
+  "deslampandnightmode":{
+    "message":"Activez l'option de Mode Nuit lorsque vous cliquez sur le bouton de la lampe.",
+    "description":"Activez l'option de Mode Nuit lorsque vous cliquez sur le bouton de la lampe."
+  },
+  "titeleyewhitelist":{
+    "message":"Liste blanche",
+    "description":"Liste blanche"
+  },
+  "titeleyeblacklist":{
+    "message":"Liste noire",
+    "description":"Liste noire"
+  },
+  "desspeech5command":{
+    "message":"La lampe du navigateur",
+    "description":"La lampe du navigateur"
   }
 }

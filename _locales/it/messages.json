@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Sosteni lo sviluppo",
     "description":"Sosteni lo sviluppo"
+  },
+  "titelautostop":{
+    "message":"Stop Automatico",
+    "description":"Stop Automatico"
+  },
+  "desautostop":{
+    "message":"Ferma automaticamente il video quando apro una pagina web.",
+    "description":"Ferma automaticamente il video quando apro una pagina web."
+  },
+  "areyouhappy":{
+    "message":"Sei soddisfatto di Turn Off the Lights?",
+    "description":"Sei soddisfatto di Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Assicura che la tua opinione conta",
+    "description":"Assicura che la tua opinione conta"
+  },
+  "nothanks":{
+    "message":"No grazie",
+    "description":"No grazie"
+  },
+  "writeareview":{
+    "message":"Scrivi una recensione",
+    "description":"Scrivi una recensione"
+  },
+  "desauroraplayer":{
+    "message":"L'illuminazione ambientale è disponibile anche per il tuo computer.",
+    "description":"L'illuminazione ambientale è disponibile anche per il tuo computer."
+  },
+  "downloadtheapp":{
+    "message":"Scarica ora l'app",
+    "description":"Scarica ora l'app"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura più confortevole.",
+    "description":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura più confortevole."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Aggiungi di nuovo la barra del menu nera sul sito web di Google.",
+    "description":"Aggiungi di nuovo la barra del menu nera sul sito web di Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Questo mostrerà le informazioni della borsa in tempo reale.",
+    "description":"Questo mostrerà le informazioni della borsa in tempo reale."
+  },
+  "titelnightmodeposition":{
+    "message":"Posizione interruttore",
+    "description":"Posizione interruttore"
+  },
+  "nmtopleft":{
+    "message":"In alto a sinistra",
+    "description":"In alto a sinistra"
+  },
+  "nmtopright":{
+    "message":"In alto a destra",
+    "description":"In alto a destra"
+  },
+  "nmbottomright":{
+    "message":"In basso a destra",
+    "description":"In basso a destra"
+  },
+  "nmbottomleft":{
+    "message":"In basso a sinistra",
+    "description":"In basso a sinistra"
+  },
+  "nmcustom":{
+    "message":"Clicca, trascina e muovi sulla posizione dello schermo che preferisci.",
+    "description":"Clicca, trascina e muovi sulla posizione dello schermo che preferisci."
+  },
+  "desnighthover":{
+    "message":"Visualizza l'interruttore trasparente sulla pagina web.",
+    "description":"Visualizza l'interruttore trasparente sulla pagina web."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
+  },
+  "desautostoponly":{
+    "message":"Attiva lo stop della riproduzione automatica del video solo sui seguenti siti:",
+    "description":"Attiva lo stop della riproduzione automatica del video solo sui seguenti siti:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titelautostopblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
+  },
+  "desnightactivetime":{
+    "message":"L'interruttore sarà visibile nei seguenti orari:",
+    "description":"L'interruttore sarà visibile nei seguenti orari:"
+  },
+  "deslampandnightmode":{
+    "message":"Attiva l'opzione 'Modalità notte' quando si fa clic sul pulsante con lampada grigia.",
+    "description":"Attiva l'opzione 'Modalità notte' quando si fa clic sul pulsante con lampada grigia."
+  },
+  "titeleyewhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titeleyeblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
+  },
+  "desspeech5command":{
+    "message":"lampada del browser",
+    "description":"lampada del browser"
   }
 }

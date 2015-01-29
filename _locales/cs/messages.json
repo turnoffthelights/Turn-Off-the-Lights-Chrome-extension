@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Povolte Pohyb na kameru tak, že se webová stránka ztmaví po pohybu rukou dolu.",
-    "description":"Pohyb na kameru"
+    "description":"Povolte Pohyb na kameru tak, že se webová stránka ztmaví po pohybu rukou dolu."
   },
   "trymotion":{
     "message":"Vyzkoušej to!",
@@ -902,5 +902,149 @@
   "titelwikiatmos":{
     "message":"Wiki o funkci osvětlení atmosféry",
     "description":"Wiki o funkci osvětlení atmosféry"
+  },
+  "sharemenusharetitle":{
+    "message":"Sdílet",
+    "description":"Sdílet"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Úvodní příručka",
+    "description":"Úvodní příručka"
+  },
+  "sharemenutellafriend":{
+    "message":"Povězte přátelům",
+    "description":"Povězte přátelům"
+  },
+  "sharemenusendatweet":{
+    "message":"Pošlete Tweet",
+    "description":"Pošlete Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Napsat na Facebook",
+    "description":"Napsat na Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Napsat na Google+",
+    "description":"Napsat na Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Ohodnotit toto rozšíření",
+    "description":"Ohodnotit toto rozšíření"
+  },
+  "sharemenudonatetitle":{
+    "message":"Podpořte vývoj",
+    "description":"Podpořte vývoj"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Zastavit automatické přehrávání videa po otevření stránky.",
+    "description":"Zastavit automatické přehrávání videa po otevření stránky."
+  },
+  "areyouhappy":{
+    "message":"Jste spokojeni s Turn Off the Lights?",
+    "description":"Jste spokojeni s Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensures that your opinion counts",
+    "description":"Ensures that your opinion counts"
+  },
+  "nothanks":{
+    "message":"Ne, děkuji",
+    "description":"Ne, děkuji"
+  },
+  "writeareview":{
+    "message":"Napsat recenzi",
+    "description":"Napsat recenzi"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Stáhnout aplikaci",
+    "description":"Stáhnout aplikaci"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Změnit pozici",
+    "description":"Změnit pozici"
+  },
+  "nmtopleft":{
+    "message":"Nahoře vlevo",
+    "description":"Nahoře vlevo"
+  },
+  "nmtopright":{
+    "message":"Nahoře vpravo",
+    "description":"Nahoře vpravo"
+  },
+  "nmbottomright":{
+    "message":"Dole vpravo",
+    "description":"Dole vpravo"
+  },
+  "nmbottomleft":{
+    "message":"Dole vlevo",
+    "description":"Dole vlevo"
+  },
+  "nmcustom":{
+    "message":"Klikněte, držte a táhněte na požadované místo.",
+    "description":"Klikněte, držte a táhněte na požadované místo."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Seznam povolených",
+    "description":"Seznam povolených"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Seznam zakázaných",
+    "description":"Seznam zakázaných"
+  },
+  "desautostoponly":{
+    "message":"Aktivovat zastavení automatického přehrávání videa pouze na těchto stránkách:",
+    "description":"Aktivovat zastavení automatického přehrávání videa pouze na těchto stránkách:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Seznam povolených",
+    "description":"Seznam povolených"
+  },
+  "titelautostopblacklist":{
+    "message":"Seznam zakázaných",
+    "description":"Seznam zakázaných"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Seznam povolených",
+    "description":"Seznam povolených"
+  },
+  "titeleyeblacklist":{
+    "message":"Seznam zakázaných",
+    "description":"Seznam zakázaných"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
   }
 }

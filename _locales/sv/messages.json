@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Aktivera Kamerarörelse så att webbsidor kan mörklägga genom att svepa neråt med handen.",
-    "description":"Kamerarörelse"
+    "description":"Aktivera Kamerarörelse så att webbsidor kan mörklägga genom att svepa neråt med handen."
   },
   "trymotion":{
     "message":"Prova det själv!",
@@ -902,5 +902,149 @@
   "titelwikiatmos":{
     "message":"Wiki om Atmosfärljus-funktionen",
     "description":"Wiki om Atmosfärljus-funktionen"
+  },
+  "sharemenusharetitle":{
+    "message":"Dela det här",
+    "description":"Dela det här"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Välkommen Guide",
+    "description":"Välkommen Guide"
+  },
+  "sharemenutellafriend":{
+    "message":"Tipsa en vän",
+    "description":"Tipsa en vän"
+  },
+  "sharemenusendatweet":{
+    "message":"Skicka en Tweet",
+    "description":"Skicka en Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Gör ett inlägg på Facebook",
+    "description":"Gör ett inlägg på Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Gör ett inlägg på Google +",
+    "description":"Gör ett inlägg på Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Betygsätt detta tillägg",
+    "description":"Betygsätt detta tillägg"
+  },
+  "sharemenudonatetitle":{
+    "message":"Stöd utvecklingen",
+    "description":"Stöd utvecklingen"
+  },
+  "titelautostop":{
+    "message":"Atostopp",
+    "description":"Atostopp"
+  },
+  "desautostop":{
+    "message":"Sluta automatiskt att spela videon när jag öppnar en webbsida.",
+    "description":"Sluta automatiskt att spela videon när jag öppnar en webbsida."
+  },
+  "areyouhappy":{
+    "message":"Är du nöjd med Turn Off the Lights?",
+    "description":"Är du nöjd med Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Försäkra dig om att din åsikt räknas",
+    "description":"Försäkra dig om att din åsikt räknas"
+  },
+  "nothanks":{
+    "message":"Nej tack",
+    "description":"Nej tack"
+  },
+  "writeareview":{
+    "message":"Skriv en recension",
+    "description":"Skriv en recension"
+  },
+  "desauroraplayer":{
+    "message":"Spelare för omgivningsbelysning är också tillgänglig för din dator.",
+    "description":"Spelare för omgivningsbelysning är också tillgänglig för din dator."
+  },
+  "downloadtheapp":{
+    "message":"Ladda ner appen nu",
+    "description":"Ladda ner appen nu"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zooma in eller ut på webbinnehållet med zoom-knapparna för bekvämare läsning.",
+    "description":"Zooma in eller ut på webbinnehållet med zoom-knapparna för bekvämare läsning."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Lägg tillbaka den svarta menyraden på Googles webbsida.",
+    "description":"Lägg tillbaka den svarta menyraden på Googles webbsida."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Detta visar dig aktemarknadsinformation i realtid.",
+    "description":"Detta visar dig aktemarknadsinformation i realtid."
+  },
+  "titelnightmodeposition":{
+    "message":"Ändra position",
+    "description":"Ändra position"
+  },
+  "nmtopleft":{
+    "message":"Överst till vänster",
+    "description":"Överst till vänster"
+  },
+  "nmtopright":{
+    "message":"Längst upp till höger",
+    "description":"Längst upp till höger"
+  },
+  "nmbottomright":{
+    "message":"Längst ned till höger",
+    "description":"Längst ned till höger"
+  },
+  "nmbottomleft":{
+    "message":"Nederst till vänster",
+    "description":"Nederst till vänster"
+  },
+  "nmcustom":{
+    "message":"Klicka, håll och flytta det till din egen plats på skärmen.",
+    "description":"Klicka, håll och flytta det till din egen plats på skärmen."
+  },
+  "desnighthover":{
+    "message":"Visa den genomskinliga knappen på webbsidan.",
+    "description":"Visa den genomskinliga knappen på webbsidan."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Aktivera 'stoppa automatiskt uppspelning av video' bara på följande sidor:",
+    "description":"Aktivera 'stoppa automatiskt uppspelning av video' bara på följande sidor:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"Knappen blir synlig mellan följande klockslag:",
+    "description":"Knappen blir synlig mellan följande klockslag:"
+  },
+  "deslampandnightmode":{
+    "message":"Aktivera alternativet \"Nattläge\" när du klickar på knappen grå lampa.",
+    "description":"Aktivera alternativet \"Nattläge\" när du klickar på knappen grå lampa."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"webbläsar lampa",
+    "description":"webbläsar lampa"
   }
 }

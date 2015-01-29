@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Активуйте Рух камери, щоб мати можливість приглушити світло жестом руки зверху вниз.",
-    "description":"Рух камери"
+    "description":"Активуйте Рух камери, щоб мати можливість приглушити світло жестом руки зверху вниз."
   },
   "trymotion":{
     "message":"Спробуйте самі!",
@@ -902,5 +902,149 @@
   "titelwikiatmos":{
     "message":"Wiki про функції атмосферного освітлення",
     "description":"Wiki про функції атмосферного освітлення"
+  },
+  "sharemenusharetitle":{
+    "message":"Поділитись з друзями",
+    "description":"Поділитись з друзями"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Стартова інструкція",
+    "description":"Стартова інструкція"
+  },
+  "sharemenutellafriend":{
+    "message":"Розповісти другові",
+    "description":"Розповісти другові"
+  },
+  "sharemenusendatweet":{
+    "message":"Твітнути",
+    "description":"Твітнути"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Запостити в Facebook",
+    "description":"Запостити в Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Запостити в Google+",
+    "description":"Запостити в Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Оцінити це розширення",
+    "description":"Оцінити це розширення"
+  },
+  "sharemenudonatetitle":{
+    "message":"Підтримати розробку",
+    "description":"Підтримати розробку"
+  },
+  "titelautostop":{
+    "message":"Автостоп",
+    "description":"Автостоп"
+  },
+  "desautostop":{
+    "message":"Зупинити автоматичне відтворення відео, коли я відкриваю веб-сторінки.",
+    "description":"Зупинити автоматичне відтворення відео, коли я відкриваю веб-сторінки."
+  },
+  "areyouhappy":{
+    "message":"Ви задоволені додатком Turn Off the Lights?",
+    "description":"Ви задоволені додатком Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Гарантує, що ваша думка має значення",
+    "description":"Гарантує, що ваша думка має значення"
+  },
+  "nothanks":{
+    "message":"Ні, дякую",
+    "description":"Ні, дякую"
+  },
+  "writeareview":{
+    "message":"Напишіть відгук",
+    "description":"Напишіть відгук"
+  },
+  "desauroraplayer":{
+    "message":"Для Вашого комп’ютера також доступний програвач з можливістю розсіяного освітлення.",
+    "description":"Для Вашого комп’ютера також доступний програвач з можливістю розсіяного освітлення."
+  },
+  "downloadtheapp":{
+    "message":"Завантажте додаток зараз",
+    "description":"Завантажте додаток зараз"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Збільшити або зменшити вміст веб-сторінки за допомогою кнопки масштабування для більш комфортного читання.",
+    "description":"Збільшити або зменшити вміст веб-сторінки за допомогою кнопки масштабування для більш комфортного читання."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Повернути чорну панель меню на веб-сайті Google.",
+    "description":"Повернути чорну панель меню на веб-сайті Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Це поле в режимі реального часу покаже вам інформацію про фондовий ринок.",
+    "description":"Це поле в режимі реального часу покаже вам інформацію про фондовий ринок."
+  },
+  "titelnightmodeposition":{
+    "message":"Змінити положення",
+    "description":"Змінити положення"
+  },
+  "nmtopleft":{
+    "message":"Зверху зліва",
+    "description":"Зверху зліва"
+  },
+  "nmtopright":{
+    "message":"Зверху справа",
+    "description":"Зверху справа"
+  },
+  "nmbottomright":{
+    "message":"Внизу справа",
+    "description":"Внизу справа"
+  },
+  "nmbottomleft":{
+    "message":"Внизу зліва",
+    "description":"Внизу зліва"
+  },
+  "nmcustom":{
+    "message":"Натисніть і, утримуючи його, перемістіть в зручне місце на вашому екрані.",
+    "description":"Натисніть і, утримуючи його, перемістіть в зручне місце на вашому екрані."
+  },
+  "desnighthover":{
+    "message":"Показувати прозорий перемикач на сторінці.",
+    "description":"Показувати прозорий перемикач на сторінці."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
+  },
+  "desautostoponly":{
+    "message":"Активувати автостоп відео тільки для наступних сайтів:",
+    "description":"Активувати автостоп відео тільки для наступних сайтів:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titelautostopblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
+  },
+  "desnightactivetime":{
+    "message":"Перемикач буде видно в певний час:",
+    "description":"Перемикач буде видно в певний час:"
+  },
+  "deslampandnightmode":{
+    "message":"Активуйте опцію „Нічний режим“ натиснувши на кнопку з сірою лампочкою.",
+    "description":"Активуйте опцію „Нічний режим“ натиснувши на кнопку з сірою лампочкою."
+  },
+  "titeleyewhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titeleyeblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
+  },
+  "desspeech5command":{
+    "message":"лампа браузера",
+    "description":"лампа браузера"
   }
 }

@@ -13,7 +13,7 @@
   },
   "lastchecked":{
     "message":"Neuste Version geprüft am",
-    "description":"Neueste Version überprüft"
+    "description":"Neueste Version überprüft am"
   },
   "visualeffects":{
     "message":"Visuelle Effekte",
@@ -33,15 +33,15 @@
   },
   "desmousespotlightt":{
     "message":"Ermöglicht Ihnen durch den abgedunkelten Bildschirmbereich zu klicken, wenn die Lichter aus sind.",
-    "description":"Können Sie durch auf dem abgedunkelten Bildschirm zu klicken, wenn die Lichter aus sind."
+    "description":"Ermöglicht Ihnen durch den abgedunkelten Bildschirmbereich zu klicken, wenn die Lichter aus sind."
   },
   "desambilight4color":{
     "message":"Vier ausgewählte Farben rund um das Video:",
     "description":"4 ausgewählte Farben um das Video:"
   },
   "lockentername":{
-    "message":"Bitte geben Sie Ihr Passwort",
-    "description":"Bitte geben Sie Ihr Passwort"
+    "message":"Please enter your password",
+    "description":"Bitte Ihr Passwort eingeben"
   },
   "desnoflash":{
     "message":"Diese Funktion nicht benutzen.",
@@ -56,20 +56,20 @@
     "description":"Augenschutz"
   },
   "titelcinemaontop":{
-    "message":"Kinomodus: nur der obere Teil des Fensters wird verdunkelt.",
-    "description":"Movie Theater-Modus: es den 'lights off'-Layer nur auf der Oberseite des Fensters anzuzeigen."
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window.",
+    "description":"Kinomodus: Nur der obere Teil des Fensters wird verdunkelt."
   },
   "desmousespotlightc":{
     "message":"Wenn das Licht ausgeschaltet ist, können Sie einen Bereich auswählen, um ein Element auswählen.",
-    "description":"Wenn das Licht ausgeschaltet ist, können Sie einen Bereich zu konzentrieren, ein Element auswählen."
+    "description":"Wenn das Licht ausgeschaltet ist, können Sie einen Bereich auswählen, um ein Element auswählen."
   },
   "titelrememberpage":{
     "message":"Erinnerungsseite",
     "description":"Erinnerungsseite"
   },
   "desmousespotlighta":{
-    "message":"Bei ausgeschaltetem Licht ein Spotlight um den Mauszeiger anzeigen.",
-    "description":"Wenn das Licht aus ist, zeigen Sie ein Schlaglicht auf den Mauscursor."
+    "message":"When the lights are off, it shows a spotlight around the mouse cursor.",
+    "description":"Wenn das Licht aus ist, wird ein Schlaglicht um den Mauszeiger angezeigt."
   },
   "desmousespotlighto":{
     "message":"Standard-Mausverhalten (deaktiviert die Maus-Einstellungen unten)",
@@ -89,15 +89,15 @@
   },
   "desconfirmpassword":{
     "message":"Passwort bestätigen",
-    "description":"Kennwort bestätigen"
+    "description":"Passwort bestätigen"
   },
   "desautoplayonly":{
     "message":"Nur die folgende(n) Video-Seite(n) abdunkeln:",
-    "description":"Dim nur die folgenden video-Sites:"
+    "description":"Nur die folgende(n) Video-Seite(n) abdunkeln:"
   },
   "helpeyeprotection":{
-    "message":"Das Aktivieren des \"Augenschutzes\" deaktiviert die \"Automatische Wiedergabe\"-Funktion.",
-    "description":"Aktivieren \"Augenschutz\" wird das Feature \"Automatische Wiedergabe\" automatisch deaktiviert."
+    "message":"Enabling 'Eye protection' will automatically disable the 'Auto play' feature.",
+    "description":"Das Aktivieren des »Augenschutzes« deaktiviert die »Automatische Wiedergabe«-Funktion."
   },
   "skipremember":{
     "message":"Das hier überspringen und sofort die Optionsseite öffnen.",
@@ -105,19 +105,19 @@
   },
   "optiontimesaved":{
     "message":"Zeit erfolgreich gespeichert!",
-    "description":"Zeit wird erfolgreich gespeichert!"
+    "description":"Zeit erfolgreich gespeichert!"
   },
   "titelvideoheadline":{
     "message":"Filmtitel",
-    "description":"Videotitel"
+    "description":"Filmtitel"
   },
   "translateme":{
     "message":"Beim Übersetzen helfen",
     "description":"Beim Übersetzen helfen"
   },
   "despassword":{
-    "message":"Die Eingabe eines Passwortes verlangen, bevor das Licht wieder eingeschaltet wird.",
-    "description":"Benötigen Sie ein Passwort eingegeben werden, bevor das Licht wieder einschalten."
+    "message":"Ein Passwort verlangen, bevor das Licht wieder eingeschaltet wird.",
+    "description":"Ein Passwort verlangen, bevor das Licht wieder eingeschaltet wird."
   },
   "helpautoplay":{
     "message":"Der »Augenschutz« ist aktiviert. Um die folgende Option zu benutzen, »Augenschutz«-Funktion bitte deaktivieren.",
@@ -125,15 +125,15 @@
   },
   "name":{
     "message":"Turn Off the Lights",
-    "description":"Schalten Sie das Licht"
+    "description":"Turn Off the Lights"
   },
   "changelog":{
     "message":"Änderungsprotokoll",
-    "description":"Changelog link"
+    "description":"Änderungsprotokollverweis"
   },
   "optionpagetitle":{
     "message":"Turn Off the Lights - Optionen",
-    "description":"Option-Seitentitel"
+    "description":"Titel der Optionsseite"
   },
   "optionpasswordsaved":{
     "message":"Passwort erfolgreich gespeichert!",
@@ -292,7 +292,7 @@
     "description":"Auf"
   },
   "videotitle":{
-    "message":"Fokusiere dieses Video",
+    "message":"Dieses Video fokussieren",
     "description":"Schwerpunkt dieses video"
   },
   "warningtextambilight":{
@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Spenden",
     "description":"Spenden"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Aufhören, das Videos automatisch abzuspielen, wenn ich eine Website öffne.",
+    "description":"Aufhören, das Videos automatisch abzuspielen, wenn ich eine Website öffne."
+  },
+  "areyouhappy":{
+    "message":"Bist du mit Turn Off the Lights glücklich?",
+    "description":"Bist du mit Turn Off the Lights glücklich?"
+  },
+  "tellothers":{
+    "message":"Sorgt dafür, dass deine Meinung zählt",
+    "description":"Sorgt dafür, dass deine Meinung zählt"
+  },
+  "nothanks":{
+    "message":"Nein Danke",
+    "description":"Nein Danke"
+  },
+  "writeareview":{
+    "message":"Bewertung schreiben",
+    "description":"Bewertung schreiben"
+  },
+  "desauroraplayer":{
+    "message":"Der Grundbeleuchtungs-Player ist auch für deinen Computer verfügbar.",
+    "description":"Der Grundbeleuchtungs-Player ist auch für deinen Computer verfügbar."
+  },
+  "downloadtheapp":{
+    "message":"Die Anwendung jetzt herunterladen",
+    "description":"Die Anwendung jetzt herunterladen"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Füge die schwarze Menüleiste auf der Google-Website ein.",
+    "description":"Füge die schwarze Menüleiste auf der Google-Website ein."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Dies zeigt dir die Echtzeit-Börseninformationen.",
+    "description":"Dies zeigt dir die Echtzeit-Börseninformationen."
+  },
+  "titelnightmodeposition":{
+    "message":"Schalterstellung",
+    "description":"Schalterstellung"
+  },
+  "nmtopleft":{
+    "message":"Oben links",
+    "description":"Oben links"
+  },
+  "nmtopright":{
+    "message":"Oben rechts",
+    "description":"Oben rechts"
+  },
+  "nmbottomright":{
+    "message":"Unten rechts",
+    "description":"Unten rechts"
+  },
+  "nmbottomleft":{
+    "message":"Unten links",
+    "description":"Unten links"
+  },
+  "nmcustom":{
+    "message":"Klicke, halte und verschiebe es auf deinen Bildschirm.",
+    "description":"Klicke, halte und verschiebe es auf deinen Bildschirm."
+  },
+  "desnighthover":{
+    "message":"Zeige den transparenten Schalter auf der Website.",
+    "description":"Zeige den transparenten Schalter auf der Website."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Positivliste",
+    "description":"Positivliste"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Negativliste",
+    "description":"Negativliste"
+  },
+  "desautostoponly":{
+    "message":"Aktiviere das Stoppen von automatisch abspielen Videos nur auf folgenden Websites:",
+    "description":"Aktiviere das Stoppen von automatisch abspielen Videos nur auf folgenden Websites:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Positivliste",
+    "description":"Positivliste"
+  },
+  "titelautostopblacklist":{
+    "message":"Negativliste",
+    "description":"Negativliste"
+  },
+  "desnightactivetime":{
+    "message":"Der Schalter wird innerhalb den folgenden Zeiten sichtbar sein:",
+    "description":"Der Schalter wird innerhalb den folgenden Zeiten sichtbar sein:"
+  },
+  "deslampandnightmode":{
+    "message":"Aktiviere die \"Nachtmodus\"-Option, wenn du auf die graue Lampe klickst.",
+    "description":"Aktiviere die \"Nachtmodus\"-Option, wenn du auf die graue Lampe klickst."
+  },
+  "titeleyewhitelist":{
+    "message":"Positivliste",
+    "description":"Positivliste"
+  },
+  "titeleyeblacklist":{
+    "message":"Negativliste",
+    "description":"Negativliste"
+  },
+  "desspeech5command":{
+    "message":"Browser-Lampe",
+    "description":"Browser-Lampe"
   }
 }

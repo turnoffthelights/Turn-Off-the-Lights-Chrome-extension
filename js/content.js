@@ -264,30 +264,6 @@ window.addEventListener('keypress', function(e) {
 }, false);
 
 if(autoplay == 'true'){
-
-if(autoplayonly == 'true'){
-var currenturl = location.protocol + '//' + location.host;
-var blackrabbit = false;
-if(typeof autoplayDomains == "string") {
-	autoplayDomains = JSON.parse(autoplayDomains);
-	var abuf = [];
-	for(var domain in autoplayDomains)
-		abuf.push(domain);
-        abuf.sort();
-		for(var i = 0; i < abuf.length; i++){
-			if(autoplaychecklistwhite == 'true'){
-				if(currenturl == abuf[i]){autoplayfunction();}
-			}
-			else if(autoplaychecklistblack == 'true'){
-				if(currenturl == abuf[i]){blackrabbit=true;}
-			}
-		}
-    }
-	if(autoplaychecklistblack == 'true'){
-		if(blackrabbit == false){autoplayfunction();blackrabbit = false;}
-	}
-} else {autoplayfunction();}
-
 function autoplayfunction(){
 var gracePeriod = 250, lastEvent = null, timeout = null;
 
@@ -411,21 +387,45 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 		
 var messagediv = $('ytCinemaMessage');
 if(messagediv) {}
-else {
+else {		
 		// injected code messaging
-		var bodytag = document.getElementsByTagName("body")[0], message = document.createElement("div");
+		var message = document.createElement("div");
+		var bt=document.getElementsByTagName("body");if(!bt.length)return;
 		message.setAttribute("id", "ytCinemaMessage");
 		message.style.display = "none";
-		bodytag.appendChild(message);
-		$(message.id).addEventListener(message.id, function(e){
-			var eventData = $(message.id).innerText;
+		if(!bt.length)return;
+		bt[0].appendChild(message);
+		$(message.id).addEventListener(message.id, function (e) {
+			var eventData = $(message.id).textContent;
 			trigger(eventData);
   		}, false);
 }
 }
 
-} // option autoplay on end
+if(autoplayonly == 'true'){
+var currenturl = location.protocol + '//' + location.host;
+var blackrabbit = false;
+if(typeof autoplayDomains == "string") {
+	autoplayDomains = JSON.parse(autoplayDomains);
+	var abuf = [];
+	for(var domain in autoplayDomains)
+		abuf.push(domain);
+        abuf.sort();
+		for(var i = 0; i < abuf.length; i++){
+			if(autoplaychecklistwhite == 'true'){
+				if(currenturl == abuf[i]){autoplayfunction();}
+			}
+			else if(autoplaychecklistblack == 'true'){
+				if(currenturl == abuf[i]){blackrabbit=true;}
+			}
+		}
+    }
+	if(autoplaychecklistblack == 'true'){
+		if(blackrabbit == false){autoplayfunction();blackrabbit = false;}
+	}
+} else {autoplayfunction();}
 
+} // option autoplay on end
 
 if(autostop == 'true'){
 
@@ -495,7 +495,7 @@ if(eastereggs == 'true'){
 		// shortcut key T
 		if ($('stefanvdtheater')){}
 		else {
-		alert(chrome.i18n.getMessage("eastereggsquestion"));
+		window.alert(chrome.i18n.getMessage("eastereggsquestion"));
 		var newimg = document.createElement('img');
 		newimg.setAttribute('id','stefanvdtheater');
 		newimg.src = chrome.extension.getURL('/images/theater.jpg');
@@ -507,25 +507,6 @@ if(eastereggs == 'true'){
 }
 
 // eye protection
-function eyedojob(){
-
-if(ecosaver == 'true'){
-
-document.onmousemove = (function() {
-  var onmousestop = function() {
-	var blackon = $('stefanvdlightareoff1');
-	if(blackon){}else{eyeprotection();}
-  }, thread;
-
-  return function() {
-    clearTimeout(thread);
-    thread = setTimeout(onmousestop, ecosavertime * 1000);
-  };
-})();
-
-} else {
-eyeprotection();
-///////
 function eyeprotection(){
 // normal use only enabled -> do nothing
 
@@ -556,9 +537,23 @@ if(typeof excludedDomains == "string") {
 	}
 }
 }
-///////
-}
 
+function eyedojob(){
+if(ecosaver == 'true'){
+
+document.onmousemove = (function() {
+  var onmousestop = function() {
+	var blackon = $('stefanvdlightareoff1');
+	if(blackon){}else{eyeprotection();}
+  }, thread;
+
+  return function() {
+    clearTimeout(thread);
+    thread = setTimeout(onmousestop, ecosavertime * 1000);
+  };
+})();
+
+} else {eyeprotection();}
 }
 
 // night time
@@ -984,6 +979,8 @@ function gogonightmode(){
         if ($("stefanvdnighti")) {
             $("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
         }
+		if ($("stefanvdnightthemecheckbox")){$("stefanvdnightthemecheckbox").checked = true;}
+		
         document.body.style.backgroundColor = "black";
         document.body.style.background = "black";
 
@@ -1072,6 +1069,7 @@ function gogonightmode(){
         if ($("stefanvdnightin")) {
             $("stefanvdnightin").setAttribute("id", "stefanvdnighti"); // change night background button
         }
+		if ($("stefanvdnightthemecheckbox")){$("stefanvdnightthemecheckbox").checked = false;}
         document.body.style.backgroundImage = oldbackgroundImage;
         document.body.style.backgroundColor = oldbackgroundColor;
         document.body.style.backgroundColor = oldbackground;
@@ -1178,7 +1176,7 @@ function nightfunction(){
 		
 		var newnightinput = document.createElement('input');
 		newnightinput.setAttribute('type','checkbox');
-		newnightinput.setAttribute('id','stefanvdnighttheme');
+		newnightinput.setAttribute('id','stefanvdnightthemecheckbox');
 		if (nightenabletheme == 'true'){ newnightinput.setAttribute('checked','true'); }
 		newnight.appendChild(newnightinput);
 
@@ -1381,7 +1379,7 @@ if(lampandnightmode == 'true'){
 			if(document.getElementById('stefanvdlightareoff1')){ sun = true; gogonightmode(); } // make it dark
 		}else{if(document.getElementById('stefanvdlightareoff1')){}else{sun = false; gogonightmode();}}
 	});
-	}	
+	}
 }
 
 // YouTube auto width the video player content

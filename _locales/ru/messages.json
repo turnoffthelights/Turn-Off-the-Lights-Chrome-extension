@@ -785,7 +785,7 @@
   },
   "speechoption":{
     "message":"Распознавание речи",
-    "description":"Speech Recognition "
+    "description":"Распознавание речи "
   },
   "titelspeech":{
     "message":"Голос",
@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Поддержать разработчика",
     "description":"Поддержать разработчика"
+  },
+  "titelautostop":{
+    "message":"Автоматическая остановка",
+    "description":"Автоматическая остановка"
+  },
+  "desautostop":{
+    "message":"Остановить автоматическое воспроизведение видео, когда я открываю веб-страницу.",
+    "description":"Остановить автоматическое воспроизведение видео, когда я открываю веб-страницу."
+  },
+  "areyouhappy":{
+    "message":"Вы довольны Turn Off the Lights?",
+    "description":"Вы довольны Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Мы гарантируем, что Ваше мнение будет учтено",
+    "description":"Мы гарантируем, что Ваше мнение будет учтено"
+  },
+  "nothanks":{
+    "message":"Нет, спасибо",
+    "description":"Нет, спасибо"
+  },
+  "writeareview":{
+    "message":"Написать отзыв",
+    "description":"Написать отзыв"
+  },
+  "desauroraplayer":{
+    "message":"Для Вашего компьютера также доступен проигрыватель с возможностью рассеянного освещения.",
+    "description":"Для Вашего компьютера также доступен проигрыватель с возможностью рассеянного освещения."
+  },
+  "downloadtheapp":{
+    "message":"Скачайте приложение сейчас",
+    "description":"Скачайте приложение сейчас"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Для более комфортного чтения увеличивайте или уменьшайте содержимое страницы, используя кнопку масштабирования.",
+    "description":"Для более комфортного чтения увеличивайте или уменьшайте содержимое страницы, используя кнопку масштабирования."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Верните чёрную панель меню на веб-сайте Google.",
+    "description":"Верните чёрную панель меню на веб-сайте Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Это покажет Вам информацию фондового рынка в реальном времени.",
+    "description":"Это покажет Вам информацию фондового рынка в реальном времени."
+  },
+  "titelnightmodeposition":{
+    "message":"Изменить положение",
+    "description":"Изменить положение"
+  },
+  "nmtopleft":{
+    "message":"Сверху слева",
+    "description":"Сверху слева"
+  },
+  "nmtopright":{
+    "message":"Сверху справа",
+    "description":"Сверху справа"
+  },
+  "nmbottomright":{
+    "message":"Снизу справа",
+    "description":"Снизу справа"
+  },
+  "nmbottomleft":{
+    "message":"Снизу слева",
+    "description":"Снизу слева"
+  },
+  "nmcustom":{
+    "message":"Нажмите, удерживайте и переместите в удобное Вам место.",
+    "description":"Нажмите, удерживайте и переместите в удобное Вам место."
+  },
+  "desnighthover":{
+    "message":"Показывать прозрачный переключатель на веб-странице.",
+    "description":"Показывать прозрачный переключатель на веб-странице."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Белый список",
+    "description":"Белый список"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Чёрный список",
+    "description":"Чёрный список"
+  },
+  "desautostoponly":{
+    "message":"Активировать автоматическую остановку видео только на указанных сайтах:",
+    "description":"Активировать автоматическую остановку видео только на указанных сайтах:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Белый список",
+    "description":"Белый список"
+  },
+  "titelautostopblacklist":{
+    "message":"Чёрный список",
+    "description":"Чёрный список"
+  },
+  "desnightactivetime":{
+    "message":"Переключатель будет доступен в следующий период времени:",
+    "description":"Переключатель будет доступен в следующий период времени:"
+  },
+  "deslampandnightmode":{
+    "message":"Активируйте опцию 'Ночной режим' нажатием на кнопку серой лампочки.",
+    "description":"Активируйте опцию 'Ночной режим' нажатием на кнопку серой лампочки."
+  },
+  "titeleyewhitelist":{
+    "message":"Белый список",
+    "description":"Белый список"
+  },
+  "titeleyeblacklist":{
+    "message":"Чёрный список",
+    "description":"Чёрный список"
+  },
+  "desspeech5command":{
+    "message":"лампа браузера",
+    "description":"лампа браузера"
   }
 }

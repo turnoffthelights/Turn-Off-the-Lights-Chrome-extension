@@ -1,7 +1,7 @@
 {
   "pagehelp":{
-    "message":"Apua",
-    "description":"Apua"
+    "message":"ohjeet",
+    "description":"ohjeet"
   },
   "titelimage":{
     "message":"Taustakuva",
@@ -9,11 +9,11 @@
   },
   "shortcutalllights":{
     "message":"kytkeäksesi valot päälle\/pois kaikkilla avoimilla välilehdillä.",
-    "description":"Voit kytkeä valot päälle\/pois kaikki avoimet välilehdet."
+    "description":"kytkeäksesi valot päälle\/pois kaikkilla avoimilla välilehdillä."
   },
   "lastchecked":{
     "message":"Viimeisin versio tarkistettu",
-    "description":"Uusin versio tarkastetaan"
+    "description":"Viimeisin versio tarkistettu"
   },
   "visualeffects":{
     "message":"Visuaaliset tehosteet",
@@ -21,7 +21,7 @@
   },
   "titelshortcutlight":{
     "message":"Pikanäppäin",
-    "description":"Lyhytfilmi avain"
+    "description":"Pikanäppäin"
   },
   "titledonatebutton":{
     "message":"Lahjoita",
@@ -29,59 +29,59 @@
   },
   "titellikebar":{
     "message":"Tykkäyspalkki",
-    "description":"Kuten Baari"
+    "description":"Tykkäyspalkki"
   },
   "desmousespotlightt":{
-    "message":"Mahdollistaa napsautukset tummennetun näytön läpi valojen ollessa poissa päältä.",
-    "description":"Voit napsauttaa Tummennetussa näytössä, kun valot ovat pois päältä."
+    "message":"Mahdollistaa klikkaukset tummennetun näytön läpi valojen ollessa poissa päältä.",
+    "description":"Mahdollistaa klikkaukset tummennetun näytön läpi valojen ollessa poissa päältä."
   },
   "desambilight4color":{
     "message":"Neljä valinnaista väriä videon ympärillä:",
-    "description":"4 valittu värit ympärillä video:"
+    "description":"Neljä valinnaista väriä videon ympärillä:"
   },
   "lockentername":{
     "message":"Syötä salasanasi",
-    "description":"Kirjoita salasana"
+    "description":"Syötä salasanasi"
   },
   "desnoflash":{
     "message":"Älä käytä tätä ominaisuutta.",
     "description":"Älä käytä tätä ominaisuutta."
   },
   "desdynamicblocks":{
-    "message":"Kuutiot",
-    "description":"Lohkot"
+    "message":"Palikat",
+    "description":"Palikat"
   },
   "titeleye":{
     "message":"Silmien suojaus",
-    "description":"Silmiensuojaus"
+    "description":"Silmien suojaus"
   },
   "titelcinemaontop":{
     "message":"Elokuvateatteri-tila: valot pois -kerros näytetään vain ikkunan yläosassa.",
-    "description":"Elokuva teatteri moodi: se näyttää valot pois kerros vain ikkunan yläosassa."
+    "description":"Elokuvateatteri-tila: valot pois -kerros näytetään vain ikkunan yläosassa."
   },
   "desmousespotlightc":{
     "message":"Jos valot ovat poissa päältä, voit valita alueen, johon kohde tarkennetaan.",
-    "description":"Jos valo ei pala, voit valita alueen keskittyä kohteen."
+    "description":"Jos valot ovat poissa päältä, voit valita alueen, johon kohde tarkennetaan."
   },
   "titelrememberpage":{
-    "message":"Muista sivu",
-    "description":"Muista sivu"
+    "message":"Muista sivusto",
+    "description":"Muista sivusto"
   },
   "desmousespotlighta":{
     "message":"Jos valot ovat poissa päältä, näytä kohdevalo hiiren kursorin ympärillä.",
-    "description":"Jos valo ei pala, näyttää taskulampulla ympäri hiiren kursori."
+    "description":"Jos valot ovat poissa päältä, näytä kohdevalo hiiren kursorin ympärillä."
   },
   "desmousespotlighto":{
     "message":"Hiiren oletuskäyttäytyminen (poistaa alla olevat hiiren asetukset)",
-    "description":"Normaalissa käytössä (poistaa hiiren asetukset alla)"
+    "description":"Hiiren oletuskäyttäytyminen (poistaa alla olevat hiiren asetukset)"
   },
   "desplaylist":{
-    "message":"Näyttää YouTube soittolistan YouTube-sivustolla.",
-    "description":"Näytä YouTube soittolista YouTube-sivustolla."
+    "message":"Näyttää YouTube-soittolistan YouTube-sivustolla.",
+    "description":"Näyttää YouTube-soittolistan YouTube-sivustolla."
   },
   "desambilightfixcolor":{
     "message":"Tasainen väri:",
-    "description":"Yksivärinen:"
+    "description":"Tasainen väri:"
   },
   "desuntil":{
     "message":"kunnes",
@@ -92,16 +92,16 @@
     "description":"Vahvista salasana"
   },
   "desautoplayonly":{
-    "message":"Himmennä vain seuraavat videosivut:",
-    "description":"Hämärä vain seuraavat video alueen:"
+    "message":"Himmennä vain seuraavat videosivustot:",
+    "description":"Himmennä vain seuraavat videosivustot:"
   },
   "helpeyeprotection":{
     "message":"Silmien suojauksen käyttöönotto poistaa automaattisesti automaattisen toiston käytöstä.",
-    "description":"Silmien suojausta käyttöön jälkisäädös automaattisesti tehdä kykenemättömäksi Auto play-toiminto."
+    "description":"Silmien suojauksen käyttöönotto poistaa automaattisesti automaattisen toiston käytöstä."
   },
   "skipremember":{
     "message":"Ohita tämä ja avaa nyt asetussivu",
-    "description":"Ohita tämä ja avaa nyt vaihtoehto sivu"
+    "description":"Ohita tämä ja avaa nyt asetussivu"
   },
   "optiontimesaved":{
     "message":"Aika on tallennettu onnistuneesti!",
@@ -109,51 +109,51 @@
   },
   "titelvideoheadline":{
     "message":"Videon otsikko",
-    "description":"Videon nimi"
+    "description":"Videon otsikko"
   },
   "translateme":{
     "message":"Auta käännöstyössä",
-    "description":"Auta kääntämään"
+    "description":"Auta käännöstyössä"
   },
   "despassword":{
     "message":"Vaadi salasanaa ennen kuin valot pistetään takaisin päälle.",
-    "description":"Vaadi salasanaa käyttää ennenkuin valot takaisin päälle."
+    "description":"Vaadi salasanaa ennen kuin valot pistetään takaisin päälle."
   },
   "helpautoplay":{
-    "message":"Silmien suojaus on käytössä. Käyttääksesi alla olevia ominaisuuksia, poista silmien suojaus -toiminto käytöstä.",
-    "description":"Silmien suojaus on käytössä. Käyttää alla ominaisuus, poista silmät suojata."
+    "message":"Silmien suojaus on käytössä. Käyttääksesi alla olevia ominaisuuksia, poista Silmien suojaus -toiminto käytöstä.",
+    "description":"Silmien suojaus on käytössä. Käyttääksesi alla olevia ominaisuuksia, poista Silmien suojaus -toiminto käytöstä."
   },
   "name":{
-    "message":"Sammuta valot",
-    "description":"Sammuta valot"
+    "message":"Turn Off the Lights",
+    "description":"Turn Off the Lights"
   },
   "changelog":{
     "message":"Muutosloki",
-    "description":"changelog linkki"
+    "description":"changelog link"
   },
   "optionpagetitle":{
-    "message":"Turn Off the Lights - asetukset",
-    "description":"Vaihtoehto sivun otsikko"
+    "message":"Turn Off the Lights - Asetukset",
+    "description":"Asetussivun otsikko"
   },
   "optionpasswordsaved":{
-    "message":"Salasana on tallennettu onnistuneesti!",
-    "description":"Salasana on tallennettu onnistuneesti!"
+    "message":"Salasanasi on tallennettu onnistuneesti!",
+    "description":"Salasanasi on tallennettu onnistuneesti!"
   },
   "desdynamicspace":{
-    "message":"Kosmos",
-    "description":"Asettaa Kaikkeus"
+    "message":"Tila",
+    "description":"Tila"
   },
   "deseastereggs":{
-    "message":"Tämän laajennuksen bonus.",
-    "description":"Bonus tämän laajennuksen."
+    "message":"Klikkaamalla T-näppäintä, lisätään täyte \"teatteritilaan\".",
+    "description":"Klikkaamalla T-näppäintä, lisätään täyte \"teatteritilaan\"."
   },
   "settings":{
     "message":"Asetukset",
     "description":"Asetukset"
   },
   "desspotlightradius":{
-    "message":"on hakulampun halkaisija.",
-    "description":"on Etsi lampun halkaisija."
+    "message":"Hakulampun halkaisija on:",
+    "description":"Hakulampun halkaisija on:"
   },
   "titelsync":{
     "message":"Synkronointi",
@@ -161,15 +161,15 @@
   },
   "right":{
     "message":"oikea",
-    "description":"oikeus"
+    "description":"oikea"
   },
   "titeldynamic":{
-    "message":"Elävä tausta",
+    "message":"Dynaaminen tausta",
     "description":"Dynaaminen tausta"
   },
   "deslikebutton":{
-    "message":"Näytä Youtuben tykkää- & ei tykkää -painikkeet tälle videolle.",
-    "description":"Näytä vastaavat & pidä painikkeita YouTube video."
+    "message":"Näytä Youtuben Tykkää-painikkeet tälle videolle.",
+    "description":"Näytä Youtuben Tykkää-painikkeet tälle videolle."
   },
   "titelmouse":{
     "message":"Hiiri",
@@ -180,8 +180,8 @@
     "description":"Näytä vähemmän"
   },
   "desshortcutlight":{
-    "message":"Ota näppäinoikotiet käyttöön alta.",
-    "description":"Ota näppäinoikotiet alla."
+    "message":"Ota pikanäppäimet käyttöön alta.",
+    "description":"Ota pikanäppäimet käyttöön alta."
   },
   "titelinfobar":{
     "message":"Tietopalkki",
@@ -189,10 +189,10 @@
   },
   "descontextmenus":{
     "message":"Näytä sisältövalikko tarkentaaksesi kohteseen.",
-    "description":"Keskittyä kohteen pikavalikon näyttäminen."
+    "description":"Näytä sisältövalikko tarkentaaksesi kohteseen."
   },
   "titelcontextmenus":{
-    "message":"Sisältövalikko",
+    "message":"Asiayhteys Menu",
     "description":"Asiayhteys Menu"
   },
   "titelplaylist":{
@@ -200,8 +200,8 @@
     "description":"Soittolista"
   },
   "desatmosphereonly":{
-    "message":"Käytä tunnelmavalaistus-ominaisuutta vain seuraavilla videosivustoilla:",
-    "description":"Käytä tunnelma valaistus ominaisuus vain seuraavat video sivusto:"
+    "message":"Käytä Tunnelmavalaistus-ominaisuutta vain seuraavilla videosivustoilla:",
+    "description":"Käytä Tunnelmavalaistus-ominaisuutta vain seuraavilla videosivustoilla:"
   },
   "recflash":{
     "message":"Suositellut",
@@ -209,95 +209,95 @@
   },
   "desenterpassword":{
     "message":"Kirjoita salasanasi alla olevaan kenttään:",
-    "description":"Kirjoita salasana alla olevaan kenttään:"
+    "description":"Kirjoita salasanasi alla olevaan kenttään:"
   },
   "titelblurradius":{
     "message":"Sumennuksen säde",
-    "description":"Blur säde"
+    "description":"Sumennuksen säde"
   },
   "version":{
     "message":"Versio",
-    "description":"Version numeron teksti"
+    "description":"Version number text"
   },
   "shortcutdark":{
     "message":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä).",
-    "description":"tummentaa näytön (kasvu opasiteetti)."
+    "description":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä)."
   },
   "dessharebutton":{
     "message":"Näytä YouTuben jakopainikkeet tälle videolle.",
-    "description":"Näytä osuus painikkeita YouTube video."
+    "description":"Näytä YouTuben jakopainikkeet tälle videolle."
   },
   "shortcutbright":{
     "message":"kirkastaaksesi näyttöä (suurenna läpinäkyvyyttä).",
-    "description":"piristämään näytön (vähentää opasiteetti)."
+    "description":"kirkastaaksesi näyttöä (suurenna läpinäkyvyyttä)."
   },
   "titelalllightsoff":{
     "message":"Kaikki avoimet välilehdet",
     "description":"Kaikki avoimet välilehdet"
   },
   "desreadera":{
-    "message":"Näytä aina tummuustaso-palkki kun valot sammuvat.",
-    "description":"Näytä aina hämyisyys osoittava palkki, kun valot sammuvat."
+    "message":"Näytä aina tummuustasopalkki, kun valot sammuvat.",
+    "description":"Näytä aina tummuustasopalkki, kun valot sammuvat."
   },
   "rememberrate":{
     "message":"Arvostele",
-    "description":"Korko"
+    "description":"Arvostele"
   },
   "desautoplay":{
-    "message":"Automaattisesti himmentää taustan kun toista-painiketta painetaan, ja päinvastoin",
-    "description":"Himmentyvän automaattisesti taustalla, kun napsautat Toista-painiketta ja verrattuna."
+    "message":"Automaattisesti himmentää taustan kun Toista-painiketta painetaan, ja päinvastoin",
+    "description":"Automaattisesti himmentää taustan kun Toista-painiketta painetaan, ja päinvastoin"
   },
   "titelscreen":{
     "message":"Näyttö",
-    "description":"Näytön"
+    "description":"Näyttö"
   },
   "desflash":{
     "message":"Näytä kaikki Flash-objektit.",
-    "description":"Näytä kaikki Flash esineitä."
+    "description":"Näytä kaikki Flash-objektit."
   },
   "titelhead":{
     "message":"Kanava",
     "description":"Kanava"
   },
   "pageatitle":{
-    "message":"Sammuta valot",
-    "description":"Sammuta valot"
+    "message":"Turn Off the Lights",
+    "description":"Turn Off the Lights"
   },
   "desaddvideobutton":{
-    "message":"Näytä lisää-painike tälle YouTube-videolle.",
-    "description":"Näytä Lisää-painiketta tämän YouTube-video."
+    "message":"Näytä Lisää-painike tälle YouTube-videolle.",
+    "description":"Näytä Lisää-painike tälle YouTube-videolle."
   },
   "shortcuteyeprotection":{
-    "message":"ottaaksesi silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä.",
-    "description":"ottaa käyttöön\/poistaa silmien suojausominaisuus."
+    "message":"ottaaksesi Silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä.",
+    "description":"ottaaksesi Silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä."
   },
   "titelfadein":{
     "message":"Häivytä sisään",
-    "description":"Häivyttää"
+    "description":"Häivytä sisään"
   },
   "desreadern":{
     "message":"Älä näytä tummuustasopalkkia.",
-    "description":"Älä Näytä hämyisyys osoittava palkki."
+    "description":"Älä näytä tummuustasopalkkia."
   },
   "titelmaxqualityyoutube":{
     "message":"Aseta resoluutioksi automaattisesti:",
-    "description":"Arvoksi automaattisesti tämän päätöslauselman:"
+    "description":"Aseta resoluutioksi automaattisesti:"
   },
   "desambilightrangespreadradius":{
     "message":"Positiiviset arvot kasvattavat varjostuksen kokoa, negatiiviset pienentävät kokoa.",
-    "description":"Positiiviset arvot lisätä varjostuksen koon, negatiiviset arvot pienentää."
+    "description":"Positiiviset arvot kasvattavat varjostuksen kokoa, negatiiviset pienentävät kokoa."
   },
   "titelon":{
     "message":"Päällä",
-    "description":"Jäsenen"
+    "description":"Päällä"
   },
   "videotitle":{
     "message":"Tarkenna tämä video",
-    "description":"Keskittyä tämän videon"
+    "description":"Tarkenna tämä video"
   },
   "warningtextambilight":{
     "message":"Jos videotietojen vastaanotto ei toimi sivuston turvasääntöjen vuoksi, näytetään sen tilalla valittu tasainen väri.",
-    "description":"Jos ei voi vastaanottaa videotietojen takia sivuston suojaussääntöä, niin se näyttää haluamillesi yksivärinen sen sijaan."
+    "description":"Jos videotietojen vastaanotto ei toimi sivuston turvasääntöjen vuoksi, näytetään sen tilalla valittu tasainen väri."
   },
   "desdynamiccloud":{
     "message":"Animoidut pilvet",
@@ -305,31 +305,31 @@
   },
   "desconfirmtimesaver":{
     "message":"Vahvista näytönsäästäjän aika",
-    "description":"Vahvistaa Screen Saver"
+    "description":"Vahvista näytönsäästäjän aika"
   },
   "deslikebar":{
     "message":"Näytä tykkäyspalkki YouTube-videoiden alla.",
-    "description":"Näytä hotelli haluavat\/pidä palkki alla YouTube-videoita."
+    "description":"Näytä tykkäyspalkki YouTube-videoiden alla."
   },
   "titelautoplay":{
     "message":"Automaattinen toisto",
-    "description":"Automaattinen käynnistys"
+    "description":"Automaattinen toisto"
   },
   "top":{
     "message":"yläreuna",
-    "description":"alkuun"
+    "description":"yläreuna"
   },
   "titelspreadradius":{
     "message":"Leviämisen säde",
-    "description":"Levitä säde"
+    "description":"Leviämisen säde"
   },
   "installadblocker":{
-    "message":"Käytä Adblocker-laajennuksen kanssa.",
-    "description":"Käytä Adblocker tunnisteella."
+    "message":"Käytä Adblocker-laajennuksen kanssa",
+    "description":"Käytä Adblocker-laajennuksen kanssa"
   },
   "titelsharebutton":{
     "message":"Jakopainikkeet",
-    "description":"Jaa painikkeita"
+    "description":"Jakopainikkeet"
   },
   "titelcolor":{
     "message":"Väri",
@@ -341,11 +341,11 @@
   },
   "pagetitle":{
     "message":"Tummenna tämä sivu",
-    "description":"Tummentaa sivua"
+    "description":"Tummenna tämä sivu"
   },
   "titelambilight":{
     "message":"Tunnelmavalaistus",
-    "description":"Tunnelma valaistus"
+    "description":"Tunnelmavalaistus"
   },
   "titelshowmore":{
     "message":"Näytä lisää",
@@ -353,27 +353,27 @@
   },
   "desviewcount":{
     "message":"Näytä tämän videon katselujen lukumäärä.",
-    "description":"Näyttää näkymän tämän videon."
+    "description":"Näytä tämän videon katselujen lukumäärä."
   },
   "titelautowidthyoutube":{
     "message":"Aseta automaattisesti YouTube-soittimen koko suureksi.",
-    "description":"YouTube-soittimen arvoksi suurempi koko automaattisesti."
+    "description":"Aseta automaattisesti YouTube-soittimen koko suureksi."
   },
   "desconfirmtime":{
     "message":"Vahvista aika",
-    "description":"Vahvistaa"
+    "description":"Vahvista aika"
   },
   "titelupgrade":{
     "message":"Päivitä",
-    "description":"Päivitys"
+    "description":"Päivitä"
   },
   "lockwrongpassword":{
-    "message":"Väärä salasana, ole hyvä ja yritä uudestaan.",
-    "description":"Väärä salasana, yritä uudelleen."
+    "message":"Väärä salasana, yritä uudestaan.",
+    "description":"Väärä salasana, yritä uudestaan."
   },
   "titelsyncbrowser":{
     "message":"Synkronoi laajennuksen asetukset toisen selaimesi kanssa.",
-    "description":"Synkronoi laajennus laskeva avulla sinun jyrsiä."
+    "description":"Synkronoi laajennuksen asetukset toisen selaimesi kanssa."
   },
   "deletebutton":{
     "message":"Poista",
@@ -381,7 +381,7 @@
   },
   "eyedivon":{
     "message":"PÄÄLLÄ",
-    "description":"EDELLEEN"
+    "description":"PÄÄLLÄ"
   },
   "eyedivoff":{
     "message":"POIS",
@@ -389,35 +389,35 @@
   },
   "deshead":{
     "message":"Näytä YouTube-kanavapalkki tai nimi.",
-    "description":"Näytä YouTube kanavapalkin tai nimi."
+    "description":"Näytä YouTube-kanavapalkki tai nimi."
   },
   "shortcutsavingopacity":{
     "message":"tallentaaksesi tämän läpinäkyvyysarvon",
-    "description":"Tallenna tämä opasiteetti arvo"
+    "description":"tallentaaksesi tämän läpinäkyvyysarvon"
   },
   "desinfobar":{
     "message":"Näytä lisätiedot videosta.",
-    "description":"Näyttää videon kuvaus tietoja."
+    "description":"Näytä lisätiedot videosta."
   },
   "titellamp":{
     "message":"Hehkulamppu",
-    "description":"Polttimo"
+    "description":"Hehkulamppu"
   },
   "desambilightvarcolor":{
-    "message":"Ota väri videosta.",
-    "description":"Ottaa väri video."
+    "message":"Poimi väri videosta.",
+    "description":"Poimi väri videosta."
   },
   "showremember":{
-    "message":"ei näytä tätä muistutussivua uudelleen, kun avaan asetukset-sivun.",
-    "description":"ei Näytä muista sivua uudelleen avattaessa vaihtoehto sivu."
+    "message":"Ei näytä tätä muistutussivua uudelleen, kun avaan asetukset-sivun.",
+    "description":"Ei näytä tätä muistutussivua uudelleen, kun avaan asetukset-sivun."
   },
   "donatepromotext":{
     "message":"Jos voisit antaa lahjoituksen, olisin siitä valtavan kiitollinen!",
-    "description":"Jos teet lahjoituksen tahansa summan, arvostaisin sitä valtavasti!"
+    "description":"Jos voisit antaa lahjoituksen, olisin siitä valtavan kiitollinen!"
   },
   "titelblur":{
     "message":"Sumenna loput",
-    "description":"Blur loput"
+    "description":"Sumenna loput"
   },
   "desdynamicraindrops":{
     "message":"Sadepisarat",
@@ -425,83 +425,83 @@
   },
   "desalllightsoff":{
     "message":"Hehkulamppu-painike sytyttää ja sammuttaa valot kaikilta välilehdiltä, kun tämä valinta on käytössä.",
-    "description":"Lamp-painikkeella toggle valot päälle\/pois kaikki avoimet välilehdet, kun tämä asetus on käytössä."
+    "description":"Hehkulamppu-painike sytyttää ja sammuttaa valot kaikilta välilehdiltä, kun tämä valinta on käytössä."
   },
   "optionecosaversaved":{
     "message":"Sekunnit on tallennettu onnistuneesti!",
-    "description":"Sekuntia on tallennettu onnistuneesti!"
+    "description":"Sekunnit on tallennettu onnistuneesti!"
   },
   "titelreader":{
     "message":"Tummuustasopalkki",
-    "description":"Hämyisyys Level-Baari"
+    "description":"Tummuustasopalkki"
   },
   "deseyen":{
-    "message":"Normaali käyttö (valot sammuvat, kun napsautat hehkulamppu-kuvaketta).",
-    "description":"Normaalissa käytössä (valot sammuvat kun lamppu kuvaketta)."
+    "message":"Normaali käyttö (valot sammuvat, kun klikkaat hehkulamppu-kuvaketta).",
+    "description":"Normaali käyttö (valot sammuvat, kun klikkaat hehkulamppu-kuvaketta)."
   },
   "enjoyshare":{
-    "message":"Nauti tästä laajennuksesta ja jaa se myös niiden kanssa, joiden uskoisit pitävän siitä.",
-    "description":"Nauti tämä laajennus ja jakaa sen muiden kanssa, jotka arvostavat sitä, että."
+    "message":"Nauti tästä laajennuksesta ja jaa se myös muiden  kanssa, joiden uskoisit pitävän siitä.",
+    "description":"Nauti tästä laajennuksesta ja jaa se myös muiden  kanssa, joiden uskoisit pitävän siitä."
   },
   "shortcuttotl":{
     "message":"kytkeäksesi valot päälle\/pois.",
-    "description":"Voit kytkeä valot päälle\/pois."
+    "description":"kytkeäksesi valot päälle\/pois."
   },
   "deseyea":{
     "message":"Himmennä tausta automaattisesti, kun avaat sivun.",
-    "description":"Himmentyvän automaattisesti taustalla sivua avattaessa."
+    "description":"Himmennä tausta automaattisesti, kun avaat sivun."
   },
   "basicsettings":{
     "message":"Perusasiat",
-    "description":"Perusteet"
+    "description":"Perusasiat"
   },
   "hoveroptionapply":{
     "message":"käytä",
-    "description":"sovelletaan"
+    "description":"käytä"
   },
   "reportbug":{
-    "message":"Ilmoita tälle laajennukselle ilmennyt ongelma",
-    "description":"Ongelmasta ilmoittaminen"
+    "message":"Ilmoita tälle laajennukselle ilmennyt ongelmaa",
+    "description":"Ilmoita tälle laajennukselle ilmennyt ongelmaa"
   },
   "destime":{
-    "message":"Valot pois seuraavina aikoina:",
-    "description":"Valot pois välillä seuraavina aikoina:"
+    "message":"Lights off between the following hours:",
+    "description":"Lights off between the following hours:"
   },
   "guide":{
-    "message":"TOtL Tervetuloa-opas",
-    "description":"TOtL Tervetuloa opas"
+    "message":"TOtL Tervetuloa -opas",
+    "description":"TOtL Tervetuloa -opas"
   },
   "deseyealist":{
-    "message":"Himmennä tausta automaattisesti seuraavilla sivuilla:",
-    "description":"Himmentyvän automaattisesti taustalla, kun avataan seuraavia sivuja:"
+    "message":"Himmennä tausta automaattisesti seuraavilla sivustoilla:",
+    "description":"Himmennä tausta automaattisesti seuraavilla sivustoilla:"
   },
   "titellikebutton":{
-    "message":"Tykkää- & ei tykkää -painikkeet",
-    "description":"Kuten & pidä painikkeita"
+    "message":"Tykkäyspainikkeet",
+    "description":"Tykkäyspainikkeet"
   },
   "titelpageaction":{
-    "message":"Piilota hehkulamppu-kuvake",
-    "description":"Piilota pageaction kuvake"
+    "message":"Hide the lamp icon in the omnibox",
+    "description":"Hide the lamp icon in the omnibox"
   },
   "friendlyremember":{
     "message":"Ystävällinen muistutus...",
-    "description":"Ystävällinen muista..."
+    "description":"Ystävällinen muistutus..."
   },
   "desfadein":{
     "message":"Näytä himmennys sisään -tehoste.",
-    "description":"Näytä häivytyksen käytännössä."
+    "description":"Näytä himmennys sisään -tehoste."
   },
   "warning":{
-    "message":"Huomio!",
+    "message":"Varoitus!",
     "description":"Varoitus!"
   },
   "deseyetimesaver":{
     "message":"Kun sivu ei ole aktiivinen (ei hiiren tai näppäimistön syötettä) alla määriteltyyn aikaan, sivu tummenee automaattisesti.",
-    "description":"Kun sivu on passiivinen (ei hiirtä tai näppäimistöä lisäämisen) alla määritellyltä sivun automaattisesti pimenee."
+    "description":"Kun sivu ei ole aktiivinen (ei hiiren tai näppäimistön syötettä) alla määriteltyyn aikaan, sivu tummenee automaattisesti."
   },
   "titelsuggestions":{
     "message":"Ehdotukset",
-    "description":"Ehdotuksia"
+    "description":"Ehdotukset"
   },
   "advancedoptions":{
     "message":"Lisäasetukset",
@@ -509,43 +509,43 @@
   },
   "dessuggestions":{
     "message":"Näytä YouTube-sivuston ehdotukset.",
-    "description":"Näytä ehdotuksia YouTube-sivustolla."
+    "description":"Näytä YouTube-sivuston ehdotukset."
   },
   "titelflash":{
     "message":"Flash-tunnistus",
-    "description":"Flash havaitseminen"
+    "description":"Flash-tunnistus"
   },
   "desambilight":{
     "message":"Näytä tunnelmavalaistus yllä olevassa videossa.",
-    "description":"Näyttää nykyisen videon toistamisen tunnelma valaistuksesta."
+    "description":"Näytä tunnelmavalaistus yllä olevassa videossa."
   },
   "productshare":{
-    "message":"Jaa",
-    "description":"Osuus"
+    "message":"Gadgets",
+    "description":"Gadgets"
   },
   "addbutton":{
     "message":"Lisää",
     "description":"Lisää"
   },
   "reportlist":{
-    "message":"(näytä luettelo)",
-    "description":"Koko asiaa luettelo"
+    "message":"Viimeisin tunnettu ongelma",
+    "description":"See the full issue list"
   },
   "desdynamicfishtank":{
     "message":"Akvaario",
-    "description":"Kala säiliö"
+    "description":"Akvaario"
   },
   "longdonatetext":{
-    "message":"Olisin todella kiitollinen, jos voisit antaa minulle lahjoituksen pitääksesi tämän selainlaajennuksen aktiivisena uusille käyttäjille. Olkoon lahjoituksesi sitten €1 tai €100, on tukesi joka tapauksessa erittäin arvostettu!",
-    "description":"Olisin todella kiitollinen jos voit lahjoittaa minun pitää tämä selainlaajennus elossa uusille käyttäjille. Onko $$ 1 tai $100 dollaria, teidän tukenne on erittäin arvostettu!"
+    "message":"Olisin todella kiitollinen, jos voisit antaa minulle lahjoituksen pitääksesi tämän selainlaajennuksen aktiivisena uusille käyttäjille. Olkoon lahjoituksesi sitten 1 € tai 100 €, on tukesi joka tapauksessa erittäin arvostettu!",
+    "description":"Olisin todella kiitollinen, jos voisit antaa minulle lahjoituksen pitääksesi tämän selainlaajennuksen aktiivisena uusille käyttäjille. Olkoon lahjoituksesi sitten 1 € tai 100 €, on tukesi joka tapauksessa erittäin arvostettu!"
   },
   "deshardflash":{
     "message":"Näytä kaikki Flash-objektit ja ohita URL-suodatin. Tämä korjaa ongelmat joidenkin videosoittimien ollessa piilossa, mutta näyttää myös mainokset.",
-    "description":"Näytä kaikki Flash esineitä, Ohita URL-suodatin. Tämä korjaa ongelmia jotkut video soittimet on piilotettu, mutta myös näyttää mainoksia."
+    "description":"Näytä kaikki Flash-objektit ja ohita URL-suodatin. Tämä korjaa ongelmat joidenkin videosoittimien ollessa piilossa, mutta näyttää myös mainokset."
   },
   "desfadeout":{
     "message":"Näytä häivytä ulos -tehoste.",
-    "description":"Näytä fade out vaikutus."
+    "description":"Näytä häivytä ulos -tehoste."
   },
   "optionwrongimg":{
     "message":"Virheellinen kuvatiedosto!",
@@ -553,7 +553,7 @@
   },
   "desvideoheadline":{
     "message":"Näytä ja käännä videon otsikon värit.",
-    "description":"Näytä hotelli ja Vaihda väri videon nimi."
+    "description":"Näytä ja käännä videon otsikon värit."
   },
   "desrememberpage":{
     "message":"Jos tämä vaihtoehto on käytössä, muistutussivua ei avata.",
@@ -561,30 +561,30 @@
   },
   "description":{
     "message":"Koko sivu on himmentyy tummaksi, joten voit katsella videoita kuin olisit elokuvissa.",
-    "description":"Koko sivu on hiipumassa tummaan, joten voit katsella videon kuin olisit elokuva."
+    "description":"Koko sivu on himmentyy tummaksi, joten voit katsella videoita kuin olisit elokuvissa."
   },
   "titelviewcount":{
     "message":"Näyttökerrat",
-    "description":"Näkymien määrä"
+    "description":"Näyttökerrat"
   },
   "titelopacity":{
     "message":"Läpinäkyvyys",
-    "description":"Opasiteetti"
+    "description":"Läpinäkyvyys"
   },
   "titelqualityyoutube":{
     "message":"Aseta YouTube-videoiden laatu automaattisesti.",
-    "description":"Automaattisesti asettaa laatu YouTube videoita."
+    "description":"Aseta YouTube-videoiden laatu automaattisesti."
   },
   "shortcutopacity":{
     "message":"palauttaaksesi hämäryysasetuksen (läpinäkyvyys).",
-    "description":"palauttaminen asetettu pimeys (opasiteetti) asettaminen."
+    "description":"palauttaaksesi hämäryysasetuksen (läpinäkyvyys)."
   },
   "desambilightrangeblurradius":{
     "message":"Matalammilla arvoilla varjo on terävä. Mitä korkeampi arvo, sitä sumeampi varjo.",
-    "description":"Jos asettaa alempi arvo varjo on terävä, mitä enemmän, enemmän hämärtyminen on."
+    "description":"If set a lower value the shadow will be sharp, the higher the number, the more blurred it will be."
   },
   "titeladdvideobutton":{
-    "message":"Lisää soittolistaan",
+    "message":"Lisää-painike",
     "description":"Lisää-painike"
   },
   "titelpassword":{
@@ -593,31 +593,31 @@
   },
   "titeldownloadupgrade":{
     "message":"Päivitys lisää tuen valittuihin kuviin tarkentamiselle ja näyttää kuvagalleriat sivustolla.",
-    "description":"Päivitys lisää tuen keskittyen valitut kuvat ja näyttää galleria kuvia sivuston."
+    "description":"Päivitys lisää tuen valittuihin kuviin tarkentamiselle ja näyttää kuvagalleriat sivustolla."
   },
   "titelfadeout":{
     "message":"Häivytä ulos",
-    "description":"Häivyttää"
+    "description":"Häivytä ulos"
   },
   "eastereggsquestion":{
     "message":"Pidätkö oikeista elokuvateattereista?",
-    "description":"Pidätkö todellinen elokuvateatteri?"
+    "description":"Pidätkö oikeista elokuvateattereista?"
   },
   "bottom":{
     "message":"alareuna",
-    "description":"alhaalta"
+    "description":"alareuna"
   },
   "dessaver":{
     "message":"Näytönsäästäjä:",
     "description":"Näytönsäästäjä:"
   },
   "hoveroptiondyn5":{
-    "message":"lentävän kanssa",
-    "description":"flying kanssa"
+    "message":"with flying",
+    "description":"with flying"
   },
   "pagestillloading":{
     "message":"Latautuuko sivu vielä?",
-    "description":"Sivu latautuu vielä?"
+    "description":"Latautuuko sivu vielä?"
   },
   "titeloff":{
     "message":"Pois",
@@ -625,31 +625,31 @@
   },
   "titeleastereggs":{
     "message":"Pääsiäismunat",
-    "description":"Pääsiäismunia"
+    "description":"Pääsiäismunat"
   },
   "textfoot":{
     "message":"Tämä ohjelmisto on lisensoitu CC-GNU GPL:n alaisuudessa. Jos haluat nähdä kopion tästä lisenssistä, käy osoitteessa",
-    "description":"Tämä ohjelmisto on lisensoitu CC-GNU GPL. Voit tarkastella tämän Käyttöoikeussopimuksen kopio"
+    "description":"Tämä ohjelmisto on lisensoitu CC-GNU GPL:n alaisuudessa. Jos haluat nähdä kopion tästä lisenssistä, käy osoitteessa"
   },
   "left":{
     "message":"vasen",
-    "description":"vasemmalle"
+    "description":"vasen"
   },
   "titelnighttheme":{
     "message":"Yötila",
     "description":"Yötila"
   },
   "desnighttheme":{
-    "message":"Näytä yötilakytkin nettisivun alla tehdäksesi sivun tummaksi tai valoisaksi.",
-    "description":"Näytä yötilakytkin nettisivun alla tehdäksesi sivun tummaksi tai valoisaksi."
+    "message":"Näytä Yötila-kytkin nettisivun alla tehdäksesi sivun tummaksi tai valoisaksi.",
+    "description":"Näytä Yötila-kytkin nettisivun alla tehdäksesi sivun tummaksi tai valoisaksi."
   },
   "nightoptions":{
     "message":"Yötila",
     "description":"Yötila"
   },
   "desnightonly":{
-    "message":"Näytä yötila vain seuraavillla sivustoilla:",
-    "description":"Näytä yötila vain seuraavillla sivustoilla:"
+    "message":"Näytä Yötila vain seuraavillla sivustoilla:",
+    "description":"Näytä Yötila vain seuraavillla sivustoilla:"
   },
   "desnightenabletheme":{
     "message":"Kun avaat uuden sivun, se menee automaattisesti yötilaan.",
@@ -660,12 +660,12 @@
     "description":"Näytä hehkulamppu-kuvake aina osoitekentän vieressä"
   },
   "titellampvideo":{
-    "message":"Näytä hehkulamppu-kuvake vain, kun löydät videosoittimen",
-    "description":"Näytä hehkulamppu-kuvake vain, kun löydät videosoittimen"
+    "message":"Näytä hehkulamppu-kuvake vain, kun videosoitin havaittu",
+    "description":"Näytä hehkulamppu-kuvake vain, kun videosoitin havaittu"
   },
   "upgradecontexttitle":{
-    "message":"Olemme lisänneet sinulle joitakin uusia ominaisuuksia",
-    "description":"Olemme lisänneet sinulle joitakin uusia ominaisuuksia"
+    "message":"Olemme lisänneet joitakin uusia ominaisuuksia",
+    "description":"Olemme lisänneet joitakin uusia ominaisuuksia"
   },
   "upgradecontextmessage":{
     "message":"Joka tekee tästä laajennuksesta vielä hämmästyttävämmän",
@@ -688,16 +688,16 @@
     "description":"Ohjaa nettisivua tarkemmin"
   },
   "upgradefbshare":{
-    "message":"Facebook-jako",
-    "description":"Facebook-jako"
+    "message":"Jaa Facebookissa",
+    "description":"Jaa Facebookissa"
   },
   "upgradetwshare":{
     "message":"Twiittaa",
     "description":"Twiittaa"
   },
   "ratetitle":{
-    "message":"Arvioi & arvostele laajennukseni",
-    "description":"Arvioi & arvostele laajennukseni"
+    "message":"Arvioi ja arvostele laajennukseni",
+    "description":"Arvioi ja arvostele laajennukseni"
   },
   "ratedes":{
     "message":"Ja kerro kaikille tästä hienosta laajennuksesta!",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Ota käyttöön kameraliike himmentääksesi nettisivun käden alaspäin pyyhkäisyllä.",
-    "description":"Kameraliike"
+    "description":"Ota käyttöön kameraliike himmentääksesi nettisivun käden alaspäin pyyhkäisyllä."
   },
   "trymotion":{
     "message":"Kokeile sitä itse!",
@@ -816,8 +816,8 @@
     "description":"Valitse puhealueesi:"
   },
   "desatmosvivid":{
-    "message":"Elävät tunnelmatehosteet YouTubessa, tarvitaan",
-    "description":"Elävät tunnelmatehosteet YouTubessa, tarvitaan"
+    "message":"Elävät tunnelmatehosteet YouTubessa vaativat",
+    "description":"Elävät tunnelmatehosteet YouTubessa vaativat"
   },
   "help":{
     "message":"Apua",
@@ -902,5 +902,149 @@
   "titelwikiatmos":{
     "message":"Tunnelmavalaistus-ominaisuuden wiki",
     "description":"Tunnelmavalaistus-ominaisuuden wiki"
+  },
+  "sharemenusharetitle":{
+    "message":"Jaa tämä",
+    "description":"Jaa tämä"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Tervetuloa-opas",
+    "description":"Tervetuloa-opas"
+  },
+  "sharemenutellafriend":{
+    "message":"Kerro kaverille",
+    "description":"Kerro kaverille"
+  },
+  "sharemenusendatweet":{
+    "message":"Lähetä twiitti",
+    "description":"Lähetä twiitti"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Viesti Facebook",
+    "description":"Viesti Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Viestistä Google +",
+    "description":"Viestistä Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Arvostele tämä laajennus",
+    "description":"Arvostele tämä laajennus"
+  },
+  "sharemenudonatetitle":{
+    "message":"Tue kehitystä",
+    "description":"Tue kehitystä"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensures that your opinion counts",
+    "description":"Ensures that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Click, hold and move it to your own screen location.",
+    "description":"Click, hold and move it to your own screen location."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Valkoinen lista",
+    "description":"Valkoinen lista"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Musta lista",
+    "description":"Musta lista"
+  },
+  "desautostoponly":{
+    "message":"Activate the stop playing automatically the video only on the following site(s):",
+    "description":"Activate the stop playing automatically the video only on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Valkoinen lista",
+    "description":"Valkoinen lista"
+  },
+  "titelautostopblacklist":{
+    "message":"Musta lista",
+    "description":"Musta lista"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Valkoinen lista",
+    "description":"Valkoinen lista"
+  },
+  "titeleyeblacklist":{
+    "message":"Musta lista",
+    "description":"Musta lista"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
   }
 }

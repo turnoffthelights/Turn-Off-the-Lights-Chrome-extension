@@ -904,12 +904,12 @@
     "description":"Wiki about the Atmosphere Lighting feature"
   },
   "sharemenusharetitle":{
-    "message":"Share this",
-    "description":"Share this"
+    "message":"இதை பகிர",
+    "description":"இதை பகிர"
   },
   "sharemenuwelcomeguidetitle":{
-    "message":"Welcome Guide",
-    "description":"Welcome Guide"
+    "message":"வரவேற்பு வழிகாட்டி",
+    "description":"வரவேற்பு வழிகாட்டி"
   },
   "sharemenutellafriend":{
     "message":"Tell a Friend",
@@ -940,8 +940,8 @@
     "description":"AutoStop"
   },
   "desautostop":{
-    "message":"Stop playing automatically the video when I open a web page.",
-    "description":"Stop playing automatically the video when I open a web page."
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
   },
   "areyouhappy":{
     "message":"Are you happy about Turn Off the Lights?",
@@ -964,8 +964,8 @@
     "description":"The ambient lighting player is also available for your computer."
   },
   "downloadtheapp":{
-    "message":"Download Now the app",
-    "description":"Download Now the app"
+    "message":"Download the app now",
+    "description":"Download the app now"
   },
   "titeldownloadupgradezoom":{
     "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
@@ -976,12 +976,12 @@
     "description":"Add back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
-    "message":"This show you the real time stock market information.",
-    "description":"This show you the real time stock market information."
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
   },
   "titelnightmodeposition":{
-    "message":"Switch position",
-    "description":"Switch position"
+    "message":"Position of switch",
+    "description":"Position of switch"
   },
   "nmtopleft":{
     "message":"Top left",

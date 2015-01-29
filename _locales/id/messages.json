@@ -128,7 +128,7 @@
     "description":"Mematikan lampu"
   },
   "changelog":{
-    "message":"Daftar perubahan",
+    "message":"Changelog",
     "description":"Changelog link"
   },
   "optionpagetitle":{
@@ -140,7 +140,7 @@
     "description":"Sandi yang disimpan berhasil!"
   },
   "desdynamicspace":{
-    "message":"Alam Semesta",
+    "message":"Ruang",
     "description":"Ruang alam semesta"
   },
   "deseastereggs":{
@@ -196,7 +196,7 @@
     "description":"Menu konteks"
   },
   "titelplaylist":{
-    "message":"Playlist",
+    "message":"Daftar Putar",
     "description":"Playlist"
   },
   "desatmosphereonly":{
@@ -420,7 +420,7 @@
     "description":"Kabur sisanya"
   },
   "desdynamicraindrops":{
-    "message":"Hujan",
+    "message":"Rintik hujan",
     "description":"Hujan"
   },
   "desalllightsoff":{
@@ -934,5 +934,117 @@
   "sharemenudonatetitle":{
     "message":"Dukung Pengembangan",
     "description":"Dukung Pengembangan"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Berhenti memutar video secara otomatis saat saya membuka laman web.",
+    "description":"Berhenti memutar video secara otomatis saat saya membuka laman web."
+  },
+  "areyouhappy":{
+    "message":"Apakah anda senang dengan Turn Off the Lights?",
+    "description":"Apakah anda senang dengan Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Pastikan opini anda benar",
+    "description":"Pastikan opini anda benar"
+  },
+  "nothanks":{
+    "message":"Tidak terima kasih",
+    "description":"Tidak terima kasih"
+  },
+  "writeareview":{
+    "message":"Tulis ulasan",
+    "description":"Tulis ulasan"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Unduh app sekarang",
+    "description":"Unduh app sekarang"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Perbesar atau perkecil  pada konten laman menggunakan tombol zoom untuk membaca lebih nyaman.",
+    "description":"Perbesar atau perkecil  pada konten laman menggunakan tombol zoom untuk membaca lebih nyaman."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Tambah tombol kembali pada menubar hitam di situs Google.",
+    "description":"Tambah tombol kembali pada menubar hitam di situs Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Tukar posisi",
+    "description":"Tukar posisi"
+  },
+  "nmtopleft":{
+    "message":"Kiri atas",
+    "description":"Kiri atas"
+  },
+  "nmtopright":{
+    "message":"Kanan atas",
+    "description":"Kanan atas"
+  },
+  "nmbottomright":{
+    "message":"Kanan bawah",
+    "description":"Kanan bawah"
+  },
+  "nmbottomleft":{
+    "message":"Kiri bawah",
+    "description":"Kiri bawah"
+  },
+  "nmcustom":{
+    "message":"klik, tahan dan geser ke lokasi layar anda.",
+    "description":"klik, tahan dan geser ke lokasi layar anda."
+  },
+  "desnighthover":{
+    "message":"Tunjukkan transparent switch pada laman.",
+    "description":"Tunjukkan transparent switch pada laman."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Aktifkan fungsi berhenti putar otomatis video hanya di situs berikut:\n",
+    "description":"Aktifkan fungsi berhenti putar otomatis video hanya di situs berikut:\n"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"Tombol akan terlihat pada waktu-waktu berikut:",
+    "description":"Tombol akan terlihat pada waktu-waktu berikut:"
+  },
+  "deslampandnightmode":{
+    "message":"Aktifkan 'Night Mode' saat anda klik pada tombol lampu abu-abu.",
+    "description":"Aktifkan 'Night Mode' saat anda klik pada tombol lampu abu-abu."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"Lampu peramban",
+    "description":"Lampu peramban"
   }
 }

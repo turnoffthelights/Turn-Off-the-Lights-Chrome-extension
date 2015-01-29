@@ -112,7 +112,7 @@ do {
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 }
 
-// Show YouTube Suggestions
+// Shows YouTube Suggestions
 if(suggestions == 'true'){
 var watch7sidebar = $('watch7-sidebar');  // new youtube watch7
 if(watch7sidebar){$('watch7-sidebar').style.zIndex = '1000';}
@@ -121,31 +121,13 @@ var watchsidebar = $('watch-sidebar');
 if(watchsidebar){$('watch-sidebar').style.zIndex = '1000';}
 }
 
-// Show YouTube playlist
-var watch7playlisttraymask = $('watch7-playlist-tray-mask');  // new youtube watch7
-if(watch7playlisttraymask){$('watch7-playlist-tray-mask').style.cssText = 'visibility:visible !important; position:absolute !important; z-index:auto !important';}
-
+// Shows YouTube playlist
 if(playlist == 'true'){
-/* watch7 show the playlist */
-div = document.getElementsByTagName('div'); 
-for(var i = 0; i < div.length; i++ )
-{if(div[i].className == ('watch7-playlist-bar')) {div[i].style.zIndex = 1001;}}
-
-var watch7playlisttraycontainer = $('watch7-playlist-tray-container');  // new youtube september 2013
-if(watch7playlisttraycontainer){$('watch7-playlist-tray-container').style.zIndex = 1001;}
-
-var watch7playlistcontainer = $('watch7-playlist-container');  // new youtube watch7
-if(watch7playlistcontainer){$('watch7-playlist-container').style.zIndex = 1001;$('watch7-playlist-container').style.position = 'relative';}
-
-// new YouTube playlist (my feeds) 
-var quicklist = $('quicklist');
-if(quicklist){$('quicklist').style.zIndex = 1001;}
-
-var playlistbar = $('playlist-bar');
-if(playlistbar){$('playlist-bar').style.zIndex = 1001;}
+var watchappbarplaylist = $('watch-appbar-playlist');
+if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = 1001;}
 }
 
-// Show video title
+// Shows video title
 if(videoheadline == 'true'){
 var watchheadlinetitle = $('watch-headline-title');  // new youtube watch7
 if(watchheadlinetitle){$('watch-headline-title').style.zIndex = 1001;$('watch-headline-title').style.position = 'relative';}
@@ -158,38 +140,23 @@ var eowtitle = $('eow-title');
 if(eowtitle){$('eow-title').style.color = 'white';$('eow-title').style.zIndex = 1001;$('eow-title').style.position = 'relative';}
 }
 
-// Show YouTube Channel name
+// Shows YouTube Channel name
 if(head == 'true'){
-a = document.getElementsByTagName('a');
-for(var i = 0; i < a.length; i++ ) 
-{if(a[i].className == ('yt-user-photo ') ) {a[i].style.zIndex = 1000;a[i].style.position = 'relative';}}
+var watch7userheader = $('watch7-user-header');
+if(watch7userheader){$('watch7-user-header').style.zIndex = 1000;$('watch7-user-header').style.position = 'relative';}
 
-a = document.getElementsByTagName('a');
-for(var i = 0; i < a.length; i++ ) 
-{if(a[i].className == ('g-hovercard yt-uix-sessionlink yt-user-name ') ) {a[i].style.zIndex = 1000;a[i].style.position = 'relative';}}
-
-a = document.getElementsByTagName('a');
-for(var i = 0; i < a.length; i++ ) 
-{if(a[i].className == ('yt-uix-sessionlink yt-user-videos') ) {a[i].style.zIndex = 1000;a[i].style.position = 'relative';}}
-
-var subcontainer = $('watch7-subscription-container');
-if(subcontainer){$('watch7-subscription-container').style.zIndex = 1000;$('watch7-subscription-container').style.position = 'relative';}
-}
-
-// Show Infobar
-if(infobar == 'true'){
-var watch7actionpanels = $('watch7-action-panels');
-if(watch7actionpanels){$('watch7-action-panels').style.zIndex = 1000;$('watch7-action-panels').style.background = 'white';}
-
-var watchinfo = $('watch-info');
-if(watchinfo){$('watch-info').style.zIndex = 1000;$('watch-info').style.position = 'relative';$('watch-info').style.background = 'white';}
-
-div = document.getElementsByTagName('div'); 
+div = document.getElementsByTagName('a'); 
 for(var i = 0; i < div.length; i++ )
-{if(div[i].className == ('watch-expander-head yt-uix-expander-head yt-rounded')) {div[i].style.zIndex = 1000;div[i].style.visibility = 'visible';div[i].style.position = 'relative';div[i].style.background = 'white'; }}
+{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = 'white';}}
 }
 
-// Show like and unlike buttons
+// Shows Infobar
+if(infobar == 'true'){
+var watchdescription = $('watch-description');
+if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-description').style.background = 'white';}
+}
+
+// Shows like and unlike buttons
 if(likebutton == 'true'){
 var watchdislike = $('watch-dislike'); // new youtube watch7
 if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
@@ -201,39 +168,26 @@ var watchunlike = $('watch-unlike');
 if(watchunlike){$('watch-unlike').style.zIndex = 1000;$('watch-unlike').style.position = 'relative';}
 }
 
-// Show share buttons
+// Shows share buttons
 if(sharebutton == 'true'){
-var watch7secondaryactions = $('watch7-secondary-actions'); // new youtube watch7
-if(watch7secondaryactions){$('watch7-secondary-actions').style.zIndex = 1000;$('watch7-secondary-actions').style.position = 'relative';$('watch7-secondary-actions').style.background = 'white';}
-
-var watchshare = $('watch-share');
-if(watchshare){$('watch-share').style.zIndex = 1000;$('watch-share').style.position = 'relative';}
+var elems = document.getElementsByTagName('button'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trigger-share') > -1) {elems[i].style.zIndex = 1001;elems[i].style.position = "relative";elems[i].style.background = "white";}}
 }
 
-// Show view count
+// Shows view count
 if(viewcount == 'true'){
-span = document.getElementsByTagName('span'); 
-for(var i = 0; i < span.length; i++ )
-{if(span[i].className == ('watch-view-count ')) {span[i].style.color = 'white';span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
-
-var watch7viewsinfo = $('watch7-views-info'); // new youtube watch7 september 2013
-if(watch7viewsinfo){$('watch7-views-info').style.zIndex = 1000;$('watch7-views-info').style.color = 'white';}
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ )
+{if(div[i].className == ('watch-view-count')) {div[i].style.color = 'white';div[i].style.zIndex = 1001;}}
 }
 
-// Show add button
+// Shows add button
 if(addvideobutton == 'true'){
-var watch7secondaryactions = $('watch7-secondary-actions'); // new youtube watch7
-if(watch7secondaryactions){$('watch7-secondary-actions').style.zIndex = 1000;$('watch7-secondary-actions').style.position = 'relative';$('watch7-secondary-actions').style.background = 'white';}
-
-var watchaddtobutton = $('watch-addto-button');
-if(watchaddtobutton){$('watch-addto-button').style.zIndex = 1000;$('watch-addto-button').style.position = 'relative';}
-
-button = document.getElementsByTagName('button'); 
-for(var i = 0; i < button.length; i++ )
-{if(button[i].className == ('yt-uix-tooltip-reverse  yt-uix-button yt-uix-button-default yt-uix-tooltip')) {button[i].style.zIndex = 1001;button[i].style.position = 'relative';}}
+var elems = document.getElementsByTagName('button'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trigger-addto') > -1) {elems[i].style.zIndex = 1001;elems[i].style.position = "relative";elems[i].style.background = "white";}}
 }
 
-// Show like/dislike bar
+// Shows like/dislike bar
 if(likebar == 'true'){
 div = document.getElementsByTagName('div');  // new youtube watch7
 for(var i = 0; i < div.length; i++ )
@@ -299,7 +253,7 @@ for (var conf in data) {
 var divs = document.getElementsByTagName('div');
 for (var div in divs) {
         var c = divs[div].className;
-        if (c == 'video-controls' || c == 'html5-video-controls' || c == 'html5-video-controls ytp-block-autohide' || c == 'html5-video-controls disabled-control-seek') {
+        if (c == 'video-controls' || c == 'html5-video-controls' || c == 'html5-video-controls ytp-block-autohide' || c == 'html5-video-controls disabled-control-seek' || c =='html5-video-content') {
                 divs[div].style.zIndex = 1001;
                 divs[div].style.visibility = 'visible';
         }
@@ -346,8 +300,6 @@ for(var i = 0; i < websiteclassapi.length; i++ ){websiteclassapi[i].cssText = 'v
 // default html5 video detection
 video = document.getElementsByTagName('video');
 for(var i = 0; i < video.length; i++) {
-// other file then "mp3" then run this code
-if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
 
 var path = [];
 var el = video[i];
@@ -363,6 +315,8 @@ do {
 	else{el.style.zIndex = 'auto';}
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 
+// other file then "mp3" then run this code
+if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
 
 }
 
@@ -790,6 +744,9 @@ if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideop
 		{if(span[i].className == ('watch-view-count ')) {span[i].style.color = '#333';span[i].style.zIndex = 'auto';span[i].style.position = 'relative';}}
 		var watch7viewsinfo = $('watch7-views-info'); // new youtube watch7 september 2013
 		if(watch7viewsinfo){$('watch7-views-info').style.zIndex = 'auto';$('watch7-views-info').style.color = '#333';}
+		div = document.getElementsByTagName('a'); 
+		for(var i = 0; i < div.length; i++ )
+		{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = '#333';}}
 	}
 	
 	function removenewframe() {
@@ -892,12 +849,12 @@ var i18nlockwrongpassword = chrome.i18n.getMessage("lockwrongpassword");
 function taart(){
 var pwon2 = $('stefanvdlightareoffpw');
 	if(pwon2){
-		var entername = prompt(i18nlockentername,'');
+		var entername = window.prompt(i18nlockentername,'');
 		if(enterpassword == entername){
 		document.body.removeChild(pwon2);
 		if(fadeout == 'true'){ReducingFinished = false;fader('hide');reader();} 
 		else {removenewframe();reader();}
-		} else {alert(i18nlockwrongpassword);}	
+		} else {window.alert(i18nlockwrongpassword);}	
 	} else {
 		if(fadeout == 'true'){ReducingFinished = false;fader('hide');reader();}
 		else {removenewframe();reader();}
@@ -909,8 +866,8 @@ var pwon2 = $('stefanvdlightareoffpw');
 var pwon = $('stefanvdlightareoffpw');
 if(password == 'true'){
 	if(pwon){
-		var entername = prompt(i18nlockentername,'');
-		if(enterpassword == entername){document.body.removeChild(pwon);lightsgoonoroff();} else {alert(i18nlockwrongpassword);}	
+		var entername = window.prompt(i18nlockentername,'');
+		if(enterpassword == entername){document.body.removeChild(pwon);lightsgoonoroff();} else {window.alert(i18nlockwrongpassword);}	
 	} else {
 		lightsgoonoroff();
 	    var newpw = document.createElement("div");

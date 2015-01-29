@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Cho phép máy ảnh chuyển động để các trang web có thể tối với một quá trình quét tay xuống.",
-    "description":"Chuyển động camera"
+    "description":"Cho phép máy ảnh chuyển động để các trang web có thể tối với một quá trình quét tay xuống."
   },
   "trymotion":{
     "message":"Tự thử nó!",
@@ -902,5 +902,149 @@
   "titelwikiatmos":{
     "message":"Wiki về các tính năng chiếu sáng bầu không khí",
     "description":"Wiki về các tính năng chiếu sáng bầu không khí"
+  },
+  "sharemenusharetitle":{
+    "message":"Chia sẻ điều này",
+    "description":"Chia sẻ điều này"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Chào mừng bạn đến với mục hướng dẫn",
+    "description":"Chào mừng bạn đến với mục hướng dẫn"
+  },
+  "sharemenutellafriend":{
+    "message":"Giới thiệu với bạn bè",
+    "description":"Giới thiệu với bạn bè"
+  },
+  "sharemenusendatweet":{
+    "message":"Gửi một Tweet",
+    "description":"Gửi một Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Đăng trên Facebook",
+    "description":"Đăng trên Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Đăng trên Google +",
+    "description":"Đăng trên Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Đánh giá tiện ích mở rộng này",
+    "description":"Đánh giá tiện ích mở rộng này"
+  },
+  "sharemenudonatetitle":{
+    "message":"Hỗ trợ người phát triển",
+    "description":"Hỗ trợ người phát triển"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensures that your opinion counts",
+    "description":"Ensures that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Click, hold and move it to your own screen location.",
+    "description":"Click, hold and move it to your own screen location."
+  },
+  "desnighthover":{
+    "message":"Show the transparent switch on the web page.",
+    "description":"Show the transparent switch on the web page."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Danh sách trắng",
+    "description":"Danh sách trắng"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Danh sách đen",
+    "description":"Danh sách đen"
+  },
+  "desautostoponly":{
+    "message":"Activate the stop playing automatically the video only on the following site(s):",
+    "description":"Activate the stop playing automatically the video only on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Danh sách trắng",
+    "description":"Danh sách trắng"
+  },
+  "titelautostopblacklist":{
+    "message":"Danh sách đen",
+    "description":"Danh sách đen"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Danh sách trắng",
+    "description":"Danh sách trắng"
+  },
+  "titeleyeblacklist":{
+    "message":"Danh sách đen",
+    "description":"Danh sách đen"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
   }
 }
