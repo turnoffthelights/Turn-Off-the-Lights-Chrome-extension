@@ -904,12 +904,12 @@
     "description":"Wiki about the Atmosphere Lighting feature"
   },
   "sharemenusharetitle":{
-    "message":"இதை பகிர",
-    "description":"இதை பகிர"
+    "message":"Share this",
+    "description":"Share this"
   },
   "sharemenuwelcomeguidetitle":{
-    "message":"வரவேற்பு வழிகாட்டி",
-    "description":"வரவேற்பு வழிகாட்டி"
+    "message":"Welcome Guide",
+    "description":"Welcome Guide"
   },
   "sharemenutellafriend":{
     "message":"Tell a Friend",

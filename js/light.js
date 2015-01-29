@@ -259,7 +259,6 @@ for (var div in divs) {
         }
 }
 
-
 // YouTube show sub titel
 var subtitel = document.getElementsByTagName('div');
 for(var i = 0; i < subtitel.length; i++ )
@@ -273,6 +272,10 @@ for(var i = 0; i < ytbezel.length; i++ )
 var admedia = document.getElementsByTagName('div');
 for(var i = 0; i < admedia.length; i++ )
 {if(admedia[i].className == ('ad-container ad-container-single-media-element')) {admedia[i].style.zIndex = 1001;}}
+
+var admediaanno = document.getElementsByTagName('div');
+for(var i = 0; i < admediaanno.length; i++ )
+{if(admediaanno[i].className == ('ad-container ad-container-single-media-element-annotations')) {admediaanno[i].style.zIndex = 1001;}}
 
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName('div');
