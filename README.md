@@ -17,7 +17,7 @@ Available for Windows Internet Explorer:
 http://www.iegallery.com/Addons/Details/12490
 
 Available for Maxthon:
-https://addons.mozilla.org/firefox/addon/turn-off-the-lights/
+http://extension.maxthon.com/detail/index.php?view_id=1813
 
 
 Please use and enjoy it, and if you can make a donation of any amount, I'd appreciate it immensely
