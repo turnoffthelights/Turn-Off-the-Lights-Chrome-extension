@@ -328,7 +328,7 @@ chrome.storage.local.get(['ambilightrangeblurradius'], function(items){
 });
 
 chrome.storage.local.get(['ambilightrangespreadradius'], function(items){
-	if(items['ambilightrangespreadradius']) default_arangeblur = items['ambilightrangespreadradius'];
+	if(items['ambilightrangespreadradius']) default_arangespread = items['ambilightrangespreadradius'];
 });
 
 chrome.storage.local.get(['ambilightvarcolor', 'ambilightfixcolor', 'ambilight4color'], function(items){ // find no localstore atmos
@@ -537,10 +537,10 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		if(items['addvideobutton'] == 'true')$('addvideobutton').checked = true;
 		if(items['likebar'] == 'true')$('likebar').checked = true;
 		if(items['ambilight'] == 'true')$('ambilight').checked = true;
-		if(items['ambilightrangeblurradius'])$('ambilightrangeblurradius').value = items['ambilightrangeblurradius'];
-		else $('ambilightrangeblurradius').value = 70;
-		if(items['ambilightrangespreadradius'])$('ambilightrangespreadradius').value = items['ambilightrangespreadradius'];
-		else $('ambilightrangespreadradius').value = 20;
+		if(items['ambilightrangeblurradius']){$('ambilightrangeblurradius').value = items['ambilightrangeblurradius'];$('arangeblur').value = items['ambilightrangeblurradius'];}
+		else{$('ambilightrangeblurradius').value = 70;}
+		if(items['ambilightrangespreadradius']){$('ambilightrangespreadradius').value = items['ambilightrangespreadradius'];$('arangespread').value = items['ambilightrangespreadradius'];}
+		else{$('ambilightrangespreadradius').value = 20;}
 		if(items['mousespotlightt'] == 'true')$('mousespotlightt').checked = true;
 		if(items['ambilightfixcolor'] == 'true')$('ambilightfixcolor').checked = true;
 		if(items['ambilightvarcolor'] == 'true')$('ambilightvarcolor').checked = true;
@@ -805,9 +805,7 @@ if(typeof autostopDomains == "string") {
 	
 	test(); // everything readed, do the "test"
 	});// chrome storage end
-
 } // end read
-
 
 // animation browser engine
 window.requestAnimFrame = function(){
@@ -1204,6 +1202,7 @@ function test() {
 if(ambilight.checked == true){
 drawImage();
 }
+
 // show alert warning
 if(ambilightvarcolor.checked == true)
 {$('showwarningambilight').style.display = '';}

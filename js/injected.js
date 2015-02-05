@@ -29,23 +29,32 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 (ytCinema = {
 	players: {objs: [], active: 0},
-	messageEvent: document.createEvent("Event"),
+	messageEvent: new Event('ytCinemaMessage'),
 	playerStateChange: function (stateId) {
 		var message = document.getElementById("ytCinemaMessage"),
 			stateIO = "playerStateChange:".concat(stateId);
+		// console.log("Debug " + message.textContent + " " +stateIO);
 		if (message && message.textContent !== stateIO) {
 			message.textContent = stateIO;
 			message.dispatchEvent(ytCinema.messageEvent);
 		}
 	},
 	initialize: function () {
-		this.messageEvent.initEvent("ytCinemaMessage", true, true);
+		this.messageEvent;
 		window.addEventListener("load", initvideoinject, false);
 		initvideoinject();
 		function initvideoinject(e) {
 			var youtubeplayer = document.getElementById("movie_player") || null;
 			var htmlplayer = document.getElementsByTagName("video") || false;
-
+			
+			if (youtubeplayer !== null) { // YouTube video element
+				var interval = setInterval(function () {
+					if (youtubeplayer.pause || youtubeplayer.pauseVideo) {
+						clearInterval(interval);
+						if (youtubeplayer.pauseVideo) {youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange");}
+					}
+				}, 10);
+			}
 			if (htmlplayer && htmlplayer.length > 0) { // HTML5 video elements
 				var setPlayerEvents = function(players) {
 					for(var j=0; j<players.length; j++) {
@@ -67,8 +76,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				
 				setPlayerEvents(htmlplayer);
 				
-				(function(o) {				
+				(function(o) {		
 					var triggerDOMChanges = function() {
+					// console.log("Trigger this DOM");
 						var htmlplayer = document.getElementsByTagName("video") || null;
 						
 						if(htmlplayer == null || htmlplayer.length === 0) {o.players.active = 0; if(o.players.active < 1){o.playerStateChange(0);} return;}
@@ -86,35 +96,27 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					};				
 
 					// New Mutation Summary API Reference
-					var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-					if (typeof MutationObserver == "function") {
+					// var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+					// if (typeof MutationObserver == "function") {
 						// setup MutationSummary observer
-						var videolist = document.querySelector('body');
-						var observer = new MutationObserver(function(mutations, observer) {
-						triggerDOMChanges();
-						});
+						// var videolist = document.querySelector('body');
+						// var observer = new MutationObserver(function(mutations, observer) {
+						// triggerDOMChanges();
+						// });
 					
-						observer.observe(videolist, {
-							subtree: true,       // observe the subtree rooted at ...videolist...
-							childList: true,     // include childNode insertion/removals
-							characterData: false, // include textContent changes
-							attributes: false     // include changes to attributes within the subtree
-						});
-					} else {
+						// observer.observe(videolist, {
+							// subtree: true,       // observe the subtree rooted at ...videolist...
+							// childList: true,     // include childNode insertion/removals
+							// characterData: false, // include textContent changes
+							// attributes: false     // include changes to attributes within the subtree
+						// });
+					// } else {
 						// setup DOM event listeners
 						// document.addEventListener("DOMNodeRemoved", triggerDOMChanges, false);
 						// document.addEventListener("DOMNodeInserted", triggerDOMChanges, false);
-					}
+					// }
 					
 				}(this.ytCinema));				
-			}
-			if (youtubeplayer !== null) { // YouTube video element
-				var interval = setInterval(function () {
-					if (youtubeplayer.pause || youtubeplayer.pauseVideo) {
-						clearInterval(interval);
-						if (youtubeplayer.pauseVideo) {youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange");}
-					}
-				}, 10);
 			}
 		}
 	}

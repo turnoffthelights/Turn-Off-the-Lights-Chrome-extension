@@ -212,11 +212,6 @@ for(var i = 0; i < span.length; i++ )
 // MAC & PC & LINUX
 // HTML5
 
-// HTML5 trial
-video = document.getElementsByTagName('video'); 
-for(var i = 0; i < video.length; i++ )
-{if(video[i].className == ('video-stream html5-main-video')) {video[i].style.cssText = 'visibility:visible !important; position:absolute !important; top: 0 !important; z-index:1000 !important';}}
-
 // show YouTube HTML5 annotation
 div = document.getElementsByTagName('div'); 
 for(var i = 0; i < div.length; i++ )
@@ -253,13 +248,13 @@ for (var conf in data) {
 var divs = document.getElementsByTagName('div');
 for (var div in divs) {
         var c = divs[div].className;
-        if (c == 'video-controls' || c == 'html5-video-controls' || c == 'html5-video-controls ytp-block-autohide' || c == 'html5-video-controls disabled-control-seek' || c =='html5-video-content') {
+        if (c == 'video-controls' || c == 'html5-video-controls' || c == 'html5-video-controls ytp-block-autohide' || c == 'html5-video-controls disabled-control-seek') {
                 divs[div].style.zIndex = 1001;
                 divs[div].style.visibility = 'visible';
         }
 }
 
-// YouTube show sub titel
+// YouTube show sub title
 var subtitel = document.getElementsByTagName('div');
 for(var i = 0; i < subtitel.length; i++ )
 {if(subtitel[i].className == ('ytp-player-content ytp-subtitles-player-content')) {subtitel[i].style.zIndex = 1001;subtitel[i].style.pointerEvents = 'none';}}
@@ -751,7 +746,7 @@ if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideop
 		for(var i = 0; i < div.length; i++ )
 		{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = '#333';}}
 	}
-	
+
 	function removenewframe() {
 		var stefanvdlightareoff1 = $('stefanvdlightareoff1');
 		var stefanvdlightareoff2 = $('stefanvdlightareoff2');

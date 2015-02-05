@@ -123,8 +123,8 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 			if ((tab.url.match(/^http/i)) && (chromeset["pageaction"] != "true") && (chromeset["pageaction"] != true)) {
 					if(tabId){
 					// fix Chrome bug, can't show icon on HDPI screen
-					//chrome.pageAction.setIcon({tabId: tab.id, path: 'icons/icon1.png'});
-					// https://code.google.com/p/chromium/issues/detail?id=395425
+					// chrome.pageAction.setIcon({tabId: tab.id, path: {'19': 'icons/icon1.png', '38':'icons/icon1@2x.png'}});
+					// https://code.google.com/p/chromium/issues/detail?id=381383
 					chrome.pageAction.show(tabId);
 					}
 			}
