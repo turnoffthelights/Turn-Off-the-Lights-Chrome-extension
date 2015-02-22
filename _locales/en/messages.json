@@ -60,8 +60,8 @@
     "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window."
   },
   "desmousespotlightc":{
-    "message":"If the light is off, you can select an area to focus a item.",
-    "description":"If the light is off, you can select an area to focus a item."
+    "message":"If the light is off, you can select an area to focus an item.",
+    "description":"If the light is off, you can select an area to focus an item."
   },
   "titelrememberpage":{
     "message":"Remember page",
@@ -648,12 +648,12 @@
     "description":"Night Mode"
   },
   "desnightonly":{
-    "message":"Show the Night Mode only the following site(s):",
-    "description":"Show the Night Mode only the following site(s):"
+    "message":"Show the Night Mode only on the following site(s):",
+    "description":"Show the Night Mode only on the following site(s):"
   },
   "desnightenabletheme":{
-    "message":"When you open a new page it go automatic to the night mode.",
-    "description":"When you open a new page it go automatic to the night mode."
+    "message":"Automatically go to Night Mode when a new web page is opened",
+    "description":"Automatically go to Night Mode when a new web page is opened"
   },
   "titellampregular":{
     "message":"Always show the lamp icon in the omnibox",
@@ -948,8 +948,8 @@
     "description":"Are you happy about Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensures that your opinion counts",
-    "description":"Ensures that your opinion counts"
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
   },
   "nothanks":{
     "message":"No thanks",
@@ -1000,12 +1000,12 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Click, hold and move it to your own screen location.",
-    "description":"Click, hold and move it to your own screen location."
+    "message":"Press the gray switch and move your mouse to a new screen position.",
+    "description":"Press the gray switch and move your mouse to a new screen position."
   },
   "desnighthover":{
-    "message":"Show the transparent switch on the web page.",
-    "description":"Show the transparent switch on the web page."
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
     "message":"Whitelist",
@@ -1016,8 +1016,8 @@
     "description":"Blacklist"
   },
   "desautostoponly":{
-    "message":"Activate the stop playing automatically the video only on the following site(s):",
-    "description":"Activate the stop playing automatically the video only on the following site(s):"
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
   },
   "titelautostopwhitelist":{
     "message":"Whitelist",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"browser lamp",
     "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }
