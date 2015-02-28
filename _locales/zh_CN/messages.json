@@ -12,8 +12,8 @@
     "description":"若要切换打开\/关闭灯对于所有打开的选项卡。"
   },
   "lastchecked":{
-    "message":"检测到最新版本",
-    "description":"签的最新版本"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"视觉效果",
@@ -32,8 +32,8 @@
     "description":"喜欢酒吧"
   },
   "desmousespotlightt":{
-    "message":"当屏幕关闭时允许您点击屏幕",
-    "description":"允许您通过屏幕变暗的灯都关的时候单击。"
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"选择 4 种环绕在视频周围的颜色。",
@@ -144,16 +144,16 @@
     "description":"空间的宇宙"
   },
   "deseastereggs":{
-    "message":"好处",
-    "description":"在此扩展中的奖金。"
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"设置",
     "description":"设置"
   },
   "desspotlightradius":{
-    "message":"是搜索范围的直径",
-    "description":"是的搜索灯直径。"
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"同步",
@@ -424,8 +424,8 @@
     "description":"雨滴"
   },
   "desalllightsoff":{
-    "message":"当启用此选项，单击灯按钮将切换打开\/关闭所有打开的选项卡上的灯。",
-    "description":"当启用此选项，单击灯按钮将切换打开\/关闭所有打开的选项卡上的指示灯。"
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"已成功保存 ！",
@@ -448,8 +448,8 @@
     "description":"若要切换灯打开\/关闭。"
   },
   "deseyea":{
-    "message":"暗淡的背景时自动打开一个页面。",
-    "description":"打开网页时，会自动变暗背景。"
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"基础",
@@ -472,8 +472,8 @@
     "description":"TOtL 欢迎指南"
   },
   "deseyealist":{
-    "message":"打开以下页面时，会自动变暗背景：",
-    "description":"打开以下页面时，会自动变暗背景："
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"顶\/踩 按钮",
@@ -580,8 +580,8 @@
     "description":"若要还原到集黑暗 （透明度） 设置。"
   },
   "desambilightrangeblurradius":{
-    "message":"值越低，模糊越小，越高则模糊越大。",
-    "description":"如果设置较低的值阴影将锋利，数字越高，越来越模糊它将。"
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"添加按钮",
@@ -752,8 +752,8 @@
     "description":"将你的手（或者拳头）上下摆动"
   },
   "step3description":{
-    "message":"然后黑色图层会自动向下滑动。",
-    "description":"然后黑色图层会自动向下滑动。"
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"清单",
@@ -1044,7 +1044,15 @@
     "description":"黑名单"
   },
   "desspeech5command":{
-    "message":"browser lamp",
-    "description":"browser lamp"
+    "message":"浏览器之灯",
+    "description":"浏览器之灯"
+  },
+  "html5andyoutube":{
+    "message":"HTML5及YouTube™视频",
+    "description":"HTML5及YouTube™视频"
+  },
+  "flashembedobject":{
+    "message":"支持：<object> <embed> <applet> <iframe>标签",
+    "description":"支持：<object> <embed> <applet> <iframe>标签"
   }
 }

@@ -12,8 +12,8 @@
     "description":"za gašenje\/paljenje svjetla za sve otvorene kartice."
   },
   "lastchecked":{
-    "message":"Posljednju verziju provjerio",
-    "description":"Posljednju verziju provjerio"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Vizualni efekti",
@@ -32,8 +32,8 @@
     "description":"Sviđa mi se Tipka"
   },
   "desmousespotlightt":{
-    "message":"Omogućuje vam da kliknete kroz zamračen zaslon kada su svjetla isključena.",
-    "description":"Omogućuje vam da kliknete kroz zamračen zaslon kada su svjetla isključena."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 odabrane boje oko videozapisa:",
@@ -144,16 +144,16 @@
     "description":"Svemirski Prostor"
   },
   "deseastereggs":{
-    "message":"Bonus u ovom proširenju.",
-    "description":"Bonus u ovom proširenju."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Postavke",
     "description":"Postavke"
   },
   "desspotlightradius":{
-    "message":"promjer je svjetiljke za pretraživanje.",
-    "description":"promjer je svjetiljke za pretraživanje."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sinkronizacija",
@@ -424,8 +424,8 @@
     "description":"Kišne Kapi"
   },
   "desalllightsoff":{
-    "message":"Klikom na tipku lampe će te uključiti\/isključiti svjetla na svim otvorenim karticama ako je ova opcija omogućena.",
-    "description":"Klikom na tipku lampe će te uključiti\/isključiti svjetla na svim otvorenim karticama ako je ova opcija omogućena."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Sekunde su uspješno spremljene!",
@@ -448,8 +448,8 @@
     "description":"za uključivanje\/isključivanje svjetla."
   },
   "deseyea":{
-    "message":"Automatski zamuti pozadinu pri otvaranju stranice.",
-    "description":"Automatski zamuti pozadinu pri otvaranju stranice."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Osnove",
@@ -472,8 +472,8 @@
     "description":"TOtL Vodič Dobrodošlice"
   },
   "deseyealist":{
-    "message":"Automatski zamuti pozadinu pri otvaranju slijedeće(ih) stranice(a):",
-    "description":"Automatski zamuti pozadinu pri otvaranju slijedeće(ih) stranice(a):"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Sviđa mi se & Ne sviđa mi se Tipke",
@@ -580,8 +580,8 @@
     "description":"za vraćanje postavaka zatamnjenosti (neprozirnosti)."
   },
   "desambilightrangeblurradius":{
-    "message":"Ako je postavljeno na nižu vrijednost sjena će biti oštra, što veći broj, više će biti zamućeno.",
-    "description":"If set a lower value the shadow will be sharp, the higher the number, the more blurred it will be."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Dodaj Tipku",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Omogućite Pokrete Kamere da biste učinili moguće zatamnjenje web stranice s rukom zamahnutom prema dolje.",
-    "description":"Pokreti Kamere"
+    "description":"Omogućite Pokrete Kamere da biste učinili moguće zatamnjenje web stranice s rukom zamahnutom prema dolje."
   },
   "trymotion":{
     "message":"Isprobajte sami!",
@@ -752,8 +752,8 @@
     "description":"Pomaknite svoju ruku (ili zglob) od gore prema dolje"
   },
   "step3description":{
-    "message":"Onda crni sloj automatski klizi dolje.",
-    "description":"Onda crni sloj automatski klizi dolje."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Kontrolni popis:",
@@ -900,7 +900,159 @@
     "description":"API Programer"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Pretražite Wiki o značajci Atmosfernog Osvjetljenja",
+    "description":"Pretražite Wiki o značajci Atmosfernog Osvjetljenja"
+  },
+  "sharemenusharetitle":{
+    "message":"Podijeli ovo",
+    "description":"Podijeli ovo"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Uvod",
+    "description":"Uvod"
+  },
+  "sharemenutellafriend":{
+    "message":"Reci Prijatelju",
+    "description":"Reci Prijatelju"
+  },
+  "sharemenusendatweet":{
+    "message":"Pošalji Tweet",
+    "description":"Pošalji Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Objavi na Facebooku",
+    "description":"Objavi na Facebooku"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Objavi na Google+",
+    "description":"Objavi na Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Ocijeni ovo proširenje",
+    "description":"Ocijeni ovo proširenje"
+  },
+  "sharemenudonatetitle":{
+    "message":"Podržite Razvoj",
+    "description":"Podržite Razvoj"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Bijeli popis",
+    "description":"Bijeli popis"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Crni popis",
+    "description":"Crni popis"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Bijeli popis",
+    "description":"Bijeli popis"
+  },
+  "titelautostopblacklist":{
+    "message":"Crni popis",
+    "description":"Crni popis"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Bijeli popis",
+    "description":"Bijeli popis"
+  },
+  "titeleyeblacklist":{
+    "message":"Crni popis",
+    "description":"Crni popis"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

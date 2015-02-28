@@ -12,8 +12,8 @@
     "description":"لتبديل تشغيل\/إيقاف الأضواء لكافة علامات التبويب المفتوحة."
   },
   "lastchecked":{
-    "message":"آخر إصدار تم فحصه في",
-    "description":"آخر إصدار تم فحصه في"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"المؤثرات البصرية",
@@ -32,8 +32,8 @@
     "description":"شريط الإعجاب"
   },
   "desmousespotlightt":{
-    "message":"يسمح لك النقر من خلال الشاشة المظلمة عندما يكون الضوء مغلقا.",
-    "description":"يسمح لك النقر من خلال الشاشة المظلمة عندما يكون الضوء مغلقا."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"الألوان الأربعة المختارة حول الفيديو:",
@@ -144,16 +144,16 @@
     "description":"مساحة الكون"
   },
   "deseastereggs":{
-    "message":"مكافأة في هذا الامتداد.",
-    "description":"مكافأة في هذا الامتداد."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"الإعدادات",
     "description":"الإعدادات"
   },
   "desspotlightradius":{
-    "message":"هو قطر مصباح البحث.",
-    "description":"هو قطر مصباح البحث."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"المزامنة",
@@ -424,8 +424,8 @@
     "description":"قطرات المطر"
   },
   "desalllightsoff":{
-    "message":"النقر فوق الزر مصباح سيتم تبديل تشغيل\/إيقاف تشغيل الأضواء على كافة علامات التبويب المفتوحة عندما يتم تمكين هذا الخيار.",
-    "description":"النقر فوق الزر مصباح سيتم تبديل تشغيل\/إيقاف تشغيل الأضواء على كافة علامات التبويب المفتوحة عندما يتم تمكين هذا الخيار."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"تم حفظ الثواني بنجاح!",
@@ -448,8 +448,8 @@
     "description":"لتبديل تشغيل\/إطفاء الأنوار."
   },
   "deseyea":{
-    "message":"لتبديل تشغيل\/إطفاء الأنوار.",
-    "description":"تعتيم الخلفية تلقائياً عند فتح صفحة."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"الأساسيات",
@@ -472,8 +472,8 @@
     "description":"دليل ترحيب إطفاء الأنوار"
   },
   "deseyealist":{
-    "message":"تعتيم الخلفية تلقائياً عند فتح الصفحات التالية:",
-    "description":"تعتيم الخلفية تلقائياً عند فتح الصفحات التالية:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"أزرار الإعجاب وعدم الإعجاب",
@@ -580,8 +580,8 @@
     "description":"للاستعادة لتعيين إعدادات الظلام (التعتيم)"
   },
   "desambilightrangeblurradius":{
-    "message":"إذا تم تعيين قيمة أقل سيصبح الظل حادًا، القيمة الأعلى سيجعله أكثر ضبابية.",
-    "description":"إذا تم تعيين قيمة أقل سيصبح الظل حادًا، القيمة الأعلى سيجعله أكثر ضبابية."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"زر الإضافة",
@@ -752,8 +752,8 @@
     "description":"حرك يدك (أو قبضتك) من الأعلى الى الأسفل"
   },
   "step3description":{
-    "message":"ثم الطبقة السوداء ستسحب تلقائيا الى الأسفل",
-    "description":"ثم الطبقة السوداء ستسحب تلقائيا الى الأسفل"
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"قائمة:",
@@ -1000,12 +1000,12 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Click, hold and move it to your own screen location.",
-    "description":"Click, hold and move it to your own screen location."
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
   },
   "desnighthover":{
-    "message":"Show the transparent switch on the web page.",
-    "description":"Show the transparent switch on the web page."
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
     "message":"القائمة البيضاء",
@@ -1016,8 +1016,8 @@
     "description":"القائمة السوداء"
   },
   "desautostoponly":{
-    "message":"Activate the stop playing automatically the video only on the following site(s):",
-    "description":"Activate the stop playing automatically the video only on the following site(s):"
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
   },
   "titelautostopwhitelist":{
     "message":"القائمة البيضاء",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"browser lamp",
     "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

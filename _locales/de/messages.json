@@ -12,8 +12,8 @@
     "description":"um für alle offenen Reiter das Licht ein-\/auszuschalten."
   },
   "lastchecked":{
-    "message":"Neuste Version geprüft am",
-    "description":"Neueste Version überprüft am"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Visuelle Effekte",
@@ -32,15 +32,15 @@
     "description":"»Gefällt mir«-Leiste"
   },
   "desmousespotlightt":{
-    "message":"Ermöglicht Ihnen durch den abgedunkelten Bildschirmbereich zu klicken, wenn die Lichter aus sind.",
-    "description":"Ermöglicht Ihnen durch den abgedunkelten Bildschirmbereich zu klicken, wenn die Lichter aus sind."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"Vier ausgewählte Farben rund um das Video:",
     "description":"4 ausgewählte Farben um das Video:"
   },
   "lockentername":{
-    "message":"Please enter your password",
+    "message":"Bitte gib dein Password ein",
     "description":"Bitte Ihr Passwort eingeben"
   },
   "desnoflash":{
@@ -56,7 +56,7 @@
     "description":"Augenschutz"
   },
   "titelcinemaontop":{
-    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window.",
+    "message":"Kinomodus: Zeigt den \"Licht aus\"-Layer nur im oberen Teil des Fensters an.",
     "description":"Kinomodus: Nur der obere Teil des Fensters wird verdunkelt."
   },
   "desmousespotlightc":{
@@ -68,7 +68,7 @@
     "description":"Erinnerungsseite"
   },
   "desmousespotlighta":{
-    "message":"When the lights are off, it shows a spotlight around the mouse cursor.",
+    "message":"Wenn das Licht ausgeht, wird ein Scheinwerfer um den Mauszeiger herum angezeigt.",
     "description":"Wenn das Licht aus ist, wird ein Schlaglicht um den Mauszeiger angezeigt."
   },
   "desmousespotlighto":{
@@ -96,7 +96,7 @@
     "description":"Nur die folgende(n) Video-Seite(n) abdunkeln:"
   },
   "helpeyeprotection":{
-    "message":"Enabling 'Eye protection' will automatically disable the 'Auto play' feature.",
+    "message":"Durch Aktivierung von \"Augenschutz\", wird die \"Automatische Wiedergabe\" deaktiviert.",
     "description":"Das Aktivieren des »Augenschutzes« deaktiviert die »Automatische Wiedergabe«-Funktion."
   },
   "skipremember":{
@@ -144,16 +144,16 @@
     "description":"Space Universe"
   },
   "deseastereggs":{
-    "message":"Ein kleiner Spass.",
-    "description":"Ein Bonus in dieser Erweiterung."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Einstellungen",
     "description":"Einstellungen"
   },
   "desspotlightradius":{
-    "message":"ist der Durchmesser der Suchlampe.",
-    "description":"ist der Durchmesser der Lampe suchen."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Synchronisation",
@@ -424,8 +424,8 @@
     "description":"Regentropfen"
   },
   "desalllightsoff":{
-    "message":"Durch Klicken auf den Lampenknopf wird das Licht auf allen geöffneten Reiter ein-\/ausgeschaltet, wenn diese Option aktiviert ist.",
-    "description":"Durch Klicken auf den Lampenknopf wird das Licht auf allen geöffneten Reiter ein-\/ausgeschaltet, wenn diese Option aktiviert ist."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Die Sekunden wurden erfolgreich gespeichert!",
@@ -448,8 +448,8 @@
     "description":"Wechseln Sie die Lichter ein-und ausschalten."
   },
   "deseyea":{
-    "message":"Automatisch den Hintergrund beim Öffnen einer Seite abdunkeln.",
-    "description":"Hintergrund dim automatisch beim Öffnen einer Seite."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Basis",
@@ -472,8 +472,8 @@
     "description":"Bewohnbare Welcome Guide"
   },
   "deseyealist":{
-    "message":"Den Hintergrund automatisch beim Öffnen der folgenden Seite(n) abdunkeln:",
-    "description":"Hintergrund dim automatisch beim Öffnen der folgenden Seiten:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"»Gefällt mir« & »Gefällt mir nicht«-Knöpfe",
@@ -580,8 +580,8 @@
     "description":"wieder die Set Dunkelheit (Deckkraft) einstellen."
   },
   "desambilightrangeblurradius":{
-    "message":"Je kleiner der Wert, desto schärfer, je größer der Wert, desto verschwommener wird der Schatten sein.",
-    "description":"Wenn ein niedrigerer Wert der Schatten scharf gesetzt wird, je höher die Zahl, die mehr verwischt werden."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"»Hinzufügen«-Knopf",
@@ -752,8 +752,8 @@
     "description":"Ihre Hand (oder Faust) von oben nach unten bewegen"
   },
   "step3description":{
-    "message":"Dann senkt sich automatisch der schwarze Vorhang.",
-    "description":"Dann senkt sich automatisch der schwarze Vorhang."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Kontrollliste:",
@@ -940,8 +940,8 @@
     "description":"AutoStop"
   },
   "desautostop":{
-    "message":"Aufhören, das Videos automatisch abzuspielen, wenn ich eine Website öffne.",
-    "description":"Aufhören, das Videos automatisch abzuspielen, wenn ich eine Website öffne."
+    "message":"Aufhören, das Videos automatisch abzuspielen, wenn ich eine Website öffne",
+    "description":"Aufhören, das Videos automatisch abzuspielen, wenn ich eine Website öffne"
   },
   "areyouhappy":{
     "message":"Bist du mit Turn Off the Lights glücklich?",
@@ -968,8 +968,8 @@
     "description":"Die Anwendung jetzt herunterladen"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Vergrössere oder verkleinere die Internetseite, indem du den Vergrösserungsknopf benutzt, um bequemer zu lesen.",
+    "description":"Vergrössere oder verkleinere die Internetseite, indem du den Vergrösserungsknopf benutzt, um bequemer zu lesen."
   },
   "titeldownloadupgradepropermenubar":{
     "message":"Füge die schwarze Menüleiste auf der Google-Website ein.",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"Browser-Lampe",
     "description":"Browser-Lampe"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ Video",
+    "description":"HTML5 & YouTube™ Video"
+  },
+  "flashembedobject":{
+    "message":"Unterstützungen: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Unterstützungen: <object>, <embed>, <applet>, <iframe>."
   }
 }

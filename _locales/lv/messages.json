@@ -12,8 +12,8 @@
     "description":"lai pārslēgtu gaismas ieslēgšanu\/izslēgšanu visām atvērtajām cilnēm."
   },
   "lastchecked":{
-    "message":"Pēdējā versija pārbaudīta",
-    "description":"Pēdējā versija pārbaudīta"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Vizuālie Efekti",
@@ -32,8 +32,8 @@
     "description":"Patīk josla"
   },
   "desmousespotlightt":{
-    "message":"Atļauj kliķšķināt cauri tumšajam ekrānam, kad gaismas ir izslēgtas.",
-    "description":"Atļauj kliķšķināt cauri tumšajam ekrānam, kad gaismas ir izslēgtas."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 izvēlētās krāsas ap video:",
@@ -144,16 +144,16 @@
     "description":"Visuma telpa"
   },
   "deseastereggs":{
-    "message":"Bonus šajā paplašinājumā.",
-    "description":"Bonus šajā paplašinājumā."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Uzstādījumi",
     "description":"Uzstādījumi"
   },
   "desspotlightradius":{
-    "message":"ir meklēšanas luktura diametrs.",
-    "description":"ir meklēšanas luktura diametrs."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sinhronizēt",
@@ -424,8 +424,8 @@
     "description":"Lietus lāses"
   },
   "desalllightsoff":{
-    "message":"Noklikšķinot uz lampas pogu pārslēgs gaismas on\/off uz visās atvērtajām cilnēm, kad šī opcija ir iespējota.",
-    "description":"Noklikšķinot uz lampas pogu pārslēgs gaismas on\/off uz visās atvērtajām cilnēm, kad šī opcija ir iespējota."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Sekundes ir veiksmīgi saglabātas!",
@@ -448,8 +448,8 @@
     "description":"lai ieslēgtu gaismu ieslēgšana\/izslēgšana."
   },
   "deseyea":{
-    "message":"Apgaismojums automātiski izslēdzas, fonā atverot lapu.",
-    "description":"Apgaismojums automātiski izslēdzas, fonā atverot lapu."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Pamati",
@@ -472,8 +472,8 @@
     "description":"TOtL Laipni pavadonis"
   },
   "deseyealist":{
-    "message":"Automātiski padara tumšu fonu, kad atver sekojošo lapu(as):",
-    "description":"Automātiski padara tumšu fonu, kad atver sekojošo lapu(as):"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Tāpat kā & Nepatika Buttons",
@@ -580,8 +580,8 @@
     "description":"lai atjaunotu iestatījumu kopas tumsā (necaurredzamība)."
   },
   "desambilightrangeblurradius":{
-    "message":"Ja iestati uz zemāku vērtību ēnās būs spilgtas, jo lielāks skaitlis, jo vairāk miglota tā būs.",
-    "description":"Ja ēnu zemāku vērtību kopa būs straujš, jo lielāks skaitlis, jo vairāk neskaidra tā būs."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Pievienot pogu",
@@ -656,8 +656,8 @@
     "description":"Atverot jaunu lapu tā automātiski pāriet nakts režīmā."
   },
   "titellampregular":{
-    "message":"Show always the lamp icon in the omnibox",
-    "description":"Show always the lamp icon in the omnibox"
+    "message":"Always show the lamp icon in the omnibox",
+    "description":"Always show the lamp icon in the omnibox"
   },
   "titellampvideo":{
     "message":"Show the lamp icon only if a video player is detected",
@@ -688,8 +688,8 @@
     "description":"Control the web page more accurately"
   },
   "upgradefbshare":{
-    "message":"Facebook Share",
-    "description":"Facebook Share"
+    "message":"Share on Facebook",
+    "description":"Share on Facebook"
   },
   "upgradetwshare":{
     "message":"Tweet",
@@ -728,8 +728,8 @@
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
-    "description":"Camera Motion"
+    "message":"Enable the Camera Motion so that the web page can be darkened with a hand sweep down.",
+    "description":"Enable the Camera Motion so that the web page can be darkened with a hand sweep down."
   },
   "trymotion":{
     "message":"Try it yourself!",
@@ -752,16 +752,16 @@
     "description":"Move your hand (or fist) from the top to bottom"
   },
   "step3description":{
-    "message":"Then the black layer slide automatically down.",
-    "description":"Then the black layer slide automatically down."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Checklist:",
     "description":"Checklist:"
   },
   "des1checkmotion":{
-    "message":"Make sure your room is not dark and that it have enough light.",
-    "description":"Make sure your room is not dark and that it have enough light."
+    "message":"Make sure your room is not dark and that it has enough light.",
+    "description":"Make sure your room is not dark and that it has enough light."
   },
   "des2checkmotion":{
     "message":"Your camera must not receive direct sunlight.",
@@ -792,8 +792,8 @@
     "description":"Speech"
   },
   "desspeech":{
-    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
-    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+    "message":"When you enable this option, you can talk to the browser lamp and say the following commands:",
+    "description":"When you enable this option, you can talk to the browser lamp and say the following commands:"
   },
   "desspeech1command":{
     "message":"turn off the lights",
@@ -856,8 +856,8 @@
     "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"See online for more examples",
@@ -902,5 +902,157 @@
   "titelwikiatmos":{
     "message":"Wiki about the Atmosphere Lighting feature",
     "description":"Wiki about the Atmosphere Lighting feature"
+  },
+  "sharemenusharetitle":{
+    "message":"Koplietot šo",
+    "description":"Koplietot šo"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Welcome pavadītājs",
+    "description":"Welcome pavadītājs"
+  },
+  "sharemenutellafriend":{
+    "message":"Pastāsti draugam",
+    "description":"Pastāsti draugam"
+  },
+  "sharemenusendatweet":{
+    "message":"Nosūtīt twītu",
+    "description":"Nosūtīt twītu"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Ziņu Facebook",
+    "description":"Ziņu Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Post Google +",
+    "description":"Post Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Novērtēt šo paplašinājumu",
+    "description":"Novērtēt šo paplašinājumu"
+  },
+  "sharemenudonatetitle":{
+    "message":"Atbalsts attīstībai",
+    "description":"Atbalsts attīstībai"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

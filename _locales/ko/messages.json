@@ -12,8 +12,8 @@
     "description":"현재 열려 있는 모든 탭에서 불 켜기\/끄기"
   },
   "lastchecked":{
-    "message":"최신 버전 확인 날짜",
-    "description":"최신 버전 확인 날짜"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"시각 효과",
@@ -32,8 +32,8 @@
     "description":"Youtube Like 바"
   },
   "desmousespotlightt":{
-    "message":"불을 껐을 때 배경 클릭 허용",
-    "description":"불을 껐을 때 배경 클릭 허용"
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"비디오 주위에 표시할 4가지 색상:",
@@ -144,16 +144,16 @@
     "description":"우주 우주"
   },
   "deseastereggs":{
-    "message":"T 키를 클릭하면, '극장 모드'에 기능이 추가됩니다.",
-    "description":"이 확장에 보너스입니다."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"설정",
     "description":"설정"
   },
   "desspotlightradius":{
-    "message":"스포트라이트의 크기",
-    "description":"검색 램프의 직경은 이다."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"동기화",
@@ -424,8 +424,8 @@
     "description":"빗방울"
   },
   "desalllightsoff":{
-    "message":"이 옵션이 활성화되어 있을 경우, 램프 버튼을 클릭하면 열려 있는 모든 탭의 조명을 켜고 끌 수 있습니다.",
-    "description":"램프 버튼을 클릭 하면이 옵션을 활성화 하면 열려 있는 모든 탭에 온\/오프 조명 전환 됩니다."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"초를 성공적으로 저장하였습니다!",
@@ -448,8 +448,8 @@
     "description":"불 켜기\/끄기."
   },
   "deseyea":{
-    "message":"페이지를 열 때 자동으로 배경을 어둡게 합니다.",
-    "description":"페이지를 열 때 자동으로 배경을 흐리게."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"기본설정",
@@ -472,8 +472,8 @@
     "description":"TOtL 환영 가이드"
   },
   "deseyealist":{
-    "message":"다음 페이지를 열 때 자동으로 배경을 흐리게 하기:",
-    "description":"다음 페이지를 열 때 자동으로 배경을 흐리게:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"좋아요 버튼과 싫어요 버튼",
@@ -580,8 +580,8 @@
     "description":"설정 설정된 어둠 (불투명도)를 복원 합니다."
   },
   "desambilightrangeblurradius":{
-    "message":"값을 낮게 설정하면 그림자가 또렷해지고, 높게 설정하면 흐릿해집니다.",
-    "description":"낮은 값은 그림자 설정을 날카로운 경우에, 숫자가 높을수록, 더 흐린 것 이다."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"버튼 추가",
@@ -752,8 +752,8 @@
     "description":"손을 아래에서 위로 움직이세요."
   },
   "step3description":{
-    "message":"그러면 검은 레이어가 자동으로 내려옵니다.",
-    "description":"그러면 검은 레이어가 자동으로 내려옵니다."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"체크리스트",
@@ -948,8 +948,8 @@
     "description":"Are you happy about Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensures that your opinion counts",
-    "description":"Ensures that your opinion counts"
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
   },
   "nothanks":{
     "message":"No thanks",
@@ -1000,12 +1000,12 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Click, hold and move it to your own screen location.",
-    "description":"Click, hold and move it to your own screen location."
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
   },
   "desnighthover":{
-    "message":"Show the transparent switch on the web page.",
-    "description":"Show the transparent switch on the web page."
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
     "message":"허용된 사이트 목록",
@@ -1016,8 +1016,8 @@
     "description":"금지된 사이트 목록"
   },
   "desautostoponly":{
-    "message":"Activate the stop playing automatically the video only on the following site(s):",
-    "description":"Activate the stop playing automatically the video only on the following site(s):"
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
   },
   "titelautostopwhitelist":{
     "message":"허용된 사이트 목록",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"browser lamp",
     "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

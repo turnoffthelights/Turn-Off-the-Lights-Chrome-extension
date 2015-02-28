@@ -12,8 +12,8 @@
     "description":"pour réduire\/restaurer la luminosité sur tous les onglets ouverts."
   },
   "lastchecked":{
-    "message":"Vous avez la dernière version d'installée",
-    "description":"Vous avez la dernière version d'installée"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Effets visuels",
@@ -32,8 +32,8 @@
     "description":"Barre d'avis"
   },
   "desmousespotlightt":{
-    "message":"Vous pourrez toujours utiliser les liens hypertextes de la partie assombrie de la page web en cliquant dessus, comme si la la luminosité était habituelle.",
-    "description":"Vous pourrez toujours utiliser les liens hypertextes de la partie assombrie de la page web en cliquant dessus, comme si la la luminosité était habituelle."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"Choisissez entre 4 couleurs possibles à afficher autour de la vidéo :",
@@ -144,16 +144,16 @@
     "description":"Voyage dans l'espace"
   },
   "deseastereggs":{
-    "message":"En appuyant sur la touche T, un bonus vient compléter le Mode \"salle de cinéma\".",
-    "description":"En appuyant sur la touche T, un bonus vient compléter le Mode \"salle de cinéma\"."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Paramètres",
     "description":"Paramètres"
   },
   "desspotlightradius":{
-    "message":"Diamètre de la lampe de recherche :",
-    "description":"Diamètre de la lampe de recherche :"
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Synchroniser",
@@ -424,8 +424,8 @@
     "description":"Pluie"
   },
   "desalllightsoff":{
-    "message":"Cliquer sur le bouton de la lampe alternera entre éclaircir et assombrir, et ce sur chaque onglet ouvert lorsque cette option est activée.",
-    "description":"Cliquer sur le bouton de la lampe alternera entre éclaircir et assombrir, et ce sur chaque onglet ouvert lorsque cette option est activée."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Les secondes ont bien été enregistrées !",
@@ -448,8 +448,8 @@
     "description":"pour assombrir\/retrouver l'éclairage normal."
   },
   "deseyea":{
-    "message":"A l'ouverture d'une page, l'arrière-plan de celle-ci s'assombrit automatiquement.",
-    "description":"A l'ouverture d'une page, l'arrière-plan de celle-ci s'assombrit automatiquement."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Notions de base",
@@ -472,8 +472,8 @@
     "description":"Guide pour bien démarrer avec TOtL"
   },
   "deseyealist":{
-    "message":"Assombrir automatiquement l'arrière-plan lors de l'ouverture de la (ou des) page(s) suivante(s) :",
-    "description":"Assombrir automatiquement l'arrière-plan lors de l'ouverture de la (ou des) page(s) suivante(s) :"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Boutons \"J’aime\" et \"Je n’aime pas\"",
@@ -580,8 +580,8 @@
     "description":"pour restaurer les paramètres d'assombrissement (opacité) d'origine."
   },
   "desambilightrangeblurradius":{
-    "message":"Plus la valeur est faible, plus l'opacité sera importante ; plus la valeur sera importante, plus l'opacité sera faible.",
-    "description":"Plus la valeur est faible, plus l'opacité sera importante ; plus la valeur sera importante, plus l'opacité sera faible."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Bouton \"Ajouter à\"",
@@ -752,8 +752,8 @@
     "description":"Faites bouger votre main (ou poignet) du haut vers le bas"
   },
   "step3description":{
-    "message":"et la partie du haut de la page web s'assombrira automatiquement.",
-    "description":"et la partie du haut de la page web s'assombrira automatiquement."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Liste de vérification :",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"La lampe du navigateur",
     "description":"La lampe du navigateur"
+  },
+  "html5andyoutube":{
+    "message":"Vidéo HTML5 & YouTube ™",
+    "description":"Vidéo HTML5 & YouTube ™"
+  },
+  "flashembedobject":{
+    "message":"Prise en charge : <object>, <embed>, <applet>, <iframe>.",
+    "description":"Prise en charge : <object>, <embed>, <applet>, <iframe>."
   }
 }

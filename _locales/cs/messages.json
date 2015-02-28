@@ -12,8 +12,8 @@
     "description":"přepínání světel na\/vypnuto pro všechny otevřené záložky."
   },
   "lastchecked":{
-    "message":"Poslední vyhledaná verze",
-    "description":"Nejnovější verze na"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Vizuální efekty",
@@ -32,8 +32,8 @@
     "description":"Jako Bar"
   },
   "desmousespotlightt":{
-    "message":"Umožňuje Vám se proklinout skrz ztmavené obrazovky, když jsou světla vypnuta.",
-    "description":"Umožňuje proklikne na ztmavené obrazovce, když nesvítí."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 vybrané barvy okolo videa:",
@@ -144,16 +144,16 @@
     "description":"Vesmíru"
   },
   "deseastereggs":{
-    "message":"Bonus v tomto rozšíření.",
-    "description":"Bonus v tomto rozšíření."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Nastavení",
     "description":"Nastavení"
   },
   "desspotlightradius":{
-    "message":"je průměr lampy pro hledání.",
-    "description":"je průměr lampy hledání."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Synchronizovat",
@@ -424,8 +424,8 @@
     "description":"Dešťové kapky"
   },
   "desalllightsoff":{
-    "message":"Klepnutím na tlačítko lampa přepíná kontrolky zapnuto\/vypnuto na všech otevřených panelů, když je tato volba zapnutá.",
-    "description":"Klepnutím na tlačítko lampa přepíná kontrolky zapnuto\/vypnuto na všech otevřených panelů, když je tato volba zapnutá."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Vteřiny byly uloženy!",
@@ -448,8 +448,8 @@
     "description":"přepínání světel, zapnuto\/vypnuto."
   },
   "deseyea":{
-    "message":"Automaticky ztmavit pozadí při otevření stránky.",
-    "description":"Automaticky ztlumí na pozadí při otevření stránky."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Základy",
@@ -472,8 +472,8 @@
     "description":"TOtL uvítací průvodce"
   },
   "deseyealist":{
-    "message":"Automaticky ztlumí na pozadí při otevírání následující stránky:",
-    "description":"Automaticky ztlumí na pozadí při otevírání následující stránky:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Tlačítka Libí a Nelíbí se mi",
@@ -580,8 +580,8 @@
     "description":"obnovení nastavení tmu (krytí) nastavení."
   },
   "desambilightrangeblurradius":{
-    "message":"Jestliže je nastaveno na nižší hodnoty, stín bude ostrý. Čím vyšší hodnota, tím více rozostřený bude stín.",
-    "description":"Je-li nižší hodnotu stín bude ostrý, vyšší číslo, více rozmazané to bude."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Přidat tlačítko",
@@ -752,8 +752,8 @@
     "description":"Přesuňte ruku (nebo pěst) shora dolů"
   },
   "step3description":{
-    "message":"Pak se tmavá vrstva automaticky sesune.",
-    "description":"Pak se tmavá vrstva automaticky sesune."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Seznam úkolů:",
@@ -948,8 +948,8 @@
     "description":"Jste spokojeni s Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensures that your opinion counts",
-    "description":"Ensures that your opinion counts"
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
   },
   "nothanks":{
     "message":"Ne, děkuji",
@@ -1004,8 +1004,8 @@
     "description":"Klikněte, držte a táhněte na požadované místo."
   },
   "desnighthover":{
-    "message":"Show the transparent switch on the web page.",
-    "description":"Show the transparent switch on the web page."
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
     "message":"Seznam povolených",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"browser lamp",
     "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

@@ -12,8 +12,8 @@
     "description":"за паљење\/гашење светла на свим отвореним картицама."
   },
   "lastchecked":{
-    "message":"Датум провере најновије верзије",
-    "description":"Датум провере најновије верзије"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Визуелни ефекти",
@@ -32,8 +32,8 @@
     "description":"Лајк линија"
   },
   "desmousespotlightt":{
-    "message":"Омогућује вам да кликћете кроз замрачен екран када су светла угашена.",
-    "description":"Омогућује вам да кликћете кроз замрачен екран када су светла угашена."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 одабране боје око видеа:",
@@ -144,16 +144,16 @@
     "description":"Простор универзума"
   },
   "deseastereggs":{
-    "message":"Бонус у овом додатку.",
-    "description":"Бонус у овом додатку."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Подешавања",
     "description":"Подешавања"
   },
   "desspotlightradius":{
-    "message":"је пречник лампе за претраживање.",
-    "description":"је пречник лампе за претраживање."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Синхронизација",
@@ -424,8 +424,8 @@
     "description":"Капљице"
   },
   "desalllightsoff":{
-    "message":"Кликом на дугме лампе ће се угасити\/упалити светла на свим отвореним картицама када је ова опција укључена.",
-    "description":"Кликом на дугме лампе ће се угасити\/упалити светла на свим отвореним картицама када је ова опција укључена."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Секунде су успешно сачуване!",
@@ -448,8 +448,8 @@
     "description":"за паљење\/гашење светла."
   },
   "deseyea":{
-    "message":"Аутоматски затамни позадину када отворим страницу.",
-    "description":"Аутоматски затамни позадину када отворим страницу."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Основнa",
@@ -472,8 +472,8 @@
     "description":"TOtL водич добродошлице"
   },
   "deseyealist":{
-    "message":"Аутоматски замути позадину при отварању следећих страница:",
-    "description":"Аутоматски замути позадину при отварању следећих страница:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Дугме „Свиђа ми се“",
@@ -580,8 +580,8 @@
     "description":"за враћање подешавања затамњења (провидности)."
   },
   "desambilightrangeblurradius":{
-    "message":"Ако поставите нижу вредност, сенка ће бити оштра, што је већи број, сенка је мутнија.",
-    "description":"If set a lower value the shadow will be sharp, the higher the number, the more blurred it will be."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Додај дугме",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Укључите Покрете камере да бисте могли да затамните страницу покретом руке на доле.",
-    "description":"Покрети камере"
+    "description":"Укључите Покрете камере да бисте могли да затамните страницу покретом руке на доле."
   },
   "trymotion":{
     "message":"Испробај!",
@@ -752,8 +752,8 @@
     "description":"Помери своју руку (или зглоб) одозго на доле"
   },
   "step3description":{
-    "message":"И онда се црни слој аутоматски спушта.",
-    "description":"И онда се црни слој аутоматски спушта."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Списак:",
@@ -902,5 +902,157 @@
   "titelwikiatmos":{
     "message":"Вики о функцији атмосферно осветљење",
     "description":"Вики о функцији атмосферно осветљење"
+  },
+  "sharemenusharetitle":{
+    "message":"Подели ово",
+    "description":"Подели ово"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Водич добродошлице",
+    "description":"Водич добродошлице"
+  },
+  "sharemenutellafriend":{
+    "message":"Реци пријатељу",
+    "description":"Реци пријатељу"
+  },
+  "sharemenusendatweet":{
+    "message":"Пошаљи твит",
+    "description":"Пошаљи твит"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Објави на Facebook-у",
+    "description":"Објави на Facebook-у"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Објави на Google+",
+    "description":"Објави на Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Оцени овај додатак",
+    "description":"Оцени овај додатак"
+  },
+  "sharemenudonatetitle":{
+    "message":"Подржи развој",
+    "description":"Подржи развој"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Бела листа",
+    "description":"Бела листа"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Црна листа",
+    "description":"Црна листа"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Бела листа",
+    "description":"Бела листа"
+  },
+  "titelautostopblacklist":{
+    "message":"Црна листа",
+    "description":"Црна листа"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Бела листа",
+    "description":"Бела листа"
+  },
+  "titeleyeblacklist":{
+    "message":"Црна листа",
+    "description":"Црна листа"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

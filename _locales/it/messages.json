@@ -12,8 +12,8 @@
     "description":"per attivare o disattivare le luci on\/off per tutte le schede aperte."
   },
   "lastchecked":{
-    "message":"Ultima versione verificata in data",
-    "description":"Ultima versione verificata il"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Effetti visivi",
@@ -32,8 +32,8 @@
     "description":"Barra Mi piace"
   },
   "desmousespotlightt":{
-    "message":"Ti permette di fare clic con lo schermo oscurato quando le luci sono spente.",
-    "description":"Ti permette di scegliere attraverso lo schermo oscurato quando le luci sono spente."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 pasirinktinės spalvos, kurios bus rodomas aplink grotuvą:",
@@ -144,16 +144,16 @@
     "description":"Spazio universo"
   },
   "deseastereggs":{
-    "message":"Un bonus in questa estensione.",
-    "description":"Un bonus in questa estensione."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Impostazioni",
     "description":"Impostazioni"
   },
   "desspotlightradius":{
-    "message":"è il diametro della lampada ricerca.",
-    "description":"è il diametro della lampada di ricerca."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sincronizzazione",
@@ -424,8 +424,8 @@
     "description":"Gocce di pioggia"
   },
   "desalllightsoff":{
-    "message":"Facendo clic sul pulsante lampadina ciò commuta le luci on \/ off su tutte le schede aperte quando questa opzione è abilitata.",
-    "description":"Facendo clic sul pulsante lampada si imposteranno le luci su on\/off su tutte le schede aperte quando questa opzione è abilitatta."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Sekundės sėkmingai išsaugotos!",
@@ -448,8 +448,8 @@
     "description":"per attivare o disattivare le luci su on\/off."
   },
   "deseyea":{
-    "message":"Automatiškai pritemdyti foną, kai atidaromas puslapis.",
-    "description":"Attenua automaticamente lo sfondo quando si apre una pagina."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Pagrindiniai Nustatymai",
@@ -472,8 +472,8 @@
     "description":"Guida di benvenuto TOtL"
   },
   "deseyealist":{
-    "message":"Oscura automaticamente lo sfondo quando si apre la seguente pagina (e):",
-    "description":"Attenua automaticamente lo sfondo quando si apre la seguente pagina:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Patiko ir Nepatiko mygtukai",
@@ -580,8 +580,8 @@
     "description":"per ripristinare l'oscurità set (opacità) impostazione."
   },
   "desambilightrangeblurradius":{
-    "message":"Kuo didesnį skaičių nustatysite, tuo labiau šešėlį suliesite.",
-    "description":"Se impostato un valore inferiore all'ombra sarà forte, più alto il numero, più sfumati sarà."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Pridėti mygtukas",
@@ -752,8 +752,8 @@
     "description":"Muovi la tua mano ( o il tuo pugno ) dall'alto verso il basso"
   },
   "step3description":{
-    "message":"Quindi il livello nero scorre automaticamente verso il basso.",
-    "description":"Quindi il livello nero scorre automaticamente verso il basso."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Lista:",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"lampada del browser",
     "description":"lampada del browser"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

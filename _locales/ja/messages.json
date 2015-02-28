@@ -12,8 +12,8 @@
     "description":"開いたタブすべてのライトをオン・オフと順に切り替えます。"
   },
   "lastchecked":{
-    "message":"最新バージョンをチェックした日付：　",
-    "description":"最新バージョンをチェックした日付：　"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"視覚効果",
@@ -32,8 +32,8 @@
     "description":"「いいね!」バー"
   },
   "desmousespotlightt":{
-    "message":"ライトがオフのまま、暗い画面をクリックして操作できます。",
-    "description":"ライトがオフのまま、暗い画面をクリックして操作できます。"
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"ビデオを囲む色は4色",
@@ -144,16 +144,16 @@
     "description":"宇宙"
   },
   "deseastereggs":{
-    "message":"Tキーを入力して、「映画館モード」に機能を追加。",
-    "description":"Tキーを入力して、「映画館モード」に機能を追加。"
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"設定",
     "description":"設定"
   },
   "desspotlightradius":{
-    "message":"サーチライトの直径。",
-    "description":"サーチランプの直径。"
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"同期",
@@ -424,8 +424,8 @@
     "description":"雨粒"
   },
   "desalllightsoff":{
-    "message":"このオプションを有効にすると、アドレスバーのランプボタンをクリックしてすべてのタブにおけるライトのオン\/オフが切り替えられます。",
-    "description":"このオプションを有効にすると、ランプ ボタンをクリックするたび、開いているタブすべてのライトはついたり消えたりします。"
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"秒数の保存が完了ました ！",
@@ -448,8 +448,8 @@
     "description":"でライトのオン\/オフを切り替える"
   },
   "deseyea":{
-    "message":"ページを開いたら、自動で背景を暗くします。",
-    "description":"ページを開いたら、自動で背景を暗くします。"
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"基本",
@@ -472,8 +472,8 @@
     "description":"TOtL ようこそガイド"
   },
   "deseyealist":{
-    "message":"以下のページを開くとき自動で暗く表示します。",
-    "description":"以下のページを開くとき自動で暗く表示します。"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"評価ボタン",
@@ -580,8 +580,8 @@
     "description":"で設定した暗さ（不透明度）に戻します。"
   },
   "desambilightrangeblurradius":{
-    "message":"値の増減で影がくっきりするか、ぼやけるか、調整します。",
-    "description":"値の増減で影がくっきりするか、ぼやけるか、調整します。"
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"追加ボタン",
@@ -752,8 +752,8 @@
     "description":"手（もしくは握りこぶし）を上から下へ動かす"
   },
   "step3description":{
-    "message":"すると影のレイヤーが自動で隠れます。",
-    "description":"すると影のレイヤーが自動で隠れます。"
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"チェックリスト：",
@@ -1000,12 +1000,12 @@
     "description":"左下"
   },
   "nmcustom":{
-    "message":"Click, hold and move it to your own screen location.",
-    "description":"Click, hold and move it to your own screen location."
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
   },
   "desnighthover":{
-    "message":"Show the transparent switch on the web page.",
-    "description":"Show the transparent switch on the web page."
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
     "message":"ホワイトリスト",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"browser lamp",
     "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

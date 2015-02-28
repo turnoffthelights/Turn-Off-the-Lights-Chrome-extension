@@ -12,8 +12,8 @@
     "description":"para encender\/apagar las luces en todas las pestañas abiertas."
   },
   "lastchecked":{
-    "message":"Última versión verificada",
-    "description":"Última versión verificada"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Efectos visuales",
@@ -32,8 +32,8 @@
     "description":"Barra de votaciones"
   },
   "desmousespotlightt":{
-    "message":"Permite hacer clic a través de la pantalla oscura cuando las luces están apagadas.",
-    "description":"Permite hacer clic a través de la pantalla oscura cuando las luces están apagadas."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 colores elegidos alrededor del vídeo:",
@@ -144,16 +144,16 @@
     "description":"Espacio exterior"
   },
   "deseastereggs":{
-    "message":"Un extra en esta extensión.",
-    "description":"Un extra en esta extensión."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Ajustes",
     "description":"Ajustes"
   },
   "desspotlightradius":{
-    "message":"Es el diámetro de la bombilla de búsqueda.",
-    "description":"Es el diámetro de la bombilla de búsqueda."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sincronización",
@@ -424,8 +424,8 @@
     "description":"Gotas de agua"
   },
   "desalllightsoff":{
-    "message":"Haz clic en el botón de la bombilla para encender\/apagar las luces de todas las pestañas abiertas cuando actives esta opción.",
-    "description":"Haz clic en el botón de la bombilla para encender\/apagar las luces de todas las pestañas abiertas cuando actives esta opción."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"¡Segundos guardados correctamente!",
@@ -448,8 +448,8 @@
     "description":"para encender\/apagar las luces."
   },
   "deseyea":{
-    "message":"Oscurecer automáticamente el fondo al abrir una página.",
-    "description":"Oscurecer automáticamente el fondo al abrir una página."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Conceptos básicos",
@@ -472,8 +472,8 @@
     "description":"Bienvenido a la guía de TOtL"
   },
   "deseyealist":{
-    "message":"Oscurecer automáticamente el fondo al abrir las siguientes páginas:",
-    "description":"Oscurecer automáticamente el fondo al abrir las siguientes páginas:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Botones de 'Me gusta' y 'No me gusta'",
@@ -580,8 +580,8 @@
     "description":"para restaurar a la oscuridad establecida (opacidad)."
   },
   "desambilightrangeblurradius":{
-    "message":"Si se establece un valor más bajo, la sombra será mas clara, cuanto mayor sea el número, será más borrosa.",
-    "description":"Si se establece un valor más bajo, la sombra será mas clara, cuanto mayor sea el número, será más borrosa."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Añadir botón",
@@ -752,8 +752,8 @@
     "description":"Mueve la mano (o puño) desde arriba hacia abajo"
   },
   "step3description":{
-    "message":"Así, el regulador de opacidad bajará automáticamente.",
-    "description":"Así, el regulador de opacidad bajará automáticamente."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Lista de comprobación:",
@@ -936,20 +936,20 @@
     "description":"Apoyar el desarrollo"
   },
   "titelautostop":{
-    "message":"Autostop",
-    "description":"Autostop"
+    "message":"Autodetención",
+    "description":"Autodetención"
   },
   "desautostop":{
-    "message":"Deja de reproducir automáticamente el vídeo cuando abro una página web.",
-    "description":"Deja de reproducir automáticamente el vídeo cuando abro una página web."
+    "message":"Deja de reproducir automáticamente el vídeo al abrir una página web.",
+    "description":"Deja de reproducir automáticamente el vídeo al abrir una página web."
   },
   "areyouhappy":{
     "message":"¿Estás contento con Turn Off the Lights?",
     "description":"¿Estás contento con Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Asegura que tu opinión cuenta",
-    "description":"Asegura que tu opinión cuenta"
+    "message":"Asegúrate de que tu opinión cuenta",
+    "description":"Asegúrate de que tu opinión cuenta"
   },
   "nothanks":{
     "message":"No, gracias",
@@ -972,12 +972,12 @@
     "description":"Acerca o aleja el contenido web usando el botón de zoom para una lectura más cómoda."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Añade de nuevo la barra de menú negra en el sitio de Google.",
-    "description":"Añade de nuevo la barra de menú negra en el sitio de Google."
+    "message":"Añade de nuevo la barra de menú negra a la web de Google.",
+    "description":"Añade de nuevo la barra de menú negra a la web de Google."
   },
   "titeldownloadupgradefinancetoolbar":{
-    "message":"Esto te muestra la información bursátil en tiempo real.",
-    "description":"Esto te muestra la información bursátil en tiempo real."
+    "message":"Esto te muestra información bursátil en tiempo real.",
+    "description":"Esto te muestra información bursátil en tiempo real."
   },
   "titelnightmodeposition":{
     "message":"Posición del interruptor",
@@ -1000,8 +1000,8 @@
     "description":"Abajo a la izquierda"
   },
   "nmcustom":{
-    "message":"Haz clic, mantén y muévelo a tu propia ubicación en la pantalla.",
-    "description":"Haz clic, mantén y muévelo a tu propia ubicación en la pantalla."
+    "message":"Haz clic, mantén y arrástralo a la ubicación en tu pantalla.",
+    "description":"Haz clic, mantén y arrástralo a la ubicación en tu pantalla."
   },
   "desnighthover":{
     "message":"Mostrar el interruptor transparente en la página web.",
@@ -1032,8 +1032,8 @@
     "description":"El interruptor estará visible entre las siguientes horas:"
   },
   "deslampandnightmode":{
-    "message":"Activar el modo nocturno al hacer clic en el botón de la lámpara gris.",
-    "description":"Activar el modo nocturno al hacer clic en el botón de la lámpara gris."
+    "message":"Activar el modo nocturno al hacer clic en el botón de la bombilla gris.",
+    "description":"Activar el modo nocturno al hacer clic en el botón de la bombilla gris."
   },
   "titeleyewhitelist":{
     "message":"Lista blanca",
@@ -1044,7 +1044,15 @@
     "description":"Lista negra"
   },
   "desspeech5command":{
-    "message":"lámpara del navegador",
-    "description":"lámpara del navegador"
+    "message":"bombilla del navegador",
+    "description":"bombilla del navegador"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

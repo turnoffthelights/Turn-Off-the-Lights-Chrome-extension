@@ -12,8 +12,8 @@
     "description":"Aby włączyć światła na\/off dla wszystkich otwartych kart."
   },
   "lastchecked":{
-    "message":"Najnowsza wersja. Sprawdzone:",
-    "description":"Najnowsza wersja sprawdzałam"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Efekty wizualne",
@@ -32,8 +32,8 @@
     "description":"Jak Bar"
   },
   "desmousespotlightt":{
-    "message":"Uaktywnij klikanie przez zaciemniony ekran",
-    "description":"Pozwala na klikaniu na przyciemnionym ekranie, gdy światła są wyłączone."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"Kolory wokół filmu:",
@@ -144,16 +144,16 @@
     "description":"Przestrzeni wszechświata"
   },
   "deseastereggs":{
-    "message":"Dodatkowe funkcje rozszerzenia",
-    "description":"Bonus w tym rozszerzeniu."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Ustawienia",
     "description":"Ustawienia"
   },
   "desspotlightradius":{
-    "message":"Średnica oświetlenia punktowego",
-    "description":"jest średnica lampy Szukaj."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Synchronizuj",
@@ -424,8 +424,8 @@
     "description":"Krople deszczu"
   },
   "desalllightsoff":{
-    "message":"Włączaj\/wyłączaj oświetlenie na wszystkich otwartych kartach – kliknięcie przycisku żarówki będzie powodowało włączenie\/wyłączenie oświetlenia na wszystkich otwartych kartach",
-    "description":"Klikając przycisk światło będzie przełączać światła wł. \/ wył. na wszystkich otwartych kart, gdy ta opcja jest włączona."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Czas został zapisany!",
@@ -448,8 +448,8 @@
     "description":"Aby włączyć światła, wł\/wył."
   },
   "deseyea":{
-    "message":"Automatycznie przyciemnij tło podczas otwierania strony",
-    "description":"Automatycznie przyciemnić tło podczas otwierania strony."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Podstawowe",
@@ -472,8 +472,8 @@
     "description":"TOtL Witamy przewodnik"
   },
   "deseyealist":{
-    "message":"Automatycznie przyciemniaj tło na następujących witrynach:",
-    "description":"Automatycznie przyciemnić tło podczas otwierania następujące strony:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Przyciski Podoba mi się i Nie podoba mi się",
@@ -580,8 +580,8 @@
     "description":"Aby przywrócić zestaw ciemności (krycie) ustawienie."
   },
   "desambilightrangeblurradius":{
-    "message":"Przy mniejszych wartościach podświetlenie będzie ostrzejsze, przy większych bardziej rozmyte.",
-    "description":"Jeśli zestaw wartość niższe cień będzie ostry, większe, bardziej niewyraźne będzie."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Przycisk Dodaj",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Włącz wykrywanie ruchu, by przyciemniać strony internetowe za pomocą ruchu ręki",
-    "description":"Wykrywanie ruchu"
+    "description":"Włącz wykrywanie ruchu, by przyciemniać strony internetowe za pomocą ruchu ręki"
   },
   "trymotion":{
     "message":"Wypróbuj sam!",
@@ -752,8 +752,8 @@
     "description":"Przesuń swoją rękę (lub pięść) z góry na dół"
   },
   "step3description":{
-    "message":"Ekran zostanie przesłonięty ciemną warstwą.",
-    "description":"Ekran zostanie przesłonięty ciemną warstwą."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Lista kontrolna:",
@@ -900,7 +900,159 @@
     "description":"API Developer"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Informacja o funkcji Oświetlenia atmosferycznego z Wikipedii",
+    "description":"Informacja o funkcji Oświetlenia atmosferycznego z Wikipedii"
+  },
+  "sharemenusharetitle":{
+    "message":"Podziel się tym",
+    "description":"Podziel się tym"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Przewodnik",
+    "description":"Przewodnik"
+  },
+  "sharemenutellafriend":{
+    "message":"Poinformuj znajomych",
+    "description":"Poinformuj znajomych"
+  },
+  "sharemenusendatweet":{
+    "message":"Wyślij tweeta",
+    "description":"Wyślij tweeta"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Prześlij post na Facebooka",
+    "description":"Prześlij post na Facebooka"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Prześlij post na Google +",
+    "description":"Prześlij post na Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"Oceń ten dodatek",
+    "description":"Oceń ten dodatek"
+  },
+  "sharemenudonatetitle":{
+    "message":"Wesprzyj rozwój",
+    "description":"Wesprzyj rozwój"
+  },
+  "titelautostop":{
+    "message":"Autozatrzymanie",
+    "description":"Autozatrzymanie"
+  },
+  "desautostop":{
+    "message":"Automatycznie zatrzymaj odtwarzanie wideo, kiedy otwieram stronę internetową",
+    "description":"Automatycznie zatrzymaj odtwarzanie wideo, kiedy otwieram stronę internetową"
+  },
+  "areyouhappy":{
+    "message":"Czy jesteś zadowolony z Turn Off the Lights?",
+    "description":"Czy jesteś zadowolony z Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Gwarantacja, że Twoja opinia się liczy",
+    "description":"Gwarantacja, że Twoja opinia się liczy"
+  },
+  "nothanks":{
+    "message":"Nie, dziękuję",
+    "description":"Nie, dziękuję"
+  },
+  "writeareview":{
+    "message":"Napisz opinię",
+    "description":"Napisz opinię"
+  },
+  "desauroraplayer":{
+    "message":"Otaczające odtwarzacz oświetlenie jest również dostępne na Twoim komputerze.",
+    "description":"Otaczające odtwarzacz oświetlenie jest również dostępne na Twoim komputerze."
+  },
+  "downloadtheapp":{
+    "message":"Pobierz aplikację teraz",
+    "description":"Pobierz aplikację teraz"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Powiększ lub pomniejsz zawartość stron internetowych przy użyciu przycisku zoom dla zwiększenia wygody czytania.",
+    "description":"Powiększ lub pomniejsz zawartość stron internetowych przy użyciu przycisku zoom dla zwiększenia wygody czytania."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Przywróć czarny pasek menu na stronie Google.",
+    "description":"Przywróć czarny pasek menu na stronie Google."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"To pokazuje Informacje giełdowe w czasie rzeczywistym.",
+    "description":"To pokazuje Informacje giełdowe w czasie rzeczywistym."
+  },
+  "titelnightmodeposition":{
+    "message":"Położenie przełącznika",
+    "description":"Położenie przełącznika"
+  },
+  "nmtopleft":{
+    "message":"Lewy górny",
+    "description":"Lewy górny"
+  },
+  "nmtopright":{
+    "message":"Prawy górny",
+    "description":"Prawy górny"
+  },
+  "nmbottomright":{
+    "message":"Prawy dolny",
+    "description":"Prawy dolny"
+  },
+  "nmbottomleft":{
+    "message":"Lewy dolny",
+    "description":"Lewy dolny"
+  },
+  "nmcustom":{
+    "message":"Kliknij, przytrzymaj i przenieś do dowolnej pozycji na ekranie.",
+    "description":"Kliknij, przytrzymaj i przenieś do dowolnej pozycji na ekranie."
+  },
+  "desnighthover":{
+    "message":"Pokaż przezroczysty przełącznik na stronie internetowej.",
+    "description":"Pokaż przezroczysty przełącznik na stronie internetowej."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Lista dozwolonych",
+    "description":"Lista dozwolonych"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Lista zabronionych",
+    "description":"Lista zabronionych"
+  },
+  "desautostoponly":{
+    "message":"Aktywuj aytomatyczne zatrzymywanie wideo tylko na następujących stronach:",
+    "description":"Aktywuj aytomatyczne zatrzymywanie wideo tylko na następujących stronach:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Lista dozwolonych",
+    "description":"Lista dozwolonych"
+  },
+  "titelautostopblacklist":{
+    "message":"Lista zabronionych",
+    "description":"Lista zabronionych"
+  },
+  "desnightactivetime":{
+    "message":"Przełącznik będzie widoczny między następującymi godzinami:",
+    "description":"Przełącznik będzie widoczny między następującymi godzinami:"
+  },
+  "deslampandnightmode":{
+    "message":"Aktywuj tryb nocny poprzez kliknięcie na szarą lampę.",
+    "description":"Aktywuj tryb nocny poprzez kliknięcie na szarą lampę."
+  },
+  "titeleyewhitelist":{
+    "message":"Lista dozwolonych",
+    "description":"Lista dozwolonych"
+  },
+  "titeleyeblacklist":{
+    "message":"Lista zabronionych",
+    "description":"Lista zabronionych"
+  },
+  "desspeech5command":{
+    "message":"Lampa przeglądarkowa",
+    "description":"Lampa przeglądarkowa"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

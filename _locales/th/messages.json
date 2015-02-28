@@ -12,8 +12,8 @@
     "description":"เมื่อต้องสลับไฟ\/ปิดสำหรับแท็บที่เปิดอยู่ทั้งหมด"
   },
   "lastchecked":{
-    "message":"ตรวจสอบเป็นรุ่นล่าสุดแล้ว",
-    "description":"รุ่นล่าสุดตรวจสอบใน"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"ลักษณะการแสดงผล",
@@ -32,8 +32,8 @@
     "description":"ชอบบาร์"
   },
   "desmousespotlightt":{
-    "message":"อนุญาตให้คุณคลิกไปยังที่มืดของหน้าจอเมื่อมีการปิดไฟ",
-    "description":"ช่วยให้คุณสามารถคลิกผ่านหน้าจอภาพที่มืดลงเมื่อปิดไฟ"
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"มี4 สีให้เลือกรอบๆวิดีโอ:",
@@ -144,16 +144,16 @@
     "description":"อวกาศจักรวาล"
   },
   "deseastereggs":{
-    "message":"โบนัสในส่วนขยายนี้",
-    "description":"โบนัสในส่วนขยายนี้"
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"การตั้งค่า",
     "description":"การตั้งค่า"
   },
   "desspotlightradius":{
-    "message":"เส้นผ่าศูนย์กลางของโคมไฟค้นหาได้",
-    "description":"เส้นผ่าศูนย์กลางของโคมไฟค้นหาได้"
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"ซิงค์",
@@ -424,8 +424,8 @@
     "description":"ฝน"
   },
   "desalllightsoff":{
-    "message":"คลิกที่ปุ่มไฟจะสลับไฟบน\/ปิดบนแท็บที่เปิดอยู่ทั้งหมดเมื่อเปิดใช้งานตัวเลือกนี้",
-    "description":"คลิกที่ปุ่มไฟจะสลับไฟบน\/ปิดบนแท็บที่เปิดอยู่ทั้งหมดเมื่อเปิดใช้งานตัวเลือกนี้"
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"บันทึกเวลาเรียบร้อยแล้ว!",
@@ -448,8 +448,8 @@
     "description":"เมื่อต้องสลับไฟเปิด\/ปิด"
   },
   "deseyea":{
-    "message":"สลัวพื้นหลังโดยอัตโนมัติเมื่อเปิดหน้า",
-    "description":"มิติพื้นหลังโดยอัตโนมัติเมื่อเปิดเพจ"
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"ข้อมูลพื้นฐานเกี่ยวกับ",
@@ -472,8 +472,8 @@
     "description":"ยินดีต้อนรับ TOtL แนะนำ"
   },
   "deseyealist":{
-    "message":"หรี่พื้นหลังโดยอัตโนมัติเมื่อเปิดเพจที่ต่อไปนี้:",
-    "description":"มิติพื้นหลังโดยอัตโนมัติเมื่อเปิดเพจที่ต่อไปนี้:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"ปุ่ม ชอบ & ไม่ชอบ",
@@ -580,8 +580,8 @@
     "description":"การคืนค่าการตั้งค่ามืด (ทึบ) ตั้ง"
   },
   "desambilightrangeblurradius":{
-    "message":"ถ้าตั้งค่าเป็นค่าที่ต่ำลงเงาจะเป็นคม เลขสูง ไม่คมชัดมากขึ้นจะ",
-    "description":"ถ้าตั้งค่าล่างเงาจะเป็นคม เลขสูง ไม่คมชัดมากขึ้นจะ"
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"เพิ่มปุ่ม",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"เปิดใช้งานการเคลื่อนไหวของกล้องเพื่อให้หน้าเว็บสามารถมืดลงด้วยการกวาดมือลง",
-    "description":"การเคลื่อนไหวกล้อง"
+    "description":"เปิดใช้งานการเคลื่อนไหวของกล้องเพื่อให้หน้าเว็บสามารถมืดลงด้วยการกวาดมือลง"
   },
   "trymotion":{
     "message":"ลองด้วยตัวคุณเอง!",
@@ -752,8 +752,8 @@
     "description":"ย้ายมือของคุณ (หรือกำปั้น) จากด้านบนลงล่าง"
   },
   "step3description":{
-    "message":"แล้วสไลด์สีดำจะเลื่อนลงมาโดยอัตโนมัติ",
-    "description":"แล้วสไลด์สีดำจะเลื่อนลงมาโดยอัตโนมัติ"
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"รายการตรวจสอบ:",
@@ -902,5 +902,157 @@
   "titelwikiatmos":{
     "message":"Wiki เกี่ยวกับคุณลักษณะแสงบรรยากาศ",
     "description":"Wiki เกี่ยวกับคุณลักษณะแสงบรรยากาศ"
+  },
+  "sharemenusharetitle":{
+    "message":"แชร์สิ่งนี้",
+    "description":"แชร์สิ่งนี้"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"ยินดีต้อนรับสู่การแนะนำ",
+    "description":"ยินดีต้อนรับสู่การแนะนำ"
+  },
+  "sharemenutellafriend":{
+    "message":"บอกเพื่อน",
+    "description":"บอกเพื่อน"
+  },
+  "sharemenusendatweet":{
+    "message":"ส่งไปที่ Tweet",
+    "description":"ส่งไปที่ Tweet"
+  },
+  "sharemenupostonfacebook":{
+    "message":"โพสต์บน Facebook",
+    "description":"โพสต์บน Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"โพสต์บน Google +",
+    "description":"โพสต์บน Google +"
+  },
+  "sharemenuratetitle":{
+    "message":"ให้คะแนนส่วนขยายนี้",
+    "description":"ให้คะแนนส่วนขยายนี้"
+  },
+  "sharemenudonatetitle":{
+    "message":"สนับสนุนการพัฒนา",
+    "description":"สนับสนุนการพัฒนา"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

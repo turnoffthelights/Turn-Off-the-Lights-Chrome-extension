@@ -12,8 +12,8 @@
     "description":"若要切換打開\/關閉燈對於所有打開的選項卡。"
   },
   "lastchecked":{
-    "message":"更新最新版本",
-    "description":"簽的最新版本"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"視覺效果",
@@ -32,8 +32,8 @@
     "description":"喜歡酒吧"
   },
   "desmousespotlightt":{
-    "message":"當光源關閉的時候允許您點擊黑螢幕。",
-    "description":"允許您通過螢幕變暗的燈都關的時候按一下。"
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"圍繞影片的四個被選擇的顏色：",
@@ -144,16 +144,16 @@
     "description":"空間的宇宙"
   },
   "deseastereggs":{
-    "message":"在此擴展中有獎利。",
-    "description":"在此擴展中的獎金。"
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"設定",
     "description":"設置"
   },
   "desspotlightradius":{
-    "message":"為搜索燈之直徑。",
-    "description":"是的搜索燈直徑。"
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"同步",
@@ -424,8 +424,8 @@
     "description":"雨滴"
   },
   "desalllightsoff":{
-    "message":"當開啟此選項時,點擊光源鈕將會使所有開啟頁籤之燈光開啟或關閉。",
-    "description":"當啟用此選項，按一下燈按鈕將切換打開\/關閉所有打開的選項卡上的指示燈。"
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"已成功保存 ！",
@@ -448,8 +448,8 @@
     "description":"若要切換燈打開\/關閉。"
   },
   "deseyea":{
-    "message":"暗淡的背景時自動打開一個頁面。",
-    "description":"打開網頁時，會自動變暗背景。"
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"基礎",
@@ -472,8 +472,8 @@
     "description":"TOtL 歡迎指南"
   },
   "deseyealist":{
-    "message":"開啟下列頁面時自動使背景變暗：",
-    "description":"打開以下頁面時，會自動變暗背景："
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"喜歡\/不喜歡 按鈕",
@@ -580,8 +580,8 @@
     "description":"若要還原到集黑暗 （透明度） 設置。"
   },
   "desambilightrangeblurradius":{
-    "message":"如果設置的值比較低, 陰影將會是很尖銳。數字越高，陰影將會是越模糊。",
-    "description":"如果設置較低的值陰影將鋒利，數位越高，越來越模糊它將。"
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"加入鈕",
@@ -752,8 +752,8 @@
     "description":"移動您的手 (或握拳) 由上至下"
   },
   "step3description":{
-    "message":"而後暗部滑條將會自動向下",
-    "description":"而後暗部滑條將會自動向下"
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"清單：",
@@ -934,5 +934,125 @@
   "sharemenudonatetitle":{
     "message":"支援開發",
     "description":"支援開發"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"白名單",
+    "description":"白名單"
+  },
+  "titelnightmodeblacklist":{
+    "message":"黑名單",
+    "description":"黑名單"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"白名單",
+    "description":"白名單"
+  },
+  "titelautostopblacklist":{
+    "message":"黑名單",
+    "description":"黑名單"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"白名單",
+    "description":"白名單"
+  },
+  "titeleyeblacklist":{
+    "message":"黑名單",
+    "description":"黑名單"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

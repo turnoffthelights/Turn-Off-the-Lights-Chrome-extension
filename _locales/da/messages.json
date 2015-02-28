@@ -12,8 +12,8 @@
     "description":"skifter lysene tænd\/sluk for alle åbne faner."
   },
   "lastchecked":{
-    "message":"Nyeste version kontrolleres på",
-    "description":"Nyeste version kontrolleres på"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Visuelle Effekter",
@@ -32,8 +32,8 @@
     "description":"Indkvartering Bar"
   },
   "desmousespotlightt":{
-    "message":"Gør det muligt at klikke sig igennem den mørke skærm når lysene er slukket.",
-    "description":"Gør det muligt at klikke sig igennem den mørke skærm når lysene er slukket."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 valgt farver omkring videoen:",
@@ -144,16 +144,16 @@
     "description":"Plads univers"
   },
   "deseastereggs":{
-    "message":"En bonus i denne udvidelse.",
-    "description":"En bonus i denne udvidelse."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Indstillinger",
     "description":"Indstillinger"
   },
   "desspotlightradius":{
-    "message":"er diameteren af Søg lampe.",
-    "description":"er diameteren af Søg lampe."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sync",
@@ -424,8 +424,8 @@
     "description":"Regndråber"
   },
   "desalllightsoff":{
-    "message":"At klikke på knappen lampe vil skifte\/sluk lyset på alle åbne faner, når denne indstilling er aktiveret.",
-    "description":"At klikke på knappen lampe vil skifte\/sluk lyset på alle åbne faner, når denne indstilling er aktiveret."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Sekunder gemmes med succes!",
@@ -448,8 +448,8 @@
     "description":"at skifte lys, Tænd\/sluk."
   },
   "deseyea":{
-    "message":"Dæmp automatisk baggrunden, når en side åbnes.",
-    "description":"Automatisk dim baggrunden, når du åbner en side."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Grundlæggende",
@@ -472,8 +472,8 @@
     "description":"TOtL velkommen Guide"
   },
   "deseyealist":{
-    "message":"Automatisk dim baggrunden, når du åbner de følgende sider:",
-    "description":"Automatisk dim baggrunden, når du åbner de følgende sider:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Like- & dislike-knapper",
@@ -580,8 +580,8 @@
     "description":"at genoprette sæt mørket (opacitet) indstilling."
   },
   "desambilightrangeblurradius":{
-    "message":"Hvis indstillet til en lavere værdi skyggen vil være skarp, jo højere tallet er, den mere sløret det vil være.",
-    "description":"Hvis sæt en lavere værdi skyggen vil være skarp, jo højere tallet er, den mere sløret det vil være."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Tilføje knappen",
@@ -752,8 +752,8 @@
     "description":"Move your hand (or fist) from the top to bottom"
   },
   "step3description":{
-    "message":"Then the black layer will automatically slide down.",
-    "description":"Then the black layer will automatically slide down."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Checklist:",
@@ -948,8 +948,8 @@
     "description":"Are you happy about Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensures that your opinion counts",
-    "description":"Ensures that your opinion counts"
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
   },
   "nothanks":{
     "message":"No thanks",
@@ -1000,12 +1000,12 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Click, hold and move it to your own screen location.",
-    "description":"Click, hold and move it to your own screen location."
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
   },
   "desnighthover":{
-    "message":"Show the transparent switch on the web page.",
-    "description":"Show the transparent switch on the web page."
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
     "message":"Whitelist",
@@ -1016,8 +1016,8 @@
     "description":"Blacklist"
   },
   "desautostoponly":{
-    "message":"Activate the stop playing automatically the video only on the following site(s):",
-    "description":"Activate the stop playing automatically the video only on the following site(s):"
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
   },
   "titelautostopwhitelist":{
     "message":"Whitelist",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"browser lamp",
     "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

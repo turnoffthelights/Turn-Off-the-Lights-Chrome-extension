@@ -12,8 +12,8 @@
     "description":"untuk beralih lampu on\/off untuk semua Buka tab."
   },
   "lastchecked":{
-    "message":"Versi terbaru di-periksa pada",
-    "description":"Memeriksa versi terbaru"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Efek Visual",
@@ -32,8 +32,8 @@
     "description":"Seperti Bar"
   },
   "desmousespotlightt":{
-    "message":"Memberikan pilihan untuk dapat mengklik daerah gelap pada layar disaat lampu sedang mati.",
-    "description":"Memungkinkan Anda untuk mengklik melalui layar gelap ketika lampu off."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"Empat (4) warna pilihan disekeliling video:",
@@ -144,16 +144,16 @@
     "description":"Ruang alam semesta"
   },
   "deseastereggs":{
-    "message":"Bonus dalam ekstensi ini.",
-    "description":"Bonus dalam ekstensi ini."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Pengaturan",
     "description":"Pengaturan"
   },
   "desspotlightradius":{
-    "message":"adalah diameter dari lampu pencari.",
-    "description":"adalah diameter lampu Cari."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sinkronisasi",
@@ -424,8 +424,8 @@
     "description":"Hujan"
   },
   "desalllightsoff":{
-    "message":"Mengklik tombol lampu akan menyalakan\/mematikan lampu pada semua tab yang terbuka ketika pilihan ini diaktifkan.",
-    "description":"Mengklik tombol lampu akan beralih lampu mematikan di semua Buka tab bila pilihan ini diaktifkan."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Detik berhasil disimpan!",
@@ -448,8 +448,8 @@
     "description":"untuk beralih lampu on\/off."
   },
   "deseyea":{
-    "message":"Secara otomatis redup latar belakang saat membuka sebuah halaman.",
-    "description":"Otomatis redup latar belakang ketika membuka halaman."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Dasar-dasar",
@@ -472,8 +472,8 @@
     "description":"Total Selamat datang panduan"
   },
   "deseyealist":{
-    "message":"Otomatis meredupkan latar belakang ketika membuka halaman-halaman berikut:",
-    "description":"Otomatis redup latar belakang ketika membuka halaman-halaman berikut:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Tombol Suka dan Tidak Suka",
@@ -580,8 +580,8 @@
     "description":"untuk mengembalikan dengan mengatur kegelapan (opacity) pengaturan."
   },
   "desambilightrangeblurradius":{
-    "message":"Nilai kecil mempertajam bayangan, nilai besar sebaliknya.",
-    "description":"Jika set nilai yang lebih rendah bayangan akan tajam, semakin tinggi nomor, lebih kabur itu akan."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Tambahkan tombol",
@@ -752,8 +752,8 @@
     "description":"Gerakkan tangan anda (atau kepalan) dari atas ke bawah"
   },
   "step3description":{
-    "message":"Maka slide lapisan hitam akan turun secara otomatis.",
-    "description":"Maka slide lapisan hitam akan turun secara otomatis."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Ceklist:",
@@ -960,8 +960,8 @@
     "description":"Tulis ulasan"
   },
   "desauroraplayer":{
-    "message":"The ambient lighting player is also available for your computer.",
-    "description":"The ambient lighting player is also available for your computer."
+    "message":"Pemain pencahayaan ruangan juga tersedia untuk komputer.",
+    "description":"Pemain pencahayaan ruangan juga tersedia untuk komputer."
   },
   "downloadtheapp":{
     "message":"Unduh app sekarang",
@@ -976,8 +976,8 @@
     "description":"Tambah tombol kembali pada menubar hitam di situs Google."
   },
   "titeldownloadupgradefinancetoolbar":{
-    "message":"This shows you the real time stock market information.",
-    "description":"This shows you the real time stock market information."
+    "message":"Menunjukkan informasi pasar saham.",
+    "description":"Menunjukkan informasi pasar saham."
   },
   "titelnightmodeposition":{
     "message":"Tukar posisi",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"Lampu peramban",
     "description":"Lampu peramban"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

@@ -12,8 +12,8 @@
     "description":"bütün sekmelerde ışıkları açmak\/kapatmak için."
   },
   "lastchecked":{
-    "message":"En son sürüm kontrolü",
-    "description":"En son sürüm kontrolü"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Görsel Efektler",
@@ -32,8 +32,8 @@
     "description":"Gibi Bar"
   },
   "desmousespotlightt":{
-    "message":"Işıklar kapalıyken, karartılmış ekranda tıklamalar yapmana izin verir.",
-    "description":"Kararan ekran üzerinden ışıklar kapalı olduğunda tıklatın sağlar."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"Video etrafında seçilen 4 renk:",
@@ -144,16 +144,16 @@
     "description":"Boşluk evren"
   },
   "deseastereggs":{
-    "message":"Bu eklentinin bonusu.",
-    "description":"Bu uzantı bir bonus."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Ayarlar",
     "description":"Ayarlar"
   },
   "desspotlightradius":{
-    "message":"arama ampulünün çapıdır.",
-    "description":"Arama lamba çapı olduğunu."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Eşitle",
@@ -424,8 +424,8 @@
     "description":"Yağmur damlaları"
   },
   "desalllightsoff":{
-    "message":"Bu özellik açıkken ampul butonuna tıklamak bütün sekmelerde ışıkları kapatıp açacaktır.",
-    "description":"Bu seçenek etkinleştirildiğinde lamba düğmesi tüm açık tabs ışıkları açma geçiş yapılır."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Saniye başarıyla kaydedildi!",
@@ -448,8 +448,8 @@
     "description":"Işıklar açık\/kapalı geçiş yapmak için."
   },
   "deseyea":{
-    "message":"Yeni bir sayfa açıldığında otomatik olarak arkaplanı karart.",
-    "description":"Otomatik olarak arka planda sayfa açarken dim."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Temeller",
@@ -472,8 +472,8 @@
     "description":"TOtL hoş geldiniz Kılavuzu"
   },
   "deseyealist":{
-    "message":"Şu sayfaları açarken otomatik olarak arkaplanı karart:",
-    "description":"Otomatik olarak arka planda aşağıdaki sayfalar açarken dim:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Beğen & Beğenme Butonları",
@@ -580,8 +580,8 @@
     "description":"ayarlama ayarlama karanlığa (opacity) geri yüklemek için."
   },
   "desambilightrangeblurradius":{
-    "message":"Daha düşük bir değer seçilirse gölge keskinleşecektir. Değer arttıkça bulanıklaşacaktır.",
-    "description":"Seti daha düşük bir değer gölge keskin olması durumunda, sayı, daha bulanık olacak."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Ekle Butonu",
@@ -752,8 +752,8 @@
     "description":"Elinizi yukarıdan aşağı doğru hareket ettirin"
   },
   "step3description":{
-    "message":"Ardından siyah katman otomatik olarak aşağı kayacaktır.",
-    "description":"Ardından siyah katman otomatik olarak aşağı kayacaktır."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Denetleme listesi:",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"Tarayıcı Lambası",
     "description":"Tarayıcı Lambası"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

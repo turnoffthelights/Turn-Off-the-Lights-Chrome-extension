@@ -12,8 +12,8 @@
     "description":"å veksle lysene på\/av for alle åpne faner."
   },
   "lastchecked":{
-    "message":"Nyeste versjon valgt",
-    "description":"Siste versjon som er sjekket på"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Visuelle Effekter",
@@ -32,8 +32,8 @@
     "description":"Som Bar"
   },
   "desmousespotlightt":{
-    "message":"Tillater at du klikke deg gjennom det mørke skjermbildet når lysene er av.",
-    "description":"Kan du klikke deg gjennom det mørke skjermbildet når lysene er av."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 valgte farger rundt videoen:",
@@ -144,16 +144,16 @@
     "description":"Mellomrom univers"
   },
   "deseastereggs":{
-    "message":"En bonus i denne utviddelsen. ",
-    "description":"En bonus i denne utvidelsen."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Innstillinger",
     "description":"Innstillinger"
   },
   "desspotlightradius":{
-    "message":"er diameteren på søkelampen.",
-    "description":"er diameteren på søk lampen."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Synkroniser",
@@ -424,8 +424,8 @@
     "description":"Regndråper"
   },
   "desalllightsoff":{
-    "message":"Med dette valget vil lampe-knappen slå lyset av eller på i alle åpne faner samtidig.",
-    "description":"Klikke lampe vil veksle lysene på\/av på alle åpne faner når dette alternativet er aktivert."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Loggføring lagret!",
@@ -448,8 +448,8 @@
     "description":"å veksle lysene på\/av."
   },
   "deseyea":{
-    "message":"Demp automatisk bakgrunnsfargen når en side åpnes",
-    "description":"Automatisk dempe bakgrunnen når en side åpnes."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Standard",
@@ -472,8 +472,8 @@
     "description":"TOtL velkommen Guide"
   },
   "deseyealist":{
-    "message":"Demp automatisk bakgrunnen når du åpner følgende side(r):",
-    "description":"Automatisk dempe bakgrunnen når du åpner den følgende siden:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"'liker' og 'liker ikke' knapper",
@@ -580,8 +580,8 @@
     "description":"å restaurere å angi mørket (opacity) innstilling."
   },
   "desambilightrangeblurradius":{
-    "message":"Hvis satt til en lavere verdi, blir skyggen skarp. Jo høyere nummer, jo mer uklar vil den bli. ",
-    "description":"Hvis sett en lavere verdi skyggen blir skarpe, jo høyere tall, på mer uskarp det vil være."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Legg til Knapp",
@@ -752,8 +752,8 @@
     "description":"Flytt hånden (eller neve) fra toppen til bunnen"
   },
   "step3description":{
-    "message":"Da sklir det sorte laget automatisk ned.",
-    "description":"Da sklir det sorte laget automatisk ned."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Sjekkliste:",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"nettleser lampe",
     "description":"nettleser lampe"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Støtter: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Støtter: <object>, <embed>, <applet>, <iframe>."
   }
 }

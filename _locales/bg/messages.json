@@ -12,8 +12,8 @@
     "description":"за превключване на светлините включване\/изключване за всички отворени раздели."
   },
   "lastchecked":{
-    "message":"Използвате последна версия",
-    "description":"Най-новата версия, проверени на"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Визуални ефекти",
@@ -32,8 +32,8 @@
     "description":"Като Бар"
   },
   "desmousespotlightt":{
-    "message":"Ви позволява да кликвате Потъмнелият екран, когато светлините са изключени.",
-    "description":"Ви позволява да кликвате Потъмнелият екран, когато светлините са изключени."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 цвята по избор около видеото:",
@@ -144,16 +144,16 @@
     "description":"Пространство вселена"
   },
   "deseastereggs":{
-    "message":"Бонус в това разширение.",
-    "description":"Бонус в това разширение."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Настройки",
     "description":"Настройки"
   },
   "desspotlightradius":{
-    "message":"е диаметърът на търсене лампата.",
-    "description":"е диаметърът на търсене лампата."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Синхронизиране",
@@ -300,8 +300,8 @@
     "description":"Ако не е в състояние да получават данни, видео, тъй като на сайта сигурност правило, тогава тя ще покаже избрания плътен цвят вместо това."
   },
   "desdynamiccloud":{
-    "message":"Animated Clouds",
-    "description":"Animated Clouds"
+    "message":"Анимирани облаци",
+    "description":"Анимирани облаци"
   },
   "desconfirmtimesaver":{
     "message":"Потвърдете параван спасявам време",
@@ -424,8 +424,8 @@
     "description":"Дъждовните капки"
   },
   "desalllightsoff":{
-    "message":"Натискане на бутона лампата ще превключва светлините включване\/изключване на всички отворени раздели, когато тази опция е включена.",
-    "description":"Натискане на бутона лампата ще превключва светлините включване\/изключване на всички отворени раздели, когато тази опция е включена."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Секунди е записан успешно!",
@@ -448,8 +448,8 @@
     "description":"за превключване на светлините, включване\/изключване."
   },
   "deseyea":{
-    "message":"Автоматично затъмни екрана когато отвориш нова страница.",
-    "description":"Автоматично замъгляване фон при отваряне на страницата."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Основни положения",
@@ -472,8 +472,8 @@
     "description":"TOtL добре дошли ръководство"
   },
   "deseyealist":{
-    "message":"Автоматично замъгляване фон при отваряне на следните страници:",
-    "description":"Автоматично замъгляване фон при отваряне на следните страници:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Бутони Like & Dislike",
@@ -580,8 +580,8 @@
     "description":"за да възстановите Задаване тъмнината (непрозрачност) настройка."
   },
   "desambilightrangeblurradius":{
-    "message":"Ако по-ниска стойност сянката ще бъде рязко, колкото това число, по-замъглено ще бъде.",
-    "description":"Ако набор по-ниска стойност сянката ще бъде рязко, колкото това число, по-замъглено ще бъде."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Добавяне на бутон",
@@ -656,16 +656,16 @@
     "description":"Когато отваряте нова страница го отидете автоматично на нощен режим."
   },
   "titellampregular":{
-    "message":"Show always the lamp icon in the omnibox",
-    "description":"Show always the lamp icon in the omnibox"
+    "message":"Винаги показвай иконата на лампата в полето за всичко",
+    "description":"Винаги показвай иконата на лампата в полето за всичко"
   },
   "titellampvideo":{
-    "message":"Show the lamp icon only if a video player is detected",
-    "description":"Show the lamp icon only if a video player is detected"
+    "message":"Покажи иконата на лампата само ако е открит видео плейър",
+    "description":"Покажи иконата на лампата само ако е открит видео плейър"
   },
   "upgradecontexttitle":{
-    "message":"We have added some new features for you",
-    "description":"We have added some new features for you"
+    "message":"Ние добавихме някои нови функции за вас",
+    "description":"Ние добавихме някои нови функции за вас"
   },
   "upgradecontextmessage":{
     "message":"That make this extension even more amazing",
@@ -680,16 +680,16 @@
     "description":"light off with your hand"
   },
   "upgradecontextitemtb":{
-    "message":"Speech Recognition",
-    "description":"Speech Recognition"
+    "message":"Разпознаване на реч",
+    "description":"Разпознаване на реч"
   },
   "upgradecontextitemmb":{
-    "message":"Control the web page more accurately",
-    "description":"Control the web page more accurately"
+    "message":"Контролирайте уеб страницата по-прецизно",
+    "description":"Контролирайте уеб страницата по-прецизно"
   },
   "upgradefbshare":{
-    "message":"Facebook Share",
-    "description":"Facebook Share"
+    "message":"Споделете във Фейсбук",
+    "description":"Споделете във Фейсбук"
   },
   "upgradetwshare":{
     "message":"Tweet",
@@ -700,8 +700,8 @@
     "description":"Моля оценете и коментирайте моята добавка"
   },
   "ratedes":{
-    "message":"And let everyone know about this great extension!",
-    "description":"And let everyone know about this great extension!"
+    "message":"И нека всички знаят за това страхотно разширение!",
+    "description":"И нека всички знаят за това страхотно разширение!"
   },
   "rateitema":{
     "message":"Оценете с 5 звезди",
@@ -712,12 +712,12 @@
     "description":"Възстановяване на настройките"
   },
   "resetbrowserextension":{
-    "message":"Reset the Turn Off the Lights settings",
-    "description":"Reset the Turn Off the Lights settings"
+    "message":"Върнете началните настройки",
+    "description":"Върнете началните настройки"
   },
   "desautoplaydelay":{
-    "message":"Brighten again the background when the video ended after",
-    "description":"Brighten again the background when the video ended after"
+    "message":"Направи фона по-светъл, когато видеото свърши",
+    "description":"Направи фона по-светъл, когато видеото свърши"
   },
   "desautoplaydelayend":{
     "message":"секунди",
@@ -728,48 +728,48 @@
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion so that the web page could darkens with a hand sweep down.",
-    "description":"Camera Motion"
+    "message":"Разрешаване на Camera Motion, за да потъмнява страницата с едно движение на раката надолу.",
+    "description":"Разрешаване на Camera Motion, за да потъмнява страницата с едно движение на раката надолу."
   },
   "trymotion":{
     "message":"Опитайте сами!",
     "description":"Опитайте сами!"
   },
   "destrymotion":{
-    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc.",
-    "description":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
+    "message":"Това е просто чудесно, и най-хубавото е, че тя работи навсякъде. Дори в YouTube, новинарски сайт, и др.",
+    "description":"Това е просто чудесно, и най-хубавото е, че тя работи навсякъде. Дори в YouTube, новинарски сайт, и др."
   },
   "howworkmotion":{
-    "message":"How does it work?",
-    "description":"How does it work?"
+    "message":"Как работи?",
+    "description":"Как работи?"
   },
   "step1description":{
-    "message":"Enable the Camera Motion feature",
-    "description":"Enable the Camera Motion feature"
+    "message":"Разрешаване на Camera Motion функцията",
+    "description":"Разрешаване на Camera Motion функцията"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Премести ръката си (или юмрук) от горе надолу",
+    "description":"Премести ръката си (или юмрук) от горе надолу"
   },
   "step3description":{
-    "message":"Then the black layer slide automatically down.",
-    "description":"Then the black layer slide automatically down."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Checklist:",
     "description":"Checklist:"
   },
   "des1checkmotion":{
-    "message":"Make sure your room is not dark and that it have enough light.",
-    "description":"Make sure your room is not dark and that it have enough light."
+    "message":"Уверете се, че във вашата стая не е тъмно и има достатъчно светлина.",
+    "description":"Уверете се, че във вашата стая не е тъмно и има достатъчно светлина."
   },
   "des2checkmotion":{
-    "message":"Your camera must not receive direct sunlight.",
-    "description":"Your camera must not receive direct sunlight."
+    "message":"Във вашата камера не трябва да попада пряка слънчева светлина.",
+    "description":"Във вашата камера не трябва да попада пряка слънчева светлина."
   },
   "des3checkmotion":{
-    "message":"You use a front facing camera.",
-    "description":"You use a front facing camera."
+    "message":"Можете да използвате предната камера.",
+    "description":"Можете да използвате предната камера."
   },
   "titellinear":{
     "message":"Linear",
@@ -784,7 +784,7 @@
     "description":"Цвят B"
   },
   "speechoption":{
-    "message":"Speech Recognition",
+    "message":"Разпознаване на реч",
     "description":"Speech Recognition "
   },
   "titelspeech":{
@@ -792,8 +792,8 @@
     "description":"Реч"
   },
   "desspeech":{
-    "message":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:",
-    "description":"When you have enable this option, you can talk to the browser lamp. And you can say the following commands:"
+    "message":"Когато разрешите тази опция, можете да говорите с лампата на браузъра. И можете да кажете следните команди:",
+    "description":"Когато разрешите тази опция, можете да говорите с лампата на браузъра. И можете да кажете следните команди:"
   },
   "desspeech1command":{
     "message":"turn off the lights",
@@ -816,8 +816,8 @@
     "description":"Изберете вашият диалект за речта:"
   },
   "desatmosvivid":{
-    "message":"Vivid atmosphere effects on YouTube, require",
-    "description":"Vivid atmosphere effects on YouTube, require"
+    "message":"Ярките атмосферни ефекти на YouTube изискват",
+    "description":"Ярките атмосферни ефекти на YouTube изискват"
   },
   "help":{
     "message":"Помощ",
@@ -828,12 +828,12 @@
     "description":"За"
   },
   "desspeechonly":{
-    "message":"Activate the Speech Recognition only the following site(s):",
-    "description":"Activate the Speech Recognition only the following site(s):"
+    "message":"Активиране на разпознаването на реч само на следните уебсайтове:",
+    "description":"Активиране на разпознаването на реч само на следните уебсайтове:"
   },
   "descammotiononly":{
-    "message":"Activate the Camera Motion only on the following site(s):",
-    "description":"Activate the Camera Motion only on the following site(s):"
+    "message":"Активирайте Camera Motion само на следните уебсайтове:",
+    "description":"Активирайте Camera Motion само на следните уебсайтове:"
   },
   "titelcamera":{
     "message":"Камера",
@@ -856,8 +856,8 @@
     "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your video card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"See online for more examples",
@@ -896,11 +896,163 @@
     "description":"project"
   },
   "titelapideveloper":{
-    "message":"API Developer",
-    "description":"API Developer"
+    "message":"API разработчик",
+    "description":"API разработчик"
   },
   "titelwikiatmos":{
     "message":"Wiki about the Atmosphere Lighting feature",
     "description":"Wiki about the Atmosphere Lighting feature"
+  },
+  "sharemenusharetitle":{
+    "message":"Споделяне",
+    "description":"Споделяне"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Начално ръководство",
+    "description":"Начално ръководство"
+  },
+  "sharemenutellafriend":{
+    "message":"Кажете на приятел",
+    "description":"Кажете на приятел"
+  },
+  "sharemenusendatweet":{
+    "message":"Публикувайте в Twitter",
+    "description":"Публикувайте в Twitter"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Публикувайте във Facebook",
+    "description":"Публикувайте във Facebook"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Публикувайте в Google+",
+    "description":"Публикувайте в Google+"
+  },
+  "sharemenuratetitle":{
+    "message":"Оценете това разширение",
+    "description":"Оценете това разширение"
+  },
+  "sharemenudonatetitle":{
+    "message":"Подкрепете разработката",
+    "description":"Подкрепете разработката"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Горе вляво",
+    "description":"Горе вляво"
+  },
+  "nmtopright":{
+    "message":"Горе вдясно",
+    "description":"Горе вдясно"
+  },
+  "nmbottomright":{
+    "message":"Долу вдясно",
+    "description":"Долу вдясно"
+  },
+  "nmbottomleft":{
+    "message":"Долу вляво",
+    "description":"Долу вляво"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desautostoponly":{
+    "message":"Активирате спиране автоматичното изпълнение на видео само на следните места:",
+    "description":"Активирате спиране автоматичното изпълнение на видео само на следните места:"
+  },
+  "titelautostopwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelautostopblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desnightactivetime":{
+    "message":"Ключа ще се вижда между следните времена:",
+    "description":"Ключа ще се вижда между следните времена:"
+  },
+  "deslampandnightmode":{
+    "message":"Активирайте опцията \"Нощен режим\", когато щракнете върху бутона на сивата светлина.",
+    "description":"Активирайте опцията \"Нощен режим\", когато щракнете върху бутона на сивата светлина."
+  },
+  "titeleyewhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titeleyeblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

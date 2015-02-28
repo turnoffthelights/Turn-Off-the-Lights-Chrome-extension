@@ -12,8 +12,8 @@
     "description":"Щоб увімкнути або вимкнути фари включення\/вимикання для всіх відкритих вкладок."
   },
   "lastchecked":{
-    "message":"Остання перевірка оновлення відбулась:",
-    "description":"Оновлювали узято на редагування"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Візуальні ефекти",
@@ -32,8 +32,8 @@
     "description":"Як бар"
   },
   "desmousespotlightt":{
-    "message":"Дозволяє клікнтути елементи веб-сторінки через затемнений прошарок, коли світло вимкнено.",
-    "description":"Дозволяє перейти на темному екрані, коли фари вимкнені."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 довільних кольори навколо відео:",
@@ -144,16 +144,16 @@
     "description":"Простір Всесвіту"
   },
   "deseastereggs":{
-    "message":"Бонус в цьому розширенні.",
-    "description":"Бонус в розширенні цього."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Налаштування",
     "description":"Параметри"
   },
   "desspotlightradius":{
-    "message":"- діаметр лампи пошуку.",
-    "description":"є діаметр пошук лампа."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Синхронізація",
@@ -424,8 +424,8 @@
     "description":"Краплі дощу"
   },
   "desalllightsoff":{
-    "message":"Клік на кнопці з лампою увімкне або вимкне світло на всіх відкритих вкладках, якщо дана опція активована.",
-    "description":"Натиснувши кнопку лампа буде перемикати світло включення\/вимикання на всі відкриті вкладки, коли ця опція включена."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Зміни успішно збережено!",
@@ -448,8 +448,8 @@
     "description":"Щоб увімкнути або вимкнути фари вкл\/викл."
   },
   "deseyea":{
-    "message":"Автоматично затемнювати фон при відкритті сторінки.",
-    "description":"Автоматично зменшення яскравості фону, під час відкриття сторінки."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Базові",
@@ -472,8 +472,8 @@
     "description":"TOtL Ласкаво просимо керівництво"
   },
   "deseyealist":{
-    "message":"Автоматично зменшувати яскравість фону під час відкриття наступних сторінок:",
-    "description":"Автоматично зменшення яскравості фону, під час відкриття наступних сторінках:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Кнопки Like & Dislike",
@@ -580,8 +580,8 @@
     "description":"Щоб відновити набір темряви (opacity) установка."
   },
   "desambilightrangeblurradius":{
-    "message":"При малих значеннях тінь буде різкою, при великих - розмитою.",
-    "description":"Якщо набір нижче значення тінь буде різким, що вище це число, більше розмите буде."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Додати кнопку",
@@ -752,8 +752,8 @@
     "description":"Зробіть рух рукою (або кистю) зверху вниз"
   },
   "step3description":{
-    "message":"Тоді затемнений шар автоматично зміститься вниз.",
-    "description":"Тоді затемнений шар автоматично зміститься вниз."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Контрольний перелік:",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"лампа браузера",
     "description":"лампа браузера"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

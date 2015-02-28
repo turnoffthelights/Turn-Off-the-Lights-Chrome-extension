@@ -12,8 +12,8 @@
     "description":"perjungti šviesą visose atvertose kortelėse."
   },
   "lastchecked":{
-    "message":"Paskutinį kartą tikrinta ar naujausia versija",
-    "description":"Paskutinį kartą tikrinta ar naujausia versija"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Vaizdiniai efektai",
@@ -32,8 +32,8 @@
     "description":"„Like“ juosta"
   },
   "desmousespotlightt":{
-    "message":"Leidžia paspausti patamsintą ekraną, kai šviesa išjungta.",
-    "description":"Leidžia paspausti patamsintą ekraną, kai šviesa išjungta."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 pasirinktos spalvos aplink video:",
@@ -144,16 +144,16 @@
     "description":"Space Universe"
   },
   "deseastereggs":{
-    "message":"Premija šiame plėtinyje.",
-    "description":"Premija šiame plėtinyje."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Nustatymai",
     "description":"Nustatymai"
   },
   "desspotlightradius":{
-    "message":"yra šviestuvo diametras.",
-    "description":"yra šviestuvo diametras."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sinchronizuoti",
@@ -424,8 +424,8 @@
     "description":"Lietaus lašai"
   },
   "desalllightsoff":{
-    "message":"Paspaudus lempos mygtuką visose kortelėse bus įjungta\/išjungta šviesa.",
-    "description":"Paspaudus lempos mygtuką visose kortelėse bus įjungta\/išjungta šviesa."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Užrašai sėkmingai išsaugoti!",
@@ -448,8 +448,8 @@
     "description":"perjungti šviesą."
   },
   "deseyea":{
-    "message":"Atveriant puslapį automatiškai tamsinti foną.",
-    "description":"Atveriant puslapį automatiškai tamsinti foną."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Pagrindiniai",
@@ -472,8 +472,8 @@
     "description":"TOtL pradžios vadovas"
   },
   "deseyealist":{
-    "message":"Atveriant puslapį automatiškai tamsinti foną tik šiuose puslapiuose:",
-    "description":"Atveriant puslapį automatiškai tamsinti foną tik šiuose puslapiuose:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Patinka ir nepatinka mygtukai",
@@ -580,8 +580,8 @@
     "description":"atstatyti tamsumo (nepermatomumo) lygio nustatymą."
   },
   "desambilightrangeblurradius":{
-    "message":"Jei nustatyta mažesnė reikšmė, šešėlis bus aštresnis, kitu atveju labiau išplaukęs.",
-    "description":"If set a lower value the shadow will be sharp, the higher the number, the more blurred it will be."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Pridėti mygtuką",
@@ -729,7 +729,7 @@
   },
   "desmotion":{
     "message":"Įjunkite kameros judesį, kad būtų galima pritemdyti puslapį rankos gestu.",
-    "description":"Kameros judesiu"
+    "description":"Įjunkite kameros judesį, kad būtų galima pritemdyti puslapį rankos gestu."
   },
   "trymotion":{
     "message":"Pabandykite patys!",
@@ -752,8 +752,8 @@
     "description":"Move your hand (or fist) from the top to bottom"
   },
   "step3description":{
-    "message":"Tada juoda skaidrė automatiškai slinksis žemyn.",
-    "description":"Tada juoda skaidrė automatiškai slinksis žemyn."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Kontrolinis sąrašas:",
@@ -902,5 +902,157 @@
   "titelwikiatmos":{
     "message":"Wiki about the Atmosphere Lighting feature",
     "description":"Wiki about the Atmosphere Lighting feature"
+  },
+  "sharemenusharetitle":{
+    "message":"Dalintis",
+    "description":"Dalintis"
+  },
+  "sharemenuwelcomeguidetitle":{
+    "message":"Pasveikinimo vadovas",
+    "description":"Pasveikinimo vadovas"
+  },
+  "sharemenutellafriend":{
+    "message":"Pasakykite draugui",
+    "description":"Pasakykite draugui"
+  },
+  "sharemenusendatweet":{
+    "message":"Čiulbėti",
+    "description":"Čiulbėti"
+  },
+  "sharemenupostonfacebook":{
+    "message":"Pranešti „Facebook'e“",
+    "description":"Pranešti „Facebook'e“"
+  },
+  "sharemenupostongoogleplus":{
+    "message":"Pranešti „Google+“",
+    "description":"Pranešti „Google+“"
+  },
+  "sharemenuratetitle":{
+    "message":"Įvertinkite šį plėtinį",
+    "description":"Įvertinkite šį plėtinį"
+  },
+  "sharemenudonatetitle":{
+    "message":"Paremkite kūrimą",
+    "description":"Paremkite kūrimą"
+  },
+  "titelautostop":{
+    "message":"AutoStop",
+    "description":"AutoStop"
+  },
+  "desautostop":{
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
+  },
+  "areyouhappy":{
+    "message":"Are you happy about Turn Off the Lights?",
+    "description":"Are you happy about Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
+  },
+  "nothanks":{
+    "message":"No thanks",
+    "description":"No thanks"
+  },
+  "writeareview":{
+    "message":"Write a review",
+    "description":"Write a review"
+  },
+  "desauroraplayer":{
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
+  },
+  "downloadtheapp":{
+    "message":"Download the app now",
+    "description":"Download the app now"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Add back the black menubar on the Google website.",
+    "description":"Add back the black menubar on the Google website."
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"This shows you the real time stock market information.",
+    "description":"This shows you the real time stock market information."
+  },
+  "titelnightmodeposition":{
+    "message":"Position of switch",
+    "description":"Position of switch"
+  },
+  "nmtopleft":{
+    "message":"Top left",
+    "description":"Top left"
+  },
+  "nmtopright":{
+    "message":"Top right",
+    "description":"Top right"
+  },
+  "nmbottomright":{
+    "message":"Bottom right",
+    "description":"Bottom right"
+  },
+  "nmbottomleft":{
+    "message":"Bottom left",
+    "description":"Bottom left"
+  },
+  "nmcustom":{
+    "message":"Customizable coordinates",
+    "description":"Customizable coordinates"
+  },
+  "desnighthover":{
+    "message":"Shows a transparent switch on the web page",
+    "description":"Shows a transparent switch on the web page"
+  },
+  "titelnightmodewhitelist":{
+    "message":"Baltasis sąrašas",
+    "description":"Baltasis sąrašas"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Juodasis sąrašas",
+    "description":"Juodasis sąrašas"
+  },
+  "desautostoponly":{
+    "message":"Only activate stop playing the video automatically on the following site(s):",
+    "description":"Only activate stop playing the video automatically on the following site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Baltasis sąrašas",
+    "description":"Baltasis sąrašas"
+  },
+  "titelautostopblacklist":{
+    "message":"Juodasis sąrašas",
+    "description":"Juodasis sąrašas"
+  },
+  "desnightactivetime":{
+    "message":"The switch will be visible between the following times:",
+    "description":"The switch will be visible between the following times:"
+  },
+  "deslampandnightmode":{
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+  },
+  "titeleyewhitelist":{
+    "message":"Baltasis sąrašas",
+    "description":"Baltasis sąrašas"
+  },
+  "titeleyeblacklist":{
+    "message":"Juodasis sąrašas",
+    "description":"Juodasis sąrašas"
+  },
+  "desspeech5command":{
+    "message":"browser lamp",
+    "description":"browser lamp"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }

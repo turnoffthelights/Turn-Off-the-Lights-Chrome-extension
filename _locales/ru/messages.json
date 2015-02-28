@@ -12,8 +12,8 @@
     "description":"для переключения огни вкл\/выкл для всех открытых вкладок."
   },
   "lastchecked":{
-    "message":"Последняя проверка обновлений выполнялась",
-    "description":"Последняя версия проверяется на"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Визуальные эффекты",
@@ -32,8 +32,8 @@
     "description":"Как бар"
   },
   "desmousespotlightt":{
-    "message":"Позволяет нажимать через затемненный экран, когда свет выключен.",
-    "description":"Позволяет вам нажать через затемненный экран, когда огни выключены."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 выбранных цвета вокруг видео:",
@@ -144,16 +144,16 @@
     "description":"Космическая вселенная"
   },
   "deseastereggs":{
-    "message":"Бонус в этом расширении.",
-    "description":"Бонус в этом расширении."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Параметры",
     "description":"Параметры"
   },
   "desspotlightradius":{
-    "message":"- диаметр лампы поиска.",
-    "description":"-Диаметр Поиск лампы."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Синхронизация",
@@ -424,8 +424,8 @@
     "description":"Капли дождя"
   },
   "desalllightsoff":{
-    "message":"Когда эта опция активирована, нажатие на лампе будет включать\/отключать свет на всех открытых вкладках.",
-    "description":"Нажатие кнопки лампа будет переключать огни вкл\/выкл на всех открытых вкладок, когда эта опция включена."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Настройки успешно сохранены!",
@@ -448,8 +448,8 @@
     "description":"для переключения огни вкл\/выкл."
   },
   "deseyea":{
-    "message":"Автоматически затемнять фон при открытии страницы.",
-    "description":"Автоматически Яркость фона при открытии страницы."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Основные",
@@ -472,8 +472,8 @@
     "description":"Добро пожаловать TOtL руководство"
   },
   "deseyealist":{
-    "message":"Автоматически затемнить фон при открытии следующих страниц:",
-    "description":"Автоматически Яркость фона при открытии следующих страницах:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Кнопки Нравится и Не нравится",
@@ -580,8 +580,8 @@
     "description":"чтобы восстановить набор тьмы (непрозрачность) параметр."
   },
   "desambilightrangeblurradius":{
-    "message":"При малом значении тень будет резкой, при большом - более размытой.",
-    "description":"Если набор более низкое значение тень будет резким, чем выше число, более размытым будет."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Кнопка Добавить",
@@ -752,8 +752,8 @@
     "description":"Сделайте движение рукой (или кистью) сверху вниз"
   },
   "step3description":{
-    "message":"Затемнённый слой автоматически смещается вниз.",
-    "description":"Затемнённый слой автоматически смещается вниз."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Проверка:",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"лампа браузера",
     "description":"лампа браузера"
+  },
+  "html5andyoutube":{
+    "message":"Видео HTML5 и YouTube™",
+    "description":"Видео HTML5 и YouTube™"
+  },
+  "flashembedobject":{
+    "message":"Поддержка: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Поддержка: <object>, <embed>, <applet>, <iframe>."
   }
 }

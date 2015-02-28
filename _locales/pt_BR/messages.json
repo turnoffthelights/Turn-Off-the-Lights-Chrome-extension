@@ -12,8 +12,8 @@
     "description":"para ligar\/desligar as luzes em todas as abas abertas."
   },
   "lastchecked":{
-    "message":"Última versão verificada em",
-    "description":"Última versão verificada em"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Efeitos visuais",
@@ -32,8 +32,8 @@
     "description":"Barra de avaliação"
   },
   "desmousespotlightt":{
-    "message":"Permite que você clique através da tela escurecida, quando as luzes estão desligadas.",
-    "description":"Permite que você clique através da tela escurecida, quando as luzes estão desligadas."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 cores escolhidas no vídeo",
@@ -144,16 +144,16 @@
     "description":"Espaço Sideral"
   },
   "deseastereggs":{
-    "message":"Um bônus dessa extensão.",
-    "description":"Um bônus dessa extensão."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Configurações",
     "description":"Configurações"
   },
   "desspotlightradius":{
-    "message":"é o diâmetro da lâmpada de busca.",
-    "description":"é o diâmetro da lâmpada de busca."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Sincronizar",
@@ -424,8 +424,8 @@
     "description":"Gotas d'água"
   },
   "desalllightsoff":{
-    "message":"Ao clicar no botão da lâmpada irá alternar as luzes de ligar\/desligar em todas as abas abertas quando esta opção estiver ativa.",
-    "description":"Ao clicar no botão da lâmpada irá alternar as luzes de ligar\/desligar em todas as abas abertas quando esta opção estiver ativa."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Tempo salvo com sucesso!",
@@ -448,8 +448,8 @@
     "description":"para ligar\/desligar as luzes."
   },
   "deseyea":{
-    "message":"Automaticamente escurecer o fundo ao abrir uma página",
-    "description":"Automaticamente escurecer o fundo ao abrir uma página"
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Básico",
@@ -472,8 +472,8 @@
     "description":"Guia do TOtL"
   },
   "deseyealist":{
-    "message":"Apagar as luzes automaticamente ao abrir as páginas:",
-    "description":"Apagar as luzes automaticamente ao abrir as páginas:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Botões de classificação",
@@ -580,8 +580,8 @@
     "description":"Para restauratar os opções de opacidade."
   },
   "desambilightrangeblurradius":{
-    "message":"Quanto maior o valor definido, mais suave será a sombra.",
-    "description":"If set a lower value the shadow will be sharp, the higher the number, the more blurred it will be."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Botão Adicionar",
@@ -752,8 +752,8 @@
     "description":"Mova sua mão (ou punho) de cima para baixo"
   },
   "step3description":{
-    "message":"E então a camada preta desliza automaticamente para baixo.",
-    "description":"E então a camada preta desliza automaticamente para baixo."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Checklist:",
@@ -934,5 +934,125 @@
   "sharemenudonatetitle":{
     "message":"Apoiar o Desenvolvimento",
     "description":"Apoiar o Desenvolvimento"
+  },
+  "titelautostop":{
+    "message":"Parar automaticamente",
+    "description":"Parar automaticamente"
+  },
+  "desautostop":{
+    "message":"Parar de reproduzir automaticamente quando abro uma página da internet",
+    "description":"Parar de reproduzir automaticamente quando abro uma página da internet"
+  },
+  "areyouhappy":{
+    "message":"Está contente com o Turn Off the Lights?",
+    "description":"Está contente com o Turn Off the Lights?"
+  },
+  "tellothers":{
+    "message":"Garanta que a sua opinião conte",
+    "description":"Garanta que a sua opinião conte"
+  },
+  "nothanks":{
+    "message":"Não, obrigado",
+    "description":"Não, obrigado"
+  },
+  "writeareview":{
+    "message":"Escreva uma avaliação",
+    "description":"Escreva uma avaliação"
+  },
+  "desauroraplayer":{
+    "message":"A Iluminação ambiente do reprodutor está também disponivel no seu computador",
+    "description":"A Iluminação ambiente do reprodutor está também disponivel no seu computador"
+  },
+  "downloadtheapp":{
+    "message":"Baixe o aplicativo agora",
+    "description":"Baixe o aplicativo agora"
+  },
+  "titeldownloadupgradezoom":{
+    "message":"Amplie ou reduza o zoom do conteudo web usando o botão de zoom para leitura mais confortavel",
+    "description":"Amplie ou reduza o zoom do conteudo web usando o botão de zoom para leitura mais confortavel"
+  },
+  "titeldownloadupgradepropermenubar":{
+    "message":"Adicione de novo o menu preto e branco ao site do google",
+    "description":"Adicione de novo o menu preto e branco ao site do google"
+  },
+  "titeldownloadupgradefinancetoolbar":{
+    "message":"Isto mostra as informações da bolsa em tempo real.",
+    "description":"Isto mostra as informações da bolsa em tempo real."
+  },
+  "titelnightmodeposition":{
+    "message":"Posição do interruptor",
+    "description":"Posição do interruptor"
+  },
+  "nmtopleft":{
+    "message":"Canto superior esquerdo",
+    "description":"Canto superior esquerdo"
+  },
+  "nmtopright":{
+    "message":"Canto superior direito",
+    "description":"Canto superior direito"
+  },
+  "nmbottomright":{
+    "message":"Canto inferior direito",
+    "description":"Canto inferior direito"
+  },
+  "nmbottomleft":{
+    "message":"Canto inferior esquerdo",
+    "description":"Canto inferior esquerdo"
+  },
+  "nmcustom":{
+    "message":"Clique, segure e move para um local do ecrâ.",
+    "description":"Clique, segure e move para um local do ecrâ."
+  },
+  "desnighthover":{
+    "message":"Mostra o interruptor transparente na página web.",
+    "description":"Mostra o interruptor transparente na página web."
+  },
+  "titelnightmodewhitelist":{
+    "message":"Lista branca",
+    "description":"Lista branca"
+  },
+  "titelnightmodeblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
+  },
+  "desautostoponly":{
+    "message":"Ativar á reprodução automática do Video nos Seguinte(s) Site(s):",
+    "description":"Ativar á reprodução automática do Video nos Seguinte(s) Site(s):"
+  },
+  "titelautostopwhitelist":{
+    "message":"Lista branca",
+    "description":"Lista branca"
+  },
+  "titelautostopblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
+  },
+  "desnightactivetime":{
+    "message":"O alternador está visivel sempre nesses horários:",
+    "description":"O alternador está visivel sempre nesses horários:"
+  },
+  "deslampandnightmode":{
+    "message":"Activar a Opção de Modo Nocturno quando clica na lâmpada cinzenta",
+    "description":"Activar a Opção de Modo Nocturno quando clica na lâmpada cinzenta"
+  },
+  "titeleyewhitelist":{
+    "message":"Lista branca",
+    "description":"Lista branca"
+  },
+  "titeleyeblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
+  },
+  "desspeech5command":{
+    "message":"Lâmpada do navegador",
+    "description":"Lâmpada do navegador"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Suporta: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Suporta: <object>, <embed>, <applet>, <iframe>."
   }
 }

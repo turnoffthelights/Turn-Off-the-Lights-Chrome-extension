@@ -12,8 +12,8 @@
     "description":"för att växla ljuset på\/av för alla öppna flikar."
   },
   "lastchecked":{
-    "message":"Senaste version kollad den",
-    "description":"Senaste versionen kontrollerades på"
+    "message":"Latest version check on",
+    "description":"Latest version check on"
   },
   "visualeffects":{
     "message":"Visuella Effekter",
@@ -32,8 +32,8 @@
     "description":"Gillar Bar"
   },
   "desmousespotlightt":{
-    "message":"Låter dig klicka igenom mörka lagret när lamporna är släckta.",
-    "description":"Låter dig klicka igenom mörka lagret när lamporna är släckta."
+    "message":"Enable clicking hyperlinks when the screen is darkened",
+    "description":"Enable clicking hyperlinks when the screen is darkened"
   },
   "desambilight4color":{
     "message":"4 valda färger runt videon:",
@@ -144,16 +144,16 @@
     "description":"Rymden"
   },
   "deseastereggs":{
-    "message":"Om du klickar på T tangenten aktiverar en gömd funktion.",
-    "description":"Om du klickar på T tangenten aktiverar en gömd funktion."
+    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
+    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
   },
   "settings":{
     "message":"Inställningar",
     "description":"Inställningar"
   },
   "desspotlightradius":{
-    "message":"är diametern på ficklampan.",
-    "description":"är diametern på ficklampan."
+    "message":"The diameter of the searchlight.",
+    "description":"The diameter of the searchlight."
   },
   "titelsync":{
     "message":"Synk",
@@ -424,8 +424,8 @@
     "description":"Regndroppar"
   },
   "desalllightsoff":{
-    "message":"Klickar du på lampan so kommer den att växla på\/av lamporna på alla öppna flikar när alternativet är aktiverat.",
-    "description":"Klicka på lampan att växla på\/av lamporna på alla öppna flikar när alternativet är aktiverat."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
   },
   "optionecosaversaved":{
     "message":"Sekunder sparades framgångsrikt!",
@@ -448,8 +448,8 @@
     "description":"att växla ljus på\/av."
   },
   "deseyea":{
-    "message":"Dämpa bakgrunden automatiskt när en sida öppnas.",
-    "description":"Dim automatiskt i bakgrunden när du öppnar en sida."
+    "message":"Automatically dim the background when opening a website.",
+    "description":"Automatically dim the background when opening a website."
   },
   "basicsettings":{
     "message":"Grunderna",
@@ -472,8 +472,8 @@
     "description":"TOtL Välkommen Guide"
   },
   "deseyealist":{
-    "message":"Dimma automatiskt bakgrunden när du öppnar de följande sidorna:",
-    "description":"Dim automatiskt i bakgrunden när du öppnar de följande sidorna:"
+    "message":"Automatically dim the background when opening the following website:",
+    "description":"Automatically dim the background when opening the following website:"
   },
   "titellikebutton":{
     "message":"Gilla- och Ogillaknappar",
@@ -580,8 +580,8 @@
     "description":"att återställa till set mörkret (opacitet) inställning."
   },
   "desambilightrangeblurradius":{
-    "message":"Ett lågt värde skärper skuggan, ett högre värde gör skuggan suddigare.",
-    "description":"Om ett lägre värde skuggan kommer att skarpa, ju högre siffra, den mer suddig blir."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
+    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
     "message":"Lägg till knapp",
@@ -752,8 +752,8 @@
     "description":"Rör din hand (eller knytnäve) uppifrån och ner"
   },
   "step3description":{
-    "message":"Då kommer det svarta lagret automatiskt åka ner.",
-    "description":"Då kommer det svarta lagret automatiskt åka ner."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Checklista:",
@@ -1046,5 +1046,13 @@
   "desspeech5command":{
     "message":"webbläsar lampa",
     "description":"webbläsar lampa"
+  },
+  "html5andyoutube":{
+    "message":"HTML5 & YouTube™ video",
+    "description":"HTML5 & YouTube™ video"
+  },
+  "flashembedobject":{
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
   }
 }
