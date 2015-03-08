@@ -8,12 +8,12 @@
     "description":"Bakgrundsbild"
   },
   "shortcutalllights":{
-    "message":"för att växla ljuset på\/av för alla öppna flikar.",
-    "description":"för att växla ljuset på\/av för alla öppna flikar."
+    "message":"för att växla ljuset på\/av för alla öppna flikar",
+    "description":"för att växla ljuset på\/av för alla öppna flikar"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Senaste version kontrollerad den",
+    "description":"Senaste version kontrollerad den"
   },
   "visualeffects":{
     "message":"Visuella Effekter",
@@ -32,8 +32,8 @@
     "description":"Gillar Bar"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Aktivera Klicka på hyperlänkar när skärmen tonas ned",
+    "description":"Aktivera Klicka på hyperlänkar när skärmen tonas ned"
   },
   "desambilight4color":{
     "message":"4 valda färger runt videon:",
@@ -56,16 +56,16 @@
     "description":"Ögonskydd"
   },
   "titelcinemaontop":{
-    "message":"Movie theater läge: det visar \"lyser av\" lagret endast på toppen av fönstret.",
-    "description":"Movie theater läge: det visar \"lyser av\" lagret endast på toppen av fönstret."
+    "message":"Movie theater läge: det visar \"lampa av\" lagret endast på toppen av fönstret",
+    "description":"Movie theater läge: det visar \"lampa av\" lagret endast på toppen av fönstret"
   },
   "desmousespotlightc":{
     "message":"Om ljuset är av kan du markera ett område att fokusera på.",
     "description":"Om ljuset är avstängd, kan du välja ett område att fokusera ett objekt."
   },
   "titelrememberpage":{
-    "message":"Kom ihåg sida",
-    "description":"Kom ihåg sida"
+    "message":"Påminnelse sida",
+    "description":"Påminnelse sida"
   },
   "desmousespotlighta":{
     "message":"Om belysningen är avstängd, visa ljus runt muspekaren.",
@@ -100,8 +100,8 @@
     "description":"Aktivera \"Öga skydd\" inaktiverar automatiskt funktionen \"Auto play\"."
   },
   "skipremember":{
-    "message":"Hoppa över detta och öppna sidan inställningar",
-    "description":"Hoppa över detta och nu öppna sidan alternativ"
+    "message":"Hoppa över detta och öppna sidan alternativ nu",
+    "description":"Hoppa över detta och öppna sidan alternativ nu"
   },
   "optiontimesaved":{
     "message":"Tiden sparades framgångsrikt!",
@@ -144,16 +144,16 @@
     "description":"Rymden"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Att trycka på T-tangenten lägger till en teater ridå till det mörka lagret",
+    "description":"Att trycka på T-tangenten lägger till en teater ridå till det mörka lagret"
   },
   "settings":{
     "message":"Inställningar",
     "description":"Inställningar"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter på strålkastare:",
+    "description":"Diameter på strålkastare:"
   },
   "titelsync":{
     "message":"Synk",
@@ -212,24 +212,24 @@
     "description":"Ange ditt lösenord i rutan nedan:"
   },
   "titelblurradius":{
-    "message":"Oskärpa",
-    "description":"Oskärpa radie"
+    "message":"Radie för oskärpa:",
+    "description":"Radie för oskärpa:"
   },
   "version":{
     "message":"Version",
     "description":"Text för version"
   },
   "shortcutdark":{
-    "message":"för att öka hur mörk skärmen är (öka opacitet).",
-    "description":"mörkare skärmen (ökning opacitet)."
+    "message":"för att göra skärmen mörkare(mindre genomskinlig)",
+    "description":"för att göra skärmen mörkare(mindre genomskinlig)"
   },
   "dessharebutton":{
     "message":"Visa YouTubes delningsknappar för denna video.",
     "description":"Visa knapparna andel av YouTube för denna video."
   },
   "shortcutbright":{
-    "message":"för att öka hur ljust skärmen är (minska opacitet).",
-    "description":"att lysa upp skärmen (minskning opacitet)."
+    "message":"för att göra skärmen ljusare(öka genomskinligheten)",
+    "description":"för att göra skärmen ljusare(öka genomskinligheten)"
   },
   "titelalllightsoff":{
     "message":"Alla öppna flikar",
@@ -268,8 +268,8 @@
     "description":"Visa knappen Lägg till från denna YouTube video."
   },
   "shortcuteyeprotection":{
-    "message":"för att aktivera\/inaktivera funktionen ögonskydd.",
-    "description":"att aktivera\/inaktivera funktionen öga skydd."
+    "message":"för att aktivera\/inaktivera funktionen ögonskydd",
+    "description":"för att aktivera\/inaktivera funktionen ögonskydd"
   },
   "titelfadein":{
     "message":"Tona in",
@@ -296,8 +296,8 @@
     "description":"Fokus denna video"
   },
   "warningtextambilight":{
-    "message":"Om det inte går att ta emot video data på grund av en regel på en webbplats, då visar det den valda färgen istället.",
-    "description":"Om det inte går att ta emot video data på grund av regel för en webbplats, då visar det den valda färgen istället."
+    "message":"När videodata inte kan tas emot på grund av säkerhetsregler på en webbplats, används den valda färgen i stället.",
+    "description":"När videodata inte kan tas emot på grund av säkerhetsregler på en webbplats, används den valda färgen i stället."
   },
   "desdynamiccloud":{
     "message":"Animerade moln",
@@ -320,8 +320,8 @@
     "description":"Top"
   },
   "titelspreadradius":{
-    "message":"Spridningsradien",
-    "description":"Spridningen radie"
+    "message":"Radie för spridning:",
+    "description":"Radie för spridning:"
   },
   "installadblocker":{
     "message":"Använd tillägget Adblock",
@@ -408,8 +408,8 @@
     "description":"Ta färgen från videon."
   },
   "showremember":{
-    "message":"visar inte kom ihåg sidan igen när jag öppnar sidan inställningar.",
-    "description":"visar inte ihåg sidan igen när jag öppnar sidan alternativ."
+    "message":"Visa inte denna påminnelse sida igen när jag öppnar alternativ",
+    "description":"Visa inte denna påminnelse sida igen när jag öppnar alternativ"
   },
   "donatepromotext":{
     "message":"Om du kan donera lite pengar skulle jag uppskatta det oerhört mycket!",
@@ -424,8 +424,8 @@
     "description":"Regndroppar"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Genom att klicka på lampan sätts lamporna på\/av på alla öppna flikar",
+    "description":"Genom att klicka på lampan sätts lamporna på\/av på alla öppna flikar"
   },
   "optionecosaversaved":{
     "message":"Sekunder sparades framgångsrikt!",
@@ -436,20 +436,20 @@
     "description":"Dunklet nivå Bar"
   },
   "deseyen":{
-    "message":"Normal användning (ljuset släcks när du klickar på lampikonen).",
-    "description":"Normal användning (ljuset släcks när du klickar på ikonen lampa)."
+    "message":"Normal användning (ljuset släcks när du klickar på lampikonen)",
+    "description":"Normal användning (ljuset släcks när du klickar på lampikonen)"
   },
   "enjoyshare":{
     "message":"Njut av detta tillägg och dela den med andra som du tror kommer att uppskatta den.",
     "description":"Njut av denna förlängning och dela den med andra som du tror kommer att uppskatta den."
   },
   "shortcuttotl":{
-    "message":"för att växla ljus på\/av.",
-    "description":"att växla ljus på\/av."
+    "message":"att växla ljus på\/av",
+    "description":"att växla ljus på\/av"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Dämpa bakgrunden automatiskt när en sida öppnas",
+    "description":"Dämpa bakgrunden automatiskt när en sida öppnas"
   },
   "basicsettings":{
     "message":"Grunderna",
@@ -472,8 +472,8 @@
     "description":"TOtL Välkommen Guide"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Dämpa automatiskt bakgrunden på följande sidor:",
+    "description":"Dämpa automatiskt bakgrunden på följande sidor:"
   },
   "titellikebutton":{
     "message":"Gilla- och Ogillaknappar",
@@ -484,8 +484,8 @@
     "description":"dölja pageaction ikonen"
   },
   "friendlyremember":{
-    "message":"Vänlig minns...",
-    "description":"Vänlig minns..."
+    "message":"Vänlig påminnelse...",
+    "description":"Vänlig påminnelse..."
   },
   "desfadein":{
     "message":"Visa tona in-effekten",
@@ -496,8 +496,8 @@
     "description":"Varning!"
   },
   "deseyetimesaver":{
-    "message":"När en sida är inaktiv (ingen mus eller tangentbord inmatning) för den tid som anges nedan, sidan kommer automatiskt att bli mörk.",
-    "description":"När en sida är inaktiv (ingen mus eller tangentbord ingång) för den tid som anges nedan, sidan kommer automatiskt att gå mörka."
+    "message":"När en sida är inaktiv (ingen mus eller tangent aktivitet) under den tid som anges nedan, blir den automatiskt mörk.",
+    "description":"När en sida är inaktiv (ingen mus eller tangent aktivitet) under den tid som anges nedan, blir den automatiskt mörk."
   },
   "titelsuggestions":{
     "message":"Förslag",
@@ -536,8 +536,8 @@
     "description":"Fish Tank"
   },
   "longdonatetext":{
-    "message":"Jag skulle verkligen uppskatta om du kan donera till mig för att hålla detta tillägg levande för nya användare. Även om det är $$ 1 eller $$ 100, uppskattas ert stöd enormt!",
-    "description":"Jag skulle verkligen uppskatta om du kan donera mig för att hålla denna webbläsare förlängning levande för andra nya användare. Om det är $$ 1 eller $$ 100, uppskattas ert stöd enormt!"
+    "message":"Jag skulle verkligen uppskatta om du kan donera för att hålla detta webbläsartillägg levande för andra nya användare. Antingen det är $$ 1 eller $$ 100,  är ert stöd  enormt uppskattat!",
+    "description":"Jag skulle verkligen uppskatta om du kan donera för att hålla detta webbläsartillägg levande för andra nya användare. Antingen det är $$ 1 eller $$ 100,  är ert stöd  enormt uppskattat!"
   },
   "deshardflash":{
     "message":"Visa alla Flash-objekt, hoppa över URL filtret. Detta kommer att åtgärda problem med vissa videospelare som är dolda, men kommer också att visa annonser.",
@@ -556,12 +556,12 @@
     "description":"Visa och Invertera färgen på videofilmen."
   },
   "desrememberpage":{
-    "message":"Om detta alternativet är aktiverat, kommer det inte visa dig kom ihåg sidan.",
-    "description":"Om detta alternativ är aktiverat, kommer det visa dig inte ihåg sidan."
+    "message":"Visa inte påminnelse sidan",
+    "description":"Visa inte påminnelse sidan"
   },
   "description":{
     "message":"Hela sidan kommer att dämpas, så att du kan se videon som om du vore på bio.",
-    "description":"Hela sidan kommer bleknar till mörk, så du kan titta på videon som om du var på bio."
+    "description":"Hela sidan kommer att dämpas, så att du kan se videon som om du vore på bio."
   },
   "titelviewcount":{
     "message":"Antal visningar",
@@ -576,12 +576,12 @@
     "description":"Automatiskt ställa in kvaliteten på YouTube-videor."
   },
   "shortcutopacity":{
-    "message":"för att återställa till set mörker (opacitet) inställning.",
-    "description":"att återställa till set mörkret (opacitet) inställning."
+    "message":"att återställa till ställ in mörker (genomskinlighet)- inställning",
+    "description":"att återställa till ställ in mörker (genomskinlighet)- inställning"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Lägre värden kommer att skärpa skuggan, högre värden kommer att göra den mer suddig.",
+    "description":"Lägre värden kommer att skärpa skuggan, högre värden kommer att göra den mer suddig."
   },
   "titeladdvideobutton":{
     "message":"Lägg till knapp",
@@ -716,8 +716,8 @@
     "description":"Återställ 'Släck ljusen'-inställningar"
   },
   "desautoplaydelay":{
-    "message":"Belys bakgrunden igen när videon slutar efter",
-    "description":"Belys bakgrunden igen när videon slutar efter"
+    "message":"Ljusare bakgrund igen när videon har upphört efter",
+    "description":"Ljusare bakgrund igen när videon har upphört efter"
   },
   "desautoplaydelayend":{
     "message":"sekunder",
@@ -728,8 +728,8 @@
     "description":"Kamerarörelse"
   },
   "desmotion":{
-    "message":"Aktivera Kamerarörelse så att webbsidor kan mörklägga genom att svepa neråt med handen.",
-    "description":"Aktivera Kamerarörelse så att webbsidor kan mörklägga genom att svepa neråt med handen."
+    "message":"Aktivera kamerarörelserna",
+    "description":"Aktivera kamerarörelserna"
   },
   "trymotion":{
     "message":"Prova det själv!",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Rör din hand (eller knytnäve) uppifrån och ner",
-    "description":"Rör din hand (eller knytnäve) uppifrån och ner"
+    "description":"Flytta din hand (eller knytnäva) ifrån toppen till botten."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"Det svarta lagret kommer automatiskt att glida ned.",
+    "description":"Det svarta lagret kommer automatiskt att glida ned."
   },
   "desmotionChecklist":{
     "message":"Checklista:",
@@ -776,12 +776,12 @@
     "description":"Linjär"
   },
   "titelcolora":{
-    "message":"Färg A",
-    "description":"Färg A"
+    "message":"Färg A:",
+    "description":"Färg A:"
   },
   "titelcolorb":{
-    "message":"Färg B",
-    "description":"Färg B"
+    "message":"Färg B:",
+    "description":"Färg B:"
   },
   "speechoption":{
     "message":"Taligenkänning",
@@ -856,8 +856,8 @@
     "description":"Den här webbläsaren stöder inte ännu denna funktion. Kontrollera att du har den senaste versionen av din webbläsare."
   },
   "titelsupportatmos":{
-    "message":"Stöder endast HTML5 <video> och YouTube HTML5 Videospelare. Och den använder GPU från ditt grafikkort.",
-    "description":"Stöder endast HTML5 <video> och YouTube HTML5 Videospelare. Och den använder GPU från ditt grafikkort."
+    "message":"Stöder endast HTML5 <video>och YouTube HTML5-spelare. Det använder också GPU från ditt grafikkort.",
+    "description":"Stöder endast HTML5 <video>och YouTube HTML5-spelare. Det använder också GPU från ditt grafikkort."
   },
   "titelseeonline":{
     "message":"Se online för fler exempel",
@@ -936,8 +936,8 @@
     "description":"Stöd utvecklingen"
   },
   "titelautostop":{
-    "message":"Atostopp",
-    "description":"Atostopp"
+    "message":"Autostopp",
+    "description":"Autostopp"
   },
   "desautostop":{
     "message":"Sluta automatiskt att spela videon när jag öppnar en webbsida.",
@@ -1048,11 +1048,11 @@
     "description":"webbläsar lampa"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"HTML5 & YouTube ™ video",
+    "description":"HTML5 & YouTube ™ video"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"Stöder: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Stöder: <object>, <embed>, <applet>, <iframe>."
   }
 }

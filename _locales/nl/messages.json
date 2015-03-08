@@ -8,12 +8,12 @@
     "description":"Achtergrondafbeelding"
   },
   "shortcutalllights":{
-    "message":"om de verlichting voor alle geopende tabbladen in of uit te schakelen.",
-    "description":"om de verlichting voor alle geopende tabbladen in of uit te schakelen."
+    "message":"om het licht voor alle geopende tabbladen aan\/uit te zetten",
+    "description":"om het licht voor alle geopende tabbladen aan\/uit te zetten"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Laatste versiecontrole op",
+    "description":"Laatste versiecontrole op"
   },
   "visualeffects":{
     "message":"Visuele effecten",
@@ -32,8 +32,8 @@
     "description":"Vind-ik-leuk-balk\n"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Klikken op hyperlinks bij verduisterd scherm inschakelen",
+    "description":"Klikken op hyperlinks bij verduisterd scherm inschakelen"
   },
   "desambilight4color":{
     "message":"Vier gekozen kleuren rondom de video:",
@@ -56,8 +56,8 @@
     "description":"Oogbescherming"
   },
   "titelcinemaontop":{
-    "message":"Bioscoopmodus: toont de laag 'licht uit' alleen aan de bovenkant van het venster.",
-    "description":"Bioscoopmodus: toont de laag 'licht uit' alleen aan de bovenkant van het venster."
+    "message":"Bioscoopmodus: toont de laag 'licht uit' alleen aan de bovenkant van het venster",
+    "description":"Bioscoopmodus: toont de laag 'licht uit' alleen aan de bovenkant van het venster"
   },
   "desmousespotlightc":{
     "message":"Selectie van gebied dat bij uitgeschakeld licht niet donker wordt inschakelen",
@@ -144,16 +144,16 @@
     "description":"Ruimte"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Op de toets T drukken voegt een theatergordijn aan de donkere laag toe",
+    "description":"Op de toets T drukken voegt een theatergordijn aan de donkere laag toe"
   },
   "settings":{
     "message":"Instellingen",
     "description":"Instellingen"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter van spotlight:",
+    "description":"Diameter van spotlight:"
   },
   "titelsync":{
     "message":"Synchroniseren",
@@ -212,24 +212,24 @@
     "description":"Voer in het onderstaande veld uw wachtwoord in:"
   },
   "titelblurradius":{
-    "message":"De vervagingsstraal",
-    "description":"De vervagingsstraal"
+    "message":"Vervagingsstraal:",
+    "description":"Vervagingsstraal:"
   },
   "version":{
     "message":"Versie",
     "description":"Version number text"
   },
   "shortcutdark":{
-    "message":"om het scherm te verduisteren (ondoorzichtigheid verhogen).",
-    "description":"om het scherm te verduisteren (ondoorzichtigheid verhogen)."
+    "message":"om het scherm te verduisteren (ondoorzichtigheid verhogen)",
+    "description":"om het scherm te verduisteren (ondoorzichtigheid verhogen)"
   },
   "dessharebutton":{
     "message":"De deelknop van YouTube voor deze video tonen",
     "description":"De deelknop van YouTube voor deze video tonen"
   },
   "shortcutbright":{
-    "message":"om het scherm te verhelderen (ondoorzichtigheid verlagen).",
-    "description":"om het scherm te verhelderen (ondoorzichtigheid verlagen)."
+    "message":"om het scherm helderder te maken (ondoorzichtigheid verlagen)",
+    "description":"om het scherm helderder te maken (ondoorzichtigheid verlagen)"
   },
   "titelalllightsoff":{
     "message":"Alle geopende tabbladen",
@@ -268,8 +268,8 @@
     "description":"De toevoegknop van deze YouTube-video tonen"
   },
   "shortcuteyeprotection":{
-    "message":"om de functie 'Oogbescherming' in of uit te schakelen.",
-    "description":"om de functie 'Oogbescherming' in of uit te schakelen."
+    "message":"om de oogbeschermingsfunctie in\/uit te schakelen",
+    "description":"om de oogbeschermingsfunctie in\/uit te schakelen"
   },
   "titelfadein":{
     "message":"Infaden",
@@ -296,8 +296,8 @@
     "description":"Deze video benadrukken"
   },
   "warningtextambilight":{
-    "message":"Als vanwege de beveiligingsregel van een website geen videogegevens kunnen worden ontvangen, wordt de gekozen vaste kleur getoond.",
-    "description":"Als vanwege de beveiligingsregel van een website geen videogegevens kunnen worden ontvangen, wordt de gekozen vaste kleur getoond."
+    "message":"Als vanwege een beveiligingsregel van een website geen videogegevens kunnen worden ontvangen, wordt de gekozen vaste kleur getoond.",
+    "description":"Als vanwege een beveiligingsregel van een website geen videogegevens kunnen worden ontvangen, wordt de gekozen vaste kleur getoond."
   },
   "desdynamiccloud":{
     "message":"Bewegende wolken",
@@ -320,8 +320,8 @@
     "description":"boven"
   },
   "titelspreadradius":{
-    "message":"De spreidingsstraal",
-    "description":"De spreidingsstraal"
+    "message":"Spreidingsstraal:",
+    "description":"Spreidingsstraal:"
   },
   "installadblocker":{
     "message":"Als u geen advertenties wilt zien, gebruik dan een adblocker-extensie.",
@@ -404,16 +404,16 @@
     "description":"Lamp"
   },
   "desambilightvarcolor":{
-    "message":"De kleur uit de video overnemen",
-    "description":"De kleur uit de video overnemen"
+    "message":"Kleur uit de video overnemen",
+    "description":"Kleur uit de video overnemen"
   },
   "showremember":{
     "message":"Deze herinneringspagina niet meer tonen als ik de opties open",
     "description":"Deze herinneringspagina niet meer tonen als ik de opties open"
   },
   "donatepromotext":{
-    "message":"Als u een donatie van welk bedrag dan ook kunt doen, zou ik dat enorm waarderen!",
-    "description":"Als u een donatie van welk bedrag dan ook kunt doen, zou ik dat enorm waarderen!"
+    "message":"Als u een donatie van een willekeurig bedrag kunt doen, zou ik dat enorm waarderen!",
+    "description":"Als u een donatie van een willekeurig bedrag kunt doen, zou ik dat enorm waarderen!"
   },
   "titelblur":{
     "message":"De rest vervagen",
@@ -424,8 +424,8 @@
     "description":"Regendruppels"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Op de lampknop klikken zet de verlichting op alle geopende tabbladen aan\/uit",
+    "description":"Op de lampknop klikken zet de verlichting op alle geopende tabbladen aan\/uit"
   },
   "optionecosaversaved":{
     "message":"Seconden zijn met succes opgeslagen!",
@@ -436,20 +436,20 @@
     "description":"Donkerheidsniveaubalk"
   },
   "deseyen":{
-    "message":"Normaal gebruik (licht gaat uit als u op het lamppictogram klikt).",
-    "description":"Normaal gebruik (licht gaat uit als u op het lamppictogram klikt)."
+    "message":"Normaal gebruik (het licht gaat uit als u op het lamppictogram klikt)",
+    "description":"Normaal gebruik (het licht gaat uit als u op het lamppictogram klikt)"
   },
   "enjoyshare":{
     "message":"Veel plezier met deze extensie en deel hem met anderen die hem volgens u zullen waarderen.",
     "description":"Veel plezier met deze extensie en deel hem met anderen die hem volgens u zullen waarderen."
   },
   "shortcuttotl":{
-    "message":"om de verlichting in of uit te schakelen.",
-    "description":"om de verlichting in of uit te schakelen."
+    "message":"om het licht aan\/uit te zetten",
+    "description":"om het licht aan\/uit te zetten"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatisch de achtergrond dimmen bij het openen van een webpagina",
+    "description":"Automatisch de achtergrond dimmen bij het openen van een webpagina"
   },
   "basicsettings":{
     "message":"Basisinstellingen",
@@ -472,8 +472,8 @@
     "description":"TOtL-welkomsthandleiding"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatisch de achtergrond dimmen op de volgende website(s):",
+    "description":"Automatisch de achtergrond dimmen op de volgende website(s):"
   },
   "titellikebutton":{
     "message":"Leuk- en niet-leuk-knoppen",
@@ -496,8 +496,8 @@
     "description":"Waarschuwing!"
   },
   "deseyetimesaver":{
-    "message":"Als een pagina gedurende de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), zal deze automatisch donker worden.",
-    "description":"Als een pagina gedurende de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), zal deze automatisch donker worden."
+    "message":"Als een pagina gedurende de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), wordt deze automatisch donker.",
+    "description":"Als een pagina gedurende de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), wordt deze automatisch donker."
   },
   "titelsuggestions":{
     "message":"Suggesties",
@@ -557,7 +557,7 @@
   },
   "desrememberpage":{
     "message":"Geen herinneringspagina tonen",
-    "description":"Als deze optie is ingeschakeld, zal het je niet de herinneringspagina tonen."
+    "description":"Geen herinneringspagina tonen"
   },
   "description":{
     "message":"De hele pagina wordt donkerder, zodat u naar video's kunt kijken alsof u in de bioscoop bent.",
@@ -576,12 +576,12 @@
     "description":"De kwaliteit van YouTube-video's automatisch instellen"
   },
   "shortcutopacity":{
-    "message":"om de ingestelde donkerheid (ondoorzichtigheid) terug te zetten.",
-    "description":"om de ingestelde donkerheid (ondoorzichtigheid) terug te zetten."
+    "message":"om de ingestelde donkerheid (ondoorzichtigheid) terug te zetten",
+    "description":"om de ingestelde donkerheid (ondoorzichtigheid) terug te zetten"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Lagere waarden maken de schaduw scherper, hogere waarden maken deze waziger.",
+    "description":"Lagere waarden maken de schaduw scherper, hogere waarden maken deze waziger."
   },
   "titeladdvideobutton":{
     "message":"Knop Toevoegen",
@@ -648,8 +648,8 @@
     "description":"Nachtmodus"
   },
   "desnightonly":{
-    "message":"De nachtmodus alleen op de volgende website(s) tonen:",
-    "description":"De nachtmodus alleen op de volgende website(s) tonen:"
+    "message":"Nachtmodus alleen op de volgende website(s) activeren:",
+    "description":"Nachtmodus alleen op de volgende website(s) activeren:"
   },
   "desnightenabletheme":{
     "message":"Automatisch naar nachtmodus gaan als een nieuwe webpagina wordt geopend",
@@ -716,20 +716,20 @@
     "description":"Turn Off the Lights opnieuw instellen"
   },
   "desautoplaydelay":{
-    "message":"De achtergrond weer helder maken als de video is beëindigd na",
-    "description":"De achtergrond weer helder maken als de video is beëindigd na"
+    "message":"De achtergrond weer helder maken als de video na",
+    "description":"De achtergrond weer helder maken als de video na"
   },
   "desautoplaydelayend":{
-    "message":"seconden",
-    "description":"seconden"
+    "message":"seconden is beëindigd",
+    "description":"seconden is beëindigd"
   },
   "motionoptions":{
     "message":"Camerabeweging",
     "description":"Camerabeweging"
   },
   "desmotion":{
-    "message":"Schakel de functie Camerabeweging in om de webpagina met een handbeweging naar beneden te dimmen.",
-    "description":"Schakel de functie Camerabeweging in om de webpagina met een handbeweging naar beneden te dimmen."
+    "message":"Camerabeweging inschakelen",
+    "description":"Camerabeweging inschakelen"
   },
   "trymotion":{
     "message":"Probeer het zelf!",
@@ -752,8 +752,8 @@
     "description":"Beweeg uw hand (of vuist) van boven naar beneden."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"De zwarte laag schuift automatisch omlaag.",
+    "description":"De zwarte laag schuift automatisch omlaag."
   },
   "desmotionChecklist":{
     "message":"Controlelijst:",
@@ -776,12 +776,12 @@
     "description":"Lineair"
   },
   "titelcolora":{
-    "message":"Kleur A",
-    "description":"Kleur A"
+    "message":"Kleur A:",
+    "description":"Kleur A:"
   },
   "titelcolorb":{
-    "message":"Kleur B",
-    "description":"Kleur B"
+    "message":"Kleur B:",
+    "description":"Kleur B:"
   },
   "speechoption":{
     "message":"Spraakherkenning",
@@ -828,12 +828,12 @@
     "description":"Over"
   },
   "desspeechonly":{
-    "message":"De functie Spraakherkenning alleen op de volgende website(s) activeren:",
-    "description":"De functie Spraakherkenning alleen op de volgende website(s) activeren:"
+    "message":"Spraakherkenning alleen op de volgende website(s) activeren:",
+    "description":"Spraakherkenning alleen op de volgende website(s) activeren:"
   },
   "descammotiononly":{
-    "message":"De functie Camerabeweging alleen op de volgende website(s) activeren:",
-    "description":"De functie Camerabeweging alleen op de volgende website(s) activeren:"
+    "message":"Camerabeweging alleen op de volgende website(s) activeren:",
+    "description":"Camerabeweging alleen op de volgende website(s) activeren:"
   },
   "titelcamera":{
     "message":"Camera",
@@ -852,8 +852,8 @@
     "description":"Voegt een donker thema toe aan uw browser om deze te verfraaien. Het thema verschijnt om de randen van de browser."
   },
   "desbrowsersupport":{
-    "message":"Deze browser ondersteunt deze functie nog niet. Zorg ervoor dat u de nieuwste browserversie op uw computer hebt geïnstalleerd.",
-    "description":"Deze browser ondersteunt deze functie nog niet. Zorg ervoor dat u de nieuwste browserversie op uw computer hebt geïnstalleerd."
+    "message":"Uw browser ondersteunt deze functie nog niet. Zorg ervoor dat u de nieuwste browserversie op uw computer hebt geïnstalleerd.",
+    "description":"Uw browser ondersteunt deze functie nog niet. Zorg ervoor dat u de nieuwste browserversie op uw computer hebt geïnstalleerd."
   },
   "titelsupportatmos":{
     "message":"Ondersteunt alleen de HTML5-<video>- en YouTube-HTML5-speler en gebruikt de GPU van uw videokaart.",
@@ -880,16 +880,16 @@
     "description":"Sommige rechten voorbehouden."
   },
   "desbrowserextension":{
-    "message":"browserextensie",
-    "description":"browserextensie"
+    "message":"-browserextensie",
+    "description":"-browserextensie"
   },
   "desapitext":{
     "message":"Wiki-API voor websiteontwikkelaar",
     "description":"Wiki-API voor websiteontwikkelaar"
   },
   "desbrowsertheme":{
-    "message":"browserthema",
-    "description":"browserthema"
+    "message":"-browserthema",
+    "description":"-browserthema"
   },
   "desproject":{
     "message":"project",

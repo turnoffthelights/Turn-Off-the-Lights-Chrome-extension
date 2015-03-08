@@ -816,13 +816,13 @@ try {
 	}
 	var yesornosubdomain = subDomain(pageurl);
 
-	if (totlshowtime != typeof HTMLVideoElement !== "undefined" && totlshowtime instanceof HTMLVideoElement) {
+	if (totlshowtime != typeof HTMLVideoElement !== "undefined") {
 		var insideitem = totlshowtime.src;
 		var insideitemlengt = 0;
-		if(insideitem){	var insideitemlengt = insideitem.length; } // lengte url
+		if(insideitem){	var insideitemlengt = insideitem.length; } // length URL
 	} else { var insideitemlengt = "undefined"; }
 
-	// mission controll
+	// begin mission control
 	if((insideitemlengt == 0) && (yesornosubdomain == false)){
 		// check for video -> source URL
 		var items = totlshowtime.getElementsByTagName("source");
@@ -839,9 +839,11 @@ try {
 		else if(insideitem.substring(0, 2) == './') {runreal();}
 		else if(insideitem.substring(0, 3) == '../') {runreal();}
 		else if((insideitem.substring(0, 4) != 'http') && (insideitem.substring(0, 5) != 'https') && (insideitem.substring(0, 3) != 'ftp')) {runreal();}
-		else {rundefault();}
+		else {runreal();}
+		// inside not OK go to rundefault();
 	} else {rundefault();}
-
+    // end mission control
+	
 function runreal(){
     var sourceWidth = totlshowtime.videoWidth;
     var sourceHeight = totlshowtime.videoHeight;

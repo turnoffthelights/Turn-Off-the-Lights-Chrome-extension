@@ -8,12 +8,12 @@
     "description":"Taustakuva"
   },
   "shortcutalllights":{
-    "message":"kytkeäksesi valot päälle\/pois kaikkilla avoimilla välilehdillä.",
-    "description":"kytkeäksesi valot päälle\/pois kaikkilla avoimilla välilehdillä."
+    "message":"kytkeäksesi valot päälle\/pois kaikkilla avoimilla välilehdillä",
+    "description":"kytkeäksesi valot päälle\/pois kaikkilla avoimilla välilehdillä"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Viimeisin versio tarkistettu",
+    "description":"Viimeisin versio tarkistettu"
   },
   "visualeffects":{
     "message":"Visuaaliset tehosteet",
@@ -32,8 +32,8 @@
     "description":"Tykkäyspalkki"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Ota linkkien napsauttaminen käyttöön näytön ollessa tummennettuna",
+    "description":"Ota linkkien napsauttaminen käyttöön näytön ollessa tummennettuna"
   },
   "desambilight4color":{
     "message":"Neljä valinnaista väriä videon ympärillä:",
@@ -56,16 +56,16 @@
     "description":"Silmien suojaus"
   },
   "titelcinemaontop":{
-    "message":"Elokuvateatteri-tila: valot pois -kerros näytetään vain ikkunan yläosassa.",
-    "description":"Elokuvateatteri-tila: valot pois -kerros näytetään vain ikkunan yläosassa."
+    "message":"Elokuvateatteri-tila: valot pois -kerros näytetään vain ikkunan yläosassa",
+    "description":"Elokuvateatteri-tila: valot pois -kerros näytetään vain ikkunan yläosassa"
   },
   "desmousespotlightc":{
     "message":"Jos valot ovat poissa päältä, voit valita alueen, johon kohde tarkennetaan.",
     "description":"Jos valot ovat poissa päältä, voit valita alueen, johon kohde tarkennetaan."
   },
   "titelrememberpage":{
-    "message":"Muista sivu",
-    "description":"Muista sivu"
+    "message":"Muistutussivu",
+    "description":"Muistutussivu"
   },
   "desmousespotlighta":{
     "message":"Jos valot ovat poissa päältä, näytä kohdevalo hiiren kohdistimen ympärillä.",
@@ -100,8 +100,8 @@
     "description":"Silmien suojauksen käyttöönotto poistaa automaattisesti automaattisen toiston käytöstä."
   },
   "skipremember":{
-    "message":"Ohita tämä ja avaa nyt asetussivu",
-    "description":"Ohita tämä ja avaa nyt asetussivu"
+    "message":"Ohita tämä ja avaa nyt asetukset-sivu",
+    "description":"Ohita tämä ja avaa nyt asetukset-sivu"
   },
   "optiontimesaved":{
     "message":"Aika on tallennettu onnistuneesti!",
@@ -144,16 +144,16 @@
     "description":"Avaruus"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"T-näppäimen painallus lisää teatteriverhon tummaan kerrokseen",
+    "description":"T-näppäimen painallus lisää teatteriverhon tummaan kerrokseen"
   },
   "settings":{
     "message":"Asetukset",
     "description":"Asetukset"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Hakuvalon halkaisija:",
+    "description":"Hakuvalon halkaisija:"
   },
   "titelsync":{
     "message":"Synkronointi",
@@ -212,24 +212,24 @@
     "description":"Kirjoita salasanasi alla olevaan kenttään:"
   },
   "titelblurradius":{
-    "message":"Sumennuksen säde",
-    "description":"Sumennuksen säde"
+    "message":"Sumennuksen säde:",
+    "description":"Sumennuksen säde:"
   },
   "version":{
     "message":"Versio",
     "description":"Version number text"
   },
   "shortcutdark":{
-    "message":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä).",
-    "description":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä)."
+    "message":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä)",
+    "description":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä)"
   },
   "dessharebutton":{
     "message":"Näytä YouTuben jakopainikkeet tälle videolle.",
     "description":"Näytä YouTuben jakopainikkeet tälle videolle."
   },
   "shortcutbright":{
-    "message":"kirkastaaksesi näyttöä (suurenna läpinäkyvyyttä).",
-    "description":"kirkastaaksesi näyttöä (suurenna läpinäkyvyyttä)."
+    "message":"kirkastaaksesi näyttöä (suurenna läpinäkyvyyttä)",
+    "description":"kirkastaaksesi näyttöä (suurenna läpinäkyvyyttä)"
   },
   "titelalllightsoff":{
     "message":"Kaikki avoimet välilehdet",
@@ -268,8 +268,8 @@
     "description":"Näytä Lisää-painike tälle YouTube-videolle."
   },
   "shortcuteyeprotection":{
-    "message":"ottaaksesi Silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä.",
-    "description":"ottaaksesi Silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä."
+    "message":"ottaaksesi Silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä",
+    "description":"ottaaksesi Silmien suojaus -toiminnon käyttöön tai poistaaksesi sen käytöstä"
   },
   "titelfadein":{
     "message":"Häivytä sisään",
@@ -296,8 +296,8 @@
     "description":"Tarkenna tähän videoon"
   },
   "warningtextambilight":{
-    "message":"Jos videotietojen vastaanotto ei toimi sivuston turvasääntöjen vuoksi, näytetään sen tilalla valittu tasainen väri.",
-    "description":"Jos videotietojen vastaanotto ei toimi sivuston turvasääntöjen vuoksi, näytetään sen tilalla valittu tasainen väri."
+    "message":"Kun verkkosivun tietoturvan vuoksi videon tietojen nouto ei onnistu, näytetään sen sijaan valittu väri.",
+    "description":"Kun verkkosivun tietoturvan vuoksi videon tietojen nouto ei onnistu, näytetään sen sijaan valittu väri."
   },
   "desdynamiccloud":{
     "message":"Animoidut pilvet",
@@ -320,8 +320,8 @@
     "description":"yläreuna"
   },
   "titelspreadradius":{
-    "message":"Leviämisen säde",
-    "description":"Leviämisen säde"
+    "message":"Leviämisen säde:",
+    "description":"Leviämisen säde:"
   },
   "installadblocker":{
     "message":"Käytä Adblocker-laajennuksen kanssa",
@@ -408,8 +408,8 @@
     "description":"Poimi väri videosta."
   },
   "showremember":{
-    "message":"Ei näytä tätä muistutussivua uudelleen, kun avaan asetukset-sivun.",
-    "description":"Ei näytä tätä muistutussivua uudelleen, kun avaan asetukset-sivun."
+    "message":"Älä näytä tätä muistutussivua uudelleen, kun avaan asetukset",
+    "description":"Älä näytä tätä muistutussivua uudelleen, kun avaan asetukset"
   },
   "donatepromotext":{
     "message":"Jos voisit antaa lahjoituksen, olisin siitä valtavan kiitollinen!",
@@ -424,8 +424,8 @@
     "description":"Sadepisarat"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Lamppupainikkeen napsautus sammuttaa\/sytyttää valot kaikissa välilehdissä",
+    "description":"Lamppupainikkeen napsautus sammuttaa\/sytyttää valot kaikissa välilehdissä"
   },
   "optionecosaversaved":{
     "message":"Sekunnit on tallennettu onnistuneesti!",
@@ -436,20 +436,20 @@
     "description":"Himmennystasopalkki"
   },
   "deseyen":{
-    "message":"Normaali käyttö (valot sammuvat, kun napsautat lamppukuvaketta).",
-    "description":"Normaali käyttö (valot sammuvat, kun napsautat lamppukuvaketta)."
+    "message":"Normaali käyttö (valot sammuvat, kun napsautat lamppukuvaketta)",
+    "description":"Normaali käyttö (valot sammuvat, kun napsautat lamppukuvaketta)"
   },
   "enjoyshare":{
     "message":"Nauti tästä laajennuksesta ja jaa se myös muiden  kanssa, joiden uskoisit pitävän siitä.",
     "description":"Nauti tästä laajennuksesta ja jaa se myös muiden  kanssa, joiden uskoisit pitävän siitä."
   },
   "shortcuttotl":{
-    "message":"kytkeäksesi valot päälle\/pois.",
-    "description":"kytkeäksesi valot päälle\/pois."
+    "message":"kytkeäksesi valot päälle\/pois",
+    "description":"kytkeäksesi valot päälle\/pois"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Himmennä tausta automaattisesti, kun verkkosivu avataan",
+    "description":"Himmennä tausta automaattisesti, kun verkkosivu avataan"
   },
   "basicsettings":{
     "message":"Perusasiat",
@@ -472,8 +472,8 @@
     "description":"TOtL - Tervetuloa-opas"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Himmennä tausta automaattisesti, kun seuraava verkkosivu avataan:",
+    "description":"Himmennä tausta automaattisesti, kun seuraava verkkosivu avataan:"
   },
   "titellikebutton":{
     "message":"Tykkäyspainikkeet",
@@ -496,8 +496,8 @@
     "description":"Varoitus!"
   },
   "deseyetimesaver":{
-    "message":"Kun sivu ei ole aktiivinen (ei hiiren tai näppäimistön syötettä) alla määriteltyyn aikaan, sivu tummenee automaattisesti.",
-    "description":"Kun sivu ei ole aktiivinen (ei hiiren tai näppäimistön syötettä) alla määriteltyyn aikaan, sivu tummenee automaattisesti."
+    "message":"Kun sivu on passiivinen (ei hiiren tai näppäimistön syötteitä) määritetyn ajan, se tummenee automaattisesti.",
+    "description":"Kun sivu on passiivinen (ei hiiren tai näppäimistön syötteitä) määritetyn ajan, se tummenee automaattisesti."
   },
   "titelsuggestions":{
     "message":"Ehdotukset",
@@ -556,8 +556,8 @@
     "description":"Näytä ja käännä videon otsikon värit."
   },
   "desrememberpage":{
-    "message":"Jos tämä vaihtoehto on käytössä, muistutussivua ei avata.",
-    "description":"Jos tämä vaihtoehto on käytössä, se ei näytä sinulle muista-sivua."
+    "message":"Älä näytä muistutus-sivua",
+    "description":"Älä näytä muistutus-sivua"
   },
   "description":{
     "message":"Koko sivu on himmentyy tummaksi, joten voit katsella videoita kuin olisit elokuvissa.",
@@ -576,12 +576,12 @@
     "description":"Aseta YouTube-videoiden laatu automaattisesti."
   },
   "shortcutopacity":{
-    "message":"palauttaaksesi hämäryysasetuksen (läpinäkyvyys).",
-    "description":"palauttaaksesi hämäryysasetuksen (läpinäkyvyys)."
+    "message":"palauttaaksesi hämäryysasetuksen (läpinäkyvyys)",
+    "description":"palauttaaksesi hämäryysasetuksen (läpinäkyvyys)"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Alemmat arvot terävöittävät varjoa, korkeammat arvot sumentavat niitä.",
+    "description":"Alemmat arvot terävöittävät varjoa, korkeammat arvot sumentavat niitä."
   },
   "titeladdvideobutton":{
     "message":"Lisää-painike",
@@ -716,8 +716,8 @@
     "description":"Resetoi Sammuta valot -asetukset"
   },
   "desautoplaydelay":{
-    "message":"Kirkasta tausta tämän ajan kuluttua, kun toisto lopetaan",
-    "description":"Kirkasta tausta tämän ajan kuluttua, kun toisto lopetaan"
+    "message":"Aika, jonka jälkeen tausta vaalennetaan videon loppumisen jälkeen",
+    "description":"Aika, jonka jälkeen tausta vaalennetaan videon loppumisen jälkeen"
   },
   "desautoplaydelayend":{
     "message":"sekuntia",
@@ -728,8 +728,8 @@
     "description":"Kameraliike"
   },
   "desmotion":{
-    "message":"Ota käyttöön kameraliike himmentääksesi nettisivun käden alaspäin pyyhkäisyllä.",
-    "description":"Ota käyttöön kameraliike himmentääksesi nettisivun käden alaspäin pyyhkäisyllä."
+    "message":"Ota kameraliike käyttöön",
+    "description":"Ota kameraliike käyttöön"
   },
   "trymotion":{
     "message":"Kokeile sitä itse!",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Liikuta kättäsi (tai nyrkkiäsi) ylhäältä alas",
-    "description":"Liikuta kättäsi (tai nyrkkiäsi) ylhäältä alas"
+    "description":"Liikuta kättäsi (tai nyrkkiäsi) ylhäältä alas."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"Musta kerros liukuu automaattisesti alas.",
+    "description":"Musta kerros liukuu automaattisesti alas."
   },
   "desmotionChecklist":{
     "message":"Tarkistuslista:",
@@ -776,12 +776,12 @@
     "description":"Lineaarinen"
   },
   "titelcolora":{
-    "message":"Väri A",
-    "description":"Väri A"
+    "message":"Väri A:",
+    "description":"Väri A:"
   },
   "titelcolorb":{
-    "message":"Väri B",
-    "description":"Väri B"
+    "message":"Väri B:",
+    "description":"Väri B:"
   },
   "speechoption":{
     "message":"Puheentunnistus",
@@ -856,8 +856,8 @@
     "description":"Tämä selain ei tue vielä tätä ominaisuutta. Varmista, että tietokoneeseesi on asennettu selaimen uusin versio."
   },
   "titelsupportatmos":{
-    "message":"Tukee vain HTML5-<video>:ta ja YouTube HTML5:ää. Ja se käyttää näytönohjaimesi GPU:ta.",
-    "description":"Tukee vain HTML5-<video>:ta ja YouTube HTML5:ää. Ja se käyttää näytönohjaimesi GPU:ta."
+    "message":"Tukee ainoastaan HTML5 <video> - ja Youtube HTML5 -soittimia. Se käyttää myös näytönohjaimesi grafiikkapiiriä.",
+    "description":"Tukee ainoastaan HTML5 <video> - ja Youtube HTML5 -soittimia. Se käyttää myös näytönohjaimesi grafiikkapiiriä."
   },
   "titelseeonline":{
     "message":"Lisää esimerkkejä verkosta",
