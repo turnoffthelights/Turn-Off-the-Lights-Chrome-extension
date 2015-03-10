@@ -45,7 +45,7 @@ ul#navbar li a{display:block;margin-right:0;padding:12px 24px 12px 0;text-align:
 .page h1{-webkit-padding-end:24px;-webkit-user-select:none;border-bottom:1px solid #EEE;color:#333;font-size:200%;font-weight:400;margin:0;padding-bottom:4px;padding-top:13px;text-shadow:#fff 0 1px 2px}
 .page{overflow:hidden;height:100%}
 section{-webkit-box-orient:horizontal;border-bottom:1px solid #EEE;display:-webkit-box;margin-top:17px;padding-bottom:20px;width:100%}
-section>h3{font-size:105%;font-weight:700;margin:0;vertical-align:middle;width:140px}
+section>h3{font-size:105%;font-weight:700;margin:0;vertical-align:middle;width:135px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;padding-right:5px}
 section>div:only-of-type{-webkit-box-flex:1}
 section>div:only-of-type label{margin:5px 0}
 label.checkbox,label.radio{display:block}
