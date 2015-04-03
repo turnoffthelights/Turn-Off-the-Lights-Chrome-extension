@@ -1420,6 +1420,7 @@ if (customqualityyoutube == 'true') {
 
 var ythdinit = function onYouTubePlayerReady(player) {
   try{
+      donesetquality = false;
       mplayer = player;
       if(typeof mplayer == "string"){
     	  mplayer = document.getElementById(mplayer);
@@ -1429,22 +1430,18 @@ var ythdinit = function onYouTubePlayerReady(player) {
       }
       mplayer.addEventListener("onStateChange", "onytplayerStateChange");
 	  updateQuality();
-      //setTimeout(updateQuality,3000);
-	  donesetquality = false;
   }
   catch(e){
   }
 }
 
 var ythdstatechange = function onytplayerStateChange(newState) {
-	try{
-		if(newState == 1 && !donesetquality){
-			//mplayer.setPlaybackQuality(maxquality);
-			// updateQuality();
-			donesetquality = true;
+		if(newState == 3 && !donesetquality){
+			updateQuality();
 		}
-	}
-	catch(e){}
+		if(newState == -1){
+			donesetquality = false;
+		}
 }
 
 var ythduq = function updateQuality(){
@@ -1458,6 +1455,7 @@ var ythduq = function updateQuality(){
 		//console.log("Set to " + maxquality + " in accordance with user settings");
 		mplayer.setPlaybackQuality(maxquality);
 	}
+	donesetquality = true;
 }
 
 function injectScript(codetext){

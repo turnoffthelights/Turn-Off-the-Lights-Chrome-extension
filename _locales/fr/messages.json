@@ -8,12 +8,12 @@
     "description":"Image pour l'arrière-plan"
   },
   "shortcutalllights":{
-    "message":"pour réduire\/restaurer la luminosité sur tous les onglets ouverts.",
-    "description":"pour réduire\/restaurer la luminosité sur tous les onglets ouverts."
+    "message":"pour assombrir ou ré-éclaircir la page pour tous les onglets ouverts",
+    "description":"pour assombrir ou ré-éclaircir la page pour tous les onglets ouverts"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Vous avez la dernière version d'installée",
+    "description":"Vous avez la dernière version d'installée"
   },
   "visualeffects":{
     "message":"Effets visuels",
@@ -32,8 +32,8 @@
     "description":"Barre d'avis"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Activer la possibilité de cliquer sur les liens hypertextes même lorsque l'arrière-plan est assombri",
+    "description":"Activer la possibilité de cliquer sur les liens hypertextes même lorsque l'arrière-plan est assombri"
   },
   "desambilight4color":{
     "message":"Choisissez entre 4 couleurs possibles à afficher autour de la vidéo :",
@@ -56,16 +56,16 @@
     "description":"Protection des yeux"
   },
   "titelcinemaontop":{
-    "message":"Mode \"salle de cinéma\" : Seule la partie haute de la page s'assombrira lorsque vous cliquerez sur l'icône de la lampe.",
-    "description":"Mode \"salle de cinéma\" : Seule la partie haute de la page s'assombrira lorsque vous cliquerez sur l'icône de la lampe."
+    "message":"Mode Salle de cinéma : N'est assombrie que la partie supérieure de la page web",
+    "description":"Mode Salle de cinéma : N'est assombrie que la partie supérieure de la page web"
   },
   "desmousespotlightc":{
     "message":"Pouvoir créer une zone de sélection à l'éclairage normal au sein de la partie assombrie de la page, sans pour autant rétablir l'éclairage normal sur toute la page au moindre clic dans cette zone de sélection.",
     "description":"Pouvoir créer une zone de sélection à l'éclairage normal au sein de la partie assombrie de la page, sans pour autant rétablir l'éclairage normal sur toute la page au moindre clic dans cette zone de sélection."
   },
   "titelrememberpage":{
-    "message":"Se souvenir de cette page",
-    "description":"Se souvenir de cette page"
+    "message":"Se souvenir de la page",
+    "description":"Se souvenir de la page"
   },
   "desmousespotlighta":{
     "message":"Ajouter une petite zone éclairée circulaire tout autour du curseur de la souris lorsque celui-ci passe au-dessus de la partie assombrie de la page.",
@@ -100,8 +100,8 @@
     "description":"Activer la fonction de « Protection des yeux » désactivera automatiquement la fonction « Auto play »."
   },
   "skipremember":{
-    "message":"Passer cette page, pour accéder directement aux Options de l'extension",
-    "description":"Passer cette page, pour accéder directement aux Options de l'extension"
+    "message":"Passer ceci et ouvrir la page d'options",
+    "description":"Passer ceci et ouvrir la page d'options"
   },
   "optiontimesaved":{
     "message":"Période validée !",
@@ -144,16 +144,16 @@
     "description":"Voyage dans l'espace"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Presser la touche T ajoute un rideau de théâtre pour recouvrir la partie assombrie",
+    "description":"Presser la touche T ajoute un rideau de théâtre pour recouvrir la partie assombrie"
   },
   "settings":{
     "message":"Paramètres",
     "description":"Paramètres"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diamètre du projecteur :",
+    "description":"Diamètre du projecteur :"
   },
   "titelsync":{
     "message":"Synchroniser",
@@ -212,24 +212,24 @@
     "description":"Saisissez votre mot de passe dans la case ci-dessous :"
   },
   "titelblurradius":{
-    "message":"Effet de flou",
-    "description":"Effet de flou"
+    "message":"Effet de flou :",
+    "description":"Effet de flou :"
   },
   "version":{
     "message":"Version",
     "description":"Numéro de version du texte"
   },
   "shortcutdark":{
-    "message":"pour assombrir l'écran (augmenter l'opacité).",
-    "description":"pour assombrir l'écran (augmenter l'opacité)."
+    "message":"pour assombrir l'écran (augmenter l'opacité)",
+    "description":"pour assombrir l'écran (augmenter l'opacité)"
   },
   "dessharebutton":{
     "message":"Montre les boutons de partage de YouTube pour cette vidéo.",
     "description":"Montre les boutons de partage de YouTube pour cette vidéo."
   },
   "shortcutbright":{
-    "message":"pour rendre l'écran plus clair (diminuer l'opacité).",
-    "description":"pour rendre l'écran plus clair (diminuer l'opacité)."
+    "message":"pour éclaircir l'écran (diminuer l'opacité)",
+    "description":"pour éclaircir l'écran (diminuer l'opacité)"
   },
   "titelalllightsoff":{
     "message":"Tout les onglets ouverts",
@@ -268,8 +268,8 @@
     "description":"Afficher le bouton \"Ajouter\" pour cette vidéo de YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"pour activer\/désactiver l'option \"Protection des yeux\".",
-    "description":"pour activer\/désactiver l'option \"Protection des yeux\"."
+    "message":"pour activer ou désactiver la fonctionnalité de Protection des yeux",
+    "description":"pour activer ou désactiver la fonctionnalité de Protection des yeux"
   },
   "titelfadein":{
     "message":"Faire apparaître en fondu",
@@ -296,8 +296,8 @@
     "description":"Centrer sur cette vidéo"
   },
   "warningtextambilight":{
-    "message":"S'il est impossible de recevoir les données de la vidéo en raison des règles de sécurité d'un site web, il ne sera alors affiché que la couleur unique choisie.",
-    "description":"S'il est impossible de recevoir les données de la vidéo en raison des règles de sécurité d'un site web, il ne sera alors affiché que la couleur unique choisie."
+    "message":"Lorsque les règles de sécurité d'un site web vous empêche de recevoir le fichier vidéo, l'unique couleur choisie pour arrière-plan primera.",
+    "description":"Lorsque les règles de sécurité d'un site web vous empêche de recevoir le fichier vidéo, l'unique couleur choisie pour arrière-plan primera."
   },
   "desdynamiccloud":{
     "message":"Nuages animés",
@@ -320,8 +320,8 @@
     "description":"Revenir en haut"
   },
   "titelspreadradius":{
-    "message":"Effet de pixellisation",
-    "description":"Effet de pixellisation"
+    "message":"Effet de pixellisation :",
+    "description":"Effet de pixellisation :"
   },
   "installadblocker":{
     "message":"Utilisez ensuite une extension de navigateur anti-pub",
@@ -408,8 +408,8 @@
     "description":"Extrait la couleur de la vidéo."
   },
   "showremember":{
-    "message":"Ne plus montrer la page \"Se souvenir de cette page\" lorsque j'ouvre les options de l'extension.",
-    "description":"Ne plus montrer la page \"Se souvenir de cette page\" lorsque j'ouvre les options de l'extension."
+    "message":"Ne plus montrer la page de proposition de faire un don lorsque j'ouvre les options",
+    "description":"Ne plus montrer la page de proposition de faire un don lorsque j'ouvre les options"
   },
   "donatepromotext":{
     "message":"Un grand merci pour tous les dons que vous pouvez me faire, quel qu'en soit leur montant !",
@@ -424,8 +424,8 @@
     "description":"Pluie"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Cliquer sur le bouton de la lampe alternera entre assombrir et éclaircir sur tous les onglets ouverts",
+    "description":"Cliquer sur le bouton de la lampe alternera entre assombrir et éclaircir sur tous les onglets ouverts"
   },
   "optionecosaversaved":{
     "message":"Les secondes ont bien été enregistrées !",
@@ -436,20 +436,20 @@
     "description":"Barre de niveau d'opacité"
   },
   "deseyen":{
-    "message":"Utilisation normale (l'arrière-plan s'assombrit en cliquant sur l'icône de l'ampoule).",
-    "description":"Utilisation normale (l'arrière-plan s'assombrit en cliquant sur l'icône de l'ampoule)."
+    "message":"Utilisation normale (la luminosité se réduit lorsque vous cliquez sur l'icône de la lampe)",
+    "description":"Utilisation normale (la luminosité se réduit lorsque vous cliquez sur l'icône de la lampe)"
   },
   "enjoyshare":{
     "message":"Appréciez cette extension et partagez-la avec d'autres qui selon vous pourront l'apprécier.",
     "description":"Appréciez cette extension et partagez-la avec d'autres qui selon vous pourront l'apprécier."
   },
   "shortcuttotl":{
-    "message":"pour assombrir\/retrouver l'éclairage normal.",
-    "description":"pour assombrir\/retrouver l'éclairage normal."
+    "message":"pour basculer entre l'éclairage habituel et l'autre réduit",
+    "description":"pour basculer entre l'éclairage habituel et l'autre réduit"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Assombrir automatiquement l'arrière-plan lorsqu'une nouvelle page web est ouverte",
+    "description":"Assombrir automatiquement l'arrière-plan lorsqu'une nouvelle page web est ouverte"
   },
   "basicsettings":{
     "message":"Notions de base",
@@ -472,8 +472,8 @@
     "description":"Guide pour bien démarrer avec TOtL"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Réduire automatiquement la luminosité sur le(s) site(s) web suivant(s) :",
+    "description":"Réduire automatiquement la luminosité sur le(s) site(s) web suivant(s) :"
   },
   "titellikebutton":{
     "message":"Boutons \"J’aime\" et \"Je n’aime pas\"",
@@ -484,8 +484,8 @@
     "description":"Masquer l'icône \"pageaction\""
   },
   "friendlyremember":{
-    "message":"Facile à retenir...",
-    "description":"Facile à retenir..."
+    "message":"Page de donnation...",
+    "description":"Page de donnation..."
   },
   "desfadein":{
     "message":"Activer les effets de transition lorsque la luminosité se réduit.",
@@ -496,8 +496,8 @@
     "description":"Méfiez-vous !"
   },
   "deseyetimesaver":{
-    "message":"Lorsque qu'une page web est restée inactive (ni le clavier ni la souris n'ont été utilisés sur cette page) pendant la durée mentionnée ci-dessous, la page s'assombrira automatiquement.",
-    "description":"Lorsque qu'une page web est restée inactive (ni le clavier ni la souris n'ont été utilisés sur cette page) pendant la durée mentionnée ci-dessous, la page s'assombrira automatiquement."
+    "message":"Lorsqu'une page est inactive (pas de mouvement de la souris ni du clavier) durant la période spécifiée ci-dessous, elle s'assombrira automatiquement.",
+    "description":"Lorsqu'une page est inactive (pas de mouvement de la souris ni du clavier) durant la période spécifiée ci-dessous, elle s'assombrira automatiquement."
   },
   "titelsuggestions":{
     "message":"Suggestions",
@@ -536,8 +536,8 @@
     "description":"Aquarium "
   },
   "longdonatetext":{
-    "message":"Je vous serais plus que reconnaissant si vous pouviez me faire un don pour que je puisse continuer à développer cette extension, pour vous et pour les utilisateurs qui la choisiront comme vous. Qu'il soit de 1€ ou de 100€, votre soutien est toujours plus qu'apprécié !",
-    "description":"Je vous serais plus que reconnaissant si vous pouviez me faire un don pour que je puisse continuer à développer cette extension, pour vous et pour les utilisateurs qui la choisiront comme vous. Qu'il soit de 1€ ou de 100€, votre soutien est toujours plus qu'apprécié !"
+    "message":"Je vous serais plus que reconnaissant si vous pouviez me faire un don pour que je puisse continuer à développer cette extension, pour vous et pour les utilisateurs qui la choisiront comme vous. Qu'il soit de 1€ ou de 100€, votre soutien est toujours plus qu'apprécié!",
+    "description":"Je vous serais plus que reconnaissant si vous pouviez me faire un don pour que je puisse continuer à développer cette extension, pour vous et pour les utilisateurs qui la choisiront comme vous. Qu'il soit de 1€ ou de 100€, votre soutien est toujours plus qu'apprécié!"
   },
   "deshardflash":{
     "message":"Afficher tous les éléments de Flash Player, en évitant le filtre URL. Cette option force certains lecteurs vidéo à être nativement détectés, ce qui n'est pas toujours le cas. Mais les publicités seront elles aussi affichées. Utilisez alors des bloqueurs de pub.",
@@ -556,12 +556,12 @@
     "description":"Afficher et inverser la couleur du titre de la vidéo."
   },
   "desrememberpage":{
-    "message":"Si cette option est activée, l'option \"Se souvenir de cette page\" ne vous sera pas montrée.",
-    "description":"Si cette option est activée, l'option \"Se souvenir de cette page\" ne vous sera pas montrée."
+    "message":"Ne plus montrer la page pour proposer de faire un don",
+    "description":"Ne plus montrer la page pour proposer de faire un don"
   },
   "description":{
-    "message":"Toute la page de votre navigateur va s’assombrir, pour que vous puissiez regarder votre vidéo comme si vous étiez au cinéma.",
-    "description":"Toute la page de votre navigateur va s’assombrir, pour que vous puissiez regarder votre vidéo comme si vous étiez au cinéma."
+    "message":"Toute la page va s'assombrir pour vous permettre de regarder vos vidéos comme si vous étiez au cinéma.",
+    "description":"Toute la page va s'assombrir pour vous permettre de regarder vos vidéos comme si vous étiez au cinéma."
   },
   "titelviewcount":{
     "message":"Nombre de \"Vue\"",
@@ -576,12 +576,12 @@
     "description":"Mettre automatiquement la qualité des vidéos sur YouTube en :"
   },
   "shortcutopacity":{
-    "message":"pour restaurer les paramètres d'assombrissement (opacité) d'origine.",
-    "description":"pour restaurer les paramètres d'assombrissement (opacité) d'origine."
+    "message":"pour restaurer les paramètres d'assombrissement (opacité) d'origine",
+    "description":"pour restaurer les paramètres d'assombrissement (opacité) d'origine"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Moins la valeur indiquée sera importante, moins l'ombre sera intense ; plus la valeur sera élevée, plus l'ombre sera troublée.",
+    "description":"Moins la valeur indiquée sera importante, moins l'ombre sera intense ; plus la valeur sera élevée, plus l'ombre sera troublée."
   },
   "titeladdvideobutton":{
     "message":"Bouton \"Ajouter à\"",
@@ -716,8 +716,8 @@
     "description":"Réinitialiser les paramètres de Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Rééclaircir l'arrière-plan lorsque la vidéo est terminée après",
-    "description":"Rééclaircir l'arrière-plan lorsque la vidéo est terminée après"
+    "message":"Ré-éclaircir l'arrière-plan lorsque la vidéo se termine après",
+    "description":"Ré-éclaircir l'arrière-plan lorsque la vidéo se termine après"
   },
   "desautoplaydelayend":{
     "message":"secondes",
@@ -728,8 +728,8 @@
     "description":"Mouvement de caméra"
   },
   "desmotion":{
-    "message":"Activez le Mouvement de caméra pour que la page web puisse s'assombrir avec un geste de la main vers le bas.",
-    "description":"Activez le Mouvement de caméra pour que la page web puisse s'assombrir avec un geste de la main vers le bas."
+    "message":"Activer le Mouvement de caméra",
+    "description":"Activer le Mouvement de caméra"
   },
   "trymotion":{
     "message":"Essayez par vous-même !",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Faites bouger votre main (ou poignet) du haut vers le bas",
-    "description":"Faites bouger votre main (ou poignet) du haut vers le bas"
+    "description":"Faites bouger votre main (ou votre poing) du haut vers le bas."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"La partie assombrie apparaîtra automatiquement en s'abaissant.",
+    "description":"La partie assombrie apparaîtra automatiquement en s'abaissant."
   },
   "desmotionChecklist":{
     "message":"Liste de vérification :",
@@ -776,12 +776,12 @@
     "description":"Linéaire"
   },
   "titelcolora":{
-    "message":"Couleur A",
-    "description":"Couleur A"
+    "message":"Couleur A :",
+    "description":"Couleur A :"
   },
   "titelcolorb":{
-    "message":"Couleur B",
-    "description":"Couleur B"
+    "message":"Couleur B :",
+    "description":"Couleur B :"
   },
   "speechoption":{
     "message":"Reconnaissance vocale",
@@ -856,8 +856,8 @@
     "description":"Ce navigateur ne supporte pas encore cette fonctionnalité. Assurez-vous d'avoir la dernière version du navigateur d'installée sur votre ordinateur."
   },
   "titelsupportatmos":{
-    "message":"Prend en charge uniquement les <video> HTML5 et YouTube HTML5. Il mobilise une petite partie de votre processeur graphique (GPU).",
-    "description":"Prend en charge uniquement les <video> HTML5 et YouTube HTML5. Il mobilise une petite partie de votre processeur graphique (GPU)."
+    "message":"Ne supporte que le HTML5 <video> et le lecteur HTML5 de YouTube. L'extension utilise également le processeur de votre carte graphique pour fonctionner.",
+    "description":"Ne supporte que le HTML5 <video> et le lecteur HTML5 de YouTube. L'extension utilise également le processeur de votre carte graphique pour fonctionner."
   },
   "titelseeonline":{
     "message":"Faites des recherches en lignes pour plus d'exemples",
@@ -1052,7 +1052,7 @@
     "description":"Vidéo HTML5 & YouTube ™"
   },
   "flashembedobject":{
-    "message":"Prise en charge : <object>, <embed>, <applet>, <iframe>.",
-    "description":"Prise en charge : <object>, <embed>, <applet>, <iframe>."
+    "message":"Pris en charge : <object>, <embed>, <applet>, <iframe>.",
+    "description":"Pris en charge : <object>, <embed>, <applet>, <iframe>."
   }
 }

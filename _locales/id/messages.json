@@ -8,12 +8,12 @@
     "description":"Gambar latar belakang"
   },
   "shortcutalllights":{
-    "message":"Untuk menghidupkan\/mematikan lampu pada seluruh halama yang sedang dibuka.",
-    "description":"untuk beralih lampu on\/off untuk semua Buka tab."
+    "message":"Munculkan tanda untuk menghidupkan\/mematikan lampu pada seluruh halaman yang sedang dibuka",
+    "description":"Munculkan tanda untuk menghidupkan\/mematikan lampu pada seluruh halaman yang sedang dibuka"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Pengecekan versi terbaru",
+    "description":"Pengecekan versi terbaru"
   },
   "visualeffects":{
     "message":"Efek Visual",
@@ -32,8 +32,8 @@
     "description":"Seperti Bar"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Mengaktifkan klik hyperlink ketika layar digelapkan",
+    "description":"Mengaktifkan klik hyperlink ketika layar digelapkan"
   },
   "desambilight4color":{
     "message":"Empat (4) warna pilihan disekeliling video:",
@@ -56,16 +56,16 @@
     "description":"Pelindung mata"
   },
   "titelcinemaontop":{
-    "message":"Modus Film Bioskop: menunjukan daerah bagian atas saja yang akan digelapkan pada jendela.",
-    "description":"Film theater mode: itu menunjukkan lapisan 'lampu ' hanya di bagian atas jendela."
+    "message":"Mode Film Bioskop: menunjukan daerah bagian atas saja yang akan digelapkan pada jendela akses",
+    "description":"Mode Film Bioskop: menunjukan daerah bagian atas saja yang akan digelapkan pada jendela akses"
   },
   "desmousespotlightc":{
     "message":"Jika cahaya mati, Anda dapat memilih area untuk difokuskan.",
     "description":"Jika cahaya tidak aktif, Anda dapat memilih area fokus item."
   },
   "titelrememberpage":{
-    "message":"Ingat Halaman ini",
-    "description":"Ingat Halaman"
+    "message":"Halaman pengingat",
+    "description":"Halaman pengingat"
   },
   "desmousespotlighta":{
     "message":"Jika lampu mati, ubah kursor menjadi lampu petunjuk.",
@@ -100,8 +100,8 @@
     "description":"Memungkinkan 'Mata perlindungan' secara otomatis akan menonaktifkan fitur 'Auto bermain'."
   },
   "skipremember":{
-    "message":"Lewati ini dan buka halaman pilihan",
-    "description":"Melompat ini, dan sekarang membuka halaman pilihan"
+    "message":"Lewati ini dan buka halaman untuk memilih sekarang",
+    "description":"Lewati ini dan buka halaman untuk memilih sekarang"
   },
   "optiontimesaved":{
     "message":"Waktu telah berhasil disimpan!",
@@ -144,16 +144,16 @@
     "description":"Ruang alam semesta"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Tekan tombol T untuk menambahkan tirai teater pada lapisan gelap",
+    "description":"Tekan tombol T untuk menambahkan tirai teater pada lapisan gelap"
   },
   "settings":{
     "message":"Pengaturan",
     "description":"Pengaturan"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter dari sorotan lampu:",
+    "description":"Diameter dari sorotan lampu:"
   },
   "titelsync":{
     "message":"Sinkronisasi",
@@ -212,24 +212,24 @@
     "description":"Masukkan password Anda dalam kotak di bawah ini:"
   },
   "titelblurradius":{
-    "message":"Radius blur.",
-    "description":"Radius kabur"
+    "message":"Radius blur:",
+    "description":"Radius blur:"
   },
   "version":{
     "message":"Versi",
     "description":"Nomor versi teks"
   },
   "shortcutdark":{
-    "message":"untuk menggelapkan layar (meningkatkan keburaman).",
-    "description":"untuk menggelapkan layar (peningkatan opacity)."
+    "message":"untuk menggelapkan layar (meningkatkan keburaman)",
+    "description":"untuk menggelapkan layar (meningkatkan keburaman)"
   },
   "dessharebutton":{
     "message":"Tampilkan tombol berbagi YouTube untuk video ini.",
     "description":"Menunjukkan tombol berbagi YouTube untuk video ini."
   },
   "shortcutbright":{
-    "message":"untuk mencerahkan layar (mengurangi keburaman).",
-    "description":"untuk mencerahkan layar (penurunan opacity)."
+    "message":"untuk mencerahkan layar (mengurangi keburaman)",
+    "description":"untuk mencerahkan layar (mengurangi keburaman)"
   },
   "titelalllightsoff":{
     "message":"Semua tab yang terbuka",
@@ -268,8 +268,8 @@
     "description":"Menunjukkan tombol add dari video YouTube ini."
   },
   "shortcuteyeprotection":{
-    "message":"untuk mengaktifkan\/menonaktifkan fitur perlindungan mata.",
-    "description":"untuk mengaktifkan\/menonaktifkan fitur perlindungan mata."
+    "message":"untuk mengaktifkan\/menonaktifkan fitur perlindungan mata",
+    "description":"untuk mengaktifkan\/menonaktifkan fitur perlindungan mata"
   },
   "titelfadein":{
     "message":"Muncul Secara Perlahan",
@@ -296,8 +296,8 @@
     "description":"Fokus video ini"
   },
   "warningtextambilight":{
-    "message":"Warna solid yang telah dipilih akan muncul apabila tidak dapat menerima data dari video dikarenakan aturan dari keamanan suatu situs.",
-    "description":"Jika tidak dapat menerima video data karena aturan keamanan situs, maka dia akan menampilkan pilihan warna solid sebagai gantinya."
+    "message":"Bila tidak dapat menerima data video terkait peraturan mengenai keamanan situs, warna solid terpilih akan digunakan sebagai gantinya.",
+    "description":"Bila tidak dapat menerima data video terkait peraturan mengenai keamanan situs, warna solid terpilih akan digunakan sebagai gantinya."
   },
   "desdynamiccloud":{
     "message":"Awan Bergerak",
@@ -320,8 +320,8 @@
     "description":"atas"
   },
   "titelspreadradius":{
-    "message":"Radius sebaran.",
-    "description":"Radius penyebaran"
+    "message":"Penyebaran radius:",
+    "description":"Penyebaran radius:"
   },
   "installadblocker":{
     "message":"Gunakan dengan sebuah ekstensi Adblocker.",
@@ -408,8 +408,8 @@
     "description":"Mengambil warna dari video."
   },
   "showremember":{
-    "message":"tidak menampilkan halaman ini lagi ketika saya membuka halaman pilihan.",
-    "description":"tidak menampilkan halaman ingat ini lagi ketika saya membuka halaman pilihan."
+    "message":"Jangan tampilkan halaman pengingat lagi pada saat saya membuka pilihan",
+    "description":"Jangan tampilkan halaman pengingat lagi pada saat saya membuka pilihan"
   },
   "donatepromotext":{
     "message":"Jika Anda bisa membuat sumbangan jumlah berapapun, aku akan sangat menghargai itu!",
@@ -424,8 +424,8 @@
     "description":"Hujan"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Mengklik tombol lampu akan memunculkan tanda untuk menyalakan\/mematikan lampu pada semua  tab yang terbuka",
+    "description":"Mengklik tombol lampu akan memunculkan tanda untuk menyalakan\/mematikan lampu pada semua  tab yang terbuka"
   },
   "optionecosaversaved":{
     "message":"Detik berhasil disimpan!",
@@ -436,20 +436,20 @@
     "description":"Redupnya tingkat Bar"
   },
   "deseyen":{
-    "message":"Normal menggunakan (lampu mati bila anda klik pada ikon lampu).",
-    "description":"Penggunaan normal (lampu pergi keluar ketika Anda klik pada ikon lampu)."
+    "message":"Pemakaian normal (lampu akan muncul pada saat anda mengklik nyalakan pada  ikon lampu)",
+    "description":"Pemakaian normal (lampu akan muncul pada saat anda mengklik nyalakan pada  ikon lampu)"
   },
   "enjoyshare":{
     "message":"Nikmati ekstensi ini dan berbagi dengan orang lain yang Anda pikir akan menyukainya.",
     "description":"Nikmati ekstensi ini dan berbagi dengan orang lain yang Anda pikir akan menghargai itu."
   },
   "shortcuttotl":{
-    "message":"untuk menyalakan\/mematikan lampu.",
-    "description":"untuk beralih lampu on\/off."
+    "message":"Untuk menyalakan\/mematikan lampu",
+    "description":"Untuk menyalakan\/mematikan lampu"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Redupkan latar belakang secara otomatis saat membuka halaman situs",
+    "description":"Redupkan latar belakang secara otomatis saat membuka halaman situs"
   },
   "basicsettings":{
     "message":"Dasar-dasar",
@@ -472,8 +472,8 @@
     "description":"Total Selamat datang panduan"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Redupkan latar belakang secara otomatis pada situs berikut:",
+    "description":"Redupkan latar belakang secara otomatis pada situs berikut:"
   },
   "titellikebutton":{
     "message":"Tombol Suka dan Tidak Suka",
@@ -484,8 +484,8 @@
     "description":"menyembunyikan ikon pageaction"
   },
   "friendlyremember":{
-    "message":"Ingat dengan ramah...",
-    "description":"Ingat ramah..."
+    "message":"Pengingat bersahabat...",
+    "description":"Pengingat bersahabat..."
   },
   "desfadein":{
     "message":"Tampilkan efek memudar.",
@@ -496,8 +496,8 @@
     "description":"Peringatan!"
   },
   "deseyetimesaver":{
-    "message":"Ketika halaman sedang tidak aktif (tidak ada masukan mouse atau keyboard) untuk waktu yang ditentukan di bawah ini, halaman akan secara otomatis pergi gelap.",
-    "description":"Ketika halaman sedang tidak aktif (tidak ada mouse atau keyboard masukan) untuk waktu yang ditentukan di bawah ini, halaman akan secara otomatis pergi gelap."
+    "message":"Ketika halaman sedang tidak aktif (tidak ada mouse ataupun aktivitas keyboard) untuk durasi waktu yang ditentukan dibawah ini, secara otomatis akan menjadi gelap.",
+    "description":"Ketika halaman sedang tidak aktif (tidak ada mouse ataupun aktivitas keyboard) untuk durasi waktu yang ditentukan dibawah ini, secara otomatis akan menjadi gelap."
   },
   "titelsuggestions":{
     "message":"Saran",
@@ -536,8 +536,8 @@
     "description":"Tangki ikan"
   },
   "longdonatetext":{
-    "message":"Kami akan sangat senang jika Anda dapat menyumbang agar ekstensi browser ini dapat digunakan untuk pengguna baru. Berapapun nilai sumbangannya, $$! atau $$100, dukungan Anda sangat kami hargai!",
-    "description":"Aku benar-benar akan menghargai jika Anda dapat menyumbang saya untuk menjaga ekstensi browser ini untuk para pengguna baru lainnya. Apakah itu $$ 1 atau $$ 100, dukungan Anda sangat dihargai!"
+    "message":"Kami akan sangat senang apabila Anda dapat menyumbang agar ekstensi browser ini tetap dapat digunakan untuk pengguna baru lainnya. Berapapun nilai sumbangannya, dukungan Anda sangat kami hargai!",
+    "description":"Kami akan sangat senang apabila Anda dapat menyumbang agar ekstensi browser ini tetap dapat digunakan untuk pengguna baru lainnya. Berapapun nilai sumbangannya, dukungan Anda sangat kami hargai!"
   },
   "deshardflash":{
     "message":"Tampilkan semua objek Flash, tidak menghiraukan URL filter. Ini akan memperbaiki masalah dengan beberapa pemutar video yang tersembunyi, tetapi juga dapat menampilkan iklan.",
@@ -556,12 +556,12 @@
     "description":"Menunjukkan dan invert warna judul video."
   },
   "desrememberpage":{
-    "message":"Jika opsi ini diaktifkan, itu akan menunjukkan Anda tidak ingat halaman.",
-    "description":"Jika opsi ini diaktifkan, itu akan menunjukkan Anda tidak ingat halaman."
+    "message":"Jangan tampilkan halaman pengingat",
+    "description":"Jangan tampilkan halaman pengingat"
   },
   "description":{
-    "message":"Keseluruhan halaman akan memudar gelap, sehingga Anda dapat menonton video seolah-olah Anda berada di bioskop.",
-    "description":"Seluruh halaman akan memudar gelap, sehingga Anda dapat menonton video sebagai jika Anda berada di bioskop."
+    "message":"Seluruh halaman akan menjadi gelap, sehingga kamu dapat menonton video seolah-olah berada di bioskop.",
+    "description":"Seluruh halaman akan menjadi gelap, sehingga kamu dapat menonton video seolah-olah berada di bioskop."
   },
   "titelviewcount":{
     "message":"Jumlah Dilihat",
@@ -576,12 +576,12 @@
     "description":"Secara otomatis ditetapkan kualitas video YouTube."
   },
   "shortcutopacity":{
-    "message":"untuk mengembalikan dengan mengatur kegelapan (opacity) pengaturan.",
-    "description":"untuk mengembalikan dengan mengatur kegelapan (opacity) pengaturan."
+    "message":"Untuk mengembalikan ke pengaturan setelan gelap (tingkat kecerahan)",
+    "description":"Untuk mengembalikan ke pengaturan setelan gelap (tingkat kecerahan)"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Nilai lebih rendah akan mempertajam bayangan, nilai yang lebih tinggi akan membuatnya lebih kabur.",
+    "description":"Nilai lebih rendah akan mempertajam bayangan, nilai yang lebih tinggi akan membuatnya lebih kabur."
   },
   "titeladdvideobutton":{
     "message":"Tambahkan tombol",
@@ -716,8 +716,8 @@
     "description":"Atur ulang pengaturan Matikan Lampu"
   },
   "desautoplaydelay":{
-    "message":"Terangi kembali latar belakang ketika video berhenti",
-    "description":"Terangi kembali latar belakang ketika video berhenti"
+    "message":"Mempercerah latar belakang nya lagi ketika video telah berakhir sesudahnya",
+    "description":"Mempercerah latar belakang nya lagi ketika video telah berakhir sesudahnya"
   },
   "desautoplaydelayend":{
     "message":"detik",
@@ -728,8 +728,8 @@
     "description":"Gerakan Kamera"
   },
   "desmotion":{
-    "message":"Nyalakan Gerak Kamera sehingga halaman web dapat menggelap dengan lambaian tangan ke bawah.",
-    "description":"Nyalakan Gerak Kamera sehingga halaman web dapat menggelap dengan lambaian tangan ke bawah."
+    "message":"Aktifkan gerakan kamera",
+    "description":"Aktifkan gerakan kamera"
   },
   "trymotion":{
     "message":"Cobalah sendiri!",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Gerakkan tangan anda (atau kepalan) dari atas ke bawah",
-    "description":"Gerakkan tangan anda (atau kepalan) dari atas ke bawah"
+    "description":"Pindahkan tangan anda (atau kepalan ) dari atas ke bawah."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"Lapisan hitam secara otomatis akan turun kebawah.",
+    "description":"Lapisan hitam secara otomatis akan turun kebawah."
   },
   "desmotionChecklist":{
     "message":"Ceklist:",
@@ -776,12 +776,12 @@
     "description":"Linier"
   },
   "titelcolora":{
-    "message":"Warna A",
-    "description":"Warna A"
+    "message":"Warna A:",
+    "description":"Warna A:"
   },
   "titelcolorb":{
-    "message":"Warna B",
-    "description":"Warna B"
+    "message":"Warna B:",
+    "description":"Warna B:"
   },
   "speechoption":{
     "message":"Pengenal Percakapan",
@@ -856,8 +856,8 @@
     "description":"Browser ini belum mendukung fitur ini. Pastikan Anda memiliki versi terakhir dari browser pada komputer anda."
   },
   "titelsupportatmos":{
-    "message":"Hanya mendukung HTML5 <video> dan pemutar YouTube HTML5. Dan ini menggunakan GPU dari video card Anda.",
-    "description":"Hanya mendukung HTML5 <video> dan pemutar YouTube HTML5. Dan ini menggunakan GPU dari video card Anda."
+    "message":"Hanya berikan dukungan kepada  HTML5 <video> dan YouTube HTML5 Player. Ini juga menggunakan GPU dari kartu grafis anda.",
+    "description":"Hanya berikan dukungan kepada  HTML5 <video> dan YouTube HTML5 Player. Ini juga menggunakan GPU dari kartu grafis anda."
   },
   "titelseeonline":{
     "message":"Lihat contoh lain secara online",
@@ -1048,11 +1048,11 @@
     "description":"Lampu peramban"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"HTML5 & video YouTube ™",
+    "description":"HTML5 & video YouTube ™"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"Dukung: <object>,<embed>,<applet>,<iframe>.",
+    "description":"Dukung: <object>,<embed>,<applet>,<iframe>."
   }
 }

@@ -8,8 +8,8 @@
     "description":"Hình nền"
   },
   "shortcutalllights":{
-    "message":"để bật\/tắt đèn cho tất cả các tab đang mở.",
-    "description":"để chuyển đổi các đèn bật\/tắt cho tất cả mở tab."
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
     "message":"Latest version check on",
@@ -56,16 +56,16 @@
     "description":"Bảo vệ mắt"
   },
   "titelcinemaontop":{
-    "message":"Chế độ nhà hát phim: nó hiển thị các lớp 'đèn tắt' chỉ trên đầu cửa sổ.",
-    "description":"Chế độ nhà hát phim: nó hiển thị các lớp 'đèn tắt' chỉ trên đầu cửa sổ."
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
     "message":"Cho phép lựa chọn khu vực để tập trung vào một vật khi ánh sáng bị tắt",
     "description":"Nếu ánh sáng là tắt, bạn có thể chọn một khu vực tập trung một mục."
   },
   "titelrememberpage":{
-    "message":"Nhớ trang",
-    "description":"Hãy nhớ rằng trang"
+    "message":"Reminder page",
+    "description":"Reminder page"
   },
   "desmousespotlighta":{
     "message":"Khi tất cả ánh sáng bị tắt, xung quanh con trỏ chuột sẽ hiển thị một ánh sáng nổi bật.",
@@ -100,8 +100,8 @@
     "description":"Cho phép 'Bảo vệ mắt' sẽ tự động tắt tính năng 'Tự động chơi'."
   },
   "skipremember":{
-    "message":"Bỏ qua điều này, và bây giờ mở trang tùy chọn",
-    "description":"Bỏ qua điều này, và bây giờ mở trang tùy chọn"
+    "message":"Skip this, and open the options page now",
+    "description":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
     "message":"Tiết kiệm thời gian thành công!",
@@ -144,16 +144,16 @@
     "description":"Space vũ trụ"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"Thiết đặt",
     "description":"Cài đặt"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"Đồng bộ",
@@ -212,24 +212,24 @@
     "description":"Nhập mật khẩu của bạn vào hộp dưới đây:"
   },
   "titelblurradius":{
-    "message":"Bán kính mờ",
-    "description":"Bán kính mờ"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"Phiên bản",
     "description":"Phiên bản văn bản số"
   },
   "shortcutdark":{
-    "message":"để tối màn hình (tăng độ mờ).",
-    "description":"để tối màn hình (tăng độ mờ)."
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"Hiện nút Share cho video này.",
     "description":"Hiển thị các nút chia sẻ của YouTube cho video này."
   },
   "shortcutbright":{
-    "message":"để làm sáng màn hình (Giảm opacity).",
-    "description":"để làm sáng màn hình (Giảm opacity)."
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"Tất cả các tab mở",
@@ -268,8 +268,8 @@
     "description":"Hiển thị nút Thêm từ này video YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"để bật\/tắt tính năng bảo vệ mắt.",
-    "description":"để bật\/tắt tính năng bảo vệ mắt."
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"Rõ dần",
@@ -296,8 +296,8 @@
     "description":"Tập trung các video này"
   },
   "warningtextambilight":{
-    "message":"Nếu nó không thể nhận được dữ liệu video vì một trang web an ninh quy tắc, sau đó nó sẽ cho rắn màu đã chọn để thay thế.",
-    "description":"Nếu nó không thể nhận được dữ liệu video vì một trang web an ninh quy tắc, sau đó nó sẽ cho rắn màu đã chọn để thay thế."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"Đám mây hoạt hình",
@@ -320,8 +320,8 @@
     "description":"đầu trang"
   },
   "titelspreadradius":{
-    "message":"Bán kính lây lan",
-    "description":"Bán kính lây lan"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
     "message":"Sử dụng với một phần mở rộng Adblocker.",
@@ -408,8 +408,8 @@
     "description":"Có màu sắc từ video."
   },
   "showremember":{
-    "message":"không hiện sửa ghi nhớ lại khi tôi mở trang tùy chọn.",
-    "description":"không hiện sửa ghi nhớ lại khi tôi mở trang tùy chọn."
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"Nếu bạn có thể ủng hộ cho tôi một số tiền cho tính năng này, tôi vô cùng cảm kích!",
@@ -424,8 +424,8 @@
     "description":"Giọt mưa"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"Giây được lưu thành công!",
@@ -436,20 +436,20 @@
     "description":"Dimness cấp Bar"
   },
   "deseyen":{
-    "message":"Sử dụng bình thường (đèn tắt khi bạn nhấp vào biểu tượng đèn).",
-    "description":"Sử dụng bình thường (đèn đi ra ngoài khi bạn bấm vào biểu tượng đèn)."
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"Thưởng thức phần mở rộng này và chia sẻ nó với những người khác những người bạn nghĩ rằng sẽ đánh giá cao nó.",
     "description":"Thưởng thức phần mở rộng này và chia sẻ nó với những người khác những người bạn nghĩ rằng sẽ đánh giá cao nó."
   },
   "shortcuttotl":{
-    "message":"để bật\/tắt đèn bật\/tắt.",
-    "description":"để bật\/tắt đèn bật\/tắt."
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"Khái niệm cơ bản",
@@ -472,8 +472,8 @@
     "description":"Chào mừng bạn đến TOtL hướng dẫn"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"Nút Like & Dislike",
@@ -484,8 +484,8 @@
     "description":"ẩn biểu tượng pageaction"
   },
   "friendlyremember":{
-    "message":"Thân thiện với nhớ...",
-    "description":"Thân thiện với nhớ..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
     "message":"Hiện hiệu ứng rõ dần.",
@@ -496,8 +496,8 @@
     "description":"Cảnh báo!"
   },
   "deseyetimesaver":{
-    "message":"Khi một trang là không hoạt động (không có chuột hoặc bàn phím đầu vào) cho thời gian được chỉ ra dưới đây, trang sẽ tự động đi tối.",
-    "description":"Khi một trang là không hoạt động (không có chuột hoặc bàn phím đầu vào) cho thời gian được chỉ ra dưới đây, trang sẽ tự động đi tối."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"Gợi ý",
@@ -536,8 +536,8 @@
     "description":"Bể cá"
   },
   "longdonatetext":{
-    "message":"Tôi thực sự sẽ đánh giá cao nếu bạn có thể tặng tôi để giữ cho phần mở rộng trình duyệt này còn sống cho những người dùng mới khác. Cho dù đó là $$ 1 hoặc $$ 100, hỗ trợ của bạn là vô cùng đánh giá cao!",
-    "description":"Tôi thực sự sẽ đánh giá cao nếu bạn có thể tặng tôi để giữ cho phần mở rộng trình duyệt này còn sống cho những người dùng mới khác. Cho dù đó là $$ 1 hoặc $$ 100, hỗ trợ của bạn là vô cùng đánh giá cao!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"Hiển thị tất cả các đối tượng Flash, bỏ qua các bộ lọc URL. Điều này sẽ sửa chữa các vấn đề với một số người chơi video được ẩn, nhưng cũng sẽ hiển thị quảng cáo.",
@@ -556,12 +556,12 @@
     "description":"Hiển thị và đảo ngược màu sắc của tên phim."
   },
   "desrememberpage":{
-    "message":"Nếu tùy chọn này được kích hoạt, nó sẽ hiển thị cho bạn không nhớ trang.",
-    "description":"Nếu tùy chọn này được kích hoạt, nó sẽ hiển thị cho bạn không nhớ trang."
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"Toàn bộ trang web sẽ tối dần, giống như bạn đang xem video trong rạp chiếu phim.",
-    "description":"Toàn bộ trang sẽ mờ dần đến tối, vì vậy bạn có thể xem video như khi bạn đang ở trong rạp chiếu phim"
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"Số lần xem",
@@ -576,8 +576,8 @@
     "description":"Tự động đặt chất lượng video YouTube."
   },
   "shortcutopacity":{
-    "message":"để khôi phục lại để đặt bóng tối (opacity) thiết lập.",
-    "description":"để khôi phục lại để đặt bóng tối (opacity) thiết lập."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -716,8 +716,8 @@
     "description":"Đặt lại các thiết đặt Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Sáng nền một lần nữa khi đoạn video đã kết thúc sau",
-    "description":"Sáng nền một lần nữa khi đoạn video đã kết thúc sau"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"vài giây",
@@ -728,8 +728,8 @@
     "description":"Chuyển động camera"
   },
   "desmotion":{
-    "message":"Cho phép máy ảnh chuyển động để các trang web có thể tối với một quá trình quét tay xuống.",
-    "description":"Cho phép máy ảnh chuyển động để các trang web có thể tối với một quá trình quét tay xuống."
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Tự thử nó!",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"Di chuyển bàn tay của bạn (hoặc nắm tay) từ trên xuống",
-    "description":"Di chuyển bàn tay của bạn (hoặc nắm tay) từ trên xuống"
+    "description":"Di chuyển bàn tay của bạn (hoặc đầu tiên hãy trượt) từ trên xuống."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"Tuyến tính"
   },
   "titelcolora":{
-    "message":"Màu A",
-    "description":"Màu A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Màu B",
-    "description":"Màu B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Nhận dạng tiếng nói",
@@ -856,8 +856,8 @@
     "description":"Trình duyệt này hiện không hỗ trợ tính năng này. Đảm bảo rằng bạn có phiên bản trình duyệt mới nhất được cài đặt trên máy tính của bạn."
   },
   "titelsupportatmos":{
-    "message":"Chỉ hỗ trợ HTML5 <video>và chơi YouTube HTML5. Và nó sử dụng GPU từ video card của bạn.",
-    "description":"Chỉ hỗ trợ HTML5 <video>và chơi YouTube HTML5. Và nó sử dụng GPU từ video card của bạn."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"Xem trực tuyến cho các ví dụ",

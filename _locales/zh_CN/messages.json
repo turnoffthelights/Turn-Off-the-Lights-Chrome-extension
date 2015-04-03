@@ -9,11 +9,11 @@
   },
   "shortcutalllights":{
     "message":"为所有打开的选项卡切换灯开关。",
-    "description":"若要切换打开\/关闭灯对于所有打开的选项卡。"
+    "description":"为所有打开的选项卡切换灯开关。"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"自动检测最新版本开启",
+    "description":"自动检测最新版本开启"
   },
   "visualeffects":{
     "message":"视觉效果",
@@ -32,8 +32,8 @@
     "description":"喜欢酒吧"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"在屏幕变暗时允许点击超链接",
+    "description":"在屏幕变暗时允许点击超链接"
   },
   "desambilight4color":{
     "message":"选择 4 种环绕在视频周围的颜色。",
@@ -56,16 +56,16 @@
     "description":"保护眼睛"
   },
   "titelcinemaontop":{
-    "message":"电影剧场模式：在窗口顶部只显示 灯关闭状态 图层。",
-    "description":"电影剧场模式： 它只有窗口上显示的 '灯关闭图层。"
+    "message":"电影剧场模式：在窗口顶部只显示灯关闭状态图层。",
+    "description":"电影剧场模式：在窗口顶部只显示灯关闭状态图层。"
   },
   "desmousespotlightc":{
     "message":"如果灯光关闭，您可以选择一个区域来关注一个事物。",
     "description":"如果光是关闭的您可以选择一个区域来重点项目。"
   },
   "titelrememberpage":{
-    "message":"记住网页",
-    "description":"记得页"
+    "message":"提醒页面",
+    "description":"提醒页面"
   },
   "desmousespotlighta":{
     "message":"在关灯的情况下，在鼠标周围显示一个光圈。",
@@ -100,8 +100,8 @@
     "description":"启用保护眼睛将自动禁用自动播放功能。"
   },
   "skipremember":{
-    "message":"跳过这项，立即打开选项页",
-    "description":"跳过这一点，和现在打开选项页"
+    "message":"跳过它然后立即打开设置页",
+    "description":"跳过它然后立即打开设置页"
   },
   "optiontimesaved":{
     "message":"时间已保存。",
@@ -144,16 +144,16 @@
     "description":"空间的宇宙"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"按 T 键为暗层添加剧院幕布",
+    "description":"按 T 键为暗层添加剧院幕布"
   },
   "settings":{
     "message":"设置",
     "description":"设置"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"聚光灯直径：",
+    "description":"聚光灯直径："
   },
   "titelsync":{
     "message":"同步",
@@ -212,8 +212,8 @@
     "description":"在下面的框中输入您的密码："
   },
   "titelblurradius":{
-    "message":"模糊半径",
-    "description":"模糊半径"
+    "message":"模糊半径：",
+    "description":"模糊半径："
   },
   "version":{
     "message":"版本",
@@ -221,7 +221,7 @@
   },
   "shortcutdark":{
     "message":"调暗屏幕(增加不透明度).",
-    "description":"要变暗屏幕 （增加透明度）。"
+    "description":"调暗屏幕(增加不透明度)."
   },
   "dessharebutton":{
     "message":"显示视频的分享按钮",
@@ -229,7 +229,7 @@
   },
   "shortcutbright":{
     "message":"调亮屏幕(减少不透明度).",
-    "description":"照亮屏幕 （减少不透明度）。"
+    "description":"调亮屏幕(减少不透明度)."
   },
   "titelalllightsoff":{
     "message":"所有打开的选项卡",
@@ -268,8 +268,8 @@
     "description":"显示添加按钮从这个 YouTube 视频。"
   },
   "shortcuteyeprotection":{
-    "message":"要启用或禁用视力保护功能。",
-    "description":"要启用\/禁用眼睛保护功能。"
+    "message":"以启用或禁用视力保护功能。",
+    "description":"以启用或禁用视力保护功能。"
   },
   "titelfadein":{
     "message":"淡入",
@@ -296,8 +296,8 @@
     "description":"关注这段视频"
   },
   "warningtextambilight":{
-    "message":"如果因为站点的安全条例而不能接收视频数据，则显示所选的纯色。",
-    "description":"如果它不能接收视频数据，由于网站的安全规则，然后它反而将显示所选的固体颜色。"
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"动态云",
@@ -320,8 +320,8 @@
     "description":"返回页首"
   },
   "titelspreadradius":{
-    "message":"范围半径",
-    "description":"传播半径"
+    "message":"传播半径：",
+    "description":"传播半径："
   },
   "installadblocker":{
     "message":"使用带有 Adblocker 扩展名。",
@@ -408,8 +408,8 @@
     "description":"采取从视频的颜色。"
   },
   "showremember":{
-    "message":"再次打开选项页时不会显示此记住页。",
-    "description":"不会显示此记住页再次打开选项页时。"
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"如果你可以做出任何款项捐赠，我会非常感激！",
@@ -424,8 +424,8 @@
     "description":"雨滴"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"已成功保存 ！",
@@ -436,20 +436,20 @@
     "description":"昏暗的水平栏"
   },
   "deseyen":{
-    "message":"正常使用（灯光熄灭时，您按一下灯图标）。",
-    "description":"(灯光熄灭，当您单击灯图标） 的正常使用。"
+    "message":"正常使用（当您按灯图标时熄灯）。",
+    "description":"正常使用（当您按灯图标时熄灯）。"
   },
   "enjoyshare":{
     "message":"享受此扩展并分享给你觉得需要它的人。",
     "description":"享受此扩展并共享与其他人你觉得会很感激。"
   },
   "shortcuttotl":{
-    "message":"开\/关灯光。",
-    "description":"若要切换灯打开\/关闭。"
+    "message":"以开\/关灯光。",
+    "description":"以开\/关灯光。"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"打开页面时自动将背景变暗。",
+    "description":"打开页面时自动将背景变暗。"
   },
   "basicsettings":{
     "message":"基础",
@@ -472,8 +472,8 @@
     "description":"TOtL 欢迎指南"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"在打开以下站点时自动将背景变暗。",
+    "description":"在打开以下站点时自动将背景变暗。"
   },
   "titellikebutton":{
     "message":"顶\/踩 按钮",
@@ -484,8 +484,8 @@
     "description":"隐藏 pageaction 图标"
   },
   "friendlyremember":{
-    "message":"还记得友好......",
-    "description":"还记得友好......"
+    "message":"友情提醒...",
+    "description":"友情提醒..."
   },
   "desfadein":{
     "message":"显示淡入效果",
@@ -496,8 +496,8 @@
     "description":"警告 ！"
   },
   "deseyetimesaver":{
-    "message":"超过以下时间没有鼠标或键盘输入，页面将自动转暗。",
-    "description":"当页处于非活动状态 (没有鼠标或键盘输入) 低于指定的时间，页面将自动转暗。"
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"建议",
@@ -536,8 +536,8 @@
     "description":"鱼缸"
   },
   "longdonatetext":{
-    "message":"我会很感激如果你可以捐款给我,使这个浏览器扩展对新用户保持可用。无论是 $$ 1 或 $$ 100都非常感激！",
-    "description":"我会很感激如果你可以捐给我留着这个浏览器扩展为其他新用户还活着。无论是 $$ 1 或 $$ 100，是非常感激您的支持 ！"
+    "message":"如果您为本项目捐款令本浏览器扩展持续可用我将十分感激，无论是1美元或100美元，我们都非常感谢您的支持！",
+    "description":"如果您为本项目捐款令本浏览器扩展持续可用我将十分感激，无论是1美元或100美元，我们都非常感谢您的支持！"
   },
   "deshardflash":{
     "message":"显示所有的 Flash 对象，跳过 URL 筛选器。这将修复有些视频播放器被隐藏的问题，但也会显示广告。",
@@ -556,12 +556,12 @@
     "description":"显示和反转视频标题的颜色。"
   },
   "desrememberpage":{
-    "message":"如果启用了此选项，则它将显示不是记住的页面。",
-    "description":"如果启用了此选项，则它将显示你不是记住页。"
+    "message":"不显示提示页",
+    "description":"不显示提示页"
   },
   "description":{
-    "message":"观看视频时调暗页面，仿佛置身电影院",
-    "description":"所以，如果你是在电影院里，你可以看视频也会褪色到暗，整个页面。"
+    "message":"观看视频时自动调暗页面，让您仿佛置身于电影院中",
+    "description":"观看视频时自动调暗页面，让您仿佛置身于电影院中"
   },
   "titelviewcount":{
     "message":"浏览次数",
@@ -577,7 +577,7 @@
   },
   "shortcutopacity":{
     "message":"还原亮度(不透明度)设置。",
-    "description":"若要还原到集黑暗 （透明度） 设置。"
+    "description":"还原亮度(不透明度)设置。"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -716,8 +716,8 @@
     "description":"重置Turn Off the Lights扩展的设置"
   },
   "desautoplaydelay":{
-    "message":"播放结束后自动点亮背景",
-    "description":"播放结束后自动点亮背景"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"秒",
@@ -728,8 +728,8 @@
     "description":"摄像头手势感应"
   },
   "desmotion":{
-    "message":"启用摄像头动作感应，当手往下扫动以使背景变暗（关灯）",
-    "description":"启用摄像头动作感应，当手往下扫动以使背景变暗（关灯）"
+    "message":"启用摄像机运动",
+    "description":"启用摄像机运动"
   },
   "trymotion":{
     "message":"自己试试 ！",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"将你的手（或者拳头）上下摆动",
-    "description":"将你的手（或者拳头）上下摆动"
+    "description":"移动您的手（或拳）由上至下"
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"黑色图层将自动滑落。",
+    "description":"黑色图层将自动滑落。"
   },
   "desmotionChecklist":{
     "message":"清单",
@@ -776,12 +776,12 @@
     "description":"线性"
   },
   "titelcolora":{
-    "message":"颜色 A",
-    "description":"颜色 A"
+    "message":"颜色 A：",
+    "description":"颜色 A："
   },
   "titelcolorb":{
-    "message":"颜色 B",
-    "description":"颜色 B"
+    "message":"颜色 B：",
+    "description":"颜色 B："
   },
   "speechoption":{
     "message":"语音识别",
@@ -856,8 +856,8 @@
     "description":"此浏览器暂时不支持但此功能。请确保您在您的计算机上安装最新的浏览器版本。"
   },
   "titelsupportatmos":{
-    "message":"只支持HTML5<video>标签以及Youtube Html5播放器。并且，将使用显卡的GPU。",
-    "description":"只支持HTML5<video>标签以及Youtube Html5播放器。并且，将使用显卡的GPU。"
+    "message":"仅支持 HTML5 <video>标签和 YouTube HTML5播放器，其会使用GPU。",
+    "description":"仅支持 HTML5 <video>标签和 YouTube HTML5播放器，其会使用GPU。"
   },
   "titelseeonline":{
     "message":"在线浏览更多示例。",

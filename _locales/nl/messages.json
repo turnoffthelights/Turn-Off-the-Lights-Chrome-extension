@@ -160,8 +160,8 @@
     "description":"Synchroniseren"
   },
   "right":{
-    "message":"rechts",
-    "description":"rechts"
+    "message":"Rechts:",
+    "description":"Rechts:"
   },
   "titeldynamic":{
     "message":"Dynamische achtergrond",
@@ -316,8 +316,8 @@
     "description":"Automatisch afspelen"
   },
   "top":{
-    "message":"boven",
-    "description":"boven"
+    "message":"Boven:",
+    "description":"Boven:"
   },
   "titelspreadradius":{
     "message":"Spreidingsstraal:",
@@ -604,8 +604,8 @@
     "description":"Houdt u van een echte bioscoop?"
   },
   "bottom":{
-    "message":"onder",
-    "description":"onder"
+    "message":"Onder:",
+    "description":"Onder:"
   },
   "dessaver":{
     "message":"Schermbeveiliging:",
@@ -632,8 +632,8 @@
     "description":"Deze software valt onder de CC-GNU GPL-licentie. Als u een kopie van deze licentie wilt zien, bezoek dan"
   },
   "left":{
-    "message":"links",
-    "description":"links"
+    "message":"Links:",
+    "description":"Links:"
   },
   "titelnighttheme":{
     "message":"Nachtmodus",

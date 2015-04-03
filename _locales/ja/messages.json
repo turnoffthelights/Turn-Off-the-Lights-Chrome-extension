@@ -8,12 +8,12 @@
     "description":"壁紙"
   },
   "shortcutalllights":{
-    "message":"開いたタブすべてのライトをオン・オフと順に切り替えます。",
-    "description":"開いたタブすべてのライトをオン・オフと順に切り替えます。"
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"最新バージョンをチェックした日付：　",
+    "description":"最新バージョンをチェックした日付：　"
   },
   "visualeffects":{
     "message":"視覚効果",
@@ -32,8 +32,8 @@
     "description":"「いいね!」バー"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"画面が暗い時のハイパーリンクのクリックを有効にする",
+    "description":"画面が暗い時のハイパーリンクのクリックを有効にする"
   },
   "desambilight4color":{
     "message":"ビデオを囲む色は4色",
@@ -56,16 +56,16 @@
     "description":"眼の保護機能"
   },
   "titelcinemaontop":{
-    "message":"映画館モード：　ウィンドウの上部だけ画面を暗くする。",
-    "description":"映画館モード：　ウィンドウの上部だけ画面を暗くする。"
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
     "message":"ライトがオフの場合、画像の領域を選んで表示できます。",
     "description":"ライトがオフの場合、画像の領域を選んで表示できます。"
   },
   "titelrememberpage":{
-    "message":"ページを記憶",
-    "description":"ページを記憶"
+    "message":"リマインダー ページ",
+    "description":"リマインダー ページ"
   },
   "desmousespotlighta":{
     "message":"ライトがオフのとき、カーソルをスポットライトで囲みます。",
@@ -100,8 +100,8 @@
     "description":"「目の保護」機能を有効にすると、「自動再生」は自動的に無効になります。"
   },
   "skipremember":{
-    "message":"これをとばし、オプションのページを今すぐ開く",
-    "description":"これをとばし、オプションのページを今すぐ開く"
+    "message":"これをスキップし、[オプション] ページを今すぐ開く",
+    "description":"これをスキップし、[オプション] ページを今すぐ開く"
   },
   "optiontimesaved":{
     "message":"時間の設定が完了しました ！",
@@ -144,16 +144,16 @@
     "description":"宇宙"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"設定",
     "description":"設定"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"同期",
@@ -212,24 +212,24 @@
     "description":"下のボックスにパスワードを入力してください："
   },
   "titelblurradius":{
-    "message":"ぼかしの半径",
-    "description":"ぼかしの半径"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"バージョン",
     "description":"バージョン番号"
   },
   "shortcutdark":{
-    "message":"スクリーンを暗くする(不透明度を増加)。",
-    "description":"スクリーンを暗くする(不透明度を増加)。"
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"このビデオに YouTube の共有ボタンを表示します。",
     "description":"このビデオに YouTube の共有ボタンを表示します。"
   },
   "shortcutbright":{
-    "message":"スクリーンを明るくする(不透明度を減少)。",
-    "description":"スクリーンを明るくする(不透明度を減少)。"
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"開いたタブすべて",
@@ -268,8 +268,8 @@
     "description":"この YouTube のビデオに追加ボタンを表示します。"
   },
   "shortcuteyeprotection":{
-    "message":"目の保護機能の入\/切を切り替えます。",
-    "description":"目の保護機能の入\/切を切り替えます。"
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"だんだん明るくなる",
@@ -296,8 +296,8 @@
     "description":"このビデオにフォーカス"
   },
   "warningtextambilight":{
-    "message":"サイトのセキュリティ規約で禁じている場合はビデオのデータを受信できないため、代わりに選択した単色を表示します。",
-    "description":"サイトのセキュリティ規約で禁じている場合はビデオのデータを受信できないため、代わりに選択した単色を表示します。"
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"雲のアニメ",
@@ -320,8 +320,8 @@
     "description":"ページのトップへ"
   },
   "titelspreadradius":{
-    "message":"広がりの半径",
-    "description":"広がりの半径"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
     "message":"Adblocker 拡張機能を使用",
@@ -408,8 +408,8 @@
     "description":"ビデオから色を取り出します。"
   },
   "showremember":{
-    "message":"オプション ページを開くたび、設定保存ページを表示しません。",
-    "description":"オプション ページを開くたび、設定保存ページを表示しません。"
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"寄付の金額が大きくても小さくても、あなたのサポートはとてもありがたいです。",
@@ -424,8 +424,8 @@
     "description":"雨粒"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"秒数の保存が完了ました ！",
@@ -436,20 +436,20 @@
     "description":"暗さ調節バー"
   },
   "deseyen":{
-    "message":"初期設定の使い方（電球マークをクリックして暗くする）。",
-    "description":"初期設定の使い方（電球マークをクリックすると、ライトが消える。）"
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"この拡張機能をお楽しみください。もしよければ、この拡張機能を喜んでくれそうな人と共有してください。",
     "description":"この拡張機能をお楽しみください。もしよければ、この拡張機能を喜んでくれそうな人と共有してください。"
   },
   "shortcuttotl":{
-    "message":"でライトのオン\/オフを切り替える",
-    "description":"でライトのオン\/オフを切り替える"
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"基本",
@@ -472,8 +472,8 @@
     "description":"TOtL ようこそガイド"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"評価ボタン",
@@ -484,8 +484,8 @@
     "description":"Omnibox に電球マークを表示しない"
   },
   "friendlyremember":{
-    "message":"ともだちを忘れない...",
-    "description":"どうか忘れないで…..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
     "message":"だんだん明るくする",
@@ -496,8 +496,8 @@
     "description":"警告 ！"
   },
   "deseyetimesaver":{
-    "message":"以下の時間、ページがアクティブでない場合 （マウスまたはキーボード入力なし）、ページは自動的に暗くなります。",
-    "description":"以下の時間、ページがアクティブでない場合 （マウスまたはキーボード入力なし）、ページは自動的に暗くなります。"
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"おすすめ",
@@ -536,8 +536,8 @@
     "description":"さかなの水槽"
   },
   "longdonatetext":{
-    "message":"他のいユーザーも、このブラウザー拡張機能を使えるようにするため、寄付をお願いできないでしょうか。金額が大きくても小さくても、あなたのサポートは大歓迎です！",
-    "description":"他のいユーザーも、このブラウザー拡張機能を使えるようにするため、寄付をお願いできないでしょうか。金額が大きくても小さくても、あなたのサポートは大歓迎です！"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"URL フィルターを無効にして、すべての Flash 画像を表示します。一部のビデオプレーヤーが非表示になる題は解決するものの、広告も表示されます。",
@@ -556,12 +556,12 @@
     "description":"動画のタイトル色を反転する。"
   },
   "desrememberpage":{
-    "message":"このオプションが有効な場合、記憶したページは表示されません。",
-    "description":"このオプションが有効な場合、記憶したページは表示されません。"
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"ページ全体がだんだん暗くなるため、映画館にいる気分でビデオを鑑賞できます。",
-    "description":"ページ全体がだんだん暗くなるため、映画館にいる気分でビデオを鑑賞できます。"
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"ビューの数",
@@ -576,8 +576,8 @@
     "description":"自動的に YouTube のビデオの品質を設定します。"
   },
   "shortcutopacity":{
-    "message":"で設定した暗さ（不透明度）に戻します。",
-    "description":"で設定した暗さ（不透明度）に戻します。"
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -716,8 +716,8 @@
     "description":"Turn Off the Lights を初期設定に戻す"
   },
   "desautoplaydelay":{
-    "message":"ビデオ再生が終わったら、背景の明るさを元に戻す",
-    "description":"ビデオ再生が終わったら、背景の明るさを元に戻す"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"秒数",
@@ -728,8 +728,8 @@
     "description":"カメラ操作モード"
   },
   "desmotion":{
-    "message":"カメラ操作モードを有効にすると、画面の前で手を下へ動かせば画面が暗くなります。",
-    "description":"カメラ操作モードを有効にすると、画面の前で手を下へ動かせば画面が暗くなります。"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"自分で試してみてください！",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"手（もしくは握りこぶし）を上から下へ動かす",
-    "description":"手（もしくは握りこぶし）を上から下へ動かす"
+    "description":"片手（または握った手）を画面の上から下へスワイプ。"
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"リニア"
   },
   "titelcolora":{
-    "message":"色A\n",
-    "description":"A色"
+    "message":"色A:",
+    "description":"色A:"
   },
   "titelcolorb":{
-    "message":"色B",
-    "description":"B色"
+    "message":"色B:",
+    "description":"色B:"
   },
   "speechoption":{
     "message":"音声認識",
@@ -856,8 +856,8 @@
     "description":"ブラウザーは、この機能をまだサポートしていません。パソコンに最新版のブラウザーがインストールされているか、確認してください。"
   },
   "titelsupportatmos":{
-    "message":"サポートするのは HTML5 動画と YouTube HTML5 プレーヤーに限られます。お使いのパソコンのビデオカードの GPU を利用します。",
-    "description":"サポートするのは HTML5 <video> と YouTube HTML5 プレーヤーに限られます。お使いのパソコンのビデオカードの GPU を利用します。"
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"ウェブサイトでほかの例を見る",
@@ -1044,15 +1044,15 @@
     "description":"ブラックリスト"
   },
   "desspeech5command":{
-    "message":"browser lamp",
-    "description":"browser lamp"
+    "message":"ブラウザー ランプ",
+    "description":"ブラウザー ランプ"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"HTML5 & YouTube ™ ビデオ",
+    "description":"HTML5 & YouTube ™ ビデオ"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"object, embed, applet, iframe タグに対応しています",
+    "description":"object, embed, applet, iframe タグに対応しています"
   }
 }

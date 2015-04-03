@@ -8,12 +8,12 @@
     "description":"Imagen de fondo"
   },
   "shortcutalllights":{
-    "message":"para encender\/apagar las luces en todas las pestañas abiertas.",
-    "description":"para encender\/apagar las luces en todas las pestañas abiertas."
+    "message":"para encender\/apagar las luces en todas las pestañas abiertas",
+    "description":"para encender\/apagar las luces en todas las pestañas abiertas"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Última versión verificada",
+    "description":"Última versión verificada"
   },
   "visualeffects":{
     "message":"Efectos visuales",
@@ -32,8 +32,8 @@
     "description":"Barra de votaciones"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Permitir hacer clic en hipervínculos cuando la pantalla está oscurecida",
+    "description":"Permitir hacer clic en hipervínculos cuando la pantalla está oscurecida"
   },
   "desambilight4color":{
     "message":"4 colores elegidos alrededor del vídeo:",
@@ -56,16 +56,16 @@
     "description":"Protección ocular"
   },
   "titelcinemaontop":{
-    "message":"Modo cine: muestra la capa de 'luces apagadas' solamente en la parte superior de la ventana.",
-    "description":"Modo cine: muestra la capa de 'luces apagadas' solamente en la parte superior de la ventana."
+    "message":"Modo cine: muestra la capa de \"luces apagadas\" solamente en la parte superior de la ventana",
+    "description":"Modo cine: muestra la capa de \"luces apagadas\" solamente en la parte superior de la ventana"
   },
   "desmousespotlightc":{
     "message":"Si la luz está apagada, puedes seleccionar un área para enfocar algo.",
     "description":"Si la luz está apagada, puedes seleccionar un área para enfocar un objeto."
   },
   "titelrememberpage":{
-    "message":"Recordar esta pagina",
-    "description":"Recordar página"
+    "message":"Página de recordatorio",
+    "description":"Página de recordatorio"
   },
   "desmousespotlighta":{
     "message":"Si la luz está apagada, se mostrará un foco alrededor del cursor del ratón.",
@@ -100,8 +100,8 @@
     "description":"Al activar la protección ocular se desactivará la reproducción automática."
   },
   "skipremember":{
-    "message":"Omite esto. Y ahora abre la página opciones.",
-    "description":"Omite esto. Y ahora abre la página opciones"
+    "message":"Omitir esto y abrir la página de opciones ya",
+    "description":"Omitir esto y abrir la página de opciones ya"
   },
   "optiontimesaved":{
     "message":"¡Tiempo guardado correctamente!",
@@ -144,16 +144,16 @@
     "description":"Espacio exterior"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pulsando la tecla T se añade un telón de teatro a la capa oscura",
+    "description":"Pulsando la tecla T se añade un telón de teatro a la capa oscura"
   },
   "settings":{
     "message":"Ajustes",
     "description":"Ajustes"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diámetro del foco:",
+    "description":"Diámetro del foco:"
   },
   "titelsync":{
     "message":"Sincronización",
@@ -212,24 +212,24 @@
     "description":"Introduce tu contraseña en el siguiente cuadro:"
   },
   "titelblurradius":{
-    "message":"Efecto de desenfoque",
-    "description":"Efecto de desenfoque"
+    "message":"Radio de desenfoque:",
+    "description":"Radio de desenfoque:"
   },
   "version":{
     "message":"Versión",
     "description":"Texto número de versión"
   },
   "shortcutdark":{
-    "message":"para oscurecer la pantalla (aumento de opacidad).",
-    "description":"para oscurecer la pantalla (aumento de opacidad)."
+    "message":"para oscurecer la pantalla (aumento de opacidad)",
+    "description":"para oscurecer la pantalla (aumento de opacidad)"
   },
   "dessharebutton":{
     "message":"Mostrar el botón compartir en este vídeo de YouTube.",
     "description":"Mostrar el botón compartir en este vídeo de YouTube."
   },
   "shortcutbright":{
-    "message":"para iluminar la pantalla (disminución de opacidad).",
-    "description":"para iluminar la pantalla (disminución de opacidad)."
+    "message":"para iluminar la pantalla (disminución de opacidad)",
+    "description":"para iluminar la pantalla (disminución de opacidad)"
   },
   "titelalllightsoff":{
     "message":"Todas las pestañas abiertas",
@@ -268,8 +268,8 @@
     "description":"Mostrar el botón añadir en este vídeo de YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"para activar\/desactivar la protección ocular.",
-    "description":"para activar\/desactivar la protección ocular."
+    "message":"para activar\/desactivar la protección ocular",
+    "description":"para activar\/desactivar la protección ocular"
   },
   "titelfadein":{
     "message":"Entrada",
@@ -296,8 +296,8 @@
     "description":"Enfocar este vídeo"
   },
   "warningtextambilight":{
-    "message":"Si no se pueden recibir datos de vídeo debido a la norma de seguridad de un sitio, se mostrará el color sólido elegido en su lugar.",
-    "description":"Si no se pueden recibir datos de vídeo debido a la norma de seguridad de un sitio, se mostrará el color sólido elegido en su lugar."
+    "message":"Cuando no sea posible recibir datos de vídeo debido a las normas de seguridad de la web, se utilizará el color sólido elegido.",
+    "description":"Cuando no sea posible recibir datos de vídeo debido a las normas de seguridad de la web, se utilizará el color sólido elegido."
   },
   "desdynamiccloud":{
     "message":"Nubes animadas",
@@ -320,8 +320,8 @@
     "description":"arriba"
   },
   "titelspreadradius":{
-    "message":"Grado de pixelización",
-    "description":"Grado de pixelización"
+    "message":"Radio de pixelización:",
+    "description":"Radio de pixelización:"
   },
   "installadblocker":{
     "message":"Utilizar con una extensión Adblocker.",
@@ -408,8 +408,8 @@
     "description":"Tomar el color del vídeo."
   },
   "showremember":{
-    "message":"No volver a mostrar este recordatorio al abrir la página de opciones.",
-    "description":"No volver a mostrar este recordatorio al abrir la página de opciones."
+    "message":"No volver a mostrar este recordatorio al abrir opciones",
+    "description":"No volver a mostrar este recordatorio al abrir opciones"
   },
   "donatepromotext":{
     "message":"Si pudieras hacer una donación de cualquier cantidad, ¡te lo agradecería inmensamente!",
@@ -424,8 +424,8 @@
     "description":"Gotas de agua"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Al hacer clic en el botón de la bombilla se encenderán\/apagarán las luces de todas las pestañas abiertas",
+    "description":"Al hacer clic en el botón de la bombilla se encenderán\/apagarán las luces de todas las pestañas abiertas"
   },
   "optionecosaversaved":{
     "message":"¡Segundos guardados correctamente!",
@@ -436,20 +436,20 @@
     "description":"Barra de oscuridad"
   },
   "deseyen":{
-    "message":"Uso normal (las luces se apagan al hacer clic en el icono).",
-    "description":"Uso normal (las luces se apagan al hacer clic en el icono)."
+    "message":"Uso normal (las luces se apagan al hacer clic en el icono)",
+    "description":"Uso normal (las luces se apagan al hacer clic en el icono)"
   },
   "enjoyshare":{
     "message":"Disfruta de esta extensión y compártela con otras personas que creas que les gustará.",
     "description":"Disfruta de esta extensión y compártela con otras personas que creas que les gustará."
   },
   "shortcuttotl":{
-    "message":"para encender\/apagar las luces.",
-    "description":"para encender\/apagar las luces."
+    "message":"para encender\/apagar las luces",
+    "description":"para encender\/apagar las luces"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Oscurecer automáticamente el fondo al abrir una página",
+    "description":"Oscurecer automáticamente el fondo al abrir una página"
   },
   "basicsettings":{
     "message":"Conceptos básicos",
@@ -472,8 +472,8 @@
     "description":"Bienvenido a la guía de TOtL"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Oscurecer automáticamente el fondo en esta(s) web(s):",
+    "description":"Oscurecer automáticamente el fondo en esta(s) web(s):"
   },
   "titellikebutton":{
     "message":"Botones de 'Me gusta' y 'No me gusta'",
@@ -484,8 +484,8 @@
     "description":"Ocultar el icono de acción"
   },
   "friendlyremember":{
-    "message":"Recuerdo amistoso...",
-    "description":"Recuerdo amistoso..."
+    "message":"Recordatorio amistoso...",
+    "description":"Recordatorio amistoso..."
   },
   "desfadein":{
     "message":"Mostrar el efecto de entrada.",
@@ -496,8 +496,8 @@
     "description":"¡Advertencia!"
   },
   "deseyetimesaver":{
-    "message":"Cuando una página está inactiva (sin movimiento del ratón ni el teclado) durante el tiempo especificado a continuación, la página se oscurecerá automáticamente.",
-    "description":"Cuando una página está inactiva (sin movimiento del ratón ni el teclado) durante el tiempo especificado a continuación, la página se oscurecerá automáticamente."
+    "message":"La página se oscurecerá cuando esté inactiva (sin movimiento del teclado o ratón) durante el tiempo especificado abajo.",
+    "description":"La página se oscurecerá cuando esté inactiva (sin movimiento del teclado o ratón) durante el tiempo especificado abajo."
   },
   "titelsuggestions":{
     "message":"Sugerencias",
@@ -536,8 +536,8 @@
     "description":"Pecera"
   },
   "longdonatetext":{
-    "message":"Te agradecería que realizases una donación a esta extensión para contribuir a mantenerla disponible. Ya sea $$ 1 o $$ 100, ¡te lo agradeceremos!",
-    "description":"Te agradecería que realizases una donación a esta extensión para contribuir a mantenerla disponible. Ya sea $$ 1 o $$ 100, ¡te lo agradeceremos!"
+    "message":"Te agradecería que realizases una donación a esta extensión para contribuir a mantenerla disponible. Ya sea $$1 o $$100, ¡te lo agradeceremos!",
+    "description":"Te agradecería que realizases una donación a esta extensión para contribuir a mantenerla disponible. Ya sea $$1 o $$100, ¡te lo agradeceremos!"
   },
   "deshardflash":{
     "message":"Mostrar todos los elementos flash, omitiendo el filtro de URL. Esto arreglará los problemas con algunos reproductores de vídeo que quedan ocultos, pero también mostrará anuncios.",
@@ -556,12 +556,12 @@
     "description":"Mostrar e invertir el color del título del vídeo."
   },
   "desrememberpage":{
-    "message":"Si esta opción está activada, no se te mostrará el recordatorio.",
-    "description":"Si esta opción está activada, no se te mostrará el recordatorio."
+    "message":"No mostrar página de recordatorio",
+    "description":"No mostrar página de recordatorio"
   },
   "description":{
-    "message":"La página se oscurecerá completamente , así podrás ver los videos como si estuvieras en el cine.",
-    "description":"La página se oscurecerá completamente , así podrás ver los videos como si estuvieras en el cine."
+    "message":"La pagina entera se oscurecerá,  así podrás ver los vídeos como si estuvieras en el cine.",
+    "description":"La pagina entera se oscurecerá,  así podrás ver los vídeos como si estuvieras en el cine."
   },
   "titelviewcount":{
     "message":"Número de vistas",
@@ -576,12 +576,12 @@
     "description":"Establecer automáticamente la calidad de los vídeos de YouTube."
   },
   "shortcutopacity":{
-    "message":"para restaurar a la oscuridad establecida (opacidad).",
-    "description":"para restaurar a la oscuridad establecida (opacidad)."
+    "message":"para restaurar a la oscuridad establecida (opacidad)",
+    "description":"para restaurar a la oscuridad establecida (opacidad)"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Los valores más bajos agudizarán la sombra, los valores más altos la harán más borrosa.",
+    "description":"Los valores más bajos agudizarán la sombra, los valores más altos la harán más borrosa."
   },
   "titeladdvideobutton":{
     "message":"Añadir botón",
@@ -716,8 +716,8 @@
     "description":"Restablecer ajustes de Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Iluminar el fondo cuando se detenga la reproducción tras",
-    "description":"Iluminar el fondo cuando se detenga la reproducción tras"
+    "message":"Volver a iluminar el fondo cuando el vídeo haya finalizado",
+    "description":"Volver a iluminar el fondo cuando el vídeo haya finalizado"
   },
   "desautoplaydelayend":{
     "message":"segundos",
@@ -728,8 +728,8 @@
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Activa la opción 'Camera Motion' para poder oscurecer la página web moviendo la mano hacia abajo.",
-    "description":"Activa la opción 'Camera Motion' para poder oscurecer la página web moviendo la mano hacia abajo."
+    "message":"Activar el \"Camera Motion\"",
+    "description":"Activar el \"Camera Motion\""
   },
   "trymotion":{
     "message":"¡Compruébalo tú mismo!",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Mueve la mano (o puño) desde arriba hacia abajo",
-    "description":"Mueve la mano (o puño) desde arriba hacia abajo"
+    "description":"Mueve tu mano (estando visible) de arriba hacia abajo."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"La capa negra se deslizará hacia abajo automáticamente.",
+    "description":"La capa negra se deslizará hacia abajo automáticamente."
   },
   "desmotionChecklist":{
     "message":"Lista de comprobación:",
@@ -776,12 +776,12 @@
     "description":"Lineal"
   },
   "titelcolora":{
-    "message":"Color A",
-    "description":"Color A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Color B",
-    "description":"Color B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Reconocimiento de voz",
@@ -856,8 +856,8 @@
     "description":"Este navegador no es compatible con esta característica aún. Asegúrate de que tienes la última versión del navegador instalada en tu ordenador."
   },
   "titelsupportatmos":{
-    "message":"Sol compatible con <vídeos> HTML5 y de YouTube. Y utiliza la GPU de tu tarjeta gráfica.",
-    "description":"Sol compatible con <vídeos> HTML5 y de YouTube. Y utiliza la GPU de tu tarjeta gráfica."
+    "message":"Compatible solo con HTML5 <video> y reproductor HTML5 de YouTube. También utiliza la GPU de tu tarjeta gráfica.",
+    "description":"Compatible solo con HTML5 <video> y reproductor HTML5 de YouTube. También utiliza la GPU de tu tarjeta gráfica."
   },
   "titelseeonline":{
     "message":"Mira más ejemplos en línea",
@@ -1048,11 +1048,11 @@
     "description":"bombilla del navegador"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"Vídeos HTML5 y de YouTube™",
+    "description":"Vídeos HTML5 y de YouTube™"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"Compatible con: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Compatible con: <object>, <embed>, <applet>, <iframe>."
   }
 }

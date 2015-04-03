@@ -8,12 +8,12 @@
     "description":"Obraz w tle"
   },
   "shortcutalllights":{
-    "message":" – włączanie\/wyłączanie oświetlenia we wszystkich otwartych kartach",
-    "description":"Aby włączyć światła na\/off dla wszystkich otwartych kart."
+    "message":"aby przełączyć światła wł\/wył dla wszystkich kart",
+    "description":"aby przełączyć światła wł\/wył dla wszystkich kart"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Sprawdź dostępność aktualizacji",
+    "description":"Sprawdź dostępność aktualizacji"
   },
   "visualeffects":{
     "message":"Efekty wizualne",
@@ -32,8 +32,8 @@
     "description":"Jak Bar"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Włącz klikanie w linki, kiedy obraz jest przyciemniony",
+    "description":"Włącz klikanie w linki, kiedy obraz jest przyciemniony"
   },
   "desambilight4color":{
     "message":"Kolory wokół filmu:",
@@ -56,16 +56,16 @@
     "description":"Ochrona oczu"
   },
   "titelcinemaontop":{
-    "message":"Tryb kinowy – wyświetla warstwę wyłączonego oświetlenia tylko na górze okna",
-    "description":"Film teatr tryb: to Pokaż warstwę \"zapala się\" tylko na górze okna."
+    "message":"Tryb kinowy: wyświetla warstwę wyłączonego światła tylko na górze okna",
+    "description":"Tryb kinowy: wyświetla warstwę wyłączonego światła tylko na górze okna"
   },
   "desmousespotlightc":{
     "message":"Oświetlaj zaznaczony obszar przy wyłączonym oświetleniu",
     "description":"Jeśli światło jest wyłączone, można wybrać obszar skupić się element."
   },
   "titelrememberpage":{
-    "message":"Zapamiętaj stronę",
-    "description":"Pamiętaj strony"
+    "message":"Strona przypominająca",
+    "description":"Strona przypominająca"
   },
   "desmousespotlighta":{
     "message":"Wyświetlaj oświetlenie punktowe wokół kursora myszy, gdy oświetlenie jest wyłączone",
@@ -100,8 +100,8 @@
     "description":"Włączanie \"Ochrona oczu\" będzie automatycznie wyłączyć funkcję \"Auto play\"."
   },
   "skipremember":{
-    "message":"Pomiń to i otwórz stronę ustawień",
-    "description":"Pominąć to i teraz otworzyć stronę opcji"
+    "message":"Pomiń to i otwórz stronę ustawień teraz",
+    "description":"Pomiń to i otwórz stronę ustawień teraz"
   },
   "optiontimesaved":{
     "message":"Czas został zapisany!",
@@ -144,16 +144,16 @@
     "description":"Przestrzeni wszechświata"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Naciśnięcie klawisza T dodaje kurtynę teatrową do ciemnej warstwy",
+    "description":"Naciśnięcie klawisza T dodaje kurtynę teatrową do ciemnej warstwy"
   },
   "settings":{
     "message":"Ustawienia",
     "description":"Ustawienia"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"Synchronizuj",
@@ -212,24 +212,24 @@
     "description":"Wprowadź hasło w polu poniżej:"
   },
   "titelblurradius":{
-    "message":"Promień rozmycia",
-    "description":"Promień rozmycia"
+    "message":"Poziom rozmycia:",
+    "description":"Poziom rozmycia:"
   },
   "version":{
     "message":"Wersja",
     "description":"Numer wersji"
   },
   "shortcutdark":{
-    "message":" – przyciemnienie ekranu (zwiększenie krycia)",
-    "description":"aby przyciemnić ekran (zwiększenie krycia)."
+    "message":"aby przyciemnić ekran (zwiększyć natężenie)",
+    "description":"aby przyciemnić ekran (zwiększyć natężenie)"
   },
   "dessharebutton":{
     "message":"Wyświetlaj przyciski udostępniania dla danego filmu",
     "description":"Pokaż przyciski akcji YouTube dla tego filmu wideo."
   },
   "shortcutbright":{
-    "message":" – rozjaśnienie ekranu (zmniejszenie krycia)",
-    "description":"aby rozjaśnić ekran (spadek nieprzezroczystości)."
+    "message":"aby rozjaśnić ekran (zmniejszyć natężenie)",
+    "description":"aby rozjaśnić ekran (zmniejszyć natężenie)"
   },
   "titelalllightsoff":{
     "message":"Otwarte karty",
@@ -268,8 +268,8 @@
     "description":"Pokaż ten Dodaæ guzik od ten film wideo YouTube."
   },
   "shortcuteyeprotection":{
-    "message":" – włączenie\/wyłączenie funkcji ochrony oczu",
-    "description":"Aby włączyć lub wyłączyć funkcję ochrony oczu."
+    "message":"aby włączyć\/wyłączyć funkcję ochrony oczu",
+    "description":"aby włączyć\/wyłączyć funkcję ochrony oczu"
   },
   "titelfadein":{
     "message":"Stopniowe rozjaśnianie",
@@ -296,8 +296,8 @@
     "description":"Nacisk ten film"
   },
   "warningtextambilight":{
-    "message":"Jeśli nie będzie można pobrać danych filmu ze względu na reguły strony, wówczas zostanie wyświetlony wybrany kolor jednolity.",
-    "description":"Jeśli nie jest w stanie otrzymać dane wideo ze względu na zasady bezpieczeństwa witryny, a następnie pokaże wybrany kolor kryjący zamiast."
+    "message":"Gdy nie można odebrać danych wideo przez ochronę strony, wybrany kolor będzie użyty w zastępstwie.",
+    "description":"Gdy nie można odebrać danych wideo przez ochronę strony, wybrany kolor będzie użyty w zastępstwie."
   },
   "desdynamiccloud":{
     "message":"Animowane chmury",
@@ -320,8 +320,8 @@
     "description":"Do góry"
   },
   "titelspreadradius":{
-    "message":"Promień propagacji",
-    "description":"Rozprzestrzeniania się promień"
+    "message":"Poziom rozprzestrzenienia:",
+    "description":"Poziom rozprzestrzenienia:"
   },
   "installadblocker":{
     "message":"Używaj rozszerzenia Adblock Plus",
@@ -408,8 +408,8 @@
     "description":"Weź kolor z wideo."
   },
   "showremember":{
-    "message":"Nie wyświetlaj tej informacji ponownie",
-    "description":"nie pokazuje ta strona Pamiętaj ponownie po otwarciu strony opcji."
+    "message":"Nie otwieraj znów tej strony przypominającej, kiedy otworzę opcje",
+    "description":"Nie otwieraj znów tej strony przypominającej, kiedy otworzę opcje"
   },
   "donatepromotext":{
     "message":"Będę ogromnie wdzięczny, jeżeli wesprzesz ten projekt dowolną kwotą!",
@@ -424,8 +424,8 @@
     "description":"Krople deszczu"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Kliknięcie przycisku lampy przełączy światła wł\/wył na wszystkich otwartych kartach",
+    "description":"Kliknięcie przycisku lampy przełączy światła wł\/wył na wszystkich otwartych kartach"
   },
   "optionecosaversaved":{
     "message":"Czas został zapisany!",
@@ -436,20 +436,20 @@
     "description":"Półmrok poziom Bar"
   },
   "deseyen":{
-    "message":"Tryb standardowy – oświetlenie gaśnie po kliknięciu ikony żarówki",
-    "description":"Normalnego użytkowania (gaśnie po kliknięciu na ikonę Lampa)."
+    "message":"Normalne użycie (światła gasną, kiedy klikniesz na ikonę żarówki)",
+    "description":"Normalne użycie (światła gasną, kiedy klikniesz na ikonę żarówki)"
   },
   "enjoyshare":{
     "message":"Jeśli korzystanie z tego rozszerzenia sprawia ci przyjmeność, podziel się nim z tymi, którzy je docenią.",
     "description":"Cieszyć się ten rozciągnięcie i podzielić się nim z innymi, które uważasz, że to docenią."
   },
   "shortcuttotl":{
-    "message":" – włączenie\/wyłączenie oświetlenia",
-    "description":"Aby włączyć światła, wł\/wył."
+    "message":"aby przełączyć światła wł\/wył",
+    "description":"aby przełączyć światła wł\/wył"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatycznie przyciemnij tło po otwarciu strony",
+    "description":"Automatycznie przyciemnij tło po otwarciu strony"
   },
   "basicsettings":{
     "message":"Podstawowe",
@@ -472,8 +472,8 @@
     "description":"TOtL Witamy przewodnik"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatycznie przyciemnij tło na następujących stronach:",
+    "description":"Automatycznie przyciemnij tło na następujących stronach:"
   },
   "titellikebutton":{
     "message":"Przyciski Podoba mi się i Nie podoba mi się",
@@ -484,8 +484,8 @@
     "description":"Ukryj ikonę pageaction"
   },
   "friendlyremember":{
-    "message":"Łatwo zapamiętać…",
-    "description":"Pamiętaj, przyjazny..."
+    "message":"Przypomnienie...",
+    "description":"Przypomnienie..."
   },
   "desfadein":{
     "message":"Włącz efekt stopniowego rozjaśniania",
@@ -496,8 +496,8 @@
     "description":"Ostrzeżenie!"
   },
   "deseyetimesaver":{
-    "message":"Jeśli nie będzie żadnej akcji w czasie określonym poniżej – ruch myszki lub naciśnięcie przycisku – strona zostanie automatycznie przyciemniona.",
-    "description":"Kiedy Strona jest nieaktywna (nie myszy lub klawiatury wejście) na czas określony poniżej, strona automatycznie zgasną."
+    "message":"Kiedy strona jest nieaktywna (nie używa myszki lub klawiatury) przez czas określony poniżej, automatycznie się przyciemnia.",
+    "description":"Kiedy strona jest nieaktywna (nie używa myszki lub klawiatury) przez czas określony poniżej, automatycznie się przyciemnia."
   },
   "titelsuggestions":{
     "message":"Sugestie",
@@ -536,8 +536,8 @@
     "description":"Akwarium"
   },
   "longdonatetext":{
-    "message":"Doceniam każde datki. Dzięki nim mogę dalej rozwijać ten dodatek i udostępniać go nowym użytkownikom. Doceniam każdy datek czy to 1$$, czy 100$$!",
-    "description":"Naprawdę wdzięczni, jeśli możesz przekazać mi na podtrzymanie to rozszerzenie przeglądarki dla nowych użytkowników. Czy to $$ 1 lub $$ 100, wsparcie jest ogromnie ceniona!"
+    "message":"Jestem bardzo wdzięczny za każde datki. Dzięki nim mogę utrzymać ten dodatek przy życiu dla innych nowych użytkowników. Obojętnie, czy to 1zł czy 100zł, Twoja pomoc jest bardzo doceniana!",
+    "description":"Jestem bardzo wdzięczny za każde datki. Dzięki nim mogę utrzymać ten dodatek przy życiu dla innych nowych użytkowników. Obojętnie, czy to 1zł czy 100zł, Twoja pomoc jest bardzo doceniana!"
   },
   "deshardflash":{
     "message":"Wyświetlaj wszystkie obiekty Flash, opuszczaj filtr URL – naprawia to problemy z niektórymi odtwarzaczami wideo, ale powoduje wyświetlanie reklam",
@@ -556,12 +556,12 @@
     "description":"Pokaż i odwrócić kolor tytułu wideo."
   },
   "desrememberpage":{
-    "message":"Nie otwieraj zapamiętanych stron",
-    "description":"Jeśli ta opcja jest włączona, to pokaże Ci nie pamiętam strony."
+    "message":"Nie pokazuj strony przypominającej",
+    "description":"Nie pokazuj strony przypominającej"
   },
   "description":{
-    "message":"Przyciemnianie stron, aby można było oglądać filmy, tak jak w kinie.",
-    "description":"Całą stronę będzie zanik do ciemnego, po tak można obejrzeć film, tak, jakby były w kinie."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"Liczba odsłon",
@@ -576,8 +576,8 @@
     "description":"Automatycznie ustawić jakość filmów z YouTube."
   },
   "shortcutopacity":{
-    "message":" – przywrócenie ustawień krycia",
-    "description":"Aby przywrócić zestaw ciemności (krycie) ustawienie."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -716,8 +716,8 @@
     "description":"Resetuj ustawienia Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Rozjaśniaj tło po zatrzymaniu odtwarzania po",
-    "description":"Rozjaśniaj tło po zatrzymaniu odtwarzania po"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"s",
@@ -728,8 +728,8 @@
     "description":"Wykrywanie ruchu"
   },
   "desmotion":{
-    "message":"Włącz wykrywanie ruchu, by przyciemniać strony internetowe za pomocą ruchu ręki",
-    "description":"Włącz wykrywanie ruchu, by przyciemniać strony internetowe za pomocą ruchu ręki"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Wypróbuj sam!",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"Przesuń swoją rękę (lub pięść) z góry na dół",
-    "description":"Przesuń swoją rękę (lub pięść) z góry na dół"
+    "description":"Przesuń dłoń z góry na dół."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"Gradient liniowy"
   },
   "titelcolora":{
-    "message":"Kolor A",
-    "description":"Kolor A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Kolor B",
-    "description":"Kolor B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Rozpoznawanie mowy",
@@ -856,8 +856,8 @@
     "description":"Przeglądarka jeszcze nie obsługuje tej funkcji. Sprawdź czy masz zainstalowaną najnowszą wersję."
   },
   "titelsupportatmos":{
-    "message":"Obsługuje tylko HTML5 <video> i YouTube HTML5. Używa procesora grafiki karty graficznej.",
-    "description":"Obsługuje tylko HTML5 <video> i YouTube HTML5. Używa procesora grafiki karty graficznej."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"Zobacz online więcej przykładów",

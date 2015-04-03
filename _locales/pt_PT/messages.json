@@ -8,8 +8,8 @@
     "description":"Imagem de fundo"
   },
   "shortcutalllights":{
-    "message":"para ligar\/desligar as luzes em todas os separadores abertos",
-    "description":"para ligar\/desligar as luzes em todas os separadores abertos"
+    "message":"para alternar o ligar\/desligar as luzes para todos os separadores abertos",
+    "description":"para alternar o ligar\/desligar as luzes para todos os separadores abertos"
   },
   "lastchecked":{
     "message":"Verificar a versão mais recente na",
@@ -20,8 +20,8 @@
     "description":"Efeitos visuais"
   },
   "titelshortcutlight":{
-    "message":"Tecla de Atalho",
-    "description":"Tecla de Atalho"
+    "message":"Teclas de atalho",
+    "description":"Teclas de atalho"
   },
   "titledonatebutton":{
     "message":"Doar",
@@ -32,8 +32,8 @@
     "description":"Barra do Gosto\/Não Gosto"
   },
   "desmousespotlightt":{
-    "message":"Habilitar clicando em hiperlinks quando a tela é escurecida",
-    "description":"Habilitar clicando em hiperlinks quando a tela é escurecida"
+    "message":"Ativar ao clicar nas hiperligações quando o ecrã é escurecido",
+    "description":"Ativar ao clicar nas hiperligações quando o ecrã é escurecido"
   },
   "desambilight4color":{
     "message":"4 cores escolhidas em todo o vídeo:",
@@ -44,8 +44,8 @@
     "description":"Por favor, digite a sua palavra-passe"
   },
   "desnoflash":{
-    "message":"Não utilize este recurso.",
-    "description":"Não utilize este recurso."
+    "message":"Desativar esta funcionalidade.",
+    "description":"Desativar esta funcionalidade."
   },
   "desdynamicblocks":{
     "message":"Blocos",
@@ -56,8 +56,8 @@
     "description":"Proteção para os olhos"
   },
   "titelcinemaontop":{
-    "message":"Modo de teatro de cinema: ele apenas mostra a camada 'luzes desligadas' na parte superior da janela",
-    "description":"Modo de teatro de cinema: ele apenas mostra a camada 'luzes desligadas' na parte superior da janela"
+    "message":"Modo de teatro\/cinema: este mostra a camada 'luzes desligadas' no topo da janela",
+    "description":"Modo de teatro\/cinema: este mostra a camada 'luzes desligadas' no topo da janela"
   },
   "desmousespotlightc":{
     "message":"Se as luzes estiverem desligadas, poderá selecionar uma área para focar um item.",
@@ -72,8 +72,8 @@
     "description":"Se a luz estiver desligada, mostrar um ponto de luz ao redor do ponteiro do rato."
   },
   "desmousespotlighto":{
-    "message":"Utilização normal (desactiva as definições do rato abaixo)",
-    "description":"Utilização normal (desactiva as definições do rato abaixo)"
+    "message":"Utilização normal (desativa as definições do rato abaixo)",
+    "description":"Utilização normal (desativa as definições do rato abaixo)"
   },
   "desplaylist":{
     "message":"Mostrar a lista de vídeos no YouTube.",
@@ -84,8 +84,8 @@
     "description":"Uma cor sólida:"
   },
   "desuntil":{
-    "message":"até",
-    "description":"até"
+    "message":"às",
+    "description":"às"
   },
   "desconfirmpassword":{
     "message":"Confirmar a palavra-passe",
@@ -100,8 +100,8 @@
     "description":"Ao ativar a 'Proteção para os olhos' está a desativar a funcionalidade 'Reprodução automática'."
   },
   "skipremember":{
-    "message":"Pule esta e abra a página de opções agora",
-    "description":"Pule esta e abra a página de opções agora"
+    "message":"Ignorar isto, e abrir agora a página de opções",
+    "description":"Ignorar isto, e abrir agora a página de opções"
   },
   "optiontimesaved":{
     "message":"As horas foram guardadas com sucesso!",
@@ -112,8 +112,8 @@
     "description":"Título do Vídeo"
   },
   "translateme":{
-    "message":"Ajude a traduzir",
-    "description":"Ajude a traduzir"
+    "message":"Ajudar a traduzir",
+    "description":"Ajudar a traduzir"
   },
   "despassword":{
     "message":"Exigir a introdução de uma palavra-passe antes de poder voltar a ligar as luzes.",
@@ -180,7 +180,7 @@
     "description":"Ocultar"
   },
   "desshortcutlight":{
-    "message":"Active os atalhos de teclado abaixo.",
+    "message":"Ativar as seguintes teclas de atalho.",
     "description":"Activar os atalhos de teclado abaixo."
   },
   "titelinfobar":{
@@ -220,8 +220,8 @@
     "description":"Número de versão do texto"
   },
   "shortcutdark":{
-    "message":"para escurecer a tela (aumento de opacidade)",
-    "description":"para escurecer a tela (aumento de opacidade)"
+    "message":"para escurecer o ecrã (aumento de opacidade)",
+    "description":"para escurecer o ecrã (aumento de opacidade)"
   },
   "dessharebutton":{
     "message":"Mostrar os botões de partilha do YouTube para este vídeo.",
@@ -268,8 +268,8 @@
     "description":"Mostrar o botão adicionar deste vídeo do YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"para ativar ou desativar a funcionalidade 'Proteção para os olhos'",
-    "description":"para ativar ou desativar a funcionalidade 'Proteção para os olhos'"
+    "message":"para ativar ou desativar a função 'Proteção dos Olhos'",
+    "description":"para ativar ou desativar a função 'Proteção dos Olhos'"
   },
   "titelfadein":{
     "message":"Aparecer gradualmente",
@@ -444,8 +444,8 @@
     "description":"Desfrute desta extensão e partilhe-a com outras pessoas que poderão apreciá-la."
   },
   "shortcuttotl":{
-    "message":"para ligar\/desligar as luzes",
-    "description":"para ligar\/desligar as luzes"
+    "message":"para alternar o ligar\/desligar as luzes",
+    "description":"para alternar o ligar\/desligar as luzes"
   },
   "deseyea":{
     "message":"Escurecer automaticamente o plano de fundo ao abrir uma página da Web",
@@ -464,16 +464,16 @@
     "description":"Comunicar um problema"
   },
   "destime":{
-    "message":"Luzes apagadas, entre os seguintes horários:",
-    "description":"Luzes apagadas, entre os seguintes horários:"
+    "message":"Desligar as luzes automaticamente das:",
+    "description":"Desligar as luzes automaticamente das:"
   },
   "guide":{
     "message":"Guia de boas-vindas",
     "description":"Guia de boas-vindas"
   },
   "deseyealist":{
-    "message":"Escurecer o fundo automaticamente ao abrir o site a seguir:",
-    "description":"Escurecer o fundo automaticamente ao abrir o site a seguir:"
+    "message":"Escurecer automaticamente o fundo no(s) seguinte(s) sítio(s):",
+    "description":"Escurecer automaticamente o fundo no(s) seguinte(s) sítio(s):"
   },
   "titellikebutton":{
     "message":"Botões Gosto e Não Gosto",
@@ -484,11 +484,11 @@
     "description":"Ocultar ícone de pageaction"
   },
   "friendlyremember":{
-    "message":"Lembrete amigável...",
-    "description":"Lembrete amigável..."
+    "message":"Lembrete...",
+    "description":"Lembrete..."
   },
   "desfadein":{
-    "message":"Activar o aparecimento gradual.",
+    "message":"Mostrar o efeito de desvanecimento ao ativar.",
     "description":"Mostrar o efeito desvanecer."
   },
   "warning":{
@@ -496,8 +496,8 @@
     "description":"Atenção!"
   },
   "deseyetimesaver":{
-    "message":"Quando uma página está inativa (sem mouse ou teclado de entrada) para o tempo especificado abaixo, automaticamente vai escuro.",
-    "description":"Quando uma página está inativa (sem mouse ou teclado de entrada) para o tempo especificado abaixo, automaticamente vai escuro."
+    "message":"Quando uma página estiver inativa, durante o tempo especificado abaixo, será automaticamente escurecida.",
+    "description":"Quando uma página estiver inativa, durante o tempo especificado abaixo, será automaticamente escurecida."
   },
   "titelsuggestions":{
     "message":"Sugestões",
@@ -528,8 +528,8 @@
     "description":"Adicionar"
   },
   "reportlist":{
-    "message":"(Ver lista de problemas)",
-    "description":"Ver lista completa"
+    "message":"Problemas técnicos conhecidos",
+    "description":"Ver a lista completa"
   },
   "desdynamicfishtank":{
     "message":"Aquário",
@@ -544,8 +544,8 @@
     "description":"Mostrar todos os objectos Flash, ignorando o filtro de URL. Isto irá corrigir problemas com alguns reprodutores de vídeo que ficam escondidos, mas também irá exibir anúncios."
   },
   "desfadeout":{
-    "message":"Mostrar o efeito de desaparecimento.",
-    "description":"Mostrar o efeito de desaparecimento."
+    "message":"Mostrar o efeito de desvanecimento ao desativar.",
+    "description":"Mostrar o efeito de desvanecimento ao desativar."
   },
   "optionwrongimg":{
     "message":"Arquivo de imagem inválido!",
@@ -560,8 +560,8 @@
     "description":"Não mostrar a página de lembrete"
   },
   "description":{
-    "message":"A página irá escurecer para que veja o vídeo como se estivesse no cinema.",
-    "description":"A página irá escurecer para que veja o vídeo como se estivesse no cinema."
+    "message":"A página irá escurecer para que veja os vídeos como se estivesse no cinema.",
+    "description":"A página irá escurecer para que veja os vídeos como se estivesse no cinema."
   },
   "titelviewcount":{
     "message":"Número de visualizações",
@@ -628,8 +628,8 @@
     "description":"Extras"
   },
   "textfoot":{
-    "message":"Este Software usa a licença CC-GNU GPL. Para ver uma cópia da licença visite",
-    "description":"Este software é licenciado sob a CC-GNU GPL. Para ver uma cópia desta licença, visite"
+    "message":"Este software está licenciado sob uma licença CC-GNU GPL. Para ver uma cópia da licença, aceda a",
+    "description":"Este software está licenciado sob uma licença CC-GNU GPL. Para ver uma cópia da licença, aceda a"
   },
   "left":{
     "message":"esquerda",
@@ -672,8 +672,8 @@
     "description":"Isso faz esta extensão ainda mais surpreendente"
   },
   "upgradecontextitemta":{
-    "message":"Movimento da Câmara",
-    "description":"Movimento da Câmara"
+    "message":"Deteção de movimentos",
+    "description":"Deteção de movimentos"
   },
   "upgradecontextitemma":{
     "message":"desligue as luzes com a sua mão",
@@ -696,8 +696,8 @@
     "description":"Tweet"
   },
   "ratetitle":{
-    "message":"Por favor classifique e faça uma teste à minha extensão",
-    "description":"Por favor classifique e faça uma teste à minha extensão"
+    "message":"Por favor, classifique a minha extensão",
+    "description":"Por favor, classifique a minha extensão"
   },
   "ratedes":{
     "message":"E informe todos acerca desta excelente extensão!",
@@ -708,8 +708,8 @@
     "description":"Classificar com 5 estrelas"
   },
   "titelreset":{
-    "message":"Redefinir as definições",
-    "description":"Redefinir as definições"
+    "message":"Reposição",
+    "description":"Reposição"
   },
   "resetbrowserextension":{
     "message":"Repor as definições do Turn Off the Lights",
@@ -724,12 +724,12 @@
     "description":"segundos"
   },
   "motionoptions":{
-    "message":"Movimento da Câmara",
-    "description":"Movimento da Câmara"
+    "message":"Deteção de movimentos",
+    "description":"Deteção de movimentos"
   },
   "desmotion":{
-    "message":"Permitir o movimento da câmera",
-    "description":"Permitir o movimento da câmera"
+    "message":"Ativar a deteção de movimentos com a câmara",
+    "description":"Ativar a deteção de movimentos com a câmara"
   },
   "trymotion":{
     "message":"Experimente!",
@@ -744,28 +744,28 @@
     "description":"Como é que funciona?"
   },
   "step1description":{
-    "message":"Activar o recurso Movimento de Câmara",
-    "description":"Activar o recurso Movimento de Câmara"
+    "message":"Ativar a deteção de movimentos.",
+    "description":"Ativar a deteção de movimentos."
   },
   "step2description":{
     "message":"Mova sua mão (ou punho) de cima para baixo",
     "description":"Mova a sua mão de cima para baixo."
   },
   "step3description":{
-    "message":"A camada preta automaticamente irá deslizar para baixo.",
-    "description":"A camada preta automaticamente irá deslizar para baixo."
+    "message":"A camada preta irá deslizar automaticamente para baixo.",
+    "description":"A camada preta irá deslizar automaticamente para baixo."
   },
   "desmotionChecklist":{
-    "message":"Checklist:",
-    "description":"Checklist:"
+    "message":"Certifique-se de que:",
+    "description":"Certifique-se de que:"
   },
   "des1checkmotion":{
-    "message":"Certifique-se de que o seu quarto não está escuro e que tem bastante luz.",
-    "description":"Certifique-se de que o seu quarto não está escuro e que tem bastante luz."
+    "message":"O local onde se encontra está bem iluminado.",
+    "description":"O local onde se encontra está bem iluminado."
   },
   "des2checkmotion":{
-    "message":"A sua câmara não recebe luz solar directa.",
-    "description":"A sua câmara não recebe luz solar directa."
+    "message":"A sua câmara não recebe luz solar direta.",
+    "description":"A sua câmara não recebe luz solar direta."
   },
   "des3checkmotion":{
     "message":"Você utiliza uma câmara frontal.",
@@ -844,8 +844,8 @@
     "description":"Lista branca"
   },
   "titelautoplayblacklist":{
-    "message":"Lista Negra",
-    "description":"Lista Negra"
+    "message":"Lista negra",
+    "description":"Lista negra"
   },
   "titeldownloadthemeupgrade":{
     "message":"Adicione um tema escuro ao seu browser para o embelezar. O tema aparecerá ao redor da borda do browser.",
@@ -928,8 +928,8 @@
     "description":"Publicar no Google +"
   },
   "sharemenuratetitle":{
-    "message":"Classifique esta extensão",
-    "description":"Classifique esta extensão"
+    "message":"Classificar esta extensão",
+    "description":"Classificar esta extensão"
   },
   "sharemenudonatetitle":{
     "message":"Apoiar o desenvolvimento",
@@ -1012,8 +1012,8 @@
     "description":"Lista branca"
   },
   "titelnightmodeblacklist":{
-    "message":"Lista Negra",
-    "description":"Lista Negra"
+    "message":"Lista negra",
+    "description":"Lista negra"
   },
   "desautostoponly":{
     "message":"Ativar a reprodução automática de vídeos apenas nos seguintes sites:",
@@ -1024,8 +1024,8 @@
     "description":"Lista branca"
   },
   "titelautostopblacklist":{
-    "message":"Lista Negra",
-    "description":"Lista Negra"
+    "message":"Lista negra",
+    "description":"Lista negra"
   },
   "desnightactivetime":{
     "message":"O interruptor estará sempre visível entre as seguintes horas:",
@@ -1040,8 +1040,8 @@
     "description":"Lista branca"
   },
   "titeleyeblacklist":{
-    "message":"Lista Negra",
-    "description":"Lista Negra"
+    "message":"Lista negra",
+    "description":"Lista negra"
   },
   "desspeech5command":{
     "message":"a lâmpada do navegador",
