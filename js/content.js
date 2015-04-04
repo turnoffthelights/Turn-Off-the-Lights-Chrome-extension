@@ -403,7 +403,7 @@ else {
 }
 
 if(autoplayonly == 'true'){
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
 var blackrabbit = false;
 if(typeof autoplayDomains == "string") {
 	autoplayDomains = JSON.parse(autoplayDomains);
@@ -430,7 +430,7 @@ if(typeof autoplayDomains == "string") {
 if(autostop == 'true'){
 
 if(autostoponly == 'true'){
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
 var stoprabbit = false;
 if(typeof autostopDomains == "string") {
 	autostopDomains = JSON.parse(autostopDomains);
@@ -515,7 +515,7 @@ if((ecosaver == 'true') && (eyen == 'true')){chrome.extension.sendMessage({name:
 
 if(eyea == 'true'){chrome.extension.sendMessage({name: 'automatic'});}
 else if(eyealist == 'true'){
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
 var eyerabbit = false;
 if(typeof excludedDomains == "string") {
 	excludedDomains = JSON.parse(excludedDomains);
@@ -594,7 +594,7 @@ else {chrome.extension.sendMessage({name: 'contextmenuoff'});}
 if(ambilight == 'true'){
 
 if(atmosphereonly == 'true'){
-var currenturl = location.protocol + '//' + location.host;
+var currenturl = window.location.protocol + '//' + window.location.host;
 if(typeof atmosphereDomains == "string") {
 	atmosphereDomains = JSON.parse(atmosphereDomains);
 	var albuf = [];
@@ -787,7 +787,7 @@ try {
 	var cross = null;
 	
 	// check for the current page URL
-	var pageurl = location.protocol + '//' + location.host; // http://www.stefanvd.net
+	var pageurl = window.location.protocol + '//' + window.location.host; // http://www.stefanvd.net
 	var pageurllengt = pageurl.length; // lengte url
 
 	function subDomain(url) {
@@ -1295,7 +1295,7 @@ function timergonighttricker(){
 }
 
 if(nightonly == 'true'){
-	var currenturl = location.protocol + '//' + location.host;
+	var currenturl = window.location.protocol + '//' + window.location.host;
 	var nightrabbit = false;
 	if(typeof nightDomains == "string") {
 		nightDomains = JSON.parse(nightDomains);
