@@ -34,7 +34,7 @@ var default_opacity = null, suggestions = null, playlist = null, videoheadline =
 var div = null, video = null, span = null, iframe = null, embed = null, object = null, a = null, img = null;
 
 /////////// Option page settings
-chrome.storage.local.get(['suggestions', 'playlist', 'videoheadline', 'head', 'infobar', 'likebutton', 'sharebutton', 'viewcount', 'addvideobutton', 'likebar'], function(response){
+chrome.storage.local.get(['suggestions', 'playlist', 'videoheadline', 'head', 'infobar', 'likebutton', 'sharebutton', 'viewcount', 'addvideobutton', 'likebar', 'flash', 'noflash', 'hardflash'], function(response){
 suggestions = response['suggestions'];
 playlist = response['playlist'];
 videoheadline = response['videoheadline'];
@@ -811,7 +811,7 @@ if(flashvideoportal1){$('flashvideoportal_1').style.zIndex = 1001;$('flashvideop
 		if(stefanvddynamicbackground) {document.body.removeChild(stefanvddynamicbackground);}
 	}
 	
-chrome.storage.local.get(['mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'lightcolor', 'lightimagea', 'lightimage', 'interval', 'fadein', 'fadeout', 'readera', 'readerlargestyle', 'mousespotlightt', 'enterpassword', 'password', 'dynamic', 'dynamic1', "dynamic2", 'dynamic3', 'dynamic4', 'dynamic5', 'flash', 'noflash', 'hardflash', 'hoveroptiondyn5', 'blur', 'cinemaontop', 'spotlightradius', 'slideeffect', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb'], function(response){
+chrome.storage.local.get(['mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'lightcolor', 'lightimagea', 'lightimage', 'interval', 'fadein', 'fadeout', 'readera', 'readerlargestyle', 'mousespotlightt', 'enterpassword', 'password', 'dynamic', 'dynamic1', "dynamic2", 'dynamic3', 'dynamic4', 'dynamic5', 'hoveroptiondyn5', 'blur', 'cinemaontop', 'spotlightradius', 'slideeffect', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb'], function(response){
 mousespotlighto = response['mousespotlighto'];if(!mousespotlighto)mousespotlighto = 'true'; // default mousespotlight true
 mousespotlightc = response['mousespotlightc'];if(!mousespotlightc)mousespotlightc = 'false'; // default mousespotlight false
 mousespotlighta = response['mousespotlighta'];if(!mousespotlighta)mousespotlighta = 'false'; // default mousespotlight false
