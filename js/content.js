@@ -649,7 +649,7 @@ function ambilightfunction(){
 		var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 		if(youtubewindow){youtubewindow.style.zIndex = 1001;}
 		var youtubemovieplayer = $("movie_player"); // YouTube video page
-		if(youtubemovieplayer){ youtubemovieplayer.style.overflow = "visible"; youtubemovieplayer.style.zIndex = 1001; } // show the overflow out the video element
+		if(youtubemovieplayer){ youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.style.zIndex = 1001; } // show the overflow out the video element
 		
 		if(yttest){
 		if ($("movie_player").getPlayerState() == 1) {drawImage(youtubewindow, item);}
