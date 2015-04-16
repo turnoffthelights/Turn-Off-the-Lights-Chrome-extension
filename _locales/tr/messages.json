@@ -8,12 +8,12 @@
     "description":"Arkaplan Resmi"
   },
   "shortcutalllights":{
-    "message":"to toggle the lights on\/off for all open tabs",
-    "description":"to toggle the lights on\/off for all open tabs"
+    "message":"ışığı bütün sekmeler için aç\/kapa",
+    "description":"ışığı bütün sekmeler için aç\/kapa"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"En son sürüm kontrolü",
+    "description":"En son sürüm kontrolü"
   },
   "visualeffects":{
     "message":"Görsel Efektler",
@@ -32,8 +32,8 @@
     "description":"Gibi Bar"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Ekran karardığında köprülere tıklamyı aktifleştir",
+    "description":"Ekran karardığında köprülere tıklamyı aktifleştir"
   },
   "desambilight4color":{
     "message":"Video etrafında seçilen 4 renk:",
@@ -56,16 +56,16 @@
     "description":"Göz koruması"
   },
   "titelcinemaontop":{
-    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
-    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
+    "message":"Sinema salonu modu: 'Işıkları Kapat' katmanını sadece pencerenin üstünde gösterir",
+    "description":"Sinema salonu modu: 'Işıkları Kapat' katmanını sadece pencerenin üstünde gösterir"
   },
   "desmousespotlightc":{
     "message":"Eğer ışıklar kapalıysa, seçtiğiniz alandaki nesneye odaklanabilirsiniz.",
     "description":"Işığı yanmıyorsa, bir öğe odaklanmasını bir alan seçebilirsiniz."
   },
   "titelrememberpage":{
-    "message":"Reminder page",
-    "description":"Reminder page"
+    "message":"Hatırlatıcı sayfa",
+    "description":"Hatırlatıcı sayfa"
   },
   "desmousespotlighta":{
     "message":"Işık kapalıysa fare imlecinin etrafını aydınlat.",
@@ -100,8 +100,8 @@
     "description":"'Göz koruma' etkinleştirme otomatik olarak 'Otomatik Oynat' özelliği devre dışı."
   },
   "skipremember":{
-    "message":"Skip this, and open the options page now",
-    "description":"Skip this, and open the options page now"
+    "message":"Bunu geç ve seçenekler sayfasını aç",
+    "description":"Bunu geç ve seçenekler sayfasını aç"
   },
   "optiontimesaved":{
     "message":"Süre başarıyla kaydedild!",
@@ -144,16 +144,16 @@
     "description":"Boşluk evren"
   },
   "deseastereggs":{
-    "message":"Pressing the T key adds a theater curtain to the dark layer",
-    "description":"Pressing the T key adds a theater curtain to the dark layer"
+    "message":"T tuşuna basmak karanlık kısma bir tiyatro perdesi ekler",
+    "description":"T tuşuna basmak karanlık kısma bir tiyatro perdesi ekler"
   },
   "settings":{
     "message":"Ayarlar",
     "description":"Ayarlar"
   },
   "desspotlightradius":{
-    "message":"Diameter of spotlight:",
-    "description":"Diameter of spotlight:"
+    "message":"Spot lamba çapı:",
+    "description":"Spot lamba çapı:"
   },
   "titelsync":{
     "message":"Eşitle",
@@ -212,24 +212,24 @@
     "description":"Aşağıdaki kutuda parolanızı girin:"
   },
   "titelblurradius":{
-    "message":"Blur radius:",
-    "description":"Blur radius:"
+    "message":"Bulanıklık yarıçapı:",
+    "description":"Bulanıklık yarıçapı:"
   },
   "version":{
     "message":"Sürüm",
     "description":"Sürüm numarası metni"
   },
   "shortcutdark":{
-    "message":"to darken the screen (increase opacity)",
-    "description":"to darken the screen (increase opacity)"
+    "message":"ekranı karartmak(şeffaflığı artırır) için",
+    "description":"ekranı karartmak(şeffaflığı artırır) için"
   },
   "dessharebutton":{
     "message":"Bu video için YouTube paylaşım butonlarını göster.",
     "description":"Bu video için YouTube Paylaş düğmelerini göster."
   },
   "shortcutbright":{
-    "message":"to brighten the screen (decrease opacity)",
-    "description":"to brighten the screen (decrease opacity)"
+    "message":"ekranı aydınlatmak(şeffaflığı artırır) için",
+    "description":"ekranı aydınlatmak(şeffaflığı artırır) için"
   },
   "titelalllightsoff":{
     "message":"Bütün açık sekmeler",
@@ -268,8 +268,8 @@
     "description":"Bu YouTube Video Ekle düğmesini göster."
   },
   "shortcuteyeprotection":{
-    "message":"to enable\/disable the eye protection feature",
-    "description":"to enable\/disable the eye protection feature"
+    "message":"göz koruma özelliğini etkinleştirmek\/devre dışı bırakmak için",
+    "description":"göz koruma özelliğini etkinleştirmek\/devre dışı bırakmak için"
   },
   "titelfadein":{
     "message":"Aydınlat",
@@ -296,8 +296,8 @@
     "description":"Bu video odaklanmak"
   },
   "warningtextambilight":{
-    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
-    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
+    "message":"Sitenin güvenliğinden dolayı video verisini almak devre dışı olduğu zaman, seçilen koyu renk kullanılacak.",
+    "description":"Sitenin güvenliğinden dolayı video verisini almak devre dışı olduğu zaman, seçilen koyu renk kullanılacak."
   },
   "desdynamiccloud":{
     "message":"Animasyonlu Bulutlar",
@@ -408,8 +408,8 @@
     "description":"Video renk al."
   },
   "showremember":{
-    "message":"Do not show this reminder page again when I open the options",
-    "description":"Do not show this reminder page again when I open the options"
+    "message":"Seçenekler kısmını açtığım zaman hatırlatma sayfasını tekrar gösterme",
+    "description":"Seçenekler kısmını açtığım zaman hatırlatma sayfasını tekrar gösterme"
   },
   "donatepromotext":{
     "message":"Yapabileceğiniz her türlü miktar bağışı, memnuniyetle karşılarım!",
@@ -424,8 +424,8 @@
     "description":"Yağmur damlaları"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
+    "message":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak\/kapatacak",
+    "description":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak\/kapatacak"
   },
   "optionecosaversaved":{
     "message":"Saniye başarıyla kaydedildi!",
@@ -436,20 +436,20 @@
     "description":"Bulanıklık seviyesi çubuğu"
   },
   "deseyen":{
-    "message":"Normal use (lights go out when you click on the lamp icon)",
-    "description":"Normal use (lights go out when you click on the lamp icon)"
+    "message":"Normal kullanım (lamba simgesine tıkladığınızda ışıklar kapanır)",
+    "description":"Normal kullanım (lamba simgesine tıkladığınızda ışıklar kapanır)"
   },
   "enjoyshare":{
     "message":"Bu eklenti hoşunuza gittiyse, kullanmaktan zevk alacak başkalarıyla da paylaşın.",
     "description":"Bu uzantı zevk ve takdir edecek düşünen başkaları ile paylaşmak."
   },
   "shortcuttotl":{
-    "message":"to toggle the lights on\/off",
-    "description":"to toggle the lights on\/off"
+    "message":"ışıkları açmak\/kapatmak için",
+    "description":"ışıkları açmak\/kapatmak için"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a webpage",
-    "description":"Automatically dim the background when opening a webpage"
+    "message":"Yeni bir sayfa açıldığı zaman, arka planı otomatik olarak karart",
+    "description":"Yeni bir sayfa açıldığı zaman, arka planı otomatik olarak karart"
   },
   "basicsettings":{
     "message":"Temeller",
@@ -472,8 +472,8 @@
     "description":"TOtL hoş geldiniz Kılavuzu"
   },
   "deseyealist":{
-    "message":"Automatically dim the background on the following site(s):",
-    "description":"Automatically dim the background on the following site(s):"
+    "message":"Aşağıdaki site(ler)de arka planı otomatik olarak karart:",
+    "description":"Aşağıdaki site(ler)de arka planı otomatik olarak karart:"
   },
   "titellikebutton":{
     "message":"Beğen & Beğenme Butonları",
@@ -484,8 +484,8 @@
     "description":"PageAction simgesini gizle"
   },
   "friendlyremember":{
-    "message":"Friendly Reminder...",
-    "description":"Friendly Reminder..."
+    "message":"Dostane Hatırlatma...",
+    "description":"Dostane Hatırlatma..."
   },
   "desfadein":{
     "message":"Kararma efektini göster.",

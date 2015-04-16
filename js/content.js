@@ -1067,7 +1067,10 @@ function gogonightmode(){
 			for(var i = 0; i < ytdivallcomments.length; i++ ){ytdivallcomments[i].style.background = "black";}
 			var ytbtnuixdiv = document.querySelectorAll('button.yt-uix-button');
 			for(var i = 0; i < ytbtnuixdiv.length; i++ ){ytbtnuixdiv[i].style.background = "#333333";ytbtnuixdiv[i].style.color = "#fff";}
-
+			// update 16 april 2015
+			var ytdivcomments = document.querySelectorAll('div.comments');
+			for(var i = 0; i < ytdivcomments.length; i++ ){ytdivcomments[i].style.color = "#999";}
+			
 			chrome.extension.sendMessage({name: 'adddarkyoutube'});
 		}
 //-----
@@ -1162,7 +1165,10 @@ function gogonightmode(){
 			for(var i = 0; i < ytdivallcomments.length; i++ ){ytdivallcomments[i].style.background = "white";}
 			var ytbtnuixdiv = document.querySelectorAll('button.yt-uix-button');
 			for(var i = 0; i < ytbtnuixdiv.length; i++ ){ytbtnuixdiv[i].style.background = "white";ytbtnuixdiv[i].style.color = "#777";}
-
+			// update 16 april 2015
+			var ytdivcomments = document.querySelectorAll('div.comments');
+			for(var i = 0; i < ytdivcomments.length; i++ ){ytdivcomments[i].style.color = "black";}
+			
 			chrome.extension.sendMessage({name: 'addnormalyoutube'});
 		}
 	}

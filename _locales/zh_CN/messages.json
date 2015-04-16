@@ -484,8 +484,8 @@
     "description":"隐藏 pageaction 图标"
   },
   "friendlyremember":{
-    "message":"友情提醒...",
-    "description":"友情提醒..."
+    "message":"友情提示...",
+    "description":"友情提示..."
   },
   "desfadein":{
     "message":"显示淡入效果",
