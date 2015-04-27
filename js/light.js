@@ -296,6 +296,23 @@ for (var div in divs) {
         }
 }
 
+// YouTube new player 27/04/2015
+var ytdivs = document.getElementsByTagName('div');
+for (var div in ytdivs) {
+        var d = ytdivs[div].className;
+        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-button ytp-cards-button' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container') {
+                ytdivs[div].style.zIndex = 1001;
+        }
+}
+// YouTube new player 27/04/2015 debug
+var ytdivsdebug = document.getElementsByTagName('div');
+for (var div in ytdivsdebug) {
+        var e = ytdivsdebug[div].className;
+        if (e == 'ytp-panelpopup ytp-contextmenu') {
+                ytdivsdebug[div].style.zIndex = 1002;
+        }
+}
+
 // YouTube show sub title
 var subtitel = document.getElementsByTagName('div');
 for(var i = 0; i < subtitel.length; i++ )
