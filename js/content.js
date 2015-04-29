@@ -624,9 +624,6 @@ function ambilightfunction(){
 		var watch7video = $('watch7-video');
 		if(watch7video)$('watch7-video').style.zIndex = 'auto';
 		
-		var playerapi = $('player-api');
-		if(playerapi){$('player-api').style.overflow = 'visible';$('player-api').style.zIndex = 1001;$('player-api').style.visibility = 'visible';$('player-api').style.position = 'relative';}
-
 		div = document.getElementsByTagName('div'); 
 		for(var i = 0; i < div.length; i++ )
 		{if(div[i].className == ('html5-video-player')) {div[i].style.overflow = 'visible';}}

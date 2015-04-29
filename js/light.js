@@ -274,13 +274,10 @@ var appbarguideiframemask = $('appbar-guide-iframe-mask');
 if(appbarguideiframemask){$('appbar-guide-iframe-mask').style.zIndex = '-1';}
 
 // short and cleaner engine 2014
-var data = [['movie_player',1000],['movie_player-html5',1000],['watch-player',1000],['player-api',1001],['html5-player',1001],['video-player',1001],['user_fullwidth_gadget',1001]];
+var data = [['movie_player',1000],['movie_player-html5',1000],['watch-player',1000],['html5-player',1001],['video-player',1001],['user_fullwidth_gadget',1001]];
 for (var conf in data) {
         var temp = document.getElementById(data[conf][0]);
         if (temp) {
-                if (conf[0] == 'player-api') {
-                        temp.style.overflow = 'visible';
-                }
                 temp.style.zIndex = data[conf][1];
                 temp.style.visibility = 'visible';
                 temp.style.position = 'relative';
@@ -293,6 +290,23 @@ for (var div in divs) {
         if (c == 'video-controls' || c == 'html5-video-controls' || c == 'html5-video-controls ytp-block-autohide' || c == 'html5-video-controls disabled-control-seek') {
                 divs[div].style.zIndex = 1001;
                 divs[div].style.visibility = 'visible';
+        }
+}
+
+// YouTube new player 27/04/2015
+var ytdivs = document.getElementsByTagName('div');
+for (var div in ytdivs) {
+        var d = ytdivs[div].className;
+        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-button ytp-cards-button' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container') {
+                ytdivs[div].style.zIndex = 1001;
+        }
+}
+// YouTube new player 27/04/2015 debug
+var ytdivsdebug = document.getElementsByTagName('div');
+for (var div in ytdivsdebug) {
+        var e = ytdivsdebug[div].className;
+        if (e == 'ytp-panelpopup ytp-contextmenu') {
+                ytdivsdebug[div].style.zIndex = 1002;
         }
 }
 
