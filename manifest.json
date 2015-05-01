@@ -2,11 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-<<<<<<< HEAD
-  "version": "3.1.0.21",
-=======
-  "version": "3.1.0.20",
->>>>>>> origin/master
+  "version": "3.1.0.22",
   "description": "__MSG_description__",
   "homepage_url": "http://www.turnoffthelights.com",
   "icons": { "16": "icons/icon16.png",

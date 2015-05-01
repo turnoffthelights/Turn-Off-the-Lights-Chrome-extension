@@ -1933,8 +1933,17 @@ $('loading').style.display = "none";
 
 document.addEventListener('DOMContentLoaded', function () {
 // browser check
+var nAgt = navigator.userAgent;
+var browserName;
 var urlbrowservendor = window.navigator.vendor;
-if (urlbrowservendor.search("Opera") >= 0) {
+if ((nAgt.indexOf("OPR/"))!=-1) {browserName = "Opera";}
+else if (urlbrowservendor.search("Safari") >= 0) {browserName = "Safari";}
+else if (urlbrowservendor.search("Yandex") >= 0) {browserName = "Yandex";}
+else if (urlbrowservendor.search("Google") >= 0) {browserName = "Google Chrome";}
+else if (navigator.appCodeName == "Mozilla") {browserName = "Firefox";}
+else if ((nAgt.indexOf("Maxthon/"))!=-1) {browserName = "Maxthon";}
+
+if (browserName == "Opera") {
 // Opera
 var stefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/";
 var reviewstefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/?#feedback-container";
@@ -1943,7 +1952,7 @@ var linkppdownload = "https://addons.opera.com/extensions/details/proper-menubar
 var linkzodownload = "https://addons.opera.com/extensions/details/zoom/";
 var linkaadownload = "https://addons.opera.com/extensions/details/ambient-aurea/";
 var linkthemedownload = "https://addons.opera.com/themes/details/turn-off-the-lights-theme/";
-} else if (urlbrowservendor.search("Google") >= 0) {
+} else if (browserName == "Google Chrome") {
 // Google Chrome
 var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
 var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
@@ -1952,7 +1961,34 @@ var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/e
 var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
 var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
 var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-} else if (urlbrowservendor.search("Yandex") >= 0) {
+} else if (browserName == "Safari") {
+// Safari
+var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
+var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
+var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
+var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+} else if (browserName == "Firefox") {
+// Firefox browser
+var stefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/";
+var reviewstefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/reviews/";
+var linkfndownload = "https://addons.mozilla.org/firefox/addon/finance-toolbar/";
+var linkppdownload = "https://addons.mozilla.org/firefox/addon/proper-menubar/";
+var linkzodownload = "https://addons.mozilla.org/firefox/addon/zoom/";
+var linkaadownload = "https://addons.mozilla.org/firefox/addon/ambient-aurea/";
+var linkthemedownload = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights-theme/";
+} else if (browserName == "Maxthon") {
+// Maxthon browser
+var stefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
+var reviewstefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
+var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
+var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
+var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
+var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
+var linkthemedownload = "http://skin.maxthon.com/detail/index.php?view_id=2015";
+} else if (browserName == "Yandex") {
 // Yandex browser
 var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
 var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
@@ -1962,7 +1998,7 @@ var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmob
 var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
 var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
 } else {
-// default for IE / MS Spartan
+// default for Microsoft Edge
 var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
 var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
 var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
@@ -2059,7 +2095,7 @@ $("tabadvan").addEventListener('click', function() {ONworkaroundbugfromsafari();
 $("tabnight").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabmotion").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "http://www.turnoffthelights.com/extension/chromeguide.html";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
+$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "http://www.turnoffthelights.com/extension/operaguide.html";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
 $("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "http://www.turnoffthelights.com/extension/fan.html";$("managed-prefs-banner").style.display = "none";});
 
 $("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support");});
@@ -2165,8 +2201,7 @@ $("auroraplayericon").src = "images/aurora-player_32x32@2x.png";
 }
 
 // browser check
-var browservendor = window.navigator.vendor
-if (browservendor.search("Opera") >= 0) {
+if (browserName == "Opera") {
 	// feature check speech and camera
 	$("helpcameramotion").style.display = "";
 	$("helpspeech").style.display = "";
@@ -2176,7 +2211,7 @@ if (browservendor.search("Opera") >= 0) {
 	$("speechonly").disabled = true;
 	$("motion").disabled = true;
 	$("cammotiononly").disabled = true;
-} else if (browservendor.search("Google") >= 0) {
+} else if (browserName == "Google Chrome") {
 	// feature check speech and camera
 	$("helpcameramotion").style.display = "none";
 	$("helpspeech").style.display = "none";

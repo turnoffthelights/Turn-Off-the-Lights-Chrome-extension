@@ -333,6 +333,9 @@ var ytpprogress = document.getElementsByTagName('div');
 for(var i = 0; i < ytpprogress.length; i++ )
 {if(ytpprogress[i].className == ('ytp-progress-bar-container')) {ytpprogress[i].style.zIndex = 1005;}}
 
+var playerapi = $('player-api');
+if(playerapi){$('player-api').style.zIndex = 1001;}
+
 } // end YouTube
 });
 
