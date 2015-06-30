@@ -2414,19 +2414,6 @@ else if (urlbrowservendor.search("Google") >= 0) {browserName = "Google Chrome";
 else if (navigator.appCodeName == "Mozilla") {browserName = "Firefox";}
 else if ((nAgt.indexOf("Maxthon/"))!=-1) {browserName = "Maxthon";}
 
-<<<<<<< HEAD
-=======
-if (browserName == "Opera") {
-// Opera
-var stefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/";
-var reviewstefanvdurl = "https://addons.opera.com/extensions/details/turn-off-the-lights/?#feedback-container";
-var linkfndownload = "https://addons.opera.com/extensions/details/finance-toolbar/";
-var linkppdownload = "https://addons.opera.com/extensions/details/proper-menubar/";
-var linkzodownload = "https://addons.opera.com/extensions/details/zoom/";
-var linkaadownload = "https://addons.opera.com/extensions/details/ambient-aurea/";
-var linkthemedownload = "https://addons.opera.com/themes/details/turn-off-the-lights-theme/";
-} else if (browserName == "Google Chrome") {
->>>>>>> origin/master
 // Google Chrome
 var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
 var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
@@ -2435,55 +2422,6 @@ var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/e
 var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
 var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
 var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-<<<<<<< HEAD
-=======
-} else if (browserName == "Safari") {
-// Safari
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-} else if (browserName == "Firefox") {
-// Firefox browser
-var stefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/";
-var reviewstefanvdurl = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights/reviews/";
-var linkfndownload = "https://addons.mozilla.org/firefox/addon/finance-toolbar/";
-var linkppdownload = "https://addons.mozilla.org/firefox/addon/proper-menubar/";
-var linkzodownload = "https://addons.mozilla.org/firefox/addon/zoom/";
-var linkaadownload = "https://addons.mozilla.org/firefox/addon/ambient-aurea/";
-var linkthemedownload = "https://addons.mozilla.org/firefox/addon/turn-off-the-lights-theme/";
-} else if (browserName == "Maxthon") {
-// Maxthon browser
-var stefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
-var reviewstefanvdurl = "http://extension.maxthon.com/detail/index.php?view_id=1813";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "http://skin.maxthon.com/detail/index.php?view_id=2015";
-} else if (browserName == "Yandex") {
-// Yandex browser
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-} else {
-// default for Microsoft Edge
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-}
->>>>>>> origin/master
 
 // Remove remember
 $("skipremember").addEventListener('click', function() {$('remembershare').style.display = "none";});
