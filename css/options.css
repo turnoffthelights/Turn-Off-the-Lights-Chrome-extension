@@ -711,7 +711,7 @@ input[type="range"]{background-image:-webkit-linear-gradient(left,hsla(0,0%,0%,.
 /* Mobile app */
 #mobileappbox{height:75px;position:relative;background:url(../images/mobilebanner.png);border-radius:2px}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-#mobileappbox{height:75px;position:relative;background:url(../images/mobilebanner@2x.png);border-radius:2px}
+#mobileappbox{height:75px;position:relative;background:url(../images/mobilebanner@2x.png);border-radius:2px;background-size:contain;}
 }
 #matllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff}
 #mant{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}

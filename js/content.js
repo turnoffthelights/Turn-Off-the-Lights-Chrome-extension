@@ -1417,7 +1417,7 @@ if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*y
 if (no360youtube == 'true'){
 	var ytfullvideo = document.getElementsByTagName('video');
 	for(var i = 0; i < ytfullvideo.length; i++) {
-	ytfullvideo[i].style.display = "block";ytfullvideo[i].style.position = "relative";ytfullvideo[i].style.zIndex = '1001';
+	ytfullvideo[i].style.position = "relative";ytfullvideo[i].style.zIndex = '1001';
 	}
 	var ytwebgl = document.getElementsByClassName('webgl');
 	for(var i = 0; i < ytwebgl.length; i++ ){ytwebgl[i].style.display = 'none';}
