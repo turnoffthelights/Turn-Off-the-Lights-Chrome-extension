@@ -29,7 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id) { return document.getElementById(id); }
 // settings
-var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null;
+var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null;
 // html elements used
 var div = null, video = null, span = null, iframe = null, embed = null, object = null, a = null, img = null;
 
@@ -200,6 +200,10 @@ if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-descrip
 
 // Shows like and unlike buttons
 if(likebutton == 'true'){
+span = document.getElementsByTagName('span');  // new youtube watch8
+for(var i = 0; i < span.length; i++ )
+{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
+
 var watchdislike = $('watch-dislike'); // new youtube watch7
 if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
 
@@ -333,6 +337,9 @@ var ytpprogress = document.getElementsByTagName('div');
 for(var i = 0; i < ytpprogress.length; i++ )
 {if(ytpprogress[i].className == ('ytp-progress-bar-container')) {ytpprogress[i].style.zIndex = 1005;}}
 
+var playerapi = $('player-api');
+if(playerapi){$('player-api').style.zIndex = 1001;}
+
 } // end YouTube
 });
 
@@ -370,7 +377,10 @@ do {
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 
 // other file then "mp3" then run this code
-if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
+if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important;';}
+if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+	if (no360youtube == 'true'){} else {video[i].style.display = "table-row";}
+}
 
 }
 
@@ -835,7 +845,7 @@ for(var i = 0; i < div.length; i++ )
 		if(stefanvddynamicbackground) {document.body.removeChild(stefanvddynamicbackground);}
 	}
 	
-chrome.storage.local.get(['mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'lightcolor', 'lightimagea', 'lightimage', 'interval', 'fadein', 'fadeout', 'readera', 'readerlargestyle', 'mousespotlightt', 'enterpassword', 'password', 'dynamic', 'dynamic1', "dynamic2", 'dynamic3', 'dynamic4', 'dynamic5', 'hoveroptiondyn5', 'blur', 'cinemaontop', 'spotlightradius', 'slideeffect', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb'], function(response){
+chrome.storage.local.get(['mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'lightcolor', 'lightimagea', 'lightimage', 'interval', 'fadein', 'fadeout', 'readera', 'readerlargestyle', 'mousespotlightt', 'enterpassword', 'password', 'dynamic', 'dynamic1', "dynamic2", 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10', 'hoveroptiondyn5', 'blur', 'cinemaontop', 'spotlightradius', 'slideeffect', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb'], function(response){
 mousespotlighto = response['mousespotlighto'];if(!mousespotlighto)mousespotlighto = 'true'; // default mousespotlight true
 mousespotlightc = response['mousespotlightc'];if(!mousespotlightc)mousespotlightc = 'false'; // default mousespotlight false
 mousespotlighta = response['mousespotlighta'];if(!mousespotlighta)mousespotlighta = 'false'; // default mousespotlight false
@@ -856,6 +866,11 @@ dynamic2 = response['dynamic2'];
 dynamic3 = response['dynamic3'];
 dynamic4 = response['dynamic4'];
 dynamic5 = response['dynamic5'];
+dynamic6 = response['dynamic6'];
+dynamic7 = response['dynamic7'];
+dynamic8 = response['dynamic8'];
+dynamic9 = response['dynamic9'];
+dynamic10 = response['dynamic10'];
 hoveroptiondyn5 = response['hoveroptiondyn5'];
 blur = response['blur'];
 cinemaontop = response['cinemaontop'];if(!cinemaontop)cinemaontop = 'false'; // default cinemaontop false
@@ -1620,6 +1635,426 @@ doScreenshot();
 				}			
 			}
 				
+			}else if(dynamic6 == 'true'){
+			var smoke = document.createElement("div");smoke.setAttribute('id','smoke');smoke.style.width = "100%";smoke.style.height = "100%";newdynmaster.appendChild(smoke);
+			var newsmokecanvas = document.createElement("canvas");newsmokecanvas.setAttribute('id','stefanvddynamicsmoke');newsmokecanvas.style.width = "100%";newsmokecanvas.style.height = "100%";smoke.appendChild(newsmokecanvas);	
+
+			// Create an array to store our particles
+			var particles = [];
+
+			// The amount of particles to render
+			var particleCount = 30;
+
+			// The maximum velocity in each direction
+			var maxVelocity = 2;
+
+			// The target frames per second (how often do we want to update / redraw the scene)
+			var targetFPS = 20;
+
+			// Set the dimensions of the canvas as variables so they can be used.
+			var canvasWidth = 400;
+			var canvasHeight = 200;
+
+			// Create an image object (only need one instance)
+			var imageObj = new Image();
+
+			// Once the image has been downloaded then set the image on all of the particles
+			imageObj.onload = function() {
+				particles.forEach(function(particle) {
+						particle.setImage(imageObj);
+				});
+			};
+
+			// Once the callback is arranged then set the source of the image
+			imageObj.src = chrome.extension.getURL("/images/Smoke10.png");
+
+			// A function to create a particle object.
+			function Particle(context) {
+
+				// Set the initial x and y positions
+				this.x = 0;
+				this.y = 0;
+
+				// Set the initial velocity
+				this.xVelocity = 0;
+				this.yVelocity = 0;
+
+				// Set the radius
+				this.radius = 5;
+
+				// Store the context which will be used to draw the particle
+				this.context = context;
+
+				// The function to draw the particle on the canvas.
+				this.draw = function() {
+					
+					// If an image is set draw it
+					if(this.image){
+						this.context.drawImage(this.image, this.x-128, this.y-128);         
+						// If the image is being rendered do not draw the circle so break out of the draw function                
+						return;
+					}
+					// Draw the circle as before, with the addition of using the position and the radius from this object.
+					this.context.beginPath();
+					this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+					this.context.fillStyle = "rgba(88, 88, 88, 1)";
+					this.context.fill();
+					this.context.closePath();
+				};
+
+				// Update the particle.
+				this.update = function() {
+					// Update the position of the particle with the addition of the velocity.
+					this.x += this.xVelocity;
+					this.y += this.yVelocity;
+
+					// Check if has crossed the right edge
+					if (this.x >= canvasWidth) {
+						this.xVelocity = -this.xVelocity;
+						this.x = canvasWidth;
+					}
+					// Check if has crossed the left edge
+					else if (this.x <= 0) {
+						this.xVelocity = -this.xVelocity;
+						this.x = 0;
+					}
+
+					// Check if has crossed the bottom edge
+					if (this.y >= canvasHeight) {
+						this.yVelocity = -this.yVelocity;
+						this.y = canvasHeight;
+					}
+					
+					// Check if has crossed the top edge
+					else if (this.y <= 0) {
+						this.yVelocity = -this.yVelocity;
+						this.y = 0;
+					}
+				};
+
+				// A function to set the position of the particle.
+				this.setPosition = function(x, y) {
+					this.x = x;
+					this.y = y;
+				};
+
+				// Function to set the velocity.
+				this.setVelocity = function(x, y) {
+					this.xVelocity = x;
+					this.yVelocity = y;
+				};
+				
+				this.setImage = function(image){
+					this.image = image;
+				}
+			}
+
+			// A function to generate a random number between 2 values
+			function generateRandom(min, max){return Math.random() * (max - min) + min;}
+
+			var context;
+			// Initialise the scene and set the context if possible
+			function runsmoke() {
+				var canvas = document.getElementById('stefanvddynamicsmoke');
+				if (canvas.getContext) {
+					// Set the context variable so it can be re-used
+					context = canvas.getContext('2d');
+					// Create the particles and set their initial positions and velocities
+					for(var i=0; i < particleCount; ++i){
+						var particle = new Particle(context);
+						
+						// Set the position to be inside the canvas bounds
+						particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+						
+						// Set the initial velocity to be either random and either negative or positive
+						particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+						particles.push(particle);            
+					}
+				}
+			}
+
+			// The function to draw the scene
+			function draw() {
+				// Clear the drawing surface and fill it with a black background
+				context.fillStyle = "rgba(0, 0, 0, 0.0)";
+				context.fillRect(0, 0, 400, 400);
+
+				// Go through all of the particles and draw them.
+				particles.forEach(function(particle) {
+					particle.draw();
+				});
+			}
+
+			// Update the scene
+			function update() {
+				particles.forEach(function(particle) {
+					particle.update();
+				});
+			}
+
+			// Initialize the scene
+			runsmoke();
+
+			// If the context is set then we can draw the scene (if not then the browser does not support canvas)
+			if (context) {
+				setInterval(function() {
+					// Update the scene before drawing
+					update();
+
+					// Draw the scene
+					draw();
+				}, 1000 / targetFPS);
+			}
+
+			}else if(dynamic7 == 'true'){
+			var flyingdots = document.createElement("div");flyingdots.setAttribute('id','flyingdots');newdynmaster.appendChild(flyingdots);
+			var newdyndotsworld = document.createElement("div");newdyndotsworld.setAttribute('id','stefanvddynamicdots');flyingdots.appendChild(newdyndotsworld);			
+				for(var j = 1; j < 100; j++ ){
+					var newminic = document.createElement("div");
+					newminic.className = "c";
+					newdyndotsworld.appendChild(newminic);
+				}
+			}else if(dynamic8 == 'true'){
+			var storm = document.createElement("div");storm.setAttribute('id','storm');newdynmaster.appendChild(storm);
+			var newstormcanvas = document.createElement("canvas");newstormcanvas.setAttribute('id','stefanvddynamicstorm');newstormcanvas.style.width = "100%";newstormcanvas.style.height = "100%";storm.appendChild(newstormcanvas);	
+
+			var stormcanvas = document.getElementById('stefanvddynamicstorm');
+			var sky = stormcanvas.getContext('2d');
+
+			var window_width = window.innerWidth * 1.5;
+			var window_height = window.innerHeight * 1.5;
+
+			var fall_speed = 0.7;
+			var wind_speed = 5;
+
+			var rain_weight = 0.11;
+			var rain_color = '255,255,255';
+
+			var drop_count;
+			var drops = [];
+
+			function randomFrom(min, max) {
+			  return (Math.random() * (max - min) + min);
+			}
+
+			function resizer() {
+			  window_width = window.innerWidth * 1.5;
+			  window_height = window.innerHeight * 1.5;
+			  drop_count = window_width * rain_weight;
+			  
+			  stormcanvas.setAttribute('width', window_width);
+			  stormcanvas.setAttribute('height', window_height);
+			}
+
+			window.addEventListener('resize', resizer, false);
+
+			function paintSky() {
+			  for (var i = 0; i < drop_count; i++) {
+				drops[i] = new drop();
+				drops[i].reset();
+			  }
+			  
+			  rain();
+			}
+
+			function rain() {
+			  sky.clearRect(0, 0, window_width, window_height);
+
+			  var drops_length = drops.length;
+
+			  for (var i = 0; i < drops_length; i++) {
+				var drop = drops[i];
+				drop.fall();
+				drop.draw();
+			  }
+
+			  window.requestAnimFrame(rain);
+			}
+
+			function drop() {
+			  this.reset = function() {
+				this.r = randomFrom(0.8, 1.6);
+				this.l = (this.r * 250);
+				this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
+				this.y = randomFrom((window_height * -0.25), (window_height * -1));
+				this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
+				this.dy = (this.r * (100 * fall_speed));
+				this.offset = (this.l * (this.dx / this.dy));
+				this.opacity = (this.r * randomFrom(0.2, 0.6));
+				this.drip = this.render();
+			  };
+			  
+			  this.render = function() {
+				var canv = document.createElement('canvas');
+				var ctx = canv.getContext('2d');
+				canv.setAttribute('width', Math.abs(this.offset) + this.r);
+				canv.setAttribute('height', this.l);
+				
+				ctx.beginPath();
+				
+				var drip = ctx.createLinearGradient(0, 0, 0, this.l);
+				drip.addColorStop(0, 'rgba(' + rain_color + ', 0)');
+				drip.addColorStop(1, 'rgba(' + rain_color + ', ' + this.opacity + ')');
+				ctx.fillStyle = drip;
+					
+				//sky.rect(this.x, this.y, this.r, this.l);
+				var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
+				ctx.moveTo(startX, 0);
+				ctx.lineTo(startX + this.r, 0);
+				ctx.lineTo(startX + this.r + this.offset, this.l);
+				ctx.lineTo(startX + this.offset, this.l);
+
+				ctx.closePath();
+				ctx.fill();
+				
+				return canv;
+			  };
+			  
+			  this.draw = function() {
+				sky.drawImage(this.drip, this.x, this.y);
+			  };
+			  
+			  this.fall = function() {
+				this.x += this.dx;
+				this.y += this.dy;
+				
+				if (this.y > (window_height * 1.25)) {
+				  this.reset();
+				}
+			  };
+			}
+
+			resizer();
+			paintSky();
+			}else if(dynamic9 == 'true'){
+			var triangle = document.createElement("div");triangle.setAttribute('id','triangle');newdynmaster.appendChild(triangle);
+				
+			var refreshDuration = 10000;
+			var refreshTimeout;
+			var numPointsX;
+			var numPointsY;
+			var unitWidth;
+			var unitHeight;
+			var points;
+
+			function trianglerun(){
+				var triasvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+				triasvg.setAttribute('width',window.innerWidth);
+				triasvg.setAttribute('height',window.innerHeight);
+				document.getElementById('triangle').appendChild(triasvg);
+
+				var unitSize = (window.innerWidth+window.innerHeight)/20;
+				numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
+				numPointsY = Math.ceil(window.innerHeight/unitSize)+1;
+				unitWidth = Math.ceil(window.innerWidth/(numPointsX-1));
+				unitHeight = Math.ceil(window.innerHeight/(numPointsY-1));
+
+				points = [];
+
+				for(var y = 0; y < numPointsY; y++) {
+					for(var x = 0; x < numPointsX; x++) {
+						points.push({x:unitWidth*x, y:unitHeight*y, originX:unitWidth*x, originY:unitHeight*y});
+					}
+				}
+
+				randomize();
+
+				for(var i = 0; i < points.length; i++) {
+					if(points[i].originX != unitWidth*(numPointsX-1) && points[i].originY != unitHeight*(numPointsY-1)) {
+						var topLeftX = points[i].x;
+						var topLeftY = points[i].y;
+						var topRightX = points[i+1].x;
+						var topRightY = points[i+1].y;
+						var bottomLeftX = points[i+numPointsX].x;
+						var bottomLeftY = points[i+numPointsX].y;
+						var bottomRightX = points[i+numPointsX+1].x;
+						var bottomRightY = points[i+numPointsX+1].y;
+
+						var rando = Math.floor(Math.random()*2);
+
+						for(var n = 0; n < 2; n++) {
+							var polygon = document.createElementNS(triasvg.namespaceURI, 'polygon');
+
+							if(rando==0) {
+								if(n==0) {
+									polygon.point1 = i;
+									polygon.point2 = i+numPointsX;
+									polygon.point3 = i+numPointsX+1;
+									polygon.setAttribute('points',topLeftX+','+topLeftY+' '+bottomLeftX+','+bottomLeftY+' '+bottomRightX+','+bottomRightY);
+								} else if(n==1) {
+									polygon.point1 = i;
+									polygon.point2 = i+1;
+									polygon.point3 = i+numPointsX+1;
+									polygon.setAttribute('points',topLeftX+','+topLeftY+' '+topRightX+','+topRightY+' '+bottomRightX+','+bottomRightY);
+								}
+							} else if(rando==1) {
+								if(n==0) {
+									polygon.point1 = i;
+									polygon.point2 = i+numPointsX;
+									polygon.point3 = i+1;
+									polygon.setAttribute('points',topLeftX+','+topLeftY+' '+bottomLeftX+','+bottomLeftY+' '+topRightX+','+topRightY);
+								} else if(n==1) {
+									polygon.point1 = i+numPointsX;
+									polygon.point2 = i+1;
+									polygon.point3 = i+numPointsX+1;
+									polygon.setAttribute('points',bottomLeftX+','+bottomLeftY+' '+topRightX+','+topRightY+' '+bottomRightX+','+bottomRightY);
+								}
+							}
+							polygon.setAttribute('fill','rgba(0,0,0,'+(Math.random()/3)+')');
+							var animate = document.createElementNS('http://www.w3.org/2000/svg','animate');
+							animate.setAttribute('fill','freeze');
+							animate.setAttribute('attributeName','points');
+							animate.setAttribute('dur',refreshDuration+'ms');
+							animate.setAttribute('calcMode','linear');
+							polygon.appendChild(animate);
+							triasvg.appendChild(polygon);
+						}
+					}
+				}
+				refresh();
+			}
+
+			function randomize() {
+				for(var i = 0; i < points.length; i++) {
+					if(points[i].originX != 0 && points[i].originX != unitWidth*(numPointsX-1)) {
+						points[i].x = points[i].originX + Math.random()*unitWidth-unitWidth/2;
+					}
+					if(points[i].originY != 0 && points[i].originY != unitHeight*(numPointsY-1)) {
+						points[i].y = points[i].originY + Math.random()*unitHeight-unitHeight/2;
+					}
+				}
+			}
+
+			function refresh() {
+				randomize();
+				for(var i = 0; i < document.querySelector('#triangle svg').childNodes.length; i++) {
+					var polygon = document.querySelector('#triangle svg').childNodes[i];
+					var animate = polygon.childNodes[0];
+					if(animate.getAttribute('to')) {
+						animate.setAttribute('from',animate.getAttribute('to'));
+					}
+					animate.setAttribute('to',points[polygon.point1].x+','+points[polygon.point1].y+' '+points[polygon.point2].x+','+points[polygon.point2].y+' '+points[polygon.point3].x+','+points[polygon.point3].y);
+					animate.beginElement();
+				}
+				refreshTimeout = window.setTimeout(function() {refresh();}, refreshDuration);
+			}
+
+			trianglerun();
+			
+			function onResize() {
+			document.querySelector('#triangle svg').remove();
+			window.clearTimeout(refreshTimeout);
+			trianglerun();
+			}
+
+			window.onresize = onResize;
+			}else if(dynamic10 == 'true'){
+			var stars = document.createElement("div");stars.setAttribute('id','stars');newdynmaster.appendChild(stars);
+				for(var j = 1; j < 3; j++ ){
+					var newmstar = document.createElement("div");
+					newmstar.id = "mstars"+[j];
+					stars.appendChild(newmstar);
+				}
 			}
 		} // end dynamic
 	}

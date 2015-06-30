@@ -34,7 +34,7 @@ var script = document.createElement("script");script.type = "text/javascript";sc
 
 function $(id) { return document.getElementById(id); }
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, autostop = null, autostoponly = null, autostopDomains = null, autostopchecklistwhite = null, autostopchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, autostop = null, autostoponly = null, autostopDomains = null, autostopchecklistwhite = null, autostopchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null;
 
 // Install on www.stefanvd.net
 // Install on www.turnoffthelights.com
@@ -46,7 +46,7 @@ if (window.location.href.match(/http:\/\/(.*stefanvd\.net\/.*|www\.stefanvd\.net
 }
 /* -------------------------------------------------- */
 
-chrome.storage.local.get(['autoplay', 'eastereggs', 'shortcutlight', 'eyen', 'eyea', 'eyealist', 'contextmenus', 'excludedDomains', 'nighttime', 'begintime', 'endtime', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'ecosaver', 'ecosavertime', 'autoplayonly', 'autoplayDomains', 'interval', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'atmosphereonly', 'atmosphereDomains', 'nighttheme', 'nightonly', 'nightDomains', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'atmosvivid','autoplaychecklistwhite','autoplaychecklistblack','nighthover','nightactivetime','nmbegintime','nmendtime','nightmodechecklistblack','nightmodechecklistwhite','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nmcustomx','nmcustomy','lampandnightmode','autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','eyechecklistwhite','eyechecklistblack'], function(response){
+chrome.storage.local.get(['autoplay', 'eastereggs', 'shortcutlight', 'eyen', 'eyea', 'eyealist', 'contextmenus', 'excludedDomains', 'nighttime', 'begintime', 'endtime', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'ecosaver', 'ecosavertime', 'autoplayonly', 'autoplayDomains', 'interval', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'atmosphereonly', 'atmosphereDomains', 'nighttheme', 'nightonly', 'nightDomains', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'atmosvivid','autoplaychecklistwhite','autoplaychecklistblack','nighthover','nightactivetime','nmbegintime','nmendtime','nightmodechecklistblack','nightmodechecklistwhite','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nmcustomx','nmcustomy','lampandnightmode','autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','eyechecklistwhite','eyechecklistblack','nightmodebck','nightmodetxt','no360youtube'], function(response){
 autoplay = response['autoplay'];
 eastereggs = response['eastereggs'];
 shortcutlight = response['shortcutlight'];
@@ -109,6 +109,8 @@ autostopchecklistwhite = response['autostopchecklistwhite'];
 autostopchecklistblack = response['autostopchecklistblack'];
 eyechecklistwhite = response['eyechecklistwhite'];
 eyechecklistblack = response['eyechecklistblack'];
+nightmodebck = response['nightmodebck'];if(!ambilightcolorhex)ambilightcolorhex = '#000000';
+no360youtube = response['no360youtube'];
 
 // observeDOM - dynamic check
 var observeDOM = (function(){
@@ -970,6 +972,7 @@ var sun = true;
 var oldbackgroundImage = document.body.style.backgroundImage
 var oldbackgroundColor = document.body.style.backgroundColor;
 var oldbackground = document.body.style.background;
+var oldtextcolor = document.body.style.color;
 
 // gogo night mode
 function gogonightmode(){
@@ -980,44 +983,50 @@ function gogonightmode(){
 			}
 			if ($("stefanvdnightthemecheckbox")){$("stefanvdnightthemecheckbox").checked = true;}
 			
-			document.body.style.backgroundColor = "black";
-			document.body.style.background = "black";
+			
+			document.body.style.backgroundColor = nightmodebck;
+			document.body.style.background = nightmodebck;
+			document.body.style.color = nightmodetxt;
 
 			if (window.location.href.match("^http(|s)://([a-z.]*).google.[a-z.]*/")){
 			var gb = document.querySelectorAll('div.gb_gb');
-			for(var i = 0; i < gb.length; i++ ){gb[i].style.background = "black";} //#f1f1f1
+			for(var i = 0; i < gb.length; i++ ){gb[i].style.background = nightmodebck;} //#f1f1f1
 			var gbhb = document.querySelectorAll('div.gb_hb');
-			for(var i = 0; i < gbhb.length; i++ ){gbhb[i].style.background = "black";} //#f1f1f1
+			for(var i = 0; i < gbhb.length; i++ ){gbhb[i].style.background = nightmodebck;} //#f1f1f1
 			var gbib = document.querySelectorAll('div.gb_ib');
-			for(var i = 0; i < gbib.length; i++ ){gbib[i].style.background = "black";} //#f1f1f1
+			for(var i = 0; i < gbib.length; i++ ){gbib[i].style.background = nightmodebck;} //#f1f1f1
 			var fbar = document.querySelectorAll('div.fbar');
-			for(var i = 0; i < fbar.length; i++ ){fbar[i].style.background = "black";} //#f2f2f2
-			if($("appbar")){$("appbar").style.background = "black";} //#fff
-			if($("hdtb")){$("hdtb").style.background = "black";} //#fff
-			if($("hdtbSum")){$("hdtbSum").style.background = "black";} //#fff
-			if($("hdtbMenus")){$("hdtbMenus").style.background = "black";} //#fff
+			for(var i = 0; i < fbar.length; i++ ){fbar[i].style.background = nightmodebck;} //#f2f2f2
+			if($("appbar")){$("appbar").style.background = nightmodebck;} //#fff
+			if($("hdtb")){$("hdtb").style.background = nightmodebck;} //#fff
+			if($("hdtbSum")){$("hdtbSum").style.background = nightmodebck;} //#fff
+			if($("hdtbMenus")){$("hdtbMenus").style.background = nightmodebck;} //#fff
 			var gbvb = document.querySelectorAll('div.gb_Vb');
-			for(var i = 0; i < gbvb.length; i++ ){gbvb[i].style.background = "black";} //#f1f1f1
-			if($("fbar")){$("fbar").style.background = "black";} //#f2f2f2
+			for(var i = 0; i < gbvb.length; i++ ){gbvb[i].style.background = nightmodebck;} //#f1f1f1
+			if($("fbar")){$("fbar").style.background = nightmodebck;} //#f2f2f2
+			var sfbg = document.querySelectorAll('div.sfbg');
+			for(var i = 0; i < sfbg.length; i++ ){sfbg[i].style.backgroundColor = nightmodebck;} //#f1f1f1
+			var sfbgg = document.querySelectorAll('div.sfbgg');
+			for(var i = 0; i < sfbgg.length; i++ ){sfbgg[i].style.backgroundColor = nightmodebck;} //#f1f1f1
 			}
 			else if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 			if($("logo-container")){$("logo-container").style.cssText = "-webkit-filter: grayscale(100%) brightness(100%) contrast(100%);";}
 			if($("watch7-action-buttons")){$("watch7-action-buttons").style.cssText = "-webkit-filter: grayscale(0%) brightness(100%) contrast(0%);";}
-			if($("watch7-content")){$("watch7-content").style.background = "black";} //#fff
-			if($("yt-masthead-container")){$("yt-masthead-container").style.background = "black";} //#f1f1f1
-			if($("watch7-sidebar")){$("watch7-sidebar").style.background = "black";} //#fff
-			if($("watch7-headline")){$("watch7-headline").style.background = "black";} //#fff
-			if($("watch7-user-header")){$("watch7-user-header").style.background = "black";} //#fff
-			if($("footer-container")){$("footer-container").style.background = "black";} //#f2f2f2
-			if($("c4-shelves-container")){$("c4-shelves-container").style.background = "black";} //#fff
-			if($("watch7-creator-bar")){$("watch7-creator-bar").style.background = "black";} //#fff
-			if($("non-appbar-vm-video-actions-bar")){$("non-appbar-vm-video-actions-bar").style.background = "black";} //#fff
-			if($("masthead-search-terms")){$("masthead-search-terms").style.background = "black";} //#fff
-			if($("watch7-action-panel-footer")){$("watch7-action-panel-footer").style.background = "black";} //#fff
+			if($("watch7-content")){$("watch7-content").style.background = nightmodebck;} //#fff
+			if($("yt-masthead-container")){$("yt-masthead-container").style.background = nightmodebck;} //#f1f1f1
+			if($("watch7-sidebar")){$("watch7-sidebar").style.background = nightmodebck;} //#fff
+			if($("watch7-headline")){$("watch7-headline").style.background = nightmodebck;} //#fff
+			if($("watch7-user-header")){$("watch7-user-header").style.background = nightmodebck;} //#fff
+			if($("footer-container")){$("footer-container").style.background = nightmodebck;} //#f2f2f2
+			if($("c4-shelves-container")){$("c4-shelves-container").style.background = nightmodebck;} //#fff
+			if($("watch7-creator-bar")){$("watch7-creator-bar").style.background = nightmodebck;} //#fff
+			if($("non-appbar-vm-video-actions-bar")){$("non-appbar-vm-video-actions-bar").style.background = nightmodebck;} //#fff
+			if($("masthead-search-terms")){$("masthead-search-terms").style.background = nightmodebck;} //#fff
+			if($("watch7-action-panel-footer")){$("watch7-action-panel-footer").style.background = nightmodebck;} //#fff
 			var ytbranddiv = document.querySelectorAll('div.branded-page-v2-primary-col');
-			for(var i = 0; i < ytbranddiv.length; i++ ){ytbranddiv[i].style.background = "black";} //#fff
+			for(var i = 0; i < ytbranddiv.length; i++ ){ytbranddiv[i].style.background = nightmodebck;} //#fff
 			var ytheaddiv = document.querySelectorAll('div.secondary-header-contents');
-			for(var i = 0; i < ytheaddiv.length; i++ ){ytheaddiv[i].style.background = "black";} //#fff
+			for(var i = 0; i < ytheaddiv.length; i++ ){ytheaddiv[i].style.background = nightmodebck;} //#fff
 			var ytmastersearchtermdiv = document.querySelectorAll('div.masthead-search-terms-border');
 			for(var i = 0; i < ytmastersearchtermdiv.length; i++ ){ytmastersearchtermdiv[i].style.border = "1px solid #414141";} //#414141
 			var ytuixbuttondiv = document.querySelectorAll('button.yt-uix-button-default');
@@ -1025,43 +1034,43 @@ function gogonightmode(){
 			var ytuixadiv = document.querySelectorAll('a.yt-uix-button-default');
 			for(var i = 0; i < ytuixadiv.length; i++ ){ytuixadiv[i].style.background = "#333333";ytuixadiv[i].style.color = "#fff";ytuixadiv[i].style.borderColor = "#5E5E5E";}
 			var ytuploadlidiv = document.querySelectorAll('li.vm-video-item');
-			for(var i = 0; i < ytuploadlidiv.length; i++ ){ytuploadlidiv[i].style.background = "black";}
+			for(var i = 0; i < ytuploadlidiv.length; i++ ){ytuploadlidiv[i].style.background = nightmodebck;}
 			var ytuploadmetrixdiv = document.querySelectorAll('div.vm-video-metrics');
 			for(var i = 0; i < ytuploadmetrixdiv.length; i++ ){ytuploadmetrixdiv[i].style.backgroundImage = "linear-gradient(to right,#000000 0,#000 11px)";}
 			var ytmetadatadiv = document.querySelectorAll('button.metadata-inline');
-			for(var i = 0; i < ytmetadatadiv.length; i++ ){ytmetadatadiv[i].style.background = "black";}
-			if($("watch7-container")){$("watch7-container").style.background = "black";} //#fff
-			if($("masthead-appbar")){$("masthead-appbar").style.background = "black";} //#fff
-			if($("gh-activityfeed")){$("gh-activityfeed").style.background = "black";} //#fff
-			if($("appbar-guide-menu")){$("appbar-guide-menu").style.background = "black";} //#fff
-			if($("gh-overviewtab")){$("gh-overviewtab").style.background = "black";} //#fff
-			if($("c4-primary-header-contents")){$("c4-primary-header-contents").style.background = "black";} //#fff
-			if($("channel-subheader")){$("channel-subheader").style.background = "black";} //#fff
+			for(var i = 0; i < ytmetadatadiv.length; i++ ){ytmetadatadiv[i].style.background = nightmodebck;}
+			if($("watch7-container")){$("watch7-container").style.background = nightmodebck;} //#fff
+			if($("masthead-appbar")){$("masthead-appbar").style.background = nightmodebck;} //#fff
+			if($("gh-activityfeed")){$("gh-activityfeed").style.background = nightmodebck;} //#fff
+			if($("appbar-guide-menu")){$("appbar-guide-menu").style.background = nightmodebck;} //#fff
+			if($("gh-overviewtab")){$("gh-overviewtab").style.background = nightmodebck;} //#fff
+			if($("c4-primary-header-contents")){$("c4-primary-header-contents").style.background = nightmodebck;} //#fff
+			if($("channel-subheader")){$("channel-subheader").style.background = nightmodebck;} //#fff
 			if($("eow-title")){$("eow-title").style.color = "#7C7C7C";}
 			var ytcard = document.querySelectorAll('.yt-card');
-			for(var i = 0; i < ytcard.length; i++ ){ytcard[i].style.background = "black"; ytcard[i].style.color = "#7C7C7C"; }
+			for(var i = 0; i < ytcard.length; i++ ){ytcard[i].style.background = nightmodebck; ytcard[i].style.color = "#7C7C7C"; }
 			// update 11 may 2014
 			var ytguideitem = document.querySelectorAll('a.guide-item');
 			for(var i = 0; i < ytguideitem.length; i++ ){ytguideitem[i].style.color = "#999";}
 			var ytuiellipsis = document.querySelectorAll('a.yt-ui-ellipsis');
-			for(var i = 0; i < ytuiellipsis.length; i++ ){ytuiellipsis[i].style.background = "black";}
+			for(var i = 0; i < ytuiellipsis.length; i++ ){ytuiellipsis[i].style.background = nightmodebck;}
 			var ytnbc = document.querySelectorAll('div.nbc');
-			for(var i = 0; i < ytnbc.length; i++ ){ytnbc[i].style.backgroundColor = "black";}
+			for(var i = 0; i < ytnbc.length; i++ ){ytnbc[i].style.backgroundColor = nightmodebck;}
 			if ($("watch-description-clip")) { $("watch-description-clip").style.color = "#999"; }
-			if ($("masthead-expanded-container")) { $("masthead-expanded-container").style.background = "black"; }
+			if ($("masthead-expanded-container")) { $("masthead-expanded-container").style.background = nightmodebck; }
 			// update 12 june 2014
 			var ytselectedguideitem = document.querySelectorAll('a.guide-item-selected');
 			for(var i = 0; i < ytselectedguideitem.length; i++ ){ytselectedguideitem[i].style.color = "#999";}
 			if ($("masthead-search-term")) { $("masthead-search-term").style.color = "white"; }
 			var ytuiellipsisdv = document.querySelectorAll('div.yt-ui-ellipsis');
-			for(var i = 0; i < ytuiellipsisdv.length; i++ ){ytuiellipsisdv[i].style.background = "black";}
+			for(var i = 0; i < ytuiellipsisdv.length; i++ ){ytuiellipsisdv[i].style.background = nightmodebck;}
 			var ytgssbmtable = document.querySelectorAll('table.gssb_m');
-			for(var i = 0; i < ytgssbmtable.length; i++ ){ytgssbmtable[i].style.background = "black";ytgssbmtable[i].style.color = "white";}
+			for(var i = 0; i < ytgssbmtable.length; i++ ){ytgssbmtable[i].style.background = nightmodebck;ytgssbmtable[i].style.color = "white";}
 			var ytdivytuixexpander = document.querySelectorAll('div.yt-uix-expander-ellipsis');
-			for(var i = 0; i < ytdivytuixexpander.length; i++ ){ytdivytuixexpander[i].style.background = "black";}
+			for(var i = 0; i < ytdivytuixexpander.length; i++ ){ytdivytuixexpander[i].style.background = nightmodebck;}
 			// update 3 april 2015
 			var ytdivallcomments = document.querySelectorAll('div.all-comments');
-			for(var i = 0; i < ytdivallcomments.length; i++ ){ytdivallcomments[i].style.background = "black";}
+			for(var i = 0; i < ytdivallcomments.length; i++ ){ytdivallcomments[i].style.background = nightmodebck;}
 			var ytbtnuixdiv = document.querySelectorAll('button.yt-uix-button');
 			for(var i = 0; i < ytbtnuixdiv.length; i++ ){ytbtnuixdiv[i].style.background = "#333333";ytbtnuixdiv[i].style.color = "#fff";}
 			// update 16 april 2015
@@ -1080,6 +1089,7 @@ function gogonightmode(){
         document.body.style.backgroundImage = oldbackgroundImage;
         document.body.style.backgroundColor = oldbackgroundColor;
         document.body.style.backgroundColor = oldbackground;
+        document.body.style.color = oldtextcolor;
 
         if (window.location.href.match("^http(|s)://([a-z.]*).google.[a-z.]*/")) {
             var gb = document.querySelectorAll('div.gb_gb');
@@ -1097,6 +1107,10 @@ function gogonightmode(){
 			var gbvb = document.querySelectorAll('div.gb_Vb');
 			for(var i = 0; i < gbvb.length; i++ ){gbvb[i].style.background = "#f1f1f1";} //#f1f1f1
 			if($("fbar")){$("fbar").style.background = "#f2f2f2";} //#f2f2f2
+			var sfbg = document.querySelectorAll('div.sfbg');
+			for(var i = 0; i < sfbg.length; i++ ){sfbg[i].style.backgroundColor = "#f1f1f1";} //#f1f1f1
+			var sfbgg = document.querySelectorAll('div.sfbgg');
+			for(var i = 0; i < sfbgg.length; i++ ){sfbgg[i].style.backgroundColor = "#f1f1f1";} //#f1f1f1
         }
         else if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)) {
             if ($("logo-container")) { $("logo-container").style.cssText = ""; }
@@ -1400,6 +1414,14 @@ if(lampandnightmode == 'true'){
 // YouTube auto width the video player content
 // URL control for YouTube only
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+if (no360youtube == 'true'){
+	var ytfullvideo = document.getElementsByTagName('video');
+	for(var i = 0; i < ytfullvideo.length; i++) {
+	ytfullvideo[i].style.display = "block";ytfullvideo[i].style.position = "relative";ytfullvideo[i].style.zIndex = '1001';
+	}
+	var ytwebgl = document.getElementsByClassName('webgl');
+	for(var i = 0; i < ytwebgl.length; i++ ){ytwebgl[i].style.display = 'none';}
+}
 
 // new YouTube october 2013
 var mastheadpositioner = $('masthead-positioner');
@@ -1420,11 +1442,12 @@ var donesetquality = false;
 var yt = yt;
 yt = yt || {};
 yt.playerConfig = {"player_wide": 1};
-document.cookie = "wide=1; domain=.youtube.com";
+document.cookie = "wide=1; domain=.youtube.com; expires=31536e3; path=/";
 function $(a) {return document.getElementById(a);}
-// $("watch7-container").className = "watch-wide";
 // with playlist hide
-$("watch7-container").className = "watch-wide watch-playlist-collapsed";
+if($("watch7-container")){$("watch7-container").className = "watch-wide watch-playlist-collapsed";}
+// YouTube wide June 2015
+if($("page")){$("page").className = "  watch clearfix watch-stage-mode watch-wide";}
 }
 
 if (customqualityyoutube == 'true') {
@@ -1472,9 +1495,14 @@ var ythduq = function updateQuality(){
 }
 
 function injectScript(codetext){
-  var ythdscript = document.createElement("script");
-  ythdscript.textContent = codetext;
-  document.head.appendChild(ythdscript);
+var messagescript = $('ytScriptMessage');
+if(messagescript) {}
+else {		
+	var ythdscript = document.createElement("script");
+	ythdscript.setAttribute("id", "ytScriptMessage");
+	ythdscript.textContent = codetext;
+	document.head.appendChild(ythdscript);
+	}
 }
 
 var codetext = "var maxquality = '" + maxquality + "';\n";
