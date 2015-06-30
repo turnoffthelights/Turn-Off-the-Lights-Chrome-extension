@@ -377,7 +377,7 @@ do {
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 
 // other file then "mp3" then run this code
-if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important;';}
+if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText += 'visibility:visible !important; position:relative !important; z-index:1000 !important;';}
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	if (no360youtube == 'true'){} else { // default the regular player
 		var ytwebgl = document.getElementsByClassName('webgl');
