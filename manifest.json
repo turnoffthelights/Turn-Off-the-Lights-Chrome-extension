@@ -2,7 +2,11 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
+<<<<<<< HEAD
   "version": "3.1.0.30",
+=======
+  "version": "3.1.0.22",
+>>>>>>> origin/master
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com",
