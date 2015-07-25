@@ -1370,8 +1370,8 @@ else{$('nmbegintime').disabled = true;$('nmendtime').disabled = true;$('nmconfir
 if(nighttheme.checked == true){$('lampandnightmode').disabled = false;}
 else{$('lampandnightmode').disabled = true;}
 
-if(autostoponly.checked == true){$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;}
-else{$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;}
+if(autostoponly.checked == true){$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;$('autostopDomainsBox').disabled = false;$('autostopwebsiteurl').disabled = false;$('autostopaddbutton').disabled = false;$('autostopremovebutton').disabled = false;}
+else{$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;$('autostopDomainsBox').disabled = true;$('autostopwebsiteurl').disabled = true;$('autostopaddbutton').disabled = true;$('autostopremovebutton').disabled = true;}
 
 // done with reading
 // run now the dynamic background if enabled
@@ -2234,11 +2234,16 @@ navigator.getUserMedia({audio:false,video:true},function(stream){
 		canvas = document.getElementById('motioncanvas');
 		canvasgetcont = canvas.getContext('2d');
 		canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
+		canvas.width = 0;
+		canvas.height = 0;
 		ccanvas = document.getElementById('motioncomp');
 		ccgetcont = ccanvas.getContext('2d');
 		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
+		ccanvas.width = 0;
+		ccanvas.height = 0;
 		window.clearInterval(intervalID);
 	}
+	
 }
 }
 

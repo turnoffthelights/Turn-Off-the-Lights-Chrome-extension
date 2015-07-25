@@ -324,12 +324,12 @@
     "description":"Penyebaran radius:"
   },
   "installadblocker":{
-    "message":"Gunakan dengan sebuah ekstensi Adblocker.",
-    "description":"Gunakan dengan sebuah ekstensi Adblocker."
+    "message":"Jika anda tidak ingin melihat iklan, gunakanlah ekstensi adblocker.",
+    "description":"Jika anda tidak ingin melihat iklan, gunakanlah ekstensi adblocker."
   },
   "titelsharebutton":{
     "message":"Tombol berbagi",
-    "description":"Berbagi tombol"
+    "description":"Tombol berbagi"
   },
   "titelcolor":{
     "message":"Warna",
@@ -628,8 +628,8 @@
     "description":"Telur Paskah"
   },
   "textfoot":{
-    "message":"Perangkat lunak ini berlisensi GPL CC-GNU. Untuk melihat salinan dari lisensi ini, kunjungi",
-    "description":"Perangkat lunak ini berlisensi di bawah CC-GNU GPL. Untuk melihat salinan dari lisensi ini, kunjungi"
+    "message":"Perangkat lunak ini berlisensi CC-GNU GPL. Untuk melihat salinan dari lisensi ini, kunjungi",
+    "description":"Perangkat lunak ini berlisensi CC-GNU GPL. Untuk melihat salinan dari lisensi ini, kunjungi"
   },
   "left":{
     "message":"kiri",
@@ -668,8 +668,8 @@
     "description":"Kami telah menambahkan beberapa fitur baru untuk Anda"
   },
   "upgradecontextmessage":{
-    "message":"Hal tersebut akan membuat ekstensi ini lebih menakjubkan",
-    "description":"Hal tersebut akan membuat ekstensi ini lebih menakjubkan"
+    "message":"Itu membuat ekstensi ini lebih mengagumkan",
+    "description":"Itu membuat ekstensi ini lebih mengagumkan"
   },
   "upgradecontextitemta":{
     "message":"Gerakan Kamera",
@@ -968,12 +968,12 @@
     "description":"Unduh app sekarang"
   },
   "titeldownloadupgradezoom":{
-    "message":"Perbesar atau perkecil  pada konten laman menggunakan tombol zoom untuk membaca lebih nyaman.",
-    "description":"Perbesar atau perkecil  pada konten laman menggunakan tombol zoom untuk membaca lebih nyaman."
+    "message":"Perbesar atau perkecil  pada konten laman menggunakan tombol perbesar untuk membaca lebih nyaman.",
+    "description":"Perbesar atau perkecil  pada konten laman menggunakan tombol perbesar untuk membaca lebih nyaman."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Tambah tombol kembali pada menubar hitam di situs Google.",
-    "description":"Tambah tombol kembali pada menubar hitam di situs Google."
+    "message":"Tambahkan kembali bilah menu hitam pada laman Google.",
+    "description":"Tambahkan kembali bilah menu hitam pada laman Google."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"Menunjukkan informasi pasar saham.",
@@ -1000,8 +1000,8 @@
     "description":"Kiri bawah"
   },
   "nmcustom":{
-    "message":"klik, tahan dan geser ke lokasi layar anda.",
-    "description":"klik, tahan dan geser ke lokasi layar anda."
+    "message":"Kustom (klik, tahan, dan pindahkan saklar ke tempat yang diinginkan di layar)",
+    "description":"Kustom (klik, tahan, dan pindahkan saklar ke tempat yang diinginkan di layar)"
   },
   "desnighthover":{
     "message":"Tunjukkan transparent switch pada laman.",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"Dukung: <object>,<embed>,<applet>,<iframe>.",
     "description":"Dukung: <object>,<embed>,<applet>,<iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Warna latar belakang:",
+    "description":"Warna latar belakang:"
+  },
+  "titelnightmodetxt":{
+    "message":"Warna teks:",
+    "description":"Warna teks:"
+  },
+  "desdynamicsmoke":{
+    "message":"Asap",
+    "description":"Asap"
+  },
+  "desdynamicdotscolor":{
+    "message":"Bintik bintik berwarna",
+    "description":"Bintik bintik berwarna"
+  },
+  "desdynamicstorm":{
+    "message":"Badai",
+    "description":"Badai"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulasi",
+    "description":"Triangulasi"
+  },
+  "desdynamicstars":{
+    "message":"Bintang-bintang",
+    "description":"Bintang-bintang"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights juga tersedia untuk ponsel anda.",
+    "description":"Turn Off the Lights juga tersedia untuk ponsel anda."
+  },
+  "titel360youtube":{
+    "message":"Menampilkan video YouTube 360 derajat dalam satu frame.",
+    "description":"Menampilkan video YouTube 360 derajat dalam satu frame."
   }
 }

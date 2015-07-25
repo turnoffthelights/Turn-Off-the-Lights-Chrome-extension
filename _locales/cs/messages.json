@@ -8,12 +8,12 @@
     "description":"Obrázek na pozadí"
   },
   "shortcutalllights":{
-    "message":"k zapnutí\/vypnutí světel ve všech otevřených kartách.",
-    "description":"přepínání světel na\/vypnuto pro všechny otevřené záložky."
+    "message":"k zapnutí\/vypnutí světel pro všechny otevřené záložky",
+    "description":"k zapnutí\/vypnutí světel pro všechny otevřené záložky"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Kontrola nejnovější verze proběhla",
+    "description":"Kontrola nejnovější verze proběhla"
   },
   "visualeffects":{
     "message":"Vizuální efekty",
@@ -32,8 +32,8 @@
     "description":"Jako Bar"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Povolit kliknutí na odkazy, když je obrazovka ztmavená",
+    "description":"Povolit kliknutí na odkazy, když je obrazovka ztmavená"
   },
   "desambilight4color":{
     "message":"4 vybrané barvy okolo videa:",
@@ -56,16 +56,16 @@
     "description":"Ochrana očí"
   },
   "titelcinemaontop":{
-    "message":"Režim kina: \"Zhasnutá\" vrstva je zobrazena pouze v horní části okna.",
-    "description":"Movie theater mode: Zobrazit vrstvy \"zhasnout\" pouze v horní části okna."
+    "message":"Mód kina: zobrazuje vrstvu 'ztmavení' jen na povrchu okna",
+    "description":"Mód kina: zobrazuje vrstvu 'ztmavení' jen na povrchu okna"
   },
   "desmousespotlightc":{
     "message":"Jsou li světla vypnuta, můžete zvolit oblast pro zaměření položky.",
     "description":"Je-li světlo je vypnutý, můžete vybrat oblast zaměřit položky."
   },
   "titelrememberpage":{
-    "message":"Zapamatovat si stránku",
-    "description":"Pamatujte si stránky"
+    "message":"Stránka připomenutí",
+    "description":"Stránka připomenutí"
   },
   "desmousespotlighta":{
     "message":"Jestliže jsou světla vypnuta, ukaž kolem kurzoru kruh světla",
@@ -100,8 +100,8 @@
     "description":"Povolení \"Ochranu očí\" automaticky zakáže funkci 'Auto play'."
   },
   "skipremember":{
-    "message":"Přeskočit a nyní otevřít stránku možnost",
-    "description":"Přeskočit a nyní otevřít stránku možnost"
+    "message":"Přeskočit a už otevřít stránku možností",
+    "description":"Přeskočit a už otevřít stránku možností"
   },
   "optiontimesaved":{
     "message":"Uložení času bylo úspěšné!",
@@ -144,16 +144,16 @@
     "description":"Vesmíru"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Stisknutí tlačítka T přidá na tmavou vrstvu divadelní oponu",
+    "description":"Stisknutí tlačítka T přidá na tmavou vrstvu divadelní oponu"
   },
   "settings":{
     "message":"Nastavení",
     "description":"Nastavení"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Průměr světlometu:",
+    "description":"Průměr světlometu:"
   },
   "titelsync":{
     "message":"Synchronizovat",
@@ -212,24 +212,24 @@
     "description":"Zadejte své heslo do pole níže:"
   },
   "titelblurradius":{
-    "message":"Rádius rozostření.",
-    "description":"Poloměr rozostření"
+    "message":"Poloměr rozostření:",
+    "description":"Poloměr rozostření:"
   },
   "version":{
     "message":"Verze",
     "description":"Text čísla verze"
   },
   "shortcutdark":{
-    "message":"pro ztmavení obrazovky (zvýšení krytí).",
-    "description":"Ztmavit obrazovku (zvýšení krytí)."
+    "message":"pro ztmavení obrazovky (zvýšení krytí)",
+    "description":"pro ztmavení obrazovky (zvýšení krytí)"
   },
   "dessharebutton":{
     "message":"Zobrazit YouTube tlačítka sdílení pro tohle video.",
     "description":"Zobrazit tlačítka sdílení YouTube pro toto video."
   },
   "shortcutbright":{
-    "message":"pro zesvětlení obrazovky (snížení krytí).",
-    "description":"Chcete-li oživit obrazovky (snížení krytí)."
+    "message":"pro zesvětlení obrazovky (snížení krytí)",
+    "description":"pro zesvětlení obrazovky (snížení krytí)"
   },
   "titelalllightsoff":{
     "message":"Všechny otevřené karty",
@@ -268,8 +268,8 @@
     "description":"Zobrazit tlačítko Přidat z tohoto videa YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"pro zapnutí\/vypnutí funkce ochrany očí.",
-    "description":"Chcete-li povolit nebo zakázat funkci ochrany očí."
+    "message":"pro aktivaci\/deaktivaci funkce ochrany očí",
+    "description":"pro aktivaci\/deaktivaci funkce ochrany očí"
   },
   "titelfadein":{
     "message":"Zesvětlit",
@@ -296,8 +296,8 @@
     "description":"Toto video se zaměřují"
   },
   "warningtextambilight":{
-    "message":"Pokud není schopna přijímat video dat webu bezpečnostní pravidla, pak bude zobrazovat zvolený plná barva místo.",
-    "description":"Pokud není schopna přijímat video dat webu bezpečnostní pravidla, pak bude zobrazovat zvolený plná barva místo."
+    "message":"Když není možné získat data videa kvůli bezpečnostním pravidlům stránek, bude místo toho použita vybraná barva.",
+    "description":"Když není možné získat data videa kvůli bezpečnostním pravidlům stránek, bude místo toho použita vybraná barva."
   },
   "desdynamiccloud":{
     "message":"Animované mraky",
@@ -320,16 +320,16 @@
     "description":"vrchol"
   },
   "titelspreadradius":{
-    "message":"Rádius rozsahu.",
-    "description":"Šíření poloměr"
+    "message":"Poloměr rozpětí:",
+    "description":"Poloměr rozpětí:"
   },
   "installadblocker":{
-    "message":"Použít s příponou Adblocker.",
-    "description":"Použít s příponou Adblocker."
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"Tlačítka sdílení",
-    "description":"Podíl tlačítka"
+    "message":"Share Button",
+    "description":"Share Button"
   },
   "titelcolor":{
     "message":"Barva",
@@ -408,8 +408,8 @@
     "description":"Vezměte barvy z videa."
   },
   "showremember":{
-    "message":"není vidět tuto stránku zapamatovat znovu, když otevřu stránku možnost.",
-    "description":"není vidět tuto stránku zapamatovat znovu, když otevřu stránku možnost."
+    "message":"Nezobrazovat tuto upomínku při příštím otevření nastavení",
+    "description":"Nezobrazovat tuto upomínku při příštím otevření nastavení"
   },
   "donatepromotext":{
     "message":"Pokud poskytnete dar v podobě libovolné částky, budu si toho nesmírně vážit!",
@@ -424,8 +424,8 @@
     "description":"Dešťové kapky"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Kliknutí na tlačítko lampy zapne\/vypne světla ve všech panelech",
+    "description":"Kliknutí na tlačítko lampy zapne\/vypne světla ve všech panelech"
   },
   "optionecosaversaved":{
     "message":"Vteřiny byly uloženy!",
@@ -436,20 +436,20 @@
     "description":"Příšeří úroveň Bar"
   },
   "deseyen":{
-    "message":"Běžné používání (světla zhasnou, když kliknete na ikonu lampy).",
-    "description":"Běžné použití (zhasnou po klepnutí na ikonu lampy)."
+    "message":"Normální použití (světla se ztlumí když kliknete na ikonu lampy)",
+    "description":"Normální použití (světla se ztlumí když kliknete na ikonu lampy)"
   },
   "enjoyshare":{
     "message":"Užijte si toto rozšíření a sdílet s ostatními, kdo myslíte, že to ocení.",
     "description":"Užijte si toto rozšíření a sdílet s ostatními, kdo myslíte, že to ocení."
   },
   "shortcuttotl":{
-    "message":"přepínání světel, zapnuto\/vypnuto.",
-    "description":"přepínání světel, zapnuto\/vypnuto."
+    "message":"pro zapnutí\/vypnutí světel",
+    "description":"pro zapnutí\/vypnutí světel"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automaticky ztlumit pozadí při otevření stránek",
+    "description":"Automaticky ztlumit pozadí při otevření stránek"
   },
   "basicsettings":{
     "message":"Základy",
@@ -472,8 +472,8 @@
     "description":"TOtL uvítací průvodce"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automaticky ztlumit pozadí následujících stránek:",
+    "description":"Automaticky ztlumit pozadí následujících stránek:"
   },
   "titellikebutton":{
     "message":"Tlačítka Libí a Nelíbí se mi",
@@ -484,8 +484,8 @@
     "description":"skrýt ikonu pageaction"
   },
   "friendlyremember":{
-    "message":"Přátelské připomenutí...",
-    "description":"Nezapomeňte, přátelský..."
+    "message":"Přátelská upomínka...",
+    "description":"Přátelská upomínka..."
   },
   "desfadein":{
     "message":"Zobrazit efekt zesvetlení.",
@@ -496,8 +496,8 @@
     "description":"Varování!"
   },
   "deseyetimesaver":{
-    "message":"Když stránka je neaktivní (bez myši nebo klávesnice vstup) dobu níže uvedené stránky automaticky ztmavne.",
-    "description":"Když stránka je neaktivní (bez myši nebo klávesnice vstup) dobu níže uvedené stránky automaticky ztmavne."
+    "message":"Pokud je stránka neaktivní (žádný vstup z myši\/klávesnice) po čas specifikovaný níže, automaticky potemní.",
+    "description":"Pokud je stránka neaktivní (žádný vstup z myši\/klávesnice) po čas specifikovaný níže, automaticky potemní."
   },
   "titelsuggestions":{
     "message":"Návrhy",
@@ -536,8 +536,8 @@
     "description":"Ryby Tank"
   },
   "longdonatetext":{
-    "message":"Jsem opravdu ocení, pokud můžete darovat mne udržování tohoto rozšíření prohlížeče pro nové uživatele. Ať je to $$ 1 nebo $100 dolarů, je nesmírně ocenil vaši podporu!",
-    "description":"Jsem opravdu ocení, pokud můžete darovat mne udržování tohoto rozšíření prohlížeče pro nové uživatele. Ať je to $$ 1 nebo $100 dolarů, je nesmírně ocenil vaši podporu!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"Zobrazit všechny Flash objekty, přeskočení URL filtr. To řeší problémy s některými video hráči jsou skryty, ale bude také zobrazovat reklamy.",
@@ -556,12 +556,12 @@
     "description":"Zobrazit a Invertovat barvy video titulu."
   },
   "desrememberpage":{
-    "message":"Je-li tato možnost povolena, zobrazí vám ne stránce zapamatovat.",
-    "description":"Je-li tato možnost povolena, zobrazí vám ne stránce zapamatovat."
+    "message":"Nezobrazovat upomínku",
+    "description":"Nezobrazovat upomínku"
   },
   "description":{
-    "message":"Celá stránka se zahalí do černého a vy tak můžete sledovat video, jako byste byli v kině.",
-    "description":"Celá stránka bude blednout k tmavé, takže můžete sledovat video, jako kdyby jste byli v kině."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"Počet zobrazení",
@@ -576,12 +576,12 @@
     "description":"Automaticky nastavte kvalitu videa na YouTube."
   },
   "shortcutopacity":{
-    "message":"obnovení nastavení tmu (krytí) nastavení.",
-    "description":"obnovení nastavení tmu (krytí) nastavení."
+    "message":"pro obnovení nastavení potemnění (neprůhlednosti)",
+    "description":"pro obnovení nastavení potemnění (neprůhlednosti)"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Nižší hodnoty zostří stín, vyšší hodnoty jej rozmažou.",
+    "description":"Nižší hodnoty zostří stín, vyšší hodnoty jej rozmažou."
   },
   "titeladdvideobutton":{
     "message":"Přidat tlačítko",
@@ -628,8 +628,8 @@
     "description":"Velikonoční vejce"
   },
   "textfoot":{
-    "message":"Tento software je licencován pod CC-GNU GPL. Pro zobrazení kopie této licence přejděte na",
-    "description":"Tento software je licencován pod licencí CC-GNU GPL. Chcete-li zobrazit kopii této licence, navštivte"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
+    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
     "message":"vlevo",
@@ -668,8 +668,8 @@
     "description":"Přidali jsme pro Vás nové funkce"
   },
   "upgradecontextmessage":{
-    "message":"Které činí toto rozšíření ještě užasnějším",
-    "description":"Které činí toto rozšíření ještě užasnějším"
+    "message":"That makes this extension even more amazing",
+    "description":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
     "message":"Pohyb na kameru",
@@ -716,8 +716,8 @@
     "description":"Resetovat nastavení Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Rozsvítit znovu pozadí po skončení videa za",
-    "description":"Rozsvítit znovu pozadí po skončení videa za"
+    "message":"Znovu rozjasnit pozadí po té co video skončí",
+    "description":"Znovu rozjasnit pozadí po té co video skončí"
   },
   "desautoplaydelayend":{
     "message":"sekund",
@@ -728,8 +728,8 @@
     "description":"Pohyb na kameru"
   },
   "desmotion":{
-    "message":"Povolte Pohyb na kameru tak, že se webová stránka ztmaví po pohybu rukou dolu.",
-    "description":"Povolte Pohyb na kameru tak, že se webová stránka ztmaví po pohybu rukou dolu."
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Vyzkoušej to!",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"Přesuňte ruku (nebo pěst) shora dolů",
-    "description":"Přesuňte ruku (nebo pěst) shora dolů"
+    "description":"Pohněte svou rukou (či pěstí) odzhora dolů."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"Lineární"
   },
   "titelcolora":{
-    "message":"Barva A",
-    "description":"Barva A"
+    "message":"Barva A:",
+    "description":"Barva A:"
   },
   "titelcolorb":{
-    "message":"Barva B",
-    "description":"Barva B"
+    "message":"Barva B:",
+    "description":"Barva B:"
   },
   "speechoption":{
     "message":"Rozpoznávání řeči",
@@ -856,8 +856,8 @@
     "description":"Tento prohlížeč zatím tuto funkci nepodporuje. Ujistěte se, že máte na svém počítači nainstalovánu nejnovější verzi prohlížeče."
   },
   "titelsupportatmos":{
-    "message":"Podporuje pouze HTML5 <video> a YouTube HTML5 přehravač. A používá GPU Vaší grafické karty.",
-    "description":"Podporuje pouze HTML5 <video> a YouTube HTML5 přehravač. A používá GPU Vaší grafické karty."
+    "message":"Podporuje pouze HTML5 <video> a YouTube HTML5 přehravač. Také používá GPU Vaší grafické karty.",
+    "description":"Podporuje pouze HTML5 <video> a YouTube HTML5 přehravač. Také používá GPU Vaší grafické karty."
   },
   "titelseeonline":{
     "message":"Viz online pro další příklady",
@@ -948,8 +948,8 @@
     "description":"Jste spokojeni s Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensure that your opinion counts",
-    "description":"Ensure that your opinion counts"
+    "message":"Zajistěte, že Váš názor je brán na zřetel",
+    "description":"Zajistěte, že Váš názor je brán na zřetel"
   },
   "nothanks":{
     "message":"Ne, děkuji",
@@ -960,20 +960,20 @@
     "description":"Napsat recenzi"
   },
   "desauroraplayer":{
-    "message":"The ambient lighting player is also available for your computer.",
-    "description":"The ambient lighting player is also available for your computer."
+    "message":"Přehravač s osvícením okolí je také dostupný pro Váš počítač.",
+    "description":"Přehravač s osvícením okolí je také dostupný pro Váš počítač."
   },
   "downloadtheapp":{
     "message":"Stáhnout aplikaci",
     "description":"Stáhnout aplikaci"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Add back the black menubar on the Google website.",
-    "description":"Add back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
@@ -1000,8 +1000,8 @@
     "description":"Dole vlevo"
   },
   "nmcustom":{
-    "message":"Klikněte, držte a táhněte na požadované místo.",
-    "description":"Klikněte, držte a táhněte na požadované místo."
+    "message":"Custom (click, hold and move the switch to the desired screen location)",
+    "description":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
     "message":"Shows a transparent switch on the web page",
@@ -1048,11 +1048,47 @@
     "description":"browser lamp"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"HTML5 a YouTube™ video",
+    "description":"HTML5 a YouTube™ video"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"Podporuje: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Podporuje: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Background color:",
+    "description":"Background color:"
+  },
+  "titelnightmodetxt":{
+    "message":"Text color:",
+    "description":"Text color:"
+  },
+  "desdynamicsmoke":{
+    "message":"Smoke",
+    "description":"Smoke"
+  },
+  "desdynamicdotscolor":{
+    "message":"Color Dots",
+    "description":"Color Dots"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"Hvězdy",
+    "description":"Hvězdy"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is also available for your mobile device.",
+    "description":"Turn Off the Lights is also available for your mobile device."
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame.",
+    "description":"Shows the full 360 degrees YouTube video in one frame."
   }
 }

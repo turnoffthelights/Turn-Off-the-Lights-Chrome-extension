@@ -296,8 +296,8 @@
     "description":"关注这段视频"
   },
   "warningtextambilight":{
-    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
-    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
+    "message":"当因网站安全规则而导致无法获取视频数据时，将改用纯色。",
+    "description":"当因网站安全规则而导致无法获取视频数据时，将改用纯色。"
   },
   "desdynamiccloud":{
     "message":"动态云",
@@ -324,8 +324,8 @@
     "description":"传播半径："
   },
   "installadblocker":{
-    "message":"使用带有 Adblocker 扩展名。",
-    "description":"使用带有 Adblocker 扩展名。"
+    "message":"如果您不想看到广告，请使用adblocker插件。",
+    "description":"如果您不想看到广告，请使用adblocker插件。"
   },
   "titelsharebutton":{
     "message":"分享按钮",
@@ -408,8 +408,8 @@
     "description":"采取从视频的颜色。"
   },
   "showremember":{
-    "message":"Do not show this reminder page again when I open the options",
-    "description":"Do not show this reminder page again when I open the options"
+    "message":"当我打开设置页时不再提示我",
+    "description":"当我打开设置页时不再提示我"
   },
   "donatepromotext":{
     "message":"如果你可以做出任何款项捐赠，我会非常感激！",
@@ -424,8 +424,8 @@
     "description":"雨滴"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
+    "message":"点击灯状按钮将切换所有打开标签页的开关灯状态",
+    "description":"点击灯状按钮将切换所有打开标签页的开关灯状态"
   },
   "optionecosaversaved":{
     "message":"已成功保存 ！",
@@ -496,8 +496,8 @@
     "description":"警告 ！"
   },
   "deseyetimesaver":{
-    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
-    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
+    "message":"当页面处于非活动状态（无鼠标移动或键盘输入）达设定时间时，页面自动关灯。",
+    "description":"当页面处于非活动状态（无鼠标移动或键盘输入）达设定时间时，页面自动关灯。"
   },
   "titelsuggestions":{
     "message":"建议",
@@ -580,8 +580,8 @@
     "description":"还原亮度(不透明度)设置。"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"较低的值将使得阴影锐化，较高的值将使得阴影变模糊。",
+    "description":"较低的值将使得阴影锐化，较高的值将使得阴影变模糊。"
   },
   "titeladdvideobutton":{
     "message":"添加按钮",
@@ -629,7 +629,7 @@
   },
   "textfoot":{
     "message":"本软件的授权遵守CC - GNU通用公共许可协议。要查看本许可协议，请访问",
-    "description":"此软件是 CC GNU GPL 许可。若要查看此许可证的副本，请访问"
+    "description":"本软件的授权遵守CC - GNU通用公共许可协议。要查看本许可协议，请访问"
   },
   "left":{
     "message":"左侧",
@@ -716,8 +716,8 @@
     "description":"重置Turn Off the Lights扩展的设置"
   },
   "desautoplaydelay":{
-    "message":"Brighten the background again when the video has ended after",
-    "description":"Brighten the background again when the video has ended after"
+    "message":"当视频结束达指定时间后自动将背景亮起",
+    "description":"当视频结束达指定时间后自动将背景亮起"
   },
   "desautoplaydelayend":{
     "message":"秒",
@@ -1000,8 +1000,8 @@
     "description":"左下角"
   },
   "nmcustom":{
-    "message":"单击并将其拖到到您自己喜欢的屏幕位置。",
-    "description":"单击并将其拖到到您自己喜欢的屏幕位置。"
+    "message":"自定义（单击、长按并拖动按钮到您所需的屏幕位置）",
+    "description":"自定义（单击、长按并拖动按钮到您所需的屏幕位置）"
   },
   "desnighthover":{
     "message":"在页面上显示透明度切换按钮。",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"支持：<object> <embed> <applet> <iframe>标签",
     "description":"支持：<object> <embed> <applet> <iframe>标签"
+  },
+  "titelnightmodebck":{
+    "message":"背景颜色：",
+    "description":"背景颜色："
+  },
+  "titelnightmodetxt":{
+    "message":"文字颜色：",
+    "description":"文字颜色："
+  },
+  "desdynamicsmoke":{
+    "message":"烟雾",
+    "description":"烟雾"
+  },
+  "desdynamicdotscolor":{
+    "message":"颜色点",
+    "description":"颜色点"
+  },
+  "desdynamicstorm":{
+    "message":"风暴",
+    "description":"风暴"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"星标",
+    "description":"星标"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights也适用于您的移动设备。",
+    "description":"Turn Off the Lights也适用于您的移动设备。"
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame.",
+    "description":"Shows the full 360 degrees YouTube video in one frame."
   }
 }

@@ -324,12 +324,12 @@
     "description":"Leviämisen säde:"
   },
   "installadblocker":{
-    "message":"Käytä Adblocker-laajennuksen kanssa",
-    "description":"Käytä Adblocker-laajennuksen kanssa"
+    "message":"Jos et halua nähdä mainoksia, käytä adblocker-laajennusta.",
+    "description":"Jos et halua nähdä mainoksia, käytä adblocker-laajennusta."
   },
   "titelsharebutton":{
-    "message":"Jakopainikkeet",
-    "description":"Jakopainikkeet"
+    "message":"Jakopainike",
+    "description":"Jakopainike"
   },
   "titelcolor":{
     "message":"Väri",
@@ -1000,8 +1000,8 @@
     "description":"Vasen alareuna"
   },
   "nmcustom":{
-    "message":"Napsauta, pidä ja siirrä haluamaasi sijaintiin näytölläsi.",
-    "description":"Napsauta, pidä ja siirrä haluamaasi sijaintiin näytölläsi."
+    "message":"Mukautettu (Napsauta, pidä ja siirrä kytkin haluamaasi kohtaan näytöllä)",
+    "description":"Mukautettu (Napsauta, pidä ja siirrä kytkin haluamaasi kohtaan näytöllä)"
   },
   "desnighthover":{
     "message":"Näytä läpinäkyvä kytkin verkkosivulla.",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"Tukee: <object>, <embed>, <applet>, <iframe>.",
     "description":"Tukee: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Taustaväri:",
+    "description":"Taustaväri:"
+  },
+  "titelnightmodetxt":{
+    "message":"Tekstin väri:",
+    "description":"Tekstin väri:"
+  },
+  "desdynamicsmoke":{
+    "message":"Savu",
+    "description":"Savu"
+  },
+  "desdynamicdotscolor":{
+    "message":"Väripisteet",
+    "description":"Väripisteet"
+  },
+  "desdynamicstorm":{
+    "message":"Myrsky",
+    "description":"Myrsky"
+  },
+  "desdynamictriangulation":{
+    "message":"Kolmiomittaus",
+    "description":"Kolmiomittaus"
+  },
+  "desdynamicstars":{
+    "message":"Tähdet",
+    "description":"Tähdet"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights on saatavilla myös mobiililaitteellesi.",
+    "description":"Turn Off the Lights on saatavilla myös mobiililaitteellesi."
+  },
+  "titel360youtube":{
+    "message":"Näyttää koko 360 asteen YouTube-videon yhdessä kehyksessä.",
+    "description":"Näyttää koko 360 asteen YouTube-videon yhdessä kehyksessä."
   }
 }

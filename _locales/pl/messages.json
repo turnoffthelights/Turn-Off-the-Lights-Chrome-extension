@@ -8,8 +8,8 @@
     "description":"Obraz w tle"
   },
   "shortcutalllights":{
-    "message":"aby przełączyć światła wł\/wył dla wszystkich kart",
-    "description":"aby przełączyć światła wł\/wył dla wszystkich kart"
+    "message":"aby włączyć\/wyłączyć światła dla wszystkich kart",
+    "description":"aby włączyć\/wyłączyć światła dla wszystkich kart"
   },
   "lastchecked":{
     "message":"Sprawdź dostępność aktualizacji",
@@ -152,8 +152,8 @@
     "description":"Ustawienia"
   },
   "desspotlightradius":{
-    "message":"Diameter of spotlight:",
-    "description":"Diameter of spotlight:"
+    "message":"Średnica plamy światła:",
+    "description":"Średnica plamy światła:"
   },
   "titelsync":{
     "message":"Synchronizuj",
@@ -324,12 +324,12 @@
     "description":"Poziom rozprzestrzenienia:"
   },
   "installadblocker":{
-    "message":"Używaj rozszerzenia Adblock Plus",
-    "description":"Korzystać z rozszerzeniem Adblocker."
+    "message":"Jeśli chcesz wyłączyć reklamy zainstaluj adblocka.",
+    "description":"Jeśli chcesz wyłączyć reklamy zainstaluj adblocka."
   },
   "titelsharebutton":{
-    "message":"Przyciski udostępniania",
-    "description":"Przyciski akcji"
+    "message":"Przycisk udostępniania",
+    "description":"Przycisk udostępniania"
   },
   "titelcolor":{
     "message":"Kolor",
@@ -560,8 +560,8 @@
     "description":"Nie pokazuj strony przypominającej"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
+    "message":"Cała strona będzie przyciemniona, aby można było oglądać filmy, tak jak w kinie.",
+    "description":"Cała strona będzie przyciemniona, aby można było oglądać filmy, tak jak w kinie."
   },
   "titelviewcount":{
     "message":"Liczba odsłon",
@@ -576,12 +576,12 @@
     "description":"Automatycznie ustawić jakość filmów z YouTube."
   },
   "shortcutopacity":{
-    "message":"to restore to the set darkness (opacity) setting",
-    "description":"to restore to the set darkness (opacity) setting"
+    "message":"aby przywrócić ustawienia przyciemnienia",
+    "description":"aby przywrócić ustawienia przyciemnienia"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Niższe wartości wyostrzą cień, wyższe wartości uczynią go bardziej rozmytym.",
+    "description":"Niższe wartości wyostrzą cień, wyższe wartości uczynią go bardziej rozmytym."
   },
   "titeladdvideobutton":{
     "message":"Przycisk Dodaj",
@@ -628,8 +628,8 @@
     "description":"Pisanki"
   },
   "textfoot":{
-    "message":"Ten program jest wydany na licencji CC-GNU GPL. Aby zapoznać się z licencją przejdź na stronę",
-    "description":"Ten program jest na licencji CC-GNU GPL. Aby zobaczyć kopię niniejszej licencji,"
+    "message":"Ten program jest wydany na licencji CC-GNU GPL. Aby zobaczyć licencję, odwiedź",
+    "description":"Ten program jest wydany na licencji CC-GNU GPL. Aby zobaczyć licencję, odwiedź"
   },
   "left":{
     "message":"lewa strona",
@@ -668,8 +668,8 @@
     "description":"Dodano kilka nowych funkcji,"
   },
   "upgradecontextmessage":{
-    "message":"które sprawiają, że rozszerzenie jest jeszcze wspanialsze",
-    "description":"które sprawiają, że rozszerzenie jest jeszcze wspanialsze"
+    "message":"To sprawia, że ten dodatek jest jeszcze wspanialszy",
+    "description":"To sprawia, że ten dodatek jest jeszcze wspanialszy"
   },
   "upgradecontextitemta":{
     "message":"Wykrywanie ruchu",
@@ -716,8 +716,8 @@
     "description":"Resetuj ustawienia Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Brighten the background again when the video has ended after",
-    "description":"Brighten the background again when the video has ended after"
+    "message":"Rozjaśnij tło ponownie, gdy film zakończył się po",
+    "description":"Rozjaśnij tło ponownie, gdy film zakończył się po"
   },
   "desautoplaydelayend":{
     "message":"s",
@@ -728,8 +728,8 @@
     "description":"Wykrywanie ruchu"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion",
-    "description":"Enable the Camera Motion"
+    "message":"Włącz \"Camera Motion\"",
+    "description":"Włącz \"Camera Motion\""
   },
   "trymotion":{
     "message":"Wypróbuj sam!",
@@ -752,8 +752,8 @@
     "description":"Przesuń dłoń z góry na dół."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"Czarna warstwa automatycznie przesunie się w dół.",
+    "description":"Czarna warstwa automatycznie przesunie się w dół."
   },
   "desmotionChecklist":{
     "message":"Lista kontrolna:",
@@ -776,12 +776,12 @@
     "description":"Gradient liniowy"
   },
   "titelcolora":{
-    "message":"Color A:",
-    "description":"Color A:"
+    "message":"Kolor A:",
+    "description":"Kolor A:"
   },
   "titelcolorb":{
-    "message":"Color B:",
-    "description":"Color B:"
+    "message":"Kolor B:",
+    "description":"Kolor B:"
   },
   "speechoption":{
     "message":"Rozpoznawanie mowy",
@@ -856,8 +856,8 @@
     "description":"Przeglądarka jeszcze nie obsługuje tej funkcji. Sprawdź czy masz zainstalowaną najnowszą wersję."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
+    "message":"Obsługuje tylko tag <video> HTML5 i odtwarzacz YouTube HTML5. Wykorzystuje również procesor twojej karty graficznej.",
+    "description":"Obsługuje tylko tag <video> HTML5 i odtwarzacz YouTube HTML5. Wykorzystuje również procesor twojej karty graficznej."
   },
   "titelseeonline":{
     "message":"Zobacz online więcej przykładów",
@@ -968,12 +968,12 @@
     "description":"Pobierz aplikację teraz"
   },
   "titeldownloadupgradezoom":{
-    "message":"Powiększ lub pomniejsz zawartość stron internetowych przy użyciu przycisku zoom dla zwiększenia wygody czytania.",
-    "description":"Powiększ lub pomniejsz zawartość stron internetowych przy użyciu przycisku zoom dla zwiększenia wygody czytania."
+    "message":"Zwiększa lub zmniejsza zawartość stron za pomocą przycisku przybliżenia dla bardziej komfortowego czytania.",
+    "description":"Zwiększa lub zmniejsza zawartość stron za pomocą przycisku przybliżenia dla bardziej komfortowego czytania."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Przywróć czarny pasek menu na stronie Google.",
-    "description":"Przywróć czarny pasek menu na stronie Google."
+    "message":"Przywraca czarny pasek menu na stronie Google.",
+    "description":"Przywraca czarny pasek menu na stronie Google."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"To pokazuje Informacje giełdowe w czasie rzeczywistym.",
@@ -1000,8 +1000,8 @@
     "description":"Lewy dolny"
   },
   "nmcustom":{
-    "message":"Kliknij, przytrzymaj i przenieś do dowolnej pozycji na ekranie.",
-    "description":"Kliknij, przytrzymaj i przenieś do dowolnej pozycji na ekranie."
+    "message":"Niestandardowe (naciśnij, przytrzymaj i przenieś przełącznik do wybranego miejsca na ekranie)",
+    "description":"Niestandardowe (naciśnij, przytrzymaj i przenieś przełącznik do wybranego miejsca na ekranie)"
   },
   "desnighthover":{
     "message":"Pokaż przezroczysty przełącznik na stronie internetowej.",
@@ -1048,11 +1048,47 @@
     "description":"Lampa przeglądarkowa"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"Wideo HTML5 i YouTube ™",
+    "description":"Wideo HTML5 i YouTube ™"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"Obsługuje: <object>, <embed>, <applet>, <iframe>.",
+    "description":"Obsługuje: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Kolor tła:",
+    "description":"Kolor tła:"
+  },
+  "titelnightmodetxt":{
+    "message":"Kolor tekstu:",
+    "description":"Kolor tekstu:"
+  },
+  "desdynamicsmoke":{
+    "message":"Dym",
+    "description":"Dym"
+  },
+  "desdynamicdotscolor":{
+    "message":"Kolorowe Kropki",
+    "description":"Kolorowe Kropki"
+  },
+  "desdynamicstorm":{
+    "message":"Burza",
+    "description":"Burza"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulacja",
+    "description":"Triangulacja"
+  },
+  "desdynamicstars":{
+    "message":"Gwiazdki",
+    "description":"Gwiazdki"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights jest również dostępne dla urządzeń mobilnych.",
+    "description":"Turn Off the Lights jest również dostępne dla urządzeń mobilnych."
+  },
+  "titel360youtube":{
+    "message":"Pokazuje pełne 360 stopni wideo YouTube w jednej ramce.",
+    "description":"Pokazuje pełne 360 stopni wideo YouTube w jednej ramce."
   }
 }

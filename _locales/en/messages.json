@@ -168,8 +168,8 @@
     "description":"Dynamic Background"
   },
   "deslikebutton":{
-    "message":"Show the like & dislike buttons of YouTube for this video.",
-    "description":"Show the like & dislike buttons of YouTube for this video."
+    "message":"Show the like & dislike buttons of YouTube for the video.",
+    "description":"Show the like & dislike buttons of YouTube for the video."
   },
   "titelmouse":{
     "message":"Mouse",
@@ -224,8 +224,8 @@
     "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
-    "message":"Show the share button of YouTube for this video.",
-    "description":"Show the share button of YouTube for this video."
+    "message":"Show the share button of YouTube for the video.",
+    "description":"Show the share button of YouTube for the video."
   },
   "shortcutbright":{
     "message":"to brighten the screen (decrease opacity)",
@@ -264,8 +264,8 @@
     "description":"Turn Off the Lights"
   },
   "desaddvideobutton":{
-    "message":"Show the add button from this YouTube video.",
-    "description":"Show the add button from this YouTube video."
+    "message":"Show the add button from the YouTube video.",
+    "description":"Show the add button from the YouTube video."
   },
   "shortcuteyeprotection":{
     "message":"to enable\/disable the eye protection feature",
@@ -352,8 +352,8 @@
     "description":"Show more"
   },
   "desviewcount":{
-    "message":"Show the number of view for this video.",
-    "description":"Show the number of view for this video."
+    "message":"Show the number of view for the video.",
+    "description":"Show the number of view for the video."
   },
   "titelautowidthyoutube":{
     "message":"Automatically set the YouTube player to the larger size.",

@@ -121,7 +121,7 @@ return true;
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 		chrome.storage.local.get(['pageaction'], function(chromeset){		
 			if ((tab.url.match(/^http/i)||tab.url.match(/^file/i)) && (chromeset["pageaction"] != "true") && (chromeset["pageaction"] != true)) {
-					if(tabId){
+					if(tabId != null){
 					// fix Chrome bug, can't show icon on HDPI screen
 					// chrome.pageAction.setIcon({tabId: tab.id, path: {'19': 'icons/icon1.png', '38':'icons/icon1@2x.png'}});
 					// https://code.google.com/p/chromium/issues/detail?id=381383
@@ -134,9 +134,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 chrome.pageAction.onClicked.addListener(function(tabs) {
 chrome.storage.local.get(['alllightsoff'], function(chromeset){
 if ((chromeset["alllightsoff"]!="true") && (chromeset["alllightsoff"]!=true)){
-chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {console.error(chrome.runtime.lastError.message);}});
+chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {
+// console.error(chrome.runtime.lastError.message);
+}});
 } else {
-chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {console.error(chrome.runtime.lastError.message);}});
+chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {
+// console.error(chrome.runtime.lastError.message);
+}});
 }
 });
 });
@@ -173,14 +177,14 @@ chrome.contextMenus.create({"title": sharemenuratetitle, "type":"normal", "id": 
 var parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts":contexts});
 var child1 = chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "parentId": parent, "onclick": onClickHandler});
 var child2 = chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "parentId": parent, "onclick": onClickHandler});
-var child2 = chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "parentId": parent, "onclick": onClickHandler});
-var child2 = chrome.contextMenus.create({"title": sharemenupostongoogleplus, "id": "totlsharegoogleplus", "parentId": parent, "onclick": onClickHandler});
+var child3 = chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "parentId": parent, "onclick": onClickHandler});
+var child4 = chrome.contextMenus.create({"title": sharemenupostongoogleplus, "id": "totlsharegoogleplus", "parentId": parent, "onclick": onClickHandler});
 
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
 // context menu for page and video
-var menupage;
-var menuvideo;
+var menupage = null;
+var menuvideo = null;
 function checkcontextmenus(){
 // video
 var contexts = ["video"];
@@ -200,8 +204,8 @@ for (var i = 0; i < contexts.length; i++){
 }
 
 function removecontexmenus(){
-chrome.contextMenus.remove(menuvideo);
-chrome.contextMenus.remove(menupage);
+	if(menuvideo != null){chrome.contextMenus.remove(menuvideo);}
+	if(menupage != null){chrome.contextMenus.remove(menupage);}
 }
 
 try{ chrome.runtime.setUninstallUrl("http://www.turnoffthelights.com/extension/chromeuninstalled.html"); }

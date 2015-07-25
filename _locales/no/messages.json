@@ -324,12 +324,12 @@
     "description":"Spre-radius:"
   },
   "installadblocker":{
-    "message":"Bruk med et Adblocker-tillegg.",
-    "description":"Bruk med filtypen Adblocker."
+    "message":"Hvis du ikke vil se annonser, bruk en adblocker utvidelse.",
+    "description":"Hvis du ikke vil se annonser, bruk en adblocker utvidelse."
   },
   "titelsharebutton":{
-    "message":"Del knapper",
-    "description":"Dele knapper"
+    "message":"Dele-knapp",
+    "description":"Dele-knapp"
   },
   "titelcolor":{
     "message":"Farge",
@@ -628,8 +628,8 @@
     "description":"Påskeegg"
   },
   "textfoot":{
-    "message":"Denne programvaren er lisensiert under CC-GNU GPL. Hvis du vil vise en kopi av denne lisensen, besøk",
-    "description":"Denne programvaren er lisensiert under CC-GNU GPL. Vise en kopi av denne lisensen, gå"
+    "message":"Denne programvaren er lisensiert under CC-GNU GPL. Hvis du vil se en kopi av denne lisensen, besøk",
+    "description":"Denne programvaren er lisensiert under CC-GNU GPL. Hvis du vil se en kopi av denne lisensen, besøk"
   },
   "left":{
     "message":"Venstre",
@@ -668,8 +668,8 @@
     "description":"Vi har lagt til noen nye funksjoner for deg"
   },
   "upgradecontextmessage":{
-    "message":"Som gjør denne utvidelsen enda mer utrolig",
-    "description":"Som gjør denne utvidelsen enda mer utrolig"
+    "message":"Det gjør denne utvidelsen enda mer utrolig",
+    "description":"Det gjør denne utvidelsen enda mer utrolig"
   },
   "upgradecontextitemta":{
     "message":"Kamerabevegelse",
@@ -968,12 +968,12 @@
     "description":"Last ned appen nå"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom inn eller ut på websiden ved å bruke zoomeknappen for behageligere lesing.",
-    "description":"Zoom inn eller ut på websiden ved å bruke zoomeknappen for behageligere lesing."
+    "message":"Zoomer inn eller ut på web-innhold ved å bruke zoom-knappen for mer komfortabel lesing.",
+    "description":"Zoomer inn eller ut på web-innhold ved å bruke zoom-knappen for mer komfortabel lesing."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Legg tilbake den svarte menylinjen på Googles nettside.",
-    "description":"Legg tilbake den svarte menylinjen på Googles nettside."
+    "message":"Legger tilbake den svarte menylinjen på Googles nettside.",
+    "description":"Legger tilbake den svarte menylinjen på Googles nettside."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"Dette viser i sanntid aksjemarkedsinformasjon.",
@@ -1000,8 +1000,8 @@
     "description":"Nederst til Venstre"
   },
   "nmcustom":{
-    "message":"Klikk, hold og flytt den til din egen plasseringen på skjermen.",
-    "description":"Klikk, hold og flytt den til din egen plasseringen på skjermen."
+    "message":"Egendefinert (klikk, hold og flytt bryteren til ønsket skjermplassering)",
+    "description":"Egendefinert (klikk, hold og flytt bryteren til ønsket skjermplassering)"
   },
   "desnighthover":{
     "message":"Vis en gjennomsiktig bryter på nettsiden.",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"Støtter: <object>, <embed>, <applet>, <iframe>.",
     "description":"Støtter: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Bakgrunnsfarge:",
+    "description":"Bakgrunnsfarge:"
+  },
+  "titelnightmodetxt":{
+    "message":"Tekstfarge:",
+    "description":"Tekstfarge:"
+  },
+  "desdynamicsmoke":{
+    "message":"Røyk",
+    "description":"Røyk"
+  },
+  "desdynamicdotscolor":{
+    "message":"Fargede prikker",
+    "description":"Fargede prikker"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulering",
+    "description":"Triangulering"
+  },
+  "desdynamicstars":{
+    "message":"Stjerner",
+    "description":"Stjerner"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights er også tilgjengelig på dine mobile enheter.",
+    "description":"Turn Off the Lights er også tilgjengelig på dine mobile enheter."
+  },
+  "titel360youtube":{
+    "message":"Viser full 360 graders YouTube-video i en ramme.",
+    "description":"Viser full 360 graders YouTube-video i en ramme."
   }
 }

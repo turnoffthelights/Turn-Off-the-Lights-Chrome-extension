@@ -202,7 +202,7 @@ if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-descrip
 if(likebutton == 'true'){
 span = document.getElementsByTagName('span');  // new youtube watch8
 for(var i = 0; i < span.length; i++ )
-{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
+{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';span[i].style.padding = "6px 0px";span[i].style.background = "white";}}
 
 var watchdislike = $('watch-dislike'); // new youtube watch7
 if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
@@ -715,7 +715,7 @@ for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('video') > -1) {el
 
 // Dailymotion, fixed show video
 else if (window.location.href.match(/http:\/\/(.*\.dailymotion\.com\/video\/.*|.*\.dailymotion\.com\/.*\/video\/.*)/i)){
-intelligentvideodetection();
+// intelligentvideodetection(); // disabled on 24 July 2015
 
 div = document.getElementsByTagName('div'); 
 for(var i = 0; i < div.length; i++ ) 
@@ -725,6 +725,35 @@ for(var i = 0; i < div.length; i++ )
 div = document.getElementsByTagName('div'); 
 for(var i = 0; i < div.length; i++ ) 
 {if(div[i].className == ('controls_container')) {div[i].style.zIndex = 1000;}}
+
+// hide top blue bar
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ ) 
+{if(div[i].className == ('sd_header')) {div[i].style.zIndex = 998;}}
+
+// player controls below
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ ) 
+{if(div[i].className == ('dmp_ControlBar dmp_will-transition')) {div[i].style.zIndex = 1001;}}
+
+// player top
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ ) 
+{if(div[i].className == ('dmp_Dock dmp_will-transition')) {div[i].style.zIndex = 1001;}}
+
+// hd tooltip
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ ) 
+{if(div[i].className == ('dmp_Tooltip dmp_is-hidden')) {div[i].style.zIndex = 1001;}}
+
+// menu
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ ) 
+{if(div[i].className == ('dmp_Menu')) {div[i].style.zIndex = 1001;}}
+
+// share panel
+var dmpSharePane = $('dmp_SharePane');
+if(dmpSharePane){$('dmp_SharePane').style.zIndex = 1001;}
 }
 
 // vk.com, fixed show video

@@ -296,8 +296,8 @@
     "description":"Зосередити увагу на це відео"
   },
   "warningtextambilight":{
-    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
-    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
+    "message":"Коли не в змозі отримати дані  щодо відео через правила безпеки сайту, буде використано обраний вами суцільний колір.",
+    "description":"Коли не в змозі отримати дані  щодо відео через правила безпеки сайту, буде використано обраний вами суцільний колір."
   },
   "desdynamiccloud":{
     "message":"Анімовані хмарки",
@@ -320,16 +320,16 @@
     "description":"Топ"
   },
   "titelspreadradius":{
-    "message":"Spread radius:",
-    "description":"Spread radius:"
+    "message":"Радіус поширення:",
+    "description":"Радіус поширення:"
   },
   "installadblocker":{
-    "message":"Використовувати разом із розширенням Adblocker.",
-    "description":"Використовувати з розширенням Adblocker."
+    "message":"Якщо Ви не хочете бачити рекламу, то використовуйте розширення, що її блокує.",
+    "description":"Якщо Ви не хочете бачити рекламу, то використовуйте розширення, що її блокує."
   },
   "titelsharebutton":{
-    "message":"Соціальні кнопки",
-    "description":"Частка кнопки"
+    "message":"Соціальна кнопка",
+    "description":"Соціальна кнопка"
   },
   "titelcolor":{
     "message":"Колір",
@@ -424,8 +424,8 @@
     "description":"Краплі дощу"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
+    "message":"Натискання на клавішу лампи увімкне або  вимкне світло в усіх відкритих вкладках",
+    "description":"Натискання на клавішу лампи увімкне або  вимкне світло в усіх відкритих вкладках"
   },
   "optionecosaversaved":{
     "message":"Зміни успішно збережено!",
@@ -436,8 +436,8 @@
     "description":"Помутніння рівні бар"
   },
   "deseyen":{
-    "message":"Normal use (lights go out when you click on the lamp icon)",
-    "description":"Normal use (lights go out when you click on the lamp icon)"
+    "message":"Налаштування по-замовчуванню (затемнення з'являється тоді, коли ви клікаєте іконку з лампою)",
+    "description":"Налаштування по-замовчуванню (затемнення з'являється тоді, коли ви клікаєте іконку з лампою)"
   },
   "enjoyshare":{
     "message":"Насолоджуйтесь цим розширенням та поділіться інформацією про нього з усіма, хто, на вашу думку, його оцінить.",
@@ -496,8 +496,8 @@
     "description":"Попередження!"
   },
   "deseyetimesaver":{
-    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
-    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
+    "message":"Коли сторінка залишається неактивною (не вводяться дані за допомогою мишки чи клавіатури) на час зазначений нижче, вона автоматично затемняється.",
+    "description":"Коли сторінка залишається неактивною (не вводяться дані за допомогою мишки чи клавіатури) на час зазначений нижче, вона автоматично затемняється."
   },
   "titelsuggestions":{
     "message":"Пропозиції",
@@ -580,8 +580,8 @@
     "description":"щоб відновити налаштування рівня затемнення"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Менші значення зроблять тінь різкішою, а вищі — більш розмитою.",
+    "description":"Менші значення зроблять тінь різкішою, а вищі — більш розмитою."
   },
   "titeladdvideobutton":{
     "message":"Додати кнопку",
@@ -628,8 +628,8 @@
     "description":"Пасхальні яйця"
   },
   "textfoot":{
-    "message":"Це програмне забезпечення поширюється на умовах ліцензії CC-GNU GPL. Щоб отримати копію даної ліцензії, відвідайте",
-    "description":"Це програмне забезпечення є ліцензією CC-GNU GPL. Можна побачити копію цієї ліцензії, відвідайте"
+    "message":"Це програмне забезпечення поширюється на умовах ліцензії CC-GNU GPL. Щоб переглянути копію цієї ліцензії, відвідайте",
+    "description":"Це програмне забезпечення поширюється на умовах ліцензії CC-GNU GPL. Щоб переглянути копію цієї ліцензії, відвідайте"
   },
   "left":{
     "message":"зліва",
@@ -668,8 +668,8 @@
     "description":"Ми додали для вас кілька нових можливостей"
   },
   "upgradecontextmessage":{
-    "message":"Які роблять дане розширення ще крутішим",
-    "description":"Які роблять дане розширення ще крутішим"
+    "message":"Що робить це розширення ще дивовижнішим",
+    "description":"Що робить це розширення ще дивовижнішим"
   },
   "upgradecontextitemta":{
     "message":"Рух камери",
@@ -716,8 +716,8 @@
     "description":"Скинути налаштування Turn Off the Lights"
   },
   "desautoplaydelay":{
-    "message":"Brighten the background again when the video has ended after",
-    "description":"Brighten the background again when the video has ended after"
+    "message":"Прояснити фон знову, після того як відео закінчилось",
+    "description":"Прояснити фон знову, після того як відео закінчилось"
   },
   "desautoplaydelayend":{
     "message":"секунд",
@@ -728,8 +728,8 @@
     "description":"Рух камери"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion",
-    "description":"Enable the Camera Motion"
+    "message":"Увімкнути Рух Кмери",
+    "description":"Увімкнути Рух Кмери"
   },
   "trymotion":{
     "message":"Спробуйте самі!",
@@ -968,12 +968,12 @@
     "description":"Завантажте додаток зараз"
   },
   "titeldownloadupgradezoom":{
-    "message":"Збільшити або зменшити вміст веб-сторінки за допомогою кнопки масштабування для більш комфортного читання.",
-    "description":"Збільшити або зменшити вміст веб-сторінки за допомогою кнопки масштабування для більш комфортного читання."
+    "message":"Збільшити або зменшити вміст сторінки за допомогою кнопки масштабування для зручнішого читання.",
+    "description":"Збільшити або зменшити вміст сторінки за допомогою кнопки масштабування для зручнішого читання."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Повернути чорну панель меню на веб-сайті Google.",
-    "description":"Повернути чорну панель меню на веб-сайті Google."
+    "message":"Повернути чорну панель меню на сайті Google.",
+    "description":"Повернути чорну панель меню на сайті Google."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"Це поле в режимі реального часу покаже вам інформацію про фондовий ринок.",
@@ -1000,8 +1000,8 @@
     "description":"Внизу зліва"
   },
   "nmcustom":{
-    "message":"Натисніть і, утримуючи його, перемістіть в зручне місце на вашому екрані.",
-    "description":"Натисніть і, утримуючи його, перемістіть в зручне місце на вашому екрані."
+    "message":"Власне (натисніть, утримуйте та рухайте перемикач до бажаного місця на екрані)",
+    "description":"Власне (натисніть, утримуйте та рухайте перемикач до бажаного місця на екрані)"
   },
   "desnighthover":{
     "message":"Показувати прозорий перемикач на сторінці.",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"Підтримка: <object>, <embed>, <applet>, <iframe>.",
     "description":"Підтримка: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Колір тла:",
+    "description":"Колір тла:"
+  },
+  "titelnightmodetxt":{
+    "message":"Колір тексту:",
+    "description":"Колір тексту:"
+  },
+  "desdynamicsmoke":{
+    "message":"Дим",
+    "description":"Дим"
+  },
+  "desdynamicdotscolor":{
+    "message":"Колорьові крапки",
+    "description":"Колорьові крапки"
+  },
+  "desdynamicstorm":{
+    "message":"Буря",
+    "description":"Буря"
+  },
+  "desdynamictriangulation":{
+    "message":"Тріангуляція",
+    "description":"Тріангуляція"
+  },
+  "desdynamicstars":{
+    "message":"Зірок",
+    "description":"Зірок"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights також доступний для Вашого мобільного пристрою.",
+    "description":"Turn Off the Lights також доступний для Вашого мобільного пристрою."
+  },
+  "titel360youtube":{
+    "message":"Показує 360-градусне відео з YouTube в одному кадрі.",
+    "description":"Показує 360-градусне відео з YouTube в одному кадрі."
   }
 }

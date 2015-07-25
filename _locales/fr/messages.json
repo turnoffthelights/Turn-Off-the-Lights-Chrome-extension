@@ -324,12 +324,12 @@
     "description":"Effet de pixellisation :"
   },
   "installadblocker":{
-    "message":"Utilisez ensuite une extension de navigateur anti-pub",
-    "description":"Utilisez ensuite une extension de navigateur anti-pub"
+    "message":"Si vous ne voulez pas voir les pubs, utiliser une extension anti-pub.",
+    "description":"Si vous ne voulez pas voir les pubs, utiliser une extension anti-pub."
   },
   "titelsharebutton":{
-    "message":"Boutons de partage",
-    "description":"Boutons de partage"
+    "message":"Bouton de partage",
+    "description":"Bouton de partage"
   },
   "titelcolor":{
     "message":"Couleur",
@@ -628,8 +628,8 @@
     "description":"Contenu supplémentaire"
   },
   "textfoot":{
-    "message":"Cette application est sous licence CC-GNU GPL. Pour en voir une copie, visitez",
-    "description":"Cette application est sous licence CC-GNU GPL. Pour en voir une copie, visitez"
+    "message":"Ce logiciel est sous licence CC-GNU GPL. Pour obtenir une copie de cette licence, rendez-vous sur",
+    "description":"Ce logiciel est sous licence CC-GNU GPL. Pour obtenir une copie de cette licence, rendez-vous sur"
   },
   "left":{
     "message":"Gauche ",
@@ -972,8 +972,8 @@
     "description":"Zoomez ou dézoomez sur un contenu web en utilisant le bouton de zoom pour une lecture plus confortable."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Ajouter à l'arrière la barre de menu sur le site web de Google.",
-    "description":"Ajouter à l'arrière la barre de menu sur le site web de Google."
+    "message":"Ajouter à l'arrière la barre de menu sombre sur le site web de Google.",
+    "description":"Ajouter à l'arrière la barre de menu sombre sur le site web de Google."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"Ceci vous montre en temps réel le stock restant sur le marché.",
@@ -1000,8 +1000,8 @@
     "description":"En bas à gauche"
   },
   "nmcustom":{
-    "message":"Cliquez et maintenez enfoncé le bouton, tout en le déplaçant à l'endroit où vous voulez le placer à l'écran. Relâchez. C'est prêt !",
-    "description":"Cliquez et maintenez enfoncé le bouton, tout en le déplaçant à l'endroit où vous voulez le placer à l'écran. Relâchez. C'est prêt !"
+    "message":"Personnalisé (cliquez, maintenez et déplacez l'interrupteur vers l'emplacement désiré)",
+    "description":"Personnalisé (cliquez, maintenez et déplacez l'interrupteur vers l'emplacement désiré)"
   },
   "desnighthover":{
     "message":"Afficher le bouton transparent sur les pages web.",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"Pris en charge : <object>, <embed>, <applet>, <iframe>.",
     "description":"Pris en charge : <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Couleur d'arrière-plan:",
+    "description":"Couleur d'arrière-plan:"
+  },
+  "titelnightmodetxt":{
+    "message":"Couleur du texte :",
+    "description":"Couleur du texte :"
+  },
+  "desdynamicsmoke":{
+    "message":"Fumée",
+    "description":"Fumée"
+  },
+  "desdynamicdotscolor":{
+    "message":"Points de couleur",
+    "description":"Points de couleur"
+  },
+  "desdynamicstorm":{
+    "message":"Tempête",
+    "description":"Tempête"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"Étoiles",
+    "description":"Étoiles"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights est également disponible pour votre appareil mobile.",
+    "description":"Turn Off the Lights est également disponible pour votre appareil mobile."
+  },
+  "titel360youtube":{
+    "message":"Afficher les vidéos YouTube 360 degrés en une seule image.",
+    "description":"Afficher les vidéos YouTube 360 degrés en une seule image."
   }
 }

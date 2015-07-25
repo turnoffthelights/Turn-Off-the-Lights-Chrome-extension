@@ -8,12 +8,12 @@
     "description":"背景圖像"
   },
   "shortcutalllights":{
-    "message":"對所有開啟頁籤切換光源開啟或關閉。",
-    "description":"若要切換打開\/關閉燈對於所有打開的選項卡。"
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"自動檢測最新版本開啟",
+    "description":"自動檢測最新版本開啟"
   },
   "visualeffects":{
     "message":"視覺效果",
@@ -32,8 +32,8 @@
     "description":"喜歡酒吧"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"在螢幕變暗時，允許點選超連結",
+    "description":"在螢幕變暗時，允許點選超連結"
   },
   "desambilight4color":{
     "message":"圍繞影片的四個被選擇的顏色：",
@@ -56,16 +56,16 @@
     "description":"保護眼睛"
   },
   "titelcinemaontop":{
-    "message":"電影院模式： 其僅會於視窗上部顯示\"關閉光源\"圖層。",
-    "description":"電影劇場模式： 它只有視窗上顯示的 '燈關閉圖層。"
+    "message":"電影院模式：它只會在視窗上方顯示'關閉燈光'圖層",
+    "description":"電影院模式：它只會在視窗上方顯示'關閉燈光'圖層"
   },
   "desmousespotlightc":{
     "message":"當關閉光源時您可以選擇一個區域來關注一個項目。",
     "description":"如果光是關閉的您可以選擇一個區域來重點專案。"
   },
   "titelrememberpage":{
-    "message":"過往頁面",
-    "description":"記得頁"
+    "message":"提醒頁面",
+    "description":"提醒頁面"
   },
   "desmousespotlighta":{
     "message":"如果燈不亮，把鼠標放進聚光燈裡。",
@@ -100,8 +100,8 @@
     "description":"啟用保護眼睛將自動禁用自動播放功能。"
   },
   "skipremember":{
-    "message":"跳過並現在打開選項頁",
-    "description":"跳過這一點，和現在打開選項頁"
+    "message":"跳過此畫面，並且立即開啟選項畫面",
+    "description":"跳過此畫面，並且立即開啟選項畫面"
   },
   "optiontimesaved":{
     "message":"時間已成功儲存 ！",
@@ -144,16 +144,16 @@
     "description":"空間的宇宙"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"設定",
     "description":"設置"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"聚光燈直徑：",
+    "description":"聚光燈直徑："
   },
   "titelsync":{
     "message":"同步",
@@ -212,24 +212,24 @@
     "description":"在下面的框中輸入您的密碼："
   },
   "titelblurradius":{
-    "message":"模糊半徑",
-    "description":"模糊半徑"
+    "message":"模糊半徑：",
+    "description":"模糊半徑："
   },
   "version":{
     "message":"版本",
     "description":"版本號碼文本"
   },
   "shortcutdark":{
-    "message":"螢幕變暗 （增加透明度）。",
-    "description":"要變暗螢幕 （增加透明度）。"
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"顯示影片的分享按鈕",
     "description":"顯示此視頻的 YouTube 分享按鈕。"
   },
   "shortcutbright":{
-    "message":"螢幕變亮 （減少不透明度）。",
-    "description":"照亮螢幕 （減少不透明度）。"
+    "message":"調亮螢幕（減少不透明度）",
+    "description":"調亮螢幕（減少不透明度）"
   },
   "titelalllightsoff":{
     "message":"所有開啟的頁籤",
@@ -268,8 +268,8 @@
     "description":"顯示添加按鈕從這個 YouTube 視頻。"
   },
   "shortcuteyeprotection":{
-    "message":"要啟用\/關閉眼睛保護功能。",
-    "description":"要啟用\/禁用眼睛保護功能。"
+    "message":"啟用或停用視力保護功能",
+    "description":"啟用或停用視力保護功能"
   },
   "titelfadein":{
     "message":"淡入",
@@ -296,8 +296,8 @@
     "description":"關注這段視頻"
   },
   "warningtextambilight":{
-    "message":"基於網站的安全規範，若是無法接收視訊訊息則會出現塊狀顏色畫面。",
-    "description":"如果它不能接收視頻資料，由於網站的安全規則，然後它反而將顯示所選的固體顏色。"
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"動態雲圖",
@@ -320,15 +320,15 @@
     "description":"返回頁首"
   },
   "titelspreadradius":{
-    "message":"散佈量的半徑",
-    "description":"傳播半徑"
+    "message":"擴散半徑：",
+    "description":"擴散半徑："
   },
   "installadblocker":{
-    "message":"使用有 Adblocker 副檔名。",
-    "description":"使用帶有 Adblocker 副檔名。"
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"分享鈕",
+    "message":"分享按鈕",
     "description":"分享按鈕"
   },
   "titelcolor":{
@@ -408,8 +408,8 @@
     "description":"採取從視頻的顏色。"
   },
   "showremember":{
-    "message":"當我開啟此選項頁面時不再顯示此記憶頁面。",
-    "description":"不會顯示此記住頁再次打開選項頁時。"
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"如果您可以進行任何數額的捐贈，我將非常感激 ！",
@@ -424,8 +424,8 @@
     "description":"雨滴"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"已成功保存 ！",
@@ -436,20 +436,20 @@
     "description":"昏暗的水準欄"
   },
   "deseyen":{
-    "message":"正常使用（燈光熄滅時，您按一下燈圖標）。",
-    "description":"(燈光熄滅，當您按一下燈圖示） 的正常使用。"
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"享受此擴充功能並分享給其他您覺得需要的人。",
     "description":"享受此擴展並共用與其他人你覺得會很感激。"
   },
   "shortcuttotl":{
-    "message":"按開關來切換on\/off。",
-    "description":"若要切換燈打開\/關閉。"
+    "message":"按下開關來切換 on\/off 。",
+    "description":"按下開關來切換 on\/off 。"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"開啟頁面時自動將背景變暗。",
+    "description":"開啟頁面時自動將背景變暗。"
   },
   "basicsettings":{
     "message":"基礎",
@@ -472,8 +472,8 @@
     "description":"TOtL 歡迎指南"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"在以下網址會自動將背景調暗：",
+    "description":"在以下網址會自動將背景調暗："
   },
   "titellikebutton":{
     "message":"喜歡\/不喜歡 按鈕",
@@ -484,8 +484,8 @@
     "description":"隱藏 pageaction 圖示"
   },
   "friendlyremember":{
-    "message":"友善提醒......",
-    "description":"還記得友好......"
+    "message":"友善提醒…",
+    "description":"友善提醒…"
   },
   "desfadein":{
     "message":"顯示淡入特效",
@@ -496,8 +496,8 @@
     "description":"警告 ！"
   },
   "deseyetimesaver":{
-    "message":"當畫面於歇息狀態 (沒有滑鼠或鍵盤輸入) 低於指定的時間，頁面將自動轉暗。",
-    "description":"當頁處於非活動狀態 (沒有滑鼠或鍵盤輸入) 低於指定的時間，頁面將自動轉暗。"
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"建議",
@@ -536,8 +536,8 @@
     "description":"魚缸"
   },
   "longdonatetext":{
-    "message":"我會很感激如果您可以捐助支持這瀏覽器的功能延續。無論是 $$ 1元 或 $$ 100元，都是是誠心無盡的感謝 ！\n",
-    "description":"我會很感激如果你可以捐給我留著這個瀏覽器延伸為其他新使用者還活著。無論是 $$ 1 或 $$ 100，是非常感激您的支援 ！"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"顯示所有的 Flash 物件，跳過 URL 篩選器。這將修復某些影片播放器被隱藏的問題,但也會顯示廣告。",
@@ -556,12 +556,12 @@
     "description":"顯示和反轉視頻標題的顏色。"
   },
   "desrememberpage":{
-    "message":"如果啟用了此選項，將不會開啟該(記憶)頁。",
-    "description":"如果啟用了此選項，則它將顯示你不是記住頁。"
+    "message":"不再顯示提示頁面",
+    "description":"不再顯示提示頁面"
   },
   "description":{
-    "message":"觀賞影片時讓整個畫面變暗，彷彿置身電影院",
-    "description":"所以，如果你是在電影院裡，你可以看視頻也會褪色到暗，整個頁面。"
+    "message":"整個頁面將會褪色到變暗, 這樣你就可觀看影片如你置身於電影院裡.",
+    "description":"整個頁面將會褪色到變暗, 這樣你就可觀看影片如你置身於電影院裡."
   },
   "titelviewcount":{
     "message":"瀏覽次數",
@@ -576,8 +576,8 @@
     "description":"自動設置的 YouTube 視頻品質。"
   },
   "shortcutopacity":{
-    "message":"還原暗部(透明度)設定。",
-    "description":"若要還原到集黑暗 （透明度） 設置。"
+    "message":"還原亮度（不透明度）設定",
+    "description":"還原亮度（不透明度）設定"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -628,8 +628,8 @@
     "description":"復活節彩蛋"
   },
   "textfoot":{
-    "message":"本軟體的授權方式遵守-GNU GPL。 查看授權副本，請至",
-    "description":"此軟體是 CC GNU GPL 許可。若要查看此許可證的副本，請訪問"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
+    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
     "message":"左",
@@ -668,8 +668,8 @@
     "description":"我們為您新增了一些功能"
   },
   "upgradecontextmessage":{
-    "message":"那使此擴充程式變得更令人驚豔",
-    "description":"那使此擴充程式變得更令人驚豔"
+    "message":"That makes this extension even more amazing",
+    "description":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
     "message":"攝影動態",
@@ -716,8 +716,8 @@
     "description":"重置 Turn Off the Lights 設置"
   },
   "desautoplaydelay":{
-    "message":"當停止播放時開啟燈光於",
-    "description":"當停止播放時開啟燈光於"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"秒",
@@ -728,8 +728,8 @@
     "description":"攝影動態"
   },
   "desmotion":{
-    "message":"請啟動攝影動態來使手向下滑動達到網頁變暗之方式成真",
-    "description":"請啟動攝影動態來使手向下滑動達到網頁變暗之方式成真"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"您自己試試!",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"移動您的手 (或握拳) 由上至下",
-    "description":"移動您的手 (或握拳) 由上至下"
+    "description":"移動您的手(或拳)由上至下"
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"線性"
   },
   "titelcolora":{
-    "message":"顏色 A",
-    "description":"顏色 A"
+    "message":"顏色 A:",
+    "description":"顏色 A:"
   },
   "titelcolorb":{
-    "message":"顏色 B",
-    "description":"顏色 B"
+    "message":"顏色 B:",
+    "description":"顏色 B:"
   },
   "speechoption":{
     "message":"語音辨別",
@@ -856,8 +856,8 @@
     "description":"此瀏覽器尚未支援此功能,請確認您安裝最新版的瀏覽器"
   },
   "titelsupportatmos":{
-    "message":"僅支援HTML5影片及YouTube HTML5,且其會使用您顯示卡上的GPU",
-    "description":"僅支援HTML5影片及YouTube HTML5,且其會使用您顯示卡上的GPU"
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"更多範例請上網參閱",
@@ -936,12 +936,12 @@
     "description":"支援開發"
   },
   "titelautostop":{
-    "message":"AutoStop",
-    "description":"AutoStop"
+    "message":"自動停止",
+    "description":"自動停止"
   },
   "desautostop":{
-    "message":"Stop playing the video automatically when I open a web page",
-    "description":"Stop playing the video automatically when I open a web page"
+    "message":"當我打開別的網頁，它會自動停止播放視頻",
+    "description":"當我打開別的網頁，它會自動停止播放視頻"
   },
   "areyouhappy":{
     "message":"Are you happy about Turn Off the Lights?",
@@ -952,56 +952,56 @@
     "description":"Ensure that your opinion counts"
   },
   "nothanks":{
-    "message":"No thanks",
-    "description":"No thanks"
+    "message":"不，謝謝",
+    "description":"不，謝謝"
   },
   "writeareview":{
-    "message":"Write a review",
-    "description":"Write a review"
+    "message":"寫下評論",
+    "description":"寫下評論"
   },
   "desauroraplayer":{
     "message":"The ambient lighting player is also available for your computer.",
     "description":"The ambient lighting player is also available for your computer."
   },
   "downloadtheapp":{
-    "message":"Download the app now",
-    "description":"Download the app now"
+    "message":"立即下載此應用程式",
+    "description":"立即下載此應用程式"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Add back the black menubar on the Google website.",
-    "description":"Add back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
     "description":"This shows you the real time stock market information."
   },
   "titelnightmodeposition":{
-    "message":"Position of switch",
-    "description":"Position of switch"
+    "message":"開關的位置",
+    "description":"開關的位置"
   },
   "nmtopleft":{
-    "message":"Top left",
-    "description":"Top left"
+    "message":"左上角",
+    "description":"左上角"
   },
   "nmtopright":{
-    "message":"Top right",
-    "description":"Top right"
+    "message":"右上角",
+    "description":"右上角"
   },
   "nmbottomright":{
-    "message":"Bottom right",
-    "description":"Bottom right"
+    "message":"右下角",
+    "description":"右下角"
   },
   "nmbottomleft":{
-    "message":"Bottom left",
-    "description":"Bottom left"
+    "message":"左下角",
+    "description":"左下角"
   },
   "nmcustom":{
-    "message":"Customizable coordinates",
-    "description":"Customizable coordinates"
+    "message":"Custom (click, hold and move the switch to the desired screen location)",
+    "description":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
     "message":"Shows a transparent switch on the web page",
@@ -1016,8 +1016,8 @@
     "description":"黑名單"
   },
   "desautostoponly":{
-    "message":"Only activate stop playing the video automatically on the following site(s):",
-    "description":"Only activate stop playing the video automatically on the following site(s):"
+    "message":"僅在以下網頁中自動暫停影片播放：",
+    "description":"僅在以下網頁中自動暫停影片播放："
   },
   "titelautostopwhitelist":{
     "message":"白名單",
@@ -1028,12 +1028,12 @@
     "description":"黑名單"
   },
   "desnightactivetime":{
-    "message":"The switch will be visible between the following times:",
-    "description":"The switch will be visible between the following times:"
+    "message":"開關將在下列時間中可見：",
+    "description":"開關將在下列時間中可見："
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+    "message":"當您點選灰色燈按鈕時，即可啟動夜間模選項。",
+    "description":"當您點選灰色燈按鈕時，即可啟動夜間模選項。"
   },
   "titeleyewhitelist":{
     "message":"白名單",
@@ -1044,15 +1044,51 @@
     "description":"黑名單"
   },
   "desspeech5command":{
-    "message":"browser lamp",
-    "description":"browser lamp"
+    "message":"瀏覽器燈",
+    "description":"瀏覽器燈"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"HTML5 & YouTube ™ 影片",
+    "description":"HTML5 & YouTube ™ 影片"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"支援：<object>，<embed>，<applet>，<iframe>標籤。",
+    "description":"支援：<object>，<embed>，<applet>，<iframe>標籤。"
+  },
+  "titelnightmodebck":{
+    "message":"Background color:",
+    "description":"Background color:"
+  },
+  "titelnightmodetxt":{
+    "message":"Text color:",
+    "description":"Text color:"
+  },
+  "desdynamicsmoke":{
+    "message":"Smoke",
+    "description":"Smoke"
+  },
+  "desdynamicdotscolor":{
+    "message":"Color Dots",
+    "description":"Color Dots"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"星星數",
+    "description":"星星數"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is also available for your mobile device.",
+    "description":"Turn Off the Lights is also available for your mobile device."
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame.",
+    "description":"Shows the full 360 degrees YouTube video in one frame."
   }
 }

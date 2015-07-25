@@ -76,8 +76,8 @@
     "description":"Normaal gebruik (schakelt de onderstaande muisinstellingen uit)"
   },
   "desplaylist":{
-    "message":"De YouTube-afspeellijst op de YouTube-website tonen",
-    "description":"De YouTube-afspeellijst op de YouTube-website tonen"
+    "message":"YouTube-afspeellijst op de YouTube-website tonen",
+    "description":"YouTube-afspeellijst op de YouTube-website tonen"
   },
   "desambilightfixcolor":{
     "message":"Een vaste kleur:",
@@ -168,8 +168,8 @@
     "description":"Dynamische achtergrond"
   },
   "deslikebutton":{
-    "message":"De leuk- en niet-leuk-knoppen van YouTube voor deze video tonen",
-    "description":"De leuk- en niet-leuk-knoppen van YouTube voor deze video tonen"
+    "message":"Leuk- en niet-leuk-knoppen van YouTube voor de video tonen",
+    "description":"Leuk- en niet-leuk-knoppen van YouTube voor de video tonen"
   },
   "titelmouse":{
     "message":"Muis",
@@ -224,8 +224,8 @@
     "description":"om het scherm te verduisteren (ondoorzichtigheid verhogen)"
   },
   "dessharebutton":{
-    "message":"De deelknop van YouTube voor deze video tonen",
-    "description":"De deelknop van YouTube voor deze video tonen"
+    "message":"Deelknop van YouTube voor de video tonen",
+    "description":"Deelknop van YouTube voor de video tonen"
   },
   "shortcutbright":{
     "message":"om het scherm helderder te maken (ondoorzichtigheid verlagen)",
@@ -264,8 +264,8 @@
     "description":"Turn Off the Lights"
   },
   "desaddvideobutton":{
-    "message":"De toevoegknop van deze YouTube-video tonen",
-    "description":"De toevoegknop van deze YouTube-video tonen"
+    "message":"Toevoegknop van de YouTube-video tonen",
+    "description":"Toevoegknop van de YouTube-video tonen"
   },
   "shortcuteyeprotection":{
     "message":"om de oogbeschermingsfunctie in\/uit te schakelen",
@@ -284,8 +284,8 @@
     "description":"Automatisch instellen op deze resolutie:"
   },
   "desambilightrangespreadradius":{
-    "message":"Een positieve waarde vergroot de afmetingen van de schaduw, een negatieve waarde verkleint deze.",
-    "description":"Een positieve waarde vergroot de afmetingen van de schaduw, een negatieve waarde verkleint deze."
+    "message":"Positieve waarden vergroten de afmetingen van de schaduw, negatieve waarden verkleinen deze.",
+    "description":"Positieve waarden vergroten de afmetingen van de schaduw, negatieve waarden verkleinen deze."
   },
   "titelon":{
     "message":"Aan",
@@ -308,8 +308,8 @@
     "description":"Schermbeveiligingstijd bevestigen"
   },
   "deslikebar":{
-    "message":"De leuk-\/niet-leuk-balk onder YouTube video's tonen",
-    "description":"De leuk-\/niet-leuk-balk onder YouTube video's tonen"
+    "message":"Leuk-\/niet-leuk-balk onder YouTube-video's tonen",
+    "description":"Leuk-\/niet-leuk-balk onder YouTube-video's tonen"
   },
   "titelautoplay":{
     "message":"Automatisch afspelen",
@@ -352,8 +352,8 @@
     "description":"Meer tonen"
   },
   "desviewcount":{
-    "message":"Het aantal weergaven voor deze video tonen",
-    "description":"Het aantal weergaven voor deze video tonen"
+    "message":"Aantal weergaven voor de video tonen",
+    "description":"Aantal weergaven voor de video tonen"
   },
   "titelautowidthyoutube":{
     "message":"Automatisch de YouTube-speler op de grotere afmetingen instellen",
@@ -388,16 +388,16 @@
     "description":"UIT"
   },
   "deshead":{
-    "message":"De balk of naam van het YouTube-kanaal tonen",
-    "description":"De balk of naam van het YouTube-kanaal tonen"
+    "message":"Balk of naam van het YouTube-kanaal tonen",
+    "description":"Balk of naam van het YouTube-kanaal tonen"
   },
   "shortcutsavingopacity":{
     "message":"om deze ondoorzichtigheidswaarde op te slaan",
     "description":"om deze ondoorzichtigheidswaarde op te slaan"
   },
   "desinfobar":{
-    "message":"De beschrijvingsgegevens over de video tonen",
-    "description":"De beschrijvingsgegevens over de video tonen"
+    "message":"Beschrijvingsgegevens over de video tonen",
+    "description":"Beschrijvingsgegevens over de video tonen"
   },
   "titellamp":{
     "message":"Lamp",
@@ -496,8 +496,8 @@
     "description":"Waarschuwing!"
   },
   "deseyetimesaver":{
-    "message":"Als een pagina gedurende de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), wordt deze automatisch donker.",
-    "description":"Als een pagina gedurende de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), wordt deze automatisch donker."
+    "message":"Als een pagina voor de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), wordt deze automatisch donker.",
+    "description":"Als een pagina voor de hieronder opgegeven tijd inactief is (geen muis- of toetsenbordinvoer), wordt deze automatisch donker."
   },
   "titelsuggestions":{
     "message":"Suggesties",
@@ -508,8 +508,8 @@
     "description":"Geavanceerde opties"
   },
   "dessuggestions":{
-    "message":"De suggesties van de YouTube-website tonen",
-    "description":"De suggesties van de YouTube-website tonen"
+    "message":"Suggesties van de YouTube-website tonen",
+    "description":"Suggesties van de YouTube-website tonen"
   },
   "titelflash":{
     "message":"Flash-detectie",
@@ -552,8 +552,8 @@
     "description":"Ongeldig afbeeldingsbestand!"
   },
   "desvideoheadline":{
-    "message":"De kleur van de videotitel tonen en omkeren",
-    "description":"De kleur van de videotitel tonen en omkeren"
+    "message":"Kleur van de videotitel tonen en omkeren",
+    "description":"Kleur van de videotitel tonen en omkeren"
   },
   "desrememberpage":{
     "message":"Geen herinneringspagina tonen",
@@ -612,8 +612,8 @@
     "description":"Schermbeveiliging:"
   },
   "hoveroptiondyn5":{
-    "message":"door vliegen",
-    "description":"door vliegen"
+    "message":"vliegeffect",
+    "description":"vliegeffect"
   },
   "pagestillloading":{
     "message":"Wordt de pagina nog steeds geladen?",
@@ -628,8 +628,8 @@
     "description":"Easter Eggs"
   },
   "textfoot":{
-    "message":"Deze software valt onder de CC-GNU GPL-licentie. Als u een kopie van deze licentie wilt zien, bezoek dan",
-    "description":"Deze software valt onder de CC-GNU GPL-licentie. Als u een kopie van deze licentie wilt zien, bezoek dan"
+    "message":"Deze software valt onder de CC-GNU GPL-licentie. Als u een kopie van deze licentie wilt zien, bekijk dan de",
+    "description":"Deze software valt onder de CC-GNU GPL-licentie. Als u een kopie van deze licentie wilt zien, bekijk dan de"
   },
   "left":{
     "message":"Links:",
@@ -880,16 +880,16 @@
     "description":"Sommige rechten voorbehouden."
   },
   "desbrowserextension":{
-    "message":"-browserextensie",
-    "description":"-browserextensie"
+    "message":"(browserextensie)",
+    "description":"(browserextensie)"
   },
   "desapitext":{
     "message":"Wiki-API voor websiteontwikkelaar",
     "description":"Wiki-API voor websiteontwikkelaar"
   },
   "desbrowsertheme":{
-    "message":"-browserthema",
-    "description":"-browserthema"
+    "message":"(browserthema)",
+    "description":"(browserthema)"
   },
   "desproject":{
     "message":"project",
@@ -968,8 +968,8 @@
     "description":"De app nu downloaden"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in of uit op webinhoud via de zoomknop voor comfortabeler lezen.",
-    "description":"Zoom in of uit op webinhoud via de zoomknop voor comfortabeler lezen."
+    "message":"Zoomt in of uit op webinhoud via de zoomknop voor comfortabeler lezen.",
+    "description":"Zoomt in of uit op webinhoud via de zoomknop voor comfortabeler lezen."
   },
   "titeldownloadupgradepropermenubar":{
     "message":"Voegt de zwarte menubalk op de Google-website weer toe.",
@@ -1000,8 +1000,8 @@
     "description":"Linksonder"
   },
   "nmcustom":{
-    "message":"Aanpasbare coördinaten",
-    "description":"Aanpasbare coördinaten"
+    "message":"Aangepast (klik, houd ingedrukt en verplaats de schakelaar naar de gewenste schermlocatie)",
+    "description":"Aangepast (klik, houd ingedrukt en verplaats de schakelaar naar de gewenste schermlocatie)"
   },
   "desnighthover":{
     "message":"Een transparante schakelaar op de webpagina tonen",
@@ -1054,5 +1054,41 @@
   "flashembedobject":{
     "message":"Ondersteunt: <object>, <embed>, <applet>, <iframe>.",
     "description":"Ondersteunt: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Achtergrondkleur:",
+    "description":"Achtergrondkleur:"
+  },
+  "titelnightmodetxt":{
+    "message":"Tekstkleur:",
+    "description":"Tekstkleur:"
+  },
+  "desdynamicsmoke":{
+    "message":"Rook",
+    "description":"Rook"
+  },
+  "desdynamicdotscolor":{
+    "message":"Gekleurde stippen",
+    "description":"Gekleurde stippen"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulatie",
+    "description":"Triangulatie"
+  },
+  "desdynamicstars":{
+    "message":"Sterren",
+    "description":"Sterren"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is ook beschikbaar voor uw mobiele apparaat.",
+    "description":"Turn Off the Lights is ook beschikbaar voor uw mobiele apparaat."
+  },
+  "titel360youtube":{
+    "message":"Toont de volledige 360 graden YouTube-video in één kader.",
+    "description":"Toont de volledige 360 graden YouTube-video in één kader."
   }
 }
