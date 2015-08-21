@@ -969,7 +969,7 @@ observeDOM( document.getElementById('content') ,function(){
 
 // Night Theme feature
 var sun = true;
-var oldbackgroundImage = document.body.style.backgroundImage
+var oldbackgroundImage = document.body.style.backgroundImage;
 var oldbackgroundColor = document.body.style.backgroundColor;
 var oldbackground = document.body.style.background;
 var oldtextcolor = document.body.style.color;

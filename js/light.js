@@ -121,6 +121,9 @@ var youtubedebuginfopanel = document.querySelectorAll('div.html5-video-info-pane
 for(var i = 0; i < youtubedebuginfopanel.length; i++ ){youtubedebuginfopanel[i].style.zIndex = "1001";}
 var youtubedebugpanel = document.querySelectorAll('div.ytp-dialog-holder');
 for(var i = 0; i < youtubedebugpanel.length; i++ ){youtubedebugpanel[i].style.zIndex = "1001";}
+// 21 august 2015
+var youtubedebugcontextmenu = document.querySelectorAll('div.ytp-contextmenu');
+for(var i = 0; i < youtubedebugcontextmenu.length; i++ ){youtubedebugcontextmenu[i].style.zIndex = "1001";}
 
 // YouTube video OK
 var watch7 = $('watch7');

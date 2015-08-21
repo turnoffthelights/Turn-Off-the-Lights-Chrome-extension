@@ -76,8 +76,8 @@
     "description":"Normal use (disables the mouse settings below)"
   },
   "desplaylist":{
-    "message":"Show the YouTube playlist on the YouTube website.",
-    "description":"Show the YouTube playlist on the YouTube website."
+    "message":"Show the YouTube playlist on the YouTube website",
+    "description":"Show the YouTube playlist on the YouTube website"
   },
   "desambilightfixcolor":{
     "message":"Only one color:",
@@ -168,8 +168,8 @@
     "description":"Dynamic Background"
   },
   "deslikebutton":{
-    "message":"Show the like & dislike buttons of YouTube for the video.",
-    "description":"Show the like & dislike buttons of YouTube for the video."
+    "message":"Show the like & dislike buttons of YouTube for the video",
+    "description":"Show the like & dislike buttons of YouTube for the video"
   },
   "titelmouse":{
     "message":"Mouse",
@@ -180,16 +180,16 @@
     "description":"Show less"
   },
   "desshortcutlight":{
-    "message":"Enable the keyboard shortcuts below.",
-    "description":"Enable the keyboard shortcuts below."
+    "message":"Enable the keyboard shortcuts below",
+    "description":"Enable the keyboard shortcuts below"
   },
   "titelinfobar":{
     "message":"Infobar",
     "description":"Infobar"
   },
   "descontextmenus":{
-    "message":"Show the context menu to focus an item.",
-    "description":"Show the context menu to focus an item."
+    "message":"Show the context menu to focus an item",
+    "description":"Show the context menu to focus an item"
   },
   "titelcontextmenus":{
     "message":"Context Menu",
@@ -224,8 +224,8 @@
     "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
-    "message":"Show the share button of YouTube for the video.",
-    "description":"Show the share button of YouTube for the video."
+    "message":"Show the share button of YouTube for the video",
+    "description":"Show the share button of YouTube for the video"
   },
   "shortcutbright":{
     "message":"to brighten the screen (decrease opacity)",
@@ -252,8 +252,8 @@
     "description":"Screen"
   },
   "desflash":{
-    "message":"Show all Flash objects.",
-    "description":"Show all Flash objects."
+    "message":"Show all Flash objects",
+    "description":"Show all Flash objects"
   },
   "titelhead":{
     "message":"Channel",
@@ -264,8 +264,8 @@
     "description":"Turn Off the Lights"
   },
   "desaddvideobutton":{
-    "message":"Show the add button from the YouTube video.",
-    "description":"Show the add button from the YouTube video."
+    "message":"Show the add button from the YouTube video",
+    "description":"Show the add button from the YouTube video"
   },
   "shortcuteyeprotection":{
     "message":"to enable\/disable the eye protection feature",
@@ -308,8 +308,8 @@
     "description":"Confirm Screen Saver Time"
   },
   "deslikebar":{
-    "message":"Show the like\/dislike bar under YouTube videos.",
-    "description":"Show the like\/dislike bar under YouTube videos."
+    "message":"Show the like\/dislike bar under YouTube videos",
+    "description":"Show the like\/dislike bar under YouTube videos"
   },
   "titelautoplay":{
     "message":"Autoplay",
@@ -352,12 +352,12 @@
     "description":"Show more"
   },
   "desviewcount":{
-    "message":"Show the number of view for the video.",
-    "description":"Show the number of view for the video."
+    "message":"Show the number of views for the video",
+    "description":"Show the number of views for the video"
   },
   "titelautowidthyoutube":{
-    "message":"Automatically set the YouTube player to the larger size.",
-    "description":"Automatically set the YouTube player to the larger size."
+    "message":"Automatically set the YouTube player to the larger size",
+    "description":"Automatically set the YouTube player to the larger size"
   },
   "desconfirmtime":{
     "message":"Confirm time",
@@ -372,8 +372,8 @@
     "description":"Wrong password, please try again."
   },
   "titelsyncbrowser":{
-    "message":"Sync the extension settings with your other browser.",
-    "description":"Sync the extension settings with your other browser."
+    "message":"Sync the extension settings with your other browser",
+    "description":"Sync the extension settings with your other browser"
   },
   "deletebutton":{
     "message":"Delete",
@@ -388,16 +388,16 @@
     "description":"OFF"
   },
   "deshead":{
-    "message":"Show the YouTube Channel bar or the name.",
-    "description":"Show the YouTube Channel bar or the name."
+    "message":"Show the YouTube Channel bar or the name",
+    "description":"Show the YouTube Channel bar or the name"
   },
   "shortcutsavingopacity":{
     "message":"to save this opacity value",
     "description":"to save this opacity value"
   },
   "desinfobar":{
-    "message":"Show the description information about the video.",
-    "description":"Show the description information about the video."
+    "message":"Show the description information about the video",
+    "description":"Show the description information about the video"
   },
   "titellamp":{
     "message":"Bulb",
@@ -488,8 +488,8 @@
     "description":"Friendly Reminder..."
   },
   "desfadein":{
-    "message":"Show the fade in effect.",
-    "description":"Show the fade in effect."
+    "message":"Show the fade in effect",
+    "description":"Show the fade in effect"
   },
   "warning":{
     "message":"Warning!",
@@ -508,16 +508,16 @@
     "description":"Advanced Options"
   },
   "dessuggestions":{
-    "message":"Show the suggestions of the YouTube website.",
-    "description":"Show the suggestions of the YouTube website."
+    "message":"Show the suggestions of the YouTube website",
+    "description":"Show the suggestions of the YouTube website"
   },
   "titelflash":{
     "message":"Flash Detection",
     "description":"Flash Detection"
   },
   "desambilight":{
-    "message":"Show you the atmosphere lighting effect of the current playing video.",
-    "description":"Show you the atmosphere lighting effect of the current playing video."
+    "message":"Show you the atmosphere lighting effect of the current playing video",
+    "description":"Show you the atmosphere lighting effect of the current playing video"
   },
   "productshare":{
     "message":"Gadgets",
@@ -544,16 +544,16 @@
     "description":"Show all Flash objects, skipping the URL filter. This will fix problems with some video players being hidden, but will also display ads."
   },
   "desfadeout":{
-    "message":"Show the fade out effect.",
-    "description":"Show the fade out effect."
+    "message":"Show the fade out effect",
+    "description":"Show the fade out effect"
   },
   "optionwrongimg":{
     "message":"Invalid image file!",
     "description":"Invalid image file!"
   },
   "desvideoheadline":{
-    "message":"Show and invert the color of the video title.",
-    "description":"Show and invert the color of the video title."
+    "message":"Show and invert the color of the video title",
+    "description":"Show and invert the color of the video title"
   },
   "desrememberpage":{
     "message":"Do not show reminder page",
@@ -572,8 +572,8 @@
     "description":"Opacity"
   },
   "titelqualityyoutube":{
-    "message":"Automatically set the quality of YouTube videos.",
-    "description":"Automatically set the quality of YouTube videos."
+    "message":"Automatically set the quality of YouTube videos",
+    "description":"Automatically set the quality of YouTube videos"
   },
   "shortcutopacity":{
     "message":"to restore to the set darkness (opacity) setting",
@@ -640,8 +640,8 @@
     "description":"Night Mode"
   },
   "desnighttheme":{
-    "message":"Show the night switch button below the web page to make the page dark or light.",
-    "description":"Show the night switch button below the web page to make the page dark or light."
+    "message":"Show the night switch button below the web page to make the page dark or light",
+    "description":"Show the night switch button below the web page to make the page dark or light"
   },
   "nightoptions":{
     "message":"Night Mode",
@@ -744,8 +744,8 @@
     "description":"How does it work?"
   },
   "step1description":{
-    "message":"Enable the Camera Motion feature.",
-    "description":"Enable the Camera Motion feature."
+    "message":"Enable the Camera Motion feature",
+    "description":"Enable the Camera Motion feature"
   },
   "step2description":{
     "message":"Move your hand (or fist) from the top to bottom.",
@@ -1032,8 +1032,8 @@
     "description":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
   },
   "titeleyewhitelist":{
     "message":"Whitelist",
@@ -1088,7 +1088,7 @@
     "description":"Turn Off the Lights is also available for your mobile device."
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame.",
-    "description":"Shows the full 360 degrees YouTube video in one frame."
+    "message":"Shows the full 360 degrees YouTube video in one frame",
+    "description":"Shows the full 360 degrees YouTube video in one frame"
   }  
 }
