@@ -968,8 +968,8 @@
     "description":"Scarica ora l'app"
   },
   "titeldownloadupgradezoom":{
-    "message":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura più confortevole.",
-    "description":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura più confortevole."
+    "message":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura migliore.",
+    "description":"Ingrandisci o riduci i contenuti web utilizzando il pulsante zoom per una lettura migliore."
   },
   "titeldownloadupgradepropermenubar":{
     "message":"Aggiunge nuovamente la barra nera al sito web di Google.",
@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Mostra i video di YouTube a 360 gradi in una sola finestra.",
     "description":"Mostra i video di YouTube a 360 gradi in una sola finestra."
+  },
+  "titelvideotool":{
+    "message":"Barra strumenti dei video",
+    "description":"Barra strumenti dei video"
+  },
+  "desvideotool":{
+    "message":"Mostra di seguito nel tuo schermo la barra degli strumenti per personalizzare il riproduttore dei video attuale",
+    "description":"Mostra di seguito nel tuo schermo la barra degli strumenti per personalizzare il riproduttore dei video attuale"
+  },
+  "vtoolfullscreen":{
+    "message":"Pulsante per impostare il lettore video a finestra intera",
+    "description":"Pulsante per impostare il lettore video a finestra intera"
+  },
+  "vtoolfilter":{
+    "message":"Pulsante per aggiungere un filtro nel lettore video",
+    "description":"Pulsante per aggiungere un filtro nel lettore video"
+  },
+  "vtoolreplay":{
+    "message":"Pulsante per riavviare il lettore video",
+    "description":"Pulsante per riavviare il lettore video"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"scala di grigi",
+    "description":"scala di grigi"
+  },
+  "titelvideotoolsepia":{
+    "message":"seppia",
+    "description":"seppia"
+  },
+  "titelvideotoolinvert":{
+    "message":"inverti",
+    "description":"inverti"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrasto",
+    "description":"contrasto"
+  },
+  "titelvideotoolsaturate":{
+    "message":"satura",
+    "description":"satura"
+  },
+  "titelvideotoolhueroration":{
+    "message":"rotazione colore di 90°",
+    "description":"rotazione colore di 90°"
+  },
+  "titelvideotoolbrightness":{
+    "message":"luminosità 50%",
+    "description":"luminosità 50%"
+  },
+  "titelvideotoolnormal":{
+    "message":"normale",
+    "description":"normale"
+  },
+  "titelvideotoollike":{
+    "message":"Mi piace",
+    "description":"Mi piace"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Iscriviti",
+    "description":"Iscriviti"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Ripet",
+    "description":"Ripet"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filtro",
+    "description":"Filtro"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Finestra intera",
+    "description":"Finestra intera"
+  },
+  "titelreflection":{
+    "message":"Riflesso",
+    "description":"Riflesso"
+  },
+  "desreflection":{
+    "message":"Mostra il riflesso in tutti i video",
+    "description":"Mostra il riflesso in tutti i video"
+  },
+  "desvideotoolonly":{
+    "message":"Attiva la barra degli strumenti video solo sui seguenti siti:",
+    "description":"Attiva la barra degli strumenti video solo sui seguenti siti:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Lista con permessi",
+    "description":"Lista con permessi"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Lista bloccati",
+    "description":"Lista bloccati"
   }
 }

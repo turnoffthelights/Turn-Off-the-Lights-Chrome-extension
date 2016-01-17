@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Afficher les vidéos YouTube 360 degrés en une seule image.",
     "description":"Afficher les vidéos YouTube 360 degrés en une seule image."
+  },
+  "titelvideotool":{
+    "message":"Barre d'outils vidéo",
+    "description":"Barre d'outils vidéo"
+  },
+  "desvideotool":{
+    "message":"Montrer, en dessous de votre écran, la barre d'outils pour personnaliser le lecteur vidéo actuel",
+    "description":"Montrer, en dessous de votre écran, la barre d'outils pour personnaliser le lecteur vidéo actuel"
+  },
+  "vtoolfullscreen":{
+    "message":"Bouton pour régler le lecteur vidéo à la taille de la fenêtre entière",
+    "description":"Bouton pour régler le lecteur vidéo à la taille de la fenêtre entière"
+  },
+  "vtoolfilter":{
+    "message":"Bouton pour ajouter un filtre au lecteur vidéo",
+    "description":"Bouton pour ajouter un filtre au lecteur vidéo"
+  },
+  "vtoolreplay":{
+    "message":"Bouton pour rejouer le lecteur vidéo",
+    "description":"Bouton pour rejouer le lecteur vidéo"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"niveaux de gris",
+    "description":"niveaux de gris"
+  },
+  "titelvideotoolsepia":{
+    "message":"sépia",
+    "description":"sépia"
+  },
+  "titelvideotoolinvert":{
+    "message":"inverser",
+    "description":"inverser"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contraster",
+    "description":"contraster"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturer",
+    "description":"saturer"
+  },
+  "titelvideotoolhueroration":{
+    "message":"rotation 90° de la teinte",
+    "description":"rotation 90° de la teinte"
+  },
+  "titelvideotoolbrightness":{
+    "message":"50 % de luminosité",
+    "description":"50 % de luminosité"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"J'aime",
+    "description":"J'aime"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Souscrire",
+    "description":"Souscrire"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Répéter ",
+    "description":"Répéter "
+  },
+  "titelvideotoolfilter":{
+    "message":"Filtre",
+    "description":"Filtre"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Plein écran",
+    "description":"Plein écran"
+  },
+  "titelreflection":{
+    "message":"Effet miroir",
+    "description":"Effet miroir"
+  },
+  "desreflection":{
+    "message":"Montrer l'effet miroir sur toutes les vidéos",
+    "description":"Montrer l'effet miroir sur toutes les vidéos"
+  },
+  "desvideotoolonly":{
+    "message":"Activer la barre d'outils vidéo uniquement sur les sites suivants :",
+    "description":"Activer la barre d'outils vidéo uniquement sur les sites suivants :"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Liste blanche",
+    "description":"Liste blanche"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Liste noire",
+    "description":"Liste noire"
   }
 }

@@ -8,12 +8,12 @@
     "description":"Taustapilt"
   },
   "shortcutalllights":{
-    "message":"lülitab tuled sisse\/välja kõikidel avatud vahekaartidel.",
-    "description":"lülitab tuled sisse\/välja kõikidel avatud vahekaartidel."
+    "message":"lülitab valgustuse sisse\/välja kõikidel lahtiolevatel vahelehtedel",
+    "description":"lülitab valgustuse sisse\/välja kõikidel lahtiolevatel vahelehtedel"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Viimase versiooni kontroll",
+    "description":"Viimase versiooni kontroll"
   },
   "visualeffects":{
     "message":"Visuaalsed efektid",
@@ -32,8 +32,8 @@
     "description":"Like tulp"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Lubage hüperlinkide kasutamine kui ekraan on tumendatud",
+    "description":"Lubage hüperlinkide kasutamine kui ekraan on tumendatud"
   },
   "desambilight4color":{
     "message":"4 valitud värvi ümber video:",
@@ -56,16 +56,16 @@
     "description":"Silmade kaitse"
   },
   "titelcinemaontop":{
-    "message":"Filmiteatri režiim: see näitab 'tuled maha' kihti ainult akna ülaosas.",
-    "description":"Filmiteatri režiim: see näitab 'tuled maha' kihti ainult akna ülaosas."
+    "message":"Kinoreziim: kuvab 'tuled maha' kihti ainult akna ülaosas",
+    "description":"Kinoreziim: kuvab 'tuled maha' kihti ainult akna ülaosas"
   },
   "desmousespotlightc":{
     "message":"Kui tuled on väljas, saad sa valida ala, millele keskenduda.",
     "description":"Kui tuled on väljas, saad sa valida ala, millele keskenduda."
   },
   "titelrememberpage":{
-    "message":"Mäleta lehte",
-    "description":"Mäleta lehte"
+    "message":"Meeldetuletuse leht",
+    "description":"Meeldetuletuse leht"
   },
   "desmousespotlighta":{
     "message":"Kui tuli on kustus, näita hiire ümbrust",
@@ -100,8 +100,8 @@
     "description":"Mis võimaldab silmade kaitse lülitab automaatselt \"Automaatne Start\" funktsioon."
   },
   "skipremember":{
-    "message":"Jäta see ja nüüd suvand lehekülje avamine",
-    "description":"Jäta see ja nüüd suvand lehekülje avamine"
+    "message":"Jäta see vahele ja ava seadete leht",
+    "description":"Jäta see vahele ja ava seadete leht"
   },
   "optiontimesaved":{
     "message":"Aeg edukalt salvestatud!",
@@ -144,16 +144,16 @@
     "description":"Kosmos"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"T klahvi vajutades saad lisada tumedale kihile teatrikardina",
+    "description":"T klahvi vajutades saad lisada tumedale kihile teatrikardina"
   },
   "settings":{
     "message":"Seaded",
     "description":"Seaded"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Kohtvalgusti läbimõõt:",
+    "description":"Kohtvalgusti läbimõõt:"
   },
   "titelsync":{
     "message":"Sünkroonimine",
@@ -212,24 +212,24 @@
     "description":"Sisestage parool allolevasse kasti:"
   },
   "titelblurradius":{
-    "message":"Hägusus",
-    "description":"Hägusus"
+    "message":"Hägustamise raadius:",
+    "description":"Hägustamise raadius:"
   },
   "version":{
     "message":"Versioon",
     "description":"Versiooni number tekst"
   },
   "shortcutdark":{
-    "message":"pimestama ekraani (kasv läbipaistmatus).",
-    "description":"pimestama ekraani (kasv läbipaistmatus)."
+    "message":"ekraani tumendamiseks (läbipaistmatuse suurendamiseks)",
+    "description":"ekraani tumendamiseks (läbipaistmatuse suurendamiseks)"
   },
   "dessharebutton":{
     "message":"Näita Youtube'i jagamisnuppe selle video puhul.",
     "description":"Näita Youtube'i jagamisnuppe selle video puhul."
   },
   "shortcutbright":{
-    "message":"heledaks ekraan (vähendada läbipaistmatus).",
-    "description":"heledaks ekraan (vähendada läbipaistmatus)."
+    "message":"ekraani heledaks muutmiseks (vähenda läbipaistmatust)",
+    "description":"ekraani heledaks muutmiseks (vähenda läbipaistmatust)"
   },
   "titelalllightsoff":{
     "message":"Kõikide vahekaartide avamine",
@@ -268,8 +268,8 @@
     "description":"Näita selle Youtube'i video lisamisnuppu."
   },
   "shortcuteyeprotection":{
-    "message":"Saate lubada või keelata silmade kaitse funktsiooni.",
-    "description":"Saate lubada või keelata silmade kaitse funktsiooni."
+    "message":"luba\/keela silmade kaitse funktsioon",
+    "description":"luba\/keela silmade kaitse funktsioon"
   },
   "titelfadein":{
     "message":"Tugevneda",
@@ -296,8 +296,8 @@
     "description":"Keskendu sellele videole"
   },
   "warningtextambilight":{
-    "message":"Kui ei suuda saada videoandmete saidi turvalisuse reegli tõttu, siis see näitab valitud värviga asemel.",
-    "description":"Kui ei suuda saada videoandmete saidi turvalisuse reegli tõttu, siis see näitab valitud värviga asemel."
+    "message":"Me ei saanud veebilehelt videoandmeid turvareeglite tõttu, kasutatakse valitud värvi.",
+    "description":"Me ei saanud veebilehelt videoandmeid turvareeglite tõttu, kasutatakse valitud värvi."
   },
   "desdynamiccloud":{
     "message":"Animeeritud pilved",
@@ -320,16 +320,16 @@
     "description":"üleval"
   },
   "titelspreadradius":{
-    "message":"Leviku ulatus",
-    "description":"Leviku ulatus"
+    "message":"Leviku raadius:",
+    "description":"Leviku raadius:"
   },
   "installadblocker":{
-    "message":"Kasutage reklaami blokeeriva laiendusega.",
-    "description":"Kasutage reklaami blokeeriva laiendusega."
+    "message":"Kui sa ei taha reklaame näha, kasuta adblockeri laiendust.",
+    "description":"Kui sa ei taha reklaame näha, kasuta adblockeri laiendust."
   },
   "titelsharebutton":{
-    "message":"Jagamisnupud",
-    "description":"Jagamisnupud"
+    "message":"Jagamisnupp",
+    "description":"Jagamisnupp"
   },
   "titelcolor":{
     "message":"Värv",
@@ -408,8 +408,8 @@
     "description":"Võta värv videost"
   },
   "showremember":{
-    "message":"ei kuva uuesti lehte meeles valik lehe avamisel",
-    "description":"ei kuva uuesti lehte meeles valik lehe avamisel"
+    "message":"Ära näita seda meeldetuletuse lehte uuesti kui ma Seaded avan",
+    "description":"Ära näita seda meeldetuletuse lehte uuesti kui ma Seaded avan"
   },
   "donatepromotext":{
     "message":"Kui saate teha annetuse mistahes summas, ma hindan seda tohutult!",
@@ -424,8 +424,8 @@
     "description":"Vihmapiisad"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Lambi nupu vajutamine lülitab kõikide vahekaartide valgustuse sisse\/välja",
+    "description":"Lambi nupu vajutamine lülitab kõikide vahekaartide valgustuse sisse\/välja"
   },
   "optionecosaversaved":{
     "message":"Sekundid edukalt salvestatud!",
@@ -436,20 +436,20 @@
     "description":"Hämaruse tase"
   },
   "deseyen":{
-    "message":"Tavaline kasutamine (tuled kustuvad kui klõpsate lambi ikooni).",
-    "description":"Tavaline kasutamine (tuled kustuvad kui klõpsate lambi ikooni)."
+    "message":"Tavakasutus (tuled kustuvad kui vajutad lambi ikoonil)",
+    "description":"Tavakasutus (tuled kustuvad kui vajutad lambi ikoonil)"
   },
   "enjoyshare":{
     "message":"Naudi seda laiendit ja jagada seda teistega, kes arvad, et hindavad seda.",
     "description":"Naudi seda laiendit ja jagada seda teistega, kes arvad, et hindavad seda."
   },
   "shortcuttotl":{
-    "message":"lülitab tuled sisse\/välja.",
-    "description":"lülitab tuled sisse\/välja."
+    "message":"tulede sisse\/välja lülitamiseks",
+    "description":"tulede sisse\/välja lülitamiseks"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Tumenda taust automaatselt kui avatakse veebileht",
+    "description":"Tumenda taust automaatselt kui avatakse veebileht"
   },
   "basicsettings":{
     "message":"Põhitõed",
@@ -472,8 +472,8 @@
     "description":"Sissejuhatus abi"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Tumenda taust automaatselt järgnevatel sai(dil\/tidel):",
+    "description":"Tumenda taust automaatselt järgnevatel sai(dil\/tidel):"
   },
   "titellikebutton":{
     "message":"Meeldib & ei meeldi nupud",
@@ -484,8 +484,8 @@
     "description":"pageaction ikooni"
   },
   "friendlyremember":{
-    "message":"Sõbralik mäletan...",
-    "description":"Sõbralik mäletan..."
+    "message":"Sõbralik meeldetuletus...",
+    "description":"Sõbralik meeldetuletus..."
   },
   "desfadein":{
     "message":"Näita Tugevneda mõju.",
@@ -496,8 +496,8 @@
     "description":"Hoiatus!"
   },
   "deseyetimesaver":{
-    "message":"Kui leht on passiivsed (ei ole hiirt või klaviatuuri sisestamise) allpool sätestatud korda leht automaatselt läheb tume.",
-    "description":"Kui leht on passiivsed (ei ole hiirt või klaviatuuri sisestamise) allpool sätestatud korda leht automaatselt läheb tume."
+    "message":"Kui lehekülg on passiivne (kui puudub hiire või klaviatuuri sisend) allpool määratud aega, muutub see automaatselt tumedaks.",
+    "description":"Kui lehekülg on passiivne (kui puudub hiire või klaviatuuri sisend) allpool määratud aega, muutub see automaatselt tumedaks."
   },
   "titelsuggestions":{
     "message":"Ettepanekud",
@@ -536,8 +536,8 @@
     "description":"Akvaarium"
   },
   "longdonatetext":{
-    "message":"Olen tõeliselt tänulik, kui kingi mulle selle brauseri laiendus teistele uutele kasutajatele elus hoida. Olgu $$ 1 või $$ 100, tohutult rahul teie toetust!",
-    "description":"Olen tõeliselt tänulik, kui kingi mulle selle brauseri laiendus teistele uutele kasutajatele elus hoida. Olgu $$ 1 või $$ 100, tohutult rahul teie toetust!"
+    "message":"Ma hindaksin väga seda kui sa saad annetada selle brauseri laienduse elushoimiseks. Olgu see 1$$ või 100$$, ma oleksin teie toetusega väga rahul!",
+    "description":"Ma hindaksin väga seda kui sa saad annetada selle brauseri laienduse elushoimiseks. Olgu see 1$$ või 100$$, ma oleksin teie toetusega väga rahul!"
   },
   "deshardflash":{
     "message":"Kuva kõik Flash objektid, URL filter vahele. See fikseerib probleeme mõne video mängijad on peidetud, kuid ka reklaame.",
@@ -556,8 +556,8 @@
     "description":"Näita ja pööratakse värvi video pealkiri."
   },
   "desrememberpage":{
-    "message":"Kui see suvand on lubatud, see näitab teile ei mäleta leht.",
-    "description":"Kui see suvand on lubatud, see näitab teile ei mäleta leht."
+    "message":"Ära kuva meeldetuletuse lehte",
+    "description":"Ära kuva meeldetuletuse lehte"
   },
   "description":{
     "message":"Kogu lehekülg tumeneb, nii et saate vaadata videot, justkui oleksite kinos.",
@@ -576,12 +576,12 @@
     "description":"Automaatselt seatud YouTube videod kvaliteeti."
   },
   "shortcutopacity":{
-    "message":"taastada seadmine pimedus (läbipaistmatuse) seadmine.",
-    "description":"taastada seadmine pimedus (läbipaistmatuse) seadmine."
+    "message":"et taastada hämaruse (läbipaistmatuse) seadet",
+    "description":"et taastada hämaruse (läbipaistmatuse) seadet"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Väiksemad väärtused teravustavad varju, suuremad väärtused muudavad need ähmaseks.",
+    "description":"Väiksemad väärtused teravustavad varju, suuremad väärtused muudavad need ähmaseks."
   },
   "titeladdvideobutton":{
     "message":"Lisamisnupp",
@@ -628,8 +628,8 @@
     "description":"Lihavõttemunad"
   },
   "textfoot":{
-    "message":"See tarkvara on litsentseeritud CC-GNU GPL. Et vaadata käesoleva Litsentsi koopiat, külastage",
-    "description":"See tarkvara on litsentseeritud CC-GNU GPL. Et vaadata käesoleva Litsentsi koopiat, külastage"
+    "message":"See tarkvara on litsensitud CC-GNU GPL´i alla. Litsensi koopia kuvamiseks näita",
+    "description":"See tarkvara on litsensitud CC-GNU GPL´i alla. Litsensi koopia kuvamiseks näita"
   },
   "left":{
     "message":"vasak",
@@ -716,8 +716,8 @@
     "description":"Lähtesta Turn Off the Lights seaded"
   },
   "desautoplaydelay":{
-    "message":"Kui video lõppeb valgusta taust jälle",
-    "description":"Kui video lõppeb valgusta taust jälle"
+    "message":"Lülita taustavalgus jälle sisse kui video lõppeb",
+    "description":"Lülita taustavalgus jälle sisse kui video lõppeb"
   },
   "desautoplaydelayend":{
     "message":"sekundid",
@@ -728,8 +728,8 @@
     "description":"Kaamera liikumine"
   },
   "desmotion":{
-    "message":"Luba Kaamera Liikumine, et saaksid lehte tumendada käeviipega.",
-    "description":"Luba Kaamera Liikumine, et saaksid lehte tumendada käeviipega."
+    "message":"Luba kaamera liikumine",
+    "description":"Luba kaamera liikumine"
   },
   "trymotion":{
     "message":"Proovi ise!",
@@ -749,11 +749,11 @@
   },
   "step2description":{
     "message":"Liiguta oma kätt (või rusikat) ekraani ees alt üles",
-    "description":"Liiguta oma kätt (või rusikat) ekraani ees alt üles"
+    "description":"Liiguta oma kätt (või rusikat) ekraani ees alt üles."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"Must kiht libiseb automaatselt alla.",
+    "description":"Must kiht libiseb automaatselt alla."
   },
   "desmotionChecklist":{
     "message":"Kontrollnimekiri:",
@@ -776,12 +776,12 @@
     "description":"Lineaarne"
   },
   "titelcolora":{
-    "message":"Värv A",
-    "description":"Värv A"
+    "message":"Värv A:",
+    "description":"Värv A:"
   },
   "titelcolorb":{
-    "message":"Värv B",
-    "description":"Värv B"
+    "message":"Värv B:",
+    "description":"Värv B:"
   },
   "speechoption":{
     "message":"Kõnetuvastus",
@@ -856,8 +856,8 @@
     "description":"See brauser ei toeta veel seda funktsioni :( Veendu et sul on arvutis värskeim brauseri versioon."
   },
   "titelsupportatmos":{
-    "message":"Toetab ainult HTML5 <video> ja YouTube HTML5 pleierit. See kasutab GPU-d sinu graafikakaardilt.",
-    "description":"Toetab ainult HTML5 <video> ja YouTube HTML5 pleierit. See kasutab GPU-d sinu graafikakaardilt."
+    "message":"Toetab ainult HTML5<video> ja TouTube HTML5 mängijat. See kasutab ka teie graafikakaardi protsessorit.",
+    "description":"Toetab ainult HTML5<video> ja TouTube HTML5 mängijat. See kasutab ka teie graafikakaardi protsessorit."
   },
   "titelseeonline":{
     "message":"Vaata veebist rohkem näiteid",
@@ -968,12 +968,12 @@
     "description":"Lae äpp kohe alla"
   },
   "titeldownloadupgradezoom":{
-    "message":"Veel mugavama lugemise jaoks saad kasutada veebisisu suurendamise ja vähendamise funktsiooni.",
-    "description":"Veel mugavama lugemise jaoks saad kasutada veebisisu suurendamise ja vähendamise funktsiooni."
+    "message":"Veel mugavama lugemise jaoks saad suurendusnupu abil veebilehe sisu suurendada ja vähendada.",
+    "description":"Veel mugavama lugemise jaoks saad suurendusnupu abil veebilehe sisu suurendada ja vähendada."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Pange must menüüriba Google'i lehele tagasi.",
-    "description":"Pange must menüüriba Google'i lehele tagasi."
+    "message":"Lisab musta menüüriba Google lehele tagasi.",
+    "description":"Lisab musta menüüriba Google lehele tagasi."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"See kuvab reaalajas teile börsiinfo.",
@@ -1000,8 +1000,8 @@
     "description":"All vasakul"
   },
   "nmcustom":{
-    "message":"Kohandatavad koordinaadid",
-    "description":"Kohandatavad koordinaadid"
+    "message":"Seadistatav (lohista nupp sobivasse ekraani ossa)",
+    "description":"Seadistatav (lohista nupp sobivasse ekraani ossa)"
   },
   "desnighthover":{
     "message":"Kuvab lehel läbipaistvat nuppu",
@@ -1054,5 +1054,133 @@
   "flashembedobject":{
     "message":"Toetab:<object><embed><applet><iframe>.",
     "description":"Toetab:<object><embed><applet><iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Tausta värv:",
+    "description":"Tausta värv:"
+  },
+  "titelnightmodetxt":{
+    "message":"Teksti värv:",
+    "description":"Teksti värv:"
+  },
+  "desdynamicsmoke":{
+    "message":"Suits",
+    "description":"Suits"
+  },
+  "desdynamicdotscolor":{
+    "message":"Värvilised punktid",
+    "description":"Värvilised punktid"
+  },
+  "desdynamicstorm":{
+    "message":"Torm",
+    "description":"Torm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulatsioon",
+    "description":"Triangulatsioon"
+  },
+  "desdynamicstars":{
+    "message":"Tähed",
+    "description":"Tähed"
+  },
+  "desmobileapp":{
+    "message":"Kustuta tuled ära on saadaval ka Sinu mobiiltelefonile.",
+    "description":"Kustuta tuled ära on saadaval ka Sinu mobiiltelefonile."
+  },
+  "titel360youtube":{
+    "message":"Kuvab YouTube 360 videod ühes kaadris.",
+    "description":"Kuvab YouTube 360 videod ühes kaadris."
+  },
+  "titelvideotool":{
+    "message":"Video Tool Bar",
+    "description":"Video Tool Bar"
+  },
+  "desvideotool":{
+    "message":"Show the toolbar below your screen to customize the current video player",
+    "description":"Show the toolbar below your screen to customize the current video player"
+  },
+  "vtoolfullscreen":{
+    "message":"A button to set the video player to the full window size",
+    "description":"A button to set the video player to the full window size"
+  },
+  "vtoolfilter":{
+    "message":"A button to add a filter in the current video player",
+    "description":"A button to add a filter in the current video player"
+  },
+  "vtoolreplay":{
+    "message":"A button to replay the current video player",
+    "description":"A button to replay the current video player"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grayscale",
+    "description":"grayscale"
+  },
+  "titelvideotoolsepia":{
+    "message":"seepia",
+    "description":"seepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"invert",
+    "description":"invert"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrast",
+    "description":"contrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturation",
+    "description":"saturation"
+  },
+  "titelvideotoolhueroration":{
+    "message":"hue rotation",
+    "description":"hue rotation"
+  },
+  "titelvideotoolbrightness":{
+    "message":"brightness",
+    "description":"brightness"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Like",
+    "description":"Like"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Telli",
+    "description":"Telli"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repeat",
+    "description":"Repeat"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Full window",
+    "description":"Full window"
+  },
+  "titelreflection":{
+    "message":"Reflection",
+    "description":"Reflection"
+  },
+  "desreflection":{
+    "message":"Show the reflection effect on all videos",
+    "description":"Show the reflection effect on all videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activate the Video Tool Bar only on the following site(s):",
+    "description":"Activate the Video Tool Bar only on the following site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Valgesse nimekirja",
+    "description":"Valgesse nimekirja"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Musta nimekirja",
+    "description":"Musta nimekirja"
   }
 }

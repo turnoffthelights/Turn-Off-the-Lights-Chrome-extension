@@ -412,8 +412,8 @@
     "description":"Deze herinneringspagina niet meer tonen als ik de opties open"
   },
   "donatepromotext":{
-    "message":"Als u een donatie van een willekeurig bedrag kunt doen, zou ik dat enorm waarderen!",
-    "description":"Als u een donatie van een willekeurig bedrag kunt doen, zou ik dat enorm waarderen!"
+    "message":"Als u een donatie van een willekeurig bedrag kunt doen, zouden we dat enorm waarderen!",
+    "description":"Als u een donatie van een willekeurig bedrag kunt doen, zouden we dat enorm waarderen!"
   },
   "titelblur":{
     "message":"De rest vervagen",
@@ -536,8 +536,8 @@
     "description":"Aquarium"
   },
   "longdonatetext":{
-    "message":"Ik zou het echt waarderen als u een donatie kunt doen om deze browserextensie voor andere nieuwe gebruikers in leven te houden. Of het nu €1 of €100 is, uw steun wordt enorm gewaardeerd!",
-    "description":"Ik zou het echt waarderen als u een donatie kunt doen om deze browserextensie voor andere nieuwe gebruikers in leven te houden. Of het nu €1 of €100 is, uw steun wordt enorm gewaardeerd!"
+    "message":"Ik zou het echt waarderen als u een donatie kunt doen om deze browserextensie voor andere nieuwe gebruikers in leven te houden. Of het nu € 1 of € 100 is, uw steun wordt enorm gewaardeerd!",
+    "description":"Ik zou het echt waarderen als u een donatie kunt doen om deze browserextensie voor andere nieuwe gebruikers in leven te houden. Of het nu € 1 of € 100 is, uw steun wordt enorm gewaardeerd!"
   },
   "deshardflash":{
     "message":"Alle Flash-objecten tonen, het URL-filter overslaan. Dit zal problemen met bepaalde videospelers die verborgen zijn verhelpen, maar ook advertenties weergeven.",
@@ -796,8 +796,8 @@
     "description":"Als u deze optie hebt ingeschakeld, kunt u tegen de browserlamp praten. U kunt dan de volgende opdrachten geven:"
   },
   "desspeech1command":{
-    "message":"licht uitzetten",
-    "description":"licht uitzetten"
+    "message":"turn off the lights",
+    "description":"turn off the lights"
   },
   "desspeech2command":{
     "message":"licht aanzetten",
@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Toont de volledige 360 graden YouTube-video in één kader.",
     "description":"Toont de volledige 360 graden YouTube-video in één kader."
+  },
+  "titelvideotool":{
+    "message":"Videowerkbalk",
+    "description":"Videowerkbalk"
+  },
+  "desvideotool":{
+    "message":"Werkbalk voor aanpassen van de huidige videospeler onder het scherm tonen",
+    "description":"Werkbalk voor aanpassen van de huidige videospeler onder het scherm tonen"
+  },
+  "vtoolfullscreen":{
+    "message":"Knop voor het instellen van de videospeler op volledige venstergrootte",
+    "description":"Knop voor het instellen van de videospeler op volledige venstergrootte"
+  },
+  "vtoolfilter":{
+    "message":"Knop voor het toevoegen van een filter in de videospeler",
+    "description":"Knop voor het toevoegen van een filter in de videospeler"
+  },
+  "vtoolreplay":{
+    "message":"Knop voor herhalen van de videospeler",
+    "description":"Knop voor herhalen van de videospeler"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grijswaarden",
+    "description":"grijswaarden"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"omkeren",
+    "description":"omkeren"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrast",
+    "description":"contrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"verzadiging",
+    "description":"verzadiging"
+  },
+  "titelvideotoolhueroration":{
+    "message":"tintdraaiing 90°",
+    "description":"tintdraaiing 90°"
+  },
+  "titelvideotoolbrightness":{
+    "message":"helderheid 50%",
+    "description":"helderheid 50%"
+  },
+  "titelvideotoolnormal":{
+    "message":"normaal",
+    "description":"normaal"
+  },
+  "titelvideotoollike":{
+    "message":"Leuk",
+    "description":"Leuk"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Abonneren",
+    "description":"Abonneren"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Herhalen",
+    "description":"Herhalen"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filteren",
+    "description":"Filteren"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Volledig venster",
+    "description":"Volledig venster"
+  },
+  "titelreflection":{
+    "message":"Reflectie",
+    "description":"Reflectie"
+  },
+  "desreflection":{
+    "message":"Reflectie-effect bij alle video's tonen",
+    "description":"Reflectie-effect bij alle video's tonen"
+  },
+  "desvideotoolonly":{
+    "message":"Videowerkbalk alleen op de volgende website(s) tonen:",
+    "description":"Videowerkbalk alleen op de volgende website(s) tonen:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Witte lijst",
+    "description":"Witte lijst"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Zwarte lijst",
+    "description":"Zwarte lijst"
   }
 }

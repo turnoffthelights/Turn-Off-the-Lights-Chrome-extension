@@ -1088,7 +1088,99 @@
     "description":"Turn Off the Lights也适用于您的移动设备。"
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame.",
-    "description":"Shows the full 360 degrees YouTube video in one frame."
+    "message":"Shows the full 360 degrees YouTube video in one frame",
+    "description":"Shows the full 360 degrees YouTube video in one frame"
+  },
+  "titelvideotool":{
+    "message":"视频工具栏",
+    "description":"视频工具栏"
+  },
+  "desvideotool":{
+    "message":"Show the toolbar below your screen to customize the current video player",
+    "description":"Show the toolbar below your screen to customize the current video player"
+  },
+  "vtoolfullscreen":{
+    "message":"A button to set the video player to the full window size",
+    "description":"A button to set the video player to the full window size"
+  },
+  "vtoolfilter":{
+    "message":"A button to add a filter in the current video player",
+    "description":"A button to add a filter in the current video player"
+  },
+  "vtoolreplay":{
+    "message":"A button to replay the current video player",
+    "description":"A button to replay the current video player"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"灰度",
+    "description":"灰度"
+  },
+  "titelvideotoolsepia":{
+    "message":"棕褐色",
+    "description":"棕褐色"
+  },
+  "titelvideotoolinvert":{
+    "message":"反转",
+    "description":"反转"
+  },
+  "titelvideotoolcontrast":{
+    "message":"对比度",
+    "description":"对比度"
+  },
+  "titelvideotoolsaturate":{
+    "message":"饱和度",
+    "description":"饱和度"
+  },
+  "titelvideotoolhueroration":{
+    "message":"hue rotation",
+    "description":"hue rotation"
+  },
+  "titelvideotoolbrightness":{
+    "message":"亮度",
+    "description":"亮度"
+  },
+  "titelvideotoolnormal":{
+    "message":"正常",
+    "description":"正常"
+  },
+  "titelvideotoollike":{
+    "message":"Like",
+    "description":"Like"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"订阅",
+    "description":"订阅"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repeat",
+    "description":"Repeat"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Full window",
+    "description":"Full window"
+  },
+  "titelreflection":{
+    "message":"Reflection",
+    "description":"Reflection"
+  },
+  "desreflection":{
+    "message":"Show the reflection effect on all videos",
+    "description":"Show the reflection effect on all videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activate the Video Tool Bar only on the following site(s):",
+    "description":"Activate the Video Tool Bar only on the following site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"白名单",
+    "description":"白名单"
+  },
+  "titelvideotoolblacklist":{
+    "message":"黑名单",
+    "description":"黑名单"
   }
 }

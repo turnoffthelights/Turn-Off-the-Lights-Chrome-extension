@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Показує 360-градусне відео з YouTube в одному кадрі.",
     "description":"Показує 360-градусне відео з YouTube в одному кадрі."
+  },
+  "titelvideotool":{
+    "message":"Панель відео-інструментів",
+    "description":"Панель відео-інструментів"
+  },
+  "desvideotool":{
+    "message":"Відображати панель для налаштування активного відео-програвача в нижній частині екрану",
+    "description":"Відображати панель для налаштування активного відео-програвача в нижній частині екрану"
+  },
+  "vtoolfullscreen":{
+    "message":"Кнопка для встановлення відео-плеєра в повноекранний режим",
+    "description":"Кнопка для встановлення відео-плеєра в повноекранний режим"
+  },
+  "vtoolfilter":{
+    "message":"Кнопка для додавання фільтру в програвач відео",
+    "description":"Кнопка для додавання фільтру в програвач відео"
+  },
+  "vtoolreplay":{
+    "message":"Кнопка для повтору відео в плеєрі",
+    "description":"Кнопка для повтору відео в плеєрі"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"відтінки сірого",
+    "description":"відтінки сірого"
+  },
+  "titelvideotoolsepia":{
+    "message":"сепія",
+    "description":"сепія"
+  },
+  "titelvideotoolinvert":{
+    "message":"інвертування",
+    "description":"інвертування"
+  },
+  "titelvideotoolcontrast":{
+    "message":"контраст",
+    "description":"контраст"
+  },
+  "titelvideotoolsaturate":{
+    "message":"насиченість",
+    "description":"насиченість"
+  },
+  "titelvideotoolhueroration":{
+    "message":"повернути відтінки на 90 градусів",
+    "description":"повернути відтінки на 90 градусів"
+  },
+  "titelvideotoolbrightness":{
+    "message":"яскравість 50%",
+    "description":"яскравість 50%"
+  },
+  "titelvideotoolnormal":{
+    "message":"нормально",
+    "description":"нормально"
+  },
+  "titelvideotoollike":{
+    "message":"Мені подобається",
+    "description":"Мені подобається"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Підписатися",
+    "description":"Підписатися"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Повтор",
+    "description":"Повтор"
+  },
+  "titelvideotoolfilter":{
+    "message":"Фільтр",
+    "description":"Фільтр"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"На повний екран",
+    "description":"На повний екран"
+  },
+  "titelreflection":{
+    "message":"Відображення",
+    "description":"Відображення"
+  },
+  "desreflection":{
+    "message":"Показувати ефект відображення на всіх відео",
+    "description":"Показувати ефект відображення на всіх відео"
+  },
+  "desvideotoolonly":{
+    "message":"Активувати панель відео-інструментів тільки для наступних сайтів:",
+    "description":"Активувати панель відео-інструментів тільки для наступних сайтів:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Білий список",
+    "description":"Білий список"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Чорний список",
+    "description":"Чорний список"
   }
 }

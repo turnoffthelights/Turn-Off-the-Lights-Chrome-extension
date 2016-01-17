@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Показывает 360-градусные видео с YouTube в одном кадре.",
     "description":"Показывает 360-градусные видео с YouTube в одном кадре."
+  },
+  "titelvideotool":{
+    "message":"Панель инструментов видео",
+    "description":"Панель инструментов видео"
+  },
+  "desvideotool":{
+    "message":"Отображать панель для настройки текущего видеопроигрывателя внизу экрана",
+    "description":"Отображать панель для настройки текущего видеопроигрывателя внизу экрана"
+  },
+  "vtoolfullscreen":{
+    "message":"Кнопка для установки полноэкранного режима для видеопроигрывателя",
+    "description":"Кнопка для установки полноэкранного режима для видеопроигрывателя"
+  },
+  "vtoolfilter":{
+    "message":"Кнопка для добавления фильтра видеопроигрывателя",
+    "description":"Кнопка для добавления фильтра видеопроигрывателя"
+  },
+  "vtoolreplay":{
+    "message":"Кнопка для повтора воспроизведения",
+    "description":"Кнопка для повтора воспроизведения"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"оттенки серого",
+    "description":"оттенки серого"
+  },
+  "titelvideotoolsepia":{
+    "message":"сепия",
+    "description":"сепия"
+  },
+  "titelvideotoolinvert":{
+    "message":"инверсия",
+    "description":"инверсия"
+  },
+  "titelvideotoolcontrast":{
+    "message":"контраст",
+    "description":"контраст"
+  },
+  "titelvideotoolsaturate":{
+    "message":"насыщенность",
+    "description":"насыщенность"
+  },
+  "titelvideotoolhueroration":{
+    "message":"вращение тона 90°",
+    "description":"вращение тона 90°"
+  },
+  "titelvideotoolbrightness":{
+    "message":"яркость 50%",
+    "description":"яркость 50%"
+  },
+  "titelvideotoolnormal":{
+    "message":"обычный",
+    "description":"обычный"
+  },
+  "titelvideotoollike":{
+    "message":"Мне нравится",
+    "description":"Мне нравится"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Подписаться",
+    "description":"Подписаться"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Повтор",
+    "description":"Повтор"
+  },
+  "titelvideotoolfilter":{
+    "message":"Фильтр",
+    "description":"Фильтр"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Полный экран",
+    "description":"Полный экран"
+  },
+  "titelreflection":{
+    "message":"Отражение",
+    "description":"Отражение"
+  },
+  "desreflection":{
+    "message":"Показывать эффект отражения на всех видео",
+    "description":"Показывать эффект отражения на всех видео"
+  },
+  "desvideotoolonly":{
+    "message":"Активировать панель инструментов видео только на следующих сайтах:",
+    "description":"Активировать панель инструментов видео только на следующих сайтах:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Белый список",
+    "description":"Белый список"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Чёрный список",
+    "description":"Чёрный список"
   }
 }

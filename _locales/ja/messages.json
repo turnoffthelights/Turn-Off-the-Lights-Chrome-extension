@@ -8,8 +8,8 @@
     "description":"壁紙"
   },
   "shortcutalllights":{
-    "message":"全ての開いているタブのライトのオン・オフを切り替えます",
-    "description":"全ての開いているタブのライトのオン・オフを切り替えます"
+    "message":"開いたタブすべてでライトのオン・オフを切り替え",
+    "description":"開いたタブすべてでライトのオン・オフを切り替え"
   },
   "lastchecked":{
     "message":"最新バージョンをチェックした日付：　",
@@ -20,7 +20,7 @@
     "description":"視覚効果"
   },
   "titelshortcutlight":{
-    "message":"ショートカット キー",
+    "message":"ショートカットキー",
     "description":"ショートカット キー"
   },
   "titledonatebutton":{
@@ -32,11 +32,11 @@
     "description":"「いいね!」バー"
   },
   "desmousespotlightt":{
-    "message":"画面が暗い時のハイパーリンクのクリックを有効にする",
-    "description":"画面が暗い時のハイパーリンクのクリックを有効にする"
+    "message":"画面が暗い時にハイパーリンクのクリックを有効にする",
+    "description":"画面が暗い時にハイパーリンクのクリックを有効にする"
   },
   "desambilight4color":{
-    "message":"ビデオを囲む色は4色",
+    "message":"ビデオを囲む色は4色から選択:",
     "description":"ビデオを囲む色は4色"
   },
   "lockentername":{
@@ -44,7 +44,7 @@
     "description":"パスワードを入力してください"
   },
   "desnoflash":{
-    "message":"この機能を使用しないでください。",
+    "message":"この機能は使用できません。",
     "description":"この機能は使えません。"
   },
   "desdynamicblocks":{
@@ -52,35 +52,35 @@
     "description":"ブロック"
   },
   "titeleye":{
-    "message":"眼の保護機能",
+    "message":"目の保護機能",
     "description":"眼の保護機能"
   },
   "titelcinemaontop":{
-    "message":"映画館モード: ウインドウの上に「消灯」のレイヤーが表示されます",
-    "description":"映画館モード: ウインドウの上に「消灯」のレイヤーが表示されます"
+    "message":"映画館モード: ウインドウの上部だけに「消灯」のレイヤーを表示",
+    "description":"映画館モード: ウインドウの上部だけに「消灯」のレイヤーを表示"
   },
   "desmousespotlightc":{
-    "message":"ライトがオフの場合、画像の領域を選んで表示できます。",
+    "message":"ライトがオフのとき、画面のエリアを選択して明るくする",
     "description":"ライトがオフの場合、画像の領域を選んで表示できます。"
   },
   "titelrememberpage":{
-    "message":"リマインダー ページ",
-    "description":"リマインダー ページ"
+    "message":"確認ページ",
+    "description":"確認ページ"
   },
   "desmousespotlighta":{
-    "message":"ライトがオフのとき、カーソルをスポットライトで囲みます。",
+    "message":"ライトがオフのとき、マウス カーソルにスポット ライトを当てる",
     "description":"ライトがオフのとき、カーソルをスポットライトで囲みます。"
   },
   "desmousespotlighto":{
-    "message":"通常の使い方（以下のマウス設定は無効）",
+    "message":"通常の使い方 (以下のマウス設定は無効)",
     "description":"通常の使い方（以下のマウス設定は無効）"
   },
   "desplaylist":{
-    "message":"Youtubeのプレイリストを表示する。",
+    "message":"Youtube のプレイリストを表示",
     "description":"YouTube のウェブサイトにあるプレイリストを表示します。"
   },
   "desambilightfixcolor":{
-    "message":"単色：",
+    "message":"単色:",
     "description":"単色："
   },
   "desuntil":{
@@ -100,8 +100,8 @@
     "description":"「目の保護」機能を有効にすると、「自動再生」は自動的に無効になります。"
   },
   "skipremember":{
-    "message":"これをスキップし、[オプション] ページを今すぐ開く",
-    "description":"これをスキップし、[オプション] ページを今すぐ開く"
+    "message":"スキップし、オプション ページへ移動",
+    "description":"スキップし、オプション ページへ移動"
   },
   "optiontimesaved":{
     "message":"時間の設定が完了しました ！",
@@ -136,7 +136,7 @@
     "description":"オプション ページのタイトル"
   },
   "optionpasswordsaved":{
-    "message":"パスワードの保存が完了しました！",
+    "message":"パスワードは正常に保存されました ！",
     "description":"パスワードの保存が完了しました！"
   },
   "desdynamicspace":{
@@ -144,8 +144,8 @@
     "description":"宇宙"
   },
   "deseastereggs":{
-    "message":"Tキーを押すと、暗いレイヤーに劇場の幕が追加されます",
-    "description":"Tキーを押すと、暗いレイヤーに劇場の幕が追加されます"
+    "message":"Tキーを押すと、暗いレイヤーに劇場の幕を表示",
+    "description":"Tキーを押すと、暗いレイヤーに劇場の幕を表示"
   },
   "settings":{
     "message":"設定",
@@ -160,7 +160,7 @@
     "description":"同期"
   },
   "right":{
-    "message":"右",
+    "message":"右:",
     "description":"右"
   },
   "titeldynamic":{
@@ -176,19 +176,19 @@
     "description":"マウス"
   },
   "titellessmore":{
-    "message":"非表示にする",
+    "message":"メニューを短縮",
     "description":"非表示にする"
   },
   "desshortcutlight":{
-    "message":"下記のキーボード ショートカットを有効にします。",
+    "message":"下記のキーボード ショートカットを有効にする",
     "description":"次のキーボード ショートカットを有効にします。"
   },
   "titelinfobar":{
-    "message":"情報",
+    "message":"情報バー",
     "description":"情報バー"
   },
   "descontextmenus":{
-    "message":"コンテキスト メニューのうち注目する項目を表示します。",
+    "message":"コンテキスト メニューを表示してフォーカスする項目を選択",
     "description":"コンテキスト メニューのうち注目する項目を表示します。"
   },
   "titelcontextmenus":{
@@ -201,7 +201,7 @@
   },
   "desatmosphereonly":{
     "message":"照明効果機能は、次のビデオのサイトでのみ使用します：　",
-    "description":"照明効果機能は、次のビデオのサイトでのみ使用します：　"
+    "description":"照明効果機能を有効にする動画サイトの指定:"
   },
   "recflash":{
     "message":"推奨",
@@ -212,24 +212,24 @@
     "description":"下のボックスにパスワードを入力してください："
   },
   "titelblurradius":{
-    "message":"ぼかしの半径:",
-    "description":"ぼかしの半径:"
+    "message":"ぼかしの範囲:",
+    "description":"ぼかしの範囲:"
   },
   "version":{
     "message":"バージョン",
     "description":"バージョン番号"
   },
   "shortcutdark":{
-    "message":"画面を暗くする (不透明度が増加します)",
-    "description":"画面を暗くする (不透明度が増加します)"
+    "message":"画面を暗くする (不透明度を増加)",
+    "description":"画面を暗くする (不透明度を増加)"
   },
   "dessharebutton":{
-    "message":"このビデオに YouTube の共有ボタンを表示します。",
-    "description":"このビデオに YouTube の共有ボタンを表示します。"
+    "message":"YouTube の再生画面にある共有ボタンを表示",
+    "description":"YouTube の再生画面にある共有ボタンを表示"
   },
   "shortcutbright":{
-    "message":"画面を明るくします (不透明度を減少させます)",
-    "description":"画面を明るくします (不透明度を減少させます)"
+    "message":"画面を明るくする (不透明度を減少)",
+    "description":"画面を明るくする (不透明度を減少)"
   },
   "titelalllightsoff":{
     "message":"開いたタブすべて",
@@ -244,7 +244,7 @@
     "description":"評価する"
   },
   "desautoplay":{
-    "message":"再生ボタンをクリックしてオンとオフを切り替えるたび、壁紙の暗さも切り替えます。",
+    "message":"再生ボタンを押したときに自動的に背景を暗くする",
     "description":"再生ボタンをクリックしてオンとオフを切り替えるたび、壁紙の暗さも切り替えます。"
   },
   "titelscreen":{
@@ -264,12 +264,12 @@
     "description":"Turn Off the Lights"
   },
   "desaddvideobutton":{
-    "message":"この YouTube のビデオに追加ボタンを表示します。",
-    "description":"この YouTube のビデオに追加ボタンを表示します。"
+    "message":"YouTube の再生画面にある追加ボタンを表示",
+    "description":"YouTube の再生画面にある追加ボタンを表示"
   },
   "shortcuteyeprotection":{
-    "message":"目の保護機能を有効または無効にします",
-    "description":"目の保護機能を有効または無効にします"
+    "message":"目の保護機能のオン・オフ切り替え",
+    "description":"目の保護機能のオン・オフ切り替え"
   },
   "titelfadein":{
     "message":"だんだん明るくなる",
@@ -293,11 +293,11 @@
   },
   "videotitle":{
     "message":"動画にフォーカスする",
-    "description":"このビデオにフォーカス"
+    "description":"この動画にフォーカス"
   },
   "warningtextambilight":{
-    "message":"ウェブサイトのセキュリティルールのため映像データを受信することができないとき、選択した単色が代わりに使用されます。",
-    "description":"ウェブサイトのセキュリティルールのため映像データを受信することができないとき、選択した単色が代わりに使用されます。"
+    "message":"ウェブサイトのセキュリティルールのため映像データを受信できないときは、画面はユーザ設定の単色に変わります。",
+    "description":"ウェブサイトのセキュリティルールのため映像データを受信できないときは、画面はユーザ設定の単色に変わります。"
   },
   "desdynamiccloud":{
     "message":"雲のアニメ",
@@ -320,8 +320,8 @@
     "description":"ページのトップへ"
   },
   "titelspreadradius":{
-    "message":"拡散の半径:",
-    "description":"拡散の半径:"
+    "message":"拡散の範囲:",
+    "description":"拡散の範囲:"
   },
   "installadblocker":{
     "message":"広告を表示したくない場合は、広告ブロック拡張機能を使用してください。",
@@ -352,8 +352,8 @@
     "description":"もっと見る"
   },
   "desviewcount":{
-    "message":"このビデオのビュー数を表示。",
-    "description":"このビデオのビュー数を表示。"
+    "message":"この動画のビュー数を表示",
+    "description":"この動画のビュー数を表示"
   },
   "titelautowidthyoutube":{
     "message":"自動的に YouTube プレーヤーを拡大。",
@@ -396,20 +396,20 @@
     "description":"で不透明度の値を保存"
   },
   "desinfobar":{
-    "message":"ビデオの概要を表示。",
-    "description":"ビデオの概要を表示。"
+    "message":"動画の概要を表示",
+    "description":"動画の概要を表示"
   },
   "titellamp":{
     "message":"電球",
     "description":"電球"
   },
   "desambilightvarcolor":{
-    "message":"ビデオから色を取り出します。",
-    "description":"ビデオから色を取り出します。"
+    "message":"動画から色を取る。",
+    "description":"動画から色を取る。"
   },
   "showremember":{
-    "message":"設定を開いたときにこのリマインダーページを今後表示しない",
-    "description":"設定を開いたときにこのリマインダーページを今後表示しない"
+    "message":"設定を開くたび、この確認ページを表示しない",
+    "description":"設定を開くたび、この確認ページを表示しない"
   },
   "donatepromotext":{
     "message":"寄付の金額が大きくても小さくても、あなたのサポートはとてもありがたいです。",
@@ -424,8 +424,8 @@
     "description":"雨粒"
   },
   "desalllightsoff":{
-    "message":"ランプボタンをクリックすると、全ての開いているタブのライトのオン・オフを切り替えます",
-    "description":"ランプボタンをクリックすると、全ての開いているタブのライトのオン・オフを切り替えます"
+    "message":"ランプボタンをクリックすると、開いているタブ全てのライトをオン・オフ切り替え",
+    "description":"ランプボタンをクリックすると、開いているタブ全てのライトをオン・オフ切り替え"
   },
   "optionecosaversaved":{
     "message":"秒数の保存が完了ました ！",
@@ -436,20 +436,20 @@
     "description":"暗さ調節バー"
   },
   "deseyen":{
-    "message":"通常の使用 (ランプアイコンをクリックすると、明かりが消えます)",
-    "description":"通常の使用 (ランプアイコンをクリックすると、明かりが消えます)"
+    "message":"通常の使用 (ランプアイコンをクリックすると、ライトをオフ)",
+    "description":"通常の使用 (ランプアイコンをクリックすると、ライトをオフ)"
   },
   "enjoyshare":{
     "message":"この拡張機能をお楽しみください。もしよければ、この拡張機能を喜んでくれそうな人と共有してください。",
     "description":"この拡張機能をお楽しみください。もしよければ、この拡張機能を喜んでくれそうな人と共有してください。"
   },
   "shortcuttotl":{
-    "message":"ライトをオンまたはオフで切り替える",
-    "description":"ライトをオンまたはオフで切り替える"
+    "message":"ライトのオンとオフを切り替え",
+    "description":"ライトのオンとオフを切り替え"
   },
   "deseyea":{
-    "message":"ウェブページを開くときに自動的に背景を暗くする",
-    "description":"ウェブページを開くときに自動的に背景を暗くする"
+    "message":"ウェブページを開くと自動的に背景を暗くする",
+    "description":"ウェブページを開くと自動的に背景を暗くする"
   },
   "basicsettings":{
     "message":"基本",
@@ -472,8 +472,8 @@
     "description":"TOtL ようこそガイド"
   },
   "deseyealist":{
-    "message":"自動的に次のサイトで背景を暗くする:",
-    "description":"自動的に次のサイトで背景を暗くする:"
+    "message":"自動的に背景を暗くするサイトの指定:",
+    "description":"自動的に背景を暗くするサイトの指定:"
   },
   "titellikebutton":{
     "message":"評価ボタン",
@@ -484,8 +484,8 @@
     "description":"Omnibox に電球マークを表示しない"
   },
   "friendlyremember":{
-    "message":"フレンドリーリマインダー...",
-    "description":"フレンドリーリマインダー..."
+    "message":"もしよろしければ...",
+    "description":"もしよろしければ..."
   },
   "desfadein":{
     "message":"だんだん明るくする",
@@ -496,8 +496,8 @@
     "description":"警告 ！"
   },
   "deseyetimesaver":{
-    "message":"ページがアクティブでない(マウスやキーボード入力がない)ときに、以下で指定した時間に自動的に消灯します。",
-    "description":"ページがアクティブでない(マウスやキーボード入力がない)ときに、以下で指定した時間に自動的に消灯します。"
+    "message":"ページがアクティブでない (マウスやキーボード入力がない) とき、指定した時間を過ぎると自動的にライトをオフ。",
+    "description":"ページがアクティブでない (マウスやキーボード入力がない) とき、指定した時間を過ぎると自動的にライトをオフ。"
   },
   "titelsuggestions":{
     "message":"おすすめ",
@@ -508,7 +508,7 @@
     "description":"高度なオプション"
   },
   "dessuggestions":{
-    "message":"YouTubeおすすめビデオを明るく表示する",
+    "message":"YouTubeおすすめ動画を表示",
     "description":"YouTube サイトのお勧めを表示します。"
   },
   "titelflash":{
@@ -516,8 +516,8 @@
     "description":"フラッシュを検知"
   },
   "desambilight":{
-    "message":"再生中のビデオの雰囲気照明効果を表示する",
-    "description":"再生中のビデオに照明効果を加えます。"
+    "message":"再生中のビデオの雰囲気照明効果を追加",
+    "description":"現在再生中の動画について照明効果を有効にする"
   },
   "productshare":{
     "message":"シェア",
@@ -536,12 +536,12 @@
     "description":"さかなの水槽"
   },
   "longdonatetext":{
-    "message":"他の新規ユーザーのためにこのブラウザ拡張機能を維持するため、私に寄付することができます。寄付をしてくださったら、私は心から感謝します。寄付額は $$1 または $$100 です。本当に感謝します！",
-    "description":"他の新規ユーザーのためにこのブラウザ拡張機能を維持するため、私に寄付することができます。寄付をしてくださったら、私は心から感謝します。寄付額は $$1 または $$100 です。本当に感謝します！"
+    "message":"新しく使い始める人のため、このブラウザ拡張機能を維持したいのですが、寄付をお願いできないでしょうか。 $$1 でも $$100 でもかまいません。どうぞよろしくお願いします！",
+    "description":"新しく使い始める人のため、このブラウザ拡張機能を維持したいのですが、寄付をお願いできないでしょうか。 $$1 でも $$100 でもかまいません。どうぞよろしくお願いします！"
   },
   "deshardflash":{
-    "message":"URL フィルターを無効にして、すべての Flash 画像を表示します。一部のビデオプレーヤーが非表示になる題は解決するものの、広告も表示されます。",
-    "description":"URL フィルターを無効にして、すべての Flash 画像を表示します。一部のビデオプレーヤーが非表示になる題は解決するものの、広告も表示されます。"
+    "message":"URL フィルターを無効にして、すべての Flash 画像を表示。一部のビデオプレーヤーが非表示になる問題は解決するものの、広告も表示する。",
+    "description":"URL フィルターを無効にして、すべての Flash 画像を表示。一部のビデオプレーヤーが非表示になる問題は解決するものの、広告も表示する。"
   },
   "desfadeout":{
     "message":"だんだん暗くする",
@@ -553,15 +553,15 @@
   },
   "desvideoheadline":{
     "message":"動画タイトルの色を反転する。",
-    "description":"動画のタイトル色を反転する。"
+    "description":"動画のタイトル色を反転"
   },
   "desrememberpage":{
-    "message":"リマインダーページを表示しない",
-    "description":"リマインダーページを表示しない"
+    "message":"確認ページを非表示",
+    "description":"確認ページを非表示"
   },
   "description":{
-    "message":"ページ全体が段々暗くなるため、映画館にいる気分でビデオを見ることができます。",
-    "description":"ページ全体が段々暗くなるため、映画館にいる気分でビデオを見ることができます。"
+    "message":"ページ全体がだんだん暗くなるため、映画館にいる気分でビデオを鑑賞できます。",
+    "description":"ページ全体がだんだん暗くなるため、映画館にいる気分でビデオを鑑賞できます。"
   },
   "titelviewcount":{
     "message":"ビューの数",
@@ -572,16 +572,16 @@
     "description":"不透明度"
   },
   "titelqualityyoutube":{
-    "message":"自動的に YouTube のビデオの品質を設定します。",
-    "description":"自動的に YouTube のビデオの品質を設定します。"
+    "message":"YouTube の動画の画質を自動設定",
+    "description":"YouTube の動画の画質を自動設定"
   },
   "shortcutopacity":{
-    "message":"設定をセットの暗さ (不透明度) に戻します",
-    "description":"設定をセットの暗さ (不透明度) に戻します"
+    "message":"暗さ (不透明度) の設定を初期化",
+    "description":"暗さ (不透明度) の設定を初期化"
   },
   "desambilightrangeblurradius":{
-    "message":"低い値に設定すると鮮明になり、高い値に設定するとぼやけます。",
-    "description":"低い値に設定すると鮮明になり、高い値に設定するとぼやけます。"
+    "message":"値を小さくすると画面が鮮明に、大きくするとぼやける。",
+    "description":"値を小さくすると画面が鮮明に、大きくするとぼやける。"
   },
   "titeladdvideobutton":{
     "message":"追加ボタン",
@@ -628,8 +628,8 @@
     "description":"秘密のメッセージ"
   },
   "textfoot":{
-    "message":"このソフトウェアは、CC GNU GPL の下でライセンスされています。以下で規約を公開しています。",
-    "description":"このソフトウェアは、CC GNU GPL の下でライセンスされています。以下で規約を公開しています。"
+    "message":"このソフトウェアは、CC-GNU GPL の下でライセンスされています。以下に規約を公開しています。",
+    "description":"このソフトウェアは、CC-GNU GPL の下でライセンスされています。以下に規約を公開しています。"
   },
   "left":{
     "message":"左",
@@ -668,16 +668,16 @@
     "description":"今回は新しい機能を追加しました"
   },
   "upgradecontextmessage":{
-    "message":"この拡張機能は驚くべきものになります",
-    "description":"この拡張機能は驚くべきものになります"
+    "message":"おかげでこの拡張機能はさらに向上するのです",
+    "description":"おかげでこの拡張機能はさらに向上するのです"
   },
   "upgradecontextitemta":{
     "message":"カメラの動き",
     "description":"カメラ操作モード"
   },
   "upgradecontextitemma":{
-    "message":"手を下へ動かしてライトを消す",
-    "description":"手を下へ動かしてライトを消す"
+    "message":"スワイプでライトを消す",
+    "description":"スワイプでライトを消す"
   },
   "upgradecontextitemtb":{
     "message":"音声認識",
@@ -716,8 +716,8 @@
     "description":"Turn Off the Lights を初期設定に戻す"
   },
   "desautoplaydelay":{
-    "message":"動画終了後に再度背景を明るくする",
-    "description":"動画終了後に再度背景を明るくする"
+    "message":"動画再生が終了したら、再び背景を明るくする",
+    "description":"動画再生が終了したら、再び背景を明るくする"
   },
   "desautoplaydelayend":{
     "message":"秒数",
@@ -752,8 +752,8 @@
     "description":"片手（または握った手）を画面の上から下へスワイプ。"
   },
   "step3description":{
-    "message":"黒いレイヤーを自動的にスライドする。",
-    "description":"黒いレイヤーを自動的にスライドする。"
+    "message":"暗転したレイヤーは自動的に上から下へ消える。",
+    "description":"暗転したレイヤーは自動的に上から下へ消える。"
   },
   "desmotionChecklist":{
     "message":"チェックリスト：",
@@ -776,12 +776,12 @@
     "description":"リニア"
   },
   "titelcolora":{
-    "message":"色A:",
-    "description":"色A:"
+    "message":"A色:",
+    "description":"A色:"
   },
   "titelcolorb":{
-    "message":"色B:",
-    "description":"色B:"
+    "message":"B色:",
+    "description":"B色:"
   },
   "speechoption":{
     "message":"音声認識",
@@ -804,12 +804,12 @@
     "description":"ライトをつける"
   },
   "desspeech3command":{
-    "message":"ビデオを再生",
-    "description":"ビデオを再生"
+    "message":"動画を再生",
+    "description":"動画を再生"
   },
   "desspeech4command":{
-    "message":"ビデオの一時停止",
-    "description":"ビデオの一時停止"
+    "message":"動画の一時停止",
+    "description":"動画の一時停止"
   },
   "desspeechdialect":{
     "message":"使う言語を選んでください：",
@@ -856,8 +856,8 @@
     "description":"ブラウザーは、この機能をまだサポートしていません。パソコンに最新版のブラウザーがインストールされているか、確認してください。"
   },
   "titelsupportatmos":{
-    "message":"HTML5の<video>とYouTubeのHTML5のプレーヤーのみをサポートしています。また、あなたのグラフィックカードからGPUを使用しています。",
-    "description":"HTML5の<video>とYouTubeのHTML5のプレーヤーのみをサポートしています。また、あなたのグラフィックカードからGPUを使用しています。"
+    "message":"HTML5の <video> と YouTube の HTML5 のプレーヤーのみ対応。なおグラフィックカードの GPU も利用。",
+    "description":"HTML5の <video> と YouTube の HTML5 のプレーヤーのみ対応。なおグラフィックカードの GPU も利用。"
   },
   "titelseeonline":{
     "message":"ウェブサイトでほかの例を見る",
@@ -940,44 +940,44 @@
     "description":"自動停止"
   },
   "desautostop":{
-    "message":"Web ページを開いたときに自動的にビデオの再生を停止します。",
-    "description":"Web ページを開いたときに自動的にビデオの再生を停止します。"
+    "message":"Web ページを開いたときに自動的にビデオ再生を停止",
+    "description":"Web ページを開いたときに自動的にビデオ再生を停止"
   },
   "areyouhappy":{
-    "message":"Turn Off the Lightsに満足していますか？",
-    "description":"Turn Off the Lightsに満足していますか？"
+    "message":"Turn Off the Lights の使いごこちはいかがですか？",
+    "description":"Turn Off the Lights の使いごこちはいかがですか？"
   },
   "tellothers":{
     "message":"あなたの意見を大切にします",
     "description":"あなたの意見を大切にします"
   },
   "nothanks":{
-    "message":"遠慮する",
-    "description":"遠慮する"
+    "message":"いらない",
+    "description":"いらない"
   },
   "writeareview":{
     "message":"レビューを書く",
     "description":"レビューを書く"
   },
   "desauroraplayer":{
-    "message":"周囲照明プレーヤーはお使いのコンピュータで使用できます。",
-    "description":"周囲照明プレーヤーはお使いのコンピュータで使用できます。"
+    "message":"照明効果機能はお使いのコンピュータで使用できます。",
+    "description":"照明効果機能はお使いのコンピュータで使用できます。"
   },
   "downloadtheapp":{
-    "message":"アプリを今すぐダウンロードします。",
-    "description":"アプリを今すぐダウンロードします。"
+    "message":"アプリを今すぐダウンロード",
+    "description":"アプリを今すぐダウンロード"
   },
   "titeldownloadupgradezoom":{
-    "message":"ズームボタンを使用してウェブコンテンツにズームすることで、より快適に文章を読み取れます。",
-    "description":"ズームボタンを使用してウェブコンテンツにズームすることで、より快適に文章を読み取れます。"
+    "message":"ズームボタンを使用してウェブコンテンツを拡大縮小すると、より快適に文章を読み取れます。",
+    "description":"ズームボタンを使用してウェブコンテンツを拡大縮小すると、より快適に文章を読み取れます。"
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Googleのウェブサイトのバックに黒いメニューバーを追加します。",
-    "description":"Googleのウェブサイトのバックに黒いメニューバーを追加します。"
+    "message":"Google のウェブサイトに黒いメニューバーを復元。",
+    "description":"Google のウェブサイトに黒いメニューバーを復元。"
   },
   "titeldownloadupgradefinancetoolbar":{
-    "message":"これは、リアルタイムの株式市場の情報を表示します。",
-    "description":"これは、リアルタイムの株式市場の情報を表示します。"
+    "message":"株式市場の情報をリアルタイムに表示。",
+    "description":"株式市場の情報をリアルタイムに表示。"
   },
   "titelnightmodeposition":{
     "message":"スイッチの位置",
@@ -1000,12 +1000,12 @@
     "description":"左下"
   },
   "nmcustom":{
-    "message":"カスタム (クリックしたまま、スイッチを目的の画面位置に移動)",
-    "description":"カスタム (クリックしたまま、スイッチを目的の画面位置に移動)"
+    "message":"ユーザ設定 (クリックしたまま、スイッチを好きな位置へ移動)",
+    "description":"ユーザ設定 (クリックしたまま、スイッチを好きな位置へ移動)"
   },
   "desnighthover":{
-    "message":"ウェブページ上に透明のスイッチを表示する",
-    "description":"ウェブページ上に透明のスイッチを表示する"
+    "message":"ウェブページ上に透明のスイッチを表示",
+    "description":"ウェブページ上に透明のスイッチを表示"
   },
   "titelnightmodewhitelist":{
     "message":"ホワイトリスト",
@@ -1016,8 +1016,8 @@
     "description":"ブラックリスト"
   },
   "desautostoponly":{
-    "message":"ビデオの自動再生停止は次のサイトでのみ有効です。",
-    "description":"ビデオの自動再生停止は次のサイトでのみ有効です。"
+    "message":"動画の自動再生停止を有効にするサイトを指定:",
+    "description":"動画の自動再生停止を有効にするサイトを指定:"
   },
   "titelautostopwhitelist":{
     "message":"ホワイトリスト",
@@ -1028,12 +1028,12 @@
     "description":"ブラックリスト"
   },
   "desnightactivetime":{
-    "message":"スイッチは、次の時間の間表示されます:",
-    "description":"スイッチは、次の時間の間表示されます:"
+    "message":"スイッチを表示する時間帯の指定:",
+    "description":"スイッチを表示する時間帯の指定:"
   },
   "deslampandnightmode":{
-    "message":"灰色のランプボタンをクリックすると「ナイトモード」オプションを有効にします。",
-    "description":"灰色のランプボタンをクリックすると「ナイトモード」オプションを有効にします。"
+    "message":"ランプボタンがグレーのときにクリックすると「ナイトモード」オプションを有効にします。",
+    "description":"ランプボタンがグレーのときにクリックすると「ナイトモード」オプションを有効にします。"
   },
   "titeleyewhitelist":{
     "message":"ホワイトリスト",
@@ -1044,40 +1044,40 @@
     "description":"ブラックリスト"
   },
   "desspeech5command":{
-    "message":"ブラウザー ランプ",
-    "description":"ブラウザー ランプ"
+    "message":"ブラウザーランプ",
+    "description":"ブラウザーランプ"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube ™ ビデオ",
-    "description":"HTML5 & YouTube ™ ビデオ"
+    "message":"HTML5 および YouTube ™ ビデオ",
+    "description":"HTML5 および YouTube ™ ビデオ"
   },
   "flashembedobject":{
-    "message":"object, embed, applet, iframe タグに対応しています",
-    "description":"object, embed, applet, iframe タグに対応しています"
+    "message":"対応: <object>、 <embed>、 <applet>、<iframe>",
+    "description":"対応: <object>、 <embed>、 <applet>、<iframe>"
   },
   "titelnightmodebck":{
-    "message":"背景色:",
-    "description":"背景色:"
+    "message":"背景の色:",
+    "description":"背景の色:"
   },
   "titelnightmodetxt":{
-    "message":"文字色:",
-    "description":"文字色:"
+    "message":"文字の色:",
+    "description":"文字の色:"
   },
   "desdynamicsmoke":{
     "message":"スモーク",
     "description":"スモーク"
   },
   "desdynamicdotscolor":{
-    "message":"カラードット",
-    "description":"カラードット"
+    "message":"カラフルな水玉",
+    "description":"カラフルな水玉"
   },
   "desdynamicstorm":{
     "message":"ストーム",
     "description":"ストーム"
   },
   "desdynamictriangulation":{
-    "message":"三角形",
-    "description":"三角形"
+    "message":"三角模様",
+    "description":"三角模様"
   },
   "desdynamicstars":{
     "message":"評価",
@@ -1088,7 +1088,99 @@
     "description":"Turn Off the Lights はモバイル端末でもご利用いただけます。"
   },
   "titel360youtube":{
-    "message":"1つのフレームで全360度の YouTube の動画を表示します。",
-    "description":"1つのフレームで全360度の YouTube の動画を表示します。"
+    "message":"全360度の YouTube の動画を1つのフレームに表示",
+    "description":"全360度の YouTube の動画を1つのフレームに表示"
+  },
+  "titelvideotool":{
+    "message":"動画ツールバー",
+    "description":"動画ツールバー"
+  },
+  "desvideotool":{
+    "message":"ツールバーを画面下に表示して、ビデオプレイヤーをカスタマイズ",
+    "description":"ツールバーを画面下に表示して、ビデオプレイヤーをカスタマイズ"
+  },
+  "vtoolfullscreen":{
+    "message":"ビデオプレイヤーを全画面表示するボタン",
+    "description":"ビデオプレイヤーを全画面表示するボタン"
+  },
+  "vtoolfilter":{
+    "message":"ビデオプレイヤーにフィルターを追加するボタン",
+    "description":"ビデオプレイヤーにフィルターを追加するボタン"
+  },
+  "vtoolreplay":{
+    "message":"いまの動画をリプレイするボタン",
+    "description":"いまの動画をリプレイするボタン"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"グレースケール",
+    "description":"グレースケール"
+  },
+  "titelvideotoolsepia":{
+    "message":"セピア",
+    "description":"セピア"
+  },
+  "titelvideotoolinvert":{
+    "message":"反転",
+    "description":"反転"
+  },
+  "titelvideotoolcontrast":{
+    "message":"コントラスト",
+    "description":"コントラスト"
+  },
+  "titelvideotoolsaturate":{
+    "message":"彩度",
+    "description":"彩度"
+  },
+  "titelvideotoolhueroration":{
+    "message":"色相90度回転",
+    "description":"色相90度回転"
+  },
+  "titelvideotoolbrightness":{
+    "message":"明るさ",
+    "description":"明るさ"
+  },
+  "titelvideotoolnormal":{
+    "message":"通常モード",
+    "description":"通常モード"
+  },
+  "titelvideotoollike":{
+    "message":"お気に入り",
+    "description":"お気に入り"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"定期的な寄付",
+    "description":"定期的な寄付"
+  },
+  "titelvideotoolrepeat":{
+    "message":"リピート再生",
+    "description":"リピート再生"
+  },
+  "titelvideotoolfilter":{
+    "message":"フィルター",
+    "description":"フィルター"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"全画面",
+    "description":"全画面"
+  },
+  "titelreflection":{
+    "message":"リフレクション",
+    "description":"リフレクション"
+  },
+  "desreflection":{
+    "message":"すべての動画のリフレクション効果を表示",
+    "description":"すべての動画のリフレクション効果を表示"
+  },
+  "desvideotoolonly":{
+    "message":"動画のツールバーを有効にするサイトを指定:",
+    "description":"動画のツールバーを有効にするサイトを指定:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"ホワイトリスト",
+    "description":"ホワイトリスト"
+  },
+  "titelvideotoolblacklist":{
+    "message":"ブラックリスト",
+    "description":"ブラックリスト"
   }
 }

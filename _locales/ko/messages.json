@@ -8,8 +8,8 @@
     "description":"배경 이미지"
   },
   "shortcutalllights":{
-    "message":"현재 열려 있는 모든 탭에서 불 켜기\/끄기",
-    "description":"현재 열려 있는 모든 탭에서 불 켜기\/끄기"
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
     "message":"Latest version check on",
@@ -56,16 +56,16 @@
     "description":"눈 보호"
   },
   "titelcinemaontop":{
-    "message":"영화 극장 모드: 창의 상단 부분만을 어둡게 합니다.",
-    "description":"영화 극장 모드: 그것은 창 상단에 있는 '불 끄기' 레이어를 표시 합니다."
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
     "message":"불을 끈 상태에서 초점을 맞출 영역을 선택할 수 있습니다.",
     "description":"불을 끈 상태에서 초점을 맞출 영역을 선택할 수 있습니다."
   },
   "titelrememberpage":{
-    "message":"페이지 기억",
-    "description":"페이지를 기억"
+    "message":"Reminder page",
+    "description":"Reminder page"
   },
   "desmousespotlighta":{
     "message":"불을 꼈을 때 마우스 커서에 스포트라이트 효과 적용",
@@ -100,8 +100,8 @@
     "description":"시력 보호 기능 사용시 자동 재생 기능은 자동으로 비활성화 됩니다."
   },
   "skipremember":{
-    "message":"무시하고 옵션 페이지 열기",
-    "description":"이 생략 하 고 지금 옵션 페이지를 열려면"
+    "message":"Skip this, and open the options page now",
+    "description":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
     "message":"시간이 성공적으로 저장되었습니다.",
@@ -144,16 +144,16 @@
     "description":"우주 우주"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"설정",
     "description":"설정"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"동기화",
@@ -212,24 +212,24 @@
     "description":"아래 상자에 암호를 입력 합니다."
   },
   "titelblurradius":{
-    "message":"흐림 범위",
-    "description":"흐림 반경"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"버전",
     "description":"버전 번호 텍스트"
   },
   "shortcutdark":{
-    "message":"화면을 어둡게 합니다(불투명도를 증가시킵니다.)",
-    "description":"(증가 불투명도) 화면을 어둡게."
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"영상 공유 버튼을 봅니다.",
     "description":"이 동영상이 YouTube의 공유 버튼을 표시 합니다."
   },
   "shortcutbright":{
-    "message":"화면을 밝게 하기 (불투명도 감소)",
-    "description":"(불투명도 감소) 화면을 밝게."
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"열려있는 모든 탭",
@@ -268,8 +268,8 @@
     "description":"이 YouTube 비디오에서 추가 단추를 표시 합니다."
   },
   "shortcuteyeprotection":{
-    "message":"시력 보호 기능 활성화\/비활성화",
-    "description":"눈 보호 기능을 활성화\/비활성화 합니다."
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"페이드 인",
@@ -296,8 +296,8 @@
     "description":"이 비디오를 집중"
   },
   "warningtextambilight":{
-    "message":"사이트의 보안 정책에 의해 비디오 데이터를 받지 못하는 경우, 대신 선택된 단색을 표시합니다.",
-    "description":"사이트의 보안 규칙 때문에 비디오 데이터를 받을 수 없는 경우 다음 표시 됩니다 선택한 단색 대신."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"움직이는 구름",
@@ -320,16 +320,16 @@
     "description":"맨 위로"
   },
   "titelspreadradius":{
-    "message":"확산 범위",
-    "description":"확산 반경"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
-    "message":"Adblocker 확장 프로그램을 사용하세요.",
-    "description":"Adblocker 확장자를 사용 합니다."
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"공유 버튼",
-    "description":"공유 버튼"
+    "message":"Share Button",
+    "description":"Share Button"
   },
   "titelcolor":{
     "message":"색상",
@@ -408,8 +408,8 @@
     "description":"비디오에서 색상을 가져가 라."
   },
   "showremember":{
-    "message":"옵션 페이지를 열 때 이 페이지를 표시하지 않기",
-    "description":"때 표시 되지 않습니다이 기억 페이지 다시 옵션 페이지를 엽니다."
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"이 확장 기능을 유용하게 사용하고 계신가요? 개발자에게 기부해보시는 건 어떨까요?",
@@ -424,8 +424,8 @@
     "description":"빗방울"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"초를 성공적으로 저장하였습니다!",
@@ -436,20 +436,20 @@
     "description":"모호 레벨 바"
   },
   "deseyen":{
-    "message":"일반적인 경우(램프 버튼을 눌렀을때 화면을 어둡게 합니다.).",
-    "description":"정상적인 사용 (빛이 클릭할 때 램프 아이콘)."
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"이 확장 프로그램을 즐기고 좋아할 것 같은 사람들과 공유하세요.",
     "description":"이 확장을 즐길 수과 당신이 그것을 감사 것 이라고 생각 하는 사람들과 그것을 공유."
   },
   "shortcuttotl":{
-    "message":"조명 켜기\/끄기",
-    "description":"불 켜기\/끄기."
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"기본설정",
@@ -472,8 +472,8 @@
     "description":"TOtL 환영 가이드"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"좋아요 버튼과 싫어요 버튼",
@@ -484,8 +484,8 @@
     "description":"pageaction 아이콘을 숨기려면"
   },
   "friendlyremember":{
-    "message":"알려드립니다...",
-    "description":"친절 한 기억..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
     "message":"Fade in 효과를 사용합니다.",
@@ -496,8 +496,8 @@
     "description":"경고!"
   },
   "deseyetimesaver":{
-    "message":"페이지가 아래에 설정한 시간동안 비활성 상태(마우스 또는 키보드 입력이 없는 상태)일 경우, 페이지를 자동으로 어둡게 합니다.",
-    "description":"페이지 활성화 되지 않은 (마우스 또는 키보드 입력) 아래에 지정 된 시간에 대 한 페이지 자동으로 이동 합니다 어두운."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"추천 영상",
@@ -536,8 +536,8 @@
     "description":"물고기 탱크"
   },
   "longdonatetext":{
-    "message":"이 확장 프로그램을 새 유저들을 위해 유지할 수 있도록 기부해주신다면 정말 감사하겠습니다. 1달러든 100달러든 상관없이 당신의 지원에 정말 감사할 것입니다!",
-    "description":"이 브라우저 확장 다른 새로운 사용자를 위해 살아 있는 유지를 기부할 수 있는 난 정말 감사 하겠습니다. 그것은 $$ 1 또는 $$ 100, 당신의 지원은 대단히 감사!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"URL 필터를 무시하고 모든 플래시 개체를 표시합니다. 이 옵션은 일부 비디오 플레이어가 가려지는 문제를 해결하지만, 광고 또한 표시되게 할 것입니다.",
@@ -556,12 +556,12 @@
     "description":"표시 및 비디오 타이틀의 색상을 반전."
   },
   "desrememberpage":{
-    "message":"이 옵션을 사용 하는 경우,  기억 페이지를 표시하지 않습니다.",
-    "description":"이 옵션을 사용 하는 경우 그것은 하지 기억 페이지를 표시 됩니다."
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"웹페이지의 배경을 어둡게 하여 영화관에 있는 느낌으로 동영상을 감상할 수 있습니다.",
-    "description":"영화관에서 마치 비디오를 볼 수 있도록 전체 페이지 어둠, 퇴색 될 것 이다."
+    "message":"페이지의 배경 전체가 어둡게 변하여 마치 영화관에서 영상을 감상하는 것처럼 보이게 합니다.",
+    "description":"페이지의 배경 전체가 어둡게 변하여 마치 영화관에서 영상을 감상하는 것처럼 보이게 합니다."
   },
   "titelviewcount":{
     "message":"조회수",
@@ -576,8 +576,8 @@
     "description":"자동으로 유튜브 동영상의 품질을 설정 합니다."
   },
   "shortcutopacity":{
-    "message":"저장된 밝기(투명도) 값으로 복원",
-    "description":"설정 설정된 어둠 (불투명도)를 복원 합니다."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -628,8 +628,8 @@
     "description":"부활절 달걀"
   },
   "textfoot":{
-    "message":"이 소프트웨어에는 CC-GNU GPL 라이센스가 적용됩니다. 자세한 내용을 보시려면 다음 링크를 방문하세요 : ",
-    "description":"이 소프트웨어는 CC GNU gpl 라이센스입니다. 이 면허의 사본, 방문"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
+    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
     "message":"왼쪽",
@@ -668,8 +668,8 @@
     "description":"몇 가지 새로운 기능을 추가했습니다."
   },
   "upgradecontextmessage":{
-    "message":"Turn off the lights가 더 놀라워졌습니다.",
-    "description":"Turn off the lights가 더 놀라워졌습니다."
+    "message":"That makes this extension even more amazing",
+    "description":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
     "message":"모션 인식",
@@ -716,8 +716,8 @@
     "description":"Turn off the Lights 설정 초기화"
   },
   "desautoplaydelay":{
-    "message":"비디오가 종료된 후 배경을 다시 밝게 하기",
-    "description":"비디오가 종료된 후 배경을 다시 밝게 하기"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"초",
@@ -728,8 +728,8 @@
     "description":"모션 인식"
   },
   "desmotion":{
-    "message":"동작 인식을 활성화하면 손을 쓸어내려 웹 페이지를 어둡게 할 수 있습니다.",
-    "description":"동작 인식을 활성화하면 손을 쓸어내려 웹 페이지를 어둡게 할 수 있습니다."
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"직접 시도해보세요!",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"손을 아래에서 위로 움직이세요.",
-    "description":"손을 아래에서 위로 움직이세요."
+    "description":"손을 위에서 아래로 움직이세요."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"선형"
   },
   "titelcolora":{
-    "message":"색깔 A",
-    "description":"색깔 A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"색깔 B",
-    "description":"색깔 B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"음성 인식",
@@ -856,8 +856,8 @@
     "description":"이 브라우저에서는 기능이 지원되지 않습니다. 브라우저가 최신 버전인지 확인해주십시오."
   },
   "titelsupportatmos":{
-    "message":"HTML 5의 <video>  태그와 Youtube의 HTML5 플레이어만 지원합니다, 또한, GPU를 사용합니다.",
-    "description":"HTML 5의 <video>  태그와 Youtube의 HTML5 플레이어만 지원합니다, 또한, GPU를 사용합니다."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"온라인에서 더 많은 예시를 볼 수 있습니다.",
@@ -968,12 +968,12 @@
     "description":"Download the app now"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Add back the black menubar on the Google website.",
-    "description":"Add back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
@@ -1000,8 +1000,8 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Customizable coordinates",
-    "description":"Customizable coordinates"
+    "message":"Custom (click, hold and move the switch to the desired screen location)",
+    "description":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
     "message":"Shows a transparent switch on the web page",
@@ -1032,8 +1032,8 @@
     "description":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
   },
   "titeleyewhitelist":{
     "message":"허용된 사이트 목록",
@@ -1054,5 +1054,133 @@
   "flashembedobject":{
     "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
     "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Background color:",
+    "description":"Background color:"
+  },
+  "titelnightmodetxt":{
+    "message":"Text color:",
+    "description":"Text color:"
+  },
+  "desdynamicsmoke":{
+    "message":"Smoke",
+    "description":"Smoke"
+  },
+  "desdynamicdotscolor":{
+    "message":"Color Dots",
+    "description":"Color Dots"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"별이 가득한 밤에",
+    "description":"별이 가득한 밤에"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is also available for your mobile device.",
+    "description":"Turn Off the Lights is also available for your mobile device."
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame",
+    "description":"Shows the full 360 degrees YouTube video in one frame"
+  },
+  "titelvideotool":{
+    "message":"Video Tool Bar",
+    "description":"Video Tool Bar"
+  },
+  "desvideotool":{
+    "message":"Show the toolbar below your screen to customize the current video player",
+    "description":"Show the toolbar below your screen to customize the current video player"
+  },
+  "vtoolfullscreen":{
+    "message":"A button to set the video player to the full window size",
+    "description":"A button to set the video player to the full window size"
+  },
+  "vtoolfilter":{
+    "message":"A button to add a filter in the current video player",
+    "description":"A button to add a filter in the current video player"
+  },
+  "vtoolreplay":{
+    "message":"A button to replay the current video player",
+    "description":"A button to replay the current video player"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grayscale",
+    "description":"grayscale"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"invert",
+    "description":"invert"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrast",
+    "description":"contrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturation",
+    "description":"saturation"
+  },
+  "titelvideotoolhueroration":{
+    "message":"hue rotation",
+    "description":"hue rotation"
+  },
+  "titelvideotoolbrightness":{
+    "message":"brightness",
+    "description":"brightness"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Like",
+    "description":"Like"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"구독",
+    "description":"구독"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repeat",
+    "description":"Repeat"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Full window",
+    "description":"Full window"
+  },
+  "titelreflection":{
+    "message":"Reflection",
+    "description":"Reflection"
+  },
+  "desreflection":{
+    "message":"Show the reflection effect on all videos",
+    "description":"Show the reflection effect on all videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activate the Video Tool Bar only on the following site(s):",
+    "description":"Activate the Video Tool Bar only on the following site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"허용된 사이트 목록",
+    "description":"허용된 사이트 목록"
+  },
+  "titelvideotoolblacklist":{
+    "message":"금지된 사이트 목록",
+    "description":"금지된 사이트 목록"
   }
 }

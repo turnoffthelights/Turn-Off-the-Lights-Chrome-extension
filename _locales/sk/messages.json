@@ -8,12 +8,12 @@
     "description":"Obrázok na pozadí"
   },
   "shortcutalllights":{
-    "message":"zapínať\/vypínať svetlá pre všetky otvorené karty.",
-    "description":"zapínať\/vypínať svetlá pre všetky otvorené karty."
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"Najnovšia verzia skontrolovaná dňa",
+    "description":"Najnovšia verzia skontrolovaná dňa"
   },
   "visualeffects":{
     "message":"Vizuálne efekty",
@@ -32,8 +32,8 @@
     "description":"Lišta Páči \/ Nepáči sa mi"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"Povoliť preklikávanie na hypertextové prepojenia, keď je obrazovka stmavená",
+    "description":"Povoliť preklikávanie na hypertextové prepojenia, keď je obrazovka stmavená"
   },
   "desambilight4color":{
     "message":"4 vybrané farby okolo videa:",
@@ -56,16 +56,16 @@
     "description":"Ochrana očí"
   },
   "titelcinemaontop":{
-    "message":"Kino režim: svetlá sa vypnú iba v hornej časti okna.",
-    "description":"Kino režim filmovania: to show \"zhasne\" vrstvu iba hornej časti okna."
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
     "message":"Ak sú svetlá vypnuté, môžete zvoliť oblasť na zobrazenie položky.",
     "description":"Ak nesvieti žiadne svetlo, môžete vybrať oblasť zameranie položkou."
   },
   "titelrememberpage":{
-    "message":"Zapamätať si stránku",
-    "description":"Nezabudnite stránku"
+    "message":"Reminder page",
+    "description":"Reminder page"
   },
   "desmousespotlighta":{
     "message":"Ak sú svetlá vypnuté, zobraziť okolo kurzora myši svetlo.",
@@ -100,8 +100,8 @@
     "description":"Umožňujúce \"Eye protection\" bude automaticky vypnúť funkciu \"Auto play\"."
   },
   "skipremember":{
-    "message":"Preskočiť a otvoriť  nastavenia",
-    "description":"Preskočte tento a teraz otvoriť možnosť page"
+    "message":"Skip this, and open the options page now",
+    "description":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
     "message":"Čas bol úspešne uložený!",
@@ -144,16 +144,16 @@
     "description":"Priestor vesmíru"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"Nastavenia",
     "description":"Nastavenia"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"Synchronizácia",
@@ -200,7 +200,7 @@
     "description":"Zoznam skladieb"
   },
   "desatmosphereonly":{
-    "message":"Použiť funkciu „atmosféra osvetlenia“ iba na nasledujúcej stránke s videami:",
+    "message":"Použiť funkciu „atmosférické osvetlenie“ iba na nasledujúcej stránke s videami:",
     "description":"Použite funkciu atmosféra osvetlenie len nasledujúce video stránky:"
   },
   "recflash":{
@@ -212,31 +212,31 @@
     "description":"Zadajte heslo do poľa nižšie:"
   },
   "titelblurradius":{
-    "message":"Polomer rozostrenia",
-    "description":"Polomer rozostrenia"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"Verzia",
     "description":"Číslo verzie textu"
   },
   "shortcutdark":{
-    "message":"stmaviť obrazovku (znížiť priehľadnosť).",
-    "description":"do stmaviť obrazovku (zvýšenie opacity)."
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
-    "message":"Zobraziť Youtube tlačidlo Zdieľať pre toto video.",
+    "message":"Zobraziť tlačidlo Zdieľať pre YouTube video.",
     "description":"Zobraziť tlačidlá zdieľať YouTube toto video."
   },
   "shortcutbright":{
-    "message":"zosvetliť obrazovku (zvýšiť priehľadnosť).",
-    "description":"rozjasní na obrazovke (zníženie opacity)."
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"Všetky otvorené karty",
     "description":"Všetkých otvorených záložiek"
   },
   "desreadera":{
-    "message":"Vždy zobrazovať panel stupňa stmavenia, keď sa svetlá vypnú.",
+    "message":"Vždy zobrazovať panel stupňa stmavenia, po vypnutí svetiel.",
     "description":"Vždy zobrazovať panel šero keď zhasnú svetlá."
   },
   "rememberrate":{
@@ -264,12 +264,12 @@
     "description":"Vypnúť svetlá"
   },
   "desaddvideobutton":{
-    "message":"Zobraziť tlačidlo Pridať z tohto YouTube videa.",
+    "message":"Zobraziť tlačidlo Pridať pre YouTube video.",
     "description":"Zobraziť tlačidlo Pridať z tejto YouTube video."
   },
   "shortcuteyeprotection":{
-    "message":"- Zapnúť\/vypnúť funkciu Ochrana očí.",
-    "description":"zapnúť\/vypnúť funkciu Ochrana očí."
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"Zosvetliť",
@@ -296,8 +296,8 @@
     "description":"Zameranie tohto videa"
   },
   "warningtextambilight":{
-    "message":"Ak nie je možné získať video dáta z dôvodu zabezpečenia stránok, potom sa namiesto toho zobrazí zvolená farba.",
-    "description":"Ak nie je schopný prijímať video dáta z dôvodu pravidlo zabezpečenia stránok, potom ukáže zvolenej farbou namiesto."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"Animované oblaky",
@@ -320,23 +320,23 @@
     "description":"hore"
   },
   "titelspreadradius":{
-    "message":"Zmena veľkosti",
-    "description":"Rozšírenie okruhu"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
-    "message":"Použitie s doplnkom Adblocker.",
-    "description":"Použitie s príponou Adblocker."
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"Zdieľanie",
-    "description":"Share Buttons"
+    "message":"Share Button",
+    "description":"Share Button"
   },
   "titelcolor":{
     "message":"Farba",
     "description":"Farba"
   },
   "titeldownloadbutton":{
-    "message":"Prevziať túto inováciu!",
+    "message":"Prevziať toto vylepšenie!",
     "description":"Prevziať túto inováciu!"
   },
   "pagetitle":{
@@ -344,7 +344,7 @@
     "description":"Stmaviť túto stránku"
   },
   "titelambilight":{
-    "message":"Atmosféra osvetlenie",
+    "message":"Atmosférické osvetlenie",
     "description":"Atmosféra osvetlenie"
   },
   "titelshowmore":{
@@ -408,8 +408,8 @@
     "description":"Take Farba z videa."
   },
   "showremember":{
-    "message":"Už znova nezobraziť možnosť \"Zapamätať stránku\" po otvorení Nastavení.",
-    "description":"nie tejto stránke zapamätať znova zobraziť pri otvorení stránky s možnosťou."
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"Ak môžete, prispejete akoukoľvek sumou, budem Vám veľmi vďačný!",
@@ -424,8 +424,8 @@
     "description":"Dažďovej kvapky"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"Nastavenie úspešne uložené!",
@@ -436,20 +436,20 @@
     "description":"Šero úrovne Bar"
   },
   "deseyen":{
-    "message":"Bežné použitie (svetlá zhasnú po kliknutí na ikonu lampy).",
-    "description":"Bežné použitie (zhasnú po kliknutí na ikonu lampa)."
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"Užite si toto rozšírenie a zdieľajte ho s ostatnými, ktorí ho podľa Vás ocenia.",
     "description":"Užite si túto príponu a zdieľať s ostatnými, ktorí si myslíte, že to ocenia."
   },
   "shortcuttotl":{
-    "message":"Ak chcete prepnúť svetlá zapnuté\/vypnuté.",
-    "description":"Ak chcete prepnúť svetlá zapnuté\/vypnuté."
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"Základy",
@@ -464,7 +464,7 @@
     "description":"Nahlásenie problému"
   },
   "destime":{
-    "message":"Zhasne v tomto časovom rozmedzí:",
+    "message":"Zhasnúť v tomto časovom rozmedzí:",
     "description":"Zhasne medzi v nasledujúcich časoch:"
   },
   "guide":{
@@ -472,23 +472,23 @@
     "description":"TOtL Vitajte sprievodca"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"Tlačidlá páči a nepáči",
     "description":"Radi & nepáči tlačidlá"
   },
   "titelpageaction":{
-    "message":"Skryť ikonu lampa",
+    "message":"Skryť ikonu lampy",
     "description":"Skryť ikonu pageaction"
   },
   "friendlyremember":{
-    "message":"Načítanie neuložených zmien...",
-    "description":"Friendly pamätať..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
-    "message":"Zobraziť fade v skutočnosti.",
+    "message":"Zobraziť efekt zosvetlenia.",
     "description":"Zobraziť fade v skutočnosti."
   },
   "warning":{
@@ -496,8 +496,8 @@
     "description":"Upozornenie!"
   },
   "deseyetimesaver":{
-    "message":"Keď je stránka neaktívna počas nižšie stanovenej doby, stránka automaticky stmavne.",
-    "description":"Keď stránka je neaktívna (bez myši alebo klávesnice vstupné) počas doby stanovenej nižšie, stránky automaticky stmavne."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"Návrhy",
@@ -516,7 +516,7 @@
     "description":"Flash detekcie"
   },
   "desambilight":{
-    "message":"Zobraziť atmosféru osvetlenia aktuálne prehrávaného videa.",
+    "message":"Zobraziť atmosférické osvetlenie aktuálne prehrávaného videa.",
     "description":"Ukázať vám atmosféru svetelný efekt súčasné prehrávanie videa."
   },
   "productshare":{
@@ -528,7 +528,7 @@
     "description":"Pridať"
   },
   "reportlist":{
-    "message":"(pozri zoznam)",
+    "message":"Posledná známa chyba",
     "description":"Pozrite sa na úplné vydanie zoznam"
   },
   "desdynamicfishtank":{
@@ -536,15 +536,15 @@
     "description":"Ryby Tank"
   },
   "longdonatetext":{
-    "message":"Naozaj by som ocenil, ak by sme prispeli na udržanie tohto rozšírenia pre nových používateľov. Či už darujete 1  alebo 100 dolárov, Vaša podpora je nesmierne cenená!",
-    "description":"Naozaj by som ocenil, ak môžete darovať mne udržať nažive pre nových používateľov tohto rozšírenia prehliadača. Či je $$ 1 alebo $100 dolárov, je nesmierne ocenil vašu podporu!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
-    "message":"Zobraziť všetky objekty flash,mimo URL filtra. Vyrieši to problémy s niektorými skrytými video prehrávačmi, ale bude tiež zobrazovať reklamy.",
+    "message":"Zobraziť všetky objekty flash, mimo URL filtra. Vyrieši to problémy s niektorými skrytými video prehrávačmi, ale bude tiež zobrazovať reklamy.",
     "description":"Zobraziť všetky Flash objekty, preskakovanie URL filter. Toto vyrieši problémy s niektoré video prehrávače sú skryté, ale bude tiež zobrazovať reklamy."
   },
   "desfadeout":{
-    "message":"Zobraziť efekty zoslabenia.",
+    "message":"Zobraziť efekty stmavenia.",
     "description":"Zobraziť fade out efekt."
   },
   "optionwrongimg":{
@@ -556,12 +556,12 @@
     "description":"Ukázať a Invertovať farby na video titul."
   },
   "desrememberpage":{
-    "message":"Ak je táto možnosť zapnutá, neukáže Vám túto zapamätanú stránku.",
-    "description":"Ak je táto možnosť zapnutá, ukáže vám nie stránke zapamätať."
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"Celá stránka sa stmaví tak, že budete môcť sledovať video, ako keby ste boli v kine.",
-    "description":"Celá stránka bude vyblednutiu na tmavé, takže môžete sledovať video ako keby ste boli v kine."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"Počet zobrazení",
@@ -572,12 +572,12 @@
     "description":"Nepriehľadnosť"
   },
   "titelqualityyoutube":{
-    "message":"Automaticky nastaviť kvalitu YouTube videí.",
+    "message":"Automaticky nastaviť kvalitu YouTube videa.",
     "description":"Automaticky nastaviť kvalitu videa YouTube."
   },
   "shortcutopacity":{
-    "message":"obnoviť nastavenia tmy (viditeľnosti).",
-    "description":"Ak chcete obnoviť nastavenie tmy (opacity) nastavenie."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -600,7 +600,7 @@
     "description":"Postupné miznutie"
   },
   "eastereggsquestion":{
-    "message":"Máte radi skutočné kino?",
+    "message":"Zobraziť oponu za videom?",
     "description":"Máte radi skutočné kino?"
   },
   "bottom":{
@@ -628,8 +628,8 @@
     "description":"Veľkonočné vajíčka"
   },
   "textfoot":{
-    "message":"Tento softvér má licenciu CC-GNU GPL. Ak chcete zobraziť kópiu tejto licencie, navštívte",
-    "description":"Tento softvér je licencovaný pod CC-GNU GPL. Ak chcete zobraziť kópiu tejto licencie, navštívte"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
+    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
     "message":"vľavo",
@@ -656,8 +656,8 @@
     "description":"Keď otvoríte novú stránku, automaticky sa spustí nočný režim."
   },
   "titellampregular":{
-    "message":"Vždy zobraziť ikonu lampy v omniboxe (adresnom riadku)",
-    "description":"Vždy zobraziť ikonu lampy v omniboxe (adresnom riadku)"
+    "message":"Vždy zobraziť ikonu lampy v riadku s adresou",
+    "description":"Vždy zobraziť ikonu lampy v riadku s adresou"
   },
   "titellampvideo":{
     "message":"Zobraziť ikonu lampy, iba ak je detekovaný video prehrávač",
@@ -668,8 +668,8 @@
     "description":"Pridali sme pre Vás nové funkcie"
   },
   "upgradecontextmessage":{
-    "message":"Ktoré urobia toto rozšírenie ešte úžasnejším",
-    "description":"Ktoré urobia toto rozšírenie ešte úžasnejším"
+    "message":"That makes this extension even more amazing",
+    "description":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
     "message":"Camera Motion",
@@ -692,8 +692,8 @@
     "description":"Zdieľať na Facebooku"
   },
   "upgradetwshare":{
-    "message":"Tweetovať",
-    "description":"Tweetovať"
+    "message":"Tweetnuť",
+    "description":"Tweetnuť"
   },
   "ratetitle":{
     "message":"Napíšte recenziu a ohodnoťte moje rozšírenie",
@@ -716,20 +716,20 @@
     "description":"Obnoviť predvolené nastavenia „Turn Off the Lights “"
   },
   "desautoplaydelay":{
-    "message":"Opäť rozsvietiť svetlá, keď skončí prehrávanie videa po",
-    "description":"Opäť rozsvietiť svetlá, keď skončí prehrávanie videa po"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
-    "message":"sekúnd",
-    "description":"sekúnd"
+    "message":"sekundách",
+    "description":"sekundách"
   },
   "motionoptions":{
     "message":"Camera Motion",
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion so that the web page can be darkened with a hand sweep down.",
-    "description":"Enable the Camera Motion so that the web page can be darkened with a hand sweep down."
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Vyskúšajte si to sami!",
@@ -748,8 +748,8 @@
     "description":"Zapnúť funkciu  „Pohybový senzor kamery“"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Prejdite rukou zhora nadol po obrazovke.",
+    "description":"Prejdite rukou zhora nadol po obrazovke."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"Prechod"
   },
   "titelcolora":{
-    "message":"Farba A",
-    "description":"Farba A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Farba B",
-    "description":"Farba B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Rozpoznávanie reči",
@@ -824,8 +824,8 @@
     "description":"Pomoc"
   },
   "about":{
-    "message":"O",
-    "description":"O"
+    "message":"O rozšírení",
+    "description":"O rozšírení"
   },
   "desspeechonly":{
     "message":"Aktivovať rozpoznávanie reči len na nasledujúcich stránkach:",
@@ -852,12 +852,12 @@
     "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
   },
   "desbrowsersupport":{
-    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
-    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+    "message":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer.",
+    "description":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"See online for more examples",
@@ -968,12 +968,12 @@
     "description":"Download the app now"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Add back the black menubar on the Google website.",
-    "description":"Add back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
@@ -1000,8 +1000,8 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Customizable coordinates",
-    "description":"Customizable coordinates"
+    "message":"Custom (click, hold and move the switch to the desired screen location)",
+    "description":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
     "message":"Shows a transparent switch on the web page",
@@ -1032,8 +1032,8 @@
     "description":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
   },
   "titeleyewhitelist":{
     "message":"Zoznam povolených",
@@ -1054,5 +1054,133 @@
   "flashembedobject":{
     "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
     "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Background color:",
+    "description":"Background color:"
+  },
+  "titelnightmodetxt":{
+    "message":"Text color:",
+    "description":"Text color:"
+  },
+  "desdynamicsmoke":{
+    "message":"Smoke",
+    "description":"Smoke"
+  },
+  "desdynamicdotscolor":{
+    "message":"Color Dots",
+    "description":"Color Dots"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"Hviezdičky",
+    "description":"Hviezdičky"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is also available for your mobile device.",
+    "description":"Turn Off the Lights is also available for your mobile device."
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame",
+    "description":"Shows the full 360 degrees YouTube video in one frame"
+  },
+  "titelvideotool":{
+    "message":"Video Tool Bar",
+    "description":"Video Tool Bar"
+  },
+  "desvideotool":{
+    "message":"Show the toolbar below your screen to customize the current video player",
+    "description":"Show the toolbar below your screen to customize the current video player"
+  },
+  "vtoolfullscreen":{
+    "message":"A button to set the video player to the full window size",
+    "description":"A button to set the video player to the full window size"
+  },
+  "vtoolfilter":{
+    "message":"A button to add a filter in the current video player",
+    "description":"A button to add a filter in the current video player"
+  },
+  "vtoolreplay":{
+    "message":"A button to replay the current video player",
+    "description":"A button to replay the current video player"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grayscale",
+    "description":"grayscale"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"invert",
+    "description":"invert"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrast",
+    "description":"contrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturation",
+    "description":"saturation"
+  },
+  "titelvideotoolhueroration":{
+    "message":"hue rotation",
+    "description":"hue rotation"
+  },
+  "titelvideotoolbrightness":{
+    "message":"brightness",
+    "description":"brightness"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Like",
+    "description":"Like"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Prihlásiť sa k odberu",
+    "description":"Prihlásiť sa k odberu"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repeat",
+    "description":"Repeat"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Full window",
+    "description":"Full window"
+  },
+  "titelreflection":{
+    "message":"Reflection",
+    "description":"Reflection"
+  },
+  "desreflection":{
+    "message":"Show the reflection effect on all videos",
+    "description":"Show the reflection effect on all videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activate the Video Tool Bar only on the following site(s):",
+    "description":"Activate the Video Tool Bar only on the following site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Zoznam povolených",
+    "description":"Zoznam povolených"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Zoznam zakázaných",
+    "description":"Zoznam zakázaných"
   }
 }

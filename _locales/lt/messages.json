@@ -8,8 +8,8 @@
     "description":"Fono paveikslėlis"
   },
   "shortcutalllights":{
-    "message":"perjungti šviesą visose atvertose kortelėse.",
-    "description":"perjungti šviesą visose atvertose kortelėse."
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
     "message":"Latest version check on",
@@ -56,16 +56,16 @@
     "description":"Akių apsauga"
   },
   "titelcinemaontop":{
-    "message":"Kino teatro režimas: „lights off“ sluoksnis rodomas tik ant viršutinio lango.",
-    "description":"Kino teatro režimas: „lights off“ sluoksnis rodomas tik ant viršutinio lango."
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
     "message":"Jei šviesa išjungta, galite pasirinkti vietą elemento koncentravimui.",
     "description":"Jei šviesa išjungta, galite pasirinkti vietą elemento koncentravimui."
   },
   "titelrememberpage":{
-    "message":"Įsiminti puslapį",
-    "description":"Įsiminti puslapį"
+    "message":"Reminder page",
+    "description":"Reminder page"
   },
   "desmousespotlighta":{
     "message":"Jei šviesa išjungta, rodyti prožektoriaus šviesą aplink pelės žymeklį.",
@@ -100,8 +100,8 @@
     "description":"Įjungus „Akių apsaugą“ bus išjungta „Auto paleidimo“ funkcija."
   },
   "skipremember":{
-    "message":"Praleisti ir atverti parinkčių puslapį",
-    "description":"Praleisti ir atverti parinkčių puslapį"
+    "message":"Skip this, and open the options page now",
+    "description":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
     "message":"Laikas sėkmingai išsaugotas!",
@@ -144,16 +144,16 @@
     "description":"Space Universe"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"Nustatymai",
     "description":"Nustatymai"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"Sinchronizuoti",
@@ -212,24 +212,24 @@
     "description":"Prašome įrašyti savo slaptažodį žemiau:"
   },
   "titelblurradius":{
-    "message":"Suliejimo spindulys",
-    "description":"Suliejimo spindulys"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"Versija",
     "description":"Version number text"
   },
   "shortcutdark":{
-    "message":"pritemdyti ekraną (padidinti ekrano nepermatomumą).",
-    "description":"pritemdyti ekraną (padidinti ekrano nepermatomumą)."
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"Šiame video rodyti YouTube patinka ir nepatinka mygtukus.",
     "description":"Šiame video rodyti YouTube patinka ir nepatinka mygtukus."
   },
   "shortcutbright":{
-    "message":"pašviesinti ekraną (padidinti ekrano permatomumą).",
-    "description":"pašviesinti ekraną (padidinti ekrano permatomumą)."
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"Visos atvertos kortelės",
@@ -268,8 +268,8 @@
     "description":"Rodyti pridėjimo mygtuką iš šio YouTube video."
   },
   "shortcuteyeprotection":{
-    "message":"įjungti\/išjungti akių apsaugos funkciją.",
-    "description":"įjungti\/išjungti akių apsaugos funkciją."
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"Išblukinti",
@@ -296,8 +296,8 @@
     "description":"Fokusuoti šį video"
   },
   "warningtextambilight":{
-    "message":"Jei dėl puslapio saugumo taisyklės neįmanoma gauti video duomenų, bus rodoma pasirinkta vientisa spalva.",
-    "description":"Jei dėl puslapio saugumo taisyklės neįmanoma gauti video duomenų, bus rodoma pasirinkta vientisa spalva."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"Animated Clouds",
@@ -320,16 +320,16 @@
     "description":"viršuje"
   },
   "titelspreadradius":{
-    "message":"Sklaida",
-    "description":"Sklaida"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
-    "message":"Naudokite su Adblocker plėtiniu.",
-    "description":"Naudokite su Adblocker plėtiniu."
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"Dalinimosi mygtukai",
-    "description":"Dalinimosi mygtukai"
+    "message":"Share Button",
+    "description":"Share Button"
   },
   "titelcolor":{
     "message":"Spalva",
@@ -408,8 +408,8 @@
     "description":"Imti spalvas iš video."
   },
   "showremember":{
-    "message":"atvėrus parinkčių puslapį neberodyti „prisiminti puslapį“.",
-    "description":"atvėrus parinkčių puslapį neberodyti „prisiminti puslapį“."
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"Jei galite paaukoti, mes būtume labai dėkingi!",
@@ -424,8 +424,8 @@
     "description":"Lietaus lašai"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"Užrašai sėkmingai išsaugoti!",
@@ -436,20 +436,20 @@
     "description":"Tamsinimo lygio juosta"
   },
   "deseyen":{
-    "message":"Įprastas naudojimas (šviesos išjungiamos paspaudus lempos piktogramą).",
-    "description":"Įprastas naudojimas (šviesos išjungiamos paspaudus lempos piktogramą)."
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"Mėgaukitės plėtiniu ir dalinkitės su kitais.",
     "description":"Mėgaukitės plėtiniu ir dalinkitės su kitais."
   },
   "shortcuttotl":{
-    "message":"perjungti šviesą.",
-    "description":"perjungti šviesą."
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"Pagrindiniai",
@@ -472,8 +472,8 @@
     "description":"TOtL pradžios vadovas"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"Patinka ir nepatinka mygtukai",
@@ -484,8 +484,8 @@
     "description":"Slėpti lempos piktogramą"
   },
   "friendlyremember":{
-    "message":"Draugiškas priminimas...",
-    "description":"Draugiškas priminimas..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
     "message":"Rodyti išblukimo efektą.",
@@ -496,8 +496,8 @@
     "description":"Įspėjimas!"
   },
   "deseyetimesaver":{
-    "message":"Kai puslapis neaktyvus (nejudinama pelė bei nepaspaudžiamas joks klavišas) tam tikrą laiką, puslapis automatiškai užtems.",
-    "description":"Kai puslapis neaktyvus (nejudinama pelė bei nepaspaudžiamas joks klavišas) tam tikrą laiką, puslapis automatiškai užtems."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"Pasiūlymai",
@@ -536,8 +536,8 @@
     "description":"Žuvų tvenkinys"
   },
   "longdonatetext":{
-    "message":"Aš labai džiaugsiuosi jei paaukosite ir taip prailginsite šio plėtinio gyvenimą. Nesvarbu ar tai $$1 ar $$100, jūsų parama neįkainojama!",
-    "description":"Aš labai džiaugsiuosi jei paaukosite ir taip prailginsite šio plėtinio gyvenimą. Nesvarbu ar tai $$1 ar $$100, jūsų parama neįkainojama!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"Rodyti Flash objektus, praleidžiant URL filtrą. Taip bus išspręsta problemos su kai kuriais paslepiamais video, bet bus rodomos kai kurios reklamos.",
@@ -556,12 +556,12 @@
     "description":"Rodyti ir invertuoti video pavadinimo spalvas."
   },
   "desrememberpage":{
-    "message":"Jei ši parinktis įjungta, puslapis nebus atvertas.",
-    "description":"Jei ši parinktis įjungta, puslapis nebus atvertas."
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"Visas puslapis patamsės, galėsite žiūrėti video taip kaip kine.",
-    "description":"Visas puslapis patamsės, galėsite žiūrėti video taip kaip kine."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"Peržiūrų skaičius",
@@ -576,8 +576,8 @@
     "description":"Automatiškai nustatyti YouTube video kokybę."
   },
   "shortcutopacity":{
-    "message":"atstatyti tamsumo (nepermatomumo) lygio nustatymą.",
-    "description":"atstatyti tamsumo (nepermatomumo) lygio nustatymą."
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -628,8 +628,8 @@
     "description":"Priedai"
   },
   "textfoot":{
-    "message":"Ši programinė licencijuota pagal CC-GNU GPL licenciją. Norėdami pamatyti licenciją, aplankykite",
-    "description":"Ši programinė licencijuota pagal CC-GNU GPL licenciją. Norėdami pamatyti licenciją, aplankykite"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
+    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
     "message":"kairėje",
@@ -668,8 +668,8 @@
     "description":"Mes pridėjome kelias naujas galimybes"
   },
   "upgradecontextmessage":{
-    "message":"Tai daro šį priedą dar įspūdingesniu",
-    "description":"Tai daro šį priedą dar įspūdingesniu"
+    "message":"That makes this extension even more amazing",
+    "description":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
     "message":"Kameros judesiu",
@@ -716,8 +716,8 @@
     "description":"Atstatyti Turn Off the Lights nustatymus"
   },
   "desautoplaydelay":{
-    "message":"Baigus atkūrimą, pašviesinti foną po",
-    "description":"Baigus atkūrimą, pašviesinti foną po"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"sekundžių",
@@ -728,8 +728,8 @@
     "description":"Kameros judesiu"
   },
   "desmotion":{
-    "message":"Įjunkite kameros judesį, kad būtų galima pritemdyti puslapį rankos gestu.",
-    "description":"Įjunkite kameros judesį, kad būtų galima pritemdyti puslapį rankos gestu."
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Pabandykite patys!",
@@ -748,8 +748,8 @@
     "description":"Įjungti kameros judesio galimybę"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Perkelkite savo ranką (ar riešą) iš viršaus į apačią.",
+    "description":"Perkelkite savo ranką (ar riešą) iš viršaus į apačią."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"Linijinis"
   },
   "titelcolora":{
-    "message":"Spalva A",
-    "description":"Spalva A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Spalva B",
-    "description":"Spalva B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Kalbos atpažinimas",
@@ -856,8 +856,8 @@
     "description":"Ši naršyklė kol kas nepalaiko šios galimybės. Įsitikinkite jog turite naujausią naršyklės versiją."
   },
   "titelsupportatmos":{
-    "message":"Palaiko tik HTML5 <video> ir YouTube HTML5. Naudoja jūsų video plokštės GPU.",
-    "description":"Palaiko tik HTML5 <video> ir YouTube HTML5. Naudoja jūsų video plokštės GPU."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"Peržiūrėkite daugiau pavyzdžių internete",
@@ -968,12 +968,12 @@
     "description":"Download the app now"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Add back the black menubar on the Google website.",
-    "description":"Add back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
@@ -1000,8 +1000,8 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Customizable coordinates",
-    "description":"Customizable coordinates"
+    "message":"Custom (click, hold and move the switch to the desired screen location)",
+    "description":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
     "message":"Shows a transparent switch on the web page",
@@ -1032,8 +1032,8 @@
     "description":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
   },
   "titeleyewhitelist":{
     "message":"Baltasis sąrašas",
@@ -1054,5 +1054,133 @@
   "flashembedobject":{
     "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
     "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Background color:",
+    "description":"Background color:"
+  },
+  "titelnightmodetxt":{
+    "message":"Text color:",
+    "description":"Text color:"
+  },
+  "desdynamicsmoke":{
+    "message":"Smoke",
+    "description":"Smoke"
+  },
+  "desdynamicdotscolor":{
+    "message":"Color Dots",
+    "description":"Color Dots"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"Žvaigždutės",
+    "description":"Žvaigždutės"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is also available for your mobile device.",
+    "description":"Turn Off the Lights is also available for your mobile device."
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame",
+    "description":"Shows the full 360 degrees YouTube video in one frame"
+  },
+  "titelvideotool":{
+    "message":"Video Tool Bar",
+    "description":"Video Tool Bar"
+  },
+  "desvideotool":{
+    "message":"Show the toolbar below your screen to customize the current video player",
+    "description":"Show the toolbar below your screen to customize the current video player"
+  },
+  "vtoolfullscreen":{
+    "message":"A button to set the video player to the full window size",
+    "description":"A button to set the video player to the full window size"
+  },
+  "vtoolfilter":{
+    "message":"A button to add a filter in the current video player",
+    "description":"A button to add a filter in the current video player"
+  },
+  "vtoolreplay":{
+    "message":"A button to replay the current video player",
+    "description":"A button to replay the current video player"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grayscale",
+    "description":"grayscale"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"invert",
+    "description":"invert"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrast",
+    "description":"contrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturation",
+    "description":"saturation"
+  },
+  "titelvideotoolhueroration":{
+    "message":"hue rotation",
+    "description":"hue rotation"
+  },
+  "titelvideotoolbrightness":{
+    "message":"brightness",
+    "description":"brightness"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Like",
+    "description":"Like"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Subscribe",
+    "description":"Subscribe"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repeat",
+    "description":"Repeat"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Full window",
+    "description":"Full window"
+  },
+  "titelreflection":{
+    "message":"Reflection",
+    "description":"Reflection"
+  },
+  "desreflection":{
+    "message":"Show the reflection effect on all videos",
+    "description":"Show the reflection effect on all videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activate the Video Tool Bar only on the following site(s):",
+    "description":"Activate the Video Tool Bar only on the following site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Baltasis sąrašas",
+    "description":"Baltasis sąrašas"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Juodasis sąrašas",
+    "description":"Juodasis sąrašas"
   }
 }
