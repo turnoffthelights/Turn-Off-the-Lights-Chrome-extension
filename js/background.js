@@ -132,7 +132,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 });
 
 chrome.pageAction.onClicked.addListener(function(tabs) {
-    console.log("jajaj geklikt")
     chrome.storage.local.get(['alllightsoff'], function(chromeset){
     if ((chromeset["alllightsoff"]!="true") && (chromeset["alllightsoff"]!=true)){
     chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {
