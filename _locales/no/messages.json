@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Viser full 360 graders YouTube-video i en ramme.",
     "description":"Viser full 360 graders YouTube-video i en ramme."
+  },
+  "titelvideotool":{
+    "message":"Video-verktøylinje",
+    "description":"Video-verktøylinje"
+  },
+  "desvideotool":{
+    "message":"Vis verktøylinjen under skjermen for å tilpasse gjeldende videospiller",
+    "description":"Vis verktøylinjen under skjermen for å tilpasse gjeldende videospiller"
+  },
+  "vtoolfullscreen":{
+    "message":"Knapp for å sette videospiller til full vindusstørrelse",
+    "description":"Knapp for å sette videospiller til full vindusstørrelse"
+  },
+  "vtoolfilter":{
+    "message":"Knapp for å legge til et filter i videospiller",
+    "description":"Knapp for å legge til et filter i videospiller"
+  },
+  "vtoolreplay":{
+    "message":"Knapp for å spille video på nytt",
+    "description":"Knapp for å spille video på nytt"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"gråtoner",
+    "description":"gråtoner"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"inverter",
+    "description":"inverter"
+  },
+  "titelvideotoolcontrast":{
+    "message":"kontrast",
+    "description":"kontrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"mette",
+    "description":"mette"
+  },
+  "titelvideotoolhueroration":{
+    "message":"nyanse rotasjon 90°",
+    "description":"nyanse rotasjon 90°"
+  },
+  "titelvideotoolbrightness":{
+    "message":"lysstyrke 50%",
+    "description":"lysstyrke 50%"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Lik",
+    "description":"Lik"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Abonnere",
+    "description":"Abonnere"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Gjenta",
+    "description":"Gjenta"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Hele vinduet",
+    "description":"Hele vinduet"
+  },
+  "titelreflection":{
+    "message":"Refleksjon",
+    "description":"Refleksjon"
+  },
+  "desreflection":{
+    "message":"Vis gjenspeilingseffekt på alle videoer",
+    "description":"Vis gjenspeilingseffekt på alle videoer"
+  },
+  "desvideotoolonly":{
+    "message":"Aktiver Video verktøylinje bare på følgende steder:",
+    "description":"Aktiver Video verktøylinje bare på følgende steder:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Hviteliste",
+    "description":"Hviteliste"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Svarteliste",
+    "description":"Svarteliste"
   }
 }

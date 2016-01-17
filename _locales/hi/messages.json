@@ -8,8 +8,8 @@
     "description":"पृष्ठभूमि छवि"
   },
   "shortcutalllights":{
-    "message":"रोशनी के लिए सभी खुले टैब पर\/बंद टॉगल करने के लिए।",
-    "description":"रोशनी के लिए सभी खुले टैब पर\/बंद टॉगल करने के लिए।"
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
     "message":"Latest version check on",
@@ -56,16 +56,16 @@
     "description":"नेत्र सुरक्षा"
   },
   "titelcinemaontop":{
-    "message":"मूवी थियेटर मोड: यह केवल विंडो के शीर्ष पर 'बंद रोशनी' परत दिखा।",
-    "description":"मूवी थियेटर मोड: यह केवल विंडो के शीर्ष पर 'बंद रोशनी' परत दिखा।"
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
+    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
     "message":"यदि प्रकाश बंद है, आप एक आइटम ध्यान केंद्रित करने के लिए एक क्षेत्र का चयन कर सकते हैं।",
     "description":"यदि प्रकाश बंद है, आप एक आइटम ध्यान केंद्रित करने के लिए एक क्षेत्र का चयन कर सकते हैं।"
   },
   "titelrememberpage":{
-    "message":"पृष्ठ याद रखें",
-    "description":"पृष्ठ याद रखें"
+    "message":"Reminder page",
+    "description":"Reminder page"
   },
   "desmousespotlighta":{
     "message":"यदि प्रकाश बंद है, तो माउस कर्सर के चारों ओर एक स्पॉटलाइट दिखाएँ।",
@@ -100,8 +100,8 @@
     "description":"'आँख ' सुरक्षा सक्षम करने स्वचालित रूप से 'ऑटो प्ले' सुविधा को अक्षम करेगा।"
   },
   "skipremember":{
-    "message":"इस को छोड़, और अब विकल्प पृष्ठ खोलें",
-    "description":"इस को छोड़, और अब विकल्प पृष्ठ खोलें"
+    "message":"Skip this, and open the options page now",
+    "description":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
     "message":"समय सफलतापूर्वक सहेजा गया है!",
@@ -144,16 +144,16 @@
     "description":"अंतरिक्ष जगत"
   },
   "deseastereggs":{
-    "message":"Clicking on the T key, adds it a theater curtain below the dark layer.",
-    "description":"Clicking on the T key, adds it a theater curtain below the dark layer."
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"सेटिंग्स",
     "description":"सेटिंग्स"
   },
   "desspotlightradius":{
-    "message":"The diameter of the searchlight.",
-    "description":"The diameter of the searchlight."
+    "message":"Diameter of spotlight:",
+    "description":"Diameter of spotlight:"
   },
   "titelsync":{
     "message":"सिंक",
@@ -212,24 +212,24 @@
     "description":"नीचे बॉक्स में अपना पासवर्ड दर्ज करें:"
   },
   "titelblurradius":{
-    "message":"धुंधला त्रिज्या",
-    "description":"धुंधला त्रिज्या"
+    "message":"Blur radius:",
+    "description":"Blur radius:"
   },
   "version":{
     "message":"संस्करण",
     "description":"संस्करण संख्या पाठ"
   },
   "shortcutdark":{
-    "message":"स्क्रीन (वृद्धि अस्पष्टता) अंधा करने के लिए।",
-    "description":"स्क्रीन (वृद्धि अस्पष्टता) अंधा करने के लिए।"
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"इस वीडियो के लिए YouTube का हिस्सा बटन दिखाएँ.",
     "description":"इस वीडियो के लिए YouTube के शेयर बटन दिखाएँ।"
   },
   "shortcutbright":{
-    "message":"स्क्रीन (घटाएँ अपारदर्शिता) को रोशन करने के लिए।",
-    "description":"स्क्रीन (घटाएँ अपारदर्शिता) को रोशन करने के लिए।"
+    "message":"to brighten the screen (decrease opacity)",
+    "description":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
     "message":"सभी खुले टैब",
@@ -268,8 +268,8 @@
     "description":"इस यूट्यूब वीडियो से जोड़ें बटन दिखाएँ।"
   },
   "shortcuteyeprotection":{
-    "message":"सक्षम करें\/निष्क्रिय नेत्र संरक्षण फीचर को।",
-    "description":"सक्षम करें\/निष्क्रिय नेत्र संरक्षण फीचर को।"
+    "message":"to enable\/disable the eye protection feature",
+    "description":"to enable\/disable the eye protection feature"
   },
   "titelfadein":{
     "message":"में फीका",
@@ -296,8 +296,8 @@
     "description":"इस वीडियो ध्यान केंद्रित"
   },
   "warningtextambilight":{
-    "message":"यदि यह वीडियो डेटा एक साइट की सुरक्षा नियम के कारण प्राप्त करने में असमर्थ है, तो यह चुने हुए ठोस रंग इसके बजाय दिखाएगा।",
-    "description":"यदि यह वीडियो डेटा एक साइट की सुरक्षा नियम के कारण प्राप्त करने में असमर्थ है, तो यह चुने हुए ठोस रंग इसके बजाय दिखाएगा।"
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
+    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
     "message":"Animated Clouds",
@@ -320,16 +320,16 @@
     "description":"शीर्ष"
   },
   "titelspreadradius":{
-    "message":"स्प्रेड त्रिज्या",
-    "description":"स्प्रेड त्रिज्या"
+    "message":"Spread radius:",
+    "description":"Spread radius:"
   },
   "installadblocker":{
-    "message":"एक Adblocker एक्सटेंशन के साथ उपयोग करें।",
-    "description":"एक Adblocker एक्सटेंशन के साथ उपयोग करें।"
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"शेयर बटन",
-    "description":"साझा करें बटन"
+    "message":"Share Button",
+    "description":"Share Button"
   },
   "titelcolor":{
     "message":"रंग",
@@ -408,8 +408,8 @@
     "description":"वीडियो से रंग ले लो।"
   },
   "showremember":{
-    "message":"यह याद रहे पृष्ठ फिर से दिखाएँ जब मैं विकल्प पृष्ठ को खोलने नहीं करता।",
-    "description":"यह याद रहे पृष्ठ फिर से दिखाएँ जब मैं विकल्प पृष्ठ को खोलने नहीं करता।"
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"अगर आप किसी भी राशि का दान कर सकते हैं, मैं यह बेहद खुशी होगी!",
@@ -424,8 +424,8 @@
     "description":"रेनड्रॉप्स"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs.",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs."
+    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
+    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
   },
   "optionecosaversaved":{
     "message":"सेकंड सफलतापूर्वक सहेजा गया है!",
@@ -436,20 +436,20 @@
     "description":"धुंधलापन स्तर पट्टी"
   },
   "deseyen":{
-    "message":"सामान्य उपयोग (रोशनी बाहर जाने के लिए जब तुम दीपक आइकन पर क्लिक करें).",
-    "description":"सामान्य उपयोग (रोशनी बाहर जाना जब आप क्लिक करें पर दीपक चिह्न)।"
+    "message":"Normal use (lights go out when you click on the lamp icon)",
+    "description":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
     "message":"इस विस्तार का आनंद और यह जो आपको लगता है कि इसकी सराहना करता होगा दूसरों के साथ साझा करें।",
     "description":"इस विस्तार का आनंद और यह जो आपको लगता है कि इसकी सराहना करता होगा दूसरों के साथ साझा करें।"
   },
   "shortcuttotl":{
-    "message":"रोशनी चालू\/बंद टॉगल करने के लिए।",
-    "description":"रोशनी चालू\/बंद टॉगल करने के लिए।"
+    "message":"to toggle the lights on\/off",
+    "description":"to toggle the lights on\/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a website.",
-    "description":"Automatically dim the background when opening a website."
+    "message":"Automatically dim the background when opening a webpage",
+    "description":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
     "message":"मूल बातें",
@@ -472,8 +472,8 @@
     "description":"TOtL में आपका स्वागत है गाइड"
   },
   "deseyealist":{
-    "message":"Automatically dim the background when opening the following website:",
-    "description":"Automatically dim the background when opening the following website:"
+    "message":"Automatically dim the background on the following site(s):",
+    "description":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
     "message":"पसंद और नापसंद बटन",
@@ -484,8 +484,8 @@
     "description":"pageaction चिह्न छुपाएँ"
   },
   "friendlyremember":{
-    "message":"मित्रतापूर्ण याद है...",
-    "description":"मित्रतापूर्ण याद है..."
+    "message":"Friendly Reminder...",
+    "description":"Friendly Reminder..."
   },
   "desfadein":{
     "message":"दिखाने के प्रभाव में फीका.",
@@ -496,8 +496,8 @@
     "description":"चेतावनी!"
   },
   "deseyetimesaver":{
-    "message":"जब एक पृष्ठ है निष्क्रिय (कोई कुंजीपटल या माउस इनपुट) नीचे निर्दिष्ट समय के लिए, पृष्ठ स्वचालित रूप से अंधेरे जाना होगा।",
-    "description":"जब एक पृष्ठ है निष्क्रिय (कोई कुंजीपटल या माउस इनपुट) नीचे निर्दिष्ट समय के लिए, पृष्ठ स्वचालित रूप से अंधेरे जाना होगा।"
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
+    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
     "message":"सुझाव",
@@ -536,8 +536,8 @@
     "description":"मछली टैंक"
   },
   "longdonatetext":{
-    "message":"मैं वास्तव में खुशी होगी अगर आप मुझे इस ब्राउज़र एक्सटेंशन अन्य नए उपयोगकर्ताओं के लिए ज़िंदा रखने के लिए दान कर सकते हैं। चाहे वह $$ 1 या $100 डॉलर है, अपने समर्थन बेहद सराहना की है!",
-    "description":"मैं वास्तव में खुशी होगी अगर आप मुझे इस ब्राउज़र एक्सटेंशन अन्य नए उपयोगकर्ताओं के लिए ज़िंदा रखने के लिए दान कर सकते हैं। चाहे वह $$ 1 या $100 डॉलर है, अपने समर्थन बेहद सराहना की है!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
+    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
     "message":"सभी फ़्लैश वस्तुओं में URL फ़िल्टर लंघन, दिखाएँ। इस छुपे हुए किया जा रहा कुछ वीडियो खिलाड़ियों के साथ समस्याओं को ठीक कर देंगे, लेकिन भी विज्ञापनों को प्रदर्शित करेगा।",
@@ -556,12 +556,12 @@
     "description":"दिखाने के और वीडियो शीर्षक के रंग पलटना।"
   },
   "desrememberpage":{
-    "message":"यदि यह विकल्प सक्षम किया गया है, यह तुम नहीं याद रहे पृष्ठ दिखाएगा।",
-    "description":"यदि यह विकल्प सक्षम किया गया है, यह तुम नहीं याद रहे पृष्ठ दिखाएगा।"
+    "message":"Do not show reminder page",
+    "description":"Do not show reminder page"
   },
   "description":{
-    "message":"संपूर्ण पृष्ठ अंधेरे में लुप्त होती है, इसलिए आप अगर आप सिनेमा में हैं के रूप में वीडियो देख सकते हैं.",
-    "description":"तो आप वीडियो देख सकते हैं के रूप में यदि आप सिनेमा में थे पूरे पृष्ठ के लिए अंधेरा, fading हो जाएगा।"
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
   },
   "titelviewcount":{
     "message":"दर्शनों की संख्या",
@@ -576,8 +576,8 @@
     "description":"स्वचालित रूप से YouTube वीडियो की गुणवत्ता सेट करें।"
   },
   "shortcutopacity":{
-    "message":"सेटिंग सेट को अंधकार (अपारदर्शिता) को पुनर्स्थापित करने के लिए।",
-    "description":"सेटिंग सेट को अंधकार (अपारदर्शिता) को पुनर्स्थापित करने के लिए।"
+    "message":"to restore to the set darkness (opacity) setting",
+    "description":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
     "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
@@ -628,8 +628,8 @@
     "description":"ईस्टर अंडे"
   },
   "textfoot":{
-    "message":"यह सॉफ्टवेयर GNU CC-GPL के अंतर्गत लाइसेंस प्राप्त है. इस लाइसेंस के लिए, यात्रा की एक प्रति को देखने के लिए",
-    "description":"इस सॉफ्टवेयर CC-GNU GPL के अंतर्गत लाइसेंस प्राप्त है। इस लाइसेंस की एक प्रतिलिपि को देखने के लिए, पर जाएँ"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
+    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
     "message":"बाईं ओर",
@@ -668,8 +668,8 @@
     "description":"We have added some new features for you"
   },
   "upgradecontextmessage":{
-    "message":"That make this extension even more amazing",
-    "description":"That make this extension even more amazing"
+    "message":"That makes this extension even more amazing",
+    "description":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
     "message":"Camera Motion",
@@ -716,8 +716,8 @@
     "description":"Reset the Turn Off the Lights settings"
   },
   "desautoplaydelay":{
-    "message":"Brighten again the background when the video ended after",
-    "description":"Brighten again the background when the video ended after"
+    "message":"Brighten the background again when the video has ended after",
+    "description":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
     "message":"seconds",
@@ -728,8 +728,8 @@
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion so that the web page can be darkened with a hand sweep down.",
-    "description":"Enable the Camera Motion so that the web page can be darkened with a hand sweep down."
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Try it yourself!",
@@ -748,8 +748,8 @@
     "description":"Enable the Camera Motion feature"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom",
-    "description":"Move your hand (or fist) from the top to bottom"
+    "message":"Move your hand (or fist) from the top to bottom.",
+    "description":"Move your hand (or fist) from the top to bottom."
   },
   "step3description":{
     "message":"The black layer will automatically slide down.",
@@ -776,12 +776,12 @@
     "description":"Linear"
   },
   "titelcolora":{
-    "message":"Color A",
-    "description":"Color A"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Color B",
-    "description":"Color B"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Speech Recognition",
@@ -828,8 +828,8 @@
     "description":"के बारे में"
   },
   "desspeechonly":{
-    "message":"Activate the Speech Recognition only the following site(s):",
-    "description":"Activate the Speech Recognition only the following site(s):"
+    "message":"Activate Speech Recognition only on the following site(s):",
+    "description":"Activate Speech Recognition only on the following site(s):"
   },
   "descammotiononly":{
     "message":"Activate the Camera Motion only on the following site(s):",
@@ -852,12 +852,12 @@
     "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
   },
   "desbrowsersupport":{
-    "message":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer.",
-    "description":"This browser doesn't support yet this feature. Make sure you have the latest browser version installed on your computer."
+    "message":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer.",
+    "description":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. And it uses the GPU from your graphics card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"See online for more examples",
@@ -968,12 +968,12 @@
     "description":"Download the app now"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zoom in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zoom in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Add back the black menubar on the Google website.",
-    "description":"Add back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
@@ -1000,8 +1000,8 @@
     "description":"Bottom left"
   },
   "nmcustom":{
-    "message":"Customizable coordinates",
-    "description":"Customizable coordinates"
+    "message":"Custom (click, hold and move the switch to the desired screen location)",
+    "description":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
     "message":"Shows a transparent switch on the web page",
@@ -1032,8 +1032,8 @@
     "description":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
   },
   "titeleyewhitelist":{
     "message":"Whitelist",
@@ -1054,5 +1054,133 @@
   "flashembedobject":{
     "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
     "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Background color:",
+    "description":"Background color:"
+  },
+  "titelnightmodetxt":{
+    "message":"Text color:",
+    "description":"Text color:"
+  },
+  "desdynamicsmoke":{
+    "message":"Smoke",
+    "description":"Smoke"
+  },
+  "desdynamicdotscolor":{
+    "message":"Color Dots",
+    "description":"Color Dots"
+  },
+  "desdynamicstorm":{
+    "message":"Storm",
+    "description":"Storm"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulation",
+    "description":"Triangulation"
+  },
+  "desdynamicstars":{
+    "message":"सितारे",
+    "description":"सितारे"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights is also available for your mobile device.",
+    "description":"Turn Off the Lights is also available for your mobile device."
+  },
+  "titel360youtube":{
+    "message":"Shows the full 360 degrees YouTube video in one frame",
+    "description":"Shows the full 360 degrees YouTube video in one frame"
+  },
+  "titelvideotool":{
+    "message":"Video Tool Bar",
+    "description":"Video Tool Bar"
+  },
+  "desvideotool":{
+    "message":"Show the toolbar below your screen to customize the current video player",
+    "description":"Show the toolbar below your screen to customize the current video player"
+  },
+  "vtoolfullscreen":{
+    "message":"A button to set the video player to the full window size",
+    "description":"A button to set the video player to the full window size"
+  },
+  "vtoolfilter":{
+    "message":"A button to add a filter in the current video player",
+    "description":"A button to add a filter in the current video player"
+  },
+  "vtoolreplay":{
+    "message":"A button to replay the current video player",
+    "description":"A button to replay the current video player"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grayscale",
+    "description":"grayscale"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"invert",
+    "description":"invert"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contrast",
+    "description":"contrast"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturation",
+    "description":"saturation"
+  },
+  "titelvideotoolhueroration":{
+    "message":"hue rotation",
+    "description":"hue rotation"
+  },
+  "titelvideotoolbrightness":{
+    "message":"brightness",
+    "description":"brightness"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Like",
+    "description":"Like"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Subscribe",
+    "description":"Subscribe"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repeat",
+    "description":"Repeat"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Full window",
+    "description":"Full window"
+  },
+  "titelreflection":{
+    "message":"Reflection",
+    "description":"Reflection"
+  },
+  "desreflection":{
+    "message":"Show the reflection effect on all videos",
+    "description":"Show the reflection effect on all videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activate the Video Tool Bar only on the following site(s):",
+    "description":"Activate the Video Tool Bar only on the following site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
   }
 }

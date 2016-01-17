@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Menampilkan video YouTube 360 derajat dalam satu frame.",
     "description":"Menampilkan video YouTube 360 derajat dalam satu frame."
+  },
+  "titelvideotool":{
+    "message":"Video Tool Bar",
+    "description":"Video Tool Bar"
+  },
+  "desvideotool":{
+    "message":"Menampilkan di bawah layar Anda toolbar untuk menyesuaikan pemutar video saat ini",
+    "description":"Menampilkan di bawah layar Anda toolbar untuk menyesuaikan pemutar video saat ini"
+  },
+  "vtoolfullscreen":{
+    "message":"Tombol untuk mengatur pemutar video dengan ukuran penuh jendela",
+    "description":"Tombol untuk mengatur pemutar video dengan ukuran penuh jendela"
+  },
+  "vtoolfilter":{
+    "message":"Tombol untuk menambahkan filter di pemutar video",
+    "description":"Tombol untuk menambahkan filter di pemutar video"
+  },
+  "vtoolreplay":{
+    "message":"Tombol untuk replay pemutar video",
+    "description":"Tombol untuk replay pemutar video"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"grayscale",
+    "description":"grayscale"
+  },
+  "titelvideotoolsepia":{
+    "message":"Sepia",
+    "description":"Sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"balikkan",
+    "description":"balikkan"
+  },
+  "titelvideotoolcontrast":{
+    "message":"kontras",
+    "description":"kontras"
+  },
+  "titelvideotoolsaturate":{
+    "message":"jenuh",
+    "description":"jenuh"
+  },
+  "titelvideotoolhueroration":{
+    "message":"Hue rotasi 90°",
+    "description":"Hue rotasi 90°"
+  },
+  "titelvideotoolbrightness":{
+    "message":"kecerahan 50%",
+    "description":"kecerahan 50%"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Seperti",
+    "description":"Seperti"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Langganan",
+    "description":"Langganan"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Ulangi",
+    "description":"Ulangi"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filter",
+    "description":"Filter"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Penuh jendela",
+    "description":"Penuh jendela"
+  },
+  "titelreflection":{
+    "message":"Refleksi",
+    "description":"Refleksi"
+  },
+  "desreflection":{
+    "message":"Menunjukkan efek refleksi pada semua video",
+    "description":"Menunjukkan efek refleksi pada semua video"
+  },
+  "desvideotoolonly":{
+    "message":"Aktifkan bilah alat Video hanya pada situs berikut:",
+    "description":"Aktifkan bilah alat Video hanya pada situs berikut:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Whitelist",
+    "description":"Whitelist"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Blacklist",
+    "description":"Blacklist"
   }
 }

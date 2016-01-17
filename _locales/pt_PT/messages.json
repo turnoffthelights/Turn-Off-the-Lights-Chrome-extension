@@ -740,8 +740,8 @@
     "description":"Isso é ótimo, e o melhor de tudo é que funciona em todos os lugares. Até mesmo no YouTube, sites de notícias, etc."
   },
   "howworkmotion":{
-    "message":"Como é que esta funciona?",
-    "description":"Como é que esta funciona?"
+    "message":"Como é que isto funciona?",
+    "description":"Como é que isto funciona?"
   },
   "step1description":{
     "message":"Ativar a deteção de movimentos.",
@@ -924,8 +924,8 @@
     "description":"Publicar no Facebook"
   },
   "sharemenupostongoogleplus":{
-    "message":"Publicar no Google +",
-    "description":"Publicar no Google +"
+    "message":"Publicar no Google+",
+    "description":"Publicar no Google+"
   },
   "sharemenuratetitle":{
     "message":"Classificar esta extensão",
@@ -1090,5 +1090,97 @@
   "titel360youtube":{
     "message":"Mostra o vídeo YouTube de 360 graus numa moldura.",
     "description":"Mostra o vídeo YouTube de 360 graus numa moldura."
+  },
+  "titelvideotool":{
+    "message":"Barra de Ferramentas de Vídeo",
+    "description":"Barra de Ferramentas de Vídeo"
+  },
+  "desvideotool":{
+    "message":"Mostrar por baixo do ecrã a barra de ferramentas para personalizar o leitor de vídeo actual",
+    "description":"Mostrar por baixo do ecrã a barra de ferramentas para personalizar o leitor de vídeo actual"
+  },
+  "vtoolfullscreen":{
+    "message":"Botão para definir o leitor de vídeo para tamanho de ecrã inteiro",
+    "description":"Botão para definir o leitor de vídeo para tamanho de ecrã inteiro"
+  },
+  "vtoolfilter":{
+    "message":"Botão para adicionar um filtro no leitor de vídeo",
+    "description":"Botão para adicionar um filtro no leitor de vídeo"
+  },
+  "vtoolreplay":{
+    "message":"Botão para voltar a reproduzir o leitor de vídeo",
+    "description":"Botão para voltar a reproduzir o leitor de vídeo"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"tons de cinza",
+    "description":"tons de cinza"
+  },
+  "titelvideotoolsepia":{
+    "message":"sépia",
+    "description":"sépia"
+  },
+  "titelvideotoolinvert":{
+    "message":"inverter",
+    "description":"inverter"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contraste",
+    "description":"contraste"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturar",
+    "description":"saturar"
+  },
+  "titelvideotoolhueroration":{
+    "message":"rotação de matriz em 90º",
+    "description":"rotação de matriz em 90º"
+  },
+  "titelvideotoolbrightness":{
+    "message":"50% de brilho",
+    "description":"50% de brilho"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Gostar",
+    "description":"Gostar"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Subscrever",
+    "description":"Subscrever"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repetir",
+    "description":"Repetir"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filtro",
+    "description":"Filtro"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Ecrã Inteiro",
+    "description":"Ecrã Inteiro"
+  },
+  "titelreflection":{
+    "message":"Reflexão",
+    "description":"Reflexão"
+  },
+  "desreflection":{
+    "message":"Mostrar o efeito de reflexo em todos os vídeos",
+    "description":"Mostrar o efeito de reflexo em todos os vídeos"
+  },
+  "desvideotoolonly":{
+    "message":"Activar a Barra de Ferramentas de Vídeo só no(s) seguinte(s) site(s):",
+    "description":"Activar a Barra de Ferramentas de Vídeo só no(s) seguinte(s) site(s):"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Lista branca",
+    "description":"Lista branca"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
   }
 }

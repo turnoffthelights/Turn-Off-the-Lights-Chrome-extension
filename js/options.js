@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2015 Stefan vd
+Copyright (C) 2016 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -242,6 +242,17 @@ function save_options(){
 	chrome.storage.local.set({"nightmodetxt": $('nightmodetxt').value});
 	if($('no360youtube').checked)chrome.storage.local.set({"no360youtube": 'true'});
 	else chrome.storage.local.set({"no360youtube": 'false'});
+	if($('videotool').checked)chrome.storage.local.set({"videotool": 'true'});
+	else chrome.storage.local.set({"videotool": 'false'});
+	if($('reflection').checked)chrome.storage.local.set({"reflection": 'true'});
+	else chrome.storage.local.set({"reflection": 'false'});
+	chrome.storage.local.set({"reflectionamount": $('reflectionamount').value});
+	if($('videotoolonly').checked)chrome.storage.local.set({"videotoolonly": 'true'});
+	else chrome.storage.local.set({"videotoolonly": 'false'});
+	if($('videotoolchecklistwhite').checked)chrome.storage.local.set({"videotoolchecklistwhite": 'true'});
+	else chrome.storage.local.set({"videotoolchecklistwhite": 'false'});
+	if($('videotoolchecklistblack').checked)chrome.storage.local.set({"videotoolchecklistblack": 'true'});
+	else chrome.storage.local.set({"videotoolchecklistblack": 'false'});
 
 // Excluded domains
 var excludedDomainsBox = $("excludedDomainsBox");
@@ -291,6 +302,13 @@ var autostopDomains = {};
 for (var i = 0; i < autostopDomainsBox.length; i++)
 	autostopDomains[autostopDomainsBox.options[i].value] = true;
     chrome.storage.local.set({"autostopDomains": JSON.stringify(autostopDomains)});
+
+// videotool Excluded domains
+var videotoolDomainsBox = $("videotoolDomainsBox");
+var videotoolDomains = {};
+for (var i = 0; i < videotoolDomainsBox.length; i++)
+	videotoolDomains[videotoolDomainsBox.options[i].value] = true;
+    chrome.storage.local.set({"videotoolDomains": JSON.stringify(videotoolDomains)});	
 }
 
 // Option to read current value from chrome.storage
@@ -405,6 +423,13 @@ chrome.storage.local.get(['autostopchecklistwhite', 'autostopchecklistblack'], f
 	}
 });
 
+chrome.storage.local.get(['videotoolchecklistwhite', 'videotoolchecklistblack'], function(items){ // find no localstore videotool whitelist
+	if(!items['videotoolchecklistwhite']&&!items['videotoolchecklistblack']){
+	chrome.storage.local.set({"videotoolchecklistwhite": 'true'}); // then default true
+	chrome.storage.local.set({"videotoolchecklistblack": 'false'}); // then default false
+	}
+});
+
 chrome.storage.local.get(['nightmodechecklistwhite', 'nightmodechecklistblack'], function(items){ // find no localstore nightmode whitelist
 	if(!items['nightmodechecklistwhite']&&!items['nightmodechecklistblack']){
 	chrome.storage.local.set({"nightmodechecklistwhite": 'true'}); // then default true
@@ -514,7 +539,7 @@ $("select_language").addEventListener('click', function () {updateCountry();},fa
 $("select_language").addEventListener('change', function() {updateCountry();save_options();});
 $("select_dialect").addEventListener('change', function() {save_options();});
 
-	chrome.storage.local.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10','hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube'], function(items){
+	chrome.storage.local.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10','hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains'], function(items){
 		if(items['interval']){$('interval').value = items['interval'];$('slider').value = items['interval'];}	
 		else $('interval').value = 80;
 		if(items['lightcolor']){$('lightcolor').value = items['lightcolor'];}
@@ -666,6 +691,13 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		else {$('nightmodetxt').value = '#ffffff';}
 		if(items['mobilelastonversion'] == chrome.runtime.getManifest().version){$("sectionmobileappbox").style.display = "none";}
 		if(items['no360youtube'] == 'true'){$('no360youtube').checked = true;}
+		if(items['videotool'] == 'true'){$('videotool').checked = true;}
+		if(items['reflection'] == 'true'){$('reflection').checked = true;}
+		if(items['reflectionamount']){$('reflectionamount').value = items['reflectionamount'];}
+		else {$('reflectionamount').value = '20';}
+		if(items['videotoolonly'] == 'true'){$('videotoolonly').checked = true;}
+		if(items['videotoolchecklistwhite'] == 'true'){$('videotoolchecklistwhite').checked = true;}
+		if(items['videotoolchecklistblack'] == 'true'){$('videotoolchecklistblack').checked = true;}
 		
 // show remember page
 var countremember = items['countremember'];
@@ -705,6 +737,40 @@ chrome.storage.local.set({"countremember": countremember});
     for ( var id in contentDivs ) {
     	if ( i != 0 ) contentDivs[id].className = 'page hidden';
         i++;
+    }
+
+    // open direct the tab to 'welcome' or the 'guide'
+    var urlwebcomputer = unescape((''+self.location.search).substring(1));
+    if(urlwebcomputer == "welcome"){
+        $("tabshare").click();
+        var selectedId = getHash("tab6");
+    
+        // Highlight the selected tab, and dim all others.
+        // Also show the selected content div, and hide all others.
+        for ( var id in contentDivs ) {
+            if ( id == selectedId ) {
+            tabLinks[id].className = 'navbar-item-selected';
+            contentDivs[id].className = 'page';
+            } else {
+            tabLinks[id].className = 'navbar-item';
+            contentDivs[id].className = 'page hidden';
+            }
+        }
+    } else if(urlwebcomputer == "welcomeguide"){
+        $("tabguide").click();
+        var selectedId = getHash("tab4");
+    
+        // Highlight the selected tab, and dim all others.
+        // Also show the selected content div, and hide all others.
+        for ( var id in contentDivs ) {
+            if ( id == selectedId ) {
+            tabLinks[id].className = 'navbar-item-selected';
+            contentDivs[id].className = 'page';
+            } else {
+            tabLinks[id].className = 'navbar-item';
+            contentDivs[id].className = 'page hidden';
+            }
+        }
     }
 
     // display version number
@@ -831,6 +897,21 @@ if(typeof autostopDomains == "string") {
         asbuf.sort();
 	for(var i = 0; i < asbuf.length; i++)
 		appendToListBox("autostopDomainsBox", asbuf[i]);
+    }
+	
+// video tool bar - Excluded domains - sort these alphabetically
+var videotoolDomains = items["videotoolDomains"];
+if(typeof videotoolDomains == "undefined")
+videotoolDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+		
+if(typeof videotoolDomains == "string") {
+	videotoolDomains = JSON.parse(videotoolDomains);
+	var vtbbuf = [];
+	for(var domain in videotoolDomains)
+		vtbbuf.push(domain);
+        vtbbuf.sort();
+	for(var i = 0; i < vtbbuf.length; i++)
+		appendToListBox("videotoolDomainsBox", vtbbuf[i]);
     }
 	
 	test(); // everything readed, do the "test"
@@ -1199,6 +1280,22 @@ function autostopremoveSelectedExcludedDomain() {
     save_options();
 }
 
+// whitelist autostop domain
+function videotooladdWhitelistDomain() {
+    var domain = $("videotoolwebsiteurl").value;
+    appendToListBox("videotoolDomainsBox", domain);
+    save_options();
+}
+
+function videotoolremoveSelectedExcludedDomain() {
+    var videotoolDomainsBox = $("videotoolDomainsBox");
+    for (var i = videotoolDomainsBox.length-1; i >= 0; i--) {
+        if (videotoolDomainsBox.options[i].selected)
+            videotoolDomainsBox.remove(i);
+    }
+    save_options();
+}
+
 // fade effects control -> not when loaded page
 function lightscontrol() {
 var jump = $('interval').value;
@@ -1301,7 +1398,8 @@ else if(lightimagelin.checked == true)
 {var linearsq = document.getElementById("linearsq");
 $('example1').style.background = 'linear-gradient(to ' + linearsq.options[linearsq.selectedIndex].value + ', ' + $('colora').value + ' ' + $('intervallina').value + '%,' + $('colorb').value + ' ' + $('intervallinb').value + '%)';
 $('example2').style.background = 'linear-gradient(to ' + linearsq.options[linearsq.selectedIndex].value + ', ' + $('colora').value + ' ' + $('intervallina').value + '%,' + $('colorb').value + ' ' + $('intervallinb').value + '%)';
-$('mousespotlighta').disabled = true;$('mousespotlightc').disabled = true;$('mousespotlighto').checked = true;
+$('mousespotlighta').disabled = true;$('mousespotlightc').disabled = true;
+if($('mousespotlighta').checked == true || $('mousespotlightc').checked == true){$('mousespotlighto').checked = true;}
 }
 
 if(eyen.checked == true){$('ecosaver').disabled = false;$('ecosavertime').disabled = false;$('confirmtimesaver').disabled = false;$('helpeyeprotection').style.display = "none";$('excludedDomainsBox').disabled = true;$('websiteurl').disabled = true;$('autoplay').disabled = false;$('autoplaydelay').disabled = false;$('autoplaydelaytime').disabled = false;$('addbutton').disabled = true;$('removebutton').disabled = true;$('nighttime').disabled = false;$('begintime').disabled = false;$('endtime').disabled = false;$('confirmtime').disabled = false;$('helpautoplay').style.display = "none";$('eyechecklistwhite').disabled = true;$('eyechecklistblack').disabled = true;}
@@ -1373,6 +1471,13 @@ else{$('lampandnightmode').disabled = true;}
 if(autostoponly.checked == true){$('autostopchecklistwhite').disabled = false;$('autostopchecklistblack').disabled = false;$('autostopDomainsBox').disabled = false;$('autostopwebsiteurl').disabled = false;$('autostopaddbutton').disabled = false;$('autostopremovebutton').disabled = false;}
 else{$('autostopchecklistwhite').disabled = true;$('autostopchecklistblack').disabled = true;$('autostopDomainsBox').disabled = true;$('autostopwebsiteurl').disabled = true;$('autostopaddbutton').disabled = true;$('autostopremovebutton').disabled = true;}
 
+if(videotoolonly.checked == true){$('videotoolchecklistwhite').disabled = false;$('videotoolchecklistblack').disabled = false;$('videotoolDomainsBox').disabled = false;$('videotoolwebsiteurl').disabled = false;$('videotooladdbutton').disabled = false;$('videotoolremovebutton').disabled = false;}
+else{$('videotoolchecklistwhite').disabled = true;$('videotoolchecklistblack').disabled = true;$('videotoolDomainsBox').disabled = true;$('videotoolwebsiteurl').disabled = true;$('videotooladdbutton').disabled = true;$('videotoolremovebutton').disabled = true;}
+
+if(reflection.checked == true){$('beeld').style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop("+(100-$('reflectionamount').value)/100+", transparent))";}
+else{$('beeld').style.webkitBoxReflect = "";}
+
+			
 // done with reading
 // run now the dynamic background if enabled
 dynamictest();
@@ -1673,7 +1778,7 @@ function draw() {
 }
 
 // Update the scene
-function update() {
+function smokeupdate() {
     particles.forEach(function(particle) {
         particle.update();
     });
@@ -1686,7 +1791,7 @@ runsmoke();
 if (context) {
     setInterval(function() {
         // Update the scene before drawing
-        update();
+        smokeupdate();
 
         // Draw the scene
         draw();
@@ -2419,6 +2524,30 @@ else if (urlbrowservendor.search("Google") >= 0) {browserName = "Google Chrome";
 else if (navigator.appCodeName == "Mozilla") {browserName = "Firefox";}
 else if ((nAgt.indexOf("Maxthon/"))!=-1) {browserName = "Maxthon";}
 
+// browser check
+if (browserName == "Opera") {
+	// feature check speech and camera
+	// no support
+	$("helpcameramotion").style.display = "";
+	$("helpspeech").style.display = "";
+	$("speech").disabled = true;
+	$("select_language").disabled = true;
+	$("select_dialect").disabled = true;
+	$("speechonly").disabled = true;
+	$("motion").disabled = true;
+	$("cammotiononly").disabled = true;
+} else if (browserName == "Google Chrome") {
+	// feature check speech and camera
+	// support
+	$("helpcameramotion").style.display = "none";
+	$("helpspeech").style.display = "none";
+} else {
+	// feature check speech and camera
+	// support
+	$("helpcameramotion").style.display = "none";
+	$("helpspeech").style.display = "none";
+}
+
 // Google Chrome
 var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
 var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
@@ -2428,6 +2557,10 @@ var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmob
 var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
 var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
 
+var linktotlguide = "https://www.turnoffthelights.com/extension/chromeguide.html";
+var linktotlchangelog = "https://www.turnoffthelights.com/extension/chromechangelog.html";  
+var linktotlfan = "https://www.turnoffthelights.com/extension/chromewelcome.html";
+                          
 // Remove remember
 $("skipremember").addEventListener('click', function() {$('remembershare').style.display = "none";});
 $("firstcheckboxskipremember").addEventListener('click', function() {if(firstcheckboxskipremember.checked == true){$('optionskipremember').checked = true;}save_options();});
@@ -2515,13 +2648,13 @@ $("tabadvan").addEventListener('click', function() {ONworkaroundbugfromsafari();
 $("tabnight").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabmotion").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
 $("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "http://www.turnoffthelights.com/extension/operaguide.html";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
-$("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "http://www.turnoffthelights.com/extension/fan.html";$("managed-prefs-banner").style.display = "none";});
+$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = linktotlguide;$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
+$("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = linktotlfan;$("managed-prefs-banner").style.display = "none";});
 
-$("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support");});
-$("buttonchangelog").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/chromechangelog.html");});
-$("buttonreportlist").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/issueslist.html");});
-$("buttontranslateme").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/translate.html");});
+$("buttonreportissue").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/support");});
+$("buttonchangelog").addEventListener('click', function() {window.open(linktotlchangelog);});
+$("buttonreportlist").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/extension/issueslist.html");});
+$("buttontranslateme").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/extension/translate.html");});
 
 function ONworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "";}
 function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}
@@ -2603,6 +2736,12 @@ $("autostopaddbutton").addEventListener('click', function() {autostopaddWhitelis
 // autostop Remove website
 $("autostopremovebutton").addEventListener('click', function() {autostopremoveSelectedExcludedDomain();});
 
+// video Add website
+$("videotooladdbutton").addEventListener('click', function() {videotooladdWhitelistDomain();});
+
+// video Remove website
+$("videotoolremovebutton").addEventListener('click', function() {videotoolremoveSelectedExcludedDomain();});
+
 // Reset settings
 $("resettotl").addEventListener('click', function() {chrome.storage.local.clear();location.reload();});
 
@@ -2614,7 +2753,7 @@ $("war").addEventListener('click', function() {window.open(reviewstefanvdurl);$(
 $("nt").addEventListener('click', function() {$("sectionreviewbox").style.display = "none";chrome.storage.local.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
 
 // Aurora Player app box
-$("apgetapp").addEventListener('click', function() {window.open("http://www.stefanvd.net/project/auroraplayer.htm");$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
+$("apgetapp").addEventListener('click', function() {window.open("https://www.stefanvd.net/project/aurora-player/");$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
 $("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
 
 // Mobile app box
@@ -2627,27 +2766,6 @@ $("loadinglamp").src = "icons/icon16@2x.png";$("loadinglamp").style.width = "16p
 $("welcomelamp").src = "icons/icon16@2x.png";$("welcomelamp").style.width = "16px"; $("welcomelamp").style.height = "16px";
 $("rememberlamp").src = "icons/icon16@2x.png";$("rememberlamp").style.width = "16px"; $("rememberlamp").style.height = "16px";
 $("auroraplayericon").src = "images/aurora-player_32x32@2x.png";
-}
-
-// browser check
-if (browserName == "Opera") {
-	// feature check speech and camera
-	$("helpcameramotion").style.display = "";
-	$("helpspeech").style.display = "";
-	$("speech").disabled = true;
-	$("select_language").disabled = true;
-	$("select_dialect").disabled = true;
-	$("speechonly").disabled = true;
-	$("motion").disabled = true;
-	$("cammotiononly").disabled = true;
-} else if (browserName == "Google Chrome") {
-	// feature check speech and camera
-	$("helpcameramotion").style.display = "none";
-	$("helpspeech").style.display = "none";
-} else {
-	// feature check speech and camera
-	$("helpcameramotion").style.display = "none";
-	$("helpspeech").style.display = "none";
 }
 
 });

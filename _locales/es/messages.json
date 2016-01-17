@@ -324,12 +324,12 @@
     "description":"Radio de pixelización:"
   },
   "installadblocker":{
-    "message":"Utilizar con una extensión Adblocker.",
-    "description":"Utilizar con una extensión Adblocker."
+    "message":"Si no quieres ver anuncios, usa una extensión de adblock.",
+    "description":"Si no quieres ver anuncios, usa una extensión de adblock."
   },
   "titelsharebutton":{
-    "message":"Botones para compartir",
-    "description":"Botones para compartir"
+    "message":"Botón de compartir",
+    "description":"Botón de compartir"
   },
   "titelcolor":{
     "message":"Color",
@@ -628,8 +628,8 @@
     "description":"Secretos"
   },
   "textfoot":{
-    "message":"Este software está licenciado bajo la CC-GNU GPL. Para ver una copia de esta licencia, visita",
-    "description":"Este software está licenciado bajo la CC-GNU GPL. Para ver una copia de esta licencia, visita"
+    "message":"Este software está licenciado bajo el CC-GNU GPL. Para obtener una copia de esta licencia, visita",
+    "description":"Este software está licenciado bajo el CC-GNU GPL. Para obtener una copia de esta licencia, visita"
   },
   "left":{
     "message":"izquierda",
@@ -668,8 +668,8 @@
     "description":"Hemos añadido algunas características nuevas"
   },
   "upgradecontextmessage":{
-    "message":"Eso hace esta extensión aún más asombrosa",
-    "description":"Eso hace esta extensión aún más asombrosa"
+    "message":"Eso hace a esta extensión aún más impresionante",
+    "description":"Eso hace a esta extensión aún más impresionante"
   },
   "upgradecontextitemta":{
     "message":"Camera Motion",
@@ -785,7 +785,7 @@
   },
   "speechoption":{
     "message":"Reconocimiento de voz",
-    "description":"Speech Recognition "
+    "description":"Reconocimiento de voz "
   },
   "titelspeech":{
     "message":"Voz",
@@ -968,12 +968,12 @@
     "description":"Descargar la aplicación ahora"
   },
   "titeldownloadupgradezoom":{
-    "message":"Acerca o aleja el contenido web usando el botón de zoom para una lectura más cómoda.",
-    "description":"Acerca o aleja el contenido web usando el botón de zoom para una lectura más cómoda."
+    "message":"Aumenta o disminuye el zoom de esta web usando el botón de zoom para una lectura más cómoda.",
+    "description":"Aumenta o disminuye el zoom de esta web usando el botón de zoom para una lectura más cómoda."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Añade de nuevo la barra de menú negra a la web de Google.",
-    "description":"Añade de nuevo la barra de menú negra a la web de Google."
+    "message":"Añade de nuevo la barra del menú negra a la web de Google.",
+    "description":"Añade de nuevo la barra del menú negra a la web de Google."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"Esto te muestra información bursátil en tiempo real.",
@@ -1000,8 +1000,8 @@
     "description":"Abajo a la izquierda"
   },
   "nmcustom":{
-    "message":"Haz clic, mantén y arrástralo a la ubicación en tu pantalla.",
-    "description":"Haz clic, mantén y arrástralo a la ubicación en tu pantalla."
+    "message":"Personalizado (haz clic, mantén pulsado y mueve el interruptor a donde quieras)",
+    "description":"Personalizado (haz clic, mantén pulsado y mueve el interruptor a donde quieras)"
   },
   "desnighthover":{
     "message":"Mostrar el interruptor transparente en la página web.",
@@ -1054,5 +1054,133 @@
   "flashembedobject":{
     "message":"Compatible con: <object>, <embed>, <applet>, <iframe>.",
     "description":"Compatible con: <object>, <embed>, <applet>, <iframe>."
+  },
+  "titelnightmodebck":{
+    "message":"Color del fondo:",
+    "description":"Color del fondo:"
+  },
+  "titelnightmodetxt":{
+    "message":"Color del texto:",
+    "description":"Color del texto:"
+  },
+  "desdynamicsmoke":{
+    "message":"Humo",
+    "description":"Humo"
+  },
+  "desdynamicdotscolor":{
+    "message":"Puntos de colores",
+    "description":"Puntos de colores"
+  },
+  "desdynamicstorm":{
+    "message":"Tormenta",
+    "description":"Tormenta"
+  },
+  "desdynamictriangulation":{
+    "message":"Triangulación",
+    "description":"Triangulación"
+  },
+  "desdynamicstars":{
+    "message":"Estrellas",
+    "description":"Estrellas"
+  },
+  "desmobileapp":{
+    "message":"Turn Off the Lights también está disponible para dispositivos móviles.",
+    "description":"Turn Off the Lights también está disponible para dispositivos móviles."
+  },
+  "titel360youtube":{
+    "message":"Muestra los 360 grados de un vídeo de YouTube en un solo fotograma",
+    "description":"Muestra los 360 grados de un vídeo de YouTube en un solo fotograma"
+  },
+  "titelvideotool":{
+    "message":"Barra de herramientas de vídeo",
+    "description":"Barra de herramientas de vídeo"
+  },
+  "desvideotool":{
+    "message":"Mostrar la barra de herramientas debajo de la pantalla para personalizar el reproductor de vídeo actual",
+    "description":"Mostrar la barra de herramientas debajo de la pantalla para personalizar el reproductor de vídeo actual"
+  },
+  "vtoolfullscreen":{
+    "message":"Un botón para ajustar el reproductor de vídeo al tamaño de la ventana completa",
+    "description":"Un botón para ajustar el reproductor de vídeo al tamaño de la ventana completa"
+  },
+  "vtoolfilter":{
+    "message":"Un botón para añadir un filtro al reproductor de vídeo actual",
+    "description":"Un botón para agregar un filtro en el reproductor de vídeo actual"
+  },
+  "vtoolreplay":{
+    "message":"Un botón para reproducir el vídeo actual",
+    "description":"Un botón para reproducir el reproductor de vídeo actual"
+  },
+  "titelvideotoolgrayscale":{
+    "message":"escala de grises",
+    "description":"escala de grises"
+  },
+  "titelvideotoolsepia":{
+    "message":"sepia",
+    "description":"sepia"
+  },
+  "titelvideotoolinvert":{
+    "message":"invertido",
+    "description":"invertir"
+  },
+  "titelvideotoolcontrast":{
+    "message":"contraste",
+    "description":"contraste"
+  },
+  "titelvideotoolsaturate":{
+    "message":"saturación",
+    "description":"saturación"
+  },
+  "titelvideotoolhueroration":{
+    "message":"90 grados",
+    "description":"rotación de hue"
+  },
+  "titelvideotoolbrightness":{
+    "message":"brillo",
+    "description":"brillo"
+  },
+  "titelvideotoolnormal":{
+    "message":"normal",
+    "description":"normal"
+  },
+  "titelvideotoollike":{
+    "message":"Me gusta",
+    "description":"Me gusta"
+  },
+  "titelvideotoolsubscribe":{
+    "message":"Suscribirse",
+    "description":"Suscribirse"
+  },
+  "titelvideotoolrepeat":{
+    "message":"Repetir",
+    "description":"Repetir"
+  },
+  "titelvideotoolfilter":{
+    "message":"Filtro",
+    "description":"Filtro"
+  },
+  "titelvideotoolfullwindow":{
+    "message":"Ventana completa",
+    "description":"Ventana completa"
+  },
+  "titelreflection":{
+    "message":"Reflexión",
+    "description":"Reflexión"
+  },
+  "desreflection":{
+    "message":"Mostrar el efecto de reflexión en todos los vídeos",
+    "description":"Mostrar el efecto de reflexión en todos los videos"
+  },
+  "desvideotoolonly":{
+    "message":"Activar la barra de herramientas de vídeo en las siguientes webs:",
+    "description":"Activar la barra de herramientas de vídeo en el sitios siguientes:"
+  },
+  "titelvideotoolwhitelist":{
+    "message":"Lista blanca",
+    "description":"Lista blanca"
+  },
+  "titelvideotoolblacklist":{
+    "message":"Lista negra",
+    "description":"Lista negra"
   }
 }
