@@ -728,8 +728,8 @@
     "description":"Chuyển động camera"
   },
   "desmotion":{
-    "message":"Kích hoạt Chuyển động Camera",
-    "description":"Kích hoạt Chuyển động Camera"
+    "message":"Enable the Camera Motion",
+    "description":"Enable the Camera Motion"
   },
   "trymotion":{
     "message":"Tự thử nó!",
@@ -752,8 +752,8 @@
     "description":"Di chuyển bàn tay của bạn (hoặc đầu tiên hãy trượt) từ trên xuống."
   },
   "step3description":{
-    "message":"Lớp màu đen sẽ tự động trượt xuống.",
-    "description":"Lớp màu đen sẽ tự động trượt xuống."
+    "message":"The black layer will automatically slide down.",
+    "description":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
     "message":"Kiểm tra danh sách:",
@@ -776,12 +776,12 @@
     "description":"Tuyến tính"
   },
   "titelcolora":{
-    "message":"Màu A:",
-    "description":"Màu A:"
+    "message":"Color A:",
+    "description":"Color A:"
   },
   "titelcolorb":{
-    "message":"Màu B:",
-    "description":"Màu B:"
+    "message":"Color B:",
+    "description":"Color B:"
   },
   "speechoption":{
     "message":"Nhận dạng tiếng nói",
@@ -856,8 +856,8 @@
     "description":"Trình duyệt này hiện không hỗ trợ tính năng này. Đảm bảo rằng bạn có phiên bản trình duyệt mới nhất được cài đặt trên máy tính của bạn."
   },
   "titelsupportatmos":{
-    "message":"Chỉ hỗ trợ <video> HTML5 và trình phát YouTube HTML5. Nó sử dụng GPU từ card đồ hoạ của bạn.",
-    "description":"Chỉ hỗ trợ <video> HTML5 và trình phát YouTube HTML5. Nó sử dụng GPU từ card đồ hoạ của bạn."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
+    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
     "message":"Xem trực tuyến cho các ví dụ",
@@ -936,44 +936,44 @@
     "description":"Hỗ trợ người phát triển"
   },
   "titelautostop":{
-    "message":"Tự động dừng",
-    "description":"Tự động dừng"
+    "message":"AutoStop",
+    "description":"AutoStop"
   },
   "desautostop":{
-    "message":"Tự động dừng phát video khi tôi mở một trang web",
-    "description":"Tự động dừng phát video khi tôi mở một trang web"
+    "message":"Stop playing the video automatically when I open a web page",
+    "description":"Stop playing the video automatically when I open a web page"
   },
   "areyouhappy":{
     "message":"Bạn có hài lòng về Turn Off the Lights?",
     "description":"Bạn có hài lòng về Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Đảm bảo ý kiến của bạn được quan tâm",
-    "description":"Đảm bảo ý kiến của bạn được quan tâm"
+    "message":"Ensure that your opinion counts",
+    "description":"Ensure that your opinion counts"
   },
   "nothanks":{
-    "message":"Không, cảm ơn",
-    "description":"Không, cảm ơn"
+    "message":"No thanks",
+    "description":"No thanks"
   },
   "writeareview":{
-    "message":"Viết đánh giá",
-    "description":"Viết đánh giá"
+    "message":"Write a review",
+    "description":"Write a review"
   },
   "desauroraplayer":{
-    "message":"Trình phát ánh sáng mô trường xung quanh cũng khả dụng cho máy tính này.",
-    "description":"Trình phát ánh sáng mô trường xung quanh cũng khả dụng cho máy tính này."
+    "message":"The ambient lighting player is also available for your computer.",
+    "description":"The ambient lighting player is also available for your computer."
   },
   "downloadtheapp":{
     "message":"Tải ứng dụng bây giờ",
     "description":"Tải ứng dụng bây giờ"
   },
   "titeldownloadupgradezoom":{
-    "message":"Phóng lớn hoặc nhỏ trên nội dung web bằng nút thu phóng để đọc thoải mái hơn.",
-    "description":"Phóng lớn hoặc nhỏ trên nội dung web bằng nút thu phóng để đọc thoải mái hơn."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
+    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Thêm lại thanh menu đen trên website Google.",
-    "description":"Thêm lại thanh menu đen trên website Google."
+    "message":"Adds back the black menubar on the Google website.",
+    "description":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
     "message":"This shows you the real time stock market information.",
@@ -1032,8 +1032,8 @@
     "description":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button.",
+    "description":"Activate the 'Night Mode' option when you click on the gray lamp button."
   },
   "titeleyewhitelist":{
     "message":"Danh sách trắng",
@@ -1088,99 +1088,7 @@
     "description":"Turn Off the Lights is also available for your mobile device."
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame",
-    "description":"Shows the full 360 degrees YouTube video in one frame"
-  },
-  "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
-  },
-  "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
-  },
-  "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
-  },
-  "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
-  },
-  "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"grayscale",
-    "description":"grayscale"
-  },
-  "titelvideotoolsepia":{
-    "message":"sepia",
-    "description":"sepia"
-  },
-  "titelvideotoolinvert":{
-    "message":"invert",
-    "description":"invert"
-  },
-  "titelvideotoolcontrast":{
-    "message":"contrast",
-    "description":"contrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"saturation",
-    "description":"saturation"
-  },
-  "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
-  },
-  "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
-  },
-  "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
-  },
-  "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Đăng ký",
-    "description":"Đăng ký"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
-  },
-  "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
-  },
-  "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
-  },
-  "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Danh sách trắng",
-    "description":"Danh sách trắng"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Danh sách đen",
-    "description":"Danh sách đen"
+    "message":"Shows the full 360 degrees YouTube video in one frame.",
+    "description":"Shows the full 360 degrees YouTube video in one frame."
   }
 }

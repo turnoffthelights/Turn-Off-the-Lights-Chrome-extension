@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2016 Stefan vd
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -42,38 +42,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 	initialize: function () {
 		this.messageEvent;
 		window.addEventListener("load", initvideoinject, false);
-        document.addEventListener("DOMContentLoaded", initvideoinject, false);
 		initvideoinject();
- 
- 		// New Mutation Summary API Reference
- 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
- 		if (MutationObserver) {
- 		// setup MutationSummary observer
- 		var videolist = document.querySelector('body');
- 		var observer = new MutationObserver(function(mutations, observer) {
-                                     initvideoinject();
-                                     });
- 
- 		observer.observe(videolist, {
-                  subtree: true,       // observe the subtree rooted at ...videolist...
-                  childList: true,     // include childNode insertion/removals
-                  characterData: false, // include textContent changes
-                  attributes: false     // include changes to attributes within the subtree
-                  });
- 		} else {
- 		// setup DOM event listeners
- 		document.addEventListener("DOMNodeRemoved", initvideoinject, false);
- 		document.addEventListener("DOMNodeInserted", initvideoinject, false);
- 		}
-
 		function initvideoinject(e) {
 			var youtubeplayer = document.getElementById("movie_player") || null;
 			var htmlplayer = document.getElementsByTagName("video") || false;
 			
 			if (youtubeplayer !== null) { // YouTube video element
-				var interval = window.setInterval(function () {
+				var interval = setInterval(function () {
 					if (youtubeplayer.pause || youtubeplayer.pauseVideo) {
-						window.clearInterval(interval);
+						clearInterval(interval);
 						if (youtubeplayer.pauseVideo) {youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange");}
 					}
 				}, 10);
@@ -98,9 +75,10 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				};
 				
 				setPlayerEvents(htmlplayer);
- 
+				
 				(function(o) {		
 					var triggerDOMChanges = function() {
+					// console.log("Trigger this DOM");
 						var htmlplayer = document.getElementsByTagName("video") || null;
 						
 						if(htmlplayer == null || htmlplayer.length === 0) {o.players.active = 0; if(o.players.active < 1){o.playerStateChange(0);} return;}
@@ -117,7 +95,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						setPlayerEvents(htmlplayer);
 					};				
 
-				}(this.ytCinema));
+					// New Mutation Summary API Reference
+					// var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+					// if (typeof MutationObserver == "function") {
+						// setup MutationSummary observer
+						// var videolist = document.querySelector('body');
+						// var observer = new MutationObserver(function(mutations, observer) {
+						// triggerDOMChanges();
+						// });
+					
+						// observer.observe(videolist, {
+							// subtree: true,       // observe the subtree rooted at ...videolist...
+							// childList: true,     // include childNode insertion/removals
+							// characterData: false, // include textContent changes
+							// attributes: false     // include changes to attributes within the subtree
+						// });
+					// } else {
+						// setup DOM event listeners
+						// document.addEventListener("DOMNodeRemoved", triggerDOMChanges, false);
+						// document.addEventListener("DOMNodeInserted", triggerDOMChanges, false);
+					// }
+					
+				}(this.ytCinema));				
 			}
 		}
 	}

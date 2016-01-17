@@ -785,7 +785,7 @@
   },
   "speechoption":{
     "message":"Stemmegenkendelse",
-    "description":"Talegenkendelse "
+    "description":"Speech Recognition "
   },
   "titelspeech":{
     "message":"Tale",
@@ -1090,97 +1090,5 @@
   "titel360youtube":{
     "message":"Viser den fulde 360 graders YouTube video i én ramme.",
     "description":"Viser den fulde 360 graders YouTube video i én ramme."
-  },
-  "titelvideotool":{
-    "message":"Videoværktøjsbjælke",
-    "description":"Videoværktøjsbjælke"
-  },
-  "desvideotool":{
-    "message":"Vis værktøjsbjælken under din skærm for at tilpasse den nuværende videoafspiller",
-    "description":"Vis værktøjsbjælken under din skærm for at tilpasse den nuværende videoafspiller"
-  },
-  "vtoolfullscreen":{
-    "message":"Knap for indstilling af videoafspiller til fuld vinduesstørrelse",
-    "description":"Knap for indstilling af videoafspiller til fuld vinduesstørrelse"
-  },
-  "vtoolfilter":{
-    "message":"Knap for tilføjelse af et filter i videoafspilleren",
-    "description":"Knap for tilføjelse af et filter i videoafspilleren"
-  },
-  "vtoolreplay":{
-    "message":"Genafspilningsknap på videoafspiller",
-    "description":"Genafspilningsknap på videoafspiller"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"gråtoneskala",
-    "description":"gråtoneskala"
-  },
-  "titelvideotoolsepia":{
-    "message":"sepia",
-    "description":"sepia"
-  },
-  "titelvideotoolinvert":{
-    "message":"invertér",
-    "description":"invertér"
-  },
-  "titelvideotoolcontrast":{
-    "message":"kontrast",
-    "description":"kontrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"mætning",
-    "description":"mætning"
-  },
-  "titelvideotoolhueroration":{
-    "message":"nuancerotation 90°",
-    "description":"nuancerotation 90°"
-  },
-  "titelvideotoolbrightness":{
-    "message":"lysstyrke 50%",
-    "description":"lysstyrke 50%"
-  },
-  "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
-  },
-  "titelvideotoollike":{
-    "message":"Synes om",
-    "description":"Synes om"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Abonnér",
-    "description":"Abonnér"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Gentag",
-    "description":"Gentag"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filtrér",
-    "description":"Filtrér"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Fuldt vindue",
-    "description":"Fuldt vindue"
-  },
-  "titelreflection":{
-    "message":"Refleksion",
-    "description":"Refleksion"
-  },
-  "desreflection":{
-    "message":"Vis refleksionseffekt på alle videoer",
-    "description":"Vis refleksionseffekt på alle videoer"
-  },
-  "desvideotoolonly":{
-    "message":"Aktivér kun videoværktøjsbjælken på de følgende websted(-er):",
-    "description":"Aktivér kun videoværktøjsbjælken på de følgende websted(-er):"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Hvidliste",
-    "description":"Hvidliste"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Sortliste",
-    "description":"Sortliste"
   }
 }

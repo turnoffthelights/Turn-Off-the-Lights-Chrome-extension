@@ -8,8 +8,8 @@
     "description":"背景圖像"
   },
   "shortcutalllights":{
-    "message":"對所有開啟頁籤切換光源開啟或關閉。",
-    "description":"對所有開啟頁籤切換光源開啟或關閉。"
+    "message":"to toggle the lights on\/off for all open tabs",
+    "description":"to toggle the lights on\/off for all open tabs"
   },
   "lastchecked":{
     "message":"自動檢測最新版本開啟",
@@ -144,8 +144,8 @@
     "description":"空間的宇宙"
   },
   "deseastereggs":{
-    "message":"按 T 鍵新增暗色層",
-    "description":"按 T 鍵新增暗色層"
+    "message":"Pressing the T key adds a theater curtain to the dark layer",
+    "description":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
     "message":"設定",
@@ -220,8 +220,8 @@
     "description":"版本號碼文本"
   },
   "shortcutdark":{
-    "message":"螢幕變暗 （增加不透明度）",
-    "description":"螢幕變暗 （增加不透明度）"
+    "message":"to darken the screen (increase opacity)",
+    "description":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
     "message":"顯示影片的分享按鈕",
@@ -324,8 +324,8 @@
     "description":"擴散半徑："
   },
   "installadblocker":{
-    "message":"如果你不想看廣告，請使用 adblocker 相關擴充功能。",
-    "description":"如果你不想看廣告，請使用 adblocker 相關擴充功能。"
+    "message":"If you don't want to see ads, use an adblocker extension.",
+    "description":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
     "message":"分享按鈕",
@@ -408,8 +408,8 @@
     "description":"採取從視頻的顏色。"
   },
   "showremember":{
-    "message":"開啟時，不再顯示提示頁面",
-    "description":"開啟時，不再顯示提示頁面"
+    "message":"Do not show this reminder page again when I open the options",
+    "description":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
     "message":"如果您可以進行任何數額的捐贈，我將非常感激 ！",
@@ -1060,20 +1060,20 @@
     "description":"Background color:"
   },
   "titelnightmodetxt":{
-    "message":"文字顏色：",
-    "description":"文字顏色："
+    "message":"Text color:",
+    "description":"Text color:"
   },
   "desdynamicsmoke":{
-    "message":"煙霧",
-    "description":"煙霧"
+    "message":"Smoke",
+    "description":"Smoke"
   },
   "desdynamicdotscolor":{
-    "message":"彩色圓點",
-    "description":"彩色圓點"
+    "message":"Color Dots",
+    "description":"Color Dots"
   },
   "desdynamicstorm":{
-    "message":"風暴",
-    "description":"風暴"
+    "message":"Storm",
+    "description":"Storm"
   },
   "desdynamictriangulation":{
     "message":"Triangulation",
@@ -1088,99 +1088,7 @@
     "description":"Turn Off the Lights is also available for your mobile device."
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame",
-    "description":"Shows the full 360 degrees YouTube video in one frame"
-  },
-  "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
-  },
-  "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
-  },
-  "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
-  },
-  "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
-  },
-  "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"grayscale",
-    "description":"grayscale"
-  },
-  "titelvideotoolsepia":{
-    "message":"sepia",
-    "description":"sepia"
-  },
-  "titelvideotoolinvert":{
-    "message":"invert",
-    "description":"invert"
-  },
-  "titelvideotoolcontrast":{
-    "message":"contrast",
-    "description":"contrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"saturation",
-    "description":"saturation"
-  },
-  "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
-  },
-  "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
-  },
-  "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
-  },
-  "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"訂閱",
-    "description":"訂閱"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
-  },
-  "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
-  },
-  "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
-  },
-  "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"白名單",
-    "description":"白名單"
-  },
-  "titelvideotoolblacklist":{
-    "message":"黑名單",
-    "description":"黑名單"
+    "message":"Shows the full 360 degrees YouTube video in one frame.",
+    "description":"Shows the full 360 degrees YouTube video in one frame."
   }
 }

@@ -12,8 +12,8 @@
     "description":"ışığı bütün sekmeler için aç\/kapa"
   },
   "lastchecked":{
-    "message":"En son sürüm kontrolü",
-    "description":"En son sürüm kontrolü"
+    "message":"En son sürümü kontrol et",
+    "description":"En son sürümü kontrol et"
   },
   "visualeffects":{
     "message":"Görsel Efektler",
@@ -560,8 +560,8 @@
     "description":"Hatırlatıcı sayfasını gösterme"
   },
   "description":{
-    "message":"Videoları tıpkı sinemadaymış gibi izleyebilmeniz için sayfanın tamamı karartılacaktır.",
-    "description":"Videoları tıpkı sinemadaymış gibi izleyebilmeniz için sayfanın tamamı karartılacaktır."
+    "message":"Tüm sayfanın arka kısmı kararır ve böylece videoları tıpkı sinemada izliyormuş gibi izlersiniz.",
+    "description":"Tüm sayfanın arka kısmı kararır ve böylece videoları tıpkı sinemada izliyormuş gibi izlersiniz."
   },
   "titelviewcount":{
     "message":"İzlenme Sayısı",
@@ -1090,97 +1090,5 @@
   "titel360youtube":{
     "message":"Tek karede 360 derecelik YouTube videosu gösterir.",
     "description":"Tek karede 360 derecelik YouTube videosu gösterir."
-  },
-  "titelvideotool":{
-    "message":"Video araç çubuğu",
-    "description":"Video araç çubuğu"
-  },
-  "desvideotool":{
-    "message":"Ekranınızın geçerli video oynatıcı özelleştirmek için araç çubuğunu göster",
-    "description":"Ekranınızın geçerli video oynatıcı özelleştirmek için araç çubuğunu göster"
-  },
-  "vtoolfullscreen":{
-    "message":"Tam ekrana geçmek için butona basın",
-    "description":"Tam ekrana geçmek için butona basın"
-  },
-  "vtoolfilter":{
-    "message":"Video oynatıcıya filtre eklemrk için buton",
-    "description":"Video oynatıcıya filtre eklemrk için buton"
-  },
-  "vtoolreplay":{
-    "message":"Videoyu yeniden oynatma butonu",
-    "description":"Videoyu yeniden oynatma butonu"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"gri tonlama",
-    "description":"gri tonlama"
-  },
-  "titelvideotoolsepia":{
-    "message":"sepya",
-    "description":"sepya"
-  },
-  "titelvideotoolinvert":{
-    "message":"ters çevir",
-    "description":"ters çevir"
-  },
-  "titelvideotoolcontrast":{
-    "message":"kontrast",
-    "description":"kontrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"doygunluk",
-    "description":"doygunluk"
-  },
-  "titelvideotoolhueroration":{
-    "message":"renk tonunu 90° çevir",
-    "description":"renk tonunu 90° çevir"
-  },
-  "titelvideotoolbrightness":{
-    "message":"parlaklık %50",
-    "description":"parlaklık %50"
-  },
-  "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
-  },
-  "titelvideotoollike":{
-    "message":"Beğen",
-    "description":"Beğen"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Abone olun",
-    "description":"Abone olun"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Tekrarla",
-    "description":"Tekrarla"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filtre",
-    "description":"Filtre"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Tam pencere",
-    "description":"Tam pencere"
-  },
-  "titelreflection":{
-    "message":"Yansıma",
-    "description":"Yansıma"
-  },
-  "desreflection":{
-    "message":"Yansıma etkisi tüm videoları gösterin",
-    "description":"Yansıma etkisi tüm videoları gösterin"
-  },
-  "desvideotoolonly":{
-    "message":"Video Araç çubuğunu sadece belirli site(ler) de etkinleştir:",
-    "description":"Video Araç çubuğunu sadece belirli site(ler) de etkinleştir:"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Beyaz liste",
-    "description":"Beyaz liste"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Kara liste",
-    "description":"Kara liste"
   }
 }

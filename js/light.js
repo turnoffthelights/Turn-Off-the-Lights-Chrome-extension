@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2016 Stefan vd
+Copyright (C) 2015 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -92,6 +92,7 @@ a[i].style.cssText = 'visibility:visible !important; position:relative !importan
 // if (y >= 1000){q[i].style.zIndex = 'auto';}
 // }
 
+
 // detect if no -webkit-transform:translateZ(0) used, if so
 // remove this and place the 'none' value
 var w = document.getElementsByTagName('*');
@@ -158,78 +159,103 @@ do {
 
 // Shows YouTube Suggestions
 if(suggestions == 'true'){
-// updated 15 january 2016    
-var watch7sidebar = $('watch7-sidebar');
-if(watch7sidebar){$('watch7-sidebar').style.zIndex = 1000;}
+var watch7sidebar = $('watch7-sidebar');  // new youtube watch7
+if(watch7sidebar){$('watch7-sidebar').style.zIndex = '1000';}
+
+var watchsidebar = $('watch-sidebar');
+if(watchsidebar){$('watch-sidebar').style.zIndex = '1000';}
 }
 
 // Shows YouTube playlist
 if(playlist == 'true'){
-// updated 15 january 2016    
 var watchappbarplaylist = $('watch-appbar-playlist');
-if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = 1000;}
+if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = 1001;}
 }
 
 // Shows video title
 if(videoheadline == 'true'){
-// updated 15 january 2016    
+var watchheadlinetitle = $('watch-headline-title');  // new youtube watch7
+if(watchheadlinetitle){$('watch-headline-title').style.zIndex = 1001;$('watch-headline-title').style.position = 'relative';}
+
+span = document.getElementsByTagName('span');  // new youtube watch7
+for(var i = 0; i < span.length; i++ ) 
+{if(span[i].className == (' yt-uix-expander-head') ) {span[i].style.color = 'white';}}
+
 var eowtitle = $('eow-title');
-if(eowtitle){$('eow-title').style.color = 'white';$('eow-title').style.zIndex = 1000;$('eow-title').style.position = 'relative';}
+if(eowtitle){$('eow-title').style.color = 'white';$('eow-title').style.zIndex = 1001;$('eow-title').style.position = 'relative';}
 }
 
 // Shows YouTube Channel name
 if(head == 'true'){
-// updated 15 january 2016
 var watch7userheader = $('watch7-user-header');
 if(watch7userheader){$('watch7-user-header').style.zIndex = 1000;$('watch7-user-header').style.position = 'relative';}
 
-var ytuserinfoa = document.querySelector('.yt-user-info a');
-ytuserinfoa.style.color = 'white';
+div = document.getElementsByTagName('a'); 
+for(var i = 0; i < div.length; i++ )
+{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = 'white';}}
 }
 
 // Shows Infobar
 if(infobar == 'true'){
-// updated 15 january 2016    
 var watchdescription = $('watch-description');
 if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-description').style.background = 'white';}
 }
 
 // Shows like and unlike buttons
 if(likebutton == 'true'){
-// updated 15 january 2016
-var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-likebuttonrenderlike.style.zIndex = 1000;likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'white';
+span = document.getElementsByTagName('span');  // new youtube watch8
+for(var i = 0; i < span.length; i++ )
+{if(span[i].className == ('like-button-renderer ')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';span[i].style.padding = "6px 0px";span[i].style.background = "white";}}
 
-var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-likebuttonrenderdislike.style.zIndex = 1000;likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'white';
+var watchdislike = $('watch-dislike'); // new youtube watch7
+if(watchdislike){$('watch-dislike').style.zIndex = 1000;$('watch-dislike').style.position = 'relative';$('watch-dislike').style.background = 'white';} // new youtube watch7
+
+var watchlike = $('watch-like');
+if(watchlike){$('watch-like').style.zIndex = 1000;$('watch-like').style.position = 'relative';$('watch-like').style.background = 'white';}
+
+var watchunlike = $('watch-unlike');
+if(watchunlike){$('watch-unlike').style.zIndex = 1000;$('watch-unlike').style.position = 'relative';}
 }
 
 // Shows share buttons
 if(sharebutton == 'true'){
-// updated 15 january 2016
-var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-actionsharepanel.style.zIndex = 1000;actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'white';
+var elems = document.getElementsByTagName('button'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trigger-share') > -1) {elems[i].style.zIndex = 1001;elems[i].style.position = "relative";elems[i].style.background = "white";}}
 }
 
 // Shows view count
 if(viewcount == 'true'){
-// updated 15 january 2016
-var watchviewcount = document.querySelector('.watch-view-count');
-watchviewcount.style.zIndex = 1000;watchviewcount.style.color = 'white';
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ )
+{if(div[i].className == ('watch-view-count')) {div[i].style.color = 'white';div[i].style.zIndex = 1001;}}
 }
 
 // Shows add button
 if(addvideobutton == 'true'){
-// updated 15 january 2016
-var addtobutton = document.querySelector('.addto-button');
-addtobutton.style.zIndex = 1000;addtobutton.style.position = 'relative';addtobutton.style.background = 'white';
+var elems = document.getElementsByTagName('button'), i;
+for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('action-panel-trigger-addto') > -1) {elems[i].style.zIndex = 1001;elems[i].style.position = "relative";elems[i].style.background = "white";}}
 }
 
 // Shows like/dislike bar
 if(likebar == 'true'){
-// updated 15 january 2016    
-var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = 'relative';
+div = document.getElementsByTagName('div');  // new youtube watch7
+for(var i = 0; i < div.length; i++ )
+{if(div[i].className == ('video-extras-sparkbars')) {div[i].style.zIndex = 1001;div[i].style.position = 'relative';}}
+
+span = document.getElementsByTagName('span');  // new youtube watch7
+for(var i = 0; i < span.length; i++ )
+{if(span[i].className == ('video-extras-likes-dislikes')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
+
+var watchdescription = $('watch-description');
+if(watchdescription){$('watch-description').style.zIndex = 'auto';}
+
+div = document.getElementsByTagName('div'); 
+for(var i = 0; i < div.length; i++ )
+{if(div[i].className == ('watch-sparkbars')) {div[i].style.zIndex = 1001;div[i].style.position = 'relative';}}
+
+span = document.getElementsByTagName('span'); 
+for(var i = 0; i < span.length; i++ )
+{if(span[i].className == ('watch-likes-dislikes')) {span[i].style.zIndex = 1001;span[i].style.position = 'relative';}}
 }
 
 // MAC & PC & LINUX
@@ -274,12 +300,20 @@ for (var div in divs) {
         }
 }
 
-// YouTube new player 27/04/2015 and 31/08/2015
+// YouTube new player 27/04/2015
 var ytdivs = document.getElementsByTagName('div');
 for (var div in ytdivs) {
         var d = ytdivs[div].className;
-        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-button ytp-cards-button' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container' || d == 'ytp-popup ytp-settings-menu' || d == 'ytp-panelpopup ytp-contextmenu') {
+        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-button ytp-cards-button' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container') {
                 ytdivs[div].style.zIndex = 1001;
+        }
+}
+// YouTube new player 27/04/2015 debug
+var ytdivsdebug = document.getElementsByTagName('div');
+for (var div in ytdivsdebug) {
+        var e = ytdivsdebug[div].className;
+        if (e == 'ytp-panelpopup ytp-contextmenu') {
+                ytdivsdebug[div].style.zIndex = 1002;
         }
 }
 
@@ -348,10 +382,9 @@ do {
 // other file then "mp3" then run this code
 if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText += 'visibility:visible !important; position:relative !important; z-index:1000 !important;';}
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-	if (no360youtube == 'true'){
-		video[i].style.cssText += "display:block !important";
-	} else {
-	 // default the regular player
+	if (no360youtube == 'true'){} else { // default the regular player
+		var ytwebgl = document.getElementsByClassName('webgl');
+		for(var i = 0; i < ytwebgl.length; i++ ){ytwebgl[i].style.zIndex = '1001';}
 	}
 }
 
@@ -432,7 +465,6 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 16) == 'http://vimeo.com') || (insideframe.substring(0, 17) == 'https://vimeo.com') || (insideframe.substring(0, 23) == 'http://player.vimeo.com') || (insideframe.substring(0, 24) == 'https://player.vimeo.com') || (insideframe.substring(0, 29) == 'https://secure-a.vimeocdn.com') || (insideframe.substring(0, 21) == 'http://a.vimeocdn.com') || (insideframe.substring(0, 22) == 'https://a.vimeocdn.com')
 || (insideframe.substring(0, 26) == 'http://www.dailymotion.com') || (insideframe.substring(0, 27) == 'https://www.dailymotion.com') || (insideframe.substring(0, 24) == 'http://static1.dmcdn.net') || (insideframe.substring(0, 25) == 'https://static1.dmcdn.net')
 || (insideframe.substring(0, 27) == 'http://videoplayer.vevo.com') || (insideframe.substring(0, 28) == 'https://videoplayer.vevo.com')
-|| (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
 || (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
 || (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
 || (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
@@ -442,7 +474,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 27) == 'http://videos.revision3.com') || (insideframe.substring(0, 28) == 'https://videos.revision3.com') || (insideframe.substring(0, 20) == 'http://revision3.com') || (insideframe.substring(0, 21) == 'https://revision3.com')
 || (insideframe.substring(0, 23) == 'http://www.metacafe.com') || (insideframe.substring(0, 24) == 'https://www.metacafe.com')
 || (insideframe.substring(0, 24) == 'http://www-cdn.justin.tv') || (insideframe.substring(0, 25) == 'https://www-cdn.justin.tv')
-|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net') || (insideframe.substring(0, 23) == 'http://player.twitch.tv')|| (insideframe.substring(0, 24) == 'https://player.twitch.tv')
+|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net')
 || (insideframe.substring(0, 21) == 'http://s.mcstatic.com') || (insideframe.substring(0, 22) == 'https://s.mcstatic.com') // metacafe
 || (insideframe.substring(0, 21) == 'http://is4.myvideo.de') || (insideframe.substring(0, 22) == 'https://is4.myvideo.de')
 || (insideframe.substring(0, 32) == 'http://cdn1.static.videobash.com') || (insideframe.substring(0, 33) == 'https://cdn1.static.videobash.com')
@@ -479,8 +511,6 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 22) == 'http://imgcache.qq.com') || (insideframe.substring(0, 23) == 'https://imgcache.qq.com')
 || (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
 || (insideframe.substring(0, 20) == 'http://client.joy.cn') || (insideframe.substring(0, 21) == 'https://client.joy.cn')
-|| (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
-|| (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'http://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
 // search for the video player, and set the previous path all to z-index "auto"
@@ -515,7 +545,6 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 16) == 'http://vimeo.com') || (insideframe.substring(0, 17) == 'https://vimeo.com') || (insideframe.substring(0, 23) == 'http://player.vimeo.com') || (insideframe.substring(0, 24) == 'https://player.vimeo.com') || (insideframe.substring(0, 29) == 'https://secure-a.vimeocdn.com') || (insideframe.substring(0, 21) == 'http://a.vimeocdn.com') || (insideframe.substring(0, 22) == 'https://a.vimeocdn.com')
 || (insideframe.substring(0, 26) == 'http://www.dailymotion.com') || (insideframe.substring(0, 27) == 'https://www.dailymotion.com') || (insideframe.substring(0, 24) == 'http://static1.dmcdn.net') || (insideframe.substring(0, 25) == 'https://static1.dmcdn.net')
 || (insideframe.substring(0, 27) == 'http://videoplayer.vevo.com') || (insideframe.substring(0, 28) == 'https://videoplayer.vevo.com')
-|| (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
 || (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
 || (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
 || (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
@@ -525,7 +554,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 27) == 'http://videos.revision3.com') || (insideframe.substring(0, 28) == 'https://videos.revision3.com') || (insideframe.substring(0, 20) == 'http://revision3.com') || (insideframe.substring(0, 21) == 'https://revision3.com')
 || (insideframe.substring(0, 23) == 'http://www.metacafe.com') || (insideframe.substring(0, 24) == 'https://www.metacafe.com')
 || (insideframe.substring(0, 24) == 'http://www-cdn.justin.tv') || (insideframe.substring(0, 25) == 'https://www-cdn.justin.tv')
-|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net') || (insideframe.substring(0, 23) == 'http://player.twitch.tv')|| (insideframe.substring(0, 24) == 'https://player.twitch.tv')
+|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net')
 || (insideframe.substring(0, 21) == 'http://s.mcstatic.com') || (insideframe.substring(0, 22) == 'https://s.mcstatic.com') // metacafe
 || (insideframe.substring(0, 21) == 'http://is4.myvideo.de') || (insideframe.substring(0, 22) == 'https://is4.myvideo.de')
 || (insideframe.substring(0, 32) == 'http://cdn1.static.videobash.com') || (insideframe.substring(0, 33) == 'https://cdn1.static.videobash.com')
@@ -562,8 +591,6 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 22) == 'http://imgcache.qq.com') || (insideframe.substring(0, 23) == 'https://imgcache.qq.com')
 || (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
 || (insideframe.substring(0, 20) == 'http://client.joy.cn') || (insideframe.substring(0, 21) == 'https://client.joy.cn')
-|| (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
-|| (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'http://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
 // search for the video player, and set the previous path all to z-index "auto"
@@ -582,7 +609,7 @@ do {
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 
 // current video to front
-object[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important;';
+object[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
 }
 }
 
@@ -595,7 +622,6 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 16) == 'http://vimeo.com') || (insideframe.substring(0, 17) == 'https://vimeo.com') || (insideframe.substring(0, 23) == 'http://player.vimeo.com') || (insideframe.substring(0, 24) == 'https://player.vimeo.com') || (insideframe.substring(0, 29) == 'https://secure-a.vimeocdn.com') || (insideframe.substring(0, 21) == 'http://a.vimeocdn.com') || (insideframe.substring(0, 22) == 'https://a.vimeocdn.com')
 || (insideframe.substring(0, 26) == 'http://www.dailymotion.com') || (insideframe.substring(0, 27) == 'https://www.dailymotion.com') || (insideframe.substring(0, 24) == 'http://static1.dmcdn.net') || (insideframe.substring(0, 25) == 'https://static1.dmcdn.net')
 || (insideframe.substring(0, 27) == 'http://videoplayer.vevo.com') || (insideframe.substring(0, 28) == 'https://videoplayer.vevo.com')
-|| (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
 || (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
 || (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
 || (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
@@ -605,7 +631,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 27) == 'http://videos.revision3.com') || (insideframe.substring(0, 28) == 'https://videos.revision3.com') || (insideframe.substring(0, 20) == 'http://revision3.com') || (insideframe.substring(0, 21) == 'https://revision3.com')
 || (insideframe.substring(0, 23) == 'http://www.metacafe.com') || (insideframe.substring(0, 24) == 'https://www.metacafe.com')
 || (insideframe.substring(0, 24) == 'http://www-cdn.justin.tv') || (insideframe.substring(0, 25) == 'https://www-cdn.justin.tv')
-|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net') || (insideframe.substring(0, 23) == 'http://player.twitch.tv')|| (insideframe.substring(0, 24) == 'https://player.twitch.tv')
+|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net')
 || (insideframe.substring(0, 21) == 'http://s.mcstatic.com') || (insideframe.substring(0, 22) == 'https://s.mcstatic.com') // metacafe
 || (insideframe.substring(0, 21) == 'http://is4.myvideo.de') || (insideframe.substring(0, 22) == 'https://is4.myvideo.de')
 || (insideframe.substring(0, 32) == 'http://cdn1.static.videobash.com') || (insideframe.substring(0, 33) == 'https://cdn1.static.videobash.com')
@@ -642,8 +668,6 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 22) == 'http://imgcache.qq.com') || (insideframe.substring(0, 23) == 'https://imgcache.qq.com')
 || (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
 || (insideframe.substring(0, 20) == 'http://client.joy.cn') || (insideframe.substring(0, 21) == 'https://client.joy.cn')
-|| (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
-|| (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'http://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
 // search for the video player, and set the previous path all to z-index "auto"
@@ -764,23 +788,6 @@ for(var i = 0; i < div.length; i++ )
 {if(div[i].className == ('html5_video_overlay')) {div[i].style.zIndex = 1000;}}
 }
 
-// twich.tv
-// fixed 15 january 2016
-else if (window.location.href.match(/((http:\/\/.*twitch\.tv\/.*)|(https:\/\/.*twitch\.tv\/.*))/i)){
-div = document.getElementsByTagName('div'); 
-for(var i = 0; i < div.length; i++ ) 
-{
-    if(div[i].className == ('player-video')) {div[i].style.height = '100%';}
-}
-
-var elems = document.querySelectorAll(".player-hover");
-[].forEach.call(elems, function (el) {
-el.style.zIndex = '1001';
-});
-
-}
-
-
 //Flash games
 //Windows Media Player
 //Silverlight
@@ -828,52 +835,27 @@ el.style.zIndex = '1001';
 		}
 		window.onmousemove = null;
 		
-        // Set everything back to the default YouTube theme
-        // YouTube video suggestions (set back to default)
-        var watch7sidebar = $('watch7-sidebar');
-        if(watch7sidebar){$('watch7-sidebar').style.zIndex = 'auto';}
-
-        // YouTube playlist (set back to default)
-        var watchappbarplaylist = $('watch-appbar-playlist');
-        if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = 'auto';}
-
 		// YouTube video title (set back to default)
 		var eowtitle = $('eow-title');
-		if(eowtitle){$('eow-title').style.color = '#222';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
+		if(eowtitle){$('eow-title').style.color = 'black';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
 		
-        // YouTube video channel link back black (set back to default)
-        var watch7userheader = $('watch7-user-header');
-        if(watch7userheader){$('watch7-user-header').style.zIndex = 'auto';$('watch7-user-header').style.position = 'relative';}
-
-        var ytuserinfoa = document.querySelector('.yt-user-info a');
-        ytuserinfoa.style.color = '#333';
-        
-        // YouTube infobar (set back to default)
-        var watchdescription = $('watch-description');
-        if(watchdescription){$('watch-description').style.zIndex = 'auto';$('watch-description').style.background = 'transparent';}
-        
-        // YouTube infobar (set back to default)
-        var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-        likebuttonrenderlike.style.zIndex = 'auto';likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'transparent';
-
-        var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-        likebuttonrenderdislike.style.zIndex = 'auto';likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'transparent';
-
-        // YouTube share buttons (set back to default)
-        var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-        actionsharepanel.style.zIndex = 'auto';actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'transparent';
-
-        // YouTube video view count (set back to default)
-        var watchviewcount = document.querySelector('.watch-view-count');
-        watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';
-        
-        // YouTube video view count (set back to default)
-        var addtobutton = document.querySelector('.addto-button');
-        addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';
- 
-        // YouTube like bar (set back to default)
-        var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-        videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';
+		var watchheadlinetitle = $('watch-headline-title');  // new youtube watch7
+		if(watchheadlinetitle){$('watch-headline-title').style.zIndex = 'auto';$('watch-headline-title').style.position = 'relative';}
+		
+		span = document.getElementsByTagName('span');  // new youtube watch7
+		for(var i = 0; i < span.length; i++ ) 
+		{if(span[i].className == (' yt-uix-expander-head') ) {span[i].style.color = 'black';}}	
+		// YouTube video view count (set back to default)
+		var eowtitle = $('eow-title');
+		if(eowtitle){$('eow-title').style.color = '#333';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
+		span = document.getElementsByTagName('span'); 
+		for(var i = 0; i < span.length; i++ )
+		{if(span[i].className == ('watch-view-count ')) {span[i].style.color = '#333';span[i].style.zIndex = 'auto';span[i].style.position = 'relative';}}
+		var watch7viewsinfo = $('watch7-views-info'); // new youtube watch7 september 2013
+		if(watch7viewsinfo){$('watch7-views-info').style.zIndex = 'auto';$('watch7-views-info').style.color = '#333';}
+		div = document.getElementsByTagName('a'); 
+		for(var i = 0; i < div.length; i++ )
+		{if(div[i].className == (' yt-uix-sessionlink     spf-link  g-hovercard')) {div[i].style.color = '#333';}}
 	}
 
 	function removenewframe() {
@@ -997,9 +979,7 @@ function lightsgoonoroff() {
 	    var newframe1 = document.createElement("div");
 	    newframe1.setAttribute('id','stefanvdlightareoff1');
 	    newframe1.setAttribute('class','stefanvdlightareoff');
-		var fullspotlightsize = spotlightradius;
-		var borderspotlightsize = spotlightradius-8;
-		var mousespotlightstyle = '-webkit-gradient(radial, -50 -50, '+fullspotlightsize+', -50 -50, '+borderspotlightsize+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
+		var mousespotlightstyle = '-webkit-gradient(radial, -50 -50, 50, -50 -50, 42, from(' + lightcolor + '), to(rgba(0,0,0,0)))';
 		
 		newframe1.style.backgroundImage = mousespotlightstyle;
 		newframe1.style.pointerEvents = 'none'; // make it possible to click on a link 
@@ -1018,49 +998,19 @@ function lightsgoonoroff() {
 		var width = document.documentElement.clientWidth;
 		var height = document.documentElement.clientHeight;
 		
-		var oldspotx = 0;
-		var oldspoty = 0;
 		function moveSpot(e){
 		var x = 0; var y = 0;
 		if (!e) var e = window.event;
 		if (e.clientX || e.clientY)
 		{
 			x = e.clientX; y = e.clientY;
-			oldspotx = x; oldspoty = y;
 		}
 		
-		var style = '-webkit-gradient(radial, '+x+' '+y+', '+fullspotlightsize+', '+x+' '+y+', '+borderspotlightsize+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
+		var style = '-webkit-gradient(radial, '+x+' '+y+', 50, '+x+' '+y+', 42, from(' + lightcolor + '), to(rgba(0,0,0,0)))';
 		spot.style.opacity = default_opacity/100;
 		spot.style.backgroundImage = style;
 		}
 		window.onmousemove = moveSpot;
-		
-		// increase size by pressing
-		var presstimer;
-		var countupsizetimer;
-		var mathfullsizeup = fullspotlightsize;
-		var mathbordersizeup = borderspotlightsize;
-		function spotmousedown() {
-			presstimer = window.setTimeout(function(){ 
-
-			countupsizetimer = window.setInterval(function(){
-				mathfullsizeup = Math.abs(mathfullsizeup) + Math.abs(1);
-				mathbordersizeup = Math.abs(mathbordersizeup) + Math.abs(1);
-				x = oldspotx;y = oldspoty;
-				style = '-webkit-gradient(radial, '+x+' '+y+', '+mathfullsizeup+', '+x+' '+y+', '+mathbordersizeup+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
-				spot.style.backgroundImage = style;
-			}, 5);
-			
-		}, 1500);}
-		function spotmouseup() {
-			window.clearInterval(countupsizetimer);window.clearTimeout(presstimer);
-			style = '-webkit-gradient(radial, '+x+' '+y+', '+fullspotlightsize+', '+x+' '+y+', '+borderspotlightsize+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
-			spot.style.backgroundImage = style;
-			mathfullsizeup = fullspotlightsize;
-			mathbordersizeup = borderspotlightsize;
-		}
-		document.addEventListener("mousedown", function() {spotmousedown();});
-		document.addEventListener("mouseup", function() {spotmouseup();});
 		}
 		else if(mousespotlightc == 'true'){
 		var beginxcordinate = null;var beginycordinate = null;var endxcordinate = null;var endycordinate = null;
@@ -1488,7 +1438,6 @@ if(document.height !== undefined) {
 				newiframeblur.style.top = 0;
 				newiframeblur.style.position = 'absolute';
 				newiframeblur.style.zIndex = 998;
-                newiframeblur.style.border = '0px';
 				document.body.appendChild(newiframeblur);
 
 				for (var bcount=0; bcount<4; bcount++) {

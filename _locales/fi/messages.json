@@ -129,7 +129,7 @@
   },
   "changelog":{
     "message":"Muutosloki",
-    "description":"muutoslokin linkki"
+    "description":"changelog link"
   },
   "optionpagetitle":{
     "message":"Turn Off the Lights - Asetukset",
@@ -217,7 +217,7 @@
   },
   "version":{
     "message":"Versio",
-    "description":"Version numeron teksti"
+    "description":"Version number text"
   },
   "shortcutdark":{
     "message":"tummentaaksesi näyttöä (pienennä läpinäkyvyyttä)",
@@ -529,7 +529,7 @@
   },
   "reportlist":{
     "message":"Viimeisin tunnettu ongelma",
-    "description":"Näytä koko asialuettelo"
+    "description":"See the full issue list"
   },
   "desdynamicfishtank":{
     "message":"Akvaario",
@@ -785,7 +785,7 @@
   },
   "speechoption":{
     "message":"Puheentunnistus",
-    "description":"Puheentunnistus "
+    "description":"Speech Recognition "
   },
   "titelspeech":{
     "message":"Puhe",
@@ -1090,97 +1090,5 @@
   "titel360youtube":{
     "message":"Näyttää koko 360 asteen YouTube-videon yhdessä kehyksessä.",
     "description":"Näyttää koko 360 asteen YouTube-videon yhdessä kehyksessä."
-  },
-  "titelvideotool":{
-    "message":"Video-työkalupalkki",
-    "description":"Video-työkalupalkki"
-  },
-  "desvideotool":{
-    "message":"Näytä näytön alareunassa työkalupalkki, josta voit mukauttaa nykyistä videosoitinta",
-    "description":"Näytä näytön alareunassa työkalupalkki, josta voit mukauttaa nykyistä videosoitinta"
-  },
-  "vtoolfullscreen":{
-    "message":"Painike, jolla videosoitin suurennetaan koko ikkunaan",
-    "description":"Painike, jolla videosoitin suurennetaan koko ikkunaan"
-  },
-  "vtoolfilter":{
-    "message":"Painike, jolla lisätään suodatin videosoittimeen",
-    "description":"Painike, jolla lisätään suodatin videosoittimeen"
-  },
-  "vtoolreplay":{
-    "message":"Painike, jolla toistetaan videosoitin uudelleen",
-    "description":"Painike, jolla toistetaan videosoitin uudelleen"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"harmaasävy",
-    "description":"harmaasävy"
-  },
-  "titelvideotoolsepia":{
-    "message":"seepia",
-    "description":"seepia"
-  },
-  "titelvideotoolinvert":{
-    "message":"käännä",
-    "description":"käännä"
-  },
-  "titelvideotoolcontrast":{
-    "message":"kontrasti",
-    "description":"kontrasti"
-  },
-  "titelvideotoolsaturate":{
-    "message":"kyllästä",
-    "description":"kyllästä"
-  },
-  "titelvideotoolhueroration":{
-    "message":"värisävyn kääntö 90°",
-    "description":"värisävyn kääntö 90°"
-  },
-  "titelvideotoolbrightness":{
-    "message":"kirkkaus 50 %",
-    "description":"kirkkaus 50 %"
-  },
-  "titelvideotoolnormal":{
-    "message":"normaali",
-    "description":"normaali"
-  },
-  "titelvideotoollike":{
-    "message":"Tykkää",
-    "description":"Tykkää"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Tilaa",
-    "description":"Tilaa"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Uudelleentoisto",
-    "description":"Uudelleentoisto"
-  },
-  "titelvideotoolfilter":{
-    "message":"Suodatin",
-    "description":"Suodatin"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Koko ikkuna",
-    "description":"Koko ikkuna"
-  },
-  "titelreflection":{
-    "message":"Heijastus",
-    "description":"Heijastus"
-  },
-  "desreflection":{
-    "message":"Näytä heijastustehoste kaikissa videoissa",
-    "description":"Näytä heijastustehoste kaikissa videoissa"
-  },
-  "desvideotoolonly":{
-    "message":"Aktivoi video-työkalupalkki vain seuraavilla sivustoilla:",
-    "description":"Aktivoi video-työkalupalkki vain seuraavilla sivustoilla:"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Valkoinen lista",
-    "description":"Valkoinen lista"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Musta lista",
-    "description":"Musta lista"
   }
 }

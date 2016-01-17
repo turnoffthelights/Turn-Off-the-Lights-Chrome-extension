@@ -324,12 +324,12 @@
     "description":"Raio de propagação:"
   },
   "installadblocker":{
-    "message":"Se você não quiser ver anúncios, use uma extensão de bloqueio de anúncios.",
-    "description":"Se você não quiser ver anúncios, use uma extensão de bloqueio de anúncios."
+    "message":"Se não quiser ver anúncios, use uma extensão de bloqueio de anúncios.",
+    "description":"Se não quiser ver anúncios, use uma extensão de bloqueio de anúncios."
   },
   "titelsharebutton":{
-    "message":"Botão Compartilhar",
-    "description":"Botão Compartilhar"
+    "message":"Botão de Compartilhar",
+    "description":"Botão de Compartilhar"
   },
   "titelcolor":{
     "message":"Cor",
@@ -628,8 +628,8 @@
     "description":"Extras"
   },
   "textfoot":{
-    "message":"Este programa é licenciado pela CC-GNU GPL. Para ver uma cópia da licença, visite",
-    "description":"Este programa é licenciado pela CC-GNU GPL. Para ver uma cópia da licença, visite"
+    "message":"Esse programa é licenciado pela CC-GNU GPL. Para ver uma cópia da licença, visite",
+    "description":"Esse programa é licenciado pela CC-GNU GPL. Para ver uma cópia da licença, visite"
   },
   "left":{
     "message":"esquerda",
@@ -668,8 +668,8 @@
     "description":"Nós adicionamos alguns recursos novos para você"
   },
   "upgradecontextmessage":{
-    "message":"Isso faz com que essa extensão seja ainda mais surpreendente",
-    "description":"Isso faz com que essa extensão seja ainda mais surpreendente"
+    "message":"Isso torna essa extensão ainda mais incrível",
+    "description":"Isso torna essa extensão ainda mais incrível"
   },
   "upgradecontextitemta":{
     "message":"Movimento de Câmera",
@@ -968,8 +968,8 @@
     "description":"Transferir o aplicativo agora"
   },
   "titeldownloadupgradezoom":{
-    "message":"Amplia ou reduz o conteúdo usando o botão de apmpliação para uma leitura mais confortável.",
-    "description":"Amplia ou reduz o conteúdo usando o botão de apmpliação para uma leitura mais confortável."
+    "message":"Amplia ou reduz o conteúdo usando o botão de zoom para uma leitura mais confortável.",
+    "description":"Amplia ou reduz o conteúdo usando o botão de zoom para uma leitura mais confortável."
   },
   "titeldownloadupgradepropermenubar":{
     "message":"Adiciona novamente a barra de menu preta no site do Google.",
@@ -1000,8 +1000,8 @@
     "description":"Inferior esquerdo"
   },
   "nmcustom":{
-    "message":"Personalizar (clique, mantenha pressionado e mova o interruptor para o local desejado)",
-    "description":"Personalizar (clique, mantenha pressionado e mova o interruptor para o local desejado)"
+    "message":"Personalizado (clique, mantenha pressionado e mova o interruptor para o local desejado)",
+    "description":"Personalizado (clique, mantenha pressionado e mova o interruptor para o local desejado)"
   },
   "desnighthover":{
     "message":"Mostra o interruptor transparente na página do site",
@@ -1064,8 +1064,8 @@
     "description":"Cor do texto:"
   },
   "desdynamicsmoke":{
-    "message":"Fumaça",
-    "description":"Fumaça"
+    "message":"Fumo",
+    "description":"Fumo"
   },
   "desdynamicdotscolor":{
     "message":"Pontos  de Cor",
@@ -1084,103 +1084,11 @@
     "description":"Estrelas"
   },
   "desmobileapp":{
-    "message":"O Turn Off the Lights também está disponível para o teu dispositivo móvel.",
-    "description":"O Turn Off the Lights também está disponível para o teu dispositivo móvel."
+    "message":"O Turn Off the Lights está também disponível para o teu dispositivo móvel.",
+    "description":"O Turn Off the Lights está também disponível para o teu dispositivo móvel."
   },
   "titel360youtube":{
-    "message":"Mostra o vídeo YouTube de 360 graus numa moldura",
-    "description":"Mostra o vídeo YouTube de 360 graus numa moldura"
-  },
-  "titelvideotool":{
-    "message":"Barra de Ferramentas de Vídeo",
-    "description":"Barra de Ferramentas de Vídeo"
-  },
-  "desvideotool":{
-    "message":"Mostrar barra de ferramentas abaixo de sua tela para personalizar o player de vídeo atual",
-    "description":"Mostrar barra de ferramentas abaixo de sua tela para personalizar o player de vídeo atual"
-  },
-  "vtoolfullscreen":{
-    "message":"Botão para definir o leitor de vídeo para tamanho de ecrã inteiro",
-    "description":"Botão para definir o leitor de vídeo para tamanho de ecrã inteiro"
-  },
-  "vtoolfilter":{
-    "message":"Um botão para adicionar um filtro no player de vídeo atual",
-    "description":"Um botão para adicionar um filtro no player de vídeo atual"
-  },
-  "vtoolreplay":{
-    "message":"Um botão para reproduzir o player de vídeo atual",
-    "description":"Um botão para reproduzir o player de vídeo atual"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"tons de cinza",
-    "description":"tons de cinza"
-  },
-  "titelvideotoolsepia":{
-    "message":"sépia",
-    "description":"sépia"
-  },
-  "titelvideotoolinvert":{
-    "message":"inverter",
-    "description":"inverter"
-  },
-  "titelvideotoolcontrast":{
-    "message":"contraste",
-    "description":"contraste"
-  },
-  "titelvideotoolsaturate":{
-    "message":"saturação",
-    "description":"saturação"
-  },
-  "titelvideotoolhueroration":{
-    "message":"rotação de matiz",
-    "description":"rotação de matiz"
-  },
-  "titelvideotoolbrightness":{
-    "message":"brilho 50%",
-    "description":"brilho 50%"
-  },
-  "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
-  },
-  "titelvideotoollike":{
-    "message":"Curtir",
-    "description":"Curtir"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Inscreva-se",
-    "description":"Inscreva-se"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Repetir",
-    "description":"Repetir"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filtro",
-    "description":"Filtro"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Tela Inteiro",
-    "description":"Tela Inteiro"
-  },
-  "titelreflection":{
-    "message":"Reflexão",
-    "description":"Reflexão"
-  },
-  "desreflection":{
-    "message":"Mostrar o efeito de reflexo em todos os vídeos",
-    "description":"Mostrar o efeito de reflexo em todos os vídeos"
-  },
-  "desvideotoolonly":{
-    "message":"Ative a barra de ferramentas de vídeo apenas no seguinte site:",
-    "description":"Ative a barra de ferramentas de vídeo apenas no seguinte site:"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Lista branca",
-    "description":"Lista branca"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Lista negra",
-    "description":"Lista negra"
+    "message":"Mostra o vídeo YouTube de 360 graus numa moldura.",
+    "description":"Mostra o vídeo YouTube de 360 graus numa moldura."
   }
 }

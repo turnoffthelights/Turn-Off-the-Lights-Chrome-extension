@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.2.0.0",
+  "version": "3.1.0.37",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com",
@@ -20,15 +20,13 @@
     }
   },
   "background": {
-    "page": "background.html",
-	"persistent": false
+    "page": "background.html"
   },
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; img-src *; object-src 'self'",
   "web_accessible_resources": [
     "images/minimize_on.png",
     "images/minimize.png",
     "icons/icon16.png",
-    "icons/icon16@2x.png",
 	"js/injected.js",
 	"images/theater.jpg",
 	"images/Smoke10.png"
@@ -50,6 +48,6 @@
     }
   },
   "options_page": "options.html",
-  "minimum_chrome_version": "33",
+  "minimum_chrome_version": "30",
   "permissions": [ "contextMenus", "notifications", "tabs", "storage", "<all_urls>" ]
 }
