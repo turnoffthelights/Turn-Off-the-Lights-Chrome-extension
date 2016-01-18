@@ -29,12 +29,12 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id) { return document.getElementById(id); }
 // settings
-var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null;
+var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null;
 // html elements used
 var div = null, video = null, span = null, iframe = null, embed = null, object = null, a = null, img = null;
 
 /////////// Option page settings
-chrome.storage.local.get(['suggestions', 'playlist', 'videoheadline', 'head', 'infobar', 'likebutton', 'sharebutton', 'viewcount', 'addvideobutton', 'likebar', 'flash', 'noflash', 'hardflash'], function(response){
+chrome.storage.local.get(['suggestions', 'playlist', 'videoheadline', 'head', 'infobar', 'likebutton', 'sharebutton', 'viewcount', 'addvideobutton', 'likebar', 'flash', 'noflash', 'hardflash','no360youtube'], function(response){
 suggestions = response['suggestions'];
 playlist = response['playlist'];
 videoheadline = response['videoheadline'];
@@ -48,6 +48,7 @@ likebar = response['likebar'];
 flash = response['flash'];
 noflash = response['noflash'];
 hardflash = response['hardflash'];
+no360youtube = response['no360youtube'];
 
 // Show all Flash objects -> Flash detection
 function flashobjects(){
