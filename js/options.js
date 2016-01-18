@@ -2651,10 +2651,10 @@ $("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari()
 $("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = linktotlguide;$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
 $("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = linktotlfan;$("managed-prefs-banner").style.display = "none";});
 
-$("buttonreportissue").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/support");});
+$("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support");});
 $("buttonchangelog").addEventListener('click', function() {window.open(linktotlchangelog);});
-$("buttonreportlist").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/extension/issueslist.html");});
-$("buttontranslateme").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/extension/translate.html");});
+$("buttonreportlist").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/issueslist.html");});
+$("buttontranslateme").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/translate.html");});
 
 function ONworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "";}
 function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}

@@ -45,7 +45,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <div id="remembersharecenter">
 <h2><span data-i18n="friendlyremember"></span></h2>
 <div class="remembertext"><span data-i18n="longdonatetext"></span></div>
-<a href="http://www.turnoffthelights.com/donate.html" target="_blank" id="rememberboxdonate" data-i18n="titledonatebutton"></a>
+<a href="https://www.turnoffthelights.com/donate.html" target="_blank" id="rememberboxdonate" data-i18n="titledonatebutton"></a>
 <br>
 <br>
 <br>
@@ -69,13 +69,13 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <div id="productwelcomeimageload"><img id="loadinglamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div>
 <div id="progressbar"><div id="progress"><div id="pbaranim"></div></div></div>
 </div>
-<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="http://www.turnoffthelights.com/support" target="blank" data-i18n="pagehelp"></a>!</span>
+<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="https://www.turnoffthelights.com/support" target="blank" data-i18n="pagehelp"></a>!</span>
 </div>
 
 <div id="main-content">
 	<div id="navbar-container">
 	<br>
-	<a href="http://www.turnoffthelights.com" target="blank" class="brand"><div id="productwelcomeimage"><img id="welcomelamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div></a>
+	<a href="https://www.turnoffthelights.com" target="blank" class="brand"><div id="productwelcomeimage"><img id="welcomelamp" alt="Lamp" src="icons/icon16.png">Turn Off the Lights™</div></a>
 	<div id="productsettingtitel" data-i18n="settings"></div>
 	<br><br><br>	
 	<ul id="navbar">
@@ -93,7 +93,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 	<div id="mainview">
 	<div id="managed-prefs-banner">
 		<span id="managed-prefs-icon">
-			<a class="donatebutton" target="_blank" href="http://www.turnoffthelights.com/donate.html" data-i18n="titledonatebutton"></a>
+			<a class="donatebutton" target="_blank" href="https://www.turnoffthelights.com/donate.html" data-i18n="titledonatebutton"></a>
 		</span>
 		<span id="managed-prefs-text" data-i18n="donatepromotext"></span>
 		<div id="managed-prefs-text-close"><span style="display:none;">Close</span></div>
@@ -175,7 +175,19 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<label>
 								<input id="lightimagen" type="radio" name="lightimage" value="never">
 								<span data-i18n="titelcolor"></span>:
-								<input id="lightcolor" type="color" class="color">
+								<input id="lightcolor" type="color" class="color" list="datalightcolor">
+                                <datalist id="datalightcolor">
+                                <option>#FFFFFF</option>
+                                <option>#FF0000</option>
+                                <option>#FF7700</option>
+                                <option>#FFEE00</option>
+                                <option>#00FF00</option>
+                                <option>#008000</option>
+                                <option>#3CB4FE</option>
+                                <option>#0000FF</option>
+                                <option>#808080</option>
+                                <option>#000000</option>
+                                </datalist>
 								<span data-i18n="titelblur"></span>:
 								<input id="blur" type="checkbox">
 							</label>
@@ -183,7 +195,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<div class="dimrange">
 						<span data-i18n="titelopacity"></span>:
 						<input type="range" id="slider" min="0" max="100" step="1" value="0"><input type="number" id="interval" min="0" max="100" step="1" value="0" maxlength="3" size="4">
-						</div>
+                        </div>
 					</div>
 					<div>
 						<div class="radio">
@@ -197,10 +209,10 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									<option value="left" data-i18n="left"></option>
 								</select>
 								<span data-i18n="titelcolora"></span>
-								<input id="colora" type="color" class="color">
+								<input id="colora" type="color" class="color" list="datalightcolor">
 								<input type="number" id="intervallina" min="0" max="100" step="1" value="0" maxlength="3" size="4">
 								<span data-i18n="titelcolorb"></span>
-								<input id="colorb" type="color" class="color">
+								<input id="colorb" type="color" class="color" list="datalightcolor">
 								<input type="number" id="intervallinb" min="0" max="100" step="1" value="0" maxlength="3" size="4">
 							</label>
 						</div>
@@ -506,10 +518,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div class="grey-text"><span data-i18n="titelsupportatmos"></span></div>					
 				<br>
 				<div>
-					<label class="radio"><input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed"><span data-i18n="desambilightfixcolor"></span> <input id="ambilightcolorhex" type="color" class="color"></label>					
-					<label class="radio"><input id="ambilight4color" type="radio" name="ambilightcolor" value="4"><span data-i18n="desambilight4color"></span><br><span data-i18n="top"></span> <input id="ambilight1colorhex" type="color" class="color"> <span data-i18n="bottom"></span> <input id="ambilight2colorhex" type="color" class="color"> <span data-i18n="right"></span> <input id="ambilight3colorhex" type="color" class="color"> <span data-i18n="left"></span> <input id="ambilight4colorhex" type="color" class="color"></label>
+					<label class="radio"><input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed"><span data-i18n="desambilightfixcolor"></span> <input id="ambilightcolorhex" type="color" class="color" list="datalightambilight"></label>					
+					<label class="radio"><input id="ambilight4color" type="radio" name="ambilightcolor" value="4"><span data-i18n="desambilight4color"></span><br><span data-i18n="top"></span> <input id="ambilight1colorhex" type="color" class="color" list="datalightambilight"> <span data-i18n="bottom"></span> <input id="ambilight2colorhex" type="color" class="color" list="datalightambilight"> <span data-i18n="right"></span> <input id="ambilight3colorhex" type="color" class="color" list="datalightambilight"> <span data-i18n="left"></span> <input id="ambilight4colorhex" type="color" class="color" list="datalightambilight"></label>
 					<label class="radio"><input id="ambilightvarcolor" type="radio" name="ambilightcolor" value="real"><span data-i18n="desambilightvarcolor"></span>
-					<br>
+					<datalist id="datalightambilight">
+                    <option>#FFFFFF</option>
+                    <option>#FF0000</option>
+                    <option>#FF7700</option>
+                    <option>#FFEE00</option>
+                    <option>#00FF00</option>
+                    <option>#008000</option>
+                    <option>#3CB4FE</option>
+                    <option>#0000FF</option>
+                    <option>#808080</option>
+                    <option>#000000</option>
+                    </datalist>
+                    <br>
 					<div id="showwarningambilight" class="warningambilight">
 					<span class="warning" data-i18n="warning"></span><br><span data-i18n="warningtextambilight"></span>
 					<span><a href="https://www.turnoffthelights.com/browser/atmosphere-lighting.html" target="blank"><span data-i18n="titelwikiatmos"></span></a>.</span>
@@ -703,7 +727,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</section>						
 				<section>
 				<h3 data-i18n="titelapideveloper"></h3>
-				<div class="grey-text"><span>Turn Off the Lights <a href="http://www.turnoffthelights.com/APIwebsite.html" target="blank"><span data-i18n="desapitext"></span></a>.</span></div>
+				<div class="grey-text"><span>Turn Off the Lights <a href="https://www.turnoffthelights.com/APIwebsite.html" target="blank"><span data-i18n="desapitext"></span></a>.</span></div>
 				</section>
 				<section>
 				<h3 data-i18n="titelsync"></h3>
@@ -761,8 +785,20 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					</span>
 				</label>
 				<br>
-				<span data-i18n="titelnightmodebck"></span> <input id="nightmodebck" type="color" class="color">&nbsp;&nbsp;&nbsp;<span data-i18n="titelnightmodetxt"></span> <input id="nightmodetxt" type="color" class="color">
-				</section>
+				<span data-i18n="titelnightmodebck"></span> <input id="nightmodebck" type="color" class="color" list="datalightnightmode">&nbsp;&nbsp;&nbsp;<span data-i18n="titelnightmodetxt"></span> <input id="nightmodetxt" type="color" class="color" list="datalightnightmode">
+				<datalist id="datalightnightmode">
+                    <option>#FFFFFF</option>
+                    <option>#FF0000</option>
+                    <option>#FF7700</option>
+                    <option>#FFEE00</option>
+                    <option>#00FF00</option>
+                    <option>#008000</option>
+                    <option>#3CB4FE</option>
+                    <option>#0000FF</option>
+                    <option>#808080</option>
+                    <option>#000000</option>
+                    </datalist>
+                </section>
 				<section>
 				<h3 data-i18n="titelnighttheme"></h3>
 				<div>
