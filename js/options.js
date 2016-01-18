@@ -1280,7 +1280,7 @@ function autostopremoveSelectedExcludedDomain() {
     save_options();
 }
 
-// whitelist autostop domain
+// whitelist videotool domain
 function videotooladdWhitelistDomain() {
     var domain = $("videotoolwebsiteurl").value;
     appendToListBox("videotoolDomainsBox", domain);
@@ -2475,25 +2475,6 @@ try{
 }
 catch(e){}
 }
-}
-
-function lookup(id, value)
-{
-    var ret = undefined;
-    if(document.getElementById(id) != undefined)
-    {
-        var options = document.getElementById(id).childNodes;
-        for(i = 0; i < options.length; i++)
-        {
-            if(options[i].value == value)
-            {
-                // ret = options[i];
-				ret = [i];
-                break;
-            }
-        }
-    }
-    return ret;
 }
 
 // Current year
