@@ -778,9 +778,23 @@ var elems = document.querySelectorAll(".player-hover");
 [].forEach.call(elems, function (el) {
 el.style.zIndex = '1001';
 });
-
 }
 
+// facebook.com - show the video player control
+// fixed 19 january 2016
+else if (window.location.href.match(/((http:\/\/.*facebook\.com\/.*)|(https:\/\/.*facebook\.com\/.*))/i)){
+var videoStage = document.getElementsByClassName("videoStage");
+for(var i = 0; i < videoStage.length; i++){
+    videoStage[i].style.zIndex = 1001; 
+        div = videoStage[i].getElementsByTagName('div'); 
+        for(var i = 0; i < div.length; i++ ) 
+        {
+            // all div get a higher level
+            div[i].style.zIndex = 1001;
+            //if(div[i].hasAttribute('data-reactroot')) {div[i].style.zIndex = 1001;}
+        }
+}
+}
 
 //Flash games
 //Windows Media Player
