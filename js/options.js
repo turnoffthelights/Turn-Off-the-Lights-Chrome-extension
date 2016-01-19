@@ -793,7 +793,7 @@ if(typeof excludedDomains == "string") {
     }
 
 // ambilight play detect
-		var startambilight = setInterval(function () {
+		var startambilight = window.setInterval(function () {
 		try {
 		var htmlplayer = document.getElementsByTagName("video") || null;
 		var playerid = null, item = null;
@@ -1789,7 +1789,7 @@ runsmoke();
 
 // If the context is set then we can draw the scene (if not then the browser does not support canvas)
 if (context) {
-    setInterval(function() {
+    window.setInterval(function() {
         // Update the scene before drawing
         smokeupdate();
 
