@@ -606,7 +606,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvdvideotool ul li{display:inline-block!important;padding:0!important;margin:0!important;user-select:none!important;-webkit-user-select:none!important;}
 #stefanvdvideotool ul li a{line-height:normal!important;padding:5px!important;text-decoration:none!important;display:inline-block!important;color:white!important;font-size:9px;font-family:verdana!important;height:25px!important;box-sizing:content-box!important}
 #stefanvdvideotoolrange{display:inline-block!important;width:100px!important;height:24px!important}
-#stefanvdvideotool ul li a div{float:right!important;margin-top:7px!important;margin-left:5px!important;max-width:65px!important;min-width:65px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;user-select:none!important;-webkit-user-select:none!important}
+#stefanvdvideotool ul li a div{float:right!important;margin-top:7px!important;margin-left:5px!important;max-width:65px!important;min-width:65px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;user-select:none!important;-webkit-user-select:none!important;font-size:9px!important}
 #stefanvdvideotool ul li a img{border:0!important;vertical-align:baseline!important;}
 #stefanvdvideotool ul li a:hover{box-shadow:0 0 10px rgba(0,0,0,0.1),inset 0 0 1px rgba(255,255,255,0.6)!important;background:rgba(255,255,255,0.1)!important}
 #stefanvdvideotool ul li a.vtactive{box-shadow:0 0 10px rgba(0,0,0,0.1),inset 0 0 1px rgba(255,255,255,0.6)!important;background:rgba(255,255,255,0.1)!important}

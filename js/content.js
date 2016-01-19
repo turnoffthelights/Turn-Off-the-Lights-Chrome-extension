@@ -281,7 +281,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 				var that = this;
 				if (gracePeriod > 0 && (lastEvent === null || String(lastEvent).split(":")[0] === String(data).split(":")[0])) {
 					clearTimeout(timeout);
-					timeout = setTimeout(function () {dispatch(data);}, gracePeriod);
+					timeout = window.setTimeout(function () {dispatch(data);}, gracePeriod);
 				} else {
 					dispatch(data);
 				}
@@ -532,6 +532,7 @@ if(typeof videotoolDomains == "string") {
 } else {videotoolfunction();}
 
 function videotoolfunction(){
+if($("stefanvdvideotool")){}else{
 var newvideocontrol = document.createElement("div");
 newvideocontrol.setAttribute('id','stefanvdvideotool');
 document.body.appendChild(newvideocontrol);
@@ -778,6 +779,7 @@ newvcpartimage.style.width = "25px";
 newvcpartimage.style.height = "25px";
 newvcparta4btn.appendChild(newvcpartimage);
 }
+}
 
 } // option videotool on end
 
@@ -844,7 +846,7 @@ document.onmousemove = (function() {
 
   return function() {
     clearTimeout(thread);
-    thread = setTimeout(onmousestop, ecosavertime * 1000);
+    thread = window.setTimeout(onmousestop, ecosavertime * 1000);
   };
 })();
 
