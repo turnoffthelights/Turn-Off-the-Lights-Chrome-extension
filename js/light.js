@@ -114,6 +114,16 @@ var t = st.getPropertyValue("-webkit-transform") ||
 if (t == "matrix(1, 0, 0, 1, 0, 0)"){ w[i].style.webkitTransform = 'none'; w[i].style.MozTransform = 'none'; w[i].style.msTransform = 'none'; w[i].style.OTransform = 'none'; w[i].style.transform = 'none';}
 }
 
+// YouTube Gaming
+if (window.location.href.match(/((http:\/\/(gaming.youtube\.com\/.*))|(https:\/\/(gaming.youtube\.com\/.*)))/i)){
+var ytgpersistentplayer = document.getElementsByTagName('ytg-persistent-player');
+    for(var i = 0; i < ytgpersistentplayer.length; i++ ){
+        if(ytgpersistentplayer[i].getAttribute('id') == "player"){
+            ytgpersistentplayer[i].style.zIndex = "1001!important";
+        }
+    }
+}
+
 // YouTube options
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 // Show the debug mode of YouTube
@@ -185,7 +195,7 @@ var watch7userheader = $('watch7-user-header');
 if(watch7userheader){$('watch7-user-header').style.zIndex = 1000;$('watch7-user-header').style.position = 'relative';}
 
 var ytuserinfoa = document.querySelector('.yt-user-info a');
-ytuserinfoa.style.color = 'white';
+if(ytuserinfoa){ytuserinfoa.style.color = 'white';}
 }
 
 // Shows Infobar
@@ -199,38 +209,38 @@ if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-descrip
 if(likebutton == 'true'){
 // updated 15 january 2016
 var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-likebuttonrenderlike.style.zIndex = 1000;likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'white';
+if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 1000;likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'white';}
 
 var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-likebuttonrenderdislike.style.zIndex = 1000;likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'white';
+if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 1000;likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'white';}
 }
 
 // Shows share buttons
 if(sharebutton == 'true'){
 // updated 15 january 2016
 var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-actionsharepanel.style.zIndex = 1000;actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'white';
+if(actionsharepanel){actionsharepanel.style.zIndex = 1000;actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'white';}
 }
 
 // Shows view count
 if(viewcount == 'true'){
 // updated 15 january 2016
 var watchviewcount = document.querySelector('.watch-view-count');
-watchviewcount.style.zIndex = 1000;watchviewcount.style.color = 'white';
+if(watchviewcount){watchviewcount.style.zIndex = 1000;watchviewcount.style.color = 'white';}
 }
 
 // Shows add button
 if(addvideobutton == 'true'){
 // updated 15 january 2016
 var addtobutton = document.querySelector('.addto-button');
-addtobutton.style.zIndex = 1000;addtobutton.style.position = 'relative';addtobutton.style.background = 'white';
+if(addtobutton){addtobutton.style.zIndex = 1000;addtobutton.style.position = 'relative';addtobutton.style.background = 'white';}
 }
 
 // Shows like/dislike bar
 if(likebar == 'true'){
 // updated 15 january 2016    
 var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = 'relative';
+if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = 'relative'};
 }
 
 // MAC & PC & LINUX
@@ -862,7 +872,7 @@ for(var i = 0; i < videoStage.length; i++){
             if(watch7userheader){$('watch7-user-header').style.zIndex = 'auto';$('watch7-user-header').style.position = 'relative';}
 
             var ytuserinfoa = document.querySelector('.yt-user-info a');
-            ytuserinfoa.style.color = '#333';
+            if(ytuserinfoa){ytuserinfoa.style.color = '#333';}
             
             // YouTube infobar (set back to default)
             var watchdescription = $('watch-description');
@@ -870,27 +880,27 @@ for(var i = 0; i < videoStage.length; i++){
             
             // YouTube infobar (set back to default)
             var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-            likebuttonrenderlike.style.zIndex = 'auto';likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'transparent';
+            if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 'auto';likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'transparent';}
 
             var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-            likebuttonrenderdislike.style.zIndex = 'auto';likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'transparent';
+            if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 'auto';likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'transparent';}
 
             // YouTube share buttons (set back to default)
             var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-            actionsharepanel.style.zIndex = 'auto';actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'transparent';
+            if(actionsharepanel){actionsharepanel.style.zIndex = 'auto';actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'transparent';}
 
             // YouTube video view count (set back to default)
             var watchviewcount = document.querySelector('.watch-view-count');
-            watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';
+            if(watchviewcount){watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';}
             
             // YouTube video view count (set back to default)
             var addtobutton = document.querySelector('.addto-button');
-            addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';
+            if(addtobutton){addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';}
     
             // YouTube like bar (set back to default)
             var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-            videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';
-        }
+            if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';}
+       }
 	}
 
 	function removenewframe() {

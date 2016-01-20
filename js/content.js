@@ -439,6 +439,7 @@ if(typeof autoplayDomains == "string") {
 
 if(autostop == 'true'){
 
+window.addEventListener("load", function(){
 if(autostoponly == 'true'){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var stoprabbit = false;
@@ -461,17 +462,16 @@ if(typeof autostopDomains == "string") {
 		if(stoprabbit == false){autostopfunction();stoprabbit = false;}
 	}
 } else {autostopfunction();}
+}, false);
 
 // Observe a specific DOM element:
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	if(document.getElementById('movie_player')){ // from youtube website
-    window.addEventListener("load", autostopfunction, false);
-    document.addEventListener("DOMContentLoaded", autostopfunction, false);
-    autostopfunction();
         // for update later also
 		observeDOM( document.querySelector('#player-api') ,function(){ 
-            if($('eow-title').getAttribute('data-totlplayer') == "activeplayer"){}
-            else{autostopfunction();}
+                var ytps = document.querySelector('.ytp-play-button');
+                if($('eow-title').getAttribute('data-totlplayer') == "activeplayer"){}
+                else{autostopfunction();}
 		});
 	}
 }
