@@ -1144,36 +1144,36 @@
     "description":"normal"
   },
   "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
+    "message":"讚",
+    "description":"讚"
   },
   "titelvideotoolsubscribe":{
     "message":"訂閱",
     "description":"訂閱"
   },
   "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
+    "message":"重覆",
+    "description":"重覆"
   },
   "titelvideotoolfilter":{
     "message":"Filter",
     "description":"Filter"
   },
   "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
+    "message":"全螢幕",
+    "description":"全螢幕"
   },
   "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
+    "message":"倒映",
+    "description":"倒映"
   },
   "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
+    "message":"所有影片皆顯示倒映",
+    "description":"所有影片皆顯示倒映"
   },
   "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
+    "message":"只有在這些網站啟動影片工具列：",
+    "description":"只有在這些網站啟動影片工具列："
   },
   "titelvideotoolwhitelist":{
     "message":"白名單",

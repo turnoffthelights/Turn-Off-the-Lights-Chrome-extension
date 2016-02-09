@@ -1096,15 +1096,15 @@
     "description":"Videowerkzeugleiste"
   },
   "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
+    "message":"Symbolleiste unter dem Bildschirm anzeigen, um den aktuellen Video-Player anzupassen",
+    "description":"Symbolleiste unter dem Bildschirm anzeigen, um den aktuellen Video-Player anzupassen"
   },
   "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
+    "message":"Ein Knopf, um den Vollbildmodus des Videoplayers zu aktivieren",
+    "description":"Ein Knopf, um den Vollbildmodus des Videoplayers zu aktivieren"
   },
   "vtoolfilter":{
-    "message":"Schaltfläche zum Hinzufügen eines Filters im Videoabspieler",
+    "message":"Knopf, der dem aktuellen Videoplayer einen Filter hinzufügt",
     "description":"Schaltfläche zum Hinzufügen eines Filters im Videoabspieler"
   },
   "vtoolreplay":{
@@ -1116,8 +1116,8 @@
     "description":"Graustufen"
   },
   "titelvideotoolsepia":{
-    "message":"sepia",
-    "description":"sepia"
+    "message":"Sepia",
+    "description":"Sepia"
   },
   "titelvideotoolinvert":{
     "message":"umkehren",
@@ -1132,12 +1132,12 @@
     "description":"sättigen"
   },
   "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
+    "message":"Einfärbung",
+    "description":"Einfärbung"
   },
   "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
+    "message":"Helligkeit",
+    "description":"Helligkeit"
   },
   "titelvideotoolnormal":{
     "message":"normal",
@@ -1160,7 +1160,7 @@
     "description":"Filter"
   },
   "titelvideotoolfullwindow":{
-    "message":"Volles Fenster",
+    "message":"Vollbild",
     "description":"Volles Fenster"
   },
   "titelreflection":{
@@ -1172,8 +1172,8 @@
     "description":"Show the reflection effect on all videos"
   },
   "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
+    "message":"Videosymbolleiste nur für diese Seite(n) aktivieren:",
+    "description":"Videosymbolleiste nur für diese Seite(n) aktivieren:"
   },
   "titelvideotoolwhitelist":{
     "message":"Positivliste",

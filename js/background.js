@@ -257,7 +257,7 @@ function initwelcome(){
 chrome.storage.local.get(['firstRun'], function(chromeset){
 if ((chromeset["firstRun"]!="false") && (chromeset["firstRun"]!=false)){
   var totlidextension = chrome.i18n.getMessage("@@extension_id");
-  chrome.tabs.create({url: "chrome-extension://"+totlidextension+"/options.html?welcome", selected:true})
+  chrome.tabs.create({url: "https://www.turnoffthelights.com/extension/chromewelcome.html", selected:true})
   chrome.tabs.create({url: "https://www.turnoffthelights.com/extension/chromeguide.html", selected:false})
   chrome.storage.local.set({"firstRun": "false"});
   chrome.storage.local.set({"version": "2.4"});
