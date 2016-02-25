@@ -560,8 +560,8 @@
     "description":"Do not show reminder page"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
+    "message":"سوف تتلاشى الصفحة بأكملها إلى الظلام، فتتمكن من مشاهدة الفيديو كما لو كنت في السينما.",
+    "description":"سوف تتلاشى الصفحة بأكملها إلى الظلام، فتتمكن من مشاهدة الفيديو كما لو كنت في السينما."
   },
   "titelviewcount":{
     "message":"عدد المشاهدات",

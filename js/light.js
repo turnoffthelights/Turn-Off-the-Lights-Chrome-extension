@@ -251,6 +251,11 @@ div = document.getElementsByTagName('div');
 for(var i = 0; i < div.length; i++ )
 {if(div[i].className == ('video-annotations iv-module')) {div[i].style.zIndex = 1001;}}
 
+// YouTube show sub title 25 february 2016
+var videoannotations = document.getElementsByTagName('div');
+for(var i = 0; i < videoannotations.length; i++ )
+{if(videoannotations[i].className == ('video-annotations')) {videoannotations[i].style.zIndex = 1001;}}
+
 // channel page
 var c4player = $('c4-player');
 if(c4player){$('c4-player').style.zIndex = 1001;$('c4-player').style.visibility = 'visible';$('c4-player').style.position = 'relative';}

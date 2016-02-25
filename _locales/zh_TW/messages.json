@@ -560,8 +560,8 @@
     "description":"不再顯示提示頁面"
   },
   "description":{
-    "message":"整個頁面將會褪色到變暗, 這樣你就可觀看影片如你置身於電影院裡.",
-    "description":"整個頁面將會褪色到變暗, 這樣你就可觀看影片如你置身於電影院裡."
+    "message":"觀賞影片時讓整個畫面變暗，彷彿置身電影院",
+    "description":"觀賞影片時讓整個畫面變暗，彷彿置身電影院"
   },
   "titelviewcount":{
     "message":"瀏覽次數",
@@ -1056,8 +1056,8 @@
     "description":"支援：<object>，<embed>，<applet>，<iframe>標籤。"
   },
   "titelnightmodebck":{
-    "message":"Background color:",
-    "description":"Background color:"
+    "message":"背景顏色：",
+    "description":"背景顏色："
   },
   "titelnightmodetxt":{
     "message":"文字顏色：",
@@ -1092,8 +1092,8 @@
     "description":"Shows the full 360 degrees YouTube video in one frame"
   },
   "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
+    "message":"影片工具列",
+    "description":"影片工具列"
   },
   "desvideotool":{
     "message":"Show the toolbar below your screen to customize the current video player",
@@ -1136,8 +1136,8 @@
     "description":"hue rotation"
   },
   "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
+    "message":"亮度",
+    "description":"亮度"
   },
   "titelvideotoolnormal":{
     "message":"normal",
@@ -1156,8 +1156,8 @@
     "description":"重覆"
   },
   "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
+    "message":"過濾器",
+    "description":"過濾器"
   },
   "titelvideotoolfullwindow":{
     "message":"全螢幕",

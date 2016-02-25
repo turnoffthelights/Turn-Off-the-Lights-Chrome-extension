@@ -8,12 +8,12 @@
     "description":"תמונת רקע"
   },
   "shortcutalllights":{
-    "message":"to toggle the lights on\/off for all open tabs",
-    "description":"to toggle the lights on\/off for all open tabs"
+    "message":"להחליף בין מצב חשוך ומואר בכל הכרטיסיות הפתוחות",
+    "description":"להחליף בין מצב חשוך ומואר בכל הכרטיסיות הפתוחות"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"בדוק עדכוני גרסה בשעה",
+    "description":"בדוק עדכוני גרסה בשעה"
   },
   "visualeffects":{
     "message":"אפקטים חזותיים",
@@ -64,8 +64,8 @@
     "description":"אם הנורית כבויה, באפשרותך לבחור אזור למקד את פריט."
   },
   "titelrememberpage":{
-    "message":"Reminder page",
-    "description":"Reminder page"
+    "message":"דף תזכורת",
+    "description":"דף תזכורת"
   },
   "desmousespotlighta":{
     "message":"אם האורות כבויים, להציג זרקור סביב סמן העכבר.",
@@ -212,8 +212,8 @@
     "description":"הזן את הסיסמה בתיבה שלהלן:"
   },
   "titelblurradius":{
-    "message":"Blur radius:",
-    "description":"Blur radius:"
+    "message":"רדיוס טשטוש:",
+    "description":"רדיוס טשטוש:"
   },
   "version":{
     "message":"גירסא",
@@ -560,8 +560,8 @@
     "description":"Do not show reminder page"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
+    "message":"הדף כולו יחשיך, כך שתוכלו לצפות בסרט כאילו אתם בקולנוע.",
+    "description":"הדף כולו יחשיך, כך שתוכלו לצפות בסרט כאילו אתם בקולנוע."
   },
   "titelviewcount":{
     "message":"מספר צפיות",

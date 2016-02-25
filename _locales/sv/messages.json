@@ -1092,24 +1092,24 @@
     "description":"Visar alla 360 grader på YouTube videon i en bild."
   },
   "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
+    "message":"Verktygsfältet för video",
+    "description":"Verktygsfältet för video"
   },
   "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
+    "message":"Visa verktygsfältet under skärmen för att anpassa den nuvarande videospelaren",
+    "description":"Visa verktygsfältet under skärmen för att anpassa den nuvarande videospelaren"
   },
   "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
+    "message":"En knapp för att ändra videospelaren till helskärm",
+    "description":"En knapp för att ändra videospelaren till helskärm"
   },
   "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
+    "message":"Knapp för att lägga till ett filter i den nuvarande videospelaren",
+    "description":"Knapp för att lägga till ett filter i den nuvarande videospelaren"
   },
   "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
+    "message":"Knapp för att spela upp den nuvarande videospelaren igen",
+    "description":"Knapp för att spela upp den nuvarande videospelaren igen"
   },
   "titelvideotoolgrayscale":{
     "message":"gråskala",
@@ -1132,8 +1132,8 @@
     "description":"mättnad"
   },
   "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
+    "message":"nyansrotation 90°",
+    "description":"nyansrotation 90°"
   },
   "titelvideotoolbrightness":{
     "message":"ljusstyrka",
@@ -1160,20 +1160,20 @@
     "description":"Filter"
   },
   "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
+    "message":"Helskärm",
+    "description":"Helskärm"
   },
   "titelreflection":{
     "message":"Reflektion",
     "description":"Reflektion"
   },
   "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
+    "message":"Visa reflektionseffekt på alla videos",
+    "description":"Visa reflektionseffekt på alla videos"
   },
   "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
+    "message":"Aktivera endast video-verktygsfältet på följande sajter:",
+    "description":"Aktivera endast video-verktygsfältet på följande sajter:"
   },
   "titelvideotoolwhitelist":{
     "message":"Whitelist",

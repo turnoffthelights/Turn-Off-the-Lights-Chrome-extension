@@ -1096,20 +1096,20 @@
     "description":"Videowerkzeugleiste"
   },
   "desvideotool":{
-    "message":"Symbolleiste unter dem Bildschirm anzeigen, um den aktuellen Video-Player anzupassen",
-    "description":"Symbolleiste unter dem Bildschirm anzeigen, um den aktuellen Video-Player anzupassen"
+    "message":"Symbolleiste am unteren Bildschirmrand anzeigen, um den aktuellen Videoabspieler anzupassen",
+    "description":"Symbolleiste am unteren Bildschirmrand anzeigen, um den aktuellen Videoabspieler anzupassen"
   },
   "vtoolfullscreen":{
-    "message":"Ein Knopf, um den Vollbildmodus des Videoplayers zu aktivieren",
-    "description":"Ein Knopf, um den Vollbildmodus des Videoplayers zu aktivieren"
+    "message":"Schaltfläche um den Vollbildmodus des Videoabspielers zu aktivieren",
+    "description":"Schaltfläche um den Vollbildmodus des Videoabspielers zu aktivieren"
   },
   "vtoolfilter":{
-    "message":"Knopf, der dem aktuellen Videoplayer einen Filter hinzufügt",
+    "message":"Schaltfläche zum Hinzufügen eines Filters im Videoabspieler",
     "description":"Schaltfläche zum Hinzufügen eines Filters im Videoabspieler"
   },
   "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
+    "message":"Schaltfläche für Wiedergabe-Wiederholung",
+    "description":"Schaltfläche für Wiedergabe-Wiederholung"
   },
   "titelvideotoolgrayscale":{
     "message":"Graustufen",
@@ -1120,7 +1120,7 @@
     "description":"Sepia"
   },
   "titelvideotoolinvert":{
-    "message":"umkehren",
+    "message":"Invertieren",
     "description":"umkehren"
   },
   "titelvideotoolcontrast":{
@@ -1128,12 +1128,12 @@
     "description":"Kontrast"
   },
   "titelvideotoolsaturate":{
-    "message":"sättigen",
+    "message":"Sättigung",
     "description":"sättigen"
   },
   "titelvideotoolhueroration":{
-    "message":"Einfärbung",
-    "description":"Einfärbung"
+    "message":"Farbtondrehung",
+    "description":"Farbtondrehung"
   },
   "titelvideotoolbrightness":{
     "message":"Helligkeit",
@@ -1168,8 +1168,8 @@
     "description":"Spiegelung"
   },
   "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
+    "message":"Spiegelungs-Effekt bei allen Videos anzeigen",
+    "description":"Spiegelungs-Effekt bei allen Videos anzeigen"
   },
   "desvideotoolonly":{
     "message":"Videosymbolleiste nur für diese Seite(n) aktivieren:",
