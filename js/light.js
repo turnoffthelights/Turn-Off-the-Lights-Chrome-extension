@@ -251,10 +251,30 @@ div = document.getElementsByTagName('div');
 for(var i = 0; i < div.length; i++ )
 {if(div[i].className == ('video-annotations iv-module')) {div[i].style.zIndex = 1001;}}
 
-// YouTube show sub title 25 february 2016
+// YouTube show annotation 25 february 2016
 var videoannotations = document.getElementsByTagName('div');
 for(var i = 0; i < videoannotations.length; i++ )
 {if(videoannotations[i].className == ('video-annotations')) {videoannotations[i].style.zIndex = 1001;}}
+
+// YouTube show channel 29 february 2016
+var annotationbranding = document.getElementsByTagName('div');
+for(var i = 0; i < annotationbranding.length; i++ )
+{if(annotationbranding[i].className == ('annotation annotation-type-custom iv-branding')) {annotationbranding[i].style.zIndex = 1001;}}
+
+// info button
+var ytpcardsteaser = document.getElementsByTagName('div');
+for(var i = 0; i < ytpcardsteaser.length; i++ )
+{if(ytpcardsteaser[i].className == ('ytp-cards-teaser')) {ytpcardsteaser[i].style.zIndex = 1001;}}
+
+var ytpcardsbutton = document.getElementsByTagName('button');
+for(var i = 0; i < ytpcardsbutton.length; i++ )
+{if(ytpcardsbutton[i].className == ('ytp-button ytp-cards-button')) {ytpcardsbutton[i].style.zIndex = 1001;ytpcardsbutton[i].style.position = 'absolute';ytpcardsbutton[i].style.top = '0';}}
+
+
+// YouTube video sidebar info button
+var ivdrawer = document.getElementsByTagName('div');
+for(var i = 0; i < ivdrawer.length; i++ )
+{if(ivdrawer[i].className == ('iv-drawer')) {ivdrawer[i].style.zIndex = 1001;}}
 
 // channel page
 var c4player = $('c4-player');
@@ -290,11 +310,11 @@ for (var div in divs) {
         }
 }
 
-// YouTube new player 27/04/2015 and 31/08/2015
+// YouTube new player 27/04/2015 and 31/08/2015 and 29/02/2016
 var ytdivs = document.getElementsByTagName('div');
 for (var div in ytdivs) {
         var d = ytdivs[div].className;
-        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-button ytp-cards-button' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container' || d == 'ytp-popup ytp-settings-menu' || d == 'ytp-panelpopup ytp-contextmenu') {
+        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container' || d == 'ytp-popup ytp-settings-menu' || d == 'ytp-panelpopup ytp-contextmenu') {
                 ytdivs[div].style.zIndex = 1001;
         }
 }
