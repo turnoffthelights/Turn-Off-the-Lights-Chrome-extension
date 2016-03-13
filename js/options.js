@@ -34,424 +34,108 @@ var default_arangespread = 20;
 
 // Option to save current value to chrome.storage
 function save_options(){
-	chrome.storage.local.set({"interval": $('interval').value});
-	chrome.storage.local.set({"lightcolor": $('lightcolor').value});
-	if($('pageaction').checked)chrome.storage.local.set({"pageaction": 'true'});
-	else chrome.storage.local.set({"pageaction": 'false'});
-	if($('lampregular').checked)chrome.storage.local.set({"lampregular": 'true'});
-	else chrome.storage.local.set({"lampregular": 'false'});
-	if($('autoplay').checked)chrome.storage.local.set({"autoplay": 'true'});
-	else chrome.storage.local.set({"autoplay": 'false'});
-	if($('playlist').checked)chrome.storage.local.set({"playlist": 'true'});
-	else chrome.storage.local.set({"playlist": 'false'});
-	if($('flash').checked)chrome.storage.local.set({"flash": 'true'});
-	else chrome.storage.local.set({"flash": 'false'});
-	if($('head').checked)chrome.storage.local.set({"head": 'true'});
-	else chrome.storage.local.set({"head": 'false'});
-	if($('fadein').checked)chrome.storage.local.set({"fadein": 'true'});
-	else chrome.storage.local.set({"fadein": 'false'});
-	if($('fadeout').checked)chrome.storage.local.set({"fadeout": 'true'});
-	else chrome.storage.local.set({"fadeout": 'false'});
-	if($('infobar').checked)chrome.storage.local.set({"infobar": 'true'});
-	else chrome.storage.local.set({"infobar": 'false'});
-	if($('sharebutton').checked)chrome.storage.local.set({"sharebutton": 'true'});
-	else chrome.storage.local.set({"sharebutton": 'false'});
-	if($('likebutton').checked)chrome.storage.local.set({"likebutton": 'true'});
-	else chrome.storage.local.set({"likebutton": 'false'});
-	if($('readera').checked)chrome.storage.local.set({"readera": 'true'});
-	else chrome.storage.local.set({"readera": 'false'});
-	if($('readern').checked)chrome.storage.local.set({"readern": 'true'});
-	else chrome.storage.local.set({"readern": 'false'});
-	if($('shortcutlight').checked)chrome.storage.local.set({"shortcutlight": 'true'});
-	else chrome.storage.local.set({"shortcutlight": 'false'});
-	if($('eyea').checked)chrome.storage.local.set({"eyea": 'true'});
-	else chrome.storage.local.set({"eyea": 'false'});
-	if($('eyen').checked)chrome.storage.local.set({"eyen": 'true'});
-	else chrome.storage.local.set({"eyen": 'false'});
-	if($('suggestions').checked)chrome.storage.local.set({"suggestions": 'true'});
-	else chrome.storage.local.set({"suggestions": 'false'});
-	if($('videoheadline').checked)chrome.storage.local.set({"videoheadline": 'true'});
-	else chrome.storage.local.set({"videoheadline": 'false'});
-	if($('eastereggs').checked)chrome.storage.local.set({"eastereggs": 'true'});
-	else chrome.storage.local.set({"eastereggs": 'false'});
-	if($('contextmenus').checked)chrome.storage.local.set({"contextmenus": 'true'});
-	else chrome.storage.local.set({"contextmenus": 'false'});
-	if($('viewcount').checked)chrome.storage.local.set({"viewcount": 'true'});
-	else chrome.storage.local.set({"viewcount": 'false'});
-	chrome.storage.local.set({"lightimage": $('lightimage').value});	
-	if($('lightimagea').checked)chrome.storage.local.set({"lightimagea": 'true'});
-	else chrome.storage.local.set({"lightimagea": 'false'});
-	if($('lightimagen').checked)chrome.storage.local.set({"lightimagen": 'true'});
-	else chrome.storage.local.set({"lightimagen": 'false'});
-	if($('eyealist').checked)chrome.storage.local.set({"eyealist": 'true'});
-	else chrome.storage.local.set({"eyealist": 'false'});
-	if($('mousespotlighto').checked)chrome.storage.local.set({"mousespotlighto": 'true'});
-	else chrome.storage.local.set({"mousespotlighto": 'false'});
-	if($('mousespotlighta').checked)chrome.storage.local.set({"mousespotlighta": 'true'});
-	else chrome.storage.local.set({"mousespotlighta": 'false'});
-	if($('mousespotlightc').checked)chrome.storage.local.set({"mousespotlightc": 'true'});
-	else chrome.storage.local.set({"mousespotlightc": 'false'});
-	if($('nighttime').checked)chrome.storage.local.set({"nighttime": 'true'});
-	else chrome.storage.local.set({"nighttime": 'false'});
-	chrome.storage.local.set({"begintime": $('begintime').value});
-	chrome.storage.local.set({"endtime": $('endtime').value});
-	if($('addvideobutton').checked)chrome.storage.local.set({"addvideobutton": 'true'});
-	else chrome.storage.local.set({"addvideobutton": 'false'});
-	if($('likebar').checked)chrome.storage.local.set({"likebar": 'true'});
-	else chrome.storage.local.set({"likebar": 'false'});
-	if($('ambilight').checked)chrome.storage.local.set({"ambilight": 'true'});
-	else chrome.storage.local.set({"ambilight": 'false'});
-	chrome.storage.local.set({"ambilightrangeblurradius": $('ambilightrangeblurradius').value});
-	chrome.storage.local.set({"ambilightrangespreadradius": $('ambilightrangespreadradius').value});
-	if($('mousespotlightt').checked)chrome.storage.local.set({"mousespotlightt": 'true'});
-	else chrome.storage.local.set({"mousespotlightt": 'false'});
-	if($('ambilightfixcolor').checked)chrome.storage.local.set({"ambilightfixcolor": 'true'});
-	else chrome.storage.local.set({"ambilightfixcolor": 'false'});
-	if($('ambilightvarcolor').checked)chrome.storage.local.set({"ambilightvarcolor": 'true'});
-	else chrome.storage.local.set({"ambilightvarcolor": 'false'});
-	chrome.storage.local.set({"ambilightcolorhex": $('ambilightcolorhex').value});
-	if($('ambilight4color').checked)chrome.storage.local.set({"ambilight4color": 'true'});
-	else chrome.storage.local.set({"ambilight4color": 'false'});
-	chrome.storage.local.set({"ambilight1colorhex": $('ambilight1colorhex').value});
-	chrome.storage.local.set({"ambilight2colorhex": $('ambilight2colorhex').value});
-	chrome.storage.local.set({"ambilight3colorhex": $('ambilight3colorhex').value});
-	chrome.storage.local.set({"ambilight4colorhex": $('ambilight4colorhex').value});
-	if($('password').checked)chrome.storage.local.set({"password": 'true'});
-	else chrome.storage.local.set({"password": 'false'});
-	chrome.storage.local.set({"enterpassword": $('enterpassword').value});
-	if($('noflash').checked)chrome.storage.local.set({"noflash": 'true'});
-	else chrome.storage.local.set({"noflash": 'false'});
-	if($('hardflash').checked)chrome.storage.local.set({"hardflash": 'true'});
-	else chrome.storage.local.set({"hardflash": 'false'});
-	if($('ecosaver').checked)chrome.storage.local.set({"ecosaver": 'true'});
-	else chrome.storage.local.set({"ecosaver": 'false'});
-	chrome.storage.local.set({"ecosavertime": $('ecosavertime').value});
-	if($('dynamic').checked)chrome.storage.local.set({"dynamic": 'true'});
-	else chrome.storage.local.set({"dynamic": 'false'});
-	if($('dynamic1').checked)chrome.storage.local.set({"dynamic1": 'true'});
-	else chrome.storage.local.set({"dynamic1": 'false'});
-	if($('dynamic2').checked)chrome.storage.local.set({"dynamic2": 'true'});
-	else chrome.storage.local.set({"dynamic2": 'false'});
-	if($('dynamic3').checked)chrome.storage.local.set({"dynamic3": 'true'});
-	else chrome.storage.local.set({"dynamic3": 'false'});
-	if($('dynamic4').checked)chrome.storage.local.set({"dynamic4": 'true'});
-	else chrome.storage.local.set({"dynamic4": 'false'});
-	if($('dynamic5').checked)chrome.storage.local.set({"dynamic5": 'true'});
-	else chrome.storage.local.set({"dynamic5": 'false'});
-	if($('dynamic6').checked)chrome.storage.local.set({"dynamic6": 'true'});
-	else chrome.storage.local.set({"dynamic6": 'false'});
-	if($('dynamic7').checked)chrome.storage.local.set({"dynamic7": 'true'});
-	else chrome.storage.local.set({"dynamic7": 'false'});
-	if($('dynamic8').checked)chrome.storage.local.set({"dynamic8": 'true'});
-	else chrome.storage.local.set({"dynamic8": 'false'});
-	if($('dynamic9').checked)chrome.storage.local.set({"dynamic9": 'true'});
-	else chrome.storage.local.set({"dynamic9": 'false'});
-	if($('dynamic10').checked)chrome.storage.local.set({"dynamic10": 'true'});
-	else chrome.storage.local.set({"dynamic10": 'false'});
-	if($('hoveroptiondyn5').checked)chrome.storage.local.set({"hoveroptiondyn5": 'true'});
-	else chrome.storage.local.set({"hoveroptiondyn5": 'false'});
-	if($('autoplayonly').checked)chrome.storage.local.set({"autoplayonly": 'true'});
-	else chrome.storage.local.set({"autoplayonly": 'false'});
-	if($('blur').checked)chrome.storage.local.set({"blur": 'true'});
-	else chrome.storage.local.set({"blur": 'false'});
-	var ytselq = document.getElementById("youtubequality");
-	chrome.storage.local.set({"maxquality": ytselq.options[ytselq.selectedIndex].value});
-	if($('autowidthyoutube').checked)chrome.storage.local.set({"autowidthyoutube": 'true'});
-	else chrome.storage.local.set({"autowidthyoutube": 'false'});
-	if($('customqualityyoutube').checked)chrome.storage.local.set({"customqualityyoutube": 'true'});
-	else chrome.storage.local.set({"customqualityyoutube": 'false'});
-	if($('cinemaontop').checked)chrome.storage.local.set({"cinemaontop": 'true'});
-	else chrome.storage.local.set({"cinemaontop": 'false'});
-	if($('alllightsoff').checked)chrome.storage.local.set({"alllightsoff": 'true'});
-	else chrome.storage.local.set({"alllightsoff": 'false'});
-	chrome.storage.local.set({"spotlightradius": $('spotlightradius').value});
-	if($('atmosphereonly').checked)chrome.storage.local.set({"atmosphereonly": 'true'});
-	else chrome.storage.local.set({"atmosphereonly": 'false'});
-	if($('optionskipremember').checked)chrome.storage.local.set({"optionskipremember": 'true'});
-	else chrome.storage.local.set({"optionskipremember": 'false'});
-	if($('nighttheme').checked)chrome.storage.local.set({"nighttheme": 'true'});
-	else chrome.storage.local.set({"nighttheme": 'false'});
-	if($('nightonly').checked)chrome.storage.local.set({"nightonly": 'true'});
-	else chrome.storage.local.set({"nightonly": 'false'});
-	if($('nightenabletheme').checked)chrome.storage.local.set({"nightenabletheme": 'true'});
-	else chrome.storage.local.set({"nightenabletheme": 'false'});
-	if($('autoplaydelay').checked)chrome.storage.local.set({"autoplaydelay": 'true'});
-	else chrome.storage.local.set({"autoplaydelay": 'false'});
-	chrome.storage.local.set({"autoplaydelaytime": $('autoplaydelaytime').value});
-	if($('motion').checked)chrome.storage.local.set({"motion": 'true'});
-	else chrome.storage.local.set({"motion": 'false'});
-	if($('lightimagelin').checked)chrome.storage.local.set({"lightimagelin": 'true'});
-	else chrome.storage.local.set({"lightimagelin": 'false'});
-	var linearsq = document.getElementById("linearsq");
-	chrome.storage.local.set({"linearsq": linearsq.options[linearsq.selectedIndex].value});
-	chrome.storage.local.set({"colora": $('colora').value});
-	chrome.storage.local.set({"intervallina": $('intervallina').value});
-	chrome.storage.local.set({"colorb": $('colorb').value});
-	chrome.storage.local.set({"intervallinb": $('intervallinb').value});
-	if($('speech').checked)chrome.storage.local.set({"speech": 'true'});
-	else chrome.storage.local.set({"speech": 'false'});
-	var webspeechlang = document.getElementById("select_language");
-	if (webspeechlang.selectedIndex != -1){chrome.storage.local.set({"speechlang": webspeechlang.options[webspeechlang.selectedIndex].value});}
-	var webspeechcountry = document.getElementById("select_dialect");
-	if (webspeechcountry.selectedIndex != -1){chrome.storage.local.set({"speechcountry": webspeechcountry.options[webspeechcountry.selectedIndex].value});}
-	if($('atmosvivid').checked)chrome.storage.local.set({"atmosvivid": 'true'});
-	else chrome.storage.local.set({"atmosvivid": 'false'});
-	if($('cammotiononly').checked)chrome.storage.local.set({"cammotiononly": 'true'});
-	else chrome.storage.local.set({"cammotiononly": 'false'});
-	if($('speechonly').checked)chrome.storage.local.set({"speechonly": 'true'});
-	else chrome.storage.local.set({"speechonly": 'false'});
-	if($('autoplaychecklistwhite').checked)chrome.storage.local.set({"autoplaychecklistwhite": 'true'});
-	else chrome.storage.local.set({"autoplaychecklistwhite": 'false'});
-	if($('autoplaychecklistblack').checked)chrome.storage.local.set({"autoplaychecklistblack": 'true'});
-	else chrome.storage.local.set({"autoplaychecklistblack": 'false'});
-	if($('autostop').checked)chrome.storage.local.set({"autostop": 'true'});
-	else chrome.storage.local.set({"autostop": 'false'});
-	if($('autostoponly').checked)chrome.storage.local.set({"autostoponly": 'true'});
-	else chrome.storage.local.set({"autostoponly": 'false'});
-	if($('autostopchecklistwhite').checked)chrome.storage.local.set({"autostopchecklistwhite": 'true'});
-	else chrome.storage.local.set({"autostopchecklistwhite": 'false'});
-	if($('autostopchecklistblack').checked)chrome.storage.local.set({"autostopchecklistblack": 'true'});
-	else chrome.storage.local.set({"autostopchecklistblack": 'false'});
-	if($('nighthover').checked)chrome.storage.local.set({"nighthover": 'true'});
-	else chrome.storage.local.set({"nighthover": 'false'});
-	if($('nightmodechecklistwhite').checked)chrome.storage.local.set({"nightmodechecklistwhite": 'true'});
-	else chrome.storage.local.set({"nightmodechecklistwhite": 'false'});
-	if($('nightmodechecklistblack').checked)chrome.storage.local.set({"nightmodechecklistblack": 'true'});
-	else chrome.storage.local.set({"nightmodechecklistblack": 'false'});
-	if($('nmtopleft').checked)chrome.storage.local.set({"nmtopleft": 'true'});
-	else chrome.storage.local.set({"nmtopleft": 'false'});
-	if($('nmtopright').checked)chrome.storage.local.set({"nmtopright": 'true'});
-	else chrome.storage.local.set({"nmtopright": 'false'});
-	if($('nmbottomright').checked)chrome.storage.local.set({"nmbottomright": 'true'});
-	else chrome.storage.local.set({"nmbottomright": 'false'});
-	if($('nmbottomleft').checked)chrome.storage.local.set({"nmbottomleft": 'true'});
-	else chrome.storage.local.set({"nmbottomleft": 'false'});
-	if($('nmcustom').checked)chrome.storage.local.set({"nmcustom": 'true'});
-	else chrome.storage.local.set({"nmcustom": 'false'});
-	if($('nightactivetime').checked)chrome.storage.local.set({"nightactivetime": 'true'});
-	else chrome.storage.local.set({"nightactivetime": 'false'});
-	chrome.storage.local.set({"nmbegintime": $('nmbegintime').value});
-	chrome.storage.local.set({"nmendtime": $('nmendtime').value});
-	if($('lampandnightmode').checked)chrome.storage.local.set({"lampandnightmode": 'true'});
-	else chrome.storage.local.set({"lampandnightmode": 'false'});	
-	if($('eyechecklistwhite').checked)chrome.storage.local.set({"eyechecklistwhite": 'true'});
-	else chrome.storage.local.set({"eyechecklistwhite": 'false'});
-	if($('eyechecklistblack').checked)chrome.storage.local.set({"eyechecklistblack": 'true'});
-	else chrome.storage.local.set({"eyechecklistblack": 'false'});
-	chrome.storage.local.set({"nightmodebck": $('nightmodebck').value});
-	chrome.storage.local.set({"nightmodetxt": $('nightmodetxt').value});
-	if($('no360youtube').checked)chrome.storage.local.set({"no360youtube": 'true'});
-	else chrome.storage.local.set({"no360youtube": 'false'});
-	if($('videotool').checked)chrome.storage.local.set({"videotool": 'true'});
-	else chrome.storage.local.set({"videotool": 'false'});
-	if($('reflection').checked)chrome.storage.local.set({"reflection": 'true'});
-	else chrome.storage.local.set({"reflection": 'false'});
-	chrome.storage.local.set({"reflectionamount": $('reflectionamount').value});
-	if($('videotoolonly').checked)chrome.storage.local.set({"videotoolonly": 'true'});
-	else chrome.storage.local.set({"videotoolonly": 'false'});
-	if($('videotoolchecklistwhite').checked)chrome.storage.local.set({"videotoolchecklistwhite": 'true'});
-	else chrome.storage.local.set({"videotoolchecklistwhite": 'false'});
-	if($('videotoolchecklistblack').checked)chrome.storage.local.set({"videotoolchecklistblack": 'true'});
-	else chrome.storage.local.set({"videotoolchecklistblack": 'false'});
-
-// Excluded domains
-var excludedDomainsBox = $("excludedDomainsBox");
-var excludedDomains = {};
-for (var i = 0; i < excludedDomainsBox.length; i++)
-	excludedDomains[excludedDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"excludedDomains": JSON.stringify(excludedDomains)});
-
-// autoplay Excluded domains
-var autoplayDomainsBox = $("autoplayDomainsBox");
-var autoplayDomains = {};
-for (var i = 0; i < autoplayDomainsBox.length; i++)
-	autoplayDomains[autoplayDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"autoplayDomains": JSON.stringify(autoplayDomains)});
+    var ytselq = document.getElementById("youtubequality");
+    var linearsq = document.getElementById("linearsq");
+    var webspeechlang = document.getElementById("select_language");
+    if (webspeechlang.selectedIndex != -1){ var savewebspeechlang = webspeechlang.options[webspeechlang.selectedIndex].value;}
+    var webspeechcountry = document.getElementById("select_dialect");
+    if (webspeechcountry.selectedIndex != -1){ var savewebspeechcountry = webspeechcountry.options[webspeechcountry.selectedIndex].value;}
+    
+    // Excluded domains
+    var excludedDomainsBox = $("excludedDomainsBox");
+    var excludedDomains = {};
+    for (var i = 0; i < excludedDomainsBox.length; i++){excludedDomains[excludedDomainsBox.options[i].value] = true;}
 	
-// atmosphere Excluded domains
-var atmosphereDomainsBox = $("atmosphereDomainsBox");
-var atmosphereDomains = {};
-for (var i = 0; i < atmosphereDomainsBox.length; i++)
-	atmosphereDomains[atmosphereDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"atmosphereDomains": JSON.stringify(atmosphereDomains)});
+    // autoplay Excluded domains
+    var autoplayDomainsBox = $("autoplayDomainsBox");
+    var autoplayDomains = {};
+    for (var i = 0; i < autoplayDomainsBox.length; i++){autoplayDomains[autoplayDomainsBox.options[i].value] = true;}
 	
-// night Excluded domains
-var nightDomainsBox = $("nightDomainsBox");
-var nightDomains = {};
-for (var i = 0; i < nightDomainsBox.length; i++)
-	nightDomains[nightDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"nightDomains": JSON.stringify(nightDomains)});
+    // atmosphere Excluded domains
+    var atmosphereDomainsBox = $("atmosphereDomainsBox");
+    var atmosphereDomains = {};
+    for (var i = 0; i < atmosphereDomainsBox.length; i++){atmosphereDomains[atmosphereDomainsBox.options[i].value] = true;}
 	
-// cammotion Excluded domains
-var cammotionDomainsBox = $("cammotionDomainsBox");
-var cammotionDomains = {};
-for (var i = 0; i < cammotionDomainsBox.length; i++)
-	cammotionDomains[cammotionDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"cammotionDomains": JSON.stringify(cammotionDomains)});
+    // night Excluded domains
+    var nightDomainsBox = $("nightDomainsBox");
+    var nightDomains = {};
+    for (var i = 0; i < nightDomainsBox.length; i++){nightDomains[nightDomainsBox.options[i].value] = true;}
 	
-// speech Excluded domains
-var speechDomainsBox = $("speechDomainsBox");
-var speechDomains = {};
-for (var i = 0; i < speechDomainsBox.length; i++)
-	speechDomains[speechDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"speechDomains": JSON.stringify(speechDomains)});
-
-// autostop Excluded domains
-var autostopDomainsBox = $("autostopDomainsBox");
-var autostopDomains = {};
-for (var i = 0; i < autostopDomainsBox.length; i++)
-	autostopDomains[autostopDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"autostopDomains": JSON.stringify(autostopDomains)});
-
-// videotool Excluded domains
-var videotoolDomainsBox = $("videotoolDomainsBox");
-var videotoolDomains = {};
-for (var i = 0; i < videotoolDomainsBox.length; i++)
-	videotoolDomains[videotoolDomainsBox.options[i].value] = true;
-    chrome.storage.local.set({"videotoolDomains": JSON.stringify(videotoolDomains)});	
+    // cammotion Excluded domains
+    var cammotionDomainsBox = $("cammotionDomainsBox");
+    var cammotionDomains = {};
+    for (var i = 0; i < cammotionDomainsBox.length; i++){cammotionDomains[cammotionDomainsBox.options[i].value] = true;}
+	
+    // speech Excluded domains
+    var speechDomainsBox = $("speechDomainsBox");
+    var speechDomains = {};
+    for (var i = 0; i < speechDomainsBox.length; i++){speechDomains[speechDomainsBox.options[i].value] = true;}
+	
+    // autostop Excluded domains
+    var autostopDomainsBox = $("autostopDomainsBox");
+    var autostopDomains = {};
+    for (var i = 0; i < autostopDomainsBox.length; i++){autostopDomains[autostopDomainsBox.options[i].value] = true;}
+	
+    // videotool Excluded domains
+    var videotoolDomainsBox = $("videotoolDomainsBox");
+    var videotoolDomains = {};
+    for (var i = 0; i < videotoolDomainsBox.length; i++){videotoolDomains[videotoolDomainsBox.options[i].value] = true;}
+	
+	chrome.storage.sync.set({"interval": $('interval').value,"lightcolor": $('lightcolor').value, "pageaction": $('pageaction').checked, "lampregular": $('lampregular').checked, "autoplay": $('autoplay').checked, "playlist": $('playlist').checked, "flash": $('flash').checked, "head": $('head').checked, "fadein": $('fadein').checked, "fadeout": $('fadeout').checked, "infobar": $('infobar').checked, "sharebutton": $('sharebutton').checked, "likebutton": $('likebutton').checked, "readera": $('readera').checked, "readern": $('readern').checked, "shortcutlight": $('shortcutlight').checked, "eyea": $('eyea').checked, "eyen": $('eyen').checked, "suggestions": $('suggestions').checked, "videoheadline": $('videoheadline').checked, "eastereggs": $('eastereggs').checked, "contextmenus": $('contextmenus').checked, "viewcount": $('viewcount').checked, "lightimage": $('lightimage').value, "lightimagea": $('lightimagea').checked, "lightimagen": $('lightimagen').checked, "eyealist": $('eyealist').checked, "mousespotlighto": $('mousespotlighto').checked, "mousespotlighta": $('mousespotlighta').checked, "mousespotlightc": $('mousespotlightc').checked, "nighttime": $('nighttime').checked, "begintime": $('begintime').value, "endtime": $('endtime').value, "addvideobutton": $('addvideobutton').checked, "likebar": $('likebar').checked, "ambilight": $('ambilight').checked, "ambilightrangeblurradius": $('ambilightrangeblurradius').value, "ambilightrangespreadradius": $('ambilightrangespreadradius').value, "mousespotlightt": $('mousespotlightt').checked, "ambilightfixcolor": $('ambilightfixcolor').checked, "ambilightvarcolor": $('ambilightvarcolor').checked, "ambilightcolorhex": $('ambilightcolorhex').value, "ambilight4color": $('ambilight4color').checked, "ambilight1colorhex": $('ambilight1colorhex').value, "ambilight2colorhex": $('ambilight2colorhex').value, "ambilight3colorhex": $('ambilight3colorhex').value, "ambilight4colorhex": $('ambilight4colorhex').value, "password": $('password').checked, "enterpassword": $('enterpassword').value, "noflash": $('noflash').checked, "hardflash": $('hardflash').checked, "ecosaver": $('ecosaver').checked, "ecosavertime": $('ecosavertime').value, "dynamic": $('dynamic').checked, "dynamic1": $('dynamic1').checked, "dynamic2": $('dynamic2').checked, "dynamic3": $('dynamic3').checked, "dynamic4": $('dynamic4').checked, "dynamic5": $('dynamic5').checked, "dynamic6": $('dynamic6').checked, "dynamic7": $('dynamic7').checked, "dynamic8": $('dynamic8').checked, "dynamic9": $('dynamic9').checked, "dynamic10": $('dynamic10').checked, "hoveroptiondyn5": $('hoveroptiondyn5').checked, "autoplayonly": $('autoplayonly').checked, "blur": $('blur').checked, "maxquality": ytselq.options[ytselq.selectedIndex].value, "autowidthyoutube": $('autowidthyoutube').checked, "customqualityyoutube": $('customqualityyoutube').checked, "cinemaontop": $('cinemaontop').checked, "alllightsoff": $('alllightsoff').checked, "spotlightradius": $('spotlightradius').value, "atmosphereonly": $('atmosphereonly').checked, "optionskipremember": $('optionskipremember').checked, "nighttheme": $('nighttheme').checked, "nightonly": $('nightonly').checked, "nightenabletheme": $('nightenabletheme').checked, "autoplaydelay": $('autoplaydelay').checked, "autoplaydelaytime": $('autoplaydelaytime').value, "motion": $('motion').checked, "lightimagelin": $('lightimagelin').checked, "linearsq": linearsq.options[linearsq.selectedIndex].value, "colora": $('colora').value, "intervallina": $('intervallina').value, "colorb": $('colorb').value, "intervallinb": $('intervallinb').value, "speech": $('speech').checked, "speechlang": savewebspeechlang, "speechcountry": savewebspeechcountry, "atmosvivid": $('atmosvivid').checked, "cammotiononly": $('cammotiononly').checked, "speechonly": $('speechonly').checked, "autoplaychecklistwhite": $('autoplaychecklistwhite').checked, "autoplaychecklistblack": $('autoplaychecklistblack').checked, "autostop": $('autostop').checked, "autostoponly": $('autostoponly').checked, "autostopchecklistwhite": $('autostopchecklistwhite').checked, "autostopchecklistblack": $('autostopchecklistblack').checked, "nighthover": $('nighthover').checked, "nightmodechecklistwhite": $('nightmodechecklistwhite').checked, "nightmodechecklistblack": $('nightmodechecklistblack').checked, "nmtopleft": $('nmtopleft').checked, "nmtopright": $('nmtopright').checked, "nmbottomright": $('nmbottomright').checked, "nmbottomleft": $('nmbottomleft').checked, "nmcustom": $('nmcustom').checked, "nightactivetime": $('nightactivetime').checked, "nmbegintime": $('nmbegintime').value, "nmendtime": $('nmendtime').value, "lampandnightmode": $('lampandnightmode').checked, "eyechecklistwhite": $('eyechecklistwhite').checked, "eyechecklistblack": $('eyechecklistblack').checked, "nightmodebck": $('nightmodebck').value, "nightmodetxt": $('nightmodetxt').value, "no360youtube": $('no360youtube').checked, "videotool": $('videotool').checked, "reflection": $('reflection').checked, "reflectionamount": $('reflectionamount').value, "videotoolonly": $('videotoolonly').checked, "videotoolchecklistwhite": $('videotoolchecklistwhite').checked, "videotoolchecklistblack": $('videotoolchecklistblack').checked, "excludedDomains": JSON.stringify(excludedDomains), "autoplayDomains": JSON.stringify(autoplayDomains), "atmosphereDomains": JSON.stringify(atmosphereDomains), "nightDomains": JSON.stringify(nightDomains), "cammotionDomains": JSON.stringify(cammotionDomains), "speechDomains": JSON.stringify(speechDomains), "autostopDomains": JSON.stringify(autostopDomains), "videotoolDomains": JSON.stringify(videotoolDomains)});	
 }
 
-// Option to read current value from chrome.storage
-chrome.storage.local.get(['fadein'], function(items){ // find no localstore fadein
-	if(!items['fadein']) chrome.storage.local.set({"fadein": 'true'}); // then default true
-});
-
-chrome.storage.local.get(['fadeout'], function(items){ // find no localstore fadeout
-	if(!items['fadeout']) chrome.storage.local.set({"fadeout": 'true'}); // then default true
-});
-
-chrome.storage.local.get(['readera', 'readern'], function(items){ // find no localstore reader
-	if(!items['readera']&&!items['readern']){
-	chrome.storage.local.set({"readern": 'true'}); // then default true
-	chrome.storage.local.set({"readera": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['lightimagea', 'lightimagen'], function(items){ // find no localstore lightimage
-	if(!items['lightimagea']&&!items['lightimagen']){
-	chrome.storage.local.set({"lightimagen": 'true'}); // then default true
-	chrome.storage.local.set({"lightimagea": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['mousespotlighta', 'mousespotlightc', 'mousespotlighto', 'mousespotlightt'], function(items){ // find no localstore mouse
-	if(!items['mousespotlighta']&&!items['mousespotlightc']&&!items['mousespotlighto']&&!items['mousespotlightt']){
-	chrome.storage.local.set({"mousespotlighto": 'true'}); // then default true, off
-	chrome.storage.local.set({"mousespotlightc": 'false'}); // then default false, custom
-	chrome.storage.local.set({"mousespotlighta": 'false'}); // then default false, auto
-	chrome.storage.local.set({"mousespotlightt": 'false'}); // then default false, auto
-	}
-});
-
-chrome.storage.local.get(['eyea', 'eyen', 'eyealist'], function(items){ // find no localstore eye
-	if(!items['eyea']&&!items['eyen']&&!items['eyealist']){
-	chrome.storage.local.set({"eyen": 'true'}); // then default true
-	chrome.storage.local.set({"eyea": 'false'}); // then default false
-	chrome.storage.local.set({"eyealist": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['interval'], function(items){
+var firstdefaultvalues = {};
+// Option default value to read if there is no current value from chrome.storage AND init default value
+chrome.storage.sync.get(['fadein', 'fadeout', 'readera', 'readern', 'lightimagea', 'lightimagen', 'mousespotlighta', 'mousespotlightc', 'mousespotlighto', 'mousespotlightt', 'eyea', 'eyen', 'eyealist', 'interval', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightvarcolor', 'ambilightfixcolor', 'ambilight4color', 'flash', 'noflash', 'noflash', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10', 'hoveroptiondyn5', 'maxquality', 'pageaction', 'lampregular', 'autoplaychecklistwhite', 'autoplaychecklistblack', 'autostopchecklistwhite', 'autostopchecklistblack', 'videotoolchecklistwhite', 'videotoolchecklistblack', 'nightmodechecklistwhite', 'nightmodechecklistblack', 'nmtopleft', 'nmtopright', 'nmbottomright', 'nmbottomleft', 'nmcustom', 'eyechecklistwhite', 'eyechecklistblack'], function(items){
+    // find no localstore fadein
+	if(items['fadein'] == null){firstdefaultvalues['fadein'] = true;}
+    // find no localstore fadeout
+	if(items['fadeout'] == null){firstdefaultvalues['fadeout'] = true;}
+    // find no localstore reader
+	if(items['readera'] == null && items['readern'] == null){firstdefaultvalues['readern'] = true;firstdefaultvalues['readera'] = false;}
+    // find no localstore lightimage
+	if(items['lightimagea'] == null && items['lightimagen'] == null){firstdefaultvalues['lightimagen'] = true;firstdefaultvalues['lightimagea'] = false;}
+    // find no localstore mouse
+	if(items['mousespotlighta'] == null && items['mousespotlightc'] == null && items['mousespotlighto'] == null && items['mousespotlightt'] == null){firstdefaultvalues['mousespotlighto'] = true;firstdefaultvalues['mousespotlightc'] = false;firstdefaultvalues['mousespotlighta'] = false;firstdefaultvalues['mousespotlightt'] = false;}
+    // find no localstore eye
+	if(items['eyea'] == null && items['eyen'] == null && items['eyealist'] == null){firstdefaultvalues['eyen'] = true;firstdefaultvalues['eyea'] = false;firstdefaultvalues['eyealist'] = false;}
+    
+    // find no default value
 	if(items['interval']) default_opacity = items['interval'];
-});
-
-chrome.storage.local.get(['ambilightrangeblurradius'], function(items){
+    // find and use default ambilight blur radius
 	if(items['ambilightrangeblurradius']) default_arangeblur = items['ambilightrangeblurradius'];
-});
-
-chrome.storage.local.get(['ambilightrangespreadradius'], function(items){
+    // find and use default ambilight spread radius
 	if(items['ambilightrangespreadradius']) default_arangespread = items['ambilightrangespreadradius'];
-});
-
-chrome.storage.local.get(['ambilightvarcolor', 'ambilightfixcolor', 'ambilight4color'], function(items){ // find no localstore atmos
-	if(!items['ambilightvarcolor']&&!items['ambilightfixcolor']&&!items['ambilight4color']){
-	chrome.storage.local.set({"ambilightfixcolor": 'true'}); // then default true
-	chrome.storage.local.set({"ambilightvarcolor": 'false'}); // then default false
-	chrome.storage.local.set({"ambilight4color": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['flash', 'noflash', 'noflash'], function(items){ // find no localstore flash
-	if(!items['flash']&&!items['noflash']&&!items['noflash']){
-	chrome.storage.local.set({"noflash": 'true'}); // then default false
-	chrome.storage.local.set({"flash": 'false'}); // then default true
-	chrome.storage.local.set({"hardflash": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5'], function(items){ // find no localstore flash
-	if(!items['dynamic1']&&!items['dynamic2']&&!items['dynamic3']&&!items['dynamic4']&&!items['dynamic5']&&!items['dynamic6']&&!items['dynamic7']&&!items['dynamic8']&&!items['dynamic9']&&!items['dynamic10']){
-	chrome.storage.local.set({"dynamic1": 'true'}); // then default true
-	chrome.storage.local.set({"dynamic2": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic3": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic4": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic5": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic6": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic7": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic8": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic9": 'false'}); // then default false
-	chrome.storage.local.set({"dynamic10": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['hoveroptiondyn5'], function(items){ // find no localstore hoverdyn
-	if(!items['hoveroptiondyn5']) chrome.storage.local.set({"hoveroptiondyn5": 'true'}); // then default true
-});
-
-chrome.storage.local.get(['maxquality'], function(items){ // find no localstore maxquality
-	if(!items['maxquality']) chrome.storage.local.set({"maxquality": 'hd1080'}); // then default hd1080
-});
-
-chrome.storage.local.get(['pageaction', 'lampregular'], function(items){ // find no localstore lamp
-	if(!items['pageaction']&&!items['lampregular']){
-	chrome.storage.local.set({"lampregular": 'true'}); // then default true
-	chrome.storage.local.set({"pageaction": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['autoplaychecklistwhite', 'autoplaychecklistblack'], function(items){ // find no localstore autoplay whitelist
-	if(!items['autoplaychecklistwhite']&&!items['autoplaychecklistblack']){
-	chrome.storage.local.set({"autoplaychecklistwhite": 'true'}); // then default true
-	chrome.storage.local.set({"autoplaychecklistblack": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['autostopchecklistwhite', 'autostopchecklistblack'], function(items){ // find no localstore autostop whitelist
-	if(!items['autostopchecklistwhite']&&!items['autostopchecklistblack']){
-	chrome.storage.local.set({"autostopchecklistwhite": 'true'}); // then default true
-	chrome.storage.local.set({"autostopchecklistblack": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['videotoolchecklistwhite', 'videotoolchecklistblack'], function(items){ // find no localstore videotool whitelist
-	if(!items['videotoolchecklistwhite']&&!items['videotoolchecklistblack']){
-	chrome.storage.local.set({"videotoolchecklistwhite": 'true'}); // then default true
-	chrome.storage.local.set({"videotoolchecklistblack": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['nightmodechecklistwhite', 'nightmodechecklistblack'], function(items){ // find no localstore nightmode whitelist
-	if(!items['nightmodechecklistwhite']&&!items['nightmodechecklistblack']){
-	chrome.storage.local.set({"nightmodechecklistwhite": 'true'}); // then default true
-	chrome.storage.local.set({"nightmodechecklistblack": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['nmtopleft', 'nmtopright', 'nmbottomright','nmbottomleft','nmcustom'], function(items){ // find no localstore eye
-	if(!items['nmtopleft']&&!items['nmtopright']&&!items['nmbottomright']&&!items['nmbottomleft']&&!items['nmcustom']){
-	chrome.storage.local.set({"nmtopleft": 'false'}); // then default false
-	chrome.storage.local.set({"nmtopright": 'false'}); // then default false
-	chrome.storage.local.set({"nmbottomright": 'false'}); // then default false
-	chrome.storage.local.set({"nmbottomleft": 'true'}); // then default true
-	chrome.storage.local.set({"nmcustom": 'false'}); // then default false
-	}
-});
-
-chrome.storage.local.get(['eyechecklistwhite', 'eyechecklistblack'], function(items){ // find no localstore eye whitelist
-	if(!items['eyechecklistwhite']&&!items['eyechecklistblack']){
-	chrome.storage.local.set({"eyechecklistwhite": 'true'}); // then default true
-	chrome.storage.local.set({"eyechecklistblack": 'false'}); // then default false
-	}
+    
+    // find no localstore atmos
+	if(items['ambilightvarcolor'] == null && items['ambilightfixcolor'] == null && items['ambilight4color'] == null){firstdefaultvalues['ambilightfixcolor'] = true;firstdefaultvalues['ambilightvarcolor'] = false;firstdefaultvalues['ambilight4color'] = false;}
+    // find no localstore flash
+	if(items['flash'] == null && items['noflash'] == null && items['noflash'] == null){firstdefaultvalues['noflash'] = true;firstdefaultvalues['flash'] = false;firstdefaultvalues['hardflash'] = false;}
+    // find no localstore dynamic
+	if(items['dynamic1'] == null && items['dynamic2'] == null && items['dynamic3'] == null && items['dynamic4'] == null && items['dynamic5'] == null && items['dynamic6'] == null && items['dynamic7'] == null && items['dynamic8'] == null && items['dynamic9'] == null && items['dynamic10'] == null){firstdefaultvalues['dynamic1'] = true;firstdefaultvalues['dynamic2'] = false;firstdefaultvalues['dynamic3'] = false;firstdefaultvalues['dynamic4'] = false;firstdefaultvalues['dynamic5'] = false;firstdefaultvalues['dynamic6'] = false;firstdefaultvalues['dynamic7'] = false;firstdefaultvalues['dynamic8'] = false;firstdefaultvalues['dynamic9'] = false;firstdefaultvalues['dynamic10'] = false;}
+    // find no localstore hoverdyn
+	if(items['hoveroptiondyn5'] == null){firstdefaultvalues['hoveroptiondyn5'] = true;}
+    // find no localstore maxquality
+	if(items['maxquality'] == null){firstdefaultvalues['maxquality'] = 'hd1080';}
+    // find no localstore lamp
+	if(items['pageaction'] == null && items['lampregular'] == null){firstdefaultvalues['lampregular'] = true;firstdefaultvalues['pageaction'] = false;}
+    // find no localstore autoplay whitelist
+	if(items['autoplaychecklistwhite'] == null && items['autoplaychecklistblack'] == null){firstdefaultvalues['autoplaychecklistwhite'] = true;firstdefaultvalues['autoplaychecklistblack'] = false;}
+    // find no localstore autostop whitelist
+	if(items['autostopchecklistwhite'] == null && items['autostopchecklistblack'] == null){firstdefaultvalues['autostopchecklistwhite'] = true;firstdefaultvalues['autostopchecklistblack'] = false;}
+    // find no localstore videotool whitelist
+	if(items['videotoolchecklistwhite'] == null && items['videotoolchecklistblack'] == null){firstdefaultvalues['videotoolchecklistwhite'] = true;firstdefaultvalues['videotoolchecklistblack'] = false;}
+    // find no localstore nightmode whitelist
+	if(items['nightmodechecklistwhite'] == null && items['nightmodechecklistblack'] == null){firstdefaultvalues['nightmodechecklistwhite'] = true;firstdefaultvalues['nightmodechecklistblack'] = false;}
+    // find no localstore eye
+	if(items['nmtopleft'] == null && items['nmtopright'] == null && items['nmbottomright'] == null && items['nmbottomleft'] == null && items['nmcustom'] == null){firstdefaultvalues['nmtopleft'] = false;firstdefaultvalues['nmtopright'] = false;firstdefaultvalues['nmbottomright'] = false;firstdefaultvalues['nmbottomleft'] = true;firstdefaultvalues['nmcustom'] = false;}
+    // find no localstore eye whitelist
+	if(items['eyechecklistwhite'] == null && items['eyechecklistblack'] == null){firstdefaultvalues['eyechecklistwhite'] = true;firstdefaultvalues['eyechecklistblack'] = false;}
+    
+    // Save the init value
+    chrome.storage.sync.set(firstdefaultvalues, function() {
+    //console.log('Settings saved');
+    });
 });
 
 function read_options(){
@@ -539,58 +223,58 @@ $("select_language").addEventListener('click', function () {updateCountry();},fa
 $("select_language").addEventListener('change', function() {updateCountry();save_options();});
 $("select_dialect").addEventListener('change', function() {save_options();});
 
-	chrome.storage.local.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10','hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains'], function(items){
+	chrome.storage.sync.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10','hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains'], function(items){
 		if(items['interval']){$('interval').value = items['interval'];$('slider').value = items['interval'];}	
 		else $('interval').value = 80;
 		if(items['lightcolor']){$('lightcolor').value = items['lightcolor'];}
 		else {$('lightcolor').value = '#000000';}
 		if(items['lightimage']){$('lightimage').value = items['lightimage'];}
 		else {$('lightimage').value = "http://www.turnoffthelights.com/extension/images/theater.jpg";}
-		if(items['lightimagea'] == 'true')$('lightimagea').checked = true;
-		if(items['lightimagen'] == 'true')$('lightimagen').checked = true;
-		if(items['pageaction'] == 'true')$('pageaction').checked = true;
-		if(items['lampregular'] == 'true')$('lampregular').checked = true;
-		if(items['autoplay'] == 'true')$('autoplay').checked = true;
-		if(items['playlist'] == 'true')$('playlist').checked = true;
-		if(items['flash'] == 'true')$('flash').checked = true;
-		if(items['head'] == 'true')$('head').checked = true;
-		if(items['fadein'] == 'true')$('fadein').checked = true;
-		if(items['fadeout'] == 'true')$('fadeout').checked = true;
-		if(items['infobar'] == 'true')$('infobar').checked = true;
-		if(items['sharebutton'] == 'true')$('sharebutton').checked = true;
-		if(items['likebutton'] == 'true')$('likebutton').checked = true;
-		if(items['readera'] == 'true')$('readera').checked = true;
-		if(items['readern'] == 'true')$('readern').checked = true;
-		if(items['shortcutlight'] == 'true')$('shortcutlight').checked = true;
-		if(items['eyea'] == 'true')$('eyea').checked = true;
-		if(items['eyen'] == 'true')$('eyen').checked = true;
-		if(items['suggestions'] == 'true')$('suggestions').checked = true;
-		if(items['videoheadline'] == 'true')$('videoheadline').checked = true;
-		if(items['eastereggs'] == 'true')$('eastereggs').checked = true;
-		if(items['contextmenus'] == 'true')$('contextmenus').checked = true;
-		if(items['viewcount'] == 'true')$('viewcount').checked = true;
-		if(items['eyealist'] == 'true')$('eyealist').checked = true;
-		if(items['mousespotlighto'] == 'true')$('mousespotlighto').checked = true;
-		if(items['mousespotlightc'] == 'true')$('mousespotlightc').checked = true;
-		if(items['mousespotlighta'] == 'true')$('mousespotlighta').checked = true;
-		if(items['nighttime'] == 'true')$('nighttime').checked = true;
+		if(items['lightimagea'] == true)$('lightimagea').checked = true;
+		if(items['lightimagen'] == true)$('lightimagen').checked = true;
+		if(items['pageaction'] == true)$('pageaction').checked = true;
+		if(items['lampregular'] == true)$('lampregular').checked = true;
+		if(items['autoplay'] == true)$('autoplay').checked = true;
+		if(items['playlist'] == true)$('playlist').checked = true;
+		if(items['flash'] == true)$('flash').checked = true;
+		if(items['head'] == true)$('head').checked = true;
+		if(items['fadein'] == true)$('fadein').checked = true;
+		if(items['fadeout'] == true)$('fadeout').checked = true;
+		if(items['infobar'] == true)$('infobar').checked = true;
+		if(items['sharebutton'] == true)$('sharebutton').checked = true;
+		if(items['likebutton'] == true)$('likebutton').checked = true;
+		if(items['readera'] == true)$('readera').checked = true;
+		if(items['readern'] == true)$('readern').checked = true;
+		if(items['shortcutlight'] == true)$('shortcutlight').checked = true;
+		if(items['eyea'] == true)$('eyea').checked = true;
+		if(items['eyen'] == true)$('eyen').checked = true;
+		if(items['suggestions'] == true)$('suggestions').checked = true;
+		if(items['videoheadline'] == true)$('videoheadline').checked = true;
+		if(items['eastereggs'] == true)$('eastereggs').checked = true;
+		if(items['contextmenus'] == true)$('contextmenus').checked = true;
+		if(items['viewcount'] == true)$('viewcount').checked = true;
+		if(items['eyealist'] == true)$('eyealist').checked = true;
+		if(items['mousespotlighto'] == true)$('mousespotlighto').checked = true;
+		if(items['mousespotlightc'] == true)$('mousespotlightc').checked = true;
+		if(items['mousespotlighta'] == true)$('mousespotlighta').checked = true;
+		if(items['nighttime'] == true)$('nighttime').checked = true;
 		if(items['begintime']){$('begintime').value = items['begintime'];}
 		else {$('begintime').value = "21:00";}
 		if(items['endtime']){$('endtime').value = items['endtime'];}
 		else {$('endtime').value = "23:45";}
-		if(items['addvideobutton'] == 'true')$('addvideobutton').checked = true;
-		if(items['likebar'] == 'true')$('likebar').checked = true;
-		if(items['ambilight'] == 'true')$('ambilight').checked = true;
+		if(items['addvideobutton'] == true)$('addvideobutton').checked = true;
+		if(items['likebar'] == true)$('likebar').checked = true;
+		if(items['ambilight'] == true)$('ambilight').checked = true;
 		if(items['ambilightrangeblurradius']){$('ambilightrangeblurradius').value = items['ambilightrangeblurradius'];$('arangeblur').value = items['ambilightrangeblurradius'];}
 		else{$('ambilightrangeblurradius').value = 70;}
 		if(items['ambilightrangespreadradius']){$('ambilightrangespreadradius').value = items['ambilightrangespreadradius'];$('arangespread').value = items['ambilightrangespreadradius'];}
 		else{$('ambilightrangespreadradius').value = 20;}
-		if(items['mousespotlightt'] == 'true')$('mousespotlightt').checked = true;
-		if(items['ambilightfixcolor'] == 'true')$('ambilightfixcolor').checked = true;
-		if(items['ambilightvarcolor'] == 'true')$('ambilightvarcolor').checked = true;
+		if(items['mousespotlightt'] == true)$('mousespotlightt').checked = true;
+		if(items['ambilightfixcolor'] == true)$('ambilightfixcolor').checked = true;
+		if(items['ambilightvarcolor'] == true)$('ambilightvarcolor').checked = true;
 		if(items['ambilightcolorhex'])$('ambilightcolorhex').value = items['ambilightcolorhex'];
 		else $('ambilightcolorhex').value = '#47C2FF';
-		if(items['ambilight4color'] == 'true')$('ambilight4color').checked = true;
+		if(items['ambilight4color'] == true)$('ambilight4color').checked = true;
 		if(items['ambilight1colorhex'])$('ambilight1colorhex').value = items['ambilight1colorhex'];
 		else $('ambilight1colorhex').value = '#FF0000';
 		if(items['ambilight2colorhex'])$('ambilight2colorhex').value = items['ambilight2colorhex'];
@@ -599,48 +283,48 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		else $('ambilight3colorhex').value = '#00FF00';
 		if(items['ambilight4colorhex'])$('ambilight4colorhex').value = items['ambilight4colorhex'];
 		else $('ambilight4colorhex').value = '#0000FF';
-		if(items['password'] == 'true')$('password').checked = true;
+		if(items['password'] == true)$('password').checked = true;
 		if(items['enterpassword'])$('enterpassword').value = items['enterpassword'];
-		if(items['noflash'] == 'true')$('noflash').checked = true;
-		if(items['hardflash'] == 'true')$('hardflash').checked = true;
-		if(items['ecosaver'] == 'true')$('ecosaver').checked = true;
+		if(items['noflash'] == true)$('noflash').checked = true;
+		if(items['hardflash'] == true)$('hardflash').checked = true;
+		if(items['ecosaver'] == true)$('ecosaver').checked = true;
 		if(items['ecosavertime'])$('ecosavertime').value = items['ecosavertime'];
 		else $('ecosavertime').value = '60';
-		if(items['dynamic'] == 'true')$('dynamic').checked = true;
+		if(items['dynamic'] == true)$('dynamic').checked = true;
 		else $('lightdynamic').disabled = true;
-		if(items['dynamic1'] == 'true'){$('dynamic1').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicfishtank');}
-		if(items['dynamic2'] == 'true'){$('dynamic2').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicblocks');}
-		if(items['dynamic3'] == 'true'){$('dynamic3').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicraindrops');}
-		if(items['dynamic4'] == 'true'){$('dynamic4').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamiccloud');}
-		if(items['dynamic5'] == 'true'){$('dynamic5').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicspace');}
-		if(items['dynamic6'] == 'true'){$('dynamic6').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicsmoke');}
-		if(items['dynamic7'] == 'true'){$('dynamic7').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicdotscolor');}
-		if(items['dynamic8'] == 'true'){$('dynamic8').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstorm');}
-		if(items['dynamic9'] == 'true'){$('dynamic9').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamictriangulation');}
-		if(items['dynamic10'] == 'true'){$('dynamic10').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstars');}
-		if(items['hoveroptiondyn5'] == 'true')$('hoveroptiondyn5').checked = true;
-		if(items['autoplayonly'] == 'true'){$('autoplayonly').checked = true;}
+		if(items['dynamic1'] == true){$('dynamic1').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicfishtank');}
+		if(items['dynamic2'] == true){$('dynamic2').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicblocks');}
+		if(items['dynamic3'] == true){$('dynamic3').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicraindrops');}
+		if(items['dynamic4'] == true){$('dynamic4').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamiccloud');}
+		if(items['dynamic5'] == true){$('dynamic5').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicspace');}
+		if(items['dynamic6'] == true){$('dynamic6').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicsmoke');}
+		if(items['dynamic7'] == true){$('dynamic7').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicdotscolor');}
+		if(items['dynamic8'] == true){$('dynamic8').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstorm');}
+		if(items['dynamic9'] == true){$('dynamic9').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamictriangulation');}
+		if(items['dynamic10'] == true){$('dynamic10').checked = true;$("lightdynamic").value = chrome.i18n.getMessage('desdynamicstars');}
+		if(items['hoveroptiondyn5'] == true)$('hoveroptiondyn5').checked = true;
+		if(items['autoplayonly'] == true){$('autoplayonly').checked = true;}
 		else{$('autoplayonly').checked = false;}
-		if(items['blur'] == 'true')$('blur').checked = true;
+		if(items['blur'] == true)$('blur').checked = true;
 		if(items['maxquality'])$('youtubequality').value = items['maxquality'];
-		if(items['autowidthyoutube'] == 'true')$('autowidthyoutube').checked = true;
-		if(items['customqualityyoutube'] == 'true')$('customqualityyoutube').checked = true;
-		if(items['cinemaontop'] == 'true')$('cinemaontop').checked = true;
-		if(items['alllightsoff'] == 'true')$('alllightsoff').checked = true;
+		if(items['autowidthyoutube'] == true)$('autowidthyoutube').checked = true;
+		if(items['customqualityyoutube'] == true)$('customqualityyoutube').checked = true;
+		if(items['cinemaontop'] == true)$('cinemaontop').checked = true;
+		if(items['alllightsoff'] == true)$('alllightsoff').checked = true;
 		if(items['spotlightradius'])$('spotlightradius').value = items['spotlightradius'];
 		else $('spotlightradius').value = 50;
-		if(items['atmosphereonly'] == 'true'){$('atmosphereonly').checked = true;}
+		if(items['atmosphereonly'] == true){$('atmosphereonly').checked = true;}
 		else{$('atmosphereonly').checked = false;}
-		if(items['optionskipremember'] == 'true'){$('optionskipremember').checked = true;$('firstcheckboxskipremember').checked = true;}
-		if(items['nighttheme'] == 'true')$('nighttheme').checked = true;
-		if(items['nightonly'] == 'true'){$('nightonly').checked = true;}
+		if(items['optionskipremember'] == true){$('optionskipremember').checked = true;$('firstcheckboxskipremember').checked = true;}
+		if(items['nighttheme'] == true)$('nighttheme').checked = true;
+		if(items['nightonly'] == true){$('nightonly').checked = true;}
 		else{$('nightonly').checked = false;}
-		if(items['nightenabletheme'] == 'true')$('nightenabletheme').checked = true;
-		if(items['autoplaydelay'] == 'true')$('autoplaydelay').checked = true;
+		if(items['nightenabletheme'] == true)$('nightenabletheme').checked = true;
+		if(items['autoplaydelay'] == true)$('autoplaydelay').checked = true;
 		if(items['autoplaydelaytime'])$('autoplaydelaytime').value = items['autoplaydelaytime'];
 		else $('autoplaydelaytime').value = 3;
-		if(items['motion'] == 'true')$('motion').checked = true;
-		if(items['lightimagelin'] == 'true')$('lightimagelin').checked = true;
+		if(items['motion'] == true)$('motion').checked = true;
+		if(items['lightimagelin'] == true)$('lightimagelin').checked = true;
 		if(items['linearsq'])$('linearsq').value = items['linearsq'];
 		else $('linearsq').value = "top";
 		if(items['colora']){$('colora').value = items['colora'];}
@@ -651,53 +335,53 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		else {$('colorb').value = '#858585';}
 		if(items['intervallinb']){$('intervallinb').value = items['intervallinb'];}
 		else {$('intervallinb').value = '100';}
-		if(items['speech'] == 'true')$('speech').checked = true;
+		if(items['speech'] == true)$('speech').checked = true;
 		if(items['speechlang']){$("select_language").selectedIndex = items['speechlang'];updateCountry();}
 		if(items['speechcountry'])$('select_dialect').value = items['speechcountry'];
-		if(items['atmosvivid'] == 'true')$('atmosvivid').checked = true;
-		if(items['cammotiononly'] == 'true'){$('cammotiononly').checked = true;}
+		if(items['atmosvivid'] == true)$('atmosvivid').checked = true;
+		if(items['cammotiononly'] == true){$('cammotiononly').checked = true;}
 		else{$('cammotiononly').checked = false;}
-		if(items['speechonly'] == 'true'){$('speechonly').checked = true;}
+		if(items['speechonly'] == true){$('speechonly').checked = true;}
 		else{$('speechonly').checked = false;}
-		if(items['autoplaychecklistwhite'] == 'true'){$('autoplaychecklistwhite').checked = true;}
-		if(items['autoplaychecklistblack'] == 'true'){$('autoplaychecklistblack').checked = true;}
+		if(items['autoplaychecklistwhite'] == true){$('autoplaychecklistwhite').checked = true;}
+		if(items['autoplaychecklistblack'] == true){$('autoplaychecklistblack').checked = true;}
 		if(items['reviewedlastonversion'] == chrome.runtime.getManifest().version){$("sectionreviewbox").style.display = "none";}
 		if(items['applastonversion'] == chrome.runtime.getManifest().version){$("sectionauroraplayerappbox").style.display = "none";}
-		if(items['autostop'] == 'true')$('autostop').checked = true;
-		if(items['autostoponly'] == 'true'){$('autostoponly').checked = true;}
+		if(items['autostop'] == true)$('autostop').checked = true;
+		if(items['autostoponly'] == true){$('autostoponly').checked = true;}
 		else{$('autostoponly').checked = false;}
-		if(items['autostopchecklistwhite'] == 'true'){$('autostopchecklistwhite').checked = true;}
-		if(items['autostopchecklistblack'] == 'true'){$('autostopchecklistblack').checked = true;}
-		if(items['nighthover'] == 'true'){$('nighthover').checked = true;}
-		if(items['nightmodechecklistwhite'] == 'true'){$('nightmodechecklistwhite').checked = true;}
-		if(items['nightmodechecklistblack'] == 'true'){$('nightmodechecklistblack').checked = true;}
-		if(items['nmtopleft'] == 'true'){$('nmtopleft').checked = true;}
-		if(items['nmtopright'] == 'true'){$('nmtopright').checked = true;}
-		if(items['nmbottomright'] == 'true'){$('nmbottomright').checked = true;}
-		if(items['nmbottomleft'] == 'true'){$('nmbottomleft').checked = true;}
-		if(items['nmcustom'] == 'true'){$('nmcustom').checked = true;}
-		if(items['nightactivetime'] == 'true'){$('nightactivetime').checked = true;}
+		if(items['autostopchecklistwhite'] == true){$('autostopchecklistwhite').checked = true;}
+		if(items['autostopchecklistblack'] == true){$('autostopchecklistblack').checked = true;}
+		if(items['nighthover'] == true){$('nighthover').checked = true;}
+		if(items['nightmodechecklistwhite'] == true){$('nightmodechecklistwhite').checked = true;}
+		if(items['nightmodechecklistblack'] == true){$('nightmodechecklistblack').checked = true;}
+		if(items['nmtopleft'] == true){$('nmtopleft').checked = true;}
+		if(items['nmtopright'] == true){$('nmtopright').checked = true;}
+		if(items['nmbottomright'] == true){$('nmbottomright').checked = true;}
+		if(items['nmbottomleft'] == true){$('nmbottomleft').checked = true;}
+		if(items['nmcustom'] == true){$('nmcustom').checked = true;}
+		if(items['nightactivetime'] == true){$('nightactivetime').checked = true;}
 		if(items['nmbegintime']){$('nmbegintime').value = items['nmbegintime'];}
 		else {$('nmbegintime').value = "21:00";}
 		if(items['nmendtime']){$('nmendtime').value = items['nmendtime'];}
 		else {$('nmendtime').value = "23:45";}
-		if(items['lampandnightmode'] == 'true'){$('lampandnightmode').checked = true;}
+		if(items['lampandnightmode'] == true){$('lampandnightmode').checked = true;}
 		else{$('lampandnightmode').checked = false;}
-		if(items['eyechecklistwhite'] == 'true'){$('eyechecklistwhite').checked = true;}
-		if(items['eyechecklistblack'] == 'true'){$('eyechecklistblack').checked = true;}
+		if(items['eyechecklistwhite'] == true){$('eyechecklistwhite').checked = true;}
+		if(items['eyechecklistblack'] == true){$('eyechecklistblack').checked = true;}
 		if(items['nightmodebck']){$('nightmodebck').value = items['nightmodebck'];}
 		else {$('nightmodebck').value = '#000000';}
 		if(items['nightmodetxt']){$('nightmodetxt').value = items['nightmodetxt'];}
 		else {$('nightmodetxt').value = '#ffffff';}
 		if(items['mobilelastonversion'] == chrome.runtime.getManifest().version){$("sectionmobileappbox").style.display = "none";}
-		if(items['no360youtube'] == 'true'){$('no360youtube').checked = true;}
-		if(items['videotool'] == 'true'){$('videotool').checked = true;}
-		if(items['reflection'] == 'true'){$('reflection').checked = true;}
+		if(items['no360youtube'] == true){$('no360youtube').checked = true;}
+		if(items['videotool'] == true){$('videotool').checked = true;}
+		if(items['reflection'] == true){$('reflection').checked = true;}
 		if(items['reflectionamount']){$('reflectionamount').value = items['reflectionamount'];}
 		else {$('reflectionamount').value = '20';}
-		if(items['videotoolonly'] == 'true'){$('videotoolonly').checked = true;}
-		if(items['videotoolchecklistwhite'] == 'true'){$('videotoolchecklistwhite').checked = true;}
-		if(items['videotoolchecklistblack'] == 'true'){$('videotoolchecklistblack').checked = true;}
+		if(items['videotoolonly'] == true){$('videotoolonly').checked = true;}
+		if(items['videotoolchecklistwhite'] == true){$('videotoolchecklistwhite').checked = true;}
+		if(items['videotoolchecklistblack'] == true){$('videotoolchecklistblack').checked = true;}
 		
 // show remember page
 var countremember = items['countremember'];
@@ -707,7 +391,7 @@ if($('optionskipremember').checked != true){
 	if(countremember >= 5) {$('remembershare').style.display = "";countremember = 0;}
 	else {$('remembershare').style.display = "none";}
 } else {$('remembershare').style.display = "none";}
-chrome.storage.local.set({"countremember": countremember});
+chrome.storage.sync.set({"countremember": countremember});
 
 	// load tab div
 	var tabListItems = $('navbar').childNodes;
@@ -1532,7 +1216,7 @@ removedynamic();
 				return id;
 			};
 
-		if (!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id) {clearTimeout(id);};
+		if (!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id) {window.clearTimeout(id);};
 	}())
 
 	var layers = [],objects = [],world = document.getElementById('stefanvdworld'),viewport = document.getElementById('stefanvddynamicbackground'),	
@@ -2448,8 +2132,8 @@ function startButton(event) {
         recognition.abort();
     }
 	final_transcript = '';
-	chrome.storage.local.get(['speechcountry'], function(response){
-		var speechcountry = response['speechcountry'];if(!speechcountry)speechcountry = 'en-US';
+	chrome.storage.sync.get(['speechcountry'], function(response){
+		var speechcountry = response['speechcountry'];if(speechcountry == null)speechcountry = 'en-US';
 		try{ recognition.lang = speechcountry; } catch(e){}
 	});
 	try{ recognition.start(); } catch(e){}
@@ -2686,6 +2370,7 @@ $("autoplayremovebutton").addEventListener('click', function() {autoplayremoveSe
 
 // YouTube quality
 $("youtubequality").addEventListener('click', function() {save_options();});
+$("youtubequality").addEventListener('change', function() {save_options();});
 
 // atmosphere Add website
 $("atmosphereaddbutton").addEventListener('click', function() {atmosphereaddWhitelistDomain();});
@@ -2724,22 +2409,23 @@ $("videotooladdbutton").addEventListener('click', function() {videotooladdWhitel
 $("videotoolremovebutton").addEventListener('click', function() {videotoolremoveSelectedExcludedDomain();});
 
 // Reset settings
-$("resettotl").addEventListener('click', function() {chrome.storage.local.clear();location.reload();});
+$("resettotl").addEventListener('click', function() {chrome.storage.sync.clear();location.reload();});
 
 // linearsq
 $("linearsq").addEventListener('click', function() {test();save_options();});
+$("linearsq").addEventListener('change', function() {test();save_options();});
 
 // Review box
-$("war").addEventListener('click', function() {window.open(reviewstefanvdurl);$("sectionreviewbox").style.display = "none";chrome.storage.local.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
-$("nt").addEventListener('click', function() {$("sectionreviewbox").style.display = "none";chrome.storage.local.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
+$("war").addEventListener('click', function() {window.open(reviewstefanvdurl);$("sectionreviewbox").style.display = "none";chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
+$("nt").addEventListener('click', function() {$("sectionreviewbox").style.display = "none";chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});});
 
 // Aurora Player app box
-$("apgetapp").addEventListener('click', function() {window.open("https://www.stefanvd.net/project/aurora-player/");$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
-$("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").style.display = "none";chrome.storage.local.set({"applastonversion": chrome.runtime.getManifest().version});});
+$("apgetapp").addEventListener('click', function() {window.open("https://www.stefanvd.net/project/aurora-player/");$("sectionauroraplayerappbox").style.display = "none";chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version});});
+$("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").style.display = "none";chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version});});
 
 // Mobile app box
-$("magetapp").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/mobile.html");$("sectionmobileappbox").style.display = "none";chrome.storage.local.set({"mobilelastonversion": chrome.runtime.getManifest().version});});
-$("mant").addEventListener('click', function() {$("sectionmobileappbox").style.display = "none";chrome.storage.local.set({"mobilelastonversion": chrome.runtime.getManifest().version});});
+$("magetapp").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/mobile.html");$("sectionmobileappbox").style.display = "none";chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version});});
+$("mant").addEventListener('click', function() {$("sectionmobileappbox").style.display = "none";chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version});});
 
 // retina check
 if(window.devicePixelRatio >= 2) {

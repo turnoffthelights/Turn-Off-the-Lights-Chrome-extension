@@ -37,13 +37,13 @@ var userSaid = function(str, s) {return str.indexOf(s) > -1;}
 
 function removespeechinfo(){
 // you are speaking now -- remove the bubble
-chrome.extension.sendMessage({'name' : 'slidersave', 'value' : 'true'});
+chrome.extension.sendMessage({'name' : 'slidersave', 'value' : true});
 chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/speechbubbleremove.js"});}});											
 }
 
 function addspeechinfo(){
 // you are speaking now -- add the bubble
-chrome.extension.sendMessage({'name' : 'slidersave', 'value' : 'true'});						
+chrome.extension.sendMessage({'name' : 'slidersave', 'value' : true});						
 chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/speechbubbleadd.js"});}});
 }
 
@@ -111,15 +111,15 @@ var i18nldesspeech5command = chrome.i18n.getMessage("desspeech5command"); // bro
 		if (event.results[i].isFinal) {
 			final_transcript = event.results[i][0].transcript;
 			// console.log(final_transcript);
-			chrome.storage.local.set({"speechhistorysave": final_transcript});
+			chrome.storage.sync.set({"speechhistorysave": final_transcript});
 				if (userSaid(final_transcript, i18nldesspeech1command)) {
 				// console.log("yes: turn off the lights");
-				chrome.storage.local.set({"slideeffect": "true"});
+				chrome.storage.sync.set({"slideeffect": true});
 				chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}});
 				}
 				else if (userSaid(final_transcript, i18nldesspeech2command)) {
 				// console.log("yes: turn on the lights");
-				chrome.storage.local.set({"slideeffect": "true"});
+				chrome.storage.sync.set({"slideeffect": true});
 				chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}});
 				}
 				// Play the video
@@ -144,8 +144,8 @@ function startButton(event) {
         recognition.abort();
     }
 	final_transcript = '';
-	chrome.storage.local.get(['speechcountry'], function(response){
-		var speechcountry = response['speechcountry'];if(!speechcountry)speechcountry = 'en-US';
+	chrome.storage.sync.get(['speechcountry'], function(response){
+		var speechcountry = response['speechcountry'];if(speechcountry == null)speechcountry = 'en-US';
 		recognition.lang = speechcountry;
 	});
 	try{ recognition.start(); } catch(e){}
@@ -154,11 +154,11 @@ function startButton(event) {
 }
 
 function speechrecognition(){
-chrome.storage.local.get(['speech', 'speechonly', 'speechDomains'], function(response){
+chrome.storage.sync.get(['speech', 'speechonly', 'speechDomains'], function(response){
 speech = response['speech'];
 speechonly  = response['speechonly'];
 
-if (speech == "true"){
+if (speech == true){
 chrome.runtime.onSuspend.addListener(function() { location.reload(); });
 }
 
@@ -193,9 +193,9 @@ function onlyspeechfunction(tab){
 		}
 }
 
-if (speech == "true"){
+if (speech == true){
 
-	if(speechonly == 'true'){
+	if(speechonly == true){
 		// get current tab website
 		chrome.tabs.onActivated.addListener(function(info) {
 			var tab = chrome.tabs.get(info.tabId, function(tab) {onlyspeechfunction(tab.url);});

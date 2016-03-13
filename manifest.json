@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.2.0.9",
+  "version": "3.2.0.10",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com",
@@ -31,7 +31,8 @@
     "icons/icon16@2x.png",
 	"js/injected.js",
 	"images/theater.jpg",
-	"images/Smoke10.png"
+	"images/Smoke10.png",
+    "images/cloud.png"
   ],
   "content_scripts": [
     {
@@ -47,7 +48,14 @@
         "default": "Ctrl+Shift+L",
         "mac": "MacCtrl+Shift+L"
       }
-    }
+    },
+    "toggle-feature-nightmode": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+N",
+              "mac": "MacCtrl+Shift+N"
+            },
+            "description": "__MSG_titelnighttheme__"
+          }
   },
   "options_page": "options.html",
   "minimum_chrome_version": "33",

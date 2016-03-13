@@ -31,7 +31,7 @@ function $(id) { return document.getElementById(id); }
 var div = null, fadein = null, fadeout = null, readera = null, dynamic = null;
 
 /////////// Option page settings
-chrome.storage.local.get(['fadein','fadeout','readera','dynamic'], function(response){
+chrome.storage.sync.get(['fadein','fadeout','readera','dynamic'], function(response){
 fadein = response['fadein'];
 fadeout = response['fadeout'];
 readera = response['readera'];
@@ -42,7 +42,7 @@ dynamic = response['dynamic'];
 
 	function reader() {
 		// save the current reader bar settings, before remove it
-		if(readera == 'true'){
+		if(readera == true){
 		var readerontext;
 		var readeronrange;
 		var readerlargestyle;
@@ -52,15 +52,15 @@ dynamic = response['dynamic'];
 		readerontext = $('totlgammaVal');
 		readeronrange = $('totlrange');
 		if (readerontext != null && readeronrange != null) {
-			chrome.storage.local.set({"interval": readerontext.value});
+			chrome.storage.sync.set({"interval": readerontext.value});
 		}
 	
 		readerlargestyle = $('__totl-tidbit-box');
 		readerlargeimgclick = $('__totl-min');
 		readerlargetitleclick = $('__totl-box-info');
 		if (readerlargestyle != null && readerlargeimgclick != null && readerlargetitleclick != null) {
-			if(readerlargestyle.style.width == '24px'){chrome.storage.local.set({"readerlargestyle": "false"});}
-			else{chrome.storage.local.set({"readerlargestyle": "true"});}
+			if(readerlargestyle.style.width == '24px'){chrome.storage.sync.set({"readerlargestyle": false});}
+			else{chrome.storage.sync.set({"readerlargestyle": true});}
 		}	
 		}
 	
@@ -146,10 +146,10 @@ dynamic = response['dynamic'];
 	}
 	
 	if(blackon) {
-		if(dynamic == 'true'){
+		if(dynamic == true){
 			removenewdynamic();
 		}
-		if(fadeout == 'true'){ReducingFinished = false;fader('hide');reader();} 
+		if(fadeout == true){ReducingFinished = false;fader('hide');reader();} 
 		else {removenewframe();reader();}
 	}
 });

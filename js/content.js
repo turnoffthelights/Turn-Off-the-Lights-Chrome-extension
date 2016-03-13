@@ -46,7 +46,7 @@ if (window.location.href.match(/http:\/\/(.*stefanvd\.net\/.*|www\.stefanvd\.net
 }
 /* -------------------------------------------------- */
 
-chrome.storage.local.get(['autoplay', 'eastereggs', 'shortcutlight', 'eyen', 'eyea', 'eyealist', 'contextmenus', 'excludedDomains', 'nighttime', 'begintime', 'endtime', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'ecosaver', 'ecosavertime', 'autoplayonly', 'autoplayDomains', 'interval', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'atmosphereonly', 'atmosphereDomains', 'nighttheme', 'nightonly', 'nightDomains', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'atmosvivid','autoplaychecklistwhite','autoplaychecklistblack','nighthover','nightactivetime','nmbegintime','nmendtime','nightmodechecklistblack','nightmodechecklistwhite','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nmcustomx','nmcustomy','lampandnightmode','autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','eyechecklistwhite','eyechecklistblack','nightmodebck','nightmodetxt','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolDomains','videotoolchecklistwhite','videotoolchecklistblack'], function(response){
+chrome.storage.sync.get(['autoplay', 'eastereggs', 'shortcutlight', 'eyen', 'eyea', 'eyealist', 'contextmenus', 'excludedDomains', 'nighttime', 'begintime', 'endtime', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'ecosaver', 'ecosavertime', 'autoplayonly', 'autoplayDomains', 'interval', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'atmosphereonly', 'atmosphereDomains', 'nighttheme', 'nightonly', 'nightDomains', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'atmosvivid','autoplaychecklistwhite','autoplaychecklistblack','nighthover','nightactivetime','nmbegintime','nmendtime','nightmodechecklistblack','nightmodechecklistwhite','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nmcustomx','nmcustomy','lampandnightmode','autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','eyechecklistwhite','eyechecklistblack','nightmodebck','nightmodetxt','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolDomains','videotoolchecklistwhite','videotoolchecklistblack'], function(response){
 autoplay = response['autoplay'];
 eastereggs = response['eastereggs'];
 shortcutlight = response['shortcutlight'];
@@ -63,12 +63,12 @@ ambilightrangeblurradius = response['ambilightrangeblurradius'];
 ambilightrangespreadradius = response['ambilightrangespreadradius'];
 ambilightfixcolor = response['ambilightfixcolor'];
 ambilightvarcolor = response['ambilightvarcolor'];
-ambilightcolorhex = response['ambilightcolorhex'];if(!ambilightcolorhex)ambilightcolorhex = '#47C2FF';
+ambilightcolorhex = response['ambilightcolorhex'];if(ambilightcolorhex == null)ambilightcolorhex = '#47C2FF';
 ambilight4color = response['ambilight4color'];
-ambilight1colorhex = response['ambilight1colorhex'];if(!ambilight1colorhex)ambilight1colorhex = '#FF0000';
-ambilight2colorhex = response['ambilight2colorhex'];if(!ambilight2colorhex)ambilight2colorhex = '#FFEE00';
-ambilight3colorhex = response['ambilight3colorhex'];if(!ambilight3colorhex)ambilight3colorhex = '#00FF00';
-ambilight4colorhex = response['ambilight4colorhex'];if(!ambilight4colorhex)ambilight4colorhex = '#0000FF';
+ambilight1colorhex = response['ambilight1colorhex'];if(ambilight1colorhex == null)ambilight1colorhex = '#FF0000';
+ambilight2colorhex = response['ambilight2colorhex'];if(ambilight2colorhex == null)ambilight2colorhex = '#FFEE00';
+ambilight3colorhex = response['ambilight3colorhex'];if(ambilight3colorhex == null)ambilight3colorhex = '#00FF00';
+ambilight4colorhex = response['ambilight4colorhex'];if(ambilight4colorhex == null)ambilight4colorhex = '#0000FF';
 ecosaver = response['ecosaver'];
 ecosavertime = response['ecosavertime'];
 autoplayonly = response['autoplayonly'];
@@ -99,8 +99,8 @@ nmtopright = response['nmtopright'];
 nmbottomright = response['nmbottomright'];
 nmbottomleft = response['nmbottomleft'];
 nmcustom = response['nmcustom'];
-nmcustomx = response['nmcustomx'];if(!nmcustomx)nmcustomx = '25px';
-nmcustomy = response['nmcustomy'];if(!nmcustomy)nmcustomy = '25px';
+nmcustomx = response['nmcustomx'];if(nmcustomx == null)nmcustomx = '25px';
+nmcustomy = response['nmcustomy'];if(nmcustomy == null)nmcustomy = '25px';
 lampandnightmode = response['lampandnightmode'];
 autostop = response['autostop'];
 autostoponly = response['autostoponly'];
@@ -109,8 +109,8 @@ autostopchecklistwhite = response['autostopchecklistwhite'];
 autostopchecklistblack = response['autostopchecklistblack'];
 eyechecklistwhite = response['eyechecklistwhite'];
 eyechecklistblack = response['eyechecklistblack'];
-nightmodebck = response['nightmodebck'];if(!nightmodebck)nightmodebck = '#000000';
-nightmodetxt = response['nightmodetxt'];if(!nightmodetxt)nightmodetxt = '#ffffff';
+nightmodebck = response['nightmodebck'];if(nightmodebck == null)nightmodebck = '#000000';
+nightmodetxt = response['nightmodetxt'];if(nightmodetxt == null)nightmodetxt = '#ffffff';
 no360youtube = response['no360youtube'];
 videotool = response['videotool'];
 reflection = response['reflection'];
@@ -149,7 +149,7 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 76 && e.ctrlKey && e.shiftKey && !e.altKey) {
 		// Run code for CTRL+SHIFT+L
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 				chrome.extension.sendMessage({name: 'automatic'});
 			}
 		}
@@ -157,7 +157,7 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 119 && !e.ctrlKey && !e.shiftKey && e.altKey) {
 		// Run code for Alt+F8
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 			if($('stefanvdlightareoff1')){
 			//control opacity for all <div>
 				var div = document.querySelectorAll('div.stefanvdlightareoff');
@@ -169,7 +169,7 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 120 && !e.ctrlKey && !e.shiftKey && e.altKey) {
 		// Run code for Alt+F9
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 			if($('stefanvdlightareoff1')){
 				var F9saving = Math.round(($('stefanvdlightareoff1').style.opacity)*100);
 				chrome.extension.sendMessage({'name' : 'readersaveme', 'value' : F9saving});
@@ -180,7 +180,7 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 38 && !e.ctrlKey && !e.shiftKey && e.altKey) {
 		// Run code for Alt+arrow up
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 			if($('stefanvdlightareoff1')){
 				var shorcutcurrentopacity = $('stefanvdlightareoff1').style.opacity;
 				shorcutcurrentopacity = (shorcutcurrentopacity*100 + 1)/100;
@@ -196,7 +196,7 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 40 && !e.ctrlKey && !e.shiftKey && e.altKey) {
 		// Run code for Alt+arrow down
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 			if($('stefanvdlightareoff1')){
 				var shorcutcurrentopacity = $('stefanvdlightareoff1').style.opacity;
 				shorcutcurrentopacity -= 0.01;
@@ -222,7 +222,7 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 106 && !e.ctrlKey && !e.shiftKey && e.altKey) {
 		// Run code for Alt+*
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 			// all tabs lights off
 			chrome.extension.sendMessage({name: 'emergencyalf'});
 			}
@@ -231,13 +231,13 @@ window.addEventListener('keydown', function(e) {
 		if (e.which == 121 && !e.ctrlKey && !e.shiftKey && e.altKey) {
 		// Run code for Alt+F10
 			// Shortcutlight
-			if(shortcutlight == 'true'){
+			if(shortcutlight == true){
 				var i18neyedivoff = chrome.i18n.getMessage("eyedivoff");
 				var i18neyedivon = chrome.i18n.getMessage("eyedivon");
 				var i18ntiteleye = chrome.i18n.getMessage("titeleye");
 			
 			// enable/disable the "Eye Protection" feature
-			if(eyea == 'true'){var eyeoptionvalue = 'false';
+			if(eyea == true){var eyeoptionvalue = false;
 			var stefanvdlightseye = $('stefanvdlightseye');
 			if(stefanvdlightseye) {document.body.removeChild(stefanvdlightseye);} // remove it
 			// create div on top page, and say this is OFF
@@ -247,7 +247,7 @@ window.addEventListener('keydown', function(e) {
 				document.body.appendChild(neweyediv);
 				chrome.extension.sendMessage({'name' : 'eyesavemeOFF', 'value' : eyeoptionvalue});
 			}
-			else{var eyeoptionvalue = 'true';	
+			else{var eyeoptionvalue = true;	
 			var stefanvdlightseye = $('stefanvdlightseye');
 			if(stefanvdlightseye) {document.body.removeChild(stefanvdlightseye);} // remove it
 			// create div on top page, and say this is ON
@@ -275,7 +275,7 @@ window.addEventListener('keypress', function(e) {
 		}	
 }, false);
 
-if(autoplay == 'true'){
+if(autoplay == true){
 function autoplayfunction(){
 var gracePeriod = 250, lastEvent = null, timeout = null;
 
@@ -296,7 +296,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 					switch (data[0]) {
 						case "playerStateChange":
 							//console.log("received playerStateChange", data[1]);
-							if (data[1] === "2" || data[1] === "0" || data[1] === "-1") {
+							if (data[1] === "2" || data[1] === "0" || data[1] === "-1" || data[1] === "5") {
 								shadesOff(this.player);
 								if (data[1] === "0") {
 									try {
@@ -352,7 +352,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 	function shadesOff(player) {
 		if (player !== null) {
 		var blackon = $('stefanvdlightareoff1');
-			if(autoplaydelay == 'true'){
+			if(autoplaydelay == true){
 			var delaytime = autoplaydelaytime * 1000;
 			godelay = window.setTimeout(function(){
 				if (blackon) {chrome.extension.sendMessage({name: 'automatic'});}
@@ -370,7 +370,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 		var blackon = $('stefanvdlightareoff1');
 			if (blackon) {} // do nothing
 			else {chrome.extension.sendMessage({name: 'automatic'});}		
-			if(autoplaydelay == 'true'){
+			if(autoplaydelay == true){
 				try{window.clearTimeout(godelay);}catch(e){}
 			}
 		}
@@ -414,7 +414,7 @@ else {
 }
 }
 
-if(autoplayonly == 'true'){
+if(autoplayonly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var blackrabbit = false;
 if(typeof autoplayDomains == "string") {
@@ -424,25 +424,25 @@ if(typeof autoplayDomains == "string") {
 		abuf.push(domain);
         abuf.sort();
 		for(var i = 0; i < abuf.length; i++){
-			if(autoplaychecklistwhite == 'true'){
+			if(autoplaychecklistwhite == true){
 				if(currenturl == abuf[i]){autoplayfunction();}
 			}
-			else if(autoplaychecklistblack == 'true'){
+			else if(autoplaychecklistblack == true){
 				if(currenturl == abuf[i]){blackrabbit=true;}
 			}
 		}
     }
-	if(autoplaychecklistblack == 'true'){
+	if(autoplaychecklistblack == true){
 		if(blackrabbit == false){autoplayfunction();blackrabbit = false;}
 	}
 } else {autoplayfunction();}
 
 } // option autoplay on end
 
-if(autostop == 'true'){
+if(autostop == true){
 
 window.addEventListener("load", function(){
-if(autostoponly == 'true'){
+if(autostoponly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var stoprabbit = false;
 if(typeof autostopDomains == "string") {
@@ -452,16 +452,20 @@ if(typeof autostopDomains == "string") {
 		atbuf.push(domain);
         atbuf.sort();
 		for(var i = 0; i < atbuf.length; i++){
-			if(autostopchecklistwhite == 'true'){
+			if(autostopchecklistwhite == true){
 				if(currenturl == atbuf[i]){autostopfunction();}
 			}
-			else if(autostopchecklistblack == 'true'){
-				if(currenturl == atbuf[i]){stoprabbit=true;}
+			else if(autostopchecklistblack == true){
+				if(currenturl == atbuf[i]){
+                    stoprabbit=true;
+                }
 			}
 		}
     }
-	if(autostopchecklistblack == 'true'){
-		if(stoprabbit == false){autostopfunction();stoprabbit = false;}
+	if(autostopchecklistblack == true){
+		if(stoprabbit == false){
+            if(currenturl == atbuf[i]){autostopfunction();}
+        }
 	}
 } else {autostopfunction();}
 }, false);
@@ -473,7 +477,9 @@ if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*y
 		observeDOM( document.querySelector('#player-api') ,function(){ 
                 var ytps = document.querySelector('.ytp-play-button');
                 if($('eow-title').getAttribute('data-totlplayer') == "activeplayer"){}
-                else{autostopfunction();}
+                else{
+                    if(autostopchecklistwhite == true){autostopfunction();}                 
+                }
 		});
 	}
 }
@@ -508,9 +514,9 @@ function autostopfunction(){
 
 } // option autostop on end
 
-if(videotool == 'true'){
+if(videotool == true){
 
-if(videotoolonly == 'true'){
+if(videotoolonly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var videotoolrabbit = false;
 if(typeof videotoolDomains == "string") {
@@ -520,15 +526,15 @@ if(typeof videotoolDomains == "string") {
 		vtbbuf.push(domain);
         vtbbuf.sort();
 		for(var i = 0; i < vtbbuf.length; i++){
-			if(videotoolchecklistwhite == 'true'){
+			if(videotoolchecklistwhite == true){
 				if(currenturl == vtbbuf[i]){videotoolfunction();}
 			}
-			else if(videotoolchecklistblack == 'true'){
+			else if(videotoolchecklistblack == true){
 				if(currenturl == vtbbuf[i]){videotoolrabbit=true;}
 			}
 		}
     }
-	if(videotoolchecklistblack == 'true'){
+	if(videotoolchecklistblack == true){
 		if(videotoolrabbit == false){videotoolfunction();videotoolrabbit = false;}
 	}
 } else {videotoolfunction();}
@@ -787,7 +793,7 @@ newvcparta4btn.appendChild(newvcpartimage);
 
 // easter eggs
 function gogotheater(){
-if(eastereggs == 'true'){
+if(eastereggs == true){
 // here the easter egg => movie theater
 	var lightareoff = $('stefanvdlightareoff1');
 	if (lightareoff != null) {
@@ -810,10 +816,10 @@ function eyeprotection(){
 // normal use only enabled -> do nothing
 
 // normal use -> only screensaver is enabled wirh a value for nighttime (true or false)
-if((ecosaver == 'true') && (eyen == 'true')){chrome.extension.sendMessage({name: 'automatic'});}
+if((ecosaver == true) && (eyen == true)){chrome.extension.sendMessage({name: 'automatic'});}
 
-if(eyea == 'true'){chrome.extension.sendMessage({name: 'automatic'});}
-else if(eyealist == 'true'){
+if(eyea == true){chrome.extension.sendMessage({name: 'automatic'});}
+else if(eyealist == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var eyerabbit = false;
 if(typeof excludedDomains == "string") {
@@ -823,22 +829,22 @@ if(typeof excludedDomains == "string") {
 		eyebuf.push(domain);
         eyebuf.sort();
 		for(var i = 0; i < eyebuf.length; i++){
-			if(eyechecklistwhite == 'true'){
+			if(eyechecklistwhite == true){
 				if(currenturl == eyebuf[i]){chrome.extension.sendMessage({name: 'automatic'});}
 			}
-			else if(eyechecklistblack == 'true'){
+			else if(eyechecklistblack == true){
 				if(currenturl == eyebuf[i]){eyerabbit=true;}
 			}
 		}
     }
-	if(eyechecklistblack == 'true'){
+	if(eyechecklistblack == true){
 		if(eyerabbit == false){chrome.extension.sendMessage({name: 'automatic'});eyerabbit = false;}
 	}
 }
 }
 
 function eyedojob(){
-if(ecosaver == 'true'){
+if(ecosaver == true){
 
 document.onmousemove = (function() {
   var onmousestop = function() {
@@ -856,7 +862,7 @@ document.onmousemove = (function() {
 }
 
 // night time
-if(nighttime == 'true'){ // yes night time
+if(nighttime == true){ // yes night time
 var now = new Date();var hours = now.getHours();var minutes = now.getMinutes();var gettime = hours + ":" + minutes;
 var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
 
@@ -886,13 +892,13 @@ eyedojob();
 else{eyedojob();} // no night time
 
 // context menu
-if(contextmenus == 'true'){chrome.extension.sendMessage({name: 'contextmenuon'});}
+if(contextmenus == true){chrome.extension.sendMessage({name: 'contextmenuon'});}
 else {chrome.extension.sendMessage({name: 'contextmenuoff'});}
 
 // ambilight time
-if(ambilight == 'true'){
+if(ambilight == true){
 
-if(atmosphereonly == 'true'){
+if(atmosphereonly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 if(typeof atmosphereDomains == "string") {
 	atmosphereDomains = JSON.parse(atmosphereDomains);
@@ -1018,8 +1024,8 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
 	if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 		// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 		var youtubewindow = $("movie_player");
-		if(ambilightvarcolor == 'true'){
-			if(atmosvivid == 'true'){
+		if(ambilightvarcolor == true){
+			if(atmosvivid == true){
 				if($("stefanvdvivideffect")){
 				var stefanvdvivideffect = $('stefanvdvivideffect');
 				stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
@@ -1035,20 +1041,20 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
 				}
 			}
 		}
-		else if(ambilightfixcolor == 'true'){
+		else if(ambilightfixcolor == true){
 		youtubewindow.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
 		}
-		else if(ambilight4color == 'true'){
+		else if(ambilight4color == true){
 		youtubewindow.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + "";
 		}
 	}else{
-		if(ambilightvarcolor == 'true'){
+		if(ambilightvarcolor == true){
 		playerid.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + ""; 
 		}
-		else if(ambilightfixcolor == 'true'){
+		else if(ambilightfixcolor == true){
 		playerid.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
 		}
-		else if(ambilight4color == 'true'){
+		else if(ambilight4color == true){
 		playerid.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + "";
 		}
 	}
@@ -1076,7 +1082,7 @@ try {
 	var textcountA = countA + "px";
 	var textcountB = countB + "px";
 	
-	if(ambilightvarcolor == 'true'){
+	if(ambilightvarcolor == true){
 	// Cross detection
 	// if url is the same as the video source
 	// then posible to play real ambilight
@@ -1191,7 +1197,7 @@ try{
 	var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 
 	if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-		if(atmosvivid == 'true'){
+		if(atmosvivid == true){
 			var calcvividscale = 1+(ambilightrangespreadradius/100);
 			var html5videoplayer = document.querySelector('video');
 				if($("stefanvdvivideffect")){
@@ -1229,10 +1235,10 @@ try{
 		if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){ youtubewindow.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
 		else { totlshowtime.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
 		}
-	} else if(ambilightfixcolor == 'true'){
+	} else if(ambilightfixcolor == true){
 		if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){ youtubewindow.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
 		else { totlshowtime.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
-	} else if (ambilight4color == 'true'){
+	} else if (ambilight4color == true){
 		if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){ youtubewindow.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + ""; }
 		else { totlshowtime.style.boxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + ""; }
 	}
@@ -1263,7 +1269,7 @@ observeDOM( document.getElementById('content') ,function(){
 		}
 
         // for the no360 live update  
-		if (no360youtube == 'true'){
+		if (no360youtube == true){
         var ytfullvideo = document.getElementsByTagName('video');
         for(var i = 0; i < ytfullvideo.length; i++) {
             ytfullvideo[i].style.cssText += "position:relative; z-index:1000; display:block !important";
@@ -1492,23 +1498,23 @@ function nightfunction(){
 		var newnight = document.createElement('label');
 		newnight.setAttribute('id','stefanvdnighttheme');
 		document.body.appendChild(newnight);
-		if(nighthover == 'true'){
+		if(nighthover == true){
 			newnight.style.opacity = '.2';
 			var item = document.getElementById("stefanvdnighttheme");
 			item.addEventListener("mouseover", function(){item.style.opacity = "1"}, false);
 			item.addEventListener("mouseout", function(){item.style.opacity = ".2"}, false);
 		}
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-		if(nmcustom == 'true'){newnight.style.left = nmcustomx;newnight.style.bottom = nmcustomy;}
-		else if(nmtopleft == 'true'){newnight.style.left = "25px";newnight.style.top = "25px";}
-		else if(nmtopright == 'true'){newnight.style.right = "25px";newnight.style.top = "25px";}
-		else if(nmbottomright == 'true'){newnight.style.right = "25px";newnight.style.bottom = "25px";}
-		else if(nmbottomleft == 'true'){newnight.style.left = "25px";newnight.style.bottom = "25px";}
+		if(nmcustom == true){newnight.style.left = nmcustomx;newnight.style.bottom = nmcustomy;}
+		else if(nmtopleft == true){newnight.style.left = "25px";newnight.style.top = "25px";}
+		else if(nmtopright == true){newnight.style.right = "25px";newnight.style.top = "25px";}
+		else if(nmbottomright == true){newnight.style.right = "25px";newnight.style.bottom = "25px";}
+		else if(nmbottomleft == true){newnight.style.left = "25px";newnight.style.bottom = "25px";}
 		
 		var newnightinput = document.createElement('input');
 		newnightinput.setAttribute('type','checkbox');
 		newnightinput.setAttribute('id','stefanvdnightthemecheckbox');
-		if (nightenabletheme == 'true'){ newnightinput.setAttribute('checked','true'); }
+		if (nightenabletheme == true){ newnightinput.setAttribute('checked',true); }
 		newnight.appendChild(newnightinput);
 
 		var newnightspan = document.createElement('span');
@@ -1542,7 +1548,7 @@ function nightfunction(){
 
 // tricker the switch
 function showswitchtricker(){
-		if(nightactivetime == 'true'){
+		if(nightactivetime == true){
 			var now = new Date();var hours = now.getHours();var minutes = now.getMinutes();var gettime = hours + ":" + minutes;
 			var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
 
@@ -1575,14 +1581,14 @@ function showswitchtricker(){
 
 // show all options the night switch CSS
 // but not the "only" websites
-if (nighttheme == 'true'){
-	if(nightonly != 'true'){
+if (nighttheme == true){
+	if(nightonly != true){
 		showswitchtricker()
 	}
 }
 
 function timergonighttricker(){
-	if(nightactivetime == 'true'){
+	if(nightactivetime == true){
 		var now = new Date();var hours = now.getHours();var minutes = now.getMinutes();var gettime = hours + ":" + minutes;
 		var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
 		
@@ -1613,7 +1619,7 @@ function timergonighttricker(){
 	}
 }
 
-if(nightonly == 'true'){
+if(nightonly == true){
 	var currenturl = window.location.protocol + '//' + window.location.host;
 	var nightrabbit = false;
 	if(typeof nightDomains == "string") {
@@ -1623,37 +1629,44 @@ if(nightonly == 'true'){
 			nbuf.push(domain);
 			nbuf.sort();
 		for(var i = 0; i < nbuf.length; i++){
-			if(nightmodechecklistwhite == 'true'){
+			if(nightmodechecklistwhite == true){
 				if(currenturl == nbuf[i]){
-					if (nighttheme == 'true'){ showswitchtricker(); }
-					if (nightenabletheme == 'true'){
+					if (nighttheme == true){ showswitchtricker(); }
+					if (nightenabletheme == true){
 						timergonighttricker();
 					}
 				}
 			}
-			else if(nightmodechecklistblack == 'true'){
-				if(currenturl == nbuf[i]){nightrabbit=true;}
+			else if(nightmodechecklistblack == true){
+				if(currenturl == nbuf[i]){
+                    nightrabbit=true;
+                }
 			}
 		}
 	}
-	if(nightmodechecklistblack == 'true'){
-		if(nightrabbit == false){showswitchtricker();timergonighttricker();nightrabbit = false;}
+	if(nightmodechecklistblack == true){
+		if(nightrabbit == false){
+            if (nighttheme == true){showswitchtricker(); }
+					if (nightenabletheme == true){
+						timergonighttricker();
+					}
+        }
 	}
 }else{
-	if (nightenabletheme == 'true'){
+	if (nightenabletheme == true){
 		timergonighttricker();
 	} // auto the night mode
 }
 
 // draggable object for the Night Mode feature switch
 if($('stefanvdnighttheme')){
-if(nmcustom == 'true'){
+if(nmcustom == true){
 var dragobject = { z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
 initialize:function(){
 document.onmousedown = this.drag;
 document.onmouseup = function(){ this.dragapproved = 0;
 // save the x and y value
-if(nmcustom == 'true'){
+if(nmcustom == true){
 var getnmcx = $('stefanvdnighttheme').style.left;
 var getnmcy = $('stefanvdnighttheme').style.bottom;
 chrome.extension.sendMessage({'name' : 'nmcustomx', 'value' : getnmcx});
@@ -1676,19 +1689,19 @@ document.onmousemove = dragobject.moveit;
 moveit:function(e){
 var evtobj = window.event? window.event : e;
 if (this.dragapproved == 1){
-	if(nmcustom == 'true' || nmbottomleft == 'true'){
+	if(nmcustom == true || nmbottomleft == true){
 		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
 		$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
 	}
-	else if(nmtopleft == 'true'){
+	else if(nmtopleft == true){
 		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
 		$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
 	}
-	else if(nmtopright == 'true'){
+	else if(nmtopright == true){
 		$('stefanvdnighttheme').style.right = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
 		$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
 	}
-	else if(nmbottomright == 'true'){
+	else if(nmbottomright == true){
 		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
 		$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
 	}
@@ -1702,7 +1715,7 @@ dragobject.initialize();
 }
 
 // lamp and night mode active with one click
-if(lampandnightmode == 'true'){
+if(lampandnightmode == true){
 	// Observe a specific DOM element:
 	if(document.body){
 	observeDOM( document.body ,function(){	
@@ -1714,7 +1727,7 @@ if(lampandnightmode == 'true'){
 }
 
 // reflection
-if(reflection == 'true'){
+if(reflection == true){
 		var startreflection = window.setInterval(function () {
 		try {
 		var reflectionplayer = document.getElementsByTagName("video") || null;
@@ -1767,7 +1780,7 @@ function drawReflection(reflectionid,ritem){
 // YouTube auto width the video player content
 // URL control for YouTube only
 if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-if (no360youtube == 'true'){
+if (no360youtube == true){
 	var ytfullvideo = document.getElementsByTagName('video');
 	for(var i = 0; i < ytfullvideo.length; i++) {
         ytfullvideo[i].style.cssText += "position:relative; z-index:1000; display:block !important";
@@ -1790,7 +1803,7 @@ if(appbarguideiframemask){$('appbar-guide-iframe-mask').style.zIndex = '-1';}
 var fixselfyoutubeplayeroutline = $('movie_player');
 if(fixselfyoutubeplayeroutline){$('movie_player').style.outline = 'none';}
 
-if (autowidthyoutube == 'true'){
+if (autowidthyoutube == true){
 var donesetquality = false;
 var yt = yt;
 yt = yt || {};
@@ -1803,7 +1816,7 @@ if($("watch7-container")){$("watch7-container").className = "watch-wide watch-pl
 if($("page")){$("page").className = "  watch clearfix watch-stage-mode watch-wide";}
 }
 
-if (customqualityyoutube == 'true') {
+if (customqualityyoutube == true) {
 //see http://code.google.com/apis/youtube/flash_api_reference.html#setPlaybackQuality
 // one of "highres", "hd1080", "hd720", "large", "medium", "small" or "default" to let youtube pick
 
