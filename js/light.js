@@ -726,6 +726,12 @@ for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('target') > -1) {e
 
 var elems = document.getElementsByTagName('div'), i;
 for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('video') > -1) {elems[i].style.zIndex = 1001;}}
+
+//fixed 25/03/2016
+var vimeocontainer = document.querySelectorAll('div.player_container');
+for(var i = 0; i < vimeocontainer.length; i++ ){vimeocontainer[i].style.transform = 'initial';vimeocontainer[i].style.webkitTransform = 'initial';vimeocontainer[i].style.margin = 'auto';vimeocontainer[i].style.left = '0px';vimeocontainer[i].style.right = '0px';}
+var vimeovideoplayerarea = document.querySelectorAll('div.player_area');
+for(var i = 0; i < vimeovideoplayerarea.length; i++ ){vimeovideoplayerarea[i].style.transformStyle = 'initial';vimeovideoplayerarea[i].style.webkitTransformStyle = 'initial';}
 }
 
 // Dailymotion, fixed show video

@@ -32,8 +32,8 @@
     "description":"Jak Bar"
   },
   "desmousespotlightt":{
-    "message":"Włącz klikanie w linki, kiedy obraz jest przyciemniony",
-    "description":"Włącz klikanie w linki, kiedy obraz jest przyciemniony"
+    "message":"Włącz klikanie linków, kiedy obraz jest przyciemniony",
+    "description":"Włącz klikanie linków, kiedy obraz jest przyciemniony"
   },
   "desambilight4color":{
     "message":"Kolory wokół filmu:",
@@ -100,8 +100,8 @@
     "description":"Włączanie \"Ochrona oczu\" będzie automatycznie wyłączyć funkcję \"Auto play\"."
   },
   "skipremember":{
-    "message":"Pomiń to i otwórz stronę ustawień teraz",
-    "description":"Pomiń to i otwórz stronę ustawień teraz"
+    "message":"Pomiń i otwórz stronę ustawień",
+    "description":"Pomiń i otwórz stronę ustawień"
   },
   "optiontimesaved":{
     "message":"Czas został zapisany!",
@@ -1092,12 +1092,12 @@
     "description":"Pokazuje pełne 360 stopni wideo YouTube w jednej ramce."
   },
   "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
+    "message":"Pasek narzędzi wideo",
+    "description":"Pasek narzędzi wideo"
   },
   "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
+    "message":"Pokaż pasek narzędzi poniżej ekranu, aby dostosować bieżący odtwarzacz wideo",
+    "description":"Pokaż pasek narzędzi poniżej ekranu, aby dostosować bieżący odtwarzacz wideo"
   },
   "vtoolfullscreen":{
     "message":"A button to set the video player to the full window size",
@@ -1148,8 +1148,8 @@
     "description":"Like"
   },
   "titelvideotoolsubscribe":{
-    "message":"Subskrybuj",
-    "description":"Subskrybuj"
+    "message":"Zasubskrybuj",
+    "description":"Zasubskrybuj"
   },
   "titelvideotoolrepeat":{
     "message":"Repeat",

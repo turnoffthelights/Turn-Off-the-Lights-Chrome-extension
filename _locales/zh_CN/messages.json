@@ -1096,20 +1096,20 @@
     "description":"视频工具栏"
   },
   "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
+    "message":"显示用于自定义当前视频播放器的工具栏。",
+    "description":"显示用于自定义当前视频播放器的工具栏。"
   },
   "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
+    "message":"设置视频播放器到全窗口模式的按钮",
+    "description":"设置视频播放器到全窗口模式的按钮"
   },
   "vtoolfilter":{
     "message":"A button to add a filter in the current video player",
     "description":"A button to add a filter in the current video player"
   },
   "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
+    "message":"重复当前视频播放器的按钮",
+    "description":"重复当前视频播放器的按钮"
   },
   "titelvideotoolgrayscale":{
     "message":"灰度",
@@ -1132,8 +1132,8 @@
     "description":"饱和度"
   },
   "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
+    "message":"色相旋转",
+    "description":"色相旋转"
   },
   "titelvideotoolbrightness":{
     "message":"亮度",
@@ -1152,28 +1152,28 @@
     "description":"订阅"
   },
   "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
+    "message":"重复",
+    "description":"重复"
   },
   "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
+    "message":"过滤器",
+    "description":"过滤器"
   },
   "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
+    "message":"完整全窗口",
+    "description":"完整全窗口"
   },
   "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
+    "message":"映射",
+    "description":"映射"
   },
   "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
+    "message":"显示所有视频的映射效果",
+    "description":"显示所有视频的映射效果"
   },
   "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
+    "message":"仅在以下网站激活视频工具栏：",
+    "description":"仅在以下网站激活视频工具栏："
   },
   "titelvideotoolwhitelist":{
     "message":"白名单",
