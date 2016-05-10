@@ -27,7 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 */
 
-body{background-color:#fff;color:#000;font-family:Arial,sans-serif;cursor:default;font-size:13px}
+body{min-width:1150px;min-height:800px;background-color:#fff;color:#000;font-family:Arial,sans-serif;cursor:default;font-size:13px}
 #main-content{display:-webkit-box;position:absolute;left:0;right:0;top:0;bottom:0}
 #mainview{-webkit-box-align:stretch;-webkit-padding-start:216px;margin:0;position:absolute;left:0;right:0;top:0;bottom:0;z-index:1}
 #mainview-content{box-sizing:border-box;max-width:888px;min-width:600px;padding:0 24px;position:relative}

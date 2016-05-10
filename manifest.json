@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.2.0.12",
+  "version": "3.2.0.14",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com",
@@ -14,14 +14,14 @@
   "default_locale": "en",
   "page_action": {
       "default_title": "__MSG_pageatitle__",
-	  "default_icon": {
-      "19": "icons/icon1.png",
-      "38": "icons/icon38.png"
-    }
+	    "default_icon": {
+        "19": "icons/icon1.png",
+        "38": "icons/icon38.png"
+      }
   },
   "background": {
     "page": "background.html",
-	"persistent": false
+	  "persistent": false
   },
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; img-src *; object-src 'self'",
   "web_accessible_resources": [
@@ -29,9 +29,9 @@
     "images/minimize.png",
     "icons/icon16.png",
     "icons/icon16@2x.png",
-	"js/injected.js",
-	"images/theater.jpg",
-	"images/Smoke10.png",
+	  "js/injected.js",
+	  "images/theater.jpg",
+	  "images/Smoke10.png",
     "images/cloud.png"
   ],
   "content_scripts": [
@@ -40,6 +40,10 @@
       "css" : ["css/light.css"],
       "js": ["js/content.js"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["http://*.youtube.com/*","https://*.youtube.com/*"], 
+      "css" : ["css/youtube.css"]
     }
   ],
   "commands": {
@@ -57,7 +61,10 @@
             "description": "__MSG_titelnighttheme__"
           }
   },
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "minimum_chrome_version": "33",
   "permissions": [ "contextMenus", "notifications", "tabs", "storage", "<all_urls>" ]
 }
