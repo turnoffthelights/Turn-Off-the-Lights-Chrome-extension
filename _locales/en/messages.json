@@ -1182,5 +1182,13 @@
   "titelvideotoolblacklist":{
     "message":"Blacklist",
     "description":"Blacklist"
-  }                   
+  },         
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },         
+  "titelblock60fps":{
+    "message":"Block 60fps",
+    "description":"Block 60fps"
+  }          
 }

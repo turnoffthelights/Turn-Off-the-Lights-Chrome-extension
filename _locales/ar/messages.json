@@ -496,8 +496,8 @@
     "description":"تحذير!"
   },
   "deseyetimesaver":{
-    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
-    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
+    "message":"عندما تكون الصفحة غير نشطة (لا إدخال من الماوس أو لوحة المفاتيح) للوقت المحدد أدناه، ستصبح الصفحة مظلمة تلقائيا.",
+    "description":"عندما تكون الصفحة غير نشطة (لا إدخال من الماوس أو لوحة المفاتيح) للوقت المحدد أدناه، ستصبح الصفحة مظلمة تلقائيا."
   },
   "titelsuggestions":{
     "message":"الاقتراحات",
@@ -1128,44 +1128,44 @@
     "description":"contrast"
   },
   "titelvideotoolsaturate":{
-    "message":"saturation",
-    "description":"saturation"
+    "message":"saturație",
+    "description":"saturație"
   },
   "titelvideotoolhueroration":{
     "message":"hue rotation",
     "description":"hue rotation"
   },
   "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
+    "message":"strălucire",
+    "description":"strălucire"
   },
   "titelvideotoolnormal":{
     "message":"normal",
     "description":"normal"
   },
   "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
+    "message":"Îmi place",
+    "description":"Îmi place"
   },
   "titelvideotoolsubscribe":{
     "message":"اﻻنضمام",
     "description":"اﻻنضمام"
   },
   "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
+    "message":"Repetă",
+    "description":"Repetă"
   },
   "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
+    "message":"Filtru",
+    "description":"Filtru"
   },
   "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
+    "message":"Ecran întreg",
+    "description":"Ecran întreg"
   },
   "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
+    "message":"Reflexie",
+    "description":"Reflexie"
   },
   "desreflection":{
     "message":"Show the reflection effect on all videos",

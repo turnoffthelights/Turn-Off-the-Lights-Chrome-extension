@@ -465,6 +465,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<select id="youtubequality">
 					<option value="highres">highres</option>
 					<option value="hd4320">4320p (8k)</option>
+					<option value="hd2880">2880p (5K)</option>
 					<option value="hd2160">2160p (4k)</option>
 					<option value="hd1440">1440p</option>
 					<option value="hd1080">1080p</option>
@@ -474,7 +475,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					<option value="small">240p</option>
 					<option value="tiny">144p</option>
 					<option value="default">default</option>
-				</select></label></td></tr>
+				</select>&nbsp;&nbsp;<input id="block60fps" type="checkbox"><span data-i18n="titelblock60fps"></span></label></td></tr>
 				<tr><td><label class="checkbox"><input id="cinemaontop" type="checkbox"><span data-i18n="titelcinemaontop"></span></label></td></tr>
 				<tr><td><label class="checkbox"><input id="no360youtube" type="checkbox"><span data-i18n="titel360youtube"></span></label>
 				</table>				
@@ -786,6 +787,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</label>
 				<br>
 				<span data-i18n="titelnightmodebck"></span> <input id="nightmodebck" type="color" class="color" list="datalightnightmode">&nbsp;&nbsp;&nbsp;<span data-i18n="titelnightmodetxt"></span> <input id="nightmodetxt" type="color" class="color" list="datalightnightmode">
+				<span data-i18n="titelnightmodehyperlink"></span> <input id="nightmodehyperlink" type="color" class="color" list="datalightnightmode">
 				<datalist id="datalightnightmode">
                     <option>#FFFFFF</option>
                     <option>#FF0000</option>

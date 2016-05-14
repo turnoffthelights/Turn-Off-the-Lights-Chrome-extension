@@ -560,8 +560,8 @@
     "description":"Không hiển thị lời nhắc nhở trang"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
+    "message":"Toàn bộ trang web sẽ tối dần, vì thế bạn có thể xem các video giống như khi bạn xem trong rạp chiếu phim.",
+    "description":"Toàn bộ trang web sẽ tối dần, vì thế bạn có thể xem các video giống như khi bạn xem trong rạp chiếu phim."
   },
   "titelviewcount":{
     "message":"Số lần xem",
