@@ -310,11 +310,11 @@ for (var div in divs) {
         }
 }
 
-// YouTube new player 27/04/2015 and 31/08/2015 and 29/02/2016
+// YouTube new player 27/04/2015 and 31/08/2015 and 29/02/2016 and 23/06/2016
 var ytdivs = document.getElementsByTagName('div');
 for (var div in ytdivs) {
         var d = ytdivs[div].className;
-        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container' || d == 'ytp-popup ytp-settings-menu' || d == 'ytp-panelpopup ytp-contextmenu') {
+        if (d == 'ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set' || d == 'ytp-remote' || d == 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay' || d == 'ytp-spinner' || d == 'ytp-bezel' || d == 'ytp-gradient-top' || d == 'ytp-chrome-top' || d == 'ytp-gradient-bottom' || d == 'ytp-chrome-bottom' || d == 'ytp-panelpopup ytp-settings-menu' || d == 'ytp-share-panel' || d == 'ytp-playlist-menu' || d == 'ytp-related-menu' || d == 'ytp-webgl-spherical-control' || d == 'ytp-storyboard enabled' || d == 'ytp-storyboard-framepreview' || d == 'ytp-ad-progress-bar-container' || d == 'ytp-popup ytp-settings-menu' || d == 'ytp-panelpopup ytp-contextmenu' || d == 'ytp-multicam-menu') {
                 ytdivs[div].style.zIndex = 1001;
         }
 }
@@ -331,11 +331,11 @@ for(var i = 0; i < ytbezel.length; i++ )
 // YouTube still showing the skip button for the ads
 var admedia = document.getElementsByTagName('div');
 for(var i = 0; i < admedia.length; i++ )
-{if(admedia[i].className == ('ad-container ad-container-single-media-element')) {admedia[i].style.zIndex = 1001;}}
+{if(admedia[i].className == ('ad-container ad-container-single-media-element')) {admedia[i].style.zIndex = 1001}}
 
 var admediaanno = document.getElementsByTagName('div');
 for(var i = 0; i < admediaanno.length; i++ )
-{if(admediaanno[i].className == ('ad-container ad-container-single-media-element-annotations')) {admediaanno[i].style.zIndex = 1001;}}
+{if(admediaanno[i].className == ('ad-container ad-container-single-media-element-annotations')) {admediaanno[i].style.zIndex = 1001;;admediaanno[i].style.top = "0px"}}
 
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName('div');
