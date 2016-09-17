@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Чорний список",
     "description":"Чорний список"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Гіперпосилання",
+    "description":"Гіперпосилання"
+  },
+  "titelblock60fps":{
+    "message":"Блокувати 60 к\/с",
+    "description":"Блокувати 60 к\/с"
+  },
+  "titelvolume":{
+    "message":"Регулятор гучності відео",
+    "description":"Регулятор гучності відео"
+  },
+  "desvideovolume":{
+    "message":"Керувати гучність поточного відео програвача коліщатком миші",
+    "description":"Керувати гучність поточного відео програвача коліщатком миші"
+  },
+  "desvideovolumecolor":{
+    "message":"Колір регулятора",
+    "description":"Колір регулятора"
+  },
+  "desvolumelabel":{
+    "message":"Показати ярлик гучності",
+    "description":"Показати ярлик гучності"
+  },
+  "desvolumesteps":{
+    "message":"Кількість кроків для кожного прокручування",
+    "description":"Кількість кроків для кожного прокручування"
+  },
+  "sharetexta":{
+    "message":"Отримайте чудове розширення для браузера Turn Off the Lights",
+    "description":"Отримайте чудове розширення для браузера Turn Off the Lights"
+  },
+  "sharetextb":{
+    "message":"Овва, це чудово. Сьогодні спробував розширення для браузера Turn Off the Lights ",
+    "description":"Овва, це чудово. Сьогодні спробував розширення для браузера Turn Off the Lights "
+  },
+  "sharetextc":{
+    "message":"Найкраще чудове розширення для браузера Turn Off the Lights",
+    "description":"Найкраще чудове розширення для браузера Turn Off the Lights"
+  },
+  "sharetextd":{
+    "message":"Розширення для браузера Turn Off the Lights - найкраще пасує для YouTube. Завантажте і спробуйте самі!",
+    "description":"Розширення для браузера Turn Off the Lights - найкраще пасує для YouTube. Завантажте і спробуйте самі!"
+  },
+  "titellampchoose":{
+    "message":"Виберіть ваш улюблений стиль лампи",
+    "description":"Виберіть ваш улюблений стиль лампи"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights не працює на цій сторінці. Спробуйте іншу.",
+    "description":"Turn Off the Lights не працює на цій сторінці. Спробуйте іншу."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Стартова інструкція",
+    "description":"Стартова інструкція"
+  },
+  "titelpopupsupport":{
+    "message":"Підтримка",
+    "description":"Підтримка"
+  },
+  "titelpopupoptions":{
+    "message":"Налаштування",
+    "description":"Налаштування"
+  },
+  "titelpopupratestars":{
+    "message":"Оцініть нас 5-ма зірками",
+    "description":"Оцініть нас 5-ма зірками"
+  },
+  "titelvisenable":{
+    "message":"Увімкнути\/вимкнути Візуалізацію Аудіо",
+    "description":"Увімкнути\/вимкнути Візуалізацію Аудіо"
+  },
+  "titelvischoose":{
+    "message":"Виберіть свій стиль Візуалізації Аудіо",
+    "description":"Виберіть свій стиль Візуалізації Аудіо"
+  },
+  "titelvisblocks":{
+    "message":"Блоки",
+    "description":"Блоки"
+  },
+  "titelvisfrequency":{
+    "message":"Частота",
+    "description":"Частота"
+  },
+  "titelvistunnel":{
+    "message":"Музичний тунель",
+    "description":"Музичний тунель"
+  },
+  "titelvisualization":{
+    "message":"Візуалізація Аудіо",
+    "description":"Візуалізація Аудіо"
+  },
+  "desvisopacity":{
+    "message":"Значення непрозорості фону для візуалізації аудіо",
+    "description":"Значення непрозорості фону для візуалізації аудіо"
+  },
+  "vtoolvisualization":{
+    "message":"Кнопка показу візуалізації аудіо для поточного програвача відео",
+    "description":"Кнопка показу візуалізації аудіо для поточного програвача відео"
   }
 }

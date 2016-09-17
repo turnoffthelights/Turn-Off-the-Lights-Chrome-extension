@@ -44,8 +44,8 @@
     "description":"Please enter your password"
   },
   "desnoflash":{
-    "message":"Don't use this feature.",
-    "description":"Don't use this feature."
+    "message":"Don't use this feature",
+    "description":"Don't use this feature"
   },
   "desdynamicblocks":{
     "message":"Blocks",
@@ -236,8 +236,8 @@
     "description":"All open tabs"
   },
   "desreadera":{
-    "message":"Always show the dimness level bar when the lights go out.",
-    "description":"Always show the dimness level bar when the lights go out."
+    "message":"Always show the dimness level bar when the lights go out",
+    "description":"Always show the dimness level bar when the lights go out"
   },
   "rememberrate":{
     "message":"Rate",
@@ -276,8 +276,8 @@
     "description":"Fade In"
   },
   "desreadern":{
-    "message":"Never show the dimness level bar.",
-    "description":"Never show the dimness level bar."
+    "message":"Never show the dimness level bar",
+    "description":"Never show the dimness level bar"
   },
   "titelmaxqualityyoutube":{
     "message":"Automatically set to this resolution:",
@@ -1092,8 +1092,8 @@
     "description":"Shows the full 360 degrees YouTube video in one frame"
   },
   "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
+    "message":"Video Toolbar",
+    "description":"Video Toolbar"
   },
   "desvideotool":{
     "message":"Show the toolbar below your screen to customize the current video player",
@@ -1190,5 +1190,101 @@
   "titelblock60fps":{
     "message":"Block 60fps",
     "description":"Block 60fps"
-  }          
+  },
+  "titelvolume":{
+    "message":"Video Volume Slider",
+    "description":"Video Volume Slider"
+  },
+  "desvideovolume":{
+    "message":"Control volume of that current video player with a mouse scroll",
+    "description":"Control volume of that current video player with a mouse scroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Color of the slider",
+    "description":"Color of the slider"
+  },
+  "desvolumelabel":{
+    "message":"Show the volume label",
+    "description":"Show the volume label"
+  },
+  "desvolumesteps":{
+    "message":"The number of steps for each scroll",
+    "description":"The number of steps for each scroll"
+  },  
+  "sharetexta":{
+    "message":"Get this Cool Turn Off the Lights Browser Extension",
+    "description":"Get this Cool Turn Off the Lights Browser Extension"
+  },
+  "sharetextb":{
+    "message":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
+    "description":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+  },
+  "sharetextc":{
+    "message":"The Best and Amazing Turn Off the Lights Browser extension",
+    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+  },
+ "sharetextd":{
+    "message":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!",
+    "description":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!"
+  },
+  "titellampchoose":{
+    "message":"Choose your favorite lamp style",
+    "description":"Choose your favorite lamp style"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights doesn't work on this web page. Try another page.",
+    "description":"Turn Off the Lights doesn't work on this web page. Try another page."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Welcome Guide",
+    "description":"Welcome Guide"
+  },
+  "titelpopupsupport":{
+    "message":"Support",
+    "description":"Support"
+  },
+  "titelpopupoptions":{
+    "message":"Options",
+    "description":"Options"
+  },
+  "titelpopupratestars":{
+    "message":"Rate 5 stars",
+    "description":"Rate 5 stars"
+  },
+  "titelvisenable":{
+    "message":"Enable/disable the Audio Visualization",
+    "description":"Enable/disable the Audio Visualization"
+  },
+  "titelvischoose":{
+    "message":"Choose your Audio Visualization",
+    "description":"Choose your Audio Visualization"
+  },
+  "titelvisblocks":{
+    "message":"Blocks",
+    "description":"Blocks"
+  },
+  "titelvisfrequency":{
+    "message":"Frequency",
+    "description":"Frequency"
+  },
+  "titelvistunnel":{
+    "message":"Music Tunnel",
+    "description":"Music Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio Visualization",
+    "description":"Audio Visualization"
+  },
+  "desvisopacity":{
+    "message":"The opacity value of the audio visualization background",
+    "description":"The opacity value of the audio visualization background"
+  },
+  "vtoolvisualization":{
+    "message":"A button to show the audio visualization for the current video player",
+    "description":"A button to show the audio visualization for the current video player"
+  }
 }

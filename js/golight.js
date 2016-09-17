@@ -31,4 +31,4 @@ function $(id) { return document.getElementById(id); }
 // Black div on
 var blackon = $('stefanvdlightareoff1');
 if(blackon){}
-else{chrome.extension.sendMessage({name: 'automatic'});}
+else{chrome.runtime.sendMessage({name: 'automatic'});}

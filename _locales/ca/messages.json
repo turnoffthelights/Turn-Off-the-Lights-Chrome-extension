@@ -924,8 +924,8 @@
     "description":"Missatge a Facebook"
   },
   "sharemenupostongoogleplus":{
-    "message":"Missatge a Google +",
-    "description":"Missatge a Google +"
+    "message":"Publiqueu-ho al Google+",
+    "description":"Publiqueu-ho al Google+"
   },
   "sharemenuratetitle":{
     "message":"Valora aquesta extensió",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Llista negra",
     "description":"Llista negra"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Enllaç",
+    "description":"Enllaç"
+  },
+  "titelblock60fps":{
+    "message":"Bloca 60fps",
+    "description":"Bloca 60fps"
+  },
+  "titelvolume":{
+    "message":"Volum del vídeo",
+    "description":"Volum del vídeo"
+  },
+  "desvideovolume":{
+    "message":"Controla el volum del vídeo en reproducció amb la roda del ratolí",
+    "description":"Controla el volum del vídeo en reproducció amb la roda del ratolí"
+  },
+  "desvideovolumecolor":{
+    "message":"Color del lliscador",
+    "description":"Color del lliscador"
+  },
+  "desvolumelabel":{
+    "message":"Mostra l'etiqueta de volum",
+    "description":"Mostra l'etiqueta de volum"
+  },
+  "desvolumesteps":{
+    "message":"Nombre de passes amb la roda",
+    "description":"Nombre de passes amb la roda"
+  },
+  "sharetexta":{
+    "message":"Aconseguiu el complement del navegador Turn Off the Lights",
+    "description":"Aconseguiu el complement del navegador Turn Off the Lights"
+  },
+  "sharetextb":{
+    "message":"Ep, això és impressionant. Estic provant el complement Turn Off the Lights al navegador ",
+    "description":"Ep, això és impressionant. Estic provant el complement Turn Off the Lights al navegador "
+  },
+  "sharetextc":{
+    "message":"El millor complement per al navegador, Turn Off the Lights",
+    "description":"El millor complement per al navegador, Turn Off the Lights"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights és la millor eina per al YouTube. Baixeu-la i comproveu-ho amb els vostres ulls!",
+    "description":"Turn Off the Lights és la millor eina per al YouTube. Baixeu-la i comproveu-ho amb els vostres ulls!"
+  },
+  "titellampchoose":{
+    "message":"Trieu el vostre estil preferit",
+    "description":"Trieu el vostre estil preferit"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights no funciona en aquesta pàgina. Proveu en altre web.",
+    "description":"Turn Off the Lights no funciona en aquesta pàgina. Proveu en altre web."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Guia de benvinguda",
+    "description":"Guia de benvinguda"
+  },
+  "titelpopupsupport":{
+    "message":"Suport",
+    "description":"Suport"
+  },
+  "titelpopupoptions":{
+    "message":"Opcions",
+    "description":"Opcions"
+  },
+  "titelpopupratestars":{
+    "message":"Valori'ns amb 5 estrelles",
+    "description":"Valori'ns amb 5 estrelles"
+  },
+  "titelvisenable":{
+    "message":"Habilita\/inhabilita la visualització d'àudio",
+    "description":"Habilita\/inhabilita la visualització d'àudio"
+  },
+  "titelvischoose":{
+    "message":"Trieu la visualització d'àudio",
+    "description":"Trieu la visualització d'àudio"
+  },
+  "titelvisblocks":{
+    "message":"Blocs",
+    "description":"Blocs"
+  },
+  "titelvisfrequency":{
+    "message":"Freqüència",
+    "description":"Freqüència"
+  },
+  "titelvistunnel":{
+    "message":"Túnel de música",
+    "description":"Túnel de música"
+  },
+  "titelvisualization":{
+    "message":"Visualització d'àudio",
+    "description":"Visualització d'àudio"
+  },
+  "desvisopacity":{
+    "message":"Valor de l'opacitat del fons de la visualització d'àudio",
+    "description":"Valor de l'opacitat del fons de la visualització d'àudio"
+  },
+  "vtoolvisualization":{
+    "message":"Un botó per mostrar la visualització d'àudio al reproductor de vídeo actual",
+    "description":"Un botó per mostrar la visualització d'àudio al reproductor de vídeo actual"
   }
 }

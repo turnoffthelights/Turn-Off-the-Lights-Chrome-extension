@@ -27,17 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-// control
-// security check
-// my users must have the official extension
-var a = chrome.i18n.getMessage("@@extension_id");
-var b = "bfbmjmiodbnnpllbbbfblcplfjjepjdn"
-if (a != b){
-var manifestData = chrome.runtime.getManifest();
-chrome.tabs.create({url: "https://www.turnoffthelights.com/extension/baduser.html"+"?totl=" + manifestData.version + "", selected:true});
-} else {
-
-chrome.extension.onMessage.addListener(function request(request,sender,sendResponse){
+chrome.runtime.onMessage.addListener(function request(request,sender,sendResponse){
 // eye protection & autoplay & shortcut
 if (request.name == "automatic") {chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});}
 // contextmenu
@@ -115,29 +105,59 @@ else{
 return true;
 });
 
-}
-// end control
+chrome.tabs.onActivated.addListener(function (activeInfo){
+    chrome.tabs.get(activeInfo.tabId, function (tab) {
+        chrome.storage.sync.get(['icon'], function(items){
+            if(items["icon"] == undefined){items["icon"] = "icons/iconstick1@2x.png";}
+            chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"],"38": items["icon"]}});
+        });// chrome storage end
+    });
+});
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-		chrome.storage.sync.get(['pageaction'], function(chromeset){		
-			if ((tab.url.match(/^http/i)||tab.url.match(/^file/i)) && (chromeset["pageaction"] != true) && (chromeset["pageaction"] != true)) {
-					if(tabId != null){
-					// fix Chrome bug, can't show icon on HDPI screen
-					// chrome.pageAction.setIcon({tabId: tab.id, path: {'19': 'icons/icon1.png', '38':'icons/icon1@2x.png'}});
-					// https://code.google.com/p/chromium/issues/detail?id=381383
-					chrome.pageAction.show(tabId);
-					}
-			}
+		chrome.storage.sync.get(['icon'], function(chromeset){
+            if(chromeset["icon"] == undefined){chromeset["icon"] = "icons/iconstick1@2x.png";}
+            chrome.browserAction.setIcon({tabId : tabId, path : {"19": chromeset["icon"],"38": chromeset["icon"]}});
+
+			if((tab.url.match(/^http/i)||tab.url.match(/^file/i)||tab.url==browsernewtab)) {
+                chrome.browserAction.setPopup({tabId : tabId, popup:''});
+				if(tabId != null){
+                    if((new URL(tab.url)).origin==browserstore){
+                        chrome.browserAction.setPopup({tabId : tabId, popup:'popup.html'});
+                    }
+				}
+			}else{
+                if(tabId != null){
+                chrome.browserAction.setPopup({tabId : tabId, popup:'popup.html'});
+				}
+            }
 		});
 });
 
-chrome.pageAction.onClicked.addListener(function(tabs) {
+chrome.tabs.onHighlighted.addListener(function(o) { tabId = o.tabIds[0];
+    chrome.tabs.get(tabId, function(tab) {
+			if((tab.url.match(/^http/i)||tab.url.match(/^file/i)||tab.url==browsernewtab)) {
+				chrome.browserAction.setPopup({tabId : tabId, popup:''});
+                if(tabId != null){
+                    if((new URL(tab.url)).origin==browserstore){
+                        chrome.browserAction.setPopup({tabId : tabId, popup:'popup.html'});
+                    }
+				}
+			}else{
+                if(tabId != null){
+                chrome.browserAction.setPopup({tabId : tabId, popup:'popup.html'});
+				}
+            }
+    });
+});
+
+chrome.browserAction.onClicked.addListener(function(tabs) {
     chrome.storage.sync.get(['alllightsoff'], function(chromeset){
-        if ((chromeset["alllightsoff"]!=true) && (chromeset["alllightsoff"]!=true)){
+        if((chromeset["alllightsoff"]!=true) && (chromeset["alllightsoff"]!=true)){
             chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {
             // console.error(chrome.runtime.lastError.message);
             }});
-        } else {
+        }else{
             chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {
             // console.error(chrome.runtime.lastError.message);
             }});
@@ -155,23 +175,21 @@ if(command == "toggle-feature-nightmode"){
 function onClickHandler(info, tab) {
 var str = info.menuItemId;var resvideo = str.substring(0, 9);var respage = str.substring(0, 8);
 if (resvideo == "totlvideo" || respage == "totlpage") {chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}
-else if (info.menuItemId == "totlguideemenu") {window.open("https://www.turnoffthelights.com/extension/chromeguide.html", "_blank");}
-else if (info.menuItemId == "totldevelopmenu") {window.open("https://www.turnoffthelights.com/donate.html", "_blank");}
-else if (info.menuItemId == "totlratemenu") {window.open("https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews", "_blank");}
-else if (info.menuItemId == "totlsharemenu") {window.open("https://www.turnoffthelights.com/shareextension.html", "_blank");}
-else if (info.menuItemId == "totlshareemail") {window.open("mailto:youremail?subject=Turn Off the Lights Chrome extension&body=Hé, This is amazing. I just tried today this Turn Off the Lights Chrome extension https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn", "_blank");}
-else if (info.menuItemId == "totlsharetwitter") {window.open("https://twitter.com/home?status=Try%20self%20this%20amazing%20Turn%20Off%20the%20Lights%20Chrome%20extension%20chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn", "_blank");}
-else if (info.menuItemId == "totlsharefacebook") {window.open("https://www.facebook.com/sharer/sharer.php?u=chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn", "_blank");}
-else if (info.menuItemId == "totlsharegoogleplus") {window.open("https://plus.google.com/share?url=chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn", "_blank");}
+else if (info.menuItemId == "totlguideemenu") {window.open(linkguide, "_blank");}
+else if (info.menuItemId == "totldevelopmenu") {window.open(donatewebsite, "_blank");}
+else if (info.menuItemId == "totlratemenu") {window.open(writereview, "_blank");}
+else if (info.menuItemId == "totlsharemenu") {window.open(linkshare, "_blank");}
+else if (info.menuItemId == "totlshareemail") {window.open("mailto:youremail?subject="+chrome.i18n.getMessage("sharetexta")+"&body="+chrome.i18n.getMessage("sharetextb")+" "+turnoffthelightsproduct, "_blank");}
+else if (info.menuItemId == "totlsharetwitter") {var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);window.open("https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, "_blank");}
+else if (info.menuItemId == "totlsharefacebook") {window.open("https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, "_blank");}
+else if (info.menuItemId == "totlsharegoogleplus") {window.open("https://plus.google.com/share?url="+turnoffthelightsproduct, "_blank");}
 }
 
-chrome.runtime.onInstalled.addListener(function() {
 // check to remove all contextmenus
 chrome.contextMenus.removeAll(function() {
 //console.log("contextMenus.removeAll callback");
 });
-          
-// pageaction
+
 var sharemenusharetitle = chrome.i18n.getMessage("sharemenusharetitle");
 var sharemenuwelcomeguidetitle = chrome.i18n.getMessage("sharemenuwelcomeguidetitle");
 var sharemenutellafriend = chrome.i18n.getMessage("sharemenutellafriend");
@@ -181,7 +199,7 @@ var sharemenupostongoogleplus = chrome.i18n.getMessage("sharemenupostongoogleplu
 var sharemenuratetitle = chrome.i18n.getMessage("sharemenuratetitle");
 var sharemenudonatetitle = chrome.i18n.getMessage("sharemenudonatetitle");
 
-var contexts = ["page_action", "browser_action"];
+var contexts = ["browser_action"];
 chrome.contextMenus.create({"title": sharemenuwelcomeguidetitle, "type":"normal", "id": "totlguideemenu", "contexts":contexts});
 chrome.contextMenus.create({"title": sharemenudonatetitle, "type":"normal", "id": "totldevelopmenu", "contexts":contexts});
 chrome.contextMenus.create({"title": sharemenuratetitle, "type":"normal", "id": "totlratemenu", "contexts":contexts});
@@ -192,7 +210,6 @@ var child1 = chrome.contextMenus.create({"title": sharemenutellafriend, "id": "t
 var child2 = chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "parentId": parent});
 var child3 = chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "parentId": parent});
 var child4 = chrome.contextMenus.create({"title": sharemenupostongoogleplus, "id": "totlsharegoogleplus", "parentId": parent});
-});
 
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
@@ -247,11 +264,31 @@ function removecontexmenus(){
     contextmenuadded = false;
 }
 
-try{ chrome.runtime.setUninstallUrl("https://www.turnoffthelights.com/extension/chromeuninstalled.html"); }
-catch(e){}
+chrome.storage.onChanged.addListener(function(changes, namespace) {
+   for (key in changes) {
+        var storageChange = changes[key];
+        if(changes['contextmenus']){if(changes['contextmenus'].newValue == true){checkcontextmenus()}else{removecontexmenus()}}
+        if(changes['icon']){if(changes['icon'].newValue){
+            chrome.browserAction.setIcon({tabId : tabId,
+              path : {
+                "19": changes['icon'].newValue,
+                "38": changes['icon'].newValue
+              }
+            });  
+            }
+        }
+        if(changes['ecosaver']){
+            chrome.tabs.query({}, function (tabs) {
+                for (var i = 0; i < tabs.length; i++) {
+                    chrome.tabs.executeScript(tabs[i].id, {file: "js/reloadlight.js"});
+                }
+            });
+        }
+    }
+})
 
-// Fired when an update is available
-chrome.runtime.onUpdateAvailable.addListener(function() {chrome.runtime.reload();});
+try{ chrome.runtime.setUninstallUrl(linkuninstall); }
+catch(e){}
 
 // convert from old storage to new
 if(localStorage["firstRun"] == "false"){ chrome.storage.sync.set({"firstRun": false}); }
@@ -265,7 +302,7 @@ function testbool(a){
 }
 
 // convert from the chrome.local to chrome.sync
-chrome.storage.local.get(['firstRun','version',"interval","lightcolor","pageaction","lampregular","autoplay","playlist","flash","head","fadein","fadeout","infobar","sharebutton","likebutton","readera","readern","shortcutlight","eyea","eyen","suggestions","videoheadline","eastereggs","contextmenus","viewcount","lightimage","lightimagea","lightimagen","eyealist","mousespotlighto","mousespotlighta","mousespotlightc","nighttime","begintime","endtime","addvideobutton","likebar","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","mousespotlightt","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","password","enterpassword","noflash","hardflash","ecosaver","ecosavertime","dynamic","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","autoplayonly","blur","maxquality","autowidthyoutube","customqualityyoutube","cinemaontop","alllightsoff","spotlightradius","atmosphereonly","optionskipremember","nighttheme","nightonly","nightenabletheme","autoplaydelay","autoplaydelaytime","motion","lightimagelin","linearsq","colora","intervallina","colorb","intervallinb","speech","speechlang","speechcountry","atmosvivid","cammotiononly","speechonly","autoplaychecklistwhite","autoplaychecklistblack","autostop","autostoponly","autostopchecklistwhite","autostopchecklistblack","nighthover","nightmodechecklistwhite","nightmodechecklistblack","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nightactivetime","nmbegintime","nmendtime","lampandnightmode","eyechecklistwhite","eyechecklistblack","nightmodebck","nightmodetxt","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolchecklistwhite","videotoolchecklistblack","excludedDomains","autoplayDomains","atmosphereDomains","nightDomains","cammotionDomains","speechDomains","autostopDomains","videotoolDomains"], function(chromeset){
+chrome.storage.local.get(['firstRun','version',"interval","lightcolor","autoplay","playlist","flash","head","fadein","fadeout","infobar","sharebutton","likebutton","readera","readern","shortcutlight","eyea","eyen","suggestions","videoheadline","eastereggs","contextmenus","viewcount","lightimage","lightimagea","lightimagen","eyealist","mousespotlighto","mousespotlighta","mousespotlightc","nighttime","begintime","endtime","addvideobutton","likebar","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","mousespotlightt","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","password","enterpassword","noflash","hardflash","ecosaver","ecosavertime","dynamic","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","autoplayonly","blur","maxquality","autowidthyoutube","customqualityyoutube","cinemaontop","alllightsoff","spotlightradius","atmosphereonly","optionskipremember","nighttheme","nightonly","nightenabletheme","autoplaydelay","autoplaydelaytime","motion","lightimagelin","linearsq","colora","intervallina","colorb","intervallinb","speech","speechlang","speechcountry","atmosvivid","cammotiononly","speechonly","autoplaychecklistwhite","autoplaychecklistblack","autostop","autostoponly","autostopchecklistwhite","autostopchecklistblack","nighthover","nightmodechecklistwhite","nightmodechecklistblack","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nightactivetime","nmbegintime","nmendtime","lampandnightmode","eyechecklistwhite","eyechecklistblack","nightmodebck","nightmodetxt","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolchecklistwhite","videotoolchecklistblack","excludedDomains","autoplayDomains","atmosphereDomains","nightDomains","cammotionDomains","speechDomains","autostopDomains","videotoolDomains"], function(chromeset){
     // if yes, it use the chrome.local setting
     if (chromeset["firstRun"] == "false"){
         // move all settings from the local to sync
@@ -276,7 +313,7 @@ chrome.storage.local.get(['firstRun','version',"interval","lightcolor","pageacti
         
         // testbool text -> is the true or false
         // no testbool tex -> is text or number or json
-        chrome.storage.sync.set({"interval": chromeset["interval"], "lightcolor": chromeset["lightcolor"], "pageaction": testbool(chromeset["pageaction"]), "lampregular": testbool(chromeset["lampregular"]), "autoplay": testbool(chromeset["autoplay"]), "playlist": testbool(chromeset["playlist"]), "flash": testbool(chromeset["flash"]), "head": testbool(chromeset["head"]), "fadein": testbool(chromeset["fadein"]), "fadeout": testbool(chromeset["fadeout"]), "infobar": testbool(chromeset["infobar"]), "sharebutton": testbool(chromeset["sharebutton"]), "likebutton": testbool(chromeset["likebutton"]), "readera": testbool(chromeset["readera"]), "readern": testbool(chromeset["readern"]), "shortcutlight": testbool(chromeset["shortcutlight"]), "eyea": testbool(chromeset["eyea"]), "eyen": testbool(chromeset["eyen"]), "suggestions": testbool(chromeset["suggestions"]), "videoheadline": testbool(chromeset["videoheadline"]), "eastereggs": testbool(chromeset["eastereggs"]), "contextmenus": testbool(chromeset["contextmenus"]), "viewcount": testbool(chromeset["viewcount"]), "lightimage": chromeset["lightimage"], "lightimagea": testbool(chromeset["lightimagea"]), "lightimagen": testbool(chromeset["lightimagen"]), "eyealist": testbool(chromeset["eyealist"]), "mousespotlighto": testbool(chromeset["mousespotlighto"]), "mousespotlighta": testbool(chromeset["mousespotlighta"]), "mousespotlightc": testbool(chromeset["mousespotlightc"]), "nighttime": testbool(chromeset["nighttime"]), "begintime": chromeset["begintime"], "endtime": chromeset["endtime"], "addvideobutton": testbool(chromeset["addvideobutton"]), "likebar": testbool(chromeset["likebar"]), "ambilight": testbool(chromeset["ambilight"]), "ambilightrangeblurradius": chromeset["ambilightrangeblurradius"], "ambilightrangespreadradius": chromeset["ambilightrangespreadradius"], "mousespotlightt": testbool(chromeset["mousespotlightt"]), "ambilightfixcolor": testbool(chromeset["ambilightfixcolor"]), "ambilightvarcolor": testbool(chromeset["ambilightvarcolor"]), "ambilightcolorhex": chromeset["ambilightcolorhex"], "ambilight4color": testbool(chromeset["ambilight4color"]), "ambilight1colorhex": chromeset["ambilight1colorhex"], "ambilight2colorhex": chromeset["ambilight2colorhex"], "ambilight3colorhex": chromeset["ambilight3colorhex"], "ambilight4colorhex": chromeset["ambilight4colorhex"], "password": testbool(chromeset["password"]), "enterpassword": chromeset["enterpassword"], "noflash": testbool(chromeset["noflash"]), "hardflash": testbool(chromeset["hardflash"]), "ecosaver": testbool(chromeset["ecosaver"]), "ecosavertime": chromeset["ecosavertime"], "dynamic": testbool(chromeset["dynamic"]), "dynamic1": testbool(chromeset["dynamic1"]), "dynamic2": testbool(chromeset["dynamic2"]), "dynamic3": testbool(chromeset["dynamic3"]), "dynamic4": testbool(chromeset["dynamic4"]), "dynamic5": testbool(chromeset["dynamic5"]), "dynamic6": testbool(chromeset["dynamic6"]), "dynamic7": testbool(chromeset["dynamic7"]), "dynamic8": testbool(chromeset["dynamic8"]), "dynamic9": testbool(chromeset["dynamic9"]), "dynamic10": testbool(chromeset["dynamic10"]), "hoveroptiondyn5": testbool(chromeset["hoveroptiondyn5"]), "autoplayonly": testbool(chromeset["autoplayonly"]), "blur": testbool(chromeset["blur"]), "maxquality": chromeset["maxquality"], "autowidthyoutube": testbool(chromeset["autowidthyoutube"]), "customqualityyoutube": testbool(chromeset["customqualityyoutube"]), "cinemaontop": testbool(chromeset["cinemaontop"]), "alllightsoff": testbool(chromeset["alllightsoff"]), "spotlightradius": chromeset["spotlightradius"], "atmosphereonly": testbool(chromeset["atmosphereonly"]), "optionskipremember": testbool(chromeset["optionskipremember"]), "nighttheme": testbool(chromeset["nighttheme"]), "nightonly": testbool(chromeset["nightonly"]), "nightenabletheme": testbool(chromeset["nightenabletheme"]), "autoplaydelay": testbool(chromeset["autoplaydelay"]), "autoplaydelaytime": chromeset["autoplaydelaytime"], "motion": testbool(chromeset["motion"]), "lightimagelin": testbool(chromeset["lightimagelin"]), "linearsq": chromeset["linearsq"], "colora": chromeset["colora"], "intervallina": chromeset["intervallina"], "colorb": chromeset["colorb"], "intervallinb": chromeset["intervallinb"], "speech": testbool(chromeset["speech"]), "speechlang": chromeset["speechlang"], "speechcountry": chromeset["speechcountry"], "atmosvivid": testbool(chromeset["atmosvivid"]), "cammotiononly": testbool(chromeset["cammotiononly"]), "speechonly": testbool(chromeset["speechonly"]), "autoplaychecklistwhite": testbool(chromeset["autoplaychecklistwhite"]), "autoplaychecklistblack": testbool(chromeset["autoplaychecklistblack"]), "autostop": testbool(chromeset["autostop"]), "autostoponly": testbool(chromeset["autostoponly"]), "autostopchecklistwhite": testbool(chromeset["autostopchecklistwhite"]), "autostopchecklistblack": testbool(chromeset["autostopchecklistblack"]), "nighthover": testbool(chromeset["nighthover"]), "nightmodechecklistwhite": testbool(chromeset["nightmodechecklistwhite"]), "nightmodechecklistblack": testbool(chromeset["nightmodechecklistblack"]), "nmtopleft": testbool(chromeset["nmtopleft"]), "nmtopright": testbool(chromeset["nmtopright"]), "nmbottomright": testbool(chromeset["nmbottomright"]), "nmbottomleft": testbool(chromeset["nmbottomleft"]), "nmcustom": testbool(chromeset["nmcustom"]), "nightactivetime": testbool(chromeset["nightactivetime"]), "nmbegintime": chromeset["nmbegintime"], "nmendtime": chromeset["nmendtime"], "lampandnightmode": testbool(chromeset["lampandnightmode"]), "eyechecklistwhite": testbool(chromeset["eyechecklistwhite"]), "eyechecklistblack": testbool(chromeset["eyechecklistblack"]), "nightmodebck": chromeset["nightmodebck"], "nightmodetxt": chromeset["nightmodetxt"], "no360youtube": testbool(chromeset["no360youtube"]), "videotool": testbool(chromeset["videotool"]), "reflection": testbool(chromeset["reflection"]), "reflectionamount": chromeset["reflectionamount"], "videotoolonly": testbool(chromeset["videotoolonly"]), "videotoolchecklistwhite": testbool(chromeset["videotoolchecklistwhite"]), "videotoolchecklistblack": testbool(chromeset["videotoolchecklistblack"]), "excludedDomains": chromeset["excludedDomains"], "autoplayDomains": chromeset["autoplayDomains"], "atmosphereDomains": chromeset["atmosphereDomains"], "nightDomains": chromeset["nightDomains"], "cammotionDomains": chromeset["cammotionDomains"], "speechDomains": chromeset["speechDomains"], "autostopDomains": chromeset["autostopDomains"], "videotoolDomains": chromeset["videotoolDomains"]});
+        chrome.storage.sync.set({"interval": chromeset["interval"], "lightcolor": chromeset["lightcolor"], "autoplay": testbool(chromeset["autoplay"]), "playlist": testbool(chromeset["playlist"]), "flash": testbool(chromeset["flash"]), "head": testbool(chromeset["head"]), "fadein": testbool(chromeset["fadein"]), "fadeout": testbool(chromeset["fadeout"]), "infobar": testbool(chromeset["infobar"]), "sharebutton": testbool(chromeset["sharebutton"]), "likebutton": testbool(chromeset["likebutton"]), "readera": testbool(chromeset["readera"]), "readern": testbool(chromeset["readern"]), "shortcutlight": testbool(chromeset["shortcutlight"]), "eyea": testbool(chromeset["eyea"]), "eyen": testbool(chromeset["eyen"]), "suggestions": testbool(chromeset["suggestions"]), "videoheadline": testbool(chromeset["videoheadline"]), "eastereggs": testbool(chromeset["eastereggs"]), "contextmenus": testbool(chromeset["contextmenus"]), "viewcount": testbool(chromeset["viewcount"]), "lightimage": chromeset["lightimage"], "lightimagea": testbool(chromeset["lightimagea"]), "lightimagen": testbool(chromeset["lightimagen"]), "eyealist": testbool(chromeset["eyealist"]), "mousespotlighto": testbool(chromeset["mousespotlighto"]), "mousespotlighta": testbool(chromeset["mousespotlighta"]), "mousespotlightc": testbool(chromeset["mousespotlightc"]), "nighttime": testbool(chromeset["nighttime"]), "begintime": chromeset["begintime"], "endtime": chromeset["endtime"], "addvideobutton": testbool(chromeset["addvideobutton"]), "likebar": testbool(chromeset["likebar"]), "ambilight": testbool(chromeset["ambilight"]), "ambilightrangeblurradius": chromeset["ambilightrangeblurradius"], "ambilightrangespreadradius": chromeset["ambilightrangespreadradius"], "mousespotlightt": testbool(chromeset["mousespotlightt"]), "ambilightfixcolor": testbool(chromeset["ambilightfixcolor"]), "ambilightvarcolor": testbool(chromeset["ambilightvarcolor"]), "ambilightcolorhex": chromeset["ambilightcolorhex"], "ambilight4color": testbool(chromeset["ambilight4color"]), "ambilight1colorhex": chromeset["ambilight1colorhex"], "ambilight2colorhex": chromeset["ambilight2colorhex"], "ambilight3colorhex": chromeset["ambilight3colorhex"], "ambilight4colorhex": chromeset["ambilight4colorhex"], "password": testbool(chromeset["password"]), "enterpassword": chromeset["enterpassword"], "noflash": testbool(chromeset["noflash"]), "hardflash": testbool(chromeset["hardflash"]), "ecosaver": testbool(chromeset["ecosaver"]), "ecosavertime": chromeset["ecosavertime"], "dynamic": testbool(chromeset["dynamic"]), "dynamic1": testbool(chromeset["dynamic1"]), "dynamic2": testbool(chromeset["dynamic2"]), "dynamic3": testbool(chromeset["dynamic3"]), "dynamic4": testbool(chromeset["dynamic4"]), "dynamic5": testbool(chromeset["dynamic5"]), "dynamic6": testbool(chromeset["dynamic6"]), "dynamic7": testbool(chromeset["dynamic7"]), "dynamic8": testbool(chromeset["dynamic8"]), "dynamic9": testbool(chromeset["dynamic9"]), "dynamic10": testbool(chromeset["dynamic10"]), "hoveroptiondyn5": testbool(chromeset["hoveroptiondyn5"]), "autoplayonly": testbool(chromeset["autoplayonly"]), "blur": testbool(chromeset["blur"]), "maxquality": chromeset["maxquality"], "autowidthyoutube": testbool(chromeset["autowidthyoutube"]), "customqualityyoutube": testbool(chromeset["customqualityyoutube"]), "cinemaontop": testbool(chromeset["cinemaontop"]), "alllightsoff": testbool(chromeset["alllightsoff"]), "spotlightradius": chromeset["spotlightradius"], "atmosphereonly": testbool(chromeset["atmosphereonly"]), "optionskipremember": testbool(chromeset["optionskipremember"]), "nighttheme": testbool(chromeset["nighttheme"]), "nightonly": testbool(chromeset["nightonly"]), "nightenabletheme": testbool(chromeset["nightenabletheme"]), "autoplaydelay": testbool(chromeset["autoplaydelay"]), "autoplaydelaytime": chromeset["autoplaydelaytime"], "motion": testbool(chromeset["motion"]), "lightimagelin": testbool(chromeset["lightimagelin"]), "linearsq": chromeset["linearsq"], "colora": chromeset["colora"], "intervallina": chromeset["intervallina"], "colorb": chromeset["colorb"], "intervallinb": chromeset["intervallinb"], "speech": testbool(chromeset["speech"]), "speechlang": chromeset["speechlang"], "speechcountry": chromeset["speechcountry"], "atmosvivid": testbool(chromeset["atmosvivid"]), "cammotiononly": testbool(chromeset["cammotiononly"]), "speechonly": testbool(chromeset["speechonly"]), "autoplaychecklistwhite": testbool(chromeset["autoplaychecklistwhite"]), "autoplaychecklistblack": testbool(chromeset["autoplaychecklistblack"]), "autostop": testbool(chromeset["autostop"]), "autostoponly": testbool(chromeset["autostoponly"]), "autostopchecklistwhite": testbool(chromeset["autostopchecklistwhite"]), "autostopchecklistblack": testbool(chromeset["autostopchecklistblack"]), "nighthover": testbool(chromeset["nighthover"]), "nightmodechecklistwhite": testbool(chromeset["nightmodechecklistwhite"]), "nightmodechecklistblack": testbool(chromeset["nightmodechecklistblack"]), "nmtopleft": testbool(chromeset["nmtopleft"]), "nmtopright": testbool(chromeset["nmtopright"]), "nmbottomright": testbool(chromeset["nmbottomright"]), "nmbottomleft": testbool(chromeset["nmbottomleft"]), "nmcustom": testbool(chromeset["nmcustom"]), "nightactivetime": testbool(chromeset["nightactivetime"]), "nmbegintime": chromeset["nmbegintime"], "nmendtime": chromeset["nmendtime"], "lampandnightmode": testbool(chromeset["lampandnightmode"]), "eyechecklistwhite": testbool(chromeset["eyechecklistwhite"]), "eyechecklistblack": testbool(chromeset["eyechecklistblack"]), "nightmodebck": chromeset["nightmodebck"], "nightmodetxt": chromeset["nightmodetxt"], "no360youtube": testbool(chromeset["no360youtube"]), "videotool": testbool(chromeset["videotool"]), "reflection": testbool(chromeset["reflection"]), "reflectionamount": chromeset["reflectionamount"], "videotoolonly": testbool(chromeset["videotoolonly"]), "videotoolchecklistwhite": testbool(chromeset["videotoolchecklistwhite"]), "videotoolchecklistblack": testbool(chromeset["videotoolchecklistblack"]), "excludedDomains": chromeset["excludedDomains"], "autoplayDomains": chromeset["autoplayDomains"], "atmosphereDomains": chromeset["atmosphereDomains"], "nightDomains": chromeset["nightDomains"], "cammotionDomains": chromeset["cammotionDomains"], "speechDomains": chromeset["speechDomains"], "autostopDomains": chromeset["autostopDomains"], "videotoolDomains": chromeset["videotoolDomains"]});
             
         // when done, clear the local
         chrome.storage.local.clear();
@@ -290,9 +327,8 @@ chrome.storage.local.get(['firstRun','version',"interval","lightcolor","pageacti
 function initwelcome(){
 chrome.storage.sync.get(['firstRun'], function(chromeset){
 if ((chromeset["firstRun"]!="false") && (chromeset["firstRun"]!=false)){
-  var totlidextension = chrome.i18n.getMessage("@@extension_id");
-  chrome.tabs.create({url: "https://www.turnoffthelights.com/extension/chromewelcome.html", selected:true})
-  chrome.tabs.create({url: "https://www.turnoffthelights.com/extension/chromeguide.html", selected:false})
+  chrome.tabs.create({url: linkwelcomepage, active:true})
+  chrome.tabs.create({url: linkguide, active:false})
   chrome.storage.sync.set({"firstRun": false, "version": "2.4"});
 }
 });

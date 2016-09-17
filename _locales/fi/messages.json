@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Musta lista",
     "description":"Musta lista"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlinkki",
+    "description":"Hyperlinkki"
+  },
+  "titelblock60fps":{
+    "message":"Estä 60 fps",
+    "description":"Estä 60 fps"
+  },
+  "titelvolume":{
+    "message":"Videon Äänenvoimakkuus-liukusäädin",
+    "description":"Videon Äänenvoimakkuus-liukusäädin"
+  },
+  "desvideovolume":{
+    "message":"Hallitse nykyisen videon äänenvoimakkuutta hiiren rullalla",
+    "description":"Hallitse nykyisen videon äänenvoimakkuutta hiiren rullalla"
+  },
+  "desvideovolumecolor":{
+    "message":"Liukusäätimen väri",
+    "description":"Liukusäätimen väri"
+  },
+  "desvolumelabel":{
+    "message":"Näytä äänenvoimakkuuden otsikko",
+    "description":"Näytä äänenvoimakkuuden otsikko"
+  },
+  "desvolumesteps":{
+    "message":"Vieritysnopeus",
+    "description":"Vieritysnopeus"
+  },
+  "sharetexta":{
+    "message":"Hanki tämä näppärä Turn Off the Lights -selainlaajennus",
+    "description":"Hanki tämä näppärä Turn Off the Lights -selainlaajennus"
+  },
+  "sharetextb":{
+    "message":"Tämä on käsittämätön. Kokeilin tätä Turn Off the Lights -selainlaajennusta ",
+    "description":"Tämä on käsittämätön. Kokeilin tätä Turn Off the Lights -selainlaajennusta "
+  },
+  "sharetextc":{
+    "message":"Paras ja hämmästyttävä Turn Off the Lights -selainlaajennus",
+    "description":"Paras ja hämmästyttävä Turn Off the Lights -selainlaajennus"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights -laajennus on paras YouTube-työkalu. Lataa ja kokeile vaikka itse!",
+    "description":"Turn Off the Lights -laajennus on paras YouTube-työkalu. Lataa ja kokeile vaikka itse!"
+  },
+  "titellampchoose":{
+    "message":"Valitse mieluinen lampun tyyli",
+    "description":"Valitse mieluinen lampun tyyli"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights ei toimi tällä sivulla. Kokeile toista sivua.",
+    "description":"Turn Off the Lights ei toimi tällä sivulla. Kokeile toista sivua."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Tervetuloa-opas",
+    "description":"Tervetuloa-opas"
+  },
+  "titelpopupsupport":{
+    "message":"Tuki",
+    "description":"Tuki"
+  },
+  "titelpopupoptions":{
+    "message":"Asetukset",
+    "description":"Asetukset"
+  },
+  "titelpopupratestars":{
+    "message":"Luokittele 5 tähdellä",
+    "description":"Luokittele 5 tähdellä"
+  },
+  "titelvisenable":{
+    "message":"Ota äänen visualisointi käyttöön\/poista käytöstä",
+    "description":"Ota äänen visualisointi käyttöön\/poista käytöstä"
+  },
+  "titelvischoose":{
+    "message":"Valitse äänen visualisointi",
+    "description":"Valitse äänen visualisointi"
+  },
+  "titelvisblocks":{
+    "message":"Palikat",
+    "description":"Palikat"
+  },
+  "titelvisfrequency":{
+    "message":"Taajuus",
+    "description":"Taajuus"
+  },
+  "titelvistunnel":{
+    "message":"Musiikkitunneli",
+    "description":"Musiikkitunneli"
+  },
+  "titelvisualization":{
+    "message":"Äänen visualisointi",
+    "description":"Äänen visualisointi"
+  },
+  "desvisopacity":{
+    "message":"Äänen visualisoinnin taustan läpinäkyvyys",
+    "description":"Äänen visualisoinnin taustan läpinäkyvyys"
+  },
+  "vtoolvisualization":{
+    "message":"Painike äänen visualisoinnin näyttämiseksi nykyisessä videosoittimessa",
+    "description":"Painike äänen visualisoinnin näyttämiseksi nykyisessä videosoittimessa"
   }
 }

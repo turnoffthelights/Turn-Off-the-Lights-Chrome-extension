@@ -35,12 +35,13 @@ var default_arangespread = 20;
 // Option to save current value to chrome.storage
 function save_options(){
     var ytselq = document.getElementById("youtubequality");
+    var html5volumesteps = document.getElementById("videovolumesteps");
     var linearsq = document.getElementById("linearsq");
     var webspeechlang = document.getElementById("select_language");
-    if (webspeechlang.selectedIndex != -1){ var savewebspeechlang = webspeechlang.options[webspeechlang.selectedIndex].value;}
+    if(webspeechlang.selectedIndex != -1){var savewebspeechlang = webspeechlang.options[webspeechlang.selectedIndex].value;}
     var webspeechcountry = document.getElementById("select_dialect");
-    if (webspeechcountry.selectedIndex != -1){ var savewebspeechcountry = webspeechcountry.options[webspeechcountry.selectedIndex].value;}
-    
+    if(webspeechcountry.selectedIndex != -1){var savewebspeechcountry = webspeechcountry.options[webspeechcountry.selectedIndex].value;}
+
     // Excluded domains
     var excludedDomainsBox = $("excludedDomainsBox");
     var excludedDomains = {};
@@ -81,12 +82,12 @@ function save_options(){
     var videotoolDomains = {};
     for (var i = 0; i < videotoolDomainsBox.length; i++){videotoolDomains[videotoolDomainsBox.options[i].value] = true;}
 	
-	chrome.storage.sync.set({"interval": $('interval').value,"lightcolor": $('lightcolor').value, "pageaction": $('pageaction').checked, "lampregular": $('lampregular').checked, "autoplay": $('autoplay').checked, "playlist": $('playlist').checked, "flash": $('flash').checked, "head": $('head').checked, "fadein": $('fadein').checked, "fadeout": $('fadeout').checked, "infobar": $('infobar').checked, "sharebutton": $('sharebutton').checked, "likebutton": $('likebutton').checked, "readera": $('readera').checked, "readern": $('readern').checked, "shortcutlight": $('shortcutlight').checked, "eyea": $('eyea').checked, "eyen": $('eyen').checked, "suggestions": $('suggestions').checked, "videoheadline": $('videoheadline').checked, "eastereggs": $('eastereggs').checked, "contextmenus": $('contextmenus').checked, "viewcount": $('viewcount').checked, "lightimage": $('lightimage').value, "lightimagea": $('lightimagea').checked, "lightimagen": $('lightimagen').checked, "eyealist": $('eyealist').checked, "mousespotlighto": $('mousespotlighto').checked, "mousespotlighta": $('mousespotlighta').checked, "mousespotlightc": $('mousespotlightc').checked, "nighttime": $('nighttime').checked, "begintime": $('begintime').value, "endtime": $('endtime').value, "addvideobutton": $('addvideobutton').checked, "likebar": $('likebar').checked, "ambilight": $('ambilight').checked, "ambilightrangeblurradius": $('ambilightrangeblurradius').value, "ambilightrangespreadradius": $('ambilightrangespreadradius').value, "mousespotlightt": $('mousespotlightt').checked, "ambilightfixcolor": $('ambilightfixcolor').checked, "ambilightvarcolor": $('ambilightvarcolor').checked, "ambilightcolorhex": $('ambilightcolorhex').value, "ambilight4color": $('ambilight4color').checked, "ambilight1colorhex": $('ambilight1colorhex').value, "ambilight2colorhex": $('ambilight2colorhex').value, "ambilight3colorhex": $('ambilight3colorhex').value, "ambilight4colorhex": $('ambilight4colorhex').value, "password": $('password').checked, "enterpassword": $('enterpassword').value, "noflash": $('noflash').checked, "hardflash": $('hardflash').checked, "ecosaver": $('ecosaver').checked, "ecosavertime": $('ecosavertime').value, "dynamic": $('dynamic').checked, "dynamic1": $('dynamic1').checked, "dynamic2": $('dynamic2').checked, "dynamic3": $('dynamic3').checked, "dynamic4": $('dynamic4').checked, "dynamic5": $('dynamic5').checked, "dynamic6": $('dynamic6').checked, "dynamic7": $('dynamic7').checked, "dynamic8": $('dynamic8').checked, "dynamic9": $('dynamic9').checked, "dynamic10": $('dynamic10').checked, "hoveroptiondyn5": $('hoveroptiondyn5').checked, "autoplayonly": $('autoplayonly').checked, "blur": $('blur').checked, "maxquality": ytselq.options[ytselq.selectedIndex].value, "autowidthyoutube": $('autowidthyoutube').checked, "customqualityyoutube": $('customqualityyoutube').checked, "cinemaontop": $('cinemaontop').checked, "alllightsoff": $('alllightsoff').checked, "spotlightradius": $('spotlightradius').value, "atmosphereonly": $('atmosphereonly').checked, "optionskipremember": $('optionskipremember').checked, "nighttheme": $('nighttheme').checked, "nightonly": $('nightonly').checked, "nightenabletheme": $('nightenabletheme').checked, "autoplaydelay": $('autoplaydelay').checked, "autoplaydelaytime": $('autoplaydelaytime').value, "motion": $('motion').checked, "lightimagelin": $('lightimagelin').checked, "linearsq": linearsq.options[linearsq.selectedIndex].value, "colora": $('colora').value, "intervallina": $('intervallina').value, "colorb": $('colorb').value, "intervallinb": $('intervallinb').value, "speech": $('speech').checked, "speechlang": savewebspeechlang, "speechcountry": savewebspeechcountry, "atmosvivid": $('atmosvivid').checked, "cammotiononly": $('cammotiononly').checked, "speechonly": $('speechonly').checked, "autoplaychecklistwhite": $('autoplaychecklistwhite').checked, "autoplaychecklistblack": $('autoplaychecklistblack').checked, "autostop": $('autostop').checked, "autostoponly": $('autostoponly').checked, "autostopchecklistwhite": $('autostopchecklistwhite').checked, "autostopchecklistblack": $('autostopchecklistblack').checked, "nighthover": $('nighthover').checked, "nightmodechecklistwhite": $('nightmodechecklistwhite').checked, "nightmodechecklistblack": $('nightmodechecklistblack').checked, "nmtopleft": $('nmtopleft').checked, "nmtopright": $('nmtopright').checked, "nmbottomright": $('nmbottomright').checked, "nmbottomleft": $('nmbottomleft').checked, "nmcustom": $('nmcustom').checked, "nightactivetime": $('nightactivetime').checked, "nmbegintime": $('nmbegintime').value, "nmendtime": $('nmendtime').value, "lampandnightmode": $('lampandnightmode').checked, "eyechecklistwhite": $('eyechecklistwhite').checked, "eyechecklistblack": $('eyechecklistblack').checked, "nightmodebck": $('nightmodebck').value, "nightmodetxt": $('nightmodetxt').value, "no360youtube": $('no360youtube').checked, "videotool": $('videotool').checked, "reflection": $('reflection').checked, "reflectionamount": $('reflectionamount').value, "videotoolonly": $('videotoolonly').checked, "videotoolchecklistwhite": $('videotoolchecklistwhite').checked, "videotoolchecklistblack": $('videotoolchecklistblack').checked, "nightmodehyperlink": $('nightmodehyperlink').value, "block60fps": $('block60fps').checked, "excludedDomains": JSON.stringify(excludedDomains), "autoplayDomains": JSON.stringify(autoplayDomains), "atmosphereDomains": JSON.stringify(atmosphereDomains), "nightDomains": JSON.stringify(nightDomains), "cammotionDomains": JSON.stringify(cammotionDomains), "speechDomains": JSON.stringify(speechDomains), "autostopDomains": JSON.stringify(autostopDomains), "videotoolDomains": JSON.stringify(videotoolDomains)});	
+	chrome.storage.sync.set({"interval": $('interval').value,"lightcolor": $('lightcolor').value, "autoplay": $('autoplay').checked, "playlist": $('playlist').checked, "flash": $('flash').checked, "head": $('head').checked, "fadein": $('fadein').checked, "fadeout": $('fadeout').checked, "infobar": $('infobar').checked, "sharebutton": $('sharebutton').checked, "likebutton": $('likebutton').checked, "readera": $('readera').checked, "readern": $('readern').checked, "shortcutlight": $('shortcutlight').checked, "eyea": $('eyea').checked, "eyen": $('eyen').checked, "suggestions": $('suggestions').checked, "videoheadline": $('videoheadline').checked, "eastereggs": $('eastereggs').checked, "contextmenus": $('contextmenus').checked, "viewcount": $('viewcount').checked, "lightimage": $('lightimage').value, "lightimagea": $('lightimagea').checked, "lightimagen": $('lightimagen').checked, "eyealist": $('eyealist').checked, "mousespotlighto": $('mousespotlighto').checked, "mousespotlighta": $('mousespotlighta').checked, "mousespotlightc": $('mousespotlightc').checked, "nighttime": $('nighttime').checked, "begintime": $('begintime').value, "endtime": $('endtime').value, "addvideobutton": $('addvideobutton').checked, "likebar": $('likebar').checked, "ambilight": $('ambilight').checked, "ambilightrangeblurradius": $('ambilightrangeblurradius').value, "ambilightrangespreadradius": $('ambilightrangespreadradius').value, "mousespotlightt": $('mousespotlightt').checked, "ambilightfixcolor": $('ambilightfixcolor').checked, "ambilightvarcolor": $('ambilightvarcolor').checked, "ambilightcolorhex": $('ambilightcolorhex').value, "ambilight4color": $('ambilight4color').checked, "ambilight1colorhex": $('ambilight1colorhex').value, "ambilight2colorhex": $('ambilight2colorhex').value, "ambilight3colorhex": $('ambilight3colorhex').value, "ambilight4colorhex": $('ambilight4colorhex').value, "password": $('password').checked, "enterpassword": $('enterpassword').value, "noflash": $('noflash').checked, "hardflash": $('hardflash').checked, "ecosaver": $('ecosaver').checked, "ecosavertime": $('ecosavertime').value, "dynamic": $('dynamic').checked, "dynamic1": $('dynamic1').checked, "dynamic2": $('dynamic2').checked, "dynamic3": $('dynamic3').checked, "dynamic4": $('dynamic4').checked, "dynamic5": $('dynamic5').checked, "dynamic6": $('dynamic6').checked, "dynamic7": $('dynamic7').checked, "dynamic8": $('dynamic8').checked, "dynamic9": $('dynamic9').checked, "dynamic10": $('dynamic10').checked, "hoveroptiondyn5": $('hoveroptiondyn5').checked, "autoplayonly": $('autoplayonly').checked, "blur": $('blur').checked, "maxquality": ytselq.options[ytselq.selectedIndex].value, "autowidthyoutube": $('autowidthyoutube').checked, "customqualityyoutube": $('customqualityyoutube').checked, "cinemaontop": $('cinemaontop').checked, "alllightsoff": $('alllightsoff').checked, "spotlightradius": $('spotlightradius').value, "atmosphereonly": $('atmosphereonly').checked, "optionskipremember": $('optionskipremember').checked, "nighttheme": $('nighttheme').checked, "nightonly": $('nightonly').checked, "nightenabletheme": $('nightenabletheme').checked, "autoplaydelay": $('autoplaydelay').checked, "autoplaydelaytime": $('autoplaydelaytime').value, "motion": $('motion').checked, "lightimagelin": $('lightimagelin').checked, "linearsq": linearsq.options[linearsq.selectedIndex].value, "colora": $('colora').value, "intervallina": $('intervallina').value, "colorb": $('colorb').value, "intervallinb": $('intervallinb').value, "speech": $('speech').checked, "speechlang": savewebspeechlang, "speechcountry": savewebspeechcountry, "atmosvivid": $('atmosvivid').checked, "cammotiononly": $('cammotiononly').checked, "speechonly": $('speechonly').checked, "autoplaychecklistwhite": $('autoplaychecklistwhite').checked, "autoplaychecklistblack": $('autoplaychecklistblack').checked, "autostop": $('autostop').checked, "autostoponly": $('autostoponly').checked, "autostopchecklistwhite": $('autostopchecklistwhite').checked, "autostopchecklistblack": $('autostopchecklistblack').checked, "nighthover": $('nighthover').checked, "nightmodechecklistwhite": $('nightmodechecklistwhite').checked, "nightmodechecklistblack": $('nightmodechecklistblack').checked, "nmtopleft": $('nmtopleft').checked, "nmtopright": $('nmtopright').checked, "nmbottomright": $('nmbottomright').checked, "nmbottomleft": $('nmbottomleft').checked, "nmcustom": $('nmcustom').checked, "nightactivetime": $('nightactivetime').checked, "nmbegintime": $('nmbegintime').value, "nmendtime": $('nmendtime').value, "lampandnightmode": $('lampandnightmode').checked, "eyechecklistwhite": $('eyechecklistwhite').checked, "eyechecklistblack": $('eyechecklistblack').checked, "nightmodebck": $('nightmodebck').value, "nightmodetxt": $('nightmodetxt').value, "no360youtube": $('no360youtube').checked, "videotool": $('videotool').checked, "reflection": $('reflection').checked, "reflectionamount": $('reflectionamount').value, "videotoolonly": $('videotoolonly').checked, "videotoolchecklistwhite": $('videotoolchecklistwhite').checked, "videotoolchecklistblack": $('videotoolchecklistblack').checked, "nightmodehyperlink": $('nightmodehyperlink').value, "block60fps": $('block60fps').checked, "excludedDomains": JSON.stringify(excludedDomains), "autoplayDomains": JSON.stringify(autoplayDomains), "atmosphereDomains": JSON.stringify(atmosphereDomains), "nightDomains": JSON.stringify(nightDomains), "cammotionDomains": JSON.stringify(cammotionDomains), "speechDomains": JSON.stringify(speechDomains), "autostopDomains": JSON.stringify(autostopDomains), "videotoolDomains": JSON.stringify(videotoolDomains), "videovolume": $('videovolume').checked, "videovolumecolor": $('videovolumecolor').value, "videovolumesteps": html5volumesteps.options[html5volumesteps.selectedIndex].value, "videovolumelabel": $('videovolumelabel').checked, "icon": $("btnpreview").src, "visopacity": $('visopacity').value});	
 }
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(['fadein', 'fadeout', 'readera', 'readern', 'lightimagea', 'lightimagen', 'mousespotlighta', 'mousespotlightc', 'mousespotlighto', 'mousespotlightt', 'eyea', 'eyen', 'eyealist', 'interval', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightvarcolor', 'ambilightfixcolor', 'ambilight4color', 'flash', 'noflash', 'noflash', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10', 'hoveroptiondyn5', 'maxquality', 'pageaction', 'lampregular', 'autoplaychecklistwhite', 'autoplaychecklistblack', 'autostopchecklistwhite', 'autostopchecklistblack', 'videotoolchecklistwhite', 'videotoolchecklistblack', 'nightmodechecklistwhite', 'nightmodechecklistblack', 'nmtopleft', 'nmtopright', 'nmbottomright', 'nmbottomleft', 'nmcustom', 'eyechecklistwhite', 'eyechecklistblack'], function(items){
+chrome.storage.sync.get(['fadein', 'fadeout', 'readera', 'readern', 'lightimagea', 'lightimagen', 'mousespotlighta', 'mousespotlightc', 'mousespotlighto', 'mousespotlightt', 'eyea', 'eyen', 'eyealist', 'interval', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'ambilightvarcolor', 'ambilightfixcolor', 'ambilight4color', 'flash', 'noflash', 'noflash', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10', 'hoveroptiondyn5', 'maxquality', 'autoplaychecklistwhite', 'autoplaychecklistblack', 'autostopchecklistwhite', 'autostopchecklistblack', 'videotoolchecklistwhite', 'videotoolchecklistblack', 'nightmodechecklistwhite', 'nightmodechecklistblack', 'nmtopleft', 'nmtopright', 'nmbottomright', 'nmbottomleft', 'nmcustom', 'eyechecklistwhite', 'eyechecklistblack','videovolumesteps','videovolumelabel'], function(items){
     // find no localstore fadein
 	if(items['fadein'] == null){firstdefaultvalues['fadein'] = true;}
     // find no localstore fadeout
@@ -117,8 +118,6 @@ chrome.storage.sync.get(['fadein', 'fadeout', 'readera', 'readern', 'lightimagea
 	if(items['hoveroptiondyn5'] == null){firstdefaultvalues['hoveroptiondyn5'] = true;}
     // find no localstore maxquality
 	if(items['maxquality'] == null){firstdefaultvalues['maxquality'] = 'hd1080';}
-    // find no localstore lamp
-	if(items['pageaction'] == null && items['lampregular'] == null){firstdefaultvalues['lampregular'] = true;firstdefaultvalues['pageaction'] = false;}
     // find no localstore autoplay whitelist
 	if(items['autoplaychecklistwhite'] == null && items['autoplaychecklistblack'] == null){firstdefaultvalues['autoplaychecklistwhite'] = true;firstdefaultvalues['autoplaychecklistblack'] = false;}
     // find no localstore autostop whitelist
@@ -132,6 +131,11 @@ chrome.storage.sync.get(['fadein', 'fadeout', 'readera', 'readern', 'lightimagea
     // find no localstore eye whitelist
 	if(items['eyechecklistwhite'] == null && items['eyechecklistblack'] == null){firstdefaultvalues['eyechecklistwhite'] = true;firstdefaultvalues['eyechecklistblack'] = false;}
     
+    // find no localstore volume steps
+    if(items['videovolumesteps'] == null){firstdefaultvalues['videovolumesteps'] = 5;}
+    // find no localstore volume label
+    if(items['videovolumelabel'] == null){firstdefaultvalues['videovolumelabel'] = true;}
+
     // Save the init value
     chrome.storage.sync.set(firstdefaultvalues, function() {
     //console.log('Settings saved');
@@ -219,21 +223,27 @@ function updateCountry() {
 	$("select_dialect").style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
 }
 
+// add default language for first run
+// will be rewritten if there is a 'saved setting'
+var webspeechlang = document.getElementById("select_language");
+if(webspeechlang.selectedIndex != -1){webspeechlang.selectedIndex = "6";updateCountry();}
+var webspeechcountry = document.getElementById("select_dialect");
+if(webspeechcountry.selectedIndex != -1){webspeechcountry.selectedIndex = "6";}
+//---
+
 $("select_language").addEventListener('click', function () {updateCountry();},false);
 $("select_language").addEventListener('change', function() {updateCountry();save_options();});
 $("select_dialect").addEventListener('change', function() {save_options();});
 
-	chrome.storage.sync.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'pageaction', 'lampregular', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10','hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains','nightmodehyperlink','block60fps'], function(items){
+	chrome.storage.sync.get(['interval', 'lightcolor', 'lightimage', 'lightimagea', 'lightimagen', 'autoplay', 'playlist', 'flash', 'head', 'fadein', 'fadeout', 'infobar', 'sharebutton', 'likebutton', 'readera', 'readern', 'shortcutlight', 'eyea', 'eyen', 'suggestions', 'videoheadline', 'eastereggs', 'contextmenus', 'viewcount', 'eyealist', 'mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'nighttime', 'begintime', 'endtime', 'addvideobutton', 'likebar', 'ambilight', 'ambilightrangeblurradius', 'ambilightrangespreadradius', 'mousespotlightt', 'ambilightfixcolor', 'ambilightvarcolor', 'ambilightcolorhex', 'ambilight4color', 'ambilight1colorhex', 'ambilight2colorhex', 'ambilight3colorhex', 'ambilight4colorhex', 'password', 'enterpassword', 'noflash', 'hardflash', 'ecosaver', 'ecosavertime', 'dynamic', 'dynamic1', 'dynamic2', 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10','hoveroptiondyn5', 'autoplayonly', 'blur', 'maxquality', 'autowidthyoutube', 'customqualityyoutube', 'cinemaontop', 'alllightsoff', 'spotlightradius', 'atmosphereonly', 'optionskipremember', 'nighttheme', 'nightonly', 'nightenabletheme', 'autoplaydelay', 'autoplaydelaytime', 'motion', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb', 'speech', 'speechlang', 'speechcountry', 'atmosvivid', 'countremember', 'excludedDomains', 'autoplayDomains', 'atmosphereDomains', 'nightDomains', 'cammotiononly', 'speechonly', 'cammotionDomains', 'speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains','nightmodehyperlink','block60fps','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','icon','visopacity'], function(items){
 		if(items['interval']){$('interval').value = items['interval'];$('slider').value = items['interval'];}	
 		else $('interval').value = 80;
 		if(items['lightcolor']){$('lightcolor').value = items['lightcolor'];}
 		else {$('lightcolor').value = '#000000';}
 		if(items['lightimage']){$('lightimage').value = items['lightimage'];}
-		else {$('lightimage').value = "http://www.turnoffthelights.com/extension/images/theater.jpg";}
+		else {$('lightimage').value = "https://www.turnoffthelights.com/extension/images/theater.jpg";}
 		if(items['lightimagea'] == true)$('lightimagea').checked = true;
 		if(items['lightimagen'] == true)$('lightimagen').checked = true;
-		if(items['pageaction'] == true)$('pageaction').checked = true;
-		if(items['lampregular'] == true)$('lampregular').checked = true;
 		if(items['autoplay'] == true)$('autoplay').checked = true;
 		if(items['playlist'] == true)$('playlist').checked = true;
 		if(items['flash'] == true)$('flash').checked = true;
@@ -385,6 +395,15 @@ $("select_dialect").addEventListener('change', function() {save_options();});
 		if(items['nightmodehyperlink']){$('nightmodehyperlink').value = items['nightmodehyperlink'];}
 		else {$('nightmodehyperlink').value = '#ffffff';}
         if(items['block60fps'] == true){$('block60fps').checked = true;}
+        if(items['videovolume'] == true){$('videovolume').checked = true;}
+        if(items['videovolumecolor']){$('videovolumecolor').value = items['videovolumecolor'];}
+		else {$('videovolumecolor').value = '#167ac6';}
+        if(items['videovolumesteps']){$('videovolumesteps').value = items['videovolumesteps'];}
+		else {$('videovolumesteps').value = 5;}
+        if(items['videovolumelabel'] == true){$('videovolumelabel').checked = true;}
+        if(items['icon']){$("btnpreview").src= items['icon']}
+		if(items['visopacity']){$('visopacity').value = items['visopacity'];}
+		else {$('visopacity').value = '80';}
         
 // show remember page
 var countremember = items['countremember'];
@@ -467,7 +486,7 @@ chrome.storage.sync.set({"countremember": countremember});
 // Excluded domains - sort these alphabetically
 var excludedDomains = items["excludedDomains"];
 if(typeof excludedDomains == "undefined")
-excludedDomains = JSON.stringify({'http://www.nytimes.com': true, 'http://www.blogger.com': true});
+excludedDomains = JSON.stringify({'https://www.nytimes.com': true, 'https://www.blogger.com': true});
 		
 if(typeof excludedDomains == "string") {
 	excludedDomains = JSON.parse(excludedDomains);
@@ -499,7 +518,7 @@ wallpapershow.style.display = 'none';dynamicshow.style.display = 'none';
 // autoplay - Excluded domains - sort these alphabetically
 var autoplayDomains = items["autoplayDomains"];
 if(typeof autoplayDomains == "undefined")
-autoplayDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+autoplayDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.vimeo.com': true});
 
 if(typeof autoplayDomains == "string") {
 	autoplayDomains = JSON.parse(autoplayDomains);
@@ -514,7 +533,7 @@ if(typeof autoplayDomains == "string") {
 // atmosphere - Excluded domains - sort these alphabetically
 var atmosphereDomains = items["atmosphereDomains"];
 if(typeof atmosphereDomains == "undefined")
-atmosphereDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+atmosphereDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.vimeo.com': true});
 		
 if(typeof atmosphereDomains == "string") {
 	atmosphereDomains = JSON.parse(atmosphereDomains);
@@ -529,7 +548,7 @@ if(typeof atmosphereDomains == "string") {
 // night - Excluded domains - sort these alphabetically
 var nightDomains = items["nightDomains"];
 if(typeof nightDomains == "undefined")
-nightDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.nytimes.com': true});
+nightDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.nytimes.com': true});
 
 if(typeof nightDomains == "string") {
 	nightDomains = JSON.parse(nightDomains);
@@ -544,7 +563,7 @@ if(typeof nightDomains == "string") {
 // cammotion - Excluded domains - sort these alphabetically
 var cammotionDomains = items["cammotionDomains"];
 if(typeof cammotionDomains == "undefined")
-cammotionDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+cammotionDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.vimeo.com': true});
 		
 if(typeof cammotionDomains == "string") {
 	cammotionDomains = JSON.parse(cammotionDomains);
@@ -559,7 +578,7 @@ if(typeof cammotionDomains == "string") {
 // speech - Excluded domains - sort these alphabetically
 var speechDomains = items["speechDomains"];
 if(typeof speechDomains == "undefined")
-speechDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+speechDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.vimeo.com': true});
 		
 if(typeof speechDomains == "string") {
 	speechDomains = JSON.parse(speechDomains);
@@ -574,7 +593,7 @@ if(typeof speechDomains == "string") {
 // autostop - Excluded domains - sort these alphabetically
 var autostopDomains = items["autostopDomains"];
 if(typeof autostopDomains == "undefined")
-autostopDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+autostopDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.vimeo.com': true});
 		
 if(typeof autostopDomains == "string") {
 	autostopDomains = JSON.parse(autostopDomains);
@@ -589,7 +608,7 @@ if(typeof autostopDomains == "string") {
 // video tool bar - Excluded domains - sort these alphabetically
 var videotoolDomains = items["videotoolDomains"];
 if(typeof videotoolDomains == "undefined")
-videotoolDomains = JSON.stringify({'http://www.youtube.com': true, 'https://www.youtube.com': true, 'http://www.vimeo.com': true});
+videotoolDomains = JSON.stringify({'https://www.youtube.com': true, 'https://www.vimeo.com': true});
 		
 if(typeof videotoolDomains == "string") {
 	videotoolDomains = JSON.parse(videotoolDomains);
@@ -625,7 +644,7 @@ var countA = 0, countB = 0, countC = 0; // start from zero (blur spread) and siz
 function drawImage(){
 	var v = $("beeld");
 	if(v.paused || v.ended){
-	// v.style.webkitBoxShadow = "";
+	// v.style.boxShadow = "";
 
 	// animation go out
 	countA=countA-1;if (countA <= 0){countA=0;}
@@ -661,13 +680,13 @@ var downhex3 = hex3; if(!hex3){ hex3 = "#000000"; } // previous value
 var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
 
 	if(ambilightvarcolor.checked == true){
-	v.style.webkitBoxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + ""; 
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + ""; 
 	}
 	else if(ambilightfixcolor.checked == true){
-	v.style.webkitBoxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + "";
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + "";
 	}
 	else if(ambilight4color.checked == true){
-	v.style.webkitBoxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight1colorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight2colorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight3colorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight4colorhex").value + "";
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight1colorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight2colorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight3colorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight4colorhex").value + "";
 	}
 	// ----
 	
@@ -733,11 +752,11 @@ function rgbToHex(r, g, b) {
     var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
     var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 
-	v.style.webkitBoxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + hex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + hex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + hex4 + "";
 	} else if(ambilightfixcolor.checked == true){
 	var fixhex = $("ambilightcolorhex").value;
 	if(fixhex)fixhex = fixhex;else fixhex = '#000000';
-	v.style.webkitBoxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
 	} else if(ambilight4color.checked == true){
 	var fix1hex = $("ambilight1colorhex").value;
 	var fix2hex = $("ambilight2colorhex").value;
@@ -747,11 +766,11 @@ function rgbToHex(r, g, b) {
 	if(fix2hex)fix2hex = fix2hex;else fix2hex = '#FFEE00';
 	if(fix3hex)fix3hex = fix3hex;else fix3hex = '#00FF00';
 	if(fix4hex)fix4hex = fix4hex;else fix4hex = '#0000FF';
-	v.style.webkitBoxShadow = "0px 0px 5px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
 	}
 	
 	window.requestAnimFrame(drawImage);	
-}else{v.style.webkitBoxShadow = "";}
+}else{v.style.boxShadow = "";}
 }
 
 // Fade engine
@@ -1270,7 +1289,7 @@ removedynamic();
 		var t = 'translateZ( ' + d + 'px ) rotateX( ' + worldXAngle + 'deg) rotateY( ' + worldYAngle + 'deg)';
 		world.style.webkitTransform = t;world.style.MozTransform = t;world.style.oTransform = t;}
 	
-	function update (){
+	function update(){
 		for( var j = 0; j < layers.length; j++ ) {
 			var layer = layers[ j ];
 			layer.data.a += layer.data.speed;
@@ -2216,33 +2235,22 @@ if (browserName == "Opera") {
 	$("helpspeech").style.display = "none";
 }
 
-// Google Chrome
-var stefanvdurl = "https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
-var reviewstefanvdurl = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn/reviews";
-var linkfndownload = "https://chrome.google.com/webstore/detail/finance-toolbar/cichbngoomgnobmmjpagmbkimbamigie";
-var linkppdownload = "https://chrome.google.com/webstore/detail/proper-menubar/egclcjdpndeoioimlbbbmdhcaopnedkp";
-var linkzodownload = "https://chrome.google.com/webstore/detail/zoom/lajondecmobodlejlcjllhojikagldgd";
-var linkaadownload = "https://chrome.google.com/webstore/detail/pkaglmndhfgdaiaccjglghcbnfinfffa";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
-
-var linktotlguide = "https://www.turnoffthelights.com/extension/chromeguide.html";
-var linktotlchangelog = "https://www.turnoffthelights.com/extension/chromechangelog.html";  
-var linktotlfan = "https://www.turnoffthelights.com/extension/chromewelcome.html";
                           
 // Remove remember
 $("skipremember").addEventListener('click', function() {$('remembershare').style.display = "none";});
 $("firstcheckboxskipremember").addEventListener('click', function() {if(firstcheckboxskipremember.checked == true){$('optionskipremember').checked = true;}save_options();});
-var sharetext = "I highly recommended Turn Off the Lights. Download and try it yourself! www.turnoffthelights.com ";
+var sharetext = chrome.i18n.getMessage("sharetextd");
+var stefanvdurl = turnoffthelightsproduct;
 var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
-$("rememberboxrate").addEventListener("click", function() {window.open(reviewstefanvdurl);});
+$("rememberboxrate").addEventListener("click", function() {window.open(writereview);});
 $("rememberboxgoogle").addEventListener("click", function() {window.open('https://plus.google.com/share?ur\l=' + stefanvdaacodeurl + '', 'Share to Google+','width=600,height=460,menubar=no,location=no,status=no');});
-$("rememberboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "[URL]&t=" + sharetext + "");});
-$("rememberboxtwitter").addEventListener("click", function() {window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + " @turnoffthelight", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');});
+$("rememberboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "&t=" + sharetext + "", 'Share to Facebook','width=600,height=460,menubar=no,location=no,status=no');});
+$("rememberboxtwitter").addEventListener("click", function() {window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');});
 
-$("shareboxrate").addEventListener("click", function() {window.open(reviewstefanvdurl);});
 $("shareboxgoogle").addEventListener("click", function() {window.open('https://plus.google.com/share?ur\l=' + stefanvdaacodeurl + '', 'Share to Google+','width=600,height=460,menubar=no,location=no,status=no');});
-$("shareboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "[URL]&t=" + sharetext + "");});
-$("shareboxtwitter").addEventListener("click", function() {window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "@turnoffthelight", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');});
+$("shareboxfacebook").addEventListener("click", function() {window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "&t=" + sharetext + "", 'Share to Facebook','width=600,height=460,menubar=no,location=no,status=no');});
+$("shareboxtwitter").addEventListener("click", function() {window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');});
+
 
 // Detect click / change to save the page and test it.
 var inputs = document.querySelectorAll('input');
@@ -2264,9 +2272,9 @@ function getImage(url) {
     bkimage.onerror = function() {
 	var optionwrongimg = chrome.i18n.getMessage('optionwrongimg');window.alert(optionwrongimg);
 	$('lightimagea').checked = true;
-	$('lightimage').value = 'http://www.turnoffthelights.com/extension/images/theater.jpg';
-	$('example1').style.background = 'url(http://www.turnoffthelights.com/extension/images/theater.jpg)';
-	$('example2').style.background = 'url(http://www.turnoffthelights.com/extension/images/theater.jpg)';
+	$('lightimage').value = 'https://www.turnoffthelights.com/extension/images/theater.jpg';
+	$('example1').style.background = 'url(https://www.turnoffthelights.com/extension/images/theater.jpg)';
+	$('example2').style.background = 'url(https://www.turnoffthelights.com/extension/images/theater.jpg)';
 	save_options();	
 	};
 	bkimage.src = url;
@@ -2310,19 +2318,17 @@ $("confirmpassword").addEventListener('click', function() {save_options();var op
 $("nmconfirmtime").addEventListener('click', function() {save_options();var optiontimetemp = chrome.i18n.getMessage('optiontimesaved');window.alert(optiontimetemp);});
 
 // Save KB download
-$("tabbasic").addEventListener('click', function() {OFFworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabvisual").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabadvan").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabnight").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabmotion").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "";});
-$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = linktotlguide;$('welcomeshare').src = "";$("managed-prefs-banner").style.display = "none";});
-$("tabshare").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$('welcomeshare').src = linktotlfan;$("managed-prefs-banner").style.display = "none";});
+$("tabbasic").addEventListener('click', function() {OFFworkaroundbugfromsafari();$('welcomeguide').src = "";$("managed-prefs-banner").style.display = "";});
+$("tabvisual").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$("managed-prefs-banner").style.display = "";});
+$("tabadvan").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$("managed-prefs-banner").style.display = "";});
+$("tabnight").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$("managed-prefs-banner").style.display = "";});
+$("tabmotion").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$("managed-prefs-banner").style.display = "";});
+$("tabspeech").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = "";$("managed-prefs-banner").style.display = "";});
+$("tabguide").addEventListener('click', function() {ONworkaroundbugfromsafari();$('welcomeguide').src = linkguide;$("managed-prefs-banner").style.display = "none";});
 
-$("buttonreportissue").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/support");});
-$("buttonchangelog").addEventListener('click', function() {window.open(linktotlchangelog);});
-$("buttonreportlist").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/issueslist.html");});
-$("buttontranslateme").addEventListener('click', function() {window.open("http://www.turnoffthelights.com/extension/translate.html");});
+$("buttonreportissue").addEventListener('click', function() {window.open(linksupport);});
+$("buttonchangelog").addEventListener('click', function() {window.open(linkchangelog);});
+$("buttontranslateme").addEventListener('click', function() {window.open(linktranslate);});
 
 function ONworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "";}
 function OFFworkaroundbugfromsafari(){$("dont-turn-off-the-lights").src = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";}
@@ -2341,11 +2347,11 @@ $("confirmtimesaver").addEventListener('click', function() {save_options();var o
 // Check screenshot
 $("wallpaperhide").addEventListener('click', function() {$("imagegallery").style.display = "";$("wallpapershow").style.display = "";$("wallpaperhide").style.display = "none";});
 $("wallpapershow").addEventListener('click', function() {$("imagegallery").style.display = "none";$("wallpapershow").style.display = "none";$("wallpaperhide").style.display = "";});
-$("totlswallpaper5").addEventListener('click', function() {$("lightimage").value = "http://www.turnoffthelights.com/extension/images/totls5.jpg";test();save_options();});
-$("totlswallpaper4").addEventListener('click', function() {$("lightimage").value = "http://www.turnoffthelights.com/extension/images/totls4.jpg";test();save_options();});
-$("totlswallpaper3").addEventListener('click', function() {$("lightimage").value = "http://www.turnoffthelights.com/extension/images/totls3.jpg";test();save_options();});
-$("totlswallpaper2").addEventListener('click', function() {$("lightimage").value = "http://www.turnoffthelights.com/extension/images/totls2.jpg";test();save_options();});
-$("totlswallpaper1").addEventListener('click', function() {$("lightimage").value = "http://www.turnoffthelights.com/extension/images/theater.jpg";test();save_options();});
+$("totlswallpaper5").addEventListener('click', function() {$("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls5.jpg";test();save_options();});
+$("totlswallpaper4").addEventListener('click', function() {$("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls4.jpg";test();save_options();});
+$("totlswallpaper3").addEventListener('click', function() {$("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls3.jpg";test();save_options();});
+$("totlswallpaper2").addEventListener('click', function() {$("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls2.jpg";test();save_options();});
+$("totlswallpaper1").addEventListener('click', function() {$("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg";test();save_options();});
 
 // dynamic test
 $("dynamic").addEventListener('click', function() {if(dynamic.checked == true){dynamictest();$('lightdynamic').disabled = false;}else{removedynamic();$('lightdynamic').disabled = true;}});
@@ -2374,6 +2380,10 @@ $("autoplayremovebutton").addEventListener('click', function() {autoplayremoveSe
 // YouTube quality
 $("youtubequality").addEventListener('click', function() {save_options();});
 $("youtubequality").addEventListener('change', function() {save_options();});
+
+// HTML5 video volume steps
+$("videovolumesteps").addEventListener('click', function() {save_options();});
+$("videovolumesteps").addEventListener('change', function() {save_options();});
 
 // atmosphere Add website
 $("atmosphereaddbutton").addEventListener('click', function() {atmosphereaddWhitelistDomain();});
@@ -2430,12 +2440,11 @@ $("apnt").addEventListener('click', function() {$("sectionauroraplayerappbox").s
 $("magetapp").addEventListener('click', function() {window.open("https://www.turnoffthelights.com/mobile.html");$("sectionmobileappbox").style.display = "none";chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version});});
 $("mant").addEventListener('click', function() {$("sectionmobileappbox").style.display = "none";chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version});});
 
-// retina check
-if(window.devicePixelRatio >= 2) {
-$("loadinglamp").src = "icons/icon16@2x.png";$("loadinglamp").style.width = "16px"; $("loadinglamp").style.height = "16px";
-$("welcomelamp").src = "icons/icon16@2x.png";$("welcomelamp").style.width = "16px"; $("welcomelamp").style.height = "16px";
-$("rememberlamp").src = "icons/icon16@2x.png";$("rememberlamp").style.width = "16px"; $("rememberlamp").style.height = "16px";
-$("auroraplayericon").src = "images/aurora-player_32x32@2x.png";
-}
+// Lamp Icons
+$("p1").addEventListener('click', function() {document.images['preview'].src=$("p1").src;save_options()});
+$("p2").addEventListener('click', function() {document.images['preview'].src=$("p2").src;save_options()});
+$("p3").addEventListener('click', function() {document.images['preview'].src=$("p3").src;save_options()});
+$("p4").addEventListener('click', function() {document.images['preview'].src=$("p4").src;save_options()});
+$("p5").addEventListener('click', function() {document.images['preview'].src=$("p5").src;save_options()});
 
 });

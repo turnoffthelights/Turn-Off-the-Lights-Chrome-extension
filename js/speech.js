@@ -37,14 +37,26 @@ var userSaid = function(str, s) {return str.indexOf(s) > -1;}
 
 function removespeechinfo(){
 // you are speaking now -- remove the bubble
-chrome.extension.sendMessage({'name' : 'slidersave', 'value' : true});
-chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/speechbubbleremove.js"});}});											
+chrome.runtime.sendMessage({'name' : 'slidersave', 'value' : true});
+chrome.tabs.query({active: true}, function (tabs) {
+	for (var i = 0; i < tabs.length; i++) {
+		if (tabs[i].url.match(/^http/i)){
+			chrome.tabs.executeScript(tabs[i].id, {file: "js/speechbubbleremove.js"});
+        }
+	}
+});									
 }
 
 function addspeechinfo(){
 // you are speaking now -- add the bubble
-chrome.extension.sendMessage({'name' : 'slidersave', 'value' : true});						
-chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/speechbubbleadd.js"});}});
+chrome.runtime.sendMessage({'name' : 'slidersave', 'value' : true});						
+chrome.tabs.query({active: true}, function (tabs) {
+	for (var i = 0; i < tabs.length; i++) {
+		if (tabs[i].url.match(/^http/i)){
+			chrome.tabs.executeScript(tabs[i].id, {file: "js/speechbubbleadd.js"});
+        }
+	}
+});	
 }
 
 var final_transcript = '';
@@ -115,20 +127,44 @@ var i18nldesspeech5command = chrome.i18n.getMessage("desspeech5command"); // bro
 				if (userSaid(final_transcript, i18nldesspeech1command)) {
 				// console.log("yes: turn off the lights");
 				chrome.storage.sync.set({"slideeffect": true});
-				chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}});
+				chrome.tabs.query({active: true}, function (tabs) {
+					for (var i = 0; i < tabs.length; i++) {
+						if (tabs[i].url.match(/^http/i)){
+							chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
+						}
+					}
+				});
 				}
 				else if (userSaid(final_transcript, i18nldesspeech2command)) {
 				// console.log("yes: turn on the lights");
 				chrome.storage.sync.set({"slideeffect": true});
-				chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}});
+				chrome.tabs.query({active: true}, function (tabs) {
+					for (var i = 0; i < tabs.length; i++) {
+						if (tabs[i].url.match(/^http/i)){
+							chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
+						}
+					}
+				});	
 				}
 				// Play the video
 				else if (userSaid(final_transcript, i18nldesspeech3command)) {
-				chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/videoplay.js"});}});
+				chrome.tabs.query({active: true}, function (tabs) {
+					for (var i = 0; i < tabs.length; i++) {
+						if (tabs[i].url.match(/^http/i)){
+							chrome.tabs.executeScript(tabs[i].id, {file: "js/videoplay.js"});
+						}
+					}
+				});	
 				}
 				// Stop the video
 				else if (userSaid(final_transcript, i18nldesspeech4command)) {
-				chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/videopause.js"});}});
+				chrome.tabs.query({active: true}, function (tabs) {
+					for (var i = 0; i < tabs.length; i++) {
+						if (tabs[i].url.match(/^http/i)){
+							chrome.tabs.executeScript(tabs[i].id, {file: "js/videopause.js"});
+						}
+					}
+				});	
 				}
 		removespeechinfo();
 		} else {

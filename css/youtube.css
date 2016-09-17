@@ -28,3 +28,4 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 
 .caption-window.ytp-caption-window-bottom{z-index:1001!important;pointer-events:none!important}
+.ytp-contextmenu{z-index:1001!important}

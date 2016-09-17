@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Blacklist",
     "description":"Blacklist"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlänk",
+    "description":"Hyperlänk"
+  },
+  "titelblock60fps":{
+    "message":"Blockera 60fps",
+    "description":"Blockera 60fps"
+  },
+  "titelvolume":{
+    "message":"Videovolymsreglage",
+    "description":"Videovolymsreglage"
+  },
+  "desvideovolume":{
+    "message":"Volymkontroll på aktuell videospelare med en musskroll",
+    "description":"Volymkontroll på aktuell videospelare med en musskroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Reglagefärg",
+    "description":"Reglagefärg"
+  },
+  "desvolumelabel":{
+    "message":"Visa volymetiketten",
+    "description":"Visa volymetiketten"
+  },
+  "desvolumesteps":{
+    "message":"Antal steg för varje skroll",
+    "description":"Antal steg för varje skroll"
+  },
+  "sharetexta":{
+    "message":"Skaffa detta häftiga Turn Off the Lights webbläsartillägg",
+    "description":"Skaffa detta häftiga Turn Off the Lights webbläsartillägg"
+  },
+  "sharetextb":{
+    "message":"Hé, detta är otroligt, jag testade idag webbläsartillägget för Turn Off the Lights ",
+    "description":"Hé, detta är otroligt, jag testade idag webbläsartillägget för Turn Off the Lights "
+  },
+  "sharetextc":{
+    "message":"Det bästa och otroliga webbläsartillägget för Turn Off the Lights",
+    "description":"Det bästa och otroliga webbläsartillägget för Turn Off the Lights"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights tillägg är det bästa verktyget på YouTube. Ladda ner och testa själv!",
+    "description":"Turn Off the Lights tillägg är det bästa verktyget på YouTube. Ladda ner och testa själv!"
+  },
+  "titellampchoose":{
+    "message":"Välj din favoritstil på lampa",
+    "description":"Välj din favoritstil på lampa"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights fungerar inte på denna webbsida. Försök på en annan sida.",
+    "description":"Turn Off the Lights fungerar inte på denna webbsida. Försök på en annan sida."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Välkommen Guide",
+    "description":"Välkommen Guide"
+  },
+  "titelpopupsupport":{
+    "message":"Support",
+    "description":"Support"
+  },
+  "titelpopupoptions":{
+    "message":"Alternativ",
+    "description":"Alternativ"
+  },
+  "titelpopupratestars":{
+    "message":"Ge 5 stjärnor",
+    "description":"Ge 5 stjärnor"
+  },
+  "titelvisenable":{
+    "message":"Aktivera\/Inaktivera ljudvisualisering",
+    "description":"Aktivera\/Inaktivera ljudvisualisering"
+  },
+  "titelvischoose":{
+    "message":"Välj din ljudvisualisering",
+    "description":"Välj din ljudvisualisering"
+  },
+  "titelvisblocks":{
+    "message":"Block",
+    "description":"Block"
+  },
+  "titelvisfrequency":{
+    "message":"Upprepning",
+    "description":"Upprepning"
+  },
+  "titelvistunnel":{
+    "message":"Musiktunnel",
+    "description":"Musiktunnel"
+  },
+  "titelvisualization":{
+    "message":"Ljudvisualisering",
+    "description":"Ljudvisualisering"
+  },
+  "desvisopacity":{
+    "message":"Opacitetsvärdet på ljudvisualiseringsbakgrunden",
+    "description":"Opacitetsvärdet på ljudvisualiseringsbakgrunden"
+  },
+  "vtoolvisualization":{
+    "message":"En knapp för att visa ljudvisualiseringen för nuvarande videospelare",
+    "description":"En knapp för att visa ljudvisualiseringen för nuvarande videospelare"
   }
 }

@@ -339,16 +339,29 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
                             // console.log('over up');
 							// to enable the fall down effect
 							chrome.storage.sync.set({"slideeffect": true});
-							chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}});	
+                            chrome.tabs.query({active: true}, function (tabs) {
+                                for (var i = 0; i < tabs.length; i++) {
+                                    if (tabs.url.match(/^http/i)){
+                                    chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+                                    }
+                                }
+						    }
+					        );
                         }
                         else{
 							// console.log('up');
 							// to enable the fall down effect
 							chrome.storage.sync.set({"slideeffect": true});
-							chrome.tabs.getSelected(null, function(tab) {if (tab.url.match(/^http/i)){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}});	
+							chrome.tabs.query({active: true}, function (tabs) {
+                                for (var i = 0; i < tabs.length; i++) {
+                                    if (tabs.url.match(/^http/i)){
+                                    chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+                                    }
+                                }
+						    }
+					        );
                         }
-                        }
-                    else if (dy < -movethresh && !dirx) {
+                    } else if (dy < -movethresh && !dirx) {
                         if (davg > overthresh) {
 							//console.log('over down')
 							//writeinlog("over down");

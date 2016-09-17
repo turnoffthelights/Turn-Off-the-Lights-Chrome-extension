@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Svarteliste",
     "description":"Svarteliste"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperkobling",
+    "description":"Hyperkobling"
+  },
+  "titelblock60fps":{
+    "message":"Blokk 60fps",
+    "description":"Blokk 60fps"
+  },
+  "titelvolume":{
+    "message":"Video volumskyveknapp",
+    "description":"Video volumskyveknapp"
+  },
+  "desvideovolume":{
+    "message":"Juster volum for den gjeldende videospiller med et musehjul",
+    "description":"Juster volum for den gjeldende videospiller med et musehjul"
+  },
+  "desvideovolumecolor":{
+    "message":"Farge på glidebryteren",
+    "description":"Farge på glidebryteren"
+  },
+  "desvolumelabel":{
+    "message":"Vis volumnavnet",
+    "description":"Vis volumnavnet"
+  },
+  "desvolumesteps":{
+    "message":"Antall trinn for hver Rull",
+    "description":"Antall trinn for hver Rull"
+  },
+  "sharetexta":{
+    "message":"Få denne kule Turn Off the Lights Nettleserutvidelse",
+    "description":"Få denne kule Turn Off the Lights Nettleserutvidelse"
+  },
+  "sharetextb":{
+    "message":"Hei, dette er fantastisk. I dag prøvde jeg denne Turn Off the Lights nettleserutvidelse ",
+    "description":"Hei, dette er fantastisk. I dag prøvde jeg denne Turn Off the Lights nettleserutvidelse "
+  },
+  "sharetextc":{
+    "message":"Den beste og fantastiske Turn Off the Lights nettleserutvidelse",
+    "description":"Den beste og fantastiske Turn Off the Lights nettleserutvidelse"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights utvidelse er det beste verktøyet for YouTube. Last ned og prøv det selv!",
+    "description":"Turn Off the Lights utvidelse er det beste verktøyet for YouTube. Last ned og prøv det selv!"
+  },
+  "titellampchoose":{
+    "message":"Velg din favoritt lampestil",
+    "description":"Velg din favoritt lampestil"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights fungerer ikke på denne nettsiden. Prøv en annen side.",
+    "description":"Turn Off the Lights fungerer ikke på denne nettsiden. Prøv en annen side."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Velkomstguide",
+    "description":"Velkomstguide"
+  },
+  "titelpopupsupport":{
+    "message":"Støtte",
+    "description":"Støtte"
+  },
+  "titelpopupoptions":{
+    "message":"Alternativer",
+    "description":"Alternativer"
+  },
+  "titelpopupratestars":{
+    "message":"Ranger 5 stjerner",
+    "description":"Ranger 5 stjerner"
+  },
+  "titelvisenable":{
+    "message":"Aktiver\/Deaktiver lyd-visualisering",
+    "description":"Aktiver\/Deaktiver lyd-visualisering"
+  },
+  "titelvischoose":{
+    "message":"Velg lyd-visualisering",
+    "description":"Velg lyd-visualisering"
+  },
+  "titelvisblocks":{
+    "message":"Blokkerer",
+    "description":"Blokkerer"
+  },
+  "titelvisfrequency":{
+    "message":"Hyppighet",
+    "description":"Hyppighet"
+  },
+  "titelvistunnel":{
+    "message":"Musikk Tunnel",
+    "description":"Musikk Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Lyd-visualisering",
+    "description":"Lyd-visualisering"
+  },
+  "desvisopacity":{
+    "message":"Tettheten til bakgrunn for lyd-visualisering",
+    "description":"Tettheten til bakgrunn for lyd-visualisering"
+  },
+  "vtoolvisualization":{
+    "message":"En knapp for å vise lyd-visualisering for gjeldende videospiller",
+    "description":"En knapp for å vise lyd-visualisering for gjeldende videospiller"
   }
 }

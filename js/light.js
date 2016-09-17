@@ -1515,7 +1515,7 @@ if(stretchable)  {
 			// disable for on YouTube website
 			if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}
 			else{
-			/*chrome.extension.sendMessage({name: 'currenttabforblur'}, function(response) {
+			/*chrome.runtime.sendMessage({name: 'currenttabforblur'}, function(response) {
 				var img = response.screenshotUrl;
 				var newblur = document.createElement('img');
 				newblur.setAttribute('id','stefanvdblurimage');

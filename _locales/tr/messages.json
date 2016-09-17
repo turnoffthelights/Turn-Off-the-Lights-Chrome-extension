@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Kara liste",
     "description":"Kara liste"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Köprü",
+    "description":"Köprü"
+  },
+  "titelblock60fps":{
+    "message":"60fps engelle",
+    "description":"60fps engelle"
+  },
+  "titelvolume":{
+    "message":"Video Ses Seviyesi Kaydırıcısı",
+    "description":"Video Ses Seviyesi Kaydırıcısı"
+  },
+  "desvideovolume":{
+    "message":"Mevcut video oynatıcının sesini fare kaydırması ile denetleyin",
+    "description":"Mevcut video oynatıcının sesini fare kaydırması ile denetleyin"
+  },
+  "desvideovolumecolor":{
+    "message":"Kaydırıcı rengi",
+    "description":"Kaydırıcı rengi"
+  },
+  "desvolumelabel":{
+    "message":"Ses etiketini göster",
+    "description":"Ses etiketini göster"
+  },
+  "desvolumesteps":{
+    "message":"Her kaydırma için adım sayısı",
+    "description":"Her kaydırma için adım sayısı"
+  },
+  "sharetexta":{
+    "message":"Bu Harika Turn Off the Lights Tarayıcı Eklentisine Sahip Olun",
+    "description":"Bu Harika Turn Off the Lights Tarayıcı Eklentisine Sahip Olun"
+  },
+  "sharetextb":{
+    "message":"Bu inanılmaz. Turn Off the Lights tarayıcı uzantısını daha bugün denedim ",
+    "description":"Bu inanılmaz. Turn Off the Lights tarayıcı uzantısını daha bugün denedim "
+  },
+  "sharetextc":{
+    "message":"Turn Off the Lights tarayıcı uzantısı sınıfının en iyisi ve inanılmaz",
+    "description":"Turn Off the Lights tarayıcı uzantısı sınıfının en iyisi ve inanılmaz"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights uzantısı YouTube için en iyi araç. İndirin ve kendinizi deneyin!",
+    "description":"Turn Off the Lights uzantısı YouTube için en iyi araç. İndirin ve kendinizi deneyin!"
+  },
+  "titellampchoose":{
+    "message":"En sevdiğiniz lamba tarzını seçin",
+    "description":"En sevdiğiniz lamba tarzını seçin"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights bu web sayfası üzerinde çalışmaz. Başka bir sayfa üzerinde deneyin.",
+    "description":"Turn Off the Lights bu web sayfası üzerinde çalışmaz. Başka bir sayfa üzerinde deneyin."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Hoşgeldiniz Kılavuzu",
+    "description":"Hoşgeldiniz Kılavuzu"
+  },
+  "titelpopupsupport":{
+    "message":"Destek",
+    "description":"Destek"
+  },
+  "titelpopupoptions":{
+    "message":"Seçenekler",
+    "description":"Seçenekler"
+  },
+  "titelpopupratestars":{
+    "message":"5 Yıldız Verin",
+    "description":"5 Yıldız Verin"
+  },
+  "titelvisenable":{
+    "message":"Ses Görselleştirmesini etkinleştir\/devre dışı bırak",
+    "description":"Ses Görselleştirmesini etkinleştir\/devre dışı bırak"
+  },
+  "titelvischoose":{
+    "message":"Ses Görselleştirmenizi seçin",
+    "description":"Ses Görselleştirmenizi seçin"
+  },
+  "titelvisblocks":{
+    "message":"Bloklar",
+    "description":"Bloklar"
+  },
+  "titelvisfrequency":{
+    "message":"Sıklık",
+    "description":"Sıklık"
+  },
+  "titelvistunnel":{
+    "message":"Müzik Tüneli",
+    "description":"Müzik Tüneli"
+  },
+  "titelvisualization":{
+    "message":"Ses Görselleştirme",
+    "description":"Ses Görselleştirme"
+  },
+  "desvisopacity":{
+    "message":"Ses görsellleştirme arka planının şeffaflık değeri",
+    "description":"Ses görsellleştirme arka planının şeffaflık değeri"
+  },
+  "vtoolvisualization":{
+    "message":"Mevcut video için ses görselleştirmesini gösteren bir düğme",
+    "description":"Mevcut video için ses görselleştirmesini gösteren bir düğme"
   }
 }

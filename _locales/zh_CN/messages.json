@@ -1076,8 +1076,8 @@
     "description":"风暴"
   },
   "desdynamictriangulation":{
-    "message":"Triangulation",
-    "description":"Triangulation"
+    "message":"三角测量",
+    "description":"三角测量"
   },
   "desdynamicstars":{
     "message":"星标",
@@ -1088,8 +1088,8 @@
     "description":"Turn Off the Lights也适用于您的移动设备。"
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame",
-    "description":"Shows the full 360 degrees YouTube video in one frame"
+    "message":"在一个框架中显示完整的360度YouTube视频",
+    "description":"在一个框架中显示完整的360度YouTube视频"
   },
   "titelvideotool":{
     "message":"视频工具栏",
@@ -1104,8 +1104,8 @@
     "description":"设置视频播放器到全窗口模式的按钮"
   },
   "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
+    "message":"在当前视频播放器中添加筛选器的按钮",
+    "description":"在当前视频播放器中添加筛选器的按钮"
   },
   "vtoolreplay":{
     "message":"重复当前视频播放器的按钮",
@@ -1144,8 +1144,8 @@
     "description":"正常"
   },
   "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
+    "message":"赞",
+    "description":"赞"
   },
   "titelvideotoolsubscribe":{
     "message":"订阅",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"黑名单",
     "description":"黑名单"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"Block 60fps",
+    "description":"Block 60fps"
+  },
+  "titelvolume":{
+    "message":"Video Volume Slider",
+    "description":"Video Volume Slider"
+  },
+  "desvideovolume":{
+    "message":"Control volume of that current video player with a mouse scroll",
+    "description":"Control volume of that current video player with a mouse scroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Color of the slider",
+    "description":"Color of the slider"
+  },
+  "desvolumelabel":{
+    "message":"Show the volume label",
+    "description":"Show the volume label"
+  },
+  "desvolumesteps":{
+    "message":"The number of steps for each scroll",
+    "description":"The number of steps for each scroll"
+  },
+  "sharetexta":{
+    "message":"Get this Cool Turn Off the Lights Browser Extension",
+    "description":"Get this Cool Turn Off the Lights Browser Extension"
+  },
+  "sharetextb":{
+    "message":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
+    "description":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+  },
+  "sharetextc":{
+    "message":"The Best and Amazing Turn Off the Lights Browser extension",
+    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!",
+    "description":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!"
+  },
+  "titellampchoose":{
+    "message":"Choose your favorite lamp style",
+    "description":"Choose your favorite lamp style"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights doesn't work on this web page. Try another page.",
+    "description":"Turn Off the Lights doesn't work on this web page. Try another page."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"使用指南",
+    "description":"使用指南"
+  },
+  "titelpopupsupport":{
+    "message":"支持",
+    "description":"支持"
+  },
+  "titelpopupoptions":{
+    "message":"选项",
+    "description":"选项"
+  },
+  "titelpopupratestars":{
+    "message":"打5分",
+    "description":"打5分"
+  },
+  "titelvisenable":{
+    "message":"Enable\/disable the Audio Visualization",
+    "description":"Enable\/disable the Audio Visualization"
+  },
+  "titelvischoose":{
+    "message":"Choose your Audio Visualization",
+    "description":"Choose your Audio Visualization"
+  },
+  "titelvisblocks":{
+    "message":"区块",
+    "description":"区块"
+  },
+  "titelvisfrequency":{
+    "message":"Frequency",
+    "description":"Frequency"
+  },
+  "titelvistunnel":{
+    "message":"Music Tunnel",
+    "description":"Music Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio Visualization",
+    "description":"Audio Visualization"
+  },
+  "desvisopacity":{
+    "message":"The opacity value of the audio visualization background",
+    "description":"The opacity value of the audio visualization background"
+  },
+  "vtoolvisualization":{
+    "message":"A button to show the audio visualization for the current video player",
+    "description":"A button to show the audio visualization for the current video player"
   }
 }

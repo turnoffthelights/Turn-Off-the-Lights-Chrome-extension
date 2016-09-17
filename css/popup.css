@@ -1,0 +1,46 @@
+/*
+//================================================
+
+Turn Off the Lights
+The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
+Copyright (C) 2016 Stefan vd
+www.stefanvd.net
+www.turnoffthelights.com
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.0/
+
+//================================================
+*/
+
+body{min-width:295px;min-height:275px;padding:0;margin:0;user-select:none;-webkit-user-select:none}
+.button{cursor:pointer;width:100%;height:55px;font-family:sans-serif,'Lucida Grande','Helvetica Neue';font-size:12px;text-align:center;padding:0px;line-height:25px;color:white;display:table-cell}
+.button:hover{color:white;opacity:.88}
+.blue{background:#4285f4}
+.infodot{font-size:16px;display:inline-table;margin-right:5px}
+.btnbox{margin:auto;left:0;right:0;width:calc(295px - 15px)}
+.btnbox .dbn{cursor:pointer;padding:5px;height:60px;width:60px;display:inline-block;float:left;vertical-align:top;margin:5px 10px;border:1px solid transparent;position:relative}
+.btnbox .dbn:hover{border:1px solid #ccc;}
+.googleplus{background:url(../images/googleplus@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/googleplus.png) 1x,url(../images/googleplus@2x.png) 2x);width:28px;height:18px;display: inline-block;background-size:cover;margin:auto;position:absolute;top:0;right:0;bottom:15px;left:0}
+.btnbox .dbn .lbl{color:#404040;position:absolute;bottom:5px;font-size:11px;text-align:center;left:0;right:0}
+.btnbox .donatebck{background:#fcba49;border:1px solid #F3A835}
+.btnbox .donatebck .lbl{color:white}
+.textrate{text-align:center;font-size:30px;top:10px;left:0;right:0;position:absolute;color:#fcba49}
+.textdonate,.textsettings{text-align:center;font-size:30px;top:10px;left:0;right:0;position:absolute}
+.googleplus{background:url(../images/googleplus@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/googleplus.png) 1x,url(../images/googleplus@2x.png) 2x);width:28px;height:18px;display: inline-block;background-size:cover;margin:auto;position:absolute;top:0;right:0;bottom:15px;left:0}
+.facebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin:auto;position:absolute;top:0;right:0;bottom:15px;left:0}
+.twitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:21px;height:18px;display:inline-block;background-size:cover;margin:auto;position:absolute;top:0;right:0;bottom:15px;left:0}

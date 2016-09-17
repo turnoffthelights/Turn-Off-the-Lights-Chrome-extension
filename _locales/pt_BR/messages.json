@@ -1100,16 +1100,16 @@
     "description":"Mostrar barra de ferramentas abaixo de sua tela para personalizar o player de vídeo atual"
   },
   "vtoolfullscreen":{
-    "message":"Botão para definir o leitor de vídeo para tamanho de ecrã inteiro",
-    "description":"Botão para definir o leitor de vídeo para tamanho de ecrã inteiro"
+    "message":"Um botão para mudar o reprodutor de vídeo para tela cheia",
+    "description":"Um botão para mudar o reprodutor de vídeo para tela cheia"
   },
   "vtoolfilter":{
-    "message":"Um botão para adicionar um filtro no player de vídeo atual",
-    "description":"Um botão para adicionar um filtro no player de vídeo atual"
+    "message":"Um botão para adicionar um filtro no reprodutor de vídeo atual",
+    "description":"Um botão para adicionar um filtro no reprodutor de vídeo atual"
   },
   "vtoolreplay":{
-    "message":"Um botão para reproduzir o player de vídeo atual",
-    "description":"Um botão para reproduzir o player de vídeo atual"
+    "message":"Um botão para tocar novamente o reprodutor de vídeo atual",
+    "description":"Um botão para tocar novamente o reprodutor de vídeo atual"
   },
   "titelvideotoolgrayscale":{
     "message":"tons de cinza",
@@ -1160,8 +1160,8 @@
     "description":"Filtro"
   },
   "titelvideotoolfullwindow":{
-    "message":"Tela Inteiro",
-    "description":"Tela Inteiro"
+    "message":"Tela cheia",
+    "description":"Tela cheia"
   },
   "titelreflection":{
     "message":"Reflexão",
@@ -1172,8 +1172,8 @@
     "description":"Mostrar o efeito de reflexo em todos os vídeos"
   },
   "desvideotoolonly":{
-    "message":"Ative a barra de ferramentas de vídeo apenas no seguinte site:",
-    "description":"Ative a barra de ferramentas de vídeo apenas no seguinte site:"
+    "message":"Ativar a barra de ferramentas de vídeo apenas nos seguintes sites:",
+    "description":"Ativar a barra de ferramentas de vídeo apenas nos seguintes sites:"
   },
   "titelvideotoolwhitelist":{
     "message":"Lista branca",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Lista negra",
     "description":"Lista negra"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hiperlink",
+    "description":"Hiperlink"
+  },
+  "titelblock60fps":{
+    "message":"Bloquear 60fps",
+    "description":"Bloquear 60fps"
+  },
+  "titelvolume":{
+    "message":"Controle de Volume de vídeo",
+    "description":"Controle de Volume de vídeo"
+  },
+  "desvideovolume":{
+    "message":"Controle o volume do reprodutor de vídeo atual com uma rolagem do mouse",
+    "description":"Controle o volume do reprodutor de vídeo atual com uma rolagem do mouse"
+  },
+  "desvideovolumecolor":{
+    "message":"Cor do controle do volume",
+    "description":"Cor do controle do volume"
+  },
+  "desvolumelabel":{
+    "message":"Mostrar o rótulo do volume",
+    "description":"Mostrar o rótulo do volume"
+  },
+  "desvolumesteps":{
+    "message":"O número de divisões para cada rolagem",
+    "description":"O número de divisões para cada rolagem"
+  },
+  "sharetexta":{
+    "message":"Obtenha essa extensão maneira Turn Off the Lights para o browser",
+    "description":"Obtenha essa extensão maneira Turn Off the Lights para o browser"
+  },
+  "sharetextb":{
+    "message":"É, isto é incrível. Acabei de experimentar esta extensão Turn Off the Lights para o navegador ",
+    "description":"É, isto é incrível. Acabei de experimentar esta extensão Turn Off the Lights para o navegador "
+  },
+  "sharetextc":{
+    "message":"A melhor e fantástica extensão Turn Off the Lights para o navegador",
+    "description":"A melhor e fantástica extensão Turn Off the Lights para o navegador"
+  },
+  "sharetextd":{
+    "message":"A extensão Turn Off the Lights é a melhor ferramenta para YouTube. Baixe e experimente você mesmo!",
+    "description":"A extensão Turn Off the Lights é a melhor ferramenta para YouTube. Baixe e experimente você mesmo!"
+  },
+  "titellampchoose":{
+    "message":"Escolha o seu estilo favorito de lâmpada",
+    "description":"Escolha o seu estilo favorito de lâmpada"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights não funciona nesta página da web. Tente outra página.",
+    "description":"Turn Off the Lights não funciona nesta página da web. Tente outra página."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Guia de Boas-vindas",
+    "description":"Guia de Boas-vindas"
+  },
+  "titelpopupsupport":{
+    "message":"Suporte",
+    "description":"Suporte"
+  },
+  "titelpopupoptions":{
+    "message":"Opções",
+    "description":"Opções"
+  },
+  "titelpopupratestars":{
+    "message":"Classificar com 5 estrelas",
+    "description":"Classificar com 5 estrelas"
+  },
+  "titelvisenable":{
+    "message":"Ativar\/desativar a visualização de áudio",
+    "description":"Ativar\/desativar a visualização de áudio"
+  },
+  "titelvischoose":{
+    "message":"Escooolha sua visualização de áudio",
+    "description":"Escooolha sua visualização de áudio"
+  },
+  "titelvisblocks":{
+    "message":"Blocos",
+    "description":"Blocos"
+  },
+  "titelvisfrequency":{
+    "message":"Frequência",
+    "description":"Frequência"
+  },
+  "titelvistunnel":{
+    "message":"Túnel de música",
+    "description":"Túnel de música"
+  },
+  "titelvisualization":{
+    "message":"Visualização de áudio",
+    "description":"Visualização de áudio"
+  },
+  "desvisopacity":{
+    "message":"O valor de opacidade do fundo da visualização de áudio",
+    "description":"O valor de opacidade do fundo da visualização de áudio"
+  },
+  "vtoolvisualization":{
+    "message":"Um botão para mostrar a visualização de áudio para o player de vídeo atual",
+    "description":"Um botão para mostrar a visualização de áudio para o player de vídeo atual"
   }
 }

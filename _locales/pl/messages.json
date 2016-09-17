@@ -1100,80 +1100,80 @@
     "description":"Pokaż pasek narzędzi poniżej ekranu, aby dostosować bieżący odtwarzacz wideo"
   },
   "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
+    "message":"Przycisk ustawiający wielkość odtwarzacza wideo na pełny rozmiar",
+    "description":"Przycisk ustawiający wielkość odtwarzacza wideo na pełny rozmiar"
   },
   "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
+    "message":"Przycisk aby dodać filtr w bieżącym odtwarzaczu wideo",
+    "description":"Przycisk aby dodać filtr w bieżącym odtwarzaczu wideo"
   },
   "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
+    "message":"Przycisk do powtarzania bieżącego odtwarzacza wideo",
+    "description":"Przycisk do powtarzania bieżącego odtwarzacza wideo"
   },
   "titelvideotoolgrayscale":{
-    "message":"grayscale",
-    "description":"grayscale"
+    "message":"skala szarości",
+    "description":"skala szarości"
   },
   "titelvideotoolsepia":{
     "message":"sepia",
     "description":"sepia"
   },
   "titelvideotoolinvert":{
-    "message":"invert",
-    "description":"invert"
+    "message":"odwróc",
+    "description":"odwróc"
   },
   "titelvideotoolcontrast":{
-    "message":"contrast",
-    "description":"contrast"
+    "message":"kontrast",
+    "description":"kontrast"
   },
   "titelvideotoolsaturate":{
-    "message":"saturation",
-    "description":"saturation"
+    "message":"nasycenie",
+    "description":"nasycenie"
   },
   "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
+    "message":"barwa rotacji",
+    "description":"barwa rotacji"
   },
   "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
+    "message":"jasność",
+    "description":"jasność"
   },
   "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
+    "message":"normalny",
+    "description":"normalny"
   },
   "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
+    "message":"Polub",
+    "description":"Polub"
   },
   "titelvideotoolsubscribe":{
     "message":"Zasubskrybuj",
     "description":"Zasubskrybuj"
   },
   "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
+    "message":"Powtórz",
+    "description":"Powtórz"
   },
   "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
+    "message":"Filtry",
+    "description":"Filtry"
   },
   "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
+    "message":"Pełen Ekran",
+    "description":"Pełen Ekran"
   },
   "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
+    "message":"Odbicie",
+    "description":"Odbicie"
   },
   "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
+    "message":"Pokaż efect odbicia na wszystkich filmach",
+    "description":"Pokaż efect odbicia na wszystkich filmach"
   },
   "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
+    "message":"Uaktywnik pasek narzędzi \"Video Tool Bar\" Tylko na następujących witrynie(ach):",
+    "description":"Uaktywnik pasek narzędzi \"Video Tool Bar\" Tylko na następujących witrynie(ach):"
   },
   "titelvideotoolwhitelist":{
     "message":"Lista dozwolonych",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Lista zabronionych",
     "description":"Lista zabronionych"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hiperłącze",
+    "description":"Hiperłącze"
+  },
+  "titelblock60fps":{
+    "message":"Blok 60fps",
+    "description":"Blok 60fps"
+  },
+  "titelvolume":{
+    "message":"Suwak głośności wideo",
+    "description":"Suwak głośności wideo"
+  },
+  "desvideovolume":{
+    "message":"Kontrola głośności bieżącego wideo kołem na myszy",
+    "description":"Kontrola głośności bieżącego wideo kołem na myszy"
+  },
+  "desvideovolumecolor":{
+    "message":"Kolor suwaka",
+    "description":"Kolor suwaka"
+  },
+  "desvolumelabel":{
+    "message":"Pokaż etykietę głośności",
+    "description":"Pokaż etykietę głośności"
+  },
+  "desvolumesteps":{
+    "message":"Liczba kroków dla każdego przewijania",
+    "description":"Liczba kroków dla każdego przewijania"
+  },
+  "sharetexta":{
+    "message":"Pobierz rozszerzenie Turn Off the Lights",
+    "description":"Pobierz rozszerzenie Turn Off the Lights"
+  },
+  "sharetextb":{
+    "message":"Cześć, to jest niesamowite. Po prostu próbowałem dziś to rozszerzenie Turn Off the Lights dla przeglądarki ",
+    "description":"Cześć, to jest niesamowite. Po prostu próbowałem dziś to rozszerzenie Turn Off the Lights dla przeglądarki "
+  },
+  "sharetextc":{
+    "message":"Najlepszy i niesamowite rozszerzenie Turn Off the Lights przeglądarki",
+    "description":"Najlepszy i niesamowite rozszerzenie Turn Off the Lights przeglądarki"
+  },
+  "sharetextd":{
+    "message":"Rozszerzenie Turn Off the Lights jest najlepszym narzędziem do na YouTube. Pobierz i wypróbuj.",
+    "description":"Rozszerzenie Turn Off the Lights jest najlepszym narzędziem do na YouTube. Pobierz i wypróbuj."
+  },
+  "titellampchoose":{
+    "message":"Wybierz swoją ulubiony styl lampy",
+    "description":"Wybierz swoją ulubiony styl lampy"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights nie działa na tej stronie sieci www. Spróbuj na innej stronie.",
+    "description":"Turn Off the Lights nie działa na tej stronie sieci www. Spróbuj na innej stronie."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Przewodnik",
+    "description":"Przewodnik"
+  },
+  "titelpopupsupport":{
+    "message":"Pomoc techniczna",
+    "description":"Pomoc techniczna"
+  },
+  "titelpopupoptions":{
+    "message":"Ustawienia",
+    "description":"Ustawienia"
+  },
+  "titelpopupratestars":{
+    "message":"Przyznaj 5 gwiazdek",
+    "description":"Przyznaj 5 gwiazdek"
+  },
+  "titelvisenable":{
+    "message":"Włącz\/Wyłącz wizualizację dźwięku",
+    "description":"Włącz\/Wyłącz wizualizację dźwięku"
+  },
+  "titelvischoose":{
+    "message":"Wybierz swoją wizualizację dźwięku",
+    "description":"Wybierz swoją wizualizację dźwięku"
+  },
+  "titelvisblocks":{
+    "message":"Bloki",
+    "description":"Bloki"
+  },
+  "titelvisfrequency":{
+    "message":"Częstotliwość",
+    "description":"Częstotliwość"
+  },
+  "titelvistunnel":{
+    "message":"Ścieżka dźwięku",
+    "description":"Ścieżka dźwięku"
+  },
+  "titelvisualization":{
+    "message":"Wizualizacji dźwięku",
+    "description":"Wizualizacji dźwięku"
+  },
+  "desvisopacity":{
+    "message":"Tło dla wizualizacji dźwięku",
+    "description":"Tło dla wizualizacji dźwięku"
+  },
+  "vtoolvisualization":{
+    "message":"Przycisk, aby pokazać wizualizację dźwięku dla bieżącego odtwarzacza wideo",
+    "description":"Przycisk, aby pokazać wizualizację dźwięku dla bieżącego odtwarzacza wideo"
   }
 }

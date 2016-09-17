@@ -30,5 +30,5 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 function $(id) { return document.getElementById(id); }
 // Black div on
 var blackon = $('stefanvdlightareoff1');
-if(blackon){chrome.extension.sendMessage({name: 'mastertabdark', value: true});}
-else{chrome.extension.sendMessage({name: 'mastertabdark', value: false});}
+if(blackon){chrome.runtime.sendMessage({name: 'mastertabdark', value: true});}
+else{chrome.runtime.sendMessage({name: 'mastertabdark', value: false});}

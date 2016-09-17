@@ -29,14 +29,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 body{min-width:1150px;min-height:800px;background-color:#fff;color:#000;font-family:Arial,sans-serif;cursor:default;font-size:13px}
 #main-content{display:-webkit-box;position:absolute;left:0;right:0;top:0;bottom:0}
-#mainview{-webkit-box-align:stretch;-webkit-padding-start:216px;margin:0;position:absolute;left:0;right:0;top:0;bottom:0;z-index:1}
+#mainview{-webkit-box-align:stretch;-webkit-padding-start:216px;-moz-box-align:stretch;-moz-padding-start:216px;margin:0;position:absolute;left:0;right:0;top:0;bottom:0;z-index:1}
 #mainview-content{box-sizing:border-box;max-width:888px;min-width:600px;padding:0 24px;position:relative}
 #managed-prefs-banner{background:#FFF2B7;height:31px;width:100%;margin:0;padding:0;vertical-align:middle;border-bottom:1px solid #c6c9ce}
 #managed-prefs-icon{display:inline-block;padding:7px 7px 2px;height:21px;vertical-align:middle}
 #managed-prefs-text{vertical-align:middle}
-#managed-prefs-text-close{float:right;background-image:url(../images/close.png);width:10px;height:10px;padding:10px;background-repeat:no-repeat;background-position:center}
+#managed-prefs-text-close{float:right;background:url(../images/close@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/close.png) 1x,url(../images/close@2x.png) 2x);width:10px;height:10px;margin:10px;background-repeat:no-repeat;background-position:center}
 #navbar{margin:0}
-#navbar-container{-webkit-border-end:1px solid #c6c9ce;background:#fff;bottom:0;display:block;left:0;position:fixed;top:0;width:216px;z-index:2}
+#navbar-container{-webkit-border-end:1px solid #c6c9ce;-moz-border-end:1px solid #c6c9ce;background:#fff;bottom:0;display:block;left:0;position:fixed;top:0;width:216px;z-index:2}
 #navbar-container>ul{-webkit-user-select:none;list-style-type:none;margin:0;padding:0}
 .navbar-item{color:#373737;cursor:pointer;display:block;font-size:105%;outline:none;padding:7px 0;text-align:end;-webkit-padding-end:24px}
 .navbar-item-selected{background:#f5f5f5;color:#000}
@@ -44,8 +44,8 @@ ul#navbar li a{display:block;margin-right:0;padding:12px 24px 12px 0;text-align:
 #settings{-webkit-padding-end:24px;-webkit-user-select:none;color:#333;cursor:pointer;font-size:200%;font-weight:400;margin:0;padding-bottom:14px;padding-top:13px;text-align:end;text-shadow:#fff 0 1px 2px}
 .page h1{-webkit-padding-end:24px;-webkit-user-select:none;border-bottom:1px solid #EEE;color:#333;font-size:200%;font-weight:400;margin:0;padding-bottom:4px;padding-top:13px;text-shadow:#fff 0 1px 2px}
 .page{overflow:hidden;height:100%}
-section{-webkit-box-orient:horizontal;border-bottom:1px solid #EEE;display:-webkit-box;margin-top:17px;padding-bottom:20px;width:100%}
-section>h3{font-size:105%;font-weight:700;margin:0;vertical-align:middle;width:135px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;padding-right:5px}
+section{position:relative;-webkit-box-orient:horizontal;border-bottom:1px solid #EEE;display:-webkit-box;margin-top:17px;padding-bottom:20px;width:100%}
+section>h3{font-size:105%;font-weight:700;margin:0;vertical-align:middle;width:140px}
 section>div:only-of-type{-webkit-box-flex:1}
 section>div:only-of-type label{margin:5px 0}
 label.checkbox,label.radio{display:block}
@@ -59,9 +59,9 @@ div.checkbox,div.radio{margin:5px 0}
 #EyeWhitelist input[type=url]{width:360px;float:left}
 #EyeWhitelist select{width:425px}
 #Eyetime{margin-left:18px}
-.ecogreen{background-color:#DAFFBD;border:1px solid #4B7C00;border-radius:2px;margin-top:10px;padding:10px 55px 10px 10px}
+.ecogreen{background-color:#DAFFBD;border:1px solid #4B7C00;border-radius:2px;margin-top:10px;padding:10px 85px 10px 10px}
 #Eyesaver{margin-left:18px}
-#logogreen{position:absolute;right:35px;color:green;background:rgba(255,255,255,0.5);vertical-align:top;padding:18px;border:1px solid #e6e6e6}
+#logogreen{position:absolute;right:15px;color:green;vertical-align:top;padding:18px}
 .superscript{vertical-align:super;color:#FF8F00;font-size:smaller}
 /* Hyperlinks */
 #mainview-content section a{color:#15c;text-decoration:underline}
@@ -108,6 +108,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .youtuberatinglikesdislikes{font-size:10px;padding-top:0;position:absolute;margin-left:95px}
 .youtubeviewnumbers{padding-bottom:7px;padding-left:80px;width:50px;display:inline-block;font-size:13px;font-weight:700}
 .youtube_container_head{display:inline-block}
+.embedytsub{position:relative;top:0px;width:195px;margin:0px;left:0px;visibility:visible;height:50px;display:inline-block}
 .youtube_video_head{display:inline-block}
 .youtubevideobutton{vertical-align:top;width:55px;display:inline-block;min-height:30px;height:50px;float:left}
 .youtubevideobutton span{display:inline-block;font-size:10px;color:gray}
@@ -615,12 +616,12 @@ input[type="range"]{background-image:-webkit-linear-gradient(left,hsla(0,0%,0%,.
 .remembertext{margin:5px 0}
 #remembershare{position:fixed;width:100%;height:100%;z-index:400;background:rgba(256,256,256,1);margin:0;padding:0;left:0;top:0;text-align:center}
 #productrememberimage{position:absolute;top:16px;left:12px;font-family:verdana;font-size:16px;color:#000;vertical-align:top}
-#remembersharecenter{margin:20% auto;width:1024px}
-#rememberboxdonate{cursor:pointer;background:#FDBD4E;color:#fff;width:900px;display:inline-block;font-size:20px;text-align:center;padding:15px;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxrate{cursor:pointer;background:#FFCE32;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxgoogle{cursor:pointer;background:#C23434;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxfacebook{cursor:pointer;background:#4c66a4;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxtwitter{cursor:pointer;background:#3CF;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#remembersharecenter{margin:auto;width:1024px;height:350px;position:absolute;top:0;bottom:0;left:0;right:0}
+#rememberboxdonate{cursor:pointer;background:#FDBD4E;color:#fff;width:900px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxrate{cursor:pointer;background:#FFCE32;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxgoogle{cursor:pointer;background:#C23434;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxfacebook{cursor:pointer;background:#4c66a4;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxtwitter{cursor:pointer;background:#3CF;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
 #rememberboxdonate:hover,#rememberboxrate:hover,#rememberboxgoogle:hover,#rememberboxfacebook:hover,#rememberboxtwitter:hover{opacity:.88}
 #skipremember{float:right}
 #divcheckboxskipremember{text-align:left}
@@ -674,6 +675,9 @@ input[type="range"]{background-image:-webkit-linear-gradient(left,hsla(0,0%,0%,.
 #loadinglamp{margin-right:5px}
 #welcomelamp{margin-right:5px}
 #rememberlamp{margin-right:5px}
+#btnpreview{display:none}
+.lampchoose{padding:10px;border:1px solid #EEE}
+.bcklampchoose{background:black}
 /* Speech */
 #stefanvdspeechbox{position:relative;height:120px;width:100%}
 #stefanvdspeechbox .stefanvdspeechbrand{position:absolute;top:50px;left:20px;font-size:24px;color:gray}
@@ -690,10 +694,9 @@ input[type="range"]{background-image:-webkit-linear-gradient(left,hsla(0,0%,0%,.
 #stefanvdspeechbox ._lw{background-color:#666;bottom:14px;height:14px;left:22px;pointer-events:none;position:absolute;width:9px;z-index:1}
 #stefanvdspeechbox ._ew{border:7px solid #666;border-radius:28px;bottom:27px;height:57px;left:0;pointer-events:none;position:absolute;width:38px;z-index:0}
 /* share box */
-#shareboxrate{text-decoration:none;padding:3px 8px;background:#FFCE32;color:#fff;margin-right:10px;border-radius:2px;cursor:pointer}
-#shareboxgoogle{text-decoration:none;padding:3px 8px;background:#C23434;color:#fff;margin-right:10px;border-radius:2px;cursor:pointer}
-#shareboxfacebook{text-decoration:none;padding:3px 8px;background:#4c66a4;color:#fff;margin-right:10px;border-radius:2px;cursor:pointer}
-#shareboxtwitter{text-decoration:none;padding:3px 8px;background:#3CF;color:#fff;border-radius:2px;cursor:pointer}
+#shareboxgoogle{background:url(../images/googleplus@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/googleplus.png) 1x,url(../images/googleplus@2x.png) 2x);width:28px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
+#shareboxfacebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
+#shareboxtwitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:21px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #shareboxrate:hover,#shareboxgoogle:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 /* Review box */
 #reviewextensionbox{height:75px;position:relative}

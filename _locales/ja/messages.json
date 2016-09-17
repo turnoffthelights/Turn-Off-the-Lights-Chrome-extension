@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"ブラックリスト",
     "description":"ブラックリスト"
+  },
+  "titelnightmodehyperlink":{
+    "message":"ハイパーリンク",
+    "description":"ハイパーリンク"
+  },
+  "titelblock60fps":{
+    "message":"60 fps をブロックする",
+    "description":"60 fps をブロックする"
+  },
+  "titelvolume":{
+    "message":"ヴィディオ ヴォリューム スライダー",
+    "description":"ヴィディオ ヴォリューム スライダー"
+  },
+  "desvideovolume":{
+    "message":"表示中のヴィディオ プレーヤーのヴォリュームをマウス スクロールでコントロールする",
+    "description":"表示中のヴィディオ プレーヤーのヴォリュームをマウス スクロールでコントロールする"
+  },
+  "desvideovolumecolor":{
+    "message":"スライダーの色",
+    "description":"スライダーの色"
+  },
+  "desvolumelabel":{
+    "message":"ヴォリューム ラベルを表示する",
+    "description":"ヴォリューム ラベルを表示する"
+  },
+  "desvolumesteps":{
+    "message":"1スクロールあたりの変更量",
+    "description":"1スクロールあたりの変更量"
+  },
+  "sharetexta":{
+    "message":"このクールな Turn Off the Lights ブラウザー拡張機能を入手する",
+    "description":"このクールな Turn Off the Lights ブラウザー拡張機能を入手する"
+  },
+  "sharetextb":{
+    "message":"今日 Turn Off the Lights ブラウザー拡張機能を試しましたが，素晴らしいです！ ",
+    "description":"今日 Turn Off the Lights ブラウザー拡張機能を試しましたが，素晴らしいです！ "
+  },
+  "sharetextc":{
+    "message":"素晴らしく，最高の，電気を消すためのブラウザー拡張機能",
+    "description":"素晴らしく，最高の，電気を消すためのブラウザー拡張機能"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights 拡張機能は，YouTube において最高のツールです．ダウンロードして試してみてください！",
+    "description":"Turn Off the Lights 拡張機能は，YouTube において最高のツールです．ダウンロードして試してみてください！"
+  },
+  "titellampchoose":{
+    "message":"お気に入りのランプ スタイルを選択する",
+    "description":"お気に入りのランプ スタイルを選択する"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights はこのページでは動作しません．他のページでお試しください．",
+    "description":"Turn Off the Lights はこのページでは動作しません．他のページでお試しください．"
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"はじめに",
+    "description":"はじめに"
+  },
+  "titelpopupsupport":{
+    "message":"サポート",
+    "description":"サポート"
+  },
+  "titelpopupoptions":{
+    "message":"オプション",
+    "description":"オプション"
+  },
+  "titelpopupratestars":{
+    "message":"5つ星の評価",
+    "description":"5つ星の評価"
+  },
+  "titelvisenable":{
+    "message":"オーディオ ヴィジュアライゼーションを有効\/無効にする",
+    "description":"オーディオ ヴィジュアライゼーションを有効\/無効にする"
+  },
+  "titelvischoose":{
+    "message":"オーディオ ヴィジュアライゼーションを選択してください",
+    "description":"オーディオ ヴィジュアライゼーションを選択してください"
+  },
+  "titelvisblocks":{
+    "message":"ブロック",
+    "description":"ブロック"
+  },
+  "titelvisfrequency":{
+    "message":"発光間隔",
+    "description":"発光間隔"
+  },
+  "titelvistunnel":{
+    "message":"音楽のトンネル",
+    "description":"音楽のトンネル"
+  },
+  "titelvisualization":{
+    "message":"オーディオ ヴィジュアライゼーション",
+    "description":"オーディオ ヴィジュアライゼーション"
+  },
+  "desvisopacity":{
+    "message":"オーディオ ヴィジュアライゼーション背景の不透明度の値",
+    "description":"オーディオ ヴィジュアライゼーション背景の不透明度の値"
+  },
+  "vtoolvisualization":{
+    "message":"表示中のヴィディオ プレーヤーのオーディオ ヴィジュアライゼーションを表示するためのボタン",
+    "description":"表示中のヴィディオ プレーヤーのオーディオ ヴィジュアライゼーションを表示するためのボタン"
   }
 }
