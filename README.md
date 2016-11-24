@@ -4,7 +4,7 @@
 
 **Turn Off the Lights** is a popular browser extension that works on all major web browsers such as Google Chrome, Firefox, Opera, Safari, Yandex, Maxthon and Microsoft Edge.
 
-Using Turn Off the Lights it dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page.
+Using Turn Off the Lights to dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page such as on YouTube.
 
 
 **[Join our growing community on Facebook](https://www.facebook.com/turnofflights) to stay up to date!**
