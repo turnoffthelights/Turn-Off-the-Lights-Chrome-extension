@@ -53,9 +53,7 @@ Using Turn Off the Lights it dims the web page and reduces the eye strain caused
   * Blackout: Dims the web page and activates the Night Mode
 * Option to stop YouTube and HTML5 videos from automatically playing.
 
-* Browser Extesnion is written in JavaScript, CSS
-* Easy to install on Windows, Mac, Linux, ChromeOS
-
+## Installation
 #### Loading it in Chrome:
 1. Open your Google Chrome web browser, browse to [chrome://extensions](chrome://extensions)
 1. If you have already Turn Off the Lights Chrome extension installed, disable it
@@ -64,10 +62,11 @@ Using Turn Off the Lights it dims the web page and reduces the eye strain caused
 1. Choose the sub-directory **turnoffthelights** (where manifest.json resides)
 
 #### Store hyperlinks:
-Available for Google Chrome: https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn
-Available for Opera: https://addons.opera.com/extensions/details/turn-off-the-lights/
-Available for Firefox: https://addons.mozilla.org/firefox/addon/turn-off-the-lights/
-Available for Safari: https://www.turnoffthelights.com
-Available for Yandex: See Yandex built-in extension
-Available for Maxthon: http://extension.maxthon.com/detail/index.php?view_id=1813
-Available for Microsoft Edge: https://www.microsoft.com/en-us/store/p/turn-off-the-lights-for-microsoft-edge/9nblggh52lrr
+The Browser extension is available in the following stores:
+* [Google Chrome in the Chrome web store](https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn)
+* [Opera in the Opera Extension gallery](https://addons.opera.com/extensions/details/turn-off-the-lights/)
+* [Firefox in the Firefox Extension gallery](https://addons.mozilla.org/firefox/addon/turn-off-the-lights/)
+* [Safari in the Safari Extension gallery](https://safari-extensions.apple.com/details/?id=com.stefanvd.turnoffthelights-PRR97757HF)
+* Available for Yandex: See Yandex built-in extension
+* [Maxthon in the Windows Store](http://extension.maxthon.com/detail/index.php?view_id=1813)
+* [Microsoft Edge in the Windows Store](http://clkde.tradedoubler.com/click?p=198981&amp;a=1376739&amp;g=0&amp;url=https%3a%2f%2fwww.microsoft.com%2fstore%2fp%2fturn-off-the-lights-for-microsoft-edge%2f9nblggh52lrr)
