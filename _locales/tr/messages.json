@@ -8,8 +8,8 @@
     "description":"Arkaplan Resmi"
   },
   "shortcutalllights":{
-    "message":"ışığı bütün sekmeler için aç\/kapa",
-    "description":"ışığı bütün sekmeler için aç\/kapa"
+    "message":"ışığı bütün sekmeler için aç/kapa",
+    "description":"ışığı bütün sekmeler için aç/kapa"
   },
   "lastchecked":{
     "message":"En son sürüm kontrolü",
@@ -268,8 +268,8 @@
     "description":"Bu YouTube Video Ekle düğmesini göster."
   },
   "shortcuteyeprotection":{
-    "message":"göz koruma özelliğini etkinleştirmek\/devre dışı bırakmak için",
-    "description":"göz koruma özelliğini etkinleştirmek\/devre dışı bırakmak için"
+    "message":"göz koruma özelliğini etkinleştirmek/devre dışı bırakmak için",
+    "description":"göz koruma özelliğini etkinleştirmek/devre dışı bırakmak için"
   },
   "titelfadein":{
     "message":"Aydınlat",
@@ -308,8 +308,8 @@
     "description":"Ekran koruyucu zaman Onayla"
   },
   "deslikebar":{
-    "message":"YouTube videolarının altında beğen\/beğenme çubuğunu göster.",
-    "description":"Göstermek gibi\/sevmediğim bar YouTube Videolar altında."
+    "message":"YouTube videolarının altında beğen/beğenme çubuğunu göster.",
+    "description":"Göstermek gibi/sevmediğim bar YouTube Videolar altında."
   },
   "titelautoplay":{
     "message":"Otomatik Oynat",
@@ -424,8 +424,8 @@
     "description":"Yağmur damlaları"
   },
   "desalllightsoff":{
-    "message":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak\/kapatacak",
-    "description":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak\/kapatacak"
+    "message":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak/kapatacak",
+    "description":"Lamba düğmesine basmak, açık olan tüm sekmelerdeki ışıkları açacak/kapatacak"
   },
   "optionecosaversaved":{
     "message":"Saniye başarıyla kaydedildi!",
@@ -444,8 +444,8 @@
     "description":"Bu uzantı zevk ve takdir edecek düşünen başkaları ile paylaşmak."
   },
   "shortcuttotl":{
-    "message":"ışıkları açmak\/kapatmak için",
-    "description":"ışıkları açmak\/kapatmak için"
+    "message":"ışıkları açmak/kapatmak için",
+    "description":"ışıkları açmak/kapatmak için"
   },
   "deseyea":{
     "message":"Yeni bir sayfa açıldığı zaman, arka planı otomatik olarak karart",
@@ -1256,8 +1256,8 @@
     "description":"5 Yıldız Verin"
   },
   "titelvisenable":{
-    "message":"Ses Görselleştirmesini etkinleştir\/devre dışı bırak",
-    "description":"Ses Görselleştirmesini etkinleştir\/devre dışı bırak"
+    "message":"Ses Görselleştirmesini etkinleştir/devre dışı bırak",
+    "description":"Ses Görselleştirmesini etkinleştir/devre dışı bırak"
   },
   "titelvischoose":{
     "message":"Ses Görselleştirmenizi seçin",

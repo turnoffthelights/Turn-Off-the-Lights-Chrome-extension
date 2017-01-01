@@ -1192,16 +1192,16 @@
     "description":"Bloca 60fps"
   },
   "titelvolume":{
-    "message":"Volum del vídeo",
-    "description":"Volum del vídeo"
+    "message":"Control de volum del vídeo",
+    "description":"Control de volum del vídeo"
   },
   "desvideovolume":{
     "message":"Controla el volum del vídeo en reproducció amb la roda del ratolí",
     "description":"Controla el volum del vídeo en reproducció amb la roda del ratolí"
   },
   "desvideovolumecolor":{
-    "message":"Color del lliscador",
-    "description":"Color del lliscador"
+    "message":"Color del control",
+    "description":"Color del control"
   },
   "desvolumelabel":{
     "message":"Mostra l'etiqueta de volum",
@@ -1228,8 +1228,8 @@
     "description":"Turn Off the Lights és la millor eina per al YouTube. Baixeu-la i comproveu-ho amb els vostres ulls!"
   },
   "titellampchoose":{
-    "message":"Trieu el vostre estil preferit",
-    "description":"Trieu el vostre estil preferit"
+    "message":"Trieu el vostre estil de bombeta preferit",
+    "description":"Trieu el vostre estil de bombeta preferit"
   },
   "titeldoesntwork":{
     "message":"Turn Off the Lights no funciona en aquesta pàgina. Proveu en altre web.",
@@ -1272,8 +1272,8 @@
     "description":"Freqüència"
   },
   "titelvistunnel":{
-    "message":"Túnel de música",
-    "description":"Túnel de música"
+    "message":"Túnel musical",
+    "description":"Túnel musical"
   },
   "titelvisualization":{
     "message":"Visualització d'àudio",

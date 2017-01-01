@@ -8,8 +8,8 @@
     "description":"صورة الخلفية"
   },
   "shortcutalllights":{
-    "message":"لتشغيل\/إيقاف الإضاءة لكل التبويبات المفتوحة",
-    "description":"لتشغيل\/إيقاف الإضاءة لكل التبويبات المفتوحة"
+    "message":"لتشغيل/إيقاف الإضاءة لكل التبويبات المفتوحة",
+    "description":"لتشغيل/إيقاف الإضاءة لكل التبويبات المفتوحة"
   },
   "lastchecked":{
     "message":"آخر تحقق من إصدار أحدث تم في",
@@ -92,8 +92,8 @@
     "description":"تأكيد كلمة المرور"
   },
   "desautoplayonly":{
-    "message":"خافت فقط في موقع\/مواقع الفيديو التالية:",
-    "description":"خافت فقط في موقع\/مواقع الفيديو التالية:"
+    "message":"خافت فقط في موقع/مواقع الفيديو التالية:",
+    "description":"خافت فقط في موقع/مواقع الفيديو التالية:"
   },
   "helpeyeprotection":{
     "message":"تمكين 'حماية العين' سيعطل تلقائياً خاصية 'التشغيل التلقائي'.",
@@ -268,8 +268,8 @@
     "description":"إظهار زر الإضافة من فيديو اليوتيوب هذا"
   },
   "shortcuteyeprotection":{
-    "message":"لتمكين\/تعطيل خاصية حماية العين",
-    "description":"لتمكين\/تعطيل خاصية حماية العين"
+    "message":"لتمكين/تعطيل خاصية حماية العين",
+    "description":"لتمكين/تعطيل خاصية حماية العين"
   },
   "titelfadein":{
     "message":"ظهور تدريجي",
@@ -308,8 +308,8 @@
     "description":"تأكيد وقت شاشة التوقف"
   },
   "deslikebar":{
-    "message":"إظهار شريط الإعجاب\/عدم الإعجاب تحت فيديوهات اليوتيوب.",
-    "description":"إظهار شريط الإعجاب\/عدم الإعجاب تحت فيديوهات اليوتيوب."
+    "message":"إظهار شريط الإعجاب/عدم الإعجاب تحت فيديوهات اليوتيوب.",
+    "description":"إظهار شريط الإعجاب/عدم الإعجاب تحت فيديوهات اليوتيوب."
   },
   "titelautoplay":{
     "message":"التشغيل التلقائي",
@@ -424,8 +424,8 @@
     "description":"قطرات المطر"
   },
   "desalllightsoff":{
-    "message":"الضغط على زر المصباح سيبدل تشغيل\/إيقاف الأضواء في كافة التبويبات المفتوحة",
-    "description":"الضغط على زر المصباح سيبدل تشغيل\/إيقاف الأضواء في كافة التبويبات المفتوحة"
+    "message":"الضغط على زر المصباح سيبدل تشغيل/إيقاف الأضواء في كافة التبويبات المفتوحة",
+    "description":"الضغط على زر المصباح سيبدل تشغيل/إيقاف الأضواء في كافة التبويبات المفتوحة"
   },
   "optionecosaversaved":{
     "message":"تم حفظ الثواني بنجاح!",
@@ -444,8 +444,8 @@
     "description":"استمتع بهذا الامتداد، وشاركه مع الآخرين الذين كنت تعتقد بأنهم سيقدرون ذلك."
   },
   "shortcuttotl":{
-    "message":"لتبديل تشغيل\/إطفاء الأنوار",
-    "description":"لتبديل تشغيل\/إطفاء الأنوار"
+    "message":"لتبديل تشغيل/إطفاء الأنوار",
+    "description":"لتبديل تشغيل/إطفاء الأنوار"
   },
   "deseyea":{
     "message":"تعتيم الخلفية تلقائيا عند فتح صفحة ويب",
@@ -536,8 +536,8 @@
     "description":"خزان الأسماك"
   },
   "longdonatetext":{
-    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
-    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
+    "message":"سأقدر حقاً إن كان يمكنك التبرع لي للحفاظ على اضافة المتصفح هذه للمستخدمين الجدد. سواء أكان $$1 أو $$100، ممتنين لدعمكم لنا!",
+    "description":"سأقدر حقاً إن كان يمكنك التبرع لي للحفاظ على اضافة المتصفح هذه للمستخدمين الجدد. سواء أكان $$1 أو $$100، ممتنين لدعمكم لنا!"
   },
   "deshardflash":{
     "message":"إظهار كافة مكونات الفلاش، تخطي عامل التصفية العنوان. فهذا سيصلح المشاكل مع بعض مشغلات الفيديو المخفية، ولكن أيضا سيعرض الإعلانات.",
@@ -556,12 +556,12 @@
     "description":"إظهار وعكس لون عنوان الفيديو."
   },
   "desrememberpage":{
-    "message":"Do not show reminder page",
-    "description":"Do not show reminder page"
+    "message":"لا تظهر صفحة التذكير",
+    "description":"لا تظهر صفحة التذكير"
   },
   "description":{
-    "message":"سوف تتلاشى الصفحة بأكملها إلى الظلام، فتتمكن من مشاهدة الفيديو كما لو كنت في السينما.",
-    "description":"سوف تتلاشى الصفحة بأكملها إلى الظلام، فتتمكن من مشاهدة الفيديو كما لو كنت في السينما."
+    "message":"سوف تتلاشى الصفحة بأكملها في الظلام، حتى تتمكن من مشاهدة أشرطة الفيديو كما لو كنت في السينما.",
+    "description":"سوف تتلاشى الصفحة بأكملها في الظلام، حتى تتمكن من مشاهدة أشرطة الفيديو كما لو كنت في السينما."
   },
   "titelviewcount":{
     "message":"عدد المشاهدات",
@@ -648,8 +648,8 @@
     "description":"الوضع الليلي"
   },
   "desnightonly":{
-    "message":"إظهار \"الوضع الليلي\" للموقع\/المواقع التالية فقط:",
-    "description":"إظهار \"الوضع الليلي\" للموقع\/المواقع التالية فقط:"
+    "message":"إظهار \"الوضع الليلي\" للموقع/المواقع التالية فقط:",
+    "description":"إظهار \"الوضع الليلي\" للموقع/المواقع التالية فقط:"
   },
   "desnightenabletheme":{
     "message":"عندما تقوم بفتح صفحة جديدة تنتقل تلقائياً للوضع الليلي.",
@@ -776,12 +776,12 @@
     "description":"خطي"
   },
   "titelcolora":{
-    "message":"Color A:",
-    "description":"Color A:"
+    "message":"اللون أ:",
+    "description":"اللون أ:"
   },
   "titelcolorb":{
-    "message":"Color B:",
-    "description":"Color B:"
+    "message":"اللون ب:",
+    "description":"اللون ب:"
   },
   "speechoption":{
     "message":"التعرف على الصوت",
@@ -1060,20 +1060,20 @@
     "description":"Background color:"
   },
   "titelnightmodetxt":{
-    "message":"Text color:",
-    "description":"Text color:"
+    "message":"لون النص:",
+    "description":"لون النص:"
   },
   "desdynamicsmoke":{
-    "message":"Smoke",
-    "description":"Smoke"
+    "message":"دخان",
+    "description":"دخان"
   },
   "desdynamicdotscolor":{
     "message":"Color Dots",
     "description":"Color Dots"
   },
   "desdynamicstorm":{
-    "message":"Storm",
-    "description":"Storm"
+    "message":"عاصفة",
+    "description":"عاصفة"
   },
   "desdynamictriangulation":{
     "message":"Triangulation",
@@ -1092,8 +1092,8 @@
     "description":"Shows the full 360 degrees YouTube video in one frame"
   },
   "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
+    "message":"شريط أدوات الفيديو",
+    "description":"شريط أدوات الفيديو"
   },
   "desvideotool":{
     "message":"Show the toolbar below your screen to customize the current video player",
@@ -1120,8 +1120,8 @@
     "description":"sepia"
   },
   "titelvideotoolinvert":{
-    "message":"invert",
-    "description":"invert"
+    "message":"عكس",
+    "description":"عكس"
   },
   "titelvideotoolcontrast":{
     "message":"contrast",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"القائمة السوداء",
     "description":"القائمة السوداء"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"Block 60fps",
+    "description":"Block 60fps"
+  },
+  "titelvolume":{
+    "message":"Video Volume Slider",
+    "description":"Video Volume Slider"
+  },
+  "desvideovolume":{
+    "message":"Control the volume of the current video player with a mouse scroll",
+    "description":"ontrol the volume of the current video player with a mouse scroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Color of the slider",
+    "description":"Color of the slider"
+  },
+  "desvolumelabel":{
+    "message":"Show volume label",
+    "description":"Show volume label"
+  },
+  "desvolumesteps":{
+    "message":"The number of levels for each 360° wheel scroll",
+    "description":"The number of levels for each 360° wheel scroll"
+  },
+  "sharetexta":{
+    "message":"Get this Cool Turn Off the Lights Browser Extension",
+    "description":"Get this Cool Turn Off the Lights Browser Extension"
+  },
+  "sharetextb":{
+    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
+    "description":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+  },
+  "sharetextc":{
+    "message":"The Best and Amazing Turn Off the Lights Browser extension",
+    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!",
+    "description":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+  },
+  "titellampchoose":{
+    "message":"Choose your favorite lamp style",
+    "description":"Choose your favorite lamp style"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights doesn't work on this web page. Please try another page.",
+    "description":"Turn Off the Lights doesn't work on this web page. Please try another page."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"دليل الترحيب",
+    "description":"دليل الترحيب"
+  },
+  "titelpopupsupport":{
+    "message":"الدعم",
+    "description":"الدعم"
+  },
+  "titelpopupoptions":{
+    "message":"خيارات",
+    "description":"خيارات"
+  },
+  "titelpopupratestars":{
+    "message":"قيمها ب 5 نجوم",
+    "description":"قيمها ب 5 نجوم"
+  },
+  "titelvisenable":{
+    "message":"Enable/disable the Audio Visualization",
+    "description":"Enable/disable the Audio Visualization"
+  },
+  "titelvischoose":{
+    "message":"Choose your Audio Visualization",
+    "description":"Choose your Audio Visualization"
+  },
+  "titelvisblocks":{
+    "message":"الحواجز",
+    "description":"الحواجز"
+  },
+  "titelvisfrequency":{
+    "message":"التردد",
+    "description":"التردد"
+  },
+  "titelvistunnel":{
+    "message":"Music Tunnel",
+    "description":"Music Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio Visualization",
+    "description":"Audio Visualization"
+  },
+  "desvisopacity":{
+    "message":"The opacity value of the audio visualization background",
+    "description":"The opacity value of the audio visualization background"
+  },
+  "vtoolvisualization":{
+    "message":"A button for displaying the audio-visualization for the current video player",
+    "description":"A button for displaying the audio-visualization for the current video player"
   }
 }

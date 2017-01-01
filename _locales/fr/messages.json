@@ -529,7 +529,7 @@
   },
   "reportlist":{
     "message":"(voir la liste complète)",
-    "description":"Voir la liste complète de questions (\/de problèmes ?)"
+    "description":"Voir la liste complète de questions (/de problèmes ?)"
   },
   "desdynamicfishtank":{
     "message":"Aquarium ",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Liste noire",
     "description":"Liste noire"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"Block 60fps",
+    "description":"Block 60fps"
+  },
+  "titelvolume":{
+    "message":"Video Volume Slider",
+    "description":"Video Volume Slider"
+  },
+  "desvideovolume":{
+    "message":"Control the volume of the current video player with a mouse scroll",
+    "description":"ontrol the volume of the current video player with a mouse scroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Color of the slider",
+    "description":"Color of the slider"
+  },
+  "desvolumelabel":{
+    "message":"Show volume label",
+    "description":"Show volume label"
+  },
+  "desvolumesteps":{
+    "message":"The number of levels for each 360° wheel scroll",
+    "description":"The number of levels for each 360° wheel scroll"
+  },
+  "sharetexta":{
+    "message":"Get this Cool Turn Off the Lights Browser Extension",
+    "description":"Get this Cool Turn Off the Lights Browser Extension"
+  },
+  "sharetextb":{
+    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
+    "description":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+  },
+  "sharetextc":{
+    "message":"The Best and Amazing Turn Off the Lights Browser extension",
+    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!",
+    "description":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+  },
+  "titellampchoose":{
+    "message":"Choose your favorite lamp style",
+    "description":"Choose your favorite lamp style"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights doesn't work on this web page. Please try another page.",
+    "description":"Turn Off the Lights doesn't work on this web page. Please try another page."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Guide pour bien débuter",
+    "description":"Guide pour bien débuter"
+  },
+  "titelpopupsupport":{
+    "message":"Assistance technique",
+    "description":"Assistance technique"
+  },
+  "titelpopupoptions":{
+    "message":"Options",
+    "description":"Options"
+  },
+  "titelpopupratestars":{
+    "message":"Noter 5 étoiles",
+    "description":"Noter 5 étoiles"
+  },
+  "titelvisenable":{
+    "message":"Enable/disable the Audio Visualization",
+    "description":"Enable/disable the Audio Visualization"
+  },
+  "titelvischoose":{
+    "message":"Choose your Audio Visualization",
+    "description":"Choose your Audio Visualization"
+  },
+  "titelvisblocks":{
+    "message":"Blocs carrés",
+    "description":"Blocs carrés"
+  },
+  "titelvisfrequency":{
+    "message":"Frequency",
+    "description":"Frequency"
+  },
+  "titelvistunnel":{
+    "message":"Music Tunnel",
+    "description":"Music Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio Visualization",
+    "description":"Audio Visualization"
+  },
+  "desvisopacity":{
+    "message":"The opacity value of the audio visualization background",
+    "description":"The opacity value of the audio visualization background"
+  },
+  "vtoolvisualization":{
+    "message":"A button for displaying the audio-visualization for the current video player",
+    "description":"A button for displaying the audio-visualization for the current video player"
   }
 }

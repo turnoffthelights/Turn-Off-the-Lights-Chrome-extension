@@ -1000,8 +1000,8 @@
     "description":"In basso a sinistra"
   },
   "nmcustom":{
-    "message":"Personalizzato (Clicca, trattieni e muovi l'interruttore nella posizione desiderata)",
-    "description":"Personalizzato (Clicca, trattieni e muovi l'interruttore nella posizione desiderata)"
+    "message":"Personalizzato (fai click con il sinistro e tieni premuto, quindi sposta il cursore nella posizione desiderata)",
+    "description":"Personalizzato (fai click con il sinistro e tieni premuto, quindi sposta il cursore nella posizione desiderata)"
   },
   "desnighthover":{
     "message":"Visualizza un interruttore trasparente sulla pagina web",
@@ -1084,8 +1084,8 @@
     "description":"Stelle"
   },
   "desmobileapp":{
-    "message":"Turn Off the Lights è anche disponibile per il tuo dispositivo mobile.",
-    "description":"Turn Off the Lights è anche disponibile per il tuo dispositivo mobile."
+    "message":"Turn Off the Lights è disponibile anche per il tuo dispositivo mobile.",
+    "description":"Turn Off the Lights è disponibile anche per il tuo dispositivo mobile."
   },
   "titel360youtube":{
     "message":"Mostra i video di YouTube a 360 gradi in una sola finestra.",
@@ -1128,7 +1128,7 @@
     "description":"contrasto"
   },
   "titelvideotoolsaturate":{
-    "message":"satura",
+    "message":"saturazione",
     "description":"satura"
   },
   "titelvideotoolhueroration":{
@@ -1152,7 +1152,7 @@
     "description":"Iscriviti"
   },
   "titelvideotoolrepeat":{
-    "message":"Ripet",
+    "message":"Ripeti",
     "description":"Ripet"
   },
   "titelvideotoolfilter":{
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Lista bloccati",
     "description":"Lista bloccati"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"Block 60fps",
+    "description":"Block 60fps"
+  },
+  "titelvolume":{
+    "message":"Video Volume Slider",
+    "description":"Video Volume Slider"
+  },
+  "desvideovolume":{
+    "message":"Control the volume of the current video player with a mouse scroll",
+    "description":"ontrol the volume of the current video player with a mouse scroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Color of the slider",
+    "description":"Color of the slider"
+  },
+  "desvolumelabel":{
+    "message":"Show volume label",
+    "description":"Show volume label"
+  },
+  "desvolumesteps":{
+    "message":"The number of levels for each 360° wheel scroll",
+    "description":"The number of levels for each 360° wheel scroll"
+  },
+  "sharetexta":{
+    "message":"Get this Cool Turn Off the Lights Browser Extension",
+    "description":"Get this Cool Turn Off the Lights Browser Extension"
+  },
+  "sharetextb":{
+    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
+    "description":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+  },
+  "sharetextc":{
+    "message":"The Best and Amazing Turn Off the Lights Browser extension",
+    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!",
+    "description":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+  },
+  "titellampchoose":{
+    "message":"Choose your favorite lamp style",
+    "description":"Choose your favorite lamp style"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights doesn't work on this web page. Please try another page.",
+    "description":"Turn Off the Lights doesn't work on this web page. Please try another page."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Guida di Benvenuto",
+    "description":"Guida di Benvenuto"
+  },
+  "titelpopupsupport":{
+    "message":"Supporto",
+    "description":"Supporto"
+  },
+  "titelpopupoptions":{
+    "message":"Opzioni",
+    "description":"Opzioni"
+  },
+  "titelpopupratestars":{
+    "message":"Vota 5 stelle",
+    "description":"Vota 5 stelle"
+  },
+  "titelvisenable":{
+    "message":"Enable\/disable the Audio Visualization",
+    "description":"Enable\/disable the Audio Visualization"
+  },
+  "titelvischoose":{
+    "message":"Choose your Audio Visualization",
+    "description":"Choose your Audio Visualization"
+  },
+  "titelvisblocks":{
+    "message":"Blocchi",
+    "description":"Blocchi"
+  },
+  "titelvisfrequency":{
+    "message":"Frequency",
+    "description":"Frequency"
+  },
+  "titelvistunnel":{
+    "message":"Music Tunnel",
+    "description":"Music Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio Visualization",
+    "description":"Audio Visualization"
+  },
+  "desvisopacity":{
+    "message":"The opacity value of the audio visualization background",
+    "description":"The opacity value of the audio visualization background"
+  },
+  "vtoolvisualization":{
+    "message":"A button for displaying the audio-visualization for the current video player",
+    "description":"A button for displaying the audio-visualization for the current video player"
   }
 }

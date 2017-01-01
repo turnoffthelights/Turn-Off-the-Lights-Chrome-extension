@@ -8,8 +8,8 @@
     "description":"Obraz w tle"
   },
   "shortcutalllights":{
-    "message":"aby włączyć\/wyłączyć światła dla wszystkich kart",
-    "description":"aby włączyć\/wyłączyć światła dla wszystkich kart"
+    "message":"aby włączyć/wyłączyć światła dla wszystkich kart",
+    "description":"aby włączyć/wyłączyć światła dla wszystkich kart"
   },
   "lastchecked":{
     "message":"Sprawdź dostępność aktualizacji",
@@ -244,7 +244,7 @@
     "description":"Kurs"
   },
   "desautoplay":{
-    "message":"Automatycznie przyciemniaj\/rozjaśniaj tło po naciśnięciu przycisku odtwarzania",
+    "message":"Automatycznie przyciemniaj/rozjaśniaj tło po naciśnięciu przycisku odtwarzania",
     "description":"Automatycznie przyciemnić tło, po kliknięciu przycisku odtwarzania i kontra."
   },
   "titelscreen":{
@@ -268,8 +268,8 @@
     "description":"Pokaż ten Dodaæ guzik od ten film wideo YouTube."
   },
   "shortcuteyeprotection":{
-    "message":"aby włączyć\/wyłączyć funkcję ochrony oczu",
-    "description":"aby włączyć\/wyłączyć funkcję ochrony oczu"
+    "message":"aby włączyć/wyłączyć funkcję ochrony oczu",
+    "description":"aby włączyć/wyłączyć funkcję ochrony oczu"
   },
   "titelfadein":{
     "message":"Stopniowe rozjaśnianie",
@@ -308,8 +308,8 @@
     "description":"Potwierdzenie czasu wygaszacza ekranu"
   },
   "deslikebar":{
-    "message":"Wyświetlaj wskaźnik podoba mi się\/nie podoba mi się pod filmem",
-    "description":"Pokaż jak\/niechęć pasek wideo YouTube."
+    "message":"Wyświetlaj wskaźnik podoba mi się/nie podoba mi się pod filmem",
+    "description":"Pokaż jak/niechęć pasek wideo YouTube."
   },
   "titelautoplay":{
     "message":"Autoodtwarzanie",
@@ -424,8 +424,8 @@
     "description":"Krople deszczu"
   },
   "desalllightsoff":{
-    "message":"Kliknięcie przycisku lampy przełączy światła wł\/wył na wszystkich otwartych kartach",
-    "description":"Kliknięcie przycisku lampy przełączy światła wł\/wył na wszystkich otwartych kartach"
+    "message":"Kliknięcie przycisku lampy przełączy światła wł/wył na wszystkich otwartych kartach",
+    "description":"Kliknięcie przycisku lampy przełączy światła wł/wył na wszystkich otwartych kartach"
   },
   "optionecosaversaved":{
     "message":"Czas został zapisany!",
@@ -444,8 +444,8 @@
     "description":"Cieszyć się ten rozciągnięcie i podzielić się nim z innymi, które uważasz, że to docenią."
   },
   "shortcuttotl":{
-    "message":"aby przełączyć światła wł\/wył",
-    "description":"aby przełączyć światła wł\/wył"
+    "message":"aby przełączyć światła wł/wył",
+    "description":"aby przełączyć światła wł/wył"
   },
   "deseyea":{
     "message":"Automatycznie przyciemnij tło po otwarciu strony",
@@ -520,7 +520,7 @@
     "description":"Pokazać atmosferę efekt oświetlenia bieżącego odtwarzania wideo."
   },
   "productshare":{
-    "message":"Udostępnianie\/Gadżety",
+    "message":"Udostępnianie/Gadżety",
     "description":"Udostępnij"
   },
   "addbutton":{
@@ -640,7 +640,7 @@
     "description":"Tryb nocny"
   },
   "desnighttheme":{
-    "message":"Wyświetlaj na dole strony internetowej przycisk przełączania w tryb nocny\/dzienny",
+    "message":"Wyświetlaj na dole strony internetowej przycisk przełączania w tryb nocny/dzienny",
     "description":"Pokaż przycisk przełączania w tryb nocny poniżej strony internetowej, aby przyciemnić lub rozjaśnić stronę."
   },
   "nightoptions":{
@@ -1148,8 +1148,8 @@
     "description":"Polub"
   },
   "titelvideotoolsubscribe":{
-    "message":"Zasubskrybuj",
-    "description":"Zasubskrybuj"
+    "message":"Subskrybuj",
+    "description":"Subskrybuj"
   },
   "titelvideotoolrepeat":{
     "message":"Powtórz",
@@ -1256,8 +1256,8 @@
     "description":"Przyznaj 5 gwiazdek"
   },
   "titelvisenable":{
-    "message":"Włącz\/Wyłącz wizualizację dźwięku",
-    "description":"Włącz\/Wyłącz wizualizację dźwięku"
+    "message":"Włącz/Wyłącz wizualizację dźwięku",
+    "description":"Włącz/Wyłącz wizualizację dźwięku"
   },
   "titelvischoose":{
     "message":"Wybierz swoją wizualizację dźwięku",

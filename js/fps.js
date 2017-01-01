@@ -30,5 +30,5 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 chrome.storage.sync.get(['block60fps'], function(response){
 var block60fps = response['block60fps'];
 if(block60fps == true){
-try {var script = document.createElement('script');;script.type = "text/javascript";script.src = chrome.extension.getURL('js/fpsinject.js');script.onload = function() {this.parentNode.removeChild(this);};document.getElementsByTagName("head")[0].appendChild(script);} catch(e) {}
+try {var script = document.createElement('script');script.type = "text/javascript";script.src = chrome.extension.getURL('js/fpsinject.js');script.onload = function() {this.parentNode.removeChild(this);};document.getElementsByTagName("head")[0].appendChild(script);} catch(e) {}
 }});

@@ -8,8 +8,8 @@
     "description":"Achtergrondafbeelding"
   },
   "shortcutalllights":{
-    "message":"om het licht voor alle geopende tabbladen aan\/uit te zetten",
-    "description":"om het licht voor alle geopende tabbladen aan\/uit te zetten"
+    "message":"om het licht voor alle geopende tabbladen aan/uit te zetten",
+    "description":"om het licht voor alle geopende tabbladen aan/uit te zetten"
   },
   "lastchecked":{
     "message":"Laatste versiecontrole op",
@@ -268,8 +268,8 @@
     "description":"Toevoegknop van de YouTube-video tonen"
   },
   "shortcuteyeprotection":{
-    "message":"om de oogbeschermingsfunctie in\/uit te schakelen",
-    "description":"om de oogbeschermingsfunctie in\/uit te schakelen"
+    "message":"om de oogbeschermingsfunctie in/uit te schakelen",
+    "description":"om de oogbeschermingsfunctie in/uit te schakelen"
   },
   "titelfadein":{
     "message":"Infaden",
@@ -308,8 +308,8 @@
     "description":"Schermbeveiligingstijd bevestigen"
   },
   "deslikebar":{
-    "message":"Leuk-\/niet-leuk-balk onder YouTube-video's tonen",
-    "description":"Leuk-\/niet-leuk-balk onder YouTube-video's tonen"
+    "message":"Leuk-/niet-leuk-balk onder YouTube-video's tonen",
+    "description":"Leuk-/niet-leuk-balk onder YouTube-video's tonen"
   },
   "titelautoplay":{
     "message":"Automatisch afspelen",
@@ -424,8 +424,8 @@
     "description":"Regendruppels"
   },
   "desalllightsoff":{
-    "message":"Op de lampknop klikken zet de verlichting op alle geopende tabbladen aan\/uit",
-    "description":"Op de lampknop klikken zet de verlichting op alle geopende tabbladen aan\/uit"
+    "message":"Op de lampknop klikken zet de verlichting op alle geopende tabbladen aan/uit",
+    "description":"Op de lampknop klikken zet de verlichting op alle geopende tabbladen aan/uit"
   },
   "optionecosaversaved":{
     "message":"Seconden zijn met succes opgeslagen!",
@@ -444,8 +444,8 @@
     "description":"Veel plezier met deze extensie en deel hem met anderen die hem volgens u zullen waarderen."
   },
   "shortcuttotl":{
-    "message":"om het licht aan\/uit te zetten",
-    "description":"om het licht aan\/uit te zetten"
+    "message":"om het licht aan/uit te zetten",
+    "description":"om het licht aan/uit te zetten"
   },
   "deseyea":{
     "message":"Automatisch de achtergrond dimmen bij het openen van een webpagina",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Zwarte lijst",
     "description":"Zwarte lijst"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"60fps blokkeren",
+    "description":"60fps blokkeren"
+  },
+  "titelvolume":{
+    "message":"Videovolumeregelaar",
+    "description":"Videovolumeregelaar"
+  },
+  "desvideovolume":{
+    "message":"Het volume van de huidige videospeler met een muisscrollbeweging bedienen",
+    "description":"Het volume van de huidige videospeler met een muisscrollbeweging bedienen"
+  },
+  "desvideovolumecolor":{
+    "message":"Kleur van de schuifregelaar",
+    "description":"Kleur van de schuifregelaar"
+  },
+  "desvolumelabel":{
+    "message":"Volumenaam tonen",
+    "description":"Volumenaam tonen"
+  },
+  "desvolumesteps":{
+    "message":"Het aantal stappen voor elke scroll",
+    "description":"Het aantal stappen voor elke scroll"
+  },
+  "sharetexta":{
+    "message":"Download deze Turn Off the Lights-browserextensie",
+    "description":"Download deze Turn Off the Lights-browserextensie"
+  },
+  "sharetextb":{
+    "message":"Hee, dit is geweldig. Ik heb vandaag net de Turn Off the Lights-browserextensie geprobeerd ",
+    "description":"Hee, dit is geweldig. Ik heb vandaag net de Turn Off the Lights-browserextensie geprobeerd "
+  },
+  "sharetextc":{
+    "message":"De beste en geweldige Turn Off the Lights-browserextensie",
+    "description":"De beste en geweldige Turn Off the Lights-browserextensie"
+  },
+  "sharetextd":{
+    "message":"De Turn Off the Lights-extensie is het beste hulpmiddel voor op YouTube. Download en probeer hem zelf!",
+    "description":"De Turn Off the Lights-extensie is het beste hulpmiddel voor op YouTube. Download en probeer hem zelf!"
+  },
+  "titellampchoose":{
+    "message":"Uw favoriete lampstijl kiezen",
+    "description":"Uw favoriete lampstijl kiezen"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights werkt niet op deze webpagina. Probeer een andere pagina.",
+    "description":"Turn Off the Lights werkt niet op deze webpagina. Probeer een andere pagina."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Welkomsthandleiding",
+    "description":"Welkomsthandleiding"
+  },
+  "titelpopupsupport":{
+    "message":"Ondersteuning",
+    "description":"Ondersteuning"
+  },
+  "titelpopupoptions":{
+    "message":"Opties",
+    "description":"Opties"
+  },
+  "titelpopupratestars":{
+    "message":"Met 5 sterren beoordelen",
+    "description":"Met 5 sterren beoordelen"
+  },
+  "titelvisenable":{
+    "message":"Audiovisualisatie in-/uitschakelen",
+    "description":"Audiovisualisatie in-/uitschakelen"
+  },
+  "titelvischoose":{
+    "message":"Uw audiovisualisatie kiezen",
+    "description":"Uw audiovisualisatie kiezen"
+  },
+  "titelvisblocks":{
+    "message":"Blokjes",
+    "description":"Blokjes"
+  },
+  "titelvisfrequency":{
+    "message":"Frequentie",
+    "description":"Frequentie"
+  },
+  "titelvistunnel":{
+    "message":"Muziektunnel",
+    "description":"Muziektunnel"
+  },
+  "titelvisualization":{
+    "message":"Audiovisualisatie",
+    "description":"Audiovisualisatie"
+  },
+  "desvisopacity":{
+    "message":"De ondoorzichtigheidswaarde van de audiovisualisatieachtergrond",
+    "description":"De ondoorzichtigheidswaarde van de audiovisualisatieachtergrond"
+  },
+  "vtoolvisualization":{
+    "message":"Een knop voor het tonen van de audiovisualisatie voor de huidige videospeler",
+    "description":"Een knop voor het tonen van de audiovisualisatie voor de huidige videospeler"
   }
 }

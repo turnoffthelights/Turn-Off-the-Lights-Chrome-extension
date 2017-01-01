@@ -32,6 +32,8 @@ function $(id) { return document.getElementById(id); }
 var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null;
 // html elements used
 var div = null, video = null, span = null, iframe = null, embed = null, object = null, a = null, img = null;
+// block lights
+var activatelightsoff = true;
 
 /////////// Option page settings
 chrome.storage.sync.get(['suggestions', 'playlist', 'videoheadline', 'head', 'infobar', 'likebutton', 'sharebutton', 'viewcount', 'addvideobutton', 'likebar', 'flash', 'noflash', 'hardflash','no360youtube'], function(response){
@@ -49,6 +51,86 @@ flash = response['flash'];
 noflash = response['noflash'];
 hardflash = response['hardflash'];
 no360youtube = response['no360youtube'];
+
+// detect if not higher then z-index 1000, then make it push down
+// search for the z-index, if found something give it 'auto'
+var q = document.getElementsByTagName('*');
+for(var i = 0; i < q.length; i++ ) {
+if (q[i].currentStyle){var y = q[i].currentStyle["z-Index"];}
+else if (window.getComputedStyle){var y = document.defaultView.getComputedStyle(q[i],null).getPropertyValue("z-Index");}
+// push below the dark layer
+if (y >= 1000){
+	var elementa = document.getElementsByTagName("screenshader")[0];//Stefan screenshader
+	if (elementa == q[i].parentNode) {
+	}else{q[i].style.zIndex = '950';}
+} // its value from its parent element
+}
+
+/////////// leanbackplayer player support
+// controls way
+var lbpcontrols = $('lbp_controls');
+if(lbpcontrols){$('lbp_controls').style.cssText = 'z-index:1002 !important';}
+
+/////////// API for Website Developer
+// id way
+var websiteidapi = $('dont-turn-off-the-lights');
+if(websiteidapi){$('dont-turn-off-the-lights').style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
+
+// class way
+var websiteclassapi = document.getElementsByClassName('dont-turn-off-the-lights');
+for(var i = 0; i < websiteclassapi.length; i++ ){websiteclassapi[i].cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
+
+/////////// HTML5 video
+// default html5 video detection
+video = document.getElementsByTagName('video');
+for(var i = 0; i < video.length; i++) {
+
+var path = [];
+var el = video[i];
+do {
+    var qq = path.unshift(el.nodeName);
+    if (el.currentStyle) { 
+        var yta = qq.currentStyle["z-Index"]; 
+    }
+    else {
+        var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+    }
+	if (yta == "auto"){}
+	else{el.style.zIndex = 'auto';}
+} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
+
+// other file then "mp3" then run this code
+if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText += 'visibility:visible !important; position:relative !important; z-index:1000 !important;';}
+if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+	if (no360youtube == true){
+		video[i].style.cssText += "display:block !important";
+		var webgl = document.querySelector('.webgl');
+		if(webgl){webgl.style.zIndex = 'auto';};
+	} else {
+	 // default the regular player
+	 // also the 360 frame push to front
+	var webgl = document.querySelector('.webgl');
+	if(webgl){webgl.style.zIndex = 1000;};
+	}
+	var playerapi = $('player-api');
+	if(playerapi){$('player-api').style.zIndex = 1001;}
+}
+
+}
+
+// default html5 video detection inside a iframe element
+/*iframe = document.getElementsByTagName("iframe");
+for(var i = 0; i < iframe.length; i++) {
+try {
+	var innerDoc = iframe[i].contentWindow ? iframe[i].contentWindow.document : iframe[i].contentDocument ? iframe[i].contentDocument : iframe[i].document;
+	if(innerDoc){
+		var iframevideo = innerDoc.getElementsByTagName("video");
+		for(var j = 0; j < iframevideo.length; j++) {
+		iframe[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
+		}
+	}
+} catch(e){}
+}*/
 
 // Show all Flash objects -> Flash detection
 function flashobjects(){
@@ -69,7 +151,6 @@ return r
 
 if(flash == true){
 intelligentvideodetection();
-
 flashobjects();
 } else if(hardflash == true){
 intelligentvideodetection();
@@ -83,15 +164,6 @@ a[i].style.cssText = 'visibility:visible !important; position:relative !importan
 }
 }
 }
-
-// detect if not higher then z-index 1000, then make it push down
-// search for the z-index, if found something give it 'auto'
-// var q = document.getElementsByTagName('*');
-// for(var i = 0; i < q.length; i++ ) {
-// if (q[i].currentStyle){var y = q[i].currentStyle["z-Index"];}
-// else if (window.getComputedStyle){var y = document.defaultView.getComputedStyle(q[i],null).getPropertyValue("z-Index");}
-// if (y >= 1000){q[i].style.zIndex = 'auto';}
-// }
 
 // detect if no -webkit-transform:translateZ(0) used, if so
 // remove this and place the 'none' value
@@ -148,6 +220,9 @@ if(watch7content)$('watch7-content').style.zIndex = 'auto';
 /* temp fix watch7-video */
 var watch7video = $('watch7-video');
 if(watch7video)$('watch7-video').style.zIndex = 'auto';
+
+var pagemanager = $('page-manager');
+if(pagemanager)$('page-manager').style.cssText = 'z-index:auto !important';
 
 // Turn Off the Lights path detection and set to auto zindex
 // this to make sure later YouTube doesn't change again the website layout
@@ -270,7 +345,6 @@ var ytpcardsbutton = document.getElementsByTagName('button');
 for(var i = 0; i < ytpcardsbutton.length; i++ )
 {if(ytpcardsbutton[i].className == ('ytp-button ytp-cards-button')) {ytpcardsbutton[i].style.zIndex = 1001;ytpcardsbutton[i].style.position = 'absolute';ytpcardsbutton[i].style.top = '0';}}
 
-
 // YouTube video sidebar info button
 var ivdrawer = document.getElementsByTagName('div');
 for(var i = 0; i < ivdrawer.length; i++ )
@@ -289,6 +363,9 @@ if(appbarguidemenu){$('appbar-guide-menu').style.zIndex = '10';}
 
 var appbarguideiframemask = $('appbar-guide-iframe-mask');
 if(appbarguideiframemask){$('appbar-guide-iframe-mask').style.zIndex = '-1';}
+
+var guide = $('guide');
+if(guide){$('guide').style.zIndex = '10';}
 
 // short and cleaner engine 2014
 var data = [['movie_player',1000],['movie_player-html5',1000],['watch-player',1000],['html5-player',1001],['video-player',1001],['user_fullwidth_gadget',1001]];
@@ -329,83 +406,19 @@ for(var i = 0; i < ytbezel.length; i++ )
 {if(ytbezel[i].className == ('html5-bezel html5-center-overlay')) {ytbezel[i].style.zIndex = 1001;}}
 
 // YouTube still showing the skip button for the ads
-var admedia = document.getElementsByTagName('div');
-for(var i = 0; i < admedia.length; i++ )
-{if(admedia[i].className == ('ad-container ad-container-single-media-element')) {admedia[i].style.zIndex = 1001}}
+var adcontainer = document.querySelector('.ad-container');
+if(adcontainer){adcontainer.style.zIndex = 1001};
 
-var admediaanno = document.getElementsByTagName('div');
-for(var i = 0; i < admediaanno.length; i++ )
-{if(admediaanno[i].className == ('ad-container ad-container-single-media-element-annotations')) {admediaanno[i].style.zIndex = 1001;;admediaanno[i].style.top = "0px"}}
+var youtubeadcontainer = document.getElementsByTagName('div');
+for(var i = 0; i < youtubeadcontainer.length; i++ )
+{if(youtubeadcontainer[i].className == ('ad-container ad-container-single-media-element-annotations')) {youtubeadcontainer[i].style.top = 0;}}
 
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName('div');
 for(var i = 0; i < ytpprogress.length; i++ )
 {if(ytpprogress[i].className == ('ytp-progress-bar-container')) {ytpprogress[i].style.zIndex = 1005;}}
 
-var playerapi = $('player-api');
-if(playerapi){$('player-api').style.zIndex = 1001;}
-
 } // end YouTube
-});
-
-/////////// leanbackplayer player support
-// controls way
-var lbpcontrols = $('lbp_controls');
-if(lbpcontrols){$('lbp_controls').style.cssText = 'z-index:1002 !important';}
-
-/////////// API for Website Developer
-// id way
-var websiteidapi = $('dont-turn-off-the-lights');
-if(websiteidapi){$('dont-turn-off-the-lights').style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
-
-// class way
-var websiteclassapi = document.getElementsByClassName('dont-turn-off-the-lights');
-for(var i = 0; i < websiteclassapi.length; i++ ){websiteclassapi[i].cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';}
-
-/////////// HTML5 video
-// default html5 video detection
-video = document.getElementsByTagName('video');
-for(var i = 0; i < video.length; i++) {
-
-var path = [];
-var el = video[i];
-do {
-    var qq = path.unshift(el.nodeName);
-    if (el.currentStyle) { 
-        var yta = qq.currentStyle["z-Index"]; 
-    }
-    else {
-        var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
-    }
-	if (yta == "auto"){}
-	else{el.style.zIndex = 'auto';}
-} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
-
-// other file then "mp3" then run this code
-if (video[i].currentSrc.lastIndexOf(".mp3")==-1) {video[i].style.cssText += 'visibility:visible !important; position:relative !important; z-index:1000 !important;';}
-if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-	if (no360youtube == true){
-		video[i].style.cssText += "display:block !important";
-	} else {
-	 // default the regular player
-	}
-}
-
-}
-
-// default html5 video detection inside a iframe element
-/*iframe = document.getElementsByTagName("iframe");
-for(var i = 0; i < iframe.length; i++) {
-try {
-	var innerDoc = iframe[i].contentWindow ? iframe[i].contentWindow.document : iframe[i].contentDocument ? iframe[i].contentDocument : iframe[i].document;
-	if(innerDoc){
-		var iframevideo = innerDoc.getElementsByTagName("video");
-		for(var j = 0; j < iframevideo.length; j++) {
-		iframe[i].style.cssText = 'visibility:visible !important; position:relative !important; z-index:1000 !important';
-		}
-	}
-} catch(e){}
-}*/
 
 // iframe HTML5 video
 // see inside injected.js
@@ -471,6 +484,8 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
 || (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
 || (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
+|| (insideframe.substring(0, 46) == 'http://www.facebook.com/v2.7/plugins/video.php') || (insideframe.substring(0, 47) == 'https://www.facebook.com/v2.7/plugins/video.php')
+|| (insideframe.substring(0, 27) == 'http://twitter.com/i/videos') || (insideframe.substring(0, 28) == 'https://twitter.com/i/videos')
 || (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
 || (insideframe.substring(0, 25) == 'http://www.hulu.com/embed') || (insideframe.substring(0, 26) == 'https://www.hulu.com/embed') || (insideframe.substring(0, 32) == 'https://www.hulu.com/site-player') || (insideframe.substring(0, 31) == 'http://www.hulu.com/site-player')|| (insideframe.substring(0, 22) == 'http://player.hulu.com') || (insideframe.substring(0, 23) == 'https://player.hulu.com')
 || (insideframe.substring(0, 14) == 'http://blip.tv') || (insideframe.substring(0, 15) == 'http://blip.tv') || (insideframe.substring(0, 16) == 'http://a.blip.tv') || (insideframe.substring(0, 17) == 'https://a.blip.tv')
@@ -496,6 +511,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 28) == 'http://rutube.ru/video/embed') || (insideframe.substring(0, 29) == 'https://rutube.ru/video/embed')
 /*|| (insideframe.substring(0, 19) == 'http://www.veoh.com') || (insideframe.substring(0, 20) == 'https://www.veoh.com')*/
 || (insideframe.substring(0, 16) == 'http://vine.co/v') || (insideframe.substring(0, 17) == 'https://vine.co/v')
+|| (insideframe.substring(0, 45) == 'http://rtssatweb.videostreaming.rs/player.php') || (insideframe.substring(0, 46) == 'http://rtssatweb.videostreaming.rs/player.php')
 || (insideframe.substring(0, 22) == 'http://embed.break.com') || (insideframe.substring(0, 23) == 'https://embed.break.com') || (insideframe.substring(0, 23) == 'https://media1.break.com') || (insideframe.substring(0, 24) == 'https://media1.break.com')
 || (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
 || (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
@@ -516,6 +532,8 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
 || (insideframe.substring(0, 20) == 'http://client.joy.cn') || (insideframe.substring(0, 21) == 'https://client.joy.cn')
 || (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
+|| (insideframe.substring(0, 28) == 'http://vxml.ifengimg.com/swf') || (insideframe.substring(0, 29) == 'https://vxml.ifengimg.com/swf')
+|| (insideframe.substring(0, 30) == 'http://live.nicovideo.jp/embed') || (insideframe.substring(0, 31) == 'https://live.nicovideo.jp/embed')
 || (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'http://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
@@ -554,6 +572,8 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
 || (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
 || (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
+|| (insideframe.substring(0, 46) == 'http://www.facebook.com/v2.7/plugins/video.php') || (insideframe.substring(0, 47) == 'https://www.facebook.com/v2.7/plugins/video.php')
+|| (insideframe.substring(0, 27) == 'http://twitter.com/i/videos') || (insideframe.substring(0, 28) == 'https://twitter.com/i/videos')
 || (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
 || (insideframe.substring(0, 25) == 'http://www.hulu.com/embed') || (insideframe.substring(0, 26) == 'https://www.hulu.com/embed') || (insideframe.substring(0, 32) == 'https://www.hulu.com/site-player') || (insideframe.substring(0, 31) == 'http://www.hulu.com/site-player')|| (insideframe.substring(0, 22) == 'http://player.hulu.com') || (insideframe.substring(0, 23) == 'https://player.hulu.com')
 || (insideframe.substring(0, 14) == 'http://blip.tv') || (insideframe.substring(0, 15) == 'http://blip.tv') || (insideframe.substring(0, 16) == 'http://a.blip.tv') || (insideframe.substring(0, 17) == 'https://a.blip.tv')
@@ -579,6 +599,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 28) == 'http://rutube.ru/video/embed') || (insideframe.substring(0, 29) == 'https://rutube.ru/video/embed')
 /*|| (insideframe.substring(0, 19) == 'http://www.veoh.com') || (insideframe.substring(0, 20) == 'https://www.veoh.com')*/
 || (insideframe.substring(0, 16) == 'http://vine.co/v') || (insideframe.substring(0, 17) == 'https://vine.co/v')
+|| (insideframe.substring(0, 45) == 'http://rtssatweb.videostreaming.rs/player.php') || (insideframe.substring(0, 46) == 'http://rtssatweb.videostreaming.rs/player.php')
 || (insideframe.substring(0, 22) == 'http://embed.break.com') || (insideframe.substring(0, 23) == 'https://embed.break.com') || (insideframe.substring(0, 23) == 'http://media1.break.com') || (insideframe.substring(0, 24) == 'https://media1.break.com')
 || (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
 || (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
@@ -599,6 +620,8 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
 || (insideframe.substring(0, 20) == 'http://client.joy.cn') || (insideframe.substring(0, 21) == 'https://client.joy.cn')
 || (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
+|| (insideframe.substring(0, 28) == 'http://vxml.ifengimg.com/swf') || (insideframe.substring(0, 29) == 'https://vxml.ifengimg.com/swf')
+|| (insideframe.substring(0, 30) == 'http://live.nicovideo.jp/embed') || (insideframe.substring(0, 31) == 'https://live.nicovideo.jp/embed')
 || (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'http://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
@@ -634,6 +657,8 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
 || (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
 || (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
+|| (insideframe.substring(0, 46) == 'http://www.facebook.com/v2.7/plugins/video.php') || (insideframe.substring(0, 47) == 'https://www.facebook.com/v2.7/plugins/video.php')
+|| (insideframe.substring(0, 27) == 'http://twitter.com/i/videos') || (insideframe.substring(0, 28) == 'https://twitter.com/i/videos')
 || (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
 || (insideframe.substring(0, 25) == 'http://www.hulu.com/embed') || (insideframe.substring(0, 26) == 'https://www.hulu.com/embed') || (insideframe.substring(0, 32) == 'https://www.hulu.com/site-player') || (insideframe.substring(0, 31) == 'http://www.hulu.com/site-player')|| (insideframe.substring(0, 22) == 'http://player.hulu.com') || (insideframe.substring(0, 23) == 'https://player.hulu.com') 
 || (insideframe.substring(0, 14) == 'http://blip.tv') || (insideframe.substring(0, 15) == 'http://blip.tv') || (insideframe.substring(0, 16) == 'http://a.blip.tv') || (insideframe.substring(0, 17) == 'https://a.blip.tv')
@@ -659,6 +684,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 28) == 'http://rutube.ru/video/embed') || (insideframe.substring(0, 29) == 'https://rutube.ru/video/embed')
 /*|| (insideframe.substring(0, 19) == 'http://www.veoh.com') || (insideframe.substring(0, 20) == 'https://www.veoh.com')*/
 || (insideframe.substring(0, 16) == 'http://vine.co/v') || (insideframe.substring(0, 17) == 'https://vine.co/v')
+|| (insideframe.substring(0, 45) == 'http://rtssatweb.videostreaming.rs/player.php') || (insideframe.substring(0, 46) == 'http://rtssatweb.videostreaming.rs/player.php')
 || (insideframe.substring(0, 22) == 'http://embed.break.com') || (insideframe.substring(0, 23) == 'https://embed.break.com') || (insideframe.substring(0, 23) == 'https://media1.break.com') || (insideframe.substring(0, 24) == 'https://media1.break.com')
 || (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
 || (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
@@ -679,6 +705,8 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
 || (insideframe.substring(0, 20) == 'http://client.joy.cn') || (insideframe.substring(0, 21) == 'https://client.joy.cn')
 || (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
+|| (insideframe.substring(0, 28) == 'http://vxml.ifengimg.com/swf') || (insideframe.substring(0, 29) == 'https://vxml.ifengimg.com/swf')
+|| (insideframe.substring(0, 30) == 'http://live.nicovideo.jp/embed') || (insideframe.substring(0, 31) == 'https://live.nicovideo.jp/embed')
 || (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'http://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
@@ -711,31 +739,34 @@ embed[i].style.cssText = 'visibility:visible !important; position:relative !impo
 // Vimeo, fixed show video
 if (window.location.href.match(/((http:\/\/(.*vimeo\.com\/.*|.*vimeo\.com\/.*\/b\/.*|.*vimeo\.com\/.*\/w\/.*))|(https:\/\/(.*vimeo\.com\/.*|.*vimeo\.com\/.*\/b\/.*|.*vimeo\.com\/.*\/w\/.*)))/i)){
 // 30/03/2014 show the controls
-var elems = document.getElementsByTagName('div'), i;
-for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('controls') > -1) {elems[i].style.zIndex = 1001;}}
+var vimeocontrols = document.querySelector('.controls');
+if(vimeocontrols){vimeocontrols.style.zIndex = 1001;}
 
-var elems = document.getElementsByTagName('div'), i;
-for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('sidedock') > -1) {elems[i].style.zIndex = 1001;}}
+var vimeosidedock = document.querySelector('.sidedock');
+if(vimeosidedock){vimeosidedock.style.zIndex = 1001;}
 
-var elems = document.getElementsByTagName('div'), i;
-for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('title') > -1) {elems[i].style.zIndex = 1001;}}
+var vimeotitle = document.querySelector('.title');
+if(vimeotitle){vimeotitle.style.zIndex = 1001;}
 
-//fixed 16/01/2015
-var elems = document.getElementsByTagName('div'), i;
-for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('target') > -1) {elems[i].style.zIndex = 1001;}}
+var vimeotarget = document.querySelector('.target');
+if(vimeotarget){vimeotarget.style.zIndex = 1001;}
 
-var elems = document.getElementsByTagName('div'), i;
-for (i in elems) {if((' ' + elems[i].className + ' ').indexOf('video') > -1) {elems[i].style.zIndex = 1001;}}
-
+var vimeovideo = document.querySelector('.video');
+if(vimeovideo){vimeovideo.style.zIndex = 1001;}
 //fixed 25/03/2016
 var vimeocontainer = document.querySelectorAll('div.player_container');
 for(var i = 0; i < vimeocontainer.length; i++ ){vimeocontainer[i].style.transform = 'initial';vimeocontainer[i].style.webkitTransform = 'initial';vimeocontainer[i].style.margin = 'auto';vimeocontainer[i].style.left = '0px';vimeocontainer[i].style.right = '0px';}
 var vimeovideoplayerarea = document.querySelectorAll('div.player_area');
 for(var i = 0; i < vimeovideoplayerarea.length; i++ ){vimeovideoplayerarea[i].style.transformStyle = 'initial';vimeovideoplayerarea[i].style.webkitTransformStyle = 'initial';}
+
+var vimeoprogress = document.querySelector('.progress');
+if(vimeoprogress){vimeoprogress.style.zIndex = 1001;}
+var vimeoplayed = document.querySelector('.played');
+if(vimeoplayed){vimeoplayed.style.zIndex = 1001;}
 }
 
 // Dailymotion, fixed show video
-else if (window.location.href.match(/http:\/\/(.*\.dailymotion\.com\/video\/.*|.*\.dailymotion\.com\/.*\/video\/.*)/i)){
+else if (window.location.href.match(/((http:\/\/(.*dailymotion\.com\/.*|.*dailymotion\.com\/video\/.*))|(https:\/\/(.*dailymotion\.com\/.*|.*dailymotion\.com\/video\/.*)))/i)){
 // intelligentvideodetection(); // disabled on 24 July 2015
 
 div = document.getElementsByTagName('div'); 
@@ -849,6 +880,15 @@ for(var i = 0; i < i5q.length; i++){
 }
 }
 
+// Netflix, fullscreen video player -> block
+else if (window.location.href.match(/((http:\/\/(.*netflix\.com\/watch\/.*))|(https:\/\/(.*netflix\.com\/watch\/.*)))/i)){
+// it's a video player. Then do nothing
+activatelightsoff = false;
+document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !important;position:absolute;width:100%;height:100%';
+}
+
+}); // end storage
+
 //Flash games
 //Windows Media Player
 //Silverlight
@@ -873,15 +913,15 @@ for(var i = 0; i < i5q.length; i++){
 		readerontext = $('totlgammaVal');
 		readeronrange = $('totlrange');
 		if (readerontext != null && readeronrange != null) {
-			chrome.storage.sync.set({"interval": readerontext.value});
+			chrome.storage.local.set({"interval": readerontext.value});
 		}
 	
 		readerlargestyle = $('__totl-tidbit-box');
 		readerlargeimgclick = $('__totl-min');
 		readerlargetitleclick = $('__totl-box-info');
 		if (readerlargestyle != null && readerlargeimgclick != null && readerlargetitleclick != null) {
-			if(readerlargestyle.style.width == '24px'){chrome.storage.sync.set({"readerlargestyle": false});}
-			else{chrome.storage.sync.set({"readerlargestyle": true});}
+			if(readerlargestyle.style.width == '24px'){chrome.storage.local.set({"readerlargestyle": false});}
+			else{chrome.storage.local.set({"readerlargestyle": true});}
 		}	
 		}
 	
@@ -900,26 +940,26 @@ for(var i = 0; i < i5q.length; i++){
         if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
             // YouTube video suggestions (set back to default)
             var watch7sidebar = $('watch7-sidebar');
-            if(watch7sidebar){$('watch7-sidebar').style.zIndex = 'auto';}
+            if(watch7sidebar){watch7sidebar.style.zIndex = 'auto';}
 
             // YouTube playlist (set back to default)
             var watchappbarplaylist = $('watch-appbar-playlist');
-            if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = '3';}
+            if(watchappbarplaylist){watchappbarplaylist.style.zIndex = '3';}
 
             // YouTube video title (set back to default)
             var eowtitle = $('eow-title');
-            if(eowtitle){$('eow-title').style.color = '#222';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
+            if(eowtitle){eowtitle.style.color = '#222';eowtitle.style.zIndex = 'auto';eowtitle.style.position = 'relative';}
 		
             // YouTube video channel link back black (set back to default)
             var watch7userheader = $('watch7-user-header');
-            if(watch7userheader){$('watch7-user-header').style.zIndex = 'auto';$('watch7-user-header').style.position = 'relative';}
+            if(watch7userheader){watch7userheader.style.zIndex = 'auto';watch7userheader.style.position = 'relative';}
 
             var ytuserinfoa = document.querySelector('.yt-user-info a');
             if(ytuserinfoa){ytuserinfoa.style.color = '#333';}
             
             // YouTube infobar (set back to default)
             var watchdescription = $('watch-description');
-            if(watchdescription){$('watch-description').style.zIndex = 'auto';$('watch-description').style.background = 'transparent';}
+            if(watchdescription){watchdescription.style.zIndex = 'auto';watchdescription.style.background = 'transparent';}
             
             // YouTube infobar (set back to default)
             var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
@@ -943,7 +983,23 @@ for(var i = 0; i < i5q.length; i++){
             // YouTube like bar (set back to default)
             var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
             if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';}
+
+			// YouTube sidebar 19 dec 2016
+			var sidebarguide = $('guide');
+            if(sidebarguide){sidebarguide.style.removeProperty("z-index");}
        }
+
+       // Set everything back to the default z-index experiment
+	   if (window.location.href.match(/((http:\/\/.*facebook\.com\/.*)|(https:\/\/.*facebook\.com\/.*))/i)){
+			for(j=0;t=['object','embed','applet','iframe','video'][j];++j)
+			{
+				var a = document.querySelectorAll(t);
+				for(var i = 0; i < a.length; i++ )
+				{
+				if (a[i].style.zIndex == '1000' || a[i].style.zIndex == '1001') {a[i].style.zIndex = 'auto';}
+				}
+			}
+		}
 	}
 
 	function removenewframe() {
@@ -967,7 +1023,7 @@ for(var i = 0; i < i5q.length; i++){
 		var stefanvddynamicbackground = $('stefanvddynamicbackground');
 		if(stefanvddynamicbackground) {document.body.removeChild(stefanvddynamicbackground);}
 	}
-	
+
 chrome.storage.sync.get(['mousespotlighto', 'mousespotlightc', 'mousespotlighta', 'lightcolor', 'lightimagea', 'lightimage', 'interval', 'fadein', 'fadeout', 'readera', 'readerlargestyle', 'mousespotlightt', 'enterpassword', 'password', 'dynamic', 'dynamic1', "dynamic2", 'dynamic3', 'dynamic4', 'dynamic5', 'dynamic6', 'dynamic7', 'dynamic8', 'dynamic9', 'dynamic10', 'hoveroptiondyn5', 'blur', 'cinemaontop', 'spotlightradius', 'slideeffect', 'lightimagelin', 'linearsq', 'colora', 'intervallina', 'colorb', 'intervallinb'], function(response){
 mousespotlighto = response['mousespotlighto'];if(mousespotlighto == null)mousespotlighto = true; // default mousespotlight true
 mousespotlightc = response['mousespotlightc'];if(mousespotlightc == null)mousespotlightc = false; // default mousespotlight false
@@ -1005,6 +1061,8 @@ colora = response['colora'];
 intervallina = response['intervallina'];
 colorb = response['colorb'];
 intervallinb = response['intervallinb'];
+
+if(activatelightsoff == true){
 
 // Password in document
 // taart make it remove or not
@@ -1497,7 +1555,7 @@ if(stretchable)  {
 		// -webkit-animation: totlbounceInDown 1.5s 0.0s linear 1;
 		newdiv.style.WebkitAnimation = "totlbounceInDown 1.5s 0.0s linear 1";
 		slideeffect = false;
-		chrome.storage.sync.set({"slideeffect": false});
+		chrome.storage.local.set({"slideeffect": false});
 		}
         document.body.appendChild(newdiv);
 
@@ -1703,7 +1761,7 @@ doScreenshot();
 				return id;
 			};
 
-		if (!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id) {clearTimeout(id);};
+		if (!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id) {window.clearTimeout(id);};
 	}())
 
 	var layers = [],objects = [],world = document.getElementById('stefanvdworld'),viewport = document.getElementById('stefanvddynamicbackground'),	
@@ -2216,7 +2274,7 @@ doScreenshot();
 	}
 	
 	}
-
+} // end activatelightsoff
 });
 
 ///////////

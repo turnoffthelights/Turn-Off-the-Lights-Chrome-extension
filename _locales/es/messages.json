@@ -1,6 +1,6 @@
 {
   "pagehelp":{
-    "message":"ayuda",
+    "message":"Ayuda",
     "description":"Ayuda"
   },
   "titelimage":{
@@ -193,7 +193,7 @@
   },
   "titelcontextmenus":{
     "message":"Menú de contexto",
-    "description":"Menú de contexto"
+    "description":"Menú contextual"
   },
   "titelplaylist":{
     "message":"Lista de reproducción",
@@ -536,11 +536,11 @@
     "description":"Pecera"
   },
   "longdonatetext":{
-    "message":"Te agradecería que realizases una donación a esta extensión para contribuir a mantenerla disponible. Ya sea $$1 o $$100, ¡te lo agradeceremos!",
-    "description":"Te agradecería que realizases una donación a esta extensión para contribuir a mantenerla disponible. Ya sea $$1 o $$100, ¡te lo agradeceremos!"
+    "message":"Te agradeceríamos que realizaras una donación a esta extensión para contribuir a mantenerla disponible. Ya sea 1€ o 100€, ¡te lo agradeceremos!",
+    "description":"Te agradeceríamos que realizaras una donación a esta extensión para contribuir a mantenerla disponible. Ya sea 1€ o 100€, ¡te lo agradeceremos!"
   },
   "deshardflash":{
-    "message":"Mostrar todos los elementos flash, omitiendo el filtro de URL. Esto arreglará los problemas con algunos reproductores de vídeo que quedan ocultos, pero también mostrará anuncios.",
+    "message":"Mostrar todos los elementos Flash, omitiendo el filtro URL. Esto solucionará los problemas con algunos reproductores de vídeo que quedan ocultos, pero también mostrará anuncios.",
     "description":"Mostrar todos los elementos flash, omitiendo el filtro de URL. Esto arreglará los problemas con algunos reproductores de vídeo que quedan ocultos, pero también mostrará anuncios."
   },
   "desfadeout":{
@@ -560,7 +560,7 @@
     "description":"No mostrar página de recordatorio"
   },
   "description":{
-    "message":"La pagina entera se oscurecerá,  así podrás ver los vídeos como si estuvieras en el cine.",
+    "message":"La pagina entera se oscurecerá, así podrás ver los vídeos como si estuvieras en el cine.",
     "description":"La pagina entera se oscurecerá,  así podrás ver los vídeos como si estuvieras en el cine."
   },
   "titelviewcount":{
@@ -624,8 +624,8 @@
     "description":"Off"
   },
   "titeleastereggs":{
-    "message":"Secretos",
-    "description":"Secretos"
+    "message":"Huevos de pascua",
+    "description":"Huevos de pascua"
   },
   "textfoot":{
     "message":"Este software está licenciado bajo el CC-GNU GPL. Para obtener una copia de esta licencia, visita",
@@ -660,8 +660,8 @@
     "description":"Mostrar siempre la bombilla en el cuadro multifunción"
   },
   "titellampvideo":{
-    "message":"Mostrar la bombilla solo si encuentras un reproductor de vídeo",
-    "description":"Mostrar la bombilla solo si encuentras un reproductor de vídeo"
+    "message":"Mostrar la bombilla solo si se detecta un reproductor de vídeo",
+    "description":"Mostrar la bombilla solo si se detecta un reproductor de vídeo"
   },
   "upgradecontexttitle":{
     "message":"Hemos añadido algunas características nuevas",
@@ -704,8 +704,8 @@
     "description":"¡Haz que todos sepan acerca de esta gran extensión!"
   },
   "rateitema":{
-    "message":"Ponle 5 estrellas",
-    "description":"Ponle 5 estrellas"
+    "message":"Valórenos con 5 estrellas",
+    "description":"Valórenos con 5 estrellas"
   },
   "titelreset":{
     "message":"Restablecer ajustes",
@@ -728,16 +728,16 @@
     "description":"Camera Motion"
   },
   "desmotion":{
-    "message":"Activar el \"Camera Motion\"",
-    "description":"Activar el \"Camera Motion\""
+    "message":"Activar \"Camera Motion\"",
+    "description":"Activar \"Camera Motion\""
   },
   "trymotion":{
     "message":"¡Compruébalo tú mismo!",
     "description":"¡Compruébalo tú mismo!"
   },
   "destrymotion":{
-    "message":"Eso es la leche, lo mejor es que funciona en todas partes. Desde YouTube hasta webs de noticias y demás.",
-    "description":"Eso es la leche, lo mejor es que funciona en todas partes. Desde YouTube hasta webs de noticias y demás."
+    "message":"Es genial y lo mejor de todo es que funciona en todas partes. Incluso en YouTube, sitios web de noticias, etc.",
+    "description":"Es genial y lo mejor de todo es que funciona en todas partes. Incluso en YouTube, sitios web de noticias, etc."
   },
   "howworkmotion":{
     "message":"¿Cómo funciona?",
@@ -749,7 +749,7 @@
   },
   "step2description":{
     "message":"Mueve la mano (o puño) desde arriba hacia abajo",
-    "description":"Mueve tu mano (estando visible) de arriba hacia abajo."
+    "description":"Mueve tu mano (o puño) de arriba hacia abajo."
   },
   "step3description":{
     "message":"La capa negra se deslizará hacia abajo automáticamente.",
@@ -816,8 +816,8 @@
     "description":"Elige tu dialecto de voz:"
   },
   "desatmosvivid":{
-    "message":"Efectos ambientales vivos en YouTube, requerido",
-    "description":"Efectos ambientales vivos en YouTube, requerido"
+    "message":"Los efectos ambientales vivos en YouTube requieren",
+    "description":"Los efectos ambientales vivos en YouTube requieren"
   },
   "help":{
     "message":"Ayuda",
@@ -832,8 +832,8 @@
     "description":"Activar el reconocimiento de voz solo en los siguientes sitios:"
   },
   "descammotiononly":{
-    "message":"Activar la 'Camera Motion' solo en los siguientes sitios:",
-    "description":"Activar la 'Camera Motion' solo en los siguientes sitios:"
+    "message":"Activar 'Camera Motion' solo en los siguientes sitios:",
+    "description":"Activar 'Camera Motion' solo en los siguientes sitios:"
   },
   "titelcamera":{
     "message":"Cámara",
@@ -884,8 +884,8 @@
     "description":"extensión para navegadores"
   },
   "desapitext":{
-    "message":"IPA Wiki para desarrolladores web",
-    "description":"IPA Wiki para desarrolladores web"
+    "message":"API Wiki para desarrolladores web",
+    "description":"API Wiki para desarrolladores web"
   },
   "desbrowsertheme":{
     "message":"tema de navegador",
@@ -896,8 +896,8 @@
     "description":"proyecto"
   },
   "titelapideveloper":{
-    "message":"Developer API",
-    "description":"Developer API"
+    "message":"Desarrollador API",
+    "description":"Desarrollador API"
   },
   "titelwikiatmos":{
     "message":"Wiki sobre la función de iluminación de ambiente",
@@ -924,8 +924,8 @@
     "description":"Publicar en Facebook"
   },
   "sharemenupostongoogleplus":{
-    "message":"Publicar en Google +",
-    "description":"Publicar en Google +"
+    "message":"Publicar en Google+",
+    "description":"Publicar en Google+"
   },
   "sharemenuratetitle":{
     "message":"Califica esta extensión",
@@ -1133,7 +1133,7 @@
   },
   "titelvideotoolhueroration":{
     "message":"90 grados",
-    "description":"rotación de hue"
+    "description":"90 grados"
   },
   "titelvideotoolbrightness":{
     "message":"brillo",
@@ -1173,7 +1173,7 @@
   },
   "desvideotoolonly":{
     "message":"Activar la barra de herramientas de vídeo en las siguientes webs:",
-    "description":"Activar la barra de herramientas de vídeo en el sitios siguientes:"
+    "description":"Activar la barra de herramientas de vídeo en los siguientes sitios:"
   },
   "titelvideotoolwhitelist":{
     "message":"Lista blanca",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Lista negra",
     "description":"Lista negra"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hipervínculo",
+    "description":"Hipervínculo"
+  },
+  "titelblock60fps":{
+    "message":"Bloquear 60fps",
+    "description":"Bloquear 60fps"
+  },
+  "titelvolume":{
+    "message":"Control de volumen del vídeo",
+    "description":"Control de volumen del vídeo"
+  },
+  "desvideovolume":{
+    "message":"Controle el volumen del vídeo en reproducción con la ruda del ratón",
+    "description":"Controle el volumen del vídeo en reproducción con la ruda del ratón"
+  },
+  "desvideovolumecolor":{
+    "message":"Color del control",
+    "description":"Color del control"
+  },
+  "desvolumelabel":{
+    "message":"Mostrar la etiqueta de volumen",
+    "description":"Mostrar la etiqueta de volumen"
+  },
+  "desvolumesteps":{
+    "message":"Número de pasos con la rueda",
+    "description":"Número de pasos con la rueda"
+  },
+  "sharetexta":{
+    "message":"Consigue esta extensión del navegador Turn Off the Lights",
+    "description":"Consigue esta extensión del navegador Turn Off the Lights"
+  },
+  "sharetextb":{
+    "message":"Ey, esto es maravilloso. He probado justo hoy la extensión Turn Off the Lights para el navegador ",
+    "description":"Ey, esto es maravilloso. He probado justo hoy la extensión Turn Off the Lights para el navegador "
+  },
+  "sharetextc":{
+    "message":"La mejor e impresionante extensión para el navegador Turn Off the Lights",
+    "description":"La mejor e impresionante extensión para el navegador Turn Off the Lights"
+  },
+  "sharetextd":{
+    "message":"La extensión Turn Off the Lights es la mejor herramienta para YouTube. ¡Descárguela y pruébela usted mismo!",
+    "description":"La extensión Turn Off the Lights es la mejor herramienta para YouTube. ¡Descárguela y pruébela usted mismo!"
+  },
+  "titellampchoose":{
+    "message":"Escoja su estilo de bombilla preferido",
+    "description":"Escoja su estilo de bombilla preferido"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights no funciona en esta página web. Pruebe en otra página.",
+    "description":"Turn Off the Lights no funciona en esta página web. Pruebe en otra página."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Guía de bienvenida",
+    "description":"Guía de bienvenida"
+  },
+  "titelpopupsupport":{
+    "message":"Soporte",
+    "description":"Soporte"
+  },
+  "titelpopupoptions":{
+    "message":"Opciones",
+    "description":"Opciones"
+  },
+  "titelpopupratestars":{
+    "message":"Valórenos con 5 estrellas",
+    "description":"Valórenos con 5 estrellas"
+  },
+  "titelvisenable":{
+    "message":"Activa\/desactiva la visualización de audio",
+    "description":"Activa\/desactiva la visualización de audio"
+  },
+  "titelvischoose":{
+    "message":"Escoja su visualización de audio",
+    "description":"Escoja su visualización de audio"
+  },
+  "titelvisblocks":{
+    "message":"Bloques",
+    "description":"Bloques"
+  },
+  "titelvisfrequency":{
+    "message":"Frecuencia",
+    "description":"Frecuencia"
+  },
+  "titelvistunnel":{
+    "message":"Túnel musical",
+    "description":"Túnel musical"
+  },
+  "titelvisualization":{
+    "message":"Visualización de audio",
+    "description":"Visualización de audio"
+  },
+  "desvisopacity":{
+    "message":"Valor de la opacidad del fondo de la visualización de audio",
+    "description":"Valor de la opacidad del fondo de la visualización de audio"
+  },
+  "vtoolvisualization":{
+    "message":"Un botón para mostrar la visualización de audio en el reproductor de vídeo actual",
+    "description":"Un botón para mostrar la visualización de audio en el reproductor de vídeo actual"
   }
 }

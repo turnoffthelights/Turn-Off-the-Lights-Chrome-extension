@@ -8,8 +8,8 @@
     "description":"Hintergrundbild"
   },
   "shortcutalllights":{
-    "message":"um die Lichter in allen geöffneten Reitern ein-\/auszuschalten",
-    "description":"um die Lichter in allen geöffneten Reitern ein-\/auszuschalten"
+    "message":"um die Lichter in allen geöffneten Reitern ein-/auszuschalten",
+    "description":"um die Lichter in allen geöffneten Reitern ein-/auszuschalten"
   },
   "lastchecked":{
     "message":"Auf neueste Version geprüft am",
@@ -268,8 +268,8 @@
     "description":"Den Hinzufügenknopf von diesem YouTube-Video anzeigen."
   },
   "shortcuteyeprotection":{
-    "message":"um den Augenschutz zu aktivieren\/deaktivieren",
-    "description":"um den Augenschutz zu aktivieren\/deaktivieren"
+    "message":"um den Augenschutz zu aktivieren/deaktivieren",
+    "description":"um den Augenschutz zu aktivieren/deaktivieren"
   },
   "titelfadein":{
     "message":"Einblenden",
@@ -424,8 +424,8 @@
     "description":"Regentropfen"
   },
   "desalllightsoff":{
-    "message":"Durch das Klicken auf den Lampenknopf werden die Lichter auf allen geöffneten Reitern ein-\/ausgeschaltet",
-    "description":"Durch das Klicken auf den Lampenknopf werden die Lichter auf allen geöffneten Reitern ein-\/ausgeschaltet"
+    "message":"Durch das Klicken auf den Lampenknopf werden die Lichter auf allen geöffneten Reitern ein-/ausgeschaltet",
+    "description":"Durch das Klicken auf den Lampenknopf werden die Lichter auf allen geöffneten Reitern ein-/ausgeschaltet"
   },
   "optionecosaversaved":{
     "message":"Die Sekunden wurden erfolgreich gespeichert!",
@@ -444,8 +444,8 @@
     "description":"Genießen Sie diese Erweiterung und teilen Sie es mit anderen, die Sie denken, es zu schätzen."
   },
   "shortcuttotl":{
-    "message":"um die Lichter ein-\/auszuschalten",
-    "description":"um die Lichter ein-\/auszuschalten"
+    "message":"um die Lichter ein-/auszuschalten",
+    "description":"um die Lichter ein-/auszuschalten"
   },
   "deseyea":{
     "message":"Automatisch den Hintergrund beim Öffnen einer Seite abdunkeln",
@@ -648,8 +648,8 @@
     "description":"Nachtmodus"
   },
   "desnightonly":{
-    "message":"Den Nachtmodus nur auf der\/den folgende(n) Seite(n) anzeigen:",
-    "description":"Den Nachtmodus nur auf der\/den folgende(n) Seite(n) anzeigen:"
+    "message":"Den Nachtmodus nur auf der/den folgende(n) Seite(n) anzeigen:",
+    "description":"Den Nachtmodus nur auf der/den folgende(n) Seite(n) anzeigen:"
   },
   "desnightenabletheme":{
     "message":"Wenn eine neue Seite geöffnet wird, automatisch in den Nachtmodus schalten.",
@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Negativliste",
     "description":"Negativliste"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"60 Fps verhindern",
+    "description":"60 Fps verhindern"
+  },
+  "titelvolume":{
+    "message":"Video-Lautstärkeregler",
+    "description":"Video-Lautstärkeregler"
+  },
+  "desvideovolume":{
+    "message":"Kontrollieren Sie die Lautstärke des momentanen Videoplayers mit dem Mausrad",
+    "description":"Kontrollieren Sie die Lautstärke des momentanen Videoplayers mit dem Mausrad"
+  },
+  "desvideovolumecolor":{
+    "message":"Farbe des Schiebereglers",
+    "description":"Farbe des Schiebereglers"
+  },
+  "desvolumelabel":{
+    "message":"Lautstärke anzeigen",
+    "description":"Lautstärke anzeigen"
+  },
+  "desvolumesteps":{
+    "message":"Die Anzahl der Schritte für jeden Scroll",
+    "description":"Die Anzahl der Schritte für jeden Scroll"
+  },
+  "sharetexta":{
+    "message":"Erhalten Sie diese coole Turn Off the Lights Browsererweiterung",
+    "description":"Erhalten Sie diese coole Turn Off the Lights Browsererweiterung"
+  },
+  "sharetextb":{
+    "message":"Hey, Das ist unglaublich. Ich habe heute diese Turn Off the Lights Browsererweiterung ausprobiert ",
+    "description":"Hey, Das ist unglaublich. Ich habe heute diese Turn Off the Lights Browsererweiterung ausprobiert "
+  },
+  "sharetextc":{
+    "message":"Die beste und erstaunliche Turn Off the Lights Browsererweiterung",
+    "description":"Die beste und erstaunliche Turn Off the Lights Browsererweiterung"
+  },
+  "sharetextd":{
+    "message":"Die Turn Off the Lights Erweiterung ist das beste Tool für YouTube. Lade sie herunter und versuch es selbst!",
+    "description":"Die Turn Off the Lights Erweiterung ist das beste Tool für YouTube. Lade sie herunter und versuch es selbst!"
+  },
+  "titellampchoose":{
+    "message":"Suchen sie ihren Lampenstil aus",
+    "description":"Suchen sie ihren Lampenstil aus"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights funktioniert nicht auf dieser Website. Versuchen Sie eine andere Seite.",
+    "description":"Turn Off the Lights funktioniert nicht auf dieser Website. Versuchen Sie eine andere Seite."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Erste Schritte",
+    "description":"Erste Schritte"
+  },
+  "titelpopupsupport":{
+    "message":"Unterstützung",
+    "description":"Unterstützung"
+  },
+  "titelpopupoptions":{
+    "message":"Optionen",
+    "description":"Optionen"
+  },
+  "titelpopupratestars":{
+    "message":"Mit 5 Sternen bewerten",
+    "description":"Mit 5 Sternen bewerten"
+  },
+  "titelvisenable":{
+    "message":"Aktiviere/Deaktiviere die Audio Visualisierung",
+    "description":"Aktiviere/Deaktiviere die Audio Visualisierung"
+  },
+  "titelvischoose":{
+    "message":"Suchen Sie ihre Audio Visualisierung aus",
+    "description":"Suchen Sie ihre Audio Visualisierung aus"
+  },
+  "titelvisblocks":{
+    "message":"Blöcke",
+    "description":"Blöcke"
+  },
+  "titelvisfrequency":{
+    "message":"Häufigkeit",
+    "description":"Häufigkeit"
+  },
+  "titelvistunnel":{
+    "message":"Musiktunnel",
+    "description":"Musiktunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio-Visualisierung",
+    "description":"Audio-Visualisierung"
+  },
+  "desvisopacity":{
+    "message":"Die Deckkraft der Audio Visualisierung",
+    "description":"Die Deckkraft der Audio Visualisierung"
+  },
+  "vtoolvisualization":{
+    "message":"Eine Schaltfläche um die Audio Visualisierung für den momentanen Videoplayer anzuzeigen",
+    "description":"Eine Schaltfläche um die Audio Visualisierung für den momentanen Videoplayer anzuzeigen"
   }
 }

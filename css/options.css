@@ -29,14 +29,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 body{min-width:1150px;min-height:800px;background-color:#fff;color:#000;font-family:Arial,sans-serif;cursor:default;font-size:13px}
 #main-content{display:-webkit-box;position:absolute;left:0;right:0;top:0;bottom:0}
-#mainview{-webkit-box-align:stretch;-webkit-padding-start:216px;-moz-box-align:stretch;-moz-padding-start:216px;margin:0;position:absolute;left:0;right:0;top:0;bottom:0;z-index:1}
+#mainview{-webkit-box-align:stretch;-webkit-padding-start:216px;-moz-box-align:stretch;-moz-padding-start:216px;padding-left:216px;margin:0;position:absolute;left:0;right:0;top:0;bottom:0;z-index:1}
 #mainview-content{box-sizing:border-box;max-width:888px;min-width:600px;padding:0 24px;position:relative}
 #managed-prefs-banner{background:#FFF2B7;height:31px;width:100%;margin:0;padding:0;vertical-align:middle;border-bottom:1px solid #c6c9ce}
 #managed-prefs-icon{display:inline-block;padding:7px 7px 2px;height:21px;vertical-align:middle}
 #managed-prefs-text{vertical-align:middle}
 #managed-prefs-text-close{float:right;background:url(../images/close@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/close.png) 1x,url(../images/close@2x.png) 2x);width:10px;height:10px;margin:10px;background-repeat:no-repeat;background-position:center}
 #navbar{margin:0}
-#navbar-container{-webkit-border-end:1px solid #c6c9ce;-moz-border-end:1px solid #c6c9ce;background:#fff;bottom:0;display:block;left:0;position:fixed;top:0;width:216px;z-index:2}
+#navbar-container{-webkit-border-end:1px solid #c6c9ce;-moz-border-end:1px solid #c6c9ce;border-right:1px solid #c6c9ce;background:#fff;bottom:0;display:block;left:0;position:fixed;top:0;width:216px;z-index:2}
 #navbar-container>ul{-webkit-user-select:none;list-style-type:none;margin:0;padding:0}
 .navbar-item{color:#373737;cursor:pointer;display:block;font-size:105%;outline:none;padding:7px 0;text-align:end;-webkit-padding-end:24px}
 .navbar-item-selected{background:#f5f5f5;color:#000}
@@ -564,6 +564,7 @@ video{position:relative;z-index:99;margin-left:100px;margin-top:10px}
 .warningambilight{border-radius:2px;background-color:#FAE691;margin-top:7px;padding:5px;border:1px solid #878787;margin-left:20px;margin-bottom:10px}
 /* html */
 header{position:absolute;right:30px;margin-top:-27px;color:#999;font-size:11px}
+header div{display:inline-block;vertical-align:middle}
 .tablefirstyt{border-spacing:0;width:100%}
 /* input */
 input[type="password"],input[type="text"],input[type="url"],input:not([type]){border-radius:2px;border:1px solid #AAA;font-size:inherit;padding:3px}

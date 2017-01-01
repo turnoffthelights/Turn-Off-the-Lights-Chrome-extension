@@ -560,8 +560,8 @@
     "description":"Do not show reminder page"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond.",
+    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond."
   },
   "titelviewcount":{
     "message":"Number of Views",
@@ -1196,44 +1196,48 @@
     "description":"Video Volume Slider"
   },
   "desvideovolume":{
-    "message":"Control volume of that current video player with a mouse scroll",
-    "description":"Control volume of that current video player with a mouse scroll"
+    "message":"Control the volume of the current video player with a mouse scroll",
+    "description":"ontrol the volume of the current video player with a mouse scroll"
   },
   "desvideovolumecolor":{
     "message":"Color of the slider",
     "description":"Color of the slider"
   },
   "desvolumelabel":{
-    "message":"Show the volume label",
-    "description":"Show the volume label"
+    "message":"Show volume label",
+    "description":"Show volume label"
   },
   "desvolumesteps":{
-    "message":"The number of steps for each scroll",
-    "description":"The number of steps for each scroll"
+    "message":"The number of levels for each 360° wheel scroll",
+    "description":"The number of levels for each 360° wheel scroll"
   },  
   "sharetexta":{
     "message":"Get this Cool Turn Off the Lights Browser Extension",
     "description":"Get this Cool Turn Off the Lights Browser Extension"
   },
   "sharetextb":{
-    "message":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
-    "description":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
+    "description":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
   },
   "sharetextc":{
     "message":"The Best and Amazing Turn Off the Lights Browser extension",
     "description":"The Best and Amazing Turn Off the Lights Browser extension"
   },
  "sharetextd":{
-    "message":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!",
-    "description":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!"
+    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!",
+    "description":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+  },
+  "titelsharethis":{
+    "message":"Share this:",
+    "description":"Share this:"
   },
   "titellampchoose":{
     "message":"Choose your favorite lamp style",
     "description":"Choose your favorite lamp style"
   },
   "titeldoesntwork":{
-    "message":"Turn Off the Lights doesn't work on this web page. Try another page.",
-    "description":"Turn Off the Lights doesn't work on this web page. Try another page."
+    "message":"Turn Off the Lights doesn't work on this web page. Please try another page.",
+    "description":"Turn Off the Lights doesn't work on this web page. Please try another page."
   },
   "titelpopupvideo":{
     "message":"YouTube",
@@ -1284,7 +1288,7 @@
     "description":"The opacity value of the audio visualization background"
   },
   "vtoolvisualization":{
-    "message":"A button to show the audio visualization for the current video player",
-    "description":"A button to show the audio visualization for the current video player"
+    "message":"A button for displaying the audio-visualization for the current video player",
+    "description":"A button for displaying the audio-visualization for the current video player"
   }
 }

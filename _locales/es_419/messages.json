@@ -1182,5 +1182,109 @@
   "titelvideotoolblacklist":{
     "message":"Lista negra",
     "description":"Lista negra"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hipervínculo",
+    "description":"Hipervínculo"
+  },
+  "titelblock60fps":{
+    "message":"Bloquear a 60 FPS",
+    "description":"Bloquear a 60 FPS"
+  },
+  "titelvolume":{
+    "message":"Deslizador de volumen de video",
+    "description":"Deslizador de volumen de video"
+  },
+  "desvideovolume":{
+    "message":"Controlá el volumen del reproductor del video actual con un un desplazamiento del mouse",
+    "description":"Controlá el volumen del reproductor del video actual con un un desplazamiento del mouse"
+  },
+  "desvideovolumecolor":{
+    "message":"Color del deslizador",
+    "description":"Color del deslizador"
+  },
+  "desvolumelabel":{
+    "message":"Mostrar la etiqueta de volumen",
+    "description":"Mostrar la etiqueta de volumen"
+  },
+  "desvolumesteps":{
+    "message":"Número de pasos para cada desplazamiento",
+    "description":"Número de pasos para cada desplazamiento"
+  },
+  "sharetexta":{
+    "message":"Conseguí la extensión Turn Off The Lights",
+    "description":"Conseguí la extensión Turn Off The Lights"
+  },
+  "sharetextb":{
+    "message":"Che, mirá qué copado está esto. Recién probé esta extensión: Turn Off The Lights.",
+    "description":"Che, mirá qué copado está esto. Recién probé esta extensión: Turn Off The Lights."
+  },
+  "sharetextc":{
+    "message":"La genial extensión Turn Off The Lights",
+    "description":"La genial extensión Turn Off The Lights"
+  },
+  "sharetextd":{
+    "message":"El complemento Turn Off The Lights es la mejor herramienta para YouTube. ¡Descargala y probala!",
+    "description":"El complemento Turn Off The Lights es la mejor herramienta para YouTube. ¡Descargala y probala!"
+  },
+  "titellampchoose":{
+    "message":"Elegí tu estilo favorito de lámpara",
+    "description":"Elegí tu estilo favorito de lámpara"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off The Lights no funciona en esta página web. Probá otra.",
+    "description":"Turn Off The Lights no funciona en esta página web. Probá otra."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube",
+    "description":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"Guía de bienvenida",
+    "description":"Guía de bienvenida"
+  },
+  "titelpopupsupport":{
+    "message":"Apoyo",
+    "description":"Apoyo"
+  },
+  "titelpopupoptions":{
+    "message":"Opciones",
+    "description":"Opciones"
+  },
+  "titelpopupratestars":{
+    "message":"Puntuá con 5 estrellas",
+    "description":"Puntuá con 5 estrellas"
+  },
+  "titelvisenable":{
+    "message":"Habilitar\/deshabilitar la visualización de audio",
+    "description":"Habilitar\/deshabilitar la visualización de audio"
+  },
+  "titelvischoose":{
+    "message":"Elegí la visualización de audio",
+    "description":"Elegí la visualización de audio"
+  },
+  "titelvisblocks":{
+    "message":"Bloques",
+    "description":"Bloques"
+  },
+  "titelvisfrequency":{
+    "message":"Frecuencia",
+    "description":"Frecuencia"
+  },
+  "titelvistunnel":{
+    "message":"Túnel musical",
+    "description":"Túnel musical"
+  },
+  "titelvisualization":{
+    "message":"Visualización de audio",
+    "description":"Visualización de audio"
+  },
+  "desvisopacity":{
+    "message":"El valor de opacidad del fondo de la visualización de audio",
+    "description":"El valor de opacidad del fondo de la visualización de audio"
+  },
+  "vtoolvisualization":{
+    "message":"Un botón para mostrar la visualización de audio del reproductor de video actual",
+    "description":"Un botón para mostrar la visualización de audio del reproductor de video actual"
   }
 }

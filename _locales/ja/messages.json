@@ -168,8 +168,8 @@
     "description":"動く壁紙"
   },
   "deslikebutton":{
-    "message":"この動画について YouTube の「好き\/嫌い」ボタンを表示する。",
-    "description":"この動画について YouTube の「好き\/嫌い」ボタンを表示する。"
+    "message":"この動画について YouTube の「好き/嫌い」ボタンを表示する。",
+    "description":"この動画について YouTube の「好き/嫌い」ボタンを表示する。"
   },
   "titelmouse":{
     "message":"マウス",
@@ -308,8 +308,8 @@
     "description":"スクリーン セーバーに切り替える時間を確認"
   },
   "deslikebar":{
-    "message":"YouTube の動画の下に、「好き\/嫌い」バーを表示します。",
-    "description":"YouTube の動画の下に、「好き\/嫌い」バーを表示します。"
+    "message":"YouTube の動画の下に、「好き/嫌い」バーを表示します。",
+    "description":"YouTube の動画の下に、「好き/嫌い」バーを表示します。"
   },
   "titelautoplay":{
     "message":"自動再生",
@@ -477,7 +477,7 @@
   },
   "titellikebutton":{
     "message":"評価ボタン",
-    "description":"好き\/嫌いのボタン"
+    "description":"好き/嫌いのボタン"
   },
   "titelpageaction":{
     "message":"電球マークを表示しない",
@@ -1256,8 +1256,8 @@
     "description":"5つ星の評価"
   },
   "titelvisenable":{
-    "message":"オーディオ ヴィジュアライゼーションを有効\/無効にする",
-    "description":"オーディオ ヴィジュアライゼーションを有効\/無効にする"
+    "message":"オーディオ ヴィジュアライゼーションを有効/無効にする",
+    "description":"オーディオ ヴィジュアライゼーションを有効/無効にする"
   },
   "titelvischoose":{
     "message":"オーディオ ヴィジュアライゼーションを選択してください",

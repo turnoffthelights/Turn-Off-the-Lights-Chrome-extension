@@ -168,7 +168,7 @@
     "description":"动态背景"
   },
   "deslikebutton":{
-    "message":"显示YouTube上视频的 顶\/踩 按钮",
+    "message":"显示YouTube上视频的 顶/踩 按钮",
     "description":"显示类似 & 不喜欢此视频的 youtube 上的按钮。"
   },
   "titelmouse":{
@@ -308,8 +308,8 @@
     "description":"确认屏幕保护程序时间"
   },
   "deslikebar":{
-    "message":"显示YouTube 视频下的“like\/dislike”项目 。",
-    "description":"显示像\/不喜欢酒吧下 YouTube 视频。"
+    "message":"显示YouTube 视频下的“like/dislike”项目 。",
+    "description":"显示像/不喜欢酒吧下 YouTube 视频。"
   },
   "titelautoplay":{
     "message":"自动播放",
@@ -444,8 +444,8 @@
     "description":"享受此扩展并共享与其他人你觉得会很感激。"
   },
   "shortcuttotl":{
-    "message":"以开\/关灯光。",
-    "description":"以开\/关灯光。"
+    "message":"以开/关灯光。",
+    "description":"以开/关灯光。"
   },
   "deseyea":{
     "message":"打开页面时自动将背景变暗。",
@@ -476,7 +476,7 @@
     "description":"在打开以下站点时自动将背景变暗。"
   },
   "titellikebutton":{
-    "message":"顶\/踩 按钮",
+    "message":"顶/踩 按钮",
     "description":"喜欢 & 不喜欢按钮"
   },
   "titelpageaction":{
@@ -1184,56 +1184,56 @@
     "description":"黑名单"
   },
   "titelnightmodehyperlink":{
-    "message":"Hyperlink",
-    "description":"Hyperlink"
+    "message":"超链接",
+    "description":"超链接"
   },
   "titelblock60fps":{
-    "message":"Block 60fps",
-    "description":"Block 60fps"
+    "message":"阻止60fps",
+    "description":"阻止60fps"
   },
   "titelvolume":{
-    "message":"Video Volume Slider",
-    "description":"Video Volume Slider"
+    "message":"视频音量控制",
+    "description":"视频音量控制"
   },
   "desvideovolume":{
-    "message":"Control volume of that current video player with a mouse scroll",
-    "description":"Control volume of that current video player with a mouse scroll"
+    "message":"使用鼠标滚轮控制当前视频播放器的音量",
+    "description":"使用鼠标滚轮控制当前视频播放器的音量"
   },
   "desvideovolumecolor":{
-    "message":"Color of the slider",
-    "description":"Color of the slider"
+    "message":"滑动条颜色",
+    "description":"滑动条颜色"
   },
   "desvolumelabel":{
-    "message":"Show the volume label",
-    "description":"Show the volume label"
+    "message":"显示音量标签",
+    "description":"显示音量标签"
   },
   "desvolumesteps":{
-    "message":"The number of steps for each scroll",
-    "description":"The number of steps for each scroll"
+    "message":"鼠标滚轮的滚动所代表的音量等级",
+    "description":"鼠标滚轮的滚动所代表的音量等级"
   },
   "sharetexta":{
-    "message":"Get this Cool Turn Off the Lights Browser Extension",
-    "description":"Get this Cool Turn Off the Lights Browser Extension"
+    "message":"获取Turn Off the Lights浏览器扩展程序",
+    "description":"获取Turn Off the Lights浏览器扩展程序"
   },
   "sharetextb":{
-    "message":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
-    "description":"Hé, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+    "message":"嘿，我今天就尝试了Turn Off the Lights浏览器扩展程序，真令人惊奇。 ",
+    "description":"嘿，我今天就尝试了Turn Off the Lights浏览器扩展程序，真令人惊奇。 "
   },
   "sharetextc":{
-    "message":"The Best and Amazing Turn Off the Lights Browser extension",
-    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+    "message":"最佳且奇妙的 Turn Off the Lights 浏览器扩展",
+    "description":"最佳且奇妙的 Turn Off the Lights 浏览器扩展"
   },
   "sharetextd":{
-    "message":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!",
-    "description":"Turn Off the Lights extension is the Best Tool for on YouTube. Download and try it yourself!"
+    "message":"Turn Off the Lights浏览器扩展程序是用在Youtube上的工具中最好用的。你也来下载使用试试吧。",
+    "description":"Turn Off the Lights浏览器扩展程序是用在Youtube上的工具中最好用的。你也来下载使用试试吧。"
   },
   "titellampchoose":{
-    "message":"Choose your favorite lamp style",
-    "description":"Choose your favorite lamp style"
+    "message":"选择您首选的灯样式",
+    "description":"选择您首选的灯样式"
   },
   "titeldoesntwork":{
-    "message":"Turn Off the Lights doesn't work on this web page. Try another page.",
-    "description":"Turn Off the Lights doesn't work on this web page. Try another page."
+    "message":"Turn Off the Lights 不工作于此网页。请尝试其它网页。",
+    "description":"Turn Off the Lights 不工作于此网页。请尝试其它网页。"
   },
   "titelpopupvideo":{
     "message":"YouTube",
@@ -1256,35 +1256,35 @@
     "description":"打5分"
   },
   "titelvisenable":{
-    "message":"Enable\/disable the Audio Visualization",
-    "description":"Enable\/disable the Audio Visualization"
+    "message":"开启/禁用音频可视化",
+    "description":"开启/禁用音频可视化"
   },
   "titelvischoose":{
-    "message":"Choose your Audio Visualization",
-    "description":"Choose your Audio Visualization"
+    "message":"选择您的音频可视化",
+    "description":"选择您的音频可视化"
   },
   "titelvisblocks":{
     "message":"区块",
     "description":"区块"
   },
   "titelvisfrequency":{
-    "message":"Frequency",
-    "description":"Frequency"
+    "message":"频率",
+    "description":"频率"
   },
   "titelvistunnel":{
-    "message":"Music Tunnel",
-    "description":"Music Tunnel"
+    "message":"音乐隧道",
+    "description":"音乐隧道"
   },
   "titelvisualization":{
-    "message":"Audio Visualization",
-    "description":"Audio Visualization"
+    "message":"音频可视化",
+    "description":"音频可视化"
   },
   "desvisopacity":{
-    "message":"The opacity value of the audio visualization background",
-    "description":"The opacity value of the audio visualization background"
+    "message":"音频可视化背景不透明值",
+    "description":"音频可视化背景不透明值"
   },
   "vtoolvisualization":{
-    "message":"A button to show the audio visualization for the current video player",
-    "description":"A button to show the audio visualization for the current video player"
+    "message":"用于显示当前视频播放器音频可视化的按钮",
+    "description":"用于显示当前视频播放器音频可视化的按钮"
   }
 }

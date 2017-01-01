@@ -50,8 +50,17 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
  		if (MutationObserver) {
  		// setup MutationSummary observer
  		var videolist = document.querySelector('body');
- 		var observer = new MutationObserver(function(mutations, observer) {
-                                     initvideoinject();
+ 		var observer = new MutationObserver(function (mutations, observer) {
+ 		    mutations.forEach(function (mutation) {
+ 		        if (mutation.target.tagName == "VIDEO") {
+ 		            if (mutation.attributeName === "src") {
+ 		                initvideoinject();
+ 		            }
+ 		        }
+ 		        if (typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO") {
+ 		            initvideoinject();
+ 		        }
+ 		    });
                                      });
  
  		observer.observe(videolist, {

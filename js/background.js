@@ -287,8 +287,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
     }
 })
 
-try{ chrome.runtime.setUninstallUrl(linkuninstall); }
-catch(e){}
+chrome.runtime.setUninstallURL(linkuninstall);
 
 // convert from old storage to new
 if(localStorage["firstRun"] == "false"){ chrome.storage.sync.set({"firstRun": false}); }

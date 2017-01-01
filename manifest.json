@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.3.0.0",
+  "version": "3.3.0.20",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com",
@@ -72,6 +72,7 @@
     "page": "options.html",
     "open_in_tab": true
   },
+  "offline_enabled": true,
   "minimum_chrome_version": "33",
   "permissions": [ "contextMenus", "notifications", "tabs", "storage", "<all_urls>" ]
 }
