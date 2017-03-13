@@ -68,5 +68,5 @@ The Browser extension is available in the following stores:
 * [Firefox in the Firefox Extension gallery](https://addons.mozilla.org/firefox/addon/turn-off-the-lights/)
 * [Safari in the Safari Extension gallery](https://safari-extensions.apple.com/details/?id=com.stefanvd.turnoffthelights-PRR97757HF)
 * Available for Yandex: See Yandex built-in extension
-* [Maxthon in the Windows Store](http://extension.maxthon.com/detail/index.php?view_id=1813)
+* [Maxthon in the Maxthon Extension gallery](http://extension.maxthon.com/detail/index.php?view_id=1813)
 * [Microsoft Edge in the Windows Store](http://clkde.tradedoubler.com/click?p=198981&amp;a=1376739&amp;g=0&amp;url=https%3a%2f%2fwww.microsoft.com%2fstore%2fp%2fturn-off-the-lights-for-microsoft-edge%2f9nblggh52lrr)
