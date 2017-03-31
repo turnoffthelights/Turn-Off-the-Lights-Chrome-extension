@@ -1,1186 +1,1056 @@
 {
   "pagehelp":{
-    "message":"मदद",
-    "description":"मदद"
+    "message":"मदद"
   },
   "titelimage":{
-    "message":"पृष्ठभूमि छवि",
-    "description":"पृष्ठभूमि छवि"
+    "message":"पृष्ठभूमि छवि"
   },
   "shortcutalllights":{
-    "message":"to toggle the lights on\/off for all open tabs",
-    "description":"to toggle the lights on\/off for all open tabs"
+    "message":"रोशनी के लिए सभी खुले टैब चालू/बंद टॉगल करने के लिए"
   },
   "lastchecked":{
-    "message":"Latest version check on",
-    "description":"Latest version check on"
+    "message":"पर नवीनतम संस्करण की जाँच करें"
   },
   "visualeffects":{
-    "message":"दृश्य प्रभाव",
-    "description":"दृश्य प्रभाव"
+    "message":"दृश्य प्रभाव"
   },
   "titelshortcutlight":{
-    "message":"शॉर्टकट कुंजी",
-    "description":"शॉर्टकट कुंजी"
+    "message":"शॉर्टकट कुंजी"
   },
   "titledonatebutton":{
-    "message":"दान",
-    "description":"दान"
+    "message":"दान"
   },
   "titellikebar":{
-    "message":"पसंद पट्टी",
-    "description":"पसंद पट्टी"
+    "message":"पसंद पट्टी"
   },
   "desmousespotlightt":{
-    "message":"Enable clicking hyperlinks when the screen is darkened",
-    "description":"Enable clicking hyperlinks when the screen is darkened"
+    "message":"जब स्क्रीन काली है पर क्लिक करके हाइपरलिंक सक्षम करें"
+  },
+  "desmousespotlights":{
+    "message":"Enable the screen shade, with the possibility to click on the hyperlinks"
   },
   "desambilight4color":{
-    "message":"4 वीडियो के आसपास चुना रंग:",
-    "description":"4 वीडियो के आसपास चुना रंग:"
+    "message":"4 वीडियो के आसपास चुना रंग:"
   },
   "lockentername":{
-    "message":"कृपया अपना पासवर्ड दर्ज करें",
-    "description":"कृपया अपना पासवर्ड दर्ज करें"
+    "message":"कृपया अपना पासवर्ड दर्ज करें"
   },
   "desnoflash":{
-    "message":"इस सुविधा का उपयोग न करें।",
-    "description":"इस सुविधा का उपयोग न करें।"
+    "message":"इस सुविधा का उपयोग न करें।"
   },
   "desdynamicblocks":{
-    "message":"ब्लॉक",
-    "description":"ब्लॉक"
+    "message":"ब्लॉक"
   },
   "titeleye":{
-    "message":"नेत्र संरक्षण",
-    "description":"नेत्र सुरक्षा"
+    "message":"नेत्र संरक्षण"
   },
   "titelcinemaontop":{
-    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window",
-    "description":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
+    "message":"Movie theater mode: it shows the 'lights off' layer only on the top of the window"
   },
   "desmousespotlightc":{
-    "message":"यदि प्रकाश बंद है, आप एक आइटम ध्यान केंद्रित करने के लिए एक क्षेत्र का चयन कर सकते हैं।",
-    "description":"यदि प्रकाश बंद है, आप एक आइटम ध्यान केंद्रित करने के लिए एक क्षेत्र का चयन कर सकते हैं।"
+    "message":"यदि प्रकाश बंद है, आप एक आइटम ध्यान केंद्रित करने के लिए एक क्षेत्र का चयन कर सकते हैं।"
   },
   "titelrememberpage":{
-    "message":"Reminder page",
-    "description":"Reminder page"
+    "message":"Reminder page"
   },
   "desmousespotlighta":{
-    "message":"यदि प्रकाश बंद है, तो माउस कर्सर के चारों ओर एक स्पॉटलाइट दिखाएँ।",
-    "description":"यदि प्रकाश बंद है, तो माउस कर्सर के चारों ओर एक स्पॉटलाइट दिखाएँ।"
+    "message":"यदि प्रकाश बंद है, तो माउस कर्सर के चारों ओर एक स्पॉटलाइट दिखाएँ।"
   },
   "desmousespotlighto":{
-    "message":"सामान्य उपयोग के (नीचे माउस सेटिंग्स अक्षम करता है)",
-    "description":"सामान्य उपयोग के (नीचे माउस सेटिंग्स अक्षम करता है)"
+    "message":"सामान्य उपयोग के (नीचे माउस सेटिंग्स अक्षम करता है)"
   },
   "desplaylist":{
-    "message":"यूट्यूब वेबसाइट पर यूट्यूब दिखाओ.",
-    "description":"यूट्यूब playlist यूट्यूब वेबसाइट पर दिखाएँ।"
+    "message":"यूट्यूब वेबसाइट पर यूट्यूब दिखाओ."
   },
   "desambilightfixcolor":{
-    "message":"कोई ठोस रंग:",
-    "description":"कोई ठोस रंग:"
+    "message":"कोई ठोस रंग:"
   },
   "desuntil":{
-    "message":"जब तक",
-    "description":"जब तक"
+    "message":"जब तक"
   },
   "desconfirmpassword":{
-    "message":"पासवर्ड की पुष्टि करें",
-    "description":"पासवर्ड की पुष्टि करें"
+    "message":"पासवर्ड की पुष्टि करें"
   },
   "desautoplayonly":{
-    "message":"मंद साइट (ओं केवल निम्नलिखित वीडियो):",
-    "description":"मंद साइट (ओं केवल निम्नलिखित वीडियो):"
+    "message":"मंद साइट (ओं केवल निम्नलिखित वीडियो):"
   },
   "helpeyeprotection":{
-    "message":"'आँख ' सुरक्षा सक्षम करने स्वचालित रूप से 'ऑटो प्ले' सुविधा को अक्षम करेगा।",
-    "description":"'आँख ' सुरक्षा सक्षम करने स्वचालित रूप से 'ऑटो प्ले' सुविधा को अक्षम करेगा।"
+    "message":"'आँख ' सुरक्षा सक्षम करने स्वचालित रूप से 'ऑटो प्ले' सुविधा को अक्षम करेगा।"
   },
   "skipremember":{
-    "message":"Skip this, and open the options page now",
-    "description":"Skip this, and open the options page now"
+    "message":"Skip this, and open the options page now"
   },
   "optiontimesaved":{
-    "message":"समय सफलतापूर्वक सहेजा गया है!",
-    "description":"समय सफलतापूर्वक सहेजा गया है!"
+    "message":"समय सफलतापूर्वक सहेजा गया है!"
   },
   "titelvideoheadline":{
-    "message":"वीडियो शीर्षक",
-    "description":"वीडियो शीर्षक"
+    "message":"वीडियो शीर्षक"
   },
   "translateme":{
-    "message":"का अनुवाद में मदद",
-    "description":"का अनुवाद में मदद"
+    "message":"का अनुवाद में मदद"
   },
   "despassword":{
-    "message":"रोशनी पर वापस मोड़ से पहले प्रवेश किया जा करने के लिए किसी पासवर्ड की आवश्यकता होती है।",
-    "description":"रोशनी पर वापस मोड़ से पहले प्रवेश किया जा करने के लिए किसी पासवर्ड की आवश्यकता होती है।"
+    "message":"रोशनी पर वापस मोड़ से पहले प्रवेश किया जा करने के लिए किसी पासवर्ड की आवश्यकता होती है।"
   },
   "helpautoplay":{
-    "message":"'नेत्र संरक्षण' सक्षम किया गया है। का उपयोग करने के लिए नीचे सुविधा, 'नेत्र संरक्षण' विकल्प को अक्षम करें।",
-    "description":"'नेत्र संरक्षण' सक्षम किया गया है। का उपयोग करने के लिए नीचे सुविधा, 'नेत्र संरक्षण' विकल्प को अक्षम करें।"
+    "message":"'नेत्र संरक्षण' सक्षम किया गया है। का उपयोग करने के लिए नीचे सुविधा, 'नेत्र संरक्षण' विकल्प को अक्षम करें।"
   },
   "name":{
-    "message":"लाइट्स बंद करें",
-    "description":"लाइट्स बंद करें"
+    "message":"लाइट्स बंद करें"
   },
   "changelog":{
-    "message":"परिवर्तन लॉग इन",
-    "description":"changelog लिंक"
+    "message":"परिवर्तन लॉग इन"
   },
   "optionpagetitle":{
-    "message":"Turn Off the Lights - विकल्प",
-    "description":"विकल्प पृष्ठ शीर्षक"
+    "message":"Turn Off the Lights - विकल्प"
   },
   "optionpasswordsaved":{
-    "message":"पासवर्ड सफलतापूर्वक सहेजा गया है!",
-    "description":"पासवर्ड सफलतापूर्वक सहेजा गया है!"
+    "message":"पासवर्ड सफलतापूर्वक सहेजा गया है!"
   },
   "desdynamicspace":{
-    "message":"अंतरिक्ष जगत",
-    "description":"अंतरिक्ष जगत"
+    "message":"अंतरिक्ष जगत"
   },
   "deseastereggs":{
-    "message":"Pressing the T key adds a theater curtain to the dark layer",
-    "description":"Pressing the T key adds a theater curtain to the dark layer"
+    "message":"Pressing the T key adds a theater curtain to the dark layer"
   },
   "settings":{
-    "message":"सेटिंग्स",
-    "description":"सेटिंग्स"
+    "message":"सेटिंग्स"
   },
   "desspotlightradius":{
-    "message":"Diameter of spotlight:",
-    "description":"Diameter of spotlight:"
+    "message":"Diameter of spotlight:"
   },
   "titelsync":{
-    "message":"सिंक",
-    "description":"सिंक"
+    "message":"सिंक"
   },
   "right":{
-    "message":"दाईं ओर",
-    "description":"दाईं ओर"
+    "message":"दाईं ओर"
   },
   "titeldynamic":{
-    "message":"गतिशील पृष्ठभूमि",
-    "description":"गतिशील पृष्ठभूमि"
+    "message":"गतिशील पृष्ठभूमि"
   },
   "deslikebutton":{
-    "message":"इस वीडियो के लिए यूट्यूब के जैसे और नापसंद बटन दिखाएँ.",
-    "description":"ऐसे शो & इस वीडियो के लिए YouTube के बटन नापसंद करते हैं।"
+    "message":"इस वीडियो के लिए यूट्यूब के जैसे और नापसंद बटन दिखाएँ."
   },
   "titelmouse":{
-    "message":"माउस",
-    "description":"माउस"
+    "message":"माउस"
   },
   "titellessmore":{
-    "message":"कम दिखाएँ",
-    "description":"कम दिखाएँ"
+    "message":"कम दिखाएँ"
   },
   "desshortcutlight":{
-    "message":"नीचे दिए गए कुंजीपटल शॉर्टकट सक्षम करें।",
-    "description":"नीचे दिए गए कुंजीपटल शॉर्टकट सक्षम करें।"
+    "message":"नीचे दिए गए कुंजीपटल शॉर्टकट सक्षम करें।"
   },
   "titelinfobar":{
-    "message":"जानकारी बार",
-    "description":"सूचना पट्टी"
+    "message":"जानकारी बार"
   },
   "descontextmenus":{
-    "message":"संदर्भ के लिए एक आइटम ध्यान मेनू दिखाएँ.",
-    "description":"संदर्भ मेनू के किसी आइटम ध्यान केंद्रित करने के लिए दिखा।"
+    "message":"संदर्भ के लिए एक आइटम ध्यान मेनू दिखाएँ."
   },
   "titelcontextmenus":{
-    "message":"संदर्भ मेनू",
-    "description":"प्रसंग मेनू"
+    "message":"संदर्भ मेनू"
   },
   "titelplaylist":{
-    "message":"प्लेलिस्ट",
-    "description":"चलाएँ-सूची"
+    "message":"प्लेलिस्ट"
   },
   "desatmosphereonly":{
-    "message":"वातावरण प्रकाश सुविधा केवल निम्नलिखित वीडियो साइट का उपयोग करें:",
-    "description":"वातावरण प्रकाश सुविधा केवल निम्नलिखित वीडियो साइट का उपयोग करें:"
+    "message":"वातावरण प्रकाश सुविधा केवल निम्नलिखित वीडियो साइट का उपयोग करें:"
   },
   "recflash":{
-    "message":"की सिफारिश की",
-    "description":"की सिफारिश की"
+    "message":"की सिफारिश की"
   },
   "desenterpassword":{
-    "message":"नीचे बॉक्स में अपना पासवर्ड दर्ज करें:",
-    "description":"नीचे बॉक्स में अपना पासवर्ड दर्ज करें:"
+    "message":"नीचे बॉक्स में अपना पासवर्ड दर्ज करें:"
   },
   "titelblurradius":{
-    "message":"Blur radius:",
-    "description":"Blur radius:"
+    "message":"Blur radius:"
   },
   "version":{
-    "message":"संस्करण",
-    "description":"संस्करण संख्या पाठ"
+    "message":"संस्करण"
   },
   "shortcutdark":{
-    "message":"to darken the screen (increase opacity)",
-    "description":"to darken the screen (increase opacity)"
+    "message":"to darken the screen (increase opacity)"
   },
   "dessharebutton":{
-    "message":"इस वीडियो के लिए YouTube का हिस्सा बटन दिखाएँ.",
-    "description":"इस वीडियो के लिए YouTube के शेयर बटन दिखाएँ।"
+    "message":"इस वीडियो के लिए YouTube का हिस्सा बटन दिखाएँ."
   },
   "shortcutbright":{
-    "message":"to brighten the screen (decrease opacity)",
-    "description":"to brighten the screen (decrease opacity)"
+    "message":"to brighten the screen (decrease opacity)"
   },
   "titelalllightsoff":{
-    "message":"सभी खुले टैब",
-    "description":"सभी खुले टैब"
+    "message":"सभी खुले टैब"
   },
   "desreadera":{
-    "message":"हमेशा मंदता स्तर पट्टी दिखाने के लिए जब रोशनी बाहर जाओ.",
-    "description":"जब रोशनी बाहर जाना हमेशा धुंधलापन तर पट्टी दिखाएँ।"
+    "message":"हमेशा मंदता स्तर पट्टी दिखाने के लिए जब रोशनी बाहर जाओ."
   },
   "rememberrate":{
-    "message":"दर",
-    "description":"दर"
+    "message":"दर"
   },
   "desautoplay":{
-    "message":"स्वचालित रूप से मंद पृष्ठभूमि जब आप खेलते हैं और बटन क्लिक बनाम.",
-    "description":"स्वतः पृष्ठभूमि जब आप चलाएँ बटन क्लिक करें और बनाम मंद।"
+    "message":"स्वचालित रूप से मंद पृष्ठभूमि जब आप खेलते हैं और बटन क्लिक बनाम."
   },
   "titelscreen":{
-    "message":"स्क्रीन",
-    "description":"स्क्रीन"
+    "message":"स्क्रीन"
   },
   "desflash":{
-    "message":"सभी फ्लैश वस्तुओं दिखाओ.",
-    "description":"सभी फ़्लैश ऑब्जेक्ट दिखाएँ।"
+    "message":"सभी फ्लैश वस्तुओं दिखाओ."
   },
   "titelhead":{
-    "message":"चैनल",
-    "description":"चैनल"
+    "message":"चैनल"
   },
   "pageatitle":{
-    "message":"लाइट्स बंद करें",
-    "description":"लाइट्स बंद करें"
+    "message":"लाइट्स बंद करें"
   },
   "desaddvideobutton":{
-    "message":"इस यूट्यूब वीडियो से जोड़ें बटन दिखाएँ।",
-    "description":"इस यूट्यूब वीडियो से जोड़ें बटन दिखाएँ।"
+    "message":"इस यूट्यूब वीडियो से जोड़ें बटन दिखाएँ।"
   },
   "shortcuteyeprotection":{
-    "message":"to enable\/disable the eye protection feature",
-    "description":"to enable\/disable the eye protection feature"
+    "message":"to enable/disable the eye protection feature"
   },
   "titelfadein":{
-    "message":"में फीका",
-    "description":"फीका"
+    "message":"में फीका"
   },
   "desreadern":{
-    "message":"कभी मंदता स्तर बार दिखाते हैं.",
-    "description":"कभी धुंधलापन तर पट्टी दिखाएँ।"
+    "message":"कभी मंदता स्तर बार दिखाते हैं."
   },
   "titelmaxqualityyoutube":{
-    "message":"इस संकल्प के लिए स्वचालित रूप से सेट करें:",
-    "description":"इस संकल्प के लिए स्वचालित रूप से सेट करें:"
+    "message":"इस संकल्प के लिए स्वचालित रूप से सेट करें:"
   },
   "desambilightrangespreadradius":{
-    "message":"धनात्मक मानों छाया का आकार बढ़ाएँ, ऋणात्मक मानों का आकार घटाएँ।",
-    "description":"धनात्मक मानों छाया का आकार बढ़ाएँ, ऋणात्मक मानों का आकार घटाएँ।"
+    "message":"धनात्मक मानों छाया का आकार बढ़ाएँ, ऋणात्मक मानों का आकार घटाएँ।"
   },
   "titelon":{
-    "message":"पर",
-    "description":"पर"
+    "message":"पर"
   },
   "videotitle":{
-    "message":"ध्यान इस वीडियो",
-    "description":"इस वीडियो ध्यान केंद्रित"
+    "message":"ध्यान इस वीडियो"
   },
   "warningtextambilight":{
-    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
-    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
-    "message":"Animated Clouds",
-    "description":"Animated Clouds"
+    "message":"Animated Clouds"
   },
   "desconfirmtimesaver":{
-    "message":"स्क्रीन सेवर समय की पुष्टि करें",
-    "description":"स्क्रीन सेवर समय की पुष्टि करें"
+    "message":"स्क्रीन सेवर समय की पुष्टि करें"
   },
   "deslikebar":{
-    "message":"शो पसंद\/नापसंद यूट्यूब वीडियो के अंतर्गत पट्टी।",
-    "description":"शो पसंद\/नापसंद यूट्यूब वीडियो के अंतर्गत पट्टी।"
+    "message":"शो पसंद/नापसंद यूट्यूब वीडियो के अंतर्गत पट्टी।"
   },
   "titelautoplay":{
-    "message":"ऑटो प्ले",
-    "description":"स्वत: चलाएँ"
+    "message":"ऑटो प्ले"
   },
   "top":{
-    "message":"शीर्ष",
-    "description":"शीर्ष"
+    "message":"शीर्ष"
   },
   "titelspreadradius":{
-    "message":"Spread radius:",
-    "description":"Spread radius:"
+    "message":"Spread radius:"
   },
   "installadblocker":{
-    "message":"If you don't want to see ads, use an adblocker extension.",
-    "description":"If you don't want to see ads, use an adblocker extension."
+    "message":"If you don't want to see ads, use an adblocker extension."
   },
   "titelsharebutton":{
-    "message":"Share Button",
-    "description":"Share Button"
+    "message":"Share Button"
   },
   "titelcolor":{
-    "message":"रंग",
-    "description":"रंग"
+    "message":"रंग"
   },
   "titeldownloadbutton":{
-    "message":"इस नवीनीकरण को डाउनलोड!",
-    "description":"इस नवीनीकरण को डाउनलोड!"
+    "message":"इस नवीनीकरण को डाउनलोड!"
   },
   "pagetitle":{
-    "message":"गहरे रंग इस पृष्ठ",
-    "description":"यह पृष्ठ काला कर"
+    "message":"गहरे रंग इस पृष्ठ"
   },
   "titelambilight":{
-    "message":"वातावरण प्रकाश",
-    "description":"वातावरण प्रकाश"
+    "message":"वातावरण प्रकाश"
   },
   "titelshowmore":{
-    "message":"अधिक दिखाएँ",
-    "description":"अधिक दिखाएँ"
+    "message":"अधिक दिखाएँ"
   },
   "desviewcount":{
-    "message":"इस वीडियो के लिए देखने की संख्या दिखाएँ.",
-    "description":"इस वीडियो के लिए दृश्य की संख्या दिखाएँ।"
+    "message":"इस वीडियो के लिए देखने की संख्या दिखाएँ."
   },
   "titelautowidthyoutube":{
-    "message":"स्वचालित रूप से YouTube खिलाड़ी बड़े आकार के लिए सेट करें।",
-    "description":"स्वचालित रूप से YouTube खिलाड़ी बड़े आकार के लिए सेट करें।"
+    "message":"स्वचालित रूप से YouTube खिलाड़ी बड़े आकार के लिए सेट करें।"
   },
   "desconfirmtime":{
-    "message":"समय की पुष्टि करें",
-    "description":"समय की पुष्टि करें"
+    "message":"समय की पुष्टि करें"
   },
   "titelupgrade":{
-    "message":"नवीनीकरण",
-    "description":"नवीनीकरण"
+    "message":"नवीनीकरण"
   },
   "lockwrongpassword":{
-    "message":"गलत पासवर्ड, कृपया पुनः प्रयास करें।",
-    "description":"गलत पासवर्ड, कृपया पुनः प्रयास करें।"
+    "message":"गलत पासवर्ड, कृपया पुनः प्रयास करें।"
   },
   "titelsyncbrowser":{
-    "message":"विस्तार सेटिंग्स आपकी अन्य ब्राउज़र के साथ सिंक्रनाइज़ करें।",
-    "description":"विस्तार सेटिंग्स आपकी अन्य ब्राउज़र के साथ सिंक्रनाइज़ करें।"
+    "message":"विस्तार सेटिंग्स आपकी अन्य ब्राउज़र के साथ सिंक्रनाइज़ करें।"
   },
   "deletebutton":{
-    "message":"हटाएँ",
-    "description":"हटाएँ"
+    "message":"हटाएँ"
   },
   "eyedivon":{
-    "message":"पर",
-    "description":"पर"
+    "message":"पर"
   },
   "eyedivoff":{
-    "message":"बंद",
-    "description":"बंद"
+    "message":"बंद"
   },
   "deshead":{
-    "message":"यूट्यूब चैनल पट्टी या नाम दिखाओ.",
-    "description":"YouTube चैनल पट्टी या नाम दिखाएँ।"
+    "message":"यूट्यूब चैनल पट्टी या नाम दिखाओ."
   },
   "shortcutsavingopacity":{
-    "message":"इस अस्पष्टता मान को सहेजने के लिए",
-    "description":"इस अस्पष्टता मान को सहेजने के लिए"
+    "message":"इस अस्पष्टता मान को सहेजने के लिए"
   },
   "desinfobar":{
-    "message":"वीडियो के बारे में विवरण जानकारी दिखाएँ.",
-    "description":"वीडियो के बारे में विवरण जानकारी दिखाएँ।"
+    "message":"वीडियो के बारे में विवरण जानकारी दिखाएँ."
   },
   "titellamp":{
-    "message":"बल्ब",
-    "description":"बल्ब"
+    "message":"बल्ब"
   },
   "desambilightvarcolor":{
-    "message":"वीडियो से रंग ले लो।",
-    "description":"वीडियो से रंग ले लो।"
+    "message":"वीडियो से रंग ले लो।"
   },
   "showremember":{
-    "message":"Do not show this reminder page again when I open the options",
-    "description":"Do not show this reminder page again when I open the options"
+    "message":"Do not show this reminder page again when I open the options"
   },
   "donatepromotext":{
-    "message":"अगर आप किसी भी राशि का दान कर सकते हैं, मैं यह बेहद खुशी होगी!",
-    "description":"यदि आप किसी भी राशि का दान कर सकते हैं, मुझे बेहद खुशी होगी!"
+    "message":"अगर आप किसी भी राशि का दान कर सकते हैं, मैं यह बेहद खुशी होगी!"
   },
   "titelblur":{
-    "message":"बाकी धुंधला",
-    "description":"बाकी धुंधला"
+    "message":"बाकी धुंधला"
   },
   "desdynamicraindrops":{
-    "message":"रेनड्रॉप्स",
-    "description":"रेनड्रॉप्स"
+    "message":"रेनड्रॉप्स"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
+    "message":"Clicking the lamp button will toggle the lights on/off on all open tabs"
   },
   "optionecosaversaved":{
-    "message":"सेकंड सफलतापूर्वक सहेजा गया है!",
-    "description":"सेकंड सफलतापूर्वक सहेजा गया है!"
+    "message":"सेकंड सफलतापूर्वक सहेजा गया है!"
   },
   "titelreader":{
-    "message":"धुंधलापन स्तर बार",
-    "description":"धुंधलापन स्तर पट्टी"
+    "message":"धुंधलापन स्तर बार"
   },
   "deseyen":{
-    "message":"Normal use (lights go out when you click on the lamp icon)",
-    "description":"Normal use (lights go out when you click on the lamp icon)"
+    "message":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
-    "message":"इस विस्तार का आनंद और यह जो आपको लगता है कि इसकी सराहना करता होगा दूसरों के साथ साझा करें।",
-    "description":"इस विस्तार का आनंद और यह जो आपको लगता है कि इसकी सराहना करता होगा दूसरों के साथ साझा करें।"
+    "message":"इस विस्तार का आनंद और यह जो आपको लगता है कि इसकी सराहना करता होगा दूसरों के साथ साझा करें।"
   },
   "shortcuttotl":{
-    "message":"to toggle the lights on\/off",
-    "description":"to toggle the lights on\/off"
+    "message":"to toggle the lights on/off"
   },
   "deseyea":{
-    "message":"Automatically dim the background when opening a webpage",
-    "description":"Automatically dim the background when opening a webpage"
+    "message":"Automatically dim the background when opening a webpage"
   },
   "basicsettings":{
-    "message":"मूल बातें",
-    "description":"मूल बातें"
+    "message":"मूल बातें"
   },
   "hoveroptionapply":{
-    "message":"लागू करें",
-    "description":"लागू करें"
+    "message":"लागू करें"
   },
   "reportbug":{
-    "message":"रिपोर्ट में समस्या",
-    "description":"एक समस्या की रिपोर्ट करें"
+    "message":"रिपोर्ट में समस्या"
   },
   "destime":{
-    "message":"निम्नलिखित समय के बीच रोशनी बंद:",
-    "description":"निम्नलिखित समय के बीच रोशनी बंद:"
+    "message":"निम्नलिखित समय के बीच रोशनी बंद:"
   },
   "guide":{
-    "message":"TOtL में आपका स्वागत है गाइड",
-    "description":"TOtL में आपका स्वागत है गाइड"
+    "message":"TOtL में आपका स्वागत है गाइड"
   },
   "deseyealist":{
-    "message":"Automatically dim the background on the following site(s):",
-    "description":"Automatically dim the background on the following site(s):"
+    "message":"Automatically dim the background on the following site(s):"
   },
   "titellikebutton":{
-    "message":"पसंद और नापसंद बटन",
-    "description":"पसंद & बटन नापसंद"
+    "message":"पसंद और नापसंद बटन"
   },
   "titelpageaction":{
-    "message":"छिपाएँ दीपक चिह्न",
-    "description":"pageaction चिह्न छुपाएँ"
+    "message":"छिपाएँ दीपक चिह्न"
   },
   "friendlyremember":{
-    "message":"Friendly Reminder...",
-    "description":"Friendly Reminder..."
+    "message":"Friendly Reminder..."
   },
   "desfadein":{
-    "message":"दिखाने के प्रभाव में फीका.",
-    "description":"फ़ेड प्रभाव में दिखाएँ।"
+    "message":"दिखाने के प्रभाव में फीका."
   },
   "warning":{
-    "message":"चेतावनी!",
-    "description":"चेतावनी!"
+    "message":"चेतावनी!"
   },
   "deseyetimesaver":{
-    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
-    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
-    "message":"सुझाव",
-    "description":"सुझाव"
+    "message":"सुझाव"
   },
   "advancedoptions":{
-    "message":"उन्नत विकल्प",
-    "description":"उन्नत विकल्प"
+    "message":"उन्नत विकल्प"
   },
   "dessuggestions":{
-    "message":"यूट्यूब वेबसाइट का सुझाव दिखाओ.",
-    "description":"यूट्यूब वेबसाइट के सुझावों के दिखाओ।"
+    "message":"यूट्यूब वेबसाइट का सुझाव दिखाओ."
   },
   "titelflash":{
-    "message":"फ़्लैश पहचान",
-    "description":"फ़्लैश डिटेक्शन"
+    "message":"फ़्लैश पहचान"
   },
   "desambilight":{
-    "message":"आप वर्तमान वीडियो चलाने का माहौल प्रकाश प्रभाव दिखा।",
-    "description":"आप वर्तमान वीडियो चलाने का माहौल प्रकाश प्रभाव दिखा।"
+    "message":"आप वर्तमान वीडियो चलाने का माहौल प्रकाश प्रभाव दिखा।"
   },
   "productshare":{
-    "message":"साझा करें",
-    "description":"साझा करें"
+    "message":"साझा करें"
   },
   "addbutton":{
-    "message":"जोड़ना",
-    "description":"जोड़ें"
+    "message":"जोड़ना"
   },
   "reportlist":{
-    "message":"(सूची देखने के लिए)",
-    "description":"पूरे मुद्दे की सूची देखें"
+    "message":"(सूची देखने के लिए)"
   },
   "desdynamicfishtank":{
-    "message":"मछली टैंक",
-    "description":"मछली टैंक"
+    "message":"मछली टैंक"
   },
   "longdonatetext":{
-    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
-    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
-    "message":"सभी फ़्लैश वस्तुओं में URL फ़िल्टर लंघन, दिखाएँ। इस छुपे हुए किया जा रहा कुछ वीडियो खिलाड़ियों के साथ समस्याओं को ठीक कर देंगे, लेकिन भी विज्ञापनों को प्रदर्शित करेगा।",
-    "description":"सभी फ़्लैश वस्तुओं में URL फ़िल्टर लंघन, दिखाएँ। इस छुपे हुए किया जा रहा कुछ वीडियो खिलाड़ियों के साथ समस्याओं को ठीक कर देंगे, लेकिन भी विज्ञापनों को प्रदर्शित करेगा।"
+    "message":"सभी फ़्लैश वस्तुओं में URL फ़िल्टर लंघन, दिखाएँ। इस छुपे हुए किया जा रहा कुछ वीडियो खिलाड़ियों के साथ समस्याओं को ठीक कर देंगे, लेकिन भी विज्ञापनों को प्रदर्शित करेगा।"
   },
   "desfadeout":{
-    "message":"बाहर फीका प्रभाव दिखाना.",
-    "description":"फ़ेड आउट प्रभाव दिखा।"
+    "message":"बाहर फीका प्रभाव दिखाना."
   },
   "optionwrongimg":{
-    "message":"अमान्य छवि फ़ाइल!",
-    "description":"अमान्य छवि फ़ाइल!"
+    "message":"अमान्य छवि फ़ाइल!"
   },
   "desvideoheadline":{
-    "message":"दिखाएँ और वीडियो शीर्षक के रंग पलटना.",
-    "description":"दिखाने के और वीडियो शीर्षक के रंग पलटना।"
+    "message":"दिखाएँ और वीडियो शीर्षक के रंग पलटना."
   },
   "desrememberpage":{
-    "message":"Do not show reminder page",
-    "description":"Do not show reminder page"
+    "message":"Do not show reminder page"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.",
-    "description":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond."
   },
   "titelviewcount":{
-    "message":"दर्शनों की संख्या",
-    "description":"दर्शनों की संख्या"
+    "message":"दर्शनों की संख्या"
   },
   "titelopacity":{
-    "message":"अस्पष्टता",
-    "description":"अपारदर्शिता"
+    "message":"अस्पष्टता"
   },
   "titelqualityyoutube":{
-    "message":"स्वचालित रूप से YouTube वीडियो की गुणवत्ता सेट करें।",
-    "description":"स्वचालित रूप से YouTube वीडियो की गुणवत्ता सेट करें।"
+    "message":"स्वचालित रूप से YouTube वीडियो की गुणवत्ता सेट करें।"
   },
   "shortcutopacity":{
-    "message":"to restore to the set darkness (opacity) setting",
-    "description":"to restore to the set darkness (opacity) setting"
+    "message":"to restore to the set darkness (opacity) setting"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
-    "message":"बटन जोड़ें",
-    "description":"बटन जोड़ें"
+    "message":"बटन जोड़ें"
   },
   "titelpassword":{
-    "message":"पासवर्ड सुरक्षा",
-    "description":"पासवर्ड सुरक्षा"
+    "message":"पासवर्ड सुरक्षा"
   },
   "titeldownloadupgrade":{
-    "message":"नवीनीकरण ध्यान केंद्रित चयनित छवियों के लिए समर्थन जोड़ता है, और साइट पर छवियों की एक गैलरी प्रदर्शित करेगा।",
-    "description":"नवीनीकरण ध्यान केंद्रित चयनित छवियों के लिए समर्थन जोड़ता है, और साइट पर छवियों की एक गैलरी प्रदर्शित करेगा।"
+    "message":"नवीनीकरण ध्यान केंद्रित चयनित छवियों के लिए समर्थन जोड़ता है, और साइट पर छवियों की एक गैलरी प्रदर्शित करेगा।"
   },
   "titelfadeout":{
-    "message":"बाहर फीका",
-    "description":"फ़ेड आउट"
+    "message":"बाहर फीका"
   },
   "eastereggsquestion":{
-    "message":"तुम एक असली फिल्म थियेटर पसंद है?",
-    "description":"तुम एक असली फिल्म थियेटर पसंद है?"
+    "message":"तुम एक असली फिल्म थियेटर पसंद है?"
   },
   "bottom":{
-    "message":"तल",
-    "description":"तल"
+    "message":"तल"
   },
   "dessaver":{
-    "message":"स्क्रीन सेवर:",
-    "description":"स्क्रीन सेवर:"
+    "message":"स्क्रीन सेवर:"
   },
   "hoveroptiondyn5":{
-    "message":"साथ फ्लाइंग",
-    "description":"साथ फ्लाइंग"
+    "message":"साथ फ्लाइंग"
   },
   "pagestillloading":{
-    "message":"पृष्ठ अभी भी लोड हो रहा है?",
-    "description":"पृष्ठ अभी भी लोड हो रहा है?"
+    "message":"पृष्ठ अभी भी लोड हो रहा है?"
   },
   "titeloff":{
-    "message":"बंद",
-    "description":"बंद"
+    "message":"बंद"
   },
   "titeleastereggs":{
-    "message":"ईस्टर अंडे",
-    "description":"ईस्टर अंडे"
+    "message":"ईस्टर अंडे"
   },
   "textfoot":{
-    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
-    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
-    "message":"बाईं ओर",
-    "description":"बाईं ओर"
+    "message":"बाईं ओर"
   },
   "titelnighttheme":{
-    "message":"रात मोड",
-    "description":"रात मोड"
+    "message":"रात मोड"
   },
   "desnighttheme":{
-    "message":"अंधेरा या प्रकाश पृष्ठ बनाने के लिए वेब पेज के नीचे रात स्विच बटन दिखाएँ।",
-    "description":"अंधेरा या प्रकाश पृष्ठ बनाने के लिए वेब पेज के नीचे रात स्विच बटन दिखाएँ।"
+    "message":"अंधेरा या प्रकाश पृष्ठ बनाने के लिए वेब पेज के नीचे रात स्विच बटन दिखाएँ।"
   },
   "nightoptions":{
-    "message":"रात मोड",
-    "description":"रात मोड"
+    "message":"रात मोड"
   },
   "desnightonly":{
-    "message":"रात मोड साइट (ओं केवल निम्न) दिखाएँ:",
-    "description":"रात मोड साइट (ओं केवल निम्न) दिखाएँ:"
+    "message":"रात मोड साइट (ओं केवल निम्न) दिखाएँ:"
   },
   "desnightenabletheme":{
-    "message":"जब आप एक नया पृष्ठ खोल यह जाना स्वत: करने के लिए रात मोड।",
-    "description":"जब आप एक नया पृष्ठ खोल यह जाना स्वत: करने के लिए रात मोड।"
+    "message":"जब आप एक नया पृष्ठ खोल यह जाना स्वत: करने के लिए रात मोड।"
   },
   "titellampregular":{
-    "message":"Always show the lamp icon in the omnibox",
-    "description":"Always show the lamp icon in the omnibox"
+    "message":"Always show the lamp icon in the omnibox"
   },
   "titellampvideo":{
-    "message":"Show the lamp icon only if a video player is detected",
-    "description":"Show the lamp icon only if a video player is detected"
+    "message":"Show the lamp icon only if a video player is detected"
   },
   "upgradecontexttitle":{
-    "message":"We have added some new features for you",
-    "description":"We have added some new features for you"
+    "message":"We have added some new features for you"
   },
   "upgradecontextmessage":{
-    "message":"That makes this extension even more amazing",
-    "description":"That makes this extension even more amazing"
+    "message":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
-    "message":"Camera Motion",
-    "description":"Camera Motion"
+    "message":"Camera Motion"
   },
   "upgradecontextitemma":{
-    "message":"light off with your hand",
-    "description":"light off with your hand"
+    "message":"light off with your hand"
   },
   "upgradecontextitemtb":{
-    "message":"Speech Recognition",
-    "description":"Speech Recognition"
+    "message":"Speech Recognition"
   },
   "upgradecontextitemmb":{
-    "message":"Control the web page more accurately",
-    "description":"Control the web page more accurately"
+    "message":"Control the web page more accurately"
   },
   "upgradefbshare":{
-    "message":"Share on Facebook",
-    "description":"Share on Facebook"
+    "message":"Share on Facebook"
   },
   "upgradetwshare":{
-    "message":"Tweet",
-    "description":"Tweet"
+    "message":"Tweet"
   },
   "ratetitle":{
-    "message":"Please rate & review my extension",
-    "description":"Please rate & review my extension"
+    "message":"Please rate & review my extension"
   },
   "ratedes":{
-    "message":"And let everyone know about this great extension!",
-    "description":"And let everyone know about this great extension!"
+    "message":"And let everyone know about this great extension!"
   },
   "rateitema":{
-    "message":"Rate 5 stars",
-    "description":"Rate 5 stars"
+    "message":"Rate 5 stars"
   },
   "titelreset":{
-    "message":"Reset settings",
-    "description":"Reset settings"
+    "message":"Reset settings"
   },
   "resetbrowserextension":{
-    "message":"Reset the Turn Off the Lights settings",
-    "description":"Reset the Turn Off the Lights settings"
+    "message":"Reset the Turn Off the Lights settings"
   },
   "desautoplaydelay":{
-    "message":"Brighten the background again when the video has ended after",
-    "description":"Brighten the background again when the video has ended after"
+    "message":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
-    "message":"seconds",
-    "description":"seconds"
+    "message":"seconds"
   },
   "motionoptions":{
-    "message":"Camera Motion",
-    "description":"Camera Motion"
+    "message":"Camera Motion"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion",
-    "description":"Enable the Camera Motion"
+    "message":"Enable the Camera Motion"
   },
   "trymotion":{
-    "message":"Try it yourself!",
-    "description":"Try it yourself!"
+    "message":"Try it yourself!"
   },
   "destrymotion":{
-    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc.",
-    "description":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
+    "message":"That's just great, and best of all is that it works everywhere. Even on YouTube, News website, etc."
   },
   "howworkmotion":{
-    "message":"How does it work?",
-    "description":"How does it work?"
+    "message":"How does it work?"
   },
   "step1description":{
-    "message":"Enable the Camera Motion feature",
-    "description":"Enable the Camera Motion feature"
+    "message":"Enable the Camera Motion feature"
   },
   "step2description":{
-    "message":"Move your hand (or fist) from the top to bottom.",
-    "description":"Move your hand (or fist) from the top to bottom."
+    "message":"Move your hand (or fist) from the top to bottom."
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
-    "message":"Checklist:",
-    "description":"Checklist:"
+    "message":"Checklist:"
   },
   "des1checkmotion":{
-    "message":"Make sure your room is not dark and that it has enough light.",
-    "description":"Make sure your room is not dark and that it has enough light."
+    "message":"Make sure your room is not dark and that it has enough light."
   },
   "des2checkmotion":{
-    "message":"Your camera must not receive direct sunlight.",
-    "description":"Your camera must not receive direct sunlight."
+    "message":"Your camera must not receive direct sunlight."
   },
   "des3checkmotion":{
-    "message":"You use a front facing camera.",
-    "description":"You use a front facing camera."
+    "message":"You use a front facing camera."
   },
   "titellinear":{
-    "message":"Linear",
-    "description":"Linear"
+    "message":"Linear"
   },
   "titelcolora":{
-    "message":"Color A:",
-    "description":"Color A:"
+    "message":"Color A:"
   },
   "titelcolorb":{
     "message":"Color B:",
     "description":"Color B:"
   },
   "speechoption":{
-    "message":"Speech Recognition",
-    "description":"Speech Recognition "
+    "message":"Speech Recognition"
   },
   "titelspeech":{
-    "message":"Speech",
-    "description":"Speech"
+    "message":"Speech"
   },
   "desspeech":{
-    "message":"When you enable this option, you can talk to the browser lamp and say the following commands:",
-    "description":"When you enable this option, you can talk to the browser lamp and say the following commands:"
+    "message":"When you enable this option, you can talk to the browser lamp and say the following commands:"
   },
   "desspeech1command":{
-    "message":"turn off the lights",
-    "description":"turn off the lights"
+    "message":"turn off the lights"
   },
   "desspeech2command":{
-    "message":"turn on the lights",
-    "description":"turn on the lights"
+    "message":"turn on the lights"
   },
   "desspeech3command":{
-    "message":"play video",
-    "description":"play video"
+    "message":"play video"
   },
   "desspeech4command":{
-    "message":"pause video",
-    "description":"pause video"
+    "message":"pause video"
   },
   "desspeechdialect":{
-    "message":"Choose your speech dialect:",
-    "description":"Choose your speech dialect:"
+    "message":"Choose your speech dialect:"
   },
   "desatmosvivid":{
-    "message":"Vivid atmosphere effects on YouTube, require",
-    "description":"Vivid atmosphere effects on YouTube, require"
+    "message":"Vivid atmosphere effects, require"
   },
   "help":{
-    "message":"मदद",
-    "description":"मदद"
+    "message":"मदद"
   },
   "about":{
-    "message":"के बारे में",
-    "description":"के बारे में"
+    "message":"के बारे में"
   },
   "desspeechonly":{
-    "message":"Activate Speech Recognition only on the following site(s):",
-    "description":"Activate Speech Recognition only on the following site(s):"
+    "message":"Activate Speech Recognition only on the following site(s):"
   },
   "descammotiononly":{
-    "message":"Activate the Camera Motion only on the following site(s):",
-    "description":"Activate the Camera Motion only on the following site(s):"
+    "message":"Activate the Camera Motion only on the following site(s):"
   },
   "titelcamera":{
-    "message":"Camera",
-    "description":"Camera"
+    "message":"Camera"
   },
   "titelautoplaywhitelist":{
-    "message":"Whitelist",
-    "description":"Whitelist"
+    "message":"Whitelist"
   },
   "titelautoplayblacklist":{
-    "message":"Blacklist",
-    "description":"Blacklist"
+    "message":"Blacklist"
   },
   "titeldownloadthemeupgrade":{
-    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser.",
-    "description":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
+    "message":"Add a dark theme to your browser to dress it up. The theme appears around the border of the browser."
   },
   "desbrowsersupport":{
-    "message":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer.",
-    "description":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer."
+    "message":"Your browser doesn't support this feature yet. Make sure you have the latest browser version installed on your computer."
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
-    "message":"See online for more examples",
-    "description":"See online for more examples"
+    "message":"See online for more examples"
   },
   "titelvideosample":{
-    "message":"Video Sample",
-    "description":"Video Sample"
+    "message":"Video Sample"
   },
   "titelwebsite":{
-    "message":"Website",
-    "description":"Website"
+    "message":"Website"
   },
   "titeldeveloper":{
-    "message":"Developer",
-    "description":"Developer"
+    "message":"Developer"
   },
   "titelrightsreserved":{
-    "message":"Some rights reserved.",
-    "description":"Some rights reserved."
+    "message":"Some rights reserved."
   },
   "desbrowserextension":{
-    "message":"browser extension",
-    "description":"browser extension"
+    "message":"browser extension"
   },
   "desapitext":{
-    "message":"Wiki API for Website Developer",
-    "description":"Wiki API for Website Developer"
+    "message":"Wiki API for Website Developer"
   },
   "desbrowsertheme":{
-    "message":"browser theme",
-    "description":"browser theme"
+    "message":"browser theme"
   },
   "desproject":{
-    "message":"project",
-    "description":"project"
+    "message":"project"
   },
   "titelapideveloper":{
-    "message":"API Developer",
-    "description":"API Developer"
+    "message":"API Developer"
   },
   "titelwikiatmos":{
-    "message":"Wiki about the Atmosphere Lighting feature",
-    "description":"Wiki about the Atmosphere Lighting feature"
+    "message":"Wiki about the Atmosphere Lighting feature"
   },
   "sharemenusharetitle":{
-    "message":"इसे भेजें",
-    "description":"इसे भेजें"
+    "message":"इसे भेजें"
   },
   "sharemenuwelcomeguidetitle":{
-    "message":"सहायता विभाग में स्वागत है",
-    "description":"सहायता विभाग में स्वागत है"
+    "message":"सहायता विभाग में स्वागत है"
   },
   "sharemenutellafriend":{
-    "message":"अपने मित्र को बताएँ",
-    "description":"अपने मित्र को बताएँ"
+    "message":"अपने मित्र को बताएँ"
   },
   "sharemenusendatweet":{
-    "message":"ट्वीट द्वारा भेजिए",
-    "description":"ट्वीट द्वारा भेजिए"
+    "message":"ट्वीट द्वारा भेजिए"
   },
   "sharemenupostonfacebook":{
-    "message":"फेसबुक द्वारा भेजिए",
-    "description":"फेसबुक द्वारा भेजिए"
+    "message":"फेसबुक द्वारा भेजिए"
   },
   "sharemenupostongoogleplus":{
-    "message":"Google+ द्वारा भेजिए",
-    "description":"Google+ द्वारा भेजिए"
+    "message":"Google+ द्वारा भेजिए"
   },
   "sharemenuratetitle":{
-    "message":"एक्सटेंशन को गुण दीजिए",
-    "description":"एक्सटेंशन को गुण दीजिए"
+    "message":"एक्सटेंशन को गुण दीजिए"
   },
   "sharemenudonatetitle":{
-    "message":"विकासकर्ता को आर्थिक समर्थन दीजिए",
-    "description":"विकासकर्ता को आर्थिक समर्थन दीजिए"
+    "message":"विकासकर्ता को आर्थिक समर्थन दीजिए"
   },
   "titelautostop":{
-    "message":"AutoStop",
-    "description":"AutoStop"
+    "message":"AutoStop"
   },
   "desautostop":{
-    "message":"Stop playing the video automatically when I open a web page",
-    "description":"Stop playing the video automatically when I open a web page"
+    "message":"Stop playing the video automatically when I open a web page"
   },
   "areyouhappy":{
-    "message":"Are you happy about Turn Off the Lights?",
-    "description":"Are you happy about Turn Off the Lights?"
+    "message":"Are you happy about Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensure that your opinion counts",
-    "description":"Ensure that your opinion counts"
+    "message":"Ensure that your opinion counts"
   },
   "nothanks":{
-    "message":"No thanks",
-    "description":"No thanks"
+    "message":"No thanks"
   },
   "writeareview":{
-    "message":"Write a review",
-    "description":"Write a review"
+    "message":"Write a review"
   },
   "desauroraplayer":{
-    "message":"The ambient lighting player is also available for your computer.",
-    "description":"The ambient lighting player is also available for your computer."
+    "message":"The ambient lighting player is also available for your computer."
   },
   "downloadtheapp":{
-    "message":"Download the app now",
-    "description":"Download the app now"
+    "message":"Download the app now"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Adds back the black menubar on the Google website.",
-    "description":"Adds back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
-    "message":"This shows you the real time stock market information.",
-    "description":"This shows you the real time stock market information."
+    "message":"This shows you the real time stock market information."
   },
   "titelnightmodeposition":{
-    "message":"Position of switch",
-    "description":"Position of switch"
+    "message":"Position of switch"
   },
   "nmtopleft":{
-    "message":"Top left",
-    "description":"Top left"
+    "message":"Top left"
   },
   "nmtopright":{
-    "message":"Top right",
-    "description":"Top right"
+    "message":"Top right"
   },
   "nmbottomright":{
-    "message":"Bottom right",
-    "description":"Bottom right"
+    "message":"Bottom right"
   },
   "nmbottomleft":{
-    "message":"Bottom left",
-    "description":"Bottom left"
+    "message":"Bottom left"
   },
   "nmcustom":{
-    "message":"Custom (click, hold and move the switch to the desired screen location)",
-    "description":"Custom (click, hold and move the switch to the desired screen location)"
+    "message":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
-    "message":"Shows a transparent switch on the web page",
-    "description":"Shows a transparent switch on the web page"
+    "message":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
-    "message":"Whitelist",
-    "description":"Whitelist"
+    "message":"Whitelist"
   },
   "titelnightmodeblacklist":{
-    "message":"Blacklist",
-    "description":"Blacklist"
+    "message":"Blacklist"
   },
   "desautostoponly":{
-    "message":"Only activate stop playing the video automatically on the following site(s):",
-    "description":"Only activate stop playing the video automatically on the following site(s):"
+    "message":"Only activate stop playing the video automatically on the following site(s):"
   },
   "titelautostopwhitelist":{
-    "message":"Whitelist",
-    "description":"Whitelist"
+    "message":"Whitelist"
   },
   "titelautostopblacklist":{
-    "message":"Blacklist",
-    "description":"Blacklist"
+    "message":"Blacklist"
   },
   "desnightactivetime":{
-    "message":"The switch will be visible between the following times:",
-    "description":"The switch will be visible between the following times:"
+    "message":"The switch will be visible between the following times:"
   },
   "deslampandnightmode":{
-    "message":"Activate the 'Night Mode' option when you click on the gray lamp button",
-    "description":"Activate the 'Night Mode' option when you click on the gray lamp button"
+    "message":"Activate the 'Night Mode' option when you click on the gray lamp button"
   },
   "titeleyewhitelist":{
-    "message":"Whitelist",
-    "description":"Whitelist"
+    "message":"Whitelist"
   },
   "titeleyeblacklist":{
-    "message":"Blacklist",
-    "description":"Blacklist"
+    "message":"Blacklist"
   },
   "desspeech5command":{
-    "message":"browser lamp",
-    "description":"browser lamp"
+    "message":"browser lamp"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video",
-    "description":"HTML5 & YouTube™ video"
+    "message":"HTML5 & YouTube™ video"
   },
   "flashembedobject":{
-    "message":"Supports: <object>, <embed>, <applet>, <iframe>.",
-    "description":"Supports: <object>, <embed>, <applet>, <iframe>."
+    "message":"Supports: <object>, <embed>, <applet>, <iframe>."
   },
   "titelnightmodebck":{
-    "message":"Background color:",
-    "description":"Background color:"
+    "message":"Background color"
   },
   "titelnightmodetxt":{
-    "message":"Text color:",
-    "description":"Text color:"
+    "message":"Text color"
   },
   "desdynamicsmoke":{
-    "message":"Smoke",
-    "description":"Smoke"
+    "message":"Smoke"
   },
   "desdynamicdotscolor":{
-    "message":"Color Dots",
-    "description":"Color Dots"
+    "message":"Color Dots"
   },
   "desdynamicstorm":{
     "message":"Storm",
     "description":"Storm"
   },
   "desdynamictriangulation":{
-    "message":"Triangulation",
-    "description":"Triangulation"
+    "message":"Triangulation"
   },
   "desdynamicstars":{
-    "message":"सितारे",
-    "description":"सितारे"
+    "message":"सितारे"
   },
   "desmobileapp":{
-    "message":"Turn Off the Lights is also available for your mobile device.",
-    "description":"Turn Off the Lights is also available for your mobile device."
+    "message":"Turn Off the Lights is also available for your mobile device."
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame",
-    "description":"Shows the full 360 degrees YouTube video in one frame"
+    "message":"Shows the full 360 degrees YouTube video in one frame"
   },
   "titelvideotool":{
-    "message":"Video Tool Bar",
-    "description":"Video Tool Bar"
+    "message":"Video Toolbar"
   },
   "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
+    "message":"Show the toolbar below your screen to customize the current video player"
   },
   "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
+    "message":"A button to set the video player to the full window size"
   },
   "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
+    "message":"A button to add a filter in the current video player"
   },
   "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
+    "message":"A button to replay the current video player"
+  },
+  "vtoolscreenshot":{
+    "message":"A button to take a screenshot of the current video player"
+  },
+  "vtoolalign":{
+    "message":"A button to center the video player in your browser window"
   },
   "titelvideotoolgrayscale":{
-    "message":"grayscale",
-    "description":"grayscale"
+    "message":"grayscale"
   },
   "titelvideotoolsepia":{
-    "message":"sepia",
-    "description":"sepia"
+    "message":"sepia"
   },
   "titelvideotoolinvert":{
-    "message":"invert",
-    "description":"invert"
+    "message":"invert"
   },
   "titelvideotoolcontrast":{
-    "message":"contrast",
-    "description":"contrast"
+    "message":"contrast"
   },
   "titelvideotoolsaturate":{
-    "message":"saturation",
-    "description":"saturation"
+    "message":"saturation"
   },
   "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
+    "message":"hue rotation"
   },
   "titelvideotoolbrightness":{
-    "message":"brightness",
-    "description":"brightness"
+    "message":"brightness"
   },
   "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
+    "message":"normal"
   },
   "titelvideotoollike":{
-    "message":"Like",
-    "description":"Like"
+    "message":"Like"
   },
   "titelvideotoolsubscribe":{
-    "message":"Subscribe",
-    "description":"Subscribe"
+    "message":"Subscribe"
   },
   "titelvideotoolrepeat":{
-    "message":"Repeat",
-    "description":"Repeat"
+    "message":"Repeat"
   },
   "titelvideotoolfilter":{
-    "message":"Filter",
-    "description":"Filter"
+    "message":"Filter"
   },
   "titelvideotoolfullwindow":{
-    "message":"Full window",
-    "description":"Full window"
+    "message":"Full window"
+  },
+  "titelvideotoolscreenshot":{
+    "message":"Take a screenshot"
   },
   "titelreflection":{
-    "message":"Reflection",
-    "description":"Reflection"
+    "message":"Reflection"
   },
   "desreflection":{
-    "message":"Show the reflection effect on all videos",
-    "description":"Show the reflection effect on all videos"
+    "message":"Show the reflection effect on all videos"
   },
   "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):",
-    "description":"Activate the Video Tool Bar only on the following site(s):"
+    "message":"Activate the Video Tool Bar only on the following site(s):"
   },
   "titelvideotoolwhitelist":{
-    "message":"Whitelist",
-    "description":"Whitelist"
+    "message":"Whitelist"
   },
   "titelvideotoolblacklist":{
-    "message":"Blacklist",
-    "description":"Blacklist"
+    "message":"Blacklist"
+  },
+  "titelnightmodehyperlink":{
+    "message":"Hyperlink",
+    "description":"Hyperlink"
+  },
+  "titelblock60fps":{
+    "message":"Block 60fps",
+    "description":"Block 60fps"
+  },
+  "titelvolume":{
+    "message":"Video Volume Slider"
+  },
+  "desvideovolume":{
+    "message":"Control the volume of the current video player with a mouse scroll"
+  },
+  "desvideovolumecolor":{
+    "message":"Color of the slider"
+  },
+  "desvolumelabel":{
+    "message":"Show volume label"
+  },
+  "desvolumesteps":{
+    "message":"The number of levels for each 360° wheel scroll"
+  },
+  "sharetexta":{
+    "message":"Get this Cool Turn Off the Lights Browser Extension"
+  },
+  "sharetextb":{
+    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+  },
+  "sharetextc":{
+    "message":"The Best and Amazing Turn Off the Lights Browser extension"
+  },
+  "sharetextd":{
+    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+  },
+  "titelsharethis":{
+    "message":"Share this:"
+  },
+  "titellampchoose":{
+    "message":"Choose your favorite lamp style"
+  },
+  "titeldoesntwork":{
+    "message":"Turn Off the Lights doesn't work on this web page. Please try another page."
+  },
+  "titelpopupvideo":{
+    "message":"YouTube"
+  },
+  "titelpopupwelcomeguide":{
+    "message":"सहायता विभाग में स्वागत है"
+  },
+  "titelpopupsupport":{
+    "message":"समर्थन"
+  },
+  "titelpopupoptions":{
+    "message":"विकल्प"
+  },
+  "titelpopupratestars":{
+    "message":"Rate 5 stars"
+  },
+  "titelvisenable":{
+    "message":"Enable/disable the Audio Visualization"
+  },
+  "titelvischoose":{
+    "message":"Choose your Audio Visualization"
+  },
+  "titelvisblocks":{
+    "message":"ब्लॉक"
+  },
+  "titelvisfrequency":{
+    "message":"Frequency"
+  },
+  "titelvistunnel":{
+    "message":"Music Tunnel"
+  },
+  "titelvisualization":{
+    "message":"Audio Visualization"
+  },
+  "desvisopacity":{
+    "message":"The opacity value of the audio visualization background"
+  },
+  "vtoolvisualization":{
+    "message":"A button for displaying the audio-visualization for the current video player"
+  },
+  "desvideotoolcolor":{
+    "message":"Color of the toolbar"
+  },
+  "titelhovervideo":{
+    "message":"Video Hover"
+  },
+  "deshovervideo":{
+    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
+  },
+  "promotitle":{
+    "message":"Tip of the day"
+  },
+  "desremyoutube":{
+    "message":"YouTube पर सदस्यता लें"
+  },
+  "desremfacebook":{
+    "message":"Recommend this on Facebook"
+  },
+  "titleuserprofile":{
+    "message":"Below, choose the settings you want to use when clicking the gray lamp button. Each profile has its own features."
+  },
+  "titleregularuser":{
+    "message":"Video Lover"
+  },
+  "titlenightowl":{
+    "message":"Night Owl"
+  },
+  "titlescreenprotection":{
+    "message":"नेत्र संरक्षण"
+  },
+  "desregularuser":{
+    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
+  },
+  "desnightowl":{
+    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
+  },
+  "desscreenprotection":{
+    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
+  },
+  "titleprofilevideofocus":{
+    "message":"Video focus is enabled"
+  },
+  "titleprofilenovideofocus":{
+    "message":"Video focus is disabled"
+  },
+  "titleprofilealwaysscreentab":{
+    "message":"Always enabled for all open tabs"
+  },
+  "titleprofilescreenclick":{
+    "message":"जब स्क्रीन काली है पर क्लिक करके हाइपरलिंक सक्षम करें"
+  },
+  "titleprofilesubmit":{
+    "message":"Choose this settings"
+  },
+  "titlelearnmore":{
+    "message":"Learn more"
+  },
+  "optionprofilesaved":{
+    "message":"New lamp action is saved successfully!"
+  },
+  "desaplay":{
+    "message":"play"
+  },
+  "desapause":{
+    "message":"pause"
+  },
+  "desastop":{
+    "message":"stop"
   }
 }

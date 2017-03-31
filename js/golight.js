@@ -2,8 +2,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2016 Stefan vd
+The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
+Copyright (C) 2017 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 

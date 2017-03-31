@@ -2,8 +2,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2016 Stefan vd
+The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
+Copyright (C) 2017 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -30,6 +30,29 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 chrome.runtime.onMessage.addListener(function request(request,sender,sendResponse){
 // eye protection & autoplay & shortcut
 if (request.name == "automatic") {chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});}
+else if (request.name == "screenshot") {
+var checkcapturewebsite = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
+var capturewebsiteisopen = false;
+    chrome.tabs.getAllInWindow(undefined, function(tabs) {
+		for (var i = 0, tab; tab = tabs[i]; i++) {
+        if(tab.url == checkcapturewebsite){
+            capturewebsiteisopen = true;
+            chrome.tabs.remove(tab.id, function() { chrome.tabs.create({url: checkcapturewebsite});});
+        }
+	}
+if(capturewebsiteisopen == false){chrome.tabs.create({url: checkcapturewebsite});}
+});
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {          
+   if (changeInfo.status == 'complete') {   
+          chrome.tabs.query({}, function (tabs) {
+            for (var i = 0; i < tabs.length; i++) {
+                chrome.tabs.sendMessage(tabs[i].id, {action: "receivescreenshot", value: request.value}, function(response) {});  
+            }
+        }
+    );
+   }
+});    
+}
 // contextmenu
 else if (request.name == "contextmenuon") {checkcontextmenus();}
 else if (request.name == "contextmenuoff") {removecontexmenus();}
@@ -37,6 +60,20 @@ else if (request.name == 'currenttabforblur') {
         chrome.tabs.captureVisibleTab(null, {format: "jpeg", quality: 50}, function(dataUrl) {
             sendResponse({ screenshotUrl: dataUrl });
         });
+}
+else if (request.name == "sendautoplay") {
+
+	var oReq = new XMLHttpRequest();
+	oReq.onreadystatechange = function (e) { if (oReq.readyState == 4) {chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText});} };
+	oReq.open("GET","/js/video-player-status.js",true);oReq.send();
+    
+}
+else if (request.name == "sendfps") {
+
+	var oReq = new XMLHttpRequest();
+	oReq.onreadystatechange = function (e) { if (oReq.readyState == 4) {chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText});} };
+	oReq.open("GET","/js/fpsinject.js",true);oReq.send();
+    
 }
 else if (request.name == "emergencyalf") {
 chrome.tabs.query({}, function (tabs) {
@@ -152,15 +189,21 @@ chrome.tabs.onHighlighted.addListener(function(o) { tabId = o.tabIds[0];
 });
 
 chrome.browserAction.onClicked.addListener(function(tabs) {
-    chrome.storage.sync.get(['alllightsoff'], function(chromeset){
-        if((chromeset["alllightsoff"]!=true) && (chromeset["alllightsoff"]!=true)){
-            chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {
-            // console.error(chrome.runtime.lastError.message);
-            }});
-        }else{
-            chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {
-            // console.error(chrome.runtime.lastError.message);
-            }});
+    chrome.storage.sync.get(['alllightsoff','mousespotlights'], function(chromeset){
+        if((chromeset["mousespotlights"]!=true)){ // regular lamp
+            if((chromeset["alllightsoff"]!=true)){
+                chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function() {if (chrome.runtime.lastError) {
+                // console.error(chrome.runtime.lastError.message);
+                }});
+            }else{
+                chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {
+                // console.error(chrome.runtime.lastError.message);
+                }});
+            }
+        }else{ // all tabs
+                chrome.tabs.executeScript(tabs.id, {file: "js/mastertab.js"}, function() {if (chrome.runtime.lastError) {
+                // console.error(chrome.runtime.lastError.message);
+                }});
         }
     });
 });
@@ -280,7 +323,10 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
         if(changes['ecosaver']){
             chrome.tabs.query({}, function (tabs) {
                 for (var i = 0; i < tabs.length; i++) {
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
                     chrome.tabs.executeScript(tabs[i].id, {file: "js/reloadlight.js"});
+                    }
                 }
             });
         }

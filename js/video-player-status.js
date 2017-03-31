@@ -2,8 +2,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2016 Stefan vd
+The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
+Copyright (C) 2017 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -47,27 +47,27 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
  
  		// New Mutation Summary API Reference
  		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
- 		if (MutationObserver) {
+ 		if(MutationObserver) {
  		// setup MutationSummary observer
  		var videolist = document.querySelector('body');
  		var observer = new MutationObserver(function (mutations, observer) {
  		    mutations.forEach(function (mutation) {
- 		        if (mutation.target.tagName == "VIDEO") {
+ 		        if(mutation.target.tagName == "VIDEO") {
  		            if (mutation.attributeName === "src") {
  		                initvideoinject();
  		            }
  		        }
- 		        if (typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO") {
+ 		        if(typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO") {
  		            initvideoinject();
  		        }
  		    });
-                                     });
+        });
  
  		observer.observe(videolist, {
                   subtree: true,       // observe the subtree rooted at ...videolist...
                   childList: true,     // include childNode insertion/removals
                   characterData: false, // include textContent changes
-                  attributes: false     // include changes to attributes within the subtree
+                  attributes: true     // include changes to attributes within the subtree
                   });
  		} else {
  		// setup DOM event listeners
@@ -79,7 +79,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			var youtubeplayer = document.getElementById("movie_player") || null;
 			var htmlplayer = document.getElementsByTagName("video") || false;
 			
-			if (youtubeplayer !== null) { // YouTube video element
+			if(youtubeplayer !== null) { // YouTube video element
 				var interval = window.setInterval(function () {
 					if (youtubeplayer.pause || youtubeplayer.pauseVideo) {
 						window.clearInterval(interval);
@@ -87,7 +87,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					}
 				}, 10);
 			}
-			if (htmlplayer && htmlplayer.length > 0) { // HTML5 video elements
+			if(htmlplayer && htmlplayer.length > 0) { // HTML5 video elements
 				var setPlayerEvents = function(players) {
 					for(var j=0; j<players.length; j++) {
 						(function(o, p) {

@@ -557,7 +557,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 @keyframes animStar{from{transform:translateY(0px)}to{transform:translateY(-2000px)}}
 /* --- */
 .dimrange{width:425px;right:0;text-align:right}
-video{position:relative;z-index:99;margin-left:100px;margin-top:10px}
+video{position:relative;z-index:101;margin-left:100px;margin-top:10px}
 .switch{position:absolute;width:100px;height:200px;right:0;border-left:1px solid #D9D9D9;padding-left:30px}
 #onoffrange{width:20px;height:20px;-webkit-transform:rotate(90deg)}
 .warning{font-weight:700}
@@ -615,17 +615,27 @@ input[type="range"]{background-image:-webkit-linear-gradient(left,hsla(0,0%,0%,.
 #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select{width:425px}
 /* Remember */
 .remembertext{margin:5px 0}
-#remembershare{position:fixed;width:100%;height:100%;z-index:400;background:rgba(256,256,256,1);margin:0;padding:0;left:0;top:0;text-align:center}
+#remembershare{display:none;background:white;position:fixed;width:100%;height:100%;z-index:400;margin:0;padding:0;left:0;top:0;text-align:center}
 #productrememberimage{position:absolute;top:16px;left:12px;font-family:verdana;font-size:16px;color:#000;vertical-align:top}
-#remembersharecenter{margin:auto;width:1024px;height:350px;position:absolute;top:0;bottom:0;left:0;right:0}
-#rememberboxdonate{cursor:pointer;background:#FDBD4E;color:#fff;width:900px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxrate{cursor:pointer;background:#FFCE32;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxgoogle{cursor:pointer;background:#C23434;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxfacebook{cursor:pointer;background:#4c66a4;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxtwitter{cursor:pointer;background:#3CF;color:#fff;width:200px;display:inline-block;font-size:20px;text-align:center;padding:15px;height:30px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
-#rememberboxdonate:hover,#rememberboxrate:hover,#rememberboxgoogle:hover,#rememberboxfacebook:hover,#rememberboxtwitter:hover{opacity:.88}
-#skipremember{float:right}
-#divcheckboxskipremember{text-align:left}
+#remembersharecenter{margin:auto;width:760px;height:325px;position:absolute;top:0;bottom:0;left:0;right:0}
+#remembersharecenter h2{font-weight:normal}
+#remembersharecenter .remgroup{display:inline-block;vertical-align:top;height:80px}
+#rememberboxrate{-webkit-user-select:none;cursor:pointer;background:#fdbc40;color:#fff;width:225px;display:inline-block;font-size:14px;text-align:center;padding:8px;height:16px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxyoutube{-webkit-user-select:none;cursor:pointer;background:#e52d27;color:#fff;width:225px;display:inline-block;font-size:14px;text-align:center;padding:8px;height:16px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxfacebook{-webkit-user-select:none;cursor:pointer;background:#4080ff;color:#fff;width:225px;display:inline-block;font-size:14px;text-align:center;padding:8px;height:16px;vertical-align:top;margin:0;font-family:verdana;text-decoration:none;border:1px solid rgba(128,128,128,0.3)}
+#rememberboxdonate{-webkit-user-select:none;cursor:pointer;background:#fcba49;border:1px solid #F3A835;color:#FFF;font-size:inherit;font-weight:700;padding:10px 15px;text-decoration:none;margin:5px 25px;display:inline-block}
+#rememberboxdonate:hover,#rememberboxrate:hover,#rememberboxyoutube:hover,#rememberboxfacebook:hover,#remclosethisdonate:hover{opacity:.88}
+#divcheckboxskipremember{text-align:left;position:absolute;margin:10px;bottom:0}
+#remdonate{position:absolute;width:100%;top:0;left:0;right:0;background:#f8f8f8;border-top:1px solid #EEE;padding:15px 5px}
+#remdonate div{display:inline-block}
+#remfacebook,#remyoutube{display:none}
+#addrecommendbutton,#addyoutubebutton{padding:10px;border:none;overflow:hidden}
+#skipremember{text-decoration:none;border:2px solid #666;font-size:24px;color:#666;padding:17px 25px;cursor:pointer}
+#skipremember:hover{opacity:.68;background:#f9f9f9}
+#skipremember:hover~#buttoncontinuetip{display:block}
+#buttoncontinuetip{display:none}
+#remclosethisdonate{position:absolute;top:0px;right:15px;color:#c3c3c3;font-size:12px;padding:5px}
+.promobox{top:2px;position:absolute;background:#ffce32;color:white;font-size:12px;padding:0 2px;border-radius:2px;display:inline-block}
 /* Night Theme */
 #stefanvdnighttheme{transform:scale(0.7);padding:0;margin:0;z-index:500;-moz-user-select:none;-webkit-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 10px;border-radius:5px;cursor:pointer;display:block;height:50px;margin:0;overflow:hidden;width:100px;position:relative}
 #stefanvdnighttheme input{display:none}
@@ -721,3 +731,16 @@ input[type="range"]{background-image:-webkit-linear-gradient(left,hsla(0,0%,0%,.
 #matllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff}
 #mant{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #magetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
+/* Atmosphere */
+.stefanvdvivideffect{position:absolute!important;z-index:100!important;overflow:hidden;pointer-events:none}
+/* Profile */
+.profilebox{display:block;height:525px}
+.profilebox .profile{display:inline-block;width:225px;vertical-align:top;margin:5px 3px 5px 0px}
+.exampleprofile{height:160px;width:calc(100% - 20px);padding:10px;position:relative;margin:10px 0px}
+.exampleprofile .lorem{font-size:10px}
+.exampleprofile .sklayer{z-index:39;width:100%;height:100%;position:absolute;top:0;left:0}
+.exampleprofile .toplayer{z-index:50;width:100%;height:100%;position:absolute;top:0;left:0;pointer-events:none;mix-blend-mode:multiply}
+.exampleprofile iframe{z-index:40;position:relative}
+.profilebutton,.profilebutton:hover{border:0;background:#4285f4;color:white;padding:10px 15px;outline:none}
+.profilebutton:hover{opacity:.8}
+.submitprofile{position:absolute;bottom:5px;margin:10px 0px}

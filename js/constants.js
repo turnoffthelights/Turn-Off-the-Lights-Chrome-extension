@@ -23,7 +23,7 @@ var linkwelcomepage = "https://www.turnoffthelights.com/extension/chromewelcome.
 var linkuninstall = "https://www.turnoffthelights.com/extension/chromeuninstalled.html";
 var linkguide = "https://www.turnoffthelights.com/extension/chromeguide.html";
 var linkshare = "https://www.turnoffthelights.com/shareextension.html";
-var linkthemedownload = "https://chrome.google.com/webstore/detail/fpddgembdeaikopmbfiokjolihbamcca";
+var linkthemedownload = "https://www.turnoffthelights.com/browser/theme.html";
 var browsernewtab = "chrome://newtab/";
 var browserstore = "https://chrome.google.com";
 var linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";

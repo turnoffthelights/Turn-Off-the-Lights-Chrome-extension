@@ -27,10 +27,5 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id) { return document.getElementById(id); }
-var speechhistory = "";
-chrome.storage.sync.get(['speechhistory'], function(items){
-speechhistory = items['speechhistory'];
-var stefanvdspeechsaidtext = $('stefanvdspeechsaidtext');
-if(stefanvdspeechsaidtext){ stefanvdspeechsaidtext.innerText = "" + speechhistory + ""; }
-});
+// settings - screen shader
+var mousespotlights=null,screenshader=null;chrome.storage.sync.get(['mousespotlights','screenshader'],function(response){mousespotlights=response['mousespotlights'];screenshader=response['screenshader'];if(mousespotlights==true){if(screenshader==true){chrome.runtime.sendMessage({name:'automatic'})}}})

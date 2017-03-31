@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.3.0.20",
+  "version": "3.4.1.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
-  "homepage_url": "https://www.turnoffthelights.com",
+  "homepage_url": "https://www.turnoffthelights.com/support/",
   "icons": { "16": "icons/icon16.png",
              "32": "icons/icon32.png",
              "48": "icons/icon48.png",
@@ -24,24 +24,19 @@
 	  "persistent": false
   },
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; img-src *; object-src 'self'",
-  "web_accessible_resources": [
-    "images/minimize_on.png",
-    "images/minimize.png",
-    "icons/icon16.png",
-    "icons/icon16@2x.png",
-	  "js/injected.js",
-	  "images/theater.jpg",
-	  "images/Smoke10.png",
-    "images/cloud.png",
-    "js/fpsinject.js"
-  ],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": ["*://*.chromeactions.com/*"],
       "css" : ["css/light.css"],
       "js": ["js/content.js"],
       "run_at": "document_end"
     },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/screenshader.js"],
+      "run_at": "document_start"
+    },    
     {
       "matches": ["*://*.youtube.com/*"],
       "js": [ "js/fps.js"],

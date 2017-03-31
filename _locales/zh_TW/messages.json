@@ -1,1187 +1,905 @@
 {
   "pagehelp":{
-    "message":"説明",
-    "description":"説明"
+    "message":"説明"
   },
   "titelimage":{
-    "message":"背景圖片",
-    "description":"背景圖像"
+    "message":"背景圖片"
   },
   "shortcutalllights":{
-    "message":"對所有開啟頁籤切換光源開啟或關閉。",
-    "description":"對所有開啟頁籤切換光源開啟或關閉。"
+    "message":"對所有開啟頁籤切換光源開啟或關閉。"
   },
   "lastchecked":{
-    "message":"自動檢測最新版本開啟",
-    "description":"自動檢測最新版本開啟"
+    "message":"自動檢測最新版本開啟"
   },
   "visualeffects":{
-    "message":"視覺效果",
-    "description":"視覺效果"
+    "message":"視覺效果"
   },
   "titelshortcutlight":{
-    "message":"快捷鍵",
-    "description":"快捷方式鍵"
+    "message":"快捷鍵"
   },
   "titledonatebutton":{
-    "message":"贊助捐款",
-    "description":"捐贈"
+    "message":"贊助捐款"
   },
   "titellikebar":{
-    "message":"喜愛選項",
-    "description":"喜歡酒吧"
+    "message":"喜愛選項"
   },
   "desmousespotlightt":{
-    "message":"在螢幕變暗時，允許點選超連結",
-    "description":"在螢幕變暗時，允許點選超連結"
+    "message":"在螢幕變暗時，允許點選超連結"
+  },
+  "desmousespotlights":{
+    "message":"Enable the screen shade, with the possibility to click on the hyperlinks"
   },
   "desambilight4color":{
-    "message":"圍繞影片的四個被選擇的顏色：",
-    "description":"在視頻周邊 4 選擇顏色："
+    "message":"圍繞影片的四個被選擇的顏色："
   },
   "lockentername":{
-    "message":"請輸入您的密碼",
-    "description":"請輸入您的密碼"
+    "message":"請輸入您的密碼"
   },
   "desnoflash":{
-    "message":"不使用此功能。",
-    "description":"不使用此功能。"
+    "message":"不使用此功能。"
   },
   "desdynamicblocks":{
-    "message":"區塊",
-    "description":"塊"
+    "message":"區塊"
   },
   "titeleye":{
-    "message":"眼部防護",
-    "description":"保護眼睛"
+    "message":"眼部防護"
   },
   "titelcinemaontop":{
-    "message":"電影院模式：它只會在視窗上方顯示'關閉燈光'圖層",
-    "description":"電影院模式：它只會在視窗上方顯示'關閉燈光'圖層"
+    "message":"電影院模式：它只會在視窗上方顯示'關閉燈光'圖層"
   },
   "desmousespotlightc":{
-    "message":"當關閉光源時您可以選擇一個區域來關注一個項目。",
-    "description":"如果光是關閉的您可以選擇一個區域來重點專案。"
+    "message":"當關閉光源時您可以選擇一個區域來關注一個項目。"
   },
   "titelrememberpage":{
-    "message":"提醒頁面",
-    "description":"提醒頁面"
+    "message":"提醒頁面"
   },
   "desmousespotlighta":{
-    "message":"如果燈不亮，把鼠標放進聚光燈裡。",
-    "description":"如果光是關閉的顯示滑鼠游標周圍的聚光燈。"
+    "message":"如果燈不亮，把鼠標放進聚光燈裡。"
   },
   "desmousespotlighto":{
-    "message":"預設滑鼠操作(關閉下列滑鼠設定)",
-    "description":"正常使用 （將禁用下面的滑鼠設置）"
+    "message":"預設滑鼠操作(關閉下列滑鼠設定)"
   },
   "desplaylist":{
-    "message":"顯示 YouTube 播放清單",
-    "description":"在 YouTube 網站上顯示的 YouTube 播放清單。"
+    "message":"顯示 YouTube 播放清單"
   },
   "desambilightfixcolor":{
-    "message":"實色",
-    "description":"一種固體顏色："
+    "message":"實色"
   },
   "desuntil":{
-    "message":"直到",
-    "description":"直到"
+    "message":"直到"
   },
   "desconfirmpassword":{
-    "message":"確認密碼",
-    "description":"確認密碼"
+    "message":"確認密碼"
   },
   "desautoplayonly":{
-    "message":"僅有以下影音網站：",
-    "description":"暗只有以下視頻網站："
+    "message":"僅有以下影音網站："
   },
   "helpeyeprotection":{
-    "message":"開啟\"保護眼睛\"將會自動關閉\"自動播放\"功能。",
-    "description":"啟用保護眼睛將自動禁用自動播放功能。"
+    "message":"開啟\"保護眼睛\"將會自動關閉\"自動播放\"功能。"
   },
   "skipremember":{
-    "message":"跳過此畫面，並且立即開啟選項畫面",
-    "description":"跳過此畫面，並且立即開啟選項畫面"
+    "message":"跳過此畫面，並且立即開啟選項畫面"
   },
   "optiontimesaved":{
-    "message":"時間已成功儲存 ！",
-    "description":"時間是已成功保存 ！"
+    "message":"時間已成功儲存 ！"
   },
   "titelvideoheadline":{
-    "message":"影片標題",
-    "description":"視頻標題"
+    "message":"影片標題"
   },
   "translateme":{
-    "message":"協助翻譯",
-    "description":"説明翻譯"
+    "message":"協助翻譯"
   },
   "despassword":{
-    "message":"開啟燈光前需要輸入密碼。",
-    "description":"需要開燈之前輸入的密碼。"
+    "message":"開啟燈光前需要輸入密碼。"
   },
   "helpautoplay":{
-    "message":"\"保護眼睛\"已經開啟,若要使用下列功能請先關閉\"保護眼睛\"選項。",
-    "description":"'眼睛防護處於啟用狀態。使用下面的功能，禁用 '眼睛防護選項。"
+    "message":"\"保護眼睛\"已經開啟,若要使用下列功能請先關閉\"保護眼睛\"選項。"
   },
   "name":{
-    "message":"關燈看影片",
-    "description":"關燈"
+    "message":"關燈看影片"
   },
   "changelog":{
-    "message":"更新日誌",
-    "description":"更新日誌連結"
+    "message":"更新日誌"
   },
   "optionpagetitle":{
-    "message":"關燈看影片 - 選項",
-    "description":"選項頁面標題"
+    "message":"關燈看影片 - 選項"
   },
   "optionpasswordsaved":{
-    "message":"成功保存密碼 ！",
-    "description":"成功保存密碼 ！"
+    "message":"成功保存密碼 ！"
   },
   "desdynamicspace":{
-    "message":"空間的宇宙",
-    "description":"空間的宇宙"
+    "message":"空間的宇宙"
   },
   "deseastereggs":{
-    "message":"按 T 鍵新增暗色層",
-    "description":"按 T 鍵新增暗色層"
+    "message":"按 T 鍵新增暗色層"
   },
   "settings":{
-    "message":"設定",
-    "description":"設置"
+    "message":"設定"
   },
   "desspotlightradius":{
-    "message":"聚光燈直徑：",
-    "description":"聚光燈直徑："
+    "message":"聚光燈直徑："
   },
   "titelsync":{
-    "message":"同步",
-    "description":"同步"
+    "message":"同步"
   },
   "right":{
-    "message":"右",
-    "description":"權利"
+    "message":"右"
   },
   "titeldynamic":{
-    "message":"動態背景",
-    "description":"動態背景"
+    "message":"動態背景"
   },
   "deslikebutton":{
-    "message":"顯示YouTube上該影片的 喜歡\/不喜歡 按鈕",
-    "description":"顯示類似 & 不喜歡此視頻的 youtube 上的按鈕。"
+    "message":"顯示YouTube上該影片的 喜歡/不喜歡 按鈕"
   },
   "titelmouse":{
-    "message":"滑鼠",
-    "description":"滑鼠"
+    "message":"滑鼠"
   },
   "titellessmore":{
-    "message":"顯示較少",
-    "description":"顯示較少"
+    "message":"顯示較少"
   },
   "desshortcutlight":{
-    "message":"啟用下面的鍵盤快速鍵。",
-    "description":"啟用下面的鍵盤快速鍵。"
+    "message":"啟用下面的鍵盤快速鍵。"
   },
   "titelinfobar":{
-    "message":"資訊欄",
-    "description":"資訊列"
+    "message":"資訊欄"
   },
   "descontextmenus":{
-    "message":"顯示上下文功能表，集中一個專案。",
-    "description":"顯示要重點專案的內容功能表。"
+    "message":"顯示上下文功能表，集中一個專案。"
   },
   "titelcontextmenus":{
-    "message":"上下文功能表",
-    "description":"內容功能表"
+    "message":"上下文功能表"
   },
   "titelplaylist":{
-    "message":"播放清單",
-    "description":"播放清單"
+    "message":"播放清單"
   },
   "desatmosphereonly":{
-    "message":"只有以下影片網站可以使用情境光源功能：",
-    "description":"使用氣氛照明功能只有以下視頻網站："
+    "message":"只有以下影片網站可以使用情境光源功能："
   },
   "recflash":{
-    "message":"建議",
-    "description":"建議"
+    "message":"建議"
   },
   "desenterpassword":{
-    "message":"在下面的框中輸入您的密碼：",
-    "description":"在下面的框中輸入您的密碼："
+    "message":"在下面的框中輸入您的密碼："
   },
   "titelblurradius":{
-    "message":"模糊半徑：",
-    "description":"模糊半徑："
+    "message":"模糊半徑："
   },
   "version":{
-    "message":"版本",
-    "description":"版本號碼文本"
+    "message":"版本"
   },
   "shortcutdark":{
-    "message":"螢幕變暗 （增加不透明度）",
-    "description":"螢幕變暗 （增加不透明度）"
+    "message":"螢幕變暗 （增加不透明度）"
   },
   "dessharebutton":{
-    "message":"顯示影片的分享按鈕",
-    "description":"顯示此視頻的 YouTube 分享按鈕。"
+    "message":"顯示影片的分享按鈕"
   },
   "shortcutbright":{
-    "message":"調亮螢幕（減少不透明度）",
-    "description":"調亮螢幕（減少不透明度）"
+    "message":"調亮螢幕（減少不透明度）"
   },
   "titelalllightsoff":{
-    "message":"所有開啟的頁籤",
-    "description":"所有打開的選項卡"
+    "message":"所有開啟的頁籤"
   },
   "desreadera":{
-    "message":"關燈後永遠顯示暗度調節",
-    "description":"當燈光熄滅時始終顯示在昏暗的水準欄。"
+    "message":"關燈後永遠顯示暗度調節"
   },
   "rememberrate":{
-    "message":"評分",
-    "description":"率"
+    "message":"評分"
   },
   "desautoplay":{
-    "message":"當你按下  播放按鈕時自動調暗背景",
-    "description":"當您按一下播放按鈕，與比較，自動調暗背景。"
+    "message":"當你按下  播放按鈕時自動調暗背景"
   },
   "titelscreen":{
-    "message":"螢幕",
-    "description":"螢幕"
+    "message":"螢幕"
   },
   "desflash":{
-    "message":"顯示所有 Flash 物件",
-    "description":"顯示所有的 Flash 物件。"
+    "message":"顯示所有 Flash 物件"
   },
   "titelhead":{
-    "message":"頻道",
-    "description":"通道"
+    "message":"頻道"
   },
   "pageatitle":{
-    "message":"關燈",
-    "description":"關燈"
+    "message":"關燈"
   },
   "desaddvideobutton":{
-    "message":"顯示對此Youtube影片之加入鈕。",
-    "description":"顯示添加按鈕從這個 YouTube 視頻。"
+    "message":"顯示對此Youtube影片之加入鈕。"
   },
   "shortcuteyeprotection":{
-    "message":"啟用或停用視力保護功能",
-    "description":"啟用或停用視力保護功能"
+    "message":"啟用或停用視力保護功能"
   },
   "titelfadein":{
-    "message":"淡入",
-    "description":"淡入"
+    "message":"淡入"
   },
   "desreadern":{
-    "message":"不顯示暗度調節",
-    "description":"從不顯示在昏暗的水準欄。"
+    "message":"不顯示暗度調節"
   },
   "titelmaxqualityyoutube":{
-    "message":"解析度自動設置：",
-    "description":"自動設置為這項決議："
+    "message":"解析度自動設置："
   },
   "desambilightrangespreadradius":{
-    "message":"正值會增加陰影的大小，而負值會減小尺寸。",
-    "description":"正值增加陰影的大小，負數的值減小大小。"
+    "message":"正值會增加陰影的大小，而負值會減小尺寸。"
   },
   "titelon":{
-    "message":"開",
-    "description":"關於"
+    "message":"開"
   },
   "videotitle":{
-    "message":"這視頻的焦點",
-    "description":"關注這段視頻"
+    "message":"這視頻的焦點"
   },
   "warningtextambilight":{
-    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead.",
-    "description":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
+    "message":"When unable to receive video data because of a website's security rule, the chosen solid color will be used instead."
   },
   "desdynamiccloud":{
-    "message":"動態雲圖",
-    "description":"動態雲圖"
+    "message":"動態雲圖"
   },
   "desconfirmtimesaver":{
-    "message":"確認螢幕保護裝置程式時間",
-    "description":"確認螢幕保護裝置程式時間"
+    "message":"確認螢幕保護裝置程式時間"
   },
   "deslikebar":{
-    "message":"在YouTube 視頻下面顯示 喜愛\/不喜愛 的欄位 。",
-    "description":"顯示像\/不喜歡酒吧下 YouTube 視頻。"
+    "message":"在YouTube 視頻下面顯示 喜愛/不喜愛 的欄位 。"
   },
   "titelautoplay":{
-    "message":"自動播放",
-    "description":"自動播放"
+    "message":"自動播放"
   },
   "top":{
-    "message":"上",
-    "description":"返回頁首"
+    "message":"上"
   },
   "titelspreadradius":{
-    "message":"擴散半徑：",
-    "description":"擴散半徑："
+    "message":"擴散半徑："
   },
   "installadblocker":{
-    "message":"如果你不想看廣告，請使用 adblocker 相關擴充功能。",
-    "description":"如果你不想看廣告，請使用 adblocker 相關擴充功能。"
+    "message":"如果你不想看廣告，請使用 adblocker 相關擴充功能。"
   },
   "titelsharebutton":{
-    "message":"分享按鈕",
-    "description":"分享按鈕"
+    "message":"分享按鈕"
   },
   "titelcolor":{
-    "message":"顏色",
-    "description":"顏色"
+    "message":"顏色"
   },
   "titeldownloadbutton":{
-    "message":"升級下載 ！",
-    "description":"下載此升級 ！"
+    "message":"升級下載 ！"
   },
   "pagetitle":{
-    "message":"暗此頁",
-    "description":"變暗此頁"
+    "message":"暗此頁"
   },
   "titelambilight":{
-    "message":"氣氛效果照明",
-    "description":"氣氛照明"
+    "message":"氣氛效果照明"
   },
   "titelshowmore":{
-    "message":"更多顯示",
-    "description":"顯示更多"
+    "message":"更多顯示"
   },
   "desviewcount":{
-    "message":"顯示該視頻的瀏覽次數",
-    "description":"顯示此視頻的視圖的數目。"
+    "message":"顯示該視頻的瀏覽次數"
   },
   "titelautowidthyoutube":{
-    "message":"自動將 YouTube 播放設置為最大。",
-    "description":"自動將 YouTube 播放機設置為更大的大小。"
+    "message":"自動將 YouTube 播放設置為最大。"
   },
   "desconfirmtime":{
-    "message":"確認時間",
-    "description":"確認時間"
+    "message":"確認時間"
   },
   "titelupgrade":{
-    "message":"升級",
-    "description":"升級"
+    "message":"升級"
   },
   "lockwrongpassword":{
-    "message":"錯誤的密碼，請再試一次。",
-    "description":"錯誤的密碼，請再試一次。"
+    "message":"錯誤的密碼，請再試一次。"
   },
   "titelsyncbrowser":{
-    "message":"同步您其他瀏覽器之擴充設定。",
-    "description":"同步您的其他瀏覽器的擴展設置。"
+    "message":"同步您其他瀏覽器之擴充設定。"
   },
   "deletebutton":{
-    "message":"刪除",
-    "description":"刪除"
+    "message":"刪除"
   },
   "eyedivon":{
-    "message":"開啓",
-    "description":"ON"
+    "message":"開啓"
   },
   "eyedivoff":{
-    "message":"關閉",
-    "description":"關閉"
+    "message":"關閉"
   },
   "deshead":{
-    "message":"顯示 YouTube 頻道欄或名稱",
-    "description":"顯示的 YouTube 頻道欄或名稱。"
+    "message":"顯示 YouTube 頻道欄或名稱"
   },
   "shortcutsavingopacity":{
-    "message":"儲存透明度數值",
-    "description":"要保存此不透明度值"
+    "message":"儲存透明度數值"
   },
   "desinfobar":{
-    "message":"顯示影片的描述信息",
-    "description":"顯示視頻的描述資訊。"
+    "message":"顯示影片的描述信息"
   },
   "titellamp":{
-    "message":"燈泡",
-    "description":"燈泡"
+    "message":"燈泡"
   },
   "desambilightvarcolor":{
-    "message":"把顏色從影片內拿出來。",
-    "description":"採取從視頻的顏色。"
+    "message":"把顏色從影片內拿出來。"
   },
   "showremember":{
-    "message":"開啟時，不再顯示提示頁面",
-    "description":"開啟時，不再顯示提示頁面"
+    "message":"開啟時，不再顯示提示頁面"
   },
   "donatepromotext":{
-    "message":"如果您可以進行任何數額的捐贈，我將非常感激 ！",
-    "description":"如果你可以使任何數額的捐贈，我會非常感激 ！"
+    "message":"如果您可以進行任何數額的捐贈，我將非常感激 ！"
   },
   "titelblur":{
-    "message":"模糊其他部份",
-    "description":"模糊其餘"
+    "message":"模糊其他部份"
   },
   "desdynamicraindrops":{
-    "message":"雨滴",
-    "description":"雨滴"
+    "message":"雨滴"
   },
   "desalllightsoff":{
-    "message":"Clicking the lamp button will toggle the lights on\/off on all open tabs",
-    "description":"Clicking the lamp button will toggle the lights on\/off on all open tabs"
+    "message":"Clicking the lamp button will toggle the lights on/off on all open tabs"
   },
   "optionecosaversaved":{
-    "message":"已成功保存 ！",
-    "description":"秒是已成功保存 ！"
+    "message":"已成功保存 ！"
   },
   "titelreader":{
-    "message":"暗度調節",
-    "description":"昏暗的水準欄"
+    "message":"暗度調節"
   },
   "deseyen":{
-    "message":"Normal use (lights go out when you click on the lamp icon)",
-    "description":"Normal use (lights go out when you click on the lamp icon)"
+    "message":"Normal use (lights go out when you click on the lamp icon)"
   },
   "enjoyshare":{
-    "message":"享受此擴充功能並分享給其他您覺得需要的人。",
-    "description":"享受此擴展並共用與其他人你覺得會很感激。"
+    "message":"享受此擴充功能並分享給其他您覺得需要的人。"
   },
   "shortcuttotl":{
-    "message":"按下開關來切換 on\/off 。",
-    "description":"按下開關來切換 on\/off 。"
+    "message":"按下開關來切換 on/off 。"
   },
   "deseyea":{
-    "message":"開啟頁面時自動將背景變暗。",
-    "description":"開啟頁面時自動將背景變暗。"
+    "message":"開啟頁面時自動將背景變暗。"
   },
   "basicsettings":{
-    "message":"基礎",
-    "description":"基礎知識"
+    "message":"基礎"
   },
   "hoveroptionapply":{
-    "message":"開啟",
-    "description":"適用"
+    "message":"開啟"
   },
   "reportbug":{
-    "message":"問題回報",
-    "description":"報告問題"
+    "message":"問題回報"
   },
   "destime":{
-    "message":"關燈時區：",
-    "description":"燈關之間下列時間："
+    "message":"關燈時區："
   },
   "guide":{
-    "message":"TOtL 歡迎指南",
-    "description":"TOtL 歡迎指南"
+    "message":"TOtL 歡迎指南"
   },
   "deseyealist":{
-    "message":"在以下網址會自動將背景調暗：",
-    "description":"在以下網址會自動將背景調暗："
+    "message":"在以下網址會自動將背景調暗："
   },
   "titellikebutton":{
-    "message":"喜歡\/不喜歡 按鈕",
-    "description":"喜歡 & 不喜歡按鈕"
+    "message":"喜歡/不喜歡 按鈕"
   },
   "titelpageaction":{
-    "message":"隱藏光源圖示",
-    "description":"隱藏 pageaction 圖示"
+    "message":"隱藏光源圖示"
   },
   "friendlyremember":{
-    "message":"友善提醒…",
-    "description":"友善提醒…"
+    "message":"友善提醒…"
   },
   "desfadein":{
-    "message":"顯示淡入特效",
-    "description":"實際上顯示淡入淡出。"
+    "message":"顯示淡入特效"
   },
   "warning":{
-    "message":"警告 ！",
-    "description":"警告 ！"
+    "message":"警告 ！"
   },
   "deseyetimesaver":{
-    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark.",
-    "description":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
+    "message":"When a page is inactive (no mouse or keyboard input) for the time specified below, it automatically goes dark."
   },
   "titelsuggestions":{
-    "message":"建議",
-    "description":"建議"
+    "message":"建議"
   },
   "advancedoptions":{
-    "message":"進階選項",
-    "description":"高級的選項"
+    "message":"進階選項"
   },
   "dessuggestions":{
-    "message":"顯示 YouTube 網站的建議。",
-    "description":"顯示的 YouTube 網站的各項建議。"
+    "message":"顯示 YouTube 網站的建議。"
   },
   "titelflash":{
-    "message":"Flash 偵測",
-    "description":"Flash 檢測"
+    "message":"Flash 偵測"
   },
   "desambilight":{
-    "message":"於目前影片中顯示您的情境燈光效果。",
-    "description":"顯示您的當前播放視頻的氛圍照明效果。"
+    "message":"於目前影片中顯示您的情境燈光效果。"
   },
   "productshare":{
-    "message":"分享",
-    "description":"共用"
+    "message":"分享"
   },
   "addbutton":{
-    "message":"加入",
-    "description":"添加"
+    "message":"加入"
   },
   "reportlist":{
-    "message":"(請參閱清單)",
-    "description":"查看全部問題清單"
+    "message":"(請參閱清單)"
   },
   "desdynamicfishtank":{
-    "message":"魚缸",
-    "description":"魚缸"
+    "message":"魚缸"
   },
   "longdonatetext":{
-    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!",
-    "description":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
+    "message":"I'd truly appreciate if you can donate me to keep this browser extension alive for other new users. Whether it's $$1 or $$100, your support is immensely appreciated!"
   },
   "deshardflash":{
-    "message":"顯示所有的 Flash 物件，跳過 URL 篩選器。這將修復某些影片播放器被隱藏的問題,但也會顯示廣告。",
-    "description":"顯示所有的 Flash 物件，跳過 URL 篩選器。這將修復被隱藏的有些視頻播放機的問題，但也會顯示廣告。"
+    "message":"顯示所有的 Flash 物件，跳過 URL 篩選器。這將修復某些影片播放器被隱藏的問題,但也會顯示廣告。"
   },
   "desfadeout":{
-    "message":"顯示淡出特效",
-    "description":"顯示淡出效果。"
+    "message":"顯示淡出特效"
   },
   "optionwrongimg":{
-    "message":"不正確影像檔 ！",
-    "description":"不正確影像檔 ！"
+    "message":"不正確影像檔 ！"
   },
   "desvideoheadline":{
-    "message":"顯示和視頻的標題的顏色反轉。",
-    "description":"顯示和反轉視頻標題的顏色。"
+    "message":"顯示和視頻的標題的顏色反轉。"
   },
   "desrememberpage":{
-    "message":"不再顯示提示頁面",
-    "description":"不再顯示提示頁面"
+    "message":"不再顯示提示頁面"
   },
   "description":{
-    "message":"觀賞影片時讓整個畫面變暗，彷彿置身電影院",
-    "description":"觀賞影片時讓整個畫面變暗，彷彿置身電影院"
+    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond."
   },
   "titelviewcount":{
-    "message":"瀏覽次數",
-    "description":"若干意見"
+    "message":"瀏覽次數"
   },
   "titelopacity":{
-    "message":"透明度",
-    "description":"不透明度"
+    "message":"透明度"
   },
   "titelqualityyoutube":{
-    "message":"自動設定YouTube 影片品質。",
-    "description":"自動設置的 YouTube 視頻品質。"
+    "message":"自動設定YouTube 影片品質。"
   },
   "shortcutopacity":{
-    "message":"還原亮度（不透明度）設定",
-    "description":"還原亮度（不透明度）設定"
+    "message":"還原亮度（不透明度）設定"
   },
   "desambilightrangeblurradius":{
-    "message":"Lower values will sharpen the shadow, higher values will make them more blurred.",
-    "description":"Lower values will sharpen the shadow, higher values will make them more blurred."
+    "message":"Lower values will sharpen the shadow, higher values will make them more blurred."
   },
   "titeladdvideobutton":{
-    "message":"加入鈕",
-    "description":"添加按鈕"
+    "message":"加入鈕"
   },
   "titelpassword":{
-    "message":"密碼保護",
-    "description":"密碼保護"
+    "message":"密碼保護"
   },
   "titeldownloadupgrade":{
-    "message":"升級增加了對聚焦所選影像的支援,並會顯示網站上的畫廊。",
-    "description":"升級添加支援重點選中的圖像，並將在網站上顯示的圖像的畫廊。"
+    "message":"升級增加了對聚焦所選影像的支援,並會顯示網站上的畫廊。"
   },
   "titelfadeout":{
-    "message":"淡出",
-    "description":"淡出"
+    "message":"淡出"
   },
   "eastereggsquestion":{
-    "message":"你喜歡一個真實的電影劇院嗎？",
-    "description":"你喜歡一個真正的電影劇場嗎？"
+    "message":"你喜歡一個真實的電影劇院嗎？"
   },
   "bottom":{
-    "message":"下",
-    "description":"底部"
+    "message":"下"
   },
   "dessaver":{
-    "message":"螢幕保護裝置程式：",
-    "description":"螢幕保護裝置程式："
+    "message":"螢幕保護裝置程式："
   },
   "hoveroptiondyn5":{
-    "message":"飛翔",
-    "description":"與飛行"
+    "message":"飛翔"
   },
   "pagestillloading":{
-    "message":"仍在載入頁面嗎？",
-    "description":"仍在載入頁嗎？"
+    "message":"仍在載入頁面嗎？"
   },
   "titeloff":{
-    "message":"閉",
-    "description":"關閉"
+    "message":"閉"
   },
   "titeleastereggs":{
-    "message":"復活節彩蛋",
-    "description":"復活節彩蛋"
+    "message":"復活節彩蛋"
   },
   "textfoot":{
-    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the",
-    "description":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
+    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
   },
   "left":{
-    "message":"左",
-    "description":"左"
+    "message":"左"
   },
   "titelnighttheme":{
-    "message":"夜間模式",
-    "description":"夜間模式"
+    "message":"夜間模式"
   },
   "desnighttheme":{
-    "message":"在網頁下面顯示可以使頁面調暗或調亮之“夜間開關按鈕“。",
-    "description":"在網頁下面顯示可以使頁面調暗或調亮之“夜間開關按鈕“。"
+    "message":"在網頁下面顯示可以使頁面調暗或調亮之“夜間開關按鈕“。"
   },
   "nightoptions":{
-    "message":"夜間模式",
-    "description":"夜間模式"
+    "message":"夜間模式"
   },
   "desnightonly":{
-    "message":"只有以下網站顯示夜間模式：",
-    "description":"只有以下網站顯示夜間模式："
+    "message":"只有以下網站顯示夜間模式："
   },
   "desnightenabletheme":{
-    "message":"當您打開一個新頁面時自動啟動夜間模式。",
-    "description":"當您打開一個新頁面時自動啟動夜間模式。"
+    "message":"當您打開一個新頁面時自動啟動夜間模式。"
   },
   "titellampregular":{
-    "message":"於omnibox上顯示光源圖示",
-    "description":"於omnibox上顯示光源圖示"
+    "message":"於omnibox上顯示光源圖示"
   },
   "titellampvideo":{
-    "message":"僅當您找到影片播放器時才顯示光源圖示",
-    "description":"僅當您找到影片播放器時才顯示光源圖示"
+    "message":"僅當您找到影片播放器時才顯示光源圖示"
   },
   "upgradecontexttitle":{
-    "message":"我們為您新增了一些功能",
-    "description":"我們為您新增了一些功能"
+    "message":"我們為您新增了一些功能"
   },
   "upgradecontextmessage":{
-    "message":"That makes this extension even more amazing",
-    "description":"That makes this extension even more amazing"
+    "message":"That makes this extension even more amazing"
   },
   "upgradecontextitemta":{
-    "message":"攝影動態",
-    "description":"攝影動態"
+    "message":"攝影動態"
   },
   "upgradecontextitemma":{
-    "message":"用手關燈",
-    "description":"用手關燈"
+    "message":"用手關燈"
   },
   "upgradecontextitemtb":{
-    "message":"語音辨別",
-    "description":"語音辨別"
+    "message":"語音辨別"
   },
   "upgradecontextitemmb":{
-    "message":"更準確控制網頁",
-    "description":"更準確控制網頁"
+    "message":"更準確控制網頁"
   },
   "upgradefbshare":{
-    "message":"Facebook 分享",
-    "description":"Facebook 分享"
+    "message":"Facebook 分享"
   },
   "upgradetwshare":{
-    "message":"Tweet",
-    "description":"Tweet"
+    "message":"Tweet"
   },
   "ratetitle":{
-    "message":"請對我的擴充程式進行評價",
-    "description":"請對我的擴充程式進行評價"
+    "message":"請對我的擴充程式進行評價"
   },
   "ratedes":{
-    "message":"並使所有人知道至這麼特別的擴充程式!",
-    "description":"並使所有人知道至這麼特別的擴充程式!"
+    "message":"並使所有人知道至這麼特別的擴充程式!"
   },
   "rateitema":{
-    "message":"給予五星評分",
-    "description":"給予五星評分"
+    "message":"給予五星評分"
   },
   "titelreset":{
-    "message":"重置",
-    "description":"重置"
+    "message":"重置"
   },
   "resetbrowserextension":{
-    "message":"重置 Turn Off the Lights 設置",
-    "description":"重置 Turn Off the Lights 設置"
+    "message":"重置 Turn Off the Lights 設置"
   },
   "desautoplaydelay":{
-    "message":"Brighten the background again when the video has ended after",
-    "description":"Brighten the background again when the video has ended after"
+    "message":"Brighten the background again when the video has ended after"
   },
   "desautoplaydelayend":{
-    "message":"秒",
-    "description":"秒"
+    "message":"秒"
   },
   "motionoptions":{
-    "message":"攝影動態",
-    "description":"攝影動態"
+    "message":"攝影動態"
   },
   "desmotion":{
-    "message":"Enable the Camera Motion",
-    "description":"Enable the Camera Motion"
+    "message":"Enable the Camera Motion"
   },
   "trymotion":{
-    "message":"您自己試試!",
-    "description":"您自己試試!"
+    "message":"您自己試試!"
   },
   "destrymotion":{
-    "message":"這太棒了,而最棒的是可在所有情形下使用,即使是YouTube,新聞網站等等",
-    "description":"這太棒了,而最棒的是可在所有情形下使用,即使是YouTube,新聞網站等等"
+    "message":"這太棒了,而最棒的是可在所有情形下使用,即使是YouTube,新聞網站等等"
   },
   "howworkmotion":{
-    "message":"其如何運作?",
-    "description":"其如何運作?"
+    "message":"其如何運作?"
   },
   "step1description":{
-    "message":"啟動攝影動態功能",
-    "description":"啟動攝影動態功能"
+    "message":"啟動攝影動態功能"
   },
   "step2description":{
-    "message":"移動您的手 (或握拳) 由上至下",
-    "description":"移動您的手(或拳)由上至下"
+    "message":"移動您的手 (或握拳) 由上至下"
   },
   "step3description":{
-    "message":"The black layer will automatically slide down.",
-    "description":"The black layer will automatically slide down."
+    "message":"The black layer will automatically slide down."
   },
   "desmotionChecklist":{
-    "message":"清單：",
-    "description":"清單："
+    "message":"清單："
   },
   "des1checkmotion":{
-    "message":"請確保您的空間仍有足夠的光度、而不是漆黑。",
-    "description":"請確保您的空間仍有足夠的光度、而不是漆黑。"
+    "message":"請確保您的空間仍有足夠的光度、而不是漆黑。"
   },
   "des2checkmotion":{
-    "message":"您的攝影機未接收到直射的陽光",
-    "description":"您的攝影機未接收到直射的陽光"
+    "message":"您的攝影機未接收到直射的陽光"
   },
   "des3checkmotion":{
-    "message":"您使用前攝影機",
-    "description":"您使用前攝影機"
+    "message":"您使用前攝影機"
   },
   "titellinear":{
-    "message":"線性",
-    "description":"線性"
+    "message":"線性"
   },
   "titelcolora":{
-    "message":"顏色 A:",
-    "description":"顏色 A:"
+    "message":"顏色 A:"
   },
   "titelcolorb":{
     "message":"顏色 B:",
     "description":"顏色 B:"
   },
   "speechoption":{
-    "message":"語音辨別",
-    "description":"Speech Recognition "
+    "message":"語音辨別"
   },
   "titelspeech":{
-    "message":"語音",
-    "description":"語音"
+    "message":"語音"
   },
   "desspeech":{
-    "message":"當您啟動此選項時,您可以語音控制瀏覽器燈光,您可以說下列指令:",
-    "description":"當您啟動此選項時,您可以語音控制瀏覽器燈光,您可以說下列指令:"
+    "message":"當您啟動此選項時,您可以語音控制瀏覽器燈光,您可以說下列指令:"
   },
   "desspeech1command":{
-    "message":"關燈",
-    "description":"關燈"
+    "message":"關燈"
   },
   "desspeech2command":{
-    "message":"開燈",
-    "description":"開燈"
+    "message":"開燈"
   },
   "desspeech3command":{
-    "message":"播放影片",
-    "description":"播放影片"
+    "message":"播放影片"
   },
   "desspeech4command":{
-    "message":"暫停影片",
-    "description":"暫停影片"
+    "message":"暫停影片"
   },
   "desspeechdialect":{
-    "message":"選擇您的腔調:",
-    "description":"選擇您的腔調:"
+    "message":"選擇您的腔調:"
   },
   "desatmosvivid":{
-    "message":"於YouTube上使用生動環境需要",
-    "description":"於YouTube上使用生動環境需要"
+    "message":"Vivid atmosphere effects, require"
   },
   "help":{
-    "message":"説明",
-    "description":"説明"
+    "message":"説明"
   },
   "about":{
-    "message":"關於",
-    "description":"關於"
+    "message":"關於"
   },
   "desspeechonly":{
-    "message":"啟動語音辨識僅可於下列網站:",
-    "description":"啟動語音辨識僅可於下列網站:"
+    "message":"啟動語音辨識僅可於下列網站:"
   },
   "descammotiononly":{
-    "message":"啟用攝影動態僅於下列網站:",
-    "description":"啟用攝影動態僅於下列網站:"
+    "message":"啟用攝影動態僅於下列網站:"
   },
   "titelcamera":{
-    "message":"相機",
-    "description":"相機"
+    "message":"相機"
   },
   "titelautoplaywhitelist":{
-    "message":"白名單",
-    "description":"白名單"
+    "message":"白名單"
   },
   "titelautoplayblacklist":{
-    "message":"黑名單",
-    "description":"黑名單"
+    "message":"黑名單"
   },
   "titeldownloadthemeupgrade":{
-    "message":"增加黑色主題至您的瀏覽器來妝點它,該主題顯示於瀏覽器的四周",
-    "description":"增加黑色主題至您的瀏覽器來妝點它,該主題顯示於瀏覽器的四周"
+    "message":"增加黑色主題至您的瀏覽器來妝點它,該主題顯示於瀏覽器的四周"
   },
   "desbrowsersupport":{
-    "message":"此瀏覽器尚未支援此功能,請確認您安裝最新版的瀏覽器",
-    "description":"此瀏覽器尚未支援此功能,請確認您安裝最新版的瀏覽器"
+    "message":"此瀏覽器尚未支援此功能,請確認您安裝最新版的瀏覽器"
   },
   "titelsupportatmos":{
-    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card.",
-    "description":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
+    "message":"Supports only the HTML5 <video> and YouTube HTML5 player. It also uses the GPU from your graphics card."
   },
   "titelseeonline":{
-    "message":"更多範例請上網參閱",
-    "description":"更多範例請上網參閱"
+    "message":"更多範例請上網參閱"
   },
   "titelvideosample":{
-    "message":"影片範例",
-    "description":"影片範例"
+    "message":"影片範例"
   },
   "titelwebsite":{
-    "message":"網址",
-    "description":"網址"
+    "message":"網址"
   },
   "titeldeveloper":{
-    "message":"開發群",
-    "description":"開發群"
+    "message":"開發群"
   },
   "titelrightsreserved":{
-    "message":"保有部分權利。",
-    "description":"保有部分權利。"
+    "message":"保有部分權利。"
   },
   "desbrowserextension":{
-    "message":"瀏覽器擴充程式",
-    "description":"瀏覽器擴充程式"
+    "message":"瀏覽器擴充程式"
   },
   "desapitext":{
-    "message":"Wiki API 網站開發群",
-    "description":"Wiki API 網站開發群"
+    "message":"Wiki API 網站開發群"
   },
   "desbrowsertheme":{
-    "message":"瀏覽器主題",
-    "description":"瀏覽器主題"
+    "message":"瀏覽器主題"
   },
   "desproject":{
-    "message":"專案",
-    "description":"專案"
+    "message":"專案"
   },
   "titelapideveloper":{
-    "message":"API 開發",
-    "description":"API 開發"
+    "message":"API 開發"
   },
   "titelwikiatmos":{
-    "message":"有關氣氛光源功能之Wiki",
-    "description":"有關氣氛光源功能之Wiki"
+    "message":"有關氣氛光源功能之Wiki"
   },
   "sharemenusharetitle":{
-    "message":"這個分享",
-    "description":"這個分享"
+    "message":"這個分享"
   },
   "sharemenuwelcomeguidetitle":{
-    "message":"歡迎使用指南",
-    "description":"歡迎使用指南"
+    "message":"歡迎使用指南"
   },
   "sharemenutellafriend":{
-    "message":"告訴朋友",
-    "description":"告訴朋友"
+    "message":"告訴朋友"
   },
   "sharemenusendatweet":{
-    "message":"發送 Tweet",
-    "description":"發送 Tweet"
+    "message":"發送 Tweet"
   },
   "sharemenupostonfacebook":{
-    "message":"於Facebook 上發佈",
-    "description":"於Facebook 上發佈"
+    "message":"於Facebook 上發佈"
   },
   "sharemenupostongoogleplus":{
-    "message":"於 Google +上發佈",
-    "description":"於 Google +上發佈"
+    "message":"於 Google +上發佈"
   },
   "sharemenuratetitle":{
-    "message":"擴充功能評分",
-    "description":"擴充功能評分"
+    "message":"擴充功能評分"
   },
   "sharemenudonatetitle":{
-    "message":"支援開發",
-    "description":"支援開發"
+    "message":"支援開發"
   },
   "titelautostop":{
-    "message":"自動停止",
-    "description":"自動停止"
+    "message":"自動停止"
   },
   "desautostop":{
-    "message":"當我打開別的網頁，它會自動停止播放視頻",
-    "description":"當我打開別的網頁，它會自動停止播放視頻"
+    "message":"當我打開別的網頁，它會自動停止播放視頻"
   },
   "areyouhappy":{
-    "message":"Are you happy about Turn Off the Lights?",
-    "description":"Are you happy about Turn Off the Lights?"
+    "message":"Are you happy about Turn Off the Lights?"
   },
   "tellothers":{
-    "message":"Ensure that your opinion counts",
-    "description":"Ensure that your opinion counts"
+    "message":"Ensure that your opinion counts"
   },
   "nothanks":{
-    "message":"不，謝謝",
-    "description":"不，謝謝"
+    "message":"不，謝謝"
   },
   "writeareview":{
-    "message":"寫下評論",
-    "description":"寫下評論"
+    "message":"寫下評論"
   },
   "desauroraplayer":{
-    "message":"The ambient lighting player is also available for your computer.",
-    "description":"The ambient lighting player is also available for your computer."
+    "message":"The ambient lighting player is also available for your computer."
   },
   "downloadtheapp":{
-    "message":"立即下載此應用程式",
-    "description":"立即下載此應用程式"
+    "message":"立即下載此應用程式"
   },
   "titeldownloadupgradezoom":{
-    "message":"Zooms in or out on web content using the zoom button for more comfortable reading.",
-    "description":"Zooms in or out on web content using the zoom button for more comfortable reading."
+    "message":"Zooms in or out on web content using the zoom button for more comfortable reading."
   },
   "titeldownloadupgradepropermenubar":{
-    "message":"Adds back the black menubar on the Google website.",
-    "description":"Adds back the black menubar on the Google website."
+    "message":"Adds back the black menubar on the Google website."
   },
   "titeldownloadupgradefinancetoolbar":{
-    "message":"This shows you the real time stock market information.",
-    "description":"This shows you the real time stock market information."
+    "message":"This shows you the real time stock market information."
   },
   "titelnightmodeposition":{
-    "message":"開關的位置",
-    "description":"開關的位置"
+    "message":"開關的位置"
   },
   "nmtopleft":{
-    "message":"左上角",
-    "description":"左上角"
+    "message":"左上角"
   },
   "nmtopright":{
-    "message":"右上角",
-    "description":"右上角"
+    "message":"右上角"
   },
   "nmbottomright":{
-    "message":"右下角",
-    "description":"右下角"
+    "message":"右下角"
   },
   "nmbottomleft":{
-    "message":"左下角",
-    "description":"左下角"
+    "message":"左下角"
   },
   "nmcustom":{
-    "message":"Custom (click, hold and move the switch to the desired screen location)",
-    "description":"Custom (click, hold and move the switch to the desired screen location)"
+    "message":"Custom (click, hold and move the switch to the desired screen location)"
   },
   "desnighthover":{
-    "message":"Shows a transparent switch on the web page",
-    "description":"Shows a transparent switch on the web page"
+    "message":"Shows a transparent switch on the web page"
   },
   "titelnightmodewhitelist":{
-    "message":"白名單",
-    "description":"白名單"
+    "message":"白名單"
   },
   "titelnightmodeblacklist":{
-    "message":"黑名單",
-    "description":"黑名單"
+    "message":"黑名單"
   },
   "desautostoponly":{
-    "message":"僅在以下網頁中自動暫停影片播放：",
-    "description":"僅在以下網頁中自動暫停影片播放："
+    "message":"僅在以下網頁中自動暫停影片播放："
   },
   "titelautostopwhitelist":{
-    "message":"白名單",
-    "description":"白名單"
+    "message":"白名單"
   },
   "titelautostopblacklist":{
-    "message":"黑名單",
-    "description":"黑名單"
+    "message":"黑名單"
   },
   "desnightactivetime":{
-    "message":"開關將在下列時間中可見：",
-    "description":"開關將在下列時間中可見："
+    "message":"開關將在下列時間中可見："
   },
   "deslampandnightmode":{
-    "message":"當您點選灰色燈按鈕時，即可啟動夜間模選項。",
-    "description":"當您點選灰色燈按鈕時，即可啟動夜間模選項。"
+    "message":"當您點選灰色燈按鈕時，即可啟動夜間模選項。"
   },
   "titeleyewhitelist":{
-    "message":"白名單",
-    "description":"白名單"
+    "message":"白名單"
   },
   "titeleyeblacklist":{
-    "message":"黑名單",
-    "description":"黑名單"
+    "message":"黑名單"
   },
   "desspeech5command":{
-    "message":"瀏覽器燈",
-    "description":"瀏覽器燈"
+    "message":"瀏覽器燈"
   },
   "html5andyoutube":{
-    "message":"HTML5 & YouTube ™ 影片",
-    "description":"HTML5 & YouTube ™ 影片"
+    "message":"HTML5 & YouTube ™ 影片"
   },
   "flashembedobject":{
-    "message":"支援：<object>，<embed>，<applet>，<iframe>標籤。",
-    "description":"支援：<object>，<embed>，<applet>，<iframe>標籤。"
+    "message":"支援：<object>，<embed>，<applet>，<iframe>標籤。"
   },
   "titelnightmodebck":{
-    "message":"背景顏色：",
-    "description":"背景顏色："
+    "message":"Background color"
   },
   "titelnightmodetxt":{
-    "message":"文字顏色：",
-    "description":"文字顏色："
+    "message":"Text color"
   },
   "desdynamicsmoke":{
-    "message":"煙霧",
-    "description":"煙霧"
+    "message":"煙霧"
   },
   "desdynamicdotscolor":{
-    "message":"彩色圓點",
-    "description":"彩色圓點"
+    "message":"彩色圓點"
   },
   "desdynamicstorm":{
     "message":"風暴",
     "description":"風暴"
   },
   "desdynamictriangulation":{
-    "message":"Triangulation",
-    "description":"Triangulation"
+    "message":"Triangulation"
   },
   "desdynamicstars":{
-    "message":"星星數",
-    "description":"星星數"
+    "message":"星星數"
   },
   "desmobileapp":{
-    "message":"Turn Off the Lights is also available for your mobile device.",
-    "description":"Turn Off the Lights is also available for your mobile device."
+    "message":"Turn Off the Lights is also available for your mobile device."
   },
   "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame",
-    "description":"Shows the full 360 degrees YouTube video in one frame"
+    "message":"Shows the full 360 degrees YouTube video in one frame"
   },
   "titelvideotool":{
-    "message":"影片工具列",
-    "description":"影片工具列"
+    "message":"影片工具列"
   },
   "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player",
-    "description":"Show the toolbar below your screen to customize the current video player"
+    "message":"Show the toolbar below your screen to customize the current video player"
   },
   "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size",
-    "description":"A button to set the video player to the full window size"
+    "message":"A button to set the video player to the full window size"
   },
   "vtoolfilter":{
-    "message":"A button to add a filter in the current video player",
-    "description":"A button to add a filter in the current video player"
+    "message":"A button to add a filter in the current video player"
   },
   "vtoolreplay":{
-    "message":"A button to replay the current video player",
-    "description":"A button to replay the current video player"
+    "message":"A button to replay the current video player"
+  },
+  "vtoolscreenshot":{
+    "message":"A button to take a screenshot of the current video player"
+  },
+  "vtoolalign":{
+    "message":"A button to center the video player in your browser window"
   },
   "titelvideotoolgrayscale":{
-    "message":"grayscale",
-    "description":"grayscale"
+    "message":"grayscale"
   },
   "titelvideotoolsepia":{
-    "message":"sepia",
-    "description":"sepia"
+    "message":"sepia"
   },
   "titelvideotoolinvert":{
-    "message":"invert",
-    "description":"invert"
+    "message":"invert"
   },
   "titelvideotoolcontrast":{
-    "message":"contrast",
-    "description":"contrast"
+    "message":"contrast"
   },
   "titelvideotoolsaturate":{
-    "message":"saturation",
-    "description":"saturation"
+    "message":"saturation"
   },
   "titelvideotoolhueroration":{
-    "message":"hue rotation",
-    "description":"hue rotation"
+    "message":"hue rotation"
   },
   "titelvideotoolbrightness":{
-    "message":"亮度",
-    "description":"亮度"
+    "message":"亮度"
   },
   "titelvideotoolnormal":{
-    "message":"normal",
-    "description":"normal"
+    "message":"normal"
   },
   "titelvideotoollike":{
-    "message":"讚",
-    "description":"讚"
+    "message":"讚"
   },
   "titelvideotoolsubscribe":{
-    "message":"訂閱",
-    "description":"訂閱"
+    "message":"訂閱"
   },
   "titelvideotoolrepeat":{
-    "message":"重覆",
-    "description":"重覆"
+    "message":"重覆"
   },
   "titelvideotoolfilter":{
-    "message":"過濾器",
-    "description":"過濾器"
+    "message":"過濾器"
   },
   "titelvideotoolfullwindow":{
-    "message":"全螢幕",
-    "description":"全螢幕"
+    "message":"全螢幕"
+  },
+  "titelvideotoolscreenshot":{
+    "message":"Take a screenshot"
   },
   "titelreflection":{
-    "message":"倒映",
-    "description":"倒映"
+    "message":"倒映"
   },
   "desreflection":{
-    "message":"所有影片皆顯示倒映",
-    "description":"所有影片皆顯示倒映"
+    "message":"所有影片皆顯示倒映"
   },
   "desvideotoolonly":{
-    "message":"只有在這些網站啟動影片工具列：",
-    "description":"只有在這些網站啟動影片工具列："
+    "message":"只有在這些網站啟動影片工具列："
   },
   "titelvideotoolwhitelist":{
-    "message":"白名單",
-    "description":"白名單"
+    "message":"白名單"
   },
   "titelvideotoolblacklist":{
-    "message":"黑名單",
-    "description":"黑名單"
+    "message":"黑名單"
   },
   "titelnightmodehyperlink":{
     "message":"Hyperlink",
@@ -1192,99 +910,147 @@
     "description":"Block 60fps"
   },
   "titelvolume":{
-    "message":"Video Volume Slider",
-    "description":"Video Volume Slider"
+    "message":"Video Volume Slider"
   },
   "desvideovolume":{
-    "message":"Control the volume of the current video player with a mouse scroll",
-    "description":"ontrol the volume of the current video player with a mouse scroll"
+    "message":"Control the volume of the current video player with a mouse scroll"
   },
   "desvideovolumecolor":{
-    "message":"Color of the slider",
-    "description":"Color of the slider"
+    "message":"Color of the slider"
   },
   "desvolumelabel":{
-    "message":"Show volume label",
-    "description":"Show volume label"
+    "message":"Show volume label"
   },
   "desvolumesteps":{
-    "message":"The number of levels for each 360° wheel scroll",
-    "description":"The number of levels for each 360° wheel scroll"
+    "message":"The number of levels for each 360° wheel scroll"
   },
   "sharetexta":{
-    "message":"Get this Cool Turn Off the Lights Browser Extension",
-    "description":"Get this Cool Turn Off the Lights Browser Extension"
+    "message":"Get this Cool Turn Off the Lights Browser Extension"
   },
   "sharetextb":{
-    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension ",
-    "description":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
+    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
   },
   "sharetextc":{
-    "message":"The Best and Amazing Turn Off the Lights Browser extension",
-    "description":"The Best and Amazing Turn Off the Lights Browser extension"
+    "message":"The Best and Amazing Turn Off the Lights Browser extension"
   },
   "sharetextd":{
-    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!",
-    "description":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
+  },
+  "titelsharethis":{
+    "message":"Share this:"
   },
   "titellampchoose":{
-    "message":"Choose your favorite lamp style",
-    "description":"Choose your favorite lamp style"
+    "message":"Choose your favorite lamp style"
   },
   "titeldoesntwork":{
-    "message":"Turn Off the Lights doesn't work on this web page. Please try another page.",
-    "description":"Turn Off the Lights doesn't work on this web page. Please try another page."
+    "message":"Turn Off the Lights doesn't work on this web page. Please try another page."
   },
   "titelpopupvideo":{
-    "message":"YouTube",
-    "description":"YouTube"
+    "message":"YouTube"
   },
   "titelpopupwelcomeguide":{
-    "message":"歡迎使用指南",
-    "description":"歡迎使用指南"
+    "message":"歡迎使用指南"
   },
   "titelpopupsupport":{
-    "message":"支援",
-    "description":"支援"
+    "message":"支援"
   },
   "titelpopupoptions":{
-    "message":"選項",
-    "description":"選項"
+    "message":"選項"
   },
   "titelpopupratestars":{
-    "message":"給予五星評分",
-    "description":"給予五星評分"
+    "message":"給予五星評分"
   },
   "titelvisenable":{
-    "message":"Enable\/disable the Audio Visualization",
-    "description":"Enable\/disable the Audio Visualization"
+    "message":"Enable/disable the Audio Visualization"
   },
   "titelvischoose":{
-    "message":"Choose your Audio Visualization",
-    "description":"Choose your Audio Visualization"
+    "message":"Choose your Audio Visualization"
   },
   "titelvisblocks":{
-    "message":"區塊",
-    "description":"區塊"
+    "message":"區塊"
   },
   "titelvisfrequency":{
-    "message":"Frequency",
-    "description":"Frequency"
+    "message":"Frequency"
   },
   "titelvistunnel":{
-    "message":"Music Tunnel",
-    "description":"Music Tunnel"
+    "message":"Music Tunnel"
   },
   "titelvisualization":{
-    "message":"Audio Visualization",
-    "description":"Audio Visualization"
+    "message":"Audio Visualization"
   },
   "desvisopacity":{
-    "message":"The opacity value of the audio visualization background",
-    "description":"The opacity value of the audio visualization background"
+    "message":"The opacity value of the audio visualization background"
   },
   "vtoolvisualization":{
-    "message":"A button for displaying the audio-visualization for the current video player",
-    "description":"A button for displaying the audio-visualization for the current video player"
+    "message":"A button for displaying the audio-visualization for the current video player"
+  },
+  "desvideotoolcolor":{
+    "message":"Color of the toolbar"
+  },
+  "titelhovervideo":{
+    "message":"Video Hover"
+  },
+  "deshovervideo":{
+    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
+  },
+  "promotitle":{
+    "message":"Tip of the day"
+  },
+  "desremyoutube":{
+    "message":"到 YouTube 上訂閱"
+  },
+  "desremfacebook":{
+    "message":"Recommend this on Facebook"
+  },
+  "titleuserprofile":{
+    "message":"Below, choose the settings you want to use when clicking the gray lamp button. Each profile has its own features."
+  },
+  "titleregularuser":{
+    "message":"Video Lover"
+  },
+  "titlenightowl":{
+    "message":"Night Owl"
+  },
+  "titlescreenprotection":{
+    "message":"眼部防護"
+  },
+  "desregularuser":{
+    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
+  },
+  "desnightowl":{
+    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
+  },
+  "desscreenprotection":{
+    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
+  },
+  "titleprofilevideofocus":{
+    "message":"Video focus is enabled"
+  },
+  "titleprofilenovideofocus":{
+    "message":"Video focus is disabled"
+  },
+  "titleprofilealwaysscreentab":{
+    "message":"Always enabled for all open tabs"
+  },
+  "titleprofilescreenclick":{
+    "message":"在螢幕變暗時，允許點選超連結"
+  },
+  "titleprofilesubmit":{
+    "message":"Choose this settings"
+  },
+  "titlelearnmore":{
+    "message":"Learn more"
+  },
+  "optionprofilesaved":{
+    "message":"New lamp action is saved successfully!"
+  },
+  "desaplay":{
+    "message":"play"
+  },
+  "desapause":{
+    "message":"pause"
+  },
+  "desastop":{
+    "message":"stop"
   }
 }
