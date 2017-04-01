@@ -175,7 +175,30 @@ T=d.getElementsByTagName(t);
 for(i=T.length-1;(i+1)&&(N=T[i]);--i)
 if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView))
 {
-N.classList.add('stefanvdvideotop');
+	var path = [];
+	var el = N;
+	do {
+		var qq = path.unshift(el.nodeName);
+		if (el.currentStyle) { 
+			var yta = qq.currentStyle["z-Index"]; 
+		}
+		else {
+			var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+		}
+		if (yta == "auto"){}
+		else{
+				// if it is not the <video> player element,
+				// and if otherdown class is inside, then remove it
+				if(el.tagName != "VIDEO" && el.tagName != "OBJECT" && el.tagName != "EMBED" && el.tagName != "APPLET" && el.tagName != "IFRAME"){
+					if(el.classList.contains("stefanvdotherdown")){el.classList.remove("stefanvdotherdown");}
+					if(el.classList.contains("stefanvdvideocontrolstop")){el.classList.remove("stefanvdvideocontrolstop");}
+					if(el.classList.contains("stefanvdvideocontrolsitem")){el.classList.remove("stefanvdvideocontrolsitem");}
+					if(el.classList.contains("stefanvditemtop")){el.classList.remove("stefanvditemtop");}
+					el.classList.add('stefanvdvideoauto');
+				}
+		}
+	} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
+	N.classList.add('stefanvdvideotop');
 }
 }
 }catch(E){r = 0}
@@ -190,7 +213,30 @@ for(j=0;t=['object','embed','applet','iframe'][j];++j)
 var a = document.querySelectorAll(t);
 for(var i = 0; i < a.length; i++ )
 {
-a[i].classList.add('stefanvdvideotop');
+	var path = [];
+	var el = a[i];
+	do {
+		var qq = path.unshift(el.nodeName);
+		if (el.currentStyle) { 
+			var yta = qq.currentStyle["z-Index"]; 
+		}
+		else {
+			var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+		}
+		if (yta == "auto"){}
+		else{
+				// if it is not the <video> player element,
+				// and if otherdown class is inside, then remove it
+				if(el.tagName != "VIDEO" && el.tagName != "OBJECT" && el.tagName != "EMBED" && el.tagName != "APPLET" && el.tagName != "IFRAME"){
+					if(el.classList.contains("stefanvdotherdown")){el.classList.remove("stefanvdotherdown");}
+					if(el.classList.contains("stefanvdvideocontrolstop")){el.classList.remove("stefanvdvideocontrolstop");}
+					if(el.classList.contains("stefanvdvideocontrolsitem")){el.classList.remove("stefanvdvideocontrolsitem");}
+					if(el.classList.contains("stefanvditemtop")){el.classList.remove("stefanvditemtop");}
+					el.classList.add('stefanvdvideoauto');
+				}
+		}
+	} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
+	a[i].classList.add('stefanvdvideotop');
 }
 }
 }

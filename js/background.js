@@ -33,7 +33,7 @@ if (request.name == "automatic") {chrome.tabs.executeScript(sender.tab.id, {file
 else if (request.name == "screenshot") {
 var checkcapturewebsite = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
 var capturewebsiteisopen = false;
-    chrome.tabs.getAllInWindow(undefined, function(tabs) {
+    chrome.tabs.query({}, function(tabs) {
 		for (var i = 0, tab; tab = tabs[i]; i++) {
         if(tab.url == checkcapturewebsite){
             capturewebsiteisopen = true;
