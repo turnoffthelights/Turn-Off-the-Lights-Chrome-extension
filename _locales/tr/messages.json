@@ -27,7 +27,7 @@
     "message":"Ekran karardığında köprülere tıklamayı aktifleştir"
   },
   "desmousespotlights":{
-    "message":"Enable the screen shade, with the possibility to click on the hyperlinks"
+    "message":"Ekran gölgesini, bağlantıları tıklama olanağı ile etkinleştirin"
   },
   "desambilight4color":{
     "message":"Video etrafında seçilen 4 renk:"
@@ -423,7 +423,7 @@
     "message":"Hatırlatıcı sayfasını gösterme"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond."
+    "message":"Tüm sayfa karanlığa dönüşür, böylece videoları sanki sinemadaymış gibi izleyebilirsiniz. YouTube™ ve ötesi için çalışır."
   },
   "titelviewcount":{
     "message":"İzlenme Sayısı"
@@ -616,7 +616,7 @@
     "message":"Konuşma diyalektinizi seçin:"
   },
   "desatmosvivid":{
-    "message":"Vivid atmosphere effects, require"
+    "message":"Canlı atmosfer efektleri, gerektirir:"
   },
   "help":{
     "message":"Yardım"
@@ -796,10 +796,10 @@
     "message":"Desteklenenler: <object>,<embed>,<applet>,<iframe>."
   },
   "titelnightmodebck":{
-    "message":"Background color"
+    "message":"Arkaplan rengi"
   },
   "titelnightmodetxt":{
-    "message":"Text color"
+    "message":"Metin rengi"
   },
   "desdynamicsmoke":{
     "message":"Duman"
@@ -839,10 +839,10 @@
     "message":"Videoyu yeniden oynatma butonu"
   },
   "vtoolscreenshot":{
-    "message":"A button to take a screenshot of the current video player"
+    "message":"Geçerli video oynatıcısının ekran görüntüsünü almak için bir buton"
   },
   "vtoolalign":{
-    "message":"A button to center the video player in your browser window"
+    "message":"Video oynatıcıyı tarayıcı pencerenizde ortalamak için kullanılan bir düğme"
   },
   "titelvideotoolgrayscale":{
     "message":"gri tonlama"
@@ -884,7 +884,7 @@
     "message":"Tam pencere"
   },
   "titelvideotoolscreenshot":{
-    "message":"Take a screenshot"
+    "message":"Bir ekran görüntüsü al"
   },
   "titelreflection":{
     "message":"Yansıma"
@@ -937,7 +937,7 @@
     "message":"Turn Off the Lights uzantısı YouTube için en iyi araç. İndirin ve kendinizi deneyin!"
   },
   "titelsharethis":{
-    "message":"Share this:"
+    "message":"Bunu paylaş:"
   },
   "titellampchoose":{
     "message":"En sevdiğiniz lamba tarzını seçin"
@@ -985,72 +985,72 @@
     "message":"Mevcut video için ses görselleştirmesini gösteren bir düğme"
   },
   "desvideotoolcolor":{
-    "message":"Color of the toolbar"
+    "message":"Araç çubuğunun rengi"
   },
   "titelhovervideo":{
-    "message":"Video Hover"
+    "message":"Video Üzeri"
   },
   "deshovervideo":{
-    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
+    "message":"Farenizi belirli bir saniye boyunca video öğesinin üzerine getirin, ardından web sayfası otomatik olarak soluklaşır"
   },
   "promotitle":{
-    "message":"Tip of the day"
+    "message":"Günün İpucu"
   },
   "desremyoutube":{
     "message":"YouTube'da takip edin"
   },
   "desremfacebook":{
-    "message":"Recommend this on Facebook"
+    "message":"Bunu Facebook'da öner"
   },
   "titleuserprofile":{
-    "message":"Below, choose the settings you want to use when clicking the gray lamp button. Each profile has its own features."
+    "message":"Aşağıda, gri lamba düğmesine tıklayıp kullanmak istediğiniz ayarları seçin. Her profilin kendi özellikleri vardır."
   },
   "titleregularuser":{
-    "message":"Video Lover"
+    "message":"Videosever"
   },
   "titlenightowl":{
-    "message":"Night Owl"
+    "message":"Gecekuşu"
   },
   "titlescreenprotection":{
     "message":"Göz Koruması"
   },
   "desregularuser":{
-    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
+    "message":"Bu, varsayılan ve yeni kullanıcılar için normal ayardır. Gri lamba düğmesini tıklattığınızda, bu stil geçerli web sayfasına uygulanır."
   },
   "desnightowl":{
-    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
+    "message":"Tek tıklama, sayfayı tıklanabilir bir bağlantı ile doğrudan bir gece temasına dönüştürür. Normal görünüme dönmek için tekrar tıklayın. Bu özelliği devre dışı bırakmak için lamba düğmesine tekrar tıklayın."
   },
   "desscreenprotection":{
-    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
+    "message":"Tüm açık sekmelerde göz yorgunluğunu azaltmak için tek bir tıklama sayfayı sakinleştirici turuncu renklerle gölgelendirir. Bu özelliği devre dışı bırakmak için lamba düğmesine tekrar tıklayın."
   },
   "titleprofilevideofocus":{
-    "message":"Video focus is enabled"
+    "message":"Video odağı etkinleştirildi"
   },
   "titleprofilenovideofocus":{
-    "message":"Video focus is disabled"
+    "message":"Video odağı devre dışı brakıldı"
   },
   "titleprofilealwaysscreentab":{
-    "message":"Always enabled for all open tabs"
+    "message":" Her zaman açılan bütün sekmeler için etkin"
   },
   "titleprofilescreenclick":{
     "message":"Ekran karardığında köprülere tıklamayı aktifleştir"
   },
   "titleprofilesubmit":{
-    "message":"Choose this settings"
+    "message":"Bu ayarları seçin"
   },
   "titlelearnmore":{
-    "message":"Learn more"
+    "message":"Daha Fazlasını Öğrenin"
   },
   "optionprofilesaved":{
-    "message":"New lamp action is saved successfully!"
+    "message":"Yeni lamba eylemi başarıyla kaydedildi!"
   },
   "desaplay":{
-    "message":"play"
+    "message":"oynat"
   },
   "desapause":{
-    "message":"pause"
+    "message":"duraklat"
   },
   "desastop":{
-    "message":"stop"
+    "message":"durdur"
   }
 }

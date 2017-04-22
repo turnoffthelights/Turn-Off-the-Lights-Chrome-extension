@@ -77,6 +77,21 @@ for(var i = 0; i < q.length; i++ ) {
 		var x = st.getPropertyValue("contain");
 		var t = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform")
 	}
+	
+	if(q[i].shadowRoot){
+		if(q[i].shadowRoot.querySelector('#rootstefan')){}else{
+			q[i].shadowRoot.innerHTML += '<style id="rootstefan">.stefanvdotherdown{z-index:950!important}</style>';
+		}
+		var s = q[i].shadowRoot.querySelectorAll('*');
+		for(var j = 0; j < s.length; j++ ) {
+			var st = document.defaultView.getComputedStyle(s[j], null);
+			var k = st.getPropertyValue("z-Index");
+			if (k >= 1000){
+				s[j].classList.add('stefanvdotherdown');
+			}
+		}
+	}
+
 	// push below the dark layer
 	if (y >= 1000){
 		var elementa = document.getElementsByTagName("screenshader")[0];//Stefan screenshader
@@ -140,7 +155,7 @@ if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*y
 	 // default the regular player
 	 // also the 360 frame push to front
 	var webgl = document.querySelector('.webgl');
-	if(webgl){webgl.classList.add('stefanvdvideotop');};
+	if(webgl){webgl.classList.add('stefanvdvideocontrolsitem');};
 	}
 	var playerapi = $('player-api');
 	if(playerapi){
@@ -159,7 +174,7 @@ try {
 		var innerDoc = (frames.item(i).contentDocument) ? frames.item(i).contentDocument : frames.item(i).contentWindow.document;
 		var iframeVideoTags = innerDoc.getElementsByTagName("video");
 		for (var j = 0; j < iframeVideoTags.length; j++) {
-			iframeVideoTags.item(j).style.cssText = 'visibility:visible !important; position:relative !important; z-index:1001 !important';
+			iframeVideoTags.item(j).classList.add('stefanvdvideotop');
 		}
 	}	
 } catch(e){}
@@ -438,6 +453,11 @@ var ytpcardsbutton = document.getElementsByTagName('button');
 for(var i = 0; i < ytpcardsbutton.length; i++ )
 {if(ytpcardsbutton[i].className == ('ytp-button ytp-cards-button')) {ytpcardsbutton[i].classList.add('stefanvdvideocontrolstop');ytpcardsbutton[i].style.position = 'absolute';ytpcardsbutton[i].style.top = '0';}}
 
+// edit video card end screen
+var ytpcardsteaser = document.getElementsByTagName('div');
+for(var i = 0; i < ytpcardsteaser.length; i++ )
+{if(ytpcardsteaser[i].className == ('playergrid-safe-area')) {ytpcardsteaser[i].classList.add('stefanvdvideocontrolsitem');}}
+
 // YouTube video sidebar info button
 var ivdrawer = document.getElementsByTagName('div');
 for(var i = 0; i < ivdrawer.length; i++ )
@@ -664,6 +684,13 @@ do {
 // current video to front
 var targetComputedStyleHeight=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("height");var spar = targetComputedStyleHeight.replace("px","");
 var targetComputedStyleWidth=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("width");var been = targetComputedStyleWidth.replace("px","");
+// double check to remove all other CSS classes
+if(embedplayer[i].classList.contains("stefanvdotherdown")){embedplayer[i].classList.remove("stefanvdotherdown");}
+if(embedplayer[i].classList.contains("stefanvdvideocontrolstop")){embedplayer[i].classList.remove("stefanvdvideocontrolstop");}
+if(embedplayer[i].classList.contains("stefanvdvideocontrolsitem")){embedplayer[i].classList.remove("stefanvdvideocontrolsitem");}
+if(embedplayer[i].classList.contains("stefanvditemtop")){embedplayer[i].classList.remove("stefanvditemtop");}
+if(embedplayer[i].classList.contains("stefanvdvideoauto")){embedplayer[i].classList.remove("stefanvdvideoauto");}
+//---
 embedplayer[i].classList.add('stefanvdvideotop');
 embedplayer[i].style.cssText = 'height:' + Math.round(spar) + 'px; width:' + Math.round(been) + 'px; display: block;';
 }
@@ -736,12 +763,15 @@ var dmpSharePane = $('dmp_SharePane');
 if(dmpSharePane){$('dmp_SharePane').classList.add('stefanvdvideocontrolsitem');}
 }
 // vk.com, fixed show video
-else if (window.location.href.match(/http:\/\/(vk\.com\/.*|vk\.com\/.*)/i)){
+else if (window.location.href.match(/((http:\/\/.*vk\.com\/.*)|(https:\/\/.*vk\.com\/.*))/i)){
 var videoplayer = $('video_player');
 if(videoplayer){$('video_player').classList.add('stefanvdvideocontrolsitem');}
 
+var layerbg = $('layer_bg');
+if(layerbg){layerbg.style.cssText += "position:absolute !important";}
+
 var mvlayerwrap = $('mv_layer_wrap');
-if(mvlayerwrap){$('mv_layer_wrap').classList.add('stefanvdvideocontrolsitem');}
+if(mvlayerwrap){mvlayerwrap.style.cssText += "position:absolute !important";}
 }
 // steampowered.com, fixed show control
 else if (window.location.href.match(/((http:\/\/.*steampowered\.com\/.*)|(https:\/\/.*steampowered\.com\/.*))/i)){
@@ -978,27 +1008,31 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 		if(stefanvdlightcorner) {document.body.removeChild(stefanvdlightcorner);}
 
 		// remove video player on top
-		document.querySelectorAll('.stefanvdvideotop').forEach(function(el) {
-		el.classList.remove("stefanvdvideotop");
-		});
-		document.querySelectorAll('.stefanvditemtop').forEach(function(el) {
-		el.classList.remove("stefanvditemtop");
-		});
-		document.querySelectorAll('.stefanvdvideoauto').forEach(function(el) {
-		el.classList.remove("stefanvdvideoauto");
-		});
-		document.querySelectorAll('.stefanvdotherdown').forEach(function(el) {
-		el.classList.remove("stefanvdotherdown");
-		});
-		document.querySelectorAll('.stefanvdcontainauto').forEach(function(el) {
-		el.classList.remove("stefanvdcontainauto");
-		});
-		document.querySelectorAll('.stefanvdvideocontrolsitem').forEach(function(el) {
-		el.classList.remove("stefanvdvideocontrolsitem");
-		});
-		document.querySelectorAll('.stefanvdvideocontrolstop').forEach(function(el) {
-		el.classList.remove("stefanvdvideocontrolstop");
-		});		
+		var div = document.querySelectorAll('.stefanvdvideotop');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideotop"); }
+		var div = document.querySelectorAll('.stefanvditemtop');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvditemtop"); }
+		var div = document.querySelectorAll('.stefanvdvideoauto');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideoauto"); }
+		var div = document.querySelectorAll('.stefanvdotherdown');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdotherdown"); }
+		var div = document.querySelectorAll('.stefanvdcontainauto');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdcontainauto"); }
+		var div = document.querySelectorAll('.stefanvdvideocontrolsitem');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideocontrolsitem"); }
+		var div = document.querySelectorAll('.stefanvdvideocontrolstop');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideocontrolstop"); }
+	
+		// inside the root
+		var q = document.getElementsByTagName('*');
+		for(var i = 0; i < q.length; i++ ) {
+			if(q[i].shadowRoot){
+				if(q[i].shadowRoot.querySelector('#rootstefan')){q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector('#rootstefan'));}
+
+				var rootdiv = q[i].shadowRoot.querySelectorAll('.stefanvdotherdown');
+				for(var k = 0; k < rootdiv.length; k++){rootdiv[k].classList.remove("stefanvdotherdown");}
+			}
+		}
 	}
 	
 	function removenewdynamic() {

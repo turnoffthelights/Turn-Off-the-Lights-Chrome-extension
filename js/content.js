@@ -122,6 +122,12 @@ videozoom = response['videozoom'];
 
 function $(id) { return document.getElementById(id); }
 
+function rgbToHex(r, g, b) {
+	if (r > 255 || g > 255 || b > 255)
+		throw "Invalid color component";
+	return ((r << 16) | (g << 8) | b).toString(16);
+}
+
 // inject script for autoplay
 if(autoplay == true){
 if((!(window.location.href.indexOf("actions.com") > -1)) && (!(window.location.href.indexOf("chrome") > -1))){
@@ -1726,9 +1732,9 @@ if(typeof atmosphereDomains == "string") {
 } else {ambilightfunction();}
 
 function ambilightfunction(){
-		// yes show time
+// yes show time
 // ambilight play detect
-var requestId;
+var requestId = 0;
 
 var stop = false;
 var frameCount = 0;
@@ -1772,24 +1778,6 @@ function animate(){
 			
 			// YouTube flash detect play
 			if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-				var yttest = $("movie_player"); item = 1;
-				
-				/* temp fix watch7-video */
-				var watch7video = $('watch7-video');
-				if(watch7video)$('watch7-video').style.zIndex = 'auto';
-				
-				div = document.getElementsByTagName('div'); 
-				for(var i = 0; i < div.length; i++ )
-				{if(div[i].className == ('html5-video-player')) {div[i].style.overflow = 'visible';}}
-				
-				// fix 16 augustus 2013
-				var playerapilegacy = $('player-api-legacy');
-				if(playerapilegacy)$('player-api-legacy').style.overflow = 'visible';
-
-				// fix 22 februari 2014
-				var html5playermessages = $('html5-player-messages');
-				if(html5playermessages)$('html5-player-messages').style.display = 'none';
-				
 				var youtubewatchplayershadow = $("watch-player"); // YouTube video page
 				if(youtubewatchplayershadow){ youtubewatchplayershadow.style.overflow = "visible"; } // show the overflow out the video element
 				var youtubevideoplayershadow = $("video-player"); // YouTube video page
@@ -1797,16 +1785,16 @@ function animate(){
 				var youtubewatchvideoshadow = $("watch-video"); // YouTube video page
 				if(youtubewatchvideoshadow){ youtubewatchvideoshadow.style.overflow = "visible"; } // show the overflow out the video element	
 				var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
-				if(youtubewindow){youtubewindow.style.zIndex = 1001;}
+				if(youtubewindow){youtubewindow.classList.add('stefanvdvideocontrolsitem');}
 				var youtubemovieplayer = $("movie_player"); // YouTube video page
-				if(youtubemovieplayer){ youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.style.zIndex = 1001; } // show the overflow out the video element
+				if(youtubemovieplayer){ youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.classList.add('stefanvdvideocontrolsitem');} // show the overflow out the video element
 			}
 
 			// TESTING...Report #seconds since start and achieved fps.
-			var sinceStart = now - startTime;
-			var currentFps = Math.round(1000 / (sinceStart / ++frameCount) * 100) / 100;
+			//var sinceStart = now - startTime;
+			//var currentFps = Math.round(1000 / (sinceStart / ++frameCount) * 100) / 100;
 			//console.log("Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @ " + currentFps + " fps.");
-		}
+		}		
 }
 
 function stopAnimation(e) {
@@ -1830,6 +1818,9 @@ try {
 	var textcountB = countB[item] + "px";
 	var textcountC = countC[item] + "px";
 
+	if(ambilightvarcolor == true){
+		if(atmosvivid == true){
+		}else{
 var k = item;
 	if(typeof k == "undefined") {
 	return
@@ -1839,12 +1830,6 @@ if(canvas){
 	var context = canvas.getContext('2d');
 	var imageData = context.getImageData(0, 0, 1, 1);
 	var data = imageData.data;
-
-	function rgbToHex(r, g, b) {
-    if (r > 255 || g > 255 || b > 255)
-        throw "Invalid color component";
-    return ((r << 16) | (g << 8) | b).toString(16);
-	}
 
 	var p1 = context.getImageData(0 , 0, 1, 1).data;
 	var p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -1859,6 +1844,8 @@ var downhex1 = hex1; if(!hex1){ hex1 = "#000000"; } // previous value
 var downhex2 = hex2; if(!hex2){ hex2 = "#000000"; } // previous value
 var downhex3 = hex3; if(!hex3){ hex3 = "#000000"; } // previous value
 var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
+		}
+	}
 	// ----
 
 	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
@@ -1923,6 +1910,9 @@ try {
 	var getspread = ambilightrangespreadradius + "px";
 	
 	// animate out and in
+	if(typeof countA[item] == 'undefined'){countA[item] = 0;}
+	if(typeof countB[item] == 'undefined'){countB[item] = 0;}
+	if(typeof countC[item] == 'undefined'){countC[item] = 0;}
 	if (countA[item] < ambilightrangespreadradius){countA[item]=countA[item]+1;};
 	if (countB[item] < ambilightrangeblurradius){countB[item]=countB[item]+1;};
 	if (countC[item] < 20){countC[item]=countC[item]+.5;};
@@ -2000,50 +1990,56 @@ try{
 			var calcvividscale = 1+(ambilightrangespreadradius/100);
 				if($("stefanvdvivideffect"+totlshowtime.getAttribute("data-video"))){
 					var stefanvdvivideffect = $("stefanvdvivideffect"+totlshowtime.getAttribute("data-video"));
-						if((stefanvdvivideffect.style.height != totlshowtime.style.height) && (totlshowtime.style.height != "")){
+					if((stefanvdvivideffect.style.height != totlshowtime.style.height) && (totlshowtime.style.height != "")){
 						stefanvdvivideffect.style.height = totlshowtime.offsetHeight;
 						stefanvdvivideffect.style.width = totlshowtime.offsetWidth;
 					}
 					var vividctx = stefanvdvivideffect.getContext('2d');var vividx = Math.floor(totlshowtime.offsetWidth*0.08);var vividy = Math.floor(totlshowtime.offsetHeight*0.08);
 					vividctx.drawImage(totlshowtime,0,0,vividx,vividy);
-					totlshowtime.classList.add('stefanvdvideotop');
-if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}else{			
-// update background html video
-var path = [];
-var el = totlshowtime;
-do {
-    var qq = path.unshift(el.nodeName);
-    if (el.currentStyle) { 
-        var yta = qq.currentStyle["z-Index"]; 
-    }
-    else {
-        var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
-    }
-	if (yta == "auto"){}
-	else{
-		// if it is not the <video> player element,
-		// and if otherdown class is inside, then remove it
-		if(el.tagName != "VIDEO"){
-		if(el.classList.contains("stefanvdotherdown")){el.classList.remove("stefanvdotherdown");}
-		el.classList.add('stefanvdvideoauto');
-		}
-	}
-} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
-}
+					if(!totlshowtime.classList.contains("stefanvdvideotop")){totlshowtime.classList.add('stefanvdvideotop');}
+
 				} else{
+					// if first run, or paused or stoped video before
+					// create the vivid effect layer (again)
 					if(totlshowtime.getAttribute("data-video") != null){
+
+						if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}else{
+						// update background html video
+						var path = [];
+						var el = totlshowtime;
+						do {
+							var qq = path.unshift(el.nodeName);
+							if (el.currentStyle) { 
+								var yta = qq.currentStyle["z-Index"]; 
+							}
+							else {
+								var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+							}
+							if (yta == "auto"){}
+							else{
+								// if it is not the <video> player element,
+								// and if otherdown class is inside, then remove it
+								if(el.tagName != "VIDEO"){
+								if(el.classList.contains("stefanvdotherdown")){el.classList.remove("stefanvdotherdown");}
+								el.classList.add('stefanvdvideoauto');
+								}
+							}
+						} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
+						}
+
 						var newpositionvivid = getPosition(totlshowtime);
 						var tempwidthvideo = totlshowtime.offsetWidth;
 						var tempheightvideo = totlshowtime.offsetHeight;
 						var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
-						var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;//
+						var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
 						totlshowtime.setAttribute("class","stefanvdvideotop");
 						var newvivid = document.createElement("canvas");
 						newvivid.setAttribute('id','stefanvdvivideffect'+totlshowtime.getAttribute("data-video"));
 						newvivid.setAttribute("data-video",totlshowtime.getAttribute("data-video"));
 						newvivid.setAttribute("class","stefanvdvivideffect");
-						newvivid.style.webkitTransform = "scale("+calcvividscale+")";
+						newvivid.style.transform = "scale3d("+calcvividscale+","+calcvividscale+","+calcvividscale+")";
 						newvivid.style.webkitFilter = "blur("+ambilightrangeblurradius+"px)";
+						newvivid.style.filter = "blur("+ambilightrangeblurradius+"px)";
 						newvivid.style.top = newpositionvivid.y+tempvisscrolltop+"px";
 						newvivid.style.left = newpositionvivid.x+tempvisscrollleft+"px";
 						newvivid.style.width = tempwidthvideo+"px";
@@ -2086,12 +2082,6 @@ do {
 
 			var imageData = context.getImageData(0, 0, 1, 1);
 			var data = imageData.data;
-
-			function rgbToHex(r, g, b) {
-			if (r > 255 || g > 255 || b > 255)
-				throw "Invalid color component";
-			return ((r << 16) | (g << 8) | b).toString(16);
-			}
 
 			var p1 = context.getImageData(0 , 0, 1, 1).data;
 			var p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -2151,7 +2141,7 @@ observeDOM( document.getElementById('content') ,function(){
 		if (no360youtube == true){
         var ytfullvideo = document.getElementsByTagName('video');
         for(var i = 0; i < ytfullvideo.length; i++) {
-            ytfullvideo[i].style.cssText += "position:relative; z-index:1000; display:block !important";
+            ytfullvideo[i].classList.add('stefanvdvideotop');
         }
         var ytwebgl = document.getElementsByClassName('webgl');
         for(var i = 0; i < ytwebgl.length; i++ ){ytwebgl[i].style.display = 'none';}
@@ -2823,8 +2813,8 @@ var doscroll=function(){
  		this.volume = Math.round(this.volume/videovolumesteps)*videovolumesteps; // fix the correct ceil level (steps of the user)
 		}
 
-        if(delta== -1 && this.volume <= 0.99){this.volume+=videovolumesteps;this.volume=Math.round(this.volume * 100) / 100}
-        if(delta== 1 && this.volume > 0.00){this.volume-=videovolumesteps;this.volume=Math.round(this.volume * 100) / 100}
+        if(delta== -1 && this.volume > 0.00){this.volume-=videovolumesteps;this.volume=Math.round(this.volume * 100) / 100}
+        if(delta== 1 && this.volume <= 0.99){this.volume+=videovolumesteps;this.volume=Math.round(this.volume * 100) / 100}
 
         document.getElementById("volumecontrol"+pop).value = Math.round(this.volume * 100);
         if(videovolumelabel == true){document.getElementById("lblvolume"+pop).textContent = Math.round(this.volume * 100)+"%";}
@@ -2956,7 +2946,7 @@ if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*y
 if (no360youtube == true){
 	var ytfullvideo = document.getElementsByTagName('video');
 	for(var i = 0; i < ytfullvideo.length; i++) {
-        ytfullvideo[i].style.cssText += "position:relative; z-index:1000; display:block !important";
+        ytfullvideo[i].classList.add('stefanvdvideotop');
 	}
 	var ytwebgl = document.getElementsByClassName('webgl');
 	for(var i = 0; i < ytwebgl.length; i++ ){ytwebgl[i].style.display = 'none';}

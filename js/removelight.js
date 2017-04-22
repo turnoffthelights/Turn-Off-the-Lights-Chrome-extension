@@ -76,51 +76,112 @@ dynamic = response['dynamic'];
 		window.onmousemove = null;
 		
         // Set everything back to the default YouTube theme
-        // YouTube video suggestions (set back to default)
-        var watch7sidebar = $('watch7-sidebar');
-        if(watch7sidebar){$('watch7-sidebar').style.zIndex = 'auto';}
+        if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+            // update YouTube material 21 march 2017
+            var ytmaterialinfo = document.querySelector("ytd-video-secondary-info-renderer");
+            if(ytmaterialinfo){ytmaterialinfo.style.background = "";}
 
-        // YouTube playlist (set back to default)
-        var watchappbarplaylist = $('watch-appbar-playlist');
-        if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = '3';}
+            // update YouTube material 21 march 2017
+            var ytmateriallikebutton = document.querySelectorAll('ytd-toggle-button-renderer');
+            for(var i = 0; i < ytmateriallikebutton.length; i++ ){
+            var ytgetobject = ytmateriallikebutton[i].querySelector("paper-icon-button");
+            if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+            if(ytgetstring != null){
+            if(ytgetstring.substring(0, 7) == "dislike"){ytmateriallikebutton[i].style.background = "";}
+            else if(ytgetstring.substring(0, 4) == "like"){ytmateriallikebutton[i].style.background = "";}
+            }}}
 
-		// YouTube video title (set back to default)
-		var eowtitle = $('eow-title');
-		if(eowtitle){$('eow-title').style.color = '#222';$('eow-title').style.zIndex = 'auto';$('eow-title').style.position = 'relative';}
+            // update YouTube material 21 march 2017
+            var ytmaterialsharebutton = document.querySelectorAll('ytd-button-renderer');
+            for(var i = 0; i < ytmaterialsharebutton.length; i++ ){
+            var ytgetobject = ytmaterialsharebutton[i].querySelector("paper-icon-button");
+            if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+            if(ytgetstring != null){
+            if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].style.background = "";}
+            }}}
 		
-        // YouTube video channel link back black (set back to default)
-        var watch7userheader = $('watch7-user-header');
-        if(watch7userheader){$('watch7-user-header').style.zIndex = 'auto';$('watch7-user-header').style.position = 'relative';}
+            // update YouTube material 21 march 2017
+            var ytmaterialsharebutton = document.querySelectorAll('ytd-button-renderer');
+            for(var i = 0; i < ytmaterialsharebutton.length; i++ ){
+            var ytgetobject = ytmaterialsharebutton[i].querySelector("paper-icon-button");
+            if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+            if(ytgetstring != null){
+            if(ytgetstring.substring(0, 6) == "Add to"){ytmaterialsharebutton[i].style.background = "";}
+            }}}
+          
+            // update YouTube material 21 march 2017
+            var ytmaterialhead = document.querySelector("ytd-video-owner-renderer");
+            if(ytmaterialhead){ytmaterialhead.style.background = "";}
 
-        var ytuserinfoa = document.querySelector('.yt-user-info a');
-        ytuserinfoa.style.color = '#333';
-        
-        // YouTube infobar (set back to default)
-        var watchdescription = $('watch-description');
-        if(watchdescription){$('watch-description').style.zIndex = 'auto';$('watch-description').style.background = 'transparent';}
-        
-        // YouTube infobar (set back to default)
-        var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-        likebuttonrenderlike.style.zIndex = 'auto';likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'transparent';
+            // update YouTube material 21 march 2017
+            var ytmaterialsuggestions = document.querySelector("ytd-watch-next-secondary-results-renderer");
+            if(ytmaterialsuggestions){ytmaterialsuggestions.style.background = "";}
 
-        var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-        likebuttonrenderdislike.style.zIndex = 'auto';likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'transparent';
+            // update YouTube material 21 march 2017
+            var ytmaterialvideotitle = document.querySelector("ytd-video-primary-info-renderer");
+            if(ytmaterialvideotitle){
+            var ytgeth = ytmaterialvideotitle.querySelector("h1");
+            if(ytgeth != null){ytgeth.style.color = "";}
+            }
 
-        // YouTube share buttons (set back to default)
-        var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-        actionsharepanel.style.zIndex = 'auto';actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'transparent';
+            // update YouTube material 21 march 2017
+            var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
+            if(ytmaterialviewcount){ytmaterialviewcount.style.color = '';}
 
-        // YouTube video view count (set back to default)
-        var watchviewcount = document.querySelector('.watch-view-count');
-        watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';
-        
-        // YouTube video view count (set back to default)
-        var addtobutton = document.querySelector('.addto-button');
-        addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';
- 
-        // YouTube like bar (set back to default)
-        var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-        videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';
+            // update YouTube material 21 march 2017
+            var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
+            if(ytmaterialviewcount){
+            var ytgetformat = ytmaterialviewcount.querySelector("yt-formatted-string");
+            if(ytgetformat != null){ytgetformat.style.color = '';}
+            }
+            
+            // old YouTube -----
+            // YouTube video suggestions (set back to default)
+            var watch7sidebar = $('watch7-sidebar');
+            if(watch7sidebar){watch7sidebar.style.zIndex = 'auto';}
+
+            // YouTube playlist (set back to default)
+            var watchappbarplaylist = $('watch-appbar-playlist');
+            if(watchappbarplaylist){watchappbarplaylist.style.zIndex = '3';}
+
+            // YouTube video title (set back to default)
+            var eowtitle = $('eow-title');
+            if(eowtitle){eowtitle.style.color = '#222';eowtitle.style.zIndex = 'auto';eowtitle.style.position = 'relative';}
+		
+            // YouTube video channel link back black (set back to default)
+            var watch7userheader = $('watch7-user-header');
+            if(watch7userheader){watch7userheader.style.zIndex = 'auto';watch7userheader.style.position = 'relative';}
+
+            var ytuserinfoa = document.querySelector('.yt-user-info a');
+            if(ytuserinfoa){ytuserinfoa.style.color = '#333';}
+            
+            // YouTube infobar (set back to default)
+            var watchdescription = $('watch-description');
+            if(watchdescription){watchdescription.style.zIndex = 'auto';watchdescription.style.background = 'transparent';}
+            
+            // YouTube infobar (set back to default)
+            var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
+            if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 'auto';likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'transparent';}
+
+            var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
+            if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 'auto';likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'transparent';}
+
+            // YouTube share buttons (set back to default)
+            var actionsharepanel = document.querySelector('.action-panel-trigger-share');
+            if(actionsharepanel){actionsharepanel.style.zIndex = 'auto';actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'transparent';}
+
+            // YouTube video view count (set back to default)
+            var watchviewcount = document.querySelector('.watch-view-count');
+            if(watchviewcount){watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';}
+            
+            // YouTube video view count (set back to default)
+            var addtobutton = document.querySelector('.addto-button');
+            if(addtobutton){addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';}
+    
+            // YouTube like bar (set back to default)
+            var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
+            if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';}
+       }
 	}
 	
 	function removenewframe() {
@@ -133,11 +194,41 @@ dynamic = response['dynamic'];
 		if(stefanvdlightareoff3) {document.body.removeChild(stefanvdlightareoff3);}
 		if(stefanvdlightareoff4) {document.body.removeChild(stefanvdlightareoff4);}
 		
+		var stefanvdeastereggs = $('stefanvdtheater');
+		if(stefanvdeastereggs) {document.body.removeChild(stefanvdeastereggs);}
+
 		var stefanvdblurimage = $('stefanvdblurimage');
 		if(stefanvdblurimage) {document.body.removeChild(stefanvdblurimage);}
 
 		var stefanvdlightcorner = $('stefanvdlightcorner');
 		if(stefanvdlightcorner) {document.body.removeChild(stefanvdlightcorner);}
+
+		// remove video player on top
+		var div = document.querySelectorAll('.stefanvdvideotop');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideotop"); }
+		var div = document.querySelectorAll('.stefanvditemtop');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvditemtop"); }
+		var div = document.querySelectorAll('.stefanvdvideoauto');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideoauto"); }
+		var div = document.querySelectorAll('.stefanvdotherdown');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdotherdown"); }
+		var div = document.querySelectorAll('.stefanvdcontainauto');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdcontainauto"); }
+		var div = document.querySelectorAll('.stefanvdvideocontrolsitem');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideocontrolsitem"); }
+		var div = document.querySelectorAll('.stefanvdvideocontrolstop');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideocontrolstop"); }
+	
+		// inside the root
+		var q = document.getElementsByTagName('*');
+		for(var i = 0; i < q.length; i++ ) {
+			if(q[i].shadowRoot){
+				if(q[i].shadowRoot.querySelector('#rootstefan')){q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector('#rootstefan'));}
+
+				var rootdiv = q[i].shadowRoot.querySelectorAll('.stefanvdotherdown');
+				for(var k = 0; k < rootdiv.length; k++){rootdiv[k].classList.remove("stefanvdotherdown");}
+			}
+		}
 	}
 	
 	function removenewdynamic() {

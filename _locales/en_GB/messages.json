@@ -447,13 +447,13 @@
     "message":"Password Protection"
   },
   "titeldownloadupgrade":{
-    "message":"The upgrade adds support for focusing selected images, and will display a gallery of images on the site."
+    "message":"The upgrade adds support for focussing selected images, and will display a gallery of images on the site."
   },
   "titelfadeout":{
     "message":"Fade Out"
   },
   "eastereggsquestion":{
-    "message":"Do you like a real movie theatre?"
+    "message":"Do you like a real cinema?"
   },
   "bottom":{
     "message":"Bottom:"
@@ -474,7 +474,7 @@
     "message":"Easter Eggs"
   },
   "textfoot":{
-    "message":"This software is licensed under the CC-GNU GPL. To view a copy of this license, view the"
+    "message":"This software is licenced under the CC-GNU GPL. To view a copy of this licence, view the"
   },
   "left":{
     "message":"Left:"
@@ -1021,7 +1021,7 @@
     "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
   },
   "desscreenprotection":{
-    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
+    "message":"One click shades the page to a soothing orange color to decrease eye strain to all open tabs. Click the lamp button again to disable this feature."
   },
   "titleprofilevideofocus":{
     "message":"Video focus is enabled"

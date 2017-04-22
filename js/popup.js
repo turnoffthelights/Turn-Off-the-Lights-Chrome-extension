@@ -30,15 +30,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 function $(id) { return document.getElementById(id); }
 
 document.addEventListener('DOMContentLoaded', function () {
-$("opendonate").addEventListener('click', function() {window.open(donatewebsite)});
-$("openrate").addEventListener('click', function() {window.open(writereview)});
-$("openoptions").addEventListener('click', function() {window.open(chrome.extension.getURL('options.html'))});
+$("opendonate").addEventListener('click', function() {chrome.tabs.create({url: donatewebsite, active:true})});
+$("openrate").addEventListener('click', function() {chrome.tabs.create({url: writereview, active:true})});
+$("openoptions").addEventListener('click', function() {chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
 
-$("opensupport").addEventListener('click', function() {window.open(linksupport)});
-$("openwelcomeguide").addEventListener('click', function() {window.open(linkguide)});
-$("openyoutube").addEventListener('click', function() {window.open(linkyoutube)});
+$("opensupport").addEventListener('click', function() {chrome.tabs.create({url: linksupport, active:true})});
+$("openwelcomeguide").addEventListener('click', function() {chrome.tabs.create({url: linkguide, active:true})});
+$("openyoutube").addEventListener('click', function() {chrome.tabs.create({url: linkyoutube, active:true})});
 
-$("opengoogleplus").addEventListener('click', function() {window.open("https://plus.google.com/share?url="+turnoffthelightsproduct, "_blank")});
-$("openfacebook").addEventListener('click', function() {window.open("https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, "_blank")});
-$("opentwitter").addEventListener('click', function() {var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);window.open("https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, "_blank")});
+$("opengoogleplus").addEventListener('click', function() {chrome.tabs.create({url: "https://plus.google.com/share?url="+turnoffthelightsproduct, active:true})});
+$("openfacebook").addEventListener('click', function() {chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, active:true})});
+$("opentwitter").addEventListener('click', function() {var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, active:true})});
 });
