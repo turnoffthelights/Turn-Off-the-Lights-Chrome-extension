@@ -80,7 +80,16 @@ for(var i = 0; i < q.length; i++ ) {
 	
 	if(q[i].shadowRoot){
 		if(q[i].shadowRoot.querySelector('#rootstefan')){}else{
-			q[i].shadowRoot.innerHTML += '<style id="rootstefan">.stefanvdotherdown{z-index:950!important}</style>';
+			var css = '.stefanvdotherdown{z-index:950!important}',
+			style = document.createElement('style');
+			style.id = "rootstefan";
+			style.type = 'text/css';
+			if (style.styleSheet){
+			style.styleSheet.cssText = css;
+			} else {
+			style.appendChild(document.createTextNode(css));
+			}
+			q[i].shadowRoot.appendChild(style);
 		}
 		var s = q[i].shadowRoot.querySelectorAll('*');
 		for(var j = 0; j < s.length; j++ ) {

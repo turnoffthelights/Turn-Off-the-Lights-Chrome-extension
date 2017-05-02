@@ -586,6 +586,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<label class="checkbox"><input id="atmosvivid" type="checkbox"><span data-i18n="desatmosvivid"></span>: <a href="https://www.turnoffthelights.com" target="_blank">HTML5 video player</a></label>
 				<label class="checkbox"><span>FPS</span> <input type="number" min="1" max="60" step="1" value="12" name="drawatmosfps" id="drawatmosfps" maxlength="3" size="4">p </label>
 				<br>
+				<label class="checkbox"><input id="atmosontotlmode" type="checkbox"><span data-i18n="desatmosontotlmode"></span></label>
 				<label class="checkbox"><input id="atmosphereonly" type="checkbox"><span data-i18n="desatmosphereonly"></span></label>
 				<form id="formatmospherelighting">
 				  <table id="atmospherewhitelist">
@@ -666,6 +667,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<li><label class="checkbox"><span data-i18n="vtoolscreenshot"></span></label></li>
 				</ul>
 				<label class="checkbox"><input id="videozoom" type="checkbox"><span data-i18n="desvideozoom"></span></label>
+				<label class="checkbox"><input id="speedtoolbar" type="checkbox"><span data-i18n="desspeedtoolbar"></span></label>
 				<label class="checkbox"><input id="videotoolonly" type="checkbox"><span data-i18n="desvideotoolonly"></span></label>
 				<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="videotoolchecklistwhite" type="radio" name="videotoolchecklist" value="true"><span data-i18n="titelvideotoolwhitelist"></span></label>&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="videotoolchecklistblack" type="radio" name="videotoolchecklist" value="black"><span data-i18n="titelvideotoolblacklist"></span></label>
 				<form id="formvideotoolbar">
@@ -686,6 +688,12 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>
 				<h3 data-i18n="titelhovervideo"></h3>
 				<div><label class="checkbox"><input id="hovervideo" type="checkbox"><span data-i18n="deshovervideo"></span> <input type="number" min="0" max="100" step="1" value="5" name="hovervideoamount" id="hovervideoamount" maxlength="3" size="4">s</label></div>
+				</section>
+				<section>
+				<h3 data-i18n="titlevideoplayrate"></h3>
+				<div>
+					<label class="checkbox"><input id="playrate" type="checkbox"><span data-i18n="desplayrate"></span> <input type="number" min="-10" max="10" step="1" value="1" name="playrateamount" id="playrateamount" maxlength="3" size="4"></label>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titeleye"></h3>
