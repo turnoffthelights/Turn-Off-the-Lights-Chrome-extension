@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"pysäytä"
+  },
+  "desvideozoom":{
+    "message":"Zoomaa videon sisältöä zoomauspainikkeella"
+  },
+  "titlevideoplayrate":{
+    "message":"Videon nopeus"
+  },
+  "desplayrate":{
+    "message":"Oletustoistonopeus"
+  },
+  "desspeedtoolbar":{
+    "message":"Näytä toistotyökalupalkki nykyisessä videotoistimessa"
+  },
+  "desatmosontotlmode":{
+    "message":"Näytä tunnelmavalaistusefekti ainoastaan TOtL-tilan ollessa käytössä"
   }
 }

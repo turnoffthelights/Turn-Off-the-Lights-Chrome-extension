@@ -747,11 +747,17 @@ elementvisa = document.getElementById('stefanvdvisualizationcanvas'+potvis);
 		elementvisa.style.right = currentvisright;
 		elementvisa.style.display = currentvisdisplay;
 		document.getElementById('stefanvdvispanel'+potvis).style.cssText = "background:"+hexToRGB(videotoolcolor,0.4)+";width:"+currentbarwidthvisualization+"!important;top:"+currentbartopvisualization+"!important;left:"+currentbarleftvisualization+"!important;position:absolute!important";
+
+		if(videozoom == true){
 		document.getElementById('stefanvdzoomcanvas'+potvis).width = currentbarwidthzoomcanvas;
 		document.getElementById('stefanvdzoomcanvas'+potvis).height = currentbarheightzoomcanvas;
 		document.getElementById('stefanvdzoomstage'+potvis).style.cssText = "background:black;width:"+currentbarwidthzoomstage+"!important;height:"+currentbarheightzoomstage+";top:"+currentbartopzoomstage+"!important;left:"+currentbarleftzoomstage+"!important;position:absolute!important;display:none";
 		document.getElementById('stefanvdzoompanel'+potvis).style.cssText = "background:"+hexToRGB(videotoolcolor,0.4)+";width:"+currentbarwidthzoom+"!important;height:"+currentbarheightzoom+";top:"+currentbartopzoom+"!important;left:"+currentbarleftzoom+"!important;position:absolute!important;padding-top:40px";
+		}
+
+		if(speedtoolbar == true){
 		document.getElementById('stefanvdspeedpanel'+potvis).style.cssText = "background:"+hexToRGB(videotoolcolor,0.4)+";width:"+currentbarwidthspeed+"!important;height:"+currentbarheightspeed+";top:"+currentbartopspeed+"!important;left:"+currentbarleftspeed+"!important;position:absolute!important;padding-top:40px";
+		}
 	}else{
 		currentviswidth = elementvisa.style.width;
 		currentvisheight = elementvisa.style.height;
@@ -772,6 +778,7 @@ elementvisa = document.getElementById('stefanvdvisualizationcanvas'+potvis);
 		currentbarleftvisualization = document.getElementById('stefanvdvispanel'+potvis).style.left;
 		document.getElementById('stefanvdvispanel'+potvis).style.cssText = "background:"+hexToRGB(videotoolcolor,0.4)+";width:100%!important;top:0!important;left:0!important;position:fixed!important";
 
+		if(videozoom == true){
 		currentbarwidthzoomcanvas = document.getElementById('stefanvdzoomcanvas'+potvis).width;
 		currentbarheightzoomcanvas = document.getElementById('stefanvdzoomcanvas'+potvis).height;
 
@@ -784,11 +791,14 @@ elementvisa = document.getElementById('stefanvdvisualizationcanvas'+potvis);
 		currentbartopzoom = document.getElementById('stefanvdzoompanel'+potvis).style.top;
 		currentbarwidthzoom = document.getElementById('stefanvdzoompanel'+potvis).style.width;
 		currentbarheightzoom = document.getElementById('stefanvdzoompanel'+potvis).style.height;
-
+		}
+	
+		if(speedtoolbar == true){
 		currentbarleftspeed = document.getElementById('stefanvdspeedpanel'+potvis).style.left;
 		currentbartopspeed = document.getElementById('stefanvdspeedpanel'+potvis).style.top;
 		currentbarwidthspeed = document.getElementById('stefanvdspeedpanel'+potvis).style.width;
 		currentbarheightspeed = document.getElementById('stefanvdspeedpanel'+potvis).style.height;
+		}
 	}
 
 	// Fix for the 3rd visualization size

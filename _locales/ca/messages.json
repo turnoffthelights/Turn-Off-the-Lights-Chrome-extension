@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"atura"
+  },
+  "desvideozoom":{
+    "message":"Augmenteu o allunyeu el vídeo amb el botó de zoom"
+  },
+  "titlevideoplayrate":{
+    "message":"Velocitat del vídeo"
+  },
+  "desplayrate":{
+    "message":"Velocitat de reproducció per defecte"
+  },
+  "desspeedtoolbar":{
+    "message":"Mostra la barra de reproducció al reproductor de vídeo"
+  },
+  "desatmosontotlmode":{
+    "message":"Mostra il·luminació ambiental només quan TOtL estigui activat"
   }
 }

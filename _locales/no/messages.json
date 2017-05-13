@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"stopp"
+  },
+  "desvideozoom":{
+    "message":"Zoom inn eller ut videoinnhold ved hjelp av zoom-knappen"
+  },
+  "titlevideoplayrate":{
+    "message":"Videohastighet"
+  },
+  "desplayrate":{
+    "message":"Standard avspillingshastighet"
+  },
+  "desspeedtoolbar":{
+    "message":"Vis verktøylinje for avspilling i eksisterende videospiller"
+  },
+  "desatmosontotlmode":{
+    "message":"Vis effekt for atmosfærebelysning kun når TOtL-modus er aktivert"
   }
 }

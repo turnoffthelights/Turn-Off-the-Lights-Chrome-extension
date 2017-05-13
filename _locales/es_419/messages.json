@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"detener"
+  },
+  "desvideozoom":{
+    "message":"Hacé un acercamiento o alejamiento en el contenido de video usando el botón de zoom"
+  },
+  "titlevideoplayrate":{
+    "message":"Velocidad del video"
+  },
+  "desplayrate":{
+    "message":"Velocidad predeterminada de reproducción"
+  },
+  "desspeedtoolbar":{
+    "message":"Mostrar la barra de herramientas de reproducción en el reproductor de video actual"
+  },
+  "desatmosontotlmode":{
+    "message":"Mostrar el efecto de iluminación ambiental sólo cuando el modo TOTL esté habilitado"
   }
 }

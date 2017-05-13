@@ -27,7 +27,7 @@
     "message":"Aktivera Klicka på hyperlänkar när skärmen tonas ned"
   },
   "desmousespotlights":{
-    "message":"Enable the screen shade, with the possibility to click on the hyperlinks"
+    "message":"Aktivera skärmskugga, med möjligheten att klicka på hyperlänkar"
   },
   "desambilight4color":{
     "message":"4 valda färger runt videon:"
@@ -423,7 +423,7 @@
     "message":"Visa inte påminnelse sidan"
   },
   "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond."
+    "message":"Hela sidan kommer att dämpas, så att du kan se videon som om du vore på bio. Fungerar på YouTube™ och Beyond."
   },
   "titelviewcount":{
     "message":"Antal visningar"
@@ -991,7 +991,7 @@
     "message":"Video svävar"
   },
   "deshovervideo":{
-    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
+    "message":"Hovra din mus på videoelementet för ett visst antal sekunder, då webbsidan automatiskt dämpas"
   },
   "promotitle":{
     "message":"Dagens tips"
@@ -1003,7 +1003,7 @@
     "message":"Rekommendera detta på Facebook"
   },
   "titleuserprofile":{
-    "message":"Below, choose the settings you want to use when clicking the gray lamp button. Each profile has its own features."
+    "message":"Nertill, välj inställningarna du vill använda när du klickar på den gråa lampknappen. Varje profil har sin egen egenskap."
   },
   "titleregularuser":{
     "message":"Videoälskare"
@@ -1015,13 +1015,13 @@
     "message":"Ögonskydd"
   },
   "desregularuser":{
-    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
+    "message":"Detta är standard och de vanligaste inställningarna för användare. När du klickar på den gråa lampknappen, kommer denna appliceras på den aktuell webbsida."
   },
   "desnightowl":{
-    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
+    "message":"Ett klick konverterar sidan direkt till ett nattema med klickbara hyperlänk. Klicka igen för att återgå till normal översikt. Klicka på lampknappen igen för att avaktivera denna funktion."
   },
   "desscreenprotection":{
-    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
+    "message":"Ett klick på sidan dämpar till en mjuk orange färg för att minska irritation i ögonen för alla öppna flikar. Klicka på lampknappen igen för att avaktivera denna funktion."
   },
   "titleprofilevideofocus":{
     "message":"Video-fokus är aktiverad"
@@ -1045,12 +1045,27 @@
     "message":"Ny lampåtgärd har sparats!"
   },
   "desaplay":{
-    "message":"play"
+    "message":"spela"
   },
   "desapause":{
-    "message":"pause"
+    "message":"pausa"
   },
   "desastop":{
-    "message":"stop"
+    "message":"stoppa"
+  },
+  "desvideozoom":{
+    "message":"Zooma in eller ut på videoinnehåll med zoomknappen"
+  },
+  "titlevideoplayrate":{
+    "message":"Videohastighet"
+  },
+  "desplayrate":{
+    "message":"Standarduppspelningshastighet"
+  },
+  "desspeedtoolbar":{
+    "message":"Visa spelningshastighetsverktygsfältet i aktuell videospelare"
+  },
+  "desatmosontotlmode":{
+    "message":"Visa enbart ljuseffekten för atmosfären när TOtL-läget är aktiverat"
   }
 }

@@ -240,7 +240,7 @@ $("select_language").addEventListener('click', function () {updateCountry();},fa
 $("select_language").addEventListener('change', function() {updateCountry();save_options();});
 $("select_dialect").addEventListener('change', function() {save_options();});
 
-	chrome.storage.sync.get(['interval','lightcolor','lightimage','lightimagea','lightimagen','autoplay','playlist','flash','head','fadein','fadeout','infobar','sharebutton','likebutton','readera','readern','shortcutlight','eyea','eyen','suggestions','videoheadline','eastereggs','contextmenus','viewcount','eyealist','mousespotlighto','mousespotlightc','mousespotlighta','nighttime','begintime','endtime','addvideobutton','likebar','ambilight','ambilightrangeblurradius','ambilightrangespreadradius','mousespotlightt','ambilightfixcolor','ambilightvarcolor','ambilightcolorhex','ambilight4color','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','password','enterpassword','noflash','hardflash','ecosaver','ecosavertime','dynamic','dynamic1','dynamic2','dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','autoplayonly','blur','maxquality','autowidthyoutube','customqualityyoutube','cinemaontop','alllightsoff','spotlightradius','atmosphereonly','optionskipremember','nighttheme','nightonly','nightenabletheme','autoplaydelay','autoplaydelaytime','motion','lightimagelin','linearsq','colora','intervallina','colorb','intervallinb','speech','speechlang','speechcountry','atmosvivid','countremember','excludedDomains','autoplayDomains','atmosphereDomains','nightDomains','cammotiononly','speechonly','cammotionDomains','speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains','nightmodehyperlink','block60fps','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','icon','visopacity','videotoolcolor','hovervideo','hovervideoamount','mousespotlights','drawatmosfps','aplay','apause','astop','videozoom','playrate','playrateamount','speedtoolbar','atmosontotlmode'], function(items){
+	chrome.storage.sync.get(['firstDate','interval','lightcolor','lightimage','lightimagea','lightimagen','autoplay','playlist','flash','head','fadein','fadeout','infobar','sharebutton','likebutton','readera','readern','shortcutlight','eyea','eyen','suggestions','videoheadline','eastereggs','contextmenus','viewcount','eyealist','mousespotlighto','mousespotlightc','mousespotlighta','nighttime','begintime','endtime','addvideobutton','likebar','ambilight','ambilightrangeblurradius','ambilightrangespreadradius','mousespotlightt','ambilightfixcolor','ambilightvarcolor','ambilightcolorhex','ambilight4color','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','password','enterpassword','noflash','hardflash','ecosaver','ecosavertime','dynamic','dynamic1','dynamic2','dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','autoplayonly','blur','maxquality','autowidthyoutube','customqualityyoutube','cinemaontop','alllightsoff','spotlightradius','atmosphereonly','optionskipremember','nighttheme','nightonly','nightenabletheme','autoplaydelay','autoplaydelaytime','motion','lightimagelin','linearsq','colora','intervallina','colorb','intervallinb','speech','speechlang','speechcountry','atmosvivid','countremember','excludedDomains','autoplayDomains','atmosphereDomains','nightDomains','cammotiononly','speechonly','cammotionDomains','speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains','nightmodehyperlink','block60fps','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','icon','visopacity','videotoolcolor','hovervideo','hovervideoamount','mousespotlights','drawatmosfps','aplay','apause','astop','videozoom','playrate','playrateamount','speedtoolbar','atmosontotlmode'], function(items){
 		if(items['interval']){$('interval').value = items['interval'];$('slider').value = items['interval'];}	
 		else $('interval').value = 80;
 		if(items['lightcolor']){$('lightcolor').value = items['lightcolor'];}
@@ -432,6 +432,19 @@ var countremember = items['countremember'];
 if(!countremember){countremember = 0;}
 countremember = parseInt(countremember) + 1;
 
+var firstweek = false;
+var currentDate = new Date().getTime();
+if(items['firstDate']){
+    var datestart = items['firstDate'];
+    var dateend = datestart + (7 * 24 * 60 * 60 * 1000)
+    if(currentDate>=dateend){firstweek = false;}
+    else{firstweek = true;}
+}else{
+    chrome.storage.sync.set({"firstDate": currentDate});
+    firstweek = true;
+}
+
+if(firstweek){$('remembershare').style.display = "none";}else{
 var d = new Date();
 var dayweek = d.getDay();
 var dayhour = d.getHours();
@@ -450,6 +463,7 @@ else if(dayweek == 6 || dayweek == 0){
         else {$('remembershare').style.display = "none";}
     } else {$('remembershare').style.display = "none";}
     chrome.storage.sync.set({"countremember": countremember});
+}
 }
 
 	// load tab div

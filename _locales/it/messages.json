@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"stop"
+  },
+  "desvideozoom":{
+    "message":"Zooma il contenuto del video avanti o indietro usando il pulsante zoom"
+  },
+  "titlevideoplayrate":{
+    "message":"Velocità Video"
+  },
+  "desplayrate":{
+    "message":"Velocità di riproduzione predefinita"
+  },
+  "desspeedtoolbar":{
+    "message":"Mostra la barra di riproduzione in questo player video"
+  },
+  "desatmosontotlmode":{
+    "message":"Mostra l'effetto illuminazione atmosfera soltanto quando la modalità TOtL è abilitata"
   }
 }

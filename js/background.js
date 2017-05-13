@@ -312,12 +312,18 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
         var storageChange = changes[key];
         if(changes['contextmenus']){if(changes['contextmenus'].newValue == true){checkcontextmenus()}else{removecontexmenus()}}
         if(changes['icon']){if(changes['icon'].newValue){
-            chrome.browserAction.setIcon({tabId : tabId,
-              path : {
-                "19": changes['icon'].newValue,
-                "38": changes['icon'].newValue
-              }
-            });  
+            chrome.tabs.query({}, function (tabs) {
+                        for (var i = 0; i < tabs.length; i++) {
+                            chrome.browserAction.setIcon({tabId : tabs[i].id,
+                                path : {
+                                    "19": changes['icon'].newValue,
+                                    "38": changes['icon'].newValue
+                                }
+                            });
+
+                        }
+                    }
+            );
             }
         }
         if(changes['ecosaver']){
@@ -374,7 +380,8 @@ chrome.storage.sync.get(['firstRun'], function(chromeset){
 if ((chromeset["firstRun"]!="false") && (chromeset["firstRun"]!=false)){
   chrome.tabs.create({url: linkwelcomepage, active:true})
   chrome.tabs.create({url: linkguide, active:false})
-  chrome.storage.sync.set({"firstRun": false, "version": "2.4"});
+  var crrinstall = new Date().getTime();
+  chrome.storage.sync.set({"firstRun": false, "version": "2.4", "firstDate": crrinstall});
 }
 });
 }

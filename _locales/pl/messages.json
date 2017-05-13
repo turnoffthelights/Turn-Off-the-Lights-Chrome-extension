@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"stop"
+  },
+  "desvideozoom":{
+    "message":"Powiększ lub pomniejsz zawartość wideo za pomocą przycisków powiększania."
+  },
+  "titlevideoplayrate":{
+    "message":"Szybkość wideo"
+  },
+  "desplayrate":{
+    "message":"Domyślna prędkość odtwarzania"
+  },
+  "desspeedtoolbar":{
+    "message":"Pokazuj pasek odtwarzania w dotychczasowym odtwarzaczu wideo"
+  },
+  "desatmosontotlmode":{
+    "message":"Pokazuj efekt światła atmosfery tylko przy włączonym trybie TotL"
   }
 }

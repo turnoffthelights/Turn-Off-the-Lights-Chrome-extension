@@ -56,6 +56,16 @@ mousespotlights = response['mousespotlights'];
 if(mousespotlights == true){
 // no video detection
 }else{
+// CSS for pseudo
+if($('csstotlpseudo')){}else{
+var totlpseudo = "*:before,*:after{z-index:auto!important}";
+var css = document.createElement('style');
+css.setAttribute('id','csstotlpseudo');
+css.type = 'text/css';
+css.appendChild(document.createTextNode(totlpseudo));
+document.getElementsByTagName("head")[0].appendChild(css);
+}
+
 // intelligent video detection
 // detect if not higher then z-index 1000, then make it push down
 // search for the z-index, if found something give it 'auto'
@@ -78,6 +88,12 @@ for(var i = 0; i < q.length; i++ ) {
 		var t = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform")
 	}
 	
+	// todo http://www.espn.com/
+	//var pseudoBefore = (window.getComputedStyle(q[i], ':before') !== null)
+	//if(pseudoBefore){q[j].style.zIndex = "auto";}
+	//var usedStyle = window.getComputedStyle(q[i], ":before/:after"); 
+	//console.log("ja of neen: "+usedStyle);
+
 	if(q[i].shadowRoot){
 		if(q[i].shadowRoot.querySelector('#rootstefan')){}else{
 			var css = '.stefanvdotherdown{z-index:950!important}',
@@ -489,7 +505,7 @@ var guide = $('guide');
 if(guide){guide.classList.add('stefanvdvideocontrolstop');}
 
 // short and cleaner engine 2014
-var data = [['movie_player'],['movie_player-html5'],['watch-player'],['html5-player'],['video-player'],['user_fullwidth_gadget'],['ytp-share-panel']];
+var data = [['movie_player'],['movie_player-html5'],['watch-player'],['html5-player'],['video-player'],['user_fullwidth_gadget'],['ytp-share-panel'],['player-container']];
 for (var conf in data) {
         var temp = document.getElementById(data[conf][0]);
         if (temp) {
@@ -667,6 +683,7 @@ if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substri
 || (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'https://ssl.acfun.tv/block-player-homura.html')
 || (insideframe.substring(0, 43) == 'http://www.ceskatelevize.cz/ivysilani/embed') || (insideframe.substring(0, 44) == 'http://www.ceskatelevize.cz/ivysilani/embed')
 || (insideframe.substring(0, 30) == 'http://cdn.embedly.com/widgets') || (insideframe.substring(0, 31) == 'https://cdn.embedly.com/widgets')
+|| (insideframe.substring(0, 29) == 'http://player.theplatform.com') || (insideframe.substring(0, 30) == 'https://player.theplatform.com')
 || (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
 {
 // search for the video player, and set the previous path all to z-index "auto"
@@ -1015,6 +1032,9 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 
 		var stefanvdlightcorner = $('stefanvdlightcorner');
 		if(stefanvdlightcorner) {document.body.removeChild(stefanvdlightcorner);}
+
+		var csstotlpseudo = $('csstotlpseudo');
+		if(csstotlpseudo) {document.getElementsByTagName("head")[0].removeChild(csstotlpseudo);}
 
 		// remove video player on top
 		var div = document.querySelectorAll('.stefanvdvideotop');

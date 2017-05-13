@@ -2,18 +2,18 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.4.13.0",
+  "version": "3.4.17.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
-    "icons": {
+  "icons": {
       "16": "icons/icon16.png",
       "24": "icons/icon24.png",
       "32": "icons/icon32.png",
       "48": "icons/icon48.png",
       "96": "icons/icon96.png",
       "128": "icons/icon128.png"
-    },
+  },
   "default_locale": "en",
   "browser_action": {
       "default_title": "__MSG_pageatitle__",
