@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "TOtL",
-  "version": "3.4.17.0",
+  "version": "3.4.18.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
@@ -48,6 +48,12 @@
     {
       "matches": ["*://*.youtube.com/*"],
       "js": [ "js/fps.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/autostop.js"],
       "run_at": "document_start",
       "all_frames": true
     },

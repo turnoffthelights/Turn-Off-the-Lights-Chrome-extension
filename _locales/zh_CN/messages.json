@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"停止"
+  },
+  "desvideozoom":{
+    "message":"使用缩放按钮放大或缩小视频"
+  },
+  "titlevideoplayrate":{
+    "message":"视频速度"
+  },
+  "desplayrate":{
+    "message":"默认播放速度"
+  },
+  "desspeedtoolbar":{
+    "message":"在当前播放器中显示播放工具栏"
+  },
+  "desatmosontotlmode":{
+    "message":"仅当TOtL模式启用时显示背光效果"
   }
 }

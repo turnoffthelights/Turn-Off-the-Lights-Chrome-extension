@@ -616,7 +616,7 @@
     "message":"Choisissez votre dialecte :"
   },
   "desatmosvivid":{
-    "message":"Vivid atmosphere effects, require"
+    "message":"Atmosphère vivante effets, nécessite"
   },
   "help":{
     "message":"Aide"
@@ -839,10 +839,10 @@
     "message":"Bouton pour rejouer le lecteur vidéo"
   },
   "vtoolscreenshot":{
-    "message":"A button to take a screenshot of the current video player"
+    "message":"Un bouton pour prendre une capture d'écran du lecteur vidéo actuel\n"
   },
   "vtoolalign":{
-    "message":"A button to center the video player in your browser window"
+    "message":"Un bouton pour centrer le lecteur vidéo dans la fenêtre de votre navigateur\n"
   },
   "titelvideotoolgrayscale":{
     "message":"niveaux de gris"
@@ -985,72 +985,87 @@
     "message":"Un bouton pour afficher la visualisation audio pour le lecteur vidéo actuel"
   },
   "desvideotoolcolor":{
-    "message":"Color of the toolbar"
+    "message":"Couleur de la barre d'outils\n"
   },
   "titelhovervideo":{
     "message":"Video Hover"
   },
   "deshovervideo":{
-    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
+    "message":"Passez votre souris sur l'élément vidéo pendant un certain nombre de secondes, après quoi la page Web diminue automatiquement"
   },
   "promotitle":{
-    "message":"Tip of the day"
+    "message":"Conseil du jour"
   },
   "desremyoutube":{
     "message":"Abonnez-vous sur YouTube"
   },
   "desremfacebook":{
-    "message":"Recommend this on Facebook"
+    "message":"Recommandez-le sur Facebook"
   },
   "titleuserprofile":{
-    "message":"Below, choose the settings you want to use when clicking the gray lamp button. Each profile has its own features."
+    "message":"Ci-dessous, choisissez les paramètres que vous souhaitez utiliser lorsque vous cliquez sur le bouton de la lampe grise. Chaque profil possède ses propres fonctionnalités."
   },
   "titleregularuser":{
     "message":"Video Lover"
   },
   "titlenightowl":{
-    "message":"Night Owl"
+    "message":"Oiseau de nuit"
   },
   "titlescreenprotection":{
     "message":"Protection des yeux"
   },
   "desregularuser":{
-    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
+    "message":"C'est par défaut et le réglage régulier pour les nouveaux utilisateurs. Lorsque vous cliquez sur le bouton de la lampe grise, ce style sera appliqué à la page Web actuelle."
   },
   "desnightowl":{
-    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
+    "message":"Un clic convertit la page directement dans un thème de nuit avec un lien hypertexte cliquable. Cliquez-en une nouvelle fois pour revenir à la vue normale. Cliquez à nouveau sur le bouton de la lampe pour désactiver cette fonction."
   },
   "desscreenprotection":{
-    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
+    "message":"Un clic permet d'effacer la page vers une couleur orange apaisante pour diminuer la contrainte des yeux sur tous les onglets ouverts. Cliquez à nouveau sur le bouton de la lampe pour désactiver cette fonction."
   },
   "titleprofilevideofocus":{
-    "message":"Video focus is enabled"
+    "message":"La mise au point vidéo est activée"
   },
   "titleprofilenovideofocus":{
-    "message":"Video focus is disabled"
+    "message":"La mise au point vidéo est désactivée"
   },
   "titleprofilealwaysscreentab":{
-    "message":"Always enabled for all open tabs"
+    "message":"Toujours activé pour tous les onglets ouverts"
   },
   "titleprofilescreenclick":{
     "message":"Activer la possibilité de cliquer sur les liens hypertextes même lorsque l'arrière-plan est assombri"
   },
   "titleprofilesubmit":{
-    "message":"Choose this settings"
+    "message":"Choisissez ce paramètre"
   },
   "titlelearnmore":{
     "message":"Plus d'informations"
   },
   "optionprofilesaved":{
-    "message":"New lamp action is saved successfully!"
+    "message":"La nouvelle action de la lampe est enregistrée avec succès!"
   },
   "desaplay":{
-    "message":"play"
+    "message":"jouer"
   },
   "desapause":{
     "message":"pause"
   },
   "desastop":{
-    "message":"stop"
+    "message":"arrêt"
+  },
+  "desvideozoom":{
+    "message":"Zoom avant ou arrière sur le contenu vidéo en utilisant le bouton de zoom"
+  },
+  "titlevideoplayrate":{
+    "message":"Vitesse vidéo"
+  },
+  "desplayrate":{
+    "message":"Vitesse de lecture par défaut\n"
+  },
+  "desspeedtoolbar":{
+    "message":"Afficher la barre d'outils de lecture dans le lecteur vidéo actuel"
+  },
+  "desatmosontotlmode":{
+    "message":"Montrer l'effet d'éclairage atmosphérique uniquement lorsque le mode TOtaL est activé\n"
   }
 }

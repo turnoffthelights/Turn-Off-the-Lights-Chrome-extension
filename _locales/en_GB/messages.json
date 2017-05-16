@@ -1052,5 +1052,20 @@
   },
   "desastop":{
     "message":"stop"
+  },
+  "desvideozoom":{
+    "message":"Zoom in or out on video content using the zoom button"
+  },
+  "titlevideoplayrate":{
+    "message":"Video Speed"
+  },
+  "desplayrate":{
+    "message":"Default playback speed"
+  },
+  "desspeedtoolbar":{
+    "message":"Show the playback toolbar in the current video player"
+  },
+  "desatmosontotlmode":{
+    "message":"Show the atmosphere lighting effect only when TOtL mode is enabled"
   }
 }

@@ -79,20 +79,14 @@ for(var i = 0; i < q.length; i++ ) {
 	if (q[i].currentStyle){
 		var y = q[i].currentStyle["z-Index"];
 		var x = q[i].currentStyle["contain"];
-		var t = q[i].currentStyle["-webkit-transform"] || q[i].currentStyle["-moz-transform"] || q[i].currentStyle["-ms-transform"] || q[i].currentStyle["-o-transform"] || q[i].currentStyle["transform"]
+		var t = q[i].currentStyle["-webkit-transform"] || q[i].currentStyle["-moz-transform"] || q[i].currentStyle["-ms-transform"] || q[i].currentStyle["-o-transform"] || q[i].currentStyle["transform"];
 	}
 	else if (window.getComputedStyle){
 		var st = document.defaultView.getComputedStyle(q[i], null);
 		var y = st.getPropertyValue("z-Index");
 		var x = st.getPropertyValue("contain");
-		var t = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform")
+		var t = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform");
 	}
-	
-	// todo http://www.espn.com/
-	//var pseudoBefore = (window.getComputedStyle(q[i], ':before') !== null)
-	//if(pseudoBefore){q[j].style.zIndex = "auto";}
-	//var usedStyle = window.getComputedStyle(q[i], ":before/:after"); 
-	//console.log("ja of neen: "+usedStyle);
 
 	if(q[i].shadowRoot){
 		if(q[i].shadowRoot.querySelector('#rootstefan')){}else{
@@ -149,11 +143,14 @@ var path = [];
 var el = video[i];
 do {
     var qq = path.unshift(el.nodeName);
-    if (el.currentStyle) { 
-        var yta = qq.currentStyle["z-Index"]; 
+    if (el.currentStyle) {
+        var yta = qq.currentStyle["z-Index"];
+		var tta = qq.currentStyle["-webkit-transform"] || qq.currentStyle["-moz-transform"] || qq.currentStyle["-ms-transform"] || qq.currentStyle["-o-transform"] || qq.currentStyle["transform"];
     }
     else {
         var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+		var st = document.defaultView.getComputedStyle(el, null);
+		var tta = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform");
     }
 	if (yta == "auto"){}
 	else{
@@ -167,6 +164,7 @@ do {
 				el.classList.add('stefanvdvideoauto');
 			}
 	}
+	if (tta != "none"){el.classList.add('stefanvdtransformauto');}
 } while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 
 // other file then "mp3" then run this code
@@ -201,7 +199,7 @@ try {
 		for (var j = 0; j < iframeVideoTags.length; j++) {
 			iframeVideoTags.item(j).classList.add('stefanvdvideotop');
 		}
-	}	
+	}
 } catch(e){}
 */
 
@@ -220,12 +218,15 @@ if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView))
 	do {
 		var qq = path.unshift(el.nodeName);
 		if (el.currentStyle) { 
-			var yta = qq.currentStyle["z-Index"]; 
+			var yta = qq.currentStyle["z-Index"];
+			var tta = qq.currentStyle["-webkit-transform"] || qq.currentStyle["-moz-transform"] || qq.currentStyle["-ms-transform"] || qq.currentStyle["-o-transform"] || qq.currentStyle["transform"];
 		}
 		else {
 			var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+			var st = document.defaultView.getComputedStyle(el, null);
+			var tta = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform");
 		}
-		if (yta == "auto"){}
+		if(yta == "auto"){}
 		else{
 				// if it is not the <video> player element,
 				// and if otherdown class is inside, then remove it
@@ -237,6 +238,7 @@ if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView))
 					el.classList.add('stefanvdvideoauto');
 				}
 		}
+		if (tta != "none"){el.classList.add('stefanvdtransformauto');}
 	} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 	N.classList.add('stefanvdvideotop');
 }
@@ -258,10 +260,13 @@ for(var i = 0; i < a.length; i++ )
 	do {
 		var qq = path.unshift(el.nodeName);
 		if (el.currentStyle) { 
-			var yta = qq.currentStyle["z-Index"]; 
+			var yta = qq.currentStyle["z-Index"];
+			var tta = qq.currentStyle["-webkit-transform"] || qq.currentStyle["-moz-transform"] || qq.currentStyle["-ms-transform"] || qq.currentStyle["-o-transform"] || qq.currentStyle["transform"];
 		}
 		else {
 			var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+			var st = document.defaultView.getComputedStyle(el, null);
+			var tta = st.getPropertyValue("-webkit-transform") || st.getPropertyValue("-moz-transform") || st.getPropertyValue("-ms-transform") || st.getPropertyValue("-o-transform") || st.getPropertyValue("transform");
 		}
 		if (yta == "auto"){}
 		else{
@@ -275,6 +280,7 @@ for(var i = 0; i < a.length; i++ )
 					el.classList.add('stefanvdvideoauto');
 				}
 		}
+		if (tta != "none"){el.classList.add('stefanvdtransformauto');}
 	} while ((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
 	a[i].classList.add('stefanvdvideotop');
 }
@@ -1047,6 +1053,8 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdotherdown"); }
 		var div = document.querySelectorAll('.stefanvdcontainauto');
 		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdcontainauto"); }
+		var div = document.querySelectorAll('.stefanvdtransformauto');
+		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdtransformauto"); }
 		var div = document.querySelectorAll('.stefanvdvideocontrolsitem');
 		for (var i = 0; i < div.length; i++) { div[i].classList.remove("stefanvdvideocontrolsitem"); }
 		var div = document.querySelectorAll('.stefanvdvideocontrolstop');
