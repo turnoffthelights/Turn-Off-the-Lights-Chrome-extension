@@ -7,7 +7,7 @@
 Using Turn Off the Lights to dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page such as on YouTube.
 
 
-**[Join our growing community on Facebook](https://www.facebook.com/turnofflights) to stay up to date!**
+**[Join our growing community on Facebook](https://www.facebook.com/turnoffthelight) to stay up to date!**
 
 **[Join our growing Translators community on Crowdin](https://www.crowdin.com/project/turnoffthelights) to stay up to date!**
 
