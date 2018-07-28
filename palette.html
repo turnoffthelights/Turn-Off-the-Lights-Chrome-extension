@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+//================================================
+/*
+
+Turn Off the Lights
+The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
+Copyright (C) 2018 Stefan vd
+www.stefanvd.net
+www.turnoffthelights.com
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.0/
+
+*/
+//================================================
+-->
+<link rel="stylesheet" type="text/css" href="css/palette.css">
+<script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/constants.js"></script>
+<body>
+
+                <div class="tabbar">
+                    <a href="#" id="tab1" class="tabbutton tabhighlight">
+                        <div class="tabicon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="24" height="24"
+                            viewBox="0 0 48 48"
+                            style="fill:#000000;"
+                            class="icon icons8-color-wheel"><g id="surface1"><path style=" fill:#E91E63;" d="M 24 5 L 24 24 L 14.5 7.546875 Z "></path><path style=" fill:#FF5722;" d="M 33.5 7.546875 L 40.453125 14.5 L 24 24 Z "></path><path style=" fill:#F44336;" d="M 24 5 L 33.5 7.546875 L 24 24 Z "></path><path style=" fill:#8BC34A;" d="M 24 43 L 24 24 L 33.5 40.453125 Z "></path><path style=" fill:#03A9F4;" d="M 14.5 40.453125 L 7.546875 33.5 L 24 24 Z "></path><path style=" fill:#4CAF50;" d="M 24 43 L 14.5 40.453125 L 24 24 Z "></path><path style=" fill:#FF9800;" d="M 43 24 L 24 24 L 40.453125 14.5 Z "></path><path style=" fill:#FFEB3B;" d="M 40.453125 33.5 L 33.5 40.453125 L 24 24 Z "></path><path style=" fill:#FFC107;" d="M 43 24 L 40.453125 33.5 L 24 24 Z "></path><path style=" fill:#3F51B5;" d="M 5 24 L 24 24 L 7.546875 33.5 Z "></path><path style=" fill:#9C27B0;" d="M 7.546875 14.5 L 14.5 7.546875 L 24 24 Z "></path><path style=" fill:#673AB7;" d="M 5 24 L 7.546875 14.5 L 24 24 Z "></path></g></svg>
+                        </div>
+                    </a>
+                    <a href="#" id="tab2" class="tabbutton">
+                        <div class="tabicon">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 252 252"
+                                style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><path d="M126,220.5c-52.19091,0 -94.5,-42.30909 -94.5,-94.5v0c0,-52.19091 42.30909,-94.5 94.5,-94.5v0c52.19091,0 94.5,42.30909 94.5,94.5v0c0,52.19091 -42.30909,94.5 -94.5,94.5z" fill="#ffffff"></path><g fill="#000000"><g id="surface1"><path d="M126,21c-57.75,0 -105,47.25 -105,105c0,57.75 47.25,105 105,105c57.75,0 105,-47.25 105,-105c0,-57.75 -47.25,-105 -105,-105zM126,42c46.1836,0 84,37.81641 84,84c0,46.1836 -37.8164,84 -84,84z"></path></g></g><path d="M126,252c-69.58788,0 -126,-56.41212 -126,-126v0c0,-69.58788 56.41212,-126 126,-126v0c69.58788,0 126,56.41212 126,126v0c0,69.58788 -56.41212,126 -126,126z" fill="none"></path><path d="M126,246.96c-66.80436,0 -120.96,-54.15564 -120.96,-120.96v0c0,-66.80436 54.15564,-120.96 120.96,-120.96h0c66.80436,0 120.96,54.15564 120.96,120.96v0c0,66.80436 -54.15564,120.96 -120.96,120.96z" fill="none"></path></g></svg>
+                        </div>
+                    </a>
+                    <a href="#" id="tab3" class="tabbutton">
+                    <div class="tabicon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="24" height="24"
+                            viewBox="0 0 252 252"
+                            style="fill:#E53935;"
+                            class="icon icons8-northern-lights"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><g id="Layer_1"><path d="M31.5,52.5c0,-11.59725 9.40275,-21 21,-21h147c11.59725,0 21,9.40275 21,21v147c0,11.592 -9.40275,21 -21,21h-147c-11.59725,0 -21,-9.408 -21,-21z" fill="#212121"></path><path d="M220.5,84c-15.63975,1.2075 -35.784,4.8615 -49.875,10.5c-26.25,10.5 -47.25,31.5 -73.5,31.5c-26.88,0 -50.37375,-12.2115 -65.625,-21l7.875,-52.5l5.25,47.25l5.25,-47.25l5.25,52.5l5.25,-52.5l5.25,57.75l5.25,-57.75l5.25,60.70575l5.25,-60.70575l5.25,63l5.25,-63l5.25,63l5.25,-63l5.25,63l5.25,-63l5.25,57.75l5.25,-57.75l5.25,52.5l5.25,-52.5l5.25,47.25l5.25,-47.25l5.25,42l5.25,-42l5.25,36.75l5.25,-36.75l5.25,31.5l5.25,-31.5l5.25,26.25l5.25,-26.25l5.25,24.612l5.25,-24.612l5.25,19.362l5.25,-19.362l5.25,21l5.25,-21z" fill="#8e24aa"></path><path d="M133.875,126l5.25,68.25l5.25,-73.5l5.25,73.5l5.25,-84l5.25,78.75l5.25,-36.75l5.25,36.75l5.25,-31.5l5.25,26.25l5.25,-21l5.25,21l5.25,-21l5.25,15.75l5.25,-15.75l5.25,15.75l7.875,-21v26.25c-7.5495,0.77175 -13.314,1.98975 -21,3.91125c-21,5.25 -57.75,17.08875 -89.25,17.08875c-10.5,0 -39.375,-5.25 -39.375,-10.5c0,-10.5 60.375,-5.25 60.375,-15.75z" fill="#00c853"></path><path d="M220.5,148.03425c-7.25025,2.058 -14.12775,4.21575 -21,4.21575c-13.125,0 -36.75,-5.25 -36.75,-21l7.875,-26.25l5.25,31.5l5.25,-36.75l5.25,42l5.25,-47.25l5.25,47.25l5.25,-52.5l5.25,52.5l5.25,-52.5z" fill="#9b59b6"></path><path d="M31.5,157.5c33.19575,2.21025 99.75,9.177 99.75,21l-7.875,-47.25l-5.25,31.5l-5.25,-26.25l-5.25,23.95575l-5.25,-23.95575l-5.25,21l-5.25,-21l-5.25,21l-5.25,-21l-5.25,17.39325l-5.25,-22.64325l-5.25,21l-5.25,-21l-5.25,21l-5.25,-26.25l-5.25,26.25l-5.25,-31.5" fill="#00e676"></path></g></g></svg>
+                        </div>
+                    </a>
+                    <a href="#" id="tab4" class="tabbutton">
+                        <div class="tabicon">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24"
+                                viewBox="0 0 252 252"
+                                style="fill:#000000;"
+                                class="icon icons8-line-chart"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><g><g id="surface1"><path d="M57.75,199.5c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#1E88E5"></path><path d="M99.75,210c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#1E88E5"></path><path d="M141.75,173.25c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#1E88E5"></path><path d="M183.75,183.75c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#1E88E5"></path><path d="M225.75,162.75c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#1E88E5"></path><path d="M205.28321,153.2959l-38.32911,19.4209l-43.5791,-11.0127l-42,36.75l-36.75,-8.92089l-5.25,19.93359l47.25,12.0791l42,-36.75l40.4209,9.98731l45.6709,-22.57911z" fill="#1E88E5"></path><path d="M57.75,105c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#E53935"></path><path d="M99.75,115.5c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#E53935"></path><path d="M141.75,78.75c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#E53935"></path><path d="M183.75,105c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#E53935"></path><path d="M225.75,42c0,8.69531 -7.05469,15.75 -15.75,15.75c-8.69531,0 -15.75,-7.05469 -15.75,-15.75c0,-8.69531 7.05469,-15.75 15.75,-15.75c8.69531,0 15.75,7.05469 15.75,15.75z" fill="#E53935"></path><path d="M201.0791,36.2168c-11.0332,16.81641 -27.8291,42 -36.2373,54.6123c-6.2959,-3.67089 -16.2627,-10.5 -33.5918,-21l-6.8291,-4.2041l-43.5791,38.3291l-36.75,-8.92089l-5.25,20.46679l47.25,12.0791l40.44141,-35.17089c13.63769,8.38769 30.43359,18.88769 34.125,21.51269l2.625,2.625l4.71679,-0.51269c5.78321,-0.53321 5.78321,-0.53321 49.875,-67.73731z" fill="#E53935"></path></g></g></g></svg>
+                        </div>
+                    </a>
+                </div>
+                <div id="basicspanel" class="">
+                        <div class="oan">
+                                <div class="oa"><input type="range" min="0" max="100" step="1" id="oslider"></div>
+                                <div class="an" id="otext"></div>
+                        </div>
+                        <hr>
+                        <div class="palette">
+                                <div class="boxcolor" id="color1a"></div>
+                                <div class="boxcolor" id="color1b"></div>
+                                <div class="boxcolor" id="color1c"></div>
+                                <div class="boxcolor" id="color1d"></div>
+                                <div class="boxcolor" id="color1e"></div>
+                                <div class="boxcolor" id="color1f"></div>
+                                <div class="boxcolor" id="color1g"></div>
+                                <div class="boxcolor" id="color1h"></div>
+                                
+                                <div class="boxcolor" id="color2a"></div>
+                                <div class="boxcolor" id="color2b"></div>
+                                <div class="boxcolor" id="color2c"></div>
+                                <div class="boxcolor" id="color2d"></div>
+                                <div class="boxcolor" id="color2e"></div>
+                                <div class="boxcolor" id="color2f"></div>
+                                <div class="boxcolor" id="color2g"></div>
+                                <div class="boxcolor" id="color2h"></div>
+                                
+                                <div class="boxcolor" id="color3a"></div>
+                                <div class="boxcolor" id="color3b"></div>
+                                <div class="boxcolor" id="color3c"></div>
+                                <div class="boxcolor" id="color3d"></div>
+                                <div class="boxcolor" id="color3e"></div>
+                                <div class="boxcolor" id="color3f"></div>
+                                <div class="boxcolor" id="color3g"></div>
+                                <div class="boxcolor" id="color3h"></div>
+                                
+                                <div class="boxcolor" id="color4a"></div>
+                                <div class="boxcolor" id="color4b"></div>
+                                <div class="boxcolor" id="color4c"></div>
+                                <div class="boxcolor" id="color4d"></div>
+                                <div class="boxcolor" id="color4e"></div>
+                                <div class="boxcolor" id="color4f"></div>
+                                <div class="boxcolor" id="color4g"></div>
+                                <div class="boxcolor" id="color4h"></div>
+                                
+                                <div class="boxcolor" id="color5a"></div>
+                                <div class="boxcolor" id="color5b"></div>
+                                <div class="boxcolor" id="color5c"></div>
+                                <div class="boxcolor" id="color5d"></div>
+                                <div class="boxcolor" id="color5e"></div>
+                                <div class="boxcolor" id="color5f"></div>
+                                <div class="boxcolor" id="color5g"></div>
+                                <div class="boxcolor" id="color5h"></div>
+                                
+                                <div class="boxcolor" id="color6a"></div>
+                                <div class="boxcolor" id="color6b"></div>
+                                <div class="boxcolor" id="color6c"></div>
+                                <div class="boxcolor" id="color6d"></div>
+                                <div class="boxcolor" id="color6e"></div>
+                                <div class="boxcolor" id="color6f"></div>
+                                <div class="boxcolor" id="color6g"></div>
+                                <div class="boxcolor" id="color6h"></div>
+                            </div>
+                            <hr>
+                            <div class="palette center">
+                                <button id="btnlights"><span data-i18n="titellamp"></span></button>
+                                <button id="btnoptions"><span data-i18n="titelpopupoptions"></span></button>
+                                <button class="btnacc" id="btndonate"><span data-i18n="titledonatebutton"></span></button>
+                            </div>
+                </div>
+                <div id="morepanel" class="hidden">
+                        <div class="nightheader">
+                                <video width="300" height="200" poster="/images/night.png" loop muted autoplay>
+                                        <source src="images/night.mp4" type="video/mp4">Your browser does not support the video tag.
+                                </video>
+                            <span data-i18n="nightoptions"></span>
+                        </div>
+                        <div class="palette">
+                                <div class="md-checkbox">
+                                    <input id="nighttheme" type="checkbox">
+                                    <label for="nighttheme"><div><span data-i18n="desnighttheme"></span></div></label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="lampandnightmode" type="checkbox">
+                                    <label for="lampandnightmode"><div><span data-i18n="deslampandnightmode"></span></div></label>
+                                </div>
+                                <span data-i18n="titelnightmodebck"></span>
+                                <div class="colorline">
+                                        <div class="boxcolor" id="colornightmodebck1"></div>
+                                        <div class="boxcolor" id="colornightmodebck2"></div>
+                                        <div class="boxcolor" id="colornightmodebck3"></div>
+                                        <div class="boxcolor" id="colornightmodebck4"></div>
+                                        <div class="boxcolor" id="colornightmodebck5"></div>
+                                        <div class="boxcolor" id="colornightmodebck6"></div>
+                                        <div class="boxcolor" id="colornightmodebck7"></div>
+                                        <div class="boxcolor" id="colornightmodebck8"></div>
+                                </div>
+                                <span data-i18n="titelnightmodetxt"></span>
+                                <div class="colorline">
+                                        <div class="boxcolor" id="colortitelnightmodetxt1"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt2"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt3"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt4"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt5"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt6"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt7"></div>
+                                        <div class="boxcolor" id="colortitelnightmodetxt8"></div>
+                                </div>
+                                <span data-i18n="titelnightmodehyperlink"></span>
+                                <div class="colorline">
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink1"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink2"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink3"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink4"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink5"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink6"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink7"></div>
+                                        <div class="boxcolor" id="colortitelnightmodehyperlink8"></div>
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="palette">
+                            <button id="btngonight"><span data-i18n="titelnighttheme"></span></button>
+                        </div>
+            </div>
+            <div id="atmospanel" class="hidden">
+                    <div class="atmosheader">
+                            <video width="300" height="170" poster="/images/atmos.png" loop muted autoplay>
+                                    <source src="images/atmos.mp4" type="video/mp4">Your browser does not support the video tag.
+                            </video>
+                            <span data-i18n="titelambilight"></span>
+                    </div>
+                    <div class="palette">
+                            <div class="md-checkbox">
+                                    <input id="ambilight" type="checkbox">
+                                    <label for="ambilight"><div><span data-i18n="desambilight"></span></div></label>
+                            </div>
+                            <div class="md-radio">
+                                    <input id="ambilightfixcolor" type="radio" name="g">
+                                    <label for="ambilightfixcolor"><div><span data-i18n="desambilightfixcolor"></span></div></label>
+                            </div>
+                            <div class="md-radio">
+                                    <input id="ambilight4color" type="radio" name="g">
+                                    <label for="ambilight4color"><div><span data-i18n="desambilight4color"></span></div></label>
+                            </div>
+                            <div class="md-radio">
+                                    <input id="ambilightvarcolor" type="radio" name="g">
+                                    <label for="ambilightvarcolor"><div><span data-i18n="desambilightvarcolor"></span></div></label>
+                            </div>
+                            <div class="md-checkbox">
+                                    <input id="atmosvivid" type="checkbox">
+                                    <label for="atmosvivid"><div><span data-i18n="desatmosvivid"></span></div></label>
+                            </div>
+                    </div>
+                    <div class="promoauroraplayer">
+                            <div class="logopart"><img id="auroraplayericon" alt="Aurora Player app" width="32" height="32" src="images/aurora-player_32x32.png" srcset="images/aurora-player_32x32.png 1x, images/aurora-player_32x32@2x.png 2x"></div>
+                            <div class="textpart">
+                                <div class="promohead"><div class="bigtitle">Aurora Player</div><span data-i18n="desauroraplayer"></span></div>
+                                <button id="btnauroraplayer"><span data-i18n="downloadtheapp"></span></button>
+                        </div>
+                    </div>
+            </div>
+            <div id="analyticspanel" class="hidden">
+                    <div class="analyticsheader">
+                            <video width="300" height="170" poster="/images/nature.png" loop muted autoplay>
+                                    <source src="images/nature.mp4" type="video/mp4">Your browser does not support the video tag.
+                            </video>
+                            <span data-i18n="titleanalytics"></span>
+                    </div>
+                        <div class="palette">
+                                <div class="md-checkbox">
+                                        <input id="badge" type="checkbox">
+                                        <label for="badge"><div><span data-i18n="desbadgeanalytics"></span></div></label>
+                                </div>
+                                <div class="analgroup">
+                                        <span data-i18n="activelayertoday" class="style"></span>
+                                        <br>
+                                        <div class="analblocka" id="analclick"><span id="analclicktoday">0</span></div>
+                                </div>
+                                <div class="analgroup">
+                                        <span data-i18n="totalenergysaved"></span>
+                                        <br>
+                                        <div class="analblockb" id="analtotal"><span id="analtotalsavedkwh">0</span>kWh</div>
+                                </div>
+                                <div class="center">
+                                <div data-i18n="titelsharethis"></div> <div id="shareboxgoogle"></div> <div id="shareboxfacebook"></div> <div id="shareboxtwitter"></div>
+                                </div>
+                        </div>
+                        <div id="energybox">
+                                <div class="energyicon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                        width="40" height="40"
+                                        viewBox="0 0 32 32"
+                                        style="fill:#ffffff;"
+                                        class="icons8-full-battery"><g id="surface1"><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
+                                </div>
+                                <div class="energytext"><span>You saved enough Energy for</span> <span id="energycompared"></span></div>
+                        </div>
+            </div>
+<script type="text/javascript" src="js/translate.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -7,8 +7,8 @@
 /*
 
 Turn Off the Lights
-The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2017 Stefan vd
+The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
+Copyright (C) 2018 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -36,331 +36,463 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <link rel="stylesheet" type="text/css" href="css/options.css">
 <script type="text/javascript" src="js/constants.js"></script>
 <script type="text/javascript" src="js/options.js"></script>
+<script type="text/javascript" src="js/Chart.js"></script>
+<script type="text/javascript" src="js/eco-preview.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body>
-<script type="text/javascript" src="js/analytics.js"></script>
-
-<div id="remembershare">
-<div id="productrememberimage"><img id="rememberlamp" alt="Lamp" width="16" height="16" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">Turn Off the Lights™</div>
-	<div id="remembersharecenter">
-	<h2><span data-i18n="friendlyremember"></span></h2>
-	<div class="remembertext"><span data-i18n="enjoyshare"></span></div>
-	<br>
-	<div class="remgroup">
-		<a id="rememberboxyoutube"><span data-i18n="desremyoutube"></span></a><br>
-		<div id="remyoutube">
-			<iframe id="addyoutubebutton" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="200" height="25" src="https://www.youtube.com/subscribe_embed?bsv&amp;usegapi=1&amp;channelid=UCmfm-qT6ksSjeoRt2mOjmRg&amp;theme=light&amp;layout=default&amp;hl=en-US&amp;origin=http%3A%2F%2Fturnoffthelights.com&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.Hm9QrP5wPuw.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOJmMfO7AjAhJbN5yM-BshnzKg53Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1371683853533&amp;parent=http%3A%2F%2Fturnoffthelights.com&amp;rpctoken=33681162" data-gapiattached="true"></iframe>
-		</div>
-	</div>
-	<div class="remgroup">
-		<a id="rememberboxrate"><span data-i18n="rememberrate"></span> 5 &#9733;</a>
-	</div>
-	<div class="remgroup">
-		<a id="rememberboxfacebook"><span data-i18n="desremfacebook"></span></a><br>
-		<div id="remfacebook">
-			<iframe id="addrecommendbutton" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fturnofflights&width=118&layout=button_count&action=recommend&size=small&show_faces=false&share=false&height=21&appId=1542940745981253" width="200" height="25" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-		</div>
-	</div>
-	<br><br><br>
-	<br><br><br>
-	<br><br><br>
-	<a id="skipremember" class="continuebutton">&gt;</a>
-	<br><br><br>
-	<span id="buttoncontinuetip" data-i18n="skipremember"></span>
-	</div>
-	<div id="divcheckboxskipremember">
-		<input id="firstcheckboxskipremember" type="checkbox"><span data-i18n="showremember"></span>
-	</div>
-	<div id="remdonate">
-		<div id="remclosethisdonate">X</div>
-		<div class="promobox"><span data-i18n="promotitle"></span></div>
-		<div>
-			<div data-i18n="longdonatetext"></div> <a href="https://www.turnoffthelights.com/donate.html" target="_blank" id="rememberboxdonate" data-i18n="titledonatebutton"></a>
-		</div>
-	</div>
-</div>
-
+<body class="light">
 
 <div id="loading">
 <div id="loadingcenter">
-<div id="productwelcomeimageload"><img id="loadinglamp" alt="Lamp" width="16" height="16" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">Turn Off the Lights™</div>
+<div id="productwelcomeimageload">
+    <div class="icon">
+        <img id="loadinglamp" alt="Lamp" width="16" height="16" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">Turn Off the Lights™</div>
+</div>
 <div id="progressbar"><div id="progress"><div id="pbaranim"></div></div></div>
 </div>
-<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="https://www.turnoffthelights.com/support" target="blank" data-i18n="pagehelp"></a>!</span>
+<span id="loadinghelp"><span data-i18n="pagestillloading"></span> <a href="https://www.turnoffthelights.com/support" target="_blank" data-i18n="pagehelp" rel="noopener"></a>!</span>
 </div>
 
-<div id="main-content">
+<div id="main-content" role="main">
+	<header>
+		<div class="messagehead">
+		</div>
+		<div class="masterhead">
+			<div class="title" id="titleex">
+				<div class="icon">
+					<img id="headlamp" width="16" height="16" alt="Turn Off the Lights Browser extension lamp">
+				</div>
+				Turn Off the Lights™</div>
+			<div class="rightmenu" id="dotmenu">
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+				width="24" height="24"
+				viewBox="0 0 24 24"><g><path d="M 12 3 C 10.894531 3 10 3.894531 10 5 C 10 6.105469 10.894531 7 12 7 C 13.105469 7 14 6.105469 14 5 C 14 3.894531 13.105469 3 12 3 Z M 12 10 C 10.894531 10 10 10.894531 10 12 C 10 13.105469 10.894531 14 12 14 C 13.105469 14 14 13.105469 14 12 C 14 10.894531 13.105469 10 12 10 Z M 12 17 C 10.894531 17 10 17.894531 10 19 C 10 20.105469 10.894531 21 12 21 C 13.105469 21 14 20.105469 14 19 C 14 17.894531 13.105469 17 12 17 Z "></path></g></svg>
+			</div>
+		</div>
+	</header>
+	<input type="checkbox" id="reveal-menu" role="button">
+	
+	<div id="md-home">
+			<label for="reveal-menu" id="menu">
+			<div id="menuToggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</label>
+	</div>
+
+	<aside id="darkpanel"></aside>
+
 	<div id="navbar-container">
-	<br>
-	<a href="https://www.turnoffthelights.com" target="blank" class="brand"><div id="productwelcomeimage"><img id="welcomelamp" alt="Lamp" width="16" height="16" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">Turn Off the Lights™</div></a>
-	<div id="productsettingtitel" data-i18n="settings"></div>
-	<br><br><br>	
 	<ul id="navbar">
-		<li><a id="tabbasic" data-tab="#tab1" class="navbar-item navbar-item-selected"><span data-i18n="basicsettings"></span></a></li>
-		<li><a id="tabvisual" data-tab="#tab2" class="navbar-item"><span data-i18n="visualeffects"></span></a></li>
-		<li><a id="tabadvan" data-tab="#tab3" class="navbar-item"><span data-i18n="advancedoptions"></span></a></li>
-		<li><a id="tabnight" data-tab="#tab5" class="navbar-item"><span data-i18n="nightoptions"></span></a></li>
-		<li><a id="tabmotion" data-tab="#tab7" class="navbar-item"><span data-i18n="motionoptions"></span></a></li>
-		<li><a id="tabspeech" data-tab="#tab8" class="navbar-item"><span data-i18n="speechoption"></span></a></li>
-		<li><a id="tabguide" data-tab="#tab4" class="navbar-item"><span data-i18n="guide"></span></a></li>
-		<li><a id="tabhelp" data-tab="#tab9" class="navbar-item"><span data-i18n="help"></span></a></li>
+		<li><a id="tabbasic" accesskey="b" data-tab="#tab1" class="navbar-item navbar-item-selected">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 10.699219 1.101563 C 5.699219 1.699219 1.601563 5.699219 1 10.800781 C 0.300781 17.398438 5.5 23 12 23 C 12.601563 23 13.199219 22.898438 13.699219 22.699219 C 16.199219 22 17.300781 18.898438 15.800781 16.699219 C 15 15.601563 15.898438 14 17.300781 14 L 21 14 C 22.101563 14 23 13.101563 23 12 C 23 5.5 17.398438 0.300781 10.699219 1.101563 Z M 12 21 C 10.898438 21 10 20.101563 10 19 C 10 17.898438 10.898438 17 12 17 C 13.101563 17 14 17.898438 14 19 C 14 20.101563 13.101563 21 12 21 Z M 18.5 11 C 17.699219 11 17 10.300781 17 9.5 C 17 8.699219 17.699219 8 18.5 8 C 19.300781 8 20 8.699219 20 9.5 C 20 10.300781 19.300781 11 18.5 11 Z M 14.5 7 C 13.699219 7 13 6.300781 13 5.5 C 13 4.699219 13.699219 4 14.5 4 C 15.300781 4 16 4.699219 16 5.5 C 16 6.300781 15.300781 7 14.5 7 Z M 9.5 7 C 8.699219 7 8 6.300781 8 5.5 C 8 4.699219 8.699219 4 9.5 4 C 10.300781 4 11 4.699219 11 5.5 C 11 6.300781 10.300781 7 9.5 7 Z M 5.5 10 C 4.699219 10 4 9.300781 4 8.5 C 4 7.699219 4.699219 7 5.5 7 C 6.300781 7 7 7.699219 7 8.5 C 7 9.300781 6.300781 10 5.5 10 Z M 4.5 15 C 3.699219 15 3 14.300781 3 13.5 C 3 12.699219 3.699219 12 4.5 12 C 5.300781 12 6 12.699219 6 13.5 C 6 14.300781 5.300781 15 4.5 15 Z "></path></g></svg>
+			<span data-i18n="basicsettings"></span>
+		</a></li>
+		<li><a id="tabvisual" accesskey="v" data-tab="#tab2" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+	 		viewBox="0 0 24 24"><g><path d="M 4 4 C 2.898438 4 2 4.898438 2 6 L 2 18 C 2 19.101563 2.898438 20 4 20 L 20 20 C 21.101563 20 22 19.101563 22 18 L 22 6 C 22 4.898438 21.101563 4 20 4 Z M 4 6 L 20 6 L 20 18 L 4 18 Z M 5 7 L 5 17 L 19 17 L 19 7 Z M 7 9 L 17 9 L 17 15 L 7 15 Z "></path></g></svg>
+			<span data-i18n="visualeffects"></span></a></li>
+		<li><a id="tabadvan" accesskey="o" data-tab="#tab3" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 8.40625 2 C 8.207031 2 8 2.207031 8 2.40625 L 7.8125 4.40625 C 7.3125 4.605469 6.804688 4.886719 6.40625 5.1875 L 4.40625 4.40625 C 4.207031 4.304688 4.007813 4.394531 3.90625 4.59375 L 2.3125 7.40625 C 2.210938 7.605469 2.207031 7.804688 2.40625 7.90625 L 4.09375 9.09375 C 3.992188 9.394531 4 9.699219 4 10 C 4 10.300781 3.992188 10.613281 4.09375 10.8125 L 2.40625 12 C 2.207031 12.101563 2.210938 12.300781 2.3125 12.5 L 3.90625 15.3125 C 4.007813 15.511719 4.207031 15.5 4.40625 15.5 L 6.3125 14.59375 C 6.710938 14.894531 7.1875 15.207031 7.6875 15.40625 L 8 17.59375 C 8 17.792969 8.207031 18 8.40625 18 L 10 18 L 10 13.1875 C 8.199219 13.1875 6.8125 11.800781 6.8125 10 C 6.8125 8.199219 8.199219 6.8125 10 6.8125 C 11.800781 6.8125 13.1875 8.199219 13.1875 10 L 16 10 C 16 9.699219 16.007813 9.386719 15.90625 9.1875 L 17.59375 8 C 17.792969 7.898438 17.789063 7.699219 17.6875 7.5 L 16.09375 4.6875 C 15.992188 4.488281 15.792969 4.5 15.59375 4.5 L 13.6875 5.40625 C 13.289063 5.105469 12.8125 4.792969 12.3125 4.59375 L 12 2.40625 C 12 2.207031 11.792969 2 11.59375 2 Z M 13 11 C 12.476563 11 11.941406 11.183594 11.5625 11.5625 C 11.183594 11.941406 11 12.476563 11 13 L 11 20 C 11 20.523438 11.183594 21.058594 11.5625 21.4375 C 11.941406 21.816406 12.476563 22 13 22 L 20 22 C 20.523438 22 21.058594 21.816406 21.4375 21.4375 C 21.816406 21.058594 22 20.523438 22 20 L 22 13 C 22 12.476563 21.816406 11.941406 21.4375 11.5625 C 21.058594 11.183594 20.523438 11 20 11 Z M 13 15 L 20 15 L 20 20 L 13 20 Z M 17.5625 15.875 L 16 17.4375 L 15.34375 16.78125 L 14.28125 17.84375 L 16 19.5625 L 18.625 16.9375 Z "></path></g></svg>
+			<span data-i18n="advancedoptions"></span></a>
+		</li>
+		<li><a id="tabnight" accesskey="n" data-tab="#tab5" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 18.65625 2 C 18.871094 2.453125 19 2.9375 19 3.46875 C 19 5.402344 17.433594 6.96875 15.5 6.96875 C 15.445313 6.96875 15.398438 6.972656 15.34375 6.96875 C 15.902344 8.15625 17.101563 8.96875 18.5 8.96875 C 20.433594 8.96875 22 7.402344 22 5.46875 C 22 3.589844 20.515625 2.085938 18.65625 2 Z M 9 9.96875 L 2 21.96875 L 22 21.96875 L 17 13.96875 L 14.0625 18.65625 Z "></path></g></svg>
+			<span data-i18n="nightoptions"></span></a></li>
+		<li><a id="tabmotion" accesskey="c" data-tab="#tab7" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 4 6 C 2.898438 6 2 6.898438 2 8 L 2 16 C 2 17.101563 2.898438 18 4 18 L 15 18 C 16.101563 18 17 17.101563 17 16 L 17 8 C 17 6.898438 16.101563 6 15 6 Z M 8 7 L 10.03125 7 C 10.160156 7 10.269531 7.089844 10.28125 7.21875 L 10.4375 8.53125 C 10.765625 8.664063 11.039063 8.847656 11.3125 9.0625 L 12.53125 8.5 C 12.648438 8.445313 12.78125 8.515625 12.84375 8.625 L 13.875 10.375 C 13.9375 10.484375 13.886719 10.644531 13.78125 10.71875 L 12.71875 11.46875 C 12.742188 11.640625 12.78125 11.824219 12.78125 12 C 12.78125 12.175781 12.742188 12.359375 12.71875 12.53125 L 13.78125 13.28125 C 13.886719 13.355469 13.941406 13.515625 13.875 13.625 L 12.84375 15.375 C 12.78125 15.484375 12.648438 15.554688 12.53125 15.5 L 11.3125 14.9375 C 11.039063 15.152344 10.765625 15.335938 10.4375 15.46875 L 10.28125 16.78125 C 10.269531 16.910156 10.160156 17 10.03125 17 L 8 17 C 7.871094 17 7.761719 16.910156 7.75 16.78125 L 7.625 15.46875 C 7.296875 15.335938 6.992188 15.152344 6.71875 14.9375 L 5.53125 15.5 C 5.414063 15.554688 5.28125 15.484375 5.21875 15.375 L 4.1875 13.625 C 4.125 13.515625 4.144531 13.355469 4.25 13.28125 L 5.3125 12.53125 C 5.289063 12.359375 5.28125 12.179688 5.28125 12 C 5.28125 11.820313 5.289063 11.640625 5.3125 11.46875 L 4.25 10.71875 C 4.144531 10.644531 4.125 10.484375 4.1875 10.375 L 5.21875 8.625 C 5.28125 8.515625 5.414063 8.445313 5.53125 8.5 L 6.71875 9.0625 C 6.992188 8.847656 7.296875 8.664063 7.625 8.53125 L 7.75 7.21875 C 7.761719 7.089844 7.871094 7 8 7 Z M 22 7 L 18 10 L 18 14 L 22 17 Z M 9.03125 10 C 7.925781 10 7.03125 10.894531 7.03125 12 C 7.03125 13.105469 7.925781 14 9.03125 14 C 10.136719 14 11.03125 13.105469 11.03125 12 C 11.03125 10.894531 10.136719 10 9.03125 10 Z "></path></g></svg>
+			<span data-i18n="motionoptions"></span></a></li>
+		<li><a id="tabspeech" accesskey="s" data-tab="#tab8" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 2 2 L 2 22 L 4 22 L 4 21 C 4 20 4.894531 19 6 19 C 7.652344 19 8.992188 17.648438 9 16 L 6 15 L 9 14 L 9 13 L 10.5625 12 C 11.007813 11.703125 11.117188 11.113281 10.84375 10.65625 L 8 8 C 8 3.484375 5.257813 2 2 2 Z M 18 7 L 14.8125 16.40625 L 13.625 14 L 10 14 L 10 16 L 12.375 16 L 15 22 L 18.09375 12.90625 L 19.3125 16 L 22 16 L 22 14 L 20.6875 14 Z "></path></g></svg>
+			<span data-i18n="speechoption"></span></a></li>
+		<li><a id="tabguide" accesskey="g" data-tab="#tab4" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 5 4 L 5 22 L 12 19 L 19 22 L 19 4 C 19 2.898438 18.101563 2 17 2 L 7 2 C 5.898438 2 5 2.898438 5 4 Z "></path></g></svg>
+			<span data-i18n="guide"></span></a></li>
+		<li><a id="tabanalytics" accesskey="a" data-tab="#tab10" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 20 2 C 18.894531 2 18 2.894531 18 4 C 18 4.339844 18.101563 4.65625 18.25 4.9375 L 16.53125 7.0625 C 16.363281 7.015625 16.183594 7 16 7 C 15.511719 7 15.066406 7.179688 14.71875 7.46875 L 12 6.09375 C 12 6.0625 12 6.03125 12 6 C 12 4.894531 11.105469 4 10 4 C 8.894531 4 8 4.894531 8 6 C 8 6.03125 8 6.0625 8 6.09375 L 5.28125 7.46875 C 4.933594 7.179688 4.488281 7 4 7 C 2.894531 7 2 7.894531 2 9 C 2 10.105469 2.894531 11 4 11 C 5.105469 11 6 10.105469 6 9 C 6 8.957031 6.003906 8.917969 6 8.875 L 8.71875 7.53125 C 9.066406 7.820313 9.511719 8 10 8 C 10.488281 8 10.933594 7.820313 11.28125 7.53125 L 14 8.875 C 13.996094 8.917969 14 8.957031 14 9 C 14 10.105469 14.894531 11 16 11 C 17.105469 11 18 10.105469 18 9 C 18 8.660156 17.898438 8.34375 17.75 8.0625 L 19.46875 5.9375 C 19.636719 5.984375 19.816406 6 20 6 C 21.105469 6 22 5.105469 22 4 C 22 2.894531 21.105469 2 20 2 Z M 20 13 C 18.894531 13 18 13.894531 18 15 C 18 15.316406 18.089844 15.609375 18.21875 15.875 L 16.5 18.0625 C 16.339844 18.019531 16.171875 18 16 18 C 15.660156 18 15.34375 18.101563 15.0625 18.25 L 12.9375 16.53125 C 12.984375 16.363281 13 16.183594 13 16 C 13 14.894531 12.105469 14 11 14 C 9.992188 14 9.167969 14.746094 9.03125 15.71875 L 5.53125 16.71875 C 5.164063 16.28125 4.617188 16 4 16 C 2.894531 16 2 16.894531 2 18 C 2 19.105469 2.894531 20 4 20 C 5.007813 20 5.832031 19.253906 5.96875 18.28125 L 9.5 17.28125 C 9.867188 17.710938 10.390625 18 11 18 C 11.324219 18 11.632813 17.917969 11.90625 17.78125 L 14.0625 19.46875 C 14.015625 19.636719 14 19.816406 14 20 C 14 21.105469 14.894531 22 16 22 C 17.105469 22 18 21.105469 18 20 C 18 19.660156 17.898438 19.34375 17.75 19.0625 L 19.4375 16.90625 C 19.617188 16.960938 19.804688 17 20 17 C 21.105469 17 22 16.105469 22 15 C 22 13.894531 21.105469 13 20 13 Z "></path></g></svg>
+			<span data-i18n="analyticsoption"></span></a></li>
+		<li><a id="tabhelp" accesskey="h" data-tab="#tab9" class="navbar-item">
+			<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			width="16" height="16"
+			viewBox="0 0 24 24"><g><path d="M 12 2 C 6.5 2 2 6.5 2 12 C 2 17.5 6.5 22 12 22 C 17.5 22 22 17.5 22 12 C 22 6.5 17.5 2 12 2 Z M 12 4 C 16.398438 4 20 7.601563 20 12 C 20 16.398438 16.398438 20 12 20 C 7.601563 20 4 16.398438 4 12 C 4 7.601563 7.601563 4 12 4 Z M 11.90625 7 C 8.605469 7 9 10 9 10 L 11 10 C 11 8.601563 11.699219 8.5 12 8.5 C 12.800781 8.5 13 9.414063 13 9.8125 C 13 11.914063 11 11.398438 11 14 L 13 14 C 13 12.300781 15 12.210938 15 9.8125 C 15 8.914063 14.507813 7 11.90625 7 Z M 11 15 L 11 17 L 13 17 L 13 15 Z "></path></g></svg>
+			<span data-i18n="help"></span></a></li>
 	</ul>
 	</div>
 	<div id="mainview">
-	<div id="managed-prefs-banner">
-		<span id="managed-prefs-icon">
-			<a class="donatebutton" target="_blank" href="https://www.turnoffthelights.com/donate.html" data-i18n="titledonatebutton"></a>
-		</span>
-		<span id="managed-prefs-text" data-i18n="donatepromotext"></span>
-		<div id="managed-prefs-text-close"><span style="display:none;">Close</span></div>
-    </div>
+		<div id="managed-prefs-banner">
+			<span id="managed-prefs-icon">
+				<a class="donatebutton" target="_blank" href="https://www.turnoffthelights.com/donate.html" data-i18n="titledonatebutton" rel="noopener"></a>
+			</span>
+			<span id="managed-prefs-text" data-i18n="donatepromotext"></span>
+			<div id="managed-prefs-text-close">x</div>
+		</div>
 		<div id="mainview-content">
 			<div id="tab1" class="page">
 			<h1 data-i18n="basicsettings"></h1>
-			<header>
+			<div class="sharemenu">
 				<div data-i18n="titelsharethis"></div> <div id="shareboxgoogle"></div> <div id="shareboxfacebook"></div> <div id="shareboxtwitter"></div>
-			</header>
+			</div>
 				<br>
 				<div id="example1"></div>
 				<div id="stefanvddynamicbackground"></div>
-				<table class="youtubepreview">
+				<table class="youtubepreview" aria-hidden="true" role="none">
 					<tr>
-						<td class="viewpanel">
-						<iframe id="dont-turn-off-the-lights" class="youtube-player" type="text/html" width="340" height="195" src="" frameborder="0" allowfullscreen></iframe>
-						<div id="sampletitle" class="youtubetitel">Stefan vd</div>
+						<td class="youtubeviewpanel">
+						<iframe id="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen></iframe>
+						<div id="sampletitle" class="youtubetitel" aria-disabled="true">Stefan vd</div>
 						<div id="samplechannel" class="youtube_container_head">	
-						<iframe class="embedytsub" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="100%" src="https://www.youtube.com/subscribe_embed?bsv&amp;usegapi=1&amp;channel=stefanvdlive&amp;theme=light&amp;layout=full&amp;hl=en-US&amp;origin=http%3A%2F%2Fturnoffthelights.com&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.Hm9QrP5wPuw.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOJmMfO7AjAhJbN5yM-BshnzKg53Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1371683853533&amp;parent=http%3A%2F%2Fturnoffthelights.com&amp;rpctoken=33681162" data-gapiattached="true"></iframe>
+						<iframe class="embedytsub" title="YouTube subscribe" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="100%" src="https://www.youtube.com/subscribe_embed?bsv&amp;usegapi=1&amp;channel=stefanvdlive&amp;theme=light&amp;layout=full&amp;hl=en-US&amp;origin=http%3A%2F%2Fturnoffthelights.com&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.Hm9QrP5wPuw.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOJmMfO7AjAhJbN5yM-BshnzKg53Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1371683853533&amp;parent=http%3A%2F%2Fturnoffthelights.com&amp;rpctoken=33681162" data-gapiattached="true"></iframe>
 						</div>
 						<div id="videochannel" class="youtube_video_head">
-						<div class="youtubevideobutton"><span>55 videos</span></div>
+						<div class="youtubevideobutton" aria-disabled="true"><span>55 videos</span></div>
 						</div>
 						<div id="samplelikebar" class="youtuberating">
-							<div id="sampleview" class="youtubeviewnumbers">4,301,189</div>
+							<div id="sampleview" class="youtubeviewnumbers" aria-disabled="true">4,301,189</div>
 							<div class="youtuberatingsparkbarlikes" style="width: 100.0%"></div>
 							<div class="youtuberatingsparkbardislikes" style="width: 0.0%"></div>
-							<span class="youtuberatinglikesdislikes"><img alt="Like" height="8" src="images/like.png" width="8"> 4k <img alt="Dislike" height="8" src="images/dislike.png" width="8"> 0</span>
 						</div>
 						<br>
-						<div id="sampledislikebutton" class="youtubelikebar">
-						<div class="youtubelikebutton"><img alt="Like" height="20" src="images/like.png" width="20"><span>Like</span></div>
-						<div class="youtubedislikebutton"><img alt="Dislike" height="20" src="images/dislike.png" width="20"></div>
+						<div id="sampledislikebutton" class="youtubelikebar" aria-disabled="true">
+						<div class="youtubelikebutton" aria-disabled="true">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+     							width="20" height="20"
+     							viewBox="0 0 24 24"
+     							style="fill:#000000;"><g><path d="M 13.5625 2.25 L 7.5625 8.25 C 7.210938 8.601563 7 9.097656 7 9.59375 L 7 19.125 C 7 20.160156 7.839844 21 8.875 21 L 17.03125 21 C 17.773438 21 18.449219 20.554688 18.75 19.875 L 21.75 13.125 C 21.914063 12.75 22 12.347656 22 11.9375 L 22 11 C 22 9.964844 21.035156 9 20 9 L 14 9 C 14 9 15.4375 5.148438 15.4375 4.46875 C 15.4375 2.710938 13.5625 2.25 13.5625 2.25 Z M 2 9 L 2 21 L 5 21 L 5 9 Z "></path></g></svg>
+     					<span>4k</span></div>
+						<div class="youtubedislikebutton" aria-disabled="true">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+     						width="20" height="20"
+     						viewBox="0 0 24 24"
+     						style="fill:#000000;"><g><path d="M 2 3 L 2 15 L 5 15 L 5 3 Z M 8.875 3 C 7.839844 3 7 3.839844 7 4.875 L 7 14.40625 C 7 14.902344 7.210938 15.398438 7.5625 15.75 L 13.5625 21.75 C 13.5625 21.75 15.4375 21.289063 15.4375 19.53125 C 15.4375 18.851563 14 15 14 15 L 20 15 C 21.035156 15 22 14.035156 22 13 L 22 12.0625 C 22 11.652344 21.914063 11.25 21.75 10.875 L 18.75 4.125 C 18.449219 3.445313 17.773438 3 17.03125 3 Z "></path></g></svg>
+						<span>0</span></div>
 						</div>
-						<div id="samplesharebutton" class="youtubesharebutton"><span>Share</span></div>
-						<div id="sampleaddbutton" class="youtubeaddtobutton"><span>Add to</span></div>
-						<div id="sampleinforbar" class="youtubeinforbar">
+						<div id="samplesharebutton" class="youtubesharebutton" aria-disabled="true"><span>Share</span></div>
+						<div id="sampleaddbutton" class="youtubeaddtobutton" aria-disabled="true"><span>Add to</span></div>
+						<div id="sampleinforbar" class="youtubeinforbar" aria-disabled="true">
 						<div class="youtubecommentsupload">Published on Sep 22, 2011</div>
 						<div class="youtubecommentsdescribe">The new introduction video from Stefan vd.</div>	
 						</div>
 						</td>
-						<td class="suggpanel">
+						<td class="youtubesuggpanel">
 						<div id="samplesug" class="youtubesuggestionbar">
 						<table>
 							<tr>
 								<td><div class="youtubevideoframegeen"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan vd video: update now in the air</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel" aria-disabled="true">Stefan vd video: update now in the air</span><br><span class="youtubesuggestionby" aria-disabled="true">by Stefan</span></td>
 							</tr>
 						</table>
 						<table>
 							<tr>
 								<td><div class="youtubevideoframeblue"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Speech Recognition feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel" aria-disabled="true">Stefan video: Speech Recognition feature</span><br><span class="youtubesuggestionby" aria-disabled="true">by Stefan</span></td>
 							</tr>
 						</table>
 						<table>
 							<tr>
 								<td><div class="youtubevideoframeyellow"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Night Mode feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel" aria-disabled="true">Stefan video: Night Mode feature</span><br><span class="youtubesuggestionby" aria-disabled="true">by Stefan</span></td>
 							</tr>
 						</table>
 						<table>
 							<tr>
 								<td><div class="youtubevideoframered"></div></td>
-								<td class="yttopframe"><span class="youtubesuggestiontitel">Stefan video: Camera Motion feature</span><br><span class="youtubesuggestionby">by Stefan</span></td>
+								<td class="yttopframe"><span class="youtubesuggestiontitel" aria-disabled="true">Stefan video: Camera Motion feature</span><br><span class="youtubesuggestionby" aria-disabled="true">by Stefan</span></td>
 							</tr>
 						</table>
 						</div>
 						</td>
 					</tr>
 				</table>
-				<section>
-				<h3 data-i18n="titelscreen"></h3>
-				<div>
-					<div id="customHomePageGroup">
-						<div class="radio">
-							<label>
-								<input id="lightimagen" type="radio" name="lightimage" value="never">
-								<span data-i18n="titelcolor"></span>:
-								<input id="lightcolor" type="color" class="color" list="datalightcolor">
-                                <datalist id="datalightcolor">
-                                <option>#FFFFFF</option>
-                                <option>#FF0000</option>
-                                <option>#FF7700</option>
-                                <option>#FFEE00</option>
-                                <option>#00FF00</option>
-                                <option>#008000</option>
-                                <option>#3CB4FE</option>
-                                <option>#0000FF</option>
-                                <option>#808080</option>
-                                <option>#000000</option>
-                                </datalist>
-								<span data-i18n="titelblur"></span>:
-								<input id="blur" type="checkbox">
-							</label>
+				<div class="tabbar">
+					<div class=tabbarintern>
+						<div id="sub1" class="tabbutton tabhighlight" title="Dark Layer Color">
+							<div class="tabicon">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="24" height="24"
+								viewBox="0 0 48 48"
+								style="fill:#000000;"
+								class="icon icons8-color-wheel"><g><path style="fill:#E91E63;" d="M 24 5 L 24 24 L 14.5 7.546875 Z "></path><path style="fill:#FF5722;" d="M 33.5 7.546875 L 40.453125 14.5 L 24 24 Z "></path><path style="fill:#F44336;" d="M 24 5 L 33.5 7.546875 L 24 24 Z "></path><path style="fill:#8BC34A;" d="M 24 43 L 24 24 L 33.5 40.453125 Z "></path><path style="fill:#03A9F4;" d="M 14.5 40.453125 L 7.546875 33.5 L 24 24 Z "></path><path style="fill:#4CAF50;" d="M 24 43 L 14.5 40.453125 L 24 24 Z "></path><path style="fill:#FF9800;" d="M 43 24 L 24 24 L 40.453125 14.5 Z "></path><path style="fill:#FFEB3B;" d="M 40.453125 33.5 L 33.5 40.453125 L 24 24 Z "></path><path style="fill:#FFC107;" d="M 43 24 L 40.453125 33.5 L 24 24 Z "></path><path style="fill:#3F51B5;" d="M 5 24 L 24 24 L 7.546875 33.5 Z "></path><path style="fill:#9C27B0;" d="M 7.546875 14.5 L 14.5 7.546875 L 24 24 Z "></path><path style="fill:#673AB7;" d="M 5 24 L 7.546875 14.5 L 24 24 Z "></path></g></svg>
+							</div>
+						</div>
+						<div id="sub2" class="tabbutton" title="Linear Gradient Color">
+							<div class="tabicon">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="24" height="24"
+								viewBox="0 0 252 252"
+								style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><path d="M126,220.5c-52.19091,0 -94.5,-42.30909 -94.5,-94.5v0c0,-52.19091 42.30909,-94.5 94.5,-94.5v0c52.19091,0 94.5,42.30909 94.5,94.5v0c0,52.19091 -42.30909,94.5 -94.5,94.5z" fill="#ffffff"></path><g fill="#000000"><g><path d="M126,21c-57.75,0 -105,47.25 -105,105c0,57.75 47.25,105 105,105c57.75,0 105,-47.25 105,-105c0,-57.75 -47.25,-105 -105,-105zM126,42c46.1836,0 84,37.81641 84,84c0,46.1836 -37.8164,84 -84,84z"></path></g></g><path d="M126,252c-69.58788,0 -126,-56.41212 -126,-126v0c0,-69.58788 56.41212,-126 126,-126v0c69.58788,0 126,56.41212 126,126v0c0,69.58788 -56.41212,126 -126,126z" fill="none"></path><path d="M126,246.96c-66.80436,0 -120.96,-54.15564 -120.96,-120.96v0c0,-66.80436 54.15564,-120.96 120.96,-120.96h0c66.80436,0 120.96,54.15564 120.96,120.96v0c0,66.80436 -54.15564,120.96 -120.96,120.96z" fill="none"></path></g></svg>
+							</div>
+						</div>
+						<div id="sub3" class="tabbutton" title="Background Image">
+							<div class="tabicon">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="24" height="24"
+								viewBox="0 0 48 48"
+								style="fill:#000000;"
+								class="icon icons8-picture"><g><path style="fill:#F57C00;" d="M 40 41 L 8 41 C 5.800781 41 4 39.199219 4 37 L 4 11 C 4 8.800781 5.800781 7 8 7 L 40 7 C 42.199219 7 44 8.800781 44 11 L 44 37 C 44 39.199219 42.199219 41 40 41 Z "></path><path style="fill:#FFF9C4;" d="M 38 16 C 38 17.65625 36.65625 19 35 19 C 33.34375 19 32 17.65625 32 16 C 32 14.34375 33.34375 13 35 13 C 36.65625 13 38 14.34375 38 16 Z "></path><path style="fill:#942A09;" d="M 20 16 L 9 32 L 31 32 Z "></path><path style="fill:#BF360C;" d="M 31 22 L 23 32 L 39 32 Z "></path></g></svg>
+							</div>
+						</div>
+						<div id="sub4" class="tabbutton" title="Dynamic Background">
+							<div class="tabicon">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="24" height="24"
+								viewBox="0 0 252 252"
+								style="fill:#000000;"
+								class="icon icons8-matrix-desktop"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><g><g><path d="M31.5,52.5c0,-11.60742 9.39258,-21 21,-21h147c11.60742,0 21,9.39258 21,21v147c0,11.58691 -9.39258,21 -21,21h-147c-11.60742,0 -21,-9.41309 -21,-21z" fill="#333333"></path><path d="M89.25,68.25h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M89.25,84h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M89.25,105h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M89.25,126h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M89.25,152.25h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M89.25,183.75h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M89.25,52.5h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M89.25,42h10.5v5.25h-10.5z" fill="#ffffff"></path><path d="M131.25,42h10.5v5.25h-10.5z" fill="#ffffff"></path><path d="M47.25,78.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M47.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M47.25,115.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M47.25,136.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M47.25,162.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M47.25,194.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M47.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M68.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M47.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M68.25,57.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M68.25,78.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M68.25,99.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M68.25,131.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M110.25,57.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M110.25,73.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M110.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M110.25,115.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M110.25,141.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M110.25,173.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M110.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,84h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,99.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M131.25,120.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M131.25,141.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M131.25,168h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M131.25,199.5h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M131.25,68.25h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,52.5h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,78.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M194.25,115.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M194.25,136.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M194.25,162.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M194.25,194.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M194.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M173.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M173.25,78.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M173.25,99.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M173.25,120.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M173.25,147h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M173.25,178.5h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M173.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M152.25,57.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M152.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M152.25,73.5h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M152.25,99.75h10.5v10.5h-10.5z" fill="#7f8c8d"></path></g></g></g></svg>
+							</div>
+						</div>
+						<div id="sub5" class="tabbutton" title="Blur Effect">
+							<div class="tabicon">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="24" height="24"
+								viewBox="0 0 48 48"
+								style="fill:#2196F3;"><g><path d="M 24 44 C 16.832031 44 11 38.183594 11 31.027344 C 11 24 24 4 24 4 C 24 4 37 24 37 31.027344 C 37 38.183594 31.167969 44 24 44 Z "></path></g></svg>
+							</div>
+						</div>
+						<div id="btnmultiopacity" class="tabbutton tabspecial" title="Multiple Website Opacity">
+							<div class="tabicon">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="24" height="24"
+								viewBox="0 0 24 24"
+								style="fill:#333333;"><g><path d="M 4 4 C 2.894531 4 2 4.894531 2 6 L 2 13 C 2 14.105469 2.894531 15 4 15 L 7 15 L 7 11 C 7 9.34375 8.34375 8 10 8 L 16 8 L 16 6 C 16 4.894531 15.105469 4 14 4 Z M 10 9 C 8.894531 9 8 9.894531 8 11 L 8 18 C 8 19.105469 8.894531 20 10 20 L 20 20 C 21.105469 20 22 19.105469 22 18 L 22 11 C 22 9.894531 21.105469 9 20 9 Z "></path></g></svg>
+							</div>
 						</div>
 						<div class="dimrange">
-						<span data-i18n="titelopacity"></span>:
-						<input type="range" id="slider" min="0" max="100" step="1" value="0"><input type="number" id="interval" min="0" max="100" step="1" value="0" maxlength="3" size="4">
-                        </div>
+							<div>
+								<span data-i18n="titelopacity"></span>:
+							</div>
+							<div class="tabopacityslider">
+								<input type="range" id="slider" min="0" max="100" step="1" value="0" aria-label="The opacity value from the slider" aria-valuemin="1" aria-valuemax="100" aria-valuenow="0">
+							</div>
+							<div>
+								<input type="number" id="interval" min="0" max="100" step="1" value="0" maxlength="3" size="4" aria-label="The opacity value from the number box" aria-valuemin="1" aria-valuemax="100" aria-valuenow="0">
+							</div>
+						</div>
 					</div>
-					<div>
-						<div class="radio">
-							<label>
-								<input id="lightimagelin" type="radio" name="lightimage" value="linear">
-								<span data-i18n="titellinear"></span>:
-								<select id="linearsq">
+				</div>
+				<section>
+					<h3 data-i18n="titelscreen" id="screen"></h3>
+					<div id="darklayersettings" role="radiogroup" aria-labelledby="screen">
+						<div id="colorpanel" class="">
+							<div class="md-radio">
+								<input id="lightimagen" type="radio" name="bcklightimage" value="never" role="radio" aria-labelledby="screen" aria-label="choose your color">
+								<label for="lightimagen"><div><span data-i18n="titelcolor"></span></div></label>
+							</div>
+							<div class="md-color md-subgroup">
+								<div class="input-color-container"><input id="lightcolor" type="color" list="datalightcolor" aria-label="The dark layer color">
+									<datalist id="datalightcolor">
+									<option>#FFFFFF</option>
+									<option>#FF0000</option>
+									<option>#FF7700</option>
+									<option>#FFEE00</option>
+									<option>#00FF00</option>
+									<option>#008000</option>
+									<option>#3CB4FE</option>
+									<option>#0000FF</option>
+									<option>#808080</option>
+									<option>#000000</option>
+									</datalist>
+								</div>
+								<span data-i18n="descolorfixcolor"></span>
+							</div>
+						</div>
+						<div id="gradientpanel" class="hidden">
+							<div class="md-radio">
+								<input id="lightimagelin" type="radio" name="bcklightimage" value="linear" role="group" aria-labelledby="screen" aria-label="Set to lineair gradient background">
+								<label for="lightimagelin"><div><span data-i18n="titellinear"></span></div></label>
+							</div>
+							<div class="md-selectfield md-subgroup">
+								<select id="linearsq" class="browser-default">
 									<option value="top" data-i18n="top"></option>
 									<option value="bottom" data-i18n="bottom"></option>
 									<option value="right" data-i18n="right"></option>
 									<option value="left" data-i18n="left"></option>
 								</select>
-								<span data-i18n="titelcolora"></span>
+							</div>
+							<div class="md-color md-subgroup">
+								<div class="input-color-container">
 								<input id="colora" type="color" class="color" list="datalightcolor">
-								<input type="number" id="intervallina" min="0" max="100" step="1" value="0" maxlength="3" size="4">
-								<span data-i18n="titelcolorb"></span>
+								</div>
+								<label for="colora"><div><span data-i18n="titelcolora"></span></div></label>
+							</div>
+							<input type="number" id="intervallina" min="0" max="100" step="1" value="0" maxlength="3" size="4">
+							<div class="md-color md-subgroup">
+								<div class="input-color-container">
 								<input id="colorb" type="color" class="color" list="datalightcolor">
-								<input type="number" id="intervallinb" min="0" max="100" step="1" value="0" maxlength="3" size="4">
-							</label>
+								</div>
+								<label for="colorb"><div><span data-i18n="titelcolorb"></span></div></label>
+							</div>
+							<input type="number" id="intervallinb" min="0" max="100" step="1" value="0" maxlength="3" size="4">
 						</div>
-					</div>
-					<div id="customHomePageGroup">
-						<div class="radio">
-							<label>
-								<input id="lightimagea" type="radio" name="lightimage" value="only">
-								<span data-i18n="titelimage"></span>:
-							</label>
+						<div id="imagepanel" class="hidden">
+							<div class="md-radio md-subgroup">
+								<input id="lightimagea" type="radio" name="bcklightimage" value="only" role="group" aria-labelledby="screen" aria-label="Set to the image background">
+								<label for="lightimagea"><div><span data-i18n="titelimage"></span></div></label>
+							</div>
+							<div>
+								<button id="wallpapershow" data-i18n="titellessmore"></button>
+								<button id="wallpaperhide" data-i18n="titelshowmore"></button>
+								<input id="lightimage" type="url" alt="Background Image" pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" aria-label="The image address">
+							</div>
+							<div id="imagegallery" style="display:none;">
+								<div class="hoveroptionbox">
+									<div class="hoveroptionwall1"><div class="wall1showme"><button id="totlswallpaper1" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage1" alt="Screenshot1" height="70" src="" width="100" class="dynamicshaduw">
+								</div>
+								<div class="hoveroptionbox">
+									<div class="hoveroptionwall2"><div class="wall2showme"><button id="totlswallpaper2" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage2" alt="Screenshot2" height="70" src="" width="100" class="dynamicshaduw">
+								</div>
+								<div class="hoveroptionbox">
+									<div class="hoveroptionwall3"><div class="wall3showme"><button id="totlswallpaper3" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage3" alt="Screenshot3" height="70" src="" width="100" class="dynamicshaduw">
+								</div>
+								<div class="hoveroptionbox">
+									<div class="hoveroptionwall4"><div class="wall4showme"><button id="totlswallpaper4" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage4" alt="Screenshot4" height="70" src="" width="100" class="dynamicshaduw">
+								</div>
+								<div class="hoveroptionbox">
+									<div class="hoveroptionwall5"><div class="wall5showme"><button id="totlswallpaper5" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage5" alt="Screenshot5" height="70" src="" width="100" class="dynamicshaduw">
+								</div>
+							</div>
 						</div>
-						<div>
-							<button id="wallpapershow" data-i18n="titellessmore"></button>
-							<button id="wallpaperhide" data-i18n="titelshowmore"></button>
-							<input id="lightimage" type="url" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)">
-						</div>
-					</div>
-					<div id="imagegallery" style="display:none;">
-					<img id="totlswallpaper1" alt="Screenshot1" height="70" src="images/totlminis1.png" width="100" class="imageshaduw">
-					<img id="totlswallpaper2" alt="Screenshot2" height="70" src="images/totlminis2.png" width="100" class="imageshaduw">
-					<img id="totlswallpaper3" alt="Screenshot3" height="70" src="images/totlminis3.png" width="100" class="imageshaduw">
-					<img id="totlswallpaper4" alt="Screenshot4" height="70" src="images/totlminis4.png" width="100" class="imageshaduw">
-					<img id="totlswallpaper5" alt="Screenshot5" height="70" src="images/totlminis5.png" width="100" class="imageshaduw">
-					</div>
-					<div id="customHomePageGroup" style="display:none;">
-						<label>
-								<input id="dynamic1" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicfishtank"></span>
-						</label>
-						<label>
-								<input id="dynamic2" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicblocks"></span>
-						</label>
-						<label>
-								<input id="dynamic3" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicraindrops"></span>
-						</label>
-						<label>
-								<input id="dynamic4" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamiccloud"></span>
-						</label>
-						<label>
-								<input id="dynamic5" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicspace"></span>
-						</label>
-						<label>
-								<input id="dynamic6" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicsmoke"></span>
-						</label>
-						<label>
-								<input id="dynamic7" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicdotscolor"></span>
-						</label>						<label>
-								<input id="dynamic8" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicstorm"></span>
-						</label>
-						<label>
-								<input id="dynamic9" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamictriangulation"></span>
-						</label>
-						<label>
-								<input id="dynamic10" type="radio" name="dynamicbackground">
-								<span data-i18n="desdynamicstars"></span>
-						</label>
-					</div>
-					<div id="customHomePageGroup">
-						<div class="radio">
-							<label>
-								<input id="dynamic" type="checkbox">
-								<span data-i18n="titeldynamic"></span>:
-							</label>
-						</div>
-						<div>
-							<button id="dynamicshow" data-i18n="titellessmore"></button>
-							<button id="dynamichide" data-i18n="titelshowmore"></button>
-							<input id="lightdynamic" type="text" readonly>
-						</div>
-					</div>
-					<div id="dynamicgallery" style="display:none;">
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn1"><div class="dyn1showme"><br><button id="totldynpaper1" data-i18n="hoveroptionapply"></button></div></div>									
-					<img alt="Dynshot1" height="70" src="images/totldyn1.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn2"><div class="dyn2showme"><br><button id="totldynpaper2" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot2" height="70" src="images/totldyn2.png" width="100" class="dynamicshaduw">
-					</div>					
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn3"><div class="dyn3showme"><br><button id="totldynpaper3" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot3" height="70" src="images/totldyn3.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn4"><div class="dyn4showme"><br><button id="totldynpaper4" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot4" height="70" src="images/totldyn4.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn5"><div class="dyn5showme"><input id="hoveroptiondyn5" type="checkbox"><span data-i18n="hoveroptiondyn5"></span><br><button id="totldynpaper5" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot5" height="70" src="images/totldyn5.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn6"><div class="dyn6showme"><br><button id="totldynpaper6" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot6" height="70" src="images/totldyn6.png" width="100" class="dynamicshaduw">
-					</div>
+						<div id="dynamicpanel" class="hidden">
+								<div id="customDynamicGroup">
+										<label>
+												<input id="dynamic1" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicfishtank"></span>
+										</label>
+										<label>
+												<input id="dynamic2" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicblocks"></span>
+										</label>
+										<label>
+												<input id="dynamic3" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicraindrops"></span>
+										</label>
+										<label>
+												<input id="dynamic4" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamiccloud"></span>
+										</label>
+										<label>
+												<input id="dynamic5" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicspace"></span>
+										</label>
+										<label>
+												<input id="dynamic6" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicsmoke"></span>
+										</label>
+										<label>
+												<input id="dynamic7" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicdotscolor"></span>
+										</label>						<label>
+												<input id="dynamic8" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicstorm"></span>
+										</label>
+										<label>
+												<input id="dynamic9" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamictriangulation"></span>
+										</label>
+										<label>
+												<input id="dynamic10" type="radio" name="dynamicbackground">
+												<span data-i18n="desdynamicstars"></span>
+										</label>
+									</div>
+									<div class="md-checkbox">
+										<input id="dynamic" type="checkbox">
+										<label for="dynamic"><div><span data-i18n="titeldynamic"></span></div></label>
+									</div>
+									<div class="relative">
+										<button id="dynamicshow" data-i18n="titellessmore"></button>
+										<button id="dynamichide" data-i18n="titelshowmore"></button>
+										<input id="lightdynamic" type="url" readonly>
+										<div id="extradyn">
+											<div class="md-checkbox md-subgroup">
+												<input id="hoveroptiondyn5" type="checkbox">
+												<label for="hoveroptiondyn5"><div><span data-i18n="hoveroptiondyn5"></span></div></label>
+											</div>
+										</div>
+									</div>
 
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn7"><div class="dyn7showme"><br><button id="totldynpaper7" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot7" height="70" src="images/totldyn7.png" width="100" class="dynamicshaduw">
-					</div>
+									<div id="dynamicgallery" style="display:none;">
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn1"><div class="dyn1showme"><button id="totldynpaper1" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn1" alt="Dynshot1" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn2"><div class="dyn2showme"><button id="totldynpaper2" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn2" alt="Dynshot2" height="70" src="" width="100" class="dynamicshaduw">
+										</div>					
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn3"><div class="dyn3showme"><button id="totldynpaper3" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn3" alt="Dynshot3" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn4"><div class="dyn4showme"><button id="totldynpaper4" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn4" alt="Dynshot4" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn5"><div class="dyn5showme">
+										<button id="totldynpaper5" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn5" alt="Dynshot5" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn6"><div class="dyn6showme"><button id="totldynpaper6" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn6" alt="Dynshot6" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
 					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn8"><div class="dyn8showme"><br><button id="totldynpaper8" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot8" height="70" src="images/totldyn8.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn9"><div class="dyn9showme"><br><button id="totldynpaper9" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot8" height="70" src="images/totldyn9.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					<div class="hoveroptionbox">
-					<div class="hoveroptiondyn10"><div class="dyn10showme"><br><button id="totldynpaper10" data-i18n="hoveroptionapply"></button></div></div>					
-					<img alt="Dynshot8" height="70" src="images/totldyn10.png" width="100" class="dynamicshaduw">
-					</div>
-					
-					</div>					
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn7"><div class="dyn7showme"><button id="totldynpaper7" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn7" alt="Dynshot7" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn8"><div class="dyn8showme"><button id="totldynpaper8" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn8" alt="Dynshot8" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn9"><div class="dyn9showme"><button id="totldynpaper9" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn9" alt="Dynshot9" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+										
+										<div class="hoveroptionbox">
+										<div class="hoveroptiondyn10"><div class="dyn10showme"><button id="totldynpaper10" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn10" alt="Dynshot8" height="70" src="" width="100" class="dynamicshaduw">
+										</div>
+									</div>
+						</div>
+						<div id="blurpanel" class="hidden">
+							<div class="md-checkbox md-subgroup">
+									<input id="blur" type="checkbox">
+									<label for="blur"><div><span data-i18n="titelblur"></span></div></label>
+							</div>
+						</div>
 				</div>
 				</section>
-				<section id="sectionmobileappbox">			
+				<section id="sectionmobileappbox">
 				<div id="mobileappbox">
 					<div id="matllo"><span data-i18n="desmobileapp"></span></div>
 					<div id="mant"><span data-i18n="nothanks"></span></div>
@@ -371,23 +503,51 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelautoplay"></h3>
 				<div>
 				<div id="helpautoplay" class="helpwhatproblem" data-i18n="helpautoplay"></div>
-				<label class="checkbox"><input id="autoplay" type="checkbox"><span data-i18n="desautoplay"></span>&nbsp;&nbsp;&nbsp;(<input id="aplay" type="checkbox"><span data-i18n="desaplay"></span> <input id="apause" type="checkbox"><span data-i18n="desapause"></span> <input id="astop" type="checkbox"><span data-i18n="desastop"></span>)</label>
-				<label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="autoplaydelay" type="checkbox"><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</label>
-				<div class="grey-text"><span data-i18n="html5andyoutube"></span></div>
-				
-				<label class="checkbox"><input id="autoplayonly" type="checkbox"><span data-i18n="desautoplayonly"></span></label>
-				<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="autoplaychecklistwhite" type="radio" name="autoplaychecklist" value="true"><span data-i18n="titelautoplaywhitelist"></span></label>
-				&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="autoplaychecklistblack" type="radio" name="autoplaychecklist" value="black"><span data-i18n="titelautoplayblacklist"></span></label>
+				<div class="md-checkbox md-subgroup">
+					<input id="autoplay" type="checkbox">
+					<label for="autoplay"><div><span data-i18n="desautoplay"></span></div></label>
+				</div>
+				&nbsp;&nbsp;&nbsp;(
+				<div class="md-checkbox md-subgroup">
+					<input id="aplay" type="checkbox">
+					<label for="aplay"><div><span data-i18n="desaplay"></span></div></label>
+				</div>
+				<div class="md-checkbox md-subgroup">
+					<input id="apause" type="checkbox">
+					<label for="apause"><div><span data-i18n="desapause"></span></div></label>
+				</div>
+				<div class="md-checkbox md-subgroup">
+					<input id="astop" type="checkbox">
+					<label for="astop"><div><span data-i18n="desastop"></span></div></label>
+				</div>)
+				<div class="md-checkbox md-subin">
+					<input id="autoplaydelay" type="checkbox">
+					<label for="autoplaydelay"><div><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</div></label>
+				</div>
+				<div class="md-checkbox">
+					<input id="autoplayonly" type="checkbox">
+					<label for="autoplayonly"><div><span data-i18n="desautoplayonly"></span></div></label>
+				</div>
+				<div role="radiogroup" aria-labelledby="autoplayonly">
+				<div class="md-radio md-subin">
+					<input id="autoplaychecklistwhite" type="radio" name="autoplaychecklist" value="true" role="radio" aria-labelledby="autoplayonly">
+					<label for="autoplaychecklistwhite"><div><span data-i18n="titelautoplaywhitelist"></span></div></label>
+				</div>
+				<div class="md-radio md-subin">
+					<input id="autoplaychecklistblack" type="radio" name="autoplaychecklist" value="black" role="radio" aria-labelledby="autoplayonly">
+					<label for="autoplaychecklistblack"><div><span data-i18n="titelautoplayblacklist"></span></div></label>
+				</div>
+				</div>
 				<form id="formautoplay">
 				  <table id="autoplaywhitelist">
  				   <tr>
  				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="autoplaywebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
+  				     <td><input id="autoplaywebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
  				     <td><button type="submit" id="autoplayaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
  				   </tr>
  				   <tr>
-				      <td colspan="2"><select id="autoplayDomainsBox" name="autoplayentryList" size="3" multiple=""></select></td>
-				      <td valign="center"><button type="button" id="autoplayremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				      <td colspan="2"><select id="autoplayDomainsBox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoDim feature"></select></td>
+				      <td valign="top"><button type="button" id="autoplayremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 				    </tr>
 				  </table>
 				</form>
@@ -396,21 +556,44 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>			
 				<h3 data-i18n="titelautostop"></h3>
 				<div>
-				<label class="checkbox"><input id="autostop" type="checkbox"><span data-i18n="desautostop"></span></label>
-				<div class="grey-text"><span data-i18n="html5andyoutube"></span></div>
-				<label class="checkbox"><input id="autostoponly" type="checkbox"><span data-i18n="desautostoponly"></span></label>
-				<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="autostopchecklistwhite" type="radio" name="autostopchecklist" value="true"><span data-i18n="titelautostopwhitelist"></span></label>
-				&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="autostopchecklistblack" type="radio" name="autostopchecklist" value="black"><span data-i18n="titelautostopblacklist"></span></label>
+				<div class="md-checkbox">
+					<input id="autostop" type="checkbox">
+					<label for="autostop"><div><span data-i18n="desautostop"></span></div></label>
+				</div>
+				<div role="radiogroup" aria-labelledby="autostop">
+				<div class="md-radio md-subin">
+					<input id="autostopred" type="radio" name="autostopbanner" value="red" role="radio" aria-labelledby="autostop">
+					<label for="autostopred"><div><span data-i18n="autostopbannerred"></span></div></label>
+					</div>
+				<div class="md-radio md-subin">
+					<input id="autostoptrans" type="radio" name="autostopbanner" value="trans" role="radio" aria-labelledby="autostop">
+					<label for="autostoptrans"><div><span data-i18n="autostopbannertrans"></span></div></label>
+				</div>
+				</div>
+				<div class="md-checkbox">
+					<input id="autostoponly" type="checkbox">
+					<label for="autostoponly"><div><span data-i18n="desautostoponly"></span></div></label>
+				</div>
+				<div role="radiogroup" aria-labelledby="autostoponly">
+				<div class="md-radio md-subin">
+					<input id="autostopchecklistwhite" type="radio" name="autostopchecklist" value="true" role="radio">
+					<label for="autostopchecklistwhite"><div><span data-i18n="titelautostopwhitelist"></span> - <span data-i18n="desautostopfeaturewhite"></span></div></label>
+				</div>
+				<div class="md-radio md-subin">
+					<input id="autostopchecklistblack" type="radio" name="autostopchecklist" value="black" role="radio">
+					<label for="autostopchecklistblack"><div><span data-i18n="titelautostopblacklist"></span> - <span data-i18n="desautostopfeatureblack"></span></div></label>
+				</div>
+				</div>
 				<form id="formautostop">
 				  <table id="autostopwhitelist">
  				   <tr>
  				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="autostopwebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
+  				     <td><input id="autostopwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
  				     <td><button type="submit" id="autostopaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
  				   </tr>
  				   <tr>
-				      <td colspan="2"><select id="autostopDomainsBox" name="autoplayentryList" size="3" multiple=""></select></td>
-				      <td valign="center"><button type="button" id="autostopremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+				      <td colspan="2"><select id="autostopDomainsBox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoStop feature"></select></td>
+				      <td valign="top"><button type="button" id="autostopremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 				    </tr>
 				  </table>
 				</form>
@@ -430,87 +613,178 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div>
 					<table class="tablefirstyt">
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelplaylist"></span></label></td>
-							<td><label class="checkbox"><input id="playlist" type="checkbox"><span data-i18n="desplaylist"></span></label></td>
+							<td><span class="item" data-i18n="titelplaylist"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="playlist" type="checkbox">
+									<label for="playlist"><div><span data-i18n="desplaylist"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelinfobar"></span></label></td>
-							<td><label class="checkbox"><input id="infobar" type="checkbox"><span data-i18n="desinfobar"></span></label></td>
+							<td><span class="item" data-i18n="titelinfobar"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="infobar" type="checkbox">
+									<label for="infobar"><div><span data-i18n="desinfobar"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titellikebutton"></span></label></td>
-							<td><label class="checkbox"><input id="likebutton" type="checkbox"><span data-i18n="deslikebutton"></span></label></td>
+							<td><span class="item" data-i18n="titellikebutton"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="likebutton" type="checkbox">
+									<label for="likebutton"><div><span data-i18n="deslikebutton"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titeladdvideobutton"></span></label></td>
-							<td><label class="checkbox"><input id="addvideobutton" type="checkbox"><span data-i18n="desaddvideobutton"></span></label></td>
+							<td><span class="item" data-i18n="titeladdvideobutton"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="addvideobutton" type="checkbox">
+									<label for="addvideobutton"><div><span data-i18n="desaddvideobutton"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelhead"></span></label></td>
-							<td><label class="checkbox"><input id="head" type="checkbox"><span data-i18n="deshead"></span></label></td>
+							<td><span class="item" data-i18n="titelhead"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="head" type="checkbox">
+									<label for="head"><div><span data-i18n="deshead"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelsharebutton"></span></label></td>
-							<td><label class="checkbox"><input id="sharebutton" type="checkbox"><span data-i18n="dessharebutton"></span></label></td>
+							<td><span class="item" data-i18n="titelsharebutton"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="sharebutton" type="checkbox">
+									<label for="sharebutton"><div><span data-i18n="dessharebutton"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelsuggestions"></span></label></td>
-							<td><label class="checkbox"><input id="suggestions" type="checkbox"><span data-i18n="dessuggestions"></span></label></td>
+							<td><span class="item" data-i18n="titelsuggestions"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="suggestions" type="checkbox">
+									<label for="suggestions"><div><span data-i18n="dessuggestions"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelvideoheadline"></span></label></td>
-							<td><label class="checkbox"><input id="videoheadline" type="checkbox"><span data-i18n="desvideoheadline"></span></label></td>
+							<td><span class="item" data-i18n="titelvideoheadline"></span></td>
+							<td>
+								<div class="md-checkbox md-subgroup">
+									<input id="videoheadline" type="checkbox">
+									<label for="videoheadline"><div><span data-i18n="desvideoheadline"></span></div></label>
+								</div>
+								<div class="md-color md-subgroup">
+									<div class="input-color-container">
+										<input id="titleinvertcolor" type="color" class="color" list="datalightcolor" aria-label="Choose the invert color for the video title">
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titelviewcount"></span></label></td>
-							<td><label class="checkbox"><input id="viewcount" type="checkbox"><span data-i18n="desviewcount"></span></label></td>
+							<td><span class="item" data-i18n="titelviewcount"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="viewcount" type="checkbox">
+									<label for="viewcount"><div><span data-i18n="desviewcount"></span></div></label>
+								</div>
+							</td>
 						</tr>
 						<tr>
-							<td><label class="checkbox"><span class="item" data-i18n="titellikebar"></span></label></td>
-							<td><label class="checkbox"><input id="likebar" type="checkbox"><span data-i18n="deslikebar"></span></label></td>
+							<td><span class="item" data-i18n="titellikebar"></span></td>
+							<td>
+								<div class="md-checkbox">
+									<input id="likebar" type="checkbox">
+									<label for="likebar"><div><span data-i18n="deslikebar"></span></div></label>
+								</div>
+							</td>
 						</tr>
 					</table>
 				</div>
 				</section>
 				<section>
-				<h3></h3>				
-				<div><table>
-				<tr><td><label class="checkbox"><input id="autowidthyoutube" type="checkbox"><span data-i18n="titelautowidthyoutube"></span></label></td></tr>
-				<tr><td><label class="checkbox"><input id="customqualityyoutube" type="checkbox"><span data-i18n="titelqualityyoutube"></span></label>
-				<label class="checkbox"><span data-i18n="titelmaxqualityyoutube"></span>
-				<select id="youtubequality">
-					<option value="highres">highres</option>
-					<option value="hd4320">4320p (8k)</option>
-					<option value="hd2880">2880p (5K)</option>
-					<option value="hd2160">2160p (4k)</option>
-					<option value="hd1440">1440p</option>
-					<option value="hd1080">1080p</option>
-					<option value="hd720">720p</option>
-					<option value="large">480p</option>
-					<option value="medium">360p</option>
-					<option value="small">240p</option>
-					<option value="tiny">144p</option>
-					<option value="default">default</option>
-				</select>&nbsp;&nbsp;<input id="block60fps" type="checkbox"><span data-i18n="titelblock60fps"></span></label></td></tr>
-				<tr><td><label class="checkbox"><input id="cinemaontop" type="checkbox"><span data-i18n="titelcinemaontop"></span></label></td></tr>
-				<tr><td><label class="checkbox"><input id="no360youtube" type="checkbox"><span data-i18n="titel360youtube"></span></label>
-				</table>				
+				<h3 role="none"></h3>
+				<div>
+				<table>
+				<tr>
+					<td>
+						<div class="md-checkbox">
+							<input id="autowidthyoutube" type="checkbox">
+							<label for="autowidthyoutube"><div><span data-i18n="titelautowidthyoutube"></span></div></label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="md-checkbox subgroup">
+							<input id="customqualityyoutube" type="checkbox">
+							<label for="customqualityyoutube"><div><span data-i18n="titelqualityyoutube"></span></div></label>
+						</div>
+						<div class="md-selectfield md-subgroup">
+								<label><span data-i18n="titelmaxqualityyoutube"></span></label>
+								<select id="youtubequality" class="browser-default" aria-label="Choose the default video quality for YouTube">
+									<option value="highres">highres</option>
+									<option value="hd4320">4320p (8k)</option>
+									<option value="hd2880">2880p (5K)</option>
+									<option value="hd2160">2160p (4k)</option>
+									<option value="hd1440">1440p</option>
+									<option value="hd1080">1080p</option>
+									<option value="hd720">720p</option>
+									<option value="large">480p</option>
+									<option value="medium">360p</option>
+									<option value="small">240p</option>
+									<option value="tiny">144p</option>
+									<option value="default">default</option>
+								</select>
+						</div>
+						&nbsp;&nbsp;
+						<div class="md-checkbox md-subgroup">
+							<input id="block60fps" type="checkbox">
+							<label for="block60fps"><div><span data-i18n="titelblock60fps"></span></div></label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="md-checkbox">
+							<input id="cinemaontop" type="checkbox">
+							<label for="cinemaontop"><div><span data-i18n="titelcinemaontop"></span></div></label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="md-checkbox">
+							<input id="no360youtube" type="checkbox">
+							<label for="no360youtube"><div><span data-i18n="titel360youtube"></span></div></label>
+						</div>
+					</td>
+				</tr>
+				</table>
 				</div>
 				</section>
 			</div>
 			<div id="tab2" class="page hidden">
 				<h1 data-i18n="visualeffects"></h1>
-				<br>
-				<div id="example2"></div>
 				<section>
-				<div>
-				<br><br>
-				<video id="beeld" controls width="640" height="360" crossOrigin="anonymous" preload="none" poster="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360.jpg" data-video="1">
+				<div id="example2"></div>
+				<div class="atmosbox">
+				<video id="beeld" controls crossOrigin="anonymous" preload="none" poster="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360.jpg" data-video="1">
 					<source src="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.mp4" type="video/mp4">
 					<source src="https://www.turnoffthelights.com/extension/video/big_buck_bunny_640x360_2.28.ogv" type="video/ogv">
+					<track label="English - subtitles" kind="subtitles" srclang="en" src="https://www.turnoffthelights.com/extension/video/captions/vtt/bunny-en.vtt">
+					<track label="English - captions" kind="captions" srclang="en" src="https://www.turnoffthelights.com/extension/video/captions/vtt/bunny-en.vtt">
+					<track label="English - descriptions" kind="descriptions" srclang="en" src="https://www.turnoffthelights.com/extension/video/captions/vtt/bunny-en.vtt">
 				</video>
 				<canvas id="stefanvdvivideffect1" data-video="1" class="stefanvdvivideffect"></canvas>
-				<br><br><br><br>
 				</div>
 				</section>
 				<section id="sectionauroraplayerappbox">			
@@ -522,104 +796,216 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					<div id="apgetapp"><span data-i18n="downloadtheapp"></span></div>
 				</div>
 				</section>
+				<div class="tabbar">
+						<div class=tabbarintern>
+							<div id="tv1" class="tabbutton tabhighlight" title="Atmosphere Lighting">
+								<div class="tabicon">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="24" height="24"
+									viewBox="0 0 48 48"
+									style="enable-background:new 0 0 48 48;fill:#333333;"><line style="fill:none;stroke:#B0BEC5;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="37" y1="11" x2="5" y2="43"></line><line style="fill:none;stroke:#607D8B;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;" x1="28.5" y1="19.5" x2="13.5" y2="34.5"></line><line style="fill:none;stroke:#D84315;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="38" y1="10" x2="29" y2="19"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="28" y1="5" x2="28" y2="35"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="25.284" y1="12.995" x2="31.688" y2="30"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="23" y1="7" x2="24.144" y2="10.003"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="13" y1="20" x2="43" y2="20"></line><g><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="17" y1="9" x2="39" y2="31"></line></g><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="28" y1="20" x2="39" y2="9"></line><circle style="fill:#FFC107;" cx="33" cy="33" r="1"></circle><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="23.762" y1="31" x2="23" y2="33"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="31.906" y1="10" x2="24.905" y2="28"></line><circle style="fill:#FFC107;" cx="33" cy="7" r="1"></circle><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="15" y1="25" x2="41" y2="15"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="38.996" y1="24.237" x2="41" y2="25"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="20.997" y1="17.312" x2="35.996" y2="23.094"></line><line style="fill:none;stroke:#FFC107;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="15" y1="15" x2="17.004" y2="15.772"></line><circle style="fill:#FFECB3;" cx="28" cy="20" r="2"></circle></svg>
+								</div>
+							</div>
+							<div id="tv2" class="tabbutton" title="One Solid Color">
+								<div class="tabicon">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="24" height="24"
+									viewBox="0 0 48 48"
+									style="fill:#333333;"><g><path style="fill:#263238;" d="M 23 44 L 25 44 L 28 41 L 20 41 "></path><path style=" fill:#9FA8DA;" d="M 26 42 L 22 42 C 19.800781 42 18 40.199219 18 38 L 18 34 L 30 34 L 30 38 C 30 40.199219 28.199219 42 26 42 Z "></path><path style="fill:#5C6BC0;" d="M 30 38 L 18.398438 39.601563 C 18.699219 40.300781 19.300781 41 20 41.398438 L 29.398438 40.101563 C 29.800781 39.5 30 38.800781 30 38 Z "></path><path style="fill:#5C6BC0;" d="M 18 35.699219 L 18 37.699219 L 30 36 L 30 34 Z "></path><path style="fill:#FFC107;" d="M 18 34 C 15 32.101563 9 26 9 19 C 9 10.699219 15.699219 4 24 4 C 32.300781 4 39 10.699219 39 19 C 39 26 33 32.101563 30 34 Z "></path><path style="fill:#FFF176;" d="M 30.601563 17.199219 L 27.601563 15.199219 C 27.300781 15 26.800781 15 26.5 15.199219 L 24 16.800781 L 21.601563 15.199219 C 21.300781 15 20.800781 15 20.5 15.199219 L 17.5 17.199219 C 17.300781 17.398438 17.101563 17.601563 17.101563 17.898438 C 17.101563 18.199219 17.101563 18.5 17.300781 18.699219 L 21.101563 23.398438 L 21.101563 34 L 23.101563 34 L 23.101563 23 C 23.101563 22.800781 23 22.601563 22.898438 22.398438 L 19.601563 18.300781 L 21.101563 17.300781 L 23.5 18.898438 C 23.800781 19.101563 24.300781 19.101563 24.601563 18.898438 L 27 17.300781 L 28.5 18.300781 L 25.199219 22.398438 C 25.101563 22.601563 25 22.800781 25 23 L 25 34 L 27 34 L 27 23.398438 L 30.800781 18.699219 C 31 18.5 31.101563 18.199219 31 17.898438 C 30.898438 17.601563 30.800781 17.300781 30.601563 17.199219 Z "></path></g></svg>
+								</div>
+							</div>
+							<div id="tv3" class="tabbutton" title="Four Solid Colors">
+								<div class="tabicon">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="24" height="24"
+									viewBox="0 0 252 252"
+									style="fill:#333333;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><g><g><path d="M31.5,52.5v147c0,11.5459 9.4541,21 21,21h147c11.5459,0 21,-9.4541 21,-21v-147c0,-11.5459 -9.4541,-21 -21,-21h-147c-11.5459,0 -21,9.4541 -21,21" fill="#222222"></path><path d="M84,42c-23.15332,0 -42,18.84668 -42,42c0,23.15332 18.84668,42 42,42c23.15332,0 42,-18.84668 42,-42c0,-23.15332 -18.84668,-42 -42,-42z" fill="#333333"></path><path d="M84,126c-23.15332,0 -42,18.84668 -42,42c0,23.15332 18.84668,42 42,42c23.15332,0 42,-18.84668 42,-42c0,-23.15332 -18.84668,-42 -42,-42z" fill="#333333"></path><path d="M168,126c-23.15332,0 -42,18.84668 -42,42c0,23.15332 18.84668,42 42,42c23.15332,0 42,-18.84668 42,-42c0,-23.15332 -18.84668,-42 -42,-42z" fill="#333333"></path><path d="M168,42c-23.15332,0 -42,18.84668 -42,42c0,23.15332 18.84668,42 42,42c23.15332,0 42,-18.84668 42,-42c0,-23.15332 -18.84668,-42 -42,-42z" fill="#333333"></path><path d="M199.5,84c0,17.39063 -14.10937,31.5 -31.5,31.5c-17.39062,0 -31.5,-14.10937 -31.5,-31.5c0,-17.39062 14.10938,-31.5 31.5,-31.5c17.39063,0 31.5,14.10938 31.5,31.5z" fill="#f4c20d"></path><path d="M115.5,84c0,17.39063 -14.10937,31.5 -31.5,31.5c-17.39062,0 -31.5,-14.10937 -31.5,-31.5c0,-17.39062 14.10938,-31.5 31.5,-31.5c17.39063,0 31.5,14.10938 31.5,31.5z" fill="#3cba54"></path><path d="M199.5,168c0,17.39063 -14.10937,31.5 -31.5,31.5c-17.39062,0 -31.5,-14.10937 -31.5,-31.5c0,-17.39062 14.10938,-31.5 31.5,-31.5c17.39063,0 31.5,14.10938 31.5,31.5z" fill="#4885ed"></path><path d="M115.5,168c0,17.39063 -14.10937,31.5 -31.5,31.5c-17.39062,0 -31.5,-14.10937 -31.5,-31.5c0,-17.39062 14.10938,-31.5 31.5,-31.5c17.39063,0 31.5,14.10938 31.5,31.5z" fill="#db3236"></path><path d="M89.25,68.25c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#3cba54"></path><path d="M105,78.75c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#3cba54"></path><path d="M173.25,68.25c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#f4c20d"></path><path d="M189,78.75c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#f4c20d"></path><path d="M89.25,152.25c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#db3236"></path><path d="M105,162.75c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#db3236"></path><path d="M173.25,152.25c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#4885ed"></path><path d="M189,162.75c0,2.8916 -2.3584,5.25 -5.25,5.25c-2.8916,0 -5.25,-2.3584 -5.25,-5.25c0,-2.8916 2.3584,-5.25 5.25,-5.25c2.8916,0 5.25,2.3584 5.25,5.25z" fill="#4885ed"></path></g></g></g></svg>
+								</div>
+							</div>
+							<div id="tv4" class="tabbutton" title="Real Vivid mode">
+								<div class="tabicon">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="24" height="24"
+									viewBox="0 0 48 48"
+									style="enable-background:new 0 0 48 48;fill:#333333;"><polyline style="fill:#263238;" points="23.095,46 25.095,46 28.095,43 20.095,43 "></polyline><path style="fill:#9FA8DA;" d="M26.312,44h-4.625C20.209,44,19,42.791,19,41.313V36h10v5.313C29,42.791,27.791,44,26.312,44z"></path><g><path style="fill:#5C6BC0;" d="M19.005,41.517c0.015,0.778,0.389,1.466,0.958,1.921l8.924-1.265C28.953,41.948,29,41.714,29,41.469   v-1.331L19.005,41.517z"></path><polygon style="fill:#5C6BC0;" points="19,37.559 19,39.559 29,38 29,36  "></polygon></g><path style="fill:#CFD8DC;" d="M24,16h-8.607c-0.677,0-1.158,0.653-0.954,1.298C15.271,19.94,17,26.347,17,34l2,2h5h5l2-2  c0-7.653,1.729-14.06,2.562-16.702C33.765,16.653,33.284,16,32.607,16H24z"></path><polygon style="fill:#B0BEC5;" points="19,36 24,36 29,36 31,34 17,34 "></polygon><path style="fill:#CDDC39;" d="M24,2c-1.912,0-3.567,0.074-5,0.206L21,16h3h3l2-13.794C27.567,2.074,25.912,2,24,2z"></path><path style="fill:#8BC34A;" d="M29,2.206c-0.622-0.057-1.293-0.101-2.001-0.135L26,16h1h1l2.979-13.508l0.006-0.041  C30.371,2.357,29.723,2.272,29,2.206z"></path><path style="fill:#FFEB3B;" d="M21.001,2.07C20.293,2.105,19.622,2.148,19,2.206c-0.723,0.066-1.371,0.152-1.985,0.246l0.006,0.041  L20,16h1h1L21.001,2.07z"></path><g><path style="fill:#4CAF50;" d="M32.951,2.832c-0.585-0.143-1.242-0.269-1.966-0.38l-0.006,0.041L28,16h1h2l3.859-12.567   C34.317,3.214,33.687,3.011,32.951,2.832z"></path></g><path style="fill:#2962FF;" d="M34.859,3.433L34.859,3.433L31,16h1.764c0.76,0,1.452-0.426,1.789-1.106C35.652,12.681,38,7.851,38,7  C38,5.918,37.466,4.487,34.859,3.433z"></path><g><path style="fill:#FFC107;" d="M17.021,2.492l-0.006-0.041c-0.724,0.111-1.381,0.237-1.966,0.38   c-0.736,0.18-1.366,0.383-1.908,0.602L17,16h2h1L17.021,2.492z"></path></g><path style="fill:#FF5722;" d="M13.141,3.433C10.534,4.487,10,5.918,10,7c0,0.804,2.35,5.664,3.448,7.889  C13.785,15.572,14.478,16,15.239,16H17L13.141,3.433L13.141,3.433z"></path></svg>
+								</div>
+							</div>
+							<div id="tv5" class="tabbutton" title="Atmosphere Lighting range">
+								<div class="tabicon">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="24" height="24"
+									viewBox="0 0 48 48"
+									style="fill:#333333;"><g><path style="fill:#FFC107;" d="M 44 40 C 44 42.199219 38.601563 44 32 44 C 25.898438 44 20.898438 42.5 20.101563 40.5 C 20 40.398438 6 10 6 10 L 11 7 C 11 7 41.5 37.101563 43.199219 38.601563 C 43.699219 39 44 39.5 44 40 Z "></path><path style="fill:#455A64;" d="M 5.398438 14 L 5.898438 10 L 10.300781 6.5 L 14.199219 6.898438 Z "></path><path style="fill:#546E7A;" d="M 10.300781 6.5 L 5.898438 10 L 4.398438 8.300781 C 3.699219 7.398438 3.898438 6.199219 4.699219 5.5 L 6 4.5 C 6.898438 3.800781 8.101563 3.898438 8.800781 4.800781 Z "></path><path style=" fill:#607D8B;" d="M 7.300781 13.699219 L 5.898438 10 L 10.300781 6.5 L 13.5 8.699219 Z "></path><path style="fill:#FFEB3B;" d="M 44 40 C 44 37.789063 38.628906 36 32 36 C 25.371094 36 20 37.789063 20 40 C 20 42.210938 25.371094 44 32 44 C 38.628906 44 44 42.210938 44 40 Z "></path></g></svg>
+								</div>
+							</div>
+							<div class="dimrange">
+								<div>
+									<span data-i18n="titelon"></span>
+								</div>
+								<div class="tabopacityslider">
+									<input type="range" id="onoffrange" min="0" max="1" step="1" value="0" name="onoffrange" aria-label="The ON and OFF switch">
+								</div>
+								<div>
+									<span data-i18n="titeloff"></span>
+								</div>
+							</div>
+						</div>
+					</div>
 				<section>
 				<h3 data-i18n="titelambilight"></h3>
 				<div>
-				<div class="switch">
-				<div class="grey-text"><span data-i18n="titelon"></span></div>
-				<input type="range" min="0" max="1" step="1" value="0" name="onoffrange" id="onoffrange">
-				<div class="grey-text"><span data-i18n="titeloff"></span></div>
-				</div>
-				<div class="grey-text"><span data-i18n="titelvideosample"></span>: <span>Big Buck Bunny &copy; Copyright 2008 Blender Foundation.</span></div>
-				<a href="https://www.youtube.com/c/turnoffthelights?sub_confirmation=1" target="blank"><span data-i18n="titelseeonline"></span></a><br><br>
-				<label class="checkbox"><input id="ambilight" type="checkbox"><span data-i18n="desambilight"></span></label>
-				<div class="grey-text"><span data-i18n="titelsupportatmos"></span></div>					
-				<br>
-				<div>
-					<label class="radio"><input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed"><span data-i18n="desambilightfixcolor"></span> <input id="ambilightcolorhex" type="color" class="color" list="datalightambilight"></label>					
-					<label class="radio"><input id="ambilight4color" type="radio" name="ambilightcolor" value="4"><span data-i18n="desambilight4color"></span><br><span data-i18n="top"></span> <input id="ambilight1colorhex" type="color" class="color" list="datalightambilight"> <span data-i18n="bottom"></span> <input id="ambilight2colorhex" type="color" class="color" list="datalightambilight"> <span data-i18n="right"></span> <input id="ambilight3colorhex" type="color" class="color" list="datalightambilight"> <span data-i18n="left"></span> <input id="ambilight4colorhex" type="color" class="color" list="datalightambilight"></label>
-					<label class="radio"><input id="ambilightvarcolor" type="radio" name="ambilightcolor" value="real"><span data-i18n="desambilightvarcolor"></span>
-					<datalist id="datalightambilight">
-                    <option>#FFFFFF</option>
-                    <option>#FF0000</option>
-                    <option>#FF7700</option>
-                    <option>#FFEE00</option>
-                    <option>#00FF00</option>
-                    <option>#008000</option>
-                    <option>#3CB4FE</option>
-                    <option>#0000FF</option>
-                    <option>#808080</option>
-                    <option>#000000</option>
-                    </datalist>
-                    <br>
-					<div id="showwarningambilight" class="warningambilight">
-					<span class="warning" data-i18n="warning"></span><br><span data-i18n="warningtextambilight"></span>
-					<span><a href="https://www.turnoffthelights.com/browser/atmosphere-lighting.html" target="blank"><span data-i18n="titelwikiatmos"></span></a>.</span>
+					<div id="atmospanel">
+						<div class="md-checkbox  md-subgroup">	
+							<input id="ambilight" type="checkbox">
+							<label for="ambilight"><div><span data-i18n="desambilight"></span></div></label>
+						</div>
+						&nbsp;&nbsp;&nbsp;(
+						<div class="md-checkbox md-subgroup">	
+							<input id="vpause" type="checkbox">
+							<label for="vpause"><div><span data-i18n="desapause"></span></div></label>
+						</div>)
+						<div class="grey-text"><span data-i18n="titelsupportatmos"></span></div>
 					</div>
-					</label>
-				</div>
-				<div>
-					<div class="radio">
-						<label>
-						<table>
-							<tr>
-								<td><span class="item" data-i18n="titelblurradius"></span></td>
-								<td><input type="range" min="30" max="250" step="1" value="0" name="arangeblur" id="arangeblur"></td>
-								<td><input type="number" min="30" max="250" step="1" value="0" name="ambilightrangeblurradius" id="ambilightrangeblurradius" maxlength="3" size="4"></td>
-								</tr>								
-						</table>
-						</label>
-						<span data-i18n="desambilightrangeblurradius"></span>
+					<div id="atmosonepanel" class="hidden">
+						<div class="md-radio">
+							<input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed">
+							<label for="ambilightfixcolor"><div><span data-i18n="desambilightfixcolor"></span></div></label>
+						</div>
+						<div class="md-color">
+							<div class="input-color-container">
+								<input id="ambilightcolorhex" type="color" class="color" list="datalightambilight">
+							</div>
+							<label for="ambilightcolorhex"><div><span data-i18n="desatmossolidcolor"></span></div></label>
+						</div>
 					</div>
-					<div class="radio">
-						<label>
-						<table>
-							<tr>
-								<td><span class="item" data-i18n="titelspreadradius"></span></td>
-								<td><input type="range" min="0" max="50" step="1" value="0" name="arangespread" id="arangespread"></td>
-								<td><input type="number" min="0" max="50" step="1" value="0" name="ambilightrangespreadradius" id="ambilightrangespreadradius" maxlength="3" size="4"></td>
-								</tr>								
-						</table>
-						</label>
-						<span data-i18n="desambilightrangespreadradius"></span>
+					<div id="atmosfourpanel" class="hidden">
+						<div class="md-radio">
+							<input id="ambilight4color" type="radio" name="ambilightcolor" value="4">
+							<label for="ambilight4color"><div><span data-i18n="desambilight4color"></span></div></label>
+						</div>
+						<div class="md-color">
+							<div class="input-color-container">
+								<input id="ambilight1colorhex" type="color" class="color" list="datalightambilight">
+							</div>
+							<label for="ambilight1colorhex"><div><span data-i18n="top"></span></div></label>
+						</div>
+						<div class="md-color">
+							<div class="input-color-container">
+								<input id="ambilight2colorhex" type="color" class="color" list="datalightambilight">
+							</div>
+							<label for="ambilight2colorhex"><div><span data-i18n="bottom"></span></div></label>
+						</div>
+						<div class="md-color">
+							<div class="input-color-container">
+								<input id="ambilight3colorhex" type="color" class="color" list="datalightambilight">
+							</div>
+							<label for="ambilight3colorhex"><div><span data-i18n="right"></span></div></label>
+						</div>
+						<div class="md-color">
+							<div class="input-color-container">
+								<input id="ambilight4colorhex" type="color" class="color" list="datalightambilight">
+							</div>
+							<label for="ambilight4colorhex"><div><span data-i18n="left"></span></div></label>
+						</div>
 					</div>
-				<label class="checkbox"><input id="atmosvivid" type="checkbox"><span data-i18n="desatmosvivid"></span>: <a href="https://www.turnoffthelights.com" target="_blank">HTML5 video player</a></label>
-				<label class="checkbox"><span>FPS</span> <input type="number" min="1" max="60" step="1" value="12" name="drawatmosfps" id="drawatmosfps" maxlength="3" size="4">p </label>
-				<br>
-				<label class="checkbox"><input id="atmosontotlmode" type="checkbox"><span data-i18n="desatmosontotlmode"></span></label>
-				<label class="checkbox"><input id="atmosphereonly" type="checkbox"><span data-i18n="desatmosphereonly"></span></label>
-				<form id="formatmospherelighting">
-				  <table id="atmospherewhitelist">
- 				   <tr>
- 				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="atmospherewebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
- 				     <td><button type="submit" id="atmosphereaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
- 				   </tr>
- 				   <tr>
-				      <td colspan="2"><select id="atmosphereDomainsBox" name="atmosphereentryList" size="3" multiple=""></select></td>
-				      <td valign="center"><button type="button" id="atmosphereremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
-				    </tr>
-				  </table>
-				</form>
-				</div>
+					<div id="atmosvividpanel" class="hidden">
+						<div class="md-radio">
+							<input id="ambilightvarcolor" type="radio" name="ambilightcolor" value="real">
+							<label for="ambilightvarcolor"><div><span data-i18n="desambilightvarcolor"></span></div></label>
+						</div>
+						<div id="showwarningambilight" class="warningambilight">
+							<span class="warning" data-i18n="warning"></span><br><span data-i18n="warningtextambilight"></span>
+							<span><a href="https://www.turnoffthelights.com/browser/atmosphere-lighting-backlight-for-html5-videos.html" target="_blank" rel="noopener"><span data-i18n="titelwikiatmos"></span></a>.</span>
+						</div>
+						<div class="md-checkbox">	
+							<input id="atmosvivid" type="checkbox">
+							<label for="atmosvivid"><div><span data-i18n="desatmosvivid"></span>, <span>FPS</span> <input type="number" min="1" max="60" step="1" value="12" name="drawatmosfps" id="drawatmosfps" maxlength="3" size="4">p</div></label>
+						</div>
+						<datalist id="datalightambilight">
+						<option>#FFFFFF</option>
+						<option>#FF0000</option>
+						<option>#FF7700</option>
+						<option>#FFEE00</option>
+						<option>#00FF00</option>
+						<option>#008000</option>
+						<option>#3CB4FE</option>
+						<option>#0000FF</option>
+						<option>#808080</option>
+						<option>#000000</option>
+						</datalist>
+					</div>
+					<div id="atmossettingspanel" class="hidden">
+						<div class="atmosrangebox">
+							<div class="attitle"><span class="item" data-i18n="titelblurradius"></span></div>
+							<div class="atrest"><input type="range" min="30" max="250" step="1" value="0" name="arangeblur" id="arangeblur"></div>
+							<div class="atrest"><input type="number" min="30" max="250" step="1" value="0" name="ambilightrangeblurradius" id="ambilightrangeblurradius" maxlength="3" size="4"></div>
+						</div>
+						<label><span data-i18n="desambilightrangeblurradius"></span></label>
+						<br>
+						<div class="atmosrangebox">
+							<div class="attitle"><span class="item" data-i18n="titelspreadradius"></span></div>
+							<div class="atrest"><input type="range" min="0" max="50" step="1" value="0" name="arangespread" id="arangespread"></div>
+							<div class="atrest"><input type="number" min="0" max="50" step="1" value="0" name="ambilightrangespreadradius" id="ambilightrangespreadradius" maxlength="3" size="4"></div>
+						</div>
+						<label><span data-i18n="desambilightrangespreadradius"></span></label>
+						<br>
+						<div class="md-checkbox">	
+							<input id="atmosontotlmode" type="checkbox">
+							<label for="atmosontotlmode"><div><span data-i18n="desatmosontotlmode"></span></div></label>
+						</div>
+						<div class="md-checkbox">	
+							<input id="atmosphereonly" type="checkbox">
+							<label for="atmosphereonly"><div><span data-i18n="desatmosphereonly"></span></div></label>
+						</div>
+						<form id="formatmospherelighting">
+							<table id="atmospherewhitelist">
+								<tr>
+									<td><span data-i18n="titelwebsite"></span>:</td>
+									<td><input id="atmospherewebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+									<td><button type="submit" id="atmosphereaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+								</tr>
+								<tr>
+									<td colspan="2"><select id="atmosphereDomainsBox" name="atmosphereentryList" size="5" multiple=""></select></td>
+									<td valign="top"><button type="button" id="atmosphereremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+								</tr>
+							</table>
+						</form>
+						<br>
+						<div class="grey-text"><span data-i18n="titelvideosample"></span>: <span>Big Buck Bunny &copy; Copyright 2008 Blender Foundation.</span></div>
+					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelfadein"></h3>
-				<div><label class="checkbox"><input id="fadein" type="checkbox"><span data-i18n="desfadein"></span></label></div>
+				<div>
+					<div class="md-checkbox">	
+						<input id="fadein" type="checkbox">
+						<label for="fadein"><div><span data-i18n="desfadein"></span></div></label>
+					</div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelfadeout"></h3>
-				<div><label class="checkbox"><input id="fadeout" type="checkbox"><span data-i18n="desfadeout"></span></label></div>
+				<div>
+					<div class="md-checkbox">	
+						<input id="fadeout" type="checkbox">
+						<label for="fadeout"><div><span data-i18n="desfadeout"></span></div></label>
+					</div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelreflection"></h3>
-				<div><label class="checkbox"><input id="reflection" type="checkbox"><span data-i18n="desreflection"></span> <input type="number" min="0" max="100" step="1" value="20" name="reflectionamount" id="reflectionamount" maxlength="3" size="4">%</label></div>
+				<div>
+					<div class="md-checkbox">	
+						<input id="reflection" type="checkbox">
+						<label for="reflection"><div><span data-i18n="desreflection"></span> <input type="number" min="0" max="100" step="1" value="20" name="reflectionamount" id="reflectionamount" maxlength="3" size="4">%</div></label>
+					</div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelvisualization"></h3>
 				<div>
-					<label class="checkbox"><span data-i18n="desvisopacity"></span> <input type="number" id="visopacity" min="0" max="100" step="1" value="0" maxlength="3" size="4">%</label>
+					<label><span data-i18n="desvisopacity"></span> <input type="number" id="visopacity" min="0" max="100" step="1" value="0" maxlength="3" size="4">%</label>
 				</div>
 				</section>
 			</div>
@@ -628,537 +1014,1108 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>
 				<h3 id="titelflash" data-i18n="titelflash"></h3>
 				<div>
-				<label class="radio"><input id="noflash" type="radio" name="af" value="normal"><span data-i18n="desnoflash"></span></label>
-				<label class="radio"><input id="flash" type="radio" name="af" value="easy"><span data-i18n="desflash"></span> <span data-i18n="recflash" class="item"></span></label>
-				<label class="radio"><input id="hardflash" type="radio" name="af" value="hard"><span data-i18n="deshardflash"></span><br><a href="https://www.turnoffthelights.com/extension/best-ad-blocker.html" target="blank"><span data-i18n="installadblocker"></span></a></label>
-				<div class="grey-text"><span data-i18n="flashembedobject"></span></div></div>
+					<div class="md-radio">
+						<input id="noflash" type="radio" name="af" value="normal">
+						<label for="noflash"><div><span data-i18n="desnoflash"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="flash" type="radio" name="af" value="easy">
+						<label for="flash"><div><span data-i18n="desflash"></span> <span data-i18n="recflash" class="item"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="hardflash" type="radio" name="af" value="hard">
+						<label for="hardflash"><div><span data-i18n="deshardflash"></span></div></label>
+					</div>
+					<br>
+					<div class="grey-text"><span data-i18n="flashembedobject"></span></div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelreader"></h3>
 				<div>
-					<label class="radio"><input id="readera" type="radio" name="reader" value="only"><span data-i18n="desreadera"></span></label>
-					<label class="radio"><input id="readern" type="radio" name="reader" value="never"><span data-i18n="desreadern"></span></label>
+					<div class="md-radio">
+						<input id="readera" type="radio" name="reader" value="only">
+						<label for="readera"><div><span data-i18n="desreadera"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="readern" type="radio" name="reader" value="never">
+						<label for="readern"><div><span data-i18n="desreadern"></span></div></label>
+					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelvolume"></h3>
 				<div>
-					<label class="checkbox"><input id="videovolume" type="checkbox"><span data-i18n="desvideovolume"></span></label>
-					<label class="radio"><input id="videovolumecolor" type="color" class="color" list="datalightcolor">&nbsp;<span data-i18n="desvideovolumecolor"></span></label>
-					<label class="checkbox"><input id="videovolumelabel" type="checkbox"><span data-i18n="desvolumelabel"></span></label>
-					<label class="radio">
-						<select id="videovolumesteps">
+					<div class="md-checkbox">	
+						<input id="videovolume" type="checkbox">
+						<label for="videovolume"><div><span data-i18n="desvideovolume"></span></div></label>
+					</div>
+					<div class="md-checkbox md-subin">
+						<input id="videovolumealt" type="checkbox">
+						<label for="videovolumealt"><div><span data-i18n="desvideovolumalt"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="videovolumehold" type="checkbox">
+						<label for="videovolumehold"><div><span data-i18n="desvideovolumhold"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="videovolumeposa" type="radio" name="volumepos" value="a">
+						<label for="videovolumeposa"><div><span data-i18n="desvolumeposa"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="videovolumeposb" type="radio" name="volumepos" value="b">
+						<label for="videovolumeposb"><div><span data-i18n="desvolumeposb"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="videovolumeposc" type="radio" name="volumepos" value="c">
+						<label for="videovolumeposc"><div><span data-i18n="desvolumeposc"></span></div></label>
+					</div>
+					<div class="md-color">
+						<div class="input-color-container">
+							<input id="videovolumecolor" type="color" class="color" list="datalightcolor">
+						</div>
+						<label for="videovolumecolor"><div><span data-i18n="desvideovolumecolor"></span></div></label>
+					</div>
+					<div class="md-checkbox md-subgroup">	
+						<input id="videovolumelabel" type="checkbox">
+						<label for="videovolumelabel"><div><span data-i18n="desvolumelabel"></span></div></label>
+					</div>
+					&nbsp;&nbsp;
+					<div class="md-selectfield md-subgroup">
+						<label><span data-i18n="desvolumesteps"></span></label>
+						<select id="videovolumesteps" class="browser-default">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="5">5</option>
 							<option value="10">10</option>
-						</select>&nbsp;<span data-i18n="desvolumesteps"></span></label>
+						</select>
+					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelvideotool"></h3>
-				<div><label class="checkbox"><input id="videotool" type="checkbox"><span data-i18n="desvideotool"></span></label>
-				<label class="radio"><input id="videotoolcolor" type="color" class="color" list="datalightcolor">&nbsp;<span data-i18n="desvideotoolcolor"></span></label>
-				<ul>
-				<li><label class="checkbox"><span data-i18n="vtoolvisualization"></span></label></li>
-				<li><label class="checkbox"><span data-i18n="vtoolfullscreen"></span></label></li>
-				<li><label class="checkbox"><span data-i18n="vtoolfilter"></span></label></li>
-				<li><label class="checkbox"><span data-i18n="vtoolreplay"></span></label></li>
-				<li><label class="checkbox"><span data-i18n="vtoolscreenshot"></span></label></li>
-				</ul>
-				<label class="checkbox"><input id="videozoom" type="checkbox"><span data-i18n="desvideozoom"></span></label>
-				<label class="checkbox"><input id="speedtoolbar" type="checkbox"><span data-i18n="desspeedtoolbar"></span></label>
-				<label class="checkbox"><input id="videotoolonly" type="checkbox"><span data-i18n="desvideotoolonly"></span></label>
-				<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="videotoolchecklistwhite" type="radio" name="videotoolchecklist" value="true"><span data-i18n="titelvideotoolwhitelist"></span></label>&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="videotoolchecklistblack" type="radio" name="videotoolchecklist" value="black"><span data-i18n="titelvideotoolblacklist"></span></label>
-				<form id="formvideotoolbar">
-				  <table id="videotoolwhitelist">
- 				   <tr>
- 				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="videotoolwebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
- 				     <td><button type="submit" id="videotooladdbutton" name="add"><span data-i18n="addbutton"></span></button></td>
- 				   </tr>
- 				   <tr>
-				      <td colspan="2"><select id="videotoolDomainsBox" name="videotoolentryList" size="3" multiple=""></select></td>
-				      <td valign="center"><button type="button" id="videotoolremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
-				    </tr>
-				  </table>
-				</form>
+				<div>
+					<div class="md-checkbox">	
+						<input id="videotool" type="checkbox">
+						<label for="videotool"><div><span data-i18n="desvideotool"></span></div></label>
+					</div>
+					<ul class="minitable">
+					<li><span data-i18n="vtoolvisualization"></span></li>
+					<li><span data-i18n="vtoolfullscreen"></span></li>
+					<li><span data-i18n="vtoolfilter"></span></li>
+					<li><span data-i18n="vtoolreplay"></span></li>
+					<li><span data-i18n="vtoolscreenshot"></span></li>
+					</ul>
+					<div class="md-color">
+						<div class="input-color-container">
+							<input id="videotoolcolor" type="color" class="color" list="datalightcolor">
+						</div>
+						<label for="videotoolcolor"><div><span data-i18n="desvideotoolcolor"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="videozoom" type="checkbox">
+						<label for="videozoom"><div><span data-i18n="desvideozoom"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="speedtoolbar" type="checkbox">
+						<label for="speedtoolbar"><div><span data-i18n="desspeedtoolbar"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="videotoolonly" type="checkbox">
+						<label for="videotoolonly"><div><span data-i18n="desvideotoolonly"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="videotoolchecklistwhite" type="radio" name="videotoolchecklist" value="true">
+						<label for="videotoolchecklistwhite"><div><span data-i18n="titelvideotoolwhitelist"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="videotoolchecklistblack" type="radio" name="videotoolchecklist" value="black">
+						<label for="videotoolchecklistblack"><div><span data-i18n="titelvideotoolblacklist"></span></div></label>
+					</div>
+					<form id="formvideotoolbar">
+					<table id="videotoolwhitelist">
+					<tr>
+						<td><span data-i18n="titelwebsite"></span>:</td>
+						<td><input id="videotoolwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+						<td><button type="submit" id="videotooladdbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+					</tr>
+					<tr>
+						<td colspan="2"><select id="videotoolDomainsBox" name="videotoolentryList" size="5" multiple=""></select></td>
+						<td valign="top"><button type="button" id="videotoolremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+						</tr>
+					</table>
+					</form>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelhovervideo"></h3>
-				<div><label class="checkbox"><input id="hovervideo" type="checkbox"><span data-i18n="deshovervideo"></span> <input type="number" min="0" max="100" step="1" value="5" name="hovervideoamount" id="hovervideoamount" maxlength="3" size="4">s</label></div>
+				<div>
+					<div class="md-checkbox">	
+						<input id="hovervideo" type="checkbox">
+						<label for="hovervideo"><div><span data-i18n="deshovervideo"></span> <input type="number" min="0" max="100" step="1" value="5" name="hovervideoamount" id="hovervideoamount" maxlength="3" size="4">s</div></label>
+					</div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titlevideoplayrate"></h3>
 				<div>
-					<label class="checkbox"><input id="playrate" type="checkbox"><span data-i18n="desplayrate"></span> <input type="number" min="-10" max="10" step="1" value="1" name="playrateamount" id="playrateamount" maxlength="3" size="4"></label>
+					<div class="md-checkbox">	
+						<input id="playrate" type="checkbox">
+						<label for="playrate"><div><span data-i18n="desplayrate"></span> <input type="number" min="-10" max="10" step="1" value="1" name="playrateamount" id="playrateamount" maxlength="3" size="4"></div></label>
+					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titeleye"></h3>
 				<div>
-				<div id="helpeyeprotection" class="helpwhatproblem" data-i18n="helpeyeprotection"></div>
-					<label class="radio"><input id="eyen" type="radio" name="eye" value="never"><span data-i18n="deseyen"></span></label>
-					<label class="radio"><input id="eyea" type="radio" name="eye" value="always"><span data-i18n="deseyea"></span></label>
-					<label class="radio"><input id="eyealist" type="radio" name="eye" value="alwayslist"><span data-i18n="deseyealist"></span></label>
-					<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="eyechecklistwhite" type="radio" name="eyechecklist" value="true"><span data-i18n="titeleyewhitelist"></span></label>&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="eyechecklistblack" type="radio" name="eyechecklist" value="black"><span data-i18n="titeleyeblacklist"></span></label>
+					<div id="helpeyeprotection" class="helpwhatproblem" data-i18n="helpeyeprotection"></div>
+					<div class="md-radio">
+						<input id="eyen" type="radio" name="eye" value="never">
+						<label for="eyen"><div><span data-i18n="deseyen"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="eyea" type="radio" name="eye" value="always">
+						<label for="eyea"><div><span data-i18n="deseyea"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="eyealist" type="radio" name="eye" value="alwayslist">
+						<label for="eyealist"><div><span data-i18n="deseyealist"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="eyechecklistwhite" type="radio" name="eyechecklist" value="true">
+						<label for="eyechecklistwhite"><div><span data-i18n="titeleyewhitelist"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="eyechecklistblack" type="radio" name="eyechecklist" value="black">
+						<label for="eyechecklistblack"><div><span data-i18n="titeleyeblacklist"></span></div></label>
+					</div>
 					<form id="formeyeprotection">
 					<table id="EyeWhitelist">
 					<tr>
 						<td><span data-i18n="titelwebsite"></span>:</td>
-						<td><input id="websiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
+						<td><input id="websiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
 						<td><button type="submit" id="addbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 					</tr>
 					<tr>
-						<td colspan="2"><select id="excludedDomainsBox" name="entryList" size="10" multiple=""></select></td>
-						<td valign="center"><button type="button" id="removebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+						<td colspan="2"><select id="excludedDomainsBox" name="entryList" size="5" multiple=""></select></td>
+						<td valign="top"><button type="button" id="removebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
 					</form>
 					<div class="ecogreen">
-						<div id="logogreen"><img alt="Green" width="32px" height="32px" src="images/green32.png" srcset="images/green32.png 1x, images/green32@2x.png 2x"><br>Green</div>
-						<label class="checkbox"><input id="ecosaver" type="checkbox"><span data-i18n="dessaver"></span></label>
+						<div id="logogreen">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+							width="80" height="80"
+							viewBox="0 0 32 32"
+							style="fill:#ffffff;"
+							class="icons8-full-battery"><g><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
+						</div>
+						<div class="md-checkbox">	
+							<input id="ecosaver" type="checkbox">
+							<label for="ecosaver"><div><span data-i18n="dessaver"></span></div></label>
+						</div>
 						<div id="Eyesaver">
 							<span data-i18n="deseyetimesaver"></span><br>
-							<input id="ecosavertime" type="number" name="saver" min="0" max="900" step="1" value="0" maxlength="3" size="4"> <button id="confirmtimesaver" data-i18n="desconfirmtimesaver"></button>
+							<input id="ecosavertime" type="number" name="saver" min="0" max="900" step="1" value="0" maxlength="3" size="4">
 						</div>
 					</div>
-					<label class="checkbox"><input id="nighttime" type="checkbox"><span data-i18n="destime"></span></label>
-					<div id="Eyetime">
-						<input id="begintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="endtime" type="time" name="time"><button id="confirmtime" data-i18n="desconfirmtime"></button>
+					<div class="md-checkbox">	
+						<input id="nighttime" type="checkbox">
+						<label for="nighttime"><div><span data-i18n="destime"></span></div></label>
+					</div>
+					<div class="md-number md-subin">
+						<label for="eyetime"><div><input id="begintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="endtime" type="time" name="time"></div></label>
 					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelshortcutlight"></h3>
-				<div><label class="checkbox"><input id="shortcutlight" type="checkbox"><span data-i18n="desshortcutlight"></span></label>
-				<ul>
-				<li><label class="checkbox"><span>Ctrl + Shift + L</span> <span data-i18n="shortcuttotl"></span></label></li>
-				<li><label class="checkbox"><span>Alt + F8</span> <span data-i18n="shortcutopacity"></span></label></li>
-				<li><label class="checkbox"><span>Alt + F9</span> <span data-i18n="shortcutsavingopacity"></span></label></li>
-				<li><label class="checkbox"><span>Alt + F10</span> <span data-i18n="shortcuteyeprotection"></span></label></li>
-				<li><label class="checkbox"><span>Alt + &uarr;</span> <span data-i18n="shortcutdark"></span></label></li>
-				<li><label class="checkbox"><span>Alt + &darr;</span> <span data-i18n="shortcutbright"></span></label></li>
-				<li><label class="checkbox"><span>Alt + *</span> <span data-i18n="shortcutalllights"></span></label></li>
+				<div>
+				<div class="md-checkbox">
+					<input id="shortcutlight" type="checkbox">
+					<label for="shortcutlight"><div><span data-i18n="desshortcutlight"></span></div></label>
+				</div>
+				<ul class="minitable">
+				<li><span>Ctrl + Shift + L</span> <span data-i18n="shortcuttotl"></span></li>
+				<li><span>Alt + F8</span> <span data-i18n="shortcutopacity"></span></li>
+				<li><span>Alt + F9</span> <span data-i18n="shortcutsavingopacity"></span></li>
+				<li><span>Alt + F10</span> <span data-i18n="shortcuteyeprotection"></span></li>
+				<li><span>Alt + &uarr;</span> <span data-i18n="shortcutdark"></span></li>
+				<li><span>Alt + &darr;</span> <span data-i18n="shortcutbright"></span></li>
+				<li><span>Alt + *</span> <span data-i18n="shortcutalllights"></span></li>
 				</ul>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelcontextmenus"></h3>
-				<div><label class="checkbox"><input id="contextmenus" type="checkbox"><span data-i18n="descontextmenus"></span></label></div>
+				<div>
+					<div class="md-checkbox">
+						<input id="contextmenus" type="checkbox">
+						<label for="contextmenus"><div><span data-i18n="descontextmenus"></span></div></label>
+					</div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titeleastereggs"></h3>
-				<div><label class="checkbox"><input id="eastereggs" type="checkbox"><span data-i18n="deseastereggs"></span></label></div>
+				<div>
+					<div class="md-checkbox">
+						<input id="eastereggs" type="checkbox">
+						<label for="eastereggs"><div><span data-i18n="deseastereggs"></span></div></label>
+					</div>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titellamp"></h3>
 				<div>
-					<label class="radio"><span data-i18n="titellampchoose"></span></label>
-					<label class="radio">	
+					<div class="md-bulb">
+						<label><span data-i18n="titellampchoose"></span></label>
+					</div>
+					<div id="brotheme">
+						<div class="bigplus">+</div>
+						<div class="brothemoption">
+							<div class="md-checkbox">
+								<input id="darkbrowsertheme" type="checkbox">
+								<label for="darkbrowsertheme"><div><span data-i18n="desdarkbrowsertheme"></span></div></label>
+							</div>
+						</div>
+					</div>
+					<div class="md-bulbpreview">
 						<img id="p1" class="lampchoose" width="16" height="16" src="icons/iconstick38.png" srcset="icons/iconstick19.png 1x, icons/iconstick38.png 2x">
 						<img id="p2" class="lampchoose" width="16" height="16" src="icons/icongold38.png" srcset="icons/icongold19.png 1x, icons/icongold38.png 2x">
 						<img id="p3" class="lampchoose" width="16" height="16" src="icons/iconrose38.png" srcset="icons/iconrose19.png 1x, icons/iconrose38.png 2x">
 						<img id="p4" class="lampchoose" width="16" height="16" src="icons/iconrainbow38.png" srcset="icons/iconrainbow19.png 1x, icons/iconrainbow38.png 2x">
 						<img id="p5" class="lampchoose bcklampchoose" width="16" height="16" src="icons/iconwhite38.png" srcset="icons/iconwhite19.png 1x, icons/iconwhite38.png 2x">
 						<img id="btnpreview" alt="Turn Off the Lights lamp design" name="preview" class="color" src="icons/iconstick38.png">
-					</label>
+					</div>
 					<br>
 					<span data-i18n="titleuserprofile"></span>
+					<div class="profileineerbox">
 						<div class="profilebox">
 							<div class="profile">
-								<h3><span data-i18n="titleregularuser"></span></h3>
-								<div class="desprofile"><span data-i18n="desregularuser"></span></div>
 								<div id="profileA" class="exampleprofile">
 									<div id="ska" class="sklayer"></div>
-									<iframe id="videopreviewA" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
+									<iframe id="videopreviewA" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
 									<br>
 									<span class="lorem">Lorem ipsum dolor sit amet, consectetur <a href="">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 								</div>
-								<div class="radio">
-									<label>✅ <span data-i18n="titleprofilevideofocus"></span></label>
+								<div class="primarytitle">
+									<span data-i18n="titleregularuser"></span>
+									<div class="cardinfo">
+										<a href="https://www.turnoffthelights.com/support/browser-extension/regular-lamp-button-video-lover/" target="_blank" rel="noopener">
+											<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+											width="24" height="24"
+											viewBox="0 0 24 24"><g><path d="M 12 2 C 6.5 2 2 6.5 2 12 C 2 17.5 6.5 22 12 22 C 17.5 22 22 17.5 22 12 C 22 6.5 17.5 2 12 2 Z M 12 4 C 16.398438 4 20 7.601563 20 12 C 20 16.398438 16.398438 20 12 20 C 7.601563 20 4 16.398438 4 12 C 4 7.601563 7.601563 4 12 4 Z M 11.90625 7 C 8.605469 7 9 10 9 10 L 11 10 C 11 8.601563 11.699219 8.5 12 8.5 C 12.800781 8.5 13 9.414063 13 9.8125 C 13 11.914063 11 11.398438 11 14 L 13 14 C 13 12.300781 15 12.210938 15 9.8125 C 15 8.914063 14.507813 7 11.90625 7 Z M 11 15 L 11 17 L 13 17 L 13 15 Z "></path></g></svg>
+										</a>
+									</div>
 								</div>
-								<div class="radio">
-									<label><span data-i18n="titelcolor"></span> <input id="profileAcolor" type="color" class="color" list="datalightcolor"></label>
-								</div>	
-								<div class="radio">	
-									<label><span data-i18n="titelopacity"></span> <input type="number" id="profileAopacity" min="0" max="100" step="1" value="80" maxlength="3" size="4"> %</label>
-								</div>	
-								<div class="radio">	
-									<label><input type="checkbox" id="profileAmouse"><span data-i18n="desmousespotlightt"></span></label>
+								<div class="subtitle">
+									<span data-i18n="titleprofile"></span>
 								</div>
-								<div class="submitprofile">
-								<button class="profilebutton" id="submitbuttonA"><span data-i18n="titleprofilesubmit"></span></button>
-								<br><br>
-								<a href="https://www.turnoffthelights.com/support/browser-extension/regular-lamp-button-video-lover/" target="_blank"><span data-i18n="titlelearnmore"></span></a>
+								<input type="checkbox" id="reveal-profilea" role="button">
+								<div class="cardactionbox">
+									<div id="submitbuttonA" class="cardokbutton"><span data-i18n="titleprofilesubmit"></span></div>
+									<div id="expandprofileaicon" class="expandicon">
+										<label for="reveal-profilea" id="profilesuba">
+											<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+											width="24" height="24"
+											viewBox="0 0 26 26"><g><path d="M 11.414063 3.585938 L 8.585938 6.414063 L 15.171875 13 L 8.585938 19.585938 L 11.414063 22.414063 L 20.828125 13 Z "></path></g></svg>
+										</label>
+									</div>
+								</div>
+								<div id="expandprofilea">
+									<div class="supporttitle">
+										<span data-i18n="desregularuser"></span>
+									</div>
+									<div class="endttitle">
+										<div class="md-checkbox">
+											<input id="pfa1" type="checkbox" checked disabled>
+											<label for="pfa1"><div><span data-i18n="titleprofilevideofocus"></span></div></label>
+										</div>
+										<div class="md-color">
+											<div class="input-color-container">
+												<input id="profileAcolor" type="color" class="color" value="#000000" list="datalightcolor">
+											</div>
+											<label for="profileAcolor"><div><span data-i18n="titelcolor"></span></div></label>
+										</div>
+										<div class="md-number">
+											<label><span data-i18n="titelopacity"></span> <input type="number" id="profileAopacity" min="0" max="100" step="1" value="80" maxlength="3" size="4"> %</label>
+										</div>
+										<div class="md-checkbox">
+											<input id="profileAmouse" type="checkbox">
+											<label for="profileAmouse"><div><span data-i18n="desmousespotlightt"></span></div></label>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="profile">
-								<h3><span data-i18n="titlenightowl"></span></h3>
-								<div class="desprofile"><span data-i18n="desnightowl"></span></div>
 								<div id="profileB" class="exampleprofile">
-									<iframe id="videopreviewB" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
+									<iframe id="videopreviewB" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
 									<br>
 									<span class="lorem">Lorem ipsum dolor sit amet, consectetur <a href="" id="profileBlink">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-								</div>				
-								<div class="radio">
-									<label>✅ <span data-i18n="titleprofilevideofocus"></span></label>
 								</div>
-								<div class="radio">	
-									<label><span data-i18n="titelnightmodebck"></span> <input id="profileBnightback" type="color" class="color" value="#000000" list="datalightcolor"></label>
+								<div class="primarytitle">
+									<span data-i18n="titlenightowl"></span>
+									<div class="cardinfo">
+										<a href="https://www.turnoffthelights.com/support/browser-extension/night-owl-lamp-button/" target="_blank" rel="noopener">
+											<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+											width="24" height="24"
+											viewBox="0 0 24 24"><g><path d="M 12 2 C 6.5 2 2 6.5 2 12 C 2 17.5 6.5 22 12 22 C 17.5 22 22 17.5 22 12 C 22 6.5 17.5 2 12 2 Z M 12 4 C 16.398438 4 20 7.601563 20 12 C 20 16.398438 16.398438 20 12 20 C 7.601563 20 4 16.398438 4 12 C 4 7.601563 7.601563 4 12 4 Z M 11.90625 7 C 8.605469 7 9 10 9 10 L 11 10 C 11 8.601563 11.699219 8.5 12 8.5 C 12.800781 8.5 13 9.414063 13 9.8125 C 13 11.914063 11 11.398438 11 14 L 13 14 C 13 12.300781 15 12.210938 15 9.8125 C 15 8.914063 14.507813 7 11.90625 7 Z M 11 15 L 11 17 L 13 17 L 13 15 Z "></path></g></svg>
+										</a>
+									</div>
 								</div>
-								<div class="radio">	
-									<label><span data-i18n="titelnightmodetxt"></span> <input id="profileBnighttext" type="color" class="color" value="#ffffff" list="datalightcolor"></label>
+								<div class="subtitle">
+									<span data-i18n="titleprofile"></span>
 								</div>
-								<div class="radio">	
-									<label><span data-i18n="titelnightmodehyperlink"></span> <input id="profileBnightlink" type="color" class="color" value="#ffffff" list="datalightcolor"></label>
+								<input type="checkbox" id="reveal-profileb" role="button">
+								<div class="cardactionbox">
+									<div id="submitbuttonB" class="cardokbutton"><span data-i18n="titleprofilesubmit"></span></div>
+									<div id="expandprofilebicon" class="expandicon">
+										<label for="reveal-profileb" id="profilesubb">
+											<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+											width="24" height="24"
+											viewBox="0 0 26 26"><g><path d="M 11.414063 3.585938 L 8.585938 6.414063 L 15.171875 13 L 8.585938 19.585938 L 11.414063 22.414063 L 20.828125 13 Z "></path></g></svg>
+										</label>
+									</div>
 								</div>
-								<div class="submitprofile">
-								<button class="profilebutton" id="submitbuttonB"><span data-i18n="titleprofilesubmit"></span></button>
-								<br><br>
-								<a href="https://www.turnoffthelights.com/support/browser-extension/night-owl-lamp-button/" target="_blank"><span data-i18n="titlelearnmore"></span></a>
+								<div id="expandprofileb">
+									<div class="supporttitle">
+										<span data-i18n="desnightowl"></span>
+									</div>
+									<div class="endttitle">
+										<div class="md-checkbox">
+											<input id="pfb1" type="checkbox" checked disabled>
+											<label for="pfb1"><div><span data-i18n="titleprofilevideofocus"></span></div></label>
+										</div>
+										<div class="md-color">
+											<div class="input-color-container">
+												<input id="profileBnightback" type="color" class="color" value="#000000" list="datalightcolor">
+											</div>
+											<label for="profileBnightback"><div><span data-i18n="titelnightmodebck"></span></div></label>
+										</div>
+										<div class="md-color">
+											<div class="input-color-container">
+												<input id="profileBnighttext" type="color" class="color" value="#ffffff" list="datalightcolor">
+											</div>
+											<label for="profileBnighttext"><div><span data-i18n="titelnightmodetxt"></span></div></label>
+										</div>
+										<div class="md-color">
+											<div class="input-color-container">
+												<input id="profileBnightlink" type="color" class="color" value="#ffffff" list="datalightcolor">
+											</div>
+											<label for="profileBnightlink"><div><span data-i18n="titelnightmodehyperlink"></span></div></label>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="profile">
-								<h3><span data-i18n="titlescreenprotection"></span></h3>
-								<div class="desprofile"><span data-i18n="desscreenprotection"></span></div>
 								<div id="profileC" class="exampleprofile">
 									<div id="skc" class="toplayer"></div>
-									<iframe id="videopreviewC" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
+									<iframe id="videopreviewC" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
 									<br>
 									<span class="lorem">Lorem ipsum dolor sit amet, consectetur <a href="">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 								</div>
-								<div class="radio">
-									<label>🚫 <span data-i18n="titleprofilenovideofocus"></span></label>
+								<div class="primarytitle">
+									<span data-i18n="titlescreenprotection"></span>
+									<div class="cardinfo">
+										<a href="https://www.turnoffthelights.com/support/browser-extension/screen-shader-on-top-of-all-open-tabs/" target="_blank" rel="noopener">
+											<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+											width="24" height="24"
+											viewBox="0 0 24 24"><g><path d="M 12 2 C 6.5 2 2 6.5 2 12 C 2 17.5 6.5 22 12 22 C 17.5 22 22 17.5 22 12 C 22 6.5 17.5 2 12 2 Z M 12 4 C 16.398438 4 20 7.601563 20 12 C 20 16.398438 16.398438 20 12 20 C 7.601563 20 4 16.398438 4 12 C 4 7.601563 7.601563 4 12 4 Z M 11.90625 7 C 8.605469 7 9 10 9 10 L 11 10 C 11 8.601563 11.699219 8.5 12 8.5 C 12.800781 8.5 13 9.414063 13 9.8125 C 13 11.914063 11 11.398438 11 14 L 13 14 C 13 12.300781 15 12.210938 15 9.8125 C 15 8.914063 14.507813 7 11.90625 7 Z M 11 15 L 11 17 L 13 17 L 13 15 Z "></path></g></svg>
+										</a>
+									</div>
 								</div>
-								<div class="radio">	
-									<label><span data-i18n="titelcolor"></span> <input id="profileCcolor" type="color" class="color" list="datalightcolor" value="#ffa500"></label>
+								<div class="subtitle">
+									<span data-i18n="titleprofile"></span>
 								</div>
-								<div class="radio">	
-									<label><span data-i18n="titelopacity"></span> <input type="number" id="profileCopacity" min="0" max="100" step="1" value="15" maxlength="3" size="4"> %</label>
+								<input type="checkbox" id="reveal-profilec" role="button">
+								<div class="cardactionbox">
+									<div id="submitbuttonC" class="cardokbutton"><span data-i18n="titleprofilesubmit"></span></div>
+									<div id="expandprofilecicon" class="expandicon">
+										<label for="reveal-profilec" id="profilesubc">
+											<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+											width="24" height="24"
+											viewBox="0 0 26 26"><g><path d="M 11.414063 3.585938 L 8.585938 6.414063 L 15.171875 13 L 8.585938 19.585938 L 11.414063 22.414063 L 20.828125 13 Z "></path></g></svg>
+										</label>
+									</div>
 								</div>
-								<div class="radio">	
-									<label>✅ <span data-i18n="titleprofilealwaysscreentab"></span></label>
-								</div>
-								<div class="radio">	
-									<label>✅ <span data-i18n="titleprofilescreenclick"></span></label>
-								</div>
-								<div class="submitprofile">
-								<button class="profilebutton" id="submitbuttonC"><span data-i18n="titleprofilesubmit"></span></button>
-								<br><br>
-								<a href="https://www.turnoffthelights.com/support/browser-extension/screen-shader-on-top-of-all-open-tabs/" target="_blank"><span data-i18n="titlelearnmore"></span></a>
+								<div id="expandprofilec">
+									<div class="supporttitle">
+										<span data-i18n="desscreenprotection"></span>
+									</div>
+									<div class="endttitle">
+										<div class="md-checkbox">
+											<input id="pfc1" type="checkbox" disabled>
+											<label for="pfc1"><div><span data-i18n="titleprofilenovideofocus"></span></div></label>
+										</div>
+										<div class="md-color">
+											<div class="input-color-container">
+												<input id="profileCcolor" type="color" class="color" list="datalightcolor" value="#ffa500">
+											</div>
+											<label for="profileCcolor"><div><span data-i18n="titelcolor"></span></div></label>
+										</div>
+										<div class="md-number">
+											<label><span data-i18n="titelopacity"></span> <input type="number" id="profileCopacity" min="0" max="100" step="1" value="15" maxlength="3" size="4"> %</label>
+										</div>
+										<div class="md-checkbox">
+											<input id="pfc2" type="checkbox" checked disabled>
+											<label for="pfc2"><div><span data-i18n="titleprofilealwaysscreentab"></span></div></label>
+										</div>
+										<div class="md-checkbox">
+											<input id="pfc3" type="checkbox" checked disabled>
+											<label for="pfc3"><div><span data-i18n="titleprofilescreenclick"></span></div></label>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelalllightsoff"></h3>
-				<div><label class="checkbox"><input id="alllightsoff" type="checkbox"><span data-i18n="desalllightsoff"></span></label></div>
-				</section>		
+				<div>
+					<div class="md-checkbox">	
+						<input id="alllightsoff" type="checkbox">
+						<label for="alllightsoff"><div><span data-i18n="desalllightsoff"></span></div></label>
+					</div>
+				</div>
+				</section>
 				<section>
 				<h3 data-i18n="titelmouse"></h3>
 				<div>
-					<label class="radio"><input id="mousespotlighto" type="radio" name="mousespotlight" value="off"><span data-i18n="desmousespotlighto"></span></label>
-					<label class="radio"><input id="mousespotlighta" type="radio" name="mousespotlight" value="auto"><span data-i18n="desmousespotlighta"></span>
-					<br>
-					<span data-i18n="desspotlightradius"></span> <input type="number" min="5" max="250" step="1" value="0" name="spotlightradiusnumber" id="spotlightradius" maxlength="3" size="4">px 
-					</label>
-					<label class="radio"><input id="mousespotlightc" type="radio" name="mousespotlight" value="custom"><span data-i18n="desmousespotlightc"></span></label>
-					<label class="radio"><input id="mousespotlightt" type="radio" name="mousespotlight" value="custom"><span data-i18n="desmousespotlightt"></span></label>	
-					<label class="radio"><input id="mousespotlights" type="radio" name="mousespotlight" value="custom"><span data-i18n="desmousespotlights"></span></label>	
+					<div class="md-radio">
+						<input id="mousespotlighto" type="radio" name="mousespotlight" value="off">
+						<label for="mousespotlighto"><div><span data-i18n="desmousespotlighto"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="mousespotlighta" type="radio" name="mousespotlight" value="auto">
+						<label for="mousespotlighta"><div><span data-i18n="desmousespotlighta"></span></div></label>
+					</div>
+					<div class="md-number">
+						<label for="spotlightradius"><div><span data-i18n="desspotlightradius"></span> <input type="number" min="5" max="250" step="1" value="0" name="spotlightradiusnumber" id="spotlightradius" maxlength="3" size="4">px</div></label>
+					</div>
+					<div class="md-radio">
+						<input id="mousespotlightc" type="radio" name="mousespotlight" value="custom">
+						<label for="mousespotlightc"><div><span data-i18n="desmousespotlightc"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="mousespotlightt" type="radio" name="mousespotlight" value="custom">
+						<label for="mousespotlightt"><div><span data-i18n="desmousespotlightt"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="mousespotlights" type="radio" name="mousespotlight" value="custom">
+						<label for="mousespotlights"><div><span data-i18n="desmousespotlights"></span></div></label>
+					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelpassword"></h3>
-				<div>
-					<label class="checkbox"><input id="password" type="checkbox"><span data-i18n="desenterpassword"></span></label>			
-					<label class="checkbox"><input id="enterpassword" type="password"><button id="confirmpassword" data-i18n="desconfirmpassword"></button><br><span data-i18n="despassword"></span></label>
-				</div>
+                <div>
+                    <form autocomplete="on">
+                        <div class="md-checkbox">
+                            <input id="password" type="checkbox">
+                            <label for="password"><div><span data-i18n="desenterpassword"></span></div></label>
+                        </div>
+                        <label><input id="enterpassword" type="password" autocomplete="new-password"><button id="confirmpassword" data-i18n="desconfirmpassword"></button><br><span data-i18n="despassword"></span></label>
+                    </form>
+                </div>
 				</section>
 				<section>
 				<h3 data-i18n="titelrememberpage"></h3>
-				<div><label class="checkbox"><input id="optionskipremember" type="checkbox"><span data-i18n="desrememberpage"></span></label></div>
-				</section>						
+				<div>
+					<div class="md-checkbox">	
+						<input id="optionskipremember" type="checkbox">
+						<label for="optionskipremember"><div><span data-i18n="desrememberpage"></span></div></label>
+					</div>
+				</div>
+				</section>
 				<section>
 				<h3 data-i18n="titelapideveloper"></h3>
-				<div class="grey-text"><span>Turn Off the Lights <a href="https://www.turnoffthelights.com/APIwebsite.html" target="blank"><span data-i18n="desapitext"></span></a>.</span></div>
+				<div class="grey-text"><span>Turn Off the Lights <a href="https://www.turnoffthelights.com/api/index.html" target="_blank" rel="noopener"><span data-i18n="desapitext"></span></a>.</span></div>
 				</section>
 				<section>
 				<h3 data-i18n="titelsync"></h3>
 				<div class="grey-text"><span data-i18n="titelsyncbrowser"></span></div>
 				</section>
-				<section>			
-				<h3 data-i18n="titelupgrade"></h3>
-				<div>
-					<label class="checkbox"><span class="item">Finance Toolbar <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgradefinancetoolbar"></span></label>
-					<p>
-					<button id="fndownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><a href="https://www.stefanvd.net/project/finance-toolbar/browser/" target="blank">Finance Toolbar</a> <span data-i18n="desbrowserextension"></span></span>
-					</p>
-					<label class="checkbox"><span class="item">Proper Menubar <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgradepropermenubar"></span></label>
-					<p>
-					<button id="ppdownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><a href="https://www.stefanvd.net/project/proper-menubar/browser/" target="blank">Proper Menubar</a> <span data-i18n="desbrowserextension"></span></span>
-					</p>
-					<label class="checkbox"><span class="item">Zoom <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgradezoom"></span></label>
-					<p>
-					<button id="zodownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><a href="https://www.stefanvd.net/project/zoom/browser/" target="blank">Zoom</a> <span data-i18n="desbrowserextension"></span></span>
-					</p>
-					<label class="checkbox"><span class="item">Ambient Aurea <span data-i18n="desbrowserextension"></span></span><br><span data-i18n="titeldownloadupgrade"></span></label>
-					<p>
-					<button id="aadownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><a href="https://www.stefanvd.net/project/ambient-aurea/browser/" target="blank">Ambient Aurea</a> <span data-i18n="desbrowserextension"></span></span>
-					</p>
-					<br>
-					<label class="checkbox"><span class="item">Turn Off the Lights <span data-i18n="desbrowsertheme"></span></span><br><span data-i18n="titeldownloadthemeupgrade"></span></label>
-					<p>
-					<button id="themedownload" data-i18n="titeldownloadbutton"></button>
-					<span class="grey-text"><a href="https://www.turnoffthelights.com" target="blank">Turn Off the Lights</a> <span data-i18n="desbrowsertheme"></span></span>
-					</p>
-				</div>
-				</section>
-				<section>			
+				<section>
 				<h3 data-i18n="titelreset"></h3>
 				<div>
-					<label class="checkbox"><button id="resettotl" data-i18n="resetbrowserextension"></button></label>
+					<label><button id="resettotl" data-i18n="resetbrowserextension"></button></label>
 				</div>
 				</section>
 			</div>
 			<div id="tab5" class="page hidden">
 				<h1 data-i18n="nightoptions"></h1>
-				<section>			
-				<br>
-				<br>	
-				<label id="stefanvdnighttheme">
-					<input type="checkbox" />
-					<span id="stefanvdnightthemeslider">
-						<span class="sun"><span></span></span>
-						<span class="night"><span></span></span>
-						<span id="sliderblock"><span id="stefanvdnighti">&#x2261;</span></span>
-					</span>
-				</label>
-				<br>
-				<span data-i18n="titelnightmodebck"></span> <input id="nightmodebck" type="color" class="color" list="datalightnightmode">&nbsp;&nbsp;&nbsp;<span data-i18n="titelnightmodetxt"></span> <input id="nightmodetxt" type="color" class="color" list="datalightnightmode">
-				<span data-i18n="titelnightmodehyperlink"></span> <input id="nightmodehyperlink" type="color" class="color" list="datalightnightmode">
-				<datalist id="datalightnightmode">
-                    <option>#FFFFFF</option>
-                    <option>#FF0000</option>
-                    <option>#FF7700</option>
-                    <option>#FFEE00</option>
-                    <option>#00FF00</option>
-                    <option>#008000</option>
-                    <option>#3CB4FE</option>
-                    <option>#0000FF</option>
-                    <option>#808080</option>
-                    <option>#000000</option>
-                    </datalist>
-                </section>
+				<section>
+					<div class="videopreview">
+						<iframe id="videopreviewnight" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen=""></iframe>
+					</div>
+					<div class="suggpanel">
+						<div class="profile">
+							<div class="primarytitle">
+								<span data-i18n="howworkmotion"></span>
+								<div class="nightworks">
+									<div class="step">
+										<div class="stepdescription">1. <span data-i18n="nightstep1description"></span></div>
+									</div>
+			
+									<div class="step">
+										<div class="stepdescription">2. <span data-i18n="nightstep2description"></span></div>
+									</div>
+
+									<label id="samplestefanvdnighttheme">
+											<input type="checkbox" />
+											<span id="stefanvdnightthemeslider">
+												<span class="sun"><span></span></span>
+												<span class="night"><span></span></span>
+												<span id="sliderblock"><span id="stefanvdnighti">&#x2261;</span></span>
+											</span>
+									</label>
+
+									<div class="step">
+										<div class="stepdescription">3. <span data-i18n="nightstep3description"></span></div>
+									</div>
+
+								</div>
+							</div>
+							<div class="cardactionbox">
+			
+							</div>
+						</div>
+					</div>
+				</section>
 				<section>
 				<h3 data-i18n="titelnighttheme"></h3>
 				<div>
-				<label class="checkbox"><input id="nighttheme" type="checkbox"><span data-i18n="desnighttheme"></span></label>
-				<label class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="lampandnightmode" type="checkbox"><span data-i18n="deslampandnightmode"></span></label>
-				<label class="checkbox"><input id="nightonly" type="checkbox"><span data-i18n="desnightonly"></span></label>
-				<label class="radioline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="nightmodechecklistwhite" type="radio" name="nightmodechecklist" value="true"><span data-i18n="titelnightmodewhitelist"></span></label>&nbsp;&nbsp;&nbsp;<label class="radioline"><input id="nightmodechecklistblack" type="radio" name="nightmodechecklist" value="black"><span data-i18n="titelnightmodeblacklist"></span></label>
-				<form id="formnightmode">
-				  <table id="nightwhitelist">
- 				   <tr>
- 				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="nightwebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
- 				     <td><button type="submit" id="nightaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
- 				   </tr>
- 				   <tr>
-				      <td colspan="2"><select id="nightDomainsBox" name="nightentryList" size="3" multiple=""></select></td>
-				      <td valign="center"><button type="button" id="nightremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
-				    </tr>
-				  </table>
-				</form>
-				<label class="checkbox"><input id="nightactivetime" type="checkbox"><span data-i18n="desnightactivetime"></span></label>
-				  <div id="nmtime">
-				      <input id="nmbegintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="nmendtime" type="time" name="time"><button id="nmconfirmtime" data-i18n="desconfirmtime"></button>
-				  </div>
-				<label class="checkbox"><input id="nightenabletheme" type="checkbox"><span data-i18n="desnightenabletheme"></span></label>
-				<label class="checkbox"><input id="nighthover" type="checkbox"><span data-i18n="desnighthover"></span></label>
+					<div class="md-checkbox">	
+						<input id="nighttheme" type="checkbox">
+						<label for="nighttheme"><div><span data-i18n="desnighttheme"></span></div></label>
+					</div>
+					<div class="md-color md-subin">
+						<div class="input-color-container">
+							<input id="nightmodebck" type="color" class="color" list="datalightnightmode">
+						</div>
+						<label for="nightmodebck"><div><span data-i18n="titelnightmodebck"></span></div></label>
+					</div>
+					<div class="md-color md-subin">
+						<div class="input-color-container">
+							<input id="nightmodetxt" type="color" class="color" list="datalightnightmode">
+						</div>
+						<label for="nightmodetxt"><div><span data-i18n="titelnightmodetxt"></span></div></label>
+					</div>
+					<div class="md-color md-subin">
+						<div class="input-color-container">
+							<input id="nightmodehyperlink" type="color" class="color" list="datalightnightmode">
+						</div>
+						<label for="nightmodehyperlink"><div><span data-i18n="titelnightmodehyperlink"></span></div></label>
+					</div>
+					<datalist id="datalightnightmode">
+						<option>#FFFFFF</option>
+						<option>#FF0000</option>
+						<option>#FF7700</option>
+						<option>#FFEE00</option>
+						<option>#00FF00</option>
+						<option>#008000</option>
+						<option>#3CB4FE</option>
+						<option>#0000FF</option>
+						<option>#808080</option>
+						<option>#000000</option>
+					</datalist>
+					<div class="md-checkbox md-subin">	
+						<input id="lampandnightmode" type="checkbox">
+						<label for="lampandnightmode"><div><span data-i18n="deslampandnightmode"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="nightonly" type="checkbox">
+						<label for="nightonly"><div><span data-i18n="desnightonly"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="nightmodechecklistwhite" type="radio" name="nightmodechecklist" value="true">
+						<label for="nightmodechecklistwhite"><div><span data-i18n="titelnightmodewhitelist"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="nightmodechecklistblack" type="radio" name="nightmodechecklist" value="black">
+						<label for="nightmodechecklistblack"><div><span data-i18n="titelnightmodeblacklist"></span></div></label>
+					</div>
+					<form id="formnightmode">
+					<table id="nightwhitelist">
+					<tr>
+						<td>
+							<span data-i18n="titelwebsite"></span>
+						</td>
+						<td>
+							<input id="nightwebsiteurl" type="url" pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com">
+						</td>
+						<td><button type="submit" id="nightaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+					</tr>
+					<tr>
+						<td colspan="2"><select id="nightDomainsBox" name="nightentryList" size="5" multiple=""></select></td>
+						<td valign="top"><button type="button" id="nightremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+						</tr>
+					</table>
+					</form>
+					<div class="md-radio md-subin">
+						<input id="nightmodebydomain" type="radio" name="nightmodebylist" value="domain">
+						<label for="nightmodebydomain"><div><span data-i18n="titelnightmodedomain"></span></div></label>
+					</div>
+					<div class="md-radio md-subin">
+						<input id="nightmodebypage" type="radio" name="nightmodebylist" value="page">
+						<label for="nightmodebypage"><div><span data-i18n="titelnightmodepage"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="nightactivetime" type="checkbox">
+						<label for="nightactivetime"><div><span data-i18n="desnightactivetime"></span></div></label>
+					</div>
+					<div class="md-number">
+						<label for="nmtime"><div><input id="nmbegintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="nmendtime" type="time" name="time"></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="nightenabletheme" type="checkbox">
+						<label for="nightenabletheme"><div><span data-i18n="desnightenabletheme"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="nighthover" type="checkbox">
+						<label for="nighthover"><div><span data-i18n="desnighthover"></span></div></label>
+					</div>
 				</div>
-				</section>			
+				</section>
 				<section>
 				<h3 data-i18n="titelnightmodeposition"></h3>
 				<div>
-					<label class="radio"><input id="nmtopleft" type="radio" name="nmpos" value="nmtop"><span data-i18n="nmtopleft"></span></label>
-					<label class="radio"><input id="nmtopright" type="radio" name="nmpos" value="nmbottom"><span data-i18n="nmtopright"></span></label>
-					<label class="radio"><input id="nmbottomright" type="radio" name="nmpos" value="nmleft"><span data-i18n="nmbottomright"></span></label>
-					<label class="radio"><input id="nmbottomleft" type="radio" name="nmpos" value="nmright"><span data-i18n="nmbottomleft"></span></label>
-					<label class="radio"><input id="nmcustom" type="radio" name="nmpos" value="nmcus"><span data-i18n="nmcustom"></span></label>
+					<div class="md-radio">
+						<input id="nmtopleft" type="radio" name="nmpos" value="nmtop">
+						<label for="nmtopleft"><div><span data-i18n="nmtopleft"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="nmtopright" type="radio" name="nmpos" value="nmbottom">
+						<label for="nmtopright"><div><span data-i18n="nmtopright"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="nmbottomright" type="radio" name="nmpos" value="nmright">
+						<label for="nmbottomright"><div><span data-i18n="nmbottomright"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="nmbottomleft" type="radio" name="nmpos" value="nmleft">
+						<label for="nmbottomleft"><div><span data-i18n="nmbottomleft"></span></div></label>
+					</div>
+					<div class="md-radio">
+						<input id="nmcustom" type="radio" name="nmpos" value="nmcus">
+						<label for="nmcustom"><div><span data-i18n="nmcustom"></span></div></label>
+					</div>
 				</div>
 				</section>
 			</div>
 			<div id="tab7" class="page hidden">
 			<h1 data-i18n="motionoptions"></h1>
 			<section>
+				<div>
+				<div class="videopreview">
+					<iframe id="videopreviewmotion" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+				<div class="suggpanel">
+					<div class="profile">
+						<div class="primarytitle">
+							<span data-i18n="howworkmotion"></span>
+						</div>
+						<div class="motionworks">
+							<div class="step">
+								<div class="stepdescription">1. <span data-i18n="camstep1description"></span></div>
+								<div class="tablet">
+									<div class="camera enablecameralamp"></div>
+									<div class="monitor">
+										<div class="screencanvas"></div>
+									</div>
+								</div>
+							</div>
+							<div class="step">
+								<div class="stepdescription">2. <span data-i18n="camstep2description"></span></div>
+									<div class="handgreep">
+										<div class="hand">
+											<div class="fingera"></div>
+											<div class="fingerb"></div>
+											<div class="fingerc"></div>
+											<div class="fingerd"></div>
+											<div class="fingere"></div>
+											<div class="palm"></div>
+										</div>
+									</div>
+								<div class="tablet">
+									<div class="camera"></div>
+									<div class="monitor">
+										<div class="screencanvas"></div>
+									</div>
+								</div>
+							</div>
+	
+							<div class="step">
+								<div class="stepdescription">3. <span data-i18n="camstep3description"></span></div>
+								<div class="tablet">
+									<div class="camera"></div>
+									<div class="monitor">
+										<div class="screencanvas">
+											<div class="screendimmer"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<input type="checkbox" id="reveal-camtip" role="button">
+						<div class="cardactionbox">
+							<div id="submitbuttoncamtip"></div>
+							<div id="expandcamtipicon" class="expandicon">
+								<label for="reveal-camtip" id="camtip">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="24" height="24"
+									viewBox="0 0 26 26"><g><path d="M 11.414063 3.585938 L 8.585938 6.414063 L 15.171875 13 L 8.585938 19.585938 L 11.414063 22.414063 L 20.828125 13 Z "></path></g></svg>
+								</label>
+							</div>
+						</div>
+						<div id="expandcamtip">
+							<div class="supporttitle">
+								<span class="cameracheclist" data-i18n="desmotionChecklist"></span>
+								<ul>
+									<li><span data-i18n="des1checkmotion"></span></li>
+									<li><span data-i18n="des2checkmotion"></span></li>
+									<li><span data-i18n="des3checkmotion"></span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				</div>
+			</section>
+			<section>
 				<h3 data-i18n="titelcamera"></h3>
 				<div>
 					<div id="helpcameramotion" class="helpwhatproblem" data-i18n="desbrowsersupport" style="display: none;"></div>
-					<label class="checkbox"><input id="motion" type="checkbox"><span data-i18n="desmotion"></span></label>
-					<a href="https://www.stefanvd.net/" target="blank"><span data-i18n="trymotion"></span></a> <span data-i18n="destrymotion"></span>
+					<div class="md-checkbox">	
+						<input id="motion" type="checkbox">
+						<label for="motion"><div><span data-i18n="desmotion"></span></div></label>
+					</div>
+					<span class="grey-text" data-i18n="functionactive"></span>
 					<br><br>
 					<canvas width="0" height="0" id="motioncanvas"></canvas>
 					<canvas width="0" height="0" id="motioncomp"></canvas>
+					<div id="stefanmotion"></div>
 					<br>
-					<video id="motionvideo" width="320" height="240" autoplay>Your browser does not support the video tag.</video>
+					<video id="motionvideo" width="320" height="240" autoplay>
+						<track label="English - subtitles" kind="subtitles" srclang="en">
+						<track label="English - captions" kind="captions" srclang="en">
+						<track label="English - descriptions" kind="descriptions" srclang="en">
+					</video>
 					<br>
-					<label class="checkbox"><input id="cammotiononly" type="checkbox"><span data-i18n="descammotiononly"></span></label>
+					<div class="md-checkbox">	
+						<input id="cammotiononly" type="checkbox">
+						<label for="cammotiononly"><div><span data-i18n="descammotiononly"></span></div></label>
+					</div>
 					<form id="formcameramotion">
 					<table id="cammotionwhitelist">
 					<tr>
 						<td><span data-i18n="titelwebsite"></span>:</td>
-						<td><input id="cammotionwebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
+						<td><input id="cammotionwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
 						<td><button type="submit" id="cammotionaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 					</tr>
 					<tr>
-						<td colspan="2"><select id="cammotionDomainsBox" name="nightentryList" size="3" multiple=""></select></td>
-						<td valign="center"><button type="button" id="cammotionremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
+						<td colspan="2"><select id="cammotionDomainsBox" name="nightentryList" size="5" multiple=""></select></td>
+						<td valign="top"><button type="button" id="cammotionremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
 					</form>
 				</div>
 				</section>
-				<section>
-				<div>
-					<h1><span data-i18n="howworkmotion"></span></h1>
-				<div class="motionworks">
-					<div class="step">
-						<div class="stepdescription">1. <span data-i18n="step1description"></span></div>
-						<div id="tablet">
-							<div class="camera enablecameralamp"></div>
-							<div class="monitor">
-								<div class="screencanvas"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="step">
-						<div class="stepdescription">2. <span data-i18n="step2description"></span></div>
-							<div class="handgreep">
-								<div class="hand">
-									<div class="fingera"></div>
-									<div class="fingerb"></div>
-									<div class="fingerc"></div>
-									<div class="fingerd"></div>
-									<div class="fingere"></div>
-									<div class="palm"></div>
-								</div>
-							</div>
-						<div id="tablet">
-							<div class="camera"></div>
-							<div class="monitor">
-								<div class="screencanvas"></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="step">
-						<div class="stepdescription">3. <span data-i18n="step3description"></span></div>
-						<div id="tablet">
-							<div class="camera"></div>
-							<div class="monitor">
-								<div class="screencanvas">
-									<div class="screendimmer"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<label class="cameracheclist"><span data-i18n="desmotionChecklist"></span></label>
-				<br>
-				<ul>
-					<li><span data-i18n="des1checkmotion"></span></li>
-					<li><span data-i18n="des2checkmotion"></span></li>
-					<li><span data-i18n="des3checkmotion"></span></li>
-				</ul>
-				<div id="stefanmotion"></div>
-				</div>
-			</section>
 			</div>
 			<div id="tab8" class="page hidden">
 			<h1 data-i18n="speechoption"></h1>
 			<section>
+				<div class="videopreview">
+					<iframe id="videopreviewspeech" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen=""></iframe>
+				</div>
+				<div class="suggpanel">
+					<div class="profile">
+						<div class="primarytitle">
+							<span data-i18n="howworkmotion"></span>
+							<div class="speechworks">
+								<div class="step">
+									<div class="stepdescription">1. <span data-i18n="speechstep1description"></span></div>
+								</div>
+
+								<div class="step">
+									<div class="stepdescription">2. <span data-i18n="speechstep2description"></span>
+									<ul>
+										<li class="item"><span data-i18n="speechheybrowser"></span>, <span data-i18n="desspeech1command"></span></li>
+										<li class="item"><span data-i18n="speechheybrowser"></span>, <span data-i18n="desspeech2command"></span></li>
+										<li class="item"><span data-i18n="speechheybrowser"></span>, <span data-i18n="desspeech3command"></span></li>
+										<li class="item"><span data-i18n="speechheybrowser"></span>, <span data-i18n="desspeech4command"></span></li>
+									</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="cardactionbox">
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
 				<h3 data-i18n="titelspeech"></h3>
 				<div>
 				<div id="helpspeech" class="helpwhatproblem" data-i18n="desbrowsersupport" style="display: none;"></div>
-				<label class="checkbox"><input id="speech" type="checkbox"><span data-i18n="desspeech"></span></label>
-				<ul>
-					<li><span data-i18n="desspeech1command"></span></li>
-					<li><span data-i18n="desspeech2command"></span></li>
-					<li><span data-i18n="desspeech3command"></span></li>
-					<li><span data-i18n="desspeech4command"></span></li>
-				</ul>
-				<label class="checkbox"><span data-i18n="desspeechdialect"></span></label>
-				<select id="select_language"></select>&nbsp;&nbsp;<select id="select_dialect"></select>
+				<div class="md-checkbox">	
+					<input id="speech" type="checkbox">
+					<label for="speech"><div><span data-i18n="desspeech"></span></div></label>
+				</div>
+				<span class="grey-text" data-i18n="functionactive"></span>
 				<br>
 				<br>
-				<label class="checkbox"><input id="speechonly" type="checkbox"><span data-i18n="desspeechonly"></span></label>
+				<span data-i18n="desspeechdialect"></span>
+				<br>
+				<div class="md-selectfield md-subgroup">
+					<label><span data-i18n="desvolumesteps"></span></label>
+					<select id="select_language" class="browser-default">
+					</select>
+				</div>
+				&nbsp;&nbsp;
+				<div class="md-selectfield md-subgroup">
+					<label><span data-i18n="desvolumesteps"></span></label>
+					<select id="select_dialect" class="browser-default">
+					</select>
+				</div>
+				<div class="md-checkbox md-subgroup"></div>
+				<div class="md-checkbox">
+					<input id="speechonly" type="checkbox">
+					<label for="speechonly"><div><span data-i18n="desspeechonly"></span></div></label>
+				</div>
 				<form id="formspeech">
-				<table id="speechwhitelist">
-				<tr>
-					<td><span data-i18n="titelwebsite"></span>:</td>
-					<td><input id="speechwebsiteurl" type="url" required pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="http://www.example.com"></td>
-					<td><button type="submit" id="speechaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
-				</tr>
-				<tr>
-					<td colspan="2"><select id="speechDomainsBox" name="speechentryList" size="3" multiple=""></select></td>
-					<td valign="center"><button type="button" id="speechremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>					  
-				</tr>
-				</table>
+					<table id="speechwhitelist">
+						<tr>
+							<td><span data-i18n="titelwebsite"></span>:</td>
+							<td><input id="speechwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+							<td><button type="submit" id="speechaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+						</tr>
+						<tr>
+							<td colspan="2"><select id="speechDomainsBox" name="speechentryList" size="5" multiple=""></select></td>
+							<td valign="top"><button type="button" id="speechremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+						</tr>
+					</table>
 				</form>
 				</div>
 			</section>
-				<div id="stefanvdspeechbox">
-					<div class="stefanvdspeechloading" id="speechicon">
-					<div class="speechicon">
-						<div class="_Xu">
-							<span class="_Kv"></span>
-							<div class="_kR">
-								<span class="_lw"></span>
-								<span class="_ew"></span>
-							</div>
-						</div>
-					</div>
-					<div class="stefanvdspeechbrand"></div>
-				</div>
-				<div id="stefanvdspeechsaidtext"></div>
-			</div>
 			</div>
 			<div id="tab9" class="page hidden">
 			<h1 data-i18n="about"></h1>
 			<section>
 				<div>
-				<label class="checkbox"><h4>Turn Off the Lights™</h4>
-						<span data-i18n="version"></span> <span id="version_number"></span>
-						<br><span data-i18n="description"></span>
-				</label>
+				<h4>Turn Off the Lights™</h4>
+				<span data-i18n="version"></span> <span id="version_number"></span>
 				<br>
-				<label class="checkbox"><span data-i18n="titelwebsite"></span>: <a href="https://www.turnoffthelights.com" target="_blank">www.turnoffthelights.com</a></label>
-				<label class="checkbox"><span data-i18n="titeldeveloper"></span>: <a href="https://www.stefanvd.net" target="_blank">www.stefanvd.net</a></label>
+				<span data-i18n="description"></span>
 				<br>
-				<button id="buttonreportissue" data-i18n="reportbug"></button><button id="buttonchangelog" data-i18n="changelog"></button><button id="buttontranslateme" data-i18n="translateme"></button>
+				<br>
+				<span data-i18n="titelwebsite"></span>: <a href="https://www.turnoffthelights.com" target="_blank" rel="noopener">www.turnoffthelights.com</a>
+				<br>
+				<span data-i18n="titeldeveloper"></span>: <a href="https://www.stefanvd.net" target="_blank" rel="noopener">www.stefanvd.net</a>
+				<br>
+				<br>
+				<div class="aboutbuttons">
+					<button id="buttonreportissue" class="btnspace" data-i18n="reportbug"></button><button id="buttonchangelog" class="btnspace" data-i18n="changelog"></button><button id="buttontranslateme" class="btnspace" data-i18n="translateme"></button>
+				</div>
 				<br><br><br><br><br><br>
 				<div class="grey-text">
 				Turn Off the Lights<br>
 				<span class="style_bold">&copy; <span id="yearnow"></span> Stefan vd. <span data-i18n="titelrightsreserved"></span></span><br>
-				<span class="license" data-i18n="textfoot"></span> <a href="http://creativecommons.org/licenses/GPL/2.0/">GPL 2.0</a>.
+				<span class="license" data-i18n="textfoot"></span> <a href="http://creativecommons.org/licenses/GPL/2.0/" target="_blank" rel="noopener">GPL 2.0</a>.
 				</div>
 				</div>
 			</section>
 			</div>
-		</div>
+			<div id="tab10" class="page hidden">
+				<h1 data-i18n="titleanalytics"></h1>
+				<section>
+					<div>
+						<div class="analyticbox">
+						<canvas id="myChart"></canvas>
+						</div>
+						<div class="esta">
+							<div><span id="txtdayweek"></span></div>
+							<div><span id="txtyestime"></span></div>
+							<div><span id="txtavgweektime"></span></div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="sharestatsenergy">
+						<div class="placeholder">
+							<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+							width="80" height="80"
+							viewBox="0 0 32 32"
+							style="fill:#ffffff;"
+							class="icons8-full-battery"><g><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
+						</div>
+						<div class="text">
+							<span id="shareenergytext"></span>
+						</div>
+						</div>
+						<button id="sharestatsenergysaved"><span data-i18n="btnsharestats"></span></button>
+					</div>
+				</section>
+				<section>
+					<div>
+					<h3 data-i18n="titleavgdayschedule"></h3>
+					<div class="canvasavgday">
+						<canvas id="myChartfour"></canvas>
+					</div>
+					</div>
+				</section>
+				<section>
+				<div class="threecanvasgroup">
+					<div class="canvaschart">
+					<canvas id="myCharttwo"></canvas>
+					</div>
+					<div class="canvaschart">
+					<canvas id="myChartthree"></canvas>
+					</div>
+				</div>
+				</section>
+				<section>
+					<div class="sharestatslove">
+						<div class="placeholder">
+						<div class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+							width="80" height="80"
+							viewBox="0 0 32 32"
+							style="fill:#ffffff;"
+							class="icons8-love"><g><path d="M 16.398438 4 C 14.601563 4 13 4.898438 12 6.300781 C 11 4.898438 9.398438 4 7.601563 4 C 4.5 4 2 6.5 2 9.601563 C 2 14 12 22 12 22 C 12 22 22 14 22 9.601563 C 22 6.5 19.5 4 16.398438 4 Z "></path></g></svg>
+						</div>
+						<div class="text">
+							<span id="sharelovetext"></span>
+						</div>
+						</div>
+						<button id="sharestatslove"><span data-i18n="btnsharestats"></span></button>
+					</div>
+				</section>
+				<section>
+					<div>
+					<h3 data-i18n="titlesiteengagement"></h3>
+					<table id="tablesiteeng" class="tabledatalist">
+						<tr>
+							<td><span data-i18n="titleorigin"></span></td>
+							<td><span data-i18n="titletime"></span></td>
+						</tr>
+					</table>
+					<br><br>
+					<label><button id="btnresetanalytics" data-i18n="resetlampanalytic"></button></label>
+					<br><br>
+					<span class="grey-text" data-i18n="titlelanalyticprivacy"></span> <a href="https://www.turnoffthelights.com/privacy.html" target="_blank" rel="noopener"><span data-i18n="titlelprivacy"></span></a>
+					</div>
+				</section>
+			</div>
+			</div>
 			<div id="tab4" class="page hidden">
-				<iframe id="welcomeguide" src="" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
+				<iframe id="welcomeguide" title="Welcome Guide" src="" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+<!-- dialog -->
+			<div id="materialModal" class="hide" role="dialog" aria-label="Multiple opacity values" aria-describedby="materialModalTitle" aria-disabled="true">
+					<div id="materialModalCentered">
+						<div id="materialModalContent">
+							<div id="materialModalTitle"><span data-i18n="titlemultiopacity"></span></div>
+							<div id="materialModalText">
+								<div role="radiogroup" aria-labelledby="materialModalTitle">
+								<div class="md-radio">
+									<input id="multiopacall" type="radio" name="multiopac" value="all" role="radio" aria-labelledby="materialModalTitle">
+									<label for="multiopacall"><div><span data-i18n="desmultiopacitynormal"></span></div></label>
+								</div>
+								<div class="md-radio">
+									<input id="multiopacsel" type="radio" name="multiopac" value="sel" role="radio" aria-labelledby="materialModalTitle">
+									<label for="multiopacsel"><div><span data-i18n="desmultiopacitysel"></span></div></label>
+								</div>
+								</div>
+								<form id="formmultiopacity">
+									<table id="multiopacitylist">
+											<tr>
+												<td>
+													<input id="multiopacityname" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature">
+												</td>
+												<td>
+													<input id="multiopacitynumber" type="number" required placeholder="80" min="0" step="1" max="100" value="80" aria-label="Choose the opacity value in the number box">
+												</td>
+												<td>
+													<button type="submit" id="multiopacityaddbutton" name="add"><span data-i18n="addbutton"></span></button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<select id="multiopacityDomainsBox" name="multiopacityentryList" size="5" multiple="" aria-label="The website URL"></select>
+												</td>
+												<td>
+													<select id="multiopacitynumberBox" name="multiopacitynumberentryList" size="5" multiple="" aria-label="The opacity value from that website"></select>
+												</td>
+												<td valign="top">
+													<button type="button" id="multiopacityremovebutton" name="delete"><span data-i18n="deletebutton"></span></button>
+												</td>
+											</tr>
+										</table>
+									<br>
+									<div class="grey-text"><span data-i18n="desmultiopacitynot"></span></div>
+									</form>
+							</div>
+							<div id="materialModalButtons">
+							<div id="materialModalButtonOK" class="materialModalButton"><span data-i18n="titleok"></span></div>
+							<div id="materialModalButtonCANCEL" class="materialModalButton"><span data-i18n="titlecancel"></span></div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div id="materialModalRate" class="hide" role="dialog" aria-label="Review this extension" aria-describedby="materialModalRateTitle" aria-disabled="true">
+						<div id="materialModalRateCentered">
+							<div id="materialModalRateContent">
+								<img src="images/star.svg" alt="Review Turn Off the Lights to 5 stars">
+								<div id="materialModalRateTitle"><span data-i18n="friendlyremember"></span></div>
+								<div id="materialModalRateText">
+									<span data-i18n="desremrate"></span>
+								</div>
+								<div id="materialModalRateButtons">
+								<div id="materialModalRateButtonOK" class="materialModalButton"><span data-i18n="titlelratenow"></span></div>
+								<div id="materialModalRateButtonCANCEL" class="materialModalButton"><span data-i18n="titleratelater"></span></div>
+								</div>
+							</div>
+						</div>
+			</div>
+			<div id="materialModalIntroduce" class="hide" role="dialog" aria-label="Introduce the new design" aria-describedby="materialModalIntroduceTitle" aria-disabled="true">
+					<div id="materialModalIntroduceCentered">
+						<div id="materialModalIntroduceContent">
+							<img src="images/introduce.svg" alt="Introducing Turn Off the Lights">
+							<div id="materialModalIntroduceTitle"><span data-i18n="titelintroduce"></span></div>
+							<div id="materialModalIntroduceText">
+								<span data-i18n="desintroduce"></span>
+							</div>
+							<div id="materialModalIntroduceButtons">
+							<div id="materialModalIntroduceButtonOK" class="materialModalButton"><span data-i18n="titleok"></span></div>
+							<div id="materialModalIntroduceButtonCANCEL" class="materialModalButton"><span data-i18n="titlecancel"></span></div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div id="dropmenu" class="hide">
+				<ul><li id="btnactivedarkmode">
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+					width="16" height="16"
+					viewBox="0 0 30 30">
+					<path d="M22,21c-6.627,0-12-5.373-12-12c0-1.95,0.475-3.785,1.3-5.412C6.485,5.148,3,9.665,3,15c0,6.627,5.373,12,12,12 c4.678,0,8.72-2.682,10.7-6.588C24.534,20.79,23.292,21,22,21z"></path></svg>
+					<span id="currentdarkmode" data-i18n="titledarkmodeoff"></span></li></ul>
+				<ul><li id="btnsupport">
+						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+						width="16" height="16"
+						viewBox="0 0 24 24"><g><path d="M 20 2 L 4 2 C 2.894531 2 2 2.894531 2 4 L 2 22 L 6 18 L 20 18 C 21.105469 18 22 17.105469 22 16 L 22 4 C 22 2.894531 21.105469 2 20 2 Z M 13 14 L 11 14 L 11 12 L 13 12 Z M 15 9 C 15 9.378906 14.789063 9.71875 14.449219 9.890625 L 13 10.621094 L 13 11 L 11 11 L 11 10 C 11 9.621094 11.210938 9.28125 11.550781 9.109375 L 13 8.378906 L 13 7 L 11 7 L 11 8.078125 L 9 8.078125 L 9 6 C 9 5.449219 9.449219 5 10 5 L 14 5 C 14.550781 5 15 5.449219 15 6 Z "></path></g></svg>
+						<span data-i18n="titelpopupsupport"></span></li></ul>
 			</div>
 </div>
-<script type="text/javascript" src="js/options-bottom.js"></script>
 <script type="text/javascript" src="js/translate.js"></script>
 </body>
 </html>
