@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2017 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,24 +27,29 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-chrome.storage.sync.get(['autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack'], function(response){
+chrome.storage.sync.get(['autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','autostopred','autostoptrans'], function(response){
 var autostop = response['autostop'];
 var autostoponly = response['autostoponly'];
 var autostopDomains = response['autostopDomains'];
 var autostopchecklistwhite = response['autostopchecklistwhite'];
 var autostopchecklistblack = response['autostopchecklistblack'];
+var autostopred = response['autostopred'];
+var autostoptrans = response['autostoptrans'];
 if(autostop == true){
-window.addEventListener("load", function(){
+document.addEventListener("DOMContentLoaded", function(event){
 if(autostoponly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var stoprabbit = false;
-if(typeof autostopDomains == "string") {
+if(typeof autostopDomains == "string"){
 	autostopDomains = JSON.parse(autostopDomains);
 	var atbuf = [];
-	for(var domain in autostopDomains)
+	var domain;
+	for(domain in autostopDomains)
 		atbuf.push(domain);
-        atbuf.sort();
-		for(var i = 0; i < atbuf.length; i++){
+		atbuf.sort();
+		var i;
+		var l = atbuf.length;
+		for(i = 0; i < l; i++){
 			if(autostopchecklistwhite == true){
 				if(currenturl == atbuf[i]){autostopfunction();}
 			}
@@ -56,113 +61,324 @@ if(typeof autostopDomains == "string") {
 	if(autostopchecklistblack == true){
 		if(stoprabbit == false){autostopfunction();}
 	}
-} else {autostopfunction();}
+}else{autostopfunction();}
 }, false);
 
-var forceautostop;
-var forcecount = 0;
-function autostopvideo(video){
-	var ytps = document.querySelector('.ytp-play-button');
-    if(ytps){
-	// YouTube
-		if (ytps.getAttribute("aria-label") == "Pause") {
-		ytps.click();
-		video.currentTime = 0;
-		}
-	}else{
-	// regular HTML5 video
-    forceautostop = window.setInterval(function(){
-	forcecount +=1;
-    video.pause();
-	video.currentTime = 0;
-	video.autostart = false;
-	video.autoplay = false;
-	video.preload = "none";
-	video.oncanplay = null;
-	video.onplay = null;
-	if(forcecount >= 25){window.clearInterval(forceautostop);forceautostop=0;forcecount=0;}
-    }, 100);
-	video.setAttribute("data-stopvideo",true);
-	}
+function getPosition(el){
+var xPos = 0;var yPos = 0;
+while (el){xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);yPos += (el.offsetTop - el.scrollTop + el.clientTop);el = el.offsetParent;}
+return{x:xPos,y:yPos};
 }
 
 function autostopfunction(){
- 		// New Mutation Summary API Reference
- 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
- 		if(MutationObserver) {
- 		// setup MutationSummary observer
- 		var videolist = document.querySelector('body');
- 		var observer = new MutationObserver(function (mutations, observer) {
- 		    mutations.forEach(function (mutation) {
- 		        if(mutation.target.tagName == "VIDEO") {
- 		            if (mutation.attributeName === "src" && mutation.target.src != "") {
- 						autostopvideo(mutation.target);
-                        mutation.target.addEventListener('timeupdate', function() {
-                            if(this.getAttribute("data-stopvideo") == "true"){
-                                if(!this.paused){this.pause();this.currentTime = 0;}
-                            }
-                        },false);
-                        mutation.target.addEventListener('play', function() {
-                            if(this.getAttribute("data-stopvideo") == "true"){
-                                if(!this.paused){this.pause();this.currentTime = 0;}
-                            }
-                        },false);
-                        mutation.target.addEventListener('mouseover', function() {
-							// unlocked - regular video player
-                            this.setAttribute("data-stopvideo","false");
-                        }, false);
- 		            }
- 		        }
- 		        if(typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO") {
-					autostopvideo(mutation.target);
- 		        }
- 		    });
-        });
- 
- 		observer.observe(videolist, {
-			subtree: true,       // observe the subtree rooted at ...videolist...
-			childList: true,     // include childNode insertion/removals
-			characterData: false, // include textContent changes
-			attributes: true     // include changes to attributes within the subtree
-        });
- 	}
+	// A regular on first run
+	autostopdetectionstart();
+	// B New Mutation Summary API Reference
+	var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+	if(MutationObserver){
+	// setup MutationSummary observer
+	var videolist = document.body;
+	var observer = new MutationObserver(function(mutations, observer){
+		mutations.forEach(function(mutation){
+			if(mutation.target.tagName == "VIDEO"){
+				if(mutation.attributeName === "src" && mutation.target.currentSrc != ""){
+					autostopdetectionstart();
+				}
+			}
+			// dynamic add and remove video
+			if(mutation.type == 'childList'){
+				var i;
+				var la = mutation.addedNodes.length;
+				for(i = 0; i < la; i++){
+					if(mutation.addedNodes[i].tagName == "VIDEO"){
+						autostopdetectionstart();
+					}
+				}
+				var j;
+				var lr = mutation.removedNodes.length;
+				for(j = 0; j < lr; j++){
+					if(mutation.removedNodes[j].tagName == "VIDEO"){
+						autostopdetectionstart();
+					}
+				}
+			}
+			// inside it
+			var i;
+			var l = mutation.addedNodes.length;
+			for(i = 0; i < l; i++){
+				if(mutation.addedNodes[i]){
+					var j;
+					var lac = mutation.addedNodes[i].childNodes.length;
+					for(j = 0; j < lac; j++){
+						var detail = mutation.addedNodes[i].childNodes[j];
+						if(detail.nodeName == "VIDEO"){
+							autostopdetectionstart();
+						}
+					}
+				}
+			}
+			// detect change style - this for floating box in div detection
+			if(mutation.attributeName == 'style'){
+				var currentClass = mutation.target.className;
+				if(currentClass!="stefanvdautostop"){
+					refreshsize();
+				}
+			}
+		});
+	});
 
-    var ytps = document.querySelector('.ytp-play-button');
-    if(ytps) {
-        if (ytps.getAttribute("aria-label") == "Pause") {
-            ytps.click();
-			var myVideo = document.getElementsByTagName('video')[0];
-			if(myVideo){
-				autostopvideo(myVideo);
+	observer.observe(videolist,{
+		subtree: true,       // observe the subtree rooted at ...videolist...
+		childList: true,     // include childNode insertion/removals
+		characterData: false, // include textContent changes
+		attributes: true     // include changes to attributes within the subtree
+	});
+	
+	}
+}
+
+function autostopdetectionstart(){
+	// first remove the excisting autostop panels
+	var firstautostopremove = document.getElementsByClassName("stefanvdautostop");
+	while(firstautostopremove.length > 0){
+		firstautostopremove[0].parentNode.removeChild(firstautostopremove[0]);
+	}
+	
+	var visualvideos = document.getElementsByTagName("video");
+	var i;
+	var l = visualvideos.length;
+	for(i = 0; i < l; i++){
+		video = visualvideos[i];
+		video.setAttribute("data-videonum",i);
+		video.setAttribute("data-stopvideo","true");
+
+		if(video.paused == false){
+			var playPromise = video.play();
+			if(playPromise !== undefined){
+			playPromise.then(_ => {
+				// Automatic playback started!
+				// Show playing UI.
+				// We can now safely pause video...
+				video.pause();video.currentTime = 0;
+			})
+			.catch(error => {
+				// Auto-play was prevented
+				// Show paused UI.
+			});
 			}
 		}
-    }
-	else {
-		// regular HTML5 video
-		// and inside iframe elements
-        var videos = document.querySelectorAll('video');
-        for (var i=0; i<videos.length; i++) {
-            video = videos[i];
-			autostopvideo(video);
-			video.oncanplay = function() { autostopvideo(video); };
-            video.onplay = function() { autostopvideo(video); };
-            video.addEventListener('timeupdate', function() {
-                if(this.getAttribute("data-stopvideo") == "true"){
-                   if(!this.paused){this.pause();this.currentTime = 0;}
-                 }
-            }, false);
-			video.addEventListener('play', function() {
-                if(this.getAttribute("data-stopvideo") == "true"){
-                	if(!this.paused){this.pause();this.currentTime = 0;}
-                }
-            },false);
-			video.addEventListener('mouseover', function() {
-				// unlocked - regular video player
-				this.setAttribute("data-stopvideo","false");
-            }, false);
-        }
-    }
+
+		var reqId;
+		var stopTracking = function(){
+			if(video.getAttribute("data-stopvideo") == "true"){
+				if(reqId){
+				cancelAnimationFrame(reqId);
+				}
+			}
+		};
+		video.addEventListener('playing', function(ev){
+			reqId = requestAnimationFrame(function play(){
+				if(ev.target.getAttribute("data-stopvideo")){
+				}else{
+					ev.target.setAttribute("data-stopvideo","true");
+				}
+				if(ev.target.getAttribute("data-stopvideo")){
+					if(ev.target.getAttribute("data-stopvideo") == "true"){
+						if(!ev.target.paused){
+							var playPromise = ev.target.play();
+							if(playPromise !== undefined){
+							playPromise.then(_ => {
+								// Automatic playback started!
+								// Show playing UI.
+								// We can now safely pause video...
+								ev.target.pause();ev.target.currentTime = 0;
+								stopTracking();
+							})
+							.catch(error => {
+								// Auto-play was prevented
+								// Show paused UI.
+							});
+							}							
+						}
+						rock = ev.target.getAttribute("data-videonum");
+						if(document.getElementById('stefanvdautostoppanel'+rock)){
+							document.getElementById('stefanvdautostoppanel'+rock).style.display = "block";
+							refreshsize();
+						}
+						//console.log(Math.round(video.currentTime * 1000));
+						reqId = requestAnimationFrame(play);
+					}
+				}
+			});
+		},false);
+		video.addEventListener('pause', stopTracking);
+
+		// design panel
+		var myElement = document.getElementsByTagName("video")[i];
+		if(myElement.currentStyle){
+			var d = myElement.currentStyle["display"];
+			var w = myElement.currentStyle["width"];
+			var h = myElement.currentStyle["height"];
+			var t = myElement.currentStyle["top"];
+		}
+		else if(window.getComputedStyle){
+			var st = document.defaultView.getComputedStyle(myElement, null);
+			var d = st.getPropertyValue("display");
+			var w = st.getPropertyValue("width");
+			var h = st.getPropertyValue("height");
+			var t = st.getPropertyValue("top");
+		}
+
+		var visposition = getPosition(myElement);
+
+		var newautostoppanel = document.createElement("div");
+		newautostoppanel.setAttribute("id","stefanvdautostoppanel"+i);
+		newautostoppanel.setAttribute("data-videonum",i);
+
+		newautostoppanel.className = "stefanvdautostop";
+		if(autostopred == true){
+			newautostoppanel.setAttribute("style","background:rgba(165,8,0,0.88)!important");
+		}
+
+		// if previous path is none, then hide it too
+		var path = [];
+		do{
+			var qq = path.unshift(myElement.nodeName);
+
+			if(myElement.currentStyle){
+				var adisplay = qq.currentStyle["display"];
+			}else{
+				var st = document.defaultView.getComputedStyle(myElement, null);
+				var adisplay = st.getPropertyValue("display");
+			}
+			if(adisplay == "none"){
+				newautostoppanel.style.display = "none";
+			}
+		}while((myElement.nodeName.toLowerCase() != 'html') && (myElement = myElement.parentNode))
+		//---
+		
+		// YouTube video top position negative value, then minus the height
+		if(parseInt(t, 10) < 0){
+			newautostoppanel.style.top = visposition.y-h+"px";
+		}else{
+			newautostoppanel.style.top = visposition.y+"px";
+		}
+		newautostoppanel.style.left = visposition.x+"px";
+		newautostoppanel.style.width = w;
+		newautostoppanel.style.height = h;
+		if(d == "none"){newautostoppanel.style.display = "none";}
+
+		newautostoppanel.addEventListener("click", function(event){
+			var templearn = event.target.id;
+			templearn = templearn.substr(0, 26);
+			if(templearn != "stefanvdautostoppanellearn"){
+			rock = this.getAttribute("data-videonum");
+			document.getElementById('stefanvdautostoppanel'+rock).style.display = "none";
+			document.getElementsByTagName("video")[rock].setAttribute("data-stopvideo","false");
+			var playPromise = document.getElementsByTagName("video")[rock].play();
+			if(playPromise !== undefined) {
+			  playPromise.then(_ => {
+				// Automatic playback started!
+			  })
+			  .catch(error => {
+				// Auto-play was prevented
+			  });
+			}
+			}
+		},false);
+		newautostoppanel.addEventListener('contextmenu', event => event.preventDefault());
+		document.body.appendChild(newautostoppanel);
+
+		if(autostopred == true){
+		var newautostoptitel = document.createElement("div");
+		newautostoptitel.className = "stefanvdautostoptitel";
+		newautostoptitel.innerText = chrome.i18n.getMessage("autostopenabled");
+		newautostoppanel.appendChild(newautostoptitel);
+
+		var newautostopdes = document.createElement("div");
+		newautostopdes.className = "stefanvdautostopdes";
+		newautostopdes.innerText = chrome.i18n.getMessage("autostopclickme");
+		newautostoppanel.appendChild(newautostopdes);
+
+		var newautostoplearn = document.createElement("div");
+		newautostoplearn.setAttribute("id","stefanvdautostoppanellearn"+i);
+		newautostoplearn.className = "stefanvdautostoplearn";
+		newautostoplearn.addEventListener("click", function(event){
+			window.open("https://www.turnoffthelights.com/support/browser-extension/what-is-the-autostop-feature/", "_blank");
+		},false);
+		newautostoplearn.innerText = chrome.i18n.getMessage("autostopdetails");
+		newautostoppanel.appendChild(newautostoplearn);
+
+		var newautostopfoot = document.createElement("div");
+		newautostopfoot.className = "stefanvdautostopfoot";
+		newautostopfoot.innerText = chrome.i18n.getMessage("autostopblocked");
+		newautostoppanel.appendChild(newautostopfoot);
+		}
+	}
 }
+
+function refreshsize(){
+var cusid_ele = document.getElementsByClassName('stefanvdautostop');
+var i;
+var l = cusid_ele.length;
+for(i = 0; i < l; ++i){
+	var item = cusid_ele[i];  
+	myElement = document.getElementsByTagName("video")[i];
+	if(myElement){
+		if(myElement.currentStyle){
+			var d = myElement.currentStyle["display"];
+			var w = myElement.currentStyle["width"];
+			var h = myElement.currentStyle["height"];
+			var t = myElement.currentStyle["top"];
+		}
+		else if(window.getComputedStyle){
+			var st = document.defaultView.getComputedStyle(myElement, null);
+			var d = st.getPropertyValue("display");
+			var w = st.getPropertyValue("width");
+			var h = st.getPropertyValue("height");
+			var t = st.getPropertyValue("top");
+		}
+
+		visposition = getPosition(myElement);
+
+		// if previous path is none, then hide it too
+		var path = [];
+		do{
+			var qq = path.unshift(myElement.nodeName);
+
+			if(myElement.currentStyle){
+				var adisplay = qq.currentStyle["display"];
+			}else{
+				var st = document.defaultView.getComputedStyle(myElement, null);
+				var adisplay = st.getPropertyValue("display");
+			}
+			if(adisplay == "none"){
+				item.style.display = "none";
+			}
+		}while((myElement.nodeName.toLowerCase() != 'html') && (myElement = myElement.parentNode))
+		//---
+
+		// YouTube video top position negative value, then minus the height
+		if(parseInt(t, 10) < 0){
+			item.style.top = visposition.y-h+"px";
+		}else{
+			item.style.top = visposition.y+"px";
+		}
+		item.style.left = visposition.x+"px";
+		item.style.width = w;
+		item.style.height = h;
+	
+		if(d == "none"){item.style.display = "none";}
+	}else{
+		// remove this stop layer
+		if(item){
+			item.parentNode.removeChild(item);
+		}
+	}
+}
+}
+window.addEventListener('resize', function(){refreshsize()},false);
+window.addEventListener('scroll', function(){refreshsize()},false);
 
 } // option autostop on end
 });

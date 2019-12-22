@@ -8,7 +8,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2018 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -45,8 +45,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 <div id="loading">
 <div id="loadingcenter">
 <div id="productwelcomeimageload">
-    <div class="icon">
-        <img id="loadinglamp" alt="Lamp" width="16" height="16" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">Turn Off the Lights™</div>
+	<div class="icon">
+		<img id="loadinglamp" loading="lazy" alt="Browser Lamp Icon" width="16" height="16" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">Turn Off the Lights™</div>
 </div>
 <div id="progressbar"><div id="progress"><div id="pbaranim"></div></div></div>
 </div>
@@ -60,9 +60,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 		<div class="masterhead">
 			<div class="title" id="titleex">
 				<div class="icon">
-					<img id="headlamp" width="16" height="16" alt="Turn Off the Lights Browser extension lamp">
+					<img id="headlamp" loading="lazy" width="16" height="16" alt="Turn Off the Lights Browser extension lamp" src="icons/icon16.png" srcset="icons/icon16.png 1x, icons/icon16@2x.png 2x">
 				</div>
 				Turn Off the Lights™</div>
+			<div class="search">
+				<div class="searchicon"><svg id="btnsearchicon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><g><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></g></svg>
+				</div>
+				<input type="search" id="appsearch" placeholder="" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Search through site content">
+			</div>
 			<div class="rightmenu" id="dotmenu">
 				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 				width="24" height="24"
@@ -70,7 +75,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			</div>
 		</div>
 	</header>
-	<input type="checkbox" id="reveal-menu" role="button">
+	<input type="checkbox" id="reveal-menu" role="checkbox" aria-checked="false" aria-label="The button to open the 3 dots menu">
 	
 	<div id="md-home">
 			<label for="reveal-menu" id="menu">
@@ -136,6 +141,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 	</ul>
 	</div>
 	<div id="mainview">
+		<h1 data-i18n="optionpagetitle" class="hidden"></h1>
 		<div id="managed-prefs-banner">
 			<span id="managed-prefs-icon">
 				<a class="donatebutton" target="_blank" href="https://www.turnoffthelights.com/donate.html" data-i18n="titledonatebutton" rel="noopener"></a>
@@ -145,9 +151,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 		</div>
 		<div id="mainview-content">
 			<div id="tab1" class="page">
-			<h1 data-i18n="basicsettings"></h1>
+			<h2 data-i18n="basicsettings"></h2>
 			<div class="sharemenu">
-				<div data-i18n="titelsharethis"></div> <div id="shareboxgoogle"></div> <div id="shareboxfacebook"></div> <div id="shareboxtwitter"></div>
+				<div data-i18n="titelsharethis"></div> <div id="shareboxyoutube"></div> <div id="shareboxfacebook"></div> <div id="shareboxtwitter"></div>
 			</div>
 				<br>
 				<div id="example1"></div>
@@ -155,10 +161,16 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<table class="youtubepreview" aria-hidden="true" role="none">
 					<tr>
 						<td class="youtubeviewpanel">
-						<iframe id="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen></iframe>
+						<iframe id="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen>Your browser does not support iframes.</iframe>
 						<div id="sampletitle" class="youtubetitel" aria-disabled="true">Stefan vd</div>
-						<div id="samplechannel" class="youtube_container_head">	
-						<iframe class="embedytsub" title="YouTube subscribe" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="100%" src="https://www.youtube.com/subscribe_embed?bsv&amp;usegapi=1&amp;channel=stefanvdlive&amp;theme=light&amp;layout=full&amp;hl=en-US&amp;origin=http%3A%2F%2Fturnoffthelights.com&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.Hm9QrP5wPuw.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOJmMfO7AjAhJbN5yM-BshnzKg53Q#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Conload&amp;id=I0_1371683853533&amp;parent=http%3A%2F%2Fturnoffthelights.com&amp;rpctoken=33681162" data-gapiattached="true"></iframe>
+						<div id="samplechannel" class="youtube_container_head">
+							<div class="embedytsub">
+								<div class="subchannelicon">S</div>
+								<div class="subchanneldes">
+									<div class="subchannelname">Stefan Van Damme</div>
+									<div class="subaction"><div class="subbtn">Subscribe</div></div>
+								</div>
+							</div>
 						</div>
 						<div id="videochannel" class="youtube_video_head">
 						<div class="youtubevideobutton" aria-disabled="true"><span>55 videos</span></div>
@@ -172,15 +184,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<div id="sampledislikebutton" class="youtubelikebar" aria-disabled="true">
 						<div class="youtubelikebutton" aria-disabled="true">
 							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-     							width="20" height="20"
-     							viewBox="0 0 24 24"
-     							style="fill:#000000;"><g><path d="M 13.5625 2.25 L 7.5625 8.25 C 7.210938 8.601563 7 9.097656 7 9.59375 L 7 19.125 C 7 20.160156 7.839844 21 8.875 21 L 17.03125 21 C 17.773438 21 18.449219 20.554688 18.75 19.875 L 21.75 13.125 C 21.914063 12.75 22 12.347656 22 11.9375 L 22 11 C 22 9.964844 21.035156 9 20 9 L 14 9 C 14 9 15.4375 5.148438 15.4375 4.46875 C 15.4375 2.710938 13.5625 2.25 13.5625 2.25 Z M 2 9 L 2 21 L 5 21 L 5 9 Z "></path></g></svg>
-     					<span>4k</span></div>
+	 							width="20" height="20"
+	 							viewBox="0 0 24 24"
+								style="fill:#000000;"><g><path d="M 13.5625 2.25 L 7.5625 8.25 C 7.210938 8.601563 7 9.097656 7 9.59375 L 7 19.125 C 7 20.160156 7.839844 21 8.875 21 L 17.03125 21 C 17.773438 21 18.449219 20.554688 18.75 19.875 L 21.75 13.125 C 21.914063 12.75 22 12.347656 22 11.9375 L 22 11 C 22 9.964844 21.035156 9 20 9 L 14 9 C 14 9 15.4375 5.148438 15.4375 4.46875 C 15.4375 2.710938 13.5625 2.25 13.5625 2.25 Z M 2 9 L 2 21 L 5 21 L 5 9 Z "></path></g></svg>
+	 					<span>4k</span></div>
 						<div class="youtubedislikebutton" aria-disabled="true">
 							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-     						width="20" height="20"
-     						viewBox="0 0 24 24"
-     						style="fill:#000000;"><g><path d="M 2 3 L 2 15 L 5 15 L 5 3 Z M 8.875 3 C 7.839844 3 7 3.839844 7 4.875 L 7 14.40625 C 7 14.902344 7.210938 15.398438 7.5625 15.75 L 13.5625 21.75 C 13.5625 21.75 15.4375 21.289063 15.4375 19.53125 C 15.4375 18.851563 14 15 14 15 L 20 15 C 21.035156 15 22 14.035156 22 13 L 22 12.0625 C 22 11.652344 21.914063 11.25 21.75 10.875 L 18.75 4.125 C 18.449219 3.445313 17.773438 3 17.03125 3 Z "></path></g></svg>
+	 						width="20" height="20"
+	 						viewBox="0 0 24 24"
+	 						style="fill:#000000;"><g><path d="M 2 3 L 2 15 L 5 15 L 5 3 Z M 8.875 3 C 7.839844 3 7 3.839844 7 4.875 L 7 14.40625 C 7 14.902344 7.210938 15.398438 7.5625 15.75 L 13.5625 21.75 C 13.5625 21.75 15.4375 21.289063 15.4375 19.53125 C 15.4375 18.851563 14 15 14 15 L 20 15 C 21.035156 15 22 14.035156 22 13 L 22 12.0625 C 22 11.652344 21.914063 11.25 21.75 10.875 L 18.75 4.125 C 18.449219 3.445313 17.773438 3 17.03125 3 Z "></path></g></svg>
 						<span>0</span></div>
 						</div>
 						<div id="samplesharebutton" class="youtubesharebutton" aria-disabled="true"><span>Share</span></div>
@@ -221,14 +233,13 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					</tr>
 				</table>
 				<div class="tabbar">
-					<div class=tabbarintern>
+					<div class="tabbarintern">
 						<div id="sub1" class="tabbutton tabhighlight" title="Dark Layer Color">
 							<div class="tabicon">
 								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								width="24" height="24"
 								viewBox="0 0 48 48"
-								style="fill:#000000;"
-								class="icon icons8-color-wheel"><g><path style="fill:#E91E63;" d="M 24 5 L 24 24 L 14.5 7.546875 Z "></path><path style="fill:#FF5722;" d="M 33.5 7.546875 L 40.453125 14.5 L 24 24 Z "></path><path style="fill:#F44336;" d="M 24 5 L 33.5 7.546875 L 24 24 Z "></path><path style="fill:#8BC34A;" d="M 24 43 L 24 24 L 33.5 40.453125 Z "></path><path style="fill:#03A9F4;" d="M 14.5 40.453125 L 7.546875 33.5 L 24 24 Z "></path><path style="fill:#4CAF50;" d="M 24 43 L 14.5 40.453125 L 24 24 Z "></path><path style="fill:#FF9800;" d="M 43 24 L 24 24 L 40.453125 14.5 Z "></path><path style="fill:#FFEB3B;" d="M 40.453125 33.5 L 33.5 40.453125 L 24 24 Z "></path><path style="fill:#FFC107;" d="M 43 24 L 40.453125 33.5 L 24 24 Z "></path><path style="fill:#3F51B5;" d="M 5 24 L 24 24 L 7.546875 33.5 Z "></path><path style="fill:#9C27B0;" d="M 7.546875 14.5 L 14.5 7.546875 L 24 24 Z "></path><path style="fill:#673AB7;" d="M 5 24 L 7.546875 14.5 L 24 24 Z "></path></g></svg>
+								style="fill:#000000;"><g><path style="fill:#E91E63;" d="M 24 5 L 24 24 L 14.5 7.546875 Z "></path><path style="fill:#FF5722;" d="M 33.5 7.546875 L 40.453125 14.5 L 24 24 Z "></path><path style="fill:#F44336;" d="M 24 5 L 33.5 7.546875 L 24 24 Z "></path><path style="fill:#8BC34A;" d="M 24 43 L 24 24 L 33.5 40.453125 Z "></path><path style="fill:#03A9F4;" d="M 14.5 40.453125 L 7.546875 33.5 L 24 24 Z "></path><path style="fill:#4CAF50;" d="M 24 43 L 14.5 40.453125 L 24 24 Z "></path><path style="fill:#FF9800;" d="M 43 24 L 24 24 L 40.453125 14.5 Z "></path><path style="fill:#FFEB3B;" d="M 40.453125 33.5 L 33.5 40.453125 L 24 24 Z "></path><path style="fill:#FFC107;" d="M 43 24 L 40.453125 33.5 L 24 24 Z "></path><path style="fill:#3F51B5;" d="M 5 24 L 24 24 L 7.546875 33.5 Z "></path><path style="fill:#9C27B0;" d="M 7.546875 14.5 L 14.5 7.546875 L 24 24 Z "></path><path style="fill:#673AB7;" d="M 5 24 L 7.546875 14.5 L 24 24 Z "></path></g></svg>
 							</div>
 						</div>
 						<div id="sub2" class="tabbutton" title="Linear Gradient Color">
@@ -244,8 +255,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								width="24" height="24"
 								viewBox="0 0 48 48"
-								style="fill:#000000;"
-								class="icon icons8-picture"><g><path style="fill:#F57C00;" d="M 40 41 L 8 41 C 5.800781 41 4 39.199219 4 37 L 4 11 C 4 8.800781 5.800781 7 8 7 L 40 7 C 42.199219 7 44 8.800781 44 11 L 44 37 C 44 39.199219 42.199219 41 40 41 Z "></path><path style="fill:#FFF9C4;" d="M 38 16 C 38 17.65625 36.65625 19 35 19 C 33.34375 19 32 17.65625 32 16 C 32 14.34375 33.34375 13 35 13 C 36.65625 13 38 14.34375 38 16 Z "></path><path style="fill:#942A09;" d="M 20 16 L 9 32 L 31 32 Z "></path><path style="fill:#BF360C;" d="M 31 22 L 23 32 L 39 32 Z "></path></g></svg>
+								style="fill:#000000;"><g><path style="fill:#F57C00;" d="M 40 41 L 8 41 C 5.800781 41 4 39.199219 4 37 L 4 11 C 4 8.800781 5.800781 7 8 7 L 40 7 C 42.199219 7 44 8.800781 44 11 L 44 37 C 44 39.199219 42.199219 41 40 41 Z "></path><path style="fill:#FFF9C4;" d="M 38 16 C 38 17.65625 36.65625 19 35 19 C 33.34375 19 32 17.65625 32 16 C 32 14.34375 33.34375 13 35 13 C 36.65625 13 38 14.34375 38 16 Z "></path><path style="fill:#942A09;" d="M 20 16 L 9 32 L 31 32 Z "></path><path style="fill:#BF360C;" d="M 31 22 L 23 32 L 39 32 Z "></path></g></svg>
 							</div>
 						</div>
 						<div id="sub4" class="tabbutton" title="Dynamic Background">
@@ -253,8 +263,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 								width="24" height="24"
 								viewBox="0 0 252 252"
-								style="fill:#000000;"
-								class="icon icons8-matrix-desktop"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><g><g><path d="M31.5,52.5c0,-11.60742 9.39258,-21 21,-21h147c11.60742,0 21,9.39258 21,21v147c0,11.58691 -9.39258,21 -21,21h-147c-11.60742,0 -21,-9.41309 -21,-21z" fill="#333333"></path><path d="M89.25,68.25h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M89.25,84h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M89.25,105h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M89.25,126h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M89.25,152.25h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M89.25,183.75h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M89.25,52.5h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M89.25,42h10.5v5.25h-10.5z" fill="#ffffff"></path><path d="M131.25,42h10.5v5.25h-10.5z" fill="#ffffff"></path><path d="M47.25,78.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M47.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M47.25,115.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M47.25,136.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M47.25,162.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M47.25,194.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M47.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M68.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M47.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M68.25,57.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M68.25,78.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M68.25,99.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M68.25,131.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M110.25,57.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M110.25,73.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M110.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M110.25,115.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M110.25,141.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M110.25,173.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M110.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,84h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,99.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M131.25,120.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M131.25,141.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M131.25,168h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M131.25,199.5h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M131.25,68.25h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,52.5h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,78.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M194.25,115.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M194.25,136.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M194.25,162.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M194.25,194.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M194.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M173.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M173.25,78.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M173.25,99.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M173.25,120.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M173.25,147h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M173.25,178.5h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M173.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M152.25,57.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M152.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M152.25,73.5h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M152.25,99.75h10.5v10.5h-10.5z" fill="#7f8c8d"></path></g></g></g></svg>
+								style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"></path><g><g><path d="M31.5,52.5c0,-11.60742 9.39258,-21 21,-21h147c11.60742,0 21,9.39258 21,21v147c0,11.58691 -9.39258,21 -21,21h-147c-11.60742,0 -21,-9.41309 -21,-21z" fill="#333333"></path><path d="M89.25,68.25h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M89.25,84h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M89.25,105h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M89.25,126h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M89.25,152.25h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M89.25,183.75h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M89.25,52.5h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M89.25,42h10.5v5.25h-10.5z" fill="#ffffff"></path><path d="M131.25,42h10.5v5.25h-10.5z" fill="#ffffff"></path><path d="M47.25,78.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M47.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M47.25,115.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M47.25,136.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M47.25,162.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M47.25,194.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M47.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M68.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M47.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M68.25,57.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M68.25,78.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M68.25,99.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M68.25,131.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M110.25,57.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M110.25,73.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M110.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M110.25,115.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M110.25,141.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M110.25,173.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M110.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,84h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,99.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M131.25,120.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M131.25,141.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M131.25,168h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M131.25,199.5h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M131.25,68.25h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M131.25,52.5h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,78.75h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,94.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M194.25,115.5h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M194.25,136.5h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M194.25,162.75h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M194.25,194.25h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M194.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M194.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M173.25,63h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M173.25,78.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M173.25,99.75h10.5v10.5h-10.5z" fill="#ecf0f1"></path><path d="M173.25,120.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M173.25,147h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M173.25,178.5h10.5v10.5h-10.5z" fill="#7f8c8d"></path><path d="M173.25,42h10.5v15.75h-10.5z" fill="#ffffff"></path><path d="M152.25,57.75h10.5v10.5h-10.5z" fill="#bdc3c7"></path><path d="M152.25,42h10.5v10.5h-10.5z" fill="#ffffff"></path><path d="M152.25,73.5h10.5v10.5h-10.5z" fill="#cccccc"></path><path d="M152.25,99.75h10.5v10.5h-10.5z" fill="#7f8c8d"></path></g></g></g></svg>
 							</div>
 						</div>
 						<div id="sub5" class="tabbutton" title="Blur Effect">
@@ -278,7 +287,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<span data-i18n="titelopacity"></span>:
 							</div>
 							<div class="tabopacityslider">
-								<input type="range" id="slider" min="0" max="100" step="1" value="0" aria-label="The opacity value from the slider" aria-valuemin="1" aria-valuemax="100" aria-valuenow="0">
+								<input type="range" id="slider" min="0" max="100" step="1" value="0" role="slider" aria-label="The opacity value from the slider" aria-valuemin="1" aria-valuemax="100" aria-valuenow="0">
 							</div>
 							<div>
 								<input type="number" id="interval" min="0" max="100" step="1" value="0" maxlength="3" size="4" aria-label="The opacity value from the number box" aria-valuemin="1" aria-valuemax="100" aria-valuenow="0">
@@ -291,7 +300,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					<div id="darklayersettings" role="radiogroup" aria-labelledby="screen">
 						<div id="colorpanel" class="">
 							<div class="md-radio">
-								<input id="lightimagen" type="radio" name="bcklightimage" value="never" role="radio" aria-labelledby="screen" aria-label="choose your color">
+								<input id="lightimagen" type="radio" name="bcklightimage" value="never" role="radio" aria-checked="true" aria-labelledby="screen" aria-label="choose your color">
 								<label for="lightimagen"><div><span data-i18n="titelcolor"></span></div></label>
 							</div>
 							<div class="md-color md-subgroup">
@@ -314,15 +323,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						</div>
 						<div id="gradientpanel" class="hidden">
 							<div class="md-radio">
-								<input id="lightimagelin" type="radio" name="bcklightimage" value="linear" role="group" aria-labelledby="screen" aria-label="Set to lineair gradient background">
+								<input id="lightimagelin" type="radio" name="bcklightimage" value="linear" role="group" aria-checked="false" aria-labelledby="screen" aria-label="Set to lineair gradient background">
 								<label for="lightimagelin"><div><span data-i18n="titellinear"></span></div></label>
 							</div>
 							<div class="md-selectfield md-subgroup">
-								<select id="linearsq" class="browser-default">
-									<option value="top" data-i18n="top"></option>
-									<option value="bottom" data-i18n="bottom"></option>
-									<option value="right" data-i18n="right"></option>
-									<option value="left" data-i18n="left"></option>
+								<select id="linearsq" role="listbox" class="browser-default">
+									<option value="top" data-i18n="top" role="option"></option>
+									<option value="bottom" data-i18n="bottom" role="option"></option>
+									<option value="right" data-i18n="right" role="option"></option>
+									<option value="left" data-i18n="left" role="option"></option>
 								</select>
 							</div>
 							<div class="md-color md-subgroup">
@@ -342,90 +351,90 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						</div>
 						<div id="imagepanel" class="hidden">
 							<div class="md-radio md-subgroup">
-								<input id="lightimagea" type="radio" name="bcklightimage" value="only" role="group" aria-labelledby="screen" aria-label="Set to the image background">
+								<input id="lightimagea" type="radio" name="bcklightimage" value="only" role="group" aria-checked="false" aria-labelledby="screen" aria-label="Set to the image background">
 								<label for="lightimagea"><div><span data-i18n="titelimage"></span></div></label>
 							</div>
 							<div>
-								<button id="wallpapershow" data-i18n="titellessmore"></button>
-								<button id="wallpaperhide" data-i18n="titelshowmore"></button>
-								<input id="lightimage" type="url" alt="Background Image" pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" aria-label="The image address">
+								<button type="button" id="wallpapershow" data-i18n="titellessmore"></button>
+								<button type="button" id="wallpaperhide" data-i18n="titelshowmore"></button>
+								<input id="lightimage" type="url" pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" aria-label="The image address">
 							</div>
 							<div id="imagegallery" style="display:none;">
 								<div class="hoveroptionbox">
-									<div class="hoveroptionwall1"><div class="wall1showme"><button id="totlswallpaper1" data-i18n="hoveroptionapply"></button></div></div>
-									<img id="bckimage1" alt="Screenshot1" height="70" src="" width="100" class="dynamicshaduw">
+									<div class="hoveroptionwall1"><div class="wall1showme"><button type="button" id="totlswallpaper1" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage1" alt="Background Wallpaper 1" height="70" src="" width="100" class="dynamicshaduw">
 								</div>
 								<div class="hoveroptionbox">
-									<div class="hoveroptionwall2"><div class="wall2showme"><button id="totlswallpaper2" data-i18n="hoveroptionapply"></button></div></div>
-									<img id="bckimage2" alt="Screenshot2" height="70" src="" width="100" class="dynamicshaduw">
+									<div class="hoveroptionwall2"><div class="wall2showme"><button type="button" id="totlswallpaper2" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage2" alt="Background Wallpaper 2" height="70" src="" width="100" class="dynamicshaduw">
 								</div>
 								<div class="hoveroptionbox">
-									<div class="hoveroptionwall3"><div class="wall3showme"><button id="totlswallpaper3" data-i18n="hoveroptionapply"></button></div></div>
-									<img id="bckimage3" alt="Screenshot3" height="70" src="" width="100" class="dynamicshaduw">
+									<div class="hoveroptionwall3"><div class="wall3showme"><button type="button" id="totlswallpaper3" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage3" alt="Background Wallpaper 3" height="70" src="" width="100" class="dynamicshaduw">
 								</div>
 								<div class="hoveroptionbox">
-									<div class="hoveroptionwall4"><div class="wall4showme"><button id="totlswallpaper4" data-i18n="hoveroptionapply"></button></div></div>
-									<img id="bckimage4" alt="Screenshot4" height="70" src="" width="100" class="dynamicshaduw">
+									<div class="hoveroptionwall4"><div class="wall4showme"><button type="button" id="totlswallpaper4" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage4" alt="Background Wallpaper 4" height="70" src="" width="100" class="dynamicshaduw">
 								</div>
 								<div class="hoveroptionbox">
-									<div class="hoveroptionwall5"><div class="wall5showme"><button id="totlswallpaper5" data-i18n="hoveroptionapply"></button></div></div>
-									<img id="bckimage5" alt="Screenshot5" height="70" src="" width="100" class="dynamicshaduw">
+									<div class="hoveroptionwall5"><div class="wall5showme"><button type="button" id="totlswallpaper5" data-i18n="hoveroptionapply"></button></div></div>
+									<img id="bckimage5" alt="Background Wallpaper 5" height="70" src="" width="100" class="dynamicshaduw">
 								</div>
 							</div>
 						</div>
 						<div id="dynamicpanel" class="hidden">
 								<div id="customDynamicGroup">
 										<label>
-												<input id="dynamic1" type="radio" name="dynamicbackground">
+												<input id="dynamic1" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicfishtank"></span>
 										</label>
 										<label>
-												<input id="dynamic2" type="radio" name="dynamicbackground">
+												<input id="dynamic2" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicblocks"></span>
 										</label>
 										<label>
-												<input id="dynamic3" type="radio" name="dynamicbackground">
+												<input id="dynamic3" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicraindrops"></span>
 										</label>
 										<label>
-												<input id="dynamic4" type="radio" name="dynamicbackground">
+												<input id="dynamic4" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamiccloud"></span>
 										</label>
 										<label>
-												<input id="dynamic5" type="radio" name="dynamicbackground">
+												<input id="dynamic5" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicspace"></span>
 										</label>
 										<label>
-												<input id="dynamic6" type="radio" name="dynamicbackground">
+												<input id="dynamic6" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicsmoke"></span>
 										</label>
 										<label>
-												<input id="dynamic7" type="radio" name="dynamicbackground">
+												<input id="dynamic7" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicdotscolor"></span>
 										</label>						<label>
-												<input id="dynamic8" type="radio" name="dynamicbackground">
+												<input id="dynamic8" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicstorm"></span>
 										</label>
 										<label>
-												<input id="dynamic9" type="radio" name="dynamicbackground">
+												<input id="dynamic9" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamictriangulation"></span>
 										</label>
 										<label>
-												<input id="dynamic10" type="radio" name="dynamicbackground">
+												<input id="dynamic10" type="radio" name="dynamicbackground" role="radio" aria-labelledby="dynamic">
 												<span data-i18n="desdynamicstars"></span>
 										</label>
 									</div>
 									<div class="md-checkbox">
-										<input id="dynamic" type="checkbox">
+										<input id="dynamic" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="dynamic">
 										<label for="dynamic"><div><span data-i18n="titeldynamic"></span></div></label>
 									</div>
 									<div class="relative">
-										<button id="dynamicshow" data-i18n="titellessmore"></button>
-										<button id="dynamichide" data-i18n="titelshowmore"></button>
+										<button type="button" id="dynamicshow" data-i18n="titellessmore"></button>
+										<button type="button" id="dynamichide" data-i18n="titelshowmore"></button>
 										<input id="lightdynamic" type="url" readonly>
 										<div id="extradyn">
 											<div class="md-checkbox md-subgroup">
-												<input id="hoveroptiondyn5" type="checkbox">
+												<input id="hoveroptiondyn5" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="hoveroptiondyn5">
 												<label for="hoveroptiondyn5"><div><span data-i18n="hoveroptiondyn5"></span></div></label>
 											</div>
 										</div>
@@ -433,60 +442,60 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 									<div id="dynamicgallery" style="display:none;">
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn1"><div class="dyn1showme"><button id="totldynpaper1" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn1" alt="Dynshot1" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn1"><div class="dyn1showme"><button type="button" id="totldynpaper1" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn1" alt="Dynamic Background Shot 1" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn2"><div class="dyn2showme"><button id="totldynpaper2" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn2" alt="Dynshot2" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn2"><div class="dyn2showme"><button type="button" id="totldynpaper2" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn2" alt="Dynamic Background Shot 2" height="70" src="" width="100" class="dynamicshaduw">
 										</div>					
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn3"><div class="dyn3showme"><button id="totldynpaper3" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn3" alt="Dynshot3" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn3"><div class="dyn3showme"><button type="button" id="totldynpaper3" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn3" alt="Dynamic Background Shot 3" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn4"><div class="dyn4showme"><button id="totldynpaper4" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn4" alt="Dynshot4" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn4"><div class="dyn4showme"><button type="button" id="totldynpaper4" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn4" alt="Dynamic Background Shot 4" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
 										<div class="hoveroptiondyn5"><div class="dyn5showme">
-										<button id="totldynpaper5" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn5" alt="Dynshot5" height="70" src="" width="100" class="dynamicshaduw">
+										<button type="button" id="totldynpaper5" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn5" alt="Dynamic Background Shot 5" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn6"><div class="dyn6showme"><button id="totldynpaper6" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn6" alt="Dynshot6" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn6"><div class="dyn6showme"><button type="button" id="totldynpaper6" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn6" alt="Dynamic Background Shot 6" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 					
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn7"><div class="dyn7showme"><button id="totldynpaper7" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn7" alt="Dynshot7" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn7"><div class="dyn7showme"><button type="button" id="totldynpaper7" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn7" alt="Dynamic Background Shot 7" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn8"><div class="dyn8showme"><button id="totldynpaper8" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn8" alt="Dynshot8" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn8"><div class="dyn8showme"><button type="button" id="totldynpaper8" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn8" alt="Dynamic Background Shot 8" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn9"><div class="dyn9showme"><button id="totldynpaper9" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn9" alt="Dynshot9" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn9"><div class="dyn9showme"><button type="button" id="totldynpaper9" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn9" alt="Dynamic Background Shot 9" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 										
 										<div class="hoveroptionbox">
-										<div class="hoveroptiondyn10"><div class="dyn10showme"><button id="totldynpaper10" data-i18n="hoveroptionapply"></button></div></div>
-										<img id="bckdyn10" alt="Dynshot8" height="70" src="" width="100" class="dynamicshaduw">
+										<div class="hoveroptiondyn10"><div class="dyn10showme"><button type="button" id="totldynpaper10" data-i18n="hoveroptionapply"></button></div></div>
+										<img id="bckdyn10" alt="Dynamic Background Shot 10" height="70" src="" width="100" class="dynamicshaduw">
 										</div>
 									</div>
 						</div>
 						<div id="blurpanel" class="hidden">
 							<div class="md-checkbox md-subgroup">
-									<input id="blur" type="checkbox">
+									<input id="blur" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="blur">
 									<label for="blur"><div><span data-i18n="titelblur"></span></div></label>
 							</div>
 						</div>
@@ -504,28 +513,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div>
 				<div id="helpautoplay" class="helpwhatproblem" data-i18n="helpautoplay"></div>
 				<div class="md-checkbox md-subgroup">
-					<input id="autoplay" type="checkbox">
+					<input id="autoplay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplay">
 					<label for="autoplay"><div><span data-i18n="desautoplay"></span></div></label>
 				</div>
 				&nbsp;&nbsp;&nbsp;(
 				<div class="md-checkbox md-subgroup">
-					<input id="aplay" type="checkbox">
+					<input id="aplay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="aplay">
 					<label for="aplay"><div><span data-i18n="desaplay"></span></div></label>
 				</div>
 				<div class="md-checkbox md-subgroup">
-					<input id="apause" type="checkbox">
+					<input id="apause" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="apause">
 					<label for="apause"><div><span data-i18n="desapause"></span></div></label>
 				</div>
 				<div class="md-checkbox md-subgroup">
-					<input id="astop" type="checkbox">
+					<input id="astop" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="astop">
 					<label for="astop"><div><span data-i18n="desastop"></span></div></label>
 				</div>)
 				<div class="md-checkbox md-subin">
-					<input id="autoplaydelay" type="checkbox">
+					<input id="autoplaydelay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplaydelay">
 					<label for="autoplaydelay"><div><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</div></label>
 				</div>
 				<div class="md-checkbox">
-					<input id="autoplayonly" type="checkbox">
+					<input id="autoplayonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplayonly">
 					<label for="autoplayonly"><div><span data-i18n="desautoplayonly"></span></div></label>
 				</div>
 				<div role="radiogroup" aria-labelledby="autoplayonly">
@@ -539,17 +548,17 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 				</div>
 				<form id="formautoplay">
-				  <table id="autoplaywhitelist">
- 				   <tr>
- 				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="autoplaywebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
- 				     <td><button type="submit" id="autoplayaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
- 				   </tr>
- 				   <tr>
-				      <td colspan="2"><select id="autoplayDomainsBox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoDim feature"></select></td>
-				      <td valign="top"><button type="button" id="autoplayremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
-				    </tr>
-				  </table>
+				<table id="autoplaywhitelist">
+ 					<tr>
+ 						<td><span data-i18n="titelwebsite"></span>:</td>
+						<td><input id="autoplaywebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
+ 						<td><button type="submit" id="autoplayaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+					</tr>
+ 					<tr>
+						<td colspan="2"><select id="autoplayDomainsBox" role="listbox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoDim feature"></select></td>
+						<td valign="top"><button type="button" id="autoplayremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+					</tr>
+				</table>
 				</form>
 				</div>
 				</section>
@@ -557,7 +566,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelautostop"></h3>
 				<div>
 				<div class="md-checkbox">
-					<input id="autostop" type="checkbox">
+					<input id="autostop" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autostop">
 					<label for="autostop"><div><span data-i18n="desautostop"></span></div></label>
 				</div>
 				<div role="radiogroup" aria-labelledby="autostop">
@@ -571,35 +580,35 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 				</div>
 				<div class="md-checkbox">
-					<input id="autostoponly" type="checkbox">
+					<input id="autostoponly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autostoponly">
 					<label for="autostoponly"><div><span data-i18n="desautostoponly"></span></div></label>
 				</div>
 				<div role="radiogroup" aria-labelledby="autostoponly">
 				<div class="md-radio md-subin">
-					<input id="autostopchecklistwhite" type="radio" name="autostopchecklist" value="true" role="radio">
+					<input id="autostopchecklistwhite" type="radio" name="autostopchecklist" value="true" role="radio" aria-labelledby="autostoponly">
 					<label for="autostopchecklistwhite"><div><span data-i18n="titelautostopwhitelist"></span> - <span data-i18n="desautostopfeaturewhite"></span></div></label>
 				</div>
 				<div class="md-radio md-subin">
-					<input id="autostopchecklistblack" type="radio" name="autostopchecklist" value="black" role="radio">
+					<input id="autostopchecklistblack" type="radio" name="autostopchecklist" value="black" role="radio" aria-labelledby="autostoponly">
 					<label for="autostopchecklistblack"><div><span data-i18n="titelautostopblacklist"></span> - <span data-i18n="desautostopfeatureblack"></span></div></label>
 				</div>
 				</div>
 				<form id="formautostop">
-				  <table id="autostopwhitelist">
- 				   <tr>
- 				     <td><span data-i18n="titelwebsite"></span>:</td>
-  				     <td><input id="autostopwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
- 				     <td><button type="submit" id="autostopaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
- 				   </tr>
- 				   <tr>
-				      <td colspan="2"><select id="autostopDomainsBox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoStop feature"></select></td>
-				      <td valign="top"><button type="button" id="autostopremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
-				    </tr>
-				  </table>
+				<table id="autostopwhitelist">
+ 					<tr>
+ 						<td><span data-i18n="titelwebsite"></span>:</td>
+						<td><input id="autostopwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
+ 						<td><button type="submit" id="autostopaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+ 					</tr>
+ 					<tr>
+						<td colspan="2"><select id="autostopDomainsBox" role="listbox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoStop feature"></select></td>
+						<td valign="top"><button type="button" id="autostopremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+					</tr>
+				</table>
 				</form>
 				</div>
 				</section>
-				<section id="sectionreviewbox">			
+				<section id="sectionreviewbox">
 				<div id="reviewextensionbox">
 					<div class="stars">★★★★★</div>
 					<div id="ayh"><span data-i18n="areyouhappy"></span></div>
@@ -616,7 +625,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelplaylist"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="playlist" type="checkbox">
+									<input id="playlist" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="playlist">
 									<label for="playlist"><div><span data-i18n="desplaylist"></span></div></label>
 								</div>
 							</td>
@@ -625,7 +634,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelinfobar"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="infobar" type="checkbox">
+									<input id="infobar" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="infobar">
 									<label for="infobar"><div><span data-i18n="desinfobar"></span></div></label>
 								</div>
 							</td>
@@ -634,7 +643,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titellikebutton"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="likebutton" type="checkbox">
+									<input id="likebutton" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="likebutton">
 									<label for="likebutton"><div><span data-i18n="deslikebutton"></span></div></label>
 								</div>
 							</td>
@@ -643,7 +652,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titeladdvideobutton"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="addvideobutton" type="checkbox">
+									<input id="addvideobutton" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="addvideobutton">
 									<label for="addvideobutton"><div><span data-i18n="desaddvideobutton"></span></div></label>
 								</div>
 							</td>
@@ -652,7 +661,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelhead"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="head" type="checkbox">
+									<input id="head" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="head">
 									<label for="head"><div><span data-i18n="deshead"></span></div></label>
 								</div>
 							</td>
@@ -661,7 +670,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelsharebutton"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="sharebutton" type="checkbox">
+									<input id="sharebutton" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="sharebutton">
 									<label for="sharebutton"><div><span data-i18n="dessharebutton"></span></div></label>
 								</div>
 							</td>
@@ -670,7 +679,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelsuggestions"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="suggestions" type="checkbox">
+									<input id="suggestions" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="suggestions">
 									<label for="suggestions"><div><span data-i18n="dessuggestions"></span></div></label>
 								</div>
 							</td>
@@ -679,7 +688,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelvideoheadline"></span></td>
 							<td>
 								<div class="md-checkbox md-subgroup">
-									<input id="videoheadline" type="checkbox">
+									<input id="videoheadline" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videoheadline">
 									<label for="videoheadline"><div><span data-i18n="desvideoheadline"></span></div></label>
 								</div>
 								<div class="md-color md-subgroup">
@@ -693,7 +702,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titelviewcount"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="viewcount" type="checkbox">
+									<input id="viewcount" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="viewcount">
 									<label for="viewcount"><div><span data-i18n="desviewcount"></span></div></label>
 								</div>
 							</td>
@@ -702,7 +711,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><span class="item" data-i18n="titellikebar"></span></td>
 							<td>
 								<div class="md-checkbox">
-									<input id="likebar" type="checkbox">
+									<input id="likebar" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="likebar">
 									<label for="likebar"><div><span data-i18n="deslikebar"></span></div></label>
 								</div>
 							</td>
@@ -717,7 +726,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<tr>
 					<td>
 						<div class="md-checkbox">
-							<input id="autowidthyoutube" type="checkbox">
+							<input id="autowidthyoutube" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autowidthyoutube">
 							<label for="autowidthyoutube"><div><span data-i18n="titelautowidthyoutube"></span></div></label>
 						</div>
 					</td>
@@ -725,29 +734,29 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<tr>
 					<td>
 						<div class="md-checkbox subgroup">
-							<input id="customqualityyoutube" type="checkbox">
+							<input id="customqualityyoutube" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="customqualityyoutube">
 							<label for="customqualityyoutube"><div><span data-i18n="titelqualityyoutube"></span></div></label>
 						</div>
 						<div class="md-selectfield md-subgroup">
 								<label><span data-i18n="titelmaxqualityyoutube"></span></label>
-								<select id="youtubequality" class="browser-default" aria-label="Choose the default video quality for YouTube">
-									<option value="highres">highres</option>
-									<option value="hd4320">4320p (8k)</option>
-									<option value="hd2880">2880p (5K)</option>
-									<option value="hd2160">2160p (4k)</option>
-									<option value="hd1440">1440p</option>
-									<option value="hd1080">1080p</option>
-									<option value="hd720">720p</option>
-									<option value="large">480p</option>
-									<option value="medium">360p</option>
-									<option value="small">240p</option>
-									<option value="tiny">144p</option>
-									<option value="default">default</option>
+								<select id="youtubequality" role="listbox" class="browser-default" aria-label="Choose the default video quality for YouTube">
+									<option value="highres" role="option">highres</option>
+									<option value="hd4320" role="option">4320p (8k)</option>
+									<option value="hd2880" role="option">2880p (5K)</option>
+									<option value="hd2160" role="option">2160p (4k)</option>
+									<option value="hd1440" role="option">1440p</option>
+									<option value="hd1080" role="option">1080p</option>
+									<option value="hd720" role="option">720p</option>
+									<option value="large" role="option">480p</option>
+									<option value="medium" role="option">360p</option>
+									<option value="small" role="option">240p</option>
+									<option value="tiny" role="option">144p</option>
+									<option value="default" role="option">default</option>
 								</select>
 						</div>
 						&nbsp;&nbsp;
 						<div class="md-checkbox md-subgroup">
-							<input id="block60fps" type="checkbox">
+							<input id="block60fps" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="block60fps">
 							<label for="block60fps"><div><span data-i18n="titelblock60fps"></span></div></label>
 						</div>
 					</td>
@@ -755,7 +764,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<tr>
 					<td>
 						<div class="md-checkbox">
-							<input id="cinemaontop" type="checkbox">
+							<input id="cinemaontop" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="cinemaontop">
 							<label for="cinemaontop"><div><span data-i18n="titelcinemaontop"></span></div></label>
 						</div>
 					</td>
@@ -763,7 +772,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<tr>
 					<td>
 						<div class="md-checkbox">
-							<input id="no360youtube" type="checkbox">
+							<input id="no360youtube" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="no360youtube">
 							<label for="no360youtube"><div><span data-i18n="titel360youtube"></span></div></label>
 						</div>
 					</td>
@@ -773,7 +782,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</section>
 			</div>
 			<div id="tab2" class="page hidden">
-				<h1 data-i18n="visualeffects"></h1>
+				<h2 data-i18n="visualeffects"></h2>
 				<section>
 				<div id="example2"></div>
 				<div class="atmosbox">
@@ -789,7 +798,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</section>
 				<section id="sectionauroraplayerappbox">			
 				<div id="auroraplayerappbox">
-					<div id="apicon"><img id="auroraplayericon" width="32px" height="32px" src="images/aurora-player_32x32.png" srcset="images/aurora-player_32x32.png 1x, images/aurora-player_32x32@2x.png 2x"></div>
+					<div id="apicon"><img id="auroraplayericon" alt="Aurora Player" loading="lazy" width="32" height="32" src="images/aurora-player_32x32.png" srcset="images/aurora-player_32x32.png 1x, images/aurora-player_32x32@2x.png 2x"></div>
 					<div id="apname"><span>Aurora Player</span></div>
 					<div id="aptllo"><span data-i18n="desauroraplayer"></span></div>
 					<div id="apnt"><span data-i18n="nothanks"></span></div>
@@ -797,7 +806,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 				</section>
 				<div class="tabbar">
-						<div class=tabbarintern>
+						<div class="tabbarintern">
 							<div id="tv1" class="tabbutton tabhighlight" title="Atmosphere Lighting">
 								<div class="tabicon">
 									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -827,7 +836,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 									width="24" height="24"
 									viewBox="0 0 48 48"
-									style="enable-background:new 0 0 48 48;fill:#333333;"><polyline style="fill:#263238;" points="23.095,46 25.095,46 28.095,43 20.095,43 "></polyline><path style="fill:#9FA8DA;" d="M26.312,44h-4.625C20.209,44,19,42.791,19,41.313V36h10v5.313C29,42.791,27.791,44,26.312,44z"></path><g><path style="fill:#5C6BC0;" d="M19.005,41.517c0.015,0.778,0.389,1.466,0.958,1.921l8.924-1.265C28.953,41.948,29,41.714,29,41.469   v-1.331L19.005,41.517z"></path><polygon style="fill:#5C6BC0;" points="19,37.559 19,39.559 29,38 29,36  "></polygon></g><path style="fill:#CFD8DC;" d="M24,16h-8.607c-0.677,0-1.158,0.653-0.954,1.298C15.271,19.94,17,26.347,17,34l2,2h5h5l2-2  c0-7.653,1.729-14.06,2.562-16.702C33.765,16.653,33.284,16,32.607,16H24z"></path><polygon style="fill:#B0BEC5;" points="19,36 24,36 29,36 31,34 17,34 "></polygon><path style="fill:#CDDC39;" d="M24,2c-1.912,0-3.567,0.074-5,0.206L21,16h3h3l2-13.794C27.567,2.074,25.912,2,24,2z"></path><path style="fill:#8BC34A;" d="M29,2.206c-0.622-0.057-1.293-0.101-2.001-0.135L26,16h1h1l2.979-13.508l0.006-0.041  C30.371,2.357,29.723,2.272,29,2.206z"></path><path style="fill:#FFEB3B;" d="M21.001,2.07C20.293,2.105,19.622,2.148,19,2.206c-0.723,0.066-1.371,0.152-1.985,0.246l0.006,0.041  L20,16h1h1L21.001,2.07z"></path><g><path style="fill:#4CAF50;" d="M32.951,2.832c-0.585-0.143-1.242-0.269-1.966-0.38l-0.006,0.041L28,16h1h2l3.859-12.567   C34.317,3.214,33.687,3.011,32.951,2.832z"></path></g><path style="fill:#2962FF;" d="M34.859,3.433L34.859,3.433L31,16h1.764c0.76,0,1.452-0.426,1.789-1.106C35.652,12.681,38,7.851,38,7  C38,5.918,37.466,4.487,34.859,3.433z"></path><g><path style="fill:#FFC107;" d="M17.021,2.492l-0.006-0.041c-0.724,0.111-1.381,0.237-1.966,0.38   c-0.736,0.18-1.366,0.383-1.908,0.602L17,16h2h1L17.021,2.492z"></path></g><path style="fill:#FF5722;" d="M13.141,3.433C10.534,4.487,10,5.918,10,7c0,0.804,2.35,5.664,3.448,7.889  C13.785,15.572,14.478,16,15.239,16H17L13.141,3.433L13.141,3.433z"></path></svg>
+									style="enable-background:new 0 0 48 48;fill:#333333;"><polyline style="fill:#263238;" points="23.095,46 25.095,46 28.095,43 20.095,43 "></polyline><path style="fill:#9FA8DA;" d="M26.312,44h-4.625C20.209,44,19,42.791,19,41.313V36h10v5.313C29,42.791,27.791,44,26.312,44z"></path><g><path style="fill:#5C6BC0;" d="M19.005,41.517c0.015,0.778,0.389,1.466,0.958,1.921l8.924-1.265C28.953,41.948,29,41.714,29,41.469 v-1.331L19.005,41.517z"></path><polygon style="fill:#5C6BC0;" points="19,37.559 19,39.559 29,38 29,36"></polygon></g><path style="fill:#CFD8DC;" d="M24,16h-8.607c-0.677,0-1.158,0.653-0.954,1.298C15.271,19.94,17,26.347,17,34l2,2h5h5l2-2 c0-7.653,1.729-14.06,2.562-16.702C33.765,16.653,33.284,16,32.607,16H24z"></path><polygon style="fill:#B0BEC5;" points="19,36 24,36 29,36 31,34 17,34 "></polygon><path style="fill:#CDDC39;" d="M24,2c-1.912,0-3.567,0.074-5,0.206L21,16h3h3l2-13.794C27.567,2.074,25.912,2,24,2z"></path><path style="fill:#8BC34A;" d="M29,2.206c-0.622-0.057-1.293-0.101-2.001-0.135L26,16h1h1l2.979-13.508l0.006-0.041 C30.371,2.357,29.723,2.272,29,2.206z"></path><path style="fill:#FFEB3B;" d="M21.001,2.07C20.293,2.105,19.622,2.148,19,2.206c-0.723,0.066-1.371,0.152-1.985,0.246l0.006,0.041 L20,16h1h1L21.001,2.07z"></path><g><path style="fill:#4CAF50;" d="M32.951,2.832c-0.585-0.143-1.242-0.269-1.966-0.38l-0.006,0.041L28,16h1h2l3.859-12.567 C34.317,3.214,33.687,3.011,32.951,2.832z"></path></g><path style="fill:#2962FF;" d="M34.859,3.433L34.859,3.433L31,16h1.764c0.76,0,1.452-0.426,1.789-1.106C35.652,12.681,38,7.851,38,7 C38,5.918,37.466,4.487,34.859,3.433z"></path><g><path style="fill:#FFC107;" d="M17.021,2.492l-0.006-0.041c-0.724,0.111-1.381,0.237-1.966,0.38 c-0.736,0.18-1.366,0.383-1.908,0.602L17,16h2h1L17.021,2.492z"></path></g><path style="fill:#FF5722;" d="M13.141,3.433C10.534,4.487,10,5.918,10,7c0,0.804,2.35,5.664,3.448,7.889 C13.785,15.572,14.478,16,15.239,16H17L13.141,3.433L13.141,3.433z"></path></svg>
 								</div>
 							</div>
 							<div id="tv5" class="tabbutton" title="Atmosphere Lighting range">
@@ -843,7 +852,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									<span data-i18n="titelon"></span>
 								</div>
 								<div class="tabopacityslider">
-									<input type="range" id="onoffrange" min="0" max="1" step="1" value="0" name="onoffrange" aria-label="The ON and OFF switch">
+									<input type="range" id="onoffrange" min="0" max="1" step="1" value="0" name="onoffrange" role="slider" aria-label="The ON and OFF switch" aria-valuemin="1" aria-valuemax="1" aria-valuenow="0">
 								</div>
 								<div>
 									<span data-i18n="titeloff"></span>
@@ -855,20 +864,20 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelambilight"></h3>
 				<div>
 					<div id="atmospanel">
-						<div class="md-checkbox  md-subgroup">	
-							<input id="ambilight" type="checkbox">
+						<div class="md-checkbox md-subgroup">	
+							<input id="ambilight" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="ambilight">
 							<label for="ambilight"><div><span data-i18n="desambilight"></span></div></label>
 						</div>
 						&nbsp;&nbsp;&nbsp;(
 						<div class="md-checkbox md-subgroup">	
-							<input id="vpause" type="checkbox">
+							<input id="vpause" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="vpause">
 							<label for="vpause"><div><span data-i18n="desapause"></span></div></label>
 						</div>)
 						<div class="grey-text"><span data-i18n="titelsupportatmos"></span></div>
 					</div>
 					<div id="atmosonepanel" class="hidden">
 						<div class="md-radio">
-							<input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed">
+							<input id="ambilightfixcolor" type="radio" name="ambilightcolor" value="fixed" role="radio" aria-labelledby="ambilight">
 							<label for="ambilightfixcolor"><div><span data-i18n="desambilightfixcolor"></span></div></label>
 						</div>
 						<div class="md-color">
@@ -880,7 +889,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					</div>
 					<div id="atmosfourpanel" class="hidden">
 						<div class="md-radio">
-							<input id="ambilight4color" type="radio" name="ambilightcolor" value="4">
+							<input id="ambilight4color" type="radio" name="ambilightcolor" value="4" role="radio" aria-labelledby="ambilight">
 							<label for="ambilight4color"><div><span data-i18n="desambilight4color"></span></div></label>
 						</div>
 						<div class="md-color">
@@ -910,7 +919,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					</div>
 					<div id="atmosvividpanel" class="hidden">
 						<div class="md-radio">
-							<input id="ambilightvarcolor" type="radio" name="ambilightcolor" value="real">
+							<input id="ambilightvarcolor" type="radio" name="ambilightcolor" value="real" role="radio" aria-labelledby="ambilight">
 							<label for="ambilightvarcolor"><div><span data-i18n="desambilightvarcolor"></span></div></label>
 						</div>
 						<div id="showwarningambilight" class="warningambilight">
@@ -918,7 +927,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<span><a href="https://www.turnoffthelights.com/browser/atmosphere-lighting-backlight-for-html5-videos.html" target="_blank" rel="noopener"><span data-i18n="titelwikiatmos"></span></a>.</span>
 						</div>
 						<div class="md-checkbox">	
-							<input id="atmosvivid" type="checkbox">
+							<input id="atmosvivid" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="atmosvivid">
 							<label for="atmosvivid"><div><span data-i18n="desatmosvivid"></span>, <span>FPS</span> <input type="number" min="1" max="60" step="1" value="12" name="drawatmosfps" id="drawatmosfps" maxlength="3" size="4">p</div></label>
 						</div>
 						<datalist id="datalightambilight">
@@ -950,22 +959,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<label><span data-i18n="desambilightrangespreadradius"></span></label>
 						<br>
 						<div class="md-checkbox">	
-							<input id="atmosontotlmode" type="checkbox">
+							<input id="atmosontotlmode" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="atmosontotlmode">
 							<label for="atmosontotlmode"><div><span data-i18n="desatmosontotlmode"></span></div></label>
 						</div>
 						<div class="md-checkbox">	
-							<input id="atmosphereonly" type="checkbox">
+							<input id="atmosphereonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="atmosphereonly">
 							<label for="atmosphereonly"><div><span data-i18n="desatmosphereonly"></span></div></label>
 						</div>
 						<form id="formatmospherelighting">
 							<table id="atmospherewhitelist">
 								<tr>
 									<td><span data-i18n="titelwebsite"></span>:</td>
-									<td><input id="atmospherewebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+									<td><input id="atmospherewebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com"></td>
 									<td><button type="submit" id="atmosphereaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 								</tr>
 								<tr>
-									<td colspan="2"><select id="atmosphereDomainsBox" name="atmosphereentryList" size="5" multiple=""></select></td>
+									<td colspan="2"><select id="atmosphereDomainsBox" role="listbox" name="atmosphereentryList" size="5" multiple=""></select></td>
 									<td valign="top"><button type="button" id="atmosphereremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 								</tr>
 							</table>
@@ -979,7 +988,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelfadein"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="fadein" type="checkbox">
+						<input id="fadein" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="fadein">
 						<label for="fadein"><div><span data-i18n="desfadein"></span></div></label>
 					</div>
 				</div>
@@ -988,7 +997,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelfadeout"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="fadeout" type="checkbox">
+						<input id="fadeout" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="fadeout">
 						<label for="fadeout"><div><span data-i18n="desfadeout"></span></div></label>
 					</div>
 				</div>
@@ -997,7 +1006,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelreflection"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="reflection" type="checkbox">
+						<input id="reflection" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="reflection">
 						<label for="reflection"><div><span data-i18n="desreflection"></span> <input type="number" min="0" max="100" step="1" value="20" name="reflectionamount" id="reflectionamount" maxlength="3" size="4">%</div></label>
 					</div>
 				</div>
@@ -1010,20 +1019,20 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</section>
 			</div>
 			<div id="tab3" class="page hidden">
-				<h1 data-i18n="advancedoptions"></h1>
+				<h2 data-i18n="advancedoptions"></h2>
 				<section>
 				<h3 id="titelflash" data-i18n="titelflash"></h3>
 				<div>
 					<div class="md-radio">
-						<input id="noflash" type="radio" name="af" value="normal">
+						<input id="noflash" type="radio" name="af" value="normal" role="radio" aria-labelledby="titelflash">
 						<label for="noflash"><div><span data-i18n="desnoflash"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="flash" type="radio" name="af" value="easy">
+						<input id="flash" type="radio" name="af" value="easy" role="radio" aria-labelledby="titelflash">
 						<label for="flash"><div><span data-i18n="desflash"></span> <span data-i18n="recflash" class="item"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="hardflash" type="radio" name="af" value="hard">
+						<input id="hardflash" type="radio" name="af" value="hard" role="radio" aria-labelledby="titelflash">
 						<label for="hardflash"><div><span data-i18n="deshardflash"></span></div></label>
 					</div>
 					<br>
@@ -1031,14 +1040,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 				</section>
 				<section>
-				<h3 data-i18n="titelreader"></h3>
+				<h3 id="titelreader" data-i18n="titelreader"></h3>
 				<div>
 					<div class="md-radio">
-						<input id="readera" type="radio" name="reader" value="only">
+						<input id="readera" type="radio" name="reader" value="only" role="radio" aria-labelledby="titelreader">
 						<label for="readera"><div><span data-i18n="desreadera"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="readern" type="radio" name="reader" value="never">
+						<input id="readern" type="radio" name="reader" value="never" role="radio" aria-labelledby="titelreader">
 						<label for="readern"><div><span data-i18n="desreadern"></span></div></label>
 					</div>
 				</div>
@@ -1047,27 +1056,27 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelvolume"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="videovolume" type="checkbox">
+						<input id="videovolume" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videovolume">
 						<label for="videovolume"><div><span data-i18n="desvideovolume"></span></div></label>
 					</div>
 					<div class="md-checkbox md-subin">
-						<input id="videovolumealt" type="checkbox">
+						<input id="videovolumealt" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videovolumealt">
 						<label for="videovolumealt"><div><span data-i18n="desvideovolumalt"></span></div></label>
 					</div>
 					<div class="md-checkbox">	
-						<input id="videovolumehold" type="checkbox">
+						<input id="videovolumehold" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videovolumehold">
 						<label for="videovolumehold"><div><span data-i18n="desvideovolumhold"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="videovolumeposa" type="radio" name="volumepos" value="a">
+						<input id="videovolumeposa" type="radio" name="volumepos" value="a" role="radio" aria-labelledby="videovolume">
 						<label for="videovolumeposa"><div><span data-i18n="desvolumeposa"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="videovolumeposb" type="radio" name="volumepos" value="b">
+						<input id="videovolumeposb" type="radio" name="volumepos" value="b" role="radio" aria-labelledby="videovolume">
 						<label for="videovolumeposb"><div><span data-i18n="desvolumeposb"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="videovolumeposc" type="radio" name="volumepos" value="c">
+						<input id="videovolumeposc" type="radio" name="volumepos" value="c" role="radio" aria-labelledby="videovolume">
 						<label for="videovolumeposc"><div><span data-i18n="desvolumeposc"></span></div></label>
 					</div>
 					<div class="md-color">
@@ -1077,17 +1086,17 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<label for="videovolumecolor"><div><span data-i18n="desvideovolumecolor"></span></div></label>
 					</div>
 					<div class="md-checkbox md-subgroup">	
-						<input id="videovolumelabel" type="checkbox">
+						<input id="videovolumelabel" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videovolumelabel">
 						<label for="videovolumelabel"><div><span data-i18n="desvolumelabel"></span></div></label>
 					</div>
 					&nbsp;&nbsp;
 					<div class="md-selectfield md-subgroup">
 						<label><span data-i18n="desvolumesteps"></span></label>
-						<select id="videovolumesteps" class="browser-default">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="5">5</option>
-							<option value="10">10</option>
+						<select id="videovolumesteps" role="listbox" class="browser-default">
+							<option value="1" role="option">1</option>
+							<option value="2" role="option">2</option>
+							<option value="5" role="option">5</option>
+							<option value="10" role="option">10</option>
 						</select>
 					</div>
 				</div>
@@ -1096,7 +1105,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelvideotool"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="videotool" type="checkbox">
+						<input id="videotool" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videotool">
 						<label for="videotool"><div><span data-i18n="desvideotool"></span></div></label>
 					</div>
 					<ul class="minitable">
@@ -1112,35 +1121,35 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						</div>
 						<label for="videotoolcolor"><div><span data-i18n="desvideotoolcolor"></span></div></label>
 					</div>
-					<div class="md-checkbox">	
-						<input id="videozoom" type="checkbox">
+					<div class="md-checkbox">
+						<input id="videozoom" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videozoom">
 						<label for="videozoom"><div><span data-i18n="desvideozoom"></span></div></label>
 					</div>
-					<div class="md-checkbox">	
-						<input id="speedtoolbar" type="checkbox">
+					<div class="md-checkbox">
+						<input id="speedtoolbar" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="speedtoolbar">
 						<label for="speedtoolbar"><div><span data-i18n="desspeedtoolbar"></span></div></label>
 					</div>
-					<div class="md-checkbox">	
-						<input id="videotoolonly" type="checkbox">
+					<div class="md-checkbox">
+						<input id="videotoolonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videotoolonly">
 						<label for="videotoolonly"><div><span data-i18n="desvideotoolonly"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="videotoolchecklistwhite" type="radio" name="videotoolchecklist" value="true">
+						<input id="videotoolchecklistwhite" type="radio" name="videotoolchecklist" value="true" role="radio" aria-labelledby="videotoolonly">
 						<label for="videotoolchecklistwhite"><div><span data-i18n="titelvideotoolwhitelist"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="videotoolchecklistblack" type="radio" name="videotoolchecklist" value="black">
+						<input id="videotoolchecklistblack" type="radio" name="videotoolchecklist" value="black" role="radio" aria-labelledby="videotoolonly">
 						<label for="videotoolchecklistblack"><div><span data-i18n="titelvideotoolblacklist"></span></div></label>
 					</div>
 					<form id="formvideotoolbar">
 					<table id="videotoolwhitelist">
 					<tr>
 						<td><span data-i18n="titelwebsite"></span>:</td>
-						<td><input id="videotoolwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+						<td><input id="videotoolwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com"></td>
 						<td><button type="submit" id="videotooladdbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 					</tr>
 					<tr>
-						<td colspan="2"><select id="videotoolDomainsBox" name="videotoolentryList" size="5" multiple=""></select></td>
+						<td colspan="2"><select id="videotoolDomainsBox" role="listbox" name="videotoolentryList" size="5" multiple=""></select></td>
 						<td valign="top"><button type="button" id="videotoolremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
@@ -1151,7 +1160,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelhovervideo"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="hovervideo" type="checkbox">
+						<input id="hovervideo" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="hovervideo">
 						<label for="hovervideo"><div><span data-i18n="deshovervideo"></span> <input type="number" min="0" max="100" step="1" value="5" name="hovervideoamount" id="hovervideoamount" maxlength="3" size="4">s</div></label>
 					</div>
 				</div>
@@ -1160,44 +1169,44 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titlevideoplayrate"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="playrate" type="checkbox">
+						<input id="playrate" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="playrate">
 						<label for="playrate"><div><span data-i18n="desplayrate"></span> <input type="number" min="-10" max="10" step="1" value="1" name="playrateamount" id="playrateamount" maxlength="3" size="4"></div></label>
 					</div>
 				</div>
 				</section>
 				<section>
-				<h3 data-i18n="titeleye"></h3>
+				<h3 id="titeleye" data-i18n="titeleye"></h3>
 				<div>
 					<div id="helpeyeprotection" class="helpwhatproblem" data-i18n="helpeyeprotection"></div>
 					<div class="md-radio">
-						<input id="eyen" type="radio" name="eye" value="never">
+						<input id="eyen" type="radio" name="eye" value="never" role="radio" aria-labelledby="titeleye">
 						<label for="eyen"><div><span data-i18n="deseyen"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="eyea" type="radio" name="eye" value="always">
+						<input id="eyea" type="radio" name="eye" value="always" role="radio" aria-labelledby="titeleye">
 						<label for="eyea"><div><span data-i18n="deseyea"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="eyealist" type="radio" name="eye" value="alwayslist">
+						<input id="eyealist" type="radio" name="eye" value="alwayslist" role="radio" aria-labelledby="titeleye">
 						<label for="eyealist"><div><span data-i18n="deseyealist"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="eyechecklistwhite" type="radio" name="eyechecklist" value="true">
+						<input id="eyechecklistwhite" type="radio" name="eyechecklist" value="true" role="radio" aria-labelledby="titeleye">
 						<label for="eyechecklistwhite"><div><span data-i18n="titeleyewhitelist"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="eyechecklistblack" type="radio" name="eyechecklist" value="black">
+						<input id="eyechecklistblack" type="radio" name="eyechecklist" value="black" role="radio" aria-labelledby="titeleye">
 						<label for="eyechecklistblack"><div><span data-i18n="titeleyeblacklist"></span></div></label>
 					</div>
 					<form id="formeyeprotection">
 					<table id="EyeWhitelist">
 					<tr>
 						<td><span data-i18n="titelwebsite"></span>:</td>
-						<td><input id="websiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+						<td><input id="websiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com"></td>
 						<td><button type="submit" id="addbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 					</tr>
 					<tr>
-						<td colspan="2"><select id="excludedDomainsBox" name="entryList" size="5" multiple=""></select></td>
+						<td colspan="2"><select id="excludedDomainsBox" role="listbox" name="entryList" size="5" multiple=""></select></td>
 						<td valign="top"><button type="button" id="removebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
@@ -1207,11 +1216,10 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 							width="80" height="80"
 							viewBox="0 0 32 32"
-							style="fill:#ffffff;"
-							class="icons8-full-battery"><g><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
+							style="fill:#ffffff;"><g><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
 						</div>
 						<div class="md-checkbox">	
-							<input id="ecosaver" type="checkbox">
+							<input id="ecosaver" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="ecosaver">
 							<label for="ecosaver"><div><span data-i18n="dessaver"></span></div></label>
 						</div>
 						<div id="Eyesaver">
@@ -1220,7 +1228,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						</div>
 					</div>
 					<div class="md-checkbox">	
-						<input id="nighttime" type="checkbox">
+						<input id="nighttime" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="shortcutlight">
 						<label for="nighttime"><div><span data-i18n="destime"></span></div></label>
 					</div>
 					<div class="md-number md-subin">
@@ -1232,7 +1240,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelshortcutlight"></h3>
 				<div>
 				<div class="md-checkbox">
-					<input id="shortcutlight" type="checkbox">
+					<input id="shortcutlight" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="shortcutlight">
 					<label for="shortcutlight"><div><span data-i18n="desshortcutlight"></span></div></label>
 				</div>
 				<ul class="minitable">
@@ -1250,7 +1258,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelcontextmenus"></h3>
 				<div>
 					<div class="md-checkbox">
-						<input id="contextmenus" type="checkbox">
+						<input id="contextmenus" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="contextmenus">
 						<label for="contextmenus"><div><span data-i18n="descontextmenus"></span></div></label>
 					</div>
 				</div>
@@ -1259,7 +1267,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titeleastereggs"></h3>
 				<div>
 					<div class="md-checkbox">
-						<input id="eastereggs" type="checkbox">
+						<input id="eastereggs" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="eastereggs">
 						<label for="eastereggs"><div><span data-i18n="deseastereggs"></span></div></label>
 					</div>
 				</div>
@@ -1267,25 +1275,25 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>
 				<h3 data-i18n="titellamp"></h3>
 				<div>
-					<div class="md-bulb">
+					<div id="lampchoosetitel" class="md-bulb">
 						<label><span data-i18n="titellampchoose"></span></label>
 					</div>
 					<div id="brotheme">
 						<div class="bigplus">+</div>
 						<div class="brothemoption">
 							<div class="md-checkbox">
-								<input id="darkbrowsertheme" type="checkbox">
+								<input id="darkbrowsertheme" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="darkbrowsertheme">
 								<label for="darkbrowsertheme"><div><span data-i18n="desdarkbrowsertheme"></span></div></label>
 							</div>
 						</div>
 					</div>
-					<div class="md-bulbpreview">
-						<img id="p1" class="lampchoose" width="16" height="16" src="icons/iconstick38.png" srcset="icons/iconstick19.png 1x, icons/iconstick38.png 2x">
-						<img id="p2" class="lampchoose" width="16" height="16" src="icons/icongold38.png" srcset="icons/icongold19.png 1x, icons/icongold38.png 2x">
-						<img id="p3" class="lampchoose" width="16" height="16" src="icons/iconrose38.png" srcset="icons/iconrose19.png 1x, icons/iconrose38.png 2x">
-						<img id="p4" class="lampchoose" width="16" height="16" src="icons/iconrainbow38.png" srcset="icons/iconrainbow19.png 1x, icons/iconrainbow38.png 2x">
-						<img id="p5" class="lampchoose bcklampchoose" width="16" height="16" src="icons/iconwhite38.png" srcset="icons/iconwhite19.png 1x, icons/iconwhite38.png 2x">
-						<img id="btnpreview" alt="Turn Off the Lights lamp design" name="preview" class="color" src="icons/iconstick38.png">
+					<div id="previewicons" class="md-bulbpreview">
+						<img id="p1" alt="Browser Lamp Icon 1" loading="lazy" class="lampchoose" width="16" height="16" src="icons/iconstick38.png" srcset="icons/iconstick19.png 1x, icons/iconstick38.png 2x">
+						<img id="p2" alt="Browser Lamp Icon 2" loading="lazy" class="lampchoose" width="16" height="16" src="icons/icongold38.png" srcset="icons/icongold19.png 1x, icons/icongold38.png 2x">
+						<img id="p3" alt="Browser Lamp Icon 3" loading="lazy" class="lampchoose" width="16" height="16" src="icons/iconrose38.png" srcset="icons/iconrose19.png 1x, icons/iconrose38.png 2x">
+						<img id="p4" alt="Browser Lamp Icon 4" loading="lazy" class="lampchoose" width="16" height="16" src="icons/iconrainbow38.png" srcset="icons/iconrainbow19.png 1x, icons/iconrainbow38.png 2x">
+						<img id="p5" alt="Browser Lamp Icon 5" loading="lazy" class="lampchoose bcklampchoose" width="16" height="16" src="icons/iconwhite38.png" srcset="icons/iconwhite19.png 1x, icons/iconwhite38.png 2x">
+						<img id="btnpreview" alt="Browser Lamp Icon Preview" loading="lazy" name="preview" class="color" data-icon="icons/iconstick38.png" src="icons/iconstick38.png">
 					</div>
 					<br>
 					<span data-i18n="titleuserprofile"></span>
@@ -1294,7 +1302,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<div class="profile">
 								<div id="profileA" class="exampleprofile">
 									<div id="ska" class="sklayer"></div>
-									<iframe id="videopreviewA" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
+									<iframe id="videopreviewA" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen>Your browser does not support iframes.</iframe>
 									<br>
 									<span class="lorem">Lorem ipsum dolor sit amet, consectetur <a href="">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 								</div>
@@ -1311,7 +1319,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<div class="subtitle">
 									<span data-i18n="titleprofile"></span>
 								</div>
-								<input type="checkbox" id="reveal-profilea" role="button">
+								<input type="checkbox" id="reveal-profilea" role="checkbox" aria-checked="true" aria-label="Show profile card A">
 								<div class="cardactionbox">
 									<div id="submitbuttonA" class="cardokbutton"><span data-i18n="titleprofilesubmit"></span></div>
 									<div id="expandprofileaicon" class="expandicon">
@@ -1328,7 +1336,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									</div>
 									<div class="endttitle">
 										<div class="md-checkbox">
-											<input id="pfa1" type="checkbox" checked disabled>
+											<input id="pfa1" type="checkbox" role="checkbox" aria-checked="true" aria-label="Video Focus feature" checked disabled>
 											<label for="pfa1"><div><span data-i18n="titleprofilevideofocus"></span></div></label>
 										</div>
 										<div class="md-color">
@@ -1341,7 +1349,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 											<label><span data-i18n="titelopacity"></span> <input type="number" id="profileAopacity" min="0" max="100" step="1" value="80" maxlength="3" size="4"> %</label>
 										</div>
 										<div class="md-checkbox">
-											<input id="profileAmouse" type="checkbox">
+											<input id="profileAmouse" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="profileAmouse">
 											<label for="profileAmouse"><div><span data-i18n="desmousespotlightt"></span></div></label>
 										</div>
 									</div>
@@ -1349,7 +1357,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							</div>
 							<div class="profile">
 								<div id="profileB" class="exampleprofile">
-									<iframe id="videopreviewB" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
+									<iframe id="videopreviewB" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen>Your browser does not support iframes.</iframe>
 									<br>
 									<span class="lorem">Lorem ipsum dolor sit amet, consectetur <a href="" id="profileBlink">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 								</div>
@@ -1366,7 +1374,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<div class="subtitle">
 									<span data-i18n="titleprofile"></span>
 								</div>
-								<input type="checkbox" id="reveal-profileb" role="button">
+								<input type="checkbox" id="reveal-profileb" role="checkbox" aria-checked="true" aria-label="Show profile card B">
 								<div class="cardactionbox">
 									<div id="submitbuttonB" class="cardokbutton"><span data-i18n="titleprofilesubmit"></span></div>
 									<div id="expandprofilebicon" class="expandicon">
@@ -1383,7 +1391,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									</div>
 									<div class="endttitle">
 										<div class="md-checkbox">
-											<input id="pfb1" type="checkbox" checked disabled>
+											<input id="pfb1" type="checkbox" role="checkbox" aria-checked="true" aria-label="Video Focus feature" checked disabled>
 											<label for="pfb1"><div><span data-i18n="titleprofilevideofocus"></span></div></label>
 										</div>
 										<div class="md-color">
@@ -1410,7 +1418,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<div class="profile">
 								<div id="profileC" class="exampleprofile">
 									<div id="skc" class="toplayer"></div>
-									<iframe id="videopreviewC" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen></iframe>
+									<iframe id="videopreviewC" title="YouTube video" width="200" height="113" src="" frameborder="0" allowfullscreen>Your browser does not support iframes.</iframe>
 									<br>
 									<span class="lorem">Lorem ipsum dolor sit amet, consectetur <a href="">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 								</div>
@@ -1427,7 +1435,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<div class="subtitle">
 									<span data-i18n="titleprofile"></span>
 								</div>
-								<input type="checkbox" id="reveal-profilec" role="button">
+								<input type="checkbox" id="reveal-profilec" role="checkbox" aria-checked="true" aria-label="Show profile card C">
 								<div class="cardactionbox">
 									<div id="submitbuttonC" class="cardokbutton"><span data-i18n="titleprofilesubmit"></span></div>
 									<div id="expandprofilecicon" class="expandicon">
@@ -1444,7 +1452,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									</div>
 									<div class="endttitle">
 										<div class="md-checkbox">
-											<input id="pfc1" type="checkbox" disabled>
+											<input id="pfc1" type="checkbox" role="checkbox" aria-checked="false" aria-label="Video Focus feature" disabled>
 											<label for="pfc1"><div><span data-i18n="titleprofilenovideofocus"></span></div></label>
 										</div>
 										<div class="md-color">
@@ -1457,11 +1465,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 											<label><span data-i18n="titelopacity"></span> <input type="number" id="profileCopacity" min="0" max="100" step="1" value="15" maxlength="3" size="4"> %</label>
 										</div>
 										<div class="md-checkbox">
-											<input id="pfc2" type="checkbox" checked disabled>
+											<input id="pfc2" type="checkbox" role="checkbox" aria-checked="true" aria-label="Always enabled for all open tabs" checked disabled>
 											<label for="pfc2"><div><span data-i18n="titleprofilealwaysscreentab"></span></div></label>
 										</div>
 										<div class="md-checkbox">
-											<input id="pfc3" type="checkbox" checked disabled>
+											<input id="pfc3" type="checkbox" role="checkbox" aria-checked="true" aria-label="Enable clicking hyperlinks when the screen is darkened" checked disabled>
 											<label for="pfc3"><div><span data-i18n="titleprofilescreenclick"></span></div></label>
 										</div>
 									</div>
@@ -1481,50 +1489,50 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 				</section>
 				<section>
-				<h3 data-i18n="titelmouse"></h3>
+				<h3 id="titelmouse" data-i18n="titelmouse"></h3>
 				<div>
 					<div class="md-radio">
-						<input id="mousespotlighto" type="radio" name="mousespotlight" value="off">
+						<input id="mousespotlighto" type="radio" name="mousespotlight" value="off" role="radio" aria-labelledby="titelmouse">
 						<label for="mousespotlighto"><div><span data-i18n="desmousespotlighto"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="mousespotlighta" type="radio" name="mousespotlight" value="auto">
+						<input id="mousespotlighta" type="radio" name="mousespotlight" value="auto" role="radio" aria-labelledby="titelmouse">
 						<label for="mousespotlighta"><div><span data-i18n="desmousespotlighta"></span></div></label>
 					</div>
 					<div class="md-number">
 						<label for="spotlightradius"><div><span data-i18n="desspotlightradius"></span> <input type="number" min="5" max="250" step="1" value="0" name="spotlightradiusnumber" id="spotlightradius" maxlength="3" size="4">px</div></label>
 					</div>
 					<div class="md-radio">
-						<input id="mousespotlightc" type="radio" name="mousespotlight" value="custom">
+						<input id="mousespotlightc" type="radio" name="mousespotlight" value="custom" role="radio" aria-labelledby="titelmouse">
 						<label for="mousespotlightc"><div><span data-i18n="desmousespotlightc"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="mousespotlightt" type="radio" name="mousespotlight" value="custom">
+						<input id="mousespotlightt" type="radio" name="mousespotlight" value="custom" role="radio" aria-labelledby="titelmouse">
 						<label for="mousespotlightt"><div><span data-i18n="desmousespotlightt"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="mousespotlights" type="radio" name="mousespotlight" value="custom">
+						<input id="mousespotlights" type="radio" name="mousespotlight" value="custom" role="radio" aria-labelledby="titelmouse">
 						<label for="mousespotlights"><div><span data-i18n="desmousespotlights"></span></div></label>
 					</div>
 				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelpassword"></h3>
-                <div>
-                    <form autocomplete="on">
-                        <div class="md-checkbox">
-                            <input id="password" type="checkbox">
-                            <label for="password"><div><span data-i18n="desenterpassword"></span></div></label>
-                        </div>
-                        <label><input id="enterpassword" type="password" autocomplete="new-password"><button id="confirmpassword" data-i18n="desconfirmpassword"></button><br><span data-i18n="despassword"></span></label>
-                    </form>
-                </div>
+				<div>
+					<form autocomplete="on">
+						<div class="md-checkbox">
+							<input id="password" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="password">
+							<label for="password"><div><span data-i18n="desenterpassword"></span></div></label>
+						</div>
+						<label><input id="enterpassword" type="password" autocomplete="new-password"><button type="button" id="confirmpassword" data-i18n="desconfirmpassword"></button><br><span data-i18n="despassword"></span></label>
+					</form>
+				</div>
 				</section>
 				<section>
 				<h3 data-i18n="titelrememberpage"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="optionskipremember" type="checkbox">
+						<input id="optionskipremember" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="optionskipremember">
 						<label for="optionskipremember"><div><span data-i18n="desrememberpage"></span></div></label>
 					</div>
 				</div>
@@ -1540,15 +1548,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>
 				<h3 data-i18n="titelreset"></h3>
 				<div>
-					<label><button id="resettotl" data-i18n="resetbrowserextension"></button></label>
+					<label><button type="button" id="resettotl" data-i18n="resetbrowserextension"></button></label>
 				</div>
 				</section>
 			</div>
 			<div id="tab5" class="page hidden">
-				<h1 data-i18n="nightoptions"></h1>
+				<h2 data-i18n="nightoptions"></h2>
 				<section>
 					<div class="videopreview">
-						<iframe id="videopreviewnight" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen=""></iframe>
+						<iframe id="videopreviewnight" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen="">Your browser does not support iframes.</iframe>
 					</div>
 					<div class="suggpanel">
 						<div class="profile">
@@ -1564,7 +1572,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									</div>
 
 									<label id="samplestefanvdnighttheme">
-											<input type="checkbox" />
+											<input type="checkbox" role="checkbox" aria-checked="false" aria-label="Switch to activate Night Mode feature">
 											<span id="stefanvdnightthemeslider">
 												<span class="sun"><span></span></span>
 												<span class="night"><span></span></span>
@@ -1588,7 +1596,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelnighttheme"></h3>
 				<div>
 					<div class="md-checkbox">	
-						<input id="nighttheme" type="checkbox">
+						<input id="nighttheme" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nighttheme">
 						<label for="nighttheme"><div><span data-i18n="desnighttheme"></span></div></label>
 					</div>
 					<div class="md-color md-subin">
@@ -1622,19 +1630,24 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<option>#000000</option>
 					</datalist>
 					<div class="md-checkbox md-subin">	
-						<input id="lampandnightmode" type="checkbox">
+						<input id="lampandnightmode" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="lampandnightmode">
 						<label for="lampandnightmode"><div><span data-i18n="deslampandnightmode"></span></div></label>
 					</div>
+					<div class="md-checkbox md-subin">	
+						<input id="nightmodeswitchhide" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightmodeswitchhide">
+						<label for="nightmodeswitchhide"><div><span data-i18n="desnightmodeswitchhide"></span> <input type="number" min="0" max="10" step="1" value="3" name="nightmodeswitchhidetime" id="nightmodeswitchhidetime" maxlength="3" size="4">s
+						</div></label>
+					</div>
 					<div class="md-checkbox">	
-						<input id="nightonly" type="checkbox">
+						<input id="nightonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightonly">
 						<label for="nightonly"><div><span data-i18n="desnightonly"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="nightmodechecklistwhite" type="radio" name="nightmodechecklist" value="true">
+						<input id="nightmodechecklistwhite" type="radio" name="nightmodechecklist" value="true" role="radio" aria-labelledby="nightonly">
 						<label for="nightmodechecklistwhite"><div><span data-i18n="titelnightmodewhitelist"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="nightmodechecklistblack" type="radio" name="nightmodechecklist" value="black">
+						<input id="nightmodechecklistblack" type="radio" name="nightmodechecklist" value="black" role="radio" aria-labelledby="nightonly">
 						<label for="nightmodechecklistblack"><div><span data-i18n="titelnightmodeblacklist"></span></div></label>
 					</div>
 					<form id="formnightmode">
@@ -1644,73 +1657,77 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<span data-i18n="titelwebsite"></span>
 						</td>
 						<td>
-							<input id="nightwebsiteurl" type="url" pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com">
+							<input id="nightwebsiteurl" type="url" pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com">
 						</td>
 						<td><button type="submit" id="nightaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 					</tr>
 					<tr>
-						<td colspan="2"><select id="nightDomainsBox" name="nightentryList" size="5" multiple=""></select></td>
+						<td colspan="2"><select id="nightDomainsBox" role="listbox" name="nightentryList" size="5" multiple=""></select></td>
 						<td valign="top"><button type="button" id="nightremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
 					</form>
 					<div class="md-radio md-subin">
-						<input id="nightmodebydomain" type="radio" name="nightmodebylist" value="domain">
+						<input id="nightmodebydomain" type="radio" name="nightmodebylist" value="domain" role="radio" aria-labelledby="nightonly">
 						<label for="nightmodebydomain"><div><span data-i18n="titelnightmodedomain"></span></div></label>
 					</div>
 					<div class="md-radio md-subin">
-						<input id="nightmodebypage" type="radio" name="nightmodebylist" value="page">
+						<input id="nightmodebypage" type="radio" name="nightmodebylist" value="page" role="radio" aria-labelledby="nightonly">
 						<label for="nightmodebypage"><div><span data-i18n="titelnightmodepage"></span></div></label>
 					</div>
 					<div class="md-checkbox">	
-						<input id="nightactivetime" type="checkbox">
+						<input id="nightactivetime" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightactivetime">
 						<label for="nightactivetime"><div><span data-i18n="desnightactivetime"></span></div></label>
 					</div>
 					<div class="md-number">
 						<label for="nmtime"><div><input id="nmbegintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="nmendtime" type="time" name="time"></div></label>
 					</div>
 					<div class="md-checkbox">	
-						<input id="nightenabletheme" type="checkbox">
+						<input id="nightenabletheme" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightenabletheme">
 						<label for="nightenabletheme"><div><span data-i18n="desnightenabletheme"></span></div></label>
 					</div>
 					<div class="md-checkbox">	
-						<input id="nighthover" type="checkbox">
+						<input id="nighthover" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nighthover">
 						<label for="nighthover"><div><span data-i18n="desnighthover"></span></div></label>
+					</div>
+					<div class="md-checkbox">	
+						<input id="nightmodegesture" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightmodegesture">
+						<label for="nightmodegesture"><div><span data-i18n="desnightmodegesture"></span></div></label>
 					</div>
 				</div>
 				</section>
 				<section>
-				<h3 data-i18n="titelnightmodeposition"></h3>
+				<h3 id="titelnightmodeposition" data-i18n="titelnightmodeposition"></h3>
 				<div>
 					<div class="md-radio">
-						<input id="nmtopleft" type="radio" name="nmpos" value="nmtop">
+						<input id="nmtopleft" type="radio" name="nmpos" value="nmtop" role="radio" aria-labelledby="titelnightmodeposition">
 						<label for="nmtopleft"><div><span data-i18n="nmtopleft"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="nmtopright" type="radio" name="nmpos" value="nmbottom">
+						<input id="nmtopright" type="radio" name="nmpos" value="nmbottom" role="radio" aria-labelledby="titelnightmodeposition">
 						<label for="nmtopright"><div><span data-i18n="nmtopright"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="nmbottomright" type="radio" name="nmpos" value="nmright">
+						<input id="nmbottomright" type="radio" name="nmpos" value="nmright" role="radio" aria-labelledby="titelnightmodeposition">
 						<label for="nmbottomright"><div><span data-i18n="nmbottomright"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="nmbottomleft" type="radio" name="nmpos" value="nmleft">
+						<input id="nmbottomleft" type="radio" name="nmpos" value="nmleft" role="radio" aria-labelledby="titelnightmodeposition">
 						<label for="nmbottomleft"><div><span data-i18n="nmbottomleft"></span></div></label>
 					</div>
 					<div class="md-radio">
-						<input id="nmcustom" type="radio" name="nmpos" value="nmcus">
+						<input id="nmcustom" type="radio" name="nmpos" value="nmcus" role="radio" aria-labelledby="titelnightmodeposition">
 						<label for="nmcustom"><div><span data-i18n="nmcustom"></span></div></label>
 					</div>
 				</div>
 				</section>
 			</div>
 			<div id="tab7" class="page hidden">
-			<h1 data-i18n="motionoptions"></h1>
+			<h2 data-i18n="motionoptions"></h2>
 			<section>
 				<div>
 				<div class="videopreview">
-					<iframe id="videopreviewmotion" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen=""></iframe>
+					<iframe id="videopreviewmotion" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen="">Your browser does not support iframes.</iframe>
 				</div>
 				<div class="suggpanel">
 					<div class="profile">
@@ -1760,7 +1777,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							</div>
 						</div>
 
-						<input type="checkbox" id="reveal-camtip" role="button">
+						<input type="checkbox" id="reveal-camtip" role="checkbox" aria-checked="false" aria-label="Show the camera debugging tips">
 						<div class="cardactionbox">
 							<div id="submitbuttoncamtip"></div>
 							<div id="expandcamtipicon" class="expandicon">
@@ -1791,7 +1808,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div>
 					<div id="helpcameramotion" class="helpwhatproblem" data-i18n="desbrowsersupport" style="display: none;"></div>
 					<div class="md-checkbox">	
-						<input id="motion" type="checkbox">
+						<input id="motion" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="motion">
 						<label for="motion"><div><span data-i18n="desmotion"></span></div></label>
 					</div>
 					<span class="grey-text" data-i18n="functionactive"></span>
@@ -1807,18 +1824,18 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					</video>
 					<br>
 					<div class="md-checkbox">	
-						<input id="cammotiononly" type="checkbox">
+						<input id="cammotiononly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="cammotiononly">
 						<label for="cammotiononly"><div><span data-i18n="descammotiononly"></span></div></label>
 					</div>
 					<form id="formcameramotion">
 					<table id="cammotionwhitelist">
 					<tr>
 						<td><span data-i18n="titelwebsite"></span>:</td>
-						<td><input id="cammotionwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+						<td><input id="cammotionwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com"></td>
 						<td><button type="submit" id="cammotionaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 					</tr>
 					<tr>
-						<td colspan="2"><select id="cammotionDomainsBox" name="nightentryList" size="5" multiple=""></select></td>
+						<td colspan="2"><select id="cammotionDomainsBox" role="listbox" name="nightentryList" size="5" multiple=""></select></td>
 						<td valign="top"><button type="button" id="cammotionremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
@@ -1827,10 +1844,10 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</section>
 			</div>
 			<div id="tab8" class="page hidden">
-			<h1 data-i18n="speechoption"></h1>
+			<h2 data-i18n="speechoption"></h2>
 			<section>
 				<div class="videopreview">
-					<iframe id="videopreviewspeech" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen=""></iframe>
+					<iframe id="videopreviewspeech" class="dont-turn-off-the-lights" title="YouTube video" type="text/html" width="auto" height="auto" src="" frameborder="0" allowfullscreen="">Your browser does not support iframes.</iframe>
 				</div>
 				<div class="suggpanel">
 					<div class="profile">
@@ -1866,7 +1883,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<div>
 				<div id="helpspeech" class="helpwhatproblem" data-i18n="desbrowsersupport" style="display: none;"></div>
 				<div class="md-checkbox">	
-					<input id="speech" type="checkbox">
+					<input id="speech" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="speech">
 					<label for="speech"><div><span data-i18n="desspeech"></span></div></label>
 				</div>
 				<span class="grey-text" data-i18n="functionactive"></span>
@@ -1876,29 +1893,29 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<br>
 				<div class="md-selectfield md-subgroup">
 					<label><span data-i18n="desvolumesteps"></span></label>
-					<select id="select_language" class="browser-default">
+					<select id="select_language" role="listbox" class="browser-default">
 					</select>
 				</div>
 				&nbsp;&nbsp;
 				<div class="md-selectfield md-subgroup">
 					<label><span data-i18n="desvolumesteps"></span></label>
-					<select id="select_dialect" class="browser-default">
+					<select id="select_dialect" role="listbox" class="browser-default">
 					</select>
 				</div>
 				<div class="md-checkbox md-subgroup"></div>
 				<div class="md-checkbox">
-					<input id="speechonly" type="checkbox">
+					<input id="speechonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="speechonly">
 					<label for="speechonly"><div><span data-i18n="desspeechonly"></span></div></label>
 				</div>
 				<form id="formspeech">
 					<table id="speechwhitelist">
 						<tr>
 							<td><span data-i18n="titelwebsite"></span>:</td>
-							<td><input id="speechwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com"></td>
+							<td><input id="speechwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com"></td>
 							<td><button type="submit" id="speechaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 						</tr>
 						<tr>
-							<td colspan="2"><select id="speechDomainsBox" name="speechentryList" size="5" multiple=""></select></td>
+							<td colspan="2"><select id="speechDomainsBox" role="listbox" name="speechentryList" size="5" multiple=""></select></td>
 							<td valign="top"><button type="button" id="speechremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
@@ -1907,7 +1924,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			</section>
 			</div>
 			<div id="tab9" class="page hidden">
-			<h1 data-i18n="about"></h1>
+			<h2 data-i18n="about"></h2>
 			<section>
 				<div>
 				<h4>Turn Off the Lights™</h4>
@@ -1922,20 +1939,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<br>
 				<br>
 				<div class="aboutbuttons">
-					<button id="buttonreportissue" class="btnspace" data-i18n="reportbug"></button><button id="buttonchangelog" class="btnspace" data-i18n="changelog"></button><button id="buttontranslateme" class="btnspace" data-i18n="translateme"></button>
+					<button type="button" id="buttonreportissue" class="btnspace" data-i18n="reportbug"></button><button type="button" id="buttonchangelog" class="btnspace" data-i18n="changelog"></button><button type="button" id="buttontranslateme" class="btnspace" data-i18n="translateme"></button>
 				</div>
-				<br><br><br><br><br><br>
+				<br>
+				<div id="permissionlist"></div>
+				<br><br><br><br><br>
 				<div class="grey-text">
 				Turn Off the Lights<br>
-				<span class="style_bold">&copy; <span id="yearnow"></span> Stefan vd. <span data-i18n="titelrightsreserved"></span></span><br>
-				<span class="license" data-i18n="textfoot"></span> <a href="http://creativecommons.org/licenses/GPL/2.0/" target="_blank" rel="noopener">GPL 2.0</a>.
+				<span>&copy; <span id="yearnow"></span> Stefan vd. <span data-i18n="titelrightsreserved"></span></span><br>
+				<span data-i18n="textfoot"></span> <a href="http://creativecommons.org/licenses/GPL/2.0/" target="_blank" rel="noopener">GPL 2.0</a>.
 				</div>
 				</div>
 			</section>
 			</div>
 			<div id="tab10" class="page hidden">
-				<h1 data-i18n="titleanalytics"></h1>
-				<section>
+				<h2 data-i18n="titleanalytics"></h2>
+				<section id="seeanalparta">
 					<div>
 						<div class="analyticbox">
 						<canvas id="myChart"></canvas>
@@ -1947,24 +1966,23 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						</div>
 					</div>
 				</section>
-				<section>
+				<section id="seeanalpartb">
 					<div class="sharestatsenergy">
 						<div class="placeholder">
 							<div class="icon">
 							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 							width="80" height="80"
 							viewBox="0 0 32 32"
-							style="fill:#ffffff;"
-							class="icons8-full-battery"><g><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
+							style="fill:#ffffff;"><g><path d="M 3 8 L 3 24 L 27 24 L 27 19 L 29 19 L 29 13 L 27 13 L 27 8 Z M 5 10 L 25 10 L 25 22 L 5 22 Z M 7 12 L 7 20 L 23 20 L 23 12 Z "></path></g></svg>
 						</div>
 						<div class="text">
 							<span id="shareenergytext"></span>
 						</div>
 						</div>
-						<button id="sharestatsenergysaved"><span data-i18n="btnsharestats"></span></button>
+						<button type="button" id="sharestatsenergysaved"><span data-i18n="btnsharestats"></span></button>
 					</div>
 				</section>
-				<section>
+				<section id="seeanalpartc">
 					<div>
 					<h3 data-i18n="titleavgdayschedule"></h3>
 					<div class="canvasavgday">
@@ -1972,52 +1990,58 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					</div>
 					</div>
 				</section>
-				<section>
-				<div class="threecanvasgroup">
-					<div class="canvaschart">
-					<canvas id="myCharttwo"></canvas>
+				<section id="seeanalpartd">
+					<div class="threecanvasgroup">
+						<div class="canvaschart">
+						<canvas id="myCharttwo"></canvas>
+						</div>
+						<div class="canvaschart">
+						<canvas id="myChartthree"></canvas>
+						</div>
 					</div>
-					<div class="canvaschart">
-					<canvas id="myChartthree"></canvas>
-					</div>
-				</div>
 				</section>
-				<section>
+				<section id="seeanalparte">
 					<div class="sharestatslove">
 						<div class="placeholder">
 						<div class="icon">
 							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 							width="80" height="80"
 							viewBox="0 0 32 32"
-							style="fill:#ffffff;"
-							class="icons8-love"><g><path d="M 16.398438 4 C 14.601563 4 13 4.898438 12 6.300781 C 11 4.898438 9.398438 4 7.601563 4 C 4.5 4 2 6.5 2 9.601563 C 2 14 12 22 12 22 C 12 22 22 14 22 9.601563 C 22 6.5 19.5 4 16.398438 4 Z "></path></g></svg>
+							style="fill:#ffffff;"><g><path d="M 16.398438 4 C 14.601563 4 13 4.898438 12 6.300781 C 11 4.898438 9.398438 4 7.601563 4 C 4.5 4 2 6.5 2 9.601563 C 2 14 12 22 12 22 C 12 22 22 14 22 9.601563 C 22 6.5 19.5 4 16.398438 4 Z "></path></g></svg>
 						</div>
 						<div class="text">
 							<span id="sharelovetext"></span>
 						</div>
 						</div>
-						<button id="sharestatslove"><span data-i18n="btnsharestats"></span></button>
+						<button type="button" id="sharestatslove"><span data-i18n="btnsharestats"></span></button>
+					</div>
+				</section>
+				<section id="seeanalpartf">
+					<div>
+						<h3 data-i18n="titlesiteengagement"></h3>
+						<table id="tablesiteeng" class="tabledatalist">
+							<tr>
+								<td><span data-i18n="titleorigin"></span></td>
+								<td><span data-i18n="titletime"></span></td>
+							</tr>
+						</table>
 					</div>
 				</section>
 				<section>
 					<div>
-					<h3 data-i18n="titlesiteengagement"></h3>
-					<table id="tablesiteeng" class="tabledatalist">
-						<tr>
-							<td><span data-i18n="titleorigin"></span></td>
-							<td><span data-i18n="titletime"></span></td>
-						</tr>
-					</table>
-					<br><br>
-					<label><button id="btnresetanalytics" data-i18n="resetlampanalytic"></button></label>
-					<br><br>
-					<span class="grey-text" data-i18n="titlelanalyticprivacy"></span> <a href="https://www.turnoffthelights.com/privacy.html" target="_blank" rel="noopener"><span data-i18n="titlelprivacy"></span></a>
+						<div class="md-checkbox">
+							<input id="seeanalytics" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="seeanalytics">
+							<label for="seeanalytics"><div><span data-i18n="titleanalytics"></span></div></label>
+						</div>
+						<span class="grey-text" data-i18n="titlelanalyticprivacy"></span> <a href="https://www.turnoffthelights.com/privacy.html" target="_blank" rel="noopener"><span data-i18n="titlelprivacy"></span></a>
+						<br><br>
+						<label id="seeanalreset"><button type="button" id="btnresetanalytics" data-i18n="resetlampanalytic"></button></label>
 					</div>
 				</section>
 			</div>
 			</div>
 			<div id="tab4" class="page hidden">
-				<iframe id="welcomeguide" title="Welcome Guide" src="" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
+				<iframe id="welcomeguide" title="Welcome Guide" src="" width="100%" height="100%" frameBorder="0" scrolling="no">Your browser does not support iframes.</iframe>
 			</div>
 		</div>
 <!-- dialog -->
@@ -2040,7 +2064,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 									<table id="multiopacitylist">
 											<tr>
 												<td>
-													<input id="multiopacityname" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature">
+													<input id="multiopacityname" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature">
 												</td>
 												<td>
 													<input id="multiopacitynumber" type="number" required placeholder="80" min="0" step="1" max="100" value="80" aria-label="Choose the opacity value in the number box">
@@ -2051,10 +2075,10 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 											</tr>
 											<tr>
 												<td>
-													<select id="multiopacityDomainsBox" name="multiopacityentryList" size="5" multiple="" aria-label="The website URL"></select>
+													<select id="multiopacityDomainsBox" role="listbox" name="multiopacityentryList" size="5" multiple="" aria-label="The website URL"></select>
 												</td>
 												<td>
-													<select id="multiopacitynumberBox" name="multiopacitynumberentryList" size="5" multiple="" aria-label="The opacity value from that website"></select>
+													<select id="multiopacitynumberBox" role="listbox" name="multiopacitynumberentryList" size="5" multiple="" aria-label="The opacity value from that website"></select>
 												</td>
 												<td valign="top">
 													<button type="button" id="multiopacityremovebutton" name="delete"><span data-i18n="deletebutton"></span></button>
@@ -2075,7 +2099,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			<div id="materialModalRate" class="hide" role="dialog" aria-label="Review this extension" aria-describedby="materialModalRateTitle" aria-disabled="true">
 						<div id="materialModalRateCentered">
 							<div id="materialModalRateContent">
-								<img src="images/star.svg" alt="Review Turn Off the Lights to 5 stars">
+								<img loading="lazy" src="images/star.svg" alt="Review Turn Off the Lights to 5 stars">
 								<div id="materialModalRateTitle"><span data-i18n="friendlyremember"></span></div>
 								<div id="materialModalRateText">
 									<span data-i18n="desremrate"></span>
@@ -2090,7 +2114,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			<div id="materialModalIntroduce" class="hide" role="dialog" aria-label="Introduce the new design" aria-describedby="materialModalIntroduceTitle" aria-disabled="true">
 					<div id="materialModalIntroduceCentered">
 						<div id="materialModalIntroduceContent">
-							<img src="images/introduce.svg" alt="Introducing Turn Off the Lights">
+							<img loading="lazy" src="images/introduce.svg" alt="Introducing Turn Off the Lights">
 							<div id="materialModalIntroduceTitle"><span data-i18n="titelintroduce"></span></div>
 							<div id="materialModalIntroduceText">
 								<span data-i18n="desintroduce"></span>

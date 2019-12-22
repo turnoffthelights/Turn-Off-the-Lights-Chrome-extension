@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2018 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -28,19 +28,21 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function search(nameKey, myArray){
-  for (var i=0; i < myArray.length; i++) {
-      if (myArray[i].name === nameKey) {
-          return myArray[i];
+  var i;
+  var l = myArray.length;
+  for(i = 0; i < l; i++){
+      if(myArray[i].name === nameKey){
+        return myArray[i];
       }
   }
 }
 
-function isKeyInObject(obj, key) {
+function isKeyInObject(obj, key){
     var res = Object.keys(obj).some(v => v == key);
     return res;
 }
 
-function sortObject(obj) {
+function sortObject(obj){
     return Object.keys(obj)
       .sort().reduce((a, v) => {
       a[v] = obj[v];
@@ -55,7 +57,7 @@ var TLDs = ["ac", "ad", "ae", "aero", "af", "ag", "ai", "al", "am", "an", "ao", 
         var parts = url.split('/');
         url = parts[0];
         var parts = url.split('.');
-        if (parts[0] === 'www' && parts[1] !== 'com'){
+        if(parts[0] === 'www' && parts[1] !== 'com'){
             parts.shift()
         }
         var ln = parts.length
@@ -66,7 +68,7 @@ var TLDs = ["ac", "ad", "ae", "aero", "af", "ag", "ai", "al", "am", "an", "ao", 
         // iterate backwards
         while(part = parts[--i]){
             // stop when we find a non-TLD part
-            if (i === 0                    // 'asia.com' (last remaining must be the SLD)
+            if(i === 0                     // 'asia.com' (last remaining must be the SLD)
                 || i < ln-2                // TLDs only span 2 levels
                 || part.length < minLength // 'www.cn.com' (valid TLD as second-level domain)
                 || TLDs.indexOf(part) < 0  // officialy not a TLD
@@ -133,19 +135,19 @@ if(window.location.href != totloptionspage){
 
 function domcontentloaded(){
 // reset
-document.getElementById("btnresetanalytics").addEventListener('click', function () {
+document.getElementById("btnresetanalytics").addEventListener('click', function(){
 chrome.storage.sync.set({"analytics":null,"siteengagement":null});
 location.reload();
 },false);
 
-document.getElementById("sharestatsenergysaved").addEventListener('click', function () {
+document.getElementById("sharestatsenergysaved").addEventListener('click', function(){
     var stefanvdurl = developerwebsite;
     var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
     shareenergytext = chrome.i18n.getMessage("shareanalyticenergy", ""+currentkwh+"");
     window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + shareenergytext + "&via=turnoffthelight", 'Share to Twitter','width=600,height=460,menubar=no,location=no,status=no');
 },false);
 
-document.getElementById("sharestatslove").addEventListener('click', function () {
+document.getElementById("sharestatslove").addEventListener('click', function(){
     var stefanvdurl = developerwebsite;
     var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
     shareenergytext = chrome.i18n.getMessage("shareanalyticlove", ""+currentkwh+"");
@@ -164,7 +166,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       
       if(analytics.length > 7){
       last7days = analytics.slice(-7);
-      var time7everything = last7days.map(function(a) {
+      var time7everything = last7days.map(function(a){
         return a.details.time; // in minutes
       });
       var ct7s = time7everything.reduce(add, 0);
@@ -173,7 +175,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       var memhigh = 0;
       var memdayweek = "";
       var countday = 0;
-      var day7everything = last7days.map(function(a) {
+      var day7everything = last7days.map(function(a){
             if(a.details.time > memhigh){
               memhigh = a.details.time;memdayweek = a.name;
             }
@@ -207,10 +209,10 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
         lastdays = analytics[analytics.length-2];
         var timeyesterday = lastdays.details.time; // in minutes
         ct1sinminutes = timeyesterday/60;
-      }else{ ct1sinminutes = 0;}
+      }else{ct1sinminutes = 0;}
 
       //----Share Energy saved
-      var timeeverything = analytics.map(function(a) {
+      var timeeverything = analytics.map(function(a){
         return a.details.time; // in minutes
       });
       var currentimeseconds = timeeverything.reduce(add, 0);
@@ -219,7 +221,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       // default laptop 65W
       var kwhwithdark = currenttimeinhours * (65 * factorpower)/1000;
       var kwhwithregu = currenttimeinhours * (65 * 1)/1000;
-      currentkwh = Math.round((kwhwithregu - kwhwithdark) * 100) / 100;
+      currentkwh = (kwhwithregu - kwhwithdark).toFixed(5);
       shareenergytext = chrome.i18n.getMessage("shareanalyticenergy", ""+currentkwh+"");
       $("shareenergytext").innerText = shareenergytext;
 
@@ -228,9 +230,9 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       if(analytics.length > 90){
       last90days = analytics.slice(90);
       }else{last90days = analytics;}
-      labelsvals = last90days.map(function(a) {return a.name;});
-      activevals = last90days.map(function(a) {return a.details.active;});
-      timevals = last90days.map(function(a) {
+      labelsvals = last90days.map(function(a){return a.name;});
+      activevals = last90days.map(function(a){return a.details.active;});
+      timevals = last90days.map(function(a){
         timevalm.push(parseFloat(Math.round(a.details.time/60 * 100) / 100).toFixed(2)); // in minutes
         return a.details.time; // in minutes
       });
@@ -240,9 +242,9 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       if(analytics.length > 30){
       last30days = analytics.slice(30);
       }else{last30days = analytics;}
-      labels30days = last30days.map(function(a) {return a.name;});
-      active30days = last30days.map(function(a) {return a.details.active;});
-      time30days = last30days.map(function(a) {
+      labels30days = last30days.map(function(a){return a.name;});
+      active30days = last30days.map(function(a){return a.details.active;});
+      time30days = last30days.map(function(a){
         return a.details.time;
       });
       
@@ -259,30 +261,30 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       if(analytics.length > 90){
       last90days = analytics.slice(90);
       }else{last90days = analytics;}
-      var day0 = last90days.map(function(a) {return a.details.day["0"];});
-      var day1 = last90days.map(function(a) {return a.details.day["1"];});
-      var day2 = last90days.map(function(a) {return a.details.day["2"];});
-      var day3 = last90days.map(function(a) {return a.details.day["3"];});
-      var day4 = last90days.map(function(a) {return a.details.day["4"];});
-      var day5 = last90days.map(function(a) {return a.details.day["5"];});
-      var day6 = last90days.map(function(a) {return a.details.day["6"];});
-      var day7 = last90days.map(function(a) {return a.details.day["7"];});
-      var day8 = last90days.map(function(a) {return a.details.day["8"];});
-      var day9 = last90days.map(function(a) {return a.details.day["9"];});
-      var day10 = last90days.map(function(a) {return a.details.day["10"];});
-      var day11 = last90days.map(function(a) {return a.details.day["11"];});
-      var day12 = last90days.map(function(a) {return a.details.day["12"];});
-      var day13 = last90days.map(function(a) {return a.details.day["13"];});
-      var day14 = last90days.map(function(a) {return a.details.day["14"];});
-      var day15 = last90days.map(function(a) {return a.details.day["15"];});
-      var day16 = last90days.map(function(a) {return a.details.day["16"];});
-      var day17 = last90days.map(function(a) {return a.details.day["17"];});
-      var day18 = last90days.map(function(a) {return a.details.day["18"];});
-      var day19 = last90days.map(function(a) {return a.details.day["19"];});
-      var day20 = last90days.map(function(a) {return a.details.day["20"];});
-      var day21 = last90days.map(function(a) {return a.details.day["21"];});
-      var day22 = last90days.map(function(a) {return a.details.day["22"];});
-      var day23 = last90days.map(function(a) {return a.details.day["23"];});
+      var day0 = last90days.map(function(a){return a.details.day["0"];});
+      var day1 = last90days.map(function(a){return a.details.day["1"];});
+      var day2 = last90days.map(function(a){return a.details.day["2"];});
+      var day3 = last90days.map(function(a){return a.details.day["3"];});
+      var day4 = last90days.map(function(a){return a.details.day["4"];});
+      var day5 = last90days.map(function(a){return a.details.day["5"];});
+      var day6 = last90days.map(function(a){return a.details.day["6"];});
+      var day7 = last90days.map(function(a){return a.details.day["7"];});
+      var day8 = last90days.map(function(a){return a.details.day["8"];});
+      var day9 = last90days.map(function(a){return a.details.day["9"];});
+      var day10 = last90days.map(function(a){return a.details.day["10"];});
+      var day11 = last90days.map(function(a){return a.details.day["11"];});
+      var day12 = last90days.map(function(a){return a.details.day["12"];});
+      var day13 = last90days.map(function(a){return a.details.day["13"];});
+      var day14 = last90days.map(function(a){return a.details.day["14"];});
+      var day15 = last90days.map(function(a){return a.details.day["15"];});
+      var day16 = last90days.map(function(a){return a.details.day["16"];});
+      var day17 = last90days.map(function(a){return a.details.day["17"];});
+      var day18 = last90days.map(function(a){return a.details.day["18"];});
+      var day19 = last90days.map(function(a){return a.details.day["19"];});
+      var day20 = last90days.map(function(a){return a.details.day["20"];});
+      var day21 = last90days.map(function(a){return a.details.day["21"];});
+      var day22 = last90days.map(function(a){return a.details.day["22"];});
+      var day23 = last90days.map(function(a){return a.details.day["23"];});
       var totalday0 = day0.reduce(add, 0);
       var totalday1 = day1.reduce(add, 0);
       var totalday2 = day2.reduce(add, 0);
@@ -319,11 +321,12 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       if(siteengagement.length > 30){
       last30days = siteengagement.slice(30);
       }else{last30days = siteengagement;}
-      for (var i in last30days) {
-        if (last30days[i]) {
+      var i;
+      for(i in last30days){
+        if(last30days[i]){
           var oma = last30days[i];
-          for(key in oma) {
-            if(oma.hasOwnProperty(key)) {
+          for(key in oma){
+            if(oma.hasOwnProperty(key)){
                 if(key != "name"){ // not the date
                 var value = parseFloat(Math.round(oma[key]/60 * 100) / 100).toFixed(2);
                 var app = isKeyInObject(newtablesite, key);
@@ -341,11 +344,12 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
         }
       }
 
-      for (var e in newtablesite) {
+      var e;
+      for(e in newtablesite){
         sortable.push([e, newtablesite[e]]);
       }
     
-      sortable.sort(function(a, b) {
+      sortable.sort(function(a, b){
         return b[1] - a[1];
       });
 
@@ -354,12 +358,13 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       if(siteengagement.length > 30){
         last30daysdomainonly = siteengagement.slice(30);
       }else{last30daysdomainonly = siteengagement;}
-      for (var i in last30daysdomainonly) {
-        if (last30daysdomainonly[i]) {
+      var i;
+      for(i in last30daysdomainonly){
+        if(last30daysdomainonly[i]){
           var oma = last30daysdomainonly[i];
-          for(key in oma) {
+          for(key in oma){
             var abc = getDomain(key);
-            if(oma.hasOwnProperty(key)) {
+            if(oma.hasOwnProperty(key)){
                 if(key != "name"){ // not the date
                 var value = parseFloat(Math.round(oma[key]/60 * 100) / 100).toFixed(2);
                 var app = isKeyInObject(newtablesitedomain, abc);
@@ -377,11 +382,12 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
         }
       }
 
-      for (var e in newtablesitedomain) {
+      var e;
+      for(e in newtablesitedomain){
         sortabledomain.push([e, newtablesitedomain[e]]);
       }
     
-      sortabledomain.sort(function(a, b) {
+      sortabledomain.sort(function(a, b){
         return b[1] - a[1];
       });
 
@@ -499,7 +505,8 @@ var testlove = false;
 var ctx = document.getElementById('myCharttwo').getContext('2d');
 var sitenamedomain = [];
 var sitevaluedomain = [];
-for(var key in sortabledomain) {
+var key;
+for(key in sortabledomain){
     if(testlove == false){
         var mostuseddoman = getDomain(sortabledomain[key][0]);
         sharelovetext = chrome.i18n.getMessage("shareanalyticlove", ""+mostuseddoman+"");
@@ -548,7 +555,8 @@ var myBarChart = new Chart(ctx, {
 // --- Share Love
 // --- Begin table1
 var table = document.getElementById("tablesiteeng");
-for(var key in sortable) {
+var key;
+for(key in sortable){
     var value = sortable[key][1];
     var row = document.createElement("tr");
     var cella = document.createElement("td");

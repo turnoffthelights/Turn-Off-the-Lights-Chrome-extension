@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2018 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -38,8 +38,10 @@ if(mm<10){mm='0'+mm;}
 var today = dd+'/'+mm+'/'+yyyy;
 
 function search(nameKey, myArray){
-  for (var i=0; i < myArray.length; i++) {
-      if (myArray[i].name === nameKey) {
+  var i;
+  var l = myArray.length;
+  for(i = 0; i < l; i++){
+      if(myArray[i].name === nameKey){
           return myArray[i];
       }
   }
@@ -79,7 +81,10 @@ function logbytessiteengagement(bytes){
 
 var analytics;
 var siteengagement;
-chrome.storage.sync.get(['analytics','siteengagement'], function(items){
+var seeanalytics;
+chrome.storage.sync.get(['analytics','siteengagement','seeanalytics'], function(items){
+  seeanalytics = items['seeanalytics'];if(seeanalytics == null)seeanalytics = true;
+  if(seeanalytics == true){
   if(items["analytics"]){
     analytics = items["analytics"];
 
@@ -95,14 +100,14 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
     // search if today date is there
     var myJSON = JSON.stringify(analytics);
     var resultObject = search(today, analytics);
-    if (typeof resultObject === "undefined"){
+    if(typeof resultObject === "undefined"){
       var array = [
         { name:today, details:{active:0, time:0, day:{0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0} }}
       ];
       var finalarray = analytics.concat(array);
 
-      chrome.storage.sync.set({"analytics":finalarray}, function() {
-        if(chrome.runtime.lastError) {
+      chrome.storage.sync.set({"analytics":finalarray}, function(){
+        if(chrome.runtime.lastError){
           if(chrome.runtime.lastError == "QUOTA_BYTES"){
             autoanalyticscleanup();
           }else if(chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM"){
@@ -114,7 +119,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       });
 
     }
-  } else {
+  }else{
     // if empty, create this empty day
     var array = [
       { name:today, details:{active:0, time:0, day:{0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0} }}
@@ -136,14 +141,14 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
     // search if today date is there
     var myJSON = JSON.stringify(siteengagement);
     var resultObject = search(today, siteengagement);
-    if (typeof resultObject === "undefined"){
+    if(typeof resultObject === "undefined"){
       var site = [
         { name:today }
       ];
       var finalsite = siteengagement.concat(site);
 
-      chrome.storage.sync.set({"siteengagement":finalsite}, function() {
-        if(chrome.runtime.lastError) {
+      chrome.storage.sync.set({"siteengagement":finalsite}, function(){
+        if(chrome.runtime.lastError){
           if(chrome.runtime.lastError == "QUOTA_BYTES"){
             autositeengagementcleanup();
           }else if(chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM"){
@@ -155,11 +160,12 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       });
 
     }
-  }else {
+  }else{
     var site = [
       { name:today }
     ];
     chrome.storage.sync.set({"siteengagement":site});
+  }
   }
 });
 
@@ -198,9 +204,13 @@ var taskaddseconds = false; // default false, when refresh the web page it save 
 observeDOM(document.body,function(){
 
 if(document.getElementById('stefanvdlightareoff1')){
-    if (!in_dom) {
+    if(!in_dom){
       taskaddseconds = false;
-      chrome.storage.sync.get("analytics", function(items){
+
+      try{
+      chrome.storage.sync.get(['analytics','seeanalytics'], function(items){
+        seeanalytics = items['seeanalytics'];if(seeanalytics == null)seeanalytics = true;
+        if(seeanalytics == true){
         if(items["analytics"]){
           analytics = items["analytics"];
           var myJSON = JSON.stringify(analytics);
@@ -223,20 +233,27 @@ if(document.getElementById('stefanvdlightareoff1')){
           chrome.runtime.sendMessage({name: 'badgeon'});
           // timer
           refreshIntervalId = window.setInterval(setTime, 1000);
-            function setTime()
-            {
-              if (document.visibilityState === "visible"){
-                ++totalSeconds;
-              }
+          function setTime(){
+            if(document.visibilityState === "visible"){
+              ++totalSeconds;
             }
+          }
+        }
         }
       });
+      }catch{
+      }
+
     }
     in_dom = true;
 
-} else if (in_dom) {
+}else if(in_dom){
   in_dom = false;
-  chrome.storage.sync.get(['analytics','siteengagement'], function(items){
+
+  try{
+  chrome.storage.sync.get(['analytics','siteengagement','seeanalytics'], function(items){
+    seeanalytics = items['seeanalytics'];if(seeanalytics == null)seeanalytics = true;
+    if(seeanalytics == true){
     if(items["analytics"]){
       analytics = items["analytics"];
       var myJSON = JSON.stringify(analytics);
@@ -254,7 +271,7 @@ if(document.getElementById('stefanvdlightareoff1')){
       var resultObject = search(today, siteengagement);
       if(JSON.stringify(resultObject["'"+window.location.href+"'"])){
           var mes = JSON.stringify(resultObject["'"+window.location.href+"'"]);
-      } else {
+      }else{
         var mes = 0;
       }
       var currentseconds = parseInt(mes);
@@ -267,20 +284,26 @@ if(document.getElementById('stefanvdlightareoff1')){
     }
     taskaddseconds = true;
     totalSeconds = 0;
+    }
   });
+  }catch{
+  }
+
   window.clearInterval(refreshIntervalId);
 }
 
 });
 
-window.addEventListener("beforeunload", function (e) {
+window.addEventListener("beforeunload", function(e){
+try{
 // stop the timer
-chrome.storage.sync.get(['analytics','siteengagement'], function(items){
-  if(chrome.runtime.lastError)
-  {
+chrome.storage.sync.get(['analytics','siteengagement','seeanalytics'], function(items){
+  seeanalytics = items['seeanalytics'];if(seeanalytics == null)seeanalytics = true;
+  if(chrome.runtime.lastError){
       /* error */
       return;
   }
+  if(seeanalytics == true){
   if(items["analytics"]){
     analytics = items["analytics"];
     if(taskaddseconds == false){
@@ -300,7 +323,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
     var resultObject = search(today, siteengagement);
     if(JSON.stringify(resultObject["'"+window.location.href+"'"])){
       var mes = JSON.stringify(resultObject["'"+window.location.href+"'"]);
-    } else {
+    }else{
       var mes = 0;
     }
     var currentseconds = parseInt(mes);
@@ -310,7 +333,9 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
     resultObject["'"+window.location.href+"'"] = mes;
     chrome.storage.sync.set({"siteengagement":siteengagement});
     }
-    }
+  }
+  }
 });
 window.clearInterval(refreshIntervalId);
+}catch(e){}
 });

@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2018 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -148,9 +148,8 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .energytext{display:inline-block;width:205px;vertical-align:top;margin-top:8px}
 #energycompared{font-weight:bold}
 /* share box */
-#shareboxgoogle{background:url(../images/googleplus@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/googleplus.png) 1x,url(../images/googleplus@2x.png) 2x);width:28px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
-#shareboxfacebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
-#shareboxtwitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:21px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
+#shareboxfacebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;margin-top:10px;cursor:pointer}
+#shareboxtwitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-top:10px;cursor:pointer}
 #shareboxrate:hover,#shareboxgoogle:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 #color1a{background-color:black}
 #color1b{background-color:rgba(33,56,17,1)}
@@ -241,3 +240,20 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .md-radio input[type="radio"]:checked[disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
 .md-radio input[type="radio"]:checked[disabled] + label::after{background:var(--totl-radio-checked-disabled)}
 .md-radio input[type="radio"][disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
+/* Rate panel */
+#materialModalRate{position:absolute;background:var(--totl-primary-background);top:0;bottom:0;right:0;left:0;width:100%;height:100%}
+#materialModalRate.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none}
+#materialModalRate.hide #materialModalRateCentered{transform:scale(0.8);transition:transform 0.2s ease-out}
+#materialModalRate.show{opacity:1;transition:opacity 0.2s ease-in}
+#materialModalRate.show #materialModalRateCentered{transform:scale(1);transition:transform 0.2s ease-in}
+#materialModalContent{border-radius:2px;padding:14px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:485px;min-height:200px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+#materialModalTitle{margin:10px;font-weight:bold;font-size:16px}
+#materialModalText{margin:10px;margin-bottom:60px}
+#materialModalButtons{width:calc(100% - 24px);position:absolute;bottom:0px}
+.materialModalButton{-webkit-user-select:none;-moz-user-select:none;user-select:none;margin:8px 0;float:right;background:0 0;border:none;border-radius:2px;color:#2296f3;position:relative;height:36px;min-width:64px;padding:0 16px;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:36px;vertical-align:middle}
+.materialModalButton:active{background-color:rgba(158,158,158,.4)}
+.materialModalButton:hover{background-color:rgba(158,158,158,.2)}
+#materialModalRateTitle{margin:24px;font-weight:bold;font-size:16px}
+#materialModalRateText{margin:24px;margin-bottom:60px}
+#materialModalRateButtons{width:calc(100% - 8px);position:absolute;bottom:0px}
+#materialModalRateContent img{height:150px;display:flex;margin:auto}

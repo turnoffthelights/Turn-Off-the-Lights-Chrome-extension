@@ -1,1071 +1,476 @@
 {
-  "pagehelp":{
-    "message":"pomoc"
-  },
-  "titelimage":{
-    "message":"Obrazek tła"
-  },
-  "shortcutalllights":{
-    "message":"aby włączyć/wyłączyć światła dla wszystkich kart"
-  },
-  "lastchecked":{
-    "message":"Sprawdź dostępność aktualizacji"
-  },
-  "visualeffects":{
-    "message":"Efekty wizualne"
-  },
-  "titelshortcutlight":{
-    "message":"Skróty klawiszowe"
-  },
-  "titledonatebutton":{
-    "message":"Wesprzyj"
-  },
-  "titellikebar":{
-    "message":"Pasek oceny"
-  },
-  "desmousespotlightt":{
-    "message":"Włącz klikanie linków, Kiedy Jest przyciemniony obraz"
-  },
-  "desmousespotlights":{
-    "message":"Włącz przyciemnianie ekranu, które jest zawsze aktywne i można klikać przez tą warstwę"
-  },
-  "desambilight4color":{
-    "message":"Kolory wokół filmu:"
-  },
-  "lockentername":{
-    "message":"Wprowadź swoje hasło"
-  },
-  "desnoflash":{
-    "message":"Nie wykrywaj obiektów Flash"
-  },
-  "desdynamicblocks":{
-    "message":"Bloki"
-  },
-  "titeleye":{
-    "message":"Ochrona oczu"
-  },
-  "titelcinemaontop":{
-    "message":"Tryb kinowy: wyświetla warstwę wyłączonego światła tylko na górze okna"
-  },
-  "desmousespotlightc":{
-    "message":"Oświetlaj zaznaczony obszar przy wyłączonym oświetleniu"
-  },
-  "titelrememberpage":{
-    "message":"Strona przypominająca"
-  },
-  "desmousespotlighta":{
-    "message":"Wyświetlaj oświetlenie punktowe wokół kursora myszy, gdy oświetlenie jest wyłączone"
-  },
-  "desmousespotlighto":{
-    "message":"Tryb standardowy – wyłącza poniższe ustawienia myszy"
-  },
-  "desplaylist":{
-    "message":"Wyświetlaj listę odtwarzania"
-  },
-  "desambilightfixcolor":{
-    "message":"Kolor jednolity"
-  },
-  "desuntil":{
-    "message":"do"
-  },
-  "desconfirmpassword":{
-    "message":"Zapisz hasło"
-  },
-  "desautoplayonly":{
-    "message":"Przyciemniaj tylko następujące witryny:"
-  },
-  "helpeyeprotection":{
-    "message":"Aktywacja funkcji ochrony oczu automatycznie dezaktywuje funkcję automatycznego odtwarzania."
-  },
-  "skipremember":{
-    "message":"Pomiń i otwórz stronę ustawień"
-  },
-  "optiontimesaved":{
-    "message":"Czas został zapisany!"
-  },
-  "titelvideoheadline":{
-    "message":"Tytuł filmu"
-  },
-  "translateme":{
-    "message":"Pomóż tłumaczyć"
-  },
-  "despassword":{
-    "message":"Przed włączeniem oświetlenia będzie wymagane podanie hasła."
-  },
-  "helpautoplay":{
-    "message":"Tryb ochrony oczu jest aktywny. Aby skorzystać z tej funkcji należy poniżej wyłączyć tryb ochrony oczu."
-  },
-  "name":{
-    "message":"Turn Off the Lights"
-  },
-  "changelog":{
-    "message":"Wykaz zmian"
-  },
-  "optionpagetitle":{
-    "message":"Turn Off The Lights - ustawienia"
-  },
-  "optionpasswordsaved":{
-    "message":"Hasło zostało zapisane!"
-  },
-  "desdynamicspace":{
-    "message":"Przestrzeń kosmiczna"
-  },
-  "deseastereggs":{
-    "message":"Naciśnięcie klawisza T dodaje Teatr kurtyna Do ciemniejszej warstwy"
-  },
-  "settings":{
-    "message":"Ustawienia"
-  },
-  "desspotlightradius":{
-    "message":"Średnica plamy światła:"
-  },
-  "titelsync":{
-    "message":"Synchronizuj"
-  },
-  "right":{
-    "message":"prawa strona"
-  },
-  "titeldynamic":{
-    "message":"Tło dynamiczne"
-  },
-  "deslikebutton":{
-    "message":"Wyświetlaj przyciski Podoba mi się i Nie podoba mi się dla danego filmu"
-  },
-  "titelmouse":{
-    "message":"Mysz"
-  },
-  "titellessmore":{
-    "message":"Zwiń"
-  },
-  "desshortcutlight":{
-    "message":"Włącz następujące skróty klawiszowe:"
-  },
-  "titelinfobar":{
-    "message":"Pasek informacyjny"
-  },
-  "descontextmenus":{
-    "message":"Wyświetlaj w menu kontekstowym opcję wyróżnienia obiektu"
-  },
-  "titelcontextmenus":{
-    "message":"Menu kontekstowe"
-  },
-  "titelplaylist":{
-    "message":"Lista odtwarzania"
-  },
-  "desatmosphereonly":{
-    "message":"Stosuj funkcję podświetlenia tylko na poniższych witrynach:"
-  },
-  "recflash":{
-    "message":"Polecane"
-  },
-  "desenterpassword":{
-    "message":"Wpisz swoje hasło w poniższym polu:"
-  },
-  "titelblurradius":{
-    "message":"Poziom rozmycia:"
-  },
-  "version":{
-    "message":"Wersja"
-  },
-  "shortcutdark":{
-    "message":"aby przyciemnić ekran (zwiększyć natężenie)"
-  },
-  "dessharebutton":{
-    "message":"Wyświetlaj przyciski udostępniania dla danego filmu"
-  },
-  "shortcutbright":{
-    "message":"aby rozjaśnić ekran (zmniejszyć natężenie)"
-  },
-  "titelalllightsoff":{
-    "message":"Otwarte karty"
-  },
-  "desreadera":{
-    "message":"Wyświetlaj pasek po wyłączeniu oświetlenia"
-  },
-  "rememberrate":{
-    "message":"Ocena"
-  },
-  "desautoplay":{
-    "message":"Automatycznie przyciemniaj/rozjaśniaj tło po naciśnięciu przycisku odtwarzania"
-  },
-  "titelscreen":{
-    "message":"Ekran"
-  },
-  "desflash":{
-    "message":"Wyświetlaj wszystkie obiekty Flash "
-  },
-  "titelhead":{
-    "message":"Kanał"
-  },
-  "pageatitle":{
-    "message":"Wyłącz światła"
-  },
-  "desaddvideobutton":{
-    "message":"Wyświetlaj przycisk Dodaj dla danego filmu"
-  },
-  "shortcuteyeprotection":{
-    "message":"aby włączyć/wyłączyć funkcję ochrony oczu"
-  },
-  "titelfadein":{
-    "message":"Stopniowe rozjaśnianie"
-  },
-  "desreadern":{
-    "message":"Nie wyświetlaj paska poziomu przyciemniania"
-  },
-  "titelmaxqualityyoutube":{
-    "message":"Automatycznie ustawiaj następującą rozdzielczość:"
-  },
-  "desambilightrangespreadradius":{
-    "message":"Wartości dodatnie zwiększają rozmiar podświetlenia, wartości ujemne zmniejszają."
-  },
-  "titelon":{
-    "message":"Włącz"
-  },
-  "videotitle":{
-    "message":"Wyróżnij ten film"
-  },
-  "warningtextambilight":{
-    "message":"Gdy nie można odebrać danych wideo przez ochronę strony, wybrany kolor będzie użyty w zastępstwie."
-  },
-  "desdynamiccloud":{
-    "message":"Animowane chmury"
-  },
-  "desconfirmtimesaver":{
-    "message":"Zapisz czas"
-  },
-  "deslikebar":{
-    "message":"Wyświetlaj wskaźnik podoba mi się/nie podoba mi się pod filmem"
-  },
-  "titelautoplay":{
-    "message":"Autoodtwarzanie"
-  },
-  "top":{
-    "message":"góra"
-  },
-  "titelspreadradius":{
-    "message":"Poziom rozprzestrzenienia:"
-  },
-  "installadblocker":{
-    "message":"Jeśli chcesz wyłączyć reklamy zainstaluj adblocka."
-  },
-  "titelsharebutton":{
-    "message":"Przycisk udostępniania"
-  },
-  "titelcolor":{
-    "message":"Kolor"
-  },
-  "titeldownloadbutton":{
-    "message":"Pobierz ten dodatek"
-  },
-  "pagetitle":{
-    "message":"Przyciemnij tę stronę"
-  },
-  "titelambilight":{
-    "message":"Podświetlenie sferyczne"
-  },
-  "titelshowmore":{
-    "message":"Rozwiń"
-  },
-  "desviewcount":{
-    "message":"Wyświetlaj liczbę odsłon danego filmu"
-  },
-  "titelautowidthyoutube":{
-    "message":"Automatycznie zwiększaj rozmiar odtwarzacza YouTube"
-  },
-  "desconfirmtime":{
-    "message":"Zapisz czas"
-  },
-  "titelupgrade":{
-    "message":"Inne dodatki"
-  },
-  "lockwrongpassword":{
-    "message":"Nieprawidłowe hasło, spróbuj ponownie."
-  },
-  "titelsyncbrowser":{
-    "message":"Synchronizuj ustawienia dodatku z innymi przeglądarkami"
-  },
-  "deletebutton":{
-    "message":"Usuń"
-  },
-  "eyedivon":{
-    "message":"Włączone"
-  },
-  "eyedivoff":{
-    "message":"Wyłączone"
-  },
-  "deshead":{
-    "message":"Wyświetlaj pasek lub nazwę kanału"
-  },
-  "shortcutsavingopacity":{
-    "message":" – zapisanie ustawionej wartości krycia"
-  },
-  "desinfobar":{
-    "message":"Wyświetlaj opis filmu"
-  },
-  "titellamp":{
-    "message":"Przycisk"
-  },
-  "desambilightvarcolor":{
-    "message":"Pobierz próbkę koloru z filmu"
-  },
-  "showremember":{
-    "message":"Nie otwieraj znów tej strony przypominającej, kiedy otworzę opcje"
-  },
-  "donatepromotext":{
-    "message":"Będę ogromnie wdzięczny, jeżeli wesprzesz ten projekt dowolną kwotą!"
-  },
-  "titelblur":{
-    "message":"Rozmycie reszty"
-  },
-  "desdynamicraindrops":{
-    "message":"Krople deszczu"
-  },
-  "desalllightsoff":{
-    "message":"Kliknięcie przycisku lampy przełączy światła wł/wył na wszystkich otwartych kartach"
-  },
-  "optionecosaversaved":{
-    "message":"Czas został zapisany!"
-  },
-  "titelreader":{
-    "message":"Pasek poziomu przyciemnienia"
-  },
-  "deseyen":{
-    "message":"Normalne użycie (światła gasną, kiedy klikniesz na ikonę żarówki)"
-  },
-  "enjoyshare":{
-    "message":"Jeśli korzystanie z tego rozszerzenia sprawia ci przyjmeność, podziel się nim z tymi, którzy je docenią."
-  },
-  "shortcuttotl":{
-    "message":"aby przełączyć światła wł/wył"
-  },
-  "deseyea":{
-    "message":"Automatycznie przyciemnij tło po otwarciu strony"
-  },
-  "basicsettings":{
-    "message":"Podstawowe"
-  },
-  "hoveroptionapply":{
-    "message":"Zastosuj"
-  },
-  "reportbug":{
-    "message":"Zgłoś problem"
-  },
-  "destime":{
-    "message":"Wyłączaj oświetlenie w godzinach:"
-  },
-  "guide":{
-    "message":"Przewodnik"
-  },
-  "deseyealist":{
-    "message":"Automatycznie przyciemnij tło na następujących stronach:"
-  },
-  "titellikebutton":{
-    "message":"Przyciski Podoba mi się i Nie podoba mi się"
-  },
-  "titelpageaction":{
-    "message":"Ukryj przycisk żarówki"
-  },
-  "friendlyremember":{
-    "message":"Przypomnienie..."
-  },
-  "desfadein":{
-    "message":"Włącz efekt stopniowego rozjaśniania"
-  },
-  "warning":{
-    "message":"Uwaga!"
-  },
-  "deseyetimesaver":{
-    "message":"Kiedy strona jest nieaktywna (nie używa myszki lub klawiatury) przez czas określony poniżej, automatycznie się przyciemnia."
-  },
-  "titelsuggestions":{
-    "message":"Sugestie"
-  },
-  "advancedoptions":{
-    "message":"Zaawansowane"
-  },
-  "dessuggestions":{
-    "message":"Wyświetlaj sugestie na stronie"
-  },
-  "titelflash":{
-    "message":"Wykrywanie obiektów Flash"
-  },
-  "desambilight":{
-    "message":"Włącz efekt podświetlenia sferycznego dla aktualnie odtwarzanego filmu"
-  },
-  "productshare":{
-    "message":"Udostępnianie/Gadżety"
-  },
-  "addbutton":{
-    "message":"Dodaj"
-  },
-  "reportlist":{
-    "message":"(zobacz listę)"
-  },
-  "desdynamicfishtank":{
-    "message":"Akwarium"
-  },
-  "longdonatetext":{
-    "message":"Jestem bardzo wdzięczny za każde datki. Dzięki nim mogę utrzymać ten dodatek przy życiu dla innych nowych użytkowników. Obojętnie, czy to 1zł czy 100zł, Twoja pomoc jest bardzo doceniana!"
-  },
-  "deshardflash":{
-    "message":"Wyświetlaj wszystkie obiekty Flash, opuszczaj filtr URL – naprawia to problemy z niektórymi odtwarzaczami wideo, ale powoduje wyświetlanie reklam"
-  },
-  "desfadeout":{
-    "message":"Włącz efekt stopniowego przyciemniania"
-  },
-  "optionwrongimg":{
-    "message":"Niewłaściwy plik obrazka!"
-  },
-  "desvideoheadline":{
-    "message":"Wyświetlaj tytuł filmu i odwróć jego kolor"
-  },
-  "desrememberpage":{
-    "message":"Nie pokazuj strony przypominającej"
-  },
-  "description":{
-    "message":"Cała strona będzie przyciemniona, aby można było oglądać filmy, tak jak w kinie. Działa między innymi w aplikacji Youtube™."
-  },
-  "titelviewcount":{
-    "message":"Liczba odsłon"
-  },
-  "titelopacity":{
-    "message":"Nieprzezroczystość"
-  },
-  "titelqualityyoutube":{
-    "message":"Automatycznie ustawiaj jakość filmów na YouTube"
-  },
-  "shortcutopacity":{
-    "message":"aby przywrócić ustawienia przyciemnienia"
-  },
-  "desambilightrangeblurradius":{
-    "message":"Niższe wartości wyostrzą cień, wyższe wartości uczynią go bardziej rozmytym."
-  },
-  "titeladdvideobutton":{
-    "message":"Przycisk Dodaj"
-  },
-  "titelpassword":{
-    "message":"Ochrona hasłem"
-  },
-  "titeldownloadupgrade":{
-    "message":"Wyświetla galerię obrazków na stronie i wyróżnia je za pomocą podświetlenia sferycznego."
-  },
-  "titelfadeout":{
-    "message":"Stopniowe przyciemnianie"
-  },
-  "eastereggsquestion":{
-    "message":"Czy lubisz prawdziwe kino?"
-  },
-  "bottom":{
-    "message":"dół"
-  },
-  "dessaver":{
-    "message":"Wygaszacz ekranu:"
-  },
-  "hoveroptiondyn5":{
-    "message":"z przelotem"
-  },
-  "pagestillloading":{
-    "message":"Trwa wczytywanie strony…"
-  },
-  "titeloff":{
-    "message":"Wyłącz"
-  },
-  "titeleastereggs":{
-    "message":"Pisanki"
-  },
-  "textfoot":{
-    "message":"Ten program jest wydany na licencji CC-GNU GPL. Aby zobaczyć licencję, odwiedź"
-  },
-  "left":{
-    "message":"lewa strona"
-  },
-  "titelnighttheme":{
-    "message":"Tryb nocny"
-  },
-  "desnighttheme":{
-    "message":"Wyświetlaj na dole strony internetowej przycisk przełączania w tryb nocny/dzienny"
-  },
-  "nightoptions":{
-    "message":"Tryb nocny"
-  },
-  "desnightonly":{
-    "message":"Wyświetlaj przycisk przełączania trybu tylko na poniższych witrynach:"
-  },
-  "desnightenabletheme":{
-    "message":"Po otwarciu nowej strony automatycznie przełączaj w tryb nocny"
-  },
-  "titellampregular":{
-    "message":"Wyświetlaj przycisk żarówki w omniboksie"
-  },
-  "titellampvideo":{
-    "message":"Wyświetlaj ikonę żarówki tylko, jeśli znajdziesz odtwarzacz wideo"
-  },
-  "upgradecontexttitle":{
-    "message":"Dodano kilka nowych funkcji,"
-  },
-  "upgradecontextmessage":{
-    "message":"To sprawia, że ten dodatek jest jeszcze wspanialszy"
-  },
-  "upgradecontextitemta":{
-    "message":"Wykrywanie ruchu"
-  },
-  "upgradecontextitemma":{
-    "message":"Wyłącz oświetlenie za pomocą ręki"
-  },
-  "upgradecontextitemtb":{
-    "message":"Rozpoznawanie mowy"
-  },
-  "upgradecontextitemmb":{
-    "message":"Panuj lepiej nad stroną internetową"
-  },
-  "upgradefbshare":{
-    "message":"Udostępnij na Facebooku"
-  },
-  "upgradetwshare":{
-    "message":"Wyślij tweeta"
-  },
-  "ratetitle":{
-    "message":"Oceń i przekaż opinię o dodatku"
-  },
-  "ratedes":{
-    "message":"Powiadom wszystkich o tym wspaniałym dodatku!"
-  },
-  "rateitema":{
-    "message":"Przyznaj 5 gwiazdek"
-  },
-  "titelreset":{
-    "message":"Resetuj ustawienia"
-  },
-  "resetbrowserextension":{
-    "message":"Resetuj ustawienia Turn Off the Lights"
-  },
-  "desautoplaydelay":{
-    "message":"Rozjaśnij tło ponownie, gdy film zakończył się po"
-  },
-  "desautoplaydelayend":{
-    "message":"s"
-  },
-  "motionoptions":{
-    "message":"Wykrywanie ruchu"
-  },
-  "desmotion":{
-    "message":"Włącz \"Camera Motion\""
-  },
-  "trymotion":{
-    "message":"Wypróbuj sam!"
-  },
-  "destrymotion":{
-    "message":"To jest po prostu super, a najlepsze jest to, że działa wszędzie, nawet na YouTube, witrynach z wiadomościami, itp."
-  },
-  "howworkmotion":{
-    "message":"Jak to działa?"
-  },
-  "step1description":{
-    "message":"Włącz wykrywanie ruchu"
-  },
-  "step2description":{
-    "message":"Przesuń swoją rękę (lub pięść) z góry na dół"
-  },
-  "step3description":{
-    "message":"Czarna warstwa automatycznie przesunie się w dół."
-  },
-  "desmotionChecklist":{
-    "message":"Lista kontrolna:"
-  },
-  "des1checkmotion":{
-    "message":"Sprawdź czy pokój nie jest zbyt ciemny – czy jest wystarczająco oświetlony"
-  },
-  "des2checkmotion":{
-    "message":"Upewnij się, że kamera nie jest oświetlona światłem słonecznym"
-  },
-  "des3checkmotion":{
-    "message":"Umieść kamerę przed sobą"
-  },
-  "titellinear":{
-    "message":"Gradient liniowy"
-  },
-  "titelcolora":{
-    "message":"Kolor A:"
-  },
-  "titelcolorb":{
-    "message":"Kolor B:",
-    "description":"Kolor B:"
-  },
-  "speechoption":{
-    "message":"Rozpoznawanie mowy"
-  },
-  "titelspeech":{
-    "message":"Mowa"
-  },
-  "desspeech":{
-    "message":"Włącz rozpoznawanie mowy – uaktywnienie tej funkcji spowoduje włączenie modułu rozpoznawania mowy. Możesz wypowiadać następujące polecenia:"
-  },
-  "desspeech1command":{
-    "message":"Wyłącz oświetlenie"
-  },
-  "desspeech2command":{
-    "message":"Włącz oświetlenie"
-  },
-  "desspeech3command":{
-    "message":"Odtwarzaj film"
-  },
-  "desspeech4command":{
-    "message":"zatrzymaj odtwarzanie"
-  },
-  "desspeechdialect":{
-    "message":"Wybierz język:"
-  },
-  "desatmosvivid":{
-    "message":"Efekty żywej atmosfery, wymagają"
-  },
-  "help":{
-    "message":"Pomoc"
-  },
-  "about":{
-    "message":"Informacje"
-  },
-  "desspeechonly":{
-    "message":"Uaktywnij rozpoznawanie mowy tylko na następujących witrynach:"
-  },
-  "descammotiononly":{
-    "message":"Włącz wykrywanie ruchu tylko na następujących witrynach:"
-  },
-  "titelcamera":{
-    "message":"Kamera"
-  },
-  "titelautoplaywhitelist":{
-    "message":"Lista dozwolonych"
-  },
-  "titelautoplayblacklist":{
-    "message":"Lista zabronionych"
-  },
-  "titeldownloadthemeupgrade":{
-    "message":"Dodaj do przeglądarki ciemny motyw. Motyw ten jest wyświetlany tylko wokół przeglądarki."
-  },
-  "desbrowsersupport":{
-    "message":"Przeglądarka jeszcze nie obsługuje tej funkcji. Sprawdź czy masz zainstalowaną najnowszą wersję."
-  },
-  "titelsupportatmos":{
-    "message":"Obsługuje tylko tag <video> HTML5 i odtwarzacz YouTube HTML5. Wykorzystuje również procesor twojej karty graficznej."
-  },
-  "titelseeonline":{
-    "message":"Zobacz online więcej przykładów"
-  },
-  "titelvideosample":{
-    "message":"Przykłady filmów"
-  },
-  "titelwebsite":{
-    "message":"Adres URL"
-  },
-  "titeldeveloper":{
-    "message":"Autor"
-  },
-  "titelrightsreserved":{
-    "message":"Niektóre prawa zastrzeżone."
-  },
-  "desbrowserextension":{
-    "message":" – rozszerzenie dla przeglądarki"
-  },
-  "desapitext":{
-    "message":"Interfejs programowania dla twórców internetowych"
-  },
-  "desbrowsertheme":{
-    "message":"Przeglądarka tematu"
-  },
-  "desproject":{
-    "message":"projekt"
-  },
-  "titelapideveloper":{
-    "message":"API Developer"
-  },
-  "titelwikiatmos":{
-    "message":"Informacja o funkcji Oświetlenia atmosferycznego z Wikipedii"
-  },
-  "sharemenusharetitle":{
-    "message":"Podziel się tym"
-  },
-  "sharemenuwelcomeguidetitle":{
-    "message":"Przewodnik"
-  },
-  "sharemenutellafriend":{
-    "message":"Poinformuj znajomych"
-  },
-  "sharemenusendatweet":{
-    "message":"Wyślij tweeta"
-  },
-  "sharemenupostonfacebook":{
-    "message":"Prześlij post na Facebooka"
-  },
-  "sharemenupostongoogleplus":{
-    "message":"Prześlij post na Google +"
-  },
-  "sharemenuratetitle":{
-    "message":"Oceń ten dodatek"
-  },
-  "sharemenudonatetitle":{
-    "message":"Wesprzyj rozwój"
-  },
-  "titelautostop":{
-    "message":"Autozatrzymanie"
-  },
-  "desautostop":{
-    "message":"Automatycznie zatrzymaj odtwarzanie wideo, kiedy otwieram stronę internetową"
-  },
-  "areyouhappy":{
-    "message":"Czy jesteś zadowolony z Turn Off the Lights?"
-  },
-  "tellothers":{
-    "message":"Gwarantacja, że Twoja opinia się liczy"
-  },
-  "nothanks":{
-    "message":"Nie, dziękuję"
-  },
-  "writeareview":{
-    "message":"Napisz opinię"
-  },
-  "desauroraplayer":{
-    "message":"Otaczające odtwarzacz oświetlenie jest również dostępne na Twoim komputerze."
-  },
-  "downloadtheapp":{
-    "message":"Pobierz aplikację teraz"
-  },
-  "titeldownloadupgradezoom":{
-    "message":"Zwiększa lub zmniejsza zawartość stron za pomocą przycisku przybliżenia dla bardziej komfortowego czytania."
-  },
-  "titeldownloadupgradepropermenubar":{
-    "message":"Przywraca czarny pasek menu na stronie Google."
-  },
-  "titeldownloadupgradefinancetoolbar":{
-    "message":"To pokazuje Informacje giełdowe w czasie rzeczywistym."
-  },
-  "titelnightmodeposition":{
-    "message":"Położenie przełącznika"
-  },
-  "nmtopleft":{
-    "message":"Lewy górny"
-  },
-  "nmtopright":{
-    "message":"Prawy górny"
-  },
-  "nmbottomright":{
-    "message":"Prawy dolny"
-  },
-  "nmbottomleft":{
-    "message":"Lewy dolny"
-  },
-  "nmcustom":{
-    "message":"Niestandardowe (naciśnij, przytrzymaj i przenieś przełącznik do wybranego miejsca na ekranie)"
-  },
-  "desnighthover":{
-    "message":"Pokaż przezroczysty przełącznik na stronie internetowej."
-  },
-  "titelnightmodewhitelist":{
-    "message":"Lista dozwolonych"
-  },
-  "titelnightmodeblacklist":{
-    "message":"Lista zabronionych"
-  },
-  "desautostoponly":{
-    "message":"Aktywuj aytomatyczne zatrzymywanie wideo tylko na następujących stronach:"
-  },
-  "titelautostopwhitelist":{
-    "message":"Lista dozwolonych"
-  },
-  "titelautostopblacklist":{
-    "message":"Lista zabronionych"
-  },
-  "desnightactivetime":{
-    "message":"Przełącznik będzie widoczny między następującymi godzinami:"
-  },
-  "deslampandnightmode":{
-    "message":"Aktywuj tryb nocny poprzez kliknięcie na szarą lampę."
-  },
-  "titeleyewhitelist":{
-    "message":"Lista dozwolonych"
-  },
-  "titeleyeblacklist":{
-    "message":"Lista zabronionych"
-  },
-  "desspeech5command":{
-    "message":"Lampa przeglądarkowa"
-  },
-  "html5andyoutube":{
-    "message":"Wideo HTML5 i YouTube ™"
-  },
-  "flashembedobject":{
-    "message":"Obsługuje: <object>, <embed>, <applet>, <iframe>."
-  },
-  "titelnightmodebck":{
-    "message":"Kolor tła"
-  },
-  "titelnightmodetxt":{
-    "message":"Kolor tekstu"
-  },
-  "desdynamicsmoke":{
-    "message":"Dym"
-  },
-  "desdynamicdotscolor":{
-    "message":"Kolorowe Kropki"
-  },
-  "desdynamicstorm":{
-    "message":"Burza",
-    "description":"Burza"
-  },
-  "desdynamictriangulation":{
-    "message":"Triangulacja"
-  },
-  "desdynamicstars":{
-    "message":"Gwiazdki"
-  },
-  "desmobileapp":{
-    "message":"Turn Off the Lights jest również dostępne dla urządzeń mobilnych."
-  },
-  "titel360youtube":{
-    "message":"Pokazuje pełne 360 stopni wideo YouTube w jednej ramce."
-  },
-  "titelvideotool":{
-    "message":"Pasek narzędzi wideo"
-  },
-  "desvideotool":{
-    "message":"Pokaż pasek narzędzi poniżej ekranu, aby dostosować bieżący odtwarzacz wideo"
-  },
-  "vtoolfullscreen":{
-    "message":"Przycisk ustawiający wielkość odtwarzacza wideo na pełny rozmiar"
-  },
-  "vtoolfilter":{
-    "message":"Przycisk aby dodać filtr w bieżącym odtwarzaczu wideo"
-  },
-  "vtoolreplay":{
-    "message":"Przycisk do powtarzania bieżącego odtwarzacza wideo"
-  },
-  "vtoolscreenshot":{
-    "message":"Przycisk wykonania zrzutu ekranu w aktualnym odtwarzaczu wideo"
-  },
-  "vtoolalign":{
-    "message":"Przycisk wyśrodkowania odtwarzacza wideo w aktualnej przeglądarce."
-  },
-  "titelvideotoolgrayscale":{
-    "message":"skala szarości"
-  },
-  "titelvideotoolsepia":{
-    "message":"sepia"
-  },
-  "titelvideotoolinvert":{
-    "message":"odwróc"
-  },
-  "titelvideotoolcontrast":{
-    "message":"kontrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"nasycenie"
-  },
-  "titelvideotoolhueroration":{
-    "message":"barwa rotacji"
-  },
-  "titelvideotoolbrightness":{
-    "message":"jasność"
-  },
-  "titelvideotoolnormal":{
-    "message":"normalny"
-  },
-  "titelvideotoollike":{
-    "message":"Polub"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Subskrybuj"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Powtórz"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filtry"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Pełen Ekran"
-  },
-  "titelvideotoolscreenshot":{
-    "message":"Wykonaj zrzut ekranu"
-  },
-  "titelreflection":{
-    "message":"Odbicie"
-  },
-  "desreflection":{
-    "message":"Pokaż efect odbicia na wszystkich filmach"
-  },
-  "desvideotoolonly":{
-    "message":"Uaktywnik pasek narzędzi \"Video Tool Bar\" Tylko na następujących witrynie(ach):"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Lista dozwolonych"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Lista zabronionych"
-  },
-  "titelnightmodehyperlink":{
-    "message":"Hiperłącze",
-    "description":"Hiperłącze"
-  },
-  "titelblock60fps":{
-    "message":"Blok 60fps",
-    "description":"Blok 60fps"
-  },
-  "titelvolume":{
-    "message":"Suwak głośności wideo"
-  },
-  "desvideovolume":{
-    "message":"Kontrola głośności bieżącego wideo kołem na myszy"
-  },
-  "desvideovolumecolor":{
-    "message":"Kolor suwaka"
-  },
-  "desvolumelabel":{
-    "message":"Pokaż etykietę głośności"
-  },
-  "desvolumesteps":{
-    "message":"Liczba kroków dla każdego przewijania"
-  },
-  "sharetexta":{
-    "message":"Pobierz rozszerzenie Turn Off the Lights"
-  },
-  "sharetextb":{
-    "message":"Cześć, to jest niesamowite. Po prostu próbowałem dziś to rozszerzenie Turn Off the Lights dla przeglądarki "
-  },
-  "sharetextc":{
-    "message":"Najlepszy i niesamowite rozszerzenie Turn Off the Lights przeglądarki"
-  },
-  "sharetextd":{
-    "message":"Rozszerzenie Turn Off the Lights jest najlepszym narzędziem do na YouTube. Pobierz i wypróbuj."
-  },
-  "titelsharethis":{
-    "message":"Udostępnij to:"
-  },
-  "titellampchoose":{
-    "message":"Wybierz swoją ulubiony styl lampy"
-  },
-  "titeldoesntwork":{
-    "message":"Turn Off the Lights nie działa na tej stronie sieci www. Spróbuj na innej stronie."
-  },
-  "titelpopupvideo":{
-    "message":"YouTube"
-  },
-  "titelpopupwelcomeguide":{
-    "message":"Przewodnik"
-  },
-  "titelpopupsupport":{
-    "message":"Pomoc techniczna"
-  },
-  "titelpopupoptions":{
-    "message":"Ustawienia"
-  },
-  "titelpopupratestars":{
-    "message":"Przyznaj 5 gwiazdek"
-  },
-  "titelvisenable":{
-    "message":"Włącz/Wyłącz wizualizację dźwięku"
-  },
-  "titelvischoose":{
-    "message":"Wybierz swoją wizualizację dźwięku"
-  },
-  "titelvisblocks":{
-    "message":"Bloki"
-  },
-  "titelvisfrequency":{
-    "message":"Częstotliwość"
-  },
-  "titelvistunnel":{
-    "message":"Ścieżka dźwięku"
-  },
-  "titelvisualization":{
-    "message":"Wizualizacji dźwięku"
-  },
-  "desvisopacity":{
-    "message":"Tło dla wizualizacji dźwięku"
-  },
-  "vtoolvisualization":{
-    "message":"Przycisk, aby pokazać wizualizację dźwięku dla bieżącego odtwarzacza wideo"
-  },
-  "desvideotoolcolor":{
-    "message":"Kolor paska narzędzi"
-  },
-  "titelhovervideo":{
-    "message":"Wideo Hover"
-  },
-  "deshovervideo":{
-    "message":"Umieść kursor myszy na elemencie wideo na określoną liczbę sekund, a następnie przyciemnij automatycznie do strony WWW"
-  },
-  "promotitle":{
-    "message":"Porada Dnia"
-  },
-  "desremyoutube":{
-    "message":"Subskrybuj na YouTube"
-  },
-  "desremfacebook":{
-    "message":"Poleć na Facebooku"
-  },
-  "titleuserprofile":{
-    "message":"Wybierz tutaj poniżej na przycisk szarej lampy, które ustawienia chcesz użyć. Każdy profil dostał swoje własne cechy."
-  },
-  "titleregularuser":{
-    "message":"Wideo Lover"
-  },
-  "titlenightowl":{
-    "message":"Nocna Sowa"
-  },
-  "titlescreenprotection":{
-    "message":"Ochrona oczu"
-  },
-  "desregularuser":{
-    "message":"To są domyślne i standardowe ustawienia dla nowych użytkowników. Kiedy klikniesz na przycisk szarej lampy, możesz ustawić własny styl aktualnej strony WWW."
-  },
-  "desnightowl":{
-    "message":"Jednym kliknięciem konwertuje strony bezpośrednio do motywu nocnego z dostępnymi hiperłączami. Kliknij ponownie, aby powrócić do widoku normalnego. Kliknij przycisk lampy ponownie, aby wyłączyć tę funkcję."
-  },
-  "desscreenprotection":{
-    "message":"Jednym kliknięciem zmienia kolor na kojący pomarańczowy, aby zmniejszyć zmęczenie oczu dla wszystkich otwartych kart. Kliknij przycisk lampy ponownie, aby wyłączyć tę funkcję."
-  },
-  "titleprofilevideofocus":{
-    "message":"Skupienie wideo jest włączone"
-  },
-  "titleprofilenovideofocus":{
-    "message":"Skupienie wideo jest wyłączone"
-  },
-  "titleprofilealwaysscreentab":{
-    "message":"Zawsze włączone dla wszystkich otwartych kart"
-  },
-  "titleprofilescreenclick":{
-    "message":"Włącz klikanie linków, Kiedy Jest przyciemniony obraz"
-  },
-  "titleprofilesubmit":{
-    "message":"Wybierz te ustawienia"
-  },
-  "titlelearnmore":{
-    "message":"Czytaj dalej"
-  },
-  "optionprofilesaved":{
-    "message":"Nowa akcja lampy jest pomyślnie zapisana."
-  },
-  "desaplay":{
-    "message":"odtwórz"
-  },
-  "desapause":{
-    "message":"pauza"
-  },
-  "desastop":{
-    "message":"stop"
-  },
-  "desvideozoom":{
-    "message":"Powiększ lub pomniejsz zawartość wideo za pomocą przycisków powiększania."
-  },
-  "titlevideoplayrate":{
-    "message":"Szybkość wideo"
-  },
-  "desplayrate":{
-    "message":"Domyślna prędkość odtwarzania"
-  },
-  "desspeedtoolbar":{
-    "message":"Pokazuj pasek odtwarzania w dotychczasowym odtwarzaczu wideo"
-  },
-  "desatmosontotlmode":{
-    "message":"Pokazuj efekt światła atmosfery tylko przy włączonym trybie TotL"
-  }
+    "pagehelp": {"message": "pomoc"},
+    "titelimage": {"message": "Obraz tła"},
+    "shortcutalllights": {"message": "aby włączyć/wyłączyć światła dla wszystkich kart"},
+    "lastchecked": {"message": "Sprawdź dostępność aktualizacji"},
+    "visualeffects": {"message": "Efekty wizualne"},
+    "titelshortcutlight": {"message": "Skrót klawiszowy"},
+    "titledonatebutton": {"message": "Wesprzyj"},
+    "titellikebar": {"message": "Pasek oceny"},
+    "desmousespotlightt": {"message": "Umożliw otwieranie linków, kiedy ekran jest przyciemniony"},
+    "desmousespotlights": {"message": "Włącz przyciemnianie ekranu z możliwością otwierania linków"},
+    "desambilight4color": {"message": "Cztery wybrane kolory wokół filmiku"},
+    "lockentername": {"message": "Wprowadź swoje hasło"},
+    "desnoflash": {"message": "Nie wykrywaj obiektów Flash"},
+    "desdynamicblocks": {"message": "Bloki"},
+    "titeleye": {"message": "Ochrona oczu"},
+    "titelcinemaontop": {"message": "Tryb kinowy: wyświetla warstwę wyłączonego światła tylko na górze okna"},
+    "desmousespotlightc": {"message": "Oświetlaj zaznaczony obszar przy wyłączonym oświetleniu"},
+    "titelrememberpage": {"message": "Strona przypominająca"},
+    "desmousespotlighta": {"message": "Wyświetlaj oświetlenie punktowe wokół kursora myszy, gdy oświetlenie jest wyłączone"},
+    "desmousespotlighto": {"message": "Tryb standardowy – wyłącza poniższe ustawienia myszy"},
+    "desplaylist": {"message": "Wyświetlaj listę odtwarzania"},
+    "desambilightfixcolor": {"message": "Tylko jeden kolor"},
+    "desuntil": {"message": "do"},
+    "desconfirmpassword": {"message": "Zapisz hasło"},
+    "desautoplayonly": {"message": "Przyciemniaj tylko następujące witryny:"},
+    "helpeyeprotection": {"message": "Aktywacja funkcji ochrony oczu automatycznie dezaktywuje funkcję automatycznego odtwarzania."},
+    "skipremember": {"message": "Pomiń i otwórz od razu stronę ustawień"},
+    "optiontimesaved": {"message": "Czas został zapisany!"},
+    "titelvideoheadline": {"message": "Tytuł filmu"},
+    "translateme": {"message": "Pomóż tłumaczyć"},
+    "despassword": {"message": "Przed włączeniem oświetlenia będzie wymagane podanie hasła."},
+    "helpautoplay": {"message": "Tryb ochrony oczu jest aktywny. Aby skorzystać z tej funkcji należy poniżej wyłączyć tryb ochrony oczu."},
+    "name": {"message": "Turn Off the Lights"},
+    "changelog": {"message": "Wykaz zmian"},
+    "optionpagetitle": {"message": "Turn Off The Lights - ustawienia"},
+    "optionpasswordsaved": {"message": "Hasło zostało zapisane!"},
+    "desdynamicspace": {"message": "Przestrzeń kosmiczna"},
+    "deseastereggs": {"message": "Naciśnięcie klawisza T dodaje kurtynę do ciemnej warstwy"},
+    "settings": {"message": "Ustawienia"},
+    "desspotlightradius": {"message": "Średnica plamy światła:"},
+    "titelsync": {"message": "Synchronizuj"},
+    "right": {"message": "Prawa strona"},
+    "titeldynamic": {"message": "Tło dynamiczne"},
+    "deslikebutton": {"message": "Wyświetlaj przyciski „Podoba mi się” i „Nie podoba mi się” przy filmie"},
+    "titelmouse": {"message": "Mysz"},
+    "titellessmore": {"message": "Zwiń"},
+    "desshortcutlight": {"message": "Włącz następujące skróty klawiszowe:"},
+    "titelinfobar": {"message": "Pasek informacyjny"},
+    "descontextmenus": {"message": "Wyświetlaj w menu kontekstowym opcję wyróżnienia obiektu"},
+    "titelcontextmenus": {"message": "Menu kontekstowe"},
+    "titelplaylist": {"message": "Lista odtwarzania"},
+    "desatmosphereonly": {"message": "Użyj funkcji podświetlenia tylko dla tej strony wideo:"},
+    "recflash": {"message": "Polecane"},
+    "desenterpassword": {"message": "Wpisz swoje hasło w poniższym polu:"},
+    "titelblurradius": {"message": "Poziom rozmycia:"},
+    "version": {"message": "Wersja"},
+    "shortcutdark": {"message": "aby przyciemnić ekran (zmniejszyć przezroczystość)"},
+    "dessharebutton": {"message": "Wyświetlaj przyciski udostępniania dla danego filmu"},
+    "shortcutbright": {"message": "aby rozjaśnić ekran (zwiększyć przezroczystość)"},
+    "titelalllightsoff": {"message": "Otwarte karty"},
+    "desreadera": {"message": "Wyświetlaj pasek po wyłączeniu oświetlenia"},
+    "rememberrate": {"message": "Ocena"},
+    "desautoplay": {"message": "Automatycznie przyciemniaj/rozjaśniaj tło po naciśnięciu przycisku odtwarzania"},
+    "titelscreen": {"message": "Ekran"},
+    "desflash": {"message": "Wyświetlaj wszystkie obiekty Flash "},
+    "titelhead": {"message": "Kanał"},
+    "pageatitle": {"message": "Wyłącz światła"},
+    "desaddvideobutton": {"message": "Wyświetlaj przycisk Dodaj dla danego filmu"},
+    "shortcuteyeprotection": {"message": "aby włączyć/wyłączyć funkcję ochrony oczu"},
+    "titelfadein": {"message": "Stopniowe rozjaśnianie"},
+    "desreadern": {"message": "Nie wyświetlaj paska poziomu przyciemniania"},
+    "titelmaxqualityyoutube": {"message": "Automatycznie ustawiaj następującą rozdzielczość:"},
+    "desambilightrangespreadradius": {"message": "Wartości dodatnie zwiększają rozmiar podświetlenia, wartości ujemne zmniejszają."},
+    "titelon": {"message": "Włącz"},
+    "videotitle": {"message": "Wyróżnij ten film"},
+    "warningtextambilight": {"message": "Gdy nie można odebrać danych wideo z powodu zasad strony, wybrany kolor będzie użyty w zastępstwie."},
+    "desdynamiccloud": {"message": "Animowane chmury"},
+    "desconfirmtimesaver": {"message": "Zapisz czas"},
+    "deslikebar": {"message": "Wyświetlaj wskaźnik podoba mi się/nie podoba mi się pod filmem"},
+    "titelautoplay": {"message": "Autoodtwarzanie"},
+    "top": {"message": "Góra"},
+    "titelspreadradius": {"message": "Poziom rozprzestrzenienia:"},
+    "installadblocker": {"message": "Jeśli masz dość reklam zainstaluj adblocka."},
+    "titelsharebutton": {"message": "Przycisk udostępniania"},
+    "titelcolor": {"message": "Kolor"},
+    "titeldownloadbutton": {"message": "Pobierz ten dodatek"},
+    "pagetitle": {"message": "Przyciemnij tę stronę"},
+    "titelambilight": {"message": "Podświetlenie sferyczne"},
+    "titelshowmore": {"message": "Rozwiń"},
+    "desviewcount": {"message": "Wyświetlaj liczbę odsłon danego filmu"},
+    "titelautowidthyoutube": {"message": "Automatycznie zwiększaj rozmiar odtwarzacza YouTube"},
+    "desconfirmtime": {"message": "Zapisz czas"},
+    "titelupgrade": {"message": "Inne dodatki"},
+    "lockwrongpassword": {"message": "Nieprawidłowe hasło, spróbuj ponownie."},
+    "titelsyncbrowser": {"message": "Synchronizuj ustawienia dodatku z innymi przeglądarkami"},
+    "deletebutton": {"message": "Usuń"},
+    "eyedivon": {"message": "Wł."},
+    "eyedivoff": {"message": "Wył."},
+    "deshead": {"message": "Wyświetlaj pasek lub nazwę kanału"},
+    "shortcutsavingopacity": {"message": "aby zapisać wartość nieprzezroczystości"},
+    "desinfobar": {"message": "Wyświetlaj opis filmu"},
+    "titellamp": {"message": "Przycisk"},
+    "desambilightvarcolor": {"message": "Wyodrębnij kolor na podstawie wideo"},
+    "showremember": {"message": "Nie otwieraj ponownie strony przypominającej, kiedy otworzę opcje"},
+    "donatepromotext": {"message": "Będę ogromnie wdzięczny, jeżeli wesprzesz ten projekt dowolną kwotą!"},
+    "titelblur": {"message": "Rozmycie reszty"},
+    "desdynamicraindrops": {"message": "Krople deszczu"},
+    "desalllightsoff": {"message": "Kliknięcie przycisku lampy przełączy światła na wszystkich otwartych kartach"},
+    "optionecosaversaved": {"message": "Czas został zapisany!"},
+    "titelreader": {"message": "Pasek poziomu przyciemnienia"},
+    "deseyen": {"message": "Normalne użycie (światła gasną, kiedy klikniesz na ikonę żarówki)"},
+    "enjoyshare": {"message": "Jeśli korzystanie z tego rozszerzenia sprawia ci przyjmeność, podziel się nim z tymi, którzy je docenią."},
+    "shortcuttotl": {"message": "aby przełączyć światła"},
+    "deseyea": {"message": "Automatycznie przyciemnij tło po otwarciu strony"},
+    "basicsettings": {"message": "Podstawowe"},
+    "hoveroptionapply": {"message": "Zastosuj"},
+    "reportbug": {"message": "Zgłoś problem"},
+    "destime": {"message": "Wyłączaj oświetlenie w godzinach:"},
+    "guide": {"message": "Przewodnik"},
+    "deseyealist": {"message": "Automatycznie przyciemnij tło na następującej stronie/stronach:"},
+    "titellikebutton": {"message": "Przyciski Podoba mi się i Nie podoba mi się"},
+    "titelpageaction": {"message": "Ukryj przycisk żarówki"},
+    "friendlyremember": {"message": "Przypomnienie..."},
+    "desfadein": {"message": "Włącz efekt wejścia"},
+    "warning": {"message": "Uwaga!"},
+    "deseyetimesaver": {"message": "Kiedy strona jest nieaktywna (nie używa myszki lub klawiatury) przez czas określony poniżej, automatycznie się przyciemnia."},
+    "titelsuggestions": {"message": "Sugestie"},
+    "advancedoptions": {"message": "Ustawienia zaawansowane"},
+    "dessuggestions": {"message": "Wyświetlaj sugestie na stronie YouTube"},
+    "titelflash": {"message": "Wykrywanie obiektów Flash"},
+    "desambilight": {"message": "Włącz efekt podświetlenia sferycznego dla aktualnie odtwarzanego filmu"},
+    "productshare": {"message": "Udostępnianie/Gadżety"},
+    "addbutton": {"message": "Dodaj"},
+    "reportlist": {"message": "(zobacz listę)"},
+    "desdynamicfishtank": {"message": "Akwarium"},
+    "longdonatetext": {"message": "Jestem bardzo wdzięczny za każde datki. Dzięki nim mogę utrzymać ten dodatek przy życiu dla innych nowych użytkowników. Obojętnie, czy to 1zł czy 100zł, Twoja pomoc jest bardzo doceniana!"},
+    "deshardflash": {"message": "Wyświetlaj wszystkie obiekty Flash, opuszczaj filtr URL – naprawia to problemy z niektórymi odtwarzaczami wideo, ale powoduje wyświetlanie reklam"},
+    "desfadeout": {"message": "Włącz efekt stopniowego przyciemniania"},
+    "optionwrongimg": {"message": "Niewłaściwy plik obrazka!"},
+    "desvideoheadline": {"message": "Wyświetlaj tytuł filmu i odwróć jego kolor"},
+    "desrememberpage": {"message": "Nie pokazuj strony przypominającej"},
+    "description": {"message": "Cała strona będzie przyciemniona, aby można było oglądać filmy, tak jak w kinie. Działa między innymi w aplikacji Youtube™ i Beyond."},
+    "titelviewcount": {"message": "Liczba wyświetleń"},
+    "titelopacity": {"message": "Nieprzezroczystość"},
+    "titelqualityyoutube": {"message": "Automatycznie ustawiaj jakość filmów na YouTube"},
+    "shortcutopacity": {"message": "aby przywrócić ustawienia nieprzezroczystości"},
+    "desambilightrangeblurradius": {"message": "Niższe wartości wyostrzą cień, wyższe wartości uczynią go bardziej rozmytym."},
+    "titeladdvideobutton": {"message": "Przycisk Dodaj"},
+    "titelpassword": {"message": "Ochrona hasłem"},
+    "titeldownloadupgrade": {"message": "Wyświetla galerię obrazków na stronie i wyróżnia je za pomocą podświetlenia sferycznego."},
+    "titelfadeout": {"message": "Stopniowe przyciemnianie"},
+    "eastereggsquestion": {"message": "Czy lubisz prawdziwe kino?"},
+    "bottom": {"message": "Dół"},
+    "dessaver": {"message": "Wygaszacz ekranu:"},
+    "hoveroptiondyn5": {"message": "z przelotem"},
+    "pagestillloading": {"message": "Trwa wczytywanie strony…"},
+    "titeloff": {"message": "Wyłącz"},
+    "titeleastereggs": {"message": "Pisanki"},
+    "textfoot": {"message": "Ten program jest wydany na licencji CC-GNU GPL. Aby zobaczyć licencję, odwiedź"},
+    "left": {"message": "Lewa strona"},
+    "titelnighttheme": {"message": "Tryb nocny"},
+    "desnighttheme": {"message": "Wyświetlaj na dole strony internetowej przycisk przełączania w tryb nocny/dzienny"},
+    "nightoptions": {"message": "Tryb nocny"},
+    "desnightonly": {"message": "Wyświetlaj przycisk przełączania trybu tylko na poniższych witrynach:"},
+    "desnightenabletheme": {"message": "Po otwarciu nowej strony automatycznie przełączaj w tryb nocny"},
+    "titellampregular": {"message": "Wyświetlaj przycisk żarówki w omniboksie"},
+    "titellampvideo": {"message": "Wyświetlaj ikonę żarówki tylko, jeśli znajdziesz odtwarzacz wideo"},
+    "ratetitle": {"message": "Dzięki za korzystanie z Turn Off the Lights"},
+    "ratedes": {"message": "Proszę ocenić i przejrzeć rozszerzenie w Sklepie. Wasze wsparcie jest bardzo cenione."},
+    "rateitema": {"message": "Przyznaj 5 gwiazdek"},
+    "titelreset": {"message": "Resetuj ustawienia"},
+    "resetbrowserextension": {"message": "Resetuj ustawienia Turn Off the Lights"},
+    "desautoplaydelay": {"message": "Rozjaśnij tło ponownie, gdy film zakończył się po"},
+    "desautoplaydelayend": {"message": "sek."},
+    "motionoptions": {"message": "Wykrywanie ruchu"},
+    "desmotion": {"message": "Włącz wykrywanie ruchu"},
+    "desspeech": {"message": "Włącz rozpoznawanie mowy"},
+    "trymotion": {"message": "Wypróbuj sam!"},
+    "destrymotion": {"message": "To jest po prostu super, a najlepsze jest to, że działa wszędzie, nawet na YouTube, witrynach z wiadomościami, itp."},
+    "howworkmotion": {"message": "Jak to działa?"},
+    "nightstep1description": {"message": "Włącz tryb nocny"},
+    "nightstep2description": {"message": "Otwórz dowolną stronę, a zobaczysz przełącznik nocny"},
+    "nightstep3description": {"message": "Kliknij na przełącznik, aby zobaczyć stronę internetową z ciemnym motywem"},
+    "speechstep1description": {"message": "Włącz funkcję rozpoznawania mowy"},
+    "speechstep2description": {"message": "Gdy ta funkcja jest aktywna, możesz wypowiadać do ikony żarówki przeglądarki następujące polecenia:"},
+    "camstep1description": {"message": "Włącz wykrywanie ruchu."},
+    "camstep2description": {"message": "Przesuń dłoń z góry na dół."},
+    "camstep3description": {"message": "Czarna warstwa automatycznie przesunie się w dół."},
+    "desmotionChecklist": {"message": "Czeklista:"},
+    "des1checkmotion": {"message": "Sprawdź czy pokój nie jest zbyt ciemny – czy jest wystarczająco oświetlony"},
+    "des2checkmotion": {"message": "Upewnij się, że kamera nie jest oświetlona światłem słonecznym"},
+    "des3checkmotion": {"message": "Umieść kamerę przed sobą"},
+    "titellinear": {"message": "Gradient liniowy"},
+    "titelcolora": {"message": "Kolor A:"},
+    "titelcolorb": {"message": "Kolor B:"},
+    "speechoption": {"message": "Rozpoznawanie mowy"},
+    "titelspeech": {"message": "Mowa"},
+    "desspeech1command": {"message": "Wyłącz oświetlenie"},
+    "desspeech2command": {"message": "Włącz oświetlenie"},
+    "desspeech3command": {"message": "Odtwarzaj film"},
+    "desspeech4command": {"message": "zatrzymaj odtwarzanie"},
+    "desspeechdialect": {"message": "Wybierz język:"},
+    "desatmosvivid": {"message": "Efekty żywej atmosfery"},
+    "help": {"message": "Pomoc"},
+    "about": {"message": "Informacje"},
+    "desspeechonly": {"message": "Uaktywnij rozpoznawanie mowy tylko na następujących witrynach:"},
+    "descammotiononly": {"message": "Włącz wykrywanie ruchu tylko na następujących witrynach:"},
+    "titelcamera": {"message": "Kamera"},
+    "titelautoplaywhitelist": {"message": "Lista dozwolonych"},
+    "titelautoplayblacklist": {"message": "Lista zabronionych"},
+    "titeldownloadthemeupgrade": {"message": "Dodaj do przeglądarki ciemny motyw. Motyw ten jest wyświetlany tylko wokół przeglądarki."},
+    "desbrowsersupport": {"message": "Przeglądarka jeszcze nie obsługuje tej funkcji. Sprawdź czy masz zainstalowaną najnowszą wersję."},
+    "titelsupportatmos": {"message": "Obsługuje tylko tag <video> HTML5. Wykorzystuje również procesor twojego urządzenia."},
+    "titelseeonline": {"message": "Zobacz online więcej przykładów"},
+    "titelvideosample": {"message": "Przykłady filmów"},
+    "titelwebsite": {"message": "Adres URL"},
+    "titeldeveloper": {"message": "Autor"},
+    "titelrightsreserved": {"message": "Niektóre prawa zastrzeżone."},
+    "desbrowserextension": {"message": " – rozszerzenie dla przeglądarki"},
+    "desapitext": {"message": "Interfejs programowania dla twórców internetowych"},
+    "desbrowsertheme": {"message": "Przeglądarka tematu"},
+    "desproject": {"message": "projekt"},
+    "titelapideveloper": {"message": "API Developer"},
+    "titelwikiatmos": {"message": "Informacja o funkcji Oświetlenia atmosferycznego z Wikipedii"},
+    "sharemenusharetitle": {"message": "Podziel się tym"},
+    "sharemenuwelcomeguidetitle": {"message": "Przewodnik"},
+    "sharemenutellafriend": {"message": "Poinformuj znajomych"},
+    "sharemenusendatweet": {"message": "Wyślij tweeta"},
+    "sharemenupostonfacebook": {"message": "Prześlij post na Facebooka"},
+    "sharemenupostongoogleplus": {"message": "Prześlij post na Google +"},
+    "sharemenuratetitle": {"message": "Oceń ten dodatek"},
+    "sharemenudonatetitle": {"message": "Wesprzyj rozwój"},
+    "titelautostop": {"message": "Autozatrzymanie"},
+    "desautostop": {"message": "Automatycznie zatrzymaj wideo, kiedy otworzę stronę internetową"},
+    "areyouhappy": {"message": "Czy jesteś zadowolony z Turn Off the Lights?"},
+    "tellothers": {"message": "Gwarantuję, że Twoja opinia się liczy"},
+    "nothanks": {"message": "Nie, dziękuję"},
+    "writeareview": {"message": "Napisz opinię"},
+    "desauroraplayer": {"message": "Otaczające odtwarzacz oświetlenie jest również dostępne na Twoim komputerze."},
+    "downloadtheapp": {"message": "Pobierz aplikację teraz"},
+    "titeldownloadupgradezoom": {"message": "Zwiększa lub zmniejsza zawartość stron za pomocą przycisku przybliżenia dla bardziej komfortowego czytania."},
+    "titeldownloadupgradepropermenubar": {"message": "Przywraca czarny pasek menu na stronie Google."},
+    "titeldownloadupgradefinancetoolbar": {"message": "To pokazuje informacje giełdowe w czasie rzeczywistym."},
+    "titelnightmodeposition": {"message": "Położenie przełącznika"},
+    "nmtopleft": {"message": "Lewy górny"},
+    "nmtopright": {"message": "Prawy górny"},
+    "nmbottomright": {"message": "Prawy dolny"},
+    "nmbottomleft": {"message": "Lewy dolny"},
+    "nmcustom": {"message": "Niestandardowe (naciśnij, przytrzymaj i przenieś przełącznik do wybranego miejsca na ekranie)"},
+    "desnighthover": {"message": "Pokaż przezroczysty przełącznik na stronie internetowej"},
+    "titelnightmodewhitelist": {"message": "Lista dozwolonych"},
+    "titelnightmodeblacklist": {"message": "Lista zabronionych"},
+    "desautostoponly": {"message": "Aktywuj automatyczne zatrzymywanie wideo tylko na następujących stronach:"},
+    "titelautostopwhitelist": {"message": "Lista dozwolonych"},
+    "titelautostopblacklist": {"message": "Lista zabronionych"},
+    "desnightactivetime": {"message": "Przełącznik będzie widoczny między następującymi godzinami:"},
+    "deslampandnightmode": {"message": "Aktywuj tryb nocny poprzez kliknięcie na szarą lampę"},
+    "titeleyewhitelist": {"message": "Lista dozwolonych"},
+    "titeleyeblacklist": {"message": "Lista zabronionych"},
+    "desspeech5command": {"message": "lampa przeglądarkowa"},
+    "html5andyoutube": {"message": "Wideo HTML5 i YouTube™"},
+    "flashembedobject": {"message": "Obsługuje: <object>, <embed>, <applet>, <iframe>."},
+    "titelnightmodebck": {"message": "Kolor tła"},
+    "titelnightmodetxt": {"message": "Kolor tekstu"},
+    "desdynamicsmoke": {"message": "Dym"},
+    "desdynamicdotscolor": {"message": "Kolorowe kropki"},
+    "desdynamicstorm": {"message": "Burza"},
+    "desdynamictriangulation": {"message": "Triangulacja"},
+    "desdynamicstars": {"message": "Gwiazdki"},
+    "desmobileapp": {"message": "Turn Off the Lights jest również dostępne dla urządzeń mobilnych."},
+    "titel360youtube": {"message": "Pokazuje pełne wideo w 360 stopniach na YouTube w jednej ramce"},
+    "titelvideotool": {"message": "Pasek narzędzi wideo"},
+    "desvideotool": {"message": "Pokaż pasek narzędzi poniżej ekranu, aby dostosować bieżący odtwarzacz wideo"},
+    "vtoolfullscreen": {"message": "Przycisk ustawiający wielkość odtwarzacza wideo na pełny rozmiar"},
+    "vtoolfilter": {"message": "Przycisk dodania filtru w bieżącym odtwarzaczu wideo"},
+    "vtoolreplay": {"message": "Przycisk do powtarzania bieżącego odtwarzacza wideo"},
+    "vtoolscreenshot": {"message": "Przycisk wykonania zrzutu ekranu w aktualnym odtwarzaczu wideo"},
+    "vtoolalign": {"message": "Przycisk wyśrodkowania odtwarzacza wideo w aktualnej przeglądarce."},
+    "titelvideotoolgrayscale": {"message": "skala szarości"},
+    "titelvideotoolsepia": {"message": "sepia"},
+    "titelvideotoolinvert": {"message": "negatyw"},
+    "titelvideotoolcontrast": {"message": "kontrast"},
+    "titelvideotoolsaturate": {"message": "nasycenie"},
+    "titelvideotoolhueroration": {"message": "barwa"},
+    "titelvideotoolbrightness": {"message": "jasność"},
+    "titelvideotoolnormal": {"message": "normalnie"},
+    "titelvideotoollike": {"message": "Lubię to!"},
+    "titelvideotoolsubscribe": {"message": "Subskrybuj"},
+    "titelvideotoolrepeat": {"message": "Powtórz"},
+    "titelvideotoolfilter": {"message": "Filtr"},
+    "titelvideotoolfullwindow": {"message": "Pełny ekran"},
+    "titelvideotoolscreenshot": {"message": "Zrób zrzut ekranu"},
+    "titelreflection": {"message": "Odbicie"},
+    "desreflection": {"message": "Pokaż efect odbicia na wszystkich filmach"},
+    "desvideotoolonly": {"message": "Uaktywnik pasek narzędzi wideo tylko na następujących witrynach:"},
+    "titelvideotoolwhitelist": {"message": "Lista dozwolonych"},
+    "titelvideotoolblacklist": {"message": "Lista zabronionych"},
+    "titelnightmodehyperlink": {"message": "Kolor hiperłączy"},
+    "titelblock60fps": {"message": "Blokuj 60fps"},
+    "titelvolume": {"message": "Suwak głośności wideo"},
+    "desvideovolume": {"message": "Kontroluj głośność bieżącego wideo kółkiem myszy"},
+    "desvideovolumecolor": {"message": "Kolor suwaka"},
+    "desvolumelabel": {"message": "Pokaż etykietę głośności"},
+    "desvolumesteps": {"message": "Głośność (w %) zmieniana naraz przy obrocie kółka myszy"},
+    "sharetexta": {"message": "Pobierz to fajne rozszerzenie Turn Off the Lights"},
+    "sharetextb": {"message": "Cześć, to niesamowite. Próbowałem dziś to rozszerzenie Turn Off the Lights"},
+    "sharetextc": {"message": "Najlepsze i niesamowite rozszerzenie Turn Off the Lights"},
+    "sharetextd": {"message": "Rozszerzenie Turn Off the Lights jest najlepszym narzędziem dla YouTube. Pobierz i wypróbuj!"},
+    "titelsharethis": {"message": "Udostępnij to:"},
+    "titellampchoose": {"message": "Wybierz swój ulubiony styl lampy"},
+    "titeldoesntwork": {"message": "Turn Off the Lights nie działa na tej stronie. Spróbuj na innej."},
+    "titelpopupvideo": {"message": "YouTube"},
+    "titelpopupwelcomeguide": {"message": "Przewodnik"},
+    "titelpopupsupport": {"message": "Pomoc techniczna"},
+    "titelpopupoptions": {"message": "Ustawienia"},
+    "titelpopupratestars": {"message": "Przyznaj 5 gwiazdek"},
+    "titelvisenable": {"message": "Włącz/Wyłącz wizualizację dźwięku"},
+    "titelvischoose": {"message": "Wybierz swoją wizualizację dźwięku"},
+    "titelvisblocks": {"message": "Bloki"},
+    "titelvisfrequency": {"message": "Częstotliwość"},
+    "titelvistunnel": {"message": "Ścieżka dźwięku"},
+    "titelvisualization": {"message": "Wizualizacja dźwięku"},
+    "desvisopacity": {"message": "Nieprzezroczystość tła z wizualizacją dźwięku"},
+    "vtoolvisualization": {"message": "Przycisk przełączający wizualizację dźwięku dla bieżącego odtwarzacza wideo"},
+    "desvideotoolcolor": {"message": "Kolor paska narzędzi"},
+    "titelhovervideo": {"message": "Kursor nad wideo"},
+    "deshovervideo": {"message": "Umieść kursor myszy na elemencie wideo na określoną liczbę sekund, aby strona się automatycznie przyciemniła"},
+    "promotitle": {"message": "Porada dnia"},
+    "desremyoutube": {"message": "Subskrybuj na YouTube"},
+    "desremfacebook": {"message": "Poleć na Facebooku"},
+    "titleuserprofile": {"message": "Poniżej wybierz ustawienia, których chcesz użyć, kiedy klikniesz szarą lampę. Każdy profil ma osobne funkcje."},
+    "titleregularuser": {"message": "Miłośnik kina"},
+    "titlenightowl": {"message": "Nocny Marek"},
+    "titlescreenprotection": {"message": "Ochrona oczu"},
+    "desregularuser": {"message": "To są domyślne i standardowe ustawienia dla nowych użytkowników. Kiedy klikniesz na szarą lampę, możesz ustawić własny styl aktualnej strony."},
+    "desnightowl": {"message": "Jednym kliknięciem konwertuje strony bezpośrednio do motywu nocnego z dostępnymi hiperłączami. Kliknij ponownie, aby powrócić do widoku normalnego. Kliknij przycisk lampy ponownie, aby wyłączyć tę funkcję."},
+    "desscreenprotection": {"message": "Jednym kliknięciem zmienia kolor na kojący pomarańczowy dla wszystkich otwartych kart, aby zmniejszyć zmęczenie oczu. Kliknij przycisk lampy ponownie, aby wyłączyć tę funkcję."},
+    "titleprofilevideofocus": {"message": "Skupienie wideo jest włączone"},
+    "titleprofilenovideofocus": {"message": "Skupienie wideo jest wyłączone"},
+    "titleprofilealwaysscreentab": {"message": "Zawsze włączone dla wszystkich otwartych kart"},
+    "titleprofilescreenclick": {"message": "Umożliw otwieranie linków, kiedy ekran jest przyciemniony"},
+    "titleprofilesubmit": {"message": "Wybierz te ustawienia"},
+    "titlelearnmore": {"message": "Czytaj dalej"},
+    "optionprofilesaved": {"message": "Nowa akcja lampy jest pomyślnie zapisana!"},
+    "desaplay": {"message": "\"odtwórz\""},
+    "desapause": {"message": "\"pauza\""},
+    "desastop": {"message": "\"zatrzymaj\""},
+    "desvideozoom": {"message": "Powiększ lub pomniejsz zawartość wideo za pomocą przycisków powiększania."},
+    "titlevideoplayrate": {"message": "Szybkość wideo"},
+    "desplayrate": {"message": "Domyślna prędkość odtwarzania"},
+    "desspeedtoolbar": {"message": "Pokazuj pasek odtwarzania w dotychczasowym odtwarzaczu wideo"},
+    "desatmosontotlmode": {"message": "Pokazuj efekt światła sferycznego tylko przy włączonym trybie TOtL"},
+    "desdarkbrowsertheme": {"message": "Przełącz się na tryb ciemny przeglądarki"},
+    "desautostopfeaturewhite": {"message": "BLOKUJ poniższe strony, ale ZEZWALAJ na automatyczne odtwarzanie na pozostałych stronach."},
+    "desautostopfeatureblack": {"message": "ZEZWALAJ poniższe strony, ale BLOKUJ na automatyczne odtwarzanie na pozostałych stronach."},
+    "autostopbannerred": {"message": "Pokaż czerwony baner"},
+    "autostopbannertrans": {"message": "Pokaż przezroczysty baner"},
+    "titleanalytics": {"message": "Statystyki"},
+    "desbadgeanalytics": {"message": "Pokaż plakietkę z liczbą kliknięć, które przyciemniono na stronie internetowej"},
+    "shareanalyticenergy": {"message": "Zaoszczędzono $product$ kWh dzięki temu rozszerzeniu", "placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "analyticsoption": {"message": "Statystyki"},
+    "activelayertoday": {"message": "Liczba kliknięć dzisiaj"},
+    "totalenergysaved": {"message": "Całkowicie zaoszczędzono energię"},
+    "resetlampanalytic": {"message": "Zresetować statystyki tego rozszerzenia"},
+    "titlesiteengagement": {"message": "Zainteresowanie użytkowników"},
+    "titleorigin": {"message": "Pochodzenie"},
+    "titletime": {"message": "Czas (w minutach)"},
+    "titleavgdayschedule": {"message": "Średni dzienny harmonogram"},
+    "titlesharestats": {"message": "Udostępnij swoje statystyki"},
+    "btnsharestats": {"message": "Udostępnij statystyki"},
+    "charttitletotaltime": {"message": "Całkowity czas dla ciemnej warstwy (minut)"},
+    "charttitlelayeractive": {"message": "Aktywna ciemna warstwa (#)"},
+    "charttitleavgday": {"message": "Średni dzienny harmonogram (dla częstego użycia)"},
+    "charttitle30dayssaved": {"message": "Energia zaoszczędzona przez ostatnie 30 dni"},
+    "charttitlelblwebsiteused": {"message": "Strony internetowe używane przez ostatnie 30 dni"},
+    "charttitlelblenergytotal": {"message": "Całkowita wykorzystana energia"},
+    "charttitlelblenergysaved": {"message": "Całkowita zaoszczędzona energia"},
+    "titlelanalyticprivacy": {"message": "Wyłącz Światło jest rozszerzeniem przeglądarki, który na poważnie traktuje Twoją prywatność. Statystyki rozszerzenia Wyłącz Światło są zapisywane tylko na Twoim komputerze. Informacje o użyciu stron nie będą sprzedawane i wysyłane do form trzecich."},
+    "shareanalyticlove": {"message": "Najbardziej lubię stronę $product$ z rozszerzeniem Wyłącz Światło", "placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "desvolumeposa": {"message": "Pokazuj miernik głośności na środku aktualnego odtwarzacza wideo"},
+    "desvolumeposb": {"message": "Pokazuj miernik głośności po lewej stronie aktualnego odtwarzacza wideo"},
+    "desvolumeposc": {"message": "Pokazuj miernik głośności na górze aktualnego odtwarzacza wideo"},
+    "desvideovolumhold": {"message": "Przytrzymaj wciśnięty prawy lub lewy przycisk myszy i przesuń myszą, aby zmienić głośność"},
+    "desvideovolumalt": {"message": "Tylko przy naciśnięciu klawisza alt"},
+    "speechheybrowser": {"message": "Hej Przeglądarka"},
+    "speechokbrowser": {"message": "ok Przeglądarka"},
+    "functionactive": {"message": "Funkcja ta jest aktywna, kiedy klikniesz na karcie lub odświeżysz stronę. Jednakże wyłączy się ona automatycznie po 15 sekundach."},
+    "cardtexsubscribe": {"message": "Subskrybuj teraz"},
+    "cardtextfavdayweek": {"message": "Ulubiony dzień tygodnia"},
+    "cardtextyestime": {"message": "Wczoraj całkowity czas (w minutach)"},
+    "cardavgprevweektime": {"message": "Poprzedni tydzień całkowity czas (w minutach)"},
+    "sunday": {"message": "Niedziela"},
+    "monday": {"message": "Poniedziałek"},
+    "tuesday": {"message": "Wtorek"},
+    "wednesday": {"message": "Środa"},
+    "thursday": {"message": "Czwartek"},
+    "friday": {"message": "Piątek"},
+    "saturday": {"message": "Sobota"},
+    "titlemultiopacity": {"message": "Każda strona internetowa ma swoją własną nieprzezroczystość"},
+    "desmultiopacitynormal": {"message": "Wszystkie strony internetowa mają tą samą nieprzezroczystość"},
+    "desmultiopacitysel": {"message": "Wybrano przenikanie dla stron z poniższej listy"},
+    "desmultiopacitynot": {"message": "Jeżeli strony nie ma liście, domyślny poziom przenikania będzie dla niej zastosowany."},
+    "titleok": {"message": "OK"},
+    "titlecancel": {"message": "Anuluj"},
+    "titledarkmodeon": {"message": "Tryb ciemny WŁ."},
+    "titledarkmodeoff": {"message": "Tryb ciemny WYŁ."},
+    "titlelprivacy": {"message": "Zasady ochrony prywatności"},
+    "titleprofile": {"message": "Profil"},
+    "descolorfixcolor": {"message": "Wybierz kolor ciemnej warstwy"},
+    "desatmossolidcolor": {"message": "Wybierz jednolity kolor efektu blasku"},
+    "titlelratenow": {"message": "Oceń teraz"},
+    "titleratelater": {"message": "Później"},
+    "desremrate": {"message": "Jeżeli podoba Ci się rozszerzenie Włącz Światła (Turn Off the Lights™), prosimy ocenić na nas na 5 gwiazdek. Daje nam to więcej energii, aby nadal utrzymywać i rozwijać ten produkt dla Ciebie. Prosimy o napisanie recenzji o naszym produkcie. Jeśli nie masz czasu na napisanie recenzji, możesz ocenić ją anonimowo. Ważna jest dla nas, aby otrzymać ★★★★★. Dziękujemy."},
+    "titelnightmodedomain": {"message": "Domena"},
+    "titelnightmodepage": {"message": "Strona internetowa"},
+    "titelintroduce": {"message": "Przedstawiamy nowe Włącz Światła"},
+    "desintroduce": {"message": "Wszystkie funkcje, których używasz mają nowy wygląd oraz styl i spersonalizowane pod Ciebie."},
+    "econothingthisyear": {"message": "Nic w tym roku. Wygaszaj ekran, aby oszczędzać energię"},
+    "ecothirtyminutes": {"message": "Oszczędzono 30 minut światła"},
+    "ecowatchtvfortwo": {"message": "Oglądaj TV przez 2 godziny"},
+    "ecotoastermaking": {"message": "Toster na dwie kromki"},
+    "ecochargeiphone": {"message": "Ładowanie telefonu iPhone"},
+    "ecobrewsomecoffee": {"message": "Zaparz więcej kawy, najlepiej od razu cały dzbanek"},
+    "ecoplayingxbox": {"message": "Granie na Xbox 360 przez godzinę"},
+    "ecovacuumingfor": {"message": "Odkurzanie przez 15 minut"},
+    "ecoblowdrying": {"message": "Suszenie włosów przez 10 minut zużywa około"},
+    "ecowashingclothes": {"message": "Pranie w zimnej wodzie zużywa około"},
+    "ecowififoraday": {"message": "Wi-Fi przez 1 dzień"},
+    "ecorunningdishwasher": {"message": "Uruchomienie zmywarki w trybie oszczędzania energii zużyje"},
+    "ecochargelaptop": {"message": "Ładowanie laptopa"},
+    "ecokeeplightonforsix": {"message": "Włączone światło przez 6 godzin"},
+    "ecokeepfridgeday": {"message": "Lodówka pracująca przez cały dzień"},
+    "ecoloadlaundry": {"message": "Jeden wkład prania do suszarki"},
+    "ecoheatingtenshower": {"message": "Ogrzanie wody na 10 minutowy prysznic"},
+    "ecotwentyfourghome": {"message": "Wystarczy, aby uruchomić Google Home na 24 godziny"},
+    "ecochargeteslacar": {"message": "Naładuj samochód marki Tesla na 30 kilometrów zasięgu"},
+    "ecochargeteslacarhundred": {"message": "Naładuj swój samochód elektryczny Tesla na 100%"},
+    "ecochargeteslathreetimes": {"message": "Naładuj 3-krotnie swój samochód elektryczny Tesla na 100%"},
+    "ecopowerhawaiimonth": {"message": "Wystarczająco dużo energii elektrycznej na 1 miesiąc na Hawajach"},
+    "ecopowernwymonth": {"message": "Wystarczająco dużo energii elektrycznej na 1 miesiąc w Nowym Jorku"},
+    "ecopowercamonth": {"message": "Wystarczająco dużo energii elektrycznej na 1 miesiąc w Kalifornii"},
+    "ecopowerbaseballgame": {"message": "Do zasilania 1 telebimu na mecz w baseball"},
+    "ecopowereiffeltower": {"message": "Do oświetlania wieży Eiffla na 1 dzień"},
+    "ecopowereurostar": {"message": "Dla pociągu Eurostar z Brukseli do Londynu"},
+    "ecopowereurostarparis": {"message": "Dla pociągu Eurostar z Paryża do Londynu"},
+    "ecoeiffeltoweryear": {"message": "Do oświetlania wieży Eiffla na 1 rok"},
+    "ecosfoyear": {"message": "Do zasilania San Francisco na 1 rok"},
+    "ecolayear": {"message": "Do zasilania Los Angeles na 1 rok"},
+    "ecoplanetearth": {"message": "Gotowy na bycie przyjaznym dla Ziemi"},
+    "autostopdetails": {"message": "SZCZEGÓŁY"},
+    "autostopblocked": {"message": "Zablokowane przez Wyłącz Światło™ - www.turnoffthelights.com"},
+    "autostopclickme": {"message": "Kliknij na mnie, aby odtworzyć to wideo HTML5"},
+    "autostopenabled": {"message": "AutoStop jest włączony."},
+    "searchplaceholder": {"message": "Szukaj"},
+    "scoregame": {"message": "Niesamowity najwyższy wynik $product$ w ukrytej grze w jajka w rozszerzeniu Wyłącz Światła. Wypróbuj sam.","placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "permissionoption": {"message": "Aby korzystać z tej funkcji, należy udzielić tego uprawnienia."},
+    "titelpermission": {"message": "Uprawnienia"},
+    "despermissiontab": {"message": "Usuń pasek uprawnienia"},
+    "wpermissionremoved": {"message": "Uprawnienia zostały usunięte."},
+    "wpermissionnotremoved": {"message": "Zezwolenia już zostały usunięte"},
+    "desnightmodegesture": {"message": "Zmieniaj stronę na ciemną lub jasną poprzez dłuższe przytrzymanie aktualnej strony"},
+    "omninightmode": {"message": "tryb nocny"},
+    "omnidaymode": {"message": "tryb dzienny"},
+    "omnilightoff": {"message": "wyłącz światło"},
+    "omnilighton": {"message": "włącz światło"},
+    "omnihelp": {"message": "pomoc"},
+    "permissionrequired": {"message": "Aktualnie aktywne zezwolenia"},
+    "permissionactivetab": {"message": "To spowoduje przyciemnianie strony tylko na aktualnie otwartej karcie."},
+    "permissiontabs": {"message": "Jest to wymagane dla następujących funkcji: aby pokazać Ci witrynę powitalną i stronę przewodnika, wykryj bieżący odtwarzany film HTML5, wykonaj zrzut ekranu wideo HTML5 i otworzy stronę opcji."},
+    "permissioncontextmenu": {"message": "To doda element menu \"Przyciemnij tę stronę\" w menu kontekstowym przeglądarki internetowej."},
+    "permissionstorage": {"message": "Aby zapisać ustawienia na komputerze lokalnym i zsynchronizować je z kontem przeglądarki internetowej."},
+    "permissionallurl": {"message": "Aby sterować przyciskiem lampy na wszystkich stronach internetowych, które zawierają http, https, plik i ftp."},
+    "permissiontheme": {"message": "To jest zmiana interfejsu użytkownika przeglądarki internetowej na ciemny lub jasny szablon."},
+    "desnightmodeswitchhide": {"message": "Automatycznie ukryj przełącznik nocny po wybranym czasie w sekundach"}
 }

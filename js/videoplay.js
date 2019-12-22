@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2017 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -28,20 +28,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id) { return document.getElementById(id); }
-if (window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	var sp = document.getElementById('movie_player');
 	var video = document.querySelector('video');
 	
-	if (typeof(sp.pauseVideo) === "function") {
+	if(typeof(sp.pauseVideo) === "function"){
 		sp.playVideo();
-	} else if (typeof(video.pause) === "function") {
+	}else if(typeof(video.pause) === "function"){
 		video.play();
 	}
 } else{
 	var htmlplayer = document.getElementsByTagName("video");
-	if (htmlplayer !== null) {
-		for(var j=0; j<htmlplayer.length; j++) {
-	   		if (htmlplayer[0]) { htmlplayer[0].play(); }
+	if(htmlplayer !== null){
+		var j;
+		var l = htmlplayer.length;
+		for(j=0; j<l; j++){
+	   		if(htmlplayer[0]){ htmlplayer[0].play(); }
 		}
 	}
 }

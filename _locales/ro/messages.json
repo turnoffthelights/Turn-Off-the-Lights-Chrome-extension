@@ -1,1056 +1,455 @@
 {
-  "pagehelp":{
-    "message":"ajutor"
-  },
-  "titelimage":{
-    "message":"Imagine de fundal"
-  },
-  "shortcutalllights":{
-    "message":"pentru a comuta luminile aprinse/închise pentru toate tab-urile"
-  },
-  "lastchecked":{
-    "message":"Ultima versiune verificată"
-  },
-  "visualeffects":{
-    "message":"Efecte vizuale"
-  },
-  "titelshortcutlight":{
-    "message":"Scurtătura"
-  },
-  "titledonatebutton":{
-    "message":"Donează"
-  },
-  "titellikebar":{
-    "message":"Bara \"Îmi place\""
-  },
-  "desmousespotlightt":{
-    "message":"Activare făcând clic pe hyperlink-uri atunci când ecranul este întunecată"
-  },
-  "desmousespotlights":{
-    "message":"Enable the screen shade, with the possibility to click on the hyperlinks"
-  },
-  "desambilight4color":{
-    "message":"4 culori alese în jurul videoclipului:"
-  },
-  "lockentername":{
-    "message":"Te rugăm să introduci parola"
-  },
-  "desnoflash":{
-    "message":"Nu folosi această opţiune."
-  },
-  "desdynamicblocks":{
-    "message":"Cărămizi"
-  },
-  "titeleye":{
-    "message":"Protecție ochi"
-  },
-  "titelcinemaontop":{
-    "message":"Modul cinema: stinge luminile numai în partea de sus a ferestrei"
-  },
-  "desmousespotlightc":{
-    "message":"Dacă lumina este stinsă, puteți selecta o zonă pentru a evidenția un obiect."
-  },
-  "titelrememberpage":{
-    "message":"Memento filme"
-  },
-  "desmousespotlighta":{
-    "message":"Dacă lumina este stinsă, afişează un punct luminos în jurul mouse-ului."
-  },
-  "desmousespotlighto":{
-    "message":"Pentru uz normal (dezactivează setările mouse-ului mai jos)"
-  },
-  "desplaylist":{
-    "message":"Afișează lista de redare YouTube de pe site-ul YouTube."
-  },
-  "desambilightfixcolor":{
-    "message":"Culoare solidă:"
-  },
-  "desuntil":{
-    "message":"până când"
-  },
-  "desconfirmpassword":{
-    "message":"Confirmă parola"
-  },
-  "desautoplayonly":{
-    "message":"Întunecă numai următoarele site-uri:"
-  },
-  "helpeyeprotection":{
-    "message":"Activarea \"Protecţie pentru ochi\" va dezactiva automat opţiunea \"Redare automată\"."
-  },
-  "skipremember":{
-    "message":"Săriţi peste acest lucru, şi deschide pagina Opţiuni acum"
-  },
-  "optiontimesaved":{
-    "message":"Intervalul de timp a fost salvat cu succes!"
-  },
-  "titelvideoheadline":{
-    "message":"Nume clip video"
-  },
-  "translateme":{
-    "message":"Ajută la traducere"
-  },
-  "despassword":{
-    "message":"Este necesară introducerea unei parole înainte de a aprinde luminile."
-  },
-  "helpautoplay":{
-    "message":"\"Protecţia ochi\" este activată. Ca să foloseşti opţiune de mai jos, dezactivează opţiunea \"protecţie ochi\"."
-  },
-  "name":{
-    "message":"Stinge lumina"
-  },
-  "changelog":{
-    "message":"Istoricul modificărilor"
-  },
-  "optionpagetitle":{
-    "message":"Turn Off the Lights - Opțiuni"
-  },
-  "optionpasswordsaved":{
-    "message":"Parola a fost salvată cu succes!"
-  },
-  "desdynamicspace":{
-    "message":"Univers"
-  },
-  "deseastereggs":{
-    "message":"Apăsând tasta T se adaugă o cortină de teatru întunecat strat"
-  },
-  "settings":{
-    "message":"Setări"
-  },
-  "desspotlightradius":{
-    "message":"Diametrul de centrul atenţiei:"
-  },
-  "titelsync":{
-    "message":"Sincronizează"
-  },
-  "right":{
-    "message":"dreapta"
-  },
-  "titeldynamic":{
-    "message":"Fundal dinamic"
-  },
-  "deslikebutton":{
-    "message":"Arată butoanele Îmi place & Nu-mi place ale YouTube pentru acest video."
-  },
-  "titelmouse":{
-    "message":"Mouse"
-  },
-  "titellessmore":{
-    "message":"Arată mai puțin"
-  },
-  "desshortcutlight":{
-    "message":"Activează scurtăturile pentru tastatură din partea de jos."
-  },
-  "titelinfobar":{
-    "message":"Bară de informaţii"
-  },
-  "descontextmenus":{
-    "message":"Arată meniul contextual pentru un anumit element."
-  },
-  "titelcontextmenus":{
-    "message":"Meniu contextual"
-  },
-  "titelplaylist":{
-    "message":"Lista de redare"
-  },
-  "desatmosphereonly":{
-    "message":"Foloseşte opţiunea de iluminare a atmosferei numai pentru următorul site:"
-  },
-  "recflash":{
-    "message":"Recomandat"
-  },
-  "desenterpassword":{
-    "message":"Introduceţi parola în caseta de mai jos:"
-  },
-  "titelblurradius":{
-    "message":"Blur raza:"
-  },
-  "version":{
-    "message":"Versiune"
-  },
-  "shortcutdark":{
-    "message":"pentru a întuneca ecranul (măreşte opacitatea)"
-  },
-  "dessharebutton":{
-    "message":"Arată butoanele de distribuire pe YouTube."
-  },
-  "shortcutbright":{
-    "message":"pentru a lumina ecranul (scade opacitatea)"
-  },
-  "titelalllightsoff":{
-    "message":"Toate tab-urile deschise"
-  },
-  "desreadera":{
-    "message":"Arată întotdeauna bara de întunecare când luminile se sting."
-  },
-  "rememberrate":{
-    "message":"Rată"
-  },
-  "desautoplay":{
-    "message":"Întunecă automat fundalul când apeși butonul play și invers."
-  },
-  "titelscreen":{
-    "message":"Ecran"
-  },
-  "desflash":{
-    "message":"Arată toate obiectele Flash."
-  },
-  "titelhead":{
-    "message":"Canal"
-  },
-  "pageatitle":{
-    "message":"Stinge lumina"
-  },
-  "desaddvideobutton":{
-    "message":"Afișează butonul de adăugare de la acest video YouTube."
-  },
-  "shortcuteyeprotection":{
-    "message":"pentru a activa/dezactiva funcţia de protecţie a ochilor"
-  },
-  "titelfadein":{
-    "message":"Intrare"
-  },
-  "desreadern":{
-    "message":"Nu afișa niciodată bara de întunecare."
-  },
-  "titelmaxqualityyoutube":{
-    "message":"Rezoluţia setată automat la:"
-  },
-  "desambilightrangespreadradius":{
-    "message":"Valorile pozitive măresc dimensiunea umbrei, valorile negative micșorează dimensiunea umbrei."
-  },
-  "titelon":{
-    "message":"Activ"
-  },
-  "videotitle":{
-    "message":"Focalizeaza acest videoclip"
-  },
-  "warningtextambilight":{
-    "message":"În cazul în care nu pot fi primite date video datorită unei reguli de securitate a paginii web, va fi folosită culoarea solidă aleasă."
-  },
-  "desdynamiccloud":{
-    "message":"Nori Animati"
-  },
-  "desconfirmtimesaver":{
-    "message":"Confirmă timpul de Protecție Ecran"
-  },
-  "deslikebar":{
-    "message":"Afișează butoanele îmi place/nu-mi place sub video-urile YouTube."
-  },
-  "titelautoplay":{
-    "message":"Pornește automat"
-  },
-  "top":{
-    "message":"sus"
-  },
-  "titelspreadradius":{
-    "message":"Răspândirea rază:"
-  },
-  "installadblocker":{
-    "message":"Dacă nu doriţi să vedeţi anunţurile, utilizaţi o extensie adblocker."
-  },
-  "titelsharebutton":{
-    "message":"Butoane de distribuire"
-  },
-  "titelcolor":{
-    "message":"Culoare"
-  },
-  "titeldownloadbutton":{
-    "message":"Descarcă acest Upgrade!"
-  },
-  "pagetitle":{
-    "message":"Întunecă această pagină"
-  },
-  "titelambilight":{
-    "message":"Luminarea spaţiului înconjurător"
-  },
-  "titelshowmore":{
-    "message":"Arată mai mult"
-  },
-  "desviewcount":{
-    "message":"Arată numărul de vizualizări pentru acest videoclip."
-  },
-  "titelautowidthyoutube":{
-    "message":"Setează automat player-ul Youtube la cea mai mare mărime."
-  },
-  "desconfirmtime":{
-    "message":"Confirmă timpul"
-  },
-  "titelupgrade":{
-    "message":"Upgrade-ul"
-  },
-  "lockwrongpassword":{
-    "message":"Parolă incorectă, te rugăm să încerci din nou."
-  },
-  "titelsyncbrowser":{
-    "message":"Sincronizează setările extensiei cu un alt browser."
-  },
-  "deletebutton":{
-    "message":"Şterge"
-  },
-  "eyedivon":{
-    "message":"Activat"
-  },
-  "eyedivoff":{
-    "message":"Dezactivat"
-  },
-  "deshead":{
-    "message":"Arată bara cu canalul YouTube sau numele."
-  },
-  "shortcutsavingopacity":{
-    "message":"Salvează valorii opacităţii actuale."
-  },
-  "desinfobar":{
-    "message":"Arată descrierea videoclipului."
-  },
-  "titellamp":{
-    "message":"Bec"
-  },
-  "desambilightvarcolor":{
-    "message":"Preia culoarea de la clipul video."
-  },
-  "showremember":{
-    "message":"Nu mai arăta această pagină când deschid opțiunile"
-  },
-  "donatepromotext":{
-    "message":"Dacă puteţi face o donatie de orice sumă, aş aprecia foarte mult!"
-  },
-  "titelblur":{
-    "message":"Întunecă restul."
-  },
-  "desdynamicraindrops":{
-    "message":"Stropi de ploaie"
-  },
-  "desalllightsoff":{
-    "message":"Apăsarea butonului lanternă va comuta luminile aprinse/stinse pentru toate filele deschise"
-  },
-  "optionecosaversaved":{
-    "message":"Secundele au fost salvate cu succes!"
-  },
-  "titelreader":{
-    "message":"Bara nivel intunecare"
-  },
-  "deseyen":{
-    "message":"Utilizare normală (lumina se stinge atunci când apăsați pe pictograma lampă)"
-  },
-  "enjoyshare":{
-    "message":"Bucură-te de această extensie şi distribuie pentru cei care cred că ar aprecia asta."
-  },
-  "shortcuttotl":{
-    "message":"pentru a comuta luminile pe aprins/stins"
-  },
-  "deseyea":{
-    "message":"Întunecă automat fundalul la deschiderea unei noi pagini web"
-  },
-  "basicsettings":{
-    "message":"Elemente de bază"
-  },
-  "hoveroptionapply":{
-    "message":"Aplică"
-  },
-  "reportbug":{
-    "message":"Raportează o problemă"
-  },
-  "destime":{
-    "message":"Luminile stinse între aceste valori ale timpului:"
-  },
-  "guide":{
-    "message":"Ghidul de bun venit TOtL "
-  },
-  "deseyealist":{
-    "message":"Întunecă automat fundalul pentru următorul/următoarele site(-uri):"
-  },
-  "titellikebutton":{
-    "message":"Butoanele Îmi place & Nu-mi place"
-  },
-  "titelpageaction":{
-    "message":"Ascunde pictograma"
-  },
-  "friendlyremember":{
-    "message":"Reamintire prietenoasă..."
-  },
-  "desfadein":{
-    "message":"Arată efectul de intrare."
-  },
-  "warning":{
-    "message":"Atenție!"
-  },
-  "deseyetimesaver":{
-    "message":"Când o pagină este inactivă (nicio mişcare a mouse-ului sau apăsare a tastaturii) pentru timpul specificat mai jos, pagina se va întuneca automat."
-  },
-  "titelsuggestions":{
-    "message":"Sugestii"
-  },
-  "advancedoptions":{
-    "message":"Opţiuni avansate"
-  },
-  "dessuggestions":{
-    "message":"Arată sugestiile de pe site-ul YouTube."
-  },
-  "titelflash":{
-    "message":"Detectare Flash"
-  },
-  "desambilight":{
-    "message":"Îţi arată efectul luminării spaţiului înconjurător la videoclipul curent."
-  },
-  "productshare":{
-    "message":"Distribuie"
-  },
-  "addbutton":{
-    "message":"Adaugă"
-  },
-  "reportlist":{
-    "message":"(vezi lista)"
-  },
-  "desdynamicfishtank":{
-    "message":"Acvariu"
-  },
-  "longdonatetext":{
-    "message":"Aş aprecia mult dacă ai putea să donezi pentru a ţine în viaţă această extensie de browser pentru alţi noi utilizatori. Chiar dacă e $1 sau $100, suportul tău este apreciat!"
-  },
-  "deshardflash":{
-    "message":"Arată toate obiectele Flash, sărind peste filtrul URL. Aceasta va corecta problemele care există cu anumite video-uri ascunse, dar va arăta şi reclamele."
-  },
-  "desfadeout":{
-    "message":"Arată efectul de ieșire."
-  },
-  "optionwrongimg":{
-    "message":"Fişier imagine invalid!"
-  },
-  "desvideoheadline":{
-    "message":"Arată şi inversează culoarea titlului video."
-  },
-  "desrememberpage":{
-    "message":"Nu mai arăta pagina de memento"
-  },
-  "description":{
-    "message":"Întreaga pagină se va întuneca, astfel vei putea urmări videoclipul ca la cinema.\nFunctioneaza pentru Youtube si Beyond."
-  },
-  "titelviewcount":{
-    "message":"Număr de vizualizări"
-  },
-  "titelopacity":{
-    "message":"Opacitate"
-  },
-  "titelqualityyoutube":{
-    "message":"Setează automat calitatea video-urilor de pe Youtube."
-  },
-  "shortcutopacity":{
-    "message":"pentru a restabili setările valorilor originale pentru umbrire (opacitate)"
-  },
-  "desambilightrangeblurradius":{
-    "message":"Valorile mai mici vor intensifica umbra, valorile mai mari le vor face mai încețoșate."
-  },
-  "titeladdvideobutton":{
-    "message":"Butonul de adăugare"
-  },
-  "titelpassword":{
-    "message":"Protejează cu parolă"
-  },
-  "titeldownloadupgrade":{
-    "message":"Acest upgrade adaugă suport pentru imaginile selectate, şi va arăta o galerie de imagini din cadrul site-ului."
-  },
-  "titelfadeout":{
-    "message":"Ieșire"
-  },
-  "eastereggsquestion":{
-    "message":"Iți place un cinematograf real?"
-  },
-  "bottom":{
-    "message":"jos"
-  },
-  "dessaver":{
-    "message":"Protecție Ecran:"
-  },
-  "hoveroptiondyn5":{
-    "message":"zburând"
-  },
-  "pagestillloading":{
-    "message":"Această pagină încă se încarcă?"
-  },
-  "titeloff":{
-    "message":"Inactiv"
-  },
-  "titeleastereggs":{
-    "message":"Ouăle de Paşti"
-  },
-  "textfoot":{
-    "message":"Acest program se află sub licență CC-GNU GPL. Pentru a vedea o copie a acestei licente, vizualizați"
-  },
-  "left":{
-    "message":"stânga"
-  },
-  "titelnighttheme":{
-    "message":"Modul noapte"
-  },
-  "desnighttheme":{
-    "message":"Arată butonul de comutare pe noapte în partea de jos a paginii pentru a întuneca sau ilumina pagina."
-  },
-  "nightoptions":{
-    "message":"Modul noapte"
-  },
-  "desnightonly":{
-    "message":"Afişează în modul noapte numai următoarele site-uri:"
-  },
-  "desnightenabletheme":{
-    "message":"Când deschideţi o nouă pagină este setată automat pe noapte."
-  },
-  "titellampregular":{
-    "message":"Arată întotdeauna pictograma lampă în casuta polivalentă"
-  },
-  "titellampvideo":{
-    "message":"Arată pictograma lampă numai dacă este detectat un player video"
-  },
-  "upgradecontexttitle":{
-    "message":"Am adăugat câteva funcţii noi pentru tine"
-  },
-  "upgradecontextmessage":{
-    "message":"Asta face această extensie chiar mai uimitoare"
-  },
-  "upgradecontextitemta":{
-    "message":"Camera Motion"
-  },
-  "upgradecontextitemma":{
-    "message":"stingeți lumina cu mână dumneavoastră"
-  },
-  "upgradecontextitemtb":{
-    "message":"Recunoaștere vocală"
-  },
-  "upgradecontextitemmb":{
-    "message":"Controlati pagina web mai precis"
-  },
-  "upgradefbshare":{
-    "message":"Partajare Facebook"
-  },
-  "upgradetwshare":{
-    "message":"Tweet"
-  },
-  "ratetitle":{
-    "message":"Vă rugăm să evaluați și recenzați extensia mea"
-  },
-  "ratedes":{
-    "message":"Și lăsați pe toată lumea să știe despre această extensie minunată!"
-  },
-  "rateitema":{
-    "message":"Evaluați 5 stele"
-  },
-  "titelreset":{
-    "message":"Reinițializarea setărilor"
-  },
-  "resetbrowserextension":{
-    "message":"Reinițializați setările Turn Off the Lights"
-  },
-  "desautoplaydelay":{
-    "message":"Luminați din nou fundalul când filmul s-a sfârșit după"
-  },
-  "desautoplaydelayend":{
-    "message":"secunde"
-  },
-  "motionoptions":{
-    "message":"Camera Motion"
-  },
-  "desmotion":{
-    "message":"Activați Camera Motion"
-  },
-  "trymotion":{
-    "message":"Încearcă-l singur!"
-  },
-  "destrymotion":{
-    "message":"Este chiar super, iar cel mai bine este că funcționează oriunde. Chiar și pe YouTube, pagini de știri, etc..."
-  },
-  "howworkmotion":{
-    "message":"Cum funcţionează?"
-  },
-  "step1description":{
-    "message":"Activați opțiunea Camera Motion"
-  },
-  "step2description":{
-    "message":"Mișcaţi mâna (sau pumnul) din partea de sus în jos."
-  },
-  "step3description":{
-    "message":"Stratul negru va aluneca în jos automat."
-  },
-  "desmotionChecklist":{
-    "message":"Listă de verificare:"
-  },
-  "des1checkmotion":{
-    "message":"Asiguraţi-vă că nu este întuneric în camera dumneavoastră şi este suficientă lumină."
-  },
-  "des2checkmotion":{
-    "message":"Camera video nu trebuie să primească în mod direct lumină solară."
-  },
-  "des3checkmotion":{
-    "message":"Utilizaţi o cameră frontală."
-  },
-  "titellinear":{
-    "message":"Liniar"
-  },
-  "titelcolora":{
-    "message":"Culoare A:"
-  },
-  "titelcolorb":{
-    "message":"Culoare B:",
-    "description":"Culoare B:"
-  },
-  "speechoption":{
-    "message":"Recunoaștere vocală"
-  },
-  "titelspeech":{
-    "message":"Vorbire"
-  },
-  "desspeech":{
-    "message":"Când activaţi această opţiune, puteţi vorbi cu lampa de browser şi spune următoarele comenzi:"
-  },
-  "desspeech1command":{
-    "message":"turn off the lights"
-  },
-  "desspeech2command":{
-    "message":"aprindeți luminile"
-  },
-  "desspeech3command":{
-    "message":"redare video"
-  },
-  "desspeech4command":{
-    "message":"pauză video"
-  },
-  "desspeechdialect":{
-    "message":"Alege dialect dumneavoastră de vorbire:"
-  },
-  "desatmosvivid":{
-    "message":"Efectele de atmosferă vie pe YouTube, necesită"
-  },
-  "help":{
-    "message":"Ajutor"
-  },
-  "about":{
-    "message":"Despre"
-  },
-  "desspeechonly":{
-    "message":"Activați Recunoașterea Vocală numai următoarele site(-uri):"
-  },
-  "descammotiononly":{
-    "message":"Activați Camera Motion numai pe următorul(arele) site(uri):"
-  },
-  "titelcamera":{
-    "message":"Camera"
-  },
-  "titelautoplaywhitelist":{
-    "message":"Lista albă"
-  },
-  "titelautoplayblacklist":{
-    "message":"Lista neagră"
-  },
-  "titeldownloadthemeupgrade":{
-    "message":"Adaugă o tematică întunecată browser-ului pentru a personaliza. Tema apare de jur împrejurul marginilor browser-ului."
-  },
-  "desbrowsersupport":{
-    "message":"Browserul nu acceptă această opțiune încă. Asiguraţi-vă că aveţi cea mai recentă versiune de browser instalat pe calculatorul dumneavoastră."
-  },
-  "titelsupportatmos":{
-    "message":"Acceptă numai HTML5 <video> şi player-ul YouTube HTML5. De asemenea, foloseste placa grafică."
-  },
-  "titelseeonline":{
-    "message":"Vedeți online pentru mai multe exemple"
-  },
-  "titelvideosample":{
-    "message":"Exemplu Video"
-  },
-  "titelwebsite":{
-    "message":"Site web"
-  },
-  "titeldeveloper":{
-    "message":"Dezvoltator"
-  },
-  "titelrightsreserved":{
-    "message":"Unele drepturile rezervate."
-  },
-  "desbrowserextension":{
-    "message":"extensie de browser"
-  },
-  "desapitext":{
-    "message":"Wiki API pentru Site-ul Dezvoltatorului"
-  },
-  "desbrowsertheme":{
-    "message":"temă browser"
-  },
-  "desproject":{
-    "message":"proiect"
-  },
-  "titelapideveloper":{
-    "message":"API Dezvoltator"
-  },
-  "titelwikiatmos":{
-    "message":"Wiki despre opțiunea „ Atmosphere Lighting”"
-  },
-  "sharemenusharetitle":{
-    "message":"Distribuie"
-  },
-  "sharemenuwelcomeguidetitle":{
-    "message":"Ghidul de început"
-  },
-  "sharemenutellafriend":{
-    "message":"Spune unui prieten"
-  },
-  "sharemenusendatweet":{
-    "message":"Trimite un Tweet"
-  },
-  "sharemenupostonfacebook":{
-    "message":"Postează pe Facebook"
-  },
-  "sharemenupostongoogleplus":{
-    "message":"Postează pe Google+"
-  },
-  "sharemenuratetitle":{
-    "message":"Evaluează această extensie"
-  },
-  "sharemenudonatetitle":{
-    "message":"Sprijină dezvoltarea"
-  },
-  "titelautostop":{
-    "message":"AutoStop"
-  },
-  "desautostop":{
-    "message":"Oprește redarea videoclipului automat când deshid o pagină de internet"
-  },
-  "areyouhappy":{
-    "message":"Îți place „Turn Off the Lights”?"
-  },
-  "tellothers":{
-    "message":"Opinia Dvs. contează"
-  },
-  "nothanks":{
-    "message":"Nu, mulţumesc"
-  },
-  "writeareview":{
-    "message":"Scrieți o recenzie"
-  },
-  "desauroraplayer":{
-    "message":"Player-ul cu Iluminare ambientală este, de asemenea disponibil pentru computerul dvs."
-  },
-  "downloadtheapp":{
-    "message":"Descărcați aplicația acum"
-  },
-  "titeldownloadupgradezoom":{
-    "message":"Faceți zoom pentru conținutul din pagină folosind butonul de zoom pentru a citi mai confortabil."
-  },
-  "titeldownloadupgradepropermenubar":{
-    "message":"Adaugă bara neagră de meniu înapoi pe site-ul Google."
-  },
-  "titeldownloadupgradefinancetoolbar":{
-    "message":"Aceasta arată în timp real informațiile de la bursă."
-  },
-  "titelnightmodeposition":{
-    "message":"Poziția comutatorului"
-  },
-  "nmtopleft":{
-    "message":"Stânga sus"
-  },
-  "nmtopright":{
-    "message":"Dreapta sus"
-  },
-  "nmbottomright":{
-    "message":"Dreapta jos"
-  },
-  "nmbottomleft":{
-    "message":"Stânga jos"
-  },
-  "nmcustom":{
-    "message":"Personalizat (faceți clic, mențineți clic și mutați comutatorul în locația dorită pe ecran)"
-  },
-  "desnighthover":{
-    "message":"Prezintî un comutator transparent pe pagina web"
-  },
-  "titelnightmodewhitelist":{
-    "message":"Lista albă"
-  },
-  "titelnightmodeblacklist":{
-    "message":"Lista neagră"
-  },
-  "desautostoponly":{
-    "message":"Activează opțiunea de redare video automat pe următoarele site-uri:"
-  },
-  "titelautostopwhitelist":{
-    "message":"Lista albă"
-  },
-  "titelautostopblacklist":{
-    "message":"Lista neagră"
-  },
-  "desnightactivetime":{
-    "message":"Comutatorul va fi vizibil între orele:"
-  },
-  "deslampandnightmode":{
-    "message":"Activa opţiunea „Mod de Noapte” atunci când faceţi clic pe butonul gri lampă"
-  },
-  "titeleyewhitelist":{
-    "message":"Lista albă"
-  },
-  "titeleyeblacklist":{
-    "message":"Lista neagră"
-  },
-  "desspeech5command":{
-    "message":"lampă pentru browser"
-  },
-  "html5andyoutube":{
-    "message":"HTML5 & YouTube™ video"
-  },
-  "flashembedobject":{
-    "message":"Acceptă: <object>, <embed>, <applet>, <iframe>."
-  },
-  "titelnightmodebck":{
-    "message":"Culoare fundal"
-  },
-  "titelnightmodetxt":{
-    "message":"Culoare text"
-  },
-  "desdynamicsmoke":{
-    "message":"Fum"
-  },
-  "desdynamicdotscolor":{
-    "message":"Puncte de culoare"
-  },
-  "desdynamicstorm":{
-    "message":"Furtună",
-    "description":"Furtună"
-  },
-  "desdynamictriangulation":{
-    "message":"Triangulare"
-  },
-  "desdynamicstars":{
-    "message":"Stele"
-  },
-  "desmobileapp":{
-    "message":"„Turn Off the Lights” este, de asemenea disponibilă pentru mobil."
-  },
-  "titel360youtube":{
-    "message":"Afişează într-un cadru plin 360 de grade videoclipul YouTube"
-  },
-  "titelvideotool":{
-    "message":"Bară de instrumente video"
-  },
-  "desvideotool":{
-    "message":"Afişaţi bara de instrumente sub ecran pentru a personaliza player-ul video curent"
-  },
-  "vtoolfullscreen":{
-    "message":"Un buton pentru a seta video player-ul la dimensiunea întregii ferestre"
-  },
-  "vtoolfilter":{
-    "message":"Un buton pentru a adăuga un filtru în video player-ul curent"
-  },
-  "vtoolreplay":{
-    "message":"Buton penru a reda din nou videoclipul curent"
-  },
-  "vtoolscreenshot":{
-    "message":"Un buton pentru a captura o imagine a player-ului video curent"
-  },
-  "vtoolalign":{
-    "message":"Un buton care sa centreze player-ul video in fereastra browserului"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"nuanțe de gri"
-  },
-  "titelvideotoolsepia":{
-    "message":"sepia"
-  },
-  "titelvideotoolinvert":{
-    "message":"inversează"
-  },
-  "titelvideotoolcontrast":{
-    "message":"contrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"saturaţie"
-  },
-  "titelvideotoolhueroration":{
-    "message":"rotaţie hue"
-  },
-  "titelvideotoolbrightness":{
-    "message":"luminozitate"
-  },
-  "titelvideotoolnormal":{
-    "message":"normal"
-  },
-  "titelvideotoollike":{
-    "message":"Apreciază"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Aboneaza-te"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Repetă"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filtrare"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Fereastră completă"
-  },
-  "titelvideotoolscreenshot":{
-    "message":"Captează ecranul"
-  },
-  "titelreflection":{
-    "message":"Reflecţie"
-  },
-  "desreflection":{
-    "message":"Arată efectul de reflexie pe toate videoclipurile"
-  },
-  "desvideotoolonly":{
-    "message":"Activați Video Tool Bar numai pe următorul(arele) site(uri):"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Lista albă"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Lista neagră"
-  },
-  "titelnightmodehyperlink":{
-    "message":"Hyperlink",
-    "description":"Hyperlink"
-  },
-  "titelblock60fps":{
-    "message":"Bloc de 60fps",
-    "description":"Bloc de 60fps"
-  },
-  "titelvolume":{
-    "message":"Indicator volum video"
-  },
-  "desvideovolume":{
-    "message":"Controlează volumul acelui player video în derulare prin defilarea cu mouse-ul"
-  },
-  "desvideovolumecolor":{
-    "message":"Culoarea indicatorului"
-  },
-  "desvolumelabel":{
-    "message":"Arată indicatorul de volum"
-  },
-  "desvolumesteps":{
-    "message":"Numărul de paşi pentru fiecare parcurgere"
-  },
-  "sharetexta":{
-    "message":"Extensia pentru Browser „Turn Off the Lights”"
-  },
-  "sharetextb":{
-    "message":"A, minunat! Tocmai am încercat astăzi această extensiede browser Turn Off the Lights "
-  },
-  "sharetextc":{
-    "message":"Extraordinara şi uimitoarea extensie de browser Stinge Luminile"
-  },
-  "sharetextd":{
-    "message":"Extensia Turn Off the Lights este cel mai bun instrument pentru pe YouTube. Descărc-o şi să încearc-o și tu!"
-  },
-  "titelsharethis":{
-    "message":"Distribuie:"
-  },
-  "titellampchoose":{
-    "message":"Alegeţi-vă tipul preferat de lampă"
-  },
-  "titeldoesntwork":{
-    "message":"Stinge luminile nu funcţionează pe această pagină web. Încercaţi o altă pagină."
-  },
-  "titelpopupvideo":{
-    "message":"YouTube"
-  },
-  "titelpopupwelcomeguide":{
-    "message":"Ghidul de început"
-  },
-  "titelpopupsupport":{
-    "message":"Suport"
-  },
-  "titelpopupoptions":{
-    "message":"Opţiuni"
-  },
-  "titelpopupratestars":{
-    "message":"Evaluați 5 stele"
-  },
-  "titelvisenable":{
-    "message":"Activează/dezactivează Vizualizarea Audio"
-  },
-  "titelvischoose":{
-    "message":"Selectați-vă propria vizualizare Audio"
-  },
-  "titelvisblocks":{
-    "message":"Cărămizi"
-  },
-  "titelvisfrequency":{
-    "message":"Frecvenţă"
-  },
-  "titelvistunnel":{
-    "message":"Tunel muzical"
-  },
-  "titelvisualization":{
-    "message":"Vizualizare audio"
-  },
-  "desvisopacity":{
-    "message":"Valoarea de opacitate a fundalului de vizualizare audio"
-  },
-  "vtoolvisualization":{
-    "message":"Un buton care indică vizualizarea audio pentru video player-ul curent"
-  },
-  "desvideotoolcolor":{
-    "message":"Culoarea barei de instrumente"
-  },
-  "titelhovervideo":{
-    "message":"Video Hover"
-  },
-  "deshovervideo":{
-    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
-  },
-  "promotitle":{
-    "message":"Tip of the day"
-  },
-  "desremyoutube":{
-    "message":"Aboneaza-te pe YouTube"
-  },
-  "desremfacebook":{
-    "message":"Recomanda acest lucru pe Facebook"
-  },
-  "titleuserprofile":{
-    "message":"Mai jos, alege setările pe care doesti să le utilizezi când faci clic pe butonul gri de lampă. Fiecare profil are propriile sale caracteristici."
-  },
-  "titleregularuser":{
-    "message":"Iubitor de video"
-  },
-  "titlenightowl":{
-    "message":"Bufnita"
-  },
-  "titlescreenprotection":{
-    "message":"Protecție ochi"
-  },
-  "desregularuser":{
-    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
-  },
-  "desnightowl":{
-    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
-  },
-  "desscreenprotection":{
-    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
-  },
-  "titleprofilevideofocus":{
-    "message":"Video focus is enabled"
-  },
-  "titleprofilenovideofocus":{
-    "message":"Video focus is disabled"
-  },
-  "titleprofilealwaysscreentab":{
-    "message":"Always enabled for all open tabs"
-  },
-  "titleprofilescreenclick":{
-    "message":"Activare făcând clic pe hyperlink-uri atunci când ecranul este întunecată"
-  },
-  "titleprofilesubmit":{
-    "message":"Choose this settings"
-  },
-  "titlelearnmore":{
-    "message":"Learn more"
-  },
-  "optionprofilesaved":{
-    "message":"New lamp action is saved successfully!"
-  },
-  "desaplay":{
-    "message":"play"
-  },
-  "desapause":{
-    "message":"pause"
-  },
-  "desastop":{
-    "message":"stop"
-  }
+    "pagehelp": {"message": "ajutor"},
+    "titelimage": {"message": "Imagine de fundal"},
+    "shortcutalllights": {"message": "pentru a comuta luminile aprinse/închise pentru toate tab-urile"},
+    "lastchecked": {"message": "Ultima versiune verificată"},
+    "visualeffects": {"message": "Efecte vizuale"},
+    "titelshortcutlight": {"message": "Scurtătura"},
+    "titledonatebutton": {"message": "Donează"},
+    "titellikebar": {"message": "Bara \"Îmi place\""},
+    "desmousespotlightt": {"message": "Activează făcând clic pe hyperlink-uri atunci când ecranul este întunecat"},
+    "desmousespotlights": {"message": "Activați umbra pe ecran, cu posibilitatea de a accesa linkurile"},
+    "desambilight4color": {"message": "Four chosen colors around the video"},
+    "lockentername": {"message": "Te rugăm să introduci parola"},
+    "desnoflash": {"message": "Nu folosi această opţiune."},
+    "desdynamicblocks": {"message": "Cărămizi"},
+    "titeleye": {"message": "Protecție ochi"},
+    "titelcinemaontop": {"message": "Modul cinema: arată învelișul 'lumini stinse' doar în fața ferestrei deschise"},
+    "desmousespotlightc": {"message": "Dacă lumina este stinsă, puteți selecta o zonă pentru a evidenția un obiect."},
+    "titelrememberpage": {"message": "Aminitire pagină"},
+    "desmousespotlighta": {"message": "Dacă lumina este stinsă, afişează un punct luminos în jurul mouse-ului."},
+    "desmousespotlighto": {"message": "Pentru uz normal (dezactivează setările mouse-ului mai jos)"},
+    "desplaylist": {"message": "Afișează lista de redare YouTube de pe site-ul YouTube."},
+    "desambilightfixcolor": {"message": "Doar o singură culoare"},
+    "desuntil": {"message": "până când"},
+    "desconfirmpassword": {"message": "Confirmă parola"},
+    "desautoplayonly": {"message": "Întunecă numai următoarele site-uri:"},
+    "helpeyeprotection": {"message": "Activarea \"Protecţie pentru ochi\" va dezactiva automat opţiunea \"Redare automată\"."},
+    "skipremember": {"message": "Treci peste și deschide pagina de opțiuni acum"},
+    "optiontimesaved": {"message": "Intervalul de timp a fost salvat cu succes!"},
+    "titelvideoheadline": {"message": "Nume clip video"},
+    "translateme": {"message": "Ajută la traducere"},
+    "despassword": {"message": "Este necesară introducerea unei parole înainte de a aprinde luminile."},
+    "helpautoplay": {"message": "\"Protecţia ochi\" este activată. Ca să foloseşti opţiune de mai jos, dezactivează opţiunea \"protecţie ochi\"."},
+    "name": {"message": "Stinge lumina"},
+    "changelog": {"message": "Istoricul modificărilor"},
+    "optionpagetitle": {"message": "Turn Off the Lights - Opțiuni"},
+    "optionpasswordsaved": {"message": "Parola a fost salvată cu succes!"},
+    "desdynamicspace": {"message": "Univers"},
+    "deseastereggs": {"message": "Apăsând tasta T se adaugă o cortină de teatru întru-un strat întunecat"},
+    "settings": {"message": "Setări"},
+    "desspotlightradius": {"message": "Diametrul reflectorului:"},
+    "titelsync": {"message": "Sincronizează"},
+    "right": {"message": "Dreapta"},
+    "titeldynamic": {"message": "Fundal dinamic"},
+    "deslikebutton": {"message": "Arată butoanele Îmi place & Nu-mi place ale YouTube pentru acest video."},
+    "titelmouse": {"message": "Mouse"},
+    "titellessmore": {"message": "Arată mai puțin"},
+    "desshortcutlight": {"message": "Activează scurtăturile pentru tastatură din partea de jos."},
+    "titelinfobar": {"message": "Bară de informaţii"},
+    "descontextmenus": {"message": "Arată meniul contextual pentru un anumit element."},
+    "titelcontextmenus": {"message": "Meniu contextual"},
+    "titelplaylist": {"message": "Lista de redare"},
+    "desatmosphereonly": {"message": "Use the atmosphere lighting feature only on the following video website:"},
+    "recflash": {"message": "Recomandat"},
+    "desenterpassword": {"message": "Introduceţi parola în caseta de mai jos:"},
+    "titelblurradius": {"message": "Raza de estampare:"},
+    "version": {"message": "Versiune"},
+    "shortcutdark": {"message": "pentru a întuneca ecranul (măreşte opacitatea)"},
+    "dessharebutton": {"message": "Arată butoanele de distribuire pe YouTube."},
+    "shortcutbright": {"message": "pentru a lumina ecranul (scade opacitatea)"},
+    "titelalllightsoff": {"message": "Toate tab-urile deschise"},
+    "desreadera": {"message": "Arată întotdeauna bara de întunecare când luminile se sting."},
+    "rememberrate": {"message": "Rată"},
+    "desautoplay": {"message": "Întunecă automat fundalul când apeși butonul play și invers."},
+    "titelscreen": {"message": "Ecran"},
+    "desflash": {"message": "Arată toate obiectele Flash."},
+    "titelhead": {"message": "Canal"},
+    "pageatitle": {"message": "Stinge lumina"},
+    "desaddvideobutton": {"message": "Afișează butonul de adăugare de la acest video YouTube."},
+    "shortcuteyeprotection": {"message": "pentru a activa/dezactiva funcţia de protecţie a ochilor"},
+    "titelfadein": {"message": "Intrare"},
+    "desreadern": {"message": "Nu afișa niciodată bara de întunecare."},
+    "titelmaxqualityyoutube": {"message": "Rezoluţia setată automat la:"},
+    "desambilightrangespreadradius": {"message": "Valorile pozitive măresc dimensiunea umbrei, valorile negative micșorează dimensiunea umbrei."},
+    "titelon": {"message": "Activ"},
+    "videotitle": {"message": "Focalizeaza acest videoclip"},
+    "warningtextambilight": {"message": "Atunci când redarea video nu este posibilă datorită unei probleme de securitate a paginii web, culoarea solidă aleasă va fi folosită în schimb."},
+    "desdynamiccloud": {"message": "Nori animați"},
+    "desconfirmtimesaver": {"message": "Confirmă timpul de Protecție Ecran"},
+    "deslikebar": {"message": "Afișează butoanele îmi place/nu-mi place sub video-urile YouTube."},
+    "titelautoplay": {"message": "Pornește automat"},
+    "top": {"message": "Sus"},
+    "titelspreadradius": {"message": "Rază de răspândire"},
+    "installadblocker": {"message": "Dacă nu vrei să vezi reclame, folosește o extensie gen adblocker."},
+    "titelsharebutton": {"message": "Buton de distribuire"},
+    "titelcolor": {"message": "Culoare"},
+    "titeldownloadbutton": {"message": "Descarcă acest Upgrade!"},
+    "pagetitle": {"message": "Întunecă această pagină"},
+    "titelambilight": {"message": "Luminarea spaţiului înconjurător"},
+    "titelshowmore": {"message": "Arată mai mult"},
+    "desviewcount": {"message": "Arată numărul de vizualizări pentru acest videoclip."},
+    "titelautowidthyoutube": {"message": "Setează automat player-ul Youtube la cea mai mare mărime."},
+    "desconfirmtime": {"message": "Confirmă timpul"},
+    "titelupgrade": {"message": "Upgrade-ul"},
+    "lockwrongpassword": {"message": "Parolă incorectă, te rugăm să încerci din nou."},
+    "titelsyncbrowser": {"message": "Sincronizează setările extensiei cu un alt browser."},
+    "deletebutton": {"message": "Şterge"},
+    "eyedivon": {"message": "Activat"},
+    "eyedivoff": {"message": "Dezactivat"},
+    "deshead": {"message": "Arată bara cu canalul YouTube sau numele."},
+    "shortcutsavingopacity": {"message": "Salvează valorii opacităţii actuale."},
+    "desinfobar": {"message": "Arată descrierea videoclipului."},
+    "titellamp": {"message": "Bec"},
+    "desambilightvarcolor": {"message": "Extract the color from the video"},
+    "showremember": {"message": "Nu mai arăta această pagină când deschid opțiunile"},
+    "donatepromotext": {"message": "Dacă puteţi face o donatie de orice sumă, aş aprecia foarte mult!"},
+    "titelblur": {"message": "Întunecă restul."},
+    "desdynamicraindrops": {"message": "Stropi de ploaie"},
+    "desalllightsoff": {"message": "Apăsarea butonului lampă va comuta luminile aprinse/stinse în toate tab-urile deschise"},
+    "optionecosaversaved": {"message": "Secundele au fost salvate cu succes!"},
+    "titelreader": {"message": "Bara nivel intunecare"},
+    "deseyen": {"message": "Utilizare normală (lumina se stinge atunci când apăsați pe pictograma lampă)"},
+    "enjoyshare": {"message": "Bucură-te de această extensie şi distribuie pentru cei care cred că ar aprecia asta."},
+    "shortcuttotl": {"message": "pentru a comuta luminile pe aprins/stins"},
+    "deseyea": {"message": "Întunecă automat fundalul la deschiderea unei noi pagini web"},
+    "basicsettings": {"message": "Elemente de bază"},
+    "hoveroptionapply": {"message": "Aplică"},
+    "reportbug": {"message": "Raportează o problemă"},
+    "destime": {"message": "Luminile stinse între aceste valori ale timpului:"},
+    "guide": {"message": "Ghidul de bun venit TOtL "},
+    "deseyealist": {"message": "Întunecă automat fundalul pentru următorul/următoarele site(-uri):"},
+    "titellikebutton": {"message": "Butoanele Îmi place & Nu-mi place"},
+    "titelpageaction": {"message": "Ascunde pictograma"},
+    "friendlyremember": {"message": "Reamintire prietenoasă..."},
+    "desfadein": {"message": "Arată efectul de intrare."},
+    "warning": {"message": "Atenție!"},
+    "deseyetimesaver": {"message": "Când o pagină este inactivă (nicio mişcare a mouse-ului sau apăsare a tastaturii) pentru timpul specificat mai jos, pagina se va întuneca automat."},
+    "titelsuggestions": {"message": "Sugestii"},
+    "advancedoptions": {"message": "Opţiuni avansate"},
+    "dessuggestions": {"message": "Arată sugestiile de pe site-ul YouTube."},
+    "titelflash": {"message": "Detectare Flash"},
+    "desambilight": {"message": "Îţi arată efectul luminării spaţiului înconjurător la videoclipul curent."},
+    "productshare": {"message": "Distribuie"},
+    "addbutton": {"message": "Adaugă"},
+    "reportlist": {"message": "(vezi lista)"},
+    "desdynamicfishtank": {"message": "Acvariu"},
+    "longdonatetext": {"message": "Aş aprecia cu adevărat dacă ați putea face o donație pentru a ţine în viaţă această extensie de browser pentru alţi noi utilizatori. Chiar dacă e $1 sau $100, ajutorul dvs. este apreciat enorm!"},
+    "deshardflash": {"message": "Arată toate obiectele Flash, sărind peste filtrul URL. Aceasta va corecta problemele care există cu anumite video-uri ascunse, dar va arăta şi reclamele."},
+    "desfadeout": {"message": "Arată efectul de ieșire."},
+    "optionwrongimg": {"message": "Fişier imagine invalid!"},
+    "desvideoheadline": {"message": "Arată şi inversează culoarea titlului video."},
+    "desrememberpage": {"message": "Nu arăta pagina de memento"},
+    "description": {"message": "The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and beyond."},
+    "titelviewcount": {"message": "Număr de vizualizări"},
+    "titelopacity": {"message": "Opacitate"},
+    "titelqualityyoutube": {"message": "Setează automat calitatea video-urilor de pe Youtube."},
+    "shortcutopacity": {"message": "pentru a restabili setările valorilor originale pentru umbrire (opacitate)"},
+    "desambilightrangeblurradius": {"message": "Valorile mai mici vor intensifica umbra, valorile mai mari le vor face mai încețoșate."},
+    "titeladdvideobutton": {"message": "Butonul de adăugare"},
+    "titelpassword": {"message": "Protejează cu parolă"},
+    "titeldownloadupgrade": {"message": "Acest upgrade adaugă suport pentru imaginile selectate, şi va arăta o galerie de imagini din cadrul site-ului."},
+    "titelfadeout": {"message": "Ieșire"},
+    "eastereggsquestion": {"message": "Iți place un cinematograf real?"},
+    "bottom": {"message": "Jos"},
+    "dessaver": {"message": "Protecție Ecran:"},
+    "hoveroptiondyn5": {"message": "zburând"},
+    "pagestillloading": {"message": "Această pagină încă se încarcă?"},
+    "titeloff": {"message": "Inactiv"},
+    "titeleastereggs": {"message": "Ouăle de Paşti"},
+    "textfoot": {"message": "Acest program se află sub licență CC-GNU GPL. Pentru a vedea o copie a acestei licențe, vizualizați"},
+    "left": {"message": "Stânga"},
+    "titelnighttheme": {"message": "Modul noapte"},
+    "desnighttheme": {"message": "Arată butonul de comutare pe noapte în partea de jos a paginii pentru a întuneca sau ilumina pagina."},
+    "nightoptions": {"message": "Modul noapte"},
+    "desnightonly": {"message": "Afişează în modul noapte numai următoarele site-uri:"},
+    "desnightenabletheme": {"message": "Când deschideţi o nouă pagină este setată automat pe noapte."},
+    "titellampregular": {"message": "Arată întotdeauna pictograma lampă în casuța polivalentă"},
+    "titellampvideo": {"message": "Arată pictograma lampă numai dacă este detectat un player video"},
+    "ratetitle": {"message": "Vă mulțumim pentru că folosiți Turn Off the Lights"},
+    "ratedes": {"message": "Please rate and review the extension on the Store. Your support is really appreciated."},
+    "rateitema": {"message": "Evaluați 5 stele"},
+    "titelreset": {"message": "Reinițializarea setărilor"},
+    "resetbrowserextension": {"message": "Reinițializați setările Turn Off the Lights"},
+    "desautoplaydelay": {"message": "Luminați din nou fundalul când filmul s-a sfârșit după"},
+    "desautoplaydelayend": {"message": "secunde"},
+    "motionoptions": {"message": "Mișcarea camerei foto"},
+    "desmotion": {"message": "Activați Camera Motion"},
+    "desspeech": {"message": "Enable the Speech Recognition"},
+    "trymotion": {"message": "Încearcă-l singur!"},
+    "destrymotion": {"message": "Este pur și simplu minunat, iar cel mai bine este că funcționează oriunde. Chiar și pe YouTube, site-uri de știri, etc."},
+    "howworkmotion": {"message": "Cum funcţionează?"},
+    "nightstep1description": {"message": "Enable the Night Mode feature"},
+    "nightstep2description": {"message": "Open any web page, and you see this night switch"},
+    "nightstep3description": {"message": "Click on the switch to see the web page in a dark theme"},
+    "speechstep1description": {"message": "Enable the Speech Recognition feature"},
+    "speechstep2description": {"message": "When you enable this option, you can talk to the browser lamp using the following commands:"},
+    "camstep1description": {"message": "Activați opțiunea Camera Motion"},
+    "camstep2description": {"message": "Mișcaţi mâna (sau pumnul) din partea de sus în jos."},
+    "camstep3description": {"message": "Stratul negru va aluneca în jos automat."},
+    "desmotionChecklist": {"message": "Listă de verificare:"},
+    "des1checkmotion": {"message": "Asiguraţi-vă că nu este întuneric în camera dumneavoastră şi este suficientă lumină."},
+    "des2checkmotion": {"message": "Camera video nu trebuie să primească în mod direct lumină solară."},
+    "des3checkmotion": {"message": "Utilizaţi o cameră frontală."},
+    "titellinear": {"message": "Liniar"},
+    "titelcolora": {"message": "Culoare A:"},
+    "titelcolorb": {"message": "Culoare B:"},
+    "speechoption": {"message": "Recunoaștere vocală"},
+    "titelspeech": {"message": "Vorbire"},
+    "desspeech1command": {"message": "turn off the lights"},
+    "desspeech2command": {"message": "aprindeți luminile"},
+    "desspeech3command": {"message": "redare video"},
+    "desspeech4command": {"message": "pauză video"},
+    "desspeechdialect": {"message": "Alege dialectul tău de vorbire:"},
+    "desatmosvivid": {"message": "Vivid atmosphere effects"},
+    "help": {"message": "Ajutor"},
+    "about": {"message": "Despre"},
+    "desspeechonly": {"message": "Activează Recunoașterea Vocală numai următoarele site(-uri):"},
+    "descammotiononly": {"message": "Activează Camera Motion numai pe următorul/(arele) site/(uri):"},
+    "titelcamera": {"message": "Cameră"},
+    "titelautoplaywhitelist": {"message": "Lista albă"},
+    "titelautoplayblacklist": {"message": "Lista neagră"},
+    "titeldownloadthemeupgrade": {"message": "Adaugă o tematică întunecată browser-ului tău pentru a-l personaliza. Tema apare de jur-împrejurul marginilor browser-ului."},
+    "desbrowsersupport": {"message": "Browserul nu acceptă această opțiune încă. Asigură-te că ai cea mai recentă versiune de browser instalată pe calculatorul tău."},
+    "titelsupportatmos": {"message": "Supports only the HTML5 <video> player. It also uses the GPU from your device."},
+    "titelseeonline": {"message": "Vezi online pentru mai multe exemple"},
+    "titelvideosample": {"message": "Exemplu Video"},
+    "titelwebsite": {"message": "Site web"},
+    "titeldeveloper": {"message": "Dezvoltator"},
+    "titelrightsreserved": {"message": "Unele drepturile rezervate."},
+    "desbrowserextension": {"message": "extensie de browser"},
+    "desapitext": {"message": "Wiki API pentru Site-ul Dezvoltatorului"},
+    "desbrowsertheme": {"message": "temă browser"},
+    "desproject": {"message": "proiect"},
+    "titelapideveloper": {"message": "Dezvoltator API"},
+    "titelwikiatmos": {"message": "Wiki despre opțiunea „ Atmosphere Lighting”"},
+    "sharemenusharetitle": {"message": "Distribuie"},
+    "sharemenuwelcomeguidetitle": {"message": "Ghidul de început"},
+    "sharemenutellafriend": {"message": "Spune unui prieten"},
+    "sharemenusendatweet": {"message": "Trimite un Tweet"},
+    "sharemenupostonfacebook": {"message": "Postează pe Facebook"},
+    "sharemenupostongoogleplus": {"message": "Postează pe Google+"},
+    "sharemenuratetitle": {"message": "Evaluează această extensie"},
+    "sharemenudonatetitle": {"message": "Sprijină dezvoltarea"},
+    "titelautostop": {"message": "AutoStop"},
+    "desautostop": {"message": "Oprește redarea videoclipului automat când deshid o pagină de internet"},
+    "areyouhappy": {"message": "Îți place „Turn Off the Lights”?"},
+    "tellothers": {"message": "Opinia Dvs. contează"},
+    "nothanks": {"message": "Nu, mulţumesc"},
+    "writeareview": {"message": "Scrieți o recenzie"},
+    "desauroraplayer": {"message": "Player-ul cu Iluminare ambientală este, de asemenea disponibil pentru computerul dvs."},
+    "downloadtheapp": {"message": "Descărcați aplicația acum"},
+    "titeldownloadupgradezoom": {"message": "Faceți zoom pentru conținutul din pagină folosind butonul de zoom pentru a citi mai confortabil."},
+    "titeldownloadupgradepropermenubar": {"message": "Adaugă bara neagră de meniu înapoi pe site-ul Google."},
+    "titeldownloadupgradefinancetoolbar": {"message": "Aceasta arată în timp real informațiile de la bursă."},
+    "titelnightmodeposition": {"message": "Poziția comutatorului"},
+    "nmtopleft": {"message": "Stânga sus"},
+    "nmtopright": {"message": "Dreapta sus"},
+    "nmbottomright": {"message": "Dreapta jos"},
+    "nmbottomleft": {"message": "Stânga jos"},
+    "nmcustom": {"message": "Personalizat (fă clic, menține clic și mută comutatorul în locația dorită pe ecran)"},
+    "desnighthover": {"message": "Prezintă un comutator transparent pe pagina web"},
+    "titelnightmodewhitelist": {"message": "Lista albă"},
+    "titelnightmodeblacklist": {"message": "Lista neagră"},
+    "desautostoponly": {"message": "Activează doar opțiunea de a opri redarea video automată pe site /-urile următoare:"},
+    "titelautostopwhitelist": {"message": "Lista albă"},
+    "titelautostopblacklist": {"message": "Lista neagră"},
+    "desnightactivetime": {"message": "Comutatorul va fi vizibil între orele:"},
+    "deslampandnightmode": {"message": "Activați opţiunea „Modul Noapte” atunci când faceţi clic pe butonul gri lampă"},
+    "titeleyewhitelist": {"message": "Lista albă"},
+    "titeleyeblacklist": {"message": "Lista neagră"},
+    "desspeech5command": {"message": "lampă pentru browser"},
+    "html5andyoutube": {"message": "Video HTML5 & YouTube™"},
+    "flashembedobject": {"message": "Acceptă: <object>, <embed>, <applet>, <iframe>."},
+    "titelnightmodebck": {"message": "Culoare fundal"},
+    "titelnightmodetxt": {"message": "Culoare text"},
+    "desdynamicsmoke": {"message": "Fum"},
+    "desdynamicdotscolor": {"message": "Puncte de culoare"},
+    "desdynamicstorm": {"message": "Furtună"},
+    "desdynamictriangulation": {"message": "Triangulare"},
+    "desdynamicstars": {"message": "Stele"},
+    "desmobileapp": {"message": "„Turn Off the Lights” este, de asemenea disponibil pentru mobil."},
+    "titel360youtube": {"message": "Afişează într-un cadru plin 360 de grade videoclipul YouTube"},
+    "titelvideotool": {"message": "Bară de instrumente video"},
+    "desvideotool": {"message": "Afişaţi bara de instrumente sub ecran pentru a personaliza player-ul video curent"},
+    "vtoolfullscreen": {"message": "Un buton pentru a seta video player-ul la dimensiunea întregii ferestre"},
+    "vtoolfilter": {"message": "Un buton pentru a adăuga un filtru în video player-ul curent"},
+    "vtoolreplay": {"message": "Buton penru a reda din nou videoclipul curent"},
+    "vtoolscreenshot": {"message": "Un buton pentru a captura o imagine a player-ului video curent"},
+    "vtoolalign": {"message": "Un buton care sa centreze player-ul video in fereastra browserului"},
+    "titelvideotoolgrayscale": {"message": "nuanțe de gri"},
+    "titelvideotoolsepia": {"message": "sepia"},
+    "titelvideotoolinvert": {"message": "inversează"},
+    "titelvideotoolcontrast": {"message": "contrast"},
+    "titelvideotoolsaturate": {"message": "saturaţie"},
+    "titelvideotoolhueroration": {"message": "rotaţie hue"},
+    "titelvideotoolbrightness": {"message": "luminozitate"},
+    "titelvideotoolnormal": {"message": "normal"},
+    "titelvideotoollike": {"message": "Apreciază"},
+    "titelvideotoolsubscribe": {"message": "Aboneaza-te"},
+    "titelvideotoolrepeat": {"message": "Repetă"},
+    "titelvideotoolfilter": {"message": "Filtrare"},
+    "titelvideotoolfullwindow": {"message": "Mod ecran complet"},
+    "titelvideotoolscreenshot": {"message": "Captează ecranul"},
+    "titelreflection": {"message": "Reflecţie"},
+    "desreflection": {"message": "Arată efectul de reflexie pe toate videoclipurile"},
+    "desvideotoolonly": {"message": "Activează Bară de instrumente video numai pe următorul(arele) site(uri):"},
+    "titelvideotoolwhitelist": {"message": "Lista albă"},
+    "titelvideotoolblacklist": {"message": "Lista neagră"},
+    "titelnightmodehyperlink": {"message": "Hyperlink"},
+    "titelblock60fps": {"message": "Blochează 60fps"},
+    "titelvolume": {"message": "Indicator volum video"},
+    "desvideovolume": {"message": "Controlează volumul acelui player video în derulare prin defilarea cu mouse-ul"},
+    "desvideovolumecolor": {"message": "Culoarea indicatorului"},
+    "desvolumelabel": {"message": "Arată indicatorul de volum"},
+    "desvolumesteps": {"message": "Number of volume steps (in %) for each scroll wheel notch"},
+    "sharetexta": {"message": "Extensia pentru Browser „Turn Off the Lights”"},
+    "sharetextb": {"message": "A, minunat! Tocmai am încercat astăzi această extensie de browser Turn Off the Lights "},
+    "sharetextc": {"message": "Extraordinara şi uimitoarea extensie de browser Turn Off the Lights"},
+    "sharetextd": {"message": "Extensia Turn Off the Lights este cel mai bun instrument pentru pe YouTube. Descărc-o şi să încearc-o și tu!"},
+    "titelsharethis": {"message": "Distribuie:"},
+    "titellampchoose": {"message": "Alegeţi-vă tipul preferat de lampă"},
+    "titeldoesntwork": {"message": "Turn Off the Lights nu funcţionează pe această pagină web. Încercaţi o altă pagină."},
+    "titelpopupvideo": {"message": "YouTube"},
+    "titelpopupwelcomeguide": {"message": "Ghidul de început"},
+    "titelpopupsupport": {"message": "Suport"},
+    "titelpopupoptions": {"message": "Opţiuni"},
+    "titelpopupratestars": {"message": "Evaluați 5 stele"},
+    "titelvisenable": {"message": "Activează/dezactivează Vizualizarea Audio"},
+    "titelvischoose": {"message": "Selectează-ți propria Vizualizare Audio"},
+    "titelvisblocks": {"message": "Cărămizi"},
+    "titelvisfrequency": {"message": "Frecvenţă"},
+    "titelvistunnel": {"message": "Tunel muzical"},
+    "titelvisualization": {"message": "Vizualizare audio"},
+    "desvisopacity": {"message": "Valoarea de opacitate a fundalului de vizualizare audio"},
+    "vtoolvisualization": {"message": "Un buton care indică vizualizarea audio pentru video player-ul curent"},
+    "desvideotoolcolor": {"message": "Culoarea barei de instrumente"},
+    "titelhovervideo": {"message": "Planare video"},
+    "deshovervideo": {"message": "Mișcă mouse-ul pe videoclip pentru câteva secunde, după care pagina web se întunecă automat"},
+    "promotitle": {"message": "Sfatul zilei"},
+    "desremyoutube": {"message": "Aboneaza-te pe YouTube"},
+    "desremfacebook": {"message": "Recomanda acest lucru pe Facebook"},
+    "titleuserprofile": {"message": "Mai jos, alege setările pe care dorești să le utilizezi când faci clic pe butonul gri de lampă. Fiecare profil are propriile sale caracteristici."},
+    "titleregularuser": {"message": "Iubitor de video"},
+    "titlenightowl": {"message": "Bufnita"},
+    "titlescreenprotection": {"message": "Protecție ochi"},
+    "desregularuser": {"message": "Aceasta este setarea normală și implicita pentru noi utilizatori. Atunci când faceți clic pe butonul cu lampa gri, acest stil va fi aplicat pe pagina web curentă."},
+    "desnightowl": {"message": "Un singur clic transformă pagina direct într-o temă întunecată cu un hyperlink pe care puteți face clic. Faceți clic din nou pentru a reveni la vizualizarea normală. Faceți clic pe butonul cu lampa din nou pentru a dezactiva această funcție."},
+    "desscreenprotection": {"message": "Un click nuanțează pagina într-un portocaliu liniștitor pentru a reduce oboseala ochilor in toate tab-urile deschise. Click pe butonul în formă de lampă pentru a dezactiva această caracteristică."},
+    "titleprofilevideofocus": {"message": "Focus video este activ"},
+    "titleprofilenovideofocus": {"message": "Focus Video este dezactivat"},
+    "titleprofilealwaysscreentab": {"message": "Întotdeauna activează pentru toate tab-urile deschise"},
+    "titleprofilescreenclick": {"message": "Activează făcând clic pe hyperlink-uri atunci când ecranul este întunecat"},
+    "titleprofilesubmit": {"message": "Alege aceste setări"},
+    "titlelearnmore": {"message": "Află mai mult"},
+    "optionprofilesaved": {"message": "Noua acțiune a lămpii este salvată cu succes!"},
+    "desaplay": {"message": "redare"},
+    "desapause": {"message": "pauză"},
+    "desastop": {"message": "stop"},
+    "desvideozoom": {"message": "Poți mări sau micșora conținutul video-ului folosind butonul de zoom"},
+    "titlevideoplayrate": {"message": "Viteză video"},
+    "desplayrate": {"message": "Viteză de redare standard"},
+    "desspeedtoolbar": {"message": "Afișează bara de redare în video-player-ul curent"},
+    "desatmosontotlmode": {"message": "Arată efectul de lumină de atmosferă doar atunci când modul TOtL este activat"},
+    "desdarkbrowsertheme": {"message": "Switch to a dark browser theme"},
+    "desautostopfeaturewhite": {"message": "BLOCKS below websites, but ALLOWS automatic playing on any other website."},
+    "desautostopfeatureblack": {"message": "ALLOWS below websites, but BLOCKS automatic playing on any other website."},
+    "autostopbannerred": {"message": "Show a red banner"},
+    "autostopbannertrans": {"message": "Show a transparent banner"},
+    "titleanalytics": {"message": "Analize"},
+    "desbadgeanalytics": {"message": "Show the badge with the number of clicks you have dimmed the webpage"},
+    "shareanalyticenergy": {"message": "Am economisit $product$ kWh mulțumită Turn Off the Lights", "placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "analyticsoption": {"message": "Analize"},
+    "activelayertoday": {"message": "Numărul de clicuri astăzi"},
+    "totalenergysaved": {"message": "Totalul energiei electrice salvate"},
+    "resetlampanalytic": {"message": "Resetează datele tale de analiză Turn Off the Lights"},
+    "titlesiteengagement": {"message": "Site Engagement"},
+    "titleorigin": {"message": "Origin"},
+    "titletime": {"message": "Timp(minute)"},
+    "titleavgdayschedule": {"message": "Average daily schedule"},
+    "titlesharestats": {"message": "Share Your Stats"},
+    "btnsharestats": {"message": "Distribuie Statistici"},
+    "charttitletotaltime": {"message": "Total time the dark layer is active (minutes)"},
+    "charttitlelayeractive": {"message": "Dark layer active (#)"},
+    "charttitleavgday": {"message": "Average daily schedule (when the lights turn off frequently)"},
+    "charttitle30dayssaved": {"message": "Energie economisită în ultimile 30 de zile"},
+    "charttitlelblwebsiteused": {"message": "Site-urile web folosite în ultimele 30 de zile"},
+    "charttitlelblenergytotal": {"message": "Totalul energiei folosite"},
+    "charttitlelblenergysaved": {"message": "Totalul energiei economisite"},
+    "titlelanalyticprivacy": {"message": "Turn Off the Lights browser extension takes your privacy very seriously. The Turn Off the Lights Analytics you are seeing on this page is only stored locally on your computer. Your personal site engagement information will not be sold and not transferred to unaffiliated third parties."},
+    "shareanalyticlove": {"message": "Site-ul web care îmi place cel mai mult este $product$ cu Turn Off the Lights", "placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "desvolumeposa": {"message": "Show the volume meter in center of the current video player"},
+    "desvolumeposb": {"message": "Show the volume value on top left of the current video player"},
+    "desvolumeposc": {"message": "Show the volume value on top right of the current video player"},
+    "desvideovolumhold": {"message": "Hold down the left or right mouse button, and move your mouse to change the volume"},
+    "desvideovolumalt": {"message": "Doar dacă butonul alt este apăsat"},
+    "speechheybrowser": {"message": "Hey Browser"},
+    "speechokbrowser": {"message": "ok Browser"},
+    "functionactive": {"message": "This function is activated when you click on a tab, or when you refresh the web page. However, this function stops automatically after 15 seconds."},
+    "cardtexsubscribe": {"message": "Subscribe Now!"},
+    "cardtextfavdayweek": {"message": "Ziua preferată a săptămânii"},
+    "cardtextyestime": {"message": "Yesterday total time (in minutes)"},
+    "cardavgprevweektime": {"message": "Previous total week time (in minutes)"},
+    "sunday": {"message": "Duminică"},
+    "monday": {"message": "Luni"},
+    "tuesday": {"message": "Marți"},
+    "wednesday": {"message": "Miercuri"},
+    "thursday": {"message": "Joi"},
+    "friday": {"message": "Vineri"},
+    "saturday": {"message": "Sâmbătă"},
+    "titlemultiopacity": {"message": "Fiecare site web, opacitatea lui"},
+    "desmultiopacitynormal": {"message": "Toate site-urile web au aceeași valoare de opacitate"},
+    "desmultiopacitysel": {"message": "The websites in the list here below have that chosen opacities"},
+    "desmultiopacitynot": {"message": "If a website it not in the list, the default opacity value will apply."},
+    "titleok": {"message": "Ok"},
+    "titlecancel": {"message": "Anulează"},
+    "titledarkmodeon": {"message": "Dark Mode ON"},
+    "titledarkmodeoff": {"message": "Dark Mode OFF"},
+    "titlelprivacy": {"message": "Politica de confidenţialitate"},
+    "titleprofile": {"message": "Profil"},
+    "descolorfixcolor": {"message": "Choose your dark layer color"},
+    "desatmossolidcolor": {"message": "Choose your one solid glow effect color"},
+    "titlelratenow": {"message": "Rate Now!"},
+    "titleratelater": {"message": "Mai tarziu"},
+    "desremrate": {"message": "If you like Turn Off the Lights™, please do not hesitate to rate this extension to five stars now. This gives us courage to continue to maintain and improve this product for you. Writing a review is recommended, but not mandatory. If you do not have the time to write a review, you can rate it anonymously. It is important to give it ★★★★★. Thank you!"},
+    "titelnightmodedomain": {"message": "Domeniu"},
+    "titelnightmodepage": {"message": "Pagină Web"},
+    "titelintroduce": {"message": "Introducing the new Turn Off the Lights!"},
+    "desintroduce": {"message": "All the features you're used to, with a brand new look and feel, and personalized to you."},
+    "econothingthisyear": {"message": "Nothing this year. Keeps the lights off to save energy"},
+    "ecothirtyminutes": {"message": "30 minutes of light saved"},
+    "ecowatchtvfortwo": {"message": "Watch TV for 2 hours"},
+    "ecotoastermaking": {"message": "Toaster making two loaves of toast"},
+    "ecochargeiphone": {"message": "Încarcă-ți Iphone-ul"},
+    "ecobrewsomecoffee": {"message": "Brew some Coffee, brewing one pot of coffee"},
+    "ecoplayingxbox": {"message": "Playing Xbox 360 for one hour"},
+    "ecovacuumingfor": {"message": "Aspiră 15 minute"},
+    "ecoblowdrying": {"message": "Blow-drying your hair for 10 minutes uses approximately"},
+    "ecowashingclothes": {"message": "Washing your clothes in a cold-rinse cycle uses approximately"},
+    "ecowififoraday": {"message": "Wi-Fi for a day"},
+    "ecorunningdishwasher": {"message": "Running your dishwasher in energy-saver mode will use"},
+    "ecochargelaptop": {"message": "Încarcă-ți laptop-ul"},
+    "ecokeeplightonforsix": {"message": "Keep the Lights on for 6 hours"},
+    "ecokeepfridgeday": {"message": "Keep the Fridge Running for a day"},
+    "ecoloadlaundry": {"message": "One load of laundry in the dryer"},
+    "ecoheatingtenshower": {"message": "Heating enough water for a 10-minute shower"},
+    "ecotwentyfourghome": {"message": "Destul ca să rulezi Google Home pentru 24 de ore"},
+    "ecochargeteslacar": {"message": "Charge your Tesla car for 20 miles"},
+    "ecochargeteslacarhundred": {"message": "Charge your Tesla electric vehicle to 100%"},
+    "ecochargeteslathreetimes": {"message": "Charge 3 times your Tesla electric vehicle to 100%"},
+    "ecopowerhawaiimonth": {"message": "Destulă energie electrică pentru 1 lună în Hawaii"},
+    "ecopowernwymonth": {"message": "Destulă energie electrică pentru 1 lună în New York"},
+    "ecopowercamonth": {"message": "Destulă energie electrică pentru 1 lună în California"},
+    "ecopowerbaseballgame": {"message": "To power 1 jumbotron for a baseball game"},
+    "ecopowereiffeltower": {"message": "To illuminate the Eiffel Tower for 1 day"},
+    "ecopowereurostar": {"message": "For a Eurostar trip from Brussels to London"},
+    "ecopowereurostarparis": {"message": "For a Eurostar trip from Paris to London"},
+    "ecoeiffeltoweryear": {"message": "To illuminate the Eiffel Tower for 1 year"},
+    "ecosfoyear": {"message": "To power San Francisco for 1 year"},
+    "ecolayear": {"message": "To power Los Angeles for 1 year"},
+    "ecoplanetearth": {"message": "Ready to save the planet Earth"},
+    "autostopdetails": {"message": "DETAILS"},
+    "autostopblocked": {"message": "Blocked by Turn Off the Lights™ - www.turnoffthelights.com"},
+    "autostopclickme": {"message": "Click on me to play this HTML5 video"},
+    "autostopenabled": {"message": "AutoStop is enabled!"}
 }

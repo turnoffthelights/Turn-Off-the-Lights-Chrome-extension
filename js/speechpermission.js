@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2018 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -29,11 +29,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function speechstartfunction(){
 	// start automatic up
-	if (!recognizing) {startButton(event);}
+	if(!recognizing){startButton(event);}
 }
-function startButton(event) {
+function startButton(event){
 	// Abort previous instances of recognition already running
-    if (recognition && recognition.abort) {
+    if(recognition && recognition.abort){
         recognition.abort();
     }
 	final_transcript = '';
@@ -51,8 +51,8 @@ var recognition;
 function startinit(){
 // Check for live API permissions  
 navigator.permissions.query({name:'microphone'})
-.then(function(permissionStatus) {  
-  permissionStatus.onchange = function() {  
+.then(function(permissionStatus){
+  permissionStatus.onchange = function(){
 	if(this.state == "granted"){
 		var lol = window.self;
 		lol.opener = window.self;
@@ -65,31 +65,31 @@ navigator.permissions.query({name:'microphone'})
   };
 });
 
-	if (!('webkitSpeechRecognition' in window)) {
+	if(!('webkitSpeechRecognition' in window)){
 	// not supported
-	} else {
+	}else{
 		recognition = new webkitSpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
 	
-		recognition.onstart = function() {
+		recognition.onstart = function(){
 			recognizing = true;
 			// console.log("speak now");
 		};
 	
-		recognition.onerror = function(event) {
-		if (event.error == 'no-speech') {
+		recognition.onerror = function(event){
+		if(event.error == 'no-speech'){
 			// No speech was detected.
 			ignore_onend = true;
 		}
-		if (event.error == 'audio-capture') {
+		if(event.error == 'audio-capture'){
 			// No microphone was found.
 			ignore_onend = true;
 		}
-		if (event.error == 'not-allowed') {
-			if (event.timeStamp - start_timestamp < 100) {
+		if(event.error == 'not-allowed'){
+			if(event.timeStamp - start_timestamp < 100){
 				// Permission to use microphone is blocked. 
-			} else {
+			}else{
 				// Permission to use microphone was denied.
 			}
 			ignore_onend = true;
@@ -101,4 +101,4 @@ navigator.permissions.query({name:'microphone'})
 	speechstartfunction();
 }
 
-document.addEventListener('DOMContentLoaded', function() { startinit(); },false);
+document.addEventListener('DOMContentLoaded', function(){ startinit(); },false);

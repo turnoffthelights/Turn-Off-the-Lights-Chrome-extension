@@ -1,1056 +1,357 @@
 {
-  "pagehelp":{
-    "message":"pomoc"
-  },
-  "titelimage":{
-    "message":"Obrázek pozadí"
-  },
-  "shortcutalllights":{
-    "message":"k zapnutí/vypnutí světel pro všechny otevřené záložky"
-  },
-  "lastchecked":{
-    "message":"Kontrola nejnovější verze proběhla"
-  },
-  "visualeffects":{
-    "message":"Vizuální efekty"
-  },
-  "titelshortcutlight":{
-    "message":"Klávesová zkratka"
-  },
-  "titledonatebutton":{
-    "message":"Přispět"
-  },
-  "titellikebar":{
-    "message":"Tlačítka Líbí se"
-  },
-  "desmousespotlightt":{
-    "message":"Povolit kliknutí na odkazy, když je obrazovka ztmavená"
-  },
-  "desmousespotlights":{
-    "message":"Enable the screen shade, with the possibility to click on the hyperlinks"
-  },
-  "desambilight4color":{
-    "message":"4 vybrané barvy okolo videa:"
-  },
-  "lockentername":{
-    "message":"Prosím vložte své heslo"
-  },
-  "desnoflash":{
-    "message":"Nepoužívejte tuto funkci."
-  },
-  "desdynamicblocks":{
-    "message":"Bloky"
-  },
-  "titeleye":{
-    "message":"Ochrana očí"
-  },
-  "titelcinemaontop":{
-    "message":"Mód kina: zobrazuje vrstvu 'ztmavení' jen na povrchu okna"
-  },
-  "desmousespotlightc":{
-    "message":"Jsou li světla vypnuta, můžete zvolit oblast pro zaměření položky."
-  },
-  "titelrememberpage":{
-    "message":"Stránka připomenutí"
-  },
-  "desmousespotlighta":{
-    "message":"Jestliže jsou světla vypnuta, ukaž kolem kurzoru kruh světla"
-  },
-  "desmousespotlighto":{
-    "message":"Výchozí chování myši (zakáže nastavení myši níže)"
-  },
-  "desplaylist":{
-    "message":"Zobrazit YouTube playlist na webu YouTube."
-  },
-  "desambilightfixcolor":{
-    "message":"Plná barevná výplň:"
-  },
-  "desuntil":{
-    "message":"dokud"
-  },
-  "desconfirmpassword":{
-    "message":"Potvrdit heslo"
-  },
-  "desautoplayonly":{
-    "message":"Ztmavovat pouze následující video stránky:"
-  },
-  "helpeyeprotection":{
-    "message":"Povolení \"Ochrany očí\" automaticky zakáže funkci 'Automatické přehrávání'."
-  },
-  "skipremember":{
-    "message":"Přeskočit a už otevřít stránku možností"
-  },
-  "optiontimesaved":{
-    "message":"Uložení času bylo úspěšné!"
-  },
-  "titelvideoheadline":{
-    "message":"Název videa"
-  },
-  "translateme":{
-    "message":"Pomoc s překladem"
-  },
-  "despassword":{
-    "message":"Vyžadovat zadání hesla před rozsvícením světla."
-  },
-  "helpautoplay":{
-    "message":"\"Ochrana očí\" je aktivní.  Pro použití funkcí níže vypněte \"Ochranu očí\"."
-  },
-  "name":{
-    "message":"Zhasnout světla"
-  },
-  "changelog":{
-    "message":"Změny ve verzích"
-  },
-  "optionpagetitle":{
-    "message":"Turn Off the Lights - Možnosti"
-  },
-  "optionpasswordsaved":{
-    "message":"Uložení hesla bylo úspěšné."
-  },
-  "desdynamicspace":{
-    "message":"Nekonečný vesmír"
-  },
-  "deseastereggs":{
-    "message":"Stisknutí tlačítka T přidá na tmavou vrstvu divadelní oponu"
-  },
-  "settings":{
-    "message":"Nastavení"
-  },
-  "desspotlightradius":{
-    "message":"Průměr světlometu:"
-  },
-  "titelsync":{
-    "message":"Synchronizovat"
-  },
-  "right":{
-    "message":"vpravo"
-  },
-  "titeldynamic":{
-    "message":"Dynamické pozadí"
-  },
-  "deslikebutton":{
-    "message":"Zobrazit YouTube tlačítka líbí a nelíbí se mi pro tohle video."
-  },
-  "titelmouse":{
-    "message":"Myš"
-  },
-  "titellessmore":{
-    "message":"Zobrazit méně"
-  },
-  "desshortcutlight":{
-    "message":"Povolit klávesové zkratky uvedené níže."
-  },
-  "titelinfobar":{
-    "message":"Informační panel"
-  },
-  "descontextmenus":{
-    "message":"Zobrazit kontextové menu k zaměření položky."
-  },
-  "titelcontextmenus":{
-    "message":"Kontextové menu"
-  },
-  "titelplaylist":{
-    "message":"Seznam stop"
-  },
-  "desatmosphereonly":{
-    "message":"Používat funkci atmosférického osvětlení pouze na následujících stránkách:"
-  },
-  "recflash":{
-    "message":"Doporučeno"
-  },
-  "desenterpassword":{
-    "message":"Své heslo zadejte do políčka níže:"
-  },
-  "titelblurradius":{
-    "message":"Poloměr rozostření:"
-  },
-  "version":{
-    "message":"Verze"
-  },
-  "shortcutdark":{
-    "message":"pro ztmavení obrazovky (zvýšení krytí)"
-  },
-  "dessharebutton":{
-    "message":"Zobrazit YouTube tlačítka sdílení pro tohle video."
-  },
-  "shortcutbright":{
-    "message":"pro zesvětlení obrazovky (snížení krytí)"
-  },
-  "titelalllightsoff":{
-    "message":"Všechny otevřené karty"
-  },
-  "desreadera":{
-    "message":"Vždy zobrazit level bar zatmavení, když světla zhasínají."
-  },
-  "rememberrate":{
-    "message":"Ohodnoďte"
-  },
-  "desautoplay":{
-    "message":"Automaticky ztmavit pozadí po kliknutí na tlačítko play a opačně."
-  },
-  "titelscreen":{
-    "message":"Obrazovka"
-  },
-  "desflash":{
-    "message":"Zobrazit všechny objekty Flash."
-  },
-  "titelhead":{
-    "message":"Kanál"
-  },
-  "pageatitle":{
-    "message":"Zhasněte světla"
-  },
-  "desaddvideobutton":{
-    "message":"Zobrazit tlačítko pro přidání v tomto videu YouTube."
-  },
-  "shortcuteyeprotection":{
-    "message":"pro aktivaci/deaktivaci funkce ochrany očí"
-  },
-  "titelfadein":{
-    "message":"Zesvětlit"
-  },
-  "desreadern":{
-    "message":"Nikdy nezobrazovat ukazatel hodnoty zatmavení."
-  },
-  "titelmaxqualityyoutube":{
-    "message":"Automaticky nastavit na toto rozlišení:"
-  },
-  "desambilightrangespreadradius":{
-    "message":"Kladné hodnoty zvětší intenzitu stínu, záporné ji sníží."
-  },
-  "titelon":{
-    "message":"Zapnout"
-  },
-  "videotitle":{
-    "message":"Zaměřit toto video"
-  },
-  "warningtextambilight":{
-    "message":"Když není možné získat data videa kvůli bezpečnostním pravidlům stránek, bude místo toho použita vybraná barva."
-  },
-  "desdynamiccloud":{
-    "message":"Animované mraky"
-  },
-  "desconfirmtimesaver":{
-    "message":"Potvrďte čas spořiče obrazovky"
-  },
-  "deslikebar":{
-    "message":"Ukázat líbí/nelíbí baru podle videa na YouTube."
-  },
-  "titelautoplay":{
-    "message":"Automatické přehrávání"
-  },
-  "top":{
-    "message":"nahoře"
-  },
-  "titelspreadradius":{
-    "message":"Poloměr rozpětí:"
-  },
-  "installadblocker":{
-    "message":"Nechcete-li vidět reklamy, použijte rozšíření typu adblocker."
-  },
-  "titelsharebutton":{
-    "message":"Tlačítko sdílení"
-  },
-  "titelcolor":{
-    "message":"Barva"
-  },
-  "titeldownloadbutton":{
-    "message":"Stáhnout aktualizaci"
-  },
-  "pagetitle":{
-    "message":"Ztmavit tuto stránku"
-  },
-  "titelambilight":{
-    "message":"Ambilight."
-  },
-  "titelshowmore":{
-    "message":"Ukázat více"
-  },
-  "desviewcount":{
-    "message":"Zobrazit počet zobrazení tohoto videa."
-  },
-  "titelautowidthyoutube":{
-    "message":"Automaticky nastaví přehrávač YouTube na větší velikost."
-  },
-  "desconfirmtime":{
-    "message":"Potvrďte čas."
-  },
-  "titelupgrade":{
-    "message":"Aktualizace"
-  },
-  "lockwrongpassword":{
-    "message":"Nesprávné heslo, zkuste to prosím znovu."
-  },
-  "titelsyncbrowser":{
-    "message":"Synchronizujte nastavení rozšíření s jiným prohlížečem."
-  },
-  "deletebutton":{
-    "message":"Smazat"
-  },
-  "eyedivon":{
-    "message":"ZAP"
-  },
-  "eyedivoff":{
-    "message":"VYP"
-  },
-  "deshead":{
-    "message":"Zobrazit YouTube Channel bar nebo jméno."
-  },
-  "shortcutsavingopacity":{
-    "message":"Chcete-li uložit tuto hodnotu krytí"
-  },
-  "desinfobar":{
-    "message":"Zobrazit info popis o videu."
-  },
-  "titellamp":{
-    "message":"Žárovka"
-  },
-  "desambilightvarcolor":{
-    "message":"Vzít barvu z videa."
-  },
-  "showremember":{
-    "message":"Nezobrazovat tuto upomínku při příštím otevření nastavení"
-  },
-  "donatepromotext":{
-    "message":"Pokud poskytnete dar v podobě libovolné částky, budu si toho nesmírně vážit!"
-  },
-  "titelblur":{
-    "message":"Rozostřit zbytek"
-  },
-  "desdynamicraindrops":{
-    "message":"déšť"
-  },
-  "desalllightsoff":{
-    "message":"Kliknutí na tlačítko lampy zapne/vypne světla ve všech panelech"
-  },
-  "optionecosaversaved":{
-    "message":"Vteřiny byly uloženy!"
-  },
-  "titelreader":{
-    "message":"Level Bar zatmavení"
-  },
-  "deseyen":{
-    "message":"Normální použití (světla se ztlumí když kliknete na ikonu lampy)"
-  },
-  "enjoyshare":{
-    "message":"Užijte si toto rozšíření a sdílet s ostatními, kdo myslíte, že to ocení."
-  },
-  "shortcuttotl":{
-    "message":"pro zapnutí/vypnutí světel"
-  },
-  "deseyea":{
-    "message":"Automaticky ztlumit pozadí při otevření stránek"
-  },
-  "basicsettings":{
-    "message":"Základy"
-  },
-  "hoveroptionapply":{
-    "message":"použít"
-  },
-  "reportbug":{
-    "message":"Náhlasit chybu."
-  },
-  "destime":{
-    "message":"Zhasínání světel mezi následující časy:"
-  },
-  "guide":{
-    "message":"TOtL Uvítací průvodce"
-  },
-  "deseyealist":{
-    "message":"Automaticky ztlumit pozadí následujících stránek:"
-  },
-  "titellikebutton":{
-    "message":"Tlačítka Libí a Nelíbí se mi"
-  },
-  "titelpageaction":{
-    "message":"Skrýt ikonu lampy"
-  },
-  "friendlyremember":{
-    "message":"Přátelská upomínka..."
-  },
-  "desfadein":{
-    "message":"Zobrazit efekt zesvetlení."
-  },
-  "warning":{
-    "message":"Pozor!"
-  },
-  "deseyetimesaver":{
-    "message":"Pokud je stránka neaktivní (žádný vstup z myši/klávesnice) po čas specifikovaný níže, automaticky potemní."
-  },
-  "titelsuggestions":{
-    "message":"Návrhy"
-  },
-  "advancedoptions":{
-    "message":"Rozšířené možnosti"
-  },
-  "dessuggestions":{
-    "message":"Zobrazit návrhy webové stránky YouTube."
-  },
-  "titelflash":{
-    "message":"Detekce Flashe"
-  },
-  "desambilight":{
-    "message":"Zobrazit ambilight efekt kolem právě přehrávaného videa."
-  },
-  "productshare":{
-    "message":"Sdílet"
-  },
-  "addbutton":{
-    "message":"přidat"
-  },
-  "reportlist":{
-    "message":"(viz seznam)"
-  },
-  "desdynamicfishtank":{
-    "message":"Akvárium "
-  },
-  "longdonatetext":{
-    "message":"Opravdu bych ocenil, kdybyste mne finančně podpořili, abych mohl dále provozovat toto rozšíření. Ať už darujete dolar nebo sto, vaše podpora je neuvěřitelně nápomocná!"
-  },
-  "deshardflash":{
-    "message":"Zobrazit všechny Flash objekty, přeskočení URL filtr. To řeší problémy s některými video hráči jsou skryty, ale bude také zobrazovat reklamy."
-  },
-  "desfadeout":{
-    "message":"Zobrazit efekt ztmavení."
-  },
-  "optionwrongimg":{
-    "message":"Neplatný obrázkový soubor!"
-  },
-  "desvideoheadline":{
-    "message":"Zobrazit a invertovat barvy názvu videa."
-  },
-  "desrememberpage":{
-    "message":"Nezobrazovat upomínku"
-  },
-  "description":{
-    "message":"The entire page will be fading to dark, so you can watch the videos as if you were in the cinema. Works for YouTube™ and Beyond."
-  },
-  "titelviewcount":{
-    "message":"Počet zobrazení"
-  },
-  "titelopacity":{
-    "message":"Průhlednost"
-  },
-  "titelqualityyoutube":{
-    "message":"Automaticky nastavte kvalitu videa na YouTube."
-  },
-  "shortcutopacity":{
-    "message":"pro obnovení nastavení potemnění (neprůhlednosti)"
-  },
-  "desambilightrangeblurradius":{
-    "message":"Nižší hodnoty zostří stín, vyšší hodnoty jej rozmažou."
-  },
-  "titeladdvideobutton":{
-    "message":"Přidat tlačítko"
-  },
-  "titelpassword":{
-    "message":"Ochrana heslem"
-  },
-  "titeldownloadupgrade":{
-    "message":"Inovace přidává podporu pro zaměření vybrané obrazy a zobrazí galerie obrázků na webu."
-  },
-  "titelfadeout":{
-    "message":"Ztmavit"
-  },
-  "eastereggsquestion":{
-    "message":"Máte rádi skutečné kino?"
-  },
-  "bottom":{
-    "message":"dole"
-  },
-  "dessaver":{
-    "message":"Spořič obrazovky"
-  },
-  "hoveroptiondyn5":{
-    "message":"s létáním"
-  },
-  "pagestillloading":{
-    "message":"Stránka stále načítá?"
-  },
-  "titeloff":{
-    "message":"Vypnout"
-  },
-  "titeleastereggs":{
-    "message":"Easter Eggy"
-  },
-  "textfoot":{
-    "message":"Tento software je licencován jako CreativeCommons GNU GPL. Kopie této licence je dostupná na"
-  },
-  "left":{
-    "message":"vlevo"
-  },
-  "titelnighttheme":{
-    "message":"Noční režim"
-  },
-  "desnighttheme":{
-    "message":"Zobrazit tlačítko Přepnout noc pod webovou stránku, aby stránky tmavé nebo světlé."
-  },
-  "nightoptions":{
-    "message":"Noční režim"
-  },
-  "desnightonly":{
-    "message":"Zobrazit nočního režimu pouze následující servery:"
-  },
-  "desnightenabletheme":{
-    "message":"Když otevřete novou stránku přejít na noční režim automatické."
-  },
-  "titellampregular":{
-    "message":"Vždy zobrazovat ikonku lampy na liště"
-  },
-  "titellampvideo":{
-    "message":"Zobrazit ikonku lampy, jen když je detekovám přehrávač videa"
-  },
-  "upgradecontexttitle":{
-    "message":"Přidali jsme pro Vás nové funkce"
-  },
-  "upgradecontextmessage":{
-    "message":"Toto udělá vaše rozšíření ještě více Superkalifradžilistikexpijalidózní"
-  },
-  "upgradecontextitemta":{
-    "message":"Pohyb na kameru"
-  },
-  "upgradecontextitemma":{
-    "message":"zhasněte Vaší rukou"
-  },
-  "upgradecontextitemtb":{
-    "message":"Rozpoznávání řeči"
-  },
-  "upgradecontextitemmb":{
-    "message":"Mějte přesnější kontrolu nad webovou stránkou"
-  },
-  "upgradefbshare":{
-    "message":"Sdílení na Facebooku"
-  },
-  "upgradetwshare":{
-    "message":"Tweet"
-  },
-  "ratetitle":{
-    "message":"Prosím oznámkujte a zhodnoťte moje rozšíření"
-  },
-  "ratedes":{
-    "message":"A zpravte všechny o tomto skvělém rozšíření!"
-  },
-  "rateitema":{
-    "message":"Ohodnoť 5 hvězdami"
-  },
-  "titelreset":{
-    "message":"Resetovat nastavení"
-  },
-  "resetbrowserextension":{
-    "message":"Resetovat nastavení Turn Off the Lights"
-  },
-  "desautoplaydelay":{
-    "message":"Znovu rozjasnit pozadí po té co video skončí"
-  },
-  "desautoplaydelayend":{
-    "message":"sekund"
-  },
-  "motionoptions":{
-    "message":"Pohyb na kameru"
-  },
-  "desmotion":{
-    "message":"Povolit pohyb kamery"
-  },
-  "trymotion":{
-    "message":"Vyzkoušej to!"
-  },
-  "destrymotion":{
-    "message":"To je bezva a nejlepší ze všeho je, že to funguje všude. Dokonce i na YouTube, zpravodajském portálu atd."
-  },
-  "howworkmotion":{
-    "message":"Jak to funguje?"
-  },
-  "step1description":{
-    "message":"Zapnout funkci Pohyb na kameru"
-  },
-  "step2description":{
-    "message":"Přesuňte ruku (nebo pěst) shora dolů"
-  },
-  "step3description":{
-    "message":"Černá vrstva bude automaticky sjíždět dolů."
-  },
-  "desmotionChecklist":{
-    "message":"Seznam úkolů:"
-  },
-  "des1checkmotion":{
-    "message":"Ujistěte se, že Váš pokoj není temný a že má dostatek světla."
-  },
-  "des2checkmotion":{
-    "message":"Vaše kamera nesmí přijímat přímé světlo."
-  },
-  "des3checkmotion":{
-    "message":"Používáte přední kameru."
-  },
-  "titellinear":{
-    "message":"Lineární"
-  },
-  "titelcolora":{
-    "message":"Barva A:"
-  },
-  "titelcolorb":{
-    "message":"Barva B:",
-    "description":"Barva B:"
-  },
-  "speechoption":{
-    "message":"Rozpoznávání řeči"
-  },
-  "titelspeech":{
-    "message":"Řeč"
-  },
-  "desspeech":{
-    "message":"Pokud zapnete tuto možnost, pak můžete na lampu prohlížeče mluvit. A můžete říkat následující příkazy:"
-  },
-  "desspeech1command":{
-    "message":"zhasni světla"
-  },
-  "desspeech2command":{
-    "message":"rozsviť světla"
-  },
-  "desspeech3command":{
-    "message":"spusť video"
-  },
-  "desspeech4command":{
-    "message":"zastav video"
-  },
-  "desspeechdialect":{
-    "message":"Vyberte své nářečí:"
-  },
-  "desatmosvivid":{
-    "message":"Vivid atmosphere effects, require"
-  },
-  "help":{
-    "message":"Pomoc"
-  },
-  "about":{
-    "message":"O"
-  },
-  "desspeechonly":{
-    "message":"Aktivuj Rozpoznávání řeči pouze na následujících stránkách:"
-  },
-  "descammotiononly":{
-    "message":"Aktivuj Pohyb na kameru pouze na následujících stránkách:"
-  },
-  "titelcamera":{
-    "message":"Kamera"
-  },
-  "titelautoplaywhitelist":{
-    "message":"Seznam povolených"
-  },
-  "titelautoplayblacklist":{
-    "message":"Seznam zakázaných"
-  },
-  "titeldownloadthemeupgrade":{
-    "message":"Zkrášlete svůj prohlížeč tím, že do něj přidáte tmavý motiv. Motiv se projeví kolem okrajů prohlížeče."
-  },
-  "desbrowsersupport":{
-    "message":"Tento prohlížeč zatím tuto funkci nepodporuje. Ujistěte se, že máte na svém počítači nainstalovánu nejnovější verzi prohlížeče."
-  },
-  "titelsupportatmos":{
-    "message":"Podporuje pouze HTML5 <video> a YouTube HTML5 přehravač. Také používá GPU Vaší grafické karty."
-  },
-  "titelseeonline":{
-    "message":"Viz online pro další příklady"
-  },
-  "titelvideosample":{
-    "message":"Video ukázka"
-  },
-  "titelwebsite":{
-    "message":"Domovská stránka"
-  },
-  "titeldeveloper":{
-    "message":"Vývojář"
-  },
-  "titelrightsreserved":{
-    "message":"Některá práva vyhrazena."
-  },
-  "desbrowserextension":{
-    "message":"rozšíření prohlížeče"
-  },
-  "desapitext":{
-    "message":"Wiki API pro webové vývojáře"
-  },
-  "desbrowsertheme":{
-    "message":"vzhled prohlížeče"
-  },
-  "desproject":{
-    "message":"projekt"
-  },
-  "titelapideveloper":{
-    "message":"API Developer"
-  },
-  "titelwikiatmos":{
-    "message":"Wiki o funkci osvětlení atmosféry"
-  },
-  "sharemenusharetitle":{
-    "message":"Sdílet"
-  },
-  "sharemenuwelcomeguidetitle":{
-    "message":"Úvodní příručka"
-  },
-  "sharemenutellafriend":{
-    "message":"Povězte přátelům"
-  },
-  "sharemenusendatweet":{
-    "message":"Pošlete Tweet"
-  },
-  "sharemenupostonfacebook":{
-    "message":"Napsat na Facebook"
-  },
-  "sharemenupostongoogleplus":{
-    "message":"Napsat na Google+"
-  },
-  "sharemenuratetitle":{
-    "message":"Ohodnotit toto rozšíření"
-  },
-  "sharemenudonatetitle":{
-    "message":"Podpořte vývoj"
-  },
-  "titelautostop":{
-    "message":"AutoStop"
-  },
-  "desautostop":{
-    "message":"Zastavit automatické přehrávání videa po otevření stránky."
-  },
-  "areyouhappy":{
-    "message":"Jste spokojeni s Turn Off the Lights?"
-  },
-  "tellothers":{
-    "message":"Zajistěte, že Váš názor je brán na zřetel"
-  },
-  "nothanks":{
-    "message":"Ne, děkuji"
-  },
-  "writeareview":{
-    "message":"Napsat recenzi"
-  },
-  "desauroraplayer":{
-    "message":"Přehravač s osvícením okolí je také dostupný pro Váš počítač."
-  },
-  "downloadtheapp":{
-    "message":"Stáhnout aplikaci"
-  },
-  "titeldownloadupgradezoom":{
-    "message":"Pro pohodlnější čtení přibližuje/oddaluje obsah webu pomocí tlačítka ZOOM."
-  },
-  "titeldownloadupgradepropermenubar":{
-    "message":"Vrací černý panel menu na stránce Google."
-  },
-  "titeldownloadupgradefinancetoolbar":{
-    "message":"This shows you the real time stock market information."
-  },
-  "titelnightmodeposition":{
-    "message":"Změnit pozici"
-  },
-  "nmtopleft":{
-    "message":"Nahoře vlevo"
-  },
-  "nmtopright":{
-    "message":"Nahoře vpravo"
-  },
-  "nmbottomright":{
-    "message":"Dole vpravo"
-  },
-  "nmbottomleft":{
-    "message":"Dole vlevo"
-  },
-  "nmcustom":{
-    "message":"Custom (click, hold and move the switch to the desired screen location)"
-  },
-  "desnighthover":{
-    "message":"Shows a transparent switch on the web page"
-  },
-  "titelnightmodewhitelist":{
-    "message":"Seznam povolených"
-  },
-  "titelnightmodeblacklist":{
-    "message":"Seznam zakázaných"
-  },
-  "desautostoponly":{
-    "message":"Aktivovat zastavení automatického přehrávání videa pouze na těchto stránkách:"
-  },
-  "titelautostopwhitelist":{
-    "message":"Seznam povolených"
-  },
-  "titelautostopblacklist":{
-    "message":"Seznam zakázaných"
-  },
-  "desnightactivetime":{
-    "message":"The switch will be visible between the following times:"
-  },
-  "deslampandnightmode":{
-    "message":"Kliknutím na tlačítko se šedou lampičkou aktivujete noční režim"
-  },
-  "titeleyewhitelist":{
-    "message":"Seznam povolených"
-  },
-  "titeleyeblacklist":{
-    "message":"Seznam zakázaných"
-  },
-  "desspeech5command":{
-    "message":"browser lamp"
-  },
-  "html5andyoutube":{
-    "message":"HTML5 a YouTube™ video"
-  },
-  "flashembedobject":{
-    "message":"Podporuje: <object>, <embed>, <applet>, <iframe>."
-  },
-  "titelnightmodebck":{
-    "message":"Background color"
-  },
-  "titelnightmodetxt":{
-    "message":"Text color"
-  },
-  "desdynamicsmoke":{
-    "message":"Kouř"
-  },
-  "desdynamicdotscolor":{
-    "message":"Barevné tečky"
-  },
-  "desdynamicstorm":{
-    "message":"Bouře",
-    "description":"Bouře"
-  },
-  "desdynamictriangulation":{
-    "message":"Triangulation"
-  },
-  "desdynamicstars":{
-    "message":"Hvězdy"
-  },
-  "desmobileapp":{
-    "message":"Turn Off the Lights is also available for your mobile device."
-  },
-  "titel360youtube":{
-    "message":"Shows the full 360 degrees YouTube video in one frame"
-  },
-  "titelvideotool":{
-    "message":"Video Toolbar"
-  },
-  "desvideotool":{
-    "message":"Show the toolbar below your screen to customize the current video player"
-  },
-  "vtoolfullscreen":{
-    "message":"A button to set the video player to the full window size"
-  },
-  "vtoolfilter":{
-    "message":"A button to add a filter in the current video player"
-  },
-  "vtoolreplay":{
-    "message":"A button to replay the current video player"
-  },
-  "vtoolscreenshot":{
-    "message":"A button to take a screenshot of the current video player"
-  },
-  "vtoolalign":{
-    "message":"A button to center the video player in your browser window"
-  },
-  "titelvideotoolgrayscale":{
-    "message":"stupně šedi"
-  },
-  "titelvideotoolsepia":{
-    "message":"sépie"
-  },
-  "titelvideotoolinvert":{
-    "message":"invertovat barvy"
-  },
-  "titelvideotoolcontrast":{
-    "message":"kontrast"
-  },
-  "titelvideotoolsaturate":{
-    "message":"sytost"
-  },
-  "titelvideotoolhueroration":{
-    "message":"hue rotation"
-  },
-  "titelvideotoolbrightness":{
-    "message":"jas"
-  },
-  "titelvideotoolnormal":{
-    "message":"normální"
-  },
-  "titelvideotoollike":{
-    "message":"Like"
-  },
-  "titelvideotoolsubscribe":{
-    "message":"Přihlásit se"
-  },
-  "titelvideotoolrepeat":{
-    "message":"Opakovat"
-  },
-  "titelvideotoolfilter":{
-    "message":"Filtr"
-  },
-  "titelvideotoolfullwindow":{
-    "message":"Celé okno"
-  },
-  "titelvideotoolscreenshot":{
-    "message":"Take a screenshot"
-  },
-  "titelreflection":{
-    "message":"Odraz"
-  },
-  "desreflection":{
-    "message":"Zobrazit efekt odrazu na všech videích"
-  },
-  "desvideotoolonly":{
-    "message":"Activate the Video Tool Bar only on the following site(s):"
-  },
-  "titelvideotoolwhitelist":{
-    "message":"Seznam povolených"
-  },
-  "titelvideotoolblacklist":{
-    "message":"Seznam zakázaných"
-  },
-  "titelnightmodehyperlink":{
-    "message":"Hypertextový odkaz",
-    "description":"Hypertextový odkaz"
-  },
-  "titelblock60fps":{
-    "message":"Blokovat 60fps",
-    "description":"Blokovat 60fps"
-  },
-  "titelvolume":{
-    "message":"Video Volume Slider"
-  },
-  "desvideovolume":{
-    "message":"Control the volume of the current video player with a mouse scroll"
-  },
-  "desvideovolumecolor":{
-    "message":"Color of the slider"
-  },
-  "desvolumelabel":{
-    "message":"Show volume label"
-  },
-  "desvolumesteps":{
-    "message":"The number of levels for each 360° wheel scroll"
-  },
-  "sharetexta":{
-    "message":"Get this Cool Turn Off the Lights Browser Extension"
-  },
-  "sharetextb":{
-    "message":"Hey, This is amazing. I just tried today this Turn Off the Lights Browser extension "
-  },
-  "sharetextc":{
-    "message":"The Best and Amazing Turn Off the Lights Browser extension"
-  },
-  "sharetextd":{
-    "message":"Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"
-  },
-  "titelsharethis":{
-    "message":"Share this:"
-  },
-  "titellampchoose":{
-    "message":"Choose your favorite lamp style"
-  },
-  "titeldoesntwork":{
-    "message":"Turn Off the Lights doesn't work on this web page. Please try another page."
-  },
-  "titelpopupvideo":{
-    "message":"YouTube"
-  },
-  "titelpopupwelcomeguide":{
-    "message":"Úvodní příručka"
-  },
-  "titelpopupsupport":{
-    "message":"Podpora"
-  },
-  "titelpopupoptions":{
-    "message":"Volby"
-  },
-  "titelpopupratestars":{
-    "message":"Ohodnoť 5 hvězdami"
-  },
-  "titelvisenable":{
-    "message":"Enable/disable the Audio Visualization"
-  },
-  "titelvischoose":{
-    "message":"Choose your Audio Visualization"
-  },
-  "titelvisblocks":{
-    "message":"Bloky"
-  },
-  "titelvisfrequency":{
-    "message":"Frequency"
-  },
-  "titelvistunnel":{
-    "message":"Music Tunnel"
-  },
-  "titelvisualization":{
-    "message":"Audio Visualization"
-  },
-  "desvisopacity":{
-    "message":"The opacity value of the audio visualization background"
-  },
-  "vtoolvisualization":{
-    "message":"A button for displaying the audio-visualization for the current video player"
-  },
-  "desvideotoolcolor":{
-    "message":"Color of the toolbar"
-  },
-  "titelhovervideo":{
-    "message":"Video Hover"
-  },
-  "deshovervideo":{
-    "message":"Hover your mouse on the video element for certain number of seconds, after which the webpage automatically dims"
-  },
-  "promotitle":{
-    "message":"Tip of the day"
-  },
-  "desremyoutube":{
-    "message":"Odebírat na YouTube"
-  },
-  "desremfacebook":{
-    "message":"Recommend this on Facebook"
-  },
-  "titleuserprofile":{
-    "message":"Below, choose the settings you want to use when clicking the gray lamp button. Each profile has its own features."
-  },
-  "titleregularuser":{
-    "message":"Video Lover"
-  },
-  "titlenightowl":{
-    "message":"Night Owl"
-  },
-  "titlescreenprotection":{
-    "message":"Ochrana očí"
-  },
-  "desregularuser":{
-    "message":"This is default and the regular setting for new users. When clicking the gray lamp button, this style will be applied to the current web page."
-  },
-  "desnightowl":{
-    "message":"One click converts the page directly into a night theme with a clickable hyperlink. Click it again to return to normal view. Click the lamp button again to disable this feature."
-  },
-  "desscreenprotection":{
-    "message":"One click shades the page to a soothing orange color to decrease eye strain on all open tabs. Click the lamp button again to disable this feature."
-  },
-  "titleprofilevideofocus":{
-    "message":"Video focus is enabled"
-  },
-  "titleprofilenovideofocus":{
-    "message":"Video focus is disabled"
-  },
-  "titleprofilealwaysscreentab":{
-    "message":"Always enabled for all open tabs"
-  },
-  "titleprofilescreenclick":{
-    "message":"Povolit kliknutí na odkazy, když je obrazovka ztmavená"
-  },
-  "titleprofilesubmit":{
-    "message":"Choose this settings"
-  },
-  "titlelearnmore":{
-    "message":"Learn more"
-  },
-  "optionprofilesaved":{
-    "message":"New lamp action is saved successfully!"
-  },
-  "desaplay":{
-    "message":"play"
-  },
-  "desapause":{
-    "message":"pause"
-  },
-  "desastop":{
-    "message":"stop"
-  }
+    "pagehelp": {"message": "pomoc"},
+    "titelimage": {"message": "Obrázek pozadí"},
+    "shortcutalllights": {"message": "k zapnutí/vypnutí světel pro všechny otevřené záložky"},
+    "lastchecked": {"message": "Kontrola nejnovější verze proběhla"},
+    "visualeffects": {"message": "Vizuální efekty"},
+    "titelshortcutlight": {"message": "Klávesová zkratka"},
+    "titledonatebutton": {"message": "Přispět"},
+    "titellikebar": {"message": "Tlačítka Líbí se"},
+    "desmousespotlightt": {"message": "Povolit kliknutí na odkazy, když je obrazovka ztmavená"},
+    "desmousespotlights": {"message": "Povolit ztmavení obrazovky, ale s možností kliknutí na hypertextové odkazy"},
+    "desambilight4color": {"message": "4 vybrané barvy okolo videa:"},
+    "lockentername": {"message": "Prosím vložte své heslo"},
+    "desnoflash": {"message": "Nepoužívejte tuto funkci."},
+    "desdynamicblocks": {"message": "Bloky"},
+    "titeleye": {"message": "Ochrana očí"},
+    "titelcinemaontop": {"message": "Mód kina: zobrazuje vrstvu 'ztmavení' jen na povrchu okna"},
+    "desmousespotlightc": {"message": "Jsou li světla vypnuta, můžete zvolit oblast pro zaměření položky."},
+    "titelrememberpage": {"message": "Stránka připomenutí"},
+    "desmousespotlighta": {"message": "Jestliže jsou světla vypnuta, ukaž kolem kurzoru kruh světla"},
+    "desmousespotlighto": {"message": "Výchozí chování myši (zakáže nastavení myši níže)"},
+    "desplaylist": {"message": "Zobrazit YouTube playlist na webu YouTube."},
+    "desambilightfixcolor": {"message": "Plná barevná výplň:"},
+    "desuntil": {"message": "dokud"},
+    "desconfirmpassword": {"message": "Potvrdit heslo"},
+    "desautoplayonly": {"message": "Ztmavovat pouze následující video stránky:"},
+    "helpeyeprotection": {"message": "Povolení \"Ochrany očí\" automaticky zakáže funkci 'Automatické přehrávání'."},
+    "skipremember": {"message": "Přeskočit a otevřít stránku možností"},
+    "optiontimesaved": {"message": "Uložení času bylo úspěšné!"},
+    "titelvideoheadline": {"message": "Název videa"},
+    "translateme": {"message": "Pomoc s překladem"},
+    "despassword": {"message": "Vyžadovat zadání hesla před rozsvícením světla."},
+    "helpautoplay": {"message": "\"Ochrana očí\" je aktivní.  Pro použití funkcí níže vypněte \"Ochranu očí\"."},
+    "name": {"message": "Zhasnout světla"},
+    "changelog": {"message": "Změny ve verzích"},
+    "optionpagetitle": {"message": "Turn Off the Lights - Možnosti"},
+    "optionpasswordsaved": {"message": "Uložení hesla bylo úspěšné."},
+    "desdynamicspace": {"message": "Nekonečný vesmír"},
+    "deseastereggs": {"message": "Stisknutím tlačítka T přidáte do tmavé vrstvy divadelní oponu"},
+    "settings": {"message": "Nastavení"},
+    "desspotlightradius": {"message": "Průměr světlometu:"},
+    "titelsync": {"message": "Synchronizovat"},
+    "right": {"message": "vpravo"},
+    "titeldynamic": {"message": "Dynamické pozadí"},
+    "deslikebutton": {"message": "Zobrazit YouTube tlačítka líbí a nelíbí se mi pro tohle video."},
+    "titelmouse": {"message": "Myš"},
+    "titellessmore": {"message": "Zobrazit méně"},
+    "desshortcutlight": {"message": "Povolit klávesové zkratky uvedené níže."},
+    "titelinfobar": {"message": "Informační panel"},
+    "descontextmenus": {"message": "Zobrazit kontextové menu k zaměření položky."},
+    "titelcontextmenus": {"message": "Kontextové menu"},
+    "titelplaylist": {"message": "Seznam stop"},
+    "desatmosphereonly": {"message": "Používat funkci atmosférického osvětlení pouze na následujících stránkách:"},
+    "recflash": {"message": "Doporučeno"},
+    "desenterpassword": {"message": "Své heslo zadejte do políčka níže:"},
+    "titelblurradius": {"message": "Poloměr rozostření:"},
+    "version": {"message": "Verze"},
+    "shortcutdark": {"message": "pro ztmavení obrazovky (zvýšení krytí)"},
+    "dessharebutton": {"message": "Zobrazit YouTube tlačítka sdílení pro tohle video."},
+    "shortcutbright": {"message": "pro zesvětlení obrazovky (snížení krytí)"},
+    "titelalllightsoff": {"message": "Všechny otevřené karty"},
+    "desreadera": {"message": "Vždy zobrazit level bar zatmavení, když světla zhasínají."},
+    "rememberrate": {"message": "Ohodnoďte"},
+    "desautoplay": {"message": "Automaticky ztmavit pozadí po kliknutí na tlačítko play a opačně."},
+    "titelscreen": {"message": "Obrazovka"},
+    "desflash": {"message": "Zobrazit všechny objekty Flash."},
+    "titelhead": {"message": "Kanál"},
+    "pageatitle": {"message": "Zhasněte světla"},
+    "desaddvideobutton": {"message": "Zobrazit tlačítko pro přidání v tomto videu YouTube."},
+    "shortcuteyeprotection": {"message": "pro aktivaci/deaktivaci funkce ochrany očí"},
+    "titelfadein": {"message": "Zesvětlit"},
+    "desreadern": {"message": "Nikdy nezobrazovat ukazatel hodnoty zatmavení."},
+    "titelmaxqualityyoutube": {"message": "Automaticky nastavit na toto rozlišení:"},
+    "desambilightrangespreadradius": {"message": "Kladné hodnoty zvětší intenzitu stínu, záporné ji sníží."},
+    "titelon": {"message": "Zapnout"},
+    "videotitle": {"message": "Zaměřit toto video"},
+    "warningtextambilight": {"message": "Když není možné získat data videa kvůli bezpečnostním pravidlům stránek, bude místo toho použita vybraná barva."},
+    "desdynamiccloud": {"message": "Animované mraky"},
+    "desconfirmtimesaver": {"message": "Potvrďte čas spořiče obrazovky"},
+    "deslikebar": {"message": "Ukázat líbí/nelíbí baru podle videa na YouTube."},
+    "titelautoplay": {"message": "Automatické přehrávání"},
+    "top": {"message": "nahoře"},
+    "titelspreadradius": {"message": "Poloměr rozpětí:"},
+    "installadblocker": {"message": "Nechcete-li vidět reklamy, použijte rozšíření typu adblocker."},
+    "titelsharebutton": {"message": "Tlačítko sdílení"},
+    "titelcolor": {"message": "Barva"},
+    "titeldownloadbutton": {"message": "Stáhnout aktualizaci"},
+    "pagetitle": {"message": "Ztmavit tuto stránku"},
+    "titelambilight": {"message": "Ambilight."},
+    "titelshowmore": {"message": "Ukázat více"},
+    "desviewcount": {"message": "Zobrazit počet zobrazení tohoto videa."},
+    "titelautowidthyoutube": {"message": "Automaticky nastaví přehrávač YouTube na větší velikost."},
+    "desconfirmtime": {"message": "Potvrďte čas."},
+    "titelupgrade": {"message": "Aktualizace"},
+    "lockwrongpassword": {"message": "Nesprávné heslo, zkuste to prosím znovu."},
+    "titelsyncbrowser": {"message": "Synchronizujte nastavení rozšíření s jiným prohlížečem."},
+    "deletebutton": {"message": "Smazat"},
+    "eyedivon": {"message": "ZAP"},
+    "eyedivoff": {"message": "VYP"},
+    "deshead": {"message": "Zobrazit YouTube Channel bar nebo jméno."},
+    "shortcutsavingopacity": {"message": "Chcete-li uložit tuto hodnotu krytí"},
+    "desinfobar": {"message": "Zobrazit info popis o videu."},
+    "titellamp": {"message": "Žárovka"},
+    "desambilightvarcolor": {"message": "Vzít barvu z videa."},
+    "showremember": {"message": "Nezobrazovat tuto upomínku při příštím otevření nastavení"},
+    "donatepromotext": {"message": "Pokud poskytnete dar v podobě libovolné částky, budu si toho nesmírně vážit!"},
+    "titelblur": {"message": "Rozostřit zbytek"},
+    "desdynamicraindrops": {"message": "déšť"},
+    "desalllightsoff": {"message": "Kliknutí na tlačítko lampy zapne/vypne světla ve všech panelech"},
+    "optionecosaversaved": {"message": "Vteřiny byly uloženy!"},
+    "titelreader": {"message": "Level Bar zatmavení"},
+    "deseyen": {"message": "Normální použití (světla se ztlumí když kliknete na ikonu lampy)"},
+    "enjoyshare": {"message": "Užijte si toto rozšíření a sdílet s ostatními, kdo myslíte, že to ocení."},
+    "shortcuttotl": {"message": "pro zapnutí/vypnutí světel"},
+    "deseyea": {"message": "Automaticky ztlumit pozadí při otevření stránek"},
+    "basicsettings": {"message": "Základy"},
+    "hoveroptionapply": {"message": "použít"},
+    "reportbug": {"message": "Náhlasit chybu."},
+    "destime": {"message": "Zhasínání světel mezi následující časy:"},
+    "guide": {"message": "TOtL Uvítací průvodce"},
+    "deseyealist": {"message": "Automaticky ztlumit pozadí následujících stránek:"},
+    "titellikebutton": {"message": "Tlačítka Libí a Nelíbí se mi"},
+    "titelpageaction": {"message": "Skrýt ikonu lampy"},
+    "friendlyremember": {"message": "Přátelská upomínka..."},
+    "desfadein": {"message": "Zobrazit efekt zesvetlení."},
+    "warning": {"message": "Pozor!"},
+    "deseyetimesaver": {"message": "Pokud je stránka neaktivní (žádný vstup z myši/klávesnice) po čas specifikovaný níže, automaticky potemní."},
+    "titelsuggestions": {"message": "Návrhy"},
+    "advancedoptions": {"message": "Rozšířené možnosti"},
+    "dessuggestions": {"message": "Zobrazit návrhy webové stránky YouTube."},
+    "titelflash": {"message": "Detekce Flashe"},
+    "desambilight": {"message": "Zobrazit ambilight efekt kolem právě přehrávaného videa."},
+    "productshare": {"message": "Sdílet"},
+    "addbutton": {"message": "přidat"},
+    "reportlist": {"message": "(viz seznam)"},
+    "desdynamicfishtank": {"message": "Akvárium "},
+    "longdonatetext": {"message": "Opravdu bych ocenil, kdybyste mne finančně podpořili, abych mohl dále provozovat toto rozšíření. Ať už darujete dolar nebo sto, vaše podpora je neuvěřitelně nápomocná!"},
+    "deshardflash": {"message": "Zobrazit všechny Flash objekty, přeskočení URL filtr. To řeší problémy s některými video hráči jsou skryty, ale bude také zobrazovat reklamy."},
+    "desfadeout": {"message": "Zobrazit efekt ztmavení."},
+    "optionwrongimg": {"message": "Neplatný obrázkový soubor!"},
+    "desvideoheadline": {"message": "Zobrazit a invertovat barvy názvu videa."},
+    "desrememberpage": {"message": "Nezobrazovat upomínku"},
+    "description": {"message": "Celá stránka se ztmaví, abyste mohli sledovat videa jako v kině. Funguje pro YouTube™ a Beyond videa."},
+    "titelviewcount": {"message": "Počet zobrazení"},
+    "titelopacity": {"message": "Průhlednost"},
+    "titelqualityyoutube": {"message": "Automaticky nastavte kvalitu videa na YouTube."},
+    "shortcutopacity": {"message": "pro obnovení nastavení potemnění (neprůhlednosti)"},
+    "desambilightrangeblurradius": {"message": "Nižší hodnoty zostří stín, vyšší hodnoty jej rozmažou."},
+    "titeladdvideobutton": {"message": "Přidat tlačítko"},
+    "titelpassword": {"message": "Ochrana heslem"},
+    "titeldownloadupgrade": {"message": "Inovace přidává podporu pro zaměření vybrané obrazy a zobrazí galerie obrázků na webu."},
+    "titelfadeout": {"message": "Ztmavit"},
+    "eastereggsquestion": {"message": "Máte rádi skutečné kino?"},
+    "bottom": {"message": "dole"},
+    "dessaver": {"message": "Spořič obrazovky"},
+    "hoveroptiondyn5": {"message": "s létáním"},
+    "pagestillloading": {"message": "Stránka stále načítá?"},
+    "titeloff": {"message": "Vypnout"},
+    "titeleastereggs": {"message": "Easter Eggy"},
+    "textfoot": {"message": "Tento software je licencován jako CreativeCommons GNU GPL. Kopie této licence je dostupná na"},
+    "left": {"message": "vlevo"},
+    "titelnighttheme": {"message": "Noční režim"},
+    "desnighttheme": {"message": "Zobrazit tlačítko Přepnout noc pod webovou stránku, aby stránky tmavé nebo světlé."},
+    "nightoptions": {"message": "Noční režim"},
+    "desnightonly": {"message": "Zobrazit nočního režimu pouze následující servery:"},
+    "desnightenabletheme": {"message": "Když otevřete novou stránku přejít na noční režim automatické."},
+    "titellampregular": {"message": "Vždy zobrazovat ikonku lampy na liště"},
+    "titellampvideo": {"message": "Zobrazit ikonku lampy, jen když je detekovám přehrávač videa"},
+    "upgradecontexttitle": {"message": "Přidali jsme pro Vás nové funkce"},
+    "upgradecontextmessage": {"message": "Toto udělá vaše rozšíření ještě více Superkalifradžilistikexpijalidózní"},
+    "upgradecontextitemta": {"message": "Pohyb na kameru"},
+    "upgradecontextitemma": {"message": "zhasněte Vaší rukou"},
+    "upgradecontextitemtb": {"message": "Rozpoznávání řeči"},
+    "upgradecontextitemmb": {"message": "Mějte přesnější kontrolu nad webovou stránkou"},
+    "upgradefbshare": {"message": "Sdílení na Facebooku"},
+    "upgradetwshare": {"message": "Tweet"},
+    "ratetitle": {"message": "Prosím oznámkujte a zhodnoťte moje rozšíření"},
+    "ratedes": {"message": "A zpravte všechny o tomto skvělém rozšíření!"},
+    "rateitema": {"message": "Ohodnoť 5 hvězdami"},
+    "titelreset": {"message": "Resetovat nastavení"},
+    "resetbrowserextension": {"message": "Resetovat nastavení Turn Off the Lights"},
+    "desautoplaydelay": {"message": "Znovu rozjasnit pozadí po té co video skončí"},
+    "desautoplaydelayend": {"message": "sekund"},
+    "motionoptions": {"message": "Pohyb na kameru"},
+    "desmotion": {"message": "Povolit pohyb kamery"},
+    "trymotion": {"message": "Vyzkoušej to!"},
+    "destrymotion": {"message": "To je bezva a nejlepší ze všeho je, že to funguje všude. Dokonce i na YouTube, zpravodajském portálu atd."},
+    "howworkmotion": {"message": "Jak to funguje?"},
+    "step1description": {"message": "Zapnout funkci Pohyb na kameru"},
+    "step2description": {"message": "Přesuňte ruku (nebo pěst) shora dolů"},
+    "step3description": {"message": "Černá vrstva bude automaticky sjíždět dolů."},
+    "desmotionChecklist": {"message": "Seznam úkolů:"},
+    "des1checkmotion": {"message": "Ujistěte se, že Váš pokoj není temný a že má dostatek světla."},
+    "des2checkmotion": {"message": "Vaše kamera nesmí přijímat přímé světlo."},
+    "des3checkmotion": {"message": "Používáte přední kameru."},
+    "titellinear": {"message": "Lineární"},
+    "titelcolora": {"message": "Barva A:"},
+    "titelcolorb": {"message": "Barva B:"},
+    "speechoption": {"message": "Rozpoznávání řeči"},
+    "titelspeech": {"message": "Řeč"},
+    "desspeech": {"message": "Pokud zapnete tuto možnost, pak můžete na lampu prohlížeče mluvit. A můžete říkat následující příkazy:"},
+    "desspeech1command": {"message": "zhasni světla"},
+    "desspeech2command": {"message": "rozsviť světla"},
+    "desspeech3command": {"message": "spusť video"},
+    "desspeech4command": {"message": "zastav video"},
+    "desspeechdialect": {"message": "Vyberte své nářečí:"},
+    "desatmosvivid": {"message": "Efekt rámového osvětlení, požaduje"},
+    "help": {"message": "Pomoc"},
+    "about": {"message": "O"},
+    "desspeechonly": {"message": "Aktivuj Rozpoznávání řeči pouze na následujících stránkách:"},
+    "descammotiononly": {"message": "Aktivuj Pohyb na kameru pouze na následujících stránkách:"},
+    "titelcamera": {"message": "Kamera"},
+    "titelautoplaywhitelist": {"message": "Seznam povolených"},
+    "titelautoplayblacklist": {"message": "Seznam zakázaných"},
+    "titeldownloadthemeupgrade": {"message": "Zkrášlete svůj prohlížeč tím, že do něj přidáte tmavý motiv. Motiv se projeví kolem okrajů prohlížeče."},
+    "desbrowsersupport": {"message": "Tento prohlížeč zatím tuto funkci nepodporuje. Ujistěte se, že máte na svém počítači nainstalovánu nejnovější verzi prohlížeče."},
+    "titelsupportatmos": {"message": "Podporuje pouze HTML5 <video> a YouTube HTML5 přehravač. Také používá GPU Vaší grafické karty."},
+    "titelseeonline": {"message": "Viz online pro další příklady"},
+    "titelvideosample": {"message": "Video ukázka"},
+    "titelwebsite": {"message": "Domovská stránka"},
+    "titeldeveloper": {"message": "Vývojář"},
+    "titelrightsreserved": {"message": "Některá práva vyhrazena."},
+    "desbrowserextension": {"message": "rozšíření prohlížeče"},
+    "desapitext": {"message": "Wiki API pro webové vývojáře"},
+    "desbrowsertheme": {"message": "vzhled prohlížeče"},
+    "desproject": {"message": "projekt"},
+    "titelapideveloper": {"message": "API Developer"},
+    "titelwikiatmos": {"message": "Wiki o funkci osvětlení atmosféry"},
+    "sharemenusharetitle": {"message": "Sdílet"},
+    "sharemenuwelcomeguidetitle": {"message": "Úvodní příručka"},
+    "sharemenutellafriend": {"message": "Povězte přátelům"},
+    "sharemenusendatweet": {"message": "Pošlete Tweet"},
+    "sharemenupostonfacebook": {"message": "Napsat na Facebook"},
+    "sharemenupostongoogleplus": {"message": "Napsat na Google+"},
+    "sharemenuratetitle": {"message": "Ohodnotit toto rozšíření"},
+    "sharemenudonatetitle": {"message": "Podpořte vývoj"},
+    "titelautostop": {"message": "AutoStop"},
+    "desautostop": {"message": "Zastavit automatické přehrávání videa po otevření stránky."},
+    "areyouhappy": {"message": "Jste spokojeni s Turn Off the Lights?"},
+    "tellothers": {"message": "Zajistěte, že Váš názor je brán na zřetel"},
+    "nothanks": {"message": "Ne, děkuji"},
+    "writeareview": {"message": "Napsat recenzi"},
+    "desauroraplayer": {"message": "Přehravač s osvícením okolí je také dostupný pro Váš počítač."},
+    "downloadtheapp": {"message": "Stáhnout aplikaci"},
+    "titeldownloadupgradezoom": {"message": "Pro pohodlnější čtení přibližuje/oddaluje obsah webu pomocí tlačítka ZOOM."},
+    "titeldownloadupgradepropermenubar": {"message": "Vrací černý panel menu na stránce Google."},
+    "titeldownloadupgradefinancetoolbar": {"message": "Tato nástrojová lišta vám ukáže burzovní informace v reálném čase."},
+    "titelnightmodeposition": {"message": "Změnit pozici"},
+    "nmtopleft": {"message": "Nahoře vlevo"},
+    "nmtopright": {"message": "Nahoře vpravo"},
+    "nmbottomright": {"message": "Dole vpravo"},
+    "nmbottomleft": {"message": "Dole vlevo"},
+    "nmcustom": {"message": "Vlastní (klikněte, podržte a pohněte vaším požadovaným tlačítkem po obrazovce)"},
+    "desnighthover": {"message": "Zobrazí průhledný přepínač na webových stránkách"},
+    "titelnightmodewhitelist": {"message": "Seznam povolených"},
+    "titelnightmodeblacklist": {"message": "Seznam zakázaných"},
+    "desautostoponly": {"message": "Aktivovat zastavení automatického přehrávání videa pouze na těchto stránkách:"},
+    "titelautostopwhitelist": {"message": "Seznam povolených"},
+    "titelautostopblacklist": {"message": "Seznam zakázaných"},
+    "desnightactivetime": {"message": "Přepínač bude viditelný mezi následujícími časy:"},
+    "deslampandnightmode": {"message": "Kliknutím na tlačítko se šedou lampičkou aktivujete noční režim"},
+    "titeleyewhitelist": {"message": "Seznam povolených"},
+    "titeleyeblacklist": {"message": "Seznam zakázaných"},
+    "desspeech5command": {"message": "prohlížečová lampa"},
+    "html5andyoutube": {"message": "HTML5 a YouTube™ video"},
+    "flashembedobject": {"message": "Podporuje: <object>, <embed>, <applet>, <iframe>."},
+    "titelnightmodebck": {"message": "Barva pozadí"},
+    "titelnightmodetxt": {"message": "Barva textu"},
+    "desdynamicsmoke": {"message": "Kouř"},
+    "desdynamicdotscolor": {"message": "Barevné tečky"},
+    "desdynamicstorm": {"message": "Bouře"},
+    "desdynamictriangulation": {"message": "Triangulace"},
+    "desdynamicstars": {"message": "Hvězdy"},
+    "desmobileapp": {"message": "Turn Off the Lights je také dostupný na vašich mobilních zařízeních."},
+    "titel360youtube": {"message": "Zobrazí celé 360 stupňové YouTube video v jednom snímku"},
+    "titelvideotool": {"message": "Video Toolbar"},
+    "desvideotool": {"message": "Zobrazí nástrojovou lištu pod stránkou, který vám umožní přizpůsobení aktuálního přehrávače videa"},
+    "vtoolfullscreen": {"message": "Tlačítko, které nastaví video přehrávač na celou plochu obrazovky"},
+    "vtoolfilter": {"message": "Tlačítko přidávající filtry na aktuální video přehrávač"},
+    "vtoolreplay": {"message": "Tlačítko, které znovu přehraje aktuální video přehrávač"},
+    "vtoolscreenshot": {"message": "Tlačítko k získání snímku obrazovky aktuálního video přehrávače"},
+    "vtoolalign": {"message": "Tlačítko, které umístí video přehrávač do středu okna vašeho prohlížeče"},
+    "titelvideotoolgrayscale": {"message": "stupně šedi"},
+    "titelvideotoolsepia": {"message": "sépie"},
+    "titelvideotoolinvert": {"message": "invertovat barvy"},
+    "titelvideotoolcontrast": {"message": "kontrast"},
+    "titelvideotoolsaturate": {"message": "sytost"},
+    "titelvideotoolhueroration": {"message": "rotace odstínů"},
+    "titelvideotoolbrightness": {"message": "jas"},
+    "titelvideotoolnormal": {"message": "normální"},
+    "titelvideotoollike": {"message": "Líbí se"},
+    "titelvideotoolsubscribe": {"message": "Přihlásit se"},
+    "titelvideotoolrepeat": {"message": "Opakovat"},
+    "titelvideotoolfilter": {"message": "Filtr"},
+    "titelvideotoolfullwindow": {"message": "Celé okno"},
+    "titelvideotoolscreenshot": {"message": "Zachytit snímek obrazovky"},
+    "titelreflection": {"message": "Odraz"},
+    "desreflection": {"message": "Zobrazit efekt odrazu na všech videích"},
+    "desvideotoolonly": {"message": "Aktivovat Video nástrojovou lištu pouze na následujících stránkách:"},
+    "titelvideotoolwhitelist": {"message": "Seznam povolených"},
+    "titelvideotoolblacklist": {"message": "Seznam zakázaných"},
+    "titelnightmodehyperlink": {"message": "Hypertextový odkaz"},
+    "titelblock60fps": {"message": "Blokovat 60fps"},
+    "titelvolume": {"message": "Posuvník hlasitosti videa"},
+    "desvideovolume": {"message": "Ovládat hlasitost aktuálního video přehrávače pomocí kolečka myši"},
+    "desvideovolumecolor": {"message": "Barva posuvníku"},
+    "desvolumelabel": {"message": "Zobrazit nastavení hlasitosti"},
+    "desvolumesteps": {"message": "Počet úrovní pro každé otočení kolečka myši o 360°"},
+    "sharetexta": {"message": "Získejte rozšíření prohlížeče Turn Off the Lights"},
+    "sharetextb": {"message": "Hej, toto je úžasné, zrovna jsem vyzkoušel Turn Off the Light rozšíření prohlížeče "},
+    "sharetextc": {"message": "Nejlepší a úžasné rozšíření prohlížeče Turn Off the Lights"},
+    "sharetextd": {"message": "Turn Off the Lights rozšíření je nejlepší nástroj pro použití na YouTube. Stáhněte si ho a zkuste sami!"},
+    "titelsharethis": {"message": "Sdílejte toot:"},
+    "titellampchoose": {"message": "Vyberte si svůj oblíbený styl lampy"},
+    "titeldoesntwork": {"message": "Turn Off the Lights nefunguje na této stránce. Prosím zkuste jinou stránku."},
+    "titelpopupvideo": {"message": "YouTube"},
+    "titelpopupwelcomeguide": {"message": "Úvodní příručka"},
+    "titelpopupsupport": {"message": "Podpora"},
+    "titelpopupoptions": {"message": "Volby"},
+    "titelpopupratestars": {"message": "Ohodnoť 5 hvězdami"},
+    "titelvisenable": {"message": "Povolit/Zakázat vizualizaci audia"},
+    "titelvischoose": {"message": "Zvolte vaší vizualizaci audia"},
+    "titelvisblocks": {"message": "Bloky"},
+    "titelvisfrequency": {"message": "Frekvence"},
+    "titelvistunnel": {"message": "Hudební tunel"},
+    "titelvisualization": {"message": "Vizualizace audia"},
+    "desvisopacity": {"message": "Krytí pozadí vizualizace audia"},
+    "vtoolvisualization": {"message": "Tlačítko zobrazující vizualizaci audia aktuálního video přehrávače"},
+    "desvideotoolcolor": {"message": "Barva nástrojové lišty"},
+    "titelhovervideo": {"message": "Zobrazovat kursor při přehrávání videa"},
+    "deshovervideo": {"message": "Najeďte vaší myší na video pro určité množství sekund, po kterých stránka automaticky vybledne"},
+    "promotitle": {"message": "Tip dne"},
+    "desremyoutube": {"message": "Odebírat na YouTube"},
+    "desremfacebook": {"message": "Doporučte to na Facebooku"},
+    "titleuserprofile": {"message": "Pod tímto zvolte akci, která se má uskutečnit po kliknutí na tlačítko šedé lampy. Každý profil má své využití."},
+    "titleregularuser": {"message": "Video Lover"},
+    "titlenightowl": {"message": "Noční sova"},
+    "titlescreenprotection": {"message": "Ochrana očí"},
+    "desregularuser": {"message": "Toto je původní nastavení pro nové uživatele. Po kliknutí šedého tlačítka lampy se změní styl, který bude použit na aktuální webovou stránku."},
+    "desnightowl": {"message": "Jedním kliknutím se stránka přepne do nočního režimu s možností kliknout na hypertext odkazy. Po dalším zmáčknutí se stránka přepne zpátky. Zmáčkněte tlačítko znovu pro zrušení této funkce."},
+    "desscreenprotection": {"message": "Jedno kliknutí změní odstíny stránky do oranžové barvy ke snížení únavy očí ve všech otevžených záložkách. Zmáčkněte tlačítko lampy znovu pro zrušení této funkce."},
+    "titleprofilevideofocus": {"message": "Zaměření na video je povolené"},
+    "titleprofilenovideofocus": {"message": "Zaměření na video je zakázané"},
+    "titleprofilealwaysscreentab": {"message": "Vždy povolit pro všechny otevřené záložky"},
+    "titleprofilescreenclick": {"message": "Povolit kliknutí na odkazy, když je obrazovka ztmavená"},
+    "titleprofilesubmit": {"message": "Zvolit toto nastavení"},
+    "titlelearnmore": {"message": "Zjistit více"},
+    "optionprofilesaved": {"message": "Nová akce lampy je úspěšně uložena!"},
+    "desaplay": {"message": "přehrát"},
+    "desapause": {"message": "pozastavit"},
+    "desastop": {"message": "zastavit"},
+    "desvideozoom": {"message": "Přiblížit nebo oddálit video pomocí přibližovacího tlačítka"},
+    "titlevideoplayrate": {"message": "Rychlost přehrávání"},
+    "desplayrate": {"message": "Výchozí rychlost přehrávání"},
+    "desspeedtoolbar": {"message": "Zobrazit nástrojovou lištu přehrávání v aktuálním video přehrávači"},
+    "desatmosontotlmode": {"message": "Zobrazit efekt rámového osvětlení pouze, pokud je TOtL povolen"}
 }

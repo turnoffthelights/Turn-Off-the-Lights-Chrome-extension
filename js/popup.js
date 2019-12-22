@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2017 Stefan vd
+Copyright (C) 2019 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -29,16 +29,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id) { return document.getElementById(id); }
 
-document.addEventListener('DOMContentLoaded', function () {
-$("opendonate").addEventListener('click', function() {chrome.tabs.create({url: donatewebsite, active:true})});
-$("openrate").addEventListener('click', function() {chrome.tabs.create({url: writereview, active:true})});
-$("openoptions").addEventListener('click', function() {chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
+var darkmode;
 
-$("opensupport").addEventListener('click', function() {chrome.tabs.create({url: linksupport, active:true})});
-$("openwelcomeguide").addEventListener('click', function() {chrome.tabs.create({url: linkguide, active:true})});
-$("openyoutube").addEventListener('click', function() {chrome.tabs.create({url: linkyoutube, active:true})});
+document.addEventListener('DOMContentLoaded', function(){
+    chrome.storage.sync.get(['darkmode'], function(items){
+        darkmode = items['darkmode'];if(darkmode == null)darkmode = false; // default darkmode false
 
-$("opengoogleplus").addEventListener('click', function() {chrome.tabs.create({url: "https://plus.google.com/share?url="+turnoffthelightsproduct, active:true})});
-$("openfacebook").addEventListener('click', function() {chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, active:true})});
-$("opentwitter").addEventListener('click', function() {var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, active:true})});
+        // dark mode
+        if(darkmode == true){
+            document.body.className = 'dark';
+        }else{
+            document.body.className = 'light';
+        }
+    });
+$("opendonate").addEventListener('click', function(){chrome.tabs.create({url: donatewebsite, active:true})});
+$("openrate").addEventListener('click', function(){chrome.tabs.create({url: writereview, active:true})});
+$("openoptions").addEventListener('click', function(){chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
+
+$("opensupport").addEventListener('click', function(){chrome.tabs.create({url: linksupport, active:true})});
+$("openwelcomeguide").addEventListener('click', function(){chrome.tabs.create({url: linkguide, active:true})});
+$("openyoutube").addEventListener('click', function(){chrome.tabs.create({url: linkyoutube, active:true})});
+
+$("openemail").addEventListener('click', function(){var sturnoffthelightemail = "mailto:your@email.com?subject="+chrome.i18n.getMessage("sharetexta")+"&body="+chrome.i18n.getMessage("sharetextb")+" "+turnoffthelightsproduct;chrome.tabs.create({url: sturnoffthelightemail, active:true})});
+$("openfacebook").addEventListener('click', function(){chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, active:true})});
+$("opentwitter").addEventListener('click', function(){var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, active:true})});
 });

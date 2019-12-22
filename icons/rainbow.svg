@@ -1,1 +1,35 @@
-<?xml version="1.0" standalone="no"?><!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg id="colors%20mini%20for%20page%20action%2019px%20TOFtL_ICON512x512.fw%202-Page%201" viewBox="0 0 512 512" style="background-color:#ffffff00" version="1.1"	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"	x="0px" y="0px" width="512px" height="512px">	<defs>		<linearGradient id="gradient1" x1="50%" y1="100.2174%" x2="50%" y2="1.5491%">			<stop stop-color="#750087" stop-opacity="1" offset="0%"/>			<stop stop-color="#852c93" stop-opacity="1" offset="16.1616%"/>			<stop stop-color="#0044ff" stop-opacity="1" offset="16.6667%"/>			<stop stop-color="#0044ff" stop-opacity="1" offset="33.8384%"/>			<stop stop-color="#00811f" stop-opacity="1" offset="34.3434%"/>			<stop stop-color="#00811f" stop-opacity="1" offset="51%"/>			<stop stop-color="#ffef00" stop-opacity="1" offset="51.0101%"/>			<stop stop-color="#ffef00" stop-opacity="1" offset="69%"/>			<stop stop-color="#ff8c00" stop-opacity="1" offset="69.1919%"/>			<stop stop-color="#ff8c00" stop-opacity="1" offset="86.3636%"/>			<stop stop-color="#e70000" stop-opacity="1" offset="86.8687%"/>			<stop stop-color="#e70000" stop-opacity="1" offset="96.9697%"/>			<stop stop-color="#e70000" stop-opacity="1" offset="100%"/>		</linearGradient>	</defs>	<path d="M 161.88 362.8504 L 161.88 380.9606 L 350.12 380.9606 L 350.12 362.8504 L 161.88 362.8504 ZM 161.88 446.1574 L 161.88 464.2677 L 183.6 464.27 L 183.6 486 L 328.4 486 L 328.4 464.27 L 350.12 464.2677 L 350.12 446.1574 L 161.88 446.1574 ZM 161.88 402.6929 L 161.88 420.8031 L 350.12 420.8031 L 350.12 402.6929 L 161.88 402.6929 ZM 75 185.3701 C 75 273.3889 156.0352 344.7401 256 344.7401 C 355.9648 344.7401 437 273.3889 437 185.3701 C 437 97.3513 355.9648 26 256 26 C 156.0352 26 75 97.3513 75 185.3701 Z" fill="url(#gradient1)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="colors_x25_20mini_x25_20for_x25_20page_x25_20action_x25_2019px_x25_20TOFtL_x5F_ICON512x512.fw_x25_202-Page_x25_201"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+	 style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0.5" y1="510.9978" x2="0.5" y2="511.9845" gradientTransform="matrix(362 0 0 -460 75 235546)">
+	<stop  offset="0" style="stop-color:#750087"/>
+	<stop  offset="0.1616" style="stop-color:#852C93"/>
+	<stop  offset="0.1667" style="stop-color:#0044FF"/>
+	<stop  offset="0.3384" style="stop-color:#0044FF"/>
+	<stop  offset="0.3434" style="stop-color:#00811F"/>
+	<stop  offset="0.51" style="stop-color:#00811F"/>
+	<stop  offset="0.5101" style="stop-color:#FFEF00"/>
+	<stop  offset="0.69" style="stop-color:#FFEF00"/>
+	<stop  offset="0.6919" style="stop-color:#FF8C00"/>
+	<stop  offset="0.8636" style="stop-color:#FF8C00"/>
+	<stop  offset="0.8687" style="stop-color:#E70000"/>
+	<stop  offset="0.9697" style="stop-color:#E70000"/>
+	<stop  offset="1" style="stop-color:#E70000"/>
+</linearGradient>
+<path class="st0" d="M161.9,362.9V381h188.2v-18.1H161.9z M161.9,446.2v18.1l21.7,0V486h144.8v-21.7l21.7,0v-18.1H161.9z
+	 M161.9,402.7v18.1h188.2v-18.1H161.9z M75,185.4c0,88,81,159.4,181,159.4s181-71.4,181-159.4S356,26,256,26S75,97.4,75,185.4z"/>
+<g>
+	<path class="st1" d="M201.7,210.7h21.7v152.1h-21.7V210.7z"/>
+	<path class="st1" d="M288.6,210.7h21.7v152.1h-21.7V210.7z"/>
+	<path class="st1" d="M242.4,170.9c-22.5,0-40.7,18.2-40.7,40.7H224c2.5-10.9,12.2-19,23.8-19h16.3c11.6,0,21.4,8.1,23.8,19h22.3
+		c0-22.5-18.2-40.7-40.7-40.7H242.4z"/>
+	<path class="st1" d="M219.4,344.7h73.2v18.1h-73.2V344.7z"/>
+</g>
+</svg>
