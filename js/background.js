@@ -496,49 +496,66 @@ chrome.storage.onChanged.addListener(function(changes, namespace){
             if(changes['badge'].newValue == true){checkbadge()}else{checkbadge()}
         }
 
+
         // Group Policy
         // check the values with group policy, if different values. Then change it back
-        if (changes['autoplay']) {
-            if (changes['autoplay'].newValue != policygrouparray["AutoPlay"]) {
-                chrome.storage.sync.set({ "autoplay": policygrouparray["AutoPlay"] });
+        if(changes['autoplay']){
+            if(policygrouparray.hasOwnProperty('AutoPlay')){
+                if(changes['autoplay'].newValue != policygrouparray["AutoPlay"]){
+                    chrome.storage.sync.set({ "autoplay": policygrouparray["AutoPlay"] });
+                }
             }
         }
-        if (changes['autostop']) {
-            if (changes['autostop'].newValue != policygrouparray["AutoStop"]) {
+        if(changes['autostop']){
+            if(policygrouparray.hasOwnProperty('AutoStop')){
+                if(changes['autostop'].newValue != policygrouparray["AutoStop"]){
                 chrome.storage.sync.set({ "autostop": policygrouparray["AutoStop"] });
+                }
             }
         }
-        if (changes['customqualityyoutube']) {
-            if (changes['customqualityyoutube'].newValue != policygrouparray["AutoHD"]) {
+        if(changes['customqualityyoutube']){
+            if(policygrouparray.hasOwnProperty('AutoHD')){
+                if(changes['customqualityyoutube'].newValue != policygrouparray["AutoHD"]){
                 chrome.storage.sync.set({ "customqualityyoutube": policygrouparray["AutoHD"] });
+                }
             }
         }
-        if (changes['maxquality']) {
-            if (changes['maxquality'].newValue != policygrouparray["AutoHDQuality"]) {
-                chrome.storage.sync.set({ "maxquality": policygrouparray["AutoHDQuality"] });
+        if(changes['maxquality']){
+            if(policygrouparray.hasOwnProperty('AutoHDQuality')){
+                if(changes['maxquality'].newValue != policygrouparray["AutoHDQuality"]){
+                    chrome.storage.sync.set({ "maxquality": policygrouparray["AutoHDQuality"] });
+                }
             }
         }
-        if (changes['block60fps']) {
-            if (changes['block60fps'].newValue != policygrouparray["Block60FPS"]) {
+        if(changes['block60fps']){
+            if(policygrouparray.hasOwnProperty('Block60FPS')){
+                if(changes['block60fps'].newValue != policygrouparray["Block60FPS"]){
                 chrome.storage.sync.set({ "block60fps": policygrouparray["Block60FPS"] });
+                }
             }
         }
-        if (changes['nighttheme']) {
-            if (changes['nighttheme'].newValue != policygrouparray["NightModeSwitch"]) {
+        if(changes['nighttheme']){
+            if (policygrouparray.hasOwnProperty('NightModeSwitch')){
+                if(changes['nighttheme'].newValue != policygrouparray["NightModeSwitch"]){
                 chrome.storage.sync.set({ "nighttheme": policygrouparray["NightModeSwitch"] });
+                }
             }
         }
-        if (changes['videovolume']) {
-            if (changes['videovolume'].newValue != policygrouparray["MouseVolumeScroll"]) {
+        if(changes['videovolume']){
+            if (policygrouparray.hasOwnProperty('MouseVolumeScroll')){
+                if(changes['videovolume'].newValue != policygrouparray["MouseVolumeScroll"]){
                 chrome.storage.sync.set({ "videovolume": policygrouparray["MouseVolumeScroll"] });
+                }
             }
         }
-        if (changes['videotool']) {
-            if (changes['videotool'].newValue != policygrouparray["VideoToolbar"]) {
+        if(changes['videotool']){
+            if (policygrouparray.hasOwnProperty('VideoToolbar')){
+                if(changes['videotool'].newValue != policygrouparray["VideoToolbar"]){
                 chrome.storage.sync.set({ "videotool": policygrouparray["VideoToolbar"] });
+                }
             }
         }
-})
+});
 
 // omnibox
 var i18nomninightmode = chrome.i18n.getMessage("omninightmode").toLowerCase();
