@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2019 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -755,8 +755,7 @@ function animate(){
 // default example2 is not display
 $("example2").style.opacity = 0;$("example2").style.display = 'none';
 // default hide this buttons
-$("wallpapershow").style.display = 'none';$("dynamicshow").style.display = 'none';
-
+$("wallpapershow").className= "hidden";$("dynamicshow").className= "hidden";
 // autoplay - Excluded domains - sort these alphabetically
 var autoplayDomains = items["autoplayDomains"];
 if(typeof autoplayDomains == "undefined" || autoplayDomains == null)
@@ -2790,8 +2789,8 @@ else if((nAgt.indexOf("Maxthon/"))!=-1){browserName = "Maxthon";}
 if(browserName == "Opera"){
 	// feature check speech and camera
 	// no support
-	$("helpcameramotion").style.display = "";
-	$("helpspeech").style.display = "";
+	$("helpcameramotion").classList.remove("hidden");
+	$("helpspeech").classList.remove("hidden");
 	$("speech").disabled = true;
 	$("select_language").disabled = true;
 	$("select_dialect").disabled = true;
@@ -2801,13 +2800,13 @@ if(browserName == "Opera"){
 }else if(browserName == "Google Chrome"){
 	// feature check speech and camera
 	// support
-	$("helpcameramotion").style.display = "none";
-	$("helpspeech").style.display = "none";
+	$("helpcameramotion").classList.add("hidden");
+	$("helpspeech").classList.add("hidden");
 }else if(browserName == "Firefox"){
 	// feature check speech and camera
 	// no support
-	$("helpcameramotion").style.display = "";
-	$("helpspeech").style.display = "";
+	$("helpcameramotion").classList.remove("hidden");
+	$("helpspeech").classList.remove("hidden");
 	$("speech").disabled = true;
 	$("select_language").disabled = true;
 	$("select_dialect").disabled = true;
@@ -2817,8 +2816,8 @@ if(browserName == "Opera"){
 }else{
 	// feature check speech and camera
 	// support
-	$("helpcameramotion").style.display = "none";
-	$("helpspeech").style.display = "none";
+	$("helpcameramotion").classList.add("hidden");
+	$("helpspeech").classList.add("hidden");
 }
 
 // Remove remember
@@ -3060,8 +3059,7 @@ save_options();test();ariacheck();
 
 // Check screenshot
 $("wallpaperhide").addEventListener('click', function(){
-    $("imagegallery").style.display = "";$("wallpapershow").style.display = "";$("wallpaperhide").style.display = "none";
-
+    $("imagegallery").classList.remove("hidden");$("wallpapershow").classList.remove("hidden");$("wallpaperhide").className = "hidden";
     $("bckimage1").setAttribute('src','images/totlminis1.png');$("bckimage1").setAttribute('src','images/totlminis1@2x.png');
     $("bckimage2").setAttribute('src','images/totlminis2.png');$("bckimage2").setAttribute('src','images/totlminis2@2x.png');
     $("bckimage3").setAttribute('src','images/totlminis3.png');$("bckimage3").setAttribute('src','images/totlminis3@2x.png');
@@ -3069,8 +3067,7 @@ $("wallpaperhide").addEventListener('click', function(){
     $("bckimage5").setAttribute('src','images/totlminis5.png');$("bckimage5").setAttribute('src','images/totlminis5@2x.png');
 });
 $("wallpapershow").addEventListener('click', function(){
-    $("imagegallery").style.display = "none";$("wallpapershow").style.display = "none";$("wallpaperhide").style.display = "";
-
+    $("imagegallery").className = "hidden";$("wallpapershow").className = "hidden";$("wallpaperhide").classList.remove("hidden");
     $("bckimage1").setAttribute('src','');$("bckimage1").setAttribute('srcset','');
     $("bckimage2").setAttribute('src','');$("bckimage2").setAttribute('srcset','');
     $("bckimage3").setAttribute('src','');$("bckimage3").setAttribute('srcset','');
@@ -3088,7 +3085,7 @@ $("dynamic").addEventListener('click', function(){if($('dynamic').checked == tru
 
 // Check dynamic
 $("dynamichide").addEventListener('click', function(){
-$("dynamicgallery").style.display = "";$("dynamicshow").style.display = "";$("dynamichide").style.display = "none";
+    $("dynamicgallery").classList.remove("hidden");$("dynamicshow").classList.remove("hidden");$("dynamichide").className = "hidden";
     $("bckdyn1").setAttribute('src','images/totldyn1.png');$("bckdyn1").setAttribute('srcset','images/totldyn1@2x.png');
     $("bckdyn2").setAttribute('src','images/totldyn2.png');$("bckdyn2").setAttribute('srcset','images/totldyn2@2x.png');
     $("bckdyn3").setAttribute('src','images/totldyn3.png');$("bckdyn3").setAttribute('srcset','images/totldyn3@2x.png');
@@ -3101,7 +3098,7 @@ $("dynamicgallery").style.display = "";$("dynamicshow").style.display = "";$("dy
     $("bckdyn10").setAttribute('src','images/totldyn10.png');$("bckdyn10").setAttribute('srcset','images/totldyn10@2x.png');
 });
 $("dynamicshow").addEventListener('click', function(){
-$("dynamicgallery").style.display = "none";$("dynamicshow").style.display = "none";$("dynamichide").style.display = "";
+    $("dynamicgallery").className = "hidden";$("dynamicshow").className = "hidden";$("dynamichide").classList.remove("hidden");
     $("bckdyn1").setAttribute('src','');$("bckdyn1").setAttribute('srcset','');
     $("bckdyn2").setAttribute('src','');$("bckdyn2").setAttribute('srcset','');
     $("bckdyn3").setAttribute('src','');$("bckdyn3").setAttribute('srcset','');

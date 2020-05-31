@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2019 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -535,21 +535,21 @@ chrome.storage.onChanged.addListener(function(changes, namespace){
             }
         }
         if(changes['nighttheme']){
-            if (policygrouparray.hasOwnProperty('NightModeSwitch')){
+            if(policygrouparray.hasOwnProperty('NightModeSwitch')){
                 if(changes['nighttheme'].newValue != policygrouparray["NightModeSwitch"]){
                 chrome.storage.sync.set({ "nighttheme": policygrouparray["NightModeSwitch"] });
                 }
             }
         }
         if(changes['videovolume']){
-            if (policygrouparray.hasOwnProperty('MouseVolumeScroll')){
+            if(policygrouparray.hasOwnProperty('MouseVolumeScroll')){
                 if(changes['videovolume'].newValue != policygrouparray["MouseVolumeScroll"]){
                 chrome.storage.sync.set({ "videovolume": policygrouparray["MouseVolumeScroll"] });
                 }
             }
         }
         if(changes['videotool']){
-            if (policygrouparray.hasOwnProperty('VideoToolbar')){
+            if(policygrouparray.hasOwnProperty('VideoToolbar')){
                 if(changes['videotool'].newValue != policygrouparray["VideoToolbar"]){
                 chrome.storage.sync.set({ "videotool": policygrouparray["VideoToolbar"] });
                 }
@@ -655,77 +655,88 @@ if((chromeset["firstRun"]!="false") && (chromeset["firstRun"]!=false)){
 
 function readgrouppolicy(items){
     var SuppressWelcomePage;
-    var AutoPlay;
-    var AutoStop;
-    var AutoHD;
-    var AutoHDQuality = "highres"; // default option
-    var Block60FPS;
-    var NightModeSwitch;
-    var MouseVolumeScroll;
-    var VideoToolbar;
-    if (chrome.runtime.lastError){
+
+    if(chrome.runtime.lastError){
         //console.error("managed error: " + chrome.runtime.lastError.message);
-    } else {
+    }else{
         //console.log("items", items);
-        if (items.SuppressWelcomePage == true) {
+        if(items.SuppressWelcomePage == true){
             var crrinstall = new Date().getTime();
             chrome.storage.sync.set({ "firstRun": false, "version": "2.4", "firstDate": crrinstall });
-        } else {
+        }else{
             // no value, then show the page
             initwelcome();
         }
-        if (items.AutoPlay == true) { AutoPlay = true; }
-        else { AutoPlay = false; }
-        if (items.AutoStop == true) { AutoStop = true; }
-        else { AutoStop = false; }
-        if (items.AutoHD == true) { AutoHD = true; }
-        else { AutoHD = false; }
-        if (items.AutoHDQuality != "") { AutoHDQuality = items.AutoHDQuality; }
-        if (items.Block60FPS == true) { Block60FPS = true; }
-        else { Block60FPS = false; }
-        if (items.NightModeSwitch == true) { NightModeSwitch = true; }
-        else { NightModeSwitch = false; }
-        if (items.MouseVolumeScroll == true) { MouseVolumeScroll = true; }
-        else { MouseVolumeScroll = false; }
-        if (items.VideoToolbar == true) { VideoToolbar = true; }
-        else { VideoToolbar = false; }
+
+        // saving group policy values
+        var savinggroup = {};
+
+        if(items.AutoPlay == true){savinggroup["autoplay"] = true;}
+        else if(items.AutoPlay == false){savinggroup["autoplay"] = false;}
+
+        if(items.AutoStop == true){savinggroup["autostop"] = true;}
+        else if(items.AutoStop == false){savinggroup["autostop"] = false;}
+
+        if(items.AutoHD == true){savinggroup["customqualityyoutube"] = true;}
+        else if(items.AutoHD == false){savinggroup["customqualityyoutube"] = false;}
+
+        if(items.AutoHDQuality != ""){savinggroup["maxquality"] = items.AutoHDQuality;}
+
+        if(items.Block60FPS == true){savinggroup["block60fps"] = true;}
+        else if(items.Block60FPS == false){savinggroup["block60fps"] = false;}
+
+        if(items.NightModeSwitch == true){savinggroup["nighttheme"] = true;}
+        else if(items.NightModeSwitch == false){savinggroup["nighttheme"] = false;}
+
+        if(items.MouseVolumeScroll == true){savinggroup["videovolume"] = true;}
+        else if(items.MouseVolumeScroll == false){savinggroup["videovolume"] = false;}
+
+        if(items.VideoToolbar == true){savinggroup["videotool"] = true;}
+        else if(items.VideoToolbar == false){savinggroup["videotool"] = false;}
+
         // save total group policy
-        chrome.storage.sync.set({ "autoplay": AutoPlay, "autostop": AutoStop, "customqualityyoutube": AutoHD, "maxquality": AutoHDQuality, "block60fps": Block60FPS, "nighttheme": NightModeSwitch, "videovolume": MouseVolumeScroll, "videotool": VideoToolbar });
+        chrome.storage.sync.set(savinggroup);
     }
 }
 
 var policygrouparray = {};
 if(chrome.storage.managed){
-    chrome.storage.managed.onChanged.addListener(function (changes, namespace) {
+    chrome.storage.managed.onChanged.addListener(function(changes, namespace){
         // save in memory
-        Object.keys(changes).forEach(function(policyName) {
+        Object.keys(changes).forEach(function(policyName){
             policygrouparray[policyName] = changes[policyName].newValue;
         });
 
-        if (changes['AutoPlay']) {
-            chrome.storage.sync.set({ "autoplay": changes['AutoPlay'].newValue });
+        // update saving group policy values
+        var updatesavinggroup = {};
+
+        if(changes['AutoPlay']){
+            updatesavinggroup["autoplay"] = changes['AutoPlay'].newValue;
         }
-        if (changes['AutoStop']) {
-            chrome.storage.sync.set({ "autostop": changes['AutoStop'].newValue });
+        if(changes['AutoStop']){
+            updatesavinggroup["autostop"] = changes['AutoStop'].newValue;
         }
-        if (changes['AutoHD']) {
-            chrome.storage.sync.set({ "customqualityyoutube": changes['AutoHD'].newValue });
+        if(changes['AutoHD']){
+            updatesavinggroup["customqualityyoutube"] = changes['AutoHD'].newValue;
         }
-        if (changes['AutoHDQuality']) {
-            chrome.storage.sync.set({ "maxquality": changes["AutoHDQuality"].newValue });
+        if(changes['AutoHDQuality']){
+            updatesavinggroup["maxquality"] = changes['AutoHDQuality'].newValue;
         }
-        if (changes['Block60FPS']) {
-            chrome.storage.sync.set({ "block60fps": changes["Block60FPS"].newValue });
+        if(changes['Block60FPS']){
+            updatesavinggroup["block60fps"] = changes['Block60FPS'].newValue;
         }
-        if (changes['NightModeSwitch']) {
-            chrome.storage.sync.set({ "nighttheme": changes["NightModeSwitch"].newValue });
+        if(changes['NightModeSwitch']){
+            updatesavinggroup["nighttheme"] = changes['NightModeSwitch'].newValue;
         }
-        if (changes['MouseVolumeScroll']) {
-            chrome.storage.sync.set({ "videovolume": changes["MouseVolumeScroll"].newValue });
+        if(changes['MouseVolumeScroll']){
+            updatesavinggroup["videovolume"] = changes['MouseVolumeScroll'].newValue;
         }
-        if (changes['VideoToolbar']) {
-            chrome.storage.sync.set({ "videotool": changes["VideoToolbar"].newValue });
+        if(changes['VideoToolbar']){
+            updatesavinggroup["videotool"] = changes['VideoToolbar'].newValue;
         }
+
+        // update save total group policy
+        chrome.storage.sync.set(updatesavinggroup);
 });
 }
 
@@ -734,7 +745,7 @@ chrome.runtime.onInstalled.addListener(function(details){
         chrome.storage.managed.get(function(items){
             readgrouppolicy(items);
             // save in memory
-            Object.keys(items).forEach(function (policyName) {
+            Object.keys(items).forEach(function(policyName){
                 policygrouparray[policyName] = items[policyName];
             });
 		});

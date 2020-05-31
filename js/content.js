@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2019 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -105,11 +105,11 @@ videotoolchecklistwhite = response['videotoolchecklistwhite'];
 videotoolchecklistblack = response['videotoolchecklistblack'];
 nightmodehyperlink = response['nightmodehyperlink'];if(nightmodehyperlink == null)nightmodehyperlink = '#ffffff';
 videovolume = response['videovolume'];
-videovolumecolor = response['videovolumecolor'];
-videovolumesteps = response['videovolumesteps'];
-videovolumelabel = response['videovolumelabel'];
+videovolumecolor = response['videovolumecolor'];if(videovolumecolor == null)videovolumecolor = '#167ac6';
+videovolumesteps = response['videovolumesteps'];if(videovolumesteps == null)videovolumesteps = 5;
+videovolumelabel = response['videovolumelabel'];if(videovolumelabel == null)videovolumelabel = true;
 visopacity = response['visopacity'];if(visopacity == null)visopacity = '80';
-videotoolcolor = response['videotoolcolor'];
+videotoolcolor = response['videotoolcolor'];if(videotoolcolor == null)videotoolcolor = '#000000';
 hovervideo = response['hovervideo'];
 hovervideoamount = response['hovervideoamount'];if(hovervideoamount == null)hovervideoamount = '3';
 mousespotlights = response['mousespotlights'];
@@ -215,14 +215,6 @@ chrome.runtime.onMessage.addListener(function(message, sender, response){
 
 // Shortcutlight
 window.addEventListener('keydown', function(e){
-		if(e.which == 76 && e.ctrlKey && e.shiftKey && !e.altKey){
-		// Run code for CTRL+SHIFT+L
-			// Shortcutlight
-			if(shortcutlight == true){
-				chrome.runtime.sendMessage({name: 'automatic'});
-			}
-		}
-
 		if(e.which == 119 && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+F8
 			// Shortcutlight
@@ -294,7 +286,7 @@ window.addEventListener('keydown', function(e){
 			}
 		}
 
-		if(e.which == 116 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.which == 106 && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+*
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -3709,6 +3701,42 @@ function nightfunction(){
 				}, nightmodeswitchhidetime * 1000);
 			}
 		}
+
+		// automatically hide the switch when video is in full screen (playing and pause status)
+		function gohideswitchonplay(){
+			if(nightcurrentvideoplaying == true){
+				if($('stefanvdnighttheme')){$('stefanvdnighttheme').classList.add("stefanvdswitchhidden");}
+			}
+		}
+
+		function goshowswitchonpause(){
+			if(!nightmodeswitchhide){ // auto hide switch is not enabled
+				if($('stefanvdnighttheme')){
+					if($('stefanvdnighttheme').classList.contains('stefanvdswitchhidden')){$('stefanvdnighttheme').classList.remove("stefanvdswitchhidden");}
+				}
+			}
+		}
+
+		var x = document.getElementsByTagName("video")[0];
+		var nightcurrentvideoplaying = false;
+		x.addEventListener("playing", function(e){
+			nightcurrentvideoplaying = true;
+			if(document.fullscreenElement){gohideswitchonplay();}
+		});
+		x.addEventListener("pause", function(e){
+			nightcurrentvideoplaying = false;
+			goshowswitchonpause();
+		});
+
+		document.addEventListener("fullscreenchange", function(event){
+			if(document.fullscreenElement){
+				// fullscreen is activated
+				gohideswitchonplay();
+			}else{
+				// fullscreen is cancelled
+				goshowswitchonpause();
+			}
+		});
 
 	}
 }

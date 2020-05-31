@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "Turn Off the Lights",
-  "version": "4.1.4.0",
+  "version": "4.1.7.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
@@ -32,7 +32,7 @@
     "page": "background.html",
 	  "persistent": false
   },
-  "content_security_policy": "default-src 'self'; style-src 'unsafe-inline'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' * data:; object-src 'none'",
+  "content_security_policy": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' * data:; object-src 'none'",
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],

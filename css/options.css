@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2019 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -230,8 +230,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 /* playground */
 #stefanvdplayground{margin-top:20px}
 #stefanvdplayground canvas{box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);width:100%}
-#stefanvdbtnplaygroundfacebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
-#stefanvdbtnplaygroundtwitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
+#stefanvdbtnplaygroundfacebook{background:url(/images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/facebook.png) 1x,url(/images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
+#stefanvdbtnplaygroundtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #stefanvdbtnplaygroundfacebook:hover,#stefanvdbtnplaygroundtwitter:hover{opacity:.8;cursor:pointer}
 /* Video frame */
 .youtubepreview{width:100%;height:380px;background:white;color:black;-webkit-user-select:none;-moz-user-select:none;user-select:none}
@@ -259,7 +259,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubesharebutton{width:35px;margin-top:5px;display:inline-block;float:right;min-height:18px;padding:4px 10px}
 .youtubesharebutton span{font-size:12px;color:#333;padding:8px;background:#fff}
 .youtuberating{padding-left:75px;display:inline-block;width:140px;padding-top:16px;line-height:1;vertical-align:top;height:0}
-.youtuberatingsparkbarlikes{background-color:#2793e6;border:1px #fff solid}
+.youtuberatingsparkbarlikes{background-color:#2793e6;border:1px #fff solid;width:100%}
 .youtuberating sparkbardislikes{float:right;height:4px;margin-right:-1px;background:#C00}
 .youtuberating sparkbars,.youtuberatingsparkbarlikes,.youtuberatingsparkbardislikes{height:5px}
 .youtubeviewnumbers{padding-bottom:7px;padding-left:80px;width:50px;display:inline-block;font-size:13px;font-weight:700}
@@ -397,7 +397,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground #stefanvdworld{position:absolute;height:380px;width:840px;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld div{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld .stefanvdcloudBase{position:absolute;left:256px;top:256px;width:20px;height:20px;margin-left:-10px;margin-top:-10px}
-#stefanvddynamicbackground #stefanvdworld .stefanvdcloudLayer{position:absolute;left:50%;top:50%;width:256px;height:256px;margin-left:-128px;margin-top:-128px;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out;background-image:url(../images/cloud.png)}
+#stefanvddynamicbackground #stefanvdworld .stefanvdcloudLayer{position:absolute;left:50%;top:50%;width:256px;height:256px;margin-left:-128px;margin-top:-128px;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out;background-image:url(/images/cloud.png)}
 /* Dynamic Background Space */
 #stefanvddynamicbackground #stefanvddynamicspace div{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvddynamicspace{height:380px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
@@ -738,8 +738,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 #productwelcomeimageload{display:block;margin-left:auto;margin-right:auto;padding-left:0;font-family:verdana;font-size:16px;color:var(--totl-title-color);text-align:center}
 #productwelcomeimageload .icon{display:flex;align-items:center;justify-content:center}
 /* image gallery */
-#wallpapershow{display:inline-block;right:0;position:absolute;width:135px}
-#wallpaperhide{display:inline-block;right:0;position:absolute;width:135px}
+#wallpapershow{right:0;position:absolute;width:135px}
+#wallpaperhide{right:0;position:absolute;width:135px}
 #imagegallery{padding-left:20px;margin:16px 0 0 0;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)}
 .imageshaduw{margin:10px 12px;padding:1px;border:1px solid #bebebe}
 /* loading bar */
@@ -757,8 +757,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 .suggpanel{width:335px;position:relative;display:inline-block;float:left}
 /* dynamic */
 .relative{position:relative}
-#dynamicshow{display:inline-block;right:0;position:absolute;width:135px}
-#dynamichide{display:inline-block;right:0;position:absolute;width:135px}
+#dynamicshow{right:0;position:absolute;width:135px}
+#dynamichide{right:0;position:absolute;width:135px}
 #customDynamicGroup{display:none}
 #extradyn{position:absolute;top:-8px;right:165px}
 #dynamicgallery{padding-left:20px;margin:16px 0 0 0;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)}
@@ -837,9 +837,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 .lampchoose:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .bcklampchoose{background:#000}
 /* share box */
-#shareboxyoutube{background:url(../images/youtube@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/youtube.png) 1x,url(../images/youtube@2x.png) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
-#shareboxfacebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
-#shareboxtwitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
+#shareboxyoutube{background:url(/images/youtube@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/youtube.png) 1x,url(/images/youtube@2x.png) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
+#shareboxfacebook{background:url(/images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/facebook.png) 1x,url(/images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
+#shareboxtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #shareboxrate:hover,#shareboxyoutube:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 /* Review box */
 #reviewextensionbox{height:75px;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none}
@@ -856,9 +856,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 #apnt{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #apgetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
 /* Mobile app */
-#mobileappbox{height:75px;position:relative;background:black url(../images/mobilebanner.png);background-repeat:no-repeat;border-radius:2px}
+#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner.png);background-repeat:no-repeat;border-radius:2px}
 @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min-device-pixel-ratio:2){
-#mobileappbox{height:75px;position:relative;background:black url(../images/mobilebanner@2x.png);background-repeat:no-repeat;border-radius:2px;background-size:cover}
+#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner@2x.png);background-repeat:no-repeat;border-radius:2px;background-size:cover}
 }
 #matllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff;background:black}
 #mant{position:absolute;font-size:12px;font-weight:700;color:#fff;background:black;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
