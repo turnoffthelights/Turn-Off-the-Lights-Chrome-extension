@@ -3719,6 +3719,7 @@ function nightfunction(){
 
 		var x = document.getElementsByTagName("video")[0];
 		var nightcurrentvideoplaying = false;
+		if(x){
 		x.addEventListener("playing", function(e){
 			nightcurrentvideoplaying = true;
 			if(document.fullscreenElement){gohideswitchonplay();}
@@ -3727,6 +3728,7 @@ function nightfunction(){
 			nightcurrentvideoplaying = false;
 			goshowswitchonpause();
 		});
+		}
 
 		document.addEventListener("fullscreenchange", function(event){
 			if(document.fullscreenElement){
