@@ -1,12 +1,15 @@
 function $(id) { return document.getElementById(id); }
 // Install on www.stefanvd.net
 // Install on www.turnoffthelights.com
-if (window.location.href.match(/http:\/\/(.*stefanvd\.net\/.*|www\.stefanvd\.net\/.*\/.*)/i)|| window.location.href.match(/http:\/\/(.*turnoffthelights\.com\/.*|www\.turnoffthelights\.com\/.*\/.*)/i)){
-	if ($('turnoffthelights-chrome-install-button')) {
+if(window.location.href.match(/^http(s)?:\/\/(www\.)?stefanvd.net/i)||window.location.href.match(/^http(s)?:\/\/(www\.)?turnoffthelights.com/i)){
+	if($('turnoffthelights-chrome-install-button')){
 		$('turnoffthelights-chrome-install-button').style.display = 'none';
-		$('turnoffthelights-chrome-thanks-button').style.display = '';
+		$('turnoffthelights-chrome-thanks-button').style.display = 'block';
 	}
 }
+var totlscreenshotpage = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
+var developerwebsite = "https://www.turnoffthelights.com";
+var totloptionspage = "https://www.turnoffthelights.com/extension/options.html";
 var ambientaureaproduct = "https://chrome.google.com/webstore/detail/ambient-aurea/pkaglmndhfgdaiaccjglghcbnfinfffa";
 var datetodayproduct = "https://chrome.google.com/webstore/detail/date-today/mhgknbehalhkedjgfhiaindklahhkccc";
 var turnoffthelightsproduct = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
@@ -27,3 +30,6 @@ var linkthemedownload = "https://www.turnoffthelights.com/browser/theme.html";
 var browsernewtab = "chrome://newtab/";
 var browserstore = "https://chrome.google.com";
 var linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";
+var linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
+var linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
+var devmode = false;

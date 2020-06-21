@@ -1,11 +1,12 @@
 {
   "manifest_version": 2,
   "name": "__MSG_name__",
-  "short_name": "TOtL",
-  "version": "3.4.17.0",
+  "short_name": "Turn Off the Lights",
+  "version": "4.1.8.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
+  "omnibox": { "keyword" : "totl" },
   "icons": {
       "16": "icons/icon16.png",
       "24": "icons/icon24.png",
@@ -31,29 +32,50 @@
     "page": "background.html",
 	  "persistent": false
   },
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://platform.twitter.com https://apis.google.com; img-src *; object-src 'self'",
+  "content_security_policy": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' * data:; object-src 'none'",
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.chromeactions.com/*"],
-      "css" : ["css/light.css"],
-      "js": ["js/content.js"],
+      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
+      "js": ["js/constants.js", "js/content.js", "js/eco.js"],
       "run_at": "document_end"
     },
     {
       "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": ["*://*.mycinema.pro/*", "*://*.turnoffthelights.com/extension/options.html"],
+      "css" : ["css/light.css"],
+      "run_at": "document_end",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
       "js": ["js/screenshader.js"],
+      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "run_at": "document_start"
-    },    
+    },
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": [ "js/fps.js"],
+      "js": [ "js/fps.js" ],
       "run_at": "document_start",
       "all_frames": true
     },
     {
+      "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
+      "js": ["js/autostop.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
+    },
+    {
+      "matches": ["*://*.turnoffthelights.com/extension/options.html"],
+      "js": ["js/constants.js","js/options.js","js/Chart.js","js/eco-preview.js"],
+      "run_at": "document_end"
     }
   ],
   "commands": {
@@ -64,11 +86,11 @@
       }
     },
     "toggle-feature-nightmode": {
-            "suggested_key": {
-              "default": "Ctrl+Shift+N",
-              "mac": "MacCtrl+Shift+N"
-            },
-            "description": "__MSG_titelnighttheme__"
+      "suggested_key": {
+        "default": "Ctrl+Shift+N",
+        "mac": "MacCtrl+Shift+N"
+      },
+      "description": "__MSG_titelnighttheme__"
     }
   },
   "options_ui": {
@@ -77,5 +99,8 @@
   },
   "offline_enabled": true,
   "minimum_chrome_version": "33",
-  "permissions": [ "contextMenus", "notifications", "tabs", "storage", "<all_urls>" ]
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage" ]
 }
