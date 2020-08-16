@@ -470,7 +470,7 @@ if(ytgetformat != null){ytgetformat.classList.add('stefanvditemtop');ytgetformat
 }
 }
 
-// Shows add button
+// Shows save button
 if(addvideobutton == true){
 // updated 15 january 2016
 var addtobutton = document.querySelector('.addto-button');
@@ -483,7 +483,7 @@ for(i = 0; i < l; i++){
 var ytgetobject = ytmaterialaddbutton[i].getElementsByTagName('button')[0];
 if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 6) == "Add to"){ytmaterialaddbutton[i].classList.add('stefanvditemtop');ytmaterialaddbutton[i].style.background = "white";}
+if(ytgetstring.substring(0, 4) == "Save"){ytmaterialaddbutton[i].classList.add('stefanvditemtop');ytmaterialaddbutton[i].style.background = "white";}
 }}}
 }
 
@@ -1030,7 +1030,7 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 			if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].style.background = "";}
 			}}}
 		
-			// YouTube add button
+			// YouTube save button
 			var ytmaterialsharebutton = document.querySelectorAll('ytd-button-renderer');
 			var i;
 			var l = ytmaterialsharebutton.length;
@@ -1038,7 +1038,7 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName('button')[0];
 			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
-			if(ytgetstring.substring(0, 6) == "Add to"){ytmaterialsharebutton[i].style.background = "";}
+			if(ytgetstring.substring(0, 4) == "Save"){ytmaterialsharebutton[i].style.background = "";}
 			}}}
 		
 			// YouTube head
@@ -1102,7 +1102,7 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
             var watchviewcount = document.querySelector('.watch-view-count');
             if(watchviewcount){watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';}
             
-            // YouTube video add button (set back to default)
+            // YouTube video save button (set back to default)
             var addtobutton = document.querySelector('.addto-button');
             if(addtobutton){addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';}
     

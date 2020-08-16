@@ -253,10 +253,10 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubedislikebutton{display:flex;float:left;line-height:20px;min-height:18px;padding:7px 10px}
 .youtubedislikebutton svg{margin-right:10px}
 .youtubedislikebutton span{font-size:12px;color:#333}
-.youtubeaddtobutton{display:inline-block;float:right;margin-top:5px;min-height:18px;padding:4px 10px}
+.youtubeaddtobutton{width:35px;display:inline-block;float:right;margin-top:5px;min-height:18px;padding:4px 10px}
 .youtubeaddtobutton img{margin-left:0;margin-right:10px;vertical-align:middle;width:10px;height:10px}
 .youtubeaddtobutton span{font-size:12px;color:#333;padding:9px;background:#fff}
-.youtubesharebutton{width:35px;margin-top:5px;display:inline-block;float:right;min-height:18px;padding:4px 10px}
+.youtubesharebutton{display:inline-block;float:right;margin-top:5px;min-height:18px;padding:4px 10px}
 .youtubesharebutton span{font-size:12px;color:#333;padding:8px;background:#fff}
 .youtuberating{padding-left:75px;display:inline-block;width:140px;padding-top:16px;line-height:1;vertical-align:top;height:0}
 .youtuberatingsparkbarlikes{background-color:#2793e6;border:1px #fff solid;width:100%}
