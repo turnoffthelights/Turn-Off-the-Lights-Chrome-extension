@@ -28,9 +28,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, autostop = null, autostoponly = null, autostopDomains = null, autostopchecklistwhite = null, autostopchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, screenshader = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, autostop = null, autostoponly = null, autostopDomains = null, autostopchecklistwhite = null, autostopchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, screenshader = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null;
 /* -------------------------------------------------- */
-chrome.storage.sync.get(['autoplay','eastereggs','shortcutlight','eyen','eyea','eyealist','contextmenus','excludedDomains','nighttime','begintime','endtime','ambilight','ambilightrangeblurradius','ambilightrangespreadradius','ambilightfixcolor','ambilightvarcolor','ambilightcolorhex','ambilight4color','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','ecosaver','ecosavertime','autoplayonly','autoplayDomains','interval','maxquality','autowidthyoutube','customqualityyoutube','atmosphereonly','atmosphereDomains','nighttheme','nightonly','nightDomains','nightenabletheme','autoplaydelay','autoplaydelaytime','atmosvivid','autoplaychecklistwhite','autoplaychecklistblack','nighthover','nightactivetime','nmbegintime','nmendtime','nightmodechecklistblack','nightmodechecklistwhite','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nmcustomx','nmcustomy','lampandnightmode','autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','eyechecklistwhite','eyechecklistblack','nightmodebck','nightmodetxt','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolDomains','videotoolchecklistwhite','videotoolchecklistblack','nightmodehyperlink','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','visopacity','videotoolcolor','hovervideo','hovervideoamount','mousespotlights','screenshader','drawatmosfps','aplay','apause','astop','videozoom','playrate','playrateamount','speedtoolbar','atmosontotlmode','vpause','videovolumeposa','videovolumeposb','videovolumeposc','videovolumehold','videovolumealt','nightmodebydomain','nightmodebypage','nightmodegesture','nightmodeswitchhide','nightmodeswitchhidetime'],function(response){
+chrome.storage.sync.get(['autoplay','eastereggs','shortcutlight','eyen','eyea','eyealist','contextmenus','excludedDomains','nighttime','begintime','endtime','ambilight','ambilightrangeblurradius','ambilightrangespreadradius','ambilightfixcolor','ambilightvarcolor','ambilightcolorhex','ambilight4color','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','ecosaver','ecosavertime','autoplayonly','autoplayDomains','interval','maxquality','autowidthyoutube','customqualityyoutube','atmosphereonly','atmosphereDomains','nighttheme','nightonly','nightDomains','nightenabletheme','autoplaydelay','autoplaydelaytime','atmosvivid','autoplaychecklistwhite','autoplaychecklistblack','nighthover','nightactivetime','nmbegintime','nmendtime','nightmodechecklistblack','nightmodechecklistwhite','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nmcustomx','nmcustomy','lampandnightmode','autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','eyechecklistwhite','eyechecklistblack','nightmodebck','nightmodetxt','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolDomains','videotoolchecklistwhite','videotoolchecklistblack','nightmodehyperlink','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','visopacity','videotoolcolor','hovervideo','hovervideoamount','mousespotlights','screenshader','drawatmosfps','aplay','apause','astop','videozoom','playrate','playrateamount','speedtoolbar','atmosontotlmode','vpause','videovolumeposa','videovolumeposb','videovolumeposc','videovolumehold','videovolumealt','nightmodebydomain','nightmodebypage','nightmodegesture','nightmodeswitchhide','nightmodeswitchhidetime','atmosfpsauto','atmosfpsmanual'],function(response){
 autoplay = response['autoplay'];
 eastereggs = response['eastereggs'];
 shortcutlight = response['shortcutlight'];
@@ -134,6 +134,8 @@ nightmodebypage = response['nightmodebypage'];if(nightmodebypage == null)nightmo
 nightmodegesture = response['nightmodegesture'];
 nightmodeswitchhide = response['nightmodeswitchhide']; 
 nightmodeswitchhidetime = response['nightmodeswitchhidetime'];if(nightmodeswitchhidetime == null)nightmodeswitchhidetime = '3';
+atmosfpsauto = response['atmosfpsauto'];if(atmosfpsauto == null)atmosfpsauto = false;
+atmosfpsmanual = response['atmosfpsmanual'];if(atmosfpsmanual == null)atmosfpsmanual = true;
 
 function $(id){return document.getElementById(id);}
 
@@ -150,13 +152,17 @@ chrome.runtime.sendMessage({name: 'sendautoplay'});
 
 chrome.runtime.onMessage.addListener(
 function(request, sender){
-	if(request.name == "injectvideostatus"){var script = document.createElement("script");script.type = "text/javascript";script.textContent = request.message;document.getElementsByTagName("head")[0].appendChild(script);}
+	if(request.name == "injectvideostatus"){
+		if(!document.getElementById("totlautoplay")){
+		var script = document.createElement("script");script.id = "totlautoplay";script.type = "text/javascript";script.textContent = request.message;document.getElementsByTagName("head")[0].appendChild(script);
+	}
+	}
 });
 
+var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 // observeDOM - dynamic check
 var observeDOM = (function(){
-    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver,
-        eventListenerSupported = window.addEventListener;
+    var eventListenerSupported = window.addEventListener;
 
     return function(obj, callback){
         if( MutationObserver ){
@@ -341,7 +347,7 @@ window.addEventListener('keypress', function(e){
 		}	
 }, false);
 
-if(autoplay == true && mousespotlights != true){
+var startautoplay;
 function autoplayfunction(){
 var gracePeriod = 250, lastEvent = null, timeout = null;
 
@@ -443,29 +449,30 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 		}
 	}
 
-		// player ready check
-		var startautoplay = window.setInterval(function(){
-		try{
-			var youtubeplayer = $("movie_player") || null
-			var htmlplayer = document.getElementsByTagName("video") || null;
+	// player ready check
+	startautoplay = window.setInterval(function(){
+	try{
+		var youtubeplayer = $("movie_player") || null
+		var htmlplayer = document.getElementsByTagName("video") || null;
 
-			// check first for the HTML5 player
-			// if nothing then try the flash for YouTube
-			if(htmlplayer !== null){ // html5 video elements
-				var j;
-				var l = htmlplayer.length;
-				for(j = 0; j < l; j++){
-	   				if(htmlplayer[j].pause){playerReady(htmlplayer[j]);}
-				}
-			}else{
-				if(youtubeplayer !== null){ // youtube video element
-					if(youtubeplayer.pauseVideo){playerReady(youtubeplayer);}
-				} 
+		// check first for the HTML5 player
+		// if nothing then try the flash for YouTube
+		if(htmlplayer !== null){ // html5 video elements
+			var j;
+			var l = htmlplayer.length;
+			for(j = 0; j < l; j++){
+				if(htmlplayer[j].pause){playerReady(htmlplayer[j]);}
 			}
+		}else{
+			if(youtubeplayer !== null){ // youtube video element
+				if(youtubeplayer.pauseVideo){playerReady(youtubeplayer);}
+			} 
 		}
-		catch(err){} // I see nothing, that is good
-		},1000); // 1000 refreshing it
-		
+	}
+	catch(err){} // I see nothing, that is good
+	},1000); // 1000 refreshing it
+
+var cinemahandler;
 var messagediv = $('ytCinemaMessage');
 if(messagediv){}
 else{
@@ -476,40 +483,44 @@ else{
 		message.style.display = "none";
 		if(!bt.length)return;
 		bt[0].appendChild(message);
-		$(message.id).addEventListener(message.id, function(e){
+		cinemahandler = function(){
 			var eventData = $(message.id).textContent;
 			trigger(eventData);
-  		}, false);
+		};
+		$(message.id).addEventListener(message.id, cinemahandler, false);
 }
 }
 
-if(autoplayonly == true){
-var currenturl = window.location.protocol + '//' + window.location.host;
-var blackrabbit = false;
-if(typeof autoplayDomains == "string"){
-	autoplayDomains = JSON.parse(autoplayDomains);
-	var abuf = [];
-	var domain;
-	for(domain in autoplayDomains)
-		abuf.push(domain);
-		abuf.sort();
-		var i;
-		var l = abuf.length;
-		for(i = 0; i < l; i++){
-			if(autoplaychecklistwhite == true){
-				if(currenturl == abuf[i]){autoplayfunction();}
+function runautoplaycheck(){
+	if(autoplay == true && mousespotlights != true){
+		if(autoplayonly == true){
+		var currenturl = window.location.protocol + '//' + window.location.host;
+		var blackrabbit = false;
+		if(typeof autoplayDomains == "string"){
+			autoplayDomains = JSON.parse(autoplayDomains);
+			var abuf = [];
+			var domain;
+			for(domain in autoplayDomains)
+				abuf.push(domain);
+				abuf.sort();
+				var i;
+				var l = abuf.length;
+				for(i = 0; i < l; i++){
+					if(autoplaychecklistwhite == true){
+						if(currenturl == abuf[i]){autoplayfunction();}
+					}
+					else if(autoplaychecklistblack == true){
+						if(currenturl == abuf[i]){blackrabbit=true;}
+					}
+				}
 			}
-			else if(autoplaychecklistblack == true){
-				if(currenturl == abuf[i]){blackrabbit=true;}
+			if(autoplaychecklistblack == true){
+				if(blackrabbit == false){autoplayfunction();blackrabbit = false;}
 			}
-		}
-    }
-	if(autoplaychecklistblack == true){
-		if(blackrabbit == false){autoplayfunction();blackrabbit = false;}
-	}
-}else{autoplayfunction();}
-
-} // option autoplay on end
+		}else{autoplayfunction();}
+		} // option autoplay on end
+}
+runautoplaycheck();
 
 // general ID for each HTML5 video player
 function adddatavideo(){
@@ -526,8 +537,8 @@ function adddatavideo(){
 }
 adddatavideo();
 
+function runvideotoolbarcheck(){
 if(videotool == true){
-
 if(videotoolonly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
 var videotoolrabbit = false;
@@ -553,7 +564,13 @@ if(typeof videotoolDomains == "string"){
 		if(videotoolrabbit == false){videotoolfunction();videotoolrabbit = false;}
 	}
 }else{videotoolfunction();}
+} // option videotool on end
+}
+runvideotoolbarcheck();
 
+
+var myListenerWithContext;
+var observervideotoolbar;
 function videotoolfunction(){
 // HTML5 video visualization
 // Videotool filters
@@ -582,10 +599,21 @@ var dovisenable=function(){
 			audiocontext[vis] = audiocontext;
 			analyser[vis] = audiocontext[vis].createAnalyser();
 		}
+		var myElement = document.getElementsByTagName("video")[tempvis];
+
 		// Fix Chrome 71
 		audiocontext[vis].resume().then(() =>{
 			//console.log('Turn Off the Lights - Visualization resumed successfully');
-			addvisual();// refresh the visualization
+			// refresh the visualization
+			if(typeof audiocontext[tempvis] != "undefined"){
+				if(vissources[tempvis] == undefined){
+					try{
+					vissources[tempvis] = audiocontext[tempvis].createMediaElementSource(myElement);
+					vissources[tempvis].connect(analyser[tempvis]);
+					}catch(e){}
+				}
+				analyser[tempvis].connect(audiocontext[tempvis].destination);
+			}
 		});
 
 		if(document.getElementById('stefanvdvisualizationcanvas'+tempvis).style.display == "none"){
@@ -713,11 +741,11 @@ elementvisa = document.getElementById('stefanvdvisualizationcanvas'+potvis);
 	// Fix for the 3rd visualization size
 	var w = elementvisa.width  = elementvisa.clientWidth;
 	var h = elementvisa.height = elementvisa.clientHeight;
-	if(buffer1){
-		buffer1.width = w;
-		buffer1.height = h;
-		buffer2.width = w;
-		buffer2.height = h;
+	if(buffer1[potvis]){
+		buffer1[potvis].width = w;
+		buffer1[potvis].height = h;
+		buffer2[potvis].width = w;
+		buffer2[potvis].height = h;
 	}
 }
 
@@ -758,30 +786,9 @@ var visualvideos = document.getElementsByTagName("video");
 	for(i = 0; i < l; i++){
 		var myElement = document.getElementsByTagName("video")[i];
 
-		if(typeof audiocontext[i] != "undefined"){
-			if(vissources[i] == undefined){
-				try{
-				vissources[i] = audiocontext[i].createMediaElementSource(myElement);
-				vissources[i].connect(analyser[i]);
-				}catch(e){}
-			}
-			analyser[i].connect(audiocontext[i].destination);
-		}
-
 		var visposition = getPosition(myElement);
 		var tempwidthvideo = myElement.offsetWidth;
 		var tempheightvideo = myElement.offsetHeight;
-
-			// Fix for the 3rd visualization size
-			var w = myElement.width  = myElement.clientWidth;
-			var h = myElement.height = myElement.clientHeight;
-			if(buffer1){
-				buffer1.width = w;
-				buffer1.height = h;
-				buffer2.width = w;
-				buffer2.height = h;
-			}
-			//---
 
 		myElement.addEventListener("mouseover", function(event){
 			rock = this.getAttribute("data-video");
@@ -1335,6 +1342,7 @@ var visualvideos = document.getElementsByTagName("video");
 		}
 		//---
 
+	if($("stefanvdvisualizationcanvas"+i)){}else{
 		var newvisualizationvideo = document.createElement("canvas");
 		newvisualizationvideo.setAttribute("id","stefanvdvisualizationcanvas"+i);
 		newvisualizationvideo.setAttribute("class","stefanvdvisualization");
@@ -1654,6 +1662,7 @@ var visualvideos = document.getElementsByTagName("video");
 		newscreenshotbutton.title = i18ntitelvideotoolscreenshot;
 		newonvispanel.appendChild(newscreenshotbutton);
 	}
+	}
 }
 addvisual();
 
@@ -1791,14 +1800,14 @@ function videovisualloop(tovis){
 
 			// copy buffer2 to buffer1, stretched
 			// draw more onto buffer
-			bctx1[tovis].drawImage(buffer2[tovis], 0,0,w,h,  -25,-25, w+50,h+50);
+			bctx1[tovis].drawImage(buffer2[tovis],0,0,w,h,-25,-25,w+50,h+50);
 			// draw buffer1 back to screen
 			ctx.drawImage(buffer1[tovis],0,0);
 		}
 	}
 }
 
-window.addEventListener('resize', function(){
+var myListenervideotoolbar = function(event) {
 	var elements = document.getElementsByClassName("stefanvdspeed");
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
@@ -1821,47 +1830,22 @@ window.addEventListener('resize', function(){
     }
 	adddatavideo(); // recheck remove and add video ID
 	addvisual();
-},false);
-
-function refreshvisual(){
-	var elements = document.getElementsByClassName("stefanvdspeed");
-	while(elements.length > 0){
-		elements[0].parentNode.removeChild(elements[0]);
-	}
-	var elements = document.getElementsByClassName("stefanvdzoomstage");
-	while(elements.length > 0){
-		elements[0].parentNode.removeChild(elements[0]);
-	}
-	var elements = document.getElementsByClassName("stefanvdzoom");
-	while(elements.length > 0){
-		elements[0].parentNode.removeChild(elements[0]);
-	}
-	var elements = document.getElementsByClassName("stefanvdvisualization");
-	while(elements.length > 0){
-		elements[0].parentNode.removeChild(elements[0]);
-	}
-	var elements = document.getElementsByClassName("stefanvdvis");
-	while(elements.length > 0){
-		elements[0].parentNode.removeChild(elements[0]);
-	}
-
-	adddatavideo(); // recheck remove and add video ID
-	addvisual();
 }
+myListenerWithContext = myListenervideotoolbar.bind(this);
+window.addEventListener('resize', myListenerWithContext);
 
 // Observe a specific DOM element
 // New Mutation Summary API Reference
-var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.body;
-		var observer = new MutationObserver(function(mutations, observer){
+		observervideotoolbar = new MutationObserver(function(mutations, observer){
 			mutations.forEach(function(mutation){
 
 				if(mutation.target.tagName == "VIDEO"){
 					if(mutation.attributeName === "src" && mutation.target.currentSrc != ""){
 						if(videotool == true){
-							refreshvisual();
+							myListenervideotoolbar();
 						}
 					}
 				}
@@ -1872,7 +1856,7 @@ if(MutationObserver){
 					for(i = 0; i < la; i++){
 						if(mutation.addedNodes[i].tagName == "VIDEO"){
 							if(videotool == true){
-								refreshvisual();
+								myListenervideotoolbar();
 							}
 						}
 					}
@@ -1881,7 +1865,7 @@ if(MutationObserver){
 					for(j = 0; j < lr; j++){
 						if(mutation.removedNodes[j].tagName == "VIDEO"){
 							if(videotool == true){
-								refreshvisual();
+								myListenervideotoolbar();
 							}
 						}
 					}
@@ -1937,7 +1921,7 @@ if(MutationObserver){
 						}else{
 							// there is no data
 							// create everything again
-							refreshvisual();
+							myListenervideotoolbar();
 						}
 					}
 				}
@@ -1945,7 +1929,7 @@ if(MutationObserver){
 			});
 		});
 	
-		observer.observe(videolist,{
+		observervideotoolbar.observe(videolist,{
 			subtree: true,       // observe the subtree rooted at ...videolist...
 			childList: true,     // include childNode insertion/removals
 			characterData: false, // include textContent changes
@@ -1956,17 +1940,18 @@ if(MutationObserver){
 //---
 
 } // end function
-} // option videotool on end
-
-if(playrate == true){
-	var ratevideos = document.getElementsByTagName("video");
-	var i;
-	var l = ratevideos.length;
-	for(i = 0; i < l; i++){
-		var myElement = document.getElementsByTagName("video")[i];
-		myElement.playbackRate = playrateamount;
+function runplayratecheck(){
+	if(playrate == true){
+		var ratevideos = document.getElementsByTagName("video");
+		var i;
+		var l = ratevideos.length;
+		for(i = 0; i < l; i++){
+			var myElement = document.getElementsByTagName("video")[i];
+			myElement.playbackRate = playrateamount;
+		}
 	}
 }
+runplayratecheck();
 
 // easter eggs
 function gogotheater(){
@@ -1989,25 +1974,32 @@ if(eastereggs == true){
 }
 
 // Video hover
+var htimer;
+var hoveractionover = function(){
+	htimer = window.setTimeout(function(){
+		var blackon = $('stefanvdlightareoff1');
+		if(!blackon){chrome.runtime.sendMessage({name: 'automatic'});}
+	}, hovervideoamount*1000);
+}
+
+var hoveractionout = function(){
+	window.clearTimeout(htimer);
+	var blackon = $('stefanvdlightareoff1');
+	if(blackon){chrome.runtime.sendMessage({name: 'automatic'});}
+}
+
+function runhovervideocheck(){
 if(hovervideo == true){
-var htimer;	
 	var hvids = document.getElementsByTagName('video');
 	var i;
 	var l = hvids.length;
 	for(i = 0; i < l; i++){
-		hvids.item(i).addEventListener("mouseover", function(){
-			htimer = window.setTimeout(function(){
-				var blackon = $('stefanvdlightareoff1');
-				if(!blackon){chrome.runtime.sendMessage({name: 'automatic'});}
-			}, hovervideoamount*1000);
-		});
-		hvids.item(i).addEventListener("mouseout", function(){
-			 window.clearTimeout(htimer);
-			 var blackon = $('stefanvdlightareoff1');
-			 if(blackon){chrome.runtime.sendMessage({name: 'automatic'});}
-		});
+		hvids.item(i).addEventListener("mouseover", hoveractionover);
+		hvids.item(i).addEventListener("mouseout", hoveractionout);
 	}
 }
+}
+runhovervideocheck();
 
 // eye protection
 function eyeprotection(){
@@ -2049,87 +2041,108 @@ var outthread;
 var thread;
 var threadkey;
 var threadscroll;
-function outscreensaver(){
-	//mouse move
-	document.onmousemove = (function(){
-		var onmousestop = function(){
-			window.clearTimeout(outthread);
-			document.onmousemove = null;
-			if(screenactiondone == true){
-				var blackon = $('stefanvdlightareoff1');
-				if(blackon){screenactiondone = false;eyeprotection();eyedojob();}else{}
-			}
-		}, outthread;
 
-		return function(){
-			window.clearTimeout(outthread);
-			outthread = window.setTimeout(onmousestop, 1);
-		};
-	})();
-	//keyboard detect key down
-	document.onkeydown = function(e){
-		document.onkeydown = null;
-		var blackon = $('stefanvdlightareoff1');
-		if(blackon){screenactiondone = false;eyeprotection();eyedojob();}else{}
-	};
-	//scroll event
-	document.onwheel = function(e){
-		document.onwheel = null;
-		var blackon = $('stefanvdlightareoff1');
-		if(blackon){screenactiondone = false;eyeprotection();eyedojob();}else{}
-	};
+
+var centralmove = false;
+var centralkey = false;
+var centralscroll = false;
+//---
+function checkforscreensaver(){
+	if(centralmove == false && centralkey == false && centralscroll == false){
+		if(screenactiondone == true){}else{
+			var blackon = $('stefanvdlightareoff1');
+			if(blackon){}
+			else{
+				screenactiondone = true;
+				eyeprotection();
+				//	outscreensaver();
+			}
+		}
+	}else{
+		// keep the lights on
+	}
+}
+//---
+var ecothreadmove;
+function movemouseStopped(){
+	centralmove = false;
+	checkforscreensaver();
+}
+
+var ecomousemove = function(){
+	centralmove = true;
+
+	var blackon = $('stefanvdlightareoff1');
+	if(blackon){
+		// remove the dark layer, and see back the regular page
+		if(screenactiondone == true){
+			var blackon = $('stefanvdlightareoff1');
+			if(blackon){screenactiondone = false;eyeprotection();eyedojob();}else{}
+		}
+	}
+	else{
+		screenactiondone = false;
+	}
+
+    window.clearTimeout(ecothreadmove);
+	ecothreadmove = window.setTimeout(movemouseStopped,ecosavertime * 1000);
+}
+//--
+var ecothreadkey;
+function keymouseStopped(){
+	centralkey = false;
+	checkforscreensaver();
+}
+
+var ecomousekey = function(){
+	centralkey = true;
+
+	var blackon = $('stefanvdlightareoff1');
+	if(blackon){
+		// remove the dark layer, and see back the regular page
+		if(screenactiondone == true){
+			var blackon = $('stefanvdlightareoff1');
+			if(blackon){screenactiondone = false;eyeprotection();eyedojob();}else{}
+		}
+	}
+	else{
+		screenactiondone = false;
+	}
+
+    window.clearTimeout(ecothreadkey);
+	ecothreadkey = window.setTimeout(keymouseStopped,ecosavertime * 1000);
+}
+//--
+var ecothreadscroll;
+function scrollmouseStopped(){
+	centralkey = false;
+	checkforscreensaver();
+}
+
+var ecomousescroll = function(){
+	centralkey = true;
+
+	var blackon = $('stefanvdlightareoff1');
+	if(blackon){
+		// remove the dark layer, and see back the regular page
+		if(screenactiondone == true){
+			var blackon = $('stefanvdlightareoff1');
+			if(blackon){screenactiondone = false;eyeprotection();eyedojob();}else{}
+		}
+	}
+	else{
+		screenactiondone = false;
+	}
+
+    window.clearTimeout(ecothreadscroll);
+	ecothreadscroll = window.setTimeout(scrollmouseStopped,ecosavertime * 1000);
 }
 
 function eyedojob(){
 if(ecosaver == true){
-document.onmousemove = (function(){
-	var onmousestop = function(){
-		window.clearTimeout(thread);
-		document.onmousemove = null;
-		if(screenactiondone == true){}else{
-			var blackon = $('stefanvdlightareoff1');
-			if(blackon){}else{screenactiondone = true;eyeprotection();outscreensaver();}
-		}
-	}, thread;
-
-	return function(){
-		window.clearTimeout(thread);
-		thread = window.setTimeout(onmousestop, ecosavertime * 1000);
-	};
-})();
-
-document.onkeydown = (function(){
-	var onkeystop = function(){
-		window.clearTimeout(threadkey);
-		document.onkeydown = null;
-		if(screenactiondone == true){}else{
-			var blackon = $('stefanvdlightareoff1');
-			if(blackon){}else{screenactiondone = true;eyeprotection();outscreensaver();}
-		}
-	}, threadkey;
-
-	return function(){
-		window.clearTimeout(threadkey);
-		threadkey = window.setTimeout(onkeystop, ecosavertime * 1000);
-	};
-})();
-
-document.onwheel = (function(){
-	var onmousewheel = function(){
-		window.clearTimeout(threadscroll);
-		document.onwheel = null;
-		if(screenactiondone == true){}else{
-			var blackon = $('stefanvdlightareoff1');
-			if(blackon){}else{screenactiondone = true;eyeprotection();outscreensaver();}
-		}
-	}, threadscroll;
-
-	return function(){
-		window.clearTimeout(threadscroll);
-		threadscroll = window.setTimeout(onmousewheel, ecosavertime * 1000);
-	};
-})();
-
+	window.addEventListener("mousemove",ecomousemove);
+	window.addEventListener("keydown",ecomousekey);
+	window.addEventListener("wheel",ecomousescroll);
 }else{eyeprotection();}
 }
 
@@ -2167,6 +2180,7 @@ else{eyedojob();} // no night time
 gonighttime();
 
 // ambilight time
+function runambilight(){
 if(ambilight == true){
 if(atmosphereonly == true){
 var currenturl = window.location.protocol + '//' + window.location.host;
@@ -2183,21 +2197,46 @@ if(typeof atmosphereDomains == "string"){
 		if(currenturl == albuf[i]){ambilightfunction();}
     }
 }else{ambilightfunction();}
-} // end ambilight
+}
+}
+runambilight();
+
+function fixyoutubeatmos(){
+	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+		var youtubewatchplayershadow = $("watch-player"); // YouTube video page
+		if(youtubewatchplayershadow){youtubewatchplayershadow.style.overflow = "visible";} // show the overflow out the video element
+		var youtubevideoplayershadow = $("video-player"); // YouTube video page
+		if(youtubevideoplayershadow){youtubevideoplayershadow.style.overflow = "visible";} // show the overflow out the video element
+		var youtubewatchvideoshadow = $("watch-video"); // YouTube video page
+		if(youtubewatchvideoshadow){youtubewatchvideoshadow.style.overflow = "visible";} // show the overflow out the video element	
+		var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
+		if(youtubewindow){youtubewindow.classList.add('stefanvdvideocontrolsitem');}
+		var youtubemovieplayer = $("movie_player"); // YouTube video page
+		if(youtubemovieplayer){youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.classList.add('stefanvdvideocontrolsitem');} // show the overflow out the video element
+		var youtubeplayer = $("player"); // YouTube video page
+		if(youtubeplayer){youtubeplayer.style.overflow = "visible";}
+		var youtubeplayercontainerid = $("player-container-id"); // YouTube video page
+		if(youtubeplayercontainerid){youtubeplayercontainerid.style.overflow = "visible";}
+		var ytdwatch = document.getElementsByTagName("ytd-watch")[0];
+		if(ytdwatch){ytdwatch.style.overflow = "visible";} // show the overflow out the video element
+		var ytdpagemanager = document.getElementsByTagName("ytd-page-manager")[0];
+		if(ytdpagemanager){ytdpagemanager.style.overflow = "visible";} // show the overflow out the video element
+	}
+	if(window.location.href.match(/((http:\/\/(gaming.youtube\.com\/.*))|(https:\/\/(gaming.youtube\.com\/.*)))/i)){
+		var contentlayer = $("content-layer");
+		if(contentlayer){contentlayer.classList.add('stefanvdvideoauto');}
+	}
+}
 
 var requestId = 0;
 var stop = false;
 var frameCount = 0;
 var fps, fpsInterval, startTime, now, then, elapsed;
+var countA = [], countB = [], countC = []; // start from zero (blur spread) and size (left right top under) position
 
 function stopAnimation(e){
     window.cancelAnimationFrame(requestId);
 }
-
-function ambilightfunction(){
-// yes show time
-// ambilight play detect
-startAnimating(drawatmosfps);
 
 function startAnimating(fps){
     fpsInterval = 1000 / fps;
@@ -2209,9 +2248,47 @@ function startAnimating(fps){
 
 var totlmode = false;
 function animate(){
-		// stop
-		if(stop){return;}
+	// stop
+	if(stop){return;}
 
+	// use only for 'vivi mode' and 'atmosfpsauto' are both enabled 
+	if(atmosfpsauto == true && atmosvivid == true){
+		// draw stuff here
+		// regular HTML5 videos
+		if(atmosontotlmode == true){
+			if($('stefanvdlightareoff1')){
+				totlmode = true;
+			}else{
+				totlmode = false;
+			}
+		}else{
+			totlmode = true;
+		}
+
+		if(document.visibilityState === "visible"){
+			var htmlplayer = document.getElementsByTagName("video") || null;
+			var playerid = null, item = null;
+			var j;
+			var l = htmlplayer.length;
+			for(j = 0; j < l; j++){
+				if(htmlplayer[j].play){
+					playerid = htmlplayer[j];
+					item = j + 1;
+					drawAtmos(playerid, item, totlmode);
+					htmlplayer[j].requestVideoFrameCallback(animate);
+				}
+				if(htmlplayer[j].paused){
+					playerid = htmlplayer[j];
+					item = j + 1;
+					drawAtmos(playerid, item, totlmode);
+					htmlplayer[j].requestVideoFrameCallback(animate);
+				}
+			}
+		}
+
+		// YouTube flash detect play
+		fixyoutubeatmos();
+	}else{
 		// request another frame
 		requestId = window.requestAnimFrame(animate);
 
@@ -2249,39 +2326,30 @@ function animate(){
 			}
 
 			// YouTube flash detect play
-			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-				var youtubewatchplayershadow = $("watch-player"); // YouTube video page
-				if(youtubewatchplayershadow){youtubewatchplayershadow.style.overflow = "visible";} // show the overflow out the video element
-				var youtubevideoplayershadow = $("video-player"); // YouTube video page
-				if(youtubevideoplayershadow){youtubevideoplayershadow.style.overflow = "visible";} // show the overflow out the video element
-				var youtubewatchvideoshadow = $("watch-video"); // YouTube video page
-				if(youtubewatchvideoshadow){youtubewatchvideoshadow.style.overflow = "visible";} // show the overflow out the video element	
-				var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
-				if(youtubewindow){youtubewindow.classList.add('stefanvdvideocontrolsitem');}
-				var youtubemovieplayer = $("movie_player"); // YouTube video page
-				if(youtubemovieplayer){youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.classList.add('stefanvdvideocontrolsitem');} // show the overflow out the video element
-				var youtubeplayer = $("player"); // YouTube video page
-				if(youtubeplayer){youtubeplayer.style.overflow = "visible";}
-				var youtubeplayercontainerid = $("player-container-id"); // YouTube video page
-				if(youtubeplayercontainerid){youtubeplayercontainerid.style.overflow = "visible";}
-				var ytdwatch = document.getElementsByTagName("ytd-watch")[0];
-				if(ytdwatch){ytdwatch.style.overflow = "visible";} // show the overflow out the video element
-				var ytdpagemanager = document.getElementsByTagName("ytd-page-manager")[0];
-				if(ytdpagemanager){ytdpagemanager.style.overflow = "visible";} // show the overflow out the video element
-			}
-			if(window.location.href.match(/((http:\/\/(gaming.youtube\.com\/.*))|(https:\/\/(gaming.youtube\.com\/.*)))/i)){
-				var contentlayer = $("content-layer");
-				if(contentlayer){contentlayer.classList.add('stefanvdvideoauto');}
-			}
+			fixyoutubeatmos();
 
 			// TESTING...Report #seconds since start and achieved fps.
 			//var sinceStart = now - startTime;
 			//var currentFps = Math.round(1000 / (sinceStart / ++frameCount) * 100) / 100;
 			//console.log("Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @ " + currentFps + " fps.");
 		}
+	}
 }
 
-var countA = [], countB = [], countC = []; // start from zero (blur spread) and size (left right top under) position
+function autoframeglow(){
+	var htmlplayer = document.getElementsByTagName("video");
+	var j;
+	var l = htmlplayer.length;
+	for(j = 0; j < l; j++){
+		htmlplayer[j].addEventListener("playing", function() {
+			animate();
+		});
+		htmlplayer[j].addEventListener("pause", function() {
+			animate();
+		});
+	}
+}
+
 // ambilight draw code		
 function drawAtmos(playerid, item, totlmode){
 	var statusdetectvideo = playerid.paused || playerid.ended;
@@ -2290,6 +2358,7 @@ function drawAtmos(playerid, item, totlmode){
 
 	if((statusdetectvideo) || totlmode == false){
 	// animation go out
+	if(ambilightfixcolor == true || ambilight4color == true || (ambilightvarcolor == true && atmosvivid == false)){
 	if(typeof countA[item] == 'undefined'){countA[item] = 0;}
 	if(typeof countB[item] == 'undefined'){countB[item] = 0;}
 	if(typeof countC[item] == 'undefined'){countC[item] = 0;}
@@ -2299,33 +2368,34 @@ function drawAtmos(playerid, item, totlmode){
 	var textcountA = countA[item] + "px";
 	var textcountB = countB[item] + "px";
 	var textcountC = countC[item] + "px";
+	}
 
 	if(ambilightvarcolor == true){
 		if(atmosvivid == true){
 		}else{
-var k = item;
-	if(typeof k == "undefined"){
-	return
-	}
-var canvas = $("totlCanvas" + k + "");
-if(canvas){
-	var context = canvas.getContext('2d',{desynchronized: true});;
-	var imageData = context.getImageData(0, 0, 1, 1);
-	var data = imageData.data;
+			var k = item;
+			if(typeof k == "undefined"){
+			return
+			}
+			var canvas = $("totlCanvas" + k + "");
+			if(canvas){
+				var context = canvas.getContext('2d',{desynchronized: true});;
+				var imageData = context.getImageData(0, 0, 1, 1);
+				var data = imageData.data;
 
-	var p1 = context.getImageData(0 , 0, 1, 1).data;
-	var p2 = context.getImageData(1 , 0, 1, 1).data;
-	var p3 = context.getImageData(2 , 0, 1, 1).data;
-	var p4 = context.getImageData(3 , 0, 1, 1).data;
-	var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-	var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-	var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-	var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
-}
-var downhex1 = hex1; if(!hex1){hex1 = "#000000";} // previous value
-var downhex2 = hex2; if(!hex2){hex2 = "#000000";} // previous value
-var downhex3 = hex3; if(!hex3){hex3 = "#000000";} // previous value
-var downhex4 = hex4; if(!hex4){hex4 = "#000000";} // previous value
+				var p1 = context.getImageData(0 , 0, 1, 1).data;
+				var p2 = context.getImageData(1 , 0, 1, 1).data;
+				var p3 = context.getImageData(2 , 0, 1, 1).data;
+				var p4 = context.getImageData(3 , 0, 1, 1).data;
+				var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+				var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+				var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+				var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+			}
+			var downhex1 = hex1; if(!hex1){hex1 = "#000000";} // previous value
+			var downhex2 = hex2; if(!hex2){hex2 = "#000000";} // previous value
+			var downhex3 = hex3; if(!hex3){hex3 = "#000000";} // previous value
+			var downhex4 = hex4; if(!hex4){hex4 = "#000000";} // previous value
 		}
 	}
 	// ----
@@ -2377,7 +2447,8 @@ var downhex4 = hex4; if(!hex4){hex4 = "#000000";} // previous value
 		}
 	}
 	
-	return false;}
+	return false;
+	}
 
 if(totlmode == false){return;}
 
@@ -2395,6 +2466,8 @@ try{
 	var getspread = ambilightrangespreadradius + "px";
 	
 	// animate out and in
+	// but not for the vivid mode
+	if(ambilightfixcolor == true || ambilight4color == true || (ambilightvarcolor == true && atmosvivid == false)){
 	if(typeof countA[item] == 'undefined'){countA[item] = 0;}
 	if(typeof countB[item] == 'undefined'){countB[item] = 0;}
 	if(typeof countC[item] == 'undefined'){countC[item] = 0;}
@@ -2404,6 +2477,7 @@ try{
 	var textcountA = countA[item] + "px";
 	var textcountB = countB[item] + "px";
 	var textcountC = countC[item] + "px";
+	}
 
 	if(ambilightvarcolor == true){
 	// Cross detection
@@ -2616,10 +2690,20 @@ try{
 	
 }
 
-// Observe a specific DOM element
-// New Mutation Summary API Reference
-var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-if(MutationObserver){
+function ambilightfunction(){
+	// yes show time
+	// ambilight play detect
+	if(atmosfpsauto == true && atmosvivid == true){
+		// auto
+		autoframeglow();
+	}else{
+		// regular
+		startAnimating(drawatmosfps);
+	}
+
+	// Observe a specific DOM element
+	// New Mutation Summary API Reference
+	if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.body;
 		var observer = new MutationObserver(function(mutations, observer){
@@ -2641,6 +2725,9 @@ if(MutationObserver){
 											document.getElementById('stefanvdvivideffect'+potvis).style.top = visposition.y+"px";
 											document.getElementById('stefanvdvivideffect'+potvis).style.left = visposition.x+"px";
 										}
+										if(mutation.target.play){
+											animate();
+										}
 									}
 								}
 							}
@@ -2658,8 +2745,7 @@ if(MutationObserver){
 			characterData: false, // include textContent changes
 			attributes: true     // include changes to attributes within the subtree
 		});
-	
-}
+	}
 }
 
 var isitdark = false;
@@ -2728,7 +2814,6 @@ function realtimewebgonightmode(na){
 }
 
 // night mode: stylesheet changed
-var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 var element = window.document;
 var nightcssobserver = new MutationObserver(function(mutations){
     mutations.forEach(function(mutation){
@@ -2845,7 +2930,7 @@ function webgonightmode(){
 			$("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
 		}
 		if($("stefanvdnightthemecheckbox")){$("stefanvdnightthemecheckbox").checked = true;}
-		
+
 		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}else{
 
 			if(document.getElementsByTagName('html')[0].classList.contains("stefanvdnightbck") || document.getElementsByTagName('html')[0].classList.contains("stefanvdnight")){
@@ -3224,8 +3309,7 @@ function webgonightmode(){
 		$("stefanvdnightin").setAttribute("id", "stefanvdnighti"); // change night background button
 	}
 	if($("stefanvdnightthemecheckbox")){$("stefanvdnightthemecheckbox").checked = false;}
-
-
+	
 	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 		document.body.style.backgroundImage = oldbackgroundImage;
 		document.body.style.backgroundColor = oldbackgroundColor;
@@ -3592,6 +3676,29 @@ function webgonightmode(){
 
 // gogo night mode
 function gogonightmode(){
+	// PDF detection
+	if(isitdark == true){
+		if(document.getElementById("stefanvdnightpdf")){
+			document.getElementById("stefanvdnightpdf").style.display = "none";
+		}
+	}else{
+		// if current web page is a PDF file
+		if(window.location.href.indexOf(".pdf") != -1){
+			// it is a PDF file
+			if(document.getElementById('stefanvdnightpdf')){
+				document.getElementById("stefanvdnightpdf").style.display = "block";
+			}
+			else{
+				var pdfcover = document.createElement("div");
+				let css = 'position: fixed; pointer-events: none; top: 0; left: 0; width: 100vw; height: 100vh; background-color: '+nightmodebck+'; -webkit-filter: invert(1);filter: invert(1);mix-blend-mode: difference;'
+				pdfcover.setAttribute("style", css); 
+				pdfcover.id = "stefanvdnightpdf"; 
+				document.body.appendChild(pdfcover); 
+			}
+		}
+	}
+	//---
+		
 	if(sun == false){
 		// go back and disable this
 		nightcssobserver.disconnect();
@@ -3630,7 +3737,56 @@ function gogonightmode(){
 			isitdark = false;
 		}
 	});
+}
 
+var timernightswitch;
+var mousemoveswitchhide = function(){
+	window.clearTimeout(timernightswitch);
+	if($('stefanvdnighttheme')){
+		if($('stefanvdnighttheme').classList.contains('stefanvdswitchhidden')){
+			$('stefanvdnighttheme').classList.remove("stefanvdswitchhidden");
+		}
+	}
+	timernightswitch = window.setTimeout(function(){
+		if($('stefanvdnighttheme')){
+		$('stefanvdnighttheme').classList.add("stefanvdswitchhidden");
+		}
+	}, nightmodeswitchhidetime * 1000);
+}
+
+// automatically hide the switch when video is in full screen (playing and pause status)
+function gohideswitchonplay(){
+	if(nightcurrentvideoplaying == true){
+		if($('stefanvdnighttheme')){$('stefanvdnighttheme').classList.add("stefanvdswitchhidden");}
+	}
+}
+
+function goshowswitchonpause(){
+	if(!nightmodeswitchhide){ // auto hide switch is not enabled
+		if($('stefanvdnighttheme')){
+			if($('stefanvdnighttheme').classList.contains('stefanvdswitchhidden')){$('stefanvdnighttheme').classList.remove("stefanvdswitchhidden");}
+		}
+	}
+}
+
+var fullscreenswitch = function(){
+	if(document.fullscreenElement){
+		// fullscreen is activated
+		gohideswitchonplay();
+	}else{
+		// fullscreen is cancelled
+		goshowswitchonpause();
+	}
+}
+
+var nightcurrentvideoplaying = false;
+var playnightfullscreen = function(){
+	nightcurrentvideoplaying = true;
+	if(document.fullscreenElement){gohideswitchonplay();}
+}
+var pausenightfullscreen = function(){
+	nightcurrentvideoplaying = false;
+	goshowswitchonpause();
 }
 
 function nightfunction(){
@@ -3685,61 +3841,17 @@ function nightfunction(){
 		$("stefanvdnighttheme").addEventListener('change', function(e){gogonightmode();}, false);
 
 		// automatically hide the switch
-		var timernightswitch;
 		if(nightmodeswitchhide == true){
-			document.onmousemove = function(){
-				window.clearTimeout(timernightswitch);
-				if($('stefanvdnighttheme')){
-					if($('stefanvdnighttheme').classList.contains('stefanvdswitchhidden')){
-						$('stefanvdnighttheme').classList.remove("stefanvdswitchhidden");
-					}
-				}
-				timernightswitch = window.setTimeout(function(){
-					if($('stefanvdnighttheme')){
-					$('stefanvdnighttheme').classList.add("stefanvdswitchhidden");
-					}
-				}, nightmodeswitchhidetime * 1000);
-			}
-		}
-
-		// automatically hide the switch when video is in full screen (playing and pause status)
-		function gohideswitchonplay(){
-			if(nightcurrentvideoplaying == true){
-				if($('stefanvdnighttheme')){$('stefanvdnighttheme').classList.add("stefanvdswitchhidden");}
-			}
-		}
-
-		function goshowswitchonpause(){
-			if(!nightmodeswitchhide){ // auto hide switch is not enabled
-				if($('stefanvdnighttheme')){
-					if($('stefanvdnighttheme').classList.contains('stefanvdswitchhidden')){$('stefanvdnighttheme').classList.remove("stefanvdswitchhidden");}
-				}
-			}
+			document.addEventListener("mousemove", mousemoveswitchhide);
 		}
 
 		var x = document.getElementsByTagName("video")[0];
-		var nightcurrentvideoplaying = false;
 		if(x){
-		x.addEventListener("playing", function(e){
-			nightcurrentvideoplaying = true;
-			if(document.fullscreenElement){gohideswitchonplay();}
-		});
-		x.addEventListener("pause", function(e){
-			nightcurrentvideoplaying = false;
-			goshowswitchonpause();
-		});
+		x.addEventListener("playing", playnightfullscreen);
+		x.addEventListener("pause", pausenightfullscreen);
 		}
 
-		document.addEventListener("fullscreenchange", function(event){
-			if(document.fullscreenElement){
-				// fullscreen is activated
-				gohideswitchonplay();
-			}else{
-				// fullscreen is cancelled
-				goshowswitchonpause();
-			}
-		});
-
+		document.addEventListener("fullscreenchange", fullscreenswitch);
 	}
 }
 
@@ -3778,11 +3890,69 @@ function showswitchtricker(){
 
 // show all options the night switch CSS
 // but not the "only" websites
-if(nighttheme == true){
-	if(nightonly != true){
-		showswitchtricker()
+var currenturl;
+var currenturlb;
+function runnightmodecheck(){
+	if(nighttheme == true){
+		if(nightonly != true){
+			showswitchtricker()
+		}
+	}
+
+	if(nightonly == true){
+		if(nightmodebydomain == true){
+			currenturl = window.location.protocol + '//' + window.location.host;
+			currenturlb = currenturl; // copy
+		}else{
+			// WITH end slash
+			currenturl = window.location.href;
+			if(currenturl.substr(-1) === '/'){
+			// NO end slash
+			currenturlb = currenturl.substr(0, currenturl.length - 1);
+			}
+		}
+	
+		var nightrabbit = false;
+		if(typeof nightDomains == "string"){
+			nightDomains = JSON.parse(nightDomains);
+			var nbuf = [];
+			var domain;
+			for(domain in nightDomains)
+				nbuf.push(domain);
+				nbuf.sort();
+				var i;
+				var l = nbuf.length;
+			for(i = 0; i < l; i++){
+				if(nightmodechecklistwhite == true){
+					if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
+						if(nighttheme == true){showswitchtricker();}
+						if(nightenabletheme == true){
+							timergonighttricker();
+						}
+					}
+				}
+				else if(nightmodechecklistblack == true){
+					if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
+						nightrabbit=true;
+					}
+				}
+			}
+		}
+		if(nightmodechecklistblack == true){
+			if(nightrabbit == false){
+				if(nighttheme == true){showswitchtricker();}
+						if(nightenabletheme == true){
+							timergonighttricker();
+						}
+			}
+		}
+	}else{
+		if(nightenabletheme == true){
+			timergonighttricker();
+		} // auto the night mode
 	}
 }
+runnightmodecheck();
 
 function timergonighttricker(){
 	if(nightactivetime == true){
@@ -3816,142 +3986,71 @@ function timergonighttricker(){
 	}
 }
 
-
-var currenturl;
-var currenturlb;
-if(nightonly == true){
-	if(nightmodebydomain == true){
-		currenturl = window.location.protocol + '//' + window.location.host;
-		currenturlb = currenturl; // copy
-	}else{
-		// WITH end slash
-		currenturl = window.location.href;
-		if(currenturl.substr(-1) === '/'){
-		// NO end slash
-		currenturlb = currenturl.substr(0, currenturl.length - 1);
-		}
-	}
-
-	var nightrabbit = false;
-	if(typeof nightDomains == "string"){
-		nightDomains = JSON.parse(nightDomains);
-		var nbuf = [];
-		var domain;
-		for(domain in nightDomains)
-			nbuf.push(domain);
-			nbuf.sort();
-			var i;
-			var l = nbuf.length;
-		for(i = 0; i < l; i++){
-			if(nightmodechecklistwhite == true){
-				if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
-					if(nighttheme == true){showswitchtricker();}
-					if(nightenabletheme == true){
-						timergonighttricker();
-					}
-				}
-			}
-			else if(nightmodechecklistblack == true){
-				if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
-                    nightrabbit=true;
-                }
-			}
-		}
-	}
-	if(nightmodechecklistblack == true){
-		if(nightrabbit == false){
-            if(nighttheme == true){showswitchtricker();}
-					if(nightenabletheme == true){
-						timergonighttricker();
-					}
-        }
-	}
-}else{
-	if(nightenabletheme == true){
-		timergonighttricker();
-	} // auto the night mode
-}
-
 // draggable object for the Night Mode feature switch
-if($('stefanvdnighttheme')){
-if(nmcustom == true){
 var dragobject = { z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
-initialize:function(){
-document.onmousedown = this.drag;
-document.onmouseup = function(){ this.dragapproved = 0;
-// save the x and y value
-if(nmcustom == true){
-var getnmcx = $('stefanvdnighttheme').style.left;
-var getnmcy = $('stefanvdnighttheme').style.bottom;
-chrome.runtime.sendMessage({'name' : 'nmcustomx', 'value' : getnmcx});
-chrome.runtime.sendMessage({'name' : 'nmcustomy', 'value' : getnmcy});
-}
-}
-},
-drag:function(e){
-var evtobj = window.event? window.event : e;
-if(e.target.className == "turnoffthelightsdrag"){
-this.dragapproved = 1;
-$('stefanvdnighttheme').offsetx = parseInt($('stefanvdnighttheme').style.left);
-$('stefanvdnighttheme').offsety = parseInt($('stefanvdnighttheme').style.bottom);
-$('stefanvdnighttheme').x = evtobj.clientX; $('stefanvdnighttheme').y = evtobj.clientY;
-if(evtobj.preventDefault)evtobj.preventDefault();
-document.onmousemove = dragobject.moveit;
-}
-},
-moveit:function(e){
-var evtobj = window.event? window.event : e;
-if(this.dragapproved == 1){
-	if(nmcustom == true || nmbottomleft == true){
-		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
-		$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+	initialize:function(){
+		document.addEventListener("mousedown", this.drag);
+		document.addEventListener("mouseup", this.dragup);
+	},
+	dragup:function(e){
+		this.dragapproved = 0;
+		// save the x and y value
+		if(nmcustom == true){
+		var getnmcx = $('stefanvdnighttheme').style.left;
+		var getnmcy = $('stefanvdnighttheme').style.bottom;
+		chrome.runtime.sendMessage({'name' : 'nmcustomx', 'value' : getnmcx});
+		chrome.runtime.sendMessage({'name' : 'nmcustomy', 'value' : getnmcy});
+		}
+	},
+	drag:function(e){
+		var evtobj = window.event? window.event : e;
+		if(e.target.className == "turnoffthelightsdrag"){
+		this.dragapproved = 1;
+		$('stefanvdnighttheme').offsetx = parseInt($('stefanvdnighttheme').style.left);
+		$('stefanvdnighttheme').offsety = parseInt($('stefanvdnighttheme').style.bottom);
+		$('stefanvdnighttheme').x = evtobj.clientX; $('stefanvdnighttheme').y = evtobj.clientY;
+		if(evtobj.preventDefault)evtobj.preventDefault();
+		document.addEventListener("mousemove", dragobject.moveit);
+		}
+	},
+	moveit:function(e){
+		var evtobj = window.event? window.event : e;
+		if(this.dragapproved == 1){
+			if(nmcustom == true || nmbottomleft == true){
+				$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+				$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+			}
+			else if(nmtopleft == true){
+				$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+				$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+			}
+			else if(nmtopright == true){
+				$('stefanvdnighttheme').style.right = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+				$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+			}
+			else if(nmbottomright == true){
+				$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
+				$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
+			}
+		return false;
+		}
 	}
-	else if(nmtopleft == true){
-		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
-		$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
-	}
-	else if(nmtopright == true){
-		$('stefanvdnighttheme').style.right = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
-		$('stefanvdnighttheme').style.top = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
-	}
-	else if(nmbottomright == true){
-		$('stefanvdnighttheme').style.left = $('stefanvdnighttheme').offsetx + evtobj.clientX - $('stefanvdnighttheme').x + "px";
-		$('stefanvdnighttheme').style.bottom = $('stefanvdnighttheme').offsety - evtobj.clientY + $('stefanvdnighttheme').y + "px";
-	}
-return false;
-}
-}
 }
 
-dragobject.initialize();
+function addswitchdrag(){
+	if($('stefanvdnighttheme')){
+		if(nmcustom == true){
+			dragobject.initialize();
+		}
+	}
 }
-}
+addswitchdrag();
 
 // night mode gesture
-if(nightmodegesture == true){
-var nightblurcss = '.stefanvdnightblur{-webkit-animation:0.8s nightblind;animation:0.8s nightblind}@-webkit-keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}@keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}.stefanvdlongpress{-webkit-animation:0.8s longpress;animation:0.8s longpress}@-webkit-keyframes longpress{0%,20%{background:'+window.getComputedStyle(document.body,null).getPropertyValue('background-color')+'}100%{background:'+nightmodebck+'}}@keyframes longpress{0%,20%{background:'+window.getComputedStyle(document.body,null).getPropertyValue('background-color')+'}100%{background:'+nightmodebck+'}}',
-head = document.head || document.getElementsByTagName('head')[0],
-style = document.createElement('style');
-
-if($("totlnightgesturestyle")){
-	$("totlnightgesturestyle").innerText = nightblurcss;
-}else{
-	style.type = 'text/css';
-	style.setAttribute("id", "totlnightgesturestyle");
-	if(style.styleSheet){
-	style.styleSheet.cssText = nightblurcss;
-	}else{
-	style.appendChild(document.createTextNode(nightblurcss));
-	}
-	head.appendChild(style);
-}
-
 var bnode = document.body;
-var longpress = false;
 var presstimer = null;
-var texseleced = false;
 
-var cancel = function(e){
+var cancelgesture = function(e){
     if(presstimer !== null){
         clearTimeout(presstimer);
         presstimer = null;
@@ -3965,9 +4064,9 @@ var cancel = function(e){
 		elementList[i].classList.remove('stefanvdlongpress');
 	}
 	document.getElementsByTagName("html")[0].classList.remove('stefanvdnightblur');
-};
+}
 
-var start = function(e){
+var startgesture = function(e){
     if(e.type === "pointerdown" && e.button !== 0){
         return;
 	}
@@ -3977,8 +4076,6 @@ var start = function(e){
 	if(targetlongpress == "A" || targetlongpress == "INPUT" || targetlongpress == "OPTION" || targetlongpress == "NAV" || targetlongpress == "METER" || targetlongpress == "PROGRESS" || targetlongpress == "SELECT" || targetlongpress == "BUTTON" || targetlongpress == "VIDEO" || targetlongpress == "AUDIO"){
         return;
 	}
-	
-	longpress = false;
 
 	var switchelements;
 	if(document.getElementById('stefanvdnighttheme')){
@@ -4034,13 +4131,12 @@ var start = function(e){
 		if(navigator.vibrate){
 		window.navigator.vibrate([100,30,200]);
 		}
-        longpress = true;
     }, 800);
     
 	return false;
-};
+}
 
-document.addEventListener("selectionchange",event=>{
+var nightseectionchange = function(){
 	if(window.getSelection){
 		var selectObj = window.getSelection();
 		// if text selection, stop the function
@@ -4049,45 +4145,44 @@ document.addEventListener("selectionchange",event=>{
 		}
 		else{
 			//console.log("TEXT selected here! + CANCEL");
-			cancel();
+			cancelgesture();
 		}
 	}
-});
-bnode.addEventListener("touchstart", start);
-bnode.addEventListener("touchend", cancel);
-bnode.addEventListener("touchcancel", cancel);
-bnode.addEventListener("touchmove", cancel);
-bnode.addEventListener("pointerdown", start);
-bnode.addEventListener("pointerup", cancel);
-bnode.addEventListener("contextmenu", cancel);
 }
 
-// reflection
-if(reflection == true){
-		var startreflection = window.setInterval(function(){
-		try{
-		var reflectionplayer = document.getElementsByTagName("video") || null;
-		var reflectionid = null, ritem = null;
-		var k;
-		var l = reflectionplayer.length;
-		for(k = 0; k < l; k++){
-			if(reflectionplayer[k].play){reflectionid = reflectionplayer[k]; ritem = k + 1; drawReflection(reflectionid, ritem);}
-		}
-		
-		// YouTube flash detect play
-		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-		var yttest = $("movie_player"); ritem = 1;
+function runnightmodegesturecheck(){
+if(nightmodegesture == true){
+var nightblurcss = '.stefanvdnightblur{-webkit-animation:0.8s nightblind;animation:0.8s nightblind}@-webkit-keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}@keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}.stefanvdlongpress{-webkit-animation:0.8s longpress;animation:0.8s longpress}@-webkit-keyframes longpress{0%,20%{background:'+window.getComputedStyle(document.body,null).getPropertyValue('background-color')+'}100%{background:'+nightmodebck+'}}@keyframes longpress{0%,20%{background:'+window.getComputedStyle(document.body,null).getPropertyValue('background-color')+'}100%{background:'+nightmodebck+'}}',
+head = document.head || document.getElementsByTagName('head')[0],
+style = document.createElement('style');
 
-		if(yttest){
-		if($("movie_player").getPlayerState() == 1){drawReflection(youtubewindow, ritem);}
-		else{drawReflection(youtubewindow, ritem);}
-		}
-		}
-		
-		}
-		catch(err){} // I see nothing, that is good
-		},20); // 20 refreshing it
-		
+if($("totlnightgesturestyle")){
+	$("totlnightgesturestyle").innerText = nightblurcss;
+}else{
+	style.type = 'text/css';
+	style.setAttribute("id", "totlnightgesturestyle");
+	if(style.styleSheet){
+	style.styleSheet.cssText = nightblurcss;
+	}else{
+	style.appendChild(document.createTextNode(nightblurcss));
+	}
+	head.appendChild(style);
+}
+
+document.addEventListener("selectionchange", nightseectionchange);
+
+bnode.addEventListener("touchstart", startgesture);
+bnode.addEventListener("touchend", cancelgesture);
+bnode.addEventListener("touchcancel", cancelgesture);
+bnode.addEventListener("touchmove", cancelgesture);
+bnode.addEventListener("pointerdown", startgesture);
+bnode.addEventListener("pointerup", cancelgesture);
+bnode.addEventListener("contextmenu", cancelgesture);
+}
+}
+runnightmodegesturecheck();
+
+// reflection
 function drawReflection(reflectionid,ritem){
 	var calcreflection = (100 - reflectionamount)/100;
 	try{
@@ -4112,11 +4207,38 @@ function drawReflection(reflectionid,ritem){
 			reflectionid.style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop("+calcreflection+", transparent))";
 		}
 	}catch(err){}
-	window.requestAnimFrame(drawReflection);	
 }
-		
-} // end reflection
 
+var startreflection;
+function runreflectioncheck(){
+	if(reflection == true){
+		startreflection = window.setInterval(function(){
+		try{
+		var reflectionplayer = document.getElementsByTagName("video") || null;
+		var reflectionid = null, ritem = null;
+		var k;
+		var l = reflectionplayer.length;
+		for(k = 0; k < l; k++){
+			if(reflectionplayer[k].play){reflectionid = reflectionplayer[k]; ritem = k + 1; drawReflection(reflectionid, ritem);}
+		}
+		
+		// YouTube flash detect play
+		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+		var yttest = $("movie_player"); ritem = 1;
+
+		if(yttest){
+		if($("movie_player").getPlayerState() == 1){drawReflection(youtubewindow, ritem);}
+		else{drawReflection(youtubewindow, ritem);}
+		}
+		}
+		
+		}
+		catch(err){} // I see nothing, that is good
+		},20); // 20 refreshing it
+	}
+} // end reflection
+runreflectioncheck();
+	
 function isMacintosh(){
 	return navigator.platform.indexOf('Mac') > -1
 }
@@ -4127,27 +4249,10 @@ while (el){xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);yPos += (el.o
 return{x:xPos,y:yPos};
 }
 
-if(videovolume == true || videovolumehold == true){
-videovolumesteps = Math.round(videovolumesteps * 100) / 10000;
-
+// Mouse Volume Scroll
+var myListenerWithContextvolume;
+var observervideovolume;
 var scrollTimer = -1;
-// inject CSS for the progress bar
-try{
-var totlvideovolume = ".totlmousewheelvideo progress[value]::-webkit-progress-value{background:"+videovolumecolor+"!important;background-color:"+videovolumecolor+"!important;border-radius:2px!important}.totlmousewheelvideo progress[value]::-moz-progress-bar{background:"+videovolumecolor+"!important;background-color:"+videovolumecolor+"!important;border-radius:2px!important}.totlmousewheelvideo progress[value]::progress-value{background:"+videovolumecolor+"!important;background-color:"+videovolumecolor+"!important;border-radius:2px!important}";
-
-if($("csstotlvolume")){
-var elem = document.getElementById("csstotlvolume");
-elem.parentElement.removeChild(elem);
-}
-
-var css = document.createElement('style');
-css.setAttribute('id','csstotlvolume');
-css.type = 'text/css';
-css.appendChild(document.createTextNode(totlvideovolume));
-document.getElementsByTagName("head")[0].appendChild(css);
-}
-catch(e){}
-
 var rundoscrollfunc = false;
 var doscroll=function(e){
 
@@ -4401,34 +4506,45 @@ for(i = 0; i < l; i++){
 }
 }
 
+function runvideovolume(){
+if(videovolume == true || videovolumehold == true){
+videovolumesteps = Math.round(videovolumesteps * 100) / 10000;
+
+// inject CSS for the progress bar
+try{
+var totlvideovolume = ".totlmousewheelvideo progress[value]::-webkit-progress-value{background:"+videovolumecolor+"!important;background-color:"+videovolumecolor+"!important;border-radius:2px!important}.totlmousewheelvideo progress[value]::-moz-progress-bar{background:"+videovolumecolor+"!important;background-color:"+videovolumecolor+"!important;border-radius:2px!important}.totlmousewheelvideo progress[value]::progress-value{background:"+videovolumecolor+"!important;background-color:"+videovolumecolor+"!important;border-radius:2px!important}";
+
+if($("csstotlvolume")){
+var elem = document.getElementById("csstotlvolume");
+elem.parentElement.removeChild(elem);
+}
+
+var css = document.createElement('style');
+css.setAttribute('id','csstotlvolume');
+css.type = 'text/css';
+css.appendChild(document.createTextNode(totlvideovolume));
+document.getElementsByTagName("head")[0].appendChild(css);
+}
+catch(e){}
+
 addvolume();
 
-window.addEventListener('resize', function(){
-	var elements = document.getElementsByClassName("totlmousewheelvideo");
-	while(elements.length > 0){
-		elements[0].parentNode.removeChild(elements[0]);
-	}
-	addvolume();
-},false);
-
-function refreshvolume(){
-	adddatavideo(); // recheck remove and add video ID
-
+var myListenervolume = function(event) {
 	var elements = document.getElementsByClassName("totlmousewheelvideo");
 	while(elements.length > 0){
 		elements[0].parentNode.removeChild(elements[0]);
 	}
 	addvolume();
 }
-} // end videovolume
+myListenerWithContextvolume = myListenervolume.bind(this);
+window.addEventListener('resize', myListenerWithContextvolume);
 
 // Observe a specific DOM element
 // New Mutation Summary API Reference
-var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.body;
-		var observer = new MutationObserver(function(mutations, observer){
+		observervideovolume = new MutationObserver(function(mutations, observer){
 			mutations.forEach(function(mutation){
 
 				if(mutation.target.tagName == "VIDEO"){
@@ -4471,7 +4587,7 @@ if(MutationObserver){
 			});
 		});
 	
-		observer.observe(videolist,{
+		observervideovolume.observe(videolist,{
 			subtree: true,       // observe the subtree rooted at ...videolist...
 			childList: true,     // include childNode insertion/removals
 			characterData: false, // include textContent changes
@@ -4480,6 +4596,19 @@ if(MutationObserver){
 	
 }
 //---
+}
+} // end videovolume
+runvideovolume();
+
+function refreshvolume(){
+	adddatavideo(); // recheck remove and add video ID
+
+	var elements = document.getElementsByClassName("totlmousewheelvideo");
+	while(elements.length > 0){
+		elements[0].parentNode.removeChild(elements[0]);
+	}
+	addvolume();
+}
 
 // YouTube embed iframe
 if(customqualityyoutube == true){
@@ -4670,76 +4799,86 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 		if(blackon){chrome.runtime.sendMessage({name: 'mastertabdark', value: true});}
 		else{chrome.runtime.sendMessage({name: 'mastertabdark', value: false});}
 	}
-	else if(request.action == "gonewecosavetime"){
-		ecosavertime = request.message;
-	}
-	else if(request.action == "gonewnightmode"){
-		chrome.storage.sync.get(['nighttheme','nightmodebck','nightmodetxt','nightmodehyperlink'], function(items){
+	else if(request.action == "gonightmodecolors"){
+		chrome.storage.sync.get(['nightmodebck','nightmodetxt','nightmodehyperlink'], function(items){
 			if(items['nightmodebck']){nightmodebck = items['nightmodebck'];}
 			else{nightmodebck = '#1e1e1e';}
 			if(items['nightmodetxt']){nightmodetxt = items['nightmodetxt'];}
 			else{nightmodetxt = '#ffffff';}
 			if(items['nightmodehyperlink']){nightmodehyperlink = items['nightmodehyperlink'];}
 			else{nightmodehyperlink = '#ffffff';}
+
+			if(document.getElementById('totlnightmodestyle')){
+				document.getElementById('totlnightmodestyle').innerText = '.stefanvdnightbck{background:'+nightmodebck+'!important;background-color:'+nightmodebck+'!important;}.stefanvdnight{color:'+nightmodetxt+'!important;}.stefanvdnight a{color:'+nightmodehyperlink+'!important}.stefanvdnight a *{color:'+nightmodehyperlink+'!important}';
+			}
 		});
 	}
 	else if(request.action == "goenablenightmode"){
-		chrome.storage.sync.get(['nighttheme'], function(items){
-			if(items['nighttheme'] == true){
-				showswitchtricker();
-			}
-			else{
-				sun = true; isitdark = false;
-				// search all elements and remove night class
-				var elems = document.querySelectorAll(".stefanvdnight");
-				[].forEach.call(elems, function(el){
-					el.classList.remove("stefanvdnight");
-				});
-				
-				var elems = document.querySelectorAll(".stefanvdnightbck");
-				[].forEach.call(elems, function(el){
-					el.classList.remove("stefanvdnightbck");
-				});
+		chrome.storage.sync.get(['nighttheme','lampandnightmode','nightmodeswitchhide','nightmodeswitchhidetime','nightonly','nightmodechecklistwhite','nightmodechecklistblack','nightDomains','nightmodebydomain','nightmodebypage','nightactivetime','nmbegintime','nmendtime','nightenabletheme','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom'], function(items){
+			nighttheme = items['nighttheme'];
+			lampandnightmode = items['lampandnightmode'];
+			nightmodeswitchhide = items['nightmodeswitchhide'];
+			nightmodeswitchhidetime = items['nightmodeswitchhidetime'];
+			nightonly = items['nightonly'];
+			nightmodechecklistwhite = items['nightmodechecklistwhite'];
+			nightmodechecklistblack = items['nightmodechecklistblack'];
+			nightDomains = items['nightDomains'];
+			nightmodebydomain = items['nightmodebydomain'];
+			nightmodebypage = items['nightmodebypage'];
+			nightactivetime = items['nightactivetime'];
+			nmbegintime = items['nmbegintime'];
+			nmendtime = items['nmendtime'];
+			nightenabletheme = items['nightenabletheme'];
+			nighthover = items['nighthover'];
+			nmtopleft = items['nmtopleft'];
+			nmtopright = items['nmtopright'];
+			nmbottomright = items['nmbottomright'];
+			nmbottomleft = items['nmbottomleft'];
+			nmcustom = items['nmcustom'];
 
-				var elemstyle = document.getElementById("totlnightmodestyle");
-				if(elemstyle){elemstyle.parentElement.removeChild(elemstyle);}
-				var elemswitch = document.getElementById("stefanvdnighttheme");
-				if(elemswitch){elemswitch.parentElement.removeChild(elemswitch);}
+			// remove
+			window.clearTimeout(timernightswitch);
+			document.removeEventListener("mousemove", mousemoveswitchhide);
+			document.removeEventListener("fullscreenchange", fullscreenswitch);
+
+			nightcurrentvideoplaying = false;
+			var x = document.getElementsByTagName("video")[0];
+			if(x){
+			x.removeEventListener("playing", playnightfullscreen);
+			x.removeEventListener("pause", pausenightfullscreen);
 			}
+
+			document.removeEventListener("mousedown", dragobject.drag);
+			document.removeEventListener("mouseup", dragobject.dragup);
+			document.removeEventListener("mouseover", dragobject.moveit);
+
+			sun = true; isitdark = false;
+			// search all elements and remove night class
+			var elems = document.querySelectorAll(".stefanvdnight");
+			[].forEach.call(elems, function(el){
+				el.classList.remove("stefanvdnight");
+			});
+			
+			var elems = document.querySelectorAll(".stefanvdnightbck");
+			[].forEach.call(elems, function(el){
+				el.classList.remove("stefanvdnightbck");
+			});
+
+			var elemstyle = document.getElementById("totlnightmodestyle");
+			if(elemstyle){elemstyle.parentElement.removeChild(elemstyle);}
+			var elemswitch = document.getElementById("stefanvdnighttheme");
+			if(elemswitch){elemswitch.parentElement.removeChild(elemswitch);}
+
+			runnightmodecheck();
+			addswitchdrag();
 		});
 	}
 	else if(request.action == "gorefreshvideonumber"){
 		adddatavideo();// recheck the video content on the current web page
 	}
 	else if(request.action == "goenableatmos"){
-		chrome.storage.sync.get(['ambilight','ambilightfixcolor','ambilight4color','ambilightvarcolor','atmosvivid'], function(items){
-			if(items['ambilight']){
-				ambilight = true;
-				stop = false;
-				ambilightfunction();
-			}
-			else{
-				ambilight = false;
-				stop = true;
-				stopAnimation();
+		chrome.storage.sync.get(['ambilight','ambilightfixcolor','ambilight4color','ambilightvarcolor','atmosvivid','vpause','atmosfpsauto','atmosfpsmanual','drawatmosfps','ambilightcolorhex','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','ambilightrangeblurradius','ambilightrangespreadradius','atmosontotlmode','atmosphereonly','atmosphereDomains'], function(items){
 
-				var htmlplayer = document.getElementsByTagName("video");
-				var j;
-				var l = htmlplayer.length;
-				for(j = 0; j < l; j++){
-					if(htmlplayer[j]){
-						htmlplayer[j].style["boxShadow"] = "none";
-						if($("stefanvdvivideffect"+htmlplayer[j].getAttribute("data-video"))){
-							var stefanvdvivideffect = $("stefanvdvivideffect"+htmlplayer[j].getAttribute("data-video"));
-							stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
-						}
-					}
-				}
-				if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-					var youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
-					youtubewindow.style["boxShadow"] = "none";
-				}
-			}
 			if(items['ambilightfixcolor']){
 				ambilightfixcolor = true;
 				ambilight4color = false;
@@ -4755,6 +4894,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 				ambilight4color = false;
 				ambilightvarcolor = true;
 			}
+			vpause = items['vpause'];
+			atmosfpsauto = items['atmosfpsauto'];
+			atmosfpsmanual = items['atmosfpsmanual'];
+			drawatmosfps = items['drawatmosfps'];
+			ambilightcolorhex = items['ambilightcolorhex'];
+			ambilight1colorhex = items['ambilight1colorhex'];
+			ambilight2colorhex = items['ambilight2colorhex'];
+			ambilight3colorhex = items['ambilight3colorhex'];
+			ambilight4colorhex = items['ambilight4colorhex'];
+			ambilightrangeblurradius = items['ambilightrangeblurradius'];
+			ambilightrangespreadradius = items['ambilightrangespreadradius'];
+			atmosontotlmode = items['atmosontotlmode'];
+			atmosphereonly = items['atmosphereonly'];
+			atmosphereDomains = items['atmosphereDomains'];
+
 			if(items['atmosvivid']){
 				atmosvivid = true;
 
@@ -4789,6 +4943,272 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 					}
 				}
 			}
+
+			if(items['ambilight']){
+				ambilight = true;
+				stop = false;
+				ambilightfunction();
+			}
+			else{
+				ambilight = false;
+				stop = true;
+				stopAnimation();
+
+				var htmlplayer = document.getElementsByTagName("video");
+				var j;
+				var l = htmlplayer.length;
+				for(j = 0; j < l; j++){
+					if(htmlplayer[j]){
+						htmlplayer[j].style["boxShadow"] = "none";
+						if($("stefanvdvivideffect"+htmlplayer[j].getAttribute("data-video"))){
+							var stefanvdvivideffect = $("stefanvdvivideffect"+htmlplayer[j].getAttribute("data-video"));
+							stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
+						}
+					}
+				}
+				if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+					var youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
+					youtubewindow.style["boxShadow"] = "none";
+				}
+			}
+		});
+	}else if(request.action == "gorefreshautoplay"){
+		chrome.storage.sync.get(['autoplay','mousespotlights','autoplayDomains','autoplaychecklistwhite','autoplaychecklistblack','autoplayonly','aplay','apause','astop','autoplaydelay','autoplaydelaytime'], function(items){
+			autoplay = items['autoplay'];
+			mousespotlights = items['mousespotlights'];
+			autoplayDomains = response['autoplayDomains'];
+			autoplaychecklistwhite = items['autoplaychecklistwhite'];
+			autoplaychecklistblack = items['autoplaychecklistblack'];
+			autoplayonly = items['autoplayonly'];
+			aplay = items['aplay'];
+			apause = items['apause'];
+			astop = items['astop'];
+			autoplaydelay = items['autoplaydelay'];
+			autoplaydelaytime = items['autoplaydelaytime'];
+
+			// remove
+			window.clearInterval(startautoplay);
+			if(document.getElementById("totlautoplay")){
+				var element = document.getElementById("totlautoplay");
+				element.parentNode.removeChild(element);
+			}
+			if(document.getElementById("ytCinemaMessage")){
+				var element = document.getElementById("ytCinemaMessage");
+				element.parentNode.removeChild(element);
+			}
+
+			if(autoplay == true){
+				runautoplaycheck();
+				chrome.runtime.sendMessage({name: 'sendautoplay'});
+			}
+		});
+	}else if(request.action == "gorefreshvideotoolbar"){
+		chrome.storage.sync.get(['videotool','videotoolonly','videotoolDomains','videotoolchecklistwhite','videotoolchecklistblack','speedtoolbar','videozoom','visopacity','videotoolcolor'], function(items){
+		videotool = items['videotool'];
+		videotoolonly = items['videotoolonly'];
+		videotoolDomains = items['videotoolDomains'];
+		videotoolchecklistwhite = items['videotoolchecklistwhite'];
+		videotoolchecklistblack = items['videotoolchecklistblack'];
+		speedtoolbar = items['speedtoolbar'];
+		videozoom = items['videozoom'];
+		visopacity = items['visopacity'];
+		videotoolcolor = items['videotoolcolor'];
+
+		// remove
+		if(MutationObserver){
+			if(typeof observervideotoolbar != "undefined" ){
+				observervideotoolbar.disconnect();
+			}
+		}
+
+		window.removeEventListener('resize', myListenerWithContext);
+
+		var elements = document.getElementsByClassName("stefanvdspeed");
+		while(elements.length > 0){
+			elements[0].parentNode.removeChild(elements[0]);
+		}
+		var elements = document.getElementsByClassName("stefanvdzoomstage");
+		while(elements.length > 0){
+			elements[0].parentNode.removeChild(elements[0]);
+		}
+		var elements = document.getElementsByClassName("stefanvdzoom");
+		while(elements.length > 0){
+			elements[0].parentNode.removeChild(elements[0]);
+		}
+		var elements = document.getElementsByClassName("stefanvdvisualization");
+		while(elements.length > 0){
+			elements[0].parentNode.removeChild(elements[0]);
+		}
+		var elements = document.getElementsByClassName("stefanvdvis");
+		while(elements.length > 0){
+			elements[0].parentNode.removeChild(elements[0]);
+		}
+
+		if(videotool == true){
+			runvideotoolbarcheck();
+		}
+		});
+	}
+	else if(request.action == "gorefreshmousescroll"){
+		chrome.storage.sync.get(['videovolume','videovolumealt','videovolumehold','videovolumeposa','videovolumeposb','videovolumeposc','videovolumecolor','videovolumelabel','videovolumesteps'], function(items){
+		videovolume = items['videovolume'];
+		videovolumealt = items['videovolumealt'];
+		videovolumehold = items['videovolumehold'];
+		videovolumeposa = items['videovolumeposa'];
+		videovolumeposb = items['videovolumeposb'];
+		videovolumeposc = items['videovolumeposc'];
+		videovolumecolor = items['videovolumecolor'];
+		videovolumelabel = items['videovolumelabel'];
+		videovolumesteps = items['videovolumesteps'];
+
+		// remove
+		if(MutationObserver){
+			if(typeof observervideovolume != "undefined" ){
+				observervideovolume.disconnect();
+			}
+		}
+
+		window.removeEventListener('resize', myListenerWithContextvolume);
+
+		window.removeEventListener("wheel", doscroll,{passive: false});
+		window.removeEventListener("DOMMouseScroll", doscroll, false);
+
+		rundoscrollfunc = false;
+		if(document.getElementById("csstotlvolume")){
+			var element = document.getElementById("csstotlvolume");
+			element.parentNode.removeChild(element);
+		}
+
+		var elements = document.getElementsByClassName("totlmousewheelvideo");
+		while(elements.length > 0){
+			elements[0].parentNode.removeChild(elements[0]);
+		}
+
+		if(videovolume == true){
+			runvideovolume();
+		}
+		});
+	}else if(request.action == "gorefreshreflection"){
+		chrome.storage.sync.get(['reflection','reflectionamount'], function(items){
+		reflection = items['reflection'];
+		reflectionamount = items['reflectionamount'];
+
+		// remove
+		window.clearInterval(startreflection);
+
+		var reflectionplayer = document.getElementsByTagName("video") || null;
+		var k;
+		var l = reflectionplayer.length;
+		for(k = 0; k < l; k++){
+			reflectionplayer[k].style.webkitBoxReflect = "";
+		}
+
+		if(reflection == true){
+			runreflectioncheck();
+		}
+		});
+	}else if(request.action == "gorefreshhovervideo"){
+		chrome.storage.sync.get(['hovervideo','hovervideoamount'], function(items){
+		hovervideo = items['hovervideo'];
+		hovervideoamount = items['hovervideoamount'];
+
+		// remove
+		window.clearTimeout(htimer);
+
+		var hvids = document.getElementsByTagName('video');
+		var i;
+		var l = hvids.length;
+		for(i = 0; i < l; i++){
+			hvids.item(i).removeEventListener("mouseover", hoveractionover);
+			hvids.item(i).removeEventListener("mouseout", hoveractionout);
+		}
+
+		if(hovervideo == true){
+			runhovervideocheck();
+		}
+		});
+	}else if(request.action == "gorefreshplayrate"){
+		chrome.storage.sync.get(['playrate','playrateamount'], function(items){
+		playrate = items['playrate'];
+		playrateamount = items['playrateamount'];
+
+		// remove
+		var ratevideos = document.getElementsByTagName("video");
+		var i;
+		var l = ratevideos.length;
+		for(i = 0; i < l; i++){
+			var myElement = document.getElementsByTagName("video")[i];
+			myElement.playbackRate = 1;//default value
+		}
+
+		if(playrate == true){
+			runplayratecheck();
+		}
+		});
+	}else if(request.action == "gorefreshnightmodegesture"){
+		chrome.storage.sync.get(['nightmodegesture'], function(items){
+		nightmodegesture = items['nightmodegesture'];
+
+		// remove
+		if(document.getElementById("totlnightgesturestyle")){
+			var element = document.getElementById("totlnightgesturestyle");
+			element.parentNode.removeChild(element);
+		}
+		document.removeEventListener("selectionchange", nightseectionchange);
+
+		document.body.removeEventListener("touchstart", startgesture);
+		document.body.removeEventListener("touchend", cancelgesture);
+		document.body.removeEventListener("touchcancel", cancelgesture);
+		document.body.removeEventListener("touchmove", cancelgesture);
+		document.body.removeEventListener("pointerdown", startgesture);
+		document.body.removeEventListener("pointerup", cancelgesture);
+		document.body.removeEventListener("contextmenu", cancelgesture);
+
+		if(nightmodegesture == true){
+			runnightmodegesturecheck();
+		}
+		});
+	}else if(request.action == "gorefresheyesaver"){
+		chrome.storage.sync.get(['ecosaver','ecosavertime'], function(items){
+		ecosaver = items['ecosaver'];
+		ecosavertime = items['ecosavertime'];
+
+		// remove
+		screenactiondone = false;
+		centralmove = false;
+		centralkey = false;
+		centralscroll = false;
+		window.clearTimeout(ecothreadmove);
+		window.clearTimeout(ecothreadkey);
+		window.clearTimeout(ecothreadscroll);
+		window.removeEventListener("mousemove",ecomousemove);
+		window.removeEventListener("keydown",ecomousekey);
+		window.removeEventListener("wheel",ecomousescroll);
+
+		gonighttime();
+
+		});
+	}
+	else if(request.action == "gorefreshnighttime"){
+		chrome.storage.sync.get(['nighttime','begintime','endtime'], function(items){
+		nighttime = items['nighttime'];
+		begintime = items['begintime'];
+		endtime = items['endtime'];
+
+		// remove
+		screenactiondone = false;
+		centralmove = false;
+		centralkey = false;
+		centralscroll = false;
+		window.clearTimeout(ecothreadmove);
+		window.clearTimeout(ecothreadkey);
+		window.clearTimeout(ecothreadscroll);
+		window.removeEventListener("mousemove",ecomousemove);
+		window.removeEventListener("keydown",ecomousekey);
+		window.removeEventListener("wheel",ecomousescroll);
+		
+		gonighttime();
+
 		});
 	}
 })

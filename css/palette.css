@@ -148,8 +148,8 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .energytext{display:inline-block;width:205px;vertical-align:top;margin-top:8px}
 #energycompared{font-weight:bold}
 /* share box */
-#shareboxfacebook{background:url(../images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/facebook.png) 1x,url(../images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;margin-top:10px;cursor:pointer}
-#shareboxtwitter{background:url(../images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(../images/twitter.png) 1x,url(../images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-top:10px;cursor:pointer}
+#shareboxfacebook{background:url(../images/facebook@2x.webp)left top no-repeat;background:-webkit-image-set(url(../images/facebook.webp) 1x,url(../images/facebook@2x.webp) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;margin-top:10px;cursor:pointer}
+#shareboxtwitter{background:url(../images/twitter@2x.webp)left top no-repeat;background:-webkit-image-set(url(../images/twitter.webp) 1x,url(../images/twitter@2x.webp) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-top:10px;cursor:pointer}
 #shareboxrate:hover,#shareboxgoogle:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 #color1a{background-color:black}
 #color1b{background-color:rgba(33,56,17,1)}

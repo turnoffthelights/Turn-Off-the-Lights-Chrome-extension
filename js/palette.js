@@ -36,6 +36,11 @@ function save_options(){
 }
 
 document.addEventListener('DOMContentLoaded', function(){
+    // disable context menu 
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    }, false);
+
     chrome.storage.sync.get(['darkmode','interval','nighttheme','lampandnightmode','ambilight','ambilightfixcolor','ambilight4color','ambilightvarcolor','atmosvivid','nightmodebck','nightmodetxt','nightmodehyperlink','badge','multiopacall','multiopacsel','multiopacityDomains','firstDate','optionskipremember','firstsawrate'], function(items){
         darkmode = items['darkmode'];if(darkmode == null)darkmode = false; // default false
         interval = items['interval'];if(interval == null)interval = 80; // default 80%
@@ -527,113 +532,12 @@ chrome.storage.onChanged.addListener(function(changes, namespace){
             if(changes['nighttheme'].newValue == true){
                 $('btngonight').disabled = false;
                 $('lampandnightmode').disabled = false;
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenablenightmode" });
-                    });
-                });
             }else{
                 $('btngonight').disabled = true;
                 $('lampandnightmode').disabled = true;
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenablenightmode" });
-                    });
-                });
             }
         }
-        if(changes['lampandnightmode']){
-            if(changes['lampandnightmode'].newValue == true){
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenablenightmode" });
-                    });
-                });
-            }else{
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenablenightmode" });
-                    });
-                });
-            }
-        }
-
-        if(changes['ambilight']){
-            if(changes['ambilight'].newValue == true){
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }else{
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }
-        }
-        if(changes['ambilightfixcolor']){
-            if(changes['ambilightfixcolor'].newValue == true){
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }else{
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }
-        }
-        if(changes['ambilight4color']){
-            if(changes['ambilight4color'].newValue == true){
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }else{
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }
-        }
-        if(changes['ambilightvarcolor']){
-            if(changes['ambilightvarcolor'].newValue == true){
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }else{
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }
-        }
-        if(changes['atmosvivid']){
-            if(changes['atmosvivid'].newValue == true){
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }else{
-                chrome.tabs.query({},function(tabs){
-                    tabs.forEach(function(tab){
-                      chrome.tabs.sendMessage(tab.id, { action: "goenableatmos" });
-                    });
-                });
-            }
-        }
- })
+ });
 
 function test(){
     if($('nighttheme').checked == true){
@@ -697,20 +601,6 @@ function nightmodebckcolorchange(){
     nightmodebck = window.getComputedStyle(elem, null).getPropertyValue("background-color");
 
     chrome.storage.sync.set({"nightmodebck": rgb2hex(nightmodebck)});
-    chrome.tabs.query({
-        active: true,
-        currentWindow: true
-    }, function(tab){
-        chrome.tabs.executeScript(tab.id,{code:"if(document.getElementById('totlnightmodestyle')){document.getElementById('totlnightmodestyle').innerText = '.stefanvdnightbck{background:"+nightmodebck+"!important;background-color:"+nightmodebck+"!important;}.stefanvdnight{color:"+nightmodetxt+"!important;}.stefanvdnight a{color:"+nightmodehyperlink+"!important}.stefanvdnight a *{color:"+nightmodehyperlink+"!important}';};"});
-    });
-
-    // if something change
-    // update the Night Mode colors to content.js script
-    chrome.tabs.query({},function(tabs){
-        tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, { action: "gonewnightmode" });
-        });
-    });
 }
 
 function nightmodetextcolorchange(){
@@ -718,20 +608,6 @@ function nightmodetextcolorchange(){
     nightmodetxt = window.getComputedStyle(elem, null).getPropertyValue("background-color");
 
     chrome.storage.sync.set({"nightmodetxt": rgb2hex(nightmodetxt)});
-    chrome.tabs.query({
-        active: true,
-        currentWindow: true
-    }, function(tab){
-        chrome.tabs.executeScript(tab.id,{code:"if(document.getElementById('totlnightmodestyle')){document.getElementById('totlnightmodestyle').innerText = '.stefanvdnightbck{background:"+nightmodebck+"!important;background-color:"+nightmodebck+"!important;}.stefanvdnight{color:"+nightmodetxt+"!important;}.stefanvdnight a{color:"+nightmodehyperlink+"!important}.stefanvdnight a *{color:"+nightmodehyperlink+"!important}';};"});
-    });
-
-    // if something change
-    // update the Night Mode colors to content.js script
-    chrome.tabs.query({},function(tabs){
-        tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, { action: "gonewnightmode" });
-        });
-    });
 }
 
 function nightmodelinkcolorchange(){
@@ -739,18 +615,4 @@ function nightmodelinkcolorchange(){
     nightmodehyperlink = window.getComputedStyle(elem, null).getPropertyValue("background-color");
 
     chrome.storage.sync.set({"nightmodehyperlink": rgb2hex(nightmodehyperlink)});
-    chrome.tabs.query({
-        active: true,
-        currentWindow: true
-    }, function(tab){
-        chrome.tabs.executeScript(tab.id,{code:"if(document.getElementById('totlnightmodestyle')){document.getElementById('totlnightmodestyle').innerText = '.stefanvdnightbck{background:"+nightmodebck+"!important;background-color:"+nightmodebck+"!important;}.stefanvdnight{color:"+nightmodetxt+"!important;}.stefanvdnight a{color:"+nightmodehyperlink+"!important}.stefanvdnight a *{color:"+nightmodehyperlink+"!important}';};"});
-    });
-
-    // if something change
-    // update the Night Mode colors to content.js script
-    chrome.tabs.query({},function(tabs){
-        tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, { action: "gonewnightmode" });
-        });
-    });
 }

@@ -779,7 +779,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url]{width:360px;float:left}
 #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select{width:437px;margin-right:16px}
 /* Night Theme */
-#samplestefanvdnighttheme{transform:scale(0.7) translate(-20px,0px);padding:0;margin:0;z-index:500;-webkit-user-select:none;-moz-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 10px;border-radius:5px;cursor:pointer;display:block;height:50px;overflow:hidden;width:100px;position:relative}
+#samplestefanvdnighttheme{zoom:0.7;padding:0;margin:20px 0;z-index:500;-webkit-user-select:none;-moz-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 10px;border-radius:5px;cursor:pointer;display:block;height:50px;overflow:hidden;width:100px;position:relative}
 #samplestefanvdnighttheme input{display:none}
 #samplestefanvdnighttheme input:checked + #stefanvdnightthemeslider{left:0}
 #samplestefanvdnighttheme #stefanvdnightthemeslider{left:-50px;position:absolute;top:0;-webkit-transition:left .25s ease-out;-moz-transition:left .25s ease-out;-o-transition:left .25s ease-out;-ms-transition:left .25s ease-out;transition:left .25s ease-out}
@@ -837,9 +837,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 .lampchoose:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .bcklampchoose{background:#000}
 /* share box */
-#shareboxyoutube{background:url(/images/youtube@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/youtube.png) 1x,url(/images/youtube@2x.png) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
-#shareboxfacebook{background:url(/images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/facebook.png) 1x,url(/images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
-#shareboxtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
+#shareboxyoutube{background:url(/images/youtube@2x.webp)left top no-repeat;background:-webkit-image-set(url(/images/youtube.webp) 1x,url(/images/youtube@2x.webp) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
+#shareboxfacebook{background:url(/images/facebook@2x.webp)left top no-repeat;background:-webkit-image-set(url(/images/facebook.webp) 1x,url(/images/facebook@2x.webp) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
+#shareboxtwitter{background:url(/images/twitter@2x.webp)left top no-repeat;background:-webkit-image-set(url(/images/twitter.webp) 1x,url(/images/twitter@2x.webp) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #shareboxrate:hover,#shareboxyoutube:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 /* Review box */
 #reviewextensionbox{height:75px;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none}
@@ -856,9 +856,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 #apnt{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #apgetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
 /* Mobile app */
-#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner.png);background-repeat:no-repeat;border-radius:2px}
+#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner.webp);background-repeat:no-repeat;border-radius:2px}
 @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min-device-pixel-ratio:2){
-#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner@2x.png);background-repeat:no-repeat;border-radius:2px;background-size:cover}
+#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner@2x.webp);background-repeat:no-repeat;border-radius:2px;background-size:cover}
 }
 #matllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff;background:black}
 #mant{position:absolute;font-size:12px;font-weight:700;color:#fff;background:black;text-transform:uppercase;top:60px;left:50px;cursor:pointer}

@@ -1,4 +1,5 @@
 {
+    "descriptionshort": {"message": "The entire page will be fading to dark, so you can watch the videos as if you were in the cinema."},
     "pagehelp": {"message": "help"},
     "titelimage": {"message": "Background Image"},
     "shortcutalllights": {"message": "to toggle the lights on/off for all open tabs"},
@@ -358,7 +359,8 @@
     "autostopbannertrans": {"message": "Show a transparent banner"},
     "titleanalytics": {"message": "Analytics"},
     "desbadgeanalytics": {"message": "Show the badge with the number of clicks you have dimmed the webpage"},
-    "shareanalyticenergy": {"message": "I saved $product$ kWh thanks to Turn Off the Lights", "placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "shareanalyticenergy": {"message": "I saved $energyvalue$ kWh thanks to Turn Off the Lights", "placeholders": {"energyvalue": {"content": "$1", "example": "123"}}},
+    "shareanalyticenergyWh": {"message": "I saved $energyvalue$ Wh thanks to Turn Off the Lights", "placeholders": {"energyvalue": {"content": "$1", "example": "123"}}},
     "analyticsoption": {"message": "Analytics"},
     "activelayertoday": {"message": "Number of clicks today"},
     "totalenergysaved": {"message": "Total electrical energy saved"},
@@ -377,7 +379,7 @@
     "charttitlelblenergytotal": {"message": "Total used Energy"},
     "charttitlelblenergysaved": {"message": "Total saved Energy"},
     "titlelanalyticprivacy": {"message": "Turn Off the Lights browser extension takes your privacy very seriously. The Turn Off the Lights Analytics you are seeing on this page is only stored locally on your computer. Your personal site engagement information will not be sold and not transferred to unaffiliated third parties."},
-    "shareanalyticlove": {"message": "The website I most love is $product$ with Turn Off the Lights", "placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "shareanalyticlove": {"message": "The website I most love is $websiteurl$ with Turn Off the Lights", "placeholders": {"websiteurl": {"content": "$1", "example": "123"}}},
     "desvolumeposa": {"message": "Show the volume meter in center of the current video player"},
     "desvolumeposb": {"message": "Show the volume value on top left of the current video player"},
     "desvolumeposc": {"message": "Show the volume value on top right of the current video player"},
@@ -453,7 +455,7 @@
     "autostopclickme": {"message": "Click on me to play this HTML5 video"},
     "autostopenabled": {"message": "AutoStop is enabled!"},
     "searchplaceholder": {"message": "Search"},
-    "scoregame": {"message": "My amazing high score $product$ on the HIDDEN easter egg game in the Turn Off the Lights Browser extension. Try it yourself!","placeholders": {"product": {"content": "$1", "example": "123"}}},
+    "scoregame": {"message": "My amazing high score $scorevalue$ on the HIDDEN easter egg game in the Turn Off the Lights Browser extension. Try it yourself!","placeholders": {"scorevalue": {"content": "$1", "example": "123"}}},
     "permissionoption": {"message": "Permission must be enabled to use this feature."},
     "titelpermission": {"message": "Permissions"},
     "despermissiontab": {"message": "Remove the tab permission"},
@@ -472,5 +474,8 @@
     "permissionstorage": {"message": "This is to save the settings on your local computer, and to sync it to your web browser account."},
     "permissionallurl": {"message": "This is to control the lamp button on all websites that include http, https, file, and ftp."},
     "permissiontheme": {"message": "This is to change the web browser user interface in a dark or light theme."},
-    "desnightmodeswitchhide": {"message": "Automatically hide the night switch after your chosen seconds"}
+    "desnightmodeswitchhide": {"message": "Automatically hide the night switch after your chosen seconds"},
+    "destrythiswebsite": {"message": "Try this web page"},
+    "desatmosfpsmanual": {"message": "Manually"},
+    "desatmosfpsauto": {"message": "Synchronized as a best effort with the frame rate of the video playing on screen"}
 }

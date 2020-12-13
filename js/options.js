@@ -130,12 +130,12 @@ function save_options(){
       websitemulti[multiopacityDomainsBox.options[i].value] = getnumber;
     }
 
-	chrome.storage.sync.set({"interval":$('interval').value,"lightcolor":$('lightcolor').value,"autoplay":$('autoplay').checked,"playlist":$('playlist').checked,"flash":$('flash').checked,"head":$('head').checked,"fadein":$('fadein').checked,"fadeout":$('fadeout').checked,"infobar":$('infobar').checked,"sharebutton":$('sharebutton').checked,"likebutton":$('likebutton').checked,"readera":$('readera').checked,"readern":$('readern').checked,"shortcutlight":$('shortcutlight').checked,"eyea":$('eyea').checked,"eyen":$('eyen').checked,"suggestions":$('suggestions').checked,"videoheadline":$('videoheadline').checked,"eastereggs":$('eastereggs').checked,"contextmenus":$('contextmenus').checked,"viewcount":$('viewcount').checked,"lightimage":$('lightimage').value,"lightimagea":$('lightimagea').checked,"lightimagen":$('lightimagen').checked,"eyealist":$('eyealist').checked,"mousespotlighto":$('mousespotlighto').checked,"mousespotlighta":$('mousespotlighta').checked,"mousespotlightc":$('mousespotlightc').checked,"nighttime":$('nighttime').checked,"begintime":$('begintime').value,"endtime":$('endtime').value,"addvideobutton":$('addvideobutton').checked,"likebar":$('likebar').checked,"ambilight":$('ambilight').checked,"ambilightrangeblurradius":$('ambilightrangeblurradius').value,"ambilightrangespreadradius":$('ambilightrangespreadradius').value,"mousespotlightt":$('mousespotlightt').checked,"ambilightfixcolor":$('ambilightfixcolor').checked,"ambilightvarcolor":$('ambilightvarcolor').checked,"ambilightcolorhex":$('ambilightcolorhex').value,"ambilight4color":$('ambilight4color').checked,"ambilight1colorhex":$('ambilight1colorhex').value,"ambilight2colorhex":$('ambilight2colorhex').value,"ambilight3colorhex":$('ambilight3colorhex').value,"ambilight4colorhex":$('ambilight4colorhex').value,"password":$('password').checked,"enterpassword":$('enterpassword').value,"noflash":$('noflash').checked,"hardflash":$('hardflash').checked,"ecosaver":$('ecosaver').checked,"ecosavertime":$('ecosavertime').value,"dynamic":$('dynamic').checked,"dynamic1":$('dynamic1').checked,"dynamic2":$('dynamic2').checked,"dynamic3":$('dynamic3').checked,"dynamic4":$('dynamic4').checked,"dynamic5":$('dynamic5').checked,"dynamic6":$('dynamic6').checked,"dynamic7":$('dynamic7').checked,"dynamic8":$('dynamic8').checked,"dynamic9":$('dynamic9').checked,"dynamic10":$('dynamic10').checked,"hoveroptiondyn5":$('hoveroptiondyn5').checked,"autoplayonly":$('autoplayonly').checked,"blur":$('blur').checked,"maxquality":ytselq.options[ytselq.selectedIndex].value,"autowidthyoutube":$('autowidthyoutube').checked,"customqualityyoutube":$('customqualityyoutube').checked,"cinemaontop":$('cinemaontop').checked,"alllightsoff":$('alllightsoff').checked,"spotlightradius":$('spotlightradius').value,"atmosphereonly":$('atmosphereonly').checked,"optionskipremember":$('optionskipremember').checked,"nighttheme":$('nighttheme').checked,"nightonly":$('nightonly').checked,"nightenabletheme":$('nightenabletheme').checked,"autoplaydelay":$('autoplaydelay').checked,"autoplaydelaytime":$('autoplaydelaytime').value,"motion":$('motion').checked,"lightimagelin":$('lightimagelin').checked,"linearsq":linearsq.options[linearsq.selectedIndex].value,"colora":$('colora').value,"intervallina":$('intervallina').value,"colorb":$('colorb').value,"intervallinb":$('intervallinb').value,"speech":$('speech').checked,"speechlang":savewebspeechlang,"speechcountry":savewebspeechcountry,"atmosvivid":$('atmosvivid').checked,"cammotiononly":$('cammotiononly').checked,"speechonly":$('speechonly').checked,"autoplaychecklistwhite":$('autoplaychecklistwhite').checked,"autoplaychecklistblack":$('autoplaychecklistblack').checked,"autostop":$('autostop').checked,"autostoponly":$('autostoponly').checked,"autostopchecklistwhite":$('autostopchecklistwhite').checked,"autostopchecklistblack":$('autostopchecklistblack').checked,"nighthover":$('nighthover').checked,"nightmodechecklistwhite":$('nightmodechecklistwhite').checked,"nightmodechecklistblack":$('nightmodechecklistblack').checked,"nmtopleft":$('nmtopleft').checked,"nmtopright":$('nmtopright').checked,"nmbottomright":$('nmbottomright').checked,"nmbottomleft":$('nmbottomleft').checked,"nmcustom":$('nmcustom').checked,"nightactivetime":$('nightactivetime').checked,"nmbegintime":$('nmbegintime').value,"nmendtime":$('nmendtime').value,"lampandnightmode":$('lampandnightmode').checked,"eyechecklistwhite":$('eyechecklistwhite').checked,"eyechecklistblack":$('eyechecklistblack').checked,"nightmodebck":$('nightmodebck').value,"nightmodetxt":$('nightmodetxt').value,"no360youtube":$('no360youtube').checked,"videotool":$('videotool').checked,"reflection":$('reflection').checked,"reflectionamount":$('reflectionamount').value,"videotoolonly":$('videotoolonly').checked,"videotoolchecklistwhite":$('videotoolchecklistwhite').checked,"videotoolchecklistblack":$('videotoolchecklistblack').checked,"nightmodehyperlink":$('nightmodehyperlink').value,"block60fps":$('block60fps').checked,"excludedDomains":JSON.stringify(excludedDomains),"autoplayDomains":JSON.stringify(autoplayDomains),"atmosphereDomains":JSON.stringify(atmosphereDomains),"nightDomains":JSON.stringify(nightDomains),"cammotionDomains":JSON.stringify(cammotionDomains),"speechDomains":JSON.stringify(speechDomains),"autostopDomains":JSON.stringify(autostopDomains),"videotoolDomains":JSON.stringify(videotoolDomains),"videovolume":$('videovolume').checked,"videovolumecolor":$('videovolumecolor').value,"videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value,"videovolumelabel":$('videovolumelabel').checked,"icon":$("btnpreview").getAttribute("data-icon"),"visopacity":$('visopacity').value,"videotoolcolor":$('videotoolcolor').value,"hovervideo":$('hovervideo').checked,"hovervideoamount":$('hovervideoamount').value,"mousespotlights":$('mousespotlights').checked,"drawatmosfps":$('drawatmosfps').value,"aplay":$('aplay').checked,"apause":$('apause').checked,"astop":$('astop').checked,"videozoom":$('videozoom').checked,"playrate":$('playrate').checked,"playrateamount":$('playrateamount').value,"speedtoolbar":$('speedtoolbar').checked,"atmosontotlmode":$('atmosontotlmode').checked,"titleinvertcolor":$('titleinvertcolor').value,"vpause":$('vpause').checked,"darkbrowsertheme":$('darkbrowsertheme').checked,"autostopred":$('autostopred').checked,"autostoptrans":$('autostoptrans').checked,"videovolumeposa":$('videovolumeposa').checked,"videovolumeposb":$('videovolumeposb').checked,"videovolumeposc":$('videovolumeposc').checked,"videovolumehold":$('videovolumehold').checked,"multiopacall":$('multiopacall').checked,"multiopacsel":$('multiopacsel').checked,"multiopacityDomains":JSON.stringify(websitemulti),"videovolumealt":$('videovolumealt').checked,"nightmodebydomain":$('nightmodebydomain').checked,"nightmodebypage":$('nightmodebypage').checked,"seeanalytics":$('seeanalytics').checked,"nightmodegesture":$('nightmodegesture').checked,"nightmodeswitchhide":$('nightmodeswitchhide').checked,"nightmodeswitchhidetime":$('nightmodeswitchhidetime').value});
+	chrome.storage.sync.set({"interval":$('interval').value,"lightcolor":$('lightcolor').value,"autoplay":$('autoplay').checked,"playlist":$('playlist').checked,"flash":$('flash').checked,"head":$('head').checked,"fadein":$('fadein').checked,"fadeout":$('fadeout').checked,"infobar":$('infobar').checked,"sharebutton":$('sharebutton').checked,"likebutton":$('likebutton').checked,"readera":$('readera').checked,"readern":$('readern').checked,"shortcutlight":$('shortcutlight').checked,"eyea":$('eyea').checked,"eyen":$('eyen').checked,"suggestions":$('suggestions').checked,"videoheadline":$('videoheadline').checked,"eastereggs":$('eastereggs').checked,"contextmenus":$('contextmenus').checked,"viewcount":$('viewcount').checked,"lightimage":$('lightimage').value,"lightimagea":$('lightimagea').checked,"lightimagen":$('lightimagen').checked,"eyealist":$('eyealist').checked,"mousespotlighto":$('mousespotlighto').checked,"mousespotlighta":$('mousespotlighta').checked,"mousespotlightc":$('mousespotlightc').checked,"nighttime":$('nighttime').checked,"begintime":$('begintime').value,"endtime":$('endtime').value,"addvideobutton":$('addvideobutton').checked,"likebar":$('likebar').checked,"ambilight":$('ambilight').checked,"ambilightrangeblurradius":$('ambilightrangeblurradius').value,"ambilightrangespreadradius":$('ambilightrangespreadradius').value,"mousespotlightt":$('mousespotlightt').checked,"ambilightfixcolor":$('ambilightfixcolor').checked,"ambilightvarcolor":$('ambilightvarcolor').checked,"ambilightcolorhex":$('ambilightcolorhex').value,"ambilight4color":$('ambilight4color').checked,"ambilight1colorhex":$('ambilight1colorhex').value,"ambilight2colorhex":$('ambilight2colorhex').value,"ambilight3colorhex":$('ambilight3colorhex').value,"ambilight4colorhex":$('ambilight4colorhex').value,"password":$('password').checked,"enterpassword":$('enterpassword').value,"noflash":$('noflash').checked,"hardflash":$('hardflash').checked,"ecosaver":$('ecosaver').checked,"ecosavertime":$('ecosavertime').value,"dynamic":$('dynamic').checked,"dynamic1":$('dynamic1').checked,"dynamic2":$('dynamic2').checked,"dynamic3":$('dynamic3').checked,"dynamic4":$('dynamic4').checked,"dynamic5":$('dynamic5').checked,"dynamic6":$('dynamic6').checked,"dynamic7":$('dynamic7').checked,"dynamic8":$('dynamic8').checked,"dynamic9":$('dynamic9').checked,"dynamic10":$('dynamic10').checked,"hoveroptiondyn5":$('hoveroptiondyn5').checked,"autoplayonly":$('autoplayonly').checked,"blur":$('blur').checked,"maxquality":ytselq.options[ytselq.selectedIndex].value,"autowidthyoutube":$('autowidthyoutube').checked,"customqualityyoutube":$('customqualityyoutube').checked,"cinemaontop":$('cinemaontop').checked,"alllightsoff":$('alllightsoff').checked,"spotlightradius":$('spotlightradius').value,"atmosphereonly":$('atmosphereonly').checked,"optionskipremember":$('optionskipremember').checked,"nighttheme":$('nighttheme').checked,"nightonly":$('nightonly').checked,"nightenabletheme":$('nightenabletheme').checked,"autoplaydelay":$('autoplaydelay').checked,"autoplaydelaytime":$('autoplaydelaytime').value,"motion":$('motion').checked,"lightimagelin":$('lightimagelin').checked,"linearsq":linearsq.options[linearsq.selectedIndex].value,"colora":$('colora').value,"intervallina":$('intervallina').value,"colorb":$('colorb').value,"intervallinb":$('intervallinb').value,"speech":$('speech').checked,"speechlang":savewebspeechlang,"speechcountry":savewebspeechcountry,"atmosvivid":$('atmosvivid').checked,"cammotiononly":$('cammotiononly').checked,"speechonly":$('speechonly').checked,"autoplaychecklistwhite":$('autoplaychecklistwhite').checked,"autoplaychecklistblack":$('autoplaychecklistblack').checked,"autostop":$('autostop').checked,"autostoponly":$('autostoponly').checked,"autostopchecklistwhite":$('autostopchecklistwhite').checked,"autostopchecklistblack":$('autostopchecklistblack').checked,"nighthover":$('nighthover').checked,"nightmodechecklistwhite":$('nightmodechecklistwhite').checked,"nightmodechecklistblack":$('nightmodechecklistblack').checked,"nmtopleft":$('nmtopleft').checked,"nmtopright":$('nmtopright').checked,"nmbottomright":$('nmbottomright').checked,"nmbottomleft":$('nmbottomleft').checked,"nmcustom":$('nmcustom').checked,"nightactivetime":$('nightactivetime').checked,"nmbegintime":$('nmbegintime').value,"nmendtime":$('nmendtime').value,"lampandnightmode":$('lampandnightmode').checked,"eyechecklistwhite":$('eyechecklistwhite').checked,"eyechecklistblack":$('eyechecklistblack').checked,"nightmodebck":$('nightmodebck').value,"nightmodetxt":$('nightmodetxt').value,"no360youtube":$('no360youtube').checked,"videotool":$('videotool').checked,"reflection":$('reflection').checked,"reflectionamount":$('reflectionamount').value,"videotoolonly":$('videotoolonly').checked,"videotoolchecklistwhite":$('videotoolchecklistwhite').checked,"videotoolchecklistblack":$('videotoolchecklistblack').checked,"nightmodehyperlink":$('nightmodehyperlink').value,"block60fps":$('block60fps').checked,"excludedDomains":JSON.stringify(excludedDomains),"autoplayDomains":JSON.stringify(autoplayDomains),"atmosphereDomains":JSON.stringify(atmosphereDomains),"nightDomains":JSON.stringify(nightDomains),"cammotionDomains":JSON.stringify(cammotionDomains),"speechDomains":JSON.stringify(speechDomains),"autostopDomains":JSON.stringify(autostopDomains),"videotoolDomains":JSON.stringify(videotoolDomains),"videovolume":$('videovolume').checked,"videovolumecolor":$('videovolumecolor').value,"videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value,"videovolumelabel":$('videovolumelabel').checked,"icon":$("btnpreview").getAttribute("data-icon"),"visopacity":$('visopacity').value,"videotoolcolor":$('videotoolcolor').value,"hovervideo":$('hovervideo').checked,"hovervideoamount":$('hovervideoamount').value,"mousespotlights":$('mousespotlights').checked,"drawatmosfps":$('drawatmosfps').value,"aplay":$('aplay').checked,"apause":$('apause').checked,"astop":$('astop').checked,"videozoom":$('videozoom').checked,"playrate":$('playrate').checked,"playrateamount":$('playrateamount').value,"speedtoolbar":$('speedtoolbar').checked,"atmosontotlmode":$('atmosontotlmode').checked,"titleinvertcolor":$('titleinvertcolor').value,"vpause":$('vpause').checked,"darkbrowsertheme":$('darkbrowsertheme').checked,"autostopred":$('autostopred').checked,"autostoptrans":$('autostoptrans').checked,"videovolumeposa":$('videovolumeposa').checked,"videovolumeposb":$('videovolumeposb').checked,"videovolumeposc":$('videovolumeposc').checked,"videovolumehold":$('videovolumehold').checked,"multiopacall":$('multiopacall').checked,"multiopacsel":$('multiopacsel').checked,"multiopacityDomains":JSON.stringify(websitemulti),"videovolumealt":$('videovolumealt').checked,"nightmodebydomain":$('nightmodebydomain').checked,"nightmodebypage":$('nightmodebypage').checked,"seeanalytics":$('seeanalytics').checked,"nightmodegesture":$('nightmodegesture').checked,"nightmodeswitchhide":$('nightmodeswitchhide').checked,"nightmodeswitchhidetime":$('nightmodeswitchhidetime').value,"atmosfpsauto":$('atmosfpsauto').checked,"atmosfpsmanual":$('atmosfpsmanual').checked});
 }
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(['fadein','fadeout','readera','readern','lightimagea','lightimagen','mousespotlighta','mousespotlightc','mousespotlighto','mousespotlightt','eyea','eyen','eyealist','interval','ambilightrangeblurradius','ambilightrangespreadradius','ambilightvarcolor','ambilightfixcolor','ambilight4color','flash','noflash','noflash','dynamic1','dynamic2','dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','maxquality','autoplaychecklistwhite','autoplaychecklistblack','autostopchecklistwhite','autostopchecklistblack','videotoolchecklistwhite','videotoolchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','eyechecklistwhite','eyechecklistblack','videovolumesteps','videovolumelabel','mousespotlights','aplay','apause','astop','autostopred','autostoptrans','videovolumeposa','videovolumeposb','videovolumeposc','multiopacall','multiopacsel','nightmodebydomain','nightmodebypage','seeanalytics'], function(items){
+chrome.storage.sync.get(['fadein','fadeout','readera','readern','lightimagea','lightimagen','mousespotlighta','mousespotlightc','mousespotlighto','mousespotlightt','eyea','eyen','eyealist','interval','ambilightrangeblurradius','ambilightrangespreadradius','ambilightvarcolor','ambilightfixcolor','ambilight4color','flash','noflash','noflash','dynamic1','dynamic2','dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','maxquality','autoplaychecklistwhite','autoplaychecklistblack','autostopchecklistwhite','autostopchecklistblack','videotoolchecklistwhite','videotoolchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','eyechecklistwhite','eyechecklistblack','videovolumesteps','videovolumelabel','mousespotlights','aplay','apause','astop','autostopred','autostoptrans','videovolumeposa','videovolumeposb','videovolumeposc','multiopacall','multiopacsel','nightmodebydomain','nightmodebypage','seeanalytics','atmosfpsauto','atmosfpsmanual'], function(items){
     // find no localstore fadein
 	if(items['fadein'] == null){firstdefaultvalues['fadein'] = true;}
     // find no localstore fadeout
@@ -204,6 +204,9 @@ chrome.storage.sync.get(['fadein','fadeout','readera','readern','lightimagea','l
     // find no localstore a seeanalytics
     if(items['seeanalytics'] == null){firstdefaultvalues['seeanalytics'] = true;}
 
+    // find no localstore atmos fps
+    if(items['atmosfpsauto'] == null && items['atmosfpsmanual'] == null){firstdefaultvalues['atmosfpsmanual'] = true;firstdefaultvalues['atmosfpsauto'] = false;}
+    
     // Save the init value
     chrome.storage.sync.set(firstdefaultvalues, function(){
     //console.log('Settings saved');
@@ -393,7 +396,7 @@ function closeMaterialIntroduceAlert(e, result){
 }
 //---
 
-	chrome.storage.sync.get(['firstDate','interval','lightcolor','lightimage','lightimagea','lightimagen','autoplay','playlist','flash','head','fadein','fadeout','infobar','sharebutton','likebutton','readera','readern','shortcutlight','eyea','eyen','suggestions','videoheadline','eastereggs','contextmenus','viewcount','eyealist','mousespotlighto','mousespotlightc','mousespotlighta','nighttime','begintime','endtime','addvideobutton','likebar','ambilight','ambilightrangeblurradius','ambilightrangespreadradius','mousespotlightt','ambilightfixcolor','ambilightvarcolor','ambilightcolorhex','ambilight4color','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','password','enterpassword','noflash','hardflash','ecosaver','ecosavertime','dynamic','dynamic1','dynamic2','dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','autoplayonly','blur','maxquality','autowidthyoutube','customqualityyoutube','cinemaontop','alllightsoff','spotlightradius','atmosphereonly','optionskipremember','nighttheme','nightonly','nightenabletheme','autoplaydelay','autoplaydelaytime','motion','lightimagelin','linearsq','colora','intervallina','colorb','intervallinb','speech','speechlang','speechcountry','atmosvivid','countremember','excludedDomains','autoplayDomains','atmosphereDomains','nightDomains','cammotiononly','speechonly','cammotionDomains','speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains','nightmodehyperlink','block60fps','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','icon','visopacity','videotoolcolor','hovervideo','hovervideoamount','mousespotlights','drawatmosfps','aplay','apause','astop','videozoom','playrate','playrateamount','speedtoolbar','atmosontotlmode','titleinvertcolor','vpause','darkbrowsertheme','autostopred','autostoptrans','videovolumeposa','videovolumeposb','videovolumeposc','videovolumehold','multiopacityDomains','multiopacall','multiopacsel','firstsawrate','videovolumealt','nightmodebydomain','nightmodebypage','introduce','seeanalytics','nightmodegesture','nightmodeswitchhide','nightmodeswitchhidetime'], function(items){
+	chrome.storage.sync.get(['firstDate','interval','lightcolor','lightimage','lightimagea','lightimagen','autoplay','playlist','flash','head','fadein','fadeout','infobar','sharebutton','likebutton','readera','readern','shortcutlight','eyea','eyen','suggestions','videoheadline','eastereggs','contextmenus','viewcount','eyealist','mousespotlighto','mousespotlightc','mousespotlighta','nighttime','begintime','endtime','addvideobutton','likebar','ambilight','ambilightrangeblurradius','ambilightrangespreadradius','mousespotlightt','ambilightfixcolor','ambilightvarcolor','ambilightcolorhex','ambilight4color','ambilight1colorhex','ambilight2colorhex','ambilight3colorhex','ambilight4colorhex','password','enterpassword','noflash','hardflash','ecosaver','ecosavertime','dynamic','dynamic1','dynamic2','dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','autoplayonly','blur','maxquality','autowidthyoutube','customqualityyoutube','cinemaontop','alllightsoff','spotlightradius','atmosphereonly','optionskipremember','nighttheme','nightonly','nightenabletheme','autoplaydelay','autoplaydelaytime','motion','lightimagelin','linearsq','colora','intervallina','colorb','intervallinb','speech','speechlang','speechcountry','atmosvivid','countremember','excludedDomains','autoplayDomains','atmosphereDomains','nightDomains','cammotiononly','speechonly','cammotionDomains','speechDomains','autoplaychecklistwhite','autoplaychecklistblack','reviewedlastonversion','applastonversion','autostop','autostoponly','autostopchecklistwhite','autostopchecklistblack','nightmodechecklistwhite','nightmodechecklistblack','autostopDomains','nighthover','nmtopleft','nmtopright','nmbottomright','nmbottomleft','nmcustom','nightactivetime','nmbegintime','nmendtime','lampandnightmode','eyechecklistblack','eyechecklistwhite','nightmodebck','nightmodetxt','mobilelastonversion','no360youtube','videotool','reflection','reflectionamount','videotoolonly','videotoolchecklistwhite','videotoolchecklistblack','videotoolDomains','nightmodehyperlink','block60fps','videovolume','videovolumecolor','videovolumesteps','videovolumelabel','icon','visopacity','videotoolcolor','hovervideo','hovervideoamount','mousespotlights','drawatmosfps','aplay','apause','astop','videozoom','playrate','playrateamount','speedtoolbar','atmosontotlmode','titleinvertcolor','vpause','darkbrowsertheme','autostopred','autostoptrans','videovolumeposa','videovolumeposb','videovolumeposc','videovolumehold','multiopacityDomains','multiopacall','multiopacsel','firstsawrate','videovolumealt','nightmodebydomain','nightmodebypage','introduce','seeanalytics','nightmodegesture','nightmodeswitchhide','nightmodeswitchhidetime','atmosfpsauto','atmosfpsmanual'], function(items){
 		if(items['interval']){$('interval').value = items['interval'];$('slider').value = items['interval'];$("interval").setAttribute('aria-valuenow',items['interval']);$("slider").setAttribute('aria-valuenow',items['interval']);$('example1').style.opacity = (items['interval']/100);$('example2').style.opacity = (items['interval']/100);}
 		else{$('interval').value = 80;}
 		if(items['lightcolor']){$('lightcolor').value = items['lightcolor'];}
@@ -597,7 +600,9 @@ function closeMaterialIntroduceAlert(e, result){
         if(items['nightmodegesture'] == true){$('nightmodegesture').checked = true;}
         if(items['nightmodeswitchhide'] == true){$('nightmodeswitchhide').checked = true;}
         if(items['nightmodeswitchhidetime']){$('nightmodeswitchhidetime').value = items['nightmodeswitchhidetime'];}
-		else{$('nightmodeswitchhidetime').value = '3';}
+        else{$('nightmodeswitchhidetime').value = '3';}
+        if(items['atmosfpsauto'] == true){$('atmosfpsauto').checked = true;}
+        if(items['atmosfpsmanual'] == true){$('atmosfpsmanual').checked = true;}
 
 // show introduce
 if(items['introduce'] != true){
@@ -1477,24 +1482,29 @@ else{$('samplelikebar').style.zIndex = 'auto';$('samplelikebar').style.position 
 if($('ambilight').checked == true)
 {$('arangespread').disabled = false;$('ambilightrangespreadradius').disabled = false;$('arangeblur').disabled = false;$('ambilightrangeblurradius').disabled = false;$('ambilightfixcolor').disabled = false;$('ambilightvarcolor').disabled = false;$('ambilightcolorhex').disabled = false;$('ambilight4color').disabled = false;$('ambilight1colorhex').disabled = false;$('ambilight2colorhex').disabled = false;$('ambilight3colorhex').disabled = false;$('ambilight4colorhex').disabled = false;$('atmosontotlmode').disabled = false;$('atmosphereonly').disabled = false;$('vpause').disabled = false;
     if($('ambilightvarcolor').checked == true){
-    $('atmosvivid').disabled = false;$('drawatmosfps').disabled = false;
+        $('atmosvivid').disabled = false;
+        if($('atmosvivid').checked == true){
+            $('atmosfpsauto').disabled = false;$('atmosfpsmanual').disabled = false;
+            if($('atmosfpsauto').checked == true){
+                $('drawatmosfps').disabled = true;
+            }else if($('atmosfpsmanual').checked == true){
+                $('drawatmosfps').disabled = false;
+            }
+        }else{
+            $('atmosfpsauto').disabled = true;$('atmosfpsmanual').disabled = true;$('drawatmosfps').disabled = true;
+        }
 	}else{
-    $('atmosvivid').disabled = true;$('drawatmosfps').disabled = true;
+    $('atmosvivid').disabled = true;$('drawatmosfps').disabled = true;$('atmosfpsauto').disabled = true;$('atmosfpsmanual').disabled = true;
     }
 }
-else{$('arangespread').disabled = true;$('ambilightrangespreadradius').disabled = true;$('arangeblur').disabled = true;$('ambilightrangeblurradius').disabled = true;$('ambilightfixcolor').disabled = true;$('ambilightvarcolor').disabled = true;$('ambilightcolorhex').disabled = true;$('ambilight4color').disabled = true;$('ambilight1colorhex').disabled = true;$('ambilight2colorhex').disabled = true;$('ambilight3colorhex').disabled = true;$('ambilight4colorhex').disabled = true;$('atmosontotlmode').disabled = true;$('atmosphereonly').disabled = true;$('vpause').disabled = true;$('atmosvivid').disabled = true;$('drawatmosfps').disabled = true;
+else{$('arangespread').disabled = true;$('ambilightrangespreadradius').disabled = true;$('arangeblur').disabled = true;$('ambilightrangeblurradius').disabled = true;$('ambilightfixcolor').disabled = true;$('ambilightvarcolor').disabled = true;$('ambilightcolorhex').disabled = true;$('ambilight4color').disabled = true;$('ambilight1colorhex').disabled = true;$('ambilight2colorhex').disabled = true;$('ambilight3colorhex').disabled = true;$('ambilight4colorhex').disabled = true;$('atmosontotlmode').disabled = true;$('atmosphereonly').disabled = true;$('vpause').disabled = true;$('atmosvivid').disabled = true;$('drawatmosfps').disabled = true;$('atmosfpsauto').disabled = true;$('atmosfpsmanual').disabled = true;
 }
 
-if($('ambilightvarcolor').checked == true)
-{
-    if($('ambilight').checked == true){
-    $('atmosvivid').disabled = false;$('drawatmosfps').disabled = false;
-    }
-}
-else{
-    if($('ambilight').checked == true){
-        $('atmosvivid').disabled = true;$('drawatmosfps').disabled = true;
-    }
+if('requestVideoFrameCallback' in HTMLVideoElement.prototype){
+    // do nothing
+}else{
+   // the API is supported! 
+   $('boxfpsauto').className = "hidden";
 }
 
 if($('lightimagea').checked == true)
@@ -1665,14 +1675,17 @@ $('skc').style.opacity = $('profileCopacity').value/100;
 // end wizard ---
 
 // function available
+try{
 if(typeof browser !== 'undefined'){
-    var qtest = browser.theme.update;
-    if(typeof qtest !== 'undefined'|| qtest != null){
+    if(typeof browser.theme.update !== 'undefined'|| browser.theme.update != null){
     $('brotheme').style.display = "block";
     }else{
     $('brotheme').style.display = "none";
     }
 }else{
+    $('brotheme').style.display = "none";
+}
+}catch(e){
     $('brotheme').style.display = "none";
 }
 }
@@ -1890,7 +1903,7 @@ imageObj.onload = function(){
 };
 
 // Once the callback is arranged then set the source of the image
-imageObj.src = "images/Smoke10.png";
+imageObj.src = "images/Smoke10.webp";
 
 // A function to create a particle object.
 function Particle(context){
@@ -2779,9 +2792,9 @@ var nAgt = navigator.userAgent;
 var browserName;
 var urlbrowservendor = window.navigator.vendor;
 if((nAgt.indexOf("OPR/"))!=-1){browserName = "Opera";}
-else if(urlbrowservendor.search("Safari") >= 0){browserName = "Safari";}
 else if(urlbrowservendor.search("Yandex") >= 0){browserName = "Yandex";}
 else if(urlbrowservendor.search("Google") >= 0){browserName = "Google Chrome";}
+else if(urlbrowservendor.search("Apple Computer, Inc.") >= 0){browserName = "Safari";}
 else if(navigator.appCodeName == "Mozilla"){browserName = "Firefox";}
 else if((nAgt.indexOf("Maxthon/"))!=-1){browserName = "Maxthon";}
 
@@ -2812,12 +2825,26 @@ if(browserName == "Opera"){
 	$("select_dialect").disabled = true;
 	$("speechonly").disabled = true;
 	$("motion").disabled = true;
-	$("cammotiononly").disabled = true;
-}else{
+    $("cammotiononly").disabled = true;
+}else if(browserName == "Safari"){
+	// feature check speech and camera
+	// no support
+	$("helpcameramotion").classList.remove("hidden");
+	$("helpspeech").classList.remove("hidden");
+	$("speech").disabled = true;
+	$("select_language").disabled = true;
+	$("select_dialect").disabled = true;
+	$("speechonly").disabled = true;
+	$("motion").disabled = true;
+    $("cammotiononly").disabled = true;
+    $("tabmotion").style.display = "none";
+    $("tabspeech").style.display = "none";
+}
+else{
 	// feature check speech and camera
 	// support
 	$("helpcameramotion").classList.add("hidden");
-	$("helpspeech").classList.add("hidden");
+    $("helpspeech").classList.add("hidden");
 }
 
 // Remove remember
@@ -3060,11 +3087,11 @@ save_options();test();ariacheck();
 // Check screenshot
 $("wallpaperhide").addEventListener('click', function(){
     $("imagegallery").classList.remove("hidden");$("wallpapershow").classList.remove("hidden");$("wallpaperhide").className = "hidden";
-    $("bckimage1").setAttribute('src','images/totlminis1.png');$("bckimage1").setAttribute('src','images/totlminis1@2x.png');
-    $("bckimage2").setAttribute('src','images/totlminis2.png');$("bckimage2").setAttribute('src','images/totlminis2@2x.png');
-    $("bckimage3").setAttribute('src','images/totlminis3.png');$("bckimage3").setAttribute('src','images/totlminis3@2x.png');
-    $("bckimage4").setAttribute('src','images/totlminis4.png');$("bckimage4").setAttribute('src','images/totlminis4@2x.png');
-    $("bckimage5").setAttribute('src','images/totlminis5.png');$("bckimage5").setAttribute('src','images/totlminis5@2x.png');
+    $("bckimage1").setAttribute('src','images/totlminis1.webp');$("bckimage1").setAttribute('src','images/totlminis1@2x.webp');
+    $("bckimage2").setAttribute('src','images/totlminis2.webp');$("bckimage2").setAttribute('src','images/totlminis2@2x.webp');
+    $("bckimage3").setAttribute('src','images/totlminis3.webp');$("bckimage3").setAttribute('src','images/totlminis3@2x.webp');
+    $("bckimage4").setAttribute('src','images/totlminis4.webp');$("bckimage4").setAttribute('src','images/totlminis4@2x.webp');
+    $("bckimage5").setAttribute('src','images/totlminis5.webp');$("bckimage5").setAttribute('src','images/totlminis5@2x.webp');
 });
 $("wallpapershow").addEventListener('click', function(){
     $("imagegallery").className = "hidden";$("wallpapershow").className = "hidden";$("wallpaperhide").classList.remove("hidden");
@@ -3086,16 +3113,16 @@ $("dynamic").addEventListener('click', function(){if($('dynamic').checked == tru
 // Check dynamic
 $("dynamichide").addEventListener('click', function(){
     $("dynamicgallery").classList.remove("hidden");$("dynamicshow").classList.remove("hidden");$("dynamichide").className = "hidden";
-    $("bckdyn1").setAttribute('src','images/totldyn1.png');$("bckdyn1").setAttribute('srcset','images/totldyn1@2x.png');
-    $("bckdyn2").setAttribute('src','images/totldyn2.png');$("bckdyn2").setAttribute('srcset','images/totldyn2@2x.png');
-    $("bckdyn3").setAttribute('src','images/totldyn3.png');$("bckdyn3").setAttribute('srcset','images/totldyn3@2x.png');
-    $("bckdyn4").setAttribute('src','images/totldyn4.png');$("bckdyn4").setAttribute('srcset','images/totldyn4@2x.png');
-    $("bckdyn5").setAttribute('src','images/totldyn5.png');$("bckdyn5").setAttribute('srcset','images/totldyn5@2x.png');
-    $("bckdyn6").setAttribute('src','images/totldyn6.png');$("bckdyn6").setAttribute('srcset','images/totldyn6@2x.png');
-    $("bckdyn7").setAttribute('src','images/totldyn7.png');$("bckdyn7").setAttribute('srcset','images/totldyn7@2x.png');
-    $("bckdyn8").setAttribute('src','images/totldyn8.png');$("bckdyn8").setAttribute('srcset','images/totldyn8@2x.png');
-    $("bckdyn9").setAttribute('src','images/totldyn9.png');$("bckdyn9").setAttribute('srcset','images/totldyn9@2x.png');
-    $("bckdyn10").setAttribute('src','images/totldyn10.png');$("bckdyn10").setAttribute('srcset','images/totldyn10@2x.png');
+    $("bckdyn1").setAttribute('src','images/totldyn1.webp');$("bckdyn1").setAttribute('srcset','images/totldyn1@2x.webp');
+    $("bckdyn2").setAttribute('src','images/totldyn2.webp');$("bckdyn2").setAttribute('srcset','images/totldyn2@2x.webp');
+    $("bckdyn3").setAttribute('src','images/totldyn3.webp');$("bckdyn3").setAttribute('srcset','images/totldyn3@2x.webp');
+    $("bckdyn4").setAttribute('src','images/totldyn4.webp');$("bckdyn4").setAttribute('srcset','images/totldyn4@2x.webp');
+    $("bckdyn5").setAttribute('src','images/totldyn5.webp');$("bckdyn5").setAttribute('srcset','images/totldyn5@2x.webp');
+    $("bckdyn6").setAttribute('src','images/totldyn6.webp');$("bckdyn6").setAttribute('srcset','images/totldyn6@2x.webp');
+    $("bckdyn7").setAttribute('src','images/totldyn7.webp');$("bckdyn7").setAttribute('srcset','images/totldyn7@2x.webp');
+    $("bckdyn8").setAttribute('src','images/totldyn8.webp');$("bckdyn8").setAttribute('srcset','images/totldyn8@2x.webp');
+    $("bckdyn9").setAttribute('src','images/totldyn9.webp');$("bckdyn9").setAttribute('srcset','images/totldyn9@2x.webp');
+    $("bckdyn10").setAttribute('src','images/totldyn10.webp');$("bckdyn10").setAttribute('srcset','images/totldyn10@2x.webp');
 });
 $("dynamicshow").addEventListener('click', function(){
     $("dynamicgallery").className = "hidden";$("dynamicshow").className = "hidden";$("dynamichide").classList.remove("hidden");
@@ -3414,7 +3441,7 @@ function restartGame(){
 
 function startGame(){
     myGameArea = new gamearea();
-    myGamePiece = new component(16, 30, "images/party-balloon@2x.png", 15, 30,"image");
+    myGamePiece = new component(16, 30, "images/party-balloon@2x.webp", 15, 30,"image");
     myGamePiece.gravity = 0.05;
     myScore = new component("15px", "Verdana", "black", 330, 25, "text");
     myHighScore = new component("15px", "Verdana", "black", 330, 45, "text");

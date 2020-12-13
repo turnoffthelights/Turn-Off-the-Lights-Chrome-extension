@@ -1809,20 +1809,17 @@ if(stretchable){
 		
 		// blur effect
 		if(blur == true){
-			var supportsBackdrop = 'backdropFilter' in document.body.style;
-			if(supportsBackdrop){
-				if($("stefanvdblurimage")){}else{
-				var newblur = document.createElement('div');
-				newblur.setAttribute('id','stefanvdblurimage');
-				newblur.style.webkitBackdropFilter = "blur(6px)";
-                newblur.style.backdropFilter = "blur(6px)";
-				newblur.style.width = '100%';
-				newblur.style.height = '100%';
-				newblur.style.left = 0;
-				newblur.style.top = 0;
-				newblur.style.position = 'fixed';
-				document.body.appendChild(newblur);
-				}
+			if($("stefanvdblurimage")){}else{
+			var newblur = document.createElement('div');
+			newblur.setAttribute('id','stefanvdblurimage');
+			newblur.style.webkitBackdropFilter = "blur(6px)";
+			newblur.style.backdropFilter = "blur(6px)";
+			newblur.style.width = '100%';
+			newblur.style.height = '100%';
+			newblur.style.left = 0;
+			newblur.style.top = 0;
+			newblur.style.position = 'fixed';
+			document.body.appendChild(newblur);
 			}
 		}
 

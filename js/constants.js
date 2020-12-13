@@ -32,4 +32,4 @@ var browserstore = "https://chrome.google.com";
 var linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";
 var linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
 var linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
-var devmode = false;
+var devmode = true;

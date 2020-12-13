@@ -158,7 +158,7 @@ chrome.tabs.query({}, function(tabs){
     var i;
     var l = tabs.length;
     for(i = 0; i < l; i++){
-    chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png","38": "icons/iconwhite19@2x.png"}});
+    chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png","38": "icons/iconwhite38.png"}});
     }
 });
 }
@@ -171,7 +171,7 @@ else{
     }
 // return default icon
 chrome.storage.sync.get(['icon'], function(items){
-if(items["icon"] == undefined){items["icon"] = "icons/iconstick19@2x.png";}
+if(items["icon"] == undefined){items["icon"] = "icons/iconstick38.png";}
 chrome.tabs.query({}, function(tabs){
     var i;
     var l = tabs.length;
@@ -199,7 +199,7 @@ return true;
 chrome.tabs.onActivated.addListener(function(activeInfo){
     chrome.tabs.get(activeInfo.tabId, function(tab){
         chrome.storage.sync.get(['icon'], function(items){
-            if(items["icon"] == undefined){items["icon"] = "icons/iconstick19@2x.png";}
+            if(items["icon"] == undefined){items["icon"] = "icons/iconstick38.png";}
             chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"],"38": items["icon"]}});
         });
         // for all tabs
@@ -219,7 +219,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
     }
 
     chrome.storage.sync.get(['icon'], function(chromeset){
-        if(chromeset["icon"] == undefined){chromeset["icon"] = "icons/iconstick19@2x.png";}
+        if(chromeset["icon"] == undefined){chromeset["icon"] = "icons/iconstick38.png";}
         chrome.browserAction.setIcon({tabId : tabId, path : {"19": chromeset["icon"],"38": chromeset["icon"]}});
     });
     // for all tabs
@@ -478,24 +478,177 @@ chrome.storage.onChanged.addListener(function(changes, namespace){
             });
             }
         }
-        if(changes['ecosavertime']){
-            if(changes['ecosavertime'].newValue){
-            chrome.tabs.query({}, function(tabs){
-                var i;
-                var l = tabs.length; 
-                for(i = 0; i < l; i++){
-                    var protocol = tabs[i].url.split(":")[0];
-                    if(protocol == "http" || protocol == "https"){
-                    chrome.tabs.sendMessage(tabs[i].id, { action: "gonewecosavetime",message: changes['ecosavertime'].newValue });
-                    }
-                }
-            });
-            }
-        }
         if(changes['badge']){
             if(changes['badge'].newValue == true){checkbadge()}else{checkbadge()}
         }
-
+        if(changes['autoplay'] || changes['mousespotlights'] || changes['autoplayDomains'] || changes['autoplaychecklistwhite'] || changes['autoplaychecklistblack'] || changes['autoplayonly'] || changes['aplay'] || changes['apause'] || changes['astop'] || changes['autoplaydelay'] || changes['autoplaydelaytime']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshautoplay" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['videotool'] || changes['videotoolonly'] || changes['videotoolDomains'] || changes['videotoolchecklistwhite'] || changes['videotoolchecklistblack'] || changes['speedtoolbar'] || changes['videozoom'] || changes['visopacity'] || changes['videotoolcolor']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshvideotoolbar" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['videovolume'] || changes['videovolumealt'] || changes['videovolumehold'] || changes['videovolumeposa'] || changes['videovolumeposb'] || changes['videovolumeposc'] || changes['videovolumecolor'] || changes['videovolumelabel'] || changes['videovolumesteps']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshmousescroll" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['ambilight'] || changes['ambilightfixcolor'] || changes['ambilight4color'] || changes['ambilightvarcolor'] || changes['atmosvivid'] || changes['vpause'] || changes['atmosfpsauto'] || changes['atmosfpsmanual'] || changes['drawatmosfps'] || changes['ambilightcolorhex'] || changes['ambilight1colorhex'] || changes['ambilight2colorhex'] || changes['ambilight3colorhex'] || changes['ambilight4colorhex'] || changes['ambilightrangeblurradius'] || changes['ambilightrangespreadradius'] || changes['atmosontotlmode'] || changes['atmosphereonly'] || changes['atmosphereDomains']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "goenableatmos" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['reflection'] || changes['reflectionamount']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshreflection" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['hovervideo'] || changes['hovervideoamount']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshhovervideo" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['playrate'] || changes['playrateamount']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshplayrate" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['nightmodebck'] || changes['nightmodetxt'] || changes['nightmodehyperlink']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gonightmodecolors" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['nighttheme'] || changes['lampandnightmode'] || changes['nightmodeswitchhide'] || changes['nightmodeswitchhidetime'] || changes['nightonly'] || changes['nightmodechecklistwhite'] || changes['nightmodechecklistblack'] || changes['nightDomains'] || changes['nightmodebydomain'] || changes['nightmodebypage'] || changes['nightactivetime'] || changes['nmbegintime'] || changes['nmendtime'] || changes['nightenabletheme'] || changes['nighthover'] || changes['nmtopleft'] || changes['nmtopright'] || changes['nmbottomright'] || changes['nmbottomleft'] || changes['nmcustom']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "goenablenightmode" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['nightmodegesture']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshnightmodegesture" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['ecosaver'] || changes['ecosavertime']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefresheyesaver" });
+                        }
+                    }
+                }
+            });
+        }
+        if(changes['nighttime'] || changes['begintime'] || changes['endtime']){
+            chrome.tabs.query({}, function(tabs){
+                var i;
+                var l = tabs.length;
+                for(i = 0; i < l; i++){
+                    var protocol = tabs[i].url.split(":")[0];
+                    if(protocol == "http" || protocol == "https"){
+                        if(tabs[i].url != totloptionspage){
+                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshnighttime" });
+                        }
+                    }
+                }
+            });
+        }
 
         // Group Policy
         // check the values with group policy, if different values. Then change it back
@@ -563,6 +716,7 @@ var i18nomnidaymode = chrome.i18n.getMessage("omnidaymode").toLowerCase();
 var i18nomnilightoff = chrome.i18n.getMessage("omnilightoff").toLowerCase();
 var i18nomnilighton = chrome.i18n.getMessage("omnilighton").toLowerCase();
 var i18nomnihelp = chrome.i18n.getMessage("omnihelp").toLowerCase();
+if(typeof chrome.omnibox !== 'undefined'){
 chrome.omnibox.onInputChanged.addListener(
     function(text, suggest){
         var suggtext;
@@ -601,7 +755,7 @@ chrome.omnibox.onInputEntered.addListener(
             });
         }
 });
-
+}
 
 // date today
 var today = new Date();
@@ -752,9 +906,9 @@ chrome.runtime.onInstalled.addListener(function(details){
     }else{
         initwelcome();
     }
-
     checkbadge();
 });
 // first run - check the badge new value for this day
 chrome.runtime.onStartup.addListener(checkbadge);
+
 checkbadge();

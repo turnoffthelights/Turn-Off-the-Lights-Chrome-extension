@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_name__",
   "short_name": "Turn Off the Lights",
-  "version": "4.1.9.0",
+  "version": "4.2.0.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
@@ -19,13 +19,8 @@
   "browser_action": {
       "default_title": "__MSG_pageatitle__",
       "default_icon": {
-        "16": "icons/iconstick16.png",
         "19": "icons/iconstick19.png",
-        "20": "icons/iconstick20.png",
-        "32": "icons/iconstick32.png",
-        "38": "icons/iconstick38.png",
-        "40": "icons/iconstick40.png",
-        "64": "icons/iconstick64.png"
+        "38": "icons/iconstick38.png"
       }
   },
   "background": {

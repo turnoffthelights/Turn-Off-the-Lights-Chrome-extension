@@ -32,6 +32,11 @@ function $(id) { return document.getElementById(id); }
 var darkmode;
 
 document.addEventListener('DOMContentLoaded', function(){
+    // disable context menu 
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    }, false);
+
     chrome.storage.sync.get(['darkmode'], function(items){
         darkmode = items['darkmode'];if(darkmode == null)darkmode = false; // default darkmode false
 
@@ -42,15 +47,10 @@ document.addEventListener('DOMContentLoaded', function(){
             document.body.className = 'light';
         }
     });
-$("opendonate").addEventListener('click', function(){chrome.tabs.create({url: donatewebsite, active:true})});
-$("openrate").addEventListener('click', function(){chrome.tabs.create({url: writereview, active:true})});
-$("openoptions").addEventListener('click', function(){chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
+$("opentrywebsite").addEventListener('click', function(){chrome.tabs.create({url: linkyoutube, active:true})});
 
+$("openoptions").addEventListener('click', function(){chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
 $("opensupport").addEventListener('click', function(){chrome.tabs.create({url: linksupport, active:true})});
 $("openwelcomeguide").addEventListener('click', function(){chrome.tabs.create({url: linkguide, active:true})});
-$("openyoutube").addEventListener('click', function(){chrome.tabs.create({url: linkyoutube, active:true})});
 
-$("openemail").addEventListener('click', function(){var sturnoffthelightemail = "mailto:your@email.com?subject="+chrome.i18n.getMessage("sharetexta")+"&body="+chrome.i18n.getMessage("sharetextb")+" "+turnoffthelightsproduct;chrome.tabs.create({url: sturnoffthelightemail, active:true})});
-$("openfacebook").addEventListener('click', function(){chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, active:true})});
-$("opentwitter").addEventListener('click', function(){var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, active:true})});
 });
