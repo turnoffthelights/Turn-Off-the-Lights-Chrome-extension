@@ -3790,7 +3790,9 @@ function OnSearch(input){
     var id;
     for(id in contentDivs){
         if(id != "tab4"){
-        contentDivs[id].className = 'page';
+            if((contentDivs[id])){
+                contentDivs[id].className = 'page';
+            }
         }
         i++;
     }
