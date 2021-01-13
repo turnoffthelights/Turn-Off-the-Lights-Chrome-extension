@@ -211,7 +211,9 @@ window.requestAnimFrame = function(){
 // Listen for messages from the popup
 chrome.runtime.onMessage.addListener(function(message, sender, response){
 	// First, validate the message's structure
-	if(window.location.href.match(totlscreenshotpage)){
+	// completed support hosts
+	let allowedHosts = [totlscreenshotpage];
+	if(allowedHosts.includes(window.location.href)){
 		if((message.action === 'receivescreenshot')){
 			if($("capturevideoframe")){$("capturevideoframe").src = message.value;}
 			if($("browserextensioninstalled")){$("browserextensioninstalled").style.display = "none";}
