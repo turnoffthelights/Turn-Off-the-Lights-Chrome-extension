@@ -2222,10 +2222,6 @@ function fixyoutubeatmos(){
 		var ytdpagemanager = document.getElementsByTagName("ytd-page-manager")[0];
 		if(ytdpagemanager){ytdpagemanager.style.overflow = "visible";} // show the overflow out the video element
 	}
-	if(window.location.href.match(/((http:\/\/(gaming.youtube\.com\/.*))|(https:\/\/(gaming.youtube\.com\/.*)))/i)){
-		var contentlayer = $("content-layer");
-		if(contentlayer){contentlayer.classList.add('stefanvdvideoauto');}
-	}
 }
 
 var requestId = 0;

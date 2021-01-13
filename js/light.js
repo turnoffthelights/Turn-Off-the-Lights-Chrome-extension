@@ -313,22 +313,6 @@ try{
 	}
 }
 
-// YouTube Gaming
-if(window.location.href.match(/((http:\/\/(gaming.youtube\.com\/.*))|(https:\/\/(gaming.youtube\.com\/.*)))/i)){
-var ytgpersistentplayer = document.getElementsByTagName('ytg-persistent-player');
-var i;
-var l = ytgpersistentplayer.length;
-    for(i = 0; i < l; i++){
-        if(ytgpersistentplayer[i].getAttribute('id') == "player"){
-				if(ytgpersistentplayer[i].classList.contains("stefanvdotherdown")){ytgpersistentplayer[i].classList.remove("stefanvdotherdown");}
-				if(ytgpersistentplayer[i].classList.contains("stefanvdvideocontrolsitem")){ytgpersistentplayer[i].classList.remove("stefanvdvideocontrolsitem");}
-				if(ytgpersistentplayer[i].classList.contains("stefanvditemtop")){ytgpersistentplayer[i].classList.remove("stefanvditemtop");}
-				if(ytgpersistentplayer[i].classList.contains("stefanvdvideoauto")){ytgpersistentplayer[i].classList.remove("stefanvdvideoauto");}
-            ytgpersistentplayer[i].classList.add('stefanvdvideocontrolstop');
-        }
-    }
-} // plus use YouTube Options also on the gaming site, for the html5 player visibility 
-
 // YouTube options
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 // Show the debug mode of YouTube
