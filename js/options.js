@@ -652,7 +652,7 @@ $("sectionreviewbox").style.display = "none";
 		var tabLink = getFirstChildWithTagName(tabListItems[i],'A');
 		var id = getHash(tabLink.getAttribute('data-tab'));
 		tabLinks[id] = tabLink;
-		contentDivs[id] = $( id );
+		contentDivs[id] = document.getElementById(id);
         }
     }
 
@@ -3781,7 +3781,7 @@ function OnSearch(input){
         if(tabListItems[i].nodeName == 'LI'){
         var tabLink = getFirstChildWithTagName(tabListItems[i],'A');
         var id = getHash(tabLink.getAttribute('data-tab'));
-        contentDivs[id] = $(id);
+        contentDivs[id] = document.getElementById(id);
         }
     }
 
