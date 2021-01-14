@@ -686,6 +686,14 @@ for(i = 0; i < l; i++){
 var insideframe = embedplayer[i].src;
 if(embedplayer[i].tagName == "IFRAME" || embedplayer[i].tagName == "EMBED"){insideframe = embedplayer[i].src}
 else if(embedplayer[i].tagName == "OBJECT"){ insideframe = embedplayer[i].data}
+
+var allowedHosts = ['http://www.youtube.com', 'http://www.facebook.com/v/', 'http://youtube.com'];
+for (var i = 0; i < allowedHosts.length; i++) {
+	if(insideframe.startsWith(allowedHosts[i]) == true) {
+		console.log("your url contains the string "+allowedHosts[i]);
+	}
+}
+
 if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substring(0, 26) == '//www.youtube-nocookie.com') || (insideframe.substring(0, 22) == 'http://www.youtube.com') || (insideframe.substring(0, 23) == 'https://www.youtube.com') || (insideframe.substring(0, 31) == 'http://www.youtube-nocookie.com') || (insideframe.substring(0, 32) == 'https://www.youtube-nocookie.com') || (insideframe.substring(0, 19) == 'https://youtube.com') || (insideframe.substring(0, 18) == 'http://youtube.com')
 || (insideframe.substring(0, 16) == 'http://vimeo.com') || (insideframe.substring(0, 17) == 'https://vimeo.com') || (insideframe.substring(0, 23) == 'http://player.vimeo.com') || (insideframe.substring(0, 24) == 'https://player.vimeo.com') || (insideframe.substring(0, 29) == 'https://secure-a.vimeocdn.com') || (insideframe.substring(0, 21) == 'http://a.vimeocdn.com') || (insideframe.substring(0, 22) == 'https://a.vimeocdn.com')
 || (insideframe.substring(0, 26) == 'http://www.dailymotion.com') || (insideframe.substring(0, 27) == 'https://www.dailymotion.com') || (insideframe.substring(0, 24) == 'http://static1.dmcdn.net') || (insideframe.substring(0, 25) == 'https://static1.dmcdn.net')
