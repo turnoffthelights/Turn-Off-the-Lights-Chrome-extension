@@ -687,94 +687,32 @@ var insideframe = embedplayer[i].src;
 if(embedplayer[i].tagName == "IFRAME" || embedplayer[i].tagName == "EMBED"){insideframe = embedplayer[i].src}
 else if(embedplayer[i].tagName == "OBJECT"){ insideframe = embedplayer[i].data}
 
-var allowedHosts = ['http://www.youtube.com', 'http://www.facebook.com/v/', 'http://youtube.com'];
-for (var i = 0; i < allowedHosts.length; i++) {
-	if(insideframe.startsWith(allowedHosts[i]) == true) {
-		console.log("your url contains the string "+allowedHosts[i]);
+var allowedHosts = ['//www.youtube.com', '//www.youtube-nocookie.com', 'http://www.youtube.com', 'https://www.youtube.com', 'http://www.youtube-nocookie.com', 'https://www.youtube-nocookie.com', 'https://youtube.com', 'http://youtube.com', 'http://vimeo.com', 'https://vimeo.com', 'http://player.vimeo.com', 'https://player.vimeo.com', 'https://secure-a.vimeocdn.com', 'http://a.vimeocdn.com', 'https://a.vimeocdn.com', 'http://www.dailymotion.com', 'https://www.dailymotion.com', 'http://static1.dmcdn.net', 'https://static1.dmcdn.net', 'http://videoplayer.vevo.com', 'https://videoplayer.vevo.com', 'http://embed.itunes.apple.com', 'https://embed.itunes.apple.com', 'http://emp.bbc.com/emp', 'https://emp.bbc.com/emp', 'http://vk.com/video', 'https://vk.com/video', 'http://vk.com/swf', 'https://vk.com/swf', 'http://www.facebook.com/v/','https://www.facebook.com/v/', 'http://static.ak.fbcdn.net', 'https://static.ak.fbcdn.net', 'http://static.ak.facebook.com', 'https://static.ak.facebook.com', 'http://s-static.ak.facebook.com', 'https://s-static.ak.facebook.com', 'http://fbstatic-a.akamaihd.net', 'https://fbstatic-a.akamaihd.net', 'http://www.facebook.com/video/', 'https://www.facebook.com/video/', 'http://twitter.com/i/videos', 'https://twitter.com/i/videos', 'http://lads.myspace.com/videos', 'https://lads.myspace.com/videos', 'http://www.hulu.com/embed', 'https://www.hulu.com/embed', 'https://www.hulu.com/site-player', 'http://www.hulu.com/site-player', 'http://player.hulu.com', 'https://player.hulu.com', 'http://blip.tv', 'http://blip.tv', 'http://a.blip.tv', 'https://a.blip.tv', 'http://l.yimg.com', 'https://l.yimg.com', 'http://www.metacafe.com', 'https://www.metacafe.com', 'http://www-cdn.justin.tv', 'https://www-cdn.justin.tv', 'http://twitch.tv', 'https://twitch.tv', 'http://www-cdn.jtvnw.net', 'https://www-cdn.jtvnw.net', 'http://player.twitch.tv', 'https://player.twitch.tv', 'http://nl.ign.com', 'https://nl.ign.com', 'http://s.mcstatic.com', 'https://s.mcstatic.com', 'http://is4.myvideo.de', 'https://is4.myvideo.de', 'http://player.ooyala.com', 'https://player.ooyala.com', 'http://i.nflcdn.com', 'https://i.nflcdn.com', 'http://cfiles.5min.com', 'https://cfiles.5min.com', 'http://can.cbs.com', 'https://can.cbs.com', 'http://player.rts.ch', 'https://player.rts.ch', 'http://cdn.livestream.com', 'https://cdn.livestream.com', 'http://static-cdn1.ustream.tv', 'https://static-cdn1.ustream.tv', 'http://static.ak.crunchyroll.com', 'https://static.ak.crunchyroll.com', 'https://static.crunchyroll.com', 'http://video.ted.com', 'https://video.ted.com', 'http://embed.ted.com', 'https://embed.ted.com', 'http://metatube.com', 'https://metatube.com', 'http://www.redditmedia.com/mediaembed','https://www.redditmedia.com/mediaembed', 'https://embeds.vice.com', 'https://embeds.vice.com', 'http://videohosting.sidereel.com', 'https://videohosting.sidereel.com', 'http://rutube.ru/video/embed', 'https://rutube.ru/video/embed', 'http://vine.co/v', 'https://vine.co/v', 'http://web.microsoftstream.com/embed/video', 'https://web.microsoftstream.com/embed/video', 'http://rtssatweb.videostreaming.rs/player.php', 'http://rtssatweb.videostreaming.rs/player.php', 'http://embed.break.com','https://embed.break.com','https://media1.break.com', 'https://media1.break.com', 'http://www.collegehumor.com', 'https://www.collegehumor.com', 'http://0.static.collegehumor.cvcdn.com', 'https://0.static.collegehumor.cvcdn.com', 'http://hub.video.msn.com', 'https://hub.video.msn.com', 'http://img.widgets.video.s-msn.com', 'https://img.widgets.video.s-msn.com', 'http://flash.pcworld.com/video', 'https://flash.pcworld.com/video', 'https://safe.txmblr.com/svc/embed/iframe', 'https://safe.txmblr.com/svc/embed/iframe', 'http://player.cntv.cn', 'https://player.cntv.cn', 'http://js.kankan.xunlei.com/player', 'https://js.kankan.xunlei.com/player', 'http://tv.sohu.com', 'https://tv.sohu.com', 'http://www.iqiyi.com', 'https://www.iqiyi.com','http://static1.mtime.cn', 'https://static1.mtime.cn', 'http://movie.mtime.com', 'https://movie.mtime.com', 'http://movie.douban.com', 'https://movie.douban.com', 'http://static.m1905.com', 'https://static.m1905.com', 'http://imgcache.qq.com', 'https://imgcache.qq.com', 'http://s1.56img.com', 'https://s1.56img.com', 'http://player.video.qiyi.com', 'https://player.video.qiyi.com', 'http://vxml.ifengimg.com/swf', 'https://vxml.ifengimg.com/swf', 'http://live.nicovideo.jp/embed', 'https://live.nicovideo.jp/embed', 'http://ssl.acfun.tv/block-player-homura.html', 'https://ssl.acfun.tv/block-player-homura.html', 'http://www.ceskatelevize.cz/ivysilani/embed', 'https://www.ceskatelevize.cz/ivysilani/embed', 'http://cdn.embedly.com/widgets', 'https://cdn.embedly.com/widgets', 'http://player.theplatform.com', 'https://player.theplatform.com', 'http://player.youku.com', 'https://player.youku.com', 'http://static.youku.com', 'https://static.youku.com'];
+
+for(p=0;p<allowedHosts.length;p++){
+	// website URL include in the whitelist array
+	if(insideframe.startsWith(allowedHosts[p])== true){
+		// current video to front
+		var targetComputedStyleHeight=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("height");var spar = targetComputedStyleHeight.replace("px","");
+		var targetComputedStyleWidth=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("width");var been = targetComputedStyleWidth.replace("px","");
+		var targetComputedStylePosition=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("position");
+		embedplayer[i].classList.add('stefanvdvideotop');
+		embedplayer[i].style.cssText = 'height:' + Math.round(spar) + 'px; width:' + Math.round(been) + 'px; display: block;';
+		// search for the video player, and set the previous path all to z-index "auto"
+		if(searchvideopath(embedplayer[i]) == true && targetComputedStylePosition == "absolute"){
+			embedplayer[i].classList.add('stefanvdposfixed');
+		}
+
+		// double check to remove all other CSS classes
+		if(embedplayer[i].classList.contains("stefanvdotherdown")){embedplayer[i].classList.remove("stefanvdotherdown");}
+		if(embedplayer[i].classList.contains("stefanvdvideocontrolstop")){embedplayer[i].classList.remove("stefanvdvideocontrolstop");}
+		if(embedplayer[i].classList.contains("stefanvdvideocontrolsitem")){embedplayer[i].classList.remove("stefanvdvideocontrolsitem");}
+		if(embedplayer[i].classList.contains("stefanvditemtop")){embedplayer[i].classList.remove("stefanvditemtop");}
+		if(embedplayer[i].classList.contains("stefanvdvideoauto")){embedplayer[i].classList.remove("stefanvdvideoauto");}
+		//---
 	}
 }
 
-if((insideframe.substring(0, 17) == '//www.youtube.com') || (insideframe.substring(0, 26) == '//www.youtube-nocookie.com') || (insideframe.substring(0, 22) == 'http://www.youtube.com') || (insideframe.substring(0, 23) == 'https://www.youtube.com') || (insideframe.substring(0, 31) == 'http://www.youtube-nocookie.com') || (insideframe.substring(0, 32) == 'https://www.youtube-nocookie.com') || (insideframe.substring(0, 19) == 'https://youtube.com') || (insideframe.substring(0, 18) == 'http://youtube.com')
-|| (insideframe.substring(0, 16) == 'http://vimeo.com') || (insideframe.substring(0, 17) == 'https://vimeo.com') || (insideframe.substring(0, 23) == 'http://player.vimeo.com') || (insideframe.substring(0, 24) == 'https://player.vimeo.com') || (insideframe.substring(0, 29) == 'https://secure-a.vimeocdn.com') || (insideframe.substring(0, 21) == 'http://a.vimeocdn.com') || (insideframe.substring(0, 22) == 'https://a.vimeocdn.com')
-|| (insideframe.substring(0, 26) == 'http://www.dailymotion.com') || (insideframe.substring(0, 27) == 'https://www.dailymotion.com') || (insideframe.substring(0, 24) == 'http://static1.dmcdn.net') || (insideframe.substring(0, 25) == 'https://static1.dmcdn.net')
-|| (insideframe.substring(0, 27) == 'http://videoplayer.vevo.com') || (insideframe.substring(0, 28) == 'https://videoplayer.vevo.com')
-|| (insideframe.substring(0, 29) == 'http://embed.itunes.apple.com') || (insideframe.substring(0, 30) == 'https://embed.itunes.apple.com')
-|| (insideframe.substring(0, 22) == 'http://emp.bbc.com/emp') || (insideframe.substring(0, 23) == 'https://emp.bbc.com/emp')
-|| (insideframe.substring(0, 19) == 'http://vk.com/video') || (insideframe.substring(0, 20) == 'https://vk.com/video') || (insideframe.substring(0, 17) == 'http://vk.com/swf') || (insideframe.substring(0, 18) == 'https://vk.com/swf')
-|| (insideframe.substring(0, 26) == 'http://www.facebook.com/v/') || (insideframe.substring(0, 27) == 'https://www.facebook.com/v/') || (insideframe.substring(0, 26) == 'http://static.ak.fbcdn.net')  || (insideframe.substring(0, 27) == 'https://static.ak.fbcdn.net') || (insideframe.substring(0, 29) == 'http://static.ak.facebook.com') || (insideframe.substring(0, 30) == 'https://static.ak.facebook.com') || (insideframe.substring(0, 31) == 'http://s-static.ak.facebook.com') || (insideframe.substring(0, 32) == 'https://s-static.ak.facebook.com') || (insideframe.substring(0, 30) == 'http://fbstatic-a.akamaihd.net') || (insideframe.substring(0, 31) == 'https://fbstatic-a.akamaihd.net')// facebook embed video
-|| (insideframe.match(/((http:\/\/(.*facebook\.com\/.*\/video.*))|(https:\/\/(.*facebook\.com\/.*\/video.*)))/i))
-|| (insideframe.substring(0, 27) == 'http://twitter.com/i/videos') || (insideframe.substring(0, 28) == 'https://twitter.com/i/videos')
-|| (insideframe.substring(0, 30) == 'http://lads.myspace.com/videos') || (insideframe.substring(0, 31) == 'https://lads.myspace.com/videos')
-|| (insideframe.substring(0, 25) == 'http://www.hulu.com/embed') || (insideframe.substring(0, 26) == 'https://www.hulu.com/embed') || (insideframe.substring(0, 32) == 'https://www.hulu.com/site-player') || (insideframe.substring(0, 31) == 'http://www.hulu.com/site-player')|| (insideframe.substring(0, 22) == 'http://player.hulu.com') || (insideframe.substring(0, 23) == 'https://player.hulu.com')
-|| (insideframe.substring(0, 14) == 'http://blip.tv') || (insideframe.substring(0, 15) == 'http://blip.tv') || (insideframe.substring(0, 16) == 'http://a.blip.tv') || (insideframe.substring(0, 17) == 'https://a.blip.tv')
-|| (insideframe.substring(0, 17) == 'http://l.yimg.com') || (insideframe.substring(0, 18) == 'https://l.yimg.com') // yahoo video
-|| (insideframe.substring(0, 23) == 'http://www.metacafe.com') || (insideframe.substring(0, 24) == 'https://www.metacafe.com')
-|| (insideframe.substring(0, 24) == 'http://www-cdn.justin.tv') || (insideframe.substring(0, 25) == 'https://www-cdn.justin.tv')
-|| (insideframe.substring(0, 16) == 'http://twitch.tv') || (insideframe.substring(0, 17) == 'https://twitch.tv') || (insideframe.substring(0, 24) == 'http://www-cdn.jtvnw.net') || (insideframe.substring(0, 25) == 'https://www-cdn.jtvnw.net') || (insideframe.substring(0, 23) == 'http://player.twitch.tv')|| (insideframe.substring(0, 24) == 'https://player.twitch.tv')
-|| (insideframe.substring(0, 17) == 'http://nl.ign.com') || (insideframe.substring(0, 18) == 'https://nl.ign.com') // ign
-|| (insideframe.substring(0, 21) == 'http://s.mcstatic.com') || (insideframe.substring(0, 22) == 'https://s.mcstatic.com') // metacafe
-|| (insideframe.substring(0, 21) == 'http://is4.myvideo.de') || (insideframe.substring(0, 22) == 'https://is4.myvideo.de')
-|| (insideframe.substring(0, 24) == 'http://player.ooyala.com') || (insideframe.substring(0, 25) == 'https://player.ooyala.com') // espn.com
-|| (insideframe.substring(0, 19) == 'http://i.nflcdn.com') || (insideframe.substring(0, 20) == 'https://i.nflcdn.com') //nfl.com
-|| (insideframe.substring(0, 22) == 'http://cfiles.5min.com') || (insideframe.substring(0, 23) == 'https://cfiles.5min.com') // aol.com
-|| (insideframe.substring(0, 18) == 'http://can.cbs.com') || (insideframe.substring(0, 19) == 'https://can.cbs.com') // tv.com
-|| (insideframe.substring(0, 20) == 'http://player.rts.ch') || (insideframe.substring(0, 21) == 'https://player.rts.ch')
-|| (insideframe.substring(0, 25) == 'http://cdn.livestream.com') || (insideframe.substring(0, 26) == 'https://cdn.livestream.com')
-|| (insideframe.substring(0, 29) == 'http://static-cdn1.ustream.tv') || (insideframe.substring(0, 30) == 'https://static-cdn1.ustream.tv')
-|| (insideframe.substring(0, 32) == 'http://static.ak.crunchyroll.com') || (insideframe.substring(0, 33) == 'https://static.ak.crunchyroll.com') || (insideframe.substring(0, 30) == 'https://static.crunchyroll.com')
-|| (insideframe.substring(0, 20) == 'http://video.ted.com') || (insideframe.substring(0, 21) == 'https://video.ted.com') || (insideframe.substring(0, 20) == 'http://embed.ted.com') || (insideframe.substring(0, 21) == 'https://embed.ted.com')
-|| (insideframe.substring(0, 19) == 'http://metatube.com') || (insideframe.substring(0, 20) == 'https://metatube.com')
-|| (insideframe.substring(0, 37) == 'http://www.redditmedia.com/mediaembed') || (insideframe.substring(0, 38) == 'https://www.redditmedia.com/mediaembed')
-|| (insideframe.substring(0, 23) == 'https://embeds.vice.com') || (insideframe.substring(0, 24) == 'https://embeds.vice.com')
-|| (insideframe.substring(0, 32) == 'http://videohosting.sidereel.com') || (insideframe.substring(0, 33) == 'https://videohosting.sidereel.com')
-|| (insideframe.substring(0, 28) == 'http://rutube.ru/video/embed') || (insideframe.substring(0, 29) == 'https://rutube.ru/video/embed')
-/*|| (insideframe.substring(0, 19) == 'http://www.veoh.com') || (insideframe.substring(0, 20) == 'https://www.veoh.com')*/
-|| (insideframe.substring(0, 16) == 'http://vine.co/v') || (insideframe.substring(0, 17) == 'https://vine.co/v')
-|| (insideframe.substring(0, 42) == 'http://web.microsoftstream.com/embed/video') || (insideframe.substring(0, 43) == 'https://web.microsoftstream.com/embed/video')
-|| (insideframe.substring(0, 45) == 'http://rtssatweb.videostreaming.rs/player.php') || (insideframe.substring(0, 46) == 'http://rtssatweb.videostreaming.rs/player.php')
-|| (insideframe.substring(0, 22) == 'http://embed.break.com') || (insideframe.substring(0, 23) == 'https://embed.break.com') || (insideframe.substring(0, 23) == 'https://media1.break.com') || (insideframe.substring(0, 24) == 'https://media1.break.com')
-|| (insideframe.substring(0, 27) == 'http://www.collegehumor.com') || (insideframe.substring(0, 28) == 'https://www.collegehumor.com') || (insideframe.substring(0, 38) == 'http://0.static.collegehumor.cvcdn.com') || (insideframe.substring(0, 39) == 'https://0.static.collegehumor.cvcdn.com')
-|| (insideframe.substring(0, 24) == 'http://hub.video.msn.com') || (insideframe.substring(0, 25) == 'https://hub.video.msn.com') || (insideframe.substring(0, 34) == 'http://img.widgets.video.s-msn.com') || (insideframe.substring(0, 35) == 'https://img.widgets.video.s-msn.com') // msn bing.com
-|| (insideframe.substring(0, 30) == 'http://flash.pcworld.com/video') || (insideframe.substring(0, 31) == 'https://flash.pcworld.com/video')
-|| (insideframe.substring(0, 39) == 'https://safe.txmblr.com/svc/embed/iframe') || (insideframe.substring(0, 40) == 'https://safe.txmblr.com/svc/embed/iframe')
-|| (insideframe.substring(0, 21) == 'http://player.cntv.cn') || (insideframe.substring(0, 22) == 'https://player.cntv.cn')
-|| (insideframe.substring(0, 34) == 'http://js.kankan.xunlei.com/player') || (insideframe.substring(0, 35) == 'https://js.kankan.xunlei.com/player')
-|| (insideframe.substring(0, 18) == 'http://tv.sohu.com') || (insideframe.substring(0, 19) == 'https://tv.sohu.com')
-|| (insideframe.substring(0, 20) == 'http://www.iqiyi.com') || (insideframe.substring(0, 21) == 'https://www.iqiyi.com')
-|| (insideframe.substring(0, 23) == 'http://static1.mtime.cn') || (insideframe.substring(0, 24) == 'https://static1.mtime.cn') || (insideframe.substring(0, 22) == 'http://movie.mtime.com') || (insideframe.substring(0, 23) == 'https://movie.mtime.com')
-|| (insideframe.substring(0, 23) == 'http://movie.douban.com') || (insideframe.substring(0, 24) == 'https://movie.douban.com')
-|| (insideframe.substring(0, 23) == 'http://static.m1905.com') || (insideframe.substring(0, 24) == 'https://static.m1905.com')
-|| (insideframe.substring(0, 22) == 'http://imgcache.qq.com') || (insideframe.substring(0, 23) == 'https://imgcache.qq.com')
-|| (insideframe.substring(0, 19) == 'http://s1.56img.com') || (insideframe.substring(0, 20) == 'https://s1.56img.com')
-|| (insideframe.substring(0, 28) == 'http://player.video.qiyi.com') || (insideframe.substring(0, 29) == 'https://player.video.qiyi.com')
-|| (insideframe.substring(0, 28) == 'http://vxml.ifengimg.com/swf') || (insideframe.substring(0, 29) == 'https://vxml.ifengimg.com/swf')
-|| (insideframe.substring(0, 30) == 'http://live.nicovideo.jp/embed') || (insideframe.substring(0, 31) == 'https://live.nicovideo.jp/embed')
-|| (insideframe.substring(0, 44) == 'http://ssl.acfun.tv/block-player-homura.html') || (insideframe.substring(0, 45) == 'https://ssl.acfun.tv/block-player-homura.html')
-|| (insideframe.substring(0, 43) == 'http://www.ceskatelevize.cz/ivysilani/embed') || (insideframe.substring(0, 44) == 'https://www.ceskatelevize.cz/ivysilani/embed')
-|| (insideframe.substring(0, 30) == 'http://cdn.embedly.com/widgets') || (insideframe.substring(0, 31) == 'https://cdn.embedly.com/widgets')
-|| (insideframe.substring(0, 29) == 'http://player.theplatform.com') || (insideframe.substring(0, 30) == 'https://player.theplatform.com')
-|| (insideframe.substring(0, 23) == 'http://player.youku.com') || (insideframe.substring(0, 24) == 'https://player.youku.com') || (insideframe.substring(0, 23) == 'http://static.youku.com') || (insideframe.substring(0, 24) == 'https://static.youku.com'))
-{
-// current video to front
-var targetComputedStyleHeight=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("height");var spar = targetComputedStyleHeight.replace("px","");
-var targetComputedStyleWidth=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("width");var been = targetComputedStyleWidth.replace("px","");
-var targetComputedStylePosition=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("position");
-embedplayer[i].classList.add('stefanvdvideotop');
-embedplayer[i].style.cssText = 'height:' + Math.round(spar) + 'px; width:' + Math.round(been) + 'px; display: block;';
-// search for the video player, and set the previous path all to z-index "auto"
-if(searchvideopath(embedplayer[i]) == true && targetComputedStylePosition == "absolute"){
-	embedplayer[i].classList.add('stefanvdposfixed');
-}
-
-// double check to remove all other CSS classes
-if(embedplayer[i].classList.contains("stefanvdotherdown")){embedplayer[i].classList.remove("stefanvdotherdown");}
-if(embedplayer[i].classList.contains("stefanvdvideocontrolstop")){embedplayer[i].classList.remove("stefanvdvideocontrolstop");}
-if(embedplayer[i].classList.contains("stefanvdvideocontrolsitem")){embedplayer[i].classList.remove("stefanvdvideocontrolsitem");}
-if(embedplayer[i].classList.contains("stefanvditemtop")){embedplayer[i].classList.remove("stefanvditemtop");}
-if(embedplayer[i].classList.contains("stefanvdvideoauto")){embedplayer[i].classList.remove("stefanvdvideoauto");}
-//---
-
-}
 }
 
 }
