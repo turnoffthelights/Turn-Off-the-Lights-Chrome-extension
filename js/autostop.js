@@ -128,10 +128,10 @@ function autostopfunction(){
 	});
 
 	observer.observe(videolist,{
-		subtree: true,       // observe the subtree rooted at ...videolist...
-		childList: true,     // include childNode insertion/removals
+		subtree: true, // observe the subtree rooted at ...videolist...
+		childList: true, // include childNode insertion/removals
 		characterData: false, // include textContent changes
-		attributes: true     // include changes to attributes within the subtree
+		attributes: true // include changes to attributes within the subtree
 	});
 	
 	}

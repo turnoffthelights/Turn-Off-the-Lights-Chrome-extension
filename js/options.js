@@ -216,20 +216,20 @@ chrome.storage.sync.get(['fadein','fadeout','readera','readern','lightimagea','l
 function read_options(){
 // speech
 var langs =
-[['Afrikaans',       ['af-ZA']],
- ['Bahasa Indonesia',['id-ID']],
- ['Bahasa Melayu',   ['ms-MY']],
- ['Català',          ['ca-ES']],
- ['Čeština',         ['cs-CZ']],
- ['Deutsch',         ['de-DE']],
- ['English',         ['en-AU', 'Australia'],
+[['Afrikaans', ['af-ZA']],
+ ['Bahasa Indonesia', ['id-ID']],
+ ['Bahasa Melayu', ['ms-MY']],
+ ['Català', ['ca-ES']],
+ ['Čeština', ['cs-CZ']],
+ ['Deutsch', ['de-DE']],
+ ['English', ['en-AU', 'Australia'],
                      ['en-CA', 'Canada'],
                      ['en-IN', 'India'],
                      ['en-NZ', 'New Zealand'],
                      ['en-ZA', 'South Africa'],
                      ['en-GB', 'United Kingdom'],
                      ['en-US', 'United States']],
- ['Español',         ['es-AR', 'Argentina'],
+ ['Español', ['es-AR', 'Argentina'],
                      ['es-BO', 'Bolivia'],
                      ['es-CL', 'Chile'],
                      ['es-CO', 'Colombia'],
@@ -249,35 +249,35 @@ var langs =
                      ['es-DO', 'República Dominicana'],
                      ['es-UY', 'Uruguay'],
                      ['es-VE', 'Venezuela']],
- ['Euskara',         ['eu-ES']],
- ['Français',        ['fr-FR']],
- ['Galego',          ['gl-ES']],
- ['Hrvatski',        ['hr_HR']],
- ['IsiZulu',         ['zu-ZA']],
- ['Íslenska',        ['is-IS']],
- ['Italiano',        ['it-IT', 'Italia'],
+ ['Euskara', ['eu-ES']],
+ ['Français', ['fr-FR']],
+ ['Galego', ['gl-ES']],
+ ['Hrvatski', ['hr_HR']],
+ ['IsiZulu', ['zu-ZA']],
+ ['Íslenska', ['is-IS']],
+ ['Italiano', ['it-IT', 'Italia'],
                      ['it-CH', 'Svizzera']],
- ['Magyar',          ['hu-HU']],
- ['Nederlands',      ['nl-NL']],
- ['Norsk bokmål',    ['nb-NO']],
- ['Polski',          ['pl-PL']],
- ['Português',       ['pt-BR', 'Brasil'],
+ ['Magyar', ['hu-HU']],
+ ['Nederlands', ['nl-NL']],
+ ['Norsk bokmål', ['nb-NO']],
+ ['Polski', ['pl-PL']],
+ ['Português', ['pt-BR', 'Brasil'],
                      ['pt-PT', 'Portugal']],
- ['Română',          ['ro-RO']],
- ['Slovenčina',      ['sk-SK']],
- ['Suomi',           ['fi-FI']],
- ['Svenska',         ['sv-SE']],
- ['Türkçe',          ['tr-TR']],
- ['български',       ['bg-BG']],
- ['Pусский',         ['ru-RU']],
- ['Српски',          ['sr-RS']],
- ['한국어',            ['ko-KR']],
- ['中文',             ['cmn-Hans-CN', '普通话 (中国大陆)'],
+ ['Română', ['ro-RO']],
+ ['Slovenčina', ['sk-SK']],
+ ['Suomi', ['fi-FI']],
+ ['Svenska', ['sv-SE']],
+ ['Türkçe', ['tr-TR']],
+ ['български', ['bg-BG']],
+ ['Pусский', ['ru-RU']],
+ ['Српски', ['sr-RS']],
+ ['한국어', ['ko-KR']],
+ ['中文', ['cmn-Hans-CN', '普通话 (中国大陆)'],
                      ['cmn-Hans-HK', '普通话 (香港)'],
                      ['cmn-Hant-TW', '中文 (台灣)'],
                      ['yue-Hant-HK', '粵語 (香港)']],
- ['日本語',           ['ja-JP']],
- ['Lingua latīna',   ['la']]];
+ ['日本語', ['ja-JP']],
+ ['Lingua latīna', ['la']]];
 
 var i;
 var l = langs.length;
@@ -913,12 +913,12 @@ if(typeof multiopacityDomains == "string"){
 
 // animation browser engine
 window.requestAnimFrame = function(){
-    return (
-        window.requestAnimationFrame       || 
+    return(
+        window.requestAnimationFrame || 
         window.webkitRequestAnimationFrame || 
-        window.mozRequestAnimationFrame    || 
-        window.oRequestAnimationFrame      || 
-        window.msRequestAnimationFrame     || 
+        window.mozRequestAnimationFrame || 
+        window.oRequestAnimationFrame || 
+        window.msRequestAnimationFrame || 
         function(/* function */ callback){
             window.setTimeout(callback, 1000 / 60);
         }
@@ -1795,7 +1795,7 @@ removedynamic();
 			var x = 256 - ( Math.random() * 512 );
 			var y = 256 - ( Math.random() * 512 );
 			var z = 100 - ( Math.random() * 200 );
-			var a = Math.random() * 360;;
+			var a = Math.random() * 360;
 			var s = .25 + Math.random();
 			x *= .2; y *= .2;
 			cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};

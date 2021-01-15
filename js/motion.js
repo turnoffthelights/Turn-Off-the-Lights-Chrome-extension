@@ -118,7 +118,7 @@ function onlycammotionfunction(tab){
 	var currenturl = tab;
 	var thatwebsite = new URL(currenturl);
     var thatpage = thatwebsite.protocol + '//' + thatwebsite.hostname;
-	speechDomains  = response['cammotionDomains']; // get latest setting
+	speechDomains = response['cammotionDomains']; // get latest setting
 	if(typeof speechDomains == "string"){
 		speechDomains = JSON.parse(speechDomains);
         var sbuf = [];
@@ -171,7 +171,7 @@ if(motion == true){
 				}
 			}
         });
-    	// on highlight
+        // on highlight
 		chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
 			chrome.tabs.get(tabId, function(tab){
 				if(tab.url){
@@ -183,7 +183,6 @@ if(motion == true){
 		});
 	}else{
         cammotionstartfunction();
-
 	}
 
 }else{
@@ -417,7 +416,7 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
         avg = 0.9 * avg + 0.1 * down.d;
             var davg = down.d - avg, good = davg > brightthresh;
             //console.log(davg)
-            switch (state){
+            switch(state){
                 case 0:
                     if(good){//Found a gesture, waiting for next move
                         state = 1

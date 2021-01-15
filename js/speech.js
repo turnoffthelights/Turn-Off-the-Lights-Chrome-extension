@@ -118,9 +118,9 @@ function startButton(event){
 		var speechcountry = response['speechcountry'];if(speechcountry == null)speechcountry = 'en-US';
 		recognition.lang = speechcountry;
 	});
-	try{ recognition.start(); } catch(e){}
+	try{recognition.start();}catch(e){}
 	ignore_onend = false;
-	try{ start_timestamp = event.timeStamp; } catch(e){}
+	try{start_timestamp = event.timeStamp;}catch(e){}
 }
 
 function PopupCenter(url, title, w, h){
@@ -325,7 +325,7 @@ function speechrecognition(){
 
 chrome.storage.sync.get(['speech', 'speechonly', 'speechDomains'], function(response){
 speech = response['speech'];
-speechonly  = response['speechonly'];
+speechonly = response['speechonly'];
 
 //if(speech == true){
 //chrome.runtime.onSuspend.addListener(function(){ location.reload(); });
@@ -360,7 +360,7 @@ function onlyspeechfunction(tab){
 	var currenturl = tab;
 	var thatwebsite = new URL(currenturl);
 	var thatpage = thatwebsite.protocol + '//' + thatwebsite.hostname;
-	speechDomains  = response['speechDomains']; // get latest setting
+	speechDomains = response['speechDomains']; // get latest setting
 	if(typeof speechDomains == "string"){
 		speechDomains = JSON.parse(speechDomains);
 		var sbuf = [];

@@ -475,7 +475,7 @@ if(ytgetstring.substring(0, 4) == "Save"){ytmaterialaddbutton[i].classList.add('
 if(likebar == true){
 // updated 15 january 2016
 var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = 'relative'};
+if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = 'relative'}
 // update YouTube material 21 march 2017
 var ytmateriallikebar = document.querySelector("ytd-sentiment-bar-renderer");
 if(ytmateriallikebar){ytmateriallikebar.classList.add('stefanvditemtop');}
@@ -597,25 +597,25 @@ for(i = 0; i < l; i++)
 
 // YouTube still showing the skip button for the ads
 var ytvideoadui = document.querySelector('.videoAdUi');
-if(ytvideoadui){ytvideoadui.classList.add('stefanvdvideocontrolsitem');};
+if(ytvideoadui){ytvideoadui.classList.add('stefanvdvideocontrolsitem');}
 
 var ytvideoads = document.querySelector('.ad-overlay');
-if(ytvideoads){ytvideoads.classList.add('stefanvdvideocontrolsitem');};
+if(ytvideoads){ytvideoads.classList.add('stefanvdvideocontrolsitem');}
 
 var ytadcon = document.querySelector('.ad-container');
-if(ytadcon){ytadcon.classList.add('stefanvdvideocontrolsitem');};
+if(ytadcon){ytadcon.classList.add('stefanvdvideocontrolsitem');}
 
 // update 10 September 2018
 // fix for the TrueView video
-var ythtmlvideocontainer = document.querySelector('.html5-video-container');
-if(ythtmlvideocontainer){ythtmlvideocontainer.style.position = "absolute";};
+var ythtmlvideocontainer = document.querySelector('.html5-video-container')
+if(ythtmlvideocontainer){ythtmlvideocontainer.style.position = "absolute";}
 
 var ytdivvideoads = document.querySelector('.video-ads');
-if(ytdivvideoads){ytdivvideoads.classList.add('stefanvdvideocontrolsitem');};
+if(ytdivvideoads){ytdivvideoads.classList.add('stefanvdvideocontrolsitem');}
 //---
 // update 14 December 2018
 var ytpadoverlayslot = document.querySelector('.ytp-ad-overlay-slot');
-if(ytpadoverlayslot){ytpadoverlayslot.classList.add('stefanvdvideocontrolsitem');};
+if(ytpadoverlayslot){ytpadoverlayslot.classList.add('stefanvdvideocontrolsitem');}
 
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName('div');
@@ -1910,7 +1910,7 @@ if(stretchable){
 			var x = 256 - ( Math.random() * 512 );
 			var y = 256 - ( Math.random() * 512 );
 			var z = 100 - ( Math.random() * 200 );
-			var a = Math.random() * 360;;
+			var a = Math.random() * 360;
 			var s = .25 + Math.random();
 			x *= .2; y *= .2;
 			cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};
@@ -2432,12 +2432,12 @@ if(stretchable){
 ///////////
 // animation browser engine
 window.requestAnimFrame = function(){
-    return (
-        window.requestAnimationFrame       || 
+    return(
+        window.requestAnimationFrame || 
         window.webkitRequestAnimationFrame || 
-        window.mozRequestAnimationFrame    || 
-        window.oRequestAnimationFrame      || 
-        window.msRequestAnimationFrame     || 
+        window.mozRequestAnimationFrame || 
+        window.oRequestAnimationFrame || 
+        window.msRequestAnimationFrame || 
         function(/* function */ callback){
             window.setTimeout(callback, 1000 / 60);
         }

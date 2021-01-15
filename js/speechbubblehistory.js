@@ -27,7 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id) { return document.getElementById(id); }
+function $(id){return document.getElementById(id);}
 var speechhistory = "";
 chrome.storage.sync.get(['speechhistory'], function(items){
 speechhistory = items['speechhistory'];

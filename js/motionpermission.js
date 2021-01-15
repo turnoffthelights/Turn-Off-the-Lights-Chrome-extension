@@ -51,18 +51,18 @@ navigator.permissions.query({name:'camera'})
 			//Display the video stream in the video object
 			localMediaStream = stream; // Store the video stream
 			video.srcObject = stream;
-		 })
-		 .catch(function(e){ console.log(e.name + ": " + e.message);
+		})
+		.catch(function(e){ console.log(e.name + ": " + e.message);
 		});
 	}
 	else{
 	navigator.getWebcam({audio: false, video: true}, 
-		 function(stream){
+		function(stream){
 			//Display the video stream in the video object
 			localMediaStream = stream; // Store the video stream
 			video.srcObject = stream;
-		 }, 
-		 function(){ console.log("Web cam is not accessible."); });
+		}, 
+		function(){ console.log("Web cam is not accessible."); });
 	}
 }
 

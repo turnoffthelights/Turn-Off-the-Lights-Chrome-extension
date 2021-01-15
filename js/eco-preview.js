@@ -68,10 +68,10 @@ var TLDs = ["ac", "ad", "ae", "aero", "af", "ag", "ai", "al", "am", "an", "ao", 
         // iterate backwards
         while(part = parts[--i]){
             // stop when we find a non-TLD part
-            if(i === 0                     // 'asia.com' (last remaining must be the SLD)
-                || i < ln-2                // TLDs only span 2 levels
+            if(i === 0 // 'asia.com' (last remaining must be the SLD)
+                || i < ln-2 // TLDs only span 2 levels
                 || part.length < minLength // 'www.cn.com' (valid TLD as second-level domain)
-                || TLDs.indexOf(part) < 0  // officialy not a TLD
+                || TLDs.indexOf(part) < 0 // officialy not a TLD
             ){
                 var actual_domain = part;
                 break;
@@ -588,7 +588,7 @@ for(key in sortable){
 function showcard(){
 // --- Begin Card
 document.getElementById("txtdayweek").innerText = chrome.i18n.getMessage("cardtextfavdayweek") + ": " + ct7favoritedayweek;
-document.getElementById("txtyestime").innerText =  chrome.i18n.getMessage("cardtextyestime") + ": " + parseFloat(Math.round(ct1sinminutes * 100) / 100).toFixed(2);
+document.getElementById("txtyestime").innerText = chrome.i18n.getMessage("cardtextyestime") + ": " + parseFloat(Math.round(ct1sinminutes * 100) / 100).toFixed(2);
 document.getElementById("txtavgweektime").innerText = chrome.i18n.getMessage("cardavgprevweektime") + ": " + parseFloat(Math.round(ct7sinminutes * 100) / 100).toFixed(2);
 // --- End Card
 }

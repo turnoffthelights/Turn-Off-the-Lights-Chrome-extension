@@ -195,12 +195,12 @@ function hexToRGB(hex, alpha){
 
 // animation browser engine
 window.requestAnimFrame = function(){
-    return (
-        window.requestAnimationFrame       || 
+    return(
+        window.requestAnimationFrame || 
         window.webkitRequestAnimationFrame || 
-        window.mozRequestAnimationFrame    || 
-        window.oRequestAnimationFrame      || 
-        window.msRequestAnimationFrame     || 
+        window.mozRequestAnimationFrame || 
+        window.oRequestAnimationFrame || 
+        window.msRequestAnimationFrame || 
         function(/* function */ callback){
             //window.setTimeout(callback, 1000 / 60);
 			window.setTimeout(callback, 1000 / 30);//33.33
@@ -377,7 +377,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 									//playerReset(this.player);
 									//playerStop(this.player);
 									playerPause(this.player);
-									} catch(e){};
+									}catch(e){}
 								}
 							}else{
 								// play action is active
@@ -476,20 +476,19 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 
 var cinemahandler;
 var messagediv = $('ytCinemaMessage');
-if(messagediv){}
-else{
-		// injected code messaging
-		var message = document.createElement("div");
-		var bt=document.getElementsByTagName("body");if(!bt.length)return;
-		message.setAttribute("id", "ytCinemaMessage");
-		message.style.display = "none";
-		if(!bt.length)return;
-		bt[0].appendChild(message);
-		cinemahandler = function(){
-			var eventData = $(message.id).textContent;
-			trigger(eventData);
-		};
-		$(message.id).addEventListener(message.id, cinemahandler, false);
+if(messagediv == null){
+	// injected code messaging
+	var message = document.createElement("div");
+	var bt=document.getElementsByTagName("body");if(!bt.length)return;
+	message.setAttribute("id", "ytCinemaMessage");
+	message.style.display = "none";
+	if(!bt.length)return;
+	bt[0].appendChild(message);
+	cinemahandler = function(){
+		var eventData = $(message.id).textContent;
+		trigger(eventData);
+	};
+	$(message.id).addEventListener(message.id, cinemahandler, false);
 }
 }
 
@@ -741,7 +740,7 @@ elementvisa = document.getElementById('stefanvdvisualizationcanvas'+potvis);
 	}
 
 	// Fix for the 3rd visualization size
-	var w = elementvisa.width  = elementvisa.clientWidth;
+	var w = elementvisa.width = elementvisa.clientWidth;
 	var h = elementvisa.height = elementvisa.clientHeight;
 	if(buffer1[potvis]){
 		buffer1[potvis].width = w;
@@ -1701,7 +1700,7 @@ function videovisualloop(tovis){
 		analyser[tovis].getByteTimeDomainData(analyser[tovis].wave);
 		timeloop = window.setInterval(setTime, 1000);
 
-		var w = canvas.width  = canvas.clientWidth;
+		var w = canvas.width = canvas.clientWidth;
 		var h = canvas.height = canvas.clientHeight;
 
 		if(visualnumber[tovis] == 1){
@@ -1768,8 +1767,8 @@ function videovisualloop(tovis){
 				buffer2[tovis].height = h;
 			}
 
-			bctx1[tovis] = buffer1[tovis].getContext('2d',{desynchronized: true});;
-			bctx2[tovis] = buffer2[tovis].getContext('2d',{desynchronized: true});;
+			bctx1[tovis] = buffer1[tovis].getContext('2d',{desynchronized: true});
+			bctx2[tovis] = buffer2[tovis].getContext('2d',{desynchronized: true});
 			
 			// copy buffer1 to buffer2
 			bctx2[tovis].drawImage(buffer1[tovis],0,0);
@@ -1785,9 +1784,9 @@ function videovisualloop(tovis){
 			rtick = (rtick+1)%255;
 			gtick = (gtick+2)%255;
 			btick = (btick+3)%255;
-			bctx2[tovis].fillStyle  = "rgba("+rtick+","+gtick+","+btick+","+ amp * 3+")";
+			bctx2[tovis].fillStyle = "rgba("+rtick+","+gtick+","+btick+","+ amp * 3+")";
 			bctx2[tovis].strokeStyle = "rgba("+20+","+20+","+20+","+ amp * 3+")";
-			bctx2[tovis].lineWidth  = 2 * amp;
+			bctx2[tovis].lineWidth = 2 * amp;
 			bctx2[tovis].beginPath();
 
 			var i;
@@ -1932,10 +1931,10 @@ if(MutationObserver){
 		});
 	
 		observervideotoolbar.observe(videolist,{
-			subtree: true,       // observe the subtree rooted at ...videolist...
-			childList: true,     // include childNode insertion/removals
+			subtree: true, // observe the subtree rooted at ...videolist...
+			childList: true, // include childNode insertion/removals
 			characterData: false, // include textContent changes
-			attributes: true     // include changes to attributes within the subtree
+			attributes: true // include changes to attributes within the subtree
 		});
 
 }
@@ -2377,7 +2376,7 @@ function drawAtmos(playerid, item, totlmode){
 			}
 			var canvas = $("totlCanvas" + k + "");
 			if(canvas){
-				var context = canvas.getContext('2d',{desynchronized: true});;
+				var context = canvas.getContext('2d',{desynchronized: true});
 				var imageData = context.getImageData(0, 0, 1, 1);
 				var data = imageData.data;
 
@@ -2469,9 +2468,9 @@ try{
 	if(typeof countA[item] == 'undefined'){countA[item] = 0;}
 	if(typeof countB[item] == 'undefined'){countB[item] = 0;}
 	if(typeof countC[item] == 'undefined'){countC[item] = 0;}
-	if(countA[item] < ambilightrangespreadradius){countA[item]=countA[item]+1;};
-	if(countB[item] < ambilightrangeblurradius){countB[item]=countB[item]+1;};
-	if(countC[item] < 20){countC[item]=countC[item]+.5;};
+	if(countA[item] < ambilightrangespreadradius){countA[item]=countA[item]+1;}
+	if(countB[item] < ambilightrangeblurradius){countB[item]=countB[item]+1;}
+	if(countC[item] < 20){countC[item]=countC[item]+.5;}
 	var textcountA = countA[item] + "px";
 	var textcountB = countB[item] + "px";
 	var textcountC = countC[item] + "px";
@@ -2738,10 +2737,10 @@ function ambilightfunction(){
 		});
 	
 		observer.observe(videolist,{
-			subtree: true,       // observe the subtree rooted at ...videolist...
-			childList: true,     // include childNode insertion/removals
+			subtree: true, // observe the subtree rooted at ...videolist...
+			childList: true, // include childNode insertion/removals
 			characterData: false, // include textContent changes
-			attributes: true     // include changes to attributes within the subtree
+			attributes: true // include changes to attributes within the subtree
 		});
 	}
 }
@@ -3463,7 +3462,7 @@ function webgonightmode(){
 		var ytironicon = document.querySelectorAll('.iron-icon-0');
 		var i;
 		var l = ytironicon.length;
-		for(i = 0; i < l; i++){ytironicon[i].style.color = "hsla(0, 0%, 6.7%, .4)";;}
+		for(i = 0; i < l; i++){ytironicon[i].style.color = "hsla(0, 0%, 6.7%, .4)";}
 		var ytverifiedbox = document.querySelectorAll('#guide-icon.ytd-topbar-logo-renderer');
 		var i;
 		var l = ytverifiedbox.length;
@@ -4586,10 +4585,10 @@ if(MutationObserver){
 		});
 	
 		observervideovolume.observe(videolist,{
-			subtree: true,       // observe the subtree rooted at ...videolist...
-			childList: true,     // include childNode insertion/removals
+			subtree: true, // observe the subtree rooted at ...videolist...
+			childList: true, // include childNode insertion/removals
 			characterData: false, // include textContent changes
-			attributes: true     // include changes to attributes within the subtree
+			attributes: true // include changes to attributes within the subtree
 		});
 	
 }
