@@ -34,7 +34,7 @@ else if(request.name == "screenshot"){
 var checkcapturewebsite = totlscreenshotpage;
 chrome.tabs.create({url: checkcapturewebsite}, function(tab){
     var tabId = tab.id;
-    chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
+    chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
         if(changeInfo.status == 'complete'){
             chrome.tabs.sendMessage(tabId, {action: "receivescreenshot", value: request.value});
         }
@@ -45,25 +45,19 @@ chrome.tabs.create({url: checkcapturewebsite}, function(tab){
 else if(request.name == "contextmenuon"){checkcontextmenus();}
 else if(request.name == "contextmenuoff"){removecontexmenus();}
 else if(request.name == "sendautoplay"){
-
 	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(e){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText});} };
+	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText});} };
 	oReq.open("GET","/js/video-player-status.js",true);oReq.send();
-
 }
 else if(request.name == "sendfps"){
-
 	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(e){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText});} };
+	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText});} };
 	oReq.open("GET","/js/fpsinject.js",true);oReq.send();
-
 }
 else if(request.name == "sendlightcss"){
-
 	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(e){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: oReq.responseText});} };
+	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: oReq.responseText});} };
 	oReq.open("GET","/css/light.css",true);oReq.send();
-
 }
 else if(request.name == "emergencyalf"){
 chrome.tabs.query({}, function(tabs){
@@ -150,7 +144,7 @@ if(request.value == "dark"){
             "popup_text": "white",
             "popup_border": "gray"
 		}
- 		});
+        });
     }
     }
 // set white icon
@@ -295,7 +289,7 @@ chrome.browserAction.onClicked.addListener(function(tabs){
         }, 250);
 
         }
-    } else{
+    }else{
         chrome.browserAction.setPopup({tabId: tabs.id, popup:"popup.html"});
     }
 });
@@ -443,7 +437,7 @@ function removecontexmenus(){
     contextmenuadded = false;
 }
 
-chrome.storage.onChanged.addListener(function(changes, namespace){
+chrome.storage.onChanged.addListener(function(changes){
         if(changes['contextmenus']){if(changes['contextmenus'].newValue == true){checkcontextmenus()}else{removecontexmenus()}}
         if(changes['icon']){if(changes['icon'].newValue){
             chrome.tabs.query({}, function(tabs){
@@ -758,11 +752,11 @@ chrome.omnibox.onInputEntered.addListener(
 }
 
 // date today
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
+var currenttoday = new Date();
+var dd = currenttoday.getDate();
+var mm = currenttoday.getMonth()+1; //January is 0!
 
-var yyyy = today.getFullYear();
+var yyyy = currenttoday.getFullYear();
 if(dd<10){dd='0'+dd;}
 if(mm<10){mm='0'+mm;}
 var today = dd+'/'+mm+'/'+yyyy;
@@ -855,7 +849,7 @@ function readgrouppolicy(items){
 
 var policygrouparray = {};
 if(chrome.storage.managed){
-    chrome.storage.managed.onChanged.addListener(function(changes, namespace){
+    chrome.storage.managed.onChanged.addListener(function(changes){
         // save in memory
         Object.keys(changes).forEach(function(policyName){
             policygrouparray[policyName] = changes[policyName].newValue;
@@ -894,7 +888,7 @@ if(chrome.storage.managed){
 });
 }
 
-chrome.runtime.onInstalled.addListener(function(details){
+chrome.runtime.onInstalled.addListener(function(){
     if(chrome.storage.managed){
         chrome.storage.managed.get(function(items){
             readgrouppolicy(items);

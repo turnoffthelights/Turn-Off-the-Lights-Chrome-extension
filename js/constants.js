@@ -1,4 +1,4 @@
-function $(id) { return document.getElementById(id); }
+function $(id){return document.getElementById(id);}
 // Install on www.stefanvd.net
 // Install on www.turnoffthelights.com
 if(window.location.href.match(/^http(s)?:\/\/(www\.)?stefanvd.net/i)||window.location.href.match(/^http(s)?:\/\/(www\.)?turnoffthelights.com/i)){

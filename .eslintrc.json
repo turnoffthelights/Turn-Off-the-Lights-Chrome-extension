@@ -18,6 +18,28 @@
         "func-call-spacing": ["error", "never"],
         "space-before-blocks": ["error", "never"],
         "array-bracket-spacing": ["error", "never"],
-        "space-in-parens": ["error", "never"]
+        "space-in-parens": ["error", "never"],
+        "quotes": ["error", "double"]
+    },
+    "globals": {
+        "totlscreenshotpage": "readonly",
+        "developerwebsite": "readonly",
+        "totloptionspage": "readonly",
+        "donatewebsite": "readonly",
+        "writereview": "readonly",
+        "linkchangelog": "readonly",
+        "linktranslate": "readonly",
+        "linksupport": "readonly",
+        "linkwelcomepage": "readonly",
+        "linkuninstall": "readonly",
+        "linkguide": "readonly",
+        "linkshare": "readonly",
+        "linkthemedownload": "readonly",
+        "browsernewtab": "readonly",
+        "browserstore": "readonly",
+        "linkyoutube": "readonly",
+        "linkauroraplayerapp": "readonly",
+        "linktotlmobileapp": "readonly",
+        "devmode": "readonly"
     }
 }
