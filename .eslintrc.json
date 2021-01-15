@@ -11,10 +11,13 @@
     },
     "rules": {
         "no-multi-spaces":1,
-        "no-space-before-semi":1,
+        "semi-spacing": ["error", {"before": false, "after": true}],
         "no-extra-semi":1,
         "space-before-function-paren": ["error", "never"],
-        "space-after-keywords": ["error", "never"],
-        "func-call-spacing": ["error", "never"]
+        "keyword-spacing": ["error", { "before": false, "after": false }],
+        "func-call-spacing": ["error", "never"],
+        "space-before-blocks": ["error", "never"],
+        "array-bracket-spacing": ["error", "never"],
+        "space-in-parens": ["error", "never"]
     }
 }

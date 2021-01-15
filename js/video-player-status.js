@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -45,35 +45,35 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
         document.addEventListener("DOMContentLoaded", initvideoinject, false);
 		initvideoinject();
  
- 		// New Mutation Summary API Reference
- 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
- 		if(MutationObserver){
- 		// setup MutationSummary observer
- 		var videolist = document.querySelector('body');
- 		var observer = new MutationObserver(function(mutations, observer){
- 		    mutations.forEach(function(mutation){
- 		        if(mutation.target.tagName == "VIDEO"){
- 		            if(mutation.attributeName === "src"){
- 		                initvideoinject();
- 		            }
- 		        }
- 		        if(typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO"){
- 		            initvideoinject();
- 		        }
- 		    });
+		// New Mutation Summary API Reference
+		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+		if(MutationObserver){
+		// setup MutationSummary observer
+		var videolist = document.querySelector('body');
+		var observer = new MutationObserver(function(mutations, observer){
+			mutations.forEach(function(mutation){
+				if(mutation.target.tagName == "VIDEO"){
+					if(mutation.attributeName === "src"){
+						initvideoinject();
+					}
+				}
+				if(typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO"){
+					initvideoinject();
+				}
+			});
         });
  
- 		observer.observe(videolist, {
-                  subtree: true,       // observe the subtree rooted at ...videolist...
-                  childList: true,     // include childNode insertion/removals
-                  characterData: false, // include textContent changes
-                  attributes: true     // include changes to attributes within the subtree
-                  });
- 		}else{
- 		// setup DOM event listeners
- 		document.addEventListener("DOMNodeRemoved", initvideoinject, false);
- 		document.addEventListener("DOMNodeInserted", initvideoinject, false);
- 		}
+		observer.observe(videolist, {
+			subtree: true, // observe the subtree rooted at ...videolist...
+			childList: true, // include childNode insertion/removals
+			characterData: false, // include textContent changes
+			attributes: true // include changes to attributes within the subtree
+			});
+		}else{
+		// setup DOM event listeners
+		document.addEventListener("DOMNodeRemoved", initvideoinject, false);
+		document.addEventListener("DOMNodeInserted", initvideoinject, false);
+		}
 
 		function initvideoinject(e){
 			var youtubeplayer = document.getElementById("movie_player") || null;

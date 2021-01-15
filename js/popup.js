@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -33,7 +33,7 @@ var darkmode;
 
 document.addEventListener('DOMContentLoaded', function(){
     // disable context menu 
-    document.addEventListener('contextmenu', function (e) {
+    document.addEventListener('contextmenu', function(e){
         e.preventDefault();
     }, false);
 

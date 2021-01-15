@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -28,11 +28,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // date today
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
+var currenttoday = new Date();
+var dd = currenttoday.getDate();
+var mm = currenttoday.getMonth()+1; //January is 0!
 
-var yyyy = today.getFullYear();
+var yyyy = currenttoday.getFullYear();
 if(dd<10){dd='0'+dd;}
 if(mm<10){mm='0'+mm;}
 var today = dd+'/'+mm+'/'+yyyy;

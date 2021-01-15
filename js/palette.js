@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -399,97 +399,97 @@ document.addEventListener('DOMContentLoaded', function(){
         var resultcomparedenergy;
         var x = currentkwh;
         switch(true){
-            case (x < 0.01):
+            case(x < 0.01):
             resultcomparedenergy = chrome.i18n.getMessage('econothingthisyear');
                 break;
-            case (x >= 0.01 && x < 0.02):
+            case(x >= 0.01 && x < 0.02):
             resultcomparedenergy = chrome.i18n.getMessage('ecothirtyminutes');
                 break;
-            case (x >= 0.02 && x < 0.04):
+            case(x >= 0.02 && x < 0.04):
             resultcomparedenergy = chrome.i18n.getMessage('ecowatchtvfortwo'); // 2 hours of television on a 49” LCD screen
                 break;
-            case (x >= 0.04 && x < 0.06):
+            case(x >= 0.04 && x < 0.06):
             resultcomparedenergy = chrome.i18n.getMessage('ecotoastermaking');
                 break;
-            case (x >= 0.06 && x < 0.12):
+            case(x >= 0.06 && x < 0.12):
             resultcomparedenergy = chrome.i18n.getMessage('ecochargeiphone');// iPhone 6 up to 4 times
                 break;
-            case (x >= 0.12 && x < 0.15):
+            case(x >= 0.12 && x < 0.15):
             resultcomparedenergy = chrome.i18n.getMessage('ecobrewsomecoffee');
                 break;
-            case (x >= 0.15 && x < 0.19):
+            case(x >= 0.15 && x < 0.19):
             resultcomparedenergy = chrome.i18n.getMessage('ecoplayingxbox'); // One hour of gaming gaming
                 break;
-            case (x >= 0.19 && x < 0.25):
+            case(x >= 0.19 && x < 0.25):
             resultcomparedenergy = chrome.i18n.getMessage('ecovacuumingfor');
                 break;
-            case (x >= 0.25 && x < 0.3):
+            case(x >= 0.25 && x < 0.3):
             resultcomparedenergy = chrome.i18n.getMessage('ecoblowdrying');
                 break;
-            case (x >= 0.3 && x < 0.48):
+            case(x >= 0.3 && x < 0.48):
             resultcomparedenergy = chrome.i18n.getMessage('ecowashingclothes');
                 break;
-            case (x >= 0.48 && x < 0.5):
+            case(x >= 0.48 && x < 0.5):
             resultcomparedenergy = chrome.i18n.getMessage('ecowififoraday'); // over a 24h
                 break;
-            case (x >= 0.5 && x < 0.55):
+            case(x >= 0.5 && x < 0.55):
             resultcomparedenergy = chrome.i18n.getMessage('ecorunningdishwasher');
                 break;
-            case (x >= 0.55 && x < 0.6):
+            case(x >= 0.55 && x < 0.6):
             resultcomparedenergy = chrome.i18n.getMessage('ecochargelaptop'); // up to 2 times
                 break;
-            case (x >= 0.6 && x < 1.53):
+            case(x >= 0.6 && x < 1.53):
             resultcomparedenergy = chrome.i18n.getMessage('ecokeeplightonforsix'); // Six hours of 10 LED indoor light bulbs at 10 watts
                 break;
-            case (x >= 1.53 && x < 2.5):
+            case(x >= 1.53 && x < 2.5):
             resultcomparedenergy = chrome.i18n.getMessage('ecokeepfridgeday'); // a medium size
                 break;
-            case (x >= 2.5 && x < 3):
+            case(x >= 2.5 && x < 3):
             resultcomparedenergy = chrome.i18n.getMessage('ecoloadlaundry');
                 break;
-            case (x >= 3 && x < 18):
+            case(x >= 3 && x < 18):
             resultcomparedenergy = chrome.i18n.getMessage('ecoheatingtenshower');
                 break;
-            case (x >= 18 && x < 7.6):
+            case(x >= 18 && x < 7.6):
             resultcomparedenergy = chrome.i18n.getMessage('ecotwentyfourghome'); // over a 24h
                 break;
-            case (x >= 7.6 && x < 85):
+            case(x >= 7.6 && x < 85):
             resultcomparedenergy = chrome.i18n.getMessage('ecochargeteslacar'); // Top off your EV 7.6 kWh will fuel approximately 20 miles of driving in a Model S
                 break;
-            case (x >= 85 && x < 255):
+            case(x >= 85 && x < 255):
             resultcomparedenergy = chrome.i18n.getMessage('ecochargeteslacarhundred'); // tesla Model S 85 KWh
                 break;
-            case (x >= 255 && x < 515):
+            case(x >= 255 && x < 515):
             resultcomparedenergy = chrome.i18n.getMessage('ecochargeteslathreetimes'); // tesla Model S 85 KWh
                 break;
-            case (x >= 515 && x < 602):
+            case(x >= 515 && x < 602):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowerhawaiimonth'); // Hawaii – 515 kWh Per Month
                 break;
-            case (x >= 602 && x < 813):
+            case(x >= 602 && x < 813):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowernwymonth'); // New York – 602 kWh Per Month
                 break;
-            case (x >= 557 && x < 813):
+            case(x >= 557 && x < 813):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowercamonth'); // California – 557 kWh Per Month
                 break;
-            case (x >= 813 && x < 1589):
+            case(x >= 813 && x < 1589):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowerbaseballgame'); // 813 kWh
                 break;
-            case (x >= 1589 && x < 6714):
+            case(x >= 1589 && x < 6714):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowereiffeltower');
                 break;
-            case (x >= 6714 && x < 8856):
+            case(x >= 6714 && x < 8856):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowereurostar'); // Eurostar Brussels to London 373km with 18kWh/km = 6714kWh total length
                 break;
-            case (x >= 8856 && x < 580000):
+            case(x >= 8856 && x < 580000):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowereurostarparis'); // Eurostar Paris to London 492 km with 18kWh/km = 8856 total length
                 break;
-            case (x >= 580000 && x < 5759190781):
+            case(x >= 580000 && x < 5759190781):
             resultcomparedenergy = chrome.i18n.getMessage('ecoeiffeltoweryear'); // 580000 KWh/year
                 break;
-            case (x >= 5759190781 && x < 69614488162):
+            case(x >= 5759190781 && x < 69614488162):
             resultcomparedenergy = chrome.i18n.getMessage('ecosfoyear'); // SFO 5759190781 KWh/year in 2016
                 break;
-            case (x >= 69614488162 && x < 70000000000):
+            case(x >= 69614488162 && x < 70000000000):
             resultcomparedenergy = chrome.i18n.getMessage('ecolayear'); // LA 69614488162 KWh/year in 2016
                 break;
             default:

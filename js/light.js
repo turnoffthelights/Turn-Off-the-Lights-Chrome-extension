@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -630,11 +630,11 @@ if(ytpopupsharecon){ytpopupsharecon.classList.add('stefanvdvideocontrolstop');yt
 
 // end screen
 var ytendscreen = document.querySelector('.html5-endscreen');
-if(ytendscreen){ytendscreen.classList.add('stefanvdvideocontrolsitem');};
+if(ytendscreen){ytendscreen.classList.add('stefanvdvideocontrolsitem');}
 
 // movie sidebar
 var ytmovieside = document.querySelector('.ytp-ypc-player-content');
-if(ytmovieside){ytmovieside.classList.add('stefanvdvideocontrolsitem');};
+if(ytmovieside){ytmovieside.classList.add('stefanvdvideocontrolsitem');}
 
 } // end YouTube
 
@@ -750,7 +750,7 @@ if(vimeoprogress){vimeoprogress.classList.add('stefanvdvideocontrolsitem');}
 var vimeoplayed = document.querySelector('.played');
 if(vimeoplayed){vimeoplayed.classList.add('stefanvdvideocontrolsitem');}
 // 18/08/2018
-var vppreview  = document.querySelector('.vp-preview');
+var vppreview = document.querySelector('.vp-preview');
 if(vppreview){vppreview.classList.add('stefanvdvideocontrolsitem');}
 
 var vpcontrols = document.querySelector('.vp-controls');
@@ -1891,7 +1891,7 @@ if(stretchable){
 	generate();
 	
 	function createCloud(){
-		var div = document.createElement( 'div'  );
+		var div = document.createElement('div');
 		div.className = 'stefanvdcloudBase';
 		var x = 256 - ( Math.random() * 512 );
 		var y = 256 - ( Math.random() * 512 );

@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2020 Stefan vd
+Copyright (C) 2021 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,7 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-chrome.runtime.onMessage.addListener(function request(request,sender,sendResponse){
+chrome.runtime.onMessage.addListener(function request(request,sender){
 // eye protection & autoplay & shortcut
 if(request.name == "automatic"){chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});}
 else if(request.name == "screenshot"){
