@@ -29,7 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id) { return document.getElementById(id); }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate;
+var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge;
 
 function save_options(){
 	chrome.storage.sync.set({"nighttheme":$('nighttheme').checked,"lampandnightmode":$('lampandnightmode').checked,"ambilight":$('ambilight').checked,"ambilightfixcolor":$('ambilightfixcolor').checked,"ambilight4color":$('ambilight4color').checked,"ambilightvarcolor":$('ambilightvarcolor').checked,"atmosvivid":$('atmosvivid').checked,"badge":$('badge').checked});
@@ -216,9 +216,9 @@ document.addEventListener('DOMContentLoaded', function(){
         tempcurrentpopup = document.getElementById("oslider").value;
         if(delta < 0){
             if(tempcurrentpopup != 0){ tempcurrentpopup -= Number(1); document.getElementById("oslider").value = tempcurrentpopup; }
-	    }
-	    else{
-		    if(tempcurrentpopup <= 100){ tempcurrentpopup = Number(tempcurrentpopup) + Number(1);document.getElementById("oslider").value = tempcurrentpopup; }
+        }
+        else{
+            if(tempcurrentpopup <= 100){ tempcurrentpopup = Number(tempcurrentpopup) + Number(1);document.getElementById("oslider").value = tempcurrentpopup; }
         }
         opacitychange();
     }
@@ -465,7 +465,7 @@ document.addEventListener('DOMContentLoaded', function(){
             case (x >= 515 && x < 602):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowerhawaiimonth'); // Hawaii – 515 kWh Per Month
                 break;
-            case (x >= 602  && x < 813):
+            case (x >= 602 && x < 813):
             resultcomparedenergy = chrome.i18n.getMessage('ecopowernwymonth'); // New York – 602 kWh Per Month
                 break;
             case (x >= 557 && x < 813):
@@ -507,11 +507,11 @@ document.addEventListener('DOMContentLoaded', function(){
     $("energybox").addEventListener('click', function(){chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
 
     // rate
-    function materialRateAlert(callback){
+    function materialRateAlert(){
         document.getElementById('materialModalRate').className = 'show';
         document.getElementById('materialModalRate').setAttribute('aria-disabled', "false");   
     }
-    function closeMaterialRateAlert(e, result){
+    function closeMaterialRateAlert(e){
         e.stopPropagation();
         document.getElementById('materialModalRate').className = 'hide';
         document.getElementById('materialModalRate').setAttribute('aria-disabled', "true");   
@@ -527,7 +527,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-chrome.storage.onChanged.addListener(function(changes, namespace){
+chrome.storage.onChanged.addListener(function(changes){
         if(changes['nighttheme']){
             if(changes['nighttheme'].newValue == true){
                 $('btngonight').disabled = false;
@@ -576,7 +576,7 @@ function colorchange(){
     });
 }
 
-function opacitychange(e){
+function opacitychange(){
     var thatvalue = $("oslider").value;
     $("otext").innerText = thatvalue;
     chrome.storage.sync.set({"interval": thatvalue});

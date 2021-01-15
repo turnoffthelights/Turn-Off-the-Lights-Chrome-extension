@@ -10,5 +10,11 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-multi-spaces":1,
+        "no-space-before-semi":1,
+        "no-extra-semi":1,
+        "space-before-function-paren": ["error", "never"],
+        "space-after-keywords": ["error", "never"],
+        "func-call-spacing": ["error", "never"]
     }
 }

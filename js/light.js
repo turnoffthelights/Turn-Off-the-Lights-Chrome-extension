@@ -235,12 +235,12 @@ if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*yo
 	if(no360youtube == true){
 		video[i].style.cssText += "display:block !important";
 		var webgl = document.querySelector('.webgl');
-		if(webgl){webgl.classList.add('stefanvdvideoauto');};
+		if(webgl){webgl.classList.add('stefanvdvideoauto');}
 	}else{
-	 // default the regular player
-	 // also the 360 frame push to front
+	// default the regular player
+	// also the 360 frame push to front
 	var webgl = document.querySelector('.webgl');
-	if(webgl){webgl.classList.add('stefanvdvideocontrolsitem');};
+	if(webgl){webgl.classList.add('stefanvdvideocontrolsitem');}
 	}
 	var playerapi = $('player-api');
 	if(playerapi){
@@ -2449,7 +2449,7 @@ window.requestAnimFrame = function(){
 var opacity = 0;
 
 var ReducingFinished = true;
-var OpacityLevelIncrement = 10;   //  Percentage value: 1-100
+var OpacityLevelIncrement = 10; // Percentage value: 1-100
 
 //  Function determines whether we show or hide the item referenced by ElementID
 function fader(ActionToTake)
@@ -2466,13 +2466,13 @@ try{
   if((opacity < default_opacity) && (ReducingFinished == true)){
 	if((opacity > (default_opacity-10)) && (ReducingFinished == true)){
     ReducingFinished = true;
-    opacity  += (default_opacity - opacity);
+    opacity += (default_opacity - opacity);
     DIVElementById.style.opacity = opacity/100;
 	window.requestAnimFrame(increaseOpacity);
 	}
 	else{
     ReducingFinished = true;
-    opacity  += OpacityLevelIncrement;
+    opacity += OpacityLevelIncrement;
     DIVElementById.style.opacity = opacity/100;
 	window.requestAnimFrame(increaseOpacity);
 	}
@@ -2494,7 +2494,7 @@ try{
   //  If opacity level is greater than 0, we can still reduce the opacity
   if((opacity > 0) && (ReducingFinished == false)){
     ReducingFinished = false;
-    opacity  -= OpacityLevelIncrement;
+    opacity -= OpacityLevelIncrement;
     DIVElementById.style.opacity = opacity/100;
 	window.requestAnimFrame(reduceOpacity);
   }

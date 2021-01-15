@@ -189,7 +189,7 @@ function hexToRGB(hex, alpha){
     if(alpha){
         return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
     }else{
-    	return "rgb(" + r + ", " + g + ", " + b + ")";
+		return "rgb(" + r + ", " + g + ", " + b + ")";
     }
 }
 
