@@ -36,7 +36,7 @@ var autostopchecklistblack = response["autostopchecklistblack"];
 var autostopred = response["autostopred"];
 var autostoptrans = response["autostoptrans"];
 if(autostop == true){
-document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function(){
 if(autostoponly == true){
 var currenturl = window.location.protocol + "//" + window.location.host;
 var stoprabbit = false;
@@ -61,7 +61,7 @@ if(typeof autostopDomains == "string"){
 	if(autostopchecklistblack == true){
 		if(stoprabbit == false){ autostopfunction(); }
 	}
-}else{autostopfunction();}
+}else{ autostopfunction(); }
 }, false);
 
 function getPosition(el){
@@ -377,8 +377,8 @@ for(i = 0; i < l; ++i){
 	}
 }
 }
-window.addEventListener("resize", function(){refreshsize()},false);
-window.addEventListener("scroll", function(){refreshsize()},false);
+window.addEventListener("resize", function(){ refreshsize(); },false);
+window.addEventListener("scroll", function(){ refreshsize(); },false);
 
 } // option autostop on end
 });

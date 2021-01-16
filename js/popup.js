@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", function(){
             document.body.className = "light";
         }
     });
-$("opentrywebsite").addEventListener("click", function(){ chrome.tabs.create({url: linkyoutube, active:true}) });
+$("opentrywebsite").addEventListener("click", function(){ chrome.tabs.create({url: linkyoutube, active:true}); });
 
-$("openoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}) });
-$("opensupport").addEventListener("click", function(){ chrome.tabs.create({url: linksupport, active:true}) });
-$("openwelcomeguide").addEventListener("click", function(){ chrome.tabs.create({url: linkguide, active:true}) });
+$("openoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+$("opensupport").addEventListener("click", function(){ chrome.tabs.create({url: linksupport, active:true}); });
+$("openwelcomeguide").addEventListener("click", function(){ chrome.tabs.create({url: linkguide, active:true}); });
 
 });

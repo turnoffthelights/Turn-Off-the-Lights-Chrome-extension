@@ -92,8 +92,8 @@ var TLDs = ["ac", "ad", "ae", "aero", "af", "ag", "ai", "al", "am", "an", "ao", 
             actual_domain = actual_domain+tid;
         else
             actual_domain = actual_domain+'.com';
-    
-    
+
+
         return actual_domain;
 }
 
@@ -153,7 +153,7 @@ document.getElementById("sharestatslove").addEventListener('click', function(){
 },false);
 
 // Collect data
-var analytics;var siteengagement;
+var analytics; var siteengagement;
 chrome.storage.sync.get(['analytics','siteengagement'], function(items){
     if(items["analytics"]){
       analytics = items["analytics"];
@@ -161,7 +161,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       //----Cards
       var last7days;
       var days = [chrome.i18n.getMessage("sunday"),chrome.i18n.getMessage("monday"),chrome.i18n.getMessage("tuesday"),chrome.i18n.getMessage("wednesday"),chrome.i18n.getMessage("thursday"),chrome.i18n.getMessage("friday"),chrome.i18n.getMessage("saturday")];
-      
+
       if(analytics.length > 7){
       last7days = analytics.slice(-7);
       var time7everything = last7days.map(function(a){
@@ -191,14 +191,14 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       }else{
         ct7sinminutes = 0;
         var zz = new Date();
-        var dayOfWeek = days[zz.getDay()]
+        var dayOfWeek = days[zz.getDay()];
         ct7favoritedayweek = dayOfWeek;
       }
-      
+
       if(memhigh == 0){
         ct7sinminutes = 0;
         var zz = new Date();
-        var dayOfWeek = days[zz.getDay()]
+        var dayOfWeek = days[zz.getDay()];
         ct7favoritedayweek = dayOfWeek;
       }
 
@@ -254,7 +254,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       time30days = last30days.map(function(a){
         return a.details.time;
       });
-      
+
       var currentimeseconds30days = time30days.reduce(add, 0);
       // current time
       var currenttimeinhours30days = currentimeseconds30days/3600;
@@ -355,7 +355,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       for(e in newtablesite){
         sortable.push([e, newtablesite[e]]);
       }
-    
+
       sortable.sort(function(a, b){
         return b[1] - a[1];
       });
@@ -393,7 +393,7 @@ chrome.storage.sync.get(['analytics','siteengagement'], function(items){
       for(e in newtablesitedomain){
         sortabledomain.push([e, newtablesitedomain[e]]);
       }
-    
+
       sortabledomain.sort(function(a, b){
         return b[1] - a[1];
       });

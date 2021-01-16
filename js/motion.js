@@ -27,28 +27,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-document.addEventListener('DOMContentLoaded', function(){cameramotionlights();},false);
+document.addEventListener("DOMContentLoaded", function(){cameramotionlights();},false);
 chrome.storage.onChanged.addListener(function(changes, namespace){
     for(key in changes){
          var storageChange = changes[key];
-         if(changes['motion']){
-             if(changes['motion'].newValue == true){
+         if(changes["motion"]){
+             if(changes["motion"].newValue == true){
              //enable this
              cameramotionlights();
              }else{
                  //disable this
                  try{ // stop it
                     if(localMediaStream){ // stop it
-                        document.getElementById('motionvideo').pause();
-                        document.getElementById('motionvideo').src = "";
+                        document.getElementById("motionvideo").pause();
+                        document.getElementById("motionvideo").src = "";
                         localMediaStream.getTracks().forEach(track => track.stop());
                         localMediaStream = null;
-                        document.getElementById('motionvideo').load();
-                        canvas = document.getElementById('motioncanvas');
-                        canvasgetcont = canvas.getContext('2d');
+                        document.getElementById("motionvideo").load();
+                        canvas = document.getElementById("motioncanvas");
+                        canvasgetcont = canvas.getContext("2d");
                         canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-                        ccanvas = document.getElementById('motioncomp');
-                        ccgetcont = ccanvas.getContext('2d');
+                        ccanvas = document.getElementById("motioncomp");
+                        ccgetcont = ccanvas.getContext("2d");
                         ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
                         window.clearInterval(intervalID);
                     }
@@ -56,21 +56,21 @@ chrome.storage.onChanged.addListener(function(changes, namespace){
                 catch(e){}
              }
          }
-         if(changes['cammotiononly']){
-             if(changes['cammotiononly'].newValue == true){
+         if(changes["cammotiononly"]){
+             if(changes["cammotiononly"].newValue == true){
                  //disable this
                  try{ // stop it
                     if(localMediaStream){ // stop it
-                        document.getElementById('motionvideo').pause();
-                        document.getElementById('motionvideo').src = "";
+                        document.getElementById("motionvideo").pause();
+                        document.getElementById("motionvideo").src = "";
                         localMediaStream.getTracks().forEach(track => track.stop());
                         localMediaStream = null;
-                        document.getElementById('motionvideo').load();
-                        canvas = document.getElementById('motioncanvas');
-                        canvasgetcont = canvas.getContext('2d');
+                        document.getElementById("motionvideo").load();
+                        canvas = document.getElementById("motioncanvas");
+                        canvasgetcont = canvas.getContext("2d");
                         canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-                        ccanvas = document.getElementById('motioncomp');
-                        ccgetcont = ccanvas.getContext('2d');
+                        ccanvas = document.getElementById("motioncomp");
+                        ccgetcont = ccanvas.getContext("2d");
                         ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
                         window.clearInterval(intervalID);
                     }
@@ -105,9 +105,9 @@ var delt;
 window.URL = window.URL || window.webkitURL;
 
 function cameramotionlights(){
-chrome.storage.sync.get(['motion', 'cammotiononly', 'cammotionDomains'], function(response){
-var motion = response['motion'];
-var cammotiononly = response['cammotiononly'];
+chrome.storage.sync.get(["motion", "cammotiononly", "cammotionDomains"], function(response){
+var motion = response["motion"];
+var cammotiononly = response["cammotiononly"];
 
 if(motion == true){
 chrome.runtime.onSuspend.addListener(function(){location.reload();});
@@ -117,8 +117,8 @@ var foundtheurlcamera = false;
 function onlycammotionfunction(tab){
 	var currenturl = tab;
 	var thatwebsite = new URL(currenturl);
-    var thatpage = thatwebsite.protocol + '//' + thatwebsite.hostname;
-	speechDomains = response['cammotionDomains']; // get latest setting
+    var thatpage = thatwebsite.protocol + "//" + thatwebsite.hostname;
+	speechDomains = response["cammotionDomains"]; // get latest setting
 	if(typeof speechDomains == "string"){
 		speechDomains = JSON.parse(speechDomains);
         var sbuf = [];
@@ -130,7 +130,7 @@ function onlycammotionfunction(tab){
         var l = sbuf.length;
 		for(i = 0; i < l; i++){
             if(foundtheurlcamera == false){
-                if(thatpage == sbuf[i]){cammotionstartfunction();foundtheurlcamera = true;}
+                if(thatpage == sbuf[i]){ cammotionstartfunction(); foundtheurlcamera = true; }
             }
         }
 		}
@@ -138,16 +138,16 @@ function onlycammotionfunction(tab){
 		if(foundtheurlcamera == false){
 			try{ // stop it
 				if(localMediaStream){ // stop it
-					document.getElementById('motionvideo').pause();
-					document.getElementById('motionvideo').src = "";
+					document.getElementById("motionvideo").pause();
+					document.getElementById("motionvideo").src = "";
                     localMediaStream.getTracks().forEach(track => track.stop());
 					localMediaStream = null;
-					document.getElementById('motionvideo').load();
-					canvas = document.getElementById('motioncanvas');
-					canvasgetcont = canvas.getContext('2d');
+					document.getElementById("motionvideo").load();
+					canvas = document.getElementById("motioncanvas");
+					canvasgetcont = canvas.getContext("2d");
 					canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-					ccanvas = document.getElementById('motioncomp');
-					ccgetcont = ccanvas.getContext('2d');
+					ccanvas = document.getElementById("motioncomp");
+					ccgetcont = ccanvas.getContext("2d");
 					ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
 					window.clearInterval(intervalID);
 				}
@@ -164,7 +164,7 @@ if(motion == true){
 		// on page update
 		chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 			if(tab.url){
-				if(tab.url.match(/^http/i)||tab.url.match(/^https/i)||tab.url.match(/^file/i)||tab.url==browsernewtab){
+				if(tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab){
 					if(tabId != null){
 						onlycammotionfunction(tab.url);
 					}
@@ -172,11 +172,11 @@ if(motion == true){
 			}
         });
         // on highlight
-		chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
+		chrome.tabs.onHighlighted.addListener(function(o){tabId = o.tabIds[0];
 			chrome.tabs.get(tabId, function(tab){
 				if(tab.url){
-					if(tab.url.match(/^http/i)||tab.url.match(/^https/i)||tab.url.match(/^file/i)||tab.url==browsernewtab){
-					    onlycammotionfunction(tab.url);
+					if(tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab){
+                        onlycammotionfunction(tab.url);
 					}
 				}
 			});
@@ -188,16 +188,16 @@ if(motion == true){
 }else{
 
 	if(localMediaStream){
-		document.getElementById('motionvideo').pause();
-		document.getElementById('motionvideo').src = "";
+		document.getElementById("motionvideo").pause();
+		document.getElementById("motionvideo").src = "";
         localMediaStream.getTracks().forEach(track => track.stop());
 		localMediaStream = null;
-		document.getElementById('motionvideo').load();
-		canvas = document.getElementById('motioncanvas');
-		canvasgetcont = canvas.getContext('2d');
+		document.getElementById("motionvideo").load();
+		canvas = document.getElementById("motioncanvas");
+		canvasgetcont = canvas.getContext("2d");
 		canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-		ccanvas = document.getElementById('motioncomp');
-		ccgetcont = ccanvas.getContext('2d');
+		ccanvas = document.getElementById("motioncomp");
+		ccgetcont = ccanvas.getContext("2d");
 		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
 		clearInterval(intervalID);
 		location.reload(); // to make sure everything is removed of the motion camera
@@ -217,7 +217,7 @@ function PopupCenter(url, title, w, h){
 
     var left = ((width / 2) - (w / 2)) + dualScreenLeft;
     var top = ((height / 2) - (h / 2)) + dualScreenTop;
-    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    var newWindow = window.open(url, title, "scrollbars=yes, width=" + w + ", height=" + h + ", top=" + top + ", left=" + left);
 
     // Puts focus on the newWindow
     if(window.focus){
@@ -227,24 +227,24 @@ function PopupCenter(url, title, w, h){
 
 function cammotionstartfunction(){
 //---
-var video = document.getElementById('motionvideo');
-var canvas = document.getElementById('motioncanvas');
-var canvasgetcont = canvas.getContext('2d');
-var ccanvas = document.getElementById('motioncomp');
-var ccgetcont = ccanvas.getContext('2d');
+var video = document.getElementById("motionvideo");
+var canvas = document.getElementById("motioncanvas");
+var canvasgetcont = canvas.getContext("2d");
+var ccanvas = document.getElementById("motioncomp");
+var ccgetcont = ccanvas.getContext("2d");
 
 // reset everything
 if(localMediaStream){
-document.getElementById('motionvideo').pause();
-document.getElementById('motionvideo').src = "";
+document.getElementById("motionvideo").pause();
+document.getElementById("motionvideo").src = "";
 localMediaStream.getTracks().forEach(track => track.stop());
 localMediaStream = null;
-document.getElementById('motionvideo').load();
-canvas = document.getElementById('motioncanvas');
-canvasgetcont = canvas.getContext('2d');
+document.getElementById("motionvideo").load();
+canvas = document.getElementById("motioncanvas");
+canvasgetcont = canvas.getContext("2d");
 canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-ccanvas = document.getElementById('motioncomp');
-ccgetcont = ccanvas.getContext('2d');
+ccanvas = document.getElementById("motioncomp");
+ccgetcont = ccanvas.getContext("2d");
 ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
 }
 
@@ -254,15 +254,15 @@ if(navigator.mediaDevices.getUserMedia){
         //Display the video stream in the video object
         localMediaStream = stream; // Store the video stream
         video.srcObject = stream;
-        video.addEventListener('play', function(){ intervalID = window.setInterval(dump,1000/25); });
-     })
-     .catch(function(e){
-          //console.log(e.name + ": " + e.message);
-          if(e.name == "NotAllowedError"){
-            var motionpermissionpage = chrome.extension.getURL('motion.html');
-            PopupCenter(motionpermissionpage,'stefanpemmotion','685','380');
-          }
-         });
+        video.addEventListener("play", function(){ intervalID = window.setInterval(dump,1000 / 25); });
+    })
+    .catch(function(e){
+        //console.log(e.name + ": " + e.message);
+        if(e.name == "NotAllowedError"){
+            var motionpermissionpage = chrome.extension.getURL("motion.html");
+            PopupCenter(motionpermissionpage,"stefanpemmotion","685","380");
+        }
+    });
 }
 
 var compression = 5;
@@ -289,42 +289,42 @@ width = height = 0;
 huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
         function skinfilter(){
 
-            skin_filter = canvasgetcont.getImageData(0, 0, width, height)
-            var total_pixels = skin_filter.width * skin_filter.height
-            var index_value = total_pixels * 4
+            skin_filter = canvasgetcont.getImageData(0, 0, width, height);
+            var total_pixels = skin_filter.width * skin_filter.height;
+            var index_value = total_pixels * 4;
 
             var count_data_big_array = 0;
             var y;
             for(y = 0; y < height; y++){
                 var x;
                 for(x = 0; x < width; x++){
-                    index_value = x + y * width
-                    r = draw.data[count_data_big_array]
-                    g = draw.data[count_data_big_array + 1]
-                    b = draw.data[count_data_big_array + 2]
-                    a = draw.data[count_data_big_array + 3]
+                    index_value = x + y * width;
+                    r = draw.data[count_data_big_array];
+                    g = draw.data[count_data_big_array + 1];
+                    b = draw.data[count_data_big_array + 2];
+                    a = draw.data[count_data_big_array + 3];
 
                     hsv = rgb2Hsv(r, g, b);
                     //When the hand is too lose (hsv[0] > 0.59 && hsv[0] < 1.0)
                     //Skin Range on HSV values
                     if(((hsv[0] > huemin && hsv[0] < huemax) || (hsv[0] > 0.59 && hsv[0] < 1.0)) && (hsv[1] > satmin && hsv[1] < satmax) && (hsv[2] > valmin && hsv[2] < valmax)){
 
-                        skin_filter[count_data_big_array] = r
-                        skin_filter[count_data_big_array + 1] = g
-                        skin_filter[count_data_big_array + 2] = b
-                        skin_filter[count_data_big_array + 3] = a
+                        skin_filter[count_data_big_array] = r;
+                        skin_filter[count_data_big_array + 1] = g;
+                        skin_filter[count_data_big_array + 2] = b;
+                        skin_filter[count_data_big_array + 3] = a;
                     }else{
 
                         skin_filter.data[count_data_big_array] =
                         skin_filter.data[count_data_big_array + 1] =
-                        skin_filter.data[count_data_big_array + 2] = 0
-                        skin_filter.data[count_data_big_array + 3] = 0
+                        skin_filter.data[count_data_big_array + 2] = 0;
+                        skin_filter.data[count_data_big_array + 3] = 0;
                     }
 
                     count_data_big_array = index_value * 4;
                 }
             }
-            draw = skin_filter
+            draw = skin_filter;
         }
 
         function rgb2Hsv(r,g,b){
@@ -354,7 +354,7 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
                 h /= 6;
             }
 
-            return [h, s, v];
+            return[h, s, v];
         }
 
         last = false; thresh = 150; down = false; wasdown = false;
@@ -363,7 +363,7 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
             if(last !== false){
                 var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height
                 , dscl = 0
-                , pix = totaln * 4; while (pix -= 4){
+                , pix = totaln * 4; while(pix -= 4){
                     var d = Math.abs(
                             draw.data[pix] - last.data[pix]
                     ) + Math.abs(
@@ -418,19 +418,19 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
             //console.log(davg)
             switch(state){
                 case 0:
-                    if(good){//Found a gesture, waiting for next move
-                        state = 1
-                        calibrate()
+                    if(good){ //Found a gesture, waiting for next move
+                        state = 1;
+                        calibrate();
                     }
-                    break
-                case 2://Wait for gesture to end
-                    if(!good){//Gesture ended
-                        state = 0
+                    break;
+                case 2: //Wait for gesture to end
+                    if(!good){ //Gesture ended
+                        state = 0;
                     }
                     break;
                 case 1://Got next move, do something based on direction
-                    var dx = down.x - wasdown.x, dy = down.y - wasdown.y
-                    var dirx = Math.abs(dy) < Math.abs(dx)//(dx,dy) is on a bowtie
+                    var dx = down.x - wasdown.x, dy = down.y - wasdown.y;
+                    var dirx = Math.abs(dy) < Math.abs(dx); //(dx,dy) is on a bowtie
                     //console.log(good,davg)
                     if(dx < -movethresh && dirx){
                         //console.log('right')
@@ -479,8 +479,8 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
 							//writeinlog("down");
                         }
                     }
-                    state = 2
-                    break
+                    state = 2;
+                    break;
             }
         }
 }

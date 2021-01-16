@@ -29,34 +29,34 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 chrome.runtime.onMessage.addListener(function request(request,sender){
 // eye protection & autoplay & shortcut
-if(request.name == "automatic"){chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});}
+if(request.name == "automatic"){ chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"}); }
 else if(request.name == "screenshot"){
 var checkcapturewebsite = totlscreenshotpage;
 chrome.tabs.create({url: checkcapturewebsite}, function(tab){
     var tabId = tab.id;
     chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
-        if(changeInfo.status == 'complete'){
+        if(changeInfo.status == "complete"){
             chrome.tabs.sendMessage(tabId, {action: "receivescreenshot", value: request.value});
         }
     });
 });
 }
 // contextmenu
-else if(request.name == "contextmenuon"){checkcontextmenus();}
-else if(request.name == "contextmenuoff"){removecontexmenus();}
+else if(request.name == "contextmenuon"){ checkcontextmenus(); }
+else if(request.name == "contextmenuoff"){ removecontexmenus(); }
 else if(request.name == "sendautoplay"){
 	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText});} };
+	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText}); } };
 	oReq.open("GET","/js/video-player-status.js",true);oReq.send();
 }
 else if(request.name == "sendfps"){
 	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText});} };
+	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText}); } };
 	oReq.open("GET","/js/fpsinject.js",true);oReq.send();
 }
 else if(request.name == "sendlightcss"){
 	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: oReq.responseText});} };
+	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: oReq.responseText}); } };
 	oReq.open("GET","/css/light.css",true);oReq.send();
 }
 else if(request.name == "emergencyalf"){
@@ -70,36 +70,36 @@ chrome.tabs.query({}, function(tabs){
     );
 }
 else if(request.name == "eyesavemeOFF"){
-if(request.value == true){chrome.storage.sync.set({"eyea": true});chrome.storage.sync.set({"eyen": false});}
-else{chrome.storage.sync.set({"eyea": false});chrome.storage.sync.set({"eyen": true});}
+if(request.value == true){ chrome.storage.sync.set({"eyea": true});chrome.storage.sync.set({"eyen": false}); }
+else{ chrome.storage.sync.set({"eyea": false});chrome.storage.sync.set({"eyen": true}); }
 chrome.tabs.query({}, function(tabs){
             var i;
             var l = tabs.length;
             for(i = 0; i < l; i++){
-                chrome.tabs.sendMessage(tabs[i].id, { action: "gorefresheyelight" });
+                chrome.tabs.sendMessage(tabs[i].id, {action: "gorefresheyelight"});
             }
         }
     );
 }
 else if(request.name == "eyesavemeON"){
-if(request.value == true){chrome.storage.sync.set({"eyea": true});chrome.storage.sync.set({"eyen": false});}
-else{chrome.storage.sync.set({"eyea": false});chrome.storage.sync.set({"eyen": true});}
+if(request.value == true){ chrome.storage.sync.set({"eyea": true});chrome.storage.sync.set({"eyen": false}); }
+else{ chrome.storage.sync.set({"eyea": false});chrome.storage.sync.set({"eyen": true}); }
 chrome.tabs.query({}, function(tabs){
             var i;
             var l = tabs.length;
             for(i = 0; i < l; i++){
                 if(tabs[i].url != totloptionspage){
-                    chrome.tabs.sendMessage(tabs[i].id, { action: "gorefresheyedark" });
+                    chrome.tabs.sendMessage(tabs[i].id, {action: "gorefresheyedark"});
                 }
             }
         }
     );
 }
 else if(request.name == "nmcustomx"){
-if(request.value){chrome.storage.sync.set({"nmcustomx": request.value});}
+if(request.value){ chrome.storage.sync.set({"nmcustomx": request.value}); }
 }
 else if(request.name == "nmcustomy"){
-if(request.value){chrome.storage.sync.set({"nmcustomy": request.value});}
+if(request.value){ chrome.storage.sync.set({"nmcustomy": request.value}); }
 }
 else if(request.name == "mastertabdark"){
 if(request.value == true){
@@ -107,7 +107,7 @@ if(request.value == true){
                 var i;
                 var l = tabs.length;
 				for(i = 0; i < l; i++){
-                    chrome.tabs.sendMessage(tabs[i].id, { action: "goremovelightoff" });
+                    chrome.tabs.sendMessage(tabs[i].id, {action: "goremovelightoff"});
 				}
 			}
 		);
@@ -117,7 +117,7 @@ else{
                 var i;
                 var l = tabs.length;
 				for(i = 0; i < l; i++){
-                    chrome.tabs.sendMessage(tabs[i].id, { action: "goaddlightoff" });
+                    chrome.tabs.sendMessage(tabs[i].id, {action: "goaddlightoff"});
 				}
 			}
 		);
@@ -125,12 +125,12 @@ else{
 }
 else if(request.name == "browsertheme"){
 if(request.value == "dark"){
-    if(typeof browser !== 'undefined'){
+    if(typeof browser !== "undefined"){
     var qtest = browser.theme.update;
-    if(typeof qtest !== 'undefined'){
+    if(typeof qtest !== "undefined"){
 		browser.theme.update({
 			images: {
-                theme_frame: '',
+                theme_frame: "",
 		},
 		colors: {
             "frame": "black",
@@ -157,15 +157,15 @@ chrome.tabs.query({}, function(tabs){
 });
 }
 else{
-    if(typeof browser !== 'undefined'){
+    if(typeof browser !== "undefined"){
     var qtest = browser.theme.update;
-    if(typeof qtest !== 'undefined'){
+    if(typeof qtest !== "undefined"){
         browser.theme.reset();
     }
     }
 // return default icon
-chrome.storage.sync.get(['icon'], function(items){
-if(items["icon"] == undefined){items["icon"] = "icons/iconstick38.png";}
+chrome.storage.sync.get(["icon"], function(items){
+if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
 chrome.tabs.query({}, function(tabs){
     var i;
     var l = tabs.length;
@@ -176,7 +176,7 @@ chrome.tabs.query({}, function(tabs){
 });// chrome storage end
 }
 }
-else if(request.name == "badgeon"){checkbadge();}
+else if(request.name == "badgeon"){ checkbadge(); }
 else if(request.name == "sendnightmodeindark"){
     chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
 }
@@ -184,7 +184,7 @@ else if(request.name == "getallpermissions"){
     var result = "";
     chrome.permissions.getAll(function(permissions){
        result = permissions.permissions;
-       chrome.tabs.sendMessage(sender.tab.id,{text: 'receiveallpermissions', value: result});
+       chrome.tabs.sendMessage(sender.tab.id,{text: "receiveallpermissions", value: result});
     });   
 }
 return true;
@@ -192,8 +192,8 @@ return true;
 
 chrome.tabs.onActivated.addListener(function(activeInfo){
     chrome.tabs.get(activeInfo.tabId, function(tab){
-        chrome.storage.sync.get(['icon'], function(items){
-            if(items["icon"] == undefined){items["icon"] = "icons/iconstick38.png";}
+        chrome.storage.sync.get(["icon"], function(items){
+            if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
             chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"],"38": items["icon"]}});
         });
         // for all tabs
@@ -204,16 +204,16 @@ chrome.tabs.onActivated.addListener(function(activeInfo){
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
     // tab loaded, recheck all the video players on the current web page
-    if(changeInfo.status == 'complete'){
+    if(changeInfo.status == "complete"){
         chrome.tabs.query({},function(tabs){
             tabs.forEach(function(tab){
-              chrome.tabs.sendMessage(tab.id, { action: "gorefreshvideonumber" });
+              chrome.tabs.sendMessage(tab.id, {action: "gorefreshvideonumber"});
             });
         });
     }
 
-    chrome.storage.sync.get(['icon'], function(chromeset){
-        if(chromeset["icon"] == undefined){chromeset["icon"] = "icons/iconstick38.png";}
+    chrome.storage.sync.get(["icon"], function(chromeset){
+        if(chromeset["icon"] == undefined){ chromeset["icon"] = "icons/iconstick38.png"; }
         chrome.browserAction.setIcon({tabId : tabId, path : {"19": chromeset["icon"],"38": chromeset["icon"]}});
     });
     // for all tabs
@@ -236,8 +236,8 @@ var alreadyClicked = false;
 var timer;
 var popupcreated = false;
 chrome.browserAction.onClicked.addListener(function(tabs){
-    if(tabs.url.match(/^http/i)||tabs.url.match(/^file/i)){
-        if(tabs.url==totloptionspage||(new URL(tabs.url)).origin==browserstore||tabs.url==browsernewtab){
+    if(tabs.url.match(/^http/i) || tabs.url.match(/^file/i)){
+        if(tabs.url == totloptionspage || (new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
             chrome.browserAction.setPopup({tabId: tabs.id, popup:"popup.html"});
         }else{
 
@@ -266,17 +266,17 @@ chrome.browserAction.onClicked.addListener(function(tabs){
             if(popups.length != 0){ // popup exist
 
             }else{ // not exist
-            chrome.storage.sync.get(['alllightsoff','mousespotlights'], function(chromeset){
-            if((chromeset["mousespotlights"]!=true)){ // regular lamp
-                if((chromeset["alllightsoff"]!=true)){
-                    chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function(){if(chrome.runtime.lastError){
+            chrome.storage.sync.get(["alllightsoff","mousespotlights"], function(chromeset){
+            if((chromeset["mousespotlights"] != true)){ // regular lamp
+                if((chromeset["alllightsoff"] != true)){
+                    chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function(){ if(chrome.runtime.lastError){
                     // console.error(chrome.runtime.lastError.message);
-                    }});
+                    } });
                 }else{
-                    chrome.tabs.sendMessage(tabs.id, { action: "masterclick" });
+                    chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
                 }
             }else{ // all tabs
-                    chrome.tabs.sendMessage(tabs.id, { action: "masterclick" });
+                    chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
             }
             });
             }
@@ -303,15 +303,15 @@ if(command == "toggle-feature-nightmode"){
 // contextMenus
 function onClickHandler(info, tab){
 var str = info.menuItemId;var resvideo = str.substring(0, 9);var respage = str.substring(0, 8);
-if(resvideo == "totlvideo" || respage == "totlpage"){chrome.tabs.executeScript(tab.id, {file: "js/light.js"});}
-else if(info.menuItemId == "totlguideemenu"){chrome.tabs.create({url: linkguide, active:true})}
-else if(info.menuItemId == "totldevelopmenu"){chrome.tabs.create({url: donatewebsite, active:true})}
-else if(info.menuItemId == "totlratemenu"){chrome.tabs.create({url: writereview, active:true})}
-else if(info.menuItemId == "totlsharemenu"){chrome.tabs.create({url: linkshare, active:true})}
-else if(info.menuItemId == "totlshareemail"){var sturnoffthelightemail = "mailto:your@email.com?subject="+chrome.i18n.getMessage("sharetexta")+"&body="+chrome.i18n.getMessage("sharetextb")+" "+turnoffthelightsproduct;chrome.tabs.create({url: sturnoffthelightemail, active:true})}
-else if(info.menuItemId == "totlsharetwitter"){var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc")+" "+turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status="+sturnoffthelightsproductcodeurl, active:true})}
-else if(info.menuItemId == "totlsharefacebook"){chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u="+turnoffthelightsproduct, active:true})}
-else if(info.menuItemId == "totlsubscribe"){chrome.tabs.create({url: linkyoutube, active:true})}
+if(resvideo == "totlvideo" || respage == "totlpage"){ chrome.tabs.executeScript(tab.id, {file: "js/light.js"}); }
+else if(info.menuItemId == "totlguideemenu"){ chrome.tabs.create({url: linkguide, active:true}); }
+else if(info.menuItemId == "totldevelopmenu"){ chrome.tabs.create({url: donatewebsite, active:true}); }
+else if(info.menuItemId == "totlratemenu"){ chrome.tabs.create({url: writereview, active:true}); }
+else if(info.menuItemId == "totlsharemenu"){ chrome.tabs.create({url: linkshare, active:true}); }
+else if(info.menuItemId == "totlshareemail"){ var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct;chrome.tabs.create({url: sturnoffthelightemail, active:true}); }
+else if(info.menuItemId == "totlsharetwitter"){ var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }
+else if(info.menuItemId == "totlsharefacebook"){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }
+else if(info.menuItemId == "totlsubscribe"){ chrome.tabs.create({url: linkyoutube, active:true}); }
 }
 
 // check to remove all contextmenus
@@ -395,7 +395,7 @@ function checkcontextmenus(){
     for(i = 0; i < l; i++){
     var context = contexts[i];
     var videotitle = chrome.i18n.getMessage("videotitle");
-    menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo"+i, "contexts":[context]});
+    menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo" + i, "contexts":[context]});
     contextarrayvideo.push(menuvideo);
     }
 
@@ -406,10 +406,10 @@ function checkcontextmenus(){
     for(i = 0; i < l; i++){
     var context = contexts[i];
     var pagetitle = chrome.i18n.getMessage("pagetitle");
-    menupage = chrome.contextMenus.create({"title": pagetitle, "type":"normal", "id": "totlpage"+i, "contexts":[context]});
+    menupage = chrome.contextMenus.create({"title": pagetitle, "type":"normal", "id": "totlpage" + i, "contexts":[context]});
     contextarraypage.push(menupage);
     }
-    
+
     }
 }
 
@@ -438,16 +438,16 @@ function removecontexmenus(){
 }
 
 chrome.storage.onChanged.addListener(function(changes){
-        if(changes['contextmenus']){if(changes['contextmenus'].newValue == true){checkcontextmenus()}else{removecontexmenus()}}
-        if(changes['icon']){if(changes['icon'].newValue){
+        if(changes["contextmenus"]){ if(changes["contextmenus"].newValue == true){ checkcontextmenus(); }else{ removecontexmenus(); } }
+        if(changes["icon"]){ if(changes["icon"].newValue){
             chrome.tabs.query({}, function(tabs){
             var i;
             var l = tabs.length;
                 for(i = 0; i < l; i++){
                     chrome.browserAction.setIcon({tabId : tabs[i].id,
                         path : {
-                            "19": changes['icon'].newValue,
-                            "38": changes['icon'].newValue
+                            "19": changes["icon"].newValue,
+                            "38": changes["icon"].newValue
                         }
                     });
 
@@ -456,8 +456,8 @@ chrome.storage.onChanged.addListener(function(changes){
             );
             }
         }
-        if(changes['ecosaver']){
-            if(changes['ecosaver'].newValue){
+        if(changes["ecosaver"]){
+            if(changes["ecosaver"].newValue){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -465,17 +465,17 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefresheyelight" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefresheyelight"});
                         }
                     }
                 }
             });
             }
         }
-        if(changes['badge']){
-            if(changes['badge'].newValue == true){checkbadge()}else{checkbadge()}
+        if(changes["badge"]){
+            if(changes["badge"].newValue == true){ checkbadge(); }else{ checkbadge(); }
         }
-        if(changes['autoplay'] || changes['mousespotlights'] || changes['autoplayDomains'] || changes['autoplaychecklistwhite'] || changes['autoplaychecklistblack'] || changes['autoplayonly'] || changes['aplay'] || changes['apause'] || changes['astop'] || changes['autoplaydelay'] || changes['autoplaydelaytime']){
+        if(changes["autoplay"] || changes["mousespotlights"] || changes["autoplayDomains"] || changes["autoplaychecklistwhite"] || changes["autoplaychecklistblack"] || changes["autoplayonly"] || changes["aplay"] || changes["apause"] || changes["astop"] || changes["autoplaydelay"] || changes["autoplaydelaytime"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -483,13 +483,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshautoplay" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshautoplay"});
                         }
                     }
                 }
             });
         }
-        if(changes['videotool'] || changes['videotoolonly'] || changes['videotoolDomains'] || changes['videotoolchecklistwhite'] || changes['videotoolchecklistblack'] || changes['speedtoolbar'] || changes['videozoom'] || changes['visopacity'] || changes['videotoolcolor']){
+        if(changes["videotool"] || changes["videotoolonly"] || changes["videotoolDomains"] || changes["videotoolchecklistwhite"] || changes["videotoolchecklistblack"] || changes["speedtoolbar"] || changes["videozoom"] || changes["visopacity"] || changes["videotoolcolor"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -497,13 +497,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshvideotoolbar" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshvideotoolbar"});
                         }
                     }
                 }
             });
         }
-        if(changes['videovolume'] || changes['videovolumealt'] || changes['videovolumehold'] || changes['videovolumeposa'] || changes['videovolumeposb'] || changes['videovolumeposc'] || changes['videovolumecolor'] || changes['videovolumelabel'] || changes['videovolumesteps']){
+        if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -511,13 +511,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshmousescroll" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshmousescroll"});
                         }
                     }
                 }
             });
         }
-        if(changes['ambilight'] || changes['ambilightfixcolor'] || changes['ambilight4color'] || changes['ambilightvarcolor'] || changes['atmosvivid'] || changes['vpause'] || changes['atmosfpsauto'] || changes['atmosfpsmanual'] || changes['drawatmosfps'] || changes['ambilightcolorhex'] || changes['ambilight1colorhex'] || changes['ambilight2colorhex'] || changes['ambilight3colorhex'] || changes['ambilight4colorhex'] || changes['ambilightrangeblurradius'] || changes['ambilightrangespreadradius'] || changes['atmosontotlmode'] || changes['atmosphereonly'] || changes['atmosphereDomains']){
+        if(changes["ambilight"] || changes["ambilightfixcolor"] || changes["ambilight4color"] || changes["ambilightvarcolor"] || changes["atmosvivid"] || changes["vpause"] || changes["atmosfpsauto"] || changes["atmosfpsmanual"] || changes["drawatmosfps"] || changes["ambilightcolorhex"] || changes["ambilight1colorhex"] || changes["ambilight2colorhex"] || changes["ambilight3colorhex"] || changes["ambilight4colorhex"] || changes["ambilightrangeblurradius"] || changes["ambilightrangespreadradius"] || changes["atmosontotlmode"] || changes["atmosphereonly"] || changes["atmosphereDomains"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -525,13 +525,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "goenableatmos" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "goenableatmos"});
                         }
                     }
                 }
             });
         }
-        if(changes['reflection'] || changes['reflectionamount']){
+        if(changes["reflection"] || changes["reflectionamount"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -539,13 +539,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshreflection" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshreflection"});
                         }
                     }
                 }
             });
         }
-        if(changes['hovervideo'] || changes['hovervideoamount']){
+        if(changes["hovervideo"] || changes["hovervideoamount"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -553,13 +553,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshhovervideo" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshhovervideo"});
                         }
                     }
                 }
             });
         }
-        if(changes['playrate'] || changes['playrateamount']){
+        if(changes["playrate"] || changes["playrateamount"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -567,13 +567,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshplayrate" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshplayrate"});
                         }
                     }
                 }
             });
         }
-        if(changes['nightmodebck'] || changes['nightmodetxt'] || changes['nightmodehyperlink']){
+        if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -581,13 +581,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gonightmodecolors" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gonightmodecolors"});
                         }
                     }
                 }
             });
         }
-        if(changes['nighttheme'] || changes['lampandnightmode'] || changes['nightmodeswitchhide'] || changes['nightmodeswitchhidetime'] || changes['nightonly'] || changes['nightmodechecklistwhite'] || changes['nightmodechecklistblack'] || changes['nightDomains'] || changes['nightmodebydomain'] || changes['nightmodebypage'] || changes['nightactivetime'] || changes['nmbegintime'] || changes['nmendtime'] || changes['nightenabletheme'] || changes['nighthover'] || changes['nmtopleft'] || changes['nmtopright'] || changes['nmbottomright'] || changes['nmbottomleft'] || changes['nmcustom']){
+        if(changes["nighttheme"] || changes["lampandnightmode"] || changes["nightmodeswitchhide"] || changes["nightmodeswitchhidetime"] || changes["nightonly"] || changes["nightmodechecklistwhite"] || changes["nightmodechecklistblack"] || changes["nightDomains"] || changes["nightmodebydomain"] || changes["nightmodebypage"] || changes["nightactivetime"] || changes["nmbegintime"] || changes["nmendtime"] || changes["nightenabletheme"] || changes["nighthover"] || changes["nmtopleft"] || changes["nmtopright"] || changes["nmbottomright"] || changes["nmbottomleft"] || changes["nmcustom"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -595,13 +595,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "goenablenightmode" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "goenablenightmode"});
                         }
                     }
                 }
             });
         }
-        if(changes['nightmodegesture']){
+        if(changes["nightmodegesture"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -609,13 +609,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshnightmodegesture" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshnightmodegesture"});
                         }
                     }
                 }
             });
         }
-        if(changes['ecosaver'] || changes['ecosavertime']){
+        if(changes["ecosaver"] || changes["ecosavertime"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -623,13 +623,13 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefresheyesaver" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefresheyesaver"});
                         }
                     }
                 }
             });
         }
-        if(changes['nighttime'] || changes['begintime'] || changes['endtime']){
+        if(changes["nighttime"] || changes["begintime"] || changes["endtime"]){
             chrome.tabs.query({}, function(tabs){
                 var i;
                 var l = tabs.length;
@@ -637,7 +637,7 @@ chrome.storage.onChanged.addListener(function(changes){
                     var protocol = tabs[i].url.split(":")[0];
                     if(protocol == "http" || protocol == "https"){
                         if(tabs[i].url != totloptionspage){
-                            chrome.tabs.sendMessage(tabs[i].id, { action: "gorefreshnighttime" });
+                            chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshnighttime"});
                         }
                     }
                 }
@@ -646,59 +646,59 @@ chrome.storage.onChanged.addListener(function(changes){
 
         // Group Policy
         // check the values with group policy, if different values. Then change it back
-        if(changes['autoplay']){
-            if(policygrouparray.hasOwnProperty('AutoPlay')){
-                if(changes['autoplay'].newValue != policygrouparray["AutoPlay"]){
-                    chrome.storage.sync.set({ "autoplay": policygrouparray["AutoPlay"] });
+        if(changes["autoplay"]){
+            if(policygrouparray.hasOwnProperty("AutoPlay")){
+                if(changes["autoplay"].newValue != policygrouparray["AutoPlay"]){
+                    chrome.storage.sync.set({"autoplay": policygrouparray["AutoPlay"]});
                 }
             }
         }
-        if(changes['autostop']){
-            if(policygrouparray.hasOwnProperty('AutoStop')){
-                if(changes['autostop'].newValue != policygrouparray["AutoStop"]){
-                chrome.storage.sync.set({ "autostop": policygrouparray["AutoStop"] });
+        if(changes["autostop"]){
+            if(policygrouparray.hasOwnProperty("AutoStop")){
+                if(changes["autostop"].newValue != policygrouparray["AutoStop"]){
+                chrome.storage.sync.set({"autostop": policygrouparray["AutoStop"]});
                 }
             }
         }
-        if(changes['customqualityyoutube']){
-            if(policygrouparray.hasOwnProperty('AutoHD')){
-                if(changes['customqualityyoutube'].newValue != policygrouparray["AutoHD"]){
-                chrome.storage.sync.set({ "customqualityyoutube": policygrouparray["AutoHD"] });
+        if(changes["customqualityyoutube"]){
+            if(policygrouparray.hasOwnProperty("AutoHD")){
+                if(changes["customqualityyoutube"].newValue != policygrouparray["AutoHD"]){
+                chrome.storage.sync.set({"customqualityyoutube": policygrouparray["AutoHD"]});
                 }
             }
         }
-        if(changes['maxquality']){
-            if(policygrouparray.hasOwnProperty('AutoHDQuality')){
-                if(changes['maxquality'].newValue != policygrouparray["AutoHDQuality"]){
-                    chrome.storage.sync.set({ "maxquality": policygrouparray["AutoHDQuality"] });
+        if(changes["maxquality"]){
+            if(policygrouparray.hasOwnProperty("AutoHDQuality")){
+                if(changes["maxquality"].newValue != policygrouparray["AutoHDQuality"]){
+                    chrome.storage.sync.set({"maxquality": policygrouparray["AutoHDQuality"]});
                 }
             }
         }
-        if(changes['block60fps']){
-            if(policygrouparray.hasOwnProperty('Block60FPS')){
-                if(changes['block60fps'].newValue != policygrouparray["Block60FPS"]){
-                chrome.storage.sync.set({ "block60fps": policygrouparray["Block60FPS"] });
+        if(changes["block60fps"]){
+            if(policygrouparray.hasOwnProperty("Block60FPS")){
+                if(changes["block60fps"].newValue != policygrouparray["Block60FPS"]){
+                chrome.storage.sync.set({"block60fps": policygrouparray["Block60FPS"]});
                 }
             }
         }
-        if(changes['nighttheme']){
-            if(policygrouparray.hasOwnProperty('NightModeSwitch')){
-                if(changes['nighttheme'].newValue != policygrouparray["NightModeSwitch"]){
-                chrome.storage.sync.set({ "nighttheme": policygrouparray["NightModeSwitch"] });
+        if(changes["nighttheme"]){
+            if(policygrouparray.hasOwnProperty("NightModeSwitch")){
+                if(changes["nighttheme"].newValue != policygrouparray["NightModeSwitch"]){
+                chrome.storage.sync.set({"nighttheme": policygrouparray["NightModeSwitch"]});
                 }
             }
         }
-        if(changes['videovolume']){
-            if(policygrouparray.hasOwnProperty('MouseVolumeScroll')){
-                if(changes['videovolume'].newValue != policygrouparray["MouseVolumeScroll"]){
-                chrome.storage.sync.set({ "videovolume": policygrouparray["MouseVolumeScroll"] });
+        if(changes["videovolume"]){
+            if(policygrouparray.hasOwnProperty("MouseVolumeScroll")){
+                if(changes["videovolume"].newValue != policygrouparray["MouseVolumeScroll"]){
+                chrome.storage.sync.set({"videovolume": policygrouparray["MouseVolumeScroll"]});
                 }
             }
         }
-        if(changes['videotool']){
-            if(policygrouparray.hasOwnProperty('VideoToolbar')){
-                if(changes['videotool'].newValue != policygrouparray["VideoToolbar"]){
-                chrome.storage.sync.set({ "videotool": policygrouparray["VideoToolbar"] });
+        if(changes["videotool"]){
+            if(policygrouparray.hasOwnProperty("VideoToolbar")){
+                if(changes["videotool"].newValue != policygrouparray["VideoToolbar"]){
+                chrome.storage.sync.set({"videotool": policygrouparray["VideoToolbar"]});
                 }
             }
         }
@@ -710,12 +710,12 @@ var i18nomnidaymode = chrome.i18n.getMessage("omnidaymode").toLowerCase();
 var i18nomnilightoff = chrome.i18n.getMessage("omnilightoff").toLowerCase();
 var i18nomnilighton = chrome.i18n.getMessage("omnilighton").toLowerCase();
 var i18nomnihelp = chrome.i18n.getMessage("omnihelp").toLowerCase();
-if(typeof chrome.omnibox !== 'undefined'){
+if(typeof chrome.omnibox !== "undefined"){
 chrome.omnibox.onInputChanged.addListener(
     function(text, suggest){
         var suggtext;
-        if(text == ""){suggtext="Turn Off the Lights"}else{suggtext=text}
-        chrome.omnibox.setDefaultSuggestion({ description: suggtext });
+        if(text == ""){ suggtext = "Turn Off the Lights"; }else{ suggtext = text; }
+        chrome.omnibox.setDefaultSuggestion({description: suggtext});
         suggest([
             {content: i18nomninightmode, description: "night mode"},
             {content: i18nomnidaymode, description: "day mode"},
@@ -754,12 +754,12 @@ chrome.omnibox.onInputEntered.addListener(
 // date today
 var currenttoday = new Date();
 var dd = currenttoday.getDate();
-var mm = currenttoday.getMonth()+1; //January is 0!
+var mm = currenttoday.getMonth() + 1; //January is 0!
 
 var yyyy = currenttoday.getFullYear();
-if(dd<10){dd='0'+dd;}
-if(mm<10){mm='0'+mm;}
-var today = dd+'/'+mm+'/'+yyyy;
+if(dd < 10){ dd = "0" + dd; }
+if(mm < 10){ mm = "0" + mm; }
+var today = dd + "/" + mm + "/" + yyyy;
 
 function search(nameKey, myArray){
     var i;
@@ -773,7 +773,7 @@ function search(nameKey, myArray){
 
 var analytics;var rest;
 function checkbadge(){
-    chrome.storage.sync.get(['analytics','badge'], function(items){
+    chrome.storage.sync.get(["analytics","badge"], function(items){
         if(items["analytics"]){
             analytics = items["analytics"];
             var resultObject = search(today, analytics);
@@ -782,17 +782,17 @@ function checkbadge(){
             }else{
                 rest = JSON.stringify(resultObject["details"]["active"]);
             }
-            if(items["badge"] == true){chrome.browserAction.setBadgeText({ text: rest }) }else{chrome.browserAction.setBadgeText({ text: "" })}
-            chrome.browserAction.setBadgeBackgroundColor({ color: "#43A047"});
-        }else{chrome.browserAction.setBadgeText({ text: "" })} // no data found, automatically clean this
-    })
+            if(items["badge"] == true){ chrome.browserAction.setBadgeText({text: rest}); }else{ chrome.browserAction.setBadgeText({text: ""}); }
+            chrome.browserAction.setBadgeBackgroundColor({color: "#43A047"});
+        }else{ chrome.browserAction.setBadgeText({text: ""}); } // no data found, automatically clean this
+    });
 }
 
 chrome.runtime.setUninstallURL(linkuninstall);
 
 function initwelcome(){
-chrome.storage.sync.get(['firstRun'], function(chromeset){
-if((chromeset["firstRun"]!="false") && (chromeset["firstRun"]!=false)){
+chrome.storage.sync.get(["firstRun"], function(chromeset){
+if((chromeset["firstRun"] != "false") && (chromeset["firstRun"] != false)){
   chrome.tabs.create({url: linkwelcomepage, active:true});
   chrome.tabs.create({url: linkguide, active:false});
   var crrinstall = new Date().getTime();
@@ -810,7 +810,7 @@ function readgrouppolicy(items){
         //console.log("items", items);
         if(items.SuppressWelcomePage == true){
             var crrinstall = new Date().getTime();
-            chrome.storage.sync.set({ "firstRun": false, "version": "2.4", "firstDate": crrinstall });
+            chrome.storage.sync.set({"firstRun": false, "version": "2.4", "firstDate": crrinstall});
         }else{
             // no value, then show the page
             initwelcome();
@@ -819,28 +819,28 @@ function readgrouppolicy(items){
         // saving group policy values
         var savinggroup = {};
 
-        if(items.AutoPlay == true){savinggroup["autoplay"] = true;}
-        else if(items.AutoPlay == false){savinggroup["autoplay"] = false;}
+        if(items.AutoPlay == true){ savinggroup["autoplay"] = true; }
+        else if(items.AutoPlay == false){ savinggroup["autoplay"] = false; }
 
-        if(items.AutoStop == true){savinggroup["autostop"] = true;}
-        else if(items.AutoStop == false){savinggroup["autostop"] = false;}
+        if(items.AutoStop == true){ savinggroup["autostop"] = true; }
+        else if(items.AutoStop == false){ savinggroup["autostop"] = false; }
 
-        if(items.AutoHD == true){savinggroup["customqualityyoutube"] = true;}
-        else if(items.AutoHD == false){savinggroup["customqualityyoutube"] = false;}
+        if(items.AutoHD == true){ savinggroup["customqualityyoutube"] = true; }
+        else if(items.AutoHD == false){ savinggroup["customqualityyoutube"] = false; }
 
-        if(items.AutoHDQuality != ""){savinggroup["maxquality"] = items.AutoHDQuality;}
+        if(items.AutoHDQuality != ""){ savinggroup["maxquality"] = items.AutoHDQuality; }
 
-        if(items.Block60FPS == true){savinggroup["block60fps"] = true;}
-        else if(items.Block60FPS == false){savinggroup["block60fps"] = false;}
+        if(items.Block60FPS == true){ savinggroup["block60fps"] = true; }
+        else if(items.Block60FPS == false){ savinggroup["block60fps"] = false; }
 
-        if(items.NightModeSwitch == true){savinggroup["nighttheme"] = true;}
-        else if(items.NightModeSwitch == false){savinggroup["nighttheme"] = false;}
+        if(items.NightModeSwitch == true){ savinggroup["nighttheme"] = true; }
+        else if(items.NightModeSwitch == false){ savinggroup["nighttheme"] = false; }
 
-        if(items.MouseVolumeScroll == true){savinggroup["videovolume"] = true;}
-        else if(items.MouseVolumeScroll == false){savinggroup["videovolume"] = false;}
+        if(items.MouseVolumeScroll == true){ savinggroup["videovolume"] = true; }
+        else if(items.MouseVolumeScroll == false){ savinggroup["videovolume"] = false; }
 
-        if(items.VideoToolbar == true){savinggroup["videotool"] = true;}
-        else if(items.VideoToolbar == false){savinggroup["videotool"] = false;}
+        if(items.VideoToolbar == true){ savinggroup["videotool"] = true; }
+        else if(items.VideoToolbar == false){ savinggroup["videotool"] = false; }
 
         // save total group policy
         chrome.storage.sync.set(savinggroup);
@@ -858,29 +858,29 @@ if(chrome.storage.managed){
         // update saving group policy values
         var updatesavinggroup = {};
 
-        if(changes['AutoPlay']){
-            updatesavinggroup["autoplay"] = changes['AutoPlay'].newValue;
+        if(changes["AutoPlay"]){
+            updatesavinggroup["autoplay"] = changes["AutoPlay"].newValue;
         }
-        if(changes['AutoStop']){
-            updatesavinggroup["autostop"] = changes['AutoStop'].newValue;
+        if(changes["AutoStop"]){
+            updatesavinggroup["autostop"] = changes["AutoStop"].newValue;
         }
-        if(changes['AutoHD']){
-            updatesavinggroup["customqualityyoutube"] = changes['AutoHD'].newValue;
+        if(changes["AutoHD"]){
+            updatesavinggroup["customqualityyoutube"] = changes["AutoHD"].newValue;
         }
-        if(changes['AutoHDQuality']){
-            updatesavinggroup["maxquality"] = changes['AutoHDQuality'].newValue;
+        if(changes["AutoHDQuality"]){
+            updatesavinggroup["maxquality"] = changes["AutoHDQuality"].newValue;
         }
-        if(changes['Block60FPS']){
-            updatesavinggroup["block60fps"] = changes['Block60FPS'].newValue;
+        if(changes["Block60FPS"]){
+            updatesavinggroup["block60fps"] = changes["Block60FPS"].newValue;
         }
-        if(changes['NightModeSwitch']){
-            updatesavinggroup["nighttheme"] = changes['NightModeSwitch'].newValue;
+        if(changes["NightModeSwitch"]){
+            updatesavinggroup["nighttheme"] = changes["NightModeSwitch"].newValue;
         }
-        if(changes['MouseVolumeScroll']){
-            updatesavinggroup["videovolume"] = changes['MouseVolumeScroll'].newValue;
+        if(changes["MouseVolumeScroll"]){
+            updatesavinggroup["videovolume"] = changes["MouseVolumeScroll"].newValue;
         }
-        if(changes['VideoToolbar']){
-            updatesavinggroup["videotool"] = changes['VideoToolbar'].newValue;
+        if(changes["VideoToolbar"]){
+            updatesavinggroup["videotool"] = changes["VideoToolbar"].newValue;
         }
 
         // update save total group policy

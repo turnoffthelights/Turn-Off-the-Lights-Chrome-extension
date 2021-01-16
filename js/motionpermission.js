@@ -29,17 +29,17 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function startinit(){
 // Check for live API permissions
-navigator.permissions.query({name:'camera'})
+navigator.permissions.query({name:"camera"})
 .then(function(permissionStatus){
   permissionStatus.onchange = function(){
 	if(this.state == "granted"){
-		var lol = window.self;
-		lol.opener = window.self;
-		lol.close();
+		var windowgranted = window.self;
+		windowgranted.opener = window.self;
+		windowgranted.close();
 	}else{
-		var lol = window.self;
-		lol.opener = window.self;
-		lol.close();
+		var windowdenied = window.self;
+		windowdenied.opener = window.self;
+		windowdenied.close();
 	}
   };
 });
@@ -56,14 +56,12 @@ navigator.permissions.query({name:'camera'})
 		});
 	}
 	else{
-	navigator.getWebcam({audio: false, video: true}, 
-		function(stream){
+	navigator.getWebcam({audio: false, video: true}, function(stream){
 			//Display the video stream in the video object
 			localMediaStream = stream; // Store the video stream
 			video.srcObject = stream;
-		}, 
-		function(){ console.log("Web cam is not accessible."); });
+		}, function(){ console.log("Web cam is not accessible."); });
 	}
 }
 
-document.addEventListener('DOMContentLoaded', function(){startinit();},false);
+document.addEventListener("DOMContentLoaded", function(){ startinit(); },false);

@@ -27,14 +27,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-chrome.storage.sync.get(['block60fps'], function(response){
-var block60fps = response['block60fps'];
+chrome.storage.sync.get(["block60fps"], function(response){
+var block60fps = response["block60fps"];
 if(block60fps == true){
 try{
-chrome.runtime.sendMessage({name: 'sendfps'});
+chrome.runtime.sendMessage({name: "sendfps"});
 chrome.runtime.onMessage.addListener(
 function(request){
-    if(request.name == "injectfps"){var script = document.createElement("script");script.type = "text/javascript";script.textContent = request.message;script.onload = function(){this.parentNode.removeChild(this);};document.getElementsByTagName("head")[0].appendChild(script);}
+    if(request.name == "injectfps"){ var script = document.createElement("script"); script.type = "text/javascript"; script.textContent = request.message; script.onload = function(){ this.parentNode.removeChild(this); }; document.getElementsByTagName("head")[0].appendChild(script); }
 });
 }catch(e){}
-}});
+} });

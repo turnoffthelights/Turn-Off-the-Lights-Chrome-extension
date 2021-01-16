@@ -29,7 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 (ytCinema = {
 	players: {objs: [], active: 0},
-	messageEvent: new Event('ytCinemaMessage'),
+	messageEvent: new Event("ytCinemaMessage"),
 	playerStateChange: function(stateId){
 		var message = document.getElementById("ytCinemaMessage"),
 			stateIO = "playerStateChange:".concat(stateId);
@@ -50,7 +50,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 		if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.querySelector("body");
-		var observer = new MutationObserver(function(mutations, observer){
+		var observer = new MutationObserver(function(mutations){
 			mutations.forEach(function(mutation){
 				if(mutation.target.tagName == "VIDEO"){
 					if(mutation.attributeName === "src"){
@@ -62,7 +62,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				}
 			});
         });
- 
+
 		observer.observe(videolist, {
 			subtree: true, // observe the subtree rooted at ...videolist...
 			childList: true, // include childNode insertion/removals

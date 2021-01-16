@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         else{
             // multi opacity
-            chrome.tabs.query({ active: true, currentWindow: true},
+            chrome.tabs.query({active: true, currentWindow: true},
             function(tabs){
                 var job = tabs[0].url;
                 var currentURL = job.match(/^[\w-]+:\/*\[?([\w\.:-]+)\]?(?::\d+)?/)[0];
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function(){
         if(firstDate){
             var datestart = firstDate;
             var dateend = datestart + (30 * 24 * 60 * 60 * 1000);
-            if(currentDate>=dateend){ firstmonth = false; }
+            if(currentDate >= dateend){ firstmonth = false; }
             else{ firstmonth = true; }
         }else{
             chrome.storage.sync.set({"firstDate": currentDate});
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }else{
             if(optionskipremember != true){
                 if(firstsawrate != true){
-                    materialRateAlert(function(result){ console.log(result) })
+                    materialRateAlert(function(result){ console.log(result); });
                     chrome.storage.sync.set({"firstsawrate": true});
                 }
             }
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function(){
         $("analyticspanel").className = "";
 
         $("tab1").className = "tabbutton";
-        $("tab2").className = "tabbutton"
+        $("tab2").className = "tabbutton";
         $("tab3").className = "tabbutton";
         $("tab4").className = "tabbutton tabhighlight";
     },false);
@@ -330,11 +330,11 @@ document.addEventListener("DOMContentLoaded", function(){
     $("btngonight").addEventListener("click", function(){
         chrome.tabs.executeScript(null,{code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
     });
-    $("btnoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}) });
-    $("btndonate").addEventListener("click", function(){ chrome.tabs.create({url: donatewebsite, active:true}) });
-    $("btnauroraplayer").addEventListener("click", function(){ chrome.tabs.create({url: linkauroraplayerapp, active:true}) });
-    $("analclick").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}) });
-    $("analtotal").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}) });
+    $("btnoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+    $("btndonate").addEventListener("click", function(){ chrome.tabs.create({url: donatewebsite, active:true}); });
+    $("btnauroraplayer").addEventListener("click", function(){ chrome.tabs.create({url: linkauroraplayerapp, active:true}); });
+    $("analclick").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+    $("analtotal").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
 
     var stefanvdurl = developerwebsite;
     var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
@@ -376,10 +376,10 @@ document.addEventListener("DOMContentLoaded", function(){
         var currentimeseconds = timeeverything.reduce(add, 0);
         function add(a,b){ return a + b; }
         // current time
-        var currenttimeinhours = currentimeseconds/3600;
+        var currenttimeinhours = currentimeseconds / 3600;
         // default laptop 65W
-        var kwhwithdark = currenttimeinhours * (65 * 0.6)/1000; // factor: power lower to 40%
-        var kwhwithregu = currenttimeinhours * (65 * 1)/1000;
+        var kwhwithdark = currenttimeinhours * (65 * 0.6) / 1000; // factor: power lower to 40%
+        var kwhwithregu = currenttimeinhours * (65 * 1) / 1000;
         var currentkwh = (kwhwithregu - kwhwithdark).toFixed(5);
         if($("analtotalsavedkwh")){
             var showwatt;
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         $("analtotalsavedkwh").innerText = showwatt;
         }
-        sharetext = chrome.i18n.getMessage("shareanalyticenergy", ""+currentkwh+"");
+        sharetext = chrome.i18n.getMessage("shareanalyticenergy", "" + currentkwh + "");
 
         //kWh/hr
         var resultcomparedenergy;
@@ -504,7 +504,7 @@ document.addEventListener("DOMContentLoaded", function(){
     $("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook","width=600,height=460,menubar=no,location=no,status=no"); });
     $("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "&via=turnoffthelight", "Share to Twitter","width=600,height=460,menubar=no,location=no,status=no"); });
 
-    $("energybox").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}) });
+    $("energybox").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
 
     // rate
     function materialRateAlert(){
@@ -572,7 +572,7 @@ function colorchange(){
         active: true,
         currentWindow: true
     }, function(tab){
-        chrome.tabs.executeScript(tab.id,{code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '"+bckbutton+"';}}"});
+        chrome.tabs.executeScript(tab.id,{code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + bckbutton + "';}}"});
     });
 }
 
@@ -584,13 +584,13 @@ function opacitychange(){
         active: true,
         currentWindow: true
     }, function(tab){
-        chrome.tabs.executeScript(tab.id,{code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.opacity = ("+thatvalue+"/100);}}"});
+        chrome.tabs.executeScript(tab.id,{code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.opacity = (" + thatvalue + "/100);}}"});
     });
 }
 
 function rgb2hex(rgb){
  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
- return (rgb && rgb.length === 4) ? "#" +
+ return(rgb && rgb.length === 4) ? "#" +
   ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
   ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
   ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : "";

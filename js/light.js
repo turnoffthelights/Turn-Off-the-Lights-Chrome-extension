@@ -27,7 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id) { return document.getElementById(id); }
+function $(id){ return document.getElementById(id); }
 // settings
 var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlightt = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
 // html elements used
@@ -36,45 +36,45 @@ var div = null, video = null, span = null, iframe = null, embed = null, object =
 var activatelightsoff = true;
 
 /////////// Option page settings
-chrome.storage.sync.get(['suggestions','playlist','videoheadline','head','infobar','likebutton','sharebutton','viewcount','addvideobutton','likebar','flash','noflash','hardflash','no360youtube','mousespotlights','titleinvertcolor'], function(response){
-suggestions = response['suggestions'];
-playlist = response['playlist'];
-videoheadline = response['videoheadline'];
-head = response['head'];
-infobar = response['infobar'];
-likebutton = response['likebutton'];
-sharebutton = response['sharebutton'];
-viewcount = response['viewcount'];
-addvideobutton = response['addvideobutton'];
-likebar = response['likebar'];
-flash = response['flash'];
-noflash = response['noflash'];
-hardflash = response['hardflash'];
-no360youtube = response['no360youtube'];
-mousespotlights = response['mousespotlights'];
-titleinvertcolor = response['titleinvertcolor'];if(titleinvertcolor)titleinvertcolor = response['titleinvertcolor'];else titleinvertcolor = '#ffffff'; // default color white
+chrome.storage.sync.get(["suggestions","playlist","videoheadline","head","infobar","likebutton","sharebutton","viewcount","addvideobutton","likebar","flash","noflash","hardflash","no360youtube","mousespotlights","titleinvertcolor"], function(response){
+suggestions = response["suggestions"];
+playlist = response["playlist"];
+videoheadline = response["videoheadline"];
+head = response["head"];
+infobar = response["infobar"];
+likebutton = response["likebutton"];
+sharebutton = response["sharebutton"];
+viewcount = response["viewcount"];
+addvideobutton = response["addvideobutton"];
+likebar = response["likebar"];
+flash = response["flash"];
+noflash = response["noflash"];
+hardflash = response["hardflash"];
+no360youtube = response["no360youtube"];
+mousespotlights = response["mousespotlights"];
+titleinvertcolor = response["titleinvertcolor"];if(titleinvertcolor)titleinvertcolor = response["titleinvertcolor"];else titleinvertcolor = "#ffffff"; // default color white
 
 // check if CSS inject is on the current page
-var a;var span = document.createElement("span");
-span.setAttribute('id','stefanvdtest');
+var a; var span = document.createElement("span");
+span.setAttribute("id","stefanvdtest");
 span.className = "stefanvdtest";
 document.body.appendChild(span);
 a = span.offsetTop;
 if(a != 88){
-chrome.runtime.sendMessage({name: 'sendlightcss'});
+chrome.runtime.sendMessage({name: "sendlightcss"});
 }
-if(document.getElementById('stefanvdtest')){
+if(document.getElementById("stefanvdtest")){
 var elem = document.getElementById("stefanvdtest");
 elem.parentNode.removeChild(elem);
 }
 
 chrome.runtime.onMessage.addListener(
 function(request, sender){
-	if(request.name == "injectlightcss"){var style = document.createElement("style");style.type = "text/css";style.textContent = request.message;document.getElementsByTagName("head")[0].appendChild(style);}
+	if(request.name == "injectlightcss"){ var style = document.createElement("style"); style.type = "text/css"; style.textContent = request.message; document.getElementsByTagName("head")[0].appendChild(style); }
 });
 
 function hasClass(a, b){
-	return (' ' + a.className + ' ').indexOf(' ' + b + ' ') > -1;
+	return(" " + a.className + " ").indexOf(" " + b + " ") > -1;
 }
 
 // search video path function
@@ -92,30 +92,30 @@ function searchvideopath(thatvideo){
 		var hta = st.getPropertyValue("height");
 		var dba = st.getPropertyValue("padding-bottom");
 
-		var pbefore = document.defaultView.getComputedStyle(el, '::before');
+		var pbefore = document.defaultView.getComputedStyle(el, "::before");
 		var beforedta = pbefore.getPropertyValue("padding-top");
 		var beforedba = pbefore.getPropertyValue("padding-bottom");
 
-		var pafter = document.defaultView.getComputedStyle(el, '::after');
+		var pafter = document.defaultView.getComputedStyle(el, "::after");
 		var afterdta = pafter.getPropertyValue("padding-top");
 		var afterdba = pafter.getPropertyValue("padding-bottom");
-		
+
 		if(yta == "auto"){}
 		else{
 			// if it is not the <video> player element,
 			// and if otherdown class is inside, then remove it
 			if(el.tagName != "VIDEO" && el.tagName != "OBJECT" && el.tagName != "EMBED" && el.tagName != "APPLET" && el.tagName != "IFRAME"){
-				if(el.classList.contains("stefanvdotherdown")){el.classList.remove("stefanvdotherdown");}
-				if(el.classList.contains("stefanvdvideocontrolstop")){el.classList.remove("stefanvdvideocontrolstop");}
-				if(el.classList.contains("stefanvdvideocontrolsitem")){el.classList.remove("stefanvdvideocontrolsitem");}
-				if(el.classList.contains("stefanvditemtop")){el.classList.remove("stefanvditemtop");}
-				el.classList.add('stefanvdvideoauto');
+				if(el.classList.contains("stefanvdotherdown")){ el.classList.remove("stefanvdotherdown"); }
+				if(el.classList.contains("stefanvdvideocontrolstop")){ el.classList.remove("stefanvdvideocontrolstop"); }
+				if(el.classList.contains("stefanvdvideocontrolsitem")){ el.classList.remove("stefanvdvideocontrolsitem"); }
+				if(el.classList.contains("stefanvditemtop")){ el.classList.remove("stefanvditemtop"); }
+				el.classList.add("stefanvdvideoauto");
 			}
 		}
-		if(tta != "none"){el.classList.add('stefanvdtransformauto');}
-		if(pta == "sticky"){el.classList.add('stefanvdpossticky');}
-		if(pta == "fixed"){el.classList.add('stefanvdposfixed');}
-	
+		if(tta != "none"){ el.classList.add("stefanvdtransformauto"); }
+		if(pta == "sticky"){ el.classList.add("stefanvdpossticky"); }
+		if(pta == "fixed"){ el.classList.add("stefanvdposfixed"); }
+
 		// if padding-top used
 		// if padding-bottom used
 		if((parseInt(dta, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(dta, 10) == parseInt(hta, 10) && (parseInt(dta, 10) > 0)) ||
@@ -129,7 +129,7 @@ function searchvideopath(thatvideo){
 			divpaddintop = true;
 		}
 		}
-	}while((el.nodeName.toLowerCase() != 'html') && (el = el.parentNode))
+	}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode))
 
 	return divpaddintop;
 }
@@ -138,11 +138,11 @@ if(mousespotlights == true){
 // no video detection
 }else{
 // CSS for pseudo
-if($('csstotlpseudo')){}else{
+if($("csstotlpseudo")){}else{
 var totlpseudo = "*:before,*:after,*::before,*::after{z-index:auto!important}";
-var css = document.createElement('style');
-css.setAttribute('id','csstotlpseudo');
-css.type = 'text/css';
+var css = document.createElement("style");
+css.setAttribute("id","csstotlpseudo");
+css.type = "text/css";
 css.appendChild(document.createTextNode(totlpseudo));
 document.getElementsByTagName("head")[0].appendChild(css);
 }
@@ -155,7 +155,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
 
 // detect if no -webkit-transform:translateZ(0) used, if so
 // remove this and place the 'none' value
-var q = document.getElementsByTagName('*');
+var q = document.getElementsByTagName("*");
 var i;
 var l = q.length;
 for(i = 0; i < l; i++){
@@ -167,11 +167,11 @@ for(i = 0; i < l; i++){
 
 	if(q[i].shadowRoot){
 		// only for open shadowRoot
-		if(q[i].shadowRoot.querySelector('#rootstefan')){}else{
-			var css = '.stefanvdotherdown{z-index:950!important}',
-			style = document.createElement('style');
+		if(q[i].shadowRoot.querySelector("#rootstefan")){}else{
+			var css = ".stefanvdotherdown{z-index:950!important}",
+			style = document.createElement("style");
 			style.id = "rootstefan";
-			style.type = 'text/css';
+			style.type = "text/css";
 			if(style.styleSheet){
 			style.styleSheet.cssText = css;
 			}else{
@@ -179,14 +179,14 @@ for(i = 0; i < l; i++){
 			}
 			q[i].shadowRoot.appendChild(style);
 		}
-		var s = q[i].shadowRoot.querySelectorAll('*');
+		var s = q[i].shadowRoot.querySelectorAll("*");
 		var j;
 		var l = s.length;
 		for(j = 0; j < l; j++){
 			var st = document.defaultView.getComputedStyle(s[j], null);
 			var k = st.getPropertyValue("z-Index");
 			if(k >= 1000){
-				s[j].classList.add('stefanvdotherdown');
+				s[j].classList.add("stefanvdotherdown");
 			}
 		}
 	}
@@ -197,55 +197,55 @@ for(i = 0; i < l; i++){
 		var elementstefanvd = q[i].id; elementstefanvd = elementstefanvd.substring(0, 8); // everthing with stefanvd element is whitelist
 		if(elementa == q[i].parentNode || elementstefanvd == "stefanvd" || q[i].tagName == "VIDEO"){
 		}else{
-		q[i].classList.add('stefanvdotherdown');
+		q[i].classList.add("stefanvdotherdown");
 		}
 	} // its value from its parent element
 	// remove contain that block z-index level
-	if(x == "strict" || x == "paint"){q[i].classList.add('stefanvdcontainauto');}
+	if(x == "strict" || x == "paint"){ q[i].classList.add("stefanvdcontainauto"); }
 	//if(t == "matrix(1, 0, 0, 1, 0, 0)"){q[i].style.webkitTransform = 'none'; q[i].style.MozTransform = 'none'; q[i].style.msTransform = 'none'; q[i].style.OTransform = 'none'; q[i].style.transform = 'none';}
 	}
 }
 
 /////////// API for Website Developer
 // id way
-var websiteidapi = $('dont-turn-off-the-lights');
-if(websiteidapi){$('dont-turn-off-the-lights').classList.add('stefanvdvideotop');}
+var websiteidapi = $("dont-turn-off-the-lights");
+if(websiteidapi){ $("dont-turn-off-the-lights").classList.add("stefanvdvideotop"); }
 
 // class way
-var websiteclassapi = document.getElementsByClassName('dont-turn-off-the-lights');
+var websiteclassapi = document.getElementsByClassName("dont-turn-off-the-lights");
 var i;
 var l = websiteclassapi.length;
-for(i = 0; i < l; i++){websiteclassapi[i].classList.add('stefanvdvideotop');}
+for(i = 0; i < l; i++){ websiteclassapi[i].classList.add("stefanvdvideotop"); }
 
 /////////// HTML5 video
 // default html5 video detection
-video = document.getElementsByTagName('video');
+video = document.getElementsByTagName("video");
 var i;
 var l = video.length;
 for(i = 0; i < l; i++){
-var targetComputedStylePosition=document.defaultView.getComputedStyle(video[i],null).getPropertyValue("position");
+var targetComputedStylePosition = document.defaultView.getComputedStyle(video[i],null).getPropertyValue("position");
 // search for the video player, and set the previous path all to z-index "auto"
 if(searchvideopath(video[i]) == true && targetComputedStylePosition == "absolute"){
-	video[i].classList.add('stefanvdposfixed');
+	video[i].classList.add("stefanvdposfixed");
 }
 
 // other file then "mp3" then run this code
-if(video[i].currentSrc.lastIndexOf(".mp3")==-1){video[i].classList.add('stefanvdvideotop');if(video[i].classList.contains("stefanvdtransformauto")){video[i].classList.remove("stefanvdtransformauto");}}
+if(video[i].currentSrc.lastIndexOf(".mp3") == -1){ video[i].classList.add("stefanvdvideotop"); if(video[i].classList.contains("stefanvdtransformauto")){video[i].classList.remove("stefanvdtransformauto");}}
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	if(no360youtube == true){
 		video[i].style.cssText += "display:block !important";
-		var webgl = document.querySelector('.webgl');
-		if(webgl){webgl.classList.add('stefanvdvideoauto');}
+		var webgl = document.querySelector(".webgl");
+		if(webgl){webgl.classList.add("stefanvdvideoauto"); }
 	}else{
 	// default the regular player
 	// also the 360 frame push to front
-	var webgl = document.querySelector('.webgl');
-	if(webgl){webgl.classList.add('stefanvdvideocontrolsitem');}
+	var webgl = document.querySelector(".webgl");
+	if(webgl){ webgl.classList.add("stefanvdvideocontrolsitem"); }
 	}
-	var playerapi = $('player-api');
+	var playerapi = $("player-api");
 	if(playerapi){
-		if(playerapi.classList.contains("stefanvdvideoauto")){playerapi.classList.remove("stefanvdvideoauto");}
-		playerapi.classList.add('stefanvdvideocontrolsitem');
+		if(playerapi.classList.contains("stefanvdvideoauto")){ playerapi.classList.remove("stefanvdvideoauto"); }
+		playerapi.classList.add("stefanvdvideocontrolsitem");
 	}
 }
 
@@ -273,7 +273,7 @@ try{
 if(flash == true){
 try{
 	var j,t;
-	for(j=0;t=['object','embed','applet','iframe'][j];++j)
+	for(j=0;t=["object","embed","applet","iframe"][j];++j)
 	{
 		var a = document.getElementsByTagName(t);
 		var i;
@@ -283,18 +283,18 @@ try{
 		{
 			var targetComputedStylePosition=document.defaultView.getComputedStyle(N,null).getPropertyValue("position");
 
-			N.classList.add('stefanvdvideotop');
+			N.classList.add("stefanvdvideotop");
 			
 			// search for the video player, and set the previous path all to z-index "auto"
 			if(searchvideopath(N) == true && targetComputedStylePosition == "absolute"){
-				N.classList.add('stefanvdposfixed');
+				N.classList.add("stefanvdposfixed");
 			}
 		}
 	}
 }catch(e){}
 }else if(hardflash == true){
 	var j,t;
-	for(j=0;t=['object','embed','applet','iframe'][j];++j)
+	for(j=0;t=["object","embed","applet","iframe"][j];++j)
 	{
 		var a = document.getElementsByTagName(t);
 		var i;
@@ -303,11 +303,11 @@ try{
 		{
 			var targetComputedStylePosition=document.defaultView.getComputedStyle(a[i],null).getPropertyValue("position");
 
-			a[i].classList.add('stefanvdvideotop');
+			a[i].classList.add("stefanvdvideotop");
 			
 			// search for the video player, and set the previous path all to z-index "auto"
 			if(searchvideopath(a[i]) == true && targetComputedStylePosition == "absolute"){
-				a[i].classList.add('stefanvdposfixed');
+				a[i].classList.add("stefanvdposfixed");
 			}
 		}
 	}
@@ -316,259 +316,259 @@ try{
 // YouTube options
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 // Show the debug mode of YouTube
-var youtubedebuginfopanel = document.querySelectorAll('div.html5-video-info-panel');
+var youtubedebuginfopanel = document.querySelectorAll("div.html5-video-info-panel");
 var i;
 var l = youtubedebuginfopanel.length;
 for(i = 0; i < l; i++){youtubedebuginfopanel[i].style.zIndex = "1001";}
-var youtubedebugpanel = document.querySelectorAll('div.ytp-dialog-holder');
+var youtubedebugpanel = document.querySelectorAll("div.ytp-dialog-holder");
 var i;
 var l = youtubedebugpanel.length;
 for(i = 0; i < l; i++){youtubedebugpanel[i].style.zIndex = "1001";}
 // 21 august 2015
-var youtubedebugcontextmenu = document.querySelectorAll('div.ytp-contextmenu');
+var youtubedebugcontextmenu = document.querySelectorAll("div.ytp-contextmenu");
 var i;
 var l = youtubedebugcontextmenu.length;
 for(i = 0; i < l; i++){youtubedebugcontextmenu[i].style.zIndex = "1001";}
 
 // YouTube video OK
-var watch7 = $('watch7');
-if(watch7)$('watch7').style.zIndex = 'auto';
+var watch7 = $("watch7");
+if(watch7)$("watch7").style.zIndex = "auto";
 
-var watch7main = $('watch7-main');
-if(watch7main)$('watch7-main').style.zIndex = 'auto';
+var watch7main = $("watch7-main");
+if(watch7main)$("watch7-main").style.zIndex = "auto";
 
-var watch7content = $('watch7-content');
-if(watch7content)$('watch7-content').style.zIndex = 'auto';
+var watch7content = $("watch7-content");
+if(watch7content)$("watch7-content").style.zIndex = "auto";
 
 // temp fix watch7-video
-var watch7video = $('watch7-video');
-if(watch7video)$('watch7-video').style.zIndex = 'auto';
+var watch7video = $("watch7-video");
+if(watch7video)$("watch7-video").style.zIndex = "auto";
 
-var pagemanager = $('page-manager');
-if(pagemanager)$('page-manager').style.cssText = 'z-index:auto !important';
+var pagemanager = $("page-manager");
+if(pagemanager)$("page-manager").style.cssText = "z-index:auto !important";
 
 // Shows YouTube Suggestions
 if(suggestions == true){
 // updated 15 january 2016
-var watch7sidebar = $('watch7-sidebar');
-if(watch7sidebar){$('watch7-sidebar').style.zIndex = 1000;}
+var watch7sidebar = $("watch7-sidebar");
+if(watch7sidebar){$("watch7-sidebar").style.zIndex = 1000;}
 // update YouTube material 21 march 2017
 var ytmaterialsuggestions = document.querySelector("ytd-watch-next-secondary-results-renderer");
-if(ytmaterialsuggestions){ytmaterialsuggestions.classList.add('stefanvditemtop');ytmaterialsuggestions.style.background = "white";}
+if(ytmaterialsuggestions){ytmaterialsuggestions.classList.add("stefanvditemtop");ytmaterialsuggestions.style.background = "white";}
 }
 
 // Shows YouTube playlist
 if(playlist == true){
 // updated 15 january 2016
-var watchappbarplaylist = $('watch-appbar-playlist');
-if(watchappbarplaylist){$('watch-appbar-playlist').style.zIndex = 1000;}
+var watchappbarplaylist = $("watch-appbar-playlist");
+if(watchappbarplaylist){$("watch-appbar-playlist").style.zIndex = 1000;}
 // update YouTube material 21 march 2017
 var ytmaterialplaylist = document.querySelector("ytd-playlist-panel-renderer");
-if(ytmaterialplaylist){ytmaterialplaylist.classList.add('stefanvditemtop');}
+if(ytmaterialplaylist){ytmaterialplaylist.classList.add("stefanvditemtop");}
 }
 
 // Shows video title
 if(videoheadline == true){
 // updated 15 january 2016
-var eowtitle = $('eow-title');
-if(eowtitle){$('eow-title').style.color = 'white';$('eow-title').style.zIndex = 1000;$('eow-title').style.position = 'relative';}
+var eowtitle = $("eow-title");
+if(eowtitle){$("eow-title").style.color = "white";$("eow-title").style.zIndex = 1000;$("eow-title").style.position = "relative";}
 // update YouTube material 21 march 2017
 var ytmaterialvideotitle = document.querySelector("ytd-video-primary-info-renderer");
 if(ytmaterialvideotitle){
 var ytgeth = ytmaterialvideotitle.querySelector("h1");
-if(ytgeth != null){ytgeth.classList.add('stefanvditemtop');ytgeth.style.color = titleinvertcolor;}
+if(ytgeth != null){ytgeth.classList.add("stefanvditemtop");ytgeth.style.color = titleinvertcolor;}
 }
 }
 
 // Shows YouTube Channel name
 if(head == true){
 // updated 15 january 2016
-var watch7userheader = $('watch7-user-header');
-if(watch7userheader){$('watch7-user-header').style.zIndex = 1000;$('watch7-user-header').style.position = 'relative';}
+var watch7userheader = $("watch7-user-header");
+if(watch7userheader){$("watch7-user-header").style.zIndex = 1000;$("watch7-user-header").style.position = "relative";}
 
-var ytuserinfoa = document.querySelector('.yt-user-info a');
-if(ytuserinfoa){ytuserinfoa.style.color = 'white';}
+var ytuserinfoa = document.querySelector(".yt-user-info a");
+if(ytuserinfoa){ytuserinfoa.style.color = "white";}
 // update YouTube material 21 march 2017
 var ytmaterialhead = document.querySelector("ytd-video-owner-renderer");
-if(ytmaterialhead){ytmaterialhead.classList.add('stefanvditemtop');ytmaterialhead.style.background = "white";}
+if(ytmaterialhead){ytmaterialhead.classList.add("stefanvditemtop");ytmaterialhead.style.background = "white";}
 }
 
 // Shows Infobar
 if(infobar == true){
 // updated 15 january 2016
-var watchdescription = $('watch-description');
-if(watchdescription){$('watch-description').style.zIndex = 1000;$('watch-description').style.background = 'white';}
+var watchdescription = $("watch-description");
+if(watchdescription){$("watch-description").style.zIndex = 1000;$("watch-description").style.background = "white";}
 // update YouTube material 21 march 2017
 var ytmaterialinfo = document.querySelector("ytd-video-secondary-info-renderer");
-if(ytmaterialinfo){ytmaterialinfo.classList.add('stefanvditemtop');ytmaterialinfo.style.background = "white";}
+if(ytmaterialinfo){ytmaterialinfo.classList.add("stefanvditemtop");ytmaterialinfo.style.background = "white";}
 }
 
 // Shows like and unlike buttons
 if(likebutton == true){
 // updated 15 january 2016
-var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 1000;likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'white';}
+var likebuttonrenderlike = document.querySelector(".like-button-renderer-like-button");
+if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 1000;likebuttonrenderlike.style.position = "relative";likebuttonrenderlike.style.background = "white";}
 
-var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 1000;likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'white';}
+var likebuttonrenderdislike = document.querySelector(".like-button-renderer-dislike-button");
+if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 1000;likebuttonrenderdislike.style.position = "relative";likebuttonrenderdislike.style.background = "white";}
 // update YouTube material 21 march 2017
-var ytmateriallikebutton = document.querySelectorAll('ytd-toggle-button-renderer');
+var ytmateriallikebutton = document.querySelectorAll("ytd-toggle-button-renderer");
 var i;
 var l = ytmateriallikebutton.length;
 for(i = 0; i < l; i++){
-var ytgetobject = ytmateriallikebutton[i].getElementsByTagName('button')[0];
+var ytgetobject = ytmateriallikebutton[i].getElementsByTagName("button")[0];
 if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 7) == "dislike"){ytmateriallikebutton[i].classList.add('stefanvditemtop');ytmateriallikebutton[i].style.background = "white";}
-else if(ytgetstring.substring(0, 4) == "like"){ytmateriallikebutton[i].classList.add('stefanvditemtop');ytmateriallikebutton[i].style.background = "white";}
+if(ytgetstring.substring(0, 7) == "dislike"){ytmateriallikebutton[i].classList.add("stefanvditemtop");ytmateriallikebutton[i].style.background = "white";}
+else if(ytgetstring.substring(0, 4) == "like"){ytmateriallikebutton[i].classList.add("stefanvditemtop");ytmateriallikebutton[i].style.background = "white";}
 }}}
 }
 
 // Shows share buttons
 if(sharebutton == true){
 // updated 15 january 2016
-var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-if(actionsharepanel){actionsharepanel.style.zIndex = 1000;actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'white';}
+var actionsharepanel = document.querySelector(".action-panel-trigger-share");
+if(actionsharepanel){actionsharepanel.style.zIndex = 1000;actionsharepanel.style.position = "relative";actionsharepanel.style.background = "white";}
 // update YouTube material 21 march 2017
-var ytmaterialsharebutton = document.querySelectorAll('ytd-button-renderer');
+var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
 var i;
 var l = ytmaterialsharebutton.length;
 for(i = 0; i < l; i++){
-var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName('button')[0];
+var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
 if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].classList.add('stefanvditemtop');ytmaterialsharebutton[i].style.background = "white";}
+if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].classList.add("stefanvditemtop");ytmaterialsharebutton[i].style.background = "white";}
 }}}
 }
 
 // Shows view count
 if(viewcount == true){
 // updated 15 january 2016
-var watchviewcount = document.querySelector('.watch-view-count');
-if(watchviewcount){watchviewcount.style.zIndex = 1000;watchviewcount.style.color = 'white';}
+var watchviewcount = document.querySelector(".watch-view-count");
+if(watchviewcount){watchviewcount.style.zIndex = 1000;watchviewcount.style.color = "white";}
 // update YouTube material 21 march 2017
 var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
 if(ytmaterialviewcount){
 var ytgetformat = ytmaterialviewcount.querySelector(".view-count");
-if(ytgetformat != null){ytgetformat.classList.add('stefanvditemtop');ytgetformat.style.color = 'white';}
+if(ytgetformat != null){ytgetformat.classList.add("stefanvditemtop");ytgetformat.style.color = "white";}
 }
 }
 
 // Shows save button
 if(addvideobutton == true){
 // updated 15 january 2016
-var addtobutton = document.querySelector('.addto-button');
-if(addtobutton){addtobutton.style.zIndex = 1000;addtobutton.style.position = 'relative';addtobutton.style.background = 'white';}
+var addtobutton = document.querySelector(".addto-button");
+if(addtobutton){addtobutton.style.zIndex = 1000;addtobutton.style.position = "relative";addtobutton.style.background = "white";}
 // update YouTube material 21 march 2017
-var ytmaterialaddbutton = document.querySelectorAll('ytd-button-renderer');
+var ytmaterialaddbutton = document.querySelectorAll("ytd-button-renderer");
 var i;
 var l = ytmaterialaddbutton.length;
 for(i = 0; i < l; i++){
-var ytgetobject = ytmaterialaddbutton[i].getElementsByTagName('button')[0];
+var ytgetobject = ytmaterialaddbutton[i].getElementsByTagName("button")[0];
 if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 4) == "Save"){ytmaterialaddbutton[i].classList.add('stefanvditemtop');ytmaterialaddbutton[i].style.background = "white";}
+if(ytgetstring.substring(0, 4) == "Save"){ytmaterialaddbutton[i].classList.add("stefanvditemtop");ytmaterialaddbutton[i].style.background = "white";}
 }}}
 }
 
 // Shows like/dislike bar
 if(likebar == true){
 // updated 15 january 2016
-var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = 'relative'}
+var videoextrasparkbars = document.querySelector(".video-extras-sparkbars");
+if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = "relative"}
 // update YouTube material 21 march 2017
 var ytmateriallikebar = document.querySelector("ytd-sentiment-bar-renderer");
-if(ytmateriallikebar){ytmateriallikebar.classList.add('stefanvditemtop');}
+if(ytmateriallikebar){ytmateriallikebar.classList.add("stefanvditemtop");}
 }
 
 // MAC & PC & LINUX
 // HTML5
 
 // show YouTube HTML5 annotation
-div = document.getElementsByTagName('div'); 
+div = document.getElementsByTagName("div"); 
 var i;
 var l = div.length;
 for(i = 0; i < l; i++)
-{if(div[i].className == ('video-annotations iv-module')){div[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(div[i].className == ("video-annotations iv-module")){div[i].classList.add("stefanvdvideocontrolsitem");}}
 
 // YouTube show annotation 25 february 2016
-var videoannotations = document.getElementsByTagName('div');
+var videoannotations = document.getElementsByTagName("div");
 var i;
 var l = videoannotations.length;
 for(i = 0; i < l; i++)
-{if(videoannotations[i].className == ('video-annotations')){videoannotations[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(videoannotations[i].className == ("video-annotations")){videoannotations[i].classList.add("stefanvdvideocontrolsitem");}}
 
 // YouTube show channel 29 february 2016
-var annotationbranding = document.getElementsByTagName('div');
+var annotationbranding = document.getElementsByTagName("div");
 var i;
 var l = annotationbranding.length;
 for(i = 0; i < l; i++)
-{if(annotationbranding[i].className == ('annotation annotation-type-custom iv-branding')){annotationbranding[i].classList.add('stefanvdvideocontrolstop');}}
+{if(annotationbranding[i].className == ("annotation annotation-type-custom iv-branding")){annotationbranding[i].classList.add("stefanvdvideocontrolstop");}}
 
-var annotationtvpromo = document.getElementsByTagName('div');
+var annotationtvpromo = document.getElementsByTagName("div");
 var i;
 var l = annotationtvpromo.length;
 for(i = 0; i < l; i++)
-{if(annotationtvpromo[i].className == ('annotation annotation-type-custom iv-promo iv-promo-video')){annotationtvpromo[i].classList.add('stefanvdvideocontrolstop');}}
+{if(annotationtvpromo[i].className == ("annotation annotation-type-custom iv-promo iv-promo-video")){annotationtvpromo[i].classList.add("stefanvdvideocontrolstop");}}
 
 // info button
-var ytpcardsteaser = document.getElementsByTagName('div');
+var ytpcardsteaser = document.getElementsByTagName("div");
 var i;
 var l = ytpcardsteaser.length;
 for(i = 0; i < l; i++)
-{if(ytpcardsteaser[i].className == ('ytp-cards-teaser')){ytpcardsteaser[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(ytpcardsteaser[i].className == ("ytp-cards-teaser")){ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem");}}
 
-var ytpcardsbutton = document.getElementsByTagName('button');
+var ytpcardsbutton = document.getElementsByTagName("button");
 var i;
 var l = ytpcardsbutton.length;
 for(i = 0; i < l; i++)
-{if(ytpcardsbutton[i].className == ('ytp-button ytp-cards-button')){ytpcardsbutton[i].classList.add('stefanvdvideocontrolstop');}}
+{if(ytpcardsbutton[i].className == ("ytp-button ytp-cards-button")){ytpcardsbutton[i].classList.add("stefanvdvideocontrolstop");}}
 
 // edit video card end screen
-var ytpcardsteaser = document.getElementsByTagName('div');
+var ytpcardsteaser = document.getElementsByTagName("div");
 var i;
 var l = ytpcardsteaser.length;
 for(i = 0; i < l; i++)
-{if(ytpcardsteaser[i].className == ('playergrid-safe-area')){ytpcardsteaser[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(ytpcardsteaser[i].className == ("playergrid-safe-area")){ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem");}}
 
 // YouTube video sidebar info button
-var ivdrawer = document.getElementsByTagName('div');
+var ivdrawer = document.getElementsByTagName("div");
 var i;
 var l = ivdrawer.length;
 for(i = 0; i < l; i++)
-{if(ivdrawer[i].className == ('iv-drawer')){ivdrawer[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(ivdrawer[i].className == ("iv-drawer")){ivdrawer[i].classList.add("stefanvdvideocontrolsitem");}}
 
 // channel page
-var c4player = $('c4-player');
-if(c4player){c4player.classList.add('stefanvdvideocontrolsitem');}
-var c4playercontainer = document.querySelector('.c4-player-container');
-if(c4playercontainer){c4playercontainer.classList.add('stefanvdvideocontrolsitem');}
+var c4player = $("c4-player");
+if(c4player){c4player.classList.add("stefanvdvideocontrolsitem");}
+var c4playercontainer = document.querySelector(".c4-player-container");
+if(c4playercontainer){c4playercontainer.classList.add("stefanvdvideocontrolsitem");}
 
 // new YouTube october 2013
-var appbarguidemenu = $('appbar-guide-menu');
-if(appbarguidemenu){appbarguidemenu.style.zIndex = '10';}
+var appbarguidemenu = $("appbar-guide-menu");
+if(appbarguidemenu){appbarguidemenu.style.zIndex = "10";}
 
-var appbarguideiframemask = $('appbar-guide-iframe-mask');
-if(appbarguideiframemask){appbarguideiframemask.style.zIndex = '-1';}
+var appbarguideiframemask = $("appbar-guide-iframe-mask");
+if(appbarguideiframemask){appbarguideiframemask.style.zIndex = "-1";}
 
-var guide = $('guide');
-if(guide){guide.classList.add('stefanvdvideocontrolstop');}
+var guide = $("guide");
+if(guide){guide.classList.add("stefanvdvideocontrolstop");}
 
 // short and cleaner engine 2014
-var data = [['movie_player'],['movie_player-html5'],['watch-player'],['html5-player'],['video-player'],['user_fullwidth_gadget'],['ytp-share-panel'],['player-container']];
+var data = [["movie_player"],["movie_player-html5"],["watch-player"],["html5-player"],["video-player"],["user_fullwidth_gadget"],["ytp-share-panel"],["player-container"]];
 var conf;
 for(conf in data){
         var temp = document.getElementById(data[conf][0]);
         if(temp){
 			if(temp.classList.contains("stefanvdvideoauto")){temp.classList.remove("stefanvdvideoauto");}
 			if(temp.classList.contains("stefanvdotherdown")){temp.classList.remove("stefanvdotherdown");}
-			temp.classList.add('stefanvdvideocontrolsitem');
+			temp.classList.add("stefanvdvideocontrolsitem");
         }
 }
 
 // YouTube new player 27/04/2015 and 31/08/2015 and 29/02/2016 and 23/06/2016 and 14/09/2017
-var dclasses = ['ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set', 'ytp-remote', 'ytp-thumbnail-overlay ytp-cued-thumbnail-overlay', 'ytp-spinner', 'ytp-bezel', 'ytp-gradient-top', 'ytp-chrome-top', 'ytp-gradient-bottom', 'ytp-chrome-bottom', 'ytp-panelpopup ytp-settings-menu', 'ytp-share-panel', 'ytp-playlist-menu', 'ytp-related-menu', 'ytp-webgl-spherical-control', 'ytp-storyboard enabled', 'ytp-storyboard-framepreview', 'ytp-ad-progress-bar-container', 'ytp-popup ytp-settings-menu', 'ytp-panelpopup ytp-contextmenu', 'ytp-multicam-menu','video-controls', 'html5-video-controls', 'html5-video-controls ytp-block-autohide', 'html5-video-controls disabled-control-seek'];
-var ytdivs = document.getElementsByTagName('div');
+var dclasses = ["ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-set", "ytp-remote", "ytp-thumbnail-overlay ytp-cued-thumbnail-overlay", "ytp-spinner", "ytp-bezel", "ytp-gradient-top", "ytp-chrome-top", "ytp-gradient-bottom", "ytp-chrome-bottom", "ytp-panelpopup ytp-settings-menu", "ytp-share-panel", "ytp-playlist-menu", "ytp-related-menu", "ytp-webgl-spherical-control", "ytp-storyboard enabled", "ytp-storyboard-framepreview", "ytp-ad-progress-bar-container", "ytp-popup ytp-settings-menu", "ytp-panelpopup ytp-contextmenu", "ytp-multicam-menu","video-controls", "html5-video-controls", "html5-video-controls ytp-block-autohide", "html5-video-controls disabled-control-seek"];
+var ytdivs = document.getElementsByTagName("div");
 var div;
 for(div in ytdivs){
 	var i;
@@ -577,64 +577,64 @@ for(div in ytdivs){
 	if(hasClass(ytdivs[div], dclasses[i])){
 		if(ytdivs[div].classList.contains("stefanvdvideoauto")){ytdivs[div].classList.remove("stefanvdvideoauto");}
 		if(ytdivs[div].classList.contains("stefanvdotherdown")){ytdivs[div].classList.remove("stefanvdotherdown");}
-		ytdivs[div].classList.add('stefanvdvideocontrolsitem');
+		ytdivs[div].classList.add("stefanvdvideocontrolsitem");
 	}
 	}
 }
 
 // YouTube show sub title
-var subtitel = document.getElementsByTagName('div');
+var subtitel = document.getElementsByTagName("div");
 var i;
 var l = subtitel.length;
 for(i = 0; i < l; i++)
-{if(subtitel[i].className == ('ytp-player-content ytp-subtitles-player-content')){subtitel[i].classList.add('stefanvdvideocontrolsitem');subtitel[i].style.pointerEvents = 'none';}}
+{if(subtitel[i].className == ("ytp-player-content ytp-subtitles-player-content")){subtitel[i].classList.add("stefanvdvideocontrolsitem");subtitel[i].style.pointerEvents = "none";}}
 
-var ytbezel = document.getElementsByTagName('div');
+var ytbezel = document.getElementsByTagName("div");
 var i;
 var l = ytbezel.length;
 for(i = 0; i < l; i++)
-{if(ytbezel[i].className == ('html5-bezel html5-center-overlay')){ytbezel[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(ytbezel[i].className == ("html5-bezel html5-center-overlay")){ytbezel[i].classList.add("stefanvdvideocontrolsitem");}}
 
 // YouTube still showing the skip button for the ads
-var ytvideoadui = document.querySelector('.videoAdUi');
-if(ytvideoadui){ytvideoadui.classList.add('stefanvdvideocontrolsitem');}
+var ytvideoadui = document.querySelector(".videoAdUi");
+if(ytvideoadui){ytvideoadui.classList.add("stefanvdvideocontrolsitem");}
 
-var ytvideoads = document.querySelector('.ad-overlay');
-if(ytvideoads){ytvideoads.classList.add('stefanvdvideocontrolsitem');}
+var ytvideoads = document.querySelector(".ad-overlay");
+if(ytvideoads){ytvideoads.classList.add("stefanvdvideocontrolsitem");}
 
-var ytadcon = document.querySelector('.ad-container');
-if(ytadcon){ytadcon.classList.add('stefanvdvideocontrolsitem');}
+var ytadcon = document.querySelector(".ad-container");
+if(ytadcon){ytadcon.classList.add("stefanvdvideocontrolsitem");}
 
 // update 10 September 2018
 // fix for the TrueView video
-var ythtmlvideocontainer = document.querySelector('.html5-video-container')
+var ythtmlvideocontainer = document.querySelector(".html5-video-container")
 if(ythtmlvideocontainer){ythtmlvideocontainer.style.position = "absolute";}
 
-var ytdivvideoads = document.querySelector('.video-ads');
-if(ytdivvideoads){ytdivvideoads.classList.add('stefanvdvideocontrolsitem');}
+var ytdivvideoads = document.querySelector(".video-ads");
+if(ytdivvideoads){ytdivvideoads.classList.add("stefanvdvideocontrolsitem");}
 //---
 // update 14 December 2018
-var ytpadoverlayslot = document.querySelector('.ytp-ad-overlay-slot');
-if(ytpadoverlayslot){ytpadoverlayslot.classList.add('stefanvdvideocontrolsitem');}
+var ytpadoverlayslot = document.querySelector(".ytp-ad-overlay-slot");
+if(ytpadoverlayslot){ytpadoverlayslot.classList.add("stefanvdvideocontrolsitem");}
 
 // show HTML5 controls
-var ytpprogress = document.getElementsByTagName('div');
+var ytpprogress = document.getElementsByTagName("div");
 var i;
 var l = ytpprogress.length;
 for(i = 0; i < l; i++)
-{if(ytpprogress[i].className == ('ytp-progress-bar-container')){ytpprogress[i].classList.add('stefanvdvideocontrolstop');}}
+{if(ytpprogress[i].className == ("ytp-progress-bar-container")){ytpprogress[i].classList.add("stefanvdvideocontrolstop");}}
 
 // popup share container
 var ytpopupsharecon = document.querySelector("ytd-popup-container");
-if(ytpopupsharecon){ytpopupsharecon.classList.add('stefanvdvideocontrolstop');ytpopupsharecon.style.position = 'absolute';}
+if(ytpopupsharecon){ytpopupsharecon.classList.add("stefanvdvideocontrolstop");ytpopupsharecon.style.position = "absolute";}
 
 // end screen
-var ytendscreen = document.querySelector('.html5-endscreen');
-if(ytendscreen){ytendscreen.classList.add('stefanvdvideocontrolsitem');}
+var ytendscreen = document.querySelector(".html5-endscreen");
+if(ytendscreen){ytendscreen.classList.add("stefanvdvideocontrolsitem");}
 
 // movie sidebar
-var ytmovieside = document.querySelector('.ytp-ypc-player-content');
-if(ytmovieside){ytmovieside.classList.add('stefanvdvideocontrolsitem');}
+var ytmovieside = document.querySelector(".ytp-ypc-player-content");
+if(ytmovieside){ytmovieside.classList.add("stefanvdvideocontrolsitem");}
 
 } // end YouTube
 
@@ -646,7 +646,7 @@ if(ytmovieside){ytmovieside.classList.add('stefanvdvideocontrolsitem');}
 function flexiwidthheightdetection(){
 // set height and width to a fixed value
 // embed iframe
-var iframe = document.querySelectorAll('iframe');
+var iframe = document.querySelectorAll("iframe");
 var i;
 var l = iframe.length;
 for(i = 0; i < l; i++){
@@ -678,7 +678,7 @@ for(i = 0; i < l; i++){
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){} // flash detection off for youtube.com
 else{
 // video detection: iframe object embed
-var embedplayer = document.querySelectorAll('iframe,object,embed');
+var embedplayer = document.querySelectorAll("iframe,object,embed");
 var i;
 var l = embedplayer.length;
 for(i = 0; i < l; i++){
@@ -687,7 +687,7 @@ var insideframe = embedplayer[i].src;
 if(embedplayer[i].tagName == "IFRAME" || embedplayer[i].tagName == "EMBED"){insideframe = embedplayer[i].src}
 else if(embedplayer[i].tagName == "OBJECT"){ insideframe = embedplayer[i].data}
 
-var allowedHosts = ['//www.youtube.com', '//www.youtube-nocookie.com', 'http://www.youtube.com', 'https://www.youtube.com', 'http://www.youtube-nocookie.com', 'https://www.youtube-nocookie.com', 'https://youtube.com', 'http://youtube.com', 'http://vimeo.com', 'https://vimeo.com', 'http://player.vimeo.com', 'https://player.vimeo.com', 'https://secure-a.vimeocdn.com', 'http://a.vimeocdn.com', 'https://a.vimeocdn.com', 'http://www.dailymotion.com', 'https://www.dailymotion.com', 'http://static1.dmcdn.net', 'https://static1.dmcdn.net', 'http://videoplayer.vevo.com', 'https://videoplayer.vevo.com', 'http://embed.itunes.apple.com', 'https://embed.itunes.apple.com', 'http://emp.bbc.com/emp', 'https://emp.bbc.com/emp', 'http://vk.com/video', 'https://vk.com/video', 'http://vk.com/swf', 'https://vk.com/swf', 'http://www.facebook.com/v/','https://www.facebook.com/v/', 'http://static.ak.fbcdn.net', 'https://static.ak.fbcdn.net', 'http://static.ak.facebook.com', 'https://static.ak.facebook.com', 'http://s-static.ak.facebook.com', 'https://s-static.ak.facebook.com', 'http://fbstatic-a.akamaihd.net', 'https://fbstatic-a.akamaihd.net', 'http://www.facebook.com/video/', 'https://www.facebook.com/video/', 'http://twitter.com/i/videos', 'https://twitter.com/i/videos', 'http://lads.myspace.com/videos', 'https://lads.myspace.com/videos', 'http://www.hulu.com/embed', 'https://www.hulu.com/embed', 'https://www.hulu.com/site-player', 'http://www.hulu.com/site-player', 'http://player.hulu.com', 'https://player.hulu.com', 'http://blip.tv', 'http://blip.tv', 'http://a.blip.tv', 'https://a.blip.tv', 'http://l.yimg.com', 'https://l.yimg.com', 'http://www.metacafe.com', 'https://www.metacafe.com', 'http://www-cdn.justin.tv', 'https://www-cdn.justin.tv', 'http://twitch.tv', 'https://twitch.tv', 'http://www-cdn.jtvnw.net', 'https://www-cdn.jtvnw.net', 'http://player.twitch.tv', 'https://player.twitch.tv', 'http://nl.ign.com', 'https://nl.ign.com', 'http://s.mcstatic.com', 'https://s.mcstatic.com', 'http://is4.myvideo.de', 'https://is4.myvideo.de', 'http://player.ooyala.com', 'https://player.ooyala.com', 'http://i.nflcdn.com', 'https://i.nflcdn.com', 'http://cfiles.5min.com', 'https://cfiles.5min.com', 'http://can.cbs.com', 'https://can.cbs.com', 'http://player.rts.ch', 'https://player.rts.ch', 'http://cdn.livestream.com', 'https://cdn.livestream.com', 'http://static-cdn1.ustream.tv', 'https://static-cdn1.ustream.tv', 'http://static.ak.crunchyroll.com', 'https://static.ak.crunchyroll.com', 'https://static.crunchyroll.com', 'http://video.ted.com', 'https://video.ted.com', 'http://embed.ted.com', 'https://embed.ted.com', 'http://metatube.com', 'https://metatube.com', 'http://www.redditmedia.com/mediaembed','https://www.redditmedia.com/mediaembed', 'https://embeds.vice.com', 'https://embeds.vice.com', 'http://videohosting.sidereel.com', 'https://videohosting.sidereel.com', 'http://rutube.ru/video/embed', 'https://rutube.ru/video/embed', 'http://vine.co/v', 'https://vine.co/v', 'http://web.microsoftstream.com/embed/video', 'https://web.microsoftstream.com/embed/video', 'http://rtssatweb.videostreaming.rs/player.php', 'http://rtssatweb.videostreaming.rs/player.php', 'http://embed.break.com','https://embed.break.com','https://media1.break.com', 'https://media1.break.com', 'http://www.collegehumor.com', 'https://www.collegehumor.com', 'http://0.static.collegehumor.cvcdn.com', 'https://0.static.collegehumor.cvcdn.com', 'http://hub.video.msn.com', 'https://hub.video.msn.com', 'http://img.widgets.video.s-msn.com', 'https://img.widgets.video.s-msn.com', 'http://flash.pcworld.com/video', 'https://flash.pcworld.com/video', 'https://safe.txmblr.com/svc/embed/iframe', 'https://safe.txmblr.com/svc/embed/iframe', 'http://player.cntv.cn', 'https://player.cntv.cn', 'http://js.kankan.xunlei.com/player', 'https://js.kankan.xunlei.com/player', 'http://tv.sohu.com', 'https://tv.sohu.com', 'http://www.iqiyi.com', 'https://www.iqiyi.com','http://static1.mtime.cn', 'https://static1.mtime.cn', 'http://movie.mtime.com', 'https://movie.mtime.com', 'http://movie.douban.com', 'https://movie.douban.com', 'http://static.m1905.com', 'https://static.m1905.com', 'http://imgcache.qq.com', 'https://imgcache.qq.com', 'http://s1.56img.com', 'https://s1.56img.com', 'http://player.video.qiyi.com', 'https://player.video.qiyi.com', 'http://vxml.ifengimg.com/swf', 'https://vxml.ifengimg.com/swf', 'http://live.nicovideo.jp/embed', 'https://live.nicovideo.jp/embed', 'http://ssl.acfun.tv/block-player-homura.html', 'https://ssl.acfun.tv/block-player-homura.html', 'http://www.ceskatelevize.cz/ivysilani/embed', 'https://www.ceskatelevize.cz/ivysilani/embed', 'http://cdn.embedly.com/widgets', 'https://cdn.embedly.com/widgets', 'http://player.theplatform.com', 'https://player.theplatform.com', 'http://player.youku.com', 'https://player.youku.com', 'http://static.youku.com', 'https://static.youku.com'];
+var allowedHosts = ["//www.youtube.com", "//www.youtube-nocookie.com", "http://www.youtube.com", "https://www.youtube.com", "http://www.youtube-nocookie.com", "https://www.youtube-nocookie.com", "https://youtube.com", "http://youtube.com", "http://vimeo.com", "https://vimeo.com", "http://player.vimeo.com", "https://player.vimeo.com", "https://secure-a.vimeocdn.com", "http://a.vimeocdn.com", "https://a.vimeocdn.com", "http://www.dailymotion.com", "https://www.dailymotion.com", "http://static1.dmcdn.net", "https://static1.dmcdn.net", "http://videoplayer.vevo.com", "https://videoplayer.vevo.com", "http://embed.itunes.apple.com", "https://embed.itunes.apple.com", "http://emp.bbc.com/emp", "https://emp.bbc.com/emp", "http://vk.com/video", "https://vk.com/video", "http://vk.com/swf", "https://vk.com/swf", "http://www.facebook.com/v/","https://www.facebook.com/v/", "http://static.ak.fbcdn.net", "https://static.ak.fbcdn.net", "http://static.ak.facebook.com", "https://static.ak.facebook.com", "http://s-static.ak.facebook.com", "https://s-static.ak.facebook.com", "http://fbstatic-a.akamaihd.net", "https://fbstatic-a.akamaihd.net", "http://www.facebook.com/video/", "https://www.facebook.com/video/", "http://twitter.com/i/videos", "https://twitter.com/i/videos", "http://lads.myspace.com/videos", "https://lads.myspace.com/videos", "http://www.hulu.com/embed", "https://www.hulu.com/embed", "https://www.hulu.com/site-player", "http://www.hulu.com/site-player", "http://player.hulu.com", "https://player.hulu.com", "http://blip.tv", "http://blip.tv", "http://a.blip.tv", "https://a.blip.tv", "http://l.yimg.com", "https://l.yimg.com", "http://www.metacafe.com", "https://www.metacafe.com", "http://www-cdn.justin.tv", "https://www-cdn.justin.tv", "http://twitch.tv", "https://twitch.tv", "http://www-cdn.jtvnw.net", "https://www-cdn.jtvnw.net", "http://player.twitch.tv", "https://player.twitch.tv", "http://nl.ign.com", "https://nl.ign.com", "http://s.mcstatic.com", "https://s.mcstatic.com", "http://is4.myvideo.de", "https://is4.myvideo.de", "http://player.ooyala.com", "https://player.ooyala.com", "http://i.nflcdn.com", "https://i.nflcdn.com", "http://cfiles.5min.com", "https://cfiles.5min.com", "http://can.cbs.com", "https://can.cbs.com", "http://player.rts.ch", "https://player.rts.ch", "http://cdn.livestream.com", "https://cdn.livestream.com", "http://static-cdn1.ustream.tv", "https://static-cdn1.ustream.tv", "http://static.ak.crunchyroll.com", "https://static.ak.crunchyroll.com", "https://static.crunchyroll.com", "http://video.ted.com", "https://video.ted.com", "http://embed.ted.com", "https://embed.ted.com", "http://metatube.com", "https://metatube.com", "http://www.redditmedia.com/mediaembed","https://www.redditmedia.com/mediaembed", "https://embeds.vice.com", "https://embeds.vice.com", "http://videohosting.sidereel.com", "https://videohosting.sidereel.com", "http://rutube.ru/video/embed", "https://rutube.ru/video/embed", "http://vine.co/v", "https://vine.co/v", "http://web.microsoftstream.com/embed/video", "https://web.microsoftstream.com/embed/video", "http://rtssatweb.videostreaming.rs/player.php", "http://rtssatweb.videostreaming.rs/player.php", "http://embed.break.com","https://embed.break.com","https://media1.break.com", "https://media1.break.com", "http://www.collegehumor.com", "https://www.collegehumor.com", "http://0.static.collegehumor.cvcdn.com", "https://0.static.collegehumor.cvcdn.com", "http://hub.video.msn.com", "https://hub.video.msn.com", "http://img.widgets.video.s-msn.com", "https://img.widgets.video.s-msn.com", "http://flash.pcworld.com/video", "https://flash.pcworld.com/video", "https://safe.txmblr.com/svc/embed/iframe", "https://safe.txmblr.com/svc/embed/iframe", "http://player.cntv.cn", "https://player.cntv.cn", "http://js.kankan.xunlei.com/player", "https://js.kankan.xunlei.com/player", "http://tv.sohu.com", "https://tv.sohu.com", "http://www.iqiyi.com", "https://www.iqiyi.com","http://static1.mtime.cn", "https://static1.mtime.cn", "http://movie.mtime.com", "https://movie.mtime.com", "http://movie.douban.com", "https://movie.douban.com", "http://static.m1905.com", "https://static.m1905.com", "http://imgcache.qq.com", "https://imgcache.qq.com", "http://s1.56img.com", "https://s1.56img.com", "http://player.video.qiyi.com", "https://player.video.qiyi.com", "http://vxml.ifengimg.com/swf", "https://vxml.ifengimg.com/swf", "http://live.nicovideo.jp/embed", "https://live.nicovideo.jp/embed", "http://ssl.acfun.tv/block-player-homura.html", "https://ssl.acfun.tv/block-player-homura.html", "http://www.ceskatelevize.cz/ivysilani/embed", "https://www.ceskatelevize.cz/ivysilani/embed", "http://cdn.embedly.com/widgets", "https://cdn.embedly.com/widgets", "http://player.theplatform.com", "https://player.theplatform.com", "http://player.youku.com", "https://player.youku.com", "http://static.youku.com", "https://static.youku.com"];
 
 for(p=0;p<allowedHosts.length;p++){
 	// website URL include in the whitelist array
@@ -696,11 +696,11 @@ for(p=0;p<allowedHosts.length;p++){
 		var targetComputedStyleHeight=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("height");var spar = targetComputedStyleHeight.replace("px","");
 		var targetComputedStyleWidth=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("width");var been = targetComputedStyleWidth.replace("px","");
 		var targetComputedStylePosition=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("position");
-		embedplayer[i].classList.add('stefanvdvideotop');
-		embedplayer[i].style.cssText = 'height:' + Math.round(spar) + 'px; width:' + Math.round(been) + 'px; display: block;';
+		embedplayer[i].classList.add("stefanvdvideotop");
+		embedplayer[i].style.cssText = "height:" + Math.round(spar) + "px; width:" + Math.round(been) + "px; display: block;";
 		// search for the video player, and set the previous path all to z-index "auto"
 		if(searchvideopath(embedplayer[i]) == true && targetComputedStylePosition == "absolute"){
-			embedplayer[i].classList.add('stefanvdposfixed');
+			embedplayer[i].classList.add("stefanvdposfixed");
 		}
 
 		// double check to remove all other CSS classes
@@ -721,46 +721,46 @@ for(p=0;p<allowedHosts.length;p++){
 // Vimeo, fixed show video
 if(window.location.href.match(/((http:\/\/(.*vimeo\.com\/.*|.*vimeo\.com\/.*\/b\/.*|.*vimeo\.com\/.*\/w\/.*))|(https:\/\/(.*vimeo\.com\/.*|.*vimeo\.com\/.*\/b\/.*|.*vimeo\.com\/.*\/w\/.*)))/i)){
 // 30/03/2014 show the controls
-var vimeocontrols = document.querySelector('.controls');
-if(vimeocontrols){vimeocontrols.classList.add('stefanvdvideocontrolsitem');}
+var vimeocontrols = document.querySelector(".controls");
+if(vimeocontrols){vimeocontrols.classList.add("stefanvdvideocontrolsitem");}
 
-var vimeosidedock = document.querySelector('.sidedock');
-if(vimeosidedock){vimeosidedock.classList.add('stefanvdvideocontrolsitem');}
+var vimeosidedock = document.querySelector(".sidedock");
+if(vimeosidedock){vimeosidedock.classList.add("stefanvdvideocontrolsitem");}
 
-var vimeotitle = document.querySelector('.title');
-if(vimeotitle){vimeotitle.classList.add('stefanvdvideocontrolsitem');}
+var vimeotitle = document.querySelector(".title");
+if(vimeotitle){vimeotitle.classList.add("stefanvdvideocontrolsitem");}
 
-var vimeotarget = document.querySelector('.target');
-if(vimeotarget){vimeotarget.classList.add('stefanvdvideocontrolsitem');}
+var vimeotarget = document.querySelector(".target");
+if(vimeotarget){vimeotarget.classList.add("stefanvdvideocontrolsitem");}
 
-var vimeovideo = document.querySelector('.video');
-if(vimeovideo){vimeovideo.classList.add('stefanvdvideocontrolsitem');}
+var vimeovideo = document.querySelector(".video");
+if(vimeovideo){vimeovideo.classList.add("stefanvdvideocontrolsitem");}
 //fixed 25/03/2016
-var vimeocontainer = document.querySelectorAll('div.player_container');
+var vimeocontainer = document.querySelectorAll("div.player_container");
 var i;
 var l = vimeocontainer.length;
-for(i = 0; i < l; i++){vimeocontainer[i].style.transform = 'initial';vimeocontainer[i].style.webkitTransform = 'initial';vimeocontainer[i].style.margin = 'auto';vimeocontainer[i].style.left = '0px';vimeocontainer[i].style.right = '0px';}
-var vimeovideoplayerarea = document.querySelectorAll('div.player_area');
+for(i = 0; i < l; i++){vimeocontainer[i].style.transform = "initial";vimeocontainer[i].style.webkitTransform = "initial";vimeocontainer[i].style.margin = "auto";vimeocontainer[i].style.left = "0px";vimeocontainer[i].style.right = "0px";}
+var vimeovideoplayerarea = document.querySelectorAll("div.player_area");
 var i;
 var l = vimeovideoplayerarea.length;
-for(i = 0; i < l; i++){vimeovideoplayerarea[i].style.transformStyle = 'initial';vimeovideoplayerarea[i].style.webkitTransformStyle = 'initial';}
+for(i = 0; i < l; i++){vimeovideoplayerarea[i].style.transformStyle = "initial";vimeovideoplayerarea[i].style.webkitTransformStyle = "initial";}
 
-var vimeoprogress = document.querySelector('.progress');
-if(vimeoprogress){vimeoprogress.classList.add('stefanvdvideocontrolsitem');}
-var vimeoplayed = document.querySelector('.played');
-if(vimeoplayed){vimeoplayed.classList.add('stefanvdvideocontrolsitem');}
+var vimeoprogress = document.querySelector(".progress");
+if(vimeoprogress){vimeoprogress.classList.add("stefanvdvideocontrolsitem");}
+var vimeoplayed = document.querySelector(".played");
+if(vimeoplayed){vimeoplayed.classList.add("stefanvdvideocontrolsitem");}
 // 18/08/2018
-var vppreview = document.querySelector('.vp-preview');
-if(vppreview){vppreview.classList.add('stefanvdvideocontrolsitem');}
+var vppreview = document.querySelector(".vp-preview");
+if(vppreview){vppreview.classList.add("stefanvdvideocontrolsitem");}
 
-var vpcontrols = document.querySelector('.vp-controls');
-if(vpcontrols){vpcontrols.classList.add('stefanvdvideocontrolsitem');}
+var vpcontrols = document.querySelector(".vp-controls");
+if(vpcontrols){vpcontrols.classList.add("stefanvdvideocontrolsitem");}
 
-var vpsidedock = document.querySelector('.vp-sidedock');
-if(vpsidedock){vpsidedock.classList.add('stefanvdvideocontrolsitem');}
+var vpsidedock = document.querySelector(".vp-sidedock");
+if(vpsidedock){vpsidedock.classList.add("stefanvdvideocontrolsitem");}
 
-var vptitle = document.querySelector('.vp-title');
-if(vptitle){vptitle.classList.add('stefanvdvideocontrolsitem');}
+var vptitle = document.querySelector(".vp-title");
+if(vptitle){vptitle.classList.add("stefanvdvideocontrolsitem");}
 }
 // Dailymotion, fixed show video
 else if(window.location.href.match(/((http:\/\/(.*dailymotion\.com\/.*|.*dailymotion\.com\/video\/.*))|(https:\/\/(.*dailymotion\.com\/.*|.*dailymotion\.com\/video\/.*)))/i)){
@@ -773,9 +773,9 @@ try{
 	 elem.parentElement.removeChild(elem);
 	}
 	
-	var css = document.createElement('style');
-	css.setAttribute('id','csstotldailymotion');
-	css.type = 'text/css';
+	var css = document.createElement("style");
+	css.setAttribute("id","csstotldailymotion");
+	css.type = "text/css";
 	css.appendChild(document.createTextNode(totldailymotion));
 	document.getElementsByTagName("head")[0].appendChild(css);
 	
@@ -784,32 +784,32 @@ catch(e){}
 }
 // vk.com, fixed show video
 else if(window.location.href.match(/((http:\/\/.*vk\.com\/.*)|(https:\/\/.*vk\.com\/.*))/i)){
-var videoplayer = $('video_player');
-if(videoplayer){$('video_player').classList.add('stefanvdvideocontrolsitem');}
+var videoplayer = $("video_player");
+if(videoplayer){$("video_player").classList.add("stefanvdvideocontrolsitem");}
 
-var layerbg = $('layer_bg');
+var layerbg = $("layer_bg");
 if(layerbg){layerbg.style.cssText += "position:absolute !important";}
 
-var mvlayerwrap = $('mv_layer_wrap');
+var mvlayerwrap = $("mv_layer_wrap");
 if(mvlayerwrap){mvlayerwrap.style.cssText += "position:absolute !important";}
 }
 // steampowered.com, fixed show control
 else if(window.location.href.match(/((http:\/\/.*steampowered\.com\/.*)|(https:\/\/.*steampowered\.com\/.*))/i)){
-div = document.getElementsByTagName('div'); 
+div = document.getElementsByTagName("div"); 
 var i;
 var l = div.length;
 for(i = 0; i < l; i++) 
-{if(div[i].className == ('html5_video_overlay')){div[i].classList.add('stefanvdvideocontrolsitem');}}
+{if(div[i].className == ("html5_video_overlay")){div[i].classList.add("stefanvdvideocontrolsitem");}}
 }
 // twich.tv
 // fixed 15 january 2016
 else if(window.location.href.match(/((http:\/\/.*twitch\.tv\/.*)|(https:\/\/.*twitch\.tv\/.*))/i)){
-div = document.getElementsByTagName('div');
+div = document.getElementsByTagName("div");
 var i;
 var l = div.length;
 for(i = 0; i < l; i++) 
 {
-    if(div[i].className == ('player-video')){div[i].style.height = '100%';}
+    if(div[i].className == ("player-video")){div[i].style.height = "100%";}
 }
 
 var twzdefault = document.querySelectorAll(".tw-z-default");
@@ -820,7 +820,7 @@ el.style.cssText += "z-index:auto !important";
 //controls
 var elems = document.querySelectorAll(".player-ui");
 [].forEach.call(elems, function(el){
-el.classList.add('stefanvdvideocontrolsitem');
+el.classList.add("stefanvdvideocontrolsitem");
 el.style.position = "absolute";
 el.style.top = "0";
 el.style.right = "0";
@@ -830,12 +830,12 @@ el.style.width = "100%";
 // play button overlay
 var elems = document.querySelectorAll(".player-play-overlay");
 [].forEach.call(elems, function(el){
-el.classList.add('stefanvdvideocontrolsitem');
+el.classList.add("stefanvdvideocontrolsitem");
 });
 // play button
 var elems = document.querySelectorAll(".player-button");
 [].forEach.call(elems, function(el){
-el.classList.add('stefanvdvideocontrolsitem');
+el.classList.add("stefanvdvideocontrolsitem");
 });
 }
 // yahoo
@@ -843,7 +843,7 @@ el.classList.add('stefanvdvideocontrolsitem');
 else if(window.location.href.match(/((http:\/\/.*yahoo\.com\/.*)|(https:\/\/.*yahoo\.com\/.*))/i)){
 	var elems = document.querySelectorAll(".yvp-bottom-bar");
 	[].forEach.call(elems, function(el){
-	el.classList.add('stefanvdvideocontrolstop');
+	el.classList.add("stefanvdvideocontrolstop");
 	});
 }
 // facebook.com - show the video player control
@@ -854,13 +854,13 @@ var videoStage = document.getElementsByClassName("videoStage");
 var i;
 var l = videoStage.length;
 for(i = 0; i < l; i++){
-    videoStage[i].classList.add('stefanvdvideocontrolsitem');
-		div = videoStage[i].getElementsByTagName('div'); 
+    videoStage[i].classList.add("stefanvdvideocontrolsitem");
+		div = videoStage[i].getElementsByTagName("div"); 
 		var j;
 		var q = div.length;
         for(j = 0; j < q; j++){
             // all div get a higher level
-            div[j].classList.add('stefanvdvideocontrolsitem');
+            div[j].classList.add("stefanvdvideocontrolsitem");
         }
 }
 // main facebook video control
@@ -868,13 +868,13 @@ var i5q = document.getElementsByClassName("_i5q");
 var i;
 var l = i5q.length;
 for(i = 0; i < l; i++){
-    i5q[i].classList.add('stefanvdvideocontrolsitem');
-		div = i5q[i].getElementsByTagName('div'); 
+    i5q[i].classList.add("stefanvdvideocontrolsitem");
+		div = i5q[i].getElementsByTagName("div"); 
 		var j;
 		var q = div.length;
         for(j = 0; j < q; j++){
 			// all div get a higher level
-            div[j].classList.add('stefanvdvideocontrolsitem');
+            div[j].classList.add("stefanvdvideocontrolsitem");
         }
 }
 }
@@ -882,7 +882,7 @@ for(i = 0; i < l; i++){
 else if(window.location.href.match(/((http:\/\/(.*netflix\.com\/watch\/.*))|(https:\/\/(.*netflix\.com\/watch\/.*)))/i)){
 // it's a video player. Then do nothing
 activatelightsoff = false;
-document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !important;position:absolute;width:100%;height:100%';
+document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !important;position:absolute;width:100%;height:100%";
 }
 
 }
@@ -898,7 +898,7 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 ///////////
 
 	// Black div on
-	var blackon = $('stefanvdlightareoff1');
+	var blackon = $("stefanvdlightareoff1");
 
 	function reader(){
 		// save the current reader bar settings, before remove it
@@ -907,24 +907,24 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 		var readeronrange;
 		var readerlargestyle;
 
-		readerontext = $('totlgammaVal');
-		readeronrange = $('totlrange');
+		readerontext = $("totlgammaVal");
+		readeronrange = $("totlrange");
 		if(readerontext != null && readeronrange != null){
 			chrome.storage.sync.set({"interval": readerontext.value});
 		}
 	
-		readerlargestyle = $('stefanvdreaderbar');
+		readerlargestyle = $("stefanvdreaderbar");
 		if(readerlargestyle != null){
-			if(readerlargestyle.style.width == '30px'){chrome.storage.sync.set({"readerlargestyle": false});}
+			if(readerlargestyle.style.width == "30px"){chrome.storage.sync.set({"readerlargestyle": false});}
 			else{chrome.storage.sync.set({"readerlargestyle": true});}
 		}
 		}
 	
-		var stefanvdreaderbar = $('stefanvdreaderbar');
+		var stefanvdreaderbar = $("stefanvdreaderbar");
 		if(stefanvdreaderbar){document.body.removeChild(stefanvdreaderbar);}
 		
 		// remove help div
-		var stefanvdlightareoffcustom = $('stefanvdlightareoffcustom');
+		var stefanvdlightareoffcustom = $("stefanvdlightareoffcustom");
 		if(stefanvdlightareoffcustom){
 		document.body.removeChild(stefanvdlightareoffcustom);
 		document.body.style.cursor = "default";
@@ -938,11 +938,11 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 			if(ytmaterialinfo){ytmaterialinfo.style.background = "";}
 
 			// YouTube like button
-			var ytmateriallikebutton = document.querySelectorAll('ytd-toggle-button-renderer');
+			var ytmateriallikebutton = document.querySelectorAll("ytd-toggle-button-renderer");
 			var i;
 			var l = ytmateriallikebutton.length;
 			for(i = 0; i < l; i++){
-			var ytgetobject = ytmateriallikebutton[i].getElementsByTagName('button')[0];
+			var ytgetobject = ytmateriallikebutton[i].getElementsByTagName("button")[0];
 			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
 			if(ytgetstring.substring(0, 7) == "dislike"){ytmateriallikebutton[i].style.background = "";}
@@ -950,22 +950,22 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 			}}}
 
 			// YouTube share button
-			var ytmaterialsharebutton = document.querySelectorAll('ytd-button-renderer');
+			var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
 			var i;
 			var l = ytmaterialsharebutton.length;
 			for(i = 0; i < l; i++){
-			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName('button')[0];
+			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
 			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
 			if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].style.background = "";}
 			}}}
 		
 			// YouTube save button
-			var ytmaterialsharebutton = document.querySelectorAll('ytd-button-renderer');
+			var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
 			var i;
 			var l = ytmaterialsharebutton.length;
 			for(i = 0; i < l; i++){
-			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName('button')[0];
+			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
 			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
 			if(ytgetstring.substring(0, 4) == "Save"){ytmaterialsharebutton[i].style.background = "";}
@@ -990,131 +990,131 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 			var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
 			if(ytmaterialviewcount){
 			var ytgetformat = ytmaterialviewcount.querySelector(".view-count");
-			if(ytgetformat != null){ytgetformat.style.color = '';}
+			if(ytgetformat != null){ytgetformat.style.color = "";}
 			}
 			
 			// old YouTube -----
             // YouTube video suggestions (set back to default)
-            var watch7sidebar = $('watch7-sidebar');
-            if(watch7sidebar){watch7sidebar.style.zIndex = 'auto';}
+            var watch7sidebar = $("watch7-sidebar");
+            if(watch7sidebar){watch7sidebar.style.zIndex = "auto";}
 
             // YouTube playlist (set back to default)
-            var watchappbarplaylist = $('watch-appbar-playlist');
-            if(watchappbarplaylist){watchappbarplaylist.style.zIndex = '3';}
+            var watchappbarplaylist = $("watch-appbar-playlist");
+            if(watchappbarplaylist){watchappbarplaylist.style.zIndex = "3";}
 
             // YouTube video title (set back to default)
-            var eowtitle = $('eow-title');
-            if(eowtitle){eowtitle.style.color = '#222';eowtitle.style.zIndex = 'auto';eowtitle.style.position = 'relative';}
+            var eowtitle = $("eow-title");
+            if(eowtitle){eowtitle.style.color = "#222";eowtitle.style.zIndex = "auto";eowtitle.style.position = "relative";}
 		
             // YouTube video channel link back black (set back to default)
-            var watch7userheader = $('watch7-user-header');
-            if(watch7userheader){watch7userheader.style.zIndex = 'auto';watch7userheader.style.position = 'relative';}
+            var watch7userheader = $("watch7-user-header");
+            if(watch7userheader){watch7userheader.style.zIndex = "auto";watch7userheader.style.position = "relative";}
 
-            var ytuserinfoa = document.querySelector('.yt-user-info a');
-            if(ytuserinfoa){ytuserinfoa.style.color = '#333';}
+            var ytuserinfoa = document.querySelector(".yt-user-info a");
+            if(ytuserinfoa){ytuserinfoa.style.color = "#333";}
             
             // YouTube infobar (set back to default)
-            var watchdescription = $('watch-description');
-            if(watchdescription){watchdescription.style.zIndex = 'auto';watchdescription.style.background = 'transparent';}
+            var watchdescription = $("watch-description");
+            if(watchdescription){watchdescription.style.zIndex = "auto";watchdescription.style.background = "transparent";}
             
             // YouTube infobar (set back to default)
-            var likebuttonrenderlike = document.querySelector('.like-button-renderer-like-button');
-            if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 'auto';likebuttonrenderlike.style.position = 'relative';likebuttonrenderlike.style.background = 'transparent';}
+            var likebuttonrenderlike = document.querySelector(".like-button-renderer-like-button");
+            if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = "auto";likebuttonrenderlike.style.position = "relative";likebuttonrenderlike.style.background = "transparent";}
 
-            var likebuttonrenderdislike = document.querySelector('.like-button-renderer-dislike-button');
-            if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 'auto';likebuttonrenderdislike.style.position = 'relative';likebuttonrenderdislike.style.background = 'transparent';}
+            var likebuttonrenderdislike = document.querySelector(".like-button-renderer-dislike-button");
+            if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = "auto";likebuttonrenderdislike.style.position = "relative";likebuttonrenderdislike.style.background = "transparent";}
 
             // YouTube share buttons (set back to default)
-            var actionsharepanel = document.querySelector('.action-panel-trigger-share');
-            if(actionsharepanel){actionsharepanel.style.zIndex = 'auto';actionsharepanel.style.position = 'relative';actionsharepanel.style.background = 'transparent';}
+            var actionsharepanel = document.querySelector(".action-panel-trigger-share");
+            if(actionsharepanel){actionsharepanel.style.zIndex = "auto";actionsharepanel.style.position = "relative";actionsharepanel.style.background = "transparent";}
 
             // YouTube video view count (set back to default)
-            var watchviewcount = document.querySelector('.watch-view-count');
-            if(watchviewcount){watchviewcount.style.zIndex = 'auto';watchviewcount.style.color = '#333';}
+            var watchviewcount = document.querySelector(".watch-view-count");
+            if(watchviewcount){watchviewcount.style.zIndex = "auto";watchviewcount.style.color = "#333";}
             
             // YouTube video save button (set back to default)
-            var addtobutton = document.querySelector('.addto-button');
-            if(addtobutton){addtobutton.style.zIndex = 'auto';addtobutton.style.position = 'relative';addtobutton.style.background = 'transparent';}
+            var addtobutton = document.querySelector(".addto-button");
+            if(addtobutton){addtobutton.style.zIndex = "auto";addtobutton.style.position = "relative";addtobutton.style.background = "transparent";}
     
             // YouTube like bar (set back to default)
-            var videoextrasparkbars = document.querySelector('.video-extras-sparkbars');
-            if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 'auto';videoextrasparkbars.style.position = 'relative';}
+            var videoextrasparkbars = document.querySelector(".video-extras-sparkbars");
+            if(videoextrasparkbars){videoextrasparkbars.style.zIndex = "auto";videoextrasparkbars.style.position = "relative";}
        }
 	}
 
 	function removenewframe(){
-		var stefanvdlightareoff1 = $('stefanvdlightareoff1');
-		var stefanvdlightareoff2 = $('stefanvdlightareoff2');
-		var stefanvdlightareoff3 = $('stefanvdlightareoff3');
-		var stefanvdlightareoff4 = $('stefanvdlightareoff4');
+		var stefanvdlightareoff1 = $("stefanvdlightareoff1");
+		var stefanvdlightareoff2 = $("stefanvdlightareoff2");
+		var stefanvdlightareoff3 = $("stefanvdlightareoff3");
+		var stefanvdlightareoff4 = $("stefanvdlightareoff4");
 		if(stefanvdlightareoff1){document.body.removeChild(stefanvdlightareoff1);}
 		if(stefanvdlightareoff2){document.body.removeChild(stefanvdlightareoff2);}
 		if(stefanvdlightareoff3){document.body.removeChild(stefanvdlightareoff3);}
 		if(stefanvdlightareoff4){document.body.removeChild(stefanvdlightareoff4);}
 		
-		var stefanvdeastereggs = $('stefanvdtheater');
+		var stefanvdeastereggs = $("stefanvdtheater");
 		if(stefanvdeastereggs){document.body.removeChild(stefanvdeastereggs);}
 
-		var stefanvdblurimage = $('stefanvdblurimage');
+		var stefanvdblurimage = $("stefanvdblurimage");
 		if(stefanvdblurimage){document.body.removeChild(stefanvdblurimage);}
 
-		var stefanvdlightcorner = $('stefanvdlightcorner');
+		var stefanvdlightcorner = $("stefanvdlightcorner");
 		if(stefanvdlightcorner){document.body.removeChild(stefanvdlightcorner);}
 
-		var csstotlpseudo = $('csstotlpseudo');
+		var csstotlpseudo = $("csstotlpseudo");
 		if(csstotlpseudo){document.getElementsByTagName("head")[0].removeChild(csstotlpseudo);}
 
 		// remove video player on top
-		var div = document.querySelectorAll('.stefanvdvideotop');
+		var div = document.querySelectorAll(".stefanvdvideotop");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideotop");}
-		var div = document.querySelectorAll('.stefanvditemtop');
+		var div = document.querySelectorAll(".stefanvditemtop");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvditemtop");}
-		var div = document.querySelectorAll('.stefanvdvideoauto');
+		var div = document.querySelectorAll(".stefanvdvideoauto");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideoauto");}
-		var div = document.querySelectorAll('.stefanvdotherdown');
+		var div = document.querySelectorAll(".stefanvdotherdown");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdotherdown");}
-		var div = document.querySelectorAll('.stefanvdcontainauto');
+		var div = document.querySelectorAll(".stefanvdcontainauto");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdcontainauto");}
-		var div = document.querySelectorAll('.stefanvdtransformauto');
+		var div = document.querySelectorAll(".stefanvdtransformauto");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdtransformauto");}
-		var div = document.querySelectorAll('.stefanvdvideocontrolsitem');
+		var div = document.querySelectorAll(".stefanvdvideocontrolsitem");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideocontrolsitem");}
-		var div = document.querySelectorAll('.stefanvdvideocontrolstop');
+		var div = document.querySelectorAll(".stefanvdvideocontrolstop");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideocontrolstop");}
-		var div = document.querySelectorAll('.stefanvdposfixed');
+		var div = document.querySelectorAll(".stefanvdposfixed");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdposfixed");}
-		var div = document.querySelectorAll('.stefanvdpossticky');
+		var div = document.querySelectorAll(".stefanvdpossticky");
 		var i;
 		var l = div.length;
 		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdpossticky");}
 
 		// inside the root
-		var q = document.getElementsByTagName('*');
+		var q = document.getElementsByTagName("*");
 		var i;
 		var l = q.length;
 		for(i = 0; i < l; i++){
 			if(q[i].shadowRoot){
-				if(q[i].shadowRoot.querySelector('#rootstefan')){q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector('#rootstefan'));}
+				if(q[i].shadowRoot.querySelector("#rootstefan")){q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector("#rootstefan"));}
 
-				var rootdiv = q[i].shadowRoot.querySelectorAll('.stefanvdotherdown');
+				var rootdiv = q[i].shadowRoot.querySelectorAll(".stefanvdotherdown");
 				var k;
 				var m = rootdiv.length;
 				for(k = 0; k < m; k++){rootdiv[k].classList.remove("stefanvdotherdown");}
@@ -1123,57 +1123,57 @@ document.getElementsByTagName('video')[0].style.cssText += 'z-index:auto !import
 	}
 	
 	function removenewdynamic(){
-		var stefanvddynamicbackground = $('stefanvddynamicbackground');
+		var stefanvddynamicbackground = $("stefanvddynamicbackground");
 		if(stefanvddynamicbackground){document.body.removeChild(stefanvddynamicbackground);}
 	}
 
-chrome.storage.sync.get(['mousespotlighto','mousespotlightc','mousespotlighta','lightcolor','lightimagea','lightimage','interval','fadein','fadeout','readera','readerlargestyle','mousespotlightt','enterpassword','password','dynamic','dynamic1',"dynamic2",'dynamic3','dynamic4','dynamic5','dynamic6','dynamic7','dynamic8','dynamic9','dynamic10','hoveroptiondyn5','blur','cinemaontop','spotlightradius','slideeffect','lightimagelin','linearsq','colora','intervallina','colorb','intervallinb','mousespotlights','screenshader','darkbrowsertheme','multiopacall','multiopacsel','multiopacityDomains','lampandnightmode'], function(response){
-mousespotlighto = response['mousespotlighto'];if(mousespotlighto == null)mousespotlighto = true; // default mousespotlighto true
-mousespotlightc = response['mousespotlightc'];if(mousespotlightc == null)mousespotlightc = false; // default mousespotlightc false
-mousespotlighta = response['mousespotlighta'];if(mousespotlighta == null)mousespotlighta = false; // default mousespotlighta false
-lightcolor = response['lightcolor'];if(lightcolor)lightcolor = response['lightcolor'];else lightcolor = '#000000'; // default color black
-lightimagea = response['lightimagea'];
-lightimage = response['lightimage'];
-interval = response['interval'];if(interval == null)interval = 80; default_opacity = interval; // default interval 80%
-fadein = response['fadein'];if(fadein == null)fadein = true; // default fadein true
-fadeout = response['fadeout'];if(fadeout == null)fadeout = true; // default fadeout true
-readera = response['readera'];if(readera == null)readera = false; // default readera false
-readerlargestyle = response['readerlargestyle'];if(readerlargestyle == null)readerlargestyle = true; // default large style
-mousespotlightt = response['mousespotlightt'];if(mousespotlightt == null)mousespotlightt = false; // default mousespotlightt false
-enterpassword = response['enterpassword'];
-password = response['password'];if(password == null)password = false;
-dynamic = response['dynamic'];if(dynamic == null)dynamic = false; // default dynamic false
-dynamic1 = response['dynamic1'];
-dynamic2 = response['dynamic2'];
-dynamic3 = response['dynamic3'];
-dynamic4 = response['dynamic4'];
-dynamic5 = response['dynamic5'];
-dynamic6 = response['dynamic6'];
-dynamic7 = response['dynamic7'];
-dynamic8 = response['dynamic8'];
-dynamic9 = response['dynamic9'];
-dynamic10 = response['dynamic10'];
-hoveroptiondyn5 = response['hoveroptiondyn5'];
-blur = response['blur'];
-cinemaontop = response['cinemaontop'];if(cinemaontop == null)cinemaontop = false; // default cinemaontop false
-spotlightradius = response['spotlightradius'];if(spotlightradius == null)spotlightradius = 50; // default spotlightradius 50
-slideeffect = response['slideeffect'];if(slideeffect == null)slideeffect = false; // default slideeffect false
-lightimagelin = response['lightimagelin'];if(lightimagelin == null)lightimagelin = false; // default lightimagelin false
-linearsq = response['linearsq'];
-colora = response['colora'];
-intervallina = response['intervallina'];
-colorb = response['colorb'];
-intervallinb = response['intervallinb'];
-mousespotlights = response['mousespotlights'];if(mousespotlights == null)mousespotlights = false; // default mousespotlights false
-darkbrowsertheme = response['darkbrowsertheme'];
-multiopacall = response['multiopacall'];if(multiopacall == null)multiopacall = true; // default multiopacall true
-multiopacsel = response['multiopacsel'];if(multiopacsel == null)multiopacsel = false; // default multiopacsel false
-multiopacityDomains = response['multiopacityDomains'];
+chrome.storage.sync.get(["mousespotlighto","mousespotlightc","mousespotlighta","lightcolor","lightimagea","lightimage","interval","fadein","fadeout","readera","readerlargestyle","mousespotlightt","enterpassword","password","dynamic","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","blur","cinemaontop","spotlightradius","slideeffect","lightimagelin","linearsq","colora","intervallina","colorb","intervallinb","mousespotlights","screenshader","darkbrowsertheme","multiopacall","multiopacsel","multiopacityDomains","lampandnightmode"], function(response){
+mousespotlighto = response["mousespotlighto"];if(mousespotlighto == null)mousespotlighto = true; // default mousespotlighto true
+mousespotlightc = response["mousespotlightc"];if(mousespotlightc == null)mousespotlightc = false; // default mousespotlightc false
+mousespotlighta = response["mousespotlighta"];if(mousespotlighta == null)mousespotlighta = false; // default mousespotlighta false
+lightcolor = response["lightcolor"];if(lightcolor)lightcolor = response["lightcolor"];else lightcolor = "#000000"; // default color black
+lightimagea = response["lightimagea"];
+lightimage = response["lightimage"];
+interval = response["interval"];if(interval == null)interval = 80; default_opacity = interval; // default interval 80%
+fadein = response["fadein"];if(fadein == null)fadein = true; // default fadein true
+fadeout = response["fadeout"];if(fadeout == null)fadeout = true; // default fadeout true
+readera = response["readera"];if(readera == null)readera = false; // default readera false
+readerlargestyle = response["readerlargestyle"];if(readerlargestyle == null)readerlargestyle = true; // default large style
+mousespotlightt = response["mousespotlightt"];if(mousespotlightt == null)mousespotlightt = false; // default mousespotlightt false
+enterpassword = response["enterpassword"];
+password = response["password"];if(password == null)password = false;
+dynamic = response["dynamic"];if(dynamic == null)dynamic = false; // default dynamic false
+dynamic1 = response["dynamic1"];
+dynamic2 = response["dynamic2"];
+dynamic3 = response["dynamic3"];
+dynamic4 = response["dynamic4"];
+dynamic5 = response["dynamic5"];
+dynamic6 = response["dynamic6"];
+dynamic7 = response["dynamic7"];
+dynamic8 = response["dynamic8"];
+dynamic9 = response["dynamic9"];
+dynamic10 = response["dynamic10"];
+hoveroptiondyn5 = response["hoveroptiondyn5"];
+blur = response["blur"];
+cinemaontop = response["cinemaontop"];if(cinemaontop == null)cinemaontop = false; // default cinemaontop false
+spotlightradius = response["spotlightradius"];if(spotlightradius == null)spotlightradius = 50; // default spotlightradius 50
+slideeffect = response["slideeffect"];if(slideeffect == null)slideeffect = false; // default slideeffect false
+lightimagelin = response["lightimagelin"];if(lightimagelin == null)lightimagelin = false; // default lightimagelin false
+linearsq = response["linearsq"];
+colora = response["colora"];
+intervallina = response["intervallina"];
+colorb = response["colorb"];
+intervallinb = response["intervallinb"];
+mousespotlights = response["mousespotlights"];if(mousespotlights == null)mousespotlights = false; // default mousespotlights false
+darkbrowsertheme = response["darkbrowsertheme"];
+multiopacall = response["multiopacall"];if(multiopacall == null)multiopacall = true; // default multiopacall true
+multiopacsel = response["multiopacsel"];if(multiopacsel == null)multiopacsel = false; // default multiopacsel false
+multiopacityDomains = response["multiopacityDomains"];
 if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
-    multiopacityDomains = JSON.stringify({'https://www.example.com': ["90"], 'https://www.nytimes.com': ["85"]});
+    multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
 }
 multiopacityDomains = JSON.parse(multiopacityDomains);
-lampandnightmode = response['lampandnightmode'];
+lampandnightmode = response["lampandnightmode"];
 
 if(mousespotlights == true){
 	// the screen shader
@@ -1183,9 +1183,9 @@ if(mousespotlights == true){
 		chrome.storage.sync.set({"screenshader": false});
 	}else{
 		if(document.documentElement){
-		var newscreenshader = document.createElement('div'); 
-		newscreenshader.setAttribute('id','stefanvdscreenshader');
-		newscreenshader.setAttribute('class','stefanvdscreenshader');
+		var newscreenshader = document.createElement("div"); 
+		newscreenshader.setAttribute("id","stefanvdscreenshader");
+		newscreenshader.setAttribute("class","stefanvdscreenshader");
 		newscreenshader.style.background = lightcolor;
 		newscreenshader.style.mixBlendMode = "multiply";
 		newscreenshader.style.opacity = default_opacity/100;
@@ -1202,42 +1202,42 @@ var i18nlockentername = chrome.i18n.getMessage("lockentername");
 var i18nlockwrongpassword = chrome.i18n.getMessage("lockwrongpassword");
 
 function taart(){
-	var pwon2 = $('stefanvdlightareoffpw');
+	var pwon2 = $("stefanvdlightareoffpw");
 	if(pwon2){
-		var entername = window.prompt(i18nlockentername,'');
+		var entername = window.prompt(i18nlockentername,"");
 		if(enterpassword == entername){
 		document.body.removeChild(pwon2);
-		if(fadeout == true){ReducingFinished = false;fader('hide');reader();removenewdynamic();} 
+		if(fadeout == true){ReducingFinished = false;fader("hide");reader();removenewdynamic();} 
 		else{removenewframe();reader();removenewdynamic();}
 		if(darkbrowsertheme == true){
-			chrome.runtime.sendMessage({'name' : 'browsertheme', 'value' : 'light'});
+			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "light"});
 		}
 		}else{window.alert(i18nlockwrongpassword);}	
 	}else{
-		if(fadeout == true){ReducingFinished = false;fader('hide');reader();removenewdynamic();}
+		if(fadeout == true){ReducingFinished = false;fader("hide");reader();removenewdynamic();}
 		else{removenewframe();reader();removenewdynamic();}
 		if(darkbrowsertheme == true){
-			chrome.runtime.sendMessage({'name' : 'browsertheme', 'value' : 'light'});
+			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "light"});
 		}
 	}
 	// lamp and night mode active with one click
 	if(lampandnightmode == true){
-		chrome.runtime.sendMessage({'name': 'sendnightmodeindark', 'value': 'day'});
+		chrome.runtime.sendMessage({"name": "sendnightmodeindark", "value": "day"});
 	}
 }
 
 
 // Password enable
-var pwon = $('stefanvdlightareoffpw');
+var pwon = $("stefanvdlightareoffpw");
 if(password == true){
 	if(pwon){
-		var entername = window.prompt(i18nlockentername,'');
+		var entername = window.prompt(i18nlockentername,"");
 		if(enterpassword == entername){document.body.removeChild(pwon);lightsgoonoroff();}else{window.alert(i18nlockwrongpassword);}	
 	}else{
 		lightsgoonoroff();
 	    var newpw = document.createElement("div");
-	    newpw.setAttribute('id','stefanvdlightareoffpw');
-        newpw.style.display = 'none';
+	    newpw.setAttribute("id","stefanvdlightareoffpw");
+        newpw.style.display = "none";
 	    document.body.appendChild(newpw);
 	}
 }else{
@@ -1263,11 +1263,11 @@ function lightsgoonoroff(){
 	else{
 		// lamp and night mode active with one click
 		if(lampandnightmode == true){
-			chrome.runtime.sendMessage({'name': 'sendnightmodeindark', 'value': 'night'});
+			chrome.runtime.sendMessage({"name": "sendnightmodeindark", "value": "night"});
 		}
 
 		if(darkbrowsertheme == true){
-			chrome.runtime.sendMessage({'name' : 'browsertheme', 'value' : 'dark'});
+			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "dark"});
 		}
 
 		// multi opacity
@@ -1292,14 +1292,14 @@ function lightsgoonoroff(){
 
 	    if(mousespotlighta == true){
 	    var newframe1 = document.createElement("div");
-	    newframe1.setAttribute('id','stefanvdlightareoff1');
-	    newframe1.setAttribute('class','stefanvdlightareoff');
+	    newframe1.setAttribute("id","stefanvdlightareoff1");
+	    newframe1.setAttribute("class","stefanvdlightareoff");
 		var fullspotlightsize = spotlightradius;
 		var borderspotlightsize = spotlightradius-8;
-		var mousespotlightstyle = '-webkit-gradient(radial, -50 -50, '+fullspotlightsize+', -50 -50, '+borderspotlightsize+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
+		var mousespotlightstyle = "-webkit-gradient(radial, -50 -50, "+fullspotlightsize+", -50 -50, "+borderspotlightsize+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
 		
 		newframe1.style.backgroundImage = mousespotlightstyle;
-		newframe1.style.pointerEvents = 'none'; // make it possible to click on a link 
+		newframe1.style.pointerEvents = "none"; // make it possible to click on a link 
         newframe1.style.opacity = 0;
         newframe1.style.zIndex = 999;
 	    document.body.appendChild(newframe1);
@@ -1308,10 +1308,10 @@ function lightsgoonoroff(){
 		// no click posible
 
         // fade in effect
-		if(fadein == true){fader('show');}
+		if(fadein == true){fader("show");}
         else{newframe1.style.opacity = default_opacity/100;} // no fade effect
 		
-		var spot = $('stefanvdlightareoff1');
+		var spot = $("stefanvdlightareoff1");
 		var width = document.documentElement.clientWidth;
 		var height = document.documentElement.clientHeight;
 		
@@ -1326,7 +1326,7 @@ function lightsgoonoroff(){
 			oldspotx = x; oldspoty = y;
 		}
 		
-		var style = '-webkit-gradient(radial, '+x+' '+y+', '+fullspotlightsize+', '+x+' '+y+', '+borderspotlightsize+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
+		var style = "-webkit-gradient(radial, "+x+" "+y+", "+fullspotlightsize+", "+x+" "+y+", "+borderspotlightsize+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
 		spot.style.opacity = default_opacity/100;
 		spot.style.backgroundImage = style;
 		}
@@ -1344,14 +1344,14 @@ function lightsgoonoroff(){
 				mathfullsizeup = Math.abs(mathfullsizeup) + Math.abs(1);
 				mathbordersizeup = Math.abs(mathbordersizeup) + Math.abs(1);
 				x = oldspotx;y = oldspoty;
-				style = '-webkit-gradient(radial, '+x+' '+y+', '+mathfullsizeup+', '+x+' '+y+', '+mathbordersizeup+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
+				style = "-webkit-gradient(radial, "+x+" "+y+", "+mathfullsizeup+", "+x+" "+y+", "+mathbordersizeup+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
 				spot.style.backgroundImage = style;
 			}, 5);
 			
 		}, 1500);}
 		function spotmouseup(){
 			window.clearInterval(countupsizetimer);window.clearTimeout(presstimer);
-			style = '-webkit-gradient(radial, '+x+' '+y+', '+fullspotlightsize+', '+x+' '+y+', '+borderspotlightsize+', from(' + lightcolor + '), to(rgba(0,0,0,0)))';
+			style = "-webkit-gradient(radial, "+x+" "+y+", "+fullspotlightsize+", "+x+" "+y+", "+borderspotlightsize+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
 			spot.style.backgroundImage = style;
 			mathfullsizeup = fullspotlightsize;
 			mathbordersizeup = borderspotlightsize;
@@ -1440,21 +1440,21 @@ if(stretchable){
 		initx = posx; inity = posy;
 		beginxcordinate = posx;beginycordinate = posy;
 		try{
-			customview = $('stefanvdlightareoffcustom');
-			customview.style.left = initx + 'px';customview.style.top = inity + 'px';
+			customview = $("stefanvdlightareoffcustom");
+			customview.style.left = initx + "px";customview.style.top = inity + "px";
 			document.body.appendChild(customview);
 		}
 		catch(err){}
 		});
 		obj.addEventListener("mouseup", function(){initx = false;inity = false;});
 		if(initx){
-		customview.style.width = Math.abs(posx - initx) + 'px';customview.style.height = Math.abs(posy - inity) + 'px';
-		customview.style.left = posx - initx < 0 ?posx + 'px':initx + 'px';
-		customview.style.top = posy - inity < 0 ?posy + 'px':inity + 'px';
+		customview.style.width = Math.abs(posx - initx) + "px";customview.style.height = Math.abs(posy - inity) + "px";
+		customview.style.left = posx - initx < 0 ?posx + "px":initx + "px";
+		customview.style.top = posy - inity < 0 ?posy + "px":inity + "px";
 		
 		endxcordinate = posx;endycordinate = posy;
 		// remove help div
-		var stefanvdlightareoffcustom = $('stefanvdlightareoffcustom');
+		var stefanvdlightareoffcustom = $("stefanvdlightareoffcustom");
 		if(stefanvdlightareoffcustom){document.body.removeChild(stefanvdlightareoffcustom);}
 		document.body.style.cursor = "default";
 		
@@ -1462,8 +1462,8 @@ if(stretchable){
 		var cornerison = $("stefanvdlightcorner");
 		if(cornerison){}
 		else{
-			var newcornerdiv = document.createElement('div'); 
-			newcornerdiv.setAttribute('id','stefanvdlightcorner');
+			var newcornerdiv = document.createElement("div"); 
+			newcornerdiv.setAttribute("id","stefanvdlightcorner");
 			document.body.appendChild(newcornerdiv);
 		}
 		
@@ -1482,135 +1482,135 @@ if(stretchable){
 		var viewpartwidth = customview.style.width;
 		var viewpartheight = customview.style.height;
 		
-		var view1 = $('stefanvdlightareoff1');
-		view1.className = 'stefanvdlightareoff';
-		view1.style.left = 0 + 'px';view1.style.top = 0 + 'px';
-		view1.style.width = '100%';view1.style.height = beginycordinate + 'px';
-		view1.style.visibility = 'visible';
+		var view1 = $("stefanvdlightareoff1");
+		view1.className = "stefanvdlightareoff";
+		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
+		view1.style.width = "100%";view1.style.height = beginycordinate + "px";
+		view1.style.visibility = "visible";
 		document.body.appendChild(view1);
 		
-		var view2 = $('stefanvdlightareoff2');
-		view2.className = 'stefanvdlightareoff';
-		view2.style.left = 0 + 'px';view2.style.top = beginycordinate + 'px';
-		view2.style.width = beginxcordinate + 'px';view2.style.height = viewpartheight;
-		view2.style.visibility = 'visible';
+		var view2 = $("stefanvdlightareoff2");
+		view2.className = "stefanvdlightareoff";
+		view2.style.left = 0 + "px";view2.style.top = beginycordinate + "px";
+		view2.style.width = beginxcordinate + "px";view2.style.height = viewpartheight;
+		view2.style.visibility = "visible";
 		document.body.appendChild(view2);
 		
-		var view3 = $('stefanvdlightareoff3');
+		var view3 = $("stefanvdlightareoff3");
 		var viewcall3awidth = window.innerWidth - beginxcordinate; // calc width
-		view3.className = 'stefanvdlightareoff';
-		view3.style.left = endxcordinate + 'px';view3.style.top = beginycordinate + 'px';
-		view3.style.width = viewcall3awidth + 'px';view3.style.height = viewpartheight;
-		view3.style.visibility = 'visible';
+		view3.className = "stefanvdlightareoff";
+		view3.style.left = endxcordinate + "px";view3.style.top = beginycordinate + "px";
+		view3.style.width = viewcall3awidth + "px";view3.style.height = viewpartheight;
+		view3.style.visibility = "visible";
 		document.body.appendChild(view3);
 		
-		var view4 = $('stefanvdlightareoff4');
+		var view4 = $("stefanvdlightareoff4");
 		var viewcall4aheight = window.innerHeight - endycordinate; // calc height
-		view4.className = 'stefanvdlightareoff';
-		view4.style.left = 0 + 'px';view4.style.top = endycordinate + 'px';
-		view4.style.width='100%';view4.style.height = viewcall4aheight + 'px';
-		view4.style.visibility = 'visible';
+		view4.className = "stefanvdlightareoff";
+		view4.style.left = 0 + "px";view4.style.top = endycordinate + "px";
+		view4.style.width="100%";view4.style.height = viewcall4aheight + "px";
+		view4.style.visibility = "visible";
 		document.body.appendChild(view4);
 		
 		var calcpartx = endxcordinate - beginxcordinate;
 		var calcparty = endycordinate - beginycordinate;
 	if((calcpartx < 0) &&! (calcparty < 0)){ // X as automatic change view
-		var view1 = $('stefanvdlightareoff1');
-		view1.className = 'stefanvdlightareoff';
-		view1.style.left = 0 + 'px';view1.style.top = 0 + 'px';
-		view1.style.width = '100%';view1.style.height = beginycordinate + 'px';
-		view1.style.visibility = 'visible';
+		var view1 = $("stefanvdlightareoff1");
+		view1.className = "stefanvdlightareoff";
+		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
+		view1.style.width = "100%";view1.style.height = beginycordinate + "px";
+		view1.style.visibility = "visible";
 		document.body.appendChild(view1);	
 	
-		var view2 = $('stefanvdlightareoff2');
-		view2.className = 'stefanvdlightareoff';
-		view2.style.left = 0 + 'px';view2.style.top = beginycordinate + 'px';
-		view2.style.width = endxcordinate + 'px';view2.style.height = viewpartheight;
-		view2.style.visibility = 'visible';
+		var view2 = $("stefanvdlightareoff2");
+		view2.className = "stefanvdlightareoff";
+		view2.style.left = 0 + "px";view2.style.top = beginycordinate + "px";
+		view2.style.width = endxcordinate + "px";view2.style.height = viewpartheight;
+		view2.style.visibility = "visible";
 		document.body.appendChild(view2);
 		
-		var view3 = $('stefanvdlightareoff3');
+		var view3 = $("stefanvdlightareoff3");
 		var viewcall3bwidth = window.innerWidth - beginxcordinate; // calc width
-		view3.className = 'stefanvdlightareoff';
-		view3.style.left = beginxcordinate + 'px';view3.style.top = beginycordinate + 'px';
-		view3.style.width = viewcall3bwidth + 'px';view3.style.height = viewpartheight;
-		view3.style.visibility = 'visible';
+		view3.className = "stefanvdlightareoff";
+		view3.style.left = beginxcordinate + "px";view3.style.top = beginycordinate + "px";
+		view3.style.width = viewcall3bwidth + "px";view3.style.height = viewpartheight;
+		view3.style.visibility = "visible";
 		document.body.appendChild(view3);
 		
-		var view4 = $('stefanvdlightareoff4');
+		var view4 = $("stefanvdlightareoff4");
 		var viewcall4bheight = window.innerHeight - endycordinate; // calc height
-		view4.className = 'stefanvdlightareoff';
-		view4.style.left = 0 + 'px';view4.style.top = endycordinate + 'px';
-		view4.style.width='100%';view4.style.height = viewcall4bheight + 'px';
-		view4.style.visibility = 'visible';
+		view4.className = "stefanvdlightareoff";
+		view4.style.left = 0 + "px";view4.style.top = endycordinate + "px";
+		view4.style.width="100%";view4.style.height = viewcall4bheight + "px";
+		view4.style.visibility = "visible";
 		document.body.appendChild(view4);
 	}
 	else if((calcparty < 0) &&! (calcpartx < 0)){ // Y as automatic change view
-		var view1 = $('stefanvdlightareoff1');
-		view1.className = 'stefanvdlightareoff';
-		view1.style.left = 0 + 'px';view1.style.top = 0 + 'px';
+		var view1 = $("stefanvdlightareoff1");
+		view1.className = "stefanvdlightareoff";
+		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
 			if(endycordinate < 0){endycordinate = 0;}
-		view1.style.width = '100%';view1.style.height = endycordinate + 'px';
-		view1.style.visibility = 'visible';
+		view1.style.width = "100%";view1.style.height = endycordinate + "px";
+		view1.style.visibility = "visible";
 		document.body.appendChild(view1);
 
-		var view2 = $('stefanvdlightareoff2');
-		view2.className = 'stefanvdlightareoff';
-		view2.style.left = 0 + 'px';view2.style.top = endycordinate + 'px';
-		view2.style.width = beginxcordinate + 'px';
-			if(endycordinate == 0){view2.style.height = beginycordinate + 'px';}else{view2.style.height = viewpartheight;}
-		view2.style.visibility = 'visible';
+		var view2 = $("stefanvdlightareoff2");
+		view2.className = "stefanvdlightareoff";
+		view2.style.left = 0 + "px";view2.style.top = endycordinate + "px";
+		view2.style.width = beginxcordinate + "px";
+			if(endycordinate == 0){view2.style.height = beginycordinate + "px";}else{view2.style.height = viewpartheight;}
+		view2.style.visibility = "visible";
 		document.body.appendChild(view2);
 		
-		var view3 = $('stefanvdlightareoff3');
+		var view3 = $("stefanvdlightareoff3");
 		var viewcall3cwidth = window.innerWidth - beginxcordinate; // calc width
-		view3.className = 'stefanvdlightareoff';
-		view3.style.left = endxcordinate + 'px';view3.style.top = endycordinate + 'px';
-		view3.style.width = viewcall3cwidth + 'px';
-			if(endycordinate == 0){view3.style.height = beginycordinate + 'px';}else{view3.style.height = viewpartheight;}
-		view3.style.visibility = 'visible';
+		view3.className = "stefanvdlightareoff";
+		view3.style.left = endxcordinate + "px";view3.style.top = endycordinate + "px";
+		view3.style.width = viewcall3cwidth + "px";
+			if(endycordinate == 0){view3.style.height = beginycordinate + "px";}else{view3.style.height = viewpartheight;}
+		view3.style.visibility = "visible";
 		document.body.appendChild(view3);
 
-		var view4 = $('stefanvdlightareoff4');
+		var view4 = $("stefanvdlightareoff4");
 		var viewcall4cheight = window.innerHeight - endycordinate; // calc height
-		view4.className = 'stefanvdlightareoff';
-		view4.style.left = 0 + 'px';view4.style.top = beginycordinate + 'px';
-		view4.style.width='100%';view4.style.height = viewcall4cheight + 'px';
-		view4.style.visibility = 'visible';
+		view4.className = "stefanvdlightareoff";
+		view4.style.left = 0 + "px";view4.style.top = beginycordinate + "px";
+		view4.style.width="100%";view4.style.height = viewcall4cheight + "px";
+		view4.style.visibility = "visible";
 		document.body.appendChild(view4);	
 	}
 	else if((calcpartx < 0) && (calcparty < 0)){ // X en Y as automatic change view
-		var view1 = $('stefanvdlightareoff1');
-		view1.className = 'stefanvdlightareoff';
-		view1.style.left = 0 + 'px';view1.style.top = 0 + 'px';
+		var view1 = $("stefanvdlightareoff1");
+		view1.className = "stefanvdlightareoff";
+		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
 			if(endycordinate < 0){endycordinate = 0;}
-		view1.style.width = '100%';view1.style.height = endycordinate + 'px';
-		view1.style.visibility = 'visible';
+		view1.style.width = "100%";view1.style.height = endycordinate + "px";
+		view1.style.visibility = "visible";
 		document.body.appendChild(view1);
 		
-		var view2 = $('stefanvdlightareoff2');
-		view2.className = 'stefanvdlightareoff';
-		view2.style.left = 0 + 'px';view2.style.top = endycordinate + 'px';
-		view2.style.width = endxcordinate + 'px';
-			if(endycordinate == 0){view2.style.height = beginycordinate + 'px';}else{view2.style.height = viewpartheight;}
-		view2.style.visibility = 'visible';
+		var view2 = $("stefanvdlightareoff2");
+		view2.className = "stefanvdlightareoff";
+		view2.style.left = 0 + "px";view2.style.top = endycordinate + "px";
+		view2.style.width = endxcordinate + "px";
+			if(endycordinate == 0){view2.style.height = beginycordinate + "px";}else{view2.style.height = viewpartheight;}
+		view2.style.visibility = "visible";
 		document.body.appendChild(view2);
 		
-		var view3 = $('stefanvdlightareoff3');
+		var view3 = $("stefanvdlightareoff3");
 		var viewcall3dwidth = window.innerWidth - beginxcordinate; // calc width
-		view3.className = 'stefanvdlightareoff';
-		view3.style.left = beginxcordinate + 'px';view3.style.top = endycordinate + 'px';
-		view3.style.width = viewcall3dwidth + 'px';
-			if(endycordinate == 0){view3.style.height = beginycordinate + 'px';}else{view3.style.height = viewpartheight;}
-		view3.style.visibility = 'visible';
+		view3.className = "stefanvdlightareoff";
+		view3.style.left = beginxcordinate + "px";view3.style.top = endycordinate + "px";
+		view3.style.width = viewcall3dwidth + "px";
+			if(endycordinate == 0){view3.style.height = beginycordinate + "px";}else{view3.style.height = viewpartheight;}
+		view3.style.visibility = "visible";
 		document.body.appendChild(view3);		
 		
-		var view4 = $('stefanvdlightareoff4');
+		var view4 = $("stefanvdlightareoff4");
 		var viewcall4dheight = window.innerHeight - beginycordinate; // calc height
-		view4.className = 'stefanvdlightareoff';
-		view4.style.left = 0 + 'px';view4.style.top = beginycordinate + 'px';
-		view4.style.width = '100%';view4.style.height = viewcall4dheight + 'px';
-		view4.style.visibility = 'visible';
+		view4.className = "stefanvdlightareoff";
+		view4.style.left = 0 + "px";view4.style.top = beginycordinate + "px";
+		view4.style.width = "100%";view4.style.height = viewcall4dheight + "px";
+		view4.style.visibility = "visible";
 		document.body.appendChild(view4);
 	}
 		}
@@ -1622,28 +1622,28 @@ if(stretchable){
 	    var newframe3 = document.createElement("div");
 	    var newframe4 = document.createElement("div");
 		var newframe5 = document.createElement("div");
-	    newframe1.setAttribute('id','stefanvdlightareoff1');
-	    newframe2.setAttribute('id','stefanvdlightareoff2');
-	    newframe3.setAttribute('id','stefanvdlightareoff3');
-	    newframe4.setAttribute('id','stefanvdlightareoff4');
-	    newframe1.setAttribute('class','stefanvdlightareoff');
-	    newframe2.setAttribute('class','stefanvdlightareoff');
-	    newframe3.setAttribute('class','stefanvdlightareoff');
-	    newframe4.setAttribute('class','stefanvdlightareoff');
-		newframe5.setAttribute('id','stefanvdlightareoffcustom');
+	    newframe1.setAttribute("id","stefanvdlightareoff1");
+	    newframe2.setAttribute("id","stefanvdlightareoff2");
+	    newframe3.setAttribute("id","stefanvdlightareoff3");
+	    newframe4.setAttribute("id","stefanvdlightareoff4");
+	    newframe1.setAttribute("class","stefanvdlightareoff");
+	    newframe2.setAttribute("class","stefanvdlightareoff");
+	    newframe3.setAttribute("class","stefanvdlightareoff");
+	    newframe4.setAttribute("class","stefanvdlightareoff");
+		newframe5.setAttribute("id","stefanvdlightareoffcustom");
 		newframe1.style.background = lightcolor;
 		newframe2.style.background = lightcolor;
 		newframe3.style.background = lightcolor;
 		newframe4.style.background = lightcolor;
-	    newframe2.style.visibility = 'hidden';
-	    newframe3.style.visibility = 'hidden';
-	    newframe4.style.visibility = 'hidden';
+	    newframe2.style.visibility = "hidden";
+	    newframe3.style.visibility = "hidden";
+	    newframe4.style.visibility = "hidden";
 	    document.body.appendChild(newframe1);
 	    document.body.appendChild(newframe2);
 	    document.body.appendChild(newframe3);
 	    document.body.appendChild(newframe4);
 		document.body.appendChild(newframe5);
-		document.body.style.cursor = 'crosshair'; // show cursor
+		document.body.style.cursor = "crosshair"; // show cursor
 		
 	    // fade out effect
 		if(fadeout == true){
@@ -1660,22 +1660,22 @@ if(stretchable){
 		}
 
         // fade in effect
-		if(fadein == true){fader('show');}
+		if(fadein == true){fader("show");}
         else{newframe1.style.opacity = default_opacity/100;newframe2.style.opacity = default_opacity/100;newframe3.style.opacity = default_opacity/100;newframe4.style.opacity = default_opacity/100;} // no fade effect
 		}
 		else if(mousespotlightt == true){
-		var newdiv = document.createElement('div'); 
-        newdiv.setAttribute('id','stefanvdlightareoff1');
-        newdiv.setAttribute('class','stefanvdlightareoff');
-		newdiv.style.width = '100%'; 
-        newdiv.style.height = '100%'; 
+		var newdiv = document.createElement("div"); 
+        newdiv.setAttribute("id","stefanvdlightareoff1");
+        newdiv.setAttribute("class","stefanvdlightareoff");
+		newdiv.style.width = "100%"; 
+        newdiv.style.height = "100%"; 
         newdiv.style.left = 0; 
         newdiv.style.top = 0; 
-        newdiv.style.position = 'fixed';
-		newdiv.style.pointerEvents = 'none'; // make it possible to click on a link 
+        newdiv.style.position = "fixed";
+		newdiv.style.pointerEvents = "none"; // make it possible to click on a link 
 		/* if image background, load it then */
 			if(lightimagea == true){newdiv.style.background = "url('"+lightimage+"')";newdiv.style.backgroundSize = "100% 100%";}
-			else if(lightimagelin == true){newdiv.style.background = 'linear-gradient(to ' + linearsq + ', ' + colora + ' ' + intervallina + '%,' + colorb + ' ' + intervallinb + '%)';}
+			else if(lightimagelin == true){newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)";}
 			else{newdiv.style.background = lightcolor;}
 		/*-------------*/
         newdiv.style.opacity = 0;
@@ -1688,32 +1688,32 @@ if(stretchable){
         else{newdiv.addEventListener("click", function(){taart();})}
 
         // fade in effect
-		if(fadein == true){fader('show');}
+		if(fadein == true){fader("show");}
         else{newdiv.style.opacity = default_opacity/100;} // no fade effect		
 		}
 		else{ // Begin normal lights off
-		var newdiv = document.createElement('div'); 
-        newdiv.setAttribute('id','stefanvdlightareoff1');
-        newdiv.setAttribute('class','stefanvdlightareoff');
-		newdiv.style.width = '100%';
-        newdiv.style.height = '100%';
+		var newdiv = document.createElement("div"); 
+        newdiv.setAttribute("id","stefanvdlightareoff1");
+        newdiv.setAttribute("class","stefanvdlightareoff");
+		newdiv.style.width = "100%";
+        newdiv.style.height = "100%";
         newdiv.style.left = 0;
         newdiv.style.top = 0;
 		if(cinemaontop == true){
-        newdiv.style.position = 'absolute';
+        newdiv.style.position = "absolute";
 		
 		if(window.innerHeight > 870){ // height cinema
-		newdiv.style.height = '100%';
+		newdiv.style.height = "100%";
 		}else{
-		newdiv.style.height = '870px';
+		newdiv.style.height = "870px";
 		}
 		
 		}else{
-		newdiv.style.position = 'fixed';
+		newdiv.style.position = "fixed";
 		}
 		/* if image background, load it then */
 			if(lightimagea == true){newdiv.style.background = "url('"+lightimage+"')";newdiv.style.backgroundSize = "100% 100%";}
-			else if(lightimagelin == true){newdiv.style.background = 'linear-gradient(to ' + linearsq + ', ' + colora + ' ' + intervallina + '%,' + colorb + ' ' + intervallinb + '%)';}
+			else if(lightimagelin == true){newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)";}
 			else{newdiv.style.background = lightcolor;}
 		/*-------------*/
         newdiv.style.opacity = 0;
@@ -1733,22 +1733,22 @@ if(stretchable){
         else{newdiv.addEventListener("click", function(){taart();})}
 
         // fade in effect      
-		if(fadein == true){fader('show');}
+		if(fadein == true){fader("show");}
         else{newdiv.style.opacity = default_opacity/100;} // no fade effect
 		}
 		
 		// blur effect
 		if(blur == true){
 			if($("stefanvdblurimage")){}else{
-			var newblur = document.createElement('div');
-			newblur.setAttribute('id','stefanvdblurimage');
+			var newblur = document.createElement("div");
+			newblur.setAttribute("id","stefanvdblurimage");
 			newblur.style.webkitBackdropFilter = "blur(6px)";
 			newblur.style.backdropFilter = "blur(6px)";
-			newblur.style.width = '100%';
-			newblur.style.height = '100%';
+			newblur.style.width = "100%";
+			newblur.style.height = "100%";
 			newblur.style.left = 0;
 			newblur.style.top = 0;
-			newblur.style.position = 'fixed';
+			newblur.style.position = "fixed";
 			document.body.appendChild(newblur);
 			}
 		}
@@ -1756,61 +1756,61 @@ if(stretchable){
 /////////// Turn Off the Lights reader slider
 	// Show always option
 	if(readera == true){
-		var stefanvdreaderbar = document.createElement('div');
-		stefanvdreaderbar.setAttribute('id','stefanvdreaderbar');
+		var stefanvdreaderbar = document.createElement("div");
+		stefanvdreaderbar.setAttribute("id","stefanvdreaderbar");
 		document.body.appendChild(stefanvdreaderbar);
-		var stefanvdreaderbardiv1 = document.createElement('div');
-		stefanvdreaderbardiv1.setAttribute('id','stefanvdreaderbarinnerbox');
+		var stefanvdreaderbardiv1 = document.createElement("div");
+		stefanvdreaderbardiv1.setAttribute("id","stefanvdreaderbarinnerbox");
 		stefanvdreaderbar.appendChild(stefanvdreaderbardiv1);
 
 		// if false then use small view
 		if(readerlargestyle == false){stefanvdreaderbar.style.width = "30px";stefanvdreaderbar.style.height = "30px";}
 
 		// top
-		var stefanvdreaderbartop = document.createElement('div');
-		stefanvdreaderbartop.setAttribute('id','stefanvdreaderbartop');
-		stefanvdreaderbartop.setAttribute('class','stefanvdreaderbartop');
-		stefanvdreaderbartop.addEventListener('click', function(e){toggle_small()}, true);
+		var stefanvdreaderbartop = document.createElement("div");
+		stefanvdreaderbartop.setAttribute("id","stefanvdreaderbartop");
+		stefanvdreaderbartop.setAttribute("class","stefanvdreaderbartop");
+		stefanvdreaderbartop.addEventListener("click", function(e){toggle_small()}, true);
 		stefanvdreaderbardiv1.appendChild(stefanvdreaderbartop);
 
 			// if false then use small view
 			if(readerlargestyle == false){stefanvdreaderbartop.style.opacity = 0;}
 
-			var stefanvdreaderbartxt1 = document.createTextNode('Turn Off the Lights');
+			var stefanvdreaderbartxt1 = document.createTextNode("Turn Off the Lights");
 			stefanvdreaderbartop.appendChild(stefanvdreaderbartxt1);
 
-			var stefanvdreaderbarmin = document.createElement('div');
-			stefanvdreaderbarmin.setAttribute('id','stefanvdreaderbarmin');
+			var stefanvdreaderbarmin = document.createElement("div");
+			stefanvdreaderbarmin.setAttribute("id","stefanvdreaderbarmin");
 			stefanvdreaderbarmin.innerText = "⎯";
 			stefanvdreaderbartop.appendChild(stefanvdreaderbarmin);
 
 		// bottom
-		var stefanvdreaderbaroa = document.createElement('div');
-		stefanvdreaderbaroa.setAttribute('class','stefanvdreaderbaroa');
+		var stefanvdreaderbaroa = document.createElement("div");
+		stefanvdreaderbaroa.setAttribute("class","stefanvdreaderbaroa");
 		stefanvdreaderbardiv1.appendChild(stefanvdreaderbaroa);
 
-			var stefanvdreaderinput1 = document.createElement('input');
-			stefanvdreaderinput1.setAttribute('type','range');
-			stefanvdreaderinput1.setAttribute('id','totlrange');
-			stefanvdreaderinput1.setAttribute('min','0');
-			stefanvdreaderinput1.setAttribute('max','100');
-			stefanvdreaderinput1.setAttribute('step','1');
-			stefanvdreaderinput1.setAttribute('value','0');
-			stefanvdreaderinput1.addEventListener('change', function(e){showValue(this.value)}, true);
-			stefanvdreaderinput1.addEventListener('input', function(e){showValue(this.value)}, true);
+			var stefanvdreaderinput1 = document.createElement("input");
+			stefanvdreaderinput1.setAttribute("type","range");
+			stefanvdreaderinput1.setAttribute("id","totlrange");
+			stefanvdreaderinput1.setAttribute("min","0");
+			stefanvdreaderinput1.setAttribute("max","100");
+			stefanvdreaderinput1.setAttribute("step","1");
+			stefanvdreaderinput1.setAttribute("value","0");
+			stefanvdreaderinput1.addEventListener("change", function(e){showValue(this.value)}, true);
+			stefanvdreaderinput1.addEventListener("input", function(e){showValue(this.value)}, true);
 			stefanvdreaderbaroa.appendChild(stefanvdreaderinput1);
 
-			var stefanvdreaderbaran = document.createElement('div');
-			stefanvdreaderbaran.setAttribute('class','stefanvdreaderbaran');
+			var stefanvdreaderbaran = document.createElement("div");
+			stefanvdreaderbaran.setAttribute("class","stefanvdreaderbaran");
 			stefanvdreaderbardiv1.appendChild(stefanvdreaderbaran);
 
-			var stefanvdreaderinput2 = document.createElement('input');
-			stefanvdreaderinput2.setAttribute('id','totlgammaVal');
-			stefanvdreaderinput2.setAttribute('maxlength','3');
-			stefanvdreaderinput2.setAttribute('size','3');
-			stefanvdreaderinput2.setAttribute('type','text');
-			stefanvdreaderinput2.setAttribute('value','0');
-			stefanvdreaderinput2.addEventListener('change', function(e){showValue(this.value)}, true);
+			var stefanvdreaderinput2 = document.createElement("input");
+			stefanvdreaderinput2.setAttribute("id","totlgammaVal");
+			stefanvdreaderinput2.setAttribute("maxlength","3");
+			stefanvdreaderinput2.setAttribute("size","3");
+			stefanvdreaderinput2.setAttribute("type","text");
+			stefanvdreaderinput2.setAttribute("value","0");
+			stefanvdreaderinput2.addEventListener("change", function(e){showValue(this.value)}, true);
 			stefanvdreaderbaran.appendChild(stefanvdreaderinput2);
 
 
@@ -1826,50 +1826,50 @@ if(stretchable){
 	else{totlreader.style.width = "";totlreader.style.height = "";totlreadermin.style.opacity = 1;}}
 
 // settings reader slider
-	$('totlgammaVal').value = interval;
-	$('totlrange').value = interval;
+	$("totlgammaVal").value = interval;
+	$("totlrange").value = interval;
 } //End option always
 
 // start dynamic
 		if(dynamic == true){
-			var newdynmaster = document.createElement("div");newdynmaster.setAttribute('id','stefanvddynamicbackground');document.body.appendChild(newdynmaster);
+			var newdynmaster = document.createElement("div");newdynmaster.setAttribute("id","stefanvddynamicbackground");document.body.appendChild(newdynmaster);
 			if(dynamic1 == true){
-				var newdynleft = document.createElement("div");newdynleft.setAttribute('class','stefanvddynamicbackgroundbubbleleft');newdynmaster.appendChild(newdynleft);
+				var newdynleft = document.createElement("div");newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft");newdynmaster.appendChild(newdynleft);
 				var i;
-				for(i = 0; i < 5; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundbubbles stefanvddynamicbubbles'+i+'');newdynleft.appendChild(newdyn);}
-				var newdynmid = document.createElement("div");newdynmid.setAttribute('class','stefanvddynamicbackgroundbubblemid');newdynmaster.appendChild(newdynmid);
+				for(i = 0; i < 5; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+"");newdynleft.appendChild(newdyn);}
+				var newdynmid = document.createElement("div");newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid");newdynmaster.appendChild(newdynmid);
 				var i;
-				for(i = 6; i < 10; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundbubbles stefanvddynamicbubbles'+i+'');newdynmid.appendChild(newdyn);}
-				var newdynright = document.createElement("div");newdynright.setAttribute('class','stefanvddynamicbackgroundbubbleright');newdynmaster.appendChild(newdynright);	
+				for(i = 6; i < 10; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+"");newdynmid.appendChild(newdyn);}
+				var newdynright = document.createElement("div");newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright");newdynmaster.appendChild(newdynright);	
 				var i;
-				for(i = 11; i < 16; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundbubbles stefanvddynamicbubbles'+i+'');newdynright.appendChild(newdyn);}				
+				for(i = 11; i < 16; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+"");newdynright.appendChild(newdyn);}				
 			}
 			else if(dynamic2 == true){
-				var newdynleft = document.createElement("div");newdynleft.setAttribute('class','stefanvddynamicbackgroundblockleft');newdynmaster.appendChild(newdynleft);
+				var newdynleft = document.createElement("div");newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft");newdynmaster.appendChild(newdynleft);
 				var i;
-				for(i = 1; i < 21; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundblocks stefanvddynamicblocks'+i+'');newdynleft.appendChild(newdyn);}
-				var newdynright = document.createElement("div");newdynright.setAttribute('class','stefanvddynamicbackgroundblockright');newdynmaster.appendChild(newdynright);
+				for(i = 1; i < 21; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks"+i+"");newdynleft.appendChild(newdyn);}
+				var newdynright = document.createElement("div");newdynright.setAttribute("class","stefanvddynamicbackgroundblockright");newdynmaster.appendChild(newdynright);
 				var i;
-				for(i = 22; i < 42; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundblocks stefanvddynamicblocks'+i+'');newdynright.appendChild(newdyn);}
+				for(i = 22; i < 42; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks"+i+"");newdynright.appendChild(newdyn);}
 			}
 			else if(dynamic3 == true){
-				var newdynleft = document.createElement("div");newdynleft.setAttribute('class','stefanvddynamicbackgroundblockleft');newdynmaster.appendChild(newdynleft);
+				var newdynleft = document.createElement("div");newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft");newdynmaster.appendChild(newdynleft);
 				var i;
-				for(i = 0; i < 15; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundraindrups b'+i+'');newdynleft.appendChild(newdyn);}
-				var newdynright = document.createElement("div");newdynright.setAttribute('class','stefanvddynamicbackgroundblockright');newdynmaster.appendChild(newdynright);
+				for(i = 0; i < 15; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b"+i+"");newdynleft.appendChild(newdyn);}
+				var newdynright = document.createElement("div");newdynright.setAttribute("class","stefanvddynamicbackgroundblockright");newdynmaster.appendChild(newdynright);
 				var i;
-				for(i = 16; i < 31; i++){var newdyn = document.createElement("div");newdyn.setAttribute('class','stefanvddynamicbackgroundraindrups b'+i+'');newdynright.appendChild(newdyn);}
+				for(i = 16; i < 31; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b"+i+"");newdynright.appendChild(newdyn);}
 			}
 			else if(dynamic4 == true){
-				var newdynworld = document.createElement("div");newdynworld.setAttribute('id','stefanvdworld');newdynmaster.appendChild(newdynworld);			
+				var newdynworld = document.createElement("div");newdynworld.setAttribute("id","stefanvdworld");newdynmaster.appendChild(newdynworld);			
 (function(){
 		var lastTime = 0;
-		var vendors = ['ms', 'moz', 'webkit', 'o'];
+		var vendors = ["ms", "moz", "webkit", "o"];
 		var x;
 		var vl = vendors.length;
 		for(x = 0; x < vl && !window.requestAnimationFrame; ++x){
-			window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-			window.cancelRequestAnimationFrame = window[vendors[x]+'CancelRequestAnimationFrame'];
+			window.requestAnimationFrame = window[vendors[x]+"RequestAnimationFrame"];
+			window.cancelRequestAnimationFrame = window[vendors[x]+"CancelRequestAnimationFrame"];
 		}
 		if(!window.requestAnimationFrame)
 			window.requestAnimationFrame = function(callback, element){
@@ -1884,29 +1884,29 @@ if(stretchable){
 		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){window.clearTimeout(id);};
 	}())
 
-	var layers = [],objects = [],world = document.getElementById('stefanvdworld'),viewport = document.getElementById('stefanvddynamicbackground'),	
+	var layers = [],objects = [],world = document.getElementById("stefanvdworld"),viewport = document.getElementById("stefanvddynamicbackground"),	
 	d = 0,p = 400,worldXAngle = 0,worldYAngle = 0;
 	
 	viewport.style.webkitPerspective = p;viewport.style.MozPerspective = p;viewport.style.oPerspective = p;
 	generate();
 	
 	function createCloud(){
-		var div = document.createElement('div');
-		div.className = 'stefanvdcloudBase';
+		var div = document.createElement("div");
+		div.className = "stefanvdcloudBase";
 		var x = 256 - ( Math.random() * 512 );
 		var y = 256 - ( Math.random() * 512 );
 		var z = 256 - ( Math.random() * 512 );
-		var t = 'translateX(' + x + 'px) translateY(' + y + 'px) translateZ(' + z + 'px)';
+		var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
 		div.style.webkitTransform = t;div.style.MozTransform = t;div.style.oTransform = t;
 		world.appendChild(div);
 		
 		var j;
 		var lcalc = 5 + Math.round( Math.random() * 10 );
 		for(j = 0; j < lcalc; j++){
-			var cloud = document.createElement('div');
+			var cloud = document.createElement("div");
 			cloud.style.opacity = 0;
 			cloud.style.opacity = .8;
-			cloud.className = 'stefanvdcloudLayer';
+			cloud.className = "stefanvdcloudLayer";
 			var x = 256 - ( Math.random() * 512 );
 			var y = 256 - ( Math.random() * 512 );
 			var z = 100 - ( Math.random() * 200 );
@@ -1914,7 +1914,7 @@ if(stretchable){
 			var s = .25 + Math.random();
 			x *= .2; y *= .2;
 			cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};
-			var t = 'translateX(' + x + 'px) translateY(' + y + 'px) translateZ(' + z + 'px) rotateZ(' + a + 'deg) scale(' + s + ')';
+			var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px) rotateZ(" + a + "deg) scale(" + s + ")";
 			cloud.style.webkitTransform = t;cloud.style.MozTransform = t;cloud.style.oTransform = t;
 			div.appendChild(cloud);
 			layers.push(cloud);
@@ -1932,7 +1932,7 @@ if(stretchable){
 	}
 	
 	function updateView(){
-		var t = 'translateZ( ' + d + 'px ) rotateX( ' + worldXAngle + 'deg) rotateY( ' + worldYAngle + 'deg)';
+		var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
 		world.style.webkitTransform = t;world.style.MozTransform = t;world.style.oTransform = t;}
 	
 	function update(){
@@ -1941,7 +1941,7 @@ if(stretchable){
 		for(j = 0; j < l; j++){
 			var layer = layers[ j ];
 			layer.data.a += layer.data.speed;
-			var t = 'translateX(' + layer.data.x + 'px) translateY(' + layer.data.y + 'px) translateZ(' + layer.data.z + 'px) rotateY(' + ( - worldYAngle ) + 'deg) rotateX(' + ( - worldXAngle ) + 'deg) rotateZ(' + layer.data.a + 'deg) scale(' + layer.data.s + ')';
+			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + ( - worldYAngle ) + "deg) rotateX(" + ( - worldXAngle ) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
 			layer.style.webkitTransform = t;layer.style.MozTransform = t;layer.style.oTransform = t;
 		}
 		requestAnimationFrame(update);
@@ -1950,36 +1950,36 @@ if(stretchable){
 			}
 			else if(dynamic5 == true){
 				if(hoveroptiondyn5 == true){
-					var newdynspaceworld = document.createElement("div");newdynspaceworld.setAttribute('id','stefanvddynamicspace');newdynmaster.appendChild(newdynspaceworld);			
+					var newdynspaceworld = document.createElement("div");newdynspaceworld.setAttribute("id","stefanvddynamicspace");newdynmaster.appendChild(newdynspaceworld);			
 					var j;
 					for(j = 1; j < 17; j++){
 					if(j <= 9){j="0"+j}
 						var newdynpart1 = document.createElement("div");
-						newdynpart1.setAttribute('id','p'+ j);newdynspaceworld.appendChild(newdynpart1);
+						newdynpart1.setAttribute("id","p"+ j);newdynspaceworld.appendChild(newdynpart1);
 						var i;
 						for(i = 1; i < 31; i++){
 						if(i <= 9){i="0"+i}
-						var newdynlow = document.createElement("b");newdynlow.setAttribute('class','s0'+i+'');newdynpart1.appendChild(newdynlow);
+						var newdynlow = document.createElement("b");newdynlow.setAttribute("class","s0"+i+"");newdynpart1.appendChild(newdynlow);
 						}
 					}
 				}else{
-					var newdynspaceworld = document.createElement("div");newdynspaceworld.setAttribute('id','stefanvddynamicspacenoflying');newdynmaster.appendChild(newdynspaceworld);			
+					var newdynspaceworld = document.createElement("div");newdynspaceworld.setAttribute("id","stefanvddynamicspacenoflying");newdynmaster.appendChild(newdynspaceworld);			
 					var j;
 					for(j = 1; j < 17; j++){
 					if(j <= 9){j="0"+j}
 						var newdynpart1 = document.createElement("div");
-						newdynpart1.setAttribute('id','np'+ j);newdynspaceworld.appendChild(newdynpart1);
+						newdynpart1.setAttribute("id","np"+ j);newdynspaceworld.appendChild(newdynpart1);
 						var i;
 						for(i = 1; i < 31; i++){
 						if(i <= 9){i="0"+i}
-						var newdynlow = document.createElement("b");newdynlow.setAttribute('class','ns0'+i+'');newdynpart1.appendChild(newdynlow);
+						var newdynlow = document.createElement("b");newdynlow.setAttribute("class","ns0"+i+"");newdynpart1.appendChild(newdynlow);
 						}
 					}			
 				}
 			}
 			else if(dynamic6 == true){
-			var smoke = document.createElement("div");smoke.setAttribute('id','smoke');smoke.style.width = "100%";smoke.style.height = "100%";newdynmaster.appendChild(smoke);
-			var newsmokecanvas = document.createElement("canvas");newsmokecanvas.setAttribute('id','stefanvddynamicsmoke');newsmokecanvas.style.width = "100%";newsmokecanvas.style.height = "100%";smoke.appendChild(newsmokecanvas);	
+			var smoke = document.createElement("div");smoke.setAttribute("id","smoke");smoke.style.width = "100%";smoke.style.height = "100%";newdynmaster.appendChild(smoke);
+			var newsmokecanvas = document.createElement("canvas");newsmokecanvas.setAttribute("id","stefanvddynamicsmoke");newsmokecanvas.style.width = "100%";newsmokecanvas.style.height = "100%";smoke.appendChild(newsmokecanvas);	
 
 			// Create an array to store our particles
 			var particles = [];
@@ -2097,10 +2097,10 @@ if(stretchable){
 			var context;
 			// Initialise the scene and set the context if possible
 			function runsmoke(){
-				var canvas = document.getElementById('stefanvddynamicsmoke');
+				var canvas = document.getElementById("stefanvddynamicsmoke");
 				if(canvas.getContext){
 					// Set the context variable so it can be re-used
-					context = canvas.getContext('2d',{desynchronized: true});
+					context = canvas.getContext("2d",{desynchronized: true});
 					// Create the particles and set their initial positions and velocities
 					var i;
 					for(i = 0; i < particleCount; ++i){
@@ -2153,8 +2153,8 @@ if(stretchable){
 
 			}
 			else if(dynamic7 == true){
-			var flyingdots = document.createElement("div");flyingdots.setAttribute('id','flyingdots');newdynmaster.appendChild(flyingdots);
-			var newdyndotsworld = document.createElement("div");newdyndotsworld.setAttribute('id','stefanvddynamicdots');flyingdots.appendChild(newdyndotsworld);
+			var flyingdots = document.createElement("div");flyingdots.setAttribute("id","flyingdots");newdynmaster.appendChild(flyingdots);
+			var newdyndotsworld = document.createElement("div");newdyndotsworld.setAttribute("id","stefanvddynamicdots");flyingdots.appendChild(newdyndotsworld);
 				var j;
 				for(j = 1; j < 100; j++){
 					var newminic = document.createElement("div");
@@ -2163,11 +2163,11 @@ if(stretchable){
 				}
 			}
 			else if(dynamic8 == true){
-			var storm = document.createElement("div");storm.setAttribute('id','storm');newdynmaster.appendChild(storm);
-			var newstormcanvas = document.createElement("canvas");newstormcanvas.setAttribute('id','stefanvddynamicstorm');newstormcanvas.style.width = "100%";newstormcanvas.style.height = "100%";storm.appendChild(newstormcanvas);	
+			var storm = document.createElement("div");storm.setAttribute("id","storm");newdynmaster.appendChild(storm);
+			var newstormcanvas = document.createElement("canvas");newstormcanvas.setAttribute("id","stefanvddynamicstorm");newstormcanvas.style.width = "100%";newstormcanvas.style.height = "100%";storm.appendChild(newstormcanvas);	
 
-			var stormcanvas = document.getElementById('stefanvddynamicstorm');
-			var sky = stormcanvas.getContext('2d',{desynchronized: true});
+			var stormcanvas = document.getElementById("stefanvddynamicstorm");
+			var sky = stormcanvas.getContext("2d",{desynchronized: true});
 
 			var window_width = window.innerWidth * 1.5;
 			var window_height = window.innerHeight * 1.5;
@@ -2176,7 +2176,7 @@ if(stretchable){
 			var wind_speed = 5;
 
 			var rain_weight = 0.11;
-			var rain_color = '255,255,255';
+			var rain_color = "255,255,255";
 
 			var drop_count;
 			var drops = [];
@@ -2190,11 +2190,11 @@ if(stretchable){
 			  window_height = window.innerHeight * 1.5;
 			  drop_count = window_width * rain_weight;
 			  
-			  stormcanvas.setAttribute('width', window_width);
-			  stormcanvas.setAttribute('height', window_height);
+			  stormcanvas.setAttribute("width", window_width);
+			  stormcanvas.setAttribute("height", window_height);
 			}
 
-			window.addEventListener('resize', resizer, false);
+			window.addEventListener("resize", resizer, false);
 
 			function paintSky(){
 				if(document.visibilityState === "visible"){
@@ -2236,16 +2236,16 @@ if(stretchable){
 			  };
 			  
 			  this.render = function(){
-				var canv = document.createElement('canvas');
-				var ctx = canv.getContext('2d',{desynchronized: true});
-				canv.setAttribute('width', Math.abs(this.offset) + this.r);
-				canv.setAttribute('height', this.l);
+				var canv = document.createElement("canvas");
+				var ctx = canv.getContext("2d",{desynchronized: true});
+				canv.setAttribute("width", Math.abs(this.offset) + this.r);
+				canv.setAttribute("height", this.l);
 				
 				ctx.beginPath();
 				
 				var drip = ctx.createLinearGradient(0, 0, 0, this.l);
-				drip.addColorStop(0, 'rgba(' + rain_color + ', 0)');
-				drip.addColorStop(1, 'rgba(' + rain_color + ', ' + this.opacity + ')');
+				drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
+				drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
 				ctx.fillStyle = drip;
 					
 				//sky.rect(this.x, this.y, this.r, this.l);
@@ -2279,7 +2279,7 @@ if(stretchable){
 			paintSky();
 			}
 			else if(dynamic9 == true){
-			var triangle = document.createElement("div");triangle.setAttribute('id','triangle');newdynmaster.appendChild(triangle);
+			var triangle = document.createElement("div");triangle.setAttribute("id","triangle");newdynmaster.appendChild(triangle);
 				
 			var refreshDuration = 10000;
 			var refreshTimeout;
@@ -2290,10 +2290,10 @@ if(stretchable){
 			var points;
 
 			function trianglerun(){
-				var triasvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-				triasvg.setAttribute('width',window.innerWidth);
-				triasvg.setAttribute('height',window.innerHeight);
-				document.getElementById('triangle').appendChild(triasvg);
+				var triasvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+				triasvg.setAttribute("width",window.innerWidth);
+				triasvg.setAttribute("height",window.innerHeight);
+				document.getElementById("triangle").appendChild(triasvg);
 
 				var unitSize = (window.innerWidth+window.innerHeight)/20;
 				numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
@@ -2330,39 +2330,39 @@ if(stretchable){
 
 						var n;
 						for(n = 0; n < 2; n++){
-							var polygon = document.createElementNS(triasvg.namespaceURI, 'polygon');
+							var polygon = document.createElementNS(triasvg.namespaceURI, "polygon");
 
 							if(rando==0){
 								if(n==0){
 									polygon.point1 = i;
 									polygon.point2 = i+numPointsX;
 									polygon.point3 = i+numPointsX+1;
-									polygon.setAttribute('points',topLeftX+','+topLeftY+' '+bottomLeftX+','+bottomLeftY+' '+bottomRightX+','+bottomRightY);
+									polygon.setAttribute("points",topLeftX+","+topLeftY+" "+bottomLeftX+","+bottomLeftY+" "+bottomRightX+","+bottomRightY);
 								} else if(n==1){
 									polygon.point1 = i;
 									polygon.point2 = i+1;
 									polygon.point3 = i+numPointsX+1;
-									polygon.setAttribute('points',topLeftX+','+topLeftY+' '+topRightX+','+topRightY+' '+bottomRightX+','+bottomRightY);
+									polygon.setAttribute("points",topLeftX+","+topLeftY+" "+topRightX+","+topRightY+" "+bottomRightX+","+bottomRightY);
 								}
 							} else if(rando==1){
 								if(n==0){
 									polygon.point1 = i;
 									polygon.point2 = i+numPointsX;
 									polygon.point3 = i+1;
-									polygon.setAttribute('points',topLeftX+','+topLeftY+' '+bottomLeftX+','+bottomLeftY+' '+topRightX+','+topRightY);
+									polygon.setAttribute("points",topLeftX+","+topLeftY+" "+bottomLeftX+","+bottomLeftY+" "+topRightX+","+topRightY);
 								} else if(n==1){
 									polygon.point1 = i+numPointsX;
 									polygon.point2 = i+1;
 									polygon.point3 = i+numPointsX+1;
-									polygon.setAttribute('points',bottomLeftX+','+bottomLeftY+' '+topRightX+','+topRightY+' '+bottomRightX+','+bottomRightY);
+									polygon.setAttribute("points",bottomLeftX+","+bottomLeftY+" "+topRightX+","+topRightY+" "+bottomRightX+","+bottomRightY);
 								}
 							}
-							polygon.setAttribute('fill','rgba(0,0,0,'+(Math.random()/3)+')');
-							var animate = document.createElementNS('http://www.w3.org/2000/svg','animate');
-							animate.setAttribute('fill','freeze');
-							animate.setAttribute('attributeName','points');
-							animate.setAttribute('dur',refreshDuration+'ms');
-							animate.setAttribute('calcMode','linear');
+							polygon.setAttribute("fill","rgba(0,0,0,"+(Math.random()/3)+")");
+							var animate = document.createElementNS("http://www.w3.org/2000/svg","animate");
+							animate.setAttribute("fill","freeze");
+							animate.setAttribute("attributeName","points");
+							animate.setAttribute("dur",refreshDuration+"ms");
+							animate.setAttribute("calcMode","linear");
 							polygon.appendChild(animate);
 							triasvg.appendChild(polygon);
 						}
@@ -2388,14 +2388,14 @@ if(stretchable){
 				if(document.visibilityState === "visible"){
 				randomize();
 				var i;
-				var l = document.querySelector('#triangle svg').childNodes.length;
+				var l = document.querySelector("#triangle svg").childNodes.length;
 				for(i = 0; i < l; i++){
-					var polygon = document.querySelector('#triangle svg').childNodes[i];
+					var polygon = document.querySelector("#triangle svg").childNodes[i];
 					var animate = polygon.childNodes[0];
-					if(animate.getAttribute('to')){
-						animate.setAttribute('from',animate.getAttribute('to'));
+					if(animate.getAttribute("to")){
+						animate.setAttribute("from",animate.getAttribute("to"));
 					}
-					animate.setAttribute('to',points[polygon.point1].x+','+points[polygon.point1].y+' '+points[polygon.point2].x+','+points[polygon.point2].y+' '+points[polygon.point3].x+','+points[polygon.point3].y);
+					animate.setAttribute("to",points[polygon.point1].x+","+points[polygon.point1].y+" "+points[polygon.point2].x+","+points[polygon.point2].y+" "+points[polygon.point3].x+","+points[polygon.point3].y);
 					animate.beginElement();
 				}
 				refreshTimeout = window.setTimeout(function(){refresh();}, refreshDuration);
@@ -2405,7 +2405,7 @@ if(stretchable){
 			trianglerun();
 			
 			function onResize(){
-			document.querySelector('#triangle svg').remove();
+			document.querySelector("#triangle svg").remove();
 			window.clearTimeout(refreshTimeout);
 			trianglerun();
 			}
@@ -2413,7 +2413,7 @@ if(stretchable){
 			window.onresize = onResize;
 			}
 			else if(dynamic10 == true){
-			var stars = document.createElement("div");stars.setAttribute('id','stars');newdynmaster.appendChild(stars);
+			var stars = document.createElement("div");stars.setAttribute("id","stars");newdynmaster.appendChild(stars);
 				var j;
 				for(j = 1; j < 3; j++){
 					var newmstar = document.createElement("div");
@@ -2454,9 +2454,9 @@ var OpacityLevelIncrement = 10; // Percentage value: 1-100
 //  Function determines whether we show or hide the item referenced by ElementID
 function fader(ActionToTake)
 {
-  DIVElementById = $('stefanvdlightareoff1');
-  if(ActionToTake == 'hide'){ opacity = default_opacity; reduceOpacity(); }
-  else if(ActionToTake == 'show'){ increaseOpacity(); }
+  DIVElementById = $("stefanvdlightareoff1");
+  if(ActionToTake == "hide"){ opacity = default_opacity; reduceOpacity(); }
+  else if(ActionToTake == "show"){ increaseOpacity(); }
 }
 
 //  Makes div increase
@@ -2481,7 +2481,7 @@ try{
     ReducingFinished = false;
   }
 //control opacity for all <div>
-var div = document.querySelectorAll('div.stefanvdlightareoff');
+var div = document.querySelectorAll("div.stefanvdlightareoff");
 var i;
 var l = div.length;
 for(i = 0; i < l; i++){div[i].style.opacity = opacity/100;}
@@ -2505,7 +2505,7 @@ try{
     if(DIVElementById.style.opacity <= 0){document.body.removeChild(DIVElementById);removenewframe();}
   }
 //control opacity for all <div>
-var div = document.querySelectorAll('div.stefanvdlightareoff');
+var div = document.querySelectorAll("div.stefanvdlightareoff");
 var i;
 var l = div.length;
 for(i = 0; i < l; i++){div[i].style.opacity = opacity/100;}

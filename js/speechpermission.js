@@ -29,28 +29,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function speechstartfunction(){
 	// start automatic up
-	if(!recognizing){startButton(event);}
+	if(!recognizing){ startButton(event); }
 }
 function startButton(event){
 	// Abort previous instances of recognition already running
     if(recognition && recognition.abort){
         recognition.abort();
     }
-	final_transcript = '';
-	recognition.lang = 'en-US';
-	try{ recognition.start(); } catch(e){}
+	final_transcript = "";
+	recognition.lang = "en-US";
+	try{ recognition.start(); }catch(e){}
 	ignore_onend = false;
-	try{ start_timestamp = event.timeStamp; } catch(e){}
+	try{ start_timestamp = event.timeStamp; }catch(e){}
 }
 
-var final_transcript = '';
+var final_transcript = "";
 var recognizing = false;
 var ignore_onend;
 var start_timestamp;
 var recognition;
 function startinit(){
 // Check for live API permissions  
-navigator.permissions.query({name:'microphone'})
+navigator.permissions.query({name:"microphone"})
 .then(function(permissionStatus){
   permissionStatus.onchange = function(){
 	if(this.state == "granted"){
@@ -65,7 +65,7 @@ navigator.permissions.query({name:'microphone'})
   };
 });
 
-	if(!('webkitSpeechRecognition' in window)){
+	if(!("webkitSpeechRecognition" in window)){
 	// not supported
 	}else{
 		recognition = new webkitSpeechRecognition();
@@ -78,17 +78,17 @@ navigator.permissions.query({name:'microphone'})
 		};
 
 		recognition.onerror = function(event){
-		if(event.error == 'no-speech'){
+		if(event.error == "no-speech"){
 			// No speech was detected.
 			ignore_onend = true;
 		}
-		if(event.error == 'audio-capture'){
+		if(event.error == "audio-capture"){
 			// No microphone was found.
 			ignore_onend = true;
 		}
-		if(event.error == 'not-allowed'){
+		if(event.error == "not-allowed"){
 			if(event.timeStamp - start_timestamp < 100){
-				// Permission to use microphone is blocked. 
+				// Permission to use microphone is blocked.
 			}else{
 				// Permission to use microphone was denied.
 			}
@@ -101,4 +101,4 @@ navigator.permissions.query({name:'microphone'})
 	speechstartfunction();
 }
 
-document.addEventListener('DOMContentLoaded', function(){ startinit(); },false);
+document.addEventListener("DOMContentLoaded", function(){ startinit(); },false);

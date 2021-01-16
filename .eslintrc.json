@@ -29,7 +29,8 @@
         "yoda": ["error"],
         "arrow-parens": ["error", "always"],
         "block-spacing": ["error", "always"],
-        "jsx-quotes": ["error", "prefer-double"]
+        "jsx-quotes": ["error", "prefer-double"],
+        "semi": ["error"]
     },
     "globals": {
         "totlscreenshotpage": "readonly",
