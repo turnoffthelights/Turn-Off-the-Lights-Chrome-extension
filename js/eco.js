@@ -203,7 +203,7 @@ if(document.getElementById("stefanvdlightareoff1")){
 
       try{
       chrome.storage.sync.get(["analytics","seeanalytics"], function(items){
-        seeanalytics = items["seeanalytics"];if(seeanalytics == null)seeanalytics = true;
+        seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
         if(seeanalytics == true){
         if(items["analytics"]){
           analytics = items["analytics"];

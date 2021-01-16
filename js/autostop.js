@@ -66,7 +66,7 @@ if(typeof autostopDomains == "string"){
 
 function getPosition(el){
 var xPos = 0;var yPos = 0;
-while (el){xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);yPos += (el.offsetTop - el.scrollTop + el.clientTop);el = el.offsetParent;}
+while(el){ xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); el = el.offsetParent; }
 return{x:xPos,y:yPos};
 }
 
@@ -120,7 +120,7 @@ function autostopfunction(){
 			// detect change style - this for floating box in div detection
 			if(mutation.attributeName == "style"){
 				var currentClass = mutation.target.className;
-				if(currentClass!="stefanvdautostop"){
+				if(currentClass != "stefanvdautostop"){
 					refreshsize();
 				}
 			}
@@ -143,7 +143,7 @@ function autostopdetectionstart(){
 	while(firstautostopremove.length > 0){
 		firstautostopremove[0].parentNode.removeChild(firstautostopremove[0]);
 	}
-	
+
 	var visualvideos = document.getElementsByTagName("video");
 	var i;
 	var l = visualvideos.length;
@@ -159,7 +159,7 @@ function autostopdetectionstart(){
 				// Automatic playback started!
 				// Show playing UI.
 				// We can now safely pause video...
-				video.pause();video.currentTime = 0;
+				video.pause(); video.currentTime = 0;
 			})
 			.catch(error => {
 				// Auto-play was prevented
@@ -191,18 +191,18 @@ function autostopdetectionstart(){
 								// Automatic playback started!
 								// Show playing UI.
 								// We can now safely pause video...
-								ev.target.pause();ev.target.currentTime = 0;
+								ev.target.pause(); ev.target.currentTime = 0;
 								stopTracking();
 							})
 							.catch(error => {
 								// Auto-play was prevented
 								// Show paused UI.
 							});
-							}							
+							}
 						}
 						rock = ev.target.getAttribute("data-videonum");
-						if(document.getElementById("stefanvdautostoppanel"+rock)){
-							document.getElementById("stefanvdautostoppanel"+rock).style.display = "block";
+						if(document.getElementById("stefanvdautostoppanel" + rock)){
+							document.getElementById("stefanvdautostoppanel" + rock).style.display = "block";
 							refreshsize();
 						}
 						//console.log(Math.round(video.currentTime * 1000));
@@ -232,7 +232,7 @@ function autostopdetectionstart(){
 		var visposition = getPosition(myElement);
 
 		var newautostoppanel = document.createElement("div");
-		newautostoppanel.setAttribute("id","stefanvdautostoppanel"+i);
+		newautostoppanel.setAttribute("id","stefanvdautostoppanel" + i);
 		newautostoppanel.setAttribute("data-videonum",i);
 
 		newautostoppanel.className = "stefanvdautostop";
@@ -256,33 +256,33 @@ function autostopdetectionstart(){
 			}
 		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode))
 		//---
-		
+
 		// YouTube video top position negative value, then minus the height
 		if(parseInt(t, 10) < 0){
-			newautostoppanel.style.top = visposition.y-h+"px";
+			newautostoppanel.style.top = visposition.y - h + "px";
 		}else{
-			newautostoppanel.style.top = visposition.y+"px";
+			newautostoppanel.style.top = visposition.y + "px";
 		}
-		newautostoppanel.style.left = visposition.x+"px";
+		newautostoppanel.style.left = visposition.x + "px";
 		newautostoppanel.style.width = w;
 		newautostoppanel.style.height = h;
-		if(d == "none"){newautostoppanel.style.display = "none";}
+		if(d == "none"){ newautostoppanel.style.display = "none"; }
 
 		newautostoppanel.addEventListener("click", function(event){
 			var templearn = event.target.id;
 			templearn = templearn.substr(0, 26);
 			if(templearn != "stefanvdautostoppanellearn"){
 			rock = this.getAttribute("data-videonum");
-			document.getElementById("stefanvdautostoppanel"+rock).style.display = "none";
+			document.getElementById("stefanvdautostoppanel" + rock).style.display = "none";
 			document.getElementsByTagName("video")[rock].setAttribute("data-stopvideo","false");
 			var playPromise = document.getElementsByTagName("video")[rock].play();
 			if(playPromise !== undefined) {
-			  playPromise.then(_ => {
-				// Automatic playback started!
-			  })
-			  .catch(error => {
-				// Auto-play was prevented
-			  });
+				playPromise.then(_ => {
+					// Automatic playback started!
+				})
+				.catch(error => {
+					// Auto-play was prevented
+				});
 			}
 			}
 		},false);
@@ -301,7 +301,7 @@ function autostopdetectionstart(){
 		newautostoppanel.appendChild(newautostopdes);
 
 		var newautostoplearn = document.createElement("div");
-		newautostoplearn.setAttribute("id","stefanvdautostoppanellearn"+i);
+		newautostoplearn.setAttribute("id","stefanvdautostoppanellearn" + i);
 		newautostoplearn.className = "stefanvdautostoplearn";
 		newautostoplearn.addEventListener("click", function(event){
 			window.open("https://www.turnoffthelights.com/support/browser-extension/what-is-the-autostop-feature/", "_blank");
@@ -355,19 +355,19 @@ for(i = 0; i < l; ++i){
 			if(adisplay == "none"){
 				item.style.display = "none";
 			}
-		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode))
+		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode));
 		//---
 
 		// YouTube video top position negative value, then minus the height
 		if(parseInt(t, 10) < 0){
-			item.style.top = visposition.y-h+"px";
+			item.style.top = visposition.y - h + "px";
 		}else{
-			item.style.top = visposition.y+"px";
+			item.style.top = visposition.y + "px";
 		}
-		item.style.left = visposition.x+"px";
+		item.style.left = visposition.x + "px";
 		item.style.width = w;
 		item.style.height = h;
-	
+
 		if(d == "none"){item.style.display = "none";}
 	}else{
 		// remove this stop layer

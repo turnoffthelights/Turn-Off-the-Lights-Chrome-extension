@@ -4747,7 +4747,7 @@ else{
 	}
 }
 
-var codetext = "var maxquality = "" + maxquality + "";\n";
+var codetext = "var maxquality = \"" + maxquality + "\";\n";
 codetext += (ythdinit.toString() +"\n");
 codetext += (ythdstatechange.toString() + "\n");
 codetext += (ythduq.toString() + "\n");

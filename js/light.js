@@ -29,9 +29,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 // settings
-var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlightt = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
+var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
 // html elements used
-var div = null, video = null, span = null, iframe = null, embed = null, object = null, a = null, img = null;
+var div = null, video = null;
 // block lights
 var activatelightsoff = true;
 
@@ -52,7 +52,7 @@ noflash = response["noflash"];
 hardflash = response["hardflash"];
 no360youtube = response["no360youtube"];
 mousespotlights = response["mousespotlights"];
-titleinvertcolor = response["titleinvertcolor"];if(titleinvertcolor)titleinvertcolor = response["titleinvertcolor"];else titleinvertcolor = "#ffffff"; // default color white
+titleinvertcolor = response["titleinvertcolor"]; if(titleinvertcolor)titleinvertcolor = response["titleinvertcolor"]; else titleinvertcolor = "#ffffff"; // default color white
 
 // check if CSS inject is on the current page
 var a; var span = document.createElement("span");
@@ -129,7 +129,7 @@ function searchvideopath(thatvideo){
 			divpaddintop = true;
 		}
 		}
-	}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode))
+	}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode));
 
 	return divpaddintop;
 }
@@ -230,12 +230,12 @@ if(searchvideopath(video[i]) == true && targetComputedStylePosition == "absolute
 }
 
 // other file then "mp3" then run this code
-if(video[i].currentSrc.lastIndexOf(".mp3") == -1){ video[i].classList.add("stefanvdvideotop"); if(video[i].classList.contains("stefanvdtransformauto")){video[i].classList.remove("stefanvdtransformauto");}}
+if(video[i].currentSrc.lastIndexOf(".mp3") == -1){ video[i].classList.add("stefanvdvideotop"); if(video[i].classList.contains("stefanvdtransformauto")){ video[i].classList.remove("stefanvdtransformauto"); } }
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	if(no360youtube == true){
 		video[i].style.cssText += "display:block !important";
 		var webgl = document.querySelector(".webgl");
-		if(webgl){webgl.classList.add("stefanvdvideoauto"); }
+		if(webgl){ webgl.classList.add("stefanvdvideoauto"); }
 	}else{
 	// default the regular player
 	// also the 360 frame push to front
@@ -272,19 +272,19 @@ try{
 // Show all iframe embed video objects -> Flash detection
 if(flash == true){
 try{
-	var j,t;
-	for(j=0;t=["object","embed","applet","iframe"][j];++j)
+	var j, t;
+	for(j = 0; t = ["object","embed","applet","iframe"][j]; ++j)
 	{
 		var a = document.getElementsByTagName(t);
 		var i;
 		var N,C;
-		for(i=a.length-1;(i+1)&&(N=a[i]);--i)
-		if(j!=3||!R((C=N.contentWindow)?C:N.contentDocument.defaultView))
+		for(i = a.length - 1; (i + 1) && (N = a[i]); --i)
+		if(j != 3 || !R((C = N.contentWindow) ? C : N.contentDocument.defaultView))
 		{
-			var targetComputedStylePosition=document.defaultView.getComputedStyle(N,null).getPropertyValue("position");
+			var targetComputedStylePosition = document.defaultView.getComputedStyle(N,null).getPropertyValue("position");
 
 			N.classList.add("stefanvdvideotop");
-			
+
 			// search for the video player, and set the previous path all to z-index "auto"
 			if(searchvideopath(N) == true && targetComputedStylePosition == "absolute"){
 				N.classList.add("stefanvdposfixed");
@@ -293,18 +293,18 @@ try{
 	}
 }catch(e){}
 }else if(hardflash == true){
-	var j,t;
-	for(j=0;t=["object","embed","applet","iframe"][j];++j)
+	var j, t;
+	for(j = 0; t = ["object","embed","applet","iframe"][j]; ++j)
 	{
 		var a = document.getElementsByTagName(t);
 		var i;
 		var l = a.length;
 		for(i = 0; i < l; i++)
 		{
-			var targetComputedStylePosition=document.defaultView.getComputedStyle(a[i],null).getPropertyValue("position");
+			var targetComputedStylePosition = document.defaultView.getComputedStyle(a[i],null).getPropertyValue("position");
 
 			a[i].classList.add("stefanvdvideotop");
-			
+
 			// search for the video player, and set the previous path all to z-index "auto"
 			if(searchvideopath(a[i]) == true && targetComputedStylePosition == "absolute"){
 				a[i].classList.add("stefanvdposfixed");
@@ -319,16 +319,16 @@ if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*yo
 var youtubedebuginfopanel = document.querySelectorAll("div.html5-video-info-panel");
 var i;
 var l = youtubedebuginfopanel.length;
-for(i = 0; i < l; i++){youtubedebuginfopanel[i].style.zIndex = "1001";}
+for(i = 0; i < l; i++){ youtubedebuginfopanel[i].style.zIndex = "1001"; }
 var youtubedebugpanel = document.querySelectorAll("div.ytp-dialog-holder");
 var i;
 var l = youtubedebugpanel.length;
-for(i = 0; i < l; i++){youtubedebugpanel[i].style.zIndex = "1001";}
+for(i = 0; i < l; i++){ youtubedebugpanel[i].style.zIndex = "1001"; }
 // 21 august 2015
 var youtubedebugcontextmenu = document.querySelectorAll("div.ytp-contextmenu");
 var i;
 var l = youtubedebugcontextmenu.length;
-for(i = 0; i < l; i++){youtubedebugcontextmenu[i].style.zIndex = "1001";}
+for(i = 0; i < l; i++){ youtubedebugcontextmenu[i].style.zIndex = "1001"; }
 
 // YouTube video OK
 var watch7 = $("watch7");
@@ -351,32 +351,32 @@ if(pagemanager)$("page-manager").style.cssText = "z-index:auto !important";
 if(suggestions == true){
 // updated 15 january 2016
 var watch7sidebar = $("watch7-sidebar");
-if(watch7sidebar){$("watch7-sidebar").style.zIndex = 1000;}
+if(watch7sidebar){ $("watch7-sidebar").style.zIndex = 1000; }
 // update YouTube material 21 march 2017
 var ytmaterialsuggestions = document.querySelector("ytd-watch-next-secondary-results-renderer");
-if(ytmaterialsuggestions){ytmaterialsuggestions.classList.add("stefanvditemtop");ytmaterialsuggestions.style.background = "white";}
+if(ytmaterialsuggestions){ ytmaterialsuggestions.classList.add("stefanvditemtop"); ytmaterialsuggestions.style.background = "white"; }
 }
 
 // Shows YouTube playlist
 if(playlist == true){
 // updated 15 january 2016
 var watchappbarplaylist = $("watch-appbar-playlist");
-if(watchappbarplaylist){$("watch-appbar-playlist").style.zIndex = 1000;}
+if(watchappbarplaylist){ $("watch-appbar-playlist").style.zIndex = 1000; }
 // update YouTube material 21 march 2017
 var ytmaterialplaylist = document.querySelector("ytd-playlist-panel-renderer");
-if(ytmaterialplaylist){ytmaterialplaylist.classList.add("stefanvditemtop");}
+if(ytmaterialplaylist){ ytmaterialplaylist.classList.add("stefanvditemtop"); }
 }
 
 // Shows video title
 if(videoheadline == true){
 // updated 15 january 2016
 var eowtitle = $("eow-title");
-if(eowtitle){$("eow-title").style.color = "white";$("eow-title").style.zIndex = 1000;$("eow-title").style.position = "relative";}
+if(eowtitle){ $("eow-title").style.color = "white"; $("eow-title").style.zIndex = 1000; $("eow-title").style.position = "relative"; }
 // update YouTube material 21 march 2017
 var ytmaterialvideotitle = document.querySelector("ytd-video-primary-info-renderer");
 if(ytmaterialvideotitle){
 var ytgeth = ytmaterialvideotitle.querySelector("h1");
-if(ytgeth != null){ytgeth.classList.add("stefanvditemtop");ytgeth.style.color = titleinvertcolor;}
+if(ytgeth != null){ ytgeth.classList.add("stefanvditemtop"); ytgeth.style.color = titleinvertcolor; }
 }
 }
 
@@ -384,73 +384,73 @@ if(ytgeth != null){ytgeth.classList.add("stefanvditemtop");ytgeth.style.color = 
 if(head == true){
 // updated 15 january 2016
 var watch7userheader = $("watch7-user-header");
-if(watch7userheader){$("watch7-user-header").style.zIndex = 1000;$("watch7-user-header").style.position = "relative";}
+if(watch7userheader){ $("watch7-user-header").style.zIndex = 1000; $("watch7-user-header").style.position = "relative"; }
 
 var ytuserinfoa = document.querySelector(".yt-user-info a");
-if(ytuserinfoa){ytuserinfoa.style.color = "white";}
+if(ytuserinfoa){ ytuserinfoa.style.color = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialhead = document.querySelector("ytd-video-owner-renderer");
-if(ytmaterialhead){ytmaterialhead.classList.add("stefanvditemtop");ytmaterialhead.style.background = "white";}
+if(ytmaterialhead){ ytmaterialhead.classList.add("stefanvditemtop"); ytmaterialhead.style.background = "white"; }
 }
 
 // Shows Infobar
 if(infobar == true){
 // updated 15 january 2016
 var watchdescription = $("watch-description");
-if(watchdescription){$("watch-description").style.zIndex = 1000;$("watch-description").style.background = "white";}
+if(watchdescription){ $("watch-description").style.zIndex = 1000; $("watch-description").style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialinfo = document.querySelector("ytd-video-secondary-info-renderer");
-if(ytmaterialinfo){ytmaterialinfo.classList.add("stefanvditemtop");ytmaterialinfo.style.background = "white";}
+if(ytmaterialinfo){ ytmaterialinfo.classList.add("stefanvditemtop"); ytmaterialinfo.style.background = "white"; }
 }
 
 // Shows like and unlike buttons
 if(likebutton == true){
 // updated 15 january 2016
 var likebuttonrenderlike = document.querySelector(".like-button-renderer-like-button");
-if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = 1000;likebuttonrenderlike.style.position = "relative";likebuttonrenderlike.style.background = "white";}
+if(likebuttonrenderlike){ likebuttonrenderlike.style.zIndex = 1000; likebuttonrenderlike.style.position = "relative"; likebuttonrenderlike.style.background = "white"; }
 
 var likebuttonrenderdislike = document.querySelector(".like-button-renderer-dislike-button");
-if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = 1000;likebuttonrenderdislike.style.position = "relative";likebuttonrenderdislike.style.background = "white";}
+if(likebuttonrenderdislike){ likebuttonrenderdislike.style.zIndex = 1000; likebuttonrenderdislike.style.position = "relative"; likebuttonrenderdislike.style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmateriallikebutton = document.querySelectorAll("ytd-toggle-button-renderer");
 var i;
 var l = ytmateriallikebutton.length;
 for(i = 0; i < l; i++){
 var ytgetobject = ytmateriallikebutton[i].getElementsByTagName("button")[0];
-if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 7) == "dislike"){ytmateriallikebutton[i].classList.add("stefanvditemtop");ytmateriallikebutton[i].style.background = "white";}
-else if(ytgetstring.substring(0, 4) == "like"){ytmateriallikebutton[i].classList.add("stefanvditemtop");ytmateriallikebutton[i].style.background = "white";}
-}}}
+if(ytgetstring.substring(0, 7) == "dislike"){ ytmateriallikebutton[i].classList.add("stefanvditemtop"); ytmateriallikebutton[i].style.background = "white"; }
+else if(ytgetstring.substring(0, 4) == "like"){ ytmateriallikebutton[i].classList.add("stefanvditemtop"); ytmateriallikebutton[i].style.background = "white"; }
+} } }
 }
 
 // Shows share buttons
 if(sharebutton == true){
 // updated 15 january 2016
 var actionsharepanel = document.querySelector(".action-panel-trigger-share");
-if(actionsharepanel){actionsharepanel.style.zIndex = 1000;actionsharepanel.style.position = "relative";actionsharepanel.style.background = "white";}
+if(actionsharepanel){ actionsharepanel.style.zIndex = 1000; actionsharepanel.style.position = "relative"; actionsharepanel.style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
 var i;
 var l = ytmaterialsharebutton.length;
 for(i = 0; i < l; i++){
 var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
-if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].classList.add("stefanvditemtop");ytmaterialsharebutton[i].style.background = "white";}
-}}}
+if(ytgetstring.substring(0, 5) == "Share"){ ytmaterialsharebutton[i].classList.add("stefanvditemtop"); ytmaterialsharebutton[i].style.background = "white"; }
+} } }
 }
 
 // Shows view count
 if(viewcount == true){
 // updated 15 january 2016
 var watchviewcount = document.querySelector(".watch-view-count");
-if(watchviewcount){watchviewcount.style.zIndex = 1000;watchviewcount.style.color = "white";}
+if(watchviewcount){ watchviewcount.style.zIndex = 1000; watchviewcount.style.color = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
 if(ytmaterialviewcount){
 var ytgetformat = ytmaterialviewcount.querySelector(".view-count");
-if(ytgetformat != null){ytgetformat.classList.add("stefanvditemtop");ytgetformat.style.color = "white";}
+if(ytgetformat != null){ ytgetformat.classList.add("stefanvditemtop"); ytgetformat.style.color = "white"; }
 }
 }
 
@@ -458,101 +458,101 @@ if(ytgetformat != null){ytgetformat.classList.add("stefanvditemtop");ytgetformat
 if(addvideobutton == true){
 // updated 15 january 2016
 var addtobutton = document.querySelector(".addto-button");
-if(addtobutton){addtobutton.style.zIndex = 1000;addtobutton.style.position = "relative";addtobutton.style.background = "white";}
+if(addtobutton){ addtobutton.style.zIndex = 1000; addtobutton.style.position = "relative"; addtobutton.style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialaddbutton = document.querySelectorAll("ytd-button-renderer");
 var i;
 var l = ytmaterialaddbutton.length;
 for(i = 0; i < l; i++){
 var ytgetobject = ytmaterialaddbutton[i].getElementsByTagName("button")[0];
-if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 4) == "Save"){ytmaterialaddbutton[i].classList.add("stefanvditemtop");ytmaterialaddbutton[i].style.background = "white";}
-}}}
+if(ytgetstring.substring(0, 4) == "Save"){ ytmaterialaddbutton[i].classList.add("stefanvditemtop"); ytmaterialaddbutton[i].style.background = "white"; }
+} } }
 }
 
 // Shows like/dislike bar
 if(likebar == true){
 // updated 15 january 2016
 var videoextrasparkbars = document.querySelector(".video-extras-sparkbars");
-if(videoextrasparkbars){videoextrasparkbars.style.zIndex = 1000;videoextrasparkbars.style.position = "relative"}
+if(videoextrasparkbars){ videoextrasparkbars.style.zIndex = 1000; videoextrasparkbars.style.position = "relative"; }
 // update YouTube material 21 march 2017
 var ytmateriallikebar = document.querySelector("ytd-sentiment-bar-renderer");
-if(ytmateriallikebar){ytmateriallikebar.classList.add("stefanvditemtop");}
+if(ytmateriallikebar){ ytmateriallikebar.classList.add("stefanvditemtop"); }
 }
 
 // MAC & PC & LINUX
 // HTML5
 
 // show YouTube HTML5 annotation
-div = document.getElementsByTagName("div"); 
+div = document.getElementsByTagName("div");
 var i;
 var l = div.length;
 for(i = 0; i < l; i++)
-{if(div[i].className == ("video-annotations iv-module")){div[i].classList.add("stefanvdvideocontrolsitem");}}
+{ if(div[i].className == ("video-annotations iv-module")){ div[i].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube show annotation 25 february 2016
 var videoannotations = document.getElementsByTagName("div");
 var i;
 var l = videoannotations.length;
 for(i = 0; i < l; i++)
-{if(videoannotations[i].className == ("video-annotations")){videoannotations[i].classList.add("stefanvdvideocontrolsitem");}}
+{ if(videoannotations[i].className == ("video-annotations")){ videoannotations[i].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube show channel 29 february 2016
 var annotationbranding = document.getElementsByTagName("div");
 var i;
 var l = annotationbranding.length;
 for(i = 0; i < l; i++)
-{if(annotationbranding[i].className == ("annotation annotation-type-custom iv-branding")){annotationbranding[i].classList.add("stefanvdvideocontrolstop");}}
+{ if(annotationbranding[i].className == ("annotation annotation-type-custom iv-branding")){ annotationbranding[i].classList.add("stefanvdvideocontrolstop"); } }
 
 var annotationtvpromo = document.getElementsByTagName("div");
 var i;
 var l = annotationtvpromo.length;
 for(i = 0; i < l; i++)
-{if(annotationtvpromo[i].className == ("annotation annotation-type-custom iv-promo iv-promo-video")){annotationtvpromo[i].classList.add("stefanvdvideocontrolstop");}}
+{ if(annotationtvpromo[i].className == ("annotation annotation-type-custom iv-promo iv-promo-video")){ annotationtvpromo[i].classList.add("stefanvdvideocontrolstop"); } }
 
 // info button
 var ytpcardsteaser = document.getElementsByTagName("div");
 var i;
 var l = ytpcardsteaser.length;
 for(i = 0; i < l; i++)
-{if(ytpcardsteaser[i].className == ("ytp-cards-teaser")){ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem");}}
+{ if(ytpcardsteaser[i].className == ("ytp-cards-teaser")){ ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem"); } }
 
 var ytpcardsbutton = document.getElementsByTagName("button");
 var i;
 var l = ytpcardsbutton.length;
 for(i = 0; i < l; i++)
-{if(ytpcardsbutton[i].className == ("ytp-button ytp-cards-button")){ytpcardsbutton[i].classList.add("stefanvdvideocontrolstop");}}
+{ if(ytpcardsbutton[i].className == ("ytp-button ytp-cards-button")){ ytpcardsbutton[i].classList.add("stefanvdvideocontrolstop"); } }
 
 // edit video card end screen
 var ytpcardsteaser = document.getElementsByTagName("div");
 var i;
 var l = ytpcardsteaser.length;
 for(i = 0; i < l; i++)
-{if(ytpcardsteaser[i].className == ("playergrid-safe-area")){ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem");}}
+{ if(ytpcardsteaser[i].className == ("playergrid-safe-area")){ ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube video sidebar info button
 var ivdrawer = document.getElementsByTagName("div");
 var i;
 var l = ivdrawer.length;
 for(i = 0; i < l; i++)
-{if(ivdrawer[i].className == ("iv-drawer")){ivdrawer[i].classList.add("stefanvdvideocontrolsitem");}}
+{ if(ivdrawer[i].className == ("iv-drawer")){ ivdrawer[i].classList.add("stefanvdvideocontrolsitem"); } }
 
 // channel page
 var c4player = $("c4-player");
-if(c4player){c4player.classList.add("stefanvdvideocontrolsitem");}
+if(c4player){ c4player.classList.add("stefanvdvideocontrolsitem"); }
 var c4playercontainer = document.querySelector(".c4-player-container");
-if(c4playercontainer){c4playercontainer.classList.add("stefanvdvideocontrolsitem");}
+if(c4playercontainer){ c4playercontainer.classList.add("stefanvdvideocontrolsitem"); }
 
 // new YouTube october 2013
 var appbarguidemenu = $("appbar-guide-menu");
-if(appbarguidemenu){appbarguidemenu.style.zIndex = "10";}
+if(appbarguidemenu){ appbarguidemenu.style.zIndex = "10"; }
 
 var appbarguideiframemask = $("appbar-guide-iframe-mask");
-if(appbarguideiframemask){appbarguideiframemask.style.zIndex = "-1";}
+if(appbarguideiframemask){ appbarguideiframemask.style.zIndex = "-1"; }
 
 var guide = $("guide");
-if(guide){guide.classList.add("stefanvdvideocontrolstop");}
+if(guide){ guide.classList.add("stefanvdvideocontrolstop"); }
 
 // short and cleaner engine 2014
 var data = [["movie_player"],["movie_player-html5"],["watch-player"],["html5-player"],["video-player"],["user_fullwidth_gadget"],["ytp-share-panel"],["player-container"]];
@@ -560,8 +560,8 @@ var conf;
 for(conf in data){
         var temp = document.getElementById(data[conf][0]);
         if(temp){
-			if(temp.classList.contains("stefanvdvideoauto")){temp.classList.remove("stefanvdvideoauto");}
-			if(temp.classList.contains("stefanvdotherdown")){temp.classList.remove("stefanvdotherdown");}
+			if(temp.classList.contains("stefanvdvideoauto")){ temp.classList.remove("stefanvdvideoauto"); }
+			if(temp.classList.contains("stefanvdotherdown")){ temp.classList.remove("stefanvdotherdown"); }
 			temp.classList.add("stefanvdvideocontrolsitem");
         }
 }
@@ -575,8 +575,8 @@ for(div in ytdivs){
 	var j = dclasses.length;
 	for(i = 0; i < j; i++){
 	if(hasClass(ytdivs[div], dclasses[i])){
-		if(ytdivs[div].classList.contains("stefanvdvideoauto")){ytdivs[div].classList.remove("stefanvdvideoauto");}
-		if(ytdivs[div].classList.contains("stefanvdotherdown")){ytdivs[div].classList.remove("stefanvdotherdown");}
+		if(ytdivs[div].classList.contains("stefanvdvideoauto")){ ytdivs[div].classList.remove("stefanvdvideoauto"); }
+		if(ytdivs[div].classList.contains("stefanvdotherdown")){ ytdivs[div].classList.remove("stefanvdotherdown"); }
 		ytdivs[div].classList.add("stefanvdvideocontrolsitem");
 	}
 	}
@@ -587,54 +587,54 @@ var subtitel = document.getElementsByTagName("div");
 var i;
 var l = subtitel.length;
 for(i = 0; i < l; i++)
-{if(subtitel[i].className == ("ytp-player-content ytp-subtitles-player-content")){subtitel[i].classList.add("stefanvdvideocontrolsitem");subtitel[i].style.pointerEvents = "none";}}
+{ if(subtitel[i].className == ("ytp-player-content ytp-subtitles-player-content")){ subtitel[i].classList.add("stefanvdvideocontrolsitem"); subtitel[i].style.pointerEvents = "none"; } }
 
 var ytbezel = document.getElementsByTagName("div");
 var i;
 var l = ytbezel.length;
 for(i = 0; i < l; i++)
-{if(ytbezel[i].className == ("html5-bezel html5-center-overlay")){ytbezel[i].classList.add("stefanvdvideocontrolsitem");}}
+{ if(ytbezel[i].className == ("html5-bezel html5-center-overlay")){ ytbezel[i].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube still showing the skip button for the ads
 var ytvideoadui = document.querySelector(".videoAdUi");
-if(ytvideoadui){ytvideoadui.classList.add("stefanvdvideocontrolsitem");}
+if(ytvideoadui){ ytvideoadui.classList.add("stefanvdvideocontrolsitem"); }
 
 var ytvideoads = document.querySelector(".ad-overlay");
-if(ytvideoads){ytvideoads.classList.add("stefanvdvideocontrolsitem");}
+if(ytvideoads){ ytvideoads.classList.add("stefanvdvideocontrolsitem"); }
 
 var ytadcon = document.querySelector(".ad-container");
-if(ytadcon){ytadcon.classList.add("stefanvdvideocontrolsitem");}
+if(ytadcon){ ytadcon.classList.add("stefanvdvideocontrolsitem"); }
 
 // update 10 September 2018
 // fix for the TrueView video
-var ythtmlvideocontainer = document.querySelector(".html5-video-container")
-if(ythtmlvideocontainer){ythtmlvideocontainer.style.position = "absolute";}
+var ythtmlvideocontainer = document.querySelector(".html5-video-container");
+if(ythtmlvideocontainer){ ythtmlvideocontainer.style.position = "absolute"; }
 
 var ytdivvideoads = document.querySelector(".video-ads");
-if(ytdivvideoads){ytdivvideoads.classList.add("stefanvdvideocontrolsitem");}
+if(ytdivvideoads){ ytdivvideoads.classList.add("stefanvdvideocontrolsitem"); }
 //---
 // update 14 December 2018
 var ytpadoverlayslot = document.querySelector(".ytp-ad-overlay-slot");
-if(ytpadoverlayslot){ytpadoverlayslot.classList.add("stefanvdvideocontrolsitem");}
+if(ytpadoverlayslot){ ytpadoverlayslot.classList.add("stefanvdvideocontrolsitem"); }
 
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName("div");
 var i;
 var l = ytpprogress.length;
 for(i = 0; i < l; i++)
-{if(ytpprogress[i].className == ("ytp-progress-bar-container")){ytpprogress[i].classList.add("stefanvdvideocontrolstop");}}
+{ if(ytpprogress[i].className == ("ytp-progress-bar-container")){ ytpprogress[i].classList.add("stefanvdvideocontrolstop"); } }
 
 // popup share container
 var ytpopupsharecon = document.querySelector("ytd-popup-container");
-if(ytpopupsharecon){ytpopupsharecon.classList.add("stefanvdvideocontrolstop");ytpopupsharecon.style.position = "absolute";}
+if(ytpopupsharecon){ ytpopupsharecon.classList.add("stefanvdvideocontrolstop"); ytpopupsharecon.style.position = "absolute"; }
 
 // end screen
 var ytendscreen = document.querySelector(".html5-endscreen");
-if(ytendscreen){ytendscreen.classList.add("stefanvdvideocontrolsitem");}
+if(ytendscreen){ ytendscreen.classList.add("stefanvdvideocontrolsitem"); }
 
 // movie sidebar
 var ytmovieside = document.querySelector(".ytp-ypc-player-content");
-if(ytmovieside){ytmovieside.classList.add("stefanvdvideocontrolsitem");}
+if(ytmovieside){ ytmovieside.classList.add("stefanvdvideocontrolsitem"); }
 
 } // end YouTube
 
@@ -667,7 +667,7 @@ for(i = 0; i < l; i++){
 		// var targetComputedStyleHeight=document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("height");
 		// var spar = targetComputedStyleHeight.replace("px","");embed[i].style.height = Math.round(spar) + "px";
 		// var targetComputedStyleWidth=document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("width");
-		// var been = targetComputedStyleWidth.replace("px","");embed[i].style.width = Math.round(been) + "px"; 
+		// var been = targetComputedStyleWidth.replace("px","");embed[i].style.width = Math.round(been) + "px";
 		// }catch(e){}
 	// }
 // }
@@ -684,18 +684,18 @@ var l = embedplayer.length;
 for(i = 0; i < l; i++){
 // video list
 var insideframe = embedplayer[i].src;
-if(embedplayer[i].tagName == "IFRAME" || embedplayer[i].tagName == "EMBED"){insideframe = embedplayer[i].src}
-else if(embedplayer[i].tagName == "OBJECT"){ insideframe = embedplayer[i].data}
+if(embedplayer[i].tagName == "IFRAME" || embedplayer[i].tagName == "EMBED"){ insideframe = embedplayer[i].src; }
+else if(embedplayer[i].tagName == "OBJECT"){ insideframe = embedplayer[i].data; }
 
 var allowedHosts = ["//www.youtube.com", "//www.youtube-nocookie.com", "http://www.youtube.com", "https://www.youtube.com", "http://www.youtube-nocookie.com", "https://www.youtube-nocookie.com", "https://youtube.com", "http://youtube.com", "http://vimeo.com", "https://vimeo.com", "http://player.vimeo.com", "https://player.vimeo.com", "https://secure-a.vimeocdn.com", "http://a.vimeocdn.com", "https://a.vimeocdn.com", "http://www.dailymotion.com", "https://www.dailymotion.com", "http://static1.dmcdn.net", "https://static1.dmcdn.net", "http://videoplayer.vevo.com", "https://videoplayer.vevo.com", "http://embed.itunes.apple.com", "https://embed.itunes.apple.com", "http://emp.bbc.com/emp", "https://emp.bbc.com/emp", "http://vk.com/video", "https://vk.com/video", "http://vk.com/swf", "https://vk.com/swf", "http://www.facebook.com/v/","https://www.facebook.com/v/", "http://static.ak.fbcdn.net", "https://static.ak.fbcdn.net", "http://static.ak.facebook.com", "https://static.ak.facebook.com", "http://s-static.ak.facebook.com", "https://s-static.ak.facebook.com", "http://fbstatic-a.akamaihd.net", "https://fbstatic-a.akamaihd.net", "http://www.facebook.com/video/", "https://www.facebook.com/video/", "http://twitter.com/i/videos", "https://twitter.com/i/videos", "http://lads.myspace.com/videos", "https://lads.myspace.com/videos", "http://www.hulu.com/embed", "https://www.hulu.com/embed", "https://www.hulu.com/site-player", "http://www.hulu.com/site-player", "http://player.hulu.com", "https://player.hulu.com", "http://blip.tv", "http://blip.tv", "http://a.blip.tv", "https://a.blip.tv", "http://l.yimg.com", "https://l.yimg.com", "http://www.metacafe.com", "https://www.metacafe.com", "http://www-cdn.justin.tv", "https://www-cdn.justin.tv", "http://twitch.tv", "https://twitch.tv", "http://www-cdn.jtvnw.net", "https://www-cdn.jtvnw.net", "http://player.twitch.tv", "https://player.twitch.tv", "http://nl.ign.com", "https://nl.ign.com", "http://s.mcstatic.com", "https://s.mcstatic.com", "http://is4.myvideo.de", "https://is4.myvideo.de", "http://player.ooyala.com", "https://player.ooyala.com", "http://i.nflcdn.com", "https://i.nflcdn.com", "http://cfiles.5min.com", "https://cfiles.5min.com", "http://can.cbs.com", "https://can.cbs.com", "http://player.rts.ch", "https://player.rts.ch", "http://cdn.livestream.com", "https://cdn.livestream.com", "http://static-cdn1.ustream.tv", "https://static-cdn1.ustream.tv", "http://static.ak.crunchyroll.com", "https://static.ak.crunchyroll.com", "https://static.crunchyroll.com", "http://video.ted.com", "https://video.ted.com", "http://embed.ted.com", "https://embed.ted.com", "http://metatube.com", "https://metatube.com", "http://www.redditmedia.com/mediaembed","https://www.redditmedia.com/mediaembed", "https://embeds.vice.com", "https://embeds.vice.com", "http://videohosting.sidereel.com", "https://videohosting.sidereel.com", "http://rutube.ru/video/embed", "https://rutube.ru/video/embed", "http://vine.co/v", "https://vine.co/v", "http://web.microsoftstream.com/embed/video", "https://web.microsoftstream.com/embed/video", "http://rtssatweb.videostreaming.rs/player.php", "http://rtssatweb.videostreaming.rs/player.php", "http://embed.break.com","https://embed.break.com","https://media1.break.com", "https://media1.break.com", "http://www.collegehumor.com", "https://www.collegehumor.com", "http://0.static.collegehumor.cvcdn.com", "https://0.static.collegehumor.cvcdn.com", "http://hub.video.msn.com", "https://hub.video.msn.com", "http://img.widgets.video.s-msn.com", "https://img.widgets.video.s-msn.com", "http://flash.pcworld.com/video", "https://flash.pcworld.com/video", "https://safe.txmblr.com/svc/embed/iframe", "https://safe.txmblr.com/svc/embed/iframe", "http://player.cntv.cn", "https://player.cntv.cn", "http://js.kankan.xunlei.com/player", "https://js.kankan.xunlei.com/player", "http://tv.sohu.com", "https://tv.sohu.com", "http://www.iqiyi.com", "https://www.iqiyi.com","http://static1.mtime.cn", "https://static1.mtime.cn", "http://movie.mtime.com", "https://movie.mtime.com", "http://movie.douban.com", "https://movie.douban.com", "http://static.m1905.com", "https://static.m1905.com", "http://imgcache.qq.com", "https://imgcache.qq.com", "http://s1.56img.com", "https://s1.56img.com", "http://player.video.qiyi.com", "https://player.video.qiyi.com", "http://vxml.ifengimg.com/swf", "https://vxml.ifengimg.com/swf", "http://live.nicovideo.jp/embed", "https://live.nicovideo.jp/embed", "http://ssl.acfun.tv/block-player-homura.html", "https://ssl.acfun.tv/block-player-homura.html", "http://www.ceskatelevize.cz/ivysilani/embed", "https://www.ceskatelevize.cz/ivysilani/embed", "http://cdn.embedly.com/widgets", "https://cdn.embedly.com/widgets", "http://player.theplatform.com", "https://player.theplatform.com", "http://player.youku.com", "https://player.youku.com", "http://static.youku.com", "https://static.youku.com"];
 
-for(p=0;p<allowedHosts.length;p++){
+for(p = 0; p < allowedHosts.length; p++){
 	// website URL include in the whitelist array
-	if(insideframe.startsWith(allowedHosts[p])== true){
+	if(insideframe.startsWith(allowedHosts[p]) == true){
 		// current video to front
-		var targetComputedStyleHeight=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("height");var spar = targetComputedStyleHeight.replace("px","");
-		var targetComputedStyleWidth=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("width");var been = targetComputedStyleWidth.replace("px","");
-		var targetComputedStylePosition=document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("position");
+		var targetComputedStyleHeight = document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("height"); var spar = targetComputedStyleHeight.replace("px","");
+		var targetComputedStyleWidth = document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("width"); var been = targetComputedStyleWidth.replace("px","");
+		var targetComputedStylePosition = document.defaultView.getComputedStyle(embedplayer[i],null).getPropertyValue("position");
 		embedplayer[i].classList.add("stefanvdvideotop");
 		embedplayer[i].style.cssText = "height:" + Math.round(spar) + "px; width:" + Math.round(been) + "px; display: block;";
 		// search for the video player, and set the previous path all to z-index "auto"
@@ -704,11 +704,11 @@ for(p=0;p<allowedHosts.length;p++){
 		}
 
 		// double check to remove all other CSS classes
-		if(embedplayer[i].classList.contains("stefanvdotherdown")){embedplayer[i].classList.remove("stefanvdotherdown");}
-		if(embedplayer[i].classList.contains("stefanvdvideocontrolstop")){embedplayer[i].classList.remove("stefanvdvideocontrolstop");}
-		if(embedplayer[i].classList.contains("stefanvdvideocontrolsitem")){embedplayer[i].classList.remove("stefanvdvideocontrolsitem");}
-		if(embedplayer[i].classList.contains("stefanvditemtop")){embedplayer[i].classList.remove("stefanvditemtop");}
-		if(embedplayer[i].classList.contains("stefanvdvideoauto")){embedplayer[i].classList.remove("stefanvdvideoauto");}
+		if(embedplayer[i].classList.contains("stefanvdotherdown")){ embedplayer[i].classList.remove("stefanvdotherdown"); }
+		if(embedplayer[i].classList.contains("stefanvdvideocontrolstop")){ embedplayer[i].classList.remove("stefanvdvideocontrolstop"); }
+		if(embedplayer[i].classList.contains("stefanvdvideocontrolsitem")){ embedplayer[i].classList.remove("stefanvdvideocontrolsitem"); }
+		if(embedplayer[i].classList.contains("stefanvditemtop")){ embedplayer[i].classList.remove("stefanvditemtop"); }
+		if(embedplayer[i].classList.contains("stefanvdvideoauto")){ embedplayer[i].classList.remove("stefanvdvideoauto"); }
 		//---
 	}
 }
@@ -722,84 +722,84 @@ for(p=0;p<allowedHosts.length;p++){
 if(window.location.href.match(/((http:\/\/(.*vimeo\.com\/.*|.*vimeo\.com\/.*\/b\/.*|.*vimeo\.com\/.*\/w\/.*))|(https:\/\/(.*vimeo\.com\/.*|.*vimeo\.com\/.*\/b\/.*|.*vimeo\.com\/.*\/w\/.*)))/i)){
 // 30/03/2014 show the controls
 var vimeocontrols = document.querySelector(".controls");
-if(vimeocontrols){vimeocontrols.classList.add("stefanvdvideocontrolsitem");}
+if(vimeocontrols){ vimeocontrols.classList.add("stefanvdvideocontrolsitem"); }
 
 var vimeosidedock = document.querySelector(".sidedock");
-if(vimeosidedock){vimeosidedock.classList.add("stefanvdvideocontrolsitem");}
+if(vimeosidedock){ vimeosidedock.classList.add("stefanvdvideocontrolsitem"); }
 
 var vimeotitle = document.querySelector(".title");
-if(vimeotitle){vimeotitle.classList.add("stefanvdvideocontrolsitem");}
+if(vimeotitle){ vimeotitle.classList.add("stefanvdvideocontrolsitem"); }
 
 var vimeotarget = document.querySelector(".target");
-if(vimeotarget){vimeotarget.classList.add("stefanvdvideocontrolsitem");}
+if(vimeotarget){ vimeotarget.classList.add("stefanvdvideocontrolsitem"); }
 
 var vimeovideo = document.querySelector(".video");
-if(vimeovideo){vimeovideo.classList.add("stefanvdvideocontrolsitem");}
+if(vimeovideo){ vimeovideo.classList.add("stefanvdvideocontrolsitem"); }
 //fixed 25/03/2016
 var vimeocontainer = document.querySelectorAll("div.player_container");
 var i;
 var l = vimeocontainer.length;
-for(i = 0; i < l; i++){vimeocontainer[i].style.transform = "initial";vimeocontainer[i].style.webkitTransform = "initial";vimeocontainer[i].style.margin = "auto";vimeocontainer[i].style.left = "0px";vimeocontainer[i].style.right = "0px";}
+for(i = 0; i < l; i++){ vimeocontainer[i].style.transform = "initial"; vimeocontainer[i].style.webkitTransform = "initial"; vimeocontainer[i].style.margin = "auto"; vimeocontainer[i].style.left = "0px"; vimeocontainer[i].style.right = "0px"; }
 var vimeovideoplayerarea = document.querySelectorAll("div.player_area");
 var i;
 var l = vimeovideoplayerarea.length;
-for(i = 0; i < l; i++){vimeovideoplayerarea[i].style.transformStyle = "initial";vimeovideoplayerarea[i].style.webkitTransformStyle = "initial";}
+for(i = 0; i < l; i++){ vimeovideoplayerarea[i].style.transformStyle = "initial"; vimeovideoplayerarea[i].style.webkitTransformStyle = "initial"; }
 
 var vimeoprogress = document.querySelector(".progress");
-if(vimeoprogress){vimeoprogress.classList.add("stefanvdvideocontrolsitem");}
+if(vimeoprogress){ vimeoprogress.classList.add("stefanvdvideocontrolsitem"); }
 var vimeoplayed = document.querySelector(".played");
-if(vimeoplayed){vimeoplayed.classList.add("stefanvdvideocontrolsitem");}
+if(vimeoplayed){ vimeoplayed.classList.add("stefanvdvideocontrolsitem"); }
 // 18/08/2018
 var vppreview = document.querySelector(".vp-preview");
-if(vppreview){vppreview.classList.add("stefanvdvideocontrolsitem");}
+if(vppreview){ vppreview.classList.add("stefanvdvideocontrolsitem"); }
 
 var vpcontrols = document.querySelector(".vp-controls");
-if(vpcontrols){vpcontrols.classList.add("stefanvdvideocontrolsitem");}
+if(vpcontrols){ vpcontrols.classList.add("stefanvdvideocontrolsitem"); }
 
 var vpsidedock = document.querySelector(".vp-sidedock");
-if(vpsidedock){vpsidedock.classList.add("stefanvdvideocontrolsitem");}
+if(vpsidedock){ vpsidedock.classList.add("stefanvdvideocontrolsitem"); }
 
 var vptitle = document.querySelector(".vp-title");
-if(vptitle){vptitle.classList.add("stefanvdvideocontrolsitem");}
+if(vptitle){ vptitle.classList.add("stefanvdvideocontrolsitem"); }
 }
 // Dailymotion, fixed show video
 else if(window.location.href.match(/((http:\/\/(.*dailymotion\.com\/.*|.*dailymotion\.com\/video\/.*))|(https:\/\/(.*dailymotion\.com\/.*|.*dailymotion\.com\/video\/.*)))/i)){
 // inject CSS for head
 try{
 	var totldailymotion = ".np_ButtonWatermark,.np_Darken,.np_ControlsManager,.np_Gesture,.np_dialog,.np_menu,.np_MenuSettings,.np_row--info,.dmp_SubtitleView{z-index:1001!important}";
-	
+
 	if($("csstotldailymotion")){
 	 var elem = document.getElementById("csstotldailymotion");
 	 elem.parentElement.removeChild(elem);
 	}
-	
+
 	var css = document.createElement("style");
 	css.setAttribute("id","csstotldailymotion");
 	css.type = "text/css";
 	css.appendChild(document.createTextNode(totldailymotion));
 	document.getElementsByTagName("head")[0].appendChild(css);
-	
+
 }
 catch(e){}
 }
 // vk.com, fixed show video
 else if(window.location.href.match(/((http:\/\/.*vk\.com\/.*)|(https:\/\/.*vk\.com\/.*))/i)){
 var videoplayer = $("video_player");
-if(videoplayer){$("video_player").classList.add("stefanvdvideocontrolsitem");}
+if(videoplayer){ $("video_player").classList.add("stefanvdvideocontrolsitem"); }
 
 var layerbg = $("layer_bg");
-if(layerbg){layerbg.style.cssText += "position:absolute !important";}
+if(layerbg){ layerbg.style.cssText += "position:absolute !important"; }
 
 var mvlayerwrap = $("mv_layer_wrap");
-if(mvlayerwrap){mvlayerwrap.style.cssText += "position:absolute !important";}
+if(mvlayerwrap){ mvlayerwrap.style.cssText += "position:absolute !important"; }
 }
 // steampowered.com, fixed show control
 else if(window.location.href.match(/((http:\/\/.*steampowered\.com\/.*)|(https:\/\/.*steampowered\.com\/.*))/i)){
-div = document.getElementsByTagName("div"); 
+div = document.getElementsByTagName("div");
 var i;
 var l = div.length;
-for(i = 0; i < l; i++) 
-{if(div[i].className == ("html5_video_overlay")){div[i].classList.add("stefanvdvideocontrolsitem");}}
+for(i = 0; i < l; i++)
+{ if(div[i].className == ("html5_video_overlay")){ div[i].classList.add("stefanvdvideocontrolsitem"); } }
 }
 // twich.tv
 // fixed 15 january 2016
@@ -807,9 +807,9 @@ else if(window.location.href.match(/((http:\/\/.*twitch\.tv\/.*)|(https:\/\/.*tw
 div = document.getElementsByTagName("div");
 var i;
 var l = div.length;
-for(i = 0; i < l; i++) 
+for(i = 0; i < l; i++)
 {
-    if(div[i].className == ("player-video")){div[i].style.height = "100%";}
+    if(div[i].className == ("player-video")){ div[i].style.height = "100%"; }
 }
 
 var twzdefault = document.querySelectorAll(".tw-z-default");
@@ -855,7 +855,7 @@ var i;
 var l = videoStage.length;
 for(i = 0; i < l; i++){
     videoStage[i].classList.add("stefanvdvideocontrolsitem");
-		div = videoStage[i].getElementsByTagName("div"); 
+		div = videoStage[i].getElementsByTagName("div");
 		var j;
 		var q = div.length;
         for(j = 0; j < q; j++){
@@ -869,7 +869,7 @@ var i;
 var l = i5q.length;
 for(i = 0; i < l; i++){
     i5q[i].classList.add("stefanvdvideocontrolsitem");
-		div = i5q[i].getElementsByTagName("div"); 
+		div = i5q[i].getElementsByTagName("div");
 		var j;
 		var q = div.length;
         for(j = 0; j < q; j++){
@@ -912,17 +912,17 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 		if(readerontext != null && readeronrange != null){
 			chrome.storage.sync.set({"interval": readerontext.value});
 		}
-	
+
 		readerlargestyle = $("stefanvdreaderbar");
 		if(readerlargestyle != null){
-			if(readerlargestyle.style.width == "30px"){chrome.storage.sync.set({"readerlargestyle": false});}
-			else{chrome.storage.sync.set({"readerlargestyle": true});}
+			if(readerlargestyle.style.width == "30px"){ chrome.storage.sync.set({"readerlargestyle": false}); }
+			else{ chrome.storage.sync.set({"readerlargestyle": true}); }
 		}
 		}
-	
+
 		var stefanvdreaderbar = $("stefanvdreaderbar");
-		if(stefanvdreaderbar){document.body.removeChild(stefanvdreaderbar);}
-		
+		if(stefanvdreaderbar){ document.body.removeChild(stefanvdreaderbar); }
+
 		// remove help div
 		var stefanvdlightareoffcustom = $("stefanvdlightareoffcustom");
 		if(stefanvdlightareoffcustom){
@@ -930,12 +930,12 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 		document.body.style.cursor = "default";
 		}
 		window.onmousemove = null;
-		
+
         // Set everything back to the default YouTube theme
         if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 			// update YouTube material 6 August 2017
 			var ytmaterialinfo = document.querySelector("ytd-video-secondary-info-renderer");
-			if(ytmaterialinfo){ytmaterialinfo.style.background = "";}
+			if(ytmaterialinfo){ ytmaterialinfo.style.background = ""; }
 
 			// YouTube like button
 			var ytmateriallikebutton = document.querySelectorAll("ytd-toggle-button-renderer");
@@ -943,11 +943,11 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 			var l = ytmateriallikebutton.length;
 			for(i = 0; i < l; i++){
 			var ytgetobject = ytmateriallikebutton[i].getElementsByTagName("button")[0];
-			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+			if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
-			if(ytgetstring.substring(0, 7) == "dislike"){ytmateriallikebutton[i].style.background = "";}
-			else if(ytgetstring.substring(0, 4) == "like"){ytmateriallikebutton[i].style.background = "";}
-			}}}
+			if(ytgetstring.substring(0, 7) == "dislike"){ ytmateriallikebutton[i].style.background = ""; }
+			else if(ytgetstring.substring(0, 4) == "like"){ ytmateriallikebutton[i].style.background = ""; }
+			} } }
 
 			// YouTube share button
 			var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
@@ -955,90 +955,90 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 			var l = ytmaterialsharebutton.length;
 			for(i = 0; i < l; i++){
 			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
-			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+			if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
-			if(ytgetstring.substring(0, 5) == "Share"){ytmaterialsharebutton[i].style.background = "";}
-			}}}
-		
+			if(ytgetstring.substring(0, 5) == "Share"){ ytmaterialsharebutton[i].style.background = ""; }
+			} } }
+
 			// YouTube save button
 			var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
 			var i;
 			var l = ytmaterialsharebutton.length;
 			for(i = 0; i < l; i++){
 			var ytgetobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
-			if(ytgetobject != null){var ytgetstring = ytgetobject.getAttribute("aria-label");
+			if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 			if(ytgetstring != null){
-			if(ytgetstring.substring(0, 4) == "Save"){ytmaterialsharebutton[i].style.background = "";}
-			}}}
-		
+			if(ytgetstring.substring(0, 4) == "Save"){ ytmaterialsharebutton[i].style.background = ""; }
+			} } }
+
 			// YouTube head
 			var ytmaterialhead = document.querySelector("ytd-video-owner-renderer");
-			if(ytmaterialhead){ytmaterialhead.style.background = "";}
+			if(ytmaterialhead){ ytmaterialhead.style.background = ""; }
 
 			// YouTube suggestions
 			var ytmaterialsuggestions = document.querySelector("ytd-watch-next-secondary-results-renderer");
-			if(ytmaterialsuggestions){ytmaterialsuggestions.style.background = "";}
+			if(ytmaterialsuggestions){ ytmaterialsuggestions.style.background = ""; }
 
 			// YouTube video title
 			var ytmaterialvideotitle = document.querySelector("ytd-video-primary-info-renderer");
 			if(ytmaterialvideotitle){
 			var ytgeth = ytmaterialvideotitle.querySelector("h1");
-			if(ytgeth != null){ytgeth.style.color = "";}
+			if(ytgeth != null){ ytgeth.style.color = ""; }
 			}
 
 			// YouTube view count
 			var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
 			if(ytmaterialviewcount){
 			var ytgetformat = ytmaterialviewcount.querySelector(".view-count");
-			if(ytgetformat != null){ytgetformat.style.color = "";}
+			if(ytgetformat != null){ ytgetformat.style.color = ""; }
 			}
-			
+
 			// old YouTube -----
             // YouTube video suggestions (set back to default)
             var watch7sidebar = $("watch7-sidebar");
-            if(watch7sidebar){watch7sidebar.style.zIndex = "auto";}
+            if(watch7sidebar){ watch7sidebar.style.zIndex = "auto"; }
 
             // YouTube playlist (set back to default)
             var watchappbarplaylist = $("watch-appbar-playlist");
-            if(watchappbarplaylist){watchappbarplaylist.style.zIndex = "3";}
+            if(watchappbarplaylist){ watchappbarplaylist.style.zIndex = "3"; }
 
             // YouTube video title (set back to default)
             var eowtitle = $("eow-title");
-            if(eowtitle){eowtitle.style.color = "#222";eowtitle.style.zIndex = "auto";eowtitle.style.position = "relative";}
-		
+            if(eowtitle){ eowtitle.style.color = "#222"; eowtitle.style.zIndex = "auto"; eowtitle.style.position = "relative"; }
+
             // YouTube video channel link back black (set back to default)
             var watch7userheader = $("watch7-user-header");
-            if(watch7userheader){watch7userheader.style.zIndex = "auto";watch7userheader.style.position = "relative";}
+            if(watch7userheader){ watch7userheader.style.zIndex = "auto"; watch7userheader.style.position = "relative"; }
 
             var ytuserinfoa = document.querySelector(".yt-user-info a");
-            if(ytuserinfoa){ytuserinfoa.style.color = "#333";}
-            
+            if(ytuserinfoa){ ytuserinfoa.style.color = "#333"; }
+
             // YouTube infobar (set back to default)
             var watchdescription = $("watch-description");
-            if(watchdescription){watchdescription.style.zIndex = "auto";watchdescription.style.background = "transparent";}
-            
+            if(watchdescription){ watchdescription.style.zIndex = "auto"; watchdescription.style.background = "transparent"; }
+
             // YouTube infobar (set back to default)
             var likebuttonrenderlike = document.querySelector(".like-button-renderer-like-button");
-            if(likebuttonrenderlike){likebuttonrenderlike.style.zIndex = "auto";likebuttonrenderlike.style.position = "relative";likebuttonrenderlike.style.background = "transparent";}
+            if(likebuttonrenderlike){ likebuttonrenderlike.style.zIndex = "auto"; likebuttonrenderlike.style.position = "relative"; likebuttonrenderlike.style.background = "transparent"; }
 
             var likebuttonrenderdislike = document.querySelector(".like-button-renderer-dislike-button");
-            if(likebuttonrenderdislike){likebuttonrenderdislike.style.zIndex = "auto";likebuttonrenderdislike.style.position = "relative";likebuttonrenderdislike.style.background = "transparent";}
+            if(likebuttonrenderdislike){ likebuttonrenderdislike.style.zIndex = "auto"; likebuttonrenderdislike.style.position = "relative"; likebuttonrenderdislike.style.background = "transparent"; }
 
             // YouTube share buttons (set back to default)
             var actionsharepanel = document.querySelector(".action-panel-trigger-share");
-            if(actionsharepanel){actionsharepanel.style.zIndex = "auto";actionsharepanel.style.position = "relative";actionsharepanel.style.background = "transparent";}
+            if(actionsharepanel){ actionsharepanel.style.zIndex = "auto"; actionsharepanel.style.position = "relative"; actionsharepanel.style.background = "transparent"; }
 
             // YouTube video view count (set back to default)
             var watchviewcount = document.querySelector(".watch-view-count");
-            if(watchviewcount){watchviewcount.style.zIndex = "auto";watchviewcount.style.color = "#333";}
-            
+            if(watchviewcount){ watchviewcount.style.zIndex = "auto"; watchviewcount.style.color = "#333"; }
+
             // YouTube video save button (set back to default)
             var addtobutton = document.querySelector(".addto-button");
-            if(addtobutton){addtobutton.style.zIndex = "auto";addtobutton.style.position = "relative";addtobutton.style.background = "transparent";}
-    
+            if(addtobutton){ addtobutton.style.zIndex = "auto"; addtobutton.style.position = "relative"; addtobutton.style.background = "transparent"; }
+
             // YouTube like bar (set back to default)
             var videoextrasparkbars = document.querySelector(".video-extras-sparkbars");
-            if(videoextrasparkbars){videoextrasparkbars.style.zIndex = "auto";videoextrasparkbars.style.position = "relative";}
+            if(videoextrasparkbars){ videoextrasparkbars.style.zIndex = "auto"; videoextrasparkbars.style.position = "relative"; }
        }
 	}
 
@@ -1047,64 +1047,64 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 		var stefanvdlightareoff2 = $("stefanvdlightareoff2");
 		var stefanvdlightareoff3 = $("stefanvdlightareoff3");
 		var stefanvdlightareoff4 = $("stefanvdlightareoff4");
-		if(stefanvdlightareoff1){document.body.removeChild(stefanvdlightareoff1);}
-		if(stefanvdlightareoff2){document.body.removeChild(stefanvdlightareoff2);}
-		if(stefanvdlightareoff3){document.body.removeChild(stefanvdlightareoff3);}
-		if(stefanvdlightareoff4){document.body.removeChild(stefanvdlightareoff4);}
-		
+		if(stefanvdlightareoff1){ document.body.removeChild(stefanvdlightareoff1); }
+		if(stefanvdlightareoff2){ document.body.removeChild(stefanvdlightareoff2); }
+		if(stefanvdlightareoff3){ document.body.removeChild(stefanvdlightareoff3); }
+		if(stefanvdlightareoff4){ document.body.removeChild(stefanvdlightareoff4); }
+
 		var stefanvdeastereggs = $("stefanvdtheater");
-		if(stefanvdeastereggs){document.body.removeChild(stefanvdeastereggs);}
+		if(stefanvdeastereggs){ document.body.removeChild(stefanvdeastereggs); }
 
 		var stefanvdblurimage = $("stefanvdblurimage");
-		if(stefanvdblurimage){document.body.removeChild(stefanvdblurimage);}
+		if(stefanvdblurimage){ document.body.removeChild(stefanvdblurimage); }
 
 		var stefanvdlightcorner = $("stefanvdlightcorner");
-		if(stefanvdlightcorner){document.body.removeChild(stefanvdlightcorner);}
+		if(stefanvdlightcorner){ document.body.removeChild(stefanvdlightcorner); }
 
 		var csstotlpseudo = $("csstotlpseudo");
-		if(csstotlpseudo){document.getElementsByTagName("head")[0].removeChild(csstotlpseudo);}
+		if(csstotlpseudo){ document.getElementsByTagName("head")[0].removeChild(csstotlpseudo); }
 
 		// remove video player on top
 		var div = document.querySelectorAll(".stefanvdvideotop");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideotop");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideotop"); }
 		var div = document.querySelectorAll(".stefanvditemtop");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvditemtop");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvditemtop"); }
 		var div = document.querySelectorAll(".stefanvdvideoauto");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideoauto");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideoauto"); }
 		var div = document.querySelectorAll(".stefanvdotherdown");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdotherdown");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdotherdown"); }
 		var div = document.querySelectorAll(".stefanvdcontainauto");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdcontainauto");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdcontainauto"); }
 		var div = document.querySelectorAll(".stefanvdtransformauto");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdtransformauto");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdtransformauto"); }
 		var div = document.querySelectorAll(".stefanvdvideocontrolsitem");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideocontrolsitem");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideocontrolsitem"); }
 		var div = document.querySelectorAll(".stefanvdvideocontrolstop");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdvideocontrolstop");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideocontrolstop"); }
 		var div = document.querySelectorAll(".stefanvdposfixed");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdposfixed");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdposfixed"); }
 		var div = document.querySelectorAll(".stefanvdpossticky");
 		var i;
 		var l = div.length;
-		for(i = 0; i < l; i++){div[i].classList.remove("stefanvdpossticky");}
+		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdpossticky"); }
 
 		// inside the root
 		var q = document.getElementsByTagName("*");
@@ -1112,37 +1112,37 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 		var l = q.length;
 		for(i = 0; i < l; i++){
 			if(q[i].shadowRoot){
-				if(q[i].shadowRoot.querySelector("#rootstefan")){q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector("#rootstefan"));}
+				if(q[i].shadowRoot.querySelector("#rootstefan")){ q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector("#rootstefan")); }
 
 				var rootdiv = q[i].shadowRoot.querySelectorAll(".stefanvdotherdown");
 				var k;
 				var m = rootdiv.length;
-				for(k = 0; k < m; k++){rootdiv[k].classList.remove("stefanvdotherdown");}
+				for(k = 0; k < m; k++){ rootdiv[k].classList.remove("stefanvdotherdown"); }
 			}
 		}
 	}
-	
+
 	function removenewdynamic(){
 		var stefanvddynamicbackground = $("stefanvddynamicbackground");
-		if(stefanvddynamicbackground){document.body.removeChild(stefanvddynamicbackground);}
+		if(stefanvddynamicbackground){ document.body.removeChild(stefanvddynamicbackground); }
 	}
 
 chrome.storage.sync.get(["mousespotlighto","mousespotlightc","mousespotlighta","lightcolor","lightimagea","lightimage","interval","fadein","fadeout","readera","readerlargestyle","mousespotlightt","enterpassword","password","dynamic","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","blur","cinemaontop","spotlightradius","slideeffect","lightimagelin","linearsq","colora","intervallina","colorb","intervallinb","mousespotlights","screenshader","darkbrowsertheme","multiopacall","multiopacsel","multiopacityDomains","lampandnightmode"], function(response){
-mousespotlighto = response["mousespotlighto"];if(mousespotlighto == null)mousespotlighto = true; // default mousespotlighto true
-mousespotlightc = response["mousespotlightc"];if(mousespotlightc == null)mousespotlightc = false; // default mousespotlightc false
-mousespotlighta = response["mousespotlighta"];if(mousespotlighta == null)mousespotlighta = false; // default mousespotlighta false
-lightcolor = response["lightcolor"];if(lightcolor)lightcolor = response["lightcolor"];else lightcolor = "#000000"; // default color black
+mousespotlighto = response["mousespotlighto"]; if(mousespotlighto == null)mousespotlighto = true; // default mousespotlighto true
+mousespotlightc = response["mousespotlightc"]; if(mousespotlightc == null)mousespotlightc = false; // default mousespotlightc false
+mousespotlighta = response["mousespotlighta"]; if(mousespotlighta == null)mousespotlighta = false; // default mousespotlighta false
+lightcolor = response["lightcolor"]; if(lightcolor)lightcolor = response["lightcolor"]; else lightcolor = "#000000"; // default color black
 lightimagea = response["lightimagea"];
 lightimage = response["lightimage"];
-interval = response["interval"];if(interval == null)interval = 80; default_opacity = interval; // default interval 80%
-fadein = response["fadein"];if(fadein == null)fadein = true; // default fadein true
-fadeout = response["fadeout"];if(fadeout == null)fadeout = true; // default fadeout true
-readera = response["readera"];if(readera == null)readera = false; // default readera false
-readerlargestyle = response["readerlargestyle"];if(readerlargestyle == null)readerlargestyle = true; // default large style
-mousespotlightt = response["mousespotlightt"];if(mousespotlightt == null)mousespotlightt = false; // default mousespotlightt false
+interval = response["interval"]; if(interval == null)interval = 80; default_opacity = interval; // default interval 80%
+fadein = response["fadein"]; if(fadein == null)fadein = true; // default fadein true
+fadeout = response["fadeout"]; if(fadeout == null)fadeout = true; // default fadeout true
+readera = response["readera"]; if(readera == null)readera = false; // default readera false
+readerlargestyle = response["readerlargestyle"]; if(readerlargestyle == null)readerlargestyle = true; // default large style
+mousespotlightt = response["mousespotlightt"]; if(mousespotlightt == null)mousespotlightt = false; // default mousespotlightt false
 enterpassword = response["enterpassword"];
-password = response["password"];if(password == null)password = false;
-dynamic = response["dynamic"];if(dynamic == null)dynamic = false; // default dynamic false
+password = response["password"]; if(password == null)password = false;
+dynamic = response["dynamic"]; if(dynamic == null)dynamic = false; // default dynamic false
 dynamic1 = response["dynamic1"];
 dynamic2 = response["dynamic2"];
 dynamic3 = response["dynamic3"];
@@ -1155,19 +1155,19 @@ dynamic9 = response["dynamic9"];
 dynamic10 = response["dynamic10"];
 hoveroptiondyn5 = response["hoveroptiondyn5"];
 blur = response["blur"];
-cinemaontop = response["cinemaontop"];if(cinemaontop == null)cinemaontop = false; // default cinemaontop false
-spotlightradius = response["spotlightradius"];if(spotlightradius == null)spotlightradius = 50; // default spotlightradius 50
-slideeffect = response["slideeffect"];if(slideeffect == null)slideeffect = false; // default slideeffect false
-lightimagelin = response["lightimagelin"];if(lightimagelin == null)lightimagelin = false; // default lightimagelin false
+cinemaontop = response["cinemaontop"]; if(cinemaontop == null)cinemaontop = false; // default cinemaontop false
+spotlightradius = response["spotlightradius"]; if(spotlightradius == null)spotlightradius = 50; // default spotlightradius 50
+slideeffect = response["slideeffect"]; if(slideeffect == null)slideeffect = false; // default slideeffect false
+lightimagelin = response["lightimagelin"]; if(lightimagelin == null)lightimagelin = false; // default lightimagelin false
 linearsq = response["linearsq"];
 colora = response["colora"];
 intervallina = response["intervallina"];
 colorb = response["colorb"];
 intervallinb = response["intervallinb"];
-mousespotlights = response["mousespotlights"];if(mousespotlights == null)mousespotlights = false; // default mousespotlights false
+mousespotlights = response["mousespotlights"]; if(mousespotlights == null)mousespotlights = false; // default mousespotlights false
 darkbrowsertheme = response["darkbrowsertheme"];
-multiopacall = response["multiopacall"];if(multiopacall == null)multiopacall = true; // default multiopacall true
-multiopacsel = response["multiopacsel"];if(multiopacsel == null)multiopacsel = false; // default multiopacsel false
+multiopacall = response["multiopacall"]; if(multiopacall == null)multiopacall = true; // default multiopacall true
+multiopacsel = response["multiopacsel"]; if(multiopacsel == null)multiopacsel = false; // default multiopacsel false
 multiopacityDomains = response["multiopacityDomains"];
 if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
     multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
@@ -1177,18 +1177,18 @@ lampandnightmode = response["lampandnightmode"];
 
 if(mousespotlights == true){
 	// the screen shader
-	var stefanscreenshader = $("stefanvdscreenshader")
+	var stefanscreenshader = $("stefanvdscreenshader");
 	if(stefanscreenshader){
 		document.documentElement.removeChild(stefanscreenshader);
 		chrome.storage.sync.set({"screenshader": false});
 	}else{
 		if(document.documentElement){
-		var newscreenshader = document.createElement("div"); 
+		var newscreenshader = document.createElement("div");
 		newscreenshader.setAttribute("id","stefanvdscreenshader");
 		newscreenshader.setAttribute("class","stefanvdscreenshader");
 		newscreenshader.style.background = lightcolor;
 		newscreenshader.style.mixBlendMode = "multiply";
-		newscreenshader.style.opacity = default_opacity/100;
+		newscreenshader.style.opacity = default_opacity / 100;
 		document.documentElement.insertBefore(newscreenshader, document.documentElement.firstChild);
 		chrome.storage.sync.set({"screenshader": true});
 		}
@@ -1207,15 +1207,15 @@ function taart(){
 		var entername = window.prompt(i18nlockentername,"");
 		if(enterpassword == entername){
 		document.body.removeChild(pwon2);
-		if(fadeout == true){ReducingFinished = false;fader("hide");reader();removenewdynamic();} 
-		else{removenewframe();reader();removenewdynamic();}
+		if(fadeout == true){ ReducingFinished = false; fader("hide"); reader(); removenewdynamic(); }
+		else{ removenewframe(); reader(); removenewdynamic(); }
 		if(darkbrowsertheme == true){
 			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "light"});
 		}
-		}else{window.alert(i18nlockwrongpassword);}	
+		}else{ window.alert(i18nlockwrongpassword); }
 	}else{
-		if(fadeout == true){ReducingFinished = false;fader("hide");reader();removenewdynamic();}
-		else{removenewframe();reader();removenewdynamic();}
+		if(fadeout == true){ ReducingFinished = false; fader("hide"); reader(); removenewdynamic(); }
+		else{ removenewframe(); reader(); removenewdynamic(); }
 		if(darkbrowsertheme == true){
 			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "light"});
 		}
@@ -1232,13 +1232,13 @@ var pwon = $("stefanvdlightareoffpw");
 if(password == true){
 	if(pwon){
 		var entername = window.prompt(i18nlockentername,"");
-		if(enterpassword == entername){document.body.removeChild(pwon);lightsgoonoroff();}else{window.alert(i18nlockwrongpassword);}	
+		if(enterpassword == entername){ document.body.removeChild(pwon); lightsgoonoroff(); }else{ window.alert(i18nlockwrongpassword); }
 	}else{
 		lightsgoonoroff();
-	    var newpw = document.createElement("div");
-	    newpw.setAttribute("id","stefanvdlightareoffpw");
-        newpw.style.display = "none";
-	    document.body.appendChild(newpw);
+		var newpw = document.createElement("div");
+		newpw.setAttribute("id","stefanvdlightareoffpw");
+		newpw.style.display = "none";
+		document.body.appendChild(newpw);
 	}
 }else{
 lightsgoonoroff();
@@ -1251,13 +1251,13 @@ function lightsgoonoroff(){
 		}
 		if((mousespotlightc == true) || (mousespotlighta == true)){
 			// fade out effect
-			if(fadeout == true){taart();}
-			else{taart();}
+			if(fadeout == true){ taart(); }
+			else{ taart(); }
 		}
 		else{
 		// fade out effect
-		if(fadeout == true){taart();}
-		else{taart();}
+		if(fadeout == true){ taart(); }
+		else{ taart(); }
 		}
 	}
 	else{
@@ -1278,7 +1278,7 @@ function lightsgoonoroff(){
 		}else{
 			var atbbuf = [];
 			var domain;
-			for(domain in multiopacityDomains){atbbuf.push(domain);atbbuf.sort();}
+			for(domain in multiopacityDomains){ atbbuf.push(domain); atbbuf.sort(); }
 			var i;
 			var l = atbbuf.length;
 			for(i = 0; i < l; i++){
@@ -1290,31 +1290,31 @@ function lightsgoonoroff(){
 			}
 		}
 
-	    if(mousespotlighta == true){
-	    var newframe1 = document.createElement("div");
-	    newframe1.setAttribute("id","stefanvdlightareoff1");
-	    newframe1.setAttribute("class","stefanvdlightareoff");
+		if(mousespotlighta == true){
+		var newframe1 = document.createElement("div");
+		newframe1.setAttribute("id","stefanvdlightareoff1");
+		newframe1.setAttribute("class","stefanvdlightareoff");
 		var fullspotlightsize = spotlightradius;
-		var borderspotlightsize = spotlightradius-8;
-		var mousespotlightstyle = "-webkit-gradient(radial, -50 -50, "+fullspotlightsize+", -50 -50, "+borderspotlightsize+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
-		
+		var borderspotlightsize = spotlightradius - 8;
+		var mousespotlightstyle = "-webkit-gradient(radial, -50 -50, " + fullspotlightsize + ", -50 -50, " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+
 		newframe1.style.backgroundImage = mousespotlightstyle;
-		newframe1.style.pointerEvents = "none"; // make it possible to click on a link 
+		newframe1.style.pointerEvents = "none"; // make it possible to click on a link
         newframe1.style.opacity = 0;
-        newframe1.style.zIndex = 999;
-	    document.body.appendChild(newframe1);
-		
-	    // fade out effect
+		newframe1.style.zIndex = 999;
+		document.body.appendChild(newframe1);
+
+		// fade out effect
 		// no click posible
 
         // fade in effect
-		if(fadein == true){fader("show");}
-        else{newframe1.style.opacity = default_opacity/100;} // no fade effect
-		
+		if(fadein == true){ fader("show"); }
+        else{ newframe1.style.opacity = default_opacity / 100; } // no fade effect
+
 		var spot = $("stefanvdlightareoff1");
 		var width = document.documentElement.clientWidth;
 		var height = document.documentElement.clientHeight;
-		
+
 		var oldspotx = 0;
 		var oldspoty = 0;
 		function moveSpot(e){
@@ -1325,46 +1325,46 @@ function lightsgoonoroff(){
 			x = e.clientX; y = e.clientY;
 			oldspotx = x; oldspoty = y;
 		}
-		
-		var style = "-webkit-gradient(radial, "+x+" "+y+", "+fullspotlightsize+", "+x+" "+y+", "+borderspotlightsize+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
-		spot.style.opacity = default_opacity/100;
+
+		var style = "-webkit-gradient(radial, " + x + " " + y + ", " + fullspotlightsize + ", " + x + " " + y + ", " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+		spot.style.opacity = default_opacity / 100;
 		spot.style.backgroundImage = style;
 		}
 		window.onmousemove = moveSpot;
-		
+
 		// increase size by pressing
 		var presstimer;
 		var countupsizetimer;
 		var mathfullsizeup = fullspotlightsize;
 		var mathbordersizeup = borderspotlightsize;
 		function spotmousedown(){
-		presstimer = window.setTimeout(function(){ 
+		presstimer = window.setTimeout(function(){
 
 			countupsizetimer = window.setInterval(function(){
 				mathfullsizeup = Math.abs(mathfullsizeup) + Math.abs(1);
 				mathbordersizeup = Math.abs(mathbordersizeup) + Math.abs(1);
-				x = oldspotx;y = oldspoty;
-				style = "-webkit-gradient(radial, "+x+" "+y+", "+mathfullsizeup+", "+x+" "+y+", "+mathbordersizeup+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+				x = oldspotx; y = oldspoty;
+				style = "-webkit-gradient(radial, " + x + " " + y + ", " + mathfullsizeup + ", " + x + " " + y + ", " + mathbordersizeup + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
 				spot.style.backgroundImage = style;
 			}, 5);
-			
-		}, 1500);}
+
+		}, 1500); }
 		function spotmouseup(){
-			window.clearInterval(countupsizetimer);window.clearTimeout(presstimer);
-			style = "-webkit-gradient(radial, "+x+" "+y+", "+fullspotlightsize+", "+x+" "+y+", "+borderspotlightsize+", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+			window.clearInterval(countupsizetimer); window.clearTimeout(presstimer);
+			style = "-webkit-gradient(radial, " + x + " " + y + ", " + fullspotlightsize + ", " + x + " " + y + ", " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
 			spot.style.backgroundImage = style;
 			mathfullsizeup = fullspotlightsize;
 			mathbordersizeup = borderspotlightsize;
 		}
-		document.addEventListener("mousedown", function(){spotmousedown();});
-		document.addEventListener("mouseup", function(){spotmouseup();});
+		document.addEventListener("mousedown", function(){ spotmousedown(); });
+		document.addEventListener("mouseup", function(){ spotmouseup(); });
 		}
 		else if(mousespotlightc == true){
-		var beginxcordinate = null;var beginycordinate = null;var endxcordinate = null;var endycordinate = null;
-		var customview;var posx;var posy;var initx = false;var inity = false;
-		
+		var beginxcordinate = null; var beginycordinate = null; var endxcordinate = null; var endycordinate = null;
+		var customview; var posx; var posy; var initx = false; var inity = false;
+
 		// change size corner
-var rect;var stretchable = false;var resizable = false;
+var rect; var stretchable = false; var resizable = false;
 var width, height, xpos, ypos;
 var mouseX, mouseY, drawnX, drawnY, rX, rY;
 var rand = 20;
@@ -1374,8 +1374,8 @@ width = parseInt(rect.style.width); height = parseInt(rect.style.height);
 xpos = parseInt(rect.style.left); ypos = parseInt(rect.style.top);
 
 // Include possible scroll values
-var sx = window.scrollX || document.documentElement.scrollLeft|| 0;
-var sy = window.scrollY || document.documentElement.scrollTop|| 0;
+var sx = window.scrollX || document.documentElement.scrollLeft || 0;
+var sy = window.scrollY || document.documentElement.scrollTop || 0;
 
 if(!e) e = window.event;
 
@@ -1391,16 +1391,16 @@ var deltaY = mouseY - rY;
 // Store difference in global variables
 rX = mouseX;
 rY = mouseY;
- 
+
 
 // left
 if(mouseX <= xpos + rand && mouseX > xpos){ dragBorder("left", deltaX); document.body.style.cursor = "w-resize"; }
 // right
-else if(mouseX >= xpos + width +rand && mouseX < xpos + width + 2*rand ){ dragBorder("right", deltaX); document.body.style.cursor = "e-resize"; }
+else if(mouseX >= xpos + width + rand && mouseX < xpos + width + 2 * rand ){ dragBorder("right", deltaX); document.body.style.cursor = "e-resize"; }
 // top
 else if(mouseY <= ypos + rand && mouseY > ypos){ dragBorder("top", deltaY); document.body.style.cursor = "n-resize"; }
 // bottom
-else if(mouseY >= ypos + height +rand && mouseY < ypos + height + 2*rand ){ dragBorder("bottom", deltaY); document.body.style.cursor = "s-resize"; }
+else if(mouseY >= ypos + height + rand && mouseY < ypos + height + 2 * rand ){ dragBorder("bottom", deltaY); document.body.style.cursor = "s-resize"; }
 // normal use
 else{ document.body.style.cursor = "auto"; }
 }
@@ -1408,66 +1408,66 @@ else{ document.body.style.cursor = "auto"; }
 function dragBorder(arg, delta){
 if(stretchable){
 	if(arg == "right"){ rect.style.width = (width + delta) + "px";
-	$("stefanvdlightareoff3").style.width = (parseInt($("stefanvdlightareoff3").style.width) + delta) + "px";$("stefanvdlightareoff3").style.left = (parseInt($("stefanvdlightareoff3").style.left) + delta) + "px";
+	$("stefanvdlightareoff3").style.width = (parseInt($("stefanvdlightareoff3").style.width) + delta) + "px"; $("stefanvdlightareoff3").style.left = (parseInt($("stefanvdlightareoff3").style.left) + delta) + "px";
 	}
 	else if(arg == "left"){ rect.style.width = (width - delta) + "px"; rect.style.left = (parseInt(rect.style.left) + delta) + "px";
 	$("stefanvdlightareoff2").style.width = (parseInt($("stefanvdlightareoff2").style.width) + delta) + "px";
 	}
 	else if(arg == "bottom"){ rect.style.height = (height + delta) + "px";
-	$("stefanvdlightareoff4").style.height = (parseInt($("stefanvdlightareoff4").style.height) - delta) + "px";$("stefanvdlightareoff4").style.top = (parseInt($("stefanvdlightareoff4").style.top) + delta) + "px";
+	$("stefanvdlightareoff4").style.height = (parseInt($("stefanvdlightareoff4").style.height) - delta) + "px"; $("stefanvdlightareoff4").style.top = (parseInt($("stefanvdlightareoff4").style.top) + delta) + "px";
 	$("stefanvdlightareoff2").style.height = (parseInt($("stefanvdlightareoff2").style.height) + delta) + "px";
 	$("stefanvdlightareoff3").style.height = (parseInt($("stefanvdlightareoff3").style.height) + delta) + "px";
 	}
 	else if(arg == "top"){ rect.style.height = (height - delta) + "px"; rect.style.top = (parseInt(rect.style.top) + delta) + "px";
 	$("stefanvdlightareoff1").style.height = (parseInt($("stefanvdlightareoff1").style.height) + delta) + "px";
-	$("stefanvdlightareoff2").style.height = (parseInt($("stefanvdlightareoff2").style.height) - delta) + "px";$("stefanvdlightareoff2").style.top = (parseInt($("stefanvdlightareoff2").style.top) + delta) + "px";
-	$("stefanvdlightareoff3").style.height = (parseInt($("stefanvdlightareoff3").style.height) - delta) + "px";$("stefanvdlightareoff3").style.top = (parseInt($("stefanvdlightareoff3").style.top) + delta) + "px";
+	$("stefanvdlightareoff2").style.height = (parseInt($("stefanvdlightareoff2").style.height) - delta) + "px"; $("stefanvdlightareoff2").style.top = (parseInt($("stefanvdlightareoff2").style.top) + delta) + "px";
+	$("stefanvdlightareoff3").style.height = (parseInt($("stefanvdlightareoff3").style.height) - delta) + "px"; $("stefanvdlightareoff3").style.top = (parseInt($("stefanvdlightareoff3").style.top) + delta) + "px";
 	}
 }
 }
-//----		
-		
+//----
+
 		function getMouse(obj,e){
-		posx = 0;posy = 0;
-		var ev = (!e)?window.event:e;
+		posx = 0; posy = 0;
+		var ev = (!e) ? window.event:e;
 		if(ev.clientX){
 			posx = ev.clientX;
 			posy = ev.clientY;
 		}
-		else{return 0}
+		else{ return 0; }
 
 		obj.addEventListener("mousedown", function(){
 		initx = posx; inity = posy;
-		beginxcordinate = posx;beginycordinate = posy;
+		beginxcordinate = posx; beginycordinate = posy;
 		try{
 			customview = $("stefanvdlightareoffcustom");
-			customview.style.left = initx + "px";customview.style.top = inity + "px";
+			customview.style.left = initx + "px"; customview.style.top = inity + "px";
 			document.body.appendChild(customview);
 		}
 		catch(err){}
 		});
-		obj.addEventListener("mouseup", function(){initx = false;inity = false;});
+		obj.addEventListener("mouseup", function(){ initx = false; inity = false; });
 		if(initx){
-		customview.style.width = Math.abs(posx - initx) + "px";customview.style.height = Math.abs(posy - inity) + "px";
-		customview.style.left = posx - initx < 0 ?posx + "px":initx + "px";
-		customview.style.top = posy - inity < 0 ?posy + "px":inity + "px";
-		
-		endxcordinate = posx;endycordinate = posy;
+		customview.style.width = Math.abs(posx - initx) + "px"; customview.style.height = Math.abs(posy - inity) + "px";
+		customview.style.left = posx - initx < 0 ? posx + "px" : initx + "px";
+		customview.style.top = posy - inity < 0 ? posy + "px" : inity + "px";
+
+		endxcordinate = posx; endycordinate = posy;
 		// remove help div
 		var stefanvdlightareoffcustom = $("stefanvdlightareoffcustom");
-		if(stefanvdlightareoffcustom){document.body.removeChild(stefanvdlightareoffcustom);}
+		if(stefanvdlightareoffcustom){ document.body.removeChild(stefanvdlightareoffcustom); }
 		document.body.style.cursor = "default";
-		
+
 		// create corner
 		var cornerison = $("stefanvdlightcorner");
 		if(cornerison){}
 		else{
-			var newcornerdiv = document.createElement("div"); 
+			var newcornerdiv = document.createElement("div");
 			newcornerdiv.setAttribute("id","stefanvdlightcorner");
 			document.body.appendChild(newcornerdiv);
 		}
-		
-		rect = $("stefanvdlightcorner");rect.onmousemove = watchMouse; 
+
+		rect = $("stefanvdlightcorner"); rect.onmousemove = watchMouse;
 		$("stefanvdlightcorner").addEventListener("mousedown", function(){ stretchable = true; }, false);
 		$("stefanvdlightcorner").addEventListener("mouseup", function(){ stretchable = false; document.body.style.cursor = "auto"; }, false);
 		$("stefanvdlightcorner").addEventListener("mouseout", function(){ stretchable = false; document.body.style.cursor = "auto"; }, false);
@@ -1477,222 +1477,222 @@ if(stretchable){
 		$("stefanvdlightcorner").style.left = parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 10 + "px";
 		$("stefanvdlightcorner").style.width = parseInt(document.getElementById("stefanvdlightareoff3").style.left) - parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 20 + "px";
 		}
-		
-		else{return false}
+
+		else{ return false; }
 		var viewpartwidth = customview.style.width;
 		var viewpartheight = customview.style.height;
-		
+
 		var view1 = $("stefanvdlightareoff1");
 		view1.className = "stefanvdlightareoff";
-		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
-		view1.style.width = "100%";view1.style.height = beginycordinate + "px";
-		view1.style.visibility = "visible";
-		document.body.appendChild(view1);
-		
-		var view2 = $("stefanvdlightareoff2");
-		view2.className = "stefanvdlightareoff";
-		view2.style.left = 0 + "px";view2.style.top = beginycordinate + "px";
-		view2.style.width = beginxcordinate + "px";view2.style.height = viewpartheight;
-		view2.style.visibility = "visible";
-		document.body.appendChild(view2);
-		
-		var view3 = $("stefanvdlightareoff3");
-		var viewcall3awidth = window.innerWidth - beginxcordinate; // calc width
-		view3.className = "stefanvdlightareoff";
-		view3.style.left = endxcordinate + "px";view3.style.top = beginycordinate + "px";
-		view3.style.width = viewcall3awidth + "px";view3.style.height = viewpartheight;
-		view3.style.visibility = "visible";
-		document.body.appendChild(view3);
-		
-		var view4 = $("stefanvdlightareoff4");
-		var viewcall4aheight = window.innerHeight - endycordinate; // calc height
-		view4.className = "stefanvdlightareoff";
-		view4.style.left = 0 + "px";view4.style.top = endycordinate + "px";
-		view4.style.width="100%";view4.style.height = viewcall4aheight + "px";
-		view4.style.visibility = "visible";
-		document.body.appendChild(view4);
-		
-		var calcpartx = endxcordinate - beginxcordinate;
-		var calcparty = endycordinate - beginycordinate;
-	if((calcpartx < 0) &&! (calcparty < 0)){ // X as automatic change view
-		var view1 = $("stefanvdlightareoff1");
-		view1.className = "stefanvdlightareoff";
-		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
-		view1.style.width = "100%";view1.style.height = beginycordinate + "px";
-		view1.style.visibility = "visible";
-		document.body.appendChild(view1);	
-	
-		var view2 = $("stefanvdlightareoff2");
-		view2.className = "stefanvdlightareoff";
-		view2.style.left = 0 + "px";view2.style.top = beginycordinate + "px";
-		view2.style.width = endxcordinate + "px";view2.style.height = viewpartheight;
-		view2.style.visibility = "visible";
-		document.body.appendChild(view2);
-		
-		var view3 = $("stefanvdlightareoff3");
-		var viewcall3bwidth = window.innerWidth - beginxcordinate; // calc width
-		view3.className = "stefanvdlightareoff";
-		view3.style.left = beginxcordinate + "px";view3.style.top = beginycordinate + "px";
-		view3.style.width = viewcall3bwidth + "px";view3.style.height = viewpartheight;
-		view3.style.visibility = "visible";
-		document.body.appendChild(view3);
-		
-		var view4 = $("stefanvdlightareoff4");
-		var viewcall4bheight = window.innerHeight - endycordinate; // calc height
-		view4.className = "stefanvdlightareoff";
-		view4.style.left = 0 + "px";view4.style.top = endycordinate + "px";
-		view4.style.width="100%";view4.style.height = viewcall4bheight + "px";
-		view4.style.visibility = "visible";
-		document.body.appendChild(view4);
-	}
-	else if((calcparty < 0) &&! (calcpartx < 0)){ // Y as automatic change view
-		var view1 = $("stefanvdlightareoff1");
-		view1.className = "stefanvdlightareoff";
-		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
-			if(endycordinate < 0){endycordinate = 0;}
-		view1.style.width = "100%";view1.style.height = endycordinate + "px";
+		view1.style.left = 0 + "px"; view1.style.top = 0 + "px";
+		view1.style.width = "100%"; view1.style.height = beginycordinate + "px";
 		view1.style.visibility = "visible";
 		document.body.appendChild(view1);
 
 		var view2 = $("stefanvdlightareoff2");
 		view2.className = "stefanvdlightareoff";
-		view2.style.left = 0 + "px";view2.style.top = endycordinate + "px";
-		view2.style.width = beginxcordinate + "px";
-			if(endycordinate == 0){view2.style.height = beginycordinate + "px";}else{view2.style.height = viewpartheight;}
+		view2.style.left = 0 + "px"; view2.style.top = beginycordinate + "px";
+		view2.style.width = beginxcordinate + "px"; view2.style.height = viewpartheight;
 		view2.style.visibility = "visible";
 		document.body.appendChild(view2);
-		
+
+		var view3 = $("stefanvdlightareoff3");
+		var viewcall3awidth = window.innerWidth - beginxcordinate; // calc width
+		view3.className = "stefanvdlightareoff";
+		view3.style.left = endxcordinate + "px"; view3.style.top = beginycordinate + "px";
+		view3.style.width = viewcall3awidth + "px"; view3.style.height = viewpartheight;
+		view3.style.visibility = "visible";
+		document.body.appendChild(view3);
+
+		var view4 = $("stefanvdlightareoff4");
+		var viewcall4aheight = window.innerHeight - endycordinate; // calc height
+		view4.className = "stefanvdlightareoff";
+		view4.style.left = 0 + "px"; view4.style.top = endycordinate + "px";
+		view4.style.width = "100%"; view4.style.height = viewcall4aheight + "px";
+		view4.style.visibility = "visible";
+		document.body.appendChild(view4);
+
+		var calcpartx = endxcordinate - beginxcordinate;
+		var calcparty = endycordinate - beginycordinate;
+	if((calcpartx < 0) && ! (calcparty < 0)){ // X as automatic change view
+		var view1 = $("stefanvdlightareoff1");
+		view1.className = "stefanvdlightareoff";
+		view1.style.left = 0 + "px"; view1.style.top = 0 + "px";
+		view1.style.width = "100%"; view1.style.height = beginycordinate + "px";
+		view1.style.visibility = "visible";
+		document.body.appendChild(view1);
+
+		var view2 = $("stefanvdlightareoff2");
+		view2.className = "stefanvdlightareoff";
+		view2.style.left = 0 + "px"; view2.style.top = beginycordinate + "px";
+		view2.style.width = endxcordinate + "px"; view2.style.height = viewpartheight;
+		view2.style.visibility = "visible";
+		document.body.appendChild(view2);
+
+		var view3 = $("stefanvdlightareoff3");
+		var viewcall3bwidth = window.innerWidth - beginxcordinate; // calc width
+		view3.className = "stefanvdlightareoff";
+		view3.style.left = beginxcordinate + "px"; view3.style.top = beginycordinate + "px";
+		view3.style.width = viewcall3bwidth + "px"; view3.style.height = viewpartheight;
+		view3.style.visibility = "visible";
+		document.body.appendChild(view3);
+
+		var view4 = $("stefanvdlightareoff4");
+		var viewcall4bheight = window.innerHeight - endycordinate; // calc height
+		view4.className = "stefanvdlightareoff";
+		view4.style.left = 0 + "px"; view4.style.top = endycordinate + "px";
+		view4.style.width = "100%"; view4.style.height = viewcall4bheight + "px";
+		view4.style.visibility = "visible";
+		document.body.appendChild(view4);
+	}
+	else if((calcparty < 0) && ! (calcpartx < 0)){ // Y as automatic change view
+		var view1 = $("stefanvdlightareoff1");
+		view1.className = "stefanvdlightareoff";
+		view1.style.left = 0 + "px"; view1.style.top = 0 + "px";
+			if(endycordinate < 0){ endycordinate = 0; }
+		view1.style.width = "100%"; view1.style.height = endycordinate + "px";
+		view1.style.visibility = "visible";
+		document.body.appendChild(view1);
+
+		var view2 = $("stefanvdlightareoff2");
+		view2.className = "stefanvdlightareoff";
+		view2.style.left = 0 + "px"; view2.style.top = endycordinate + "px";
+		view2.style.width = beginxcordinate + "px";
+			if(endycordinate == 0){ view2.style.height = beginycordinate + "px"; }else{ view2.style.height = viewpartheight; }
+		view2.style.visibility = "visible";
+		document.body.appendChild(view2);
+
 		var view3 = $("stefanvdlightareoff3");
 		var viewcall3cwidth = window.innerWidth - beginxcordinate; // calc width
 		view3.className = "stefanvdlightareoff";
-		view3.style.left = endxcordinate + "px";view3.style.top = endycordinate + "px";
+		view3.style.left = endxcordinate + "px"; view3.style.top = endycordinate + "px";
 		view3.style.width = viewcall3cwidth + "px";
-			if(endycordinate == 0){view3.style.height = beginycordinate + "px";}else{view3.style.height = viewpartheight;}
+			if(endycordinate == 0){ view3.style.height = beginycordinate + "px"; }else{ view3.style.height = viewpartheight; }
 		view3.style.visibility = "visible";
 		document.body.appendChild(view3);
 
 		var view4 = $("stefanvdlightareoff4");
 		var viewcall4cheight = window.innerHeight - endycordinate; // calc height
 		view4.className = "stefanvdlightareoff";
-		view4.style.left = 0 + "px";view4.style.top = beginycordinate + "px";
-		view4.style.width="100%";view4.style.height = viewcall4cheight + "px";
+		view4.style.left = 0 + "px"; view4.style.top = beginycordinate + "px";
+		view4.style.width = "100%"; view4.style.height = viewcall4cheight + "px";
 		view4.style.visibility = "visible";
-		document.body.appendChild(view4);	
+		document.body.appendChild(view4);
 	}
 	else if((calcpartx < 0) && (calcparty < 0)){ // X en Y as automatic change view
 		var view1 = $("stefanvdlightareoff1");
 		view1.className = "stefanvdlightareoff";
-		view1.style.left = 0 + "px";view1.style.top = 0 + "px";
-			if(endycordinate < 0){endycordinate = 0;}
-		view1.style.width = "100%";view1.style.height = endycordinate + "px";
+		view1.style.left = 0 + "px"; view1.style.top = 0 + "px";
+			if(endycordinate < 0){ endycordinate = 0; }
+		view1.style.width = "100%"; view1.style.height = endycordinate + "px";
 		view1.style.visibility = "visible";
 		document.body.appendChild(view1);
-		
+
 		var view2 = $("stefanvdlightareoff2");
 		view2.className = "stefanvdlightareoff";
-		view2.style.left = 0 + "px";view2.style.top = endycordinate + "px";
+		view2.style.left = 0 + "px"; view2.style.top = endycordinate + "px";
 		view2.style.width = endxcordinate + "px";
-			if(endycordinate == 0){view2.style.height = beginycordinate + "px";}else{view2.style.height = viewpartheight;}
+			if(endycordinate == 0){ view2.style.height = beginycordinate + "px"; }else{ view2.style.height = viewpartheight; }
 		view2.style.visibility = "visible";
 		document.body.appendChild(view2);
-		
+
 		var view3 = $("stefanvdlightareoff3");
 		var viewcall3dwidth = window.innerWidth - beginxcordinate; // calc width
 		view3.className = "stefanvdlightareoff";
-		view3.style.left = beginxcordinate + "px";view3.style.top = endycordinate + "px";
+		view3.style.left = beginxcordinate + "px"; view3.style.top = endycordinate + "px";
 		view3.style.width = viewcall3dwidth + "px";
-			if(endycordinate == 0){view3.style.height = beginycordinate + "px";}else{view3.style.height = viewpartheight;}
+			if(endycordinate == 0){ view3.style.height = beginycordinate + "px"; }else{ view3.style.height = viewpartheight; }
 		view3.style.visibility = "visible";
-		document.body.appendChild(view3);		
-		
+		document.body.appendChild(view3);
+
 		var view4 = $("stefanvdlightareoff4");
 		var viewcall4dheight = window.innerHeight - beginycordinate; // calc height
 		view4.className = "stefanvdlightareoff";
-		view4.style.left = 0 + "px";view4.style.top = beginycordinate + "px";
-		view4.style.width = "100%";view4.style.height = viewcall4dheight + "px";
+		view4.style.left = 0 + "px"; view4.style.top = beginycordinate + "px";
+		view4.style.width = "100%"; view4.style.height = viewcall4dheight + "px";
 		view4.style.visibility = "visible";
 		document.body.appendChild(view4);
 	}
 		}
-		
-		window.onmousemove = function(event){try{getMouse(window,event);}catch(err){}};
-		
-	    var newframe1 = document.createElement("div");
-	    var newframe2 = document.createElement("div");
-	    var newframe3 = document.createElement("div");
-	    var newframe4 = document.createElement("div");
+
+		window.onmousemove = function(event){ try{ getMouse(window,event); }catch(err){} };
+
+		var newframe1 = document.createElement("div");
+		var newframe2 = document.createElement("div");
+		var newframe3 = document.createElement("div");
+		var newframe4 = document.createElement("div");
 		var newframe5 = document.createElement("div");
-	    newframe1.setAttribute("id","stefanvdlightareoff1");
-	    newframe2.setAttribute("id","stefanvdlightareoff2");
-	    newframe3.setAttribute("id","stefanvdlightareoff3");
-	    newframe4.setAttribute("id","stefanvdlightareoff4");
-	    newframe1.setAttribute("class","stefanvdlightareoff");
-	    newframe2.setAttribute("class","stefanvdlightareoff");
-	    newframe3.setAttribute("class","stefanvdlightareoff");
-	    newframe4.setAttribute("class","stefanvdlightareoff");
+		newframe1.setAttribute("id","stefanvdlightareoff1");
+		newframe2.setAttribute("id","stefanvdlightareoff2");
+		newframe3.setAttribute("id","stefanvdlightareoff3");
+		newframe4.setAttribute("id","stefanvdlightareoff4");
+		newframe1.setAttribute("class","stefanvdlightareoff");
+		newframe2.setAttribute("class","stefanvdlightareoff");
+		newframe3.setAttribute("class","stefanvdlightareoff");
+		newframe4.setAttribute("class","stefanvdlightareoff");
 		newframe5.setAttribute("id","stefanvdlightareoffcustom");
 		newframe1.style.background = lightcolor;
 		newframe2.style.background = lightcolor;
 		newframe3.style.background = lightcolor;
 		newframe4.style.background = lightcolor;
-	    newframe2.style.visibility = "hidden";
-	    newframe3.style.visibility = "hidden";
-	    newframe4.style.visibility = "hidden";
-	    document.body.appendChild(newframe1);
-	    document.body.appendChild(newframe2);
-	    document.body.appendChild(newframe3);
-	    document.body.appendChild(newframe4);
+		newframe2.style.visibility = "hidden";
+		newframe3.style.visibility = "hidden";
+		newframe4.style.visibility = "hidden";
+		document.body.appendChild(newframe1);
+		document.body.appendChild(newframe2);
+		document.body.appendChild(newframe3);
+		document.body.appendChild(newframe4);
 		document.body.appendChild(newframe5);
 		document.body.style.cursor = "crosshair"; // show cursor
-		
-	    // fade out effect
+
+		// fade out effect
 		if(fadeout == true){
-		newframe1.addEventListener("click", function(){taart();});
-		newframe2.addEventListener("click", function(){taart();});
-		newframe3.addEventListener("click", function(){taart();});
-		newframe4.addEventListener("click", function(){taart();});
+		newframe1.addEventListener("click", function(){ taart(); });
+		newframe2.addEventListener("click", function(){ taart(); });
+		newframe3.addEventListener("click", function(){ taart(); });
+		newframe4.addEventListener("click", function(){ taart(); });
 		}
         else{
-		newframe1.addEventListener("click", function(){taart();});
-		newframe2.addEventListener("click", function(){taart();});
-		newframe3.addEventListener("click", function(){taart();});
-		newframe4.addEventListener("click", function(){taart();});
+		newframe1.addEventListener("click", function(){ taart(); });
+		newframe2.addEventListener("click", function(){ taart(); });
+		newframe3.addEventListener("click", function(){ taart(); });
+		newframe4.addEventListener("click", function(){ taart(); });
 		}
 
         // fade in effect
-		if(fadein == true){fader("show");}
-        else{newframe1.style.opacity = default_opacity/100;newframe2.style.opacity = default_opacity/100;newframe3.style.opacity = default_opacity/100;newframe4.style.opacity = default_opacity/100;} // no fade effect
+		if(fadein == true){ fader("show"); }
+        else{ newframe1.style.opacity = default_opacity / 100; newframe2.style.opacity = default_opacity / 100; newframe3.style.opacity = default_opacity / 100; newframe4.style.opacity = default_opacity / 100; } // no fade effect
 		}
 		else if(mousespotlightt == true){
-		var newdiv = document.createElement("div"); 
+		var newdiv = document.createElement("div");
         newdiv.setAttribute("id","stefanvdlightareoff1");
         newdiv.setAttribute("class","stefanvdlightareoff");
-		newdiv.style.width = "100%"; 
-        newdiv.style.height = "100%"; 
-        newdiv.style.left = 0; 
-        newdiv.style.top = 0; 
+		newdiv.style.width = "100%";
+        newdiv.style.height = "100%";
+        newdiv.style.left = 0;
+        newdiv.style.top = 0;
         newdiv.style.position = "fixed";
-		newdiv.style.pointerEvents = "none"; // make it possible to click on a link 
+		newdiv.style.pointerEvents = "none"; // make it possible to click on a link
 		/* if image background, load it then */
-			if(lightimagea == true){newdiv.style.background = "url('"+lightimage+"')";newdiv.style.backgroundSize = "100% 100%";}
-			else if(lightimagelin == true){newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)";}
-			else{newdiv.style.background = lightcolor;}
+			if(lightimagea == true){ newdiv.style.background = "url('" + lightimage + "')"; newdiv.style.backgroundSize = "100% 100%"; }
+			else if(lightimagelin == true){ newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)"; }
+			else{ newdiv.style.background = lightcolor; }
 		/*-------------*/
         newdiv.style.opacity = 0;
         newdiv.style.zIndex = 999;
-		
+
         document.body.appendChild(newdiv);
-	  
-	    // fade out effect
-		if(fadeout == true){newdiv.addEventListener("click", function(){taart();})}
-        else{newdiv.addEventListener("click", function(){taart();})}
+
+		// fade out effect
+		if(fadeout == true){ newdiv.addEventListener("click", function(){ taart(); }); }
+        else{ newdiv.addEventListener("click", function(){ taart(); }); }
 
         // fade in effect
-		if(fadein == true){fader("show");}
-        else{newdiv.style.opacity = default_opacity/100;} // no fade effect		
+		if(fadein == true){ fader("show"); }
+        else{ newdiv.style.opacity = default_opacity / 100; } // no fade effect
 		}
 		else{ // Begin normal lights off
-		var newdiv = document.createElement("div"); 
+		var newdiv = document.createElement("div");
         newdiv.setAttribute("id","stefanvdlightareoff1");
         newdiv.setAttribute("class","stefanvdlightareoff");
 		newdiv.style.width = "100%";
@@ -1701,20 +1701,20 @@ if(stretchable){
         newdiv.style.top = 0;
 		if(cinemaontop == true){
         newdiv.style.position = "absolute";
-		
+
 		if(window.innerHeight > 870){ // height cinema
 		newdiv.style.height = "100%";
 		}else{
 		newdiv.style.height = "870px";
 		}
-		
+
 		}else{
 		newdiv.style.position = "fixed";
 		}
 		/* if image background, load it then */
-			if(lightimagea == true){newdiv.style.background = "url('"+lightimage+"')";newdiv.style.backgroundSize = "100% 100%";}
-			else if(lightimagelin == true){newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)";}
-			else{newdiv.style.background = lightcolor;}
+			if(lightimagea == true){ newdiv.style.background = "url('" + lightimage + "')"; newdiv.style.backgroundSize = "100% 100%"; }
+			else if(lightimagelin == true){ newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)"; }
+			else{ newdiv.style.background = lightcolor; }
 		/*-------------*/
         newdiv.style.opacity = 0;
         newdiv.style.zIndex = 999;
@@ -1728,15 +1728,15 @@ if(stretchable){
 		}
         document.body.appendChild(newdiv);
 
-	    // fade out effect      
-		if(fadeout == true){newdiv.addEventListener("click", function(){taart();})}
-        else{newdiv.addEventListener("click", function(){taart();})}
+		// fade out effect
+		if(fadeout == true){ newdiv.addEventListener("click", function(){ taart(); }); }
+        else{ newdiv.addEventListener("click", function(){ taart(); }); }
 
-        // fade in effect      
-		if(fadein == true){fader("show");}
-        else{newdiv.style.opacity = default_opacity/100;} // no fade effect
+        // fade in effect
+		if(fadein == true){ fader("show"); }
+        else{ newdiv.style.opacity = default_opacity / 100; } // no fade effect
 		}
-		
+
 		// blur effect
 		if(blur == true){
 			if($("stefanvdblurimage")){}else{
@@ -1764,17 +1764,17 @@ if(stretchable){
 		stefanvdreaderbar.appendChild(stefanvdreaderbardiv1);
 
 		// if false then use small view
-		if(readerlargestyle == false){stefanvdreaderbar.style.width = "30px";stefanvdreaderbar.style.height = "30px";}
+		if(readerlargestyle == false){ stefanvdreaderbar.style.width = "30px"; stefanvdreaderbar.style.height = "30px"; }
 
 		// top
 		var stefanvdreaderbartop = document.createElement("div");
 		stefanvdreaderbartop.setAttribute("id","stefanvdreaderbartop");
 		stefanvdreaderbartop.setAttribute("class","stefanvdreaderbartop");
-		stefanvdreaderbartop.addEventListener("click", function(e){toggle_small()}, true);
+		stefanvdreaderbartop.addEventListener("click", function(e){ toggle_small(); }, true);
 		stefanvdreaderbardiv1.appendChild(stefanvdreaderbartop);
 
 			// if false then use small view
-			if(readerlargestyle == false){stefanvdreaderbartop.style.opacity = 0;}
+			if(readerlargestyle == false){ stefanvdreaderbartop.style.opacity = 0; }
 
 			var stefanvdreaderbartxt1 = document.createTextNode("Turn Off the Lights");
 			stefanvdreaderbartop.appendChild(stefanvdreaderbartxt1);
@@ -1796,8 +1796,8 @@ if(stretchable){
 			stefanvdreaderinput1.setAttribute("max","100");
 			stefanvdreaderinput1.setAttribute("step","1");
 			stefanvdreaderinput1.setAttribute("value","0");
-			stefanvdreaderinput1.addEventListener("change", function(e){showValue(this.value)}, true);
-			stefanvdreaderinput1.addEventListener("input", function(e){showValue(this.value)}, true);
+			stefanvdreaderinput1.addEventListener("change", function(e){ showValue(this.value); }, true);
+			stefanvdreaderinput1.addEventListener("input", function(e){ showValue(this.value); }, true);
 			stefanvdreaderbaroa.appendChild(stefanvdreaderinput1);
 
 			var stefanvdreaderbaran = document.createElement("div");
@@ -1810,20 +1810,20 @@ if(stretchable){
 			stefanvdreaderinput2.setAttribute("size","3");
 			stefanvdreaderinput2.setAttribute("type","text");
 			stefanvdreaderinput2.setAttribute("value","0");
-			stefanvdreaderinput2.addEventListener("change", function(e){showValue(this.value)}, true);
+			stefanvdreaderinput2.addEventListener("change", function(e){ showValue(this.value); }, true);
 			stefanvdreaderbaran.appendChild(stefanvdreaderinput2);
 
 
 	// script readerbar
-	function showValue(newValue){$("totlgammaVal").value = newValue;$("totlrange").value = newValue;div = document.getElementsByTagName("div");
+	function showValue(newValue){ $("totlgammaVal").value = newValue; $("totlrange").value = newValue; div = document.getElementsByTagName("div");
 	var i;
 	var l = div.length;
-	for(i = 0; i < l; i++){if(div[i].className == ("stefanvdlightareoff")){div[i].style.opacity = (newValue/100);}}}
+	for(i = 0; i < l; i++){ if(div[i].className == ("stefanvdlightareoff")){ div[i].style.opacity = (newValue / 100); } } }
 
 	function toggle_small(){
-	var totlreader = $("stefanvdreaderbar");var totlreadermin = $("stefanvdreaderbartop");
-	if(totlreader.style.width != "30px"){totlreader.style.width = "30px";totlreader.style.height = "30px";totlreadermin.style.opacity = 0;}
-	else{totlreader.style.width = "";totlreader.style.height = "";totlreadermin.style.opacity = 1;}}
+	var totlreader = $("stefanvdreaderbar"); var totlreadermin = $("stefanvdreaderbartop");
+	if(totlreader.style.width != "30px"){ totlreader.style.width = "30px"; totlreader.style.height = "30px"; totlreadermin.style.opacity = 0; }
+	else{ totlreader.style.width = ""; totlreader.style.height = ""; totlreadermin.style.opacity = 1; } }
 
 // settings reader slider
 	$("totlgammaVal").value = interval;
@@ -1832,117 +1832,116 @@ if(stretchable){
 
 // start dynamic
 		if(dynamic == true){
-			var newdynmaster = document.createElement("div");newdynmaster.setAttribute("id","stefanvddynamicbackground");document.body.appendChild(newdynmaster);
+			var newdynmaster = document.createElement("div"); newdynmaster.setAttribute("id","stefanvddynamicbackground"); document.body.appendChild(newdynmaster);
 			if(dynamic1 == true){
-				var newdynleft = document.createElement("div");newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft");newdynmaster.appendChild(newdynleft);
+				var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); newdynmaster.appendChild(newdynleft);
 				var i;
-				for(i = 0; i < 5; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+"");newdynleft.appendChild(newdyn);}
-				var newdynmid = document.createElement("div");newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid");newdynmaster.appendChild(newdynmid);
+				for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
+				var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); newdynmaster.appendChild(newdynmid);
 				var i;
-				for(i = 6; i < 10; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+"");newdynmid.appendChild(newdyn);}
-				var newdynright = document.createElement("div");newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright");newdynmaster.appendChild(newdynright);	
+				for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
+				var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); newdynmaster.appendChild(newdynright);
 				var i;
-				for(i = 11; i < 16; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+"");newdynright.appendChild(newdyn);}				
+				for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
 			}
 			else if(dynamic2 == true){
-				var newdynleft = document.createElement("div");newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft");newdynmaster.appendChild(newdynleft);
+				var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); newdynmaster.appendChild(newdynleft);
 				var i;
-				for(i = 1; i < 21; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks"+i+"");newdynleft.appendChild(newdyn);}
-				var newdynright = document.createElement("div");newdynright.setAttribute("class","stefanvddynamicbackgroundblockright");newdynmaster.appendChild(newdynright);
+				for(i = 1; i < 21; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynleft.appendChild(newdyn); }
+				var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundblockright"); newdynmaster.appendChild(newdynright);
 				var i;
-				for(i = 22; i < 42; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks"+i+"");newdynright.appendChild(newdyn);}
+				for(i = 22; i < 42; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynright.appendChild(newdyn); }
 			}
 			else if(dynamic3 == true){
-				var newdynleft = document.createElement("div");newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft");newdynmaster.appendChild(newdynleft);
+				var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); newdynmaster.appendChild(newdynleft);
 				var i;
-				for(i = 0; i < 15; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b"+i+"");newdynleft.appendChild(newdyn);}
-				var newdynright = document.createElement("div");newdynright.setAttribute("class","stefanvddynamicbackgroundblockright");newdynmaster.appendChild(newdynright);
+				for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
+				var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundblockright"); newdynmaster.appendChild(newdynright);
 				var i;
-				for(i = 16; i < 31; i++){var newdyn = document.createElement("div");newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b"+i+"");newdynright.appendChild(newdyn);}
+				for(i = 16; i < 31; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynright.appendChild(newdyn); }
 			}
 			else if(dynamic4 == true){
-				var newdynworld = document.createElement("div");newdynworld.setAttribute("id","stefanvdworld");newdynmaster.appendChild(newdynworld);			
+				var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); newdynmaster.appendChild(newdynworld);
 (function(){
 		var lastTime = 0;
 		var vendors = ["ms", "moz", "webkit", "o"];
 		var x;
 		var vl = vendors.length;
 		for(x = 0; x < vl && !window.requestAnimationFrame; ++x){
-			window.requestAnimationFrame = window[vendors[x]+"RequestAnimationFrame"];
-			window.cancelRequestAnimationFrame = window[vendors[x]+"CancelRequestAnimationFrame"];
+			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
 		}
 		if(!window.requestAnimationFrame)
 			window.requestAnimationFrame = function(callback, element){
 				var currTime = new Date().getTime();
 				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, 
-				  timeToCall);
+				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
 				lastTime = currTime + timeToCall;
 				return id;
 			};
 
-		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){window.clearTimeout(id);};
-	}())
+		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
+	}());
 
-	var layers = [],objects = [],world = document.getElementById("stefanvdworld"),viewport = document.getElementById("stefanvddynamicbackground"),	
+	var layers = [],objects = [],world = document.getElementById("stefanvdworld"),viewport = document.getElementById("stefanvddynamicbackground"),
 	d = 0,p = 400,worldXAngle = 0,worldYAngle = 0;
-	
-	viewport.style.webkitPerspective = p;viewport.style.MozPerspective = p;viewport.style.oPerspective = p;
+
+	viewport.style.webkitPerspective = p; viewport.style.MozPerspective = p; viewport.style.oPerspective = p;
 	generate();
-	
+
 	function createCloud(){
 		var div = document.createElement("div");
 		div.className = "stefanvdcloudBase";
-		var x = 256 - ( Math.random() * 512 );
-		var y = 256 - ( Math.random() * 512 );
-		var z = 256 - ( Math.random() * 512 );
+		var x = 256 - (Math.random() * 512);
+		var y = 256 - (Math.random() * 512);
+		var z = 256 - (Math.random() * 512);
 		var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
-		div.style.webkitTransform = t;div.style.MozTransform = t;div.style.oTransform = t;
+		div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
 		world.appendChild(div);
-		
+
 		var j;
-		var lcalc = 5 + Math.round( Math.random() * 10 );
+		var lcalc = 5 + Math.round(Math.random() * 10);
 		for(j = 0; j < lcalc; j++){
 			var cloud = document.createElement("div");
 			cloud.style.opacity = 0;
 			cloud.style.opacity = .8;
 			cloud.className = "stefanvdcloudLayer";
-			var x = 256 - ( Math.random() * 512 );
-			var y = 256 - ( Math.random() * 512 );
-			var z = 100 - ( Math.random() * 200 );
+			var x = 256 - (Math.random() * 512);
+			var y = 256 - (Math.random() * 512);
+			var z = 100 - (Math.random() * 200);
 			var a = Math.random() * 360;
 			var s = .25 + Math.random();
 			x *= .2; y *= .2;
 			cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};
 			var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px) rotateZ(" + a + "deg) scale(" + s + ")";
-			cloud.style.webkitTransform = t;cloud.style.MozTransform = t;cloud.style.oTransform = t;
+			cloud.style.webkitTransform = t; cloud.style.MozTransform = t; cloud.style.oTransform = t;
 			div.appendChild(cloud);
 			layers.push(cloud);
 		}
 		return div;
 	}
-	
+
 	function generate(){
 		objects = [];
 		if(world.hasChildNodes()){
-			while ( world.childNodes.length >= 1 ){world.removeChild(world.firstChild);} 
+			while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); }
 		}
 		var j;
-		for(j = 0; j < 5; j++){objects.push(createCloud());}
+		for(j = 0; j < 5; j++){ objects.push(createCloud()); }
 	}
-	
+
 	function updateView(){
 		var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
-		world.style.webkitTransform = t;world.style.MozTransform = t;world.style.oTransform = t;}
-	
+		world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t; }
+
 	function update(){
 		var j;
 		var l = layers.length;
 		for(j = 0; j < l; j++){
 			var layer = layers[ j ];
 			layer.data.a += layer.data.speed;
-			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + ( - worldYAngle ) + "deg) rotateX(" + ( - worldXAngle ) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
-			layer.style.webkitTransform = t;layer.style.MozTransform = t;layer.style.oTransform = t;
+			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + ( - worldYAngle ) + "deg) rotateX(" + ( - worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
+			layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
 		}
 		requestAnimationFrame(update);
 	}
@@ -1950,36 +1949,36 @@ if(stretchable){
 			}
 			else if(dynamic5 == true){
 				if(hoveroptiondyn5 == true){
-					var newdynspaceworld = document.createElement("div");newdynspaceworld.setAttribute("id","stefanvddynamicspace");newdynmaster.appendChild(newdynspaceworld);			
+					var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); newdynmaster.appendChild(newdynspaceworld);
 					var j;
 					for(j = 1; j < 17; j++){
-					if(j <= 9){j="0"+j}
+					if(j <= 9){ j = "0" + j; }
 						var newdynpart1 = document.createElement("div");
-						newdynpart1.setAttribute("id","p"+ j);newdynspaceworld.appendChild(newdynpart1);
+						newdynpart1.setAttribute("id","p" + j); newdynspaceworld.appendChild(newdynpart1);
 						var i;
 						for(i = 1; i < 31; i++){
-						if(i <= 9){i="0"+i}
-						var newdynlow = document.createElement("b");newdynlow.setAttribute("class","s0"+i+"");newdynpart1.appendChild(newdynlow);
+						if(i <= 9){ i = "0" + i; }
+						var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","s0" + i + ""); newdynpart1.appendChild(newdynlow);
 						}
 					}
 				}else{
-					var newdynspaceworld = document.createElement("div");newdynspaceworld.setAttribute("id","stefanvddynamicspacenoflying");newdynmaster.appendChild(newdynspaceworld);			
+					var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspacenoflying"); newdynmaster.appendChild(newdynspaceworld);
 					var j;
 					for(j = 1; j < 17; j++){
-					if(j <= 9){j="0"+j}
+					if(j <= 9){ j = "0" + j; }
 						var newdynpart1 = document.createElement("div");
-						newdynpart1.setAttribute("id","np"+ j);newdynspaceworld.appendChild(newdynpart1);
+						newdynpart1.setAttribute("id","np" + j); newdynspaceworld.appendChild(newdynpart1);
 						var i;
 						for(i = 1; i < 31; i++){
-						if(i <= 9){i="0"+i}
-						var newdynlow = document.createElement("b");newdynlow.setAttribute("class","ns0"+i+"");newdynpart1.appendChild(newdynlow);
+						if(i <= 9){ i = "0" + i; }
+						var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","ns0" + i + ""); newdynpart1.appendChild(newdynlow);
 						}
-					}			
+					}
 				}
 			}
 			else if(dynamic6 == true){
-			var smoke = document.createElement("div");smoke.setAttribute("id","smoke");smoke.style.width = "100%";smoke.style.height = "100%";newdynmaster.appendChild(smoke);
-			var newsmokecanvas = document.createElement("canvas");newsmokecanvas.setAttribute("id","stefanvddynamicsmoke");newsmokecanvas.style.width = "100%";newsmokecanvas.style.height = "100%";smoke.appendChild(newsmokecanvas);	
+			var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
+			var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
 
 			// Create an array to store our particles
 			var particles = [];
@@ -2029,11 +2028,11 @@ if(stretchable){
 
 				// The function to draw the particle on the canvas.
 				this.draw = function(){
-					
+
 					// If an image is set draw it
 					if(this.image){
-						this.context.drawImage(this.image, this.x-128, this.y-128);         
-						// If the image is being rendered do not draw the circle so break out of the draw function                
+						this.context.drawImage(this.image, this.x - 128, this.y - 128);
+						// If the image is being rendered do not draw the circle so break out of the draw function
 						return;
 					}
 					// Draw the circle as before, with the addition of using the position and the radius from this object.
@@ -2066,7 +2065,7 @@ if(stretchable){
 						this.yVelocity = -this.yVelocity;
 						this.y = canvasHeight;
 					}
-					
+
 					// Check if has crossed the top edge
 					else if(this.y <= 0){
 						this.yVelocity = -this.yVelocity;
@@ -2085,14 +2084,14 @@ if(stretchable){
 					this.xVelocity = x;
 					this.yVelocity = y;
 				};
-				
+
 				this.setImage = function(image){
 					this.image = image;
-				}
+				};
 			}
 
 			// A function to generate a random number between 2 values
-			function generateRandom(min, max){return Math.random() * (max - min) + min;}
+			function generateRandom(min, max){ return Math.random() * (max - min) + min; }
 
 			var context;
 			// Initialise the scene and set the context if possible
@@ -2105,13 +2104,13 @@ if(stretchable){
 					var i;
 					for(i = 0; i < particleCount; ++i){
 						var particle = new Particle(context);
-						
+
 						// Set the position to be inside the canvas bounds
 						particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
-						
+
 						// Set the initial velocity to be either random and either negative or positive
 						particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
-						particles.push(particle);            
+						particles.push(particle);
 					}
 				}
 			}
@@ -2153,8 +2152,8 @@ if(stretchable){
 
 			}
 			else if(dynamic7 == true){
-			var flyingdots = document.createElement("div");flyingdots.setAttribute("id","flyingdots");newdynmaster.appendChild(flyingdots);
-			var newdyndotsworld = document.createElement("div");newdyndotsworld.setAttribute("id","stefanvddynamicdots");flyingdots.appendChild(newdyndotsworld);
+			var flyingdots = document.createElement("div"); flyingdots.setAttribute("id","flyingdots"); newdynmaster.appendChild(flyingdots);
+			var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id","stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
 				var j;
 				for(j = 1; j < 100; j++){
 					var newminic = document.createElement("div");
@@ -2163,8 +2162,8 @@ if(stretchable){
 				}
 			}
 			else if(dynamic8 == true){
-			var storm = document.createElement("div");storm.setAttribute("id","storm");newdynmaster.appendChild(storm);
-			var newstormcanvas = document.createElement("canvas");newstormcanvas.setAttribute("id","stefanvddynamicstorm");newstormcanvas.style.width = "100%";newstormcanvas.style.height = "100%";storm.appendChild(newstormcanvas);	
+			var storm = document.createElement("div"); storm.setAttribute("id","storm"); newdynmaster.appendChild(storm);
+			var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id","stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
 
 			var stormcanvas = document.getElementById("stefanvddynamicstorm");
 			var sky = stormcanvas.getContext("2d",{desynchronized: true});
@@ -2182,16 +2181,16 @@ if(stretchable){
 			var drops = [];
 
 			function randomFrom(min, max){
-			  return (Math.random() * (max - min) + min);
+				return(Math.random() * (max - min) + min);
 			}
 
 			function resizer(){
-			  window_width = window.innerWidth * 1.5;
-			  window_height = window.innerHeight * 1.5;
-			  drop_count = window_width * rain_weight;
-			  
-			  stormcanvas.setAttribute("width", window_width);
-			  stormcanvas.setAttribute("height", window_height);
+				window_width = window.innerWidth * 1.5;
+				window_height = window.innerHeight * 1.5;
+				drop_count = window_width * rain_weight;
+
+				stormcanvas.setAttribute("width", window_width);
+				stormcanvas.setAttribute("height", window_height);
 			}
 
 			window.addEventListener("resize", resizer, false);
@@ -2223,64 +2222,64 @@ if(stretchable){
 			}
 
 			function drop(){
-			  this.reset = function(){
-				this.r = randomFrom(0.8, 1.6);
-				this.l = (this.r * 250);
-				this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
-				this.y = randomFrom((window_height * -0.25), (window_height * -1));
-				this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
-				this.dy = (this.r * (100 * fall_speed));
-				this.offset = (this.l * (this.dx / this.dy));
-				this.opacity = (this.r * randomFrom(0.2, 0.6));
-				this.drip = this.render();
-			  };
-			  
-			  this.render = function(){
-				var canv = document.createElement("canvas");
-				var ctx = canv.getContext("2d",{desynchronized: true});
-				canv.setAttribute("width", Math.abs(this.offset) + this.r);
-				canv.setAttribute("height", this.l);
-				
-				ctx.beginPath();
-				
-				var drip = ctx.createLinearGradient(0, 0, 0, this.l);
-				drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
-				drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
-				ctx.fillStyle = drip;
-					
-				//sky.rect(this.x, this.y, this.r, this.l);
-				var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
-				ctx.moveTo(startX, 0);
-				ctx.lineTo(startX + this.r, 0);
-				ctx.lineTo(startX + this.r + this.offset, this.l);
-				ctx.lineTo(startX + this.offset, this.l);
+				this.reset = function(){
+					this.r = randomFrom(0.8, 1.6);
+					this.l = (this.r * 250);
+					this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
+					this.y = randomFrom((window_height * -0.25), (window_height * -1));
+					this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
+					this.dy = (this.r * (100 * fall_speed));
+					this.offset = (this.l * (this.dx / this.dy));
+					this.opacity = (this.r * randomFrom(0.2, 0.6));
+					this.drip = this.render();
+				};
 
-				ctx.closePath();
-				ctx.fill();
-				
-				return canv;
-			  };
-			  
-			  this.draw = function(){
-				sky.drawImage(this.drip, this.x, this.y);
-			  };
-			  
-			  this.fall = function(){
-				this.x += this.dx;
-				this.y += this.dy;
-				
-				if(this.y > (window_height * 1.25)){
-				  this.reset();
-				}
-			  };
+				this.render = function(){
+					var canv = document.createElement("canvas");
+					var ctx = canv.getContext("2d",{desynchronized: true});
+					canv.setAttribute("width", Math.abs(this.offset) + this.r);
+					canv.setAttribute("height", this.l);
+
+					ctx.beginPath();
+
+					var drip = ctx.createLinearGradient(0, 0, 0, this.l);
+					drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
+					drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
+					ctx.fillStyle = drip;
+
+					//sky.rect(this.x, this.y, this.r, this.l);
+					var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
+					ctx.moveTo(startX, 0);
+					ctx.lineTo(startX + this.r, 0);
+					ctx.lineTo(startX + this.r + this.offset, this.l);
+					ctx.lineTo(startX + this.offset, this.l);
+
+					ctx.closePath();
+					ctx.fill();
+
+					return canv;
+				};
+
+				this.draw = function(){
+					sky.drawImage(this.drip, this.x, this.y);
+				};
+
+				this.fall = function(){
+					this.x += this.dx;
+					this.y += this.dy;
+
+					if(this.y > (window_height * 1.25)){
+						this.reset();
+					}
+				};
 			}
 
 			resizer();
 			paintSky();
 			}
 			else if(dynamic9 == true){
-			var triangle = document.createElement("div");triangle.setAttribute("id","triangle");newdynmaster.appendChild(triangle);
-				
+			var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
+
 			var refreshDuration = 10000;
 			var refreshTimeout;
 			var numPointsX;
@@ -2295,11 +2294,11 @@ if(stretchable){
 				triasvg.setAttribute("height",window.innerHeight);
 				document.getElementById("triangle").appendChild(triasvg);
 
-				var unitSize = (window.innerWidth+window.innerHeight)/20;
-				numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
-				numPointsY = Math.ceil(window.innerHeight/unitSize)+1;
-				unitWidth = Math.ceil(window.innerWidth/(numPointsX-1));
-				unitHeight = Math.ceil(window.innerHeight/(numPointsY-1));
+				var unitSize = (window.innerWidth + window.innerHeight) / 20;
+				numPointsX = Math.ceil(window.innerWidth / unitSize) + 1;
+				numPointsY = Math.ceil(window.innerHeight / unitSize) + 1;
+				unitWidth = Math.ceil(window.innerWidth / (numPointsX - 1));
+				unitHeight = Math.ceil(window.innerHeight / (numPointsY - 1));
 
 				points = [];
 
@@ -2307,7 +2306,7 @@ if(stretchable){
 				for(y = 0; y < numPointsY; y++){
 					var x;
 					for(x = 0; x < numPointsX; x++){
-						points.push({x:unitWidth*x, y:unitHeight*y, originX:unitWidth*x, originY:unitHeight*y});
+						points.push({x:unitWidth * x, y:unitHeight * y, originX:unitWidth * x, originY:unitHeight * y});
 					}
 				}
 
@@ -2316,52 +2315,52 @@ if(stretchable){
 				var i;
 				var l = points.length;
 				for(i = 0; i < l; i++){
-					if(points[i].originX != unitWidth*(numPointsX-1) && points[i].originY != unitHeight*(numPointsY-1)){
+					if(points[i].originX != unitWidth * (numPointsX - 1) && points[i].originY != unitHeight * (numPointsY - 1)){
 						var topLeftX = points[i].x;
 						var topLeftY = points[i].y;
-						var topRightX = points[i+1].x;
-						var topRightY = points[i+1].y;
-						var bottomLeftX = points[i+numPointsX].x;
-						var bottomLeftY = points[i+numPointsX].y;
-						var bottomRightX = points[i+numPointsX+1].x;
-						var bottomRightY = points[i+numPointsX+1].y;
+						var topRightX = points[i + 1].x;
+						var topRightY = points[i + 1].y;
+						var bottomLeftX = points[i + numPointsX].x;
+						var bottomLeftY = points[i + numPointsX].y;
+						var bottomRightX = points[i + numPointsX + 1].x;
+						var bottomRightY = points[i + numPointsX + 1].y;
 
-						var rando = Math.floor(Math.random()*2);
+						var rando = Math.floor(Math.random() * 2);
 
 						var n;
 						for(n = 0; n < 2; n++){
 							var polygon = document.createElementNS(triasvg.namespaceURI, "polygon");
 
-							if(rando==0){
-								if(n==0){
+							if(rando == 0){
+								if(n == 0){
 									polygon.point1 = i;
-									polygon.point2 = i+numPointsX;
-									polygon.point3 = i+numPointsX+1;
-									polygon.setAttribute("points",topLeftX+","+topLeftY+" "+bottomLeftX+","+bottomLeftY+" "+bottomRightX+","+bottomRightY);
-								} else if(n==1){
+									polygon.point2 = i + numPointsX;
+									polygon.point3 = i + numPointsX + 1;
+									polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + bottomRightX + "," + bottomRightY);
+								}else if(n == 1){
 									polygon.point1 = i;
-									polygon.point2 = i+1;
-									polygon.point3 = i+numPointsX+1;
-									polygon.setAttribute("points",topLeftX+","+topLeftY+" "+topRightX+","+topRightY+" "+bottomRightX+","+bottomRightY);
+									polygon.point2 = i + 1;
+									polygon.point3 = i + numPointsX + 1;
+									polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
 								}
-							} else if(rando==1){
-								if(n==0){
+							}else if(rando == 1){
+								if(n == 0){
 									polygon.point1 = i;
-									polygon.point2 = i+numPointsX;
-									polygon.point3 = i+1;
-									polygon.setAttribute("points",topLeftX+","+topLeftY+" "+bottomLeftX+","+bottomLeftY+" "+topRightX+","+topRightY);
-								} else if(n==1){
-									polygon.point1 = i+numPointsX;
-									polygon.point2 = i+1;
-									polygon.point3 = i+numPointsX+1;
-									polygon.setAttribute("points",bottomLeftX+","+bottomLeftY+" "+topRightX+","+topRightY+" "+bottomRightX+","+bottomRightY);
+									polygon.point2 = i + numPointsX;
+									polygon.point3 = i + 1;
+									polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY);
+								}else if(n == 1){
+									polygon.point1 = i + numPointsX;
+									polygon.point2 = i + 1;
+									polygon.point3 = i + numPointsX + 1;
+									polygon.setAttribute("points",bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
 								}
 							}
-							polygon.setAttribute("fill","rgba(0,0,0,"+(Math.random()/3)+")");
+							polygon.setAttribute("fill","rgba(0,0,0," + (Math.random() / 3) + ")");
 							var animate = document.createElementNS("http://www.w3.org/2000/svg","animate");
 							animate.setAttribute("fill","freeze");
 							animate.setAttribute("attributeName","points");
-							animate.setAttribute("dur",refreshDuration+"ms");
+							animate.setAttribute("dur",refreshDuration + "ms");
 							animate.setAttribute("calcMode","linear");
 							polygon.appendChild(animate);
 							triasvg.appendChild(polygon);
@@ -2375,11 +2374,11 @@ if(stretchable){
 				var i;
 				var l = points.length;
 				for(i = 0; i < l; i++){
-					if(points[i].originX != 0 && points[i].originX != unitWidth*(numPointsX-1)){
-						points[i].x = points[i].originX + Math.random()*unitWidth-unitWidth/2;
+					if(points[i].originX != 0 && points[i].originX != unitWidth * (numPointsX - 1)){
+						points[i].x = points[i].originX + Math.random() * unitWidth - unitWidth / 2;
 					}
-					if(points[i].originY != 0 && points[i].originY != unitHeight*(numPointsY-1)){
-						points[i].y = points[i].originY + Math.random()*unitHeight-unitHeight/2;
+					if(points[i].originY != 0 && points[i].originY != unitHeight * (numPointsY - 1)){
+						points[i].y = points[i].originY + Math.random() * unitHeight - unitHeight / 2;
 					}
 				}
 			}
@@ -2395,15 +2394,15 @@ if(stretchable){
 					if(animate.getAttribute("to")){
 						animate.setAttribute("from",animate.getAttribute("to"));
 					}
-					animate.setAttribute("to",points[polygon.point1].x+","+points[polygon.point1].y+" "+points[polygon.point2].x+","+points[polygon.point2].y+" "+points[polygon.point3].x+","+points[polygon.point3].y);
+					animate.setAttribute("to",points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
 					animate.beginElement();
 				}
-				refreshTimeout = window.setTimeout(function(){refresh();}, refreshDuration);
+				refreshTimeout = window.setTimeout(function(){ refresh(); }, refreshDuration);
 				}
 			}
 
 			trianglerun();
-			
+
 			function onResize(){
 			document.querySelector("#triangle svg").remove();
 			window.clearTimeout(refreshTimeout);
@@ -2413,17 +2412,17 @@ if(stretchable){
 			window.onresize = onResize;
 			}
 			else if(dynamic10 == true){
-			var stars = document.createElement("div");stars.setAttribute("id","stars");newdynmaster.appendChild(stars);
+			var stars = document.createElement("div"); stars.setAttribute("id","stars"); newdynmaster.appendChild(stars);
 				var j;
 				for(j = 1; j < 3; j++){
 					var newmstar = document.createElement("div");
-					newmstar.id = "mstars"+[j];
+					newmstar.id = "mstars" + [j];
 					stars.appendChild(newmstar);
 				}
 			}
 		} // end dynamic
 	}
-	
+
 	}
 } // end activatelightsoff
 } // end mousespotlightt
@@ -2433,11 +2432,11 @@ if(stretchable){
 // animation browser engine
 window.requestAnimFrame = function(){
     return(
-        window.requestAnimationFrame || 
-        window.webkitRequestAnimationFrame || 
-        window.mozRequestAnimationFrame || 
-        window.oRequestAnimationFrame || 
-        window.msRequestAnimationFrame || 
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
         function(/* function */ callback){
             window.setTimeout(callback, 1000 / 60);
         }
@@ -2464,16 +2463,16 @@ function increaseOpacity(){
 try{
   //  If opacity level is less than default_opacity, we can still increase the opacity
   if((opacity < default_opacity) && (ReducingFinished == true)){
-	if((opacity > (default_opacity-10)) && (ReducingFinished == true)){
+	if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
     ReducingFinished = true;
     opacity += (default_opacity - opacity);
-    DIVElementById.style.opacity = opacity/100;
+    DIVElementById.style.opacity = opacity / 100;
 	window.requestAnimFrame(increaseOpacity);
 	}
 	else{
     ReducingFinished = true;
     opacity += OpacityLevelIncrement;
-    DIVElementById.style.opacity = opacity/100;
+    DIVElementById.style.opacity = opacity / 100;
 	window.requestAnimFrame(increaseOpacity);
 	}
   }
@@ -2484,7 +2483,7 @@ try{
 var div = document.querySelectorAll("div.stefanvdlightareoff");
 var i;
 var l = div.length;
-for(i = 0; i < l; i++){div[i].style.opacity = opacity/100;}
+for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
 }catch(e){}
 }
 
@@ -2495,19 +2494,19 @@ try{
   if((opacity > 0) && (ReducingFinished == false)){
     ReducingFinished = false;
     opacity -= OpacityLevelIncrement;
-    DIVElementById.style.opacity = opacity/100;
+    DIVElementById.style.opacity = opacity / 100;
 	window.requestAnimFrame(reduceOpacity);
   }
   else{
     ReducingFinished = true;
 
     //  When finished, make sure the DIVElementById is set to remove element
-    if(DIVElementById.style.opacity <= 0){document.body.removeChild(DIVElementById);removenewframe();}
+    if(DIVElementById.style.opacity <= 0){ document.body.removeChild(DIVElementById); removenewframe(); }
   }
 //control opacity for all <div>
 var div = document.querySelectorAll("div.stefanvdlightareoff");
 var i;
 var l = div.length;
-for(i = 0; i < l; i++){div[i].style.opacity = opacity/100;}
+for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
 }catch(e){}
 }

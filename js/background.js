@@ -47,17 +47,17 @@ else if(request.name == "contextmenuoff"){ removecontexmenus(); }
 else if(request.name == "sendautoplay"){
 	var oReq = new XMLHttpRequest();
 	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText}); } };
-	oReq.open("GET","/js/video-player-status.js",true);oReq.send();
+	oReq.open("GET","/js/video-player-status.js",true); oReq.send();
 }
 else if(request.name == "sendfps"){
 	var oReq = new XMLHttpRequest();
 	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText}); } };
-	oReq.open("GET","/js/fpsinject.js",true);oReq.send();
+	oReq.open("GET","/js/fpsinject.js",true); oReq.send();
 }
 else if(request.name == "sendlightcss"){
 	var oReq = new XMLHttpRequest();
 	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: oReq.responseText}); } };
-	oReq.open("GET","/css/light.css",true);oReq.send();
+	oReq.open("GET","/css/light.css",true); oReq.send();
 }
 else if(request.name == "emergencyalf"){
 chrome.tabs.query({}, function(tabs){
@@ -70,8 +70,8 @@ chrome.tabs.query({}, function(tabs){
     );
 }
 else if(request.name == "eyesavemeOFF"){
-if(request.value == true){ chrome.storage.sync.set({"eyea": true});chrome.storage.sync.set({"eyen": false}); }
-else{ chrome.storage.sync.set({"eyea": false});chrome.storage.sync.set({"eyen": true}); }
+if(request.value == true){ chrome.storage.sync.set({"eyea": true}); chrome.storage.sync.set({"eyen": false}); }
+else{ chrome.storage.sync.set({"eyea": false}); chrome.storage.sync.set({"eyen": true}); }
 chrome.tabs.query({}, function(tabs){
             var i;
             var l = tabs.length;
@@ -82,8 +82,8 @@ chrome.tabs.query({}, function(tabs){
     );
 }
 else if(request.name == "eyesavemeON"){
-if(request.value == true){ chrome.storage.sync.set({"eyea": true});chrome.storage.sync.set({"eyen": false}); }
-else{ chrome.storage.sync.set({"eyea": false});chrome.storage.sync.set({"eyen": true}); }
+if(request.value == true){ chrome.storage.sync.set({"eyea": true}); chrome.storage.sync.set({"eyen": false}); }
+else{ chrome.storage.sync.set({"eyea": false}); chrome.storage.sync.set({"eyen": true}); }
 chrome.tabs.query({}, function(tabs){
             var i;
             var l = tabs.length;
@@ -185,7 +185,7 @@ else if(request.name == "getallpermissions"){
     chrome.permissions.getAll(function(permissions){
        result = permissions.permissions;
        chrome.tabs.sendMessage(sender.tab.id,{text: "receiveallpermissions", value: result});
-    });   
+    });
 }
 return true;
 });
@@ -302,14 +302,14 @@ if(command == "toggle-feature-nightmode"){
 
 // contextMenus
 function onClickHandler(info, tab){
-var str = info.menuItemId;var resvideo = str.substring(0, 9);var respage = str.substring(0, 8);
+var str = info.menuItemId; var resvideo = str.substring(0, 9); var respage = str.substring(0, 8);
 if(resvideo == "totlvideo" || respage == "totlpage"){ chrome.tabs.executeScript(tab.id, {file: "js/light.js"}); }
 else if(info.menuItemId == "totlguideemenu"){ chrome.tabs.create({url: linkguide, active:true}); }
 else if(info.menuItemId == "totldevelopmenu"){ chrome.tabs.create({url: donatewebsite, active:true}); }
 else if(info.menuItemId == "totlratemenu"){ chrome.tabs.create({url: writereview, active:true}); }
 else if(info.menuItemId == "totlsharemenu"){ chrome.tabs.create({url: linkshare, active:true}); }
-else if(info.menuItemId == "totlshareemail"){ var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct;chrome.tabs.create({url: sturnoffthelightemail, active:true}); }
-else if(info.menuItemId == "totlsharetwitter"){ var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct);chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }
+else if(info.menuItemId == "totlshareemail"){ var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true}); }
+else if(info.menuItemId == "totlsharetwitter"){ var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }
 else if(info.menuItemId == "totlsharefacebook"){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }
 else if(info.menuItemId == "totlsubscribe"){ chrome.tabs.create({url: linkyoutube, active:true}); }
 }

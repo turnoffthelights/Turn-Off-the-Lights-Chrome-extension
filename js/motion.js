@@ -27,8 +27,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-document.addEventListener("DOMContentLoaded", function(){cameramotionlights();},false);
-chrome.storage.onChanged.addListener(function(changes, namespace){
+document.addEventListener("DOMContentLoaded", function(){ cameramotionlights(); },false);
+chrome.storage.onChanged.addListener(function(changes){
     for(key in changes){
          var storageChange = changes[key];
          if(changes["motion"]){
@@ -110,7 +110,7 @@ var motion = response["motion"];
 var cammotiononly = response["cammotiononly"];
 
 if(motion == true){
-chrome.runtime.onSuspend.addListener(function(){location.reload();});
+chrome.runtime.onSuspend.addListener(function(){ location.reload(); });
 }
 
 var foundtheurlcamera = false;
@@ -172,7 +172,7 @@ if(motion == true){
 			}
         });
         // on highlight
-		chrome.tabs.onHighlighted.addListener(function(o){tabId = o.tabIds[0];
+		chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
 			chrome.tabs.get(tabId, function(tab){
 				if(tab.url){
 					if(tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab){
@@ -329,11 +329,11 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
 
         function rgb2Hsv(r,g,b){
 
-            r = r / 255
-            g = g / 255
+            r = r / 255;
+            g = g / 255;
             b = b / 255;
 
-            var max = Math.max(r, g, b)
+            var max = Math.max(r, g, b);
             var min = Math.min(r, g, b);
 
             var h, s, v = max;
@@ -359,32 +359,30 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
 
         last = false; thresh = 150; down = false; wasdown = false;
         function camtest(){
-            delt = canvasgetcont.createImageData(width, height)
+            delt = canvasgetcont.createImageData(width, height);
             if(last !== false){
-                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height
-                , dscl = 0
-                , pix = totaln * 4; while(pix -= 4){
+                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, dscl = 0, pix = totaln * 4; while(pix -= 4){
                     var d = Math.abs(
                             draw.data[pix] - last.data[pix]
                     ) + Math.abs(
                             draw.data[pix + 1] - last.data[pix + 1]
                     ) + Math.abs(
                             draw.data[pix + 2] - last.data[pix + 2]
-                    )
+                    );
                     if(d > thresh){
-                        delt.data[pix] = 160
-                        delt.data[pix + 1] = 255
+                        delt.data[pix] = 160;
+                        delt.data[pix + 1] = 255;
                         delt.data[pix + 2] =
-                delt.data[pix + 3] = 255
-                        totald += 1
-                        totalx += ((pix / 4) % width)
-                        totaly += (Math.floor((pix / 4) / delt.height))
+                delt.data[pix + 3] = 255;
+                        totald += 1;
+                        totalx += ((pix / 4) % width);
+                        totaly += (Math.floor((pix / 4) / delt.height));
                     }
                     else{
                         delt.data[pix] =
                                 delt.data[pix + 1] =
-                                delt.data[pix + 2] = 0
-                        delt.data[pix + 3] = 0
+                                delt.data[pix + 2] = 0;
+                        delt.data[pix + 3] = 0;
                     }
                 }
             }
@@ -395,12 +393,12 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
                     x: totalx / totald,
                     y: totaly / totald,
                     d: totald
-                }
-                handledown()
+                };
+                handledown();
             }
             //console.log(totald)
-            last = draw
-            ccgetcont.putImageData(delt, 0, 0)
+            last = draw;
+            ccgetcont.putImageData(delt, 0, 0);
         }
         movethresh = 2; brightthresh = 300; overthresh = 1000;
         function calibrate(){
@@ -408,7 +406,7 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
                 x: down.x,
                 y: down.y,
                 d: down.d
-            }
+            };
         }
         avg = 0;
         state = 0;//States: 0 waiting for gesture, 1 waiting for next move after gesture, 2 waiting for gesture to end
