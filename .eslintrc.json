@@ -19,7 +19,17 @@
         "space-before-blocks": ["error", "never"],
         "array-bracket-spacing": ["error", "never"],
         "space-in-parens": ["error", "never"],
-        "quotes": ["error", "double"]
+        "quotes": ["error", "double"],
+        "object-curly-spacing": ["error", "never"],
+        "no-cond-assign": ["error"],
+        "no-redeclare": ["error"],
+        "no-trailing-spaces": ["error"],
+        "no-whitespace-before-property": ["error"],
+        "space-infix-ops": ["error"],
+        "yoda": ["error"],
+        "arrow-parens": ["error", "always"],
+        "block-spacing": ["error", "always"],
+        "jsx-quotes": ["error", "prefer-double"]
     },
     "globals": {
         "totlscreenshotpage": "readonly",

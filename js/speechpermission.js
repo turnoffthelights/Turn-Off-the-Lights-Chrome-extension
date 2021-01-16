@@ -71,12 +71,12 @@ navigator.permissions.query({name:'microphone'})
 		recognition = new webkitSpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
-	
+
 		recognition.onstart = function(){
 			recognizing = true;
 			// console.log("speak now");
 		};
-	
+
 		recognition.onerror = function(event){
 		if(event.error == 'no-speech'){
 			// No speech was detected.
@@ -95,7 +95,7 @@ navigator.permissions.query({name:'microphone'})
 			ignore_onend = true;
 		}
 		};
-	
+
 	}
 
 	speechstartfunction();

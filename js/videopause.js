@@ -28,9 +28,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-	var sp = document.getElementById('movie_player');
-	var video = document.querySelector('video');
-	
+	var sp = document.getElementById("movie_player");
+	var video = document.querySelector("video");
+
 	if(typeof(sp.pauseVideo) === "function"){
 		sp.pauseVideo();
 	}else if(typeof(video.pause) === "function"){
@@ -41,7 +41,7 @@ if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*yo
 	if(htmlplayer !== null){
 		var j;
 		var l = htmlplayer.length;
-		for(j=0; j<l; j++){
+		for(j = 0; j < l; j++){
 			if(htmlplayer[0]){ htmlplayer[0].pause(); }
 		}
 	}

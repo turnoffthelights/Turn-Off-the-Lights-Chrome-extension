@@ -27,18 +27,18 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-chrome.storage.sync.get(['autostop','autostoponly','autostopDomains','autostopchecklistwhite','autostopchecklistblack','autostopred','autostoptrans'], function(response){
-var autostop = response['autostop'];
-var autostoponly = response['autostoponly'];
-var autostopDomains = response['autostopDomains'];
-var autostopchecklistwhite = response['autostopchecklistwhite'];
-var autostopchecklistblack = response['autostopchecklistblack'];
-var autostopred = response['autostopred'];
-var autostoptrans = response['autostoptrans'];
+chrome.storage.sync.get(["autostop","autostoponly","autostopDomains","autostopchecklistwhite","autostopchecklistblack","autostopred","autostoptrans"], function(response){
+var autostop = response["autostop"];
+var autostoponly = response["autostoponly"];
+var autostopDomains = response["autostopDomains"];
+var autostopchecklistwhite = response["autostopchecklistwhite"];
+var autostopchecklistblack = response["autostopchecklistblack"];
+var autostopred = response["autostopred"];
+var autostoptrans = response["autostoptrans"];
 if(autostop == true){
 document.addEventListener("DOMContentLoaded", function(event){
 if(autostoponly == true){
-var currenturl = window.location.protocol + '//' + window.location.host;
+var currenturl = window.location.protocol + "//" + window.location.host;
 var stoprabbit = false;
 if(typeof autostopDomains == "string"){
 	autostopDomains = JSON.parse(autostopDomains);
@@ -51,15 +51,15 @@ if(typeof autostopDomains == "string"){
 		var l = atbuf.length;
 		for(i = 0; i < l; i++){
 			if(autostopchecklistwhite == true){
-				if(currenturl == atbuf[i]){autostopfunction();}
+				if(currenturl == atbuf[i]){ autostopfunction(); }
 			}
 			else if(autostopchecklistblack == true){
-				if(currenturl == atbuf[i]){stoprabbit=true;}
+				if(currenturl == atbuf[i]){ stoprabbit = true; }
 			}
 		}
     }
 	if(autostopchecklistblack == true){
-		if(stoprabbit == false){autostopfunction();}
+		if(stoprabbit == false){ autostopfunction(); }
 	}
 }else{autostopfunction();}
 }, false);
@@ -86,7 +86,7 @@ function autostopfunction(){
 				}
 			}
 			// dynamic add and remove video
-			if(mutation.type == 'childList'){
+			if(mutation.type == "childList"){
 				var i;
 				var la = mutation.addedNodes.length;
 				for(i = 0; i < la; i++){
@@ -118,7 +118,7 @@ function autostopfunction(){
 				}
 			}
 			// detect change style - this for floating box in div detection
-			if(mutation.attributeName == 'style'){
+			if(mutation.attributeName == "style"){
 				var currentClass = mutation.target.className;
 				if(currentClass!="stefanvdautostop"){
 					refreshsize();
@@ -176,7 +176,7 @@ function autostopdetectionstart(){
 				}
 			}
 		};
-		video.addEventListener('playing', function(ev){
+		video.addEventListener("playing", function(ev){
 			reqId = requestAnimationFrame(function play(){
 				if(ev.target.getAttribute("data-stopvideo")){
 				}else{
@@ -201,8 +201,8 @@ function autostopdetectionstart(){
 							}							
 						}
 						rock = ev.target.getAttribute("data-videonum");
-						if(document.getElementById('stefanvdautostoppanel'+rock)){
-							document.getElementById('stefanvdautostoppanel'+rock).style.display = "block";
+						if(document.getElementById("stefanvdautostoppanel"+rock)){
+							document.getElementById("stefanvdautostoppanel"+rock).style.display = "block";
 							refreshsize();
 						}
 						//console.log(Math.round(video.currentTime * 1000));
@@ -211,7 +211,7 @@ function autostopdetectionstart(){
 				}
 			});
 		},false);
-		video.addEventListener('pause', stopTracking);
+		video.addEventListener("pause", stopTracking);
 
 		// design panel
 		var myElement = document.getElementsByTagName("video")[i];
@@ -254,7 +254,7 @@ function autostopdetectionstart(){
 			if(adisplay == "none"){
 				newautostoppanel.style.display = "none";
 			}
-		}while((myElement.nodeName.toLowerCase() != 'html') && (myElement = myElement.parentNode))
+		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode))
 		//---
 		
 		// YouTube video top position negative value, then minus the height
@@ -273,7 +273,7 @@ function autostopdetectionstart(){
 			templearn = templearn.substr(0, 26);
 			if(templearn != "stefanvdautostoppanellearn"){
 			rock = this.getAttribute("data-videonum");
-			document.getElementById('stefanvdautostoppanel'+rock).style.display = "none";
+			document.getElementById("stefanvdautostoppanel"+rock).style.display = "none";
 			document.getElementsByTagName("video")[rock].setAttribute("data-stopvideo","false");
 			var playPromise = document.getElementsByTagName("video")[rock].play();
 			if(playPromise !== undefined) {
@@ -286,7 +286,7 @@ function autostopdetectionstart(){
 			}
 			}
 		},false);
-		newautostoppanel.addEventListener('contextmenu', event => event.preventDefault());
+		newautostoppanel.addEventListener("contextmenu", event => event.preventDefault());
 		document.body.appendChild(newautostoppanel);
 
 		if(autostopred == true){
@@ -318,7 +318,7 @@ function autostopdetectionstart(){
 }
 
 function refreshsize(){
-var cusid_ele = document.getElementsByClassName('stefanvdautostop');
+var cusid_ele = document.getElementsByClassName("stefanvdautostop");
 var i;
 var l = cusid_ele.length;
 for(i = 0; i < l; ++i){
@@ -355,7 +355,7 @@ for(i = 0; i < l; ++i){
 			if(adisplay == "none"){
 				item.style.display = "none";
 			}
-		}while((myElement.nodeName.toLowerCase() != 'html') && (myElement = myElement.parentNode))
+		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode))
 		//---
 
 		// YouTube video top position negative value, then minus the height
@@ -377,8 +377,8 @@ for(i = 0; i < l; ++i){
 	}
 }
 }
-window.addEventListener('resize', function(){refreshsize()},false);
-window.addEventListener('scroll', function(){refreshsize()},false);
+window.addEventListener("resize", function(){refreshsize()},false);
+window.addEventListener("scroll", function(){refreshsize()},false);
 
 } // option autostop on end
 });

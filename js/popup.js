@@ -27,30 +27,30 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id) { return document.getElementById(id); }
+function $(id){ return document.getElementById(id); }
 
 var darkmode;
 
-document.addEventListener('DOMContentLoaded', function(){
-    // disable context menu 
-    document.addEventListener('contextmenu', function(e){
+document.addEventListener("DOMContentLoaded", function(){
+    // disable context menu
+    document.addEventListener("contextmenu", function(e){
         e.preventDefault();
     }, false);
 
-    chrome.storage.sync.get(['darkmode'], function(items){
-        darkmode = items['darkmode'];if(darkmode == null)darkmode = false; // default darkmode false
+    chrome.storage.sync.get(["darkmode"], function(items){
+        darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
 
         // dark mode
         if(darkmode == true){
-            document.body.className = 'dark';
+            document.body.className = "dark";
         }else{
-            document.body.className = 'light';
+            document.body.className = "light";
         }
     });
-$("opentrywebsite").addEventListener('click', function(){chrome.tabs.create({url: linkyoutube, active:true})});
+$("opentrywebsite").addEventListener("click", function(){ chrome.tabs.create({url: linkyoutube, active:true}) });
 
-$("openoptions").addEventListener('click', function(){chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
-$("opensupport").addEventListener('click', function(){chrome.tabs.create({url: linksupport, active:true})});
-$("openwelcomeguide").addEventListener('click', function(){chrome.tabs.create({url: linkguide, active:true})});
+$("openoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}) });
+$("opensupport").addEventListener("click", function(){ chrome.tabs.create({url: linksupport, active:true}) });
+$("openwelcomeguide").addEventListener("click", function(){ chrome.tabs.create({url: linkguide, active:true}) });
 
 });

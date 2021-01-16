@@ -28,7 +28,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function startinit(){
-// Check for live API permissions  
+// Check for live API permissions
 navigator.permissions.query({name:'camera'})
 .then(function(permissionStatus){
   permissionStatus.onchange = function(){

@@ -30,8 +30,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 // Search for data and translate it to current use language
 var items = document.querySelectorAll("[data-i18n]");
 var i;
-var l=items.length;
-for(i=0; i<l; i++){
+var l = items.length;
+for(i = 0; i < l; i++){
   var translation = chrome.i18n.getMessage(items[i].getAttribute("data-i18n"));
   if(items[i].value === "i18n"){
     items[i].value = translation;
