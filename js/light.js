@@ -1282,11 +1282,11 @@ function lightsgoonoroff(){
 			var i;
 			var l = atbbuf.length;
 			for(i = 0; i < l; i++){
-			  if(atbbuf[i] == currentURL){
-				var tempatbbuf = atbbuf[i];
-				var editzoom = multiopacityDomains[atbbuf[i]];
-				default_opacity = editzoom;
-			}
+				if(atbbuf[i] == currentURL){
+					var tempatbbuf = atbbuf[i];
+					var editzoom = multiopacityDomains[atbbuf[i]];
+					default_opacity = editzoom;
+				}
 			}
 		}
 
@@ -1429,7 +1429,7 @@ if(stretchable){
 
 		function getMouse(obj,e){
 		posx = 0; posy = 0;
-		var ev = (!e) ? window.event:e;
+		var ev = (!e) ? window.event : e;
 		if(ev.clientX){
 			posx = ev.clientX;
 			posy = ev.clientY;

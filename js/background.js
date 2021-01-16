@@ -221,7 +221,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
     checkbadge();
 });
 
-chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
+chrome.tabs.onHighlighted.addListener(function(o){ var tabId = o.tabIds[0];
     chrome.tabs.get(tabId, function(tab){
         // for highlighted tab
         // update the badge value
@@ -234,7 +234,6 @@ chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
 var alreadyClicked = false;
 // Declare a timer variable
 var timer;
-var popupcreated = false;
 chrome.browserAction.onClicked.addListener(function(tabs){
     if(tabs.url.match(/^http/i) || tabs.url.match(/^file/i)){
         if(tabs.url == totloptionspage || (new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
@@ -389,13 +388,13 @@ function checkcontextmenus(){
     contextmenuadded = true;
 
     // video
-    var contexts = ["video"];
+    var contextsvideo = ["video"];
     var i;
-    var l = contexts.length;
+    var l = contextsvideo.length;
     for(i = 0; i < l; i++){
-    var context = contexts[i];
+    var contextvideo = contextsvideo[i];
     var videotitle = chrome.i18n.getMessage("videotitle");
-    menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo" + i, "contexts":[context]});
+    menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo" + i, "contexts":[contextvideo]});
     contextarrayvideo.push(menuvideo);
     }
 
@@ -771,7 +770,7 @@ function search(nameKey, myArray){
   }
 }
 
-var analytics;var rest;
+var analytics; var rest;
 function checkbadge(){
     chrome.storage.sync.get(["analytics","badge"], function(items){
         if(items["analytics"]){
@@ -802,8 +801,6 @@ if((chromeset["firstRun"] != "false") && (chromeset["firstRun"] != false)){
 }
 
 function readgrouppolicy(items){
-    var SuppressWelcomePage;
-
     if(chrome.runtime.lastError){
         //console.error("managed error: " + chrome.runtime.lastError.message);
     }else{

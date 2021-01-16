@@ -902,7 +902,7 @@ if(typeof multiopacityDomains == "string"){
     var i;
     var l = mpbbuf.length;
 	for(i = 0; i < l; i++){
-		multiappendToListBox("multiopacityDomainsBox", mpbbuf[i],multiopacityDomains[""+mpbbuf[i]+""]);
+		multiappendToListBox("multiopacityDomainsBox", mpbbuf[i],multiopacityDomains["" + mpbbuf[i] + ""]);
     }
 }
 
@@ -914,12 +914,7 @@ if(typeof multiopacityDomains == "string"){
 // animation browser engine
 window.requestAnimFrame = function(){
     return(
-        window.requestAnimationFrame || 
-        window.webkitRequestAnimationFrame || 
-        window.mozRequestAnimationFrame || 
-        window.oRequestAnimationFrame || 
-        window.msRequestAnimationFrame || 
-        function(/* function */ callback){
+        window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(/* function */ callback){
             window.setTimeout(callback, 1000 / 60);
         }
     );
@@ -938,9 +933,9 @@ function drawAtmos(){
 	var v = $("beeld");
 	if(v.paused || v.ended){
 	// animation go out
-	countA=countA-1; if(countA <= 0){ countA=0; }
-	countB=countB-1; if(countB <= 0){ countB=0; }
-	countC=countC-1; if(countC <= 0){ countC=0; }
+	countA = countA - 1; if(countA <= 0){ countA = 0; }
+	countB = countB - 1; if(countB <= 0){ countB = 0; }
+	countC = countC - 1; if(countC <= 0){ countC = 0; }
 	var textcountA = countA + "px";
 	var textcountB = countB + "px";
 
@@ -998,16 +993,16 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
 	var getspread = $("ambilightrangespreadradius").value + "px";
 
 	// animate out and in
-	if(countA < $("ambilightrangespreadradius").value){ countA=countA+1; }
-	if(countB < $("ambilightrangeblurradius").value){ countB=countB+1; }
-	if(countC < 20){ countC=countC+.5; }
+	if(countA < $("ambilightrangespreadradius").value){ countA = countA + 1; }
+	if(countB < $("ambilightrangeblurradius").value){ countB = countB + 1; }
+	if(countC < 20){ countC = countC + .5; }
 	var textcountA = countA + "px";
 	var textcountB = countB + "px";
 
 	if($("ambilightvarcolor").checked == true){
     var sourceWidth = showtime.videoWidth;
     var sourceHeight = showtime.videoHeight;
-    
+
 var totlcheckcanvas = $("totlCanvas1");
 if(totlcheckcanvas){}else{
     var totlnewcanvas = document.createElement("canvas");
@@ -1020,14 +1015,14 @@ if(totlcheckcanvas){}else{
 
 var canvas = $("totlCanvas1");
 var context = canvas.getContext("2d", {desynchronized: true});
-var colorlamp1X = (sourceWidth * 50) /100; // up midden
-var colorlamp1Y = (sourceHeight * 95) /100;
-var colorlamp2X = (sourceWidth * 95) /100; // right midden
-var colorlamp2Y = (sourceHeight * 50) /100;
-var colorlamp3X = (sourceWidth * 50) /100; // down midden
-var colorlamp3Y = (sourceHeight * 5) /100;
-var colorlamp4X = (sourceWidth * 5) /100; // left midden
-var colorlamp4Y = (sourceHeight * 50) /100;
+var colorlamp1X = (sourceWidth * 50) / 100; // up midden
+var colorlamp1Y = (sourceHeight * 95) / 100;
+var colorlamp2X = (sourceWidth * 95) / 100; // right midden
+var colorlamp2Y = (sourceHeight * 50) / 100;
+var colorlamp3X = (sourceWidth * 50) / 100; // down midden
+var colorlamp3Y = (sourceHeight * 5) / 100;
+var colorlamp4X = (sourceWidth * 5) / 100; // left midden
+var colorlamp4Y = (sourceHeight * 50) / 100;
 
 	context.drawImage(showtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
 	context.drawImage(showtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
@@ -1043,10 +1038,10 @@ function rgbToHex(r, g, b){
     return ((r << 16) | (g << 8) | b).toString(16);
 }
 
-    var p1 = context.getImageData(0 , 0, 1, 1).data; 
-    var p2 = context.getImageData(1 , 0, 1, 1).data; 
-    var p3 = context.getImageData(2 , 0, 1, 1).data; 
-    var p4 = context.getImageData(3 , 0, 1, 1).data; 
+    var p1 = context.getImageData(0 , 0, 1, 1).data;
+    var p2 = context.getImageData(1 , 0, 1, 1).data;
+    var p3 = context.getImageData(2 , 0, 1, 1).data;
+    var p4 = context.getImageData(3 , 0, 1, 1).data;
     var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
     var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
     var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
@@ -1061,8 +1056,8 @@ function rgbToHex(r, g, b){
 					var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
 					var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
                     var newvivid = $("stefanvdvivideffect1");
-					newvivid.style.webkitTransform = "scale("+1.1+")";
-					newvivid.style.webkitFilter = "blur("+30+"px)";
+					newvivid.style.webkitTransform = "scale(" + 1.1 + ")";
+					newvivid.style.webkitFilter = "blur(" + 30 + "px)";
                     newvivid.style.top = 0;
                     newvivid.style.bottom = 0;
                     newvivid.style.right = 0;
@@ -1072,9 +1067,9 @@ function rgbToHex(r, g, b){
                     newvivid.style.height = "360px";
 					newvivid.style.opacity = .88;
                     newvivid.style.display = "block";
-                    newvivid.width = Math.floor(tempwidthvideo*0.08);
-                    newvivid.height = Math.floor(tempheightvideo*0.08);
-                    var vividctx = newvivid.getContext("2d", {desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth*0.08); var vividy = Math.floor(showtime.offsetHeight*0.08);
+                    newvivid.width = Math.floor(tempwidthvideo * 0.08);
+                    newvivid.height = Math.floor(tempheightvideo * 0.08);
+                    var vividctx = newvivid.getContext("2d", {desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
 					vividctx.drawImage(showtime,0,0,vividx,vividy);
 				}
         }else{
@@ -1126,16 +1121,16 @@ DIVElementById.style.display = "";
   //  If opacity level is less than default_opacity, we can still increase the opacity
   if((opacity < default_opacity) && (ReducingFinished == true))
   {
-	if((opacity > (default_opacity-10)) && (ReducingFinished == true)){
+	if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
     ReducingFinished = true;
     opacity += (default_opacity - opacity);
-    DIVElementById.style.opacity = opacity/100;
+    DIVElementById.style.opacity = opacity / 100;
 	window.requestAnimFrame(increaseOpacity);
 	}
 	else{
     ReducingFinished = true;
     opacity += OpacityLevelIncrement;
-    DIVElementById.style.opacity = opacity/100;
+    DIVElementById.style.opacity = opacity / 100;
 	window.requestAnimFrame(increaseOpacity);
 	}
   }
@@ -1152,7 +1147,7 @@ function reduceOpacity(){
   {
     ReducingFinished = false;
     opacity -= OpacityLevelIncrement;
-    DIVElementById.style.opacity = opacity/100;
+    DIVElementById.style.opacity = opacity / 100;
 	window.requestAnimFrame(reduceOpacity);
   }
   else
@@ -1160,7 +1155,7 @@ function reduceOpacity(){
     ReducingFinished = true;
 
     // When finished, make sure the DIVElementById is set to remove element
-    if(DIVElementById.style.opacity == "0"){ DIVElementById.style.display = "none"; }
+    if(DIVElementById.style.opacity <= 0){ DIVElementById.style.display = "none"; }
   }
 }
 

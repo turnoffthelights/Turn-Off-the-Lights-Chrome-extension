@@ -27,45 +27,16 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-chrome.storage.sync.get(["autostop","autostoponly","autostopDomains","autostopchecklistwhite","autostopchecklistblack","autostopred","autostoptrans"], function(response){
+chrome.storage.sync.get(["autostop","autostoponly","autostopDomains","autostopchecklistwhite","autostopchecklistblack","autostopred"], function(response){
 var autostop = response["autostop"];
 var autostoponly = response["autostoponly"];
 var autostopDomains = response["autostopDomains"];
 var autostopchecklistwhite = response["autostopchecklistwhite"];
 var autostopchecklistblack = response["autostopchecklistblack"];
 var autostopred = response["autostopred"];
-var autostoptrans = response["autostoptrans"];
-if(autostop == true){
-document.addEventListener("DOMContentLoaded", function(){
-if(autostoponly == true){
-var currenturl = window.location.protocol + "//" + window.location.host;
-var stoprabbit = false;
-if(typeof autostopDomains == "string"){
-	autostopDomains = JSON.parse(autostopDomains);
-	var atbuf = [];
-	var domain;
-	for(domain in autostopDomains)
-		atbuf.push(domain);
-		atbuf.sort();
-		var i;
-		var l = atbuf.length;
-		for(i = 0; i < l; i++){
-			if(autostopchecklistwhite == true){
-				if(currenturl == atbuf[i]){ autostopfunction(); }
-			}
-			else if(autostopchecklistblack == true){
-				if(currenturl == atbuf[i]){ stoprabbit = true; }
-			}
-		}
-    }
-	if(autostopchecklistblack == true){
-		if(stoprabbit == false){ autostopfunction(); }
-	}
-}else{ autostopfunction(); }
-}, false);
 
 function getPosition(el){
-var xPos = 0;var yPos = 0;
+var xPos = 0; var yPos = 0;
 while(el){ xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); el = el.offsetParent; }
 return{x:xPos,y:yPos};
 }
@@ -78,7 +49,7 @@ function autostopfunction(){
 	if(MutationObserver){
 	// setup MutationSummary observer
 	var videolist = document.body;
-	var observer = new MutationObserver(function(mutations, observer){
+	var observer = new MutationObserver(function(mutations){
 		mutations.forEach(function(mutation){
 			if(mutation.target.tagName == "VIDEO"){
 				if(mutation.attributeName === "src" && mutation.target.currentSrc != ""){
@@ -133,7 +104,7 @@ function autostopfunction(){
 		characterData: false, // include textContent changes
 		attributes: true // include changes to attributes within the subtree
 	});
-	
+
 	}
 }
 
@@ -178,8 +149,7 @@ function autostopdetectionstart(){
 		};
 		video.addEventListener("playing", function(ev){
 			reqId = requestAnimationFrame(function play(){
-				if(ev.target.getAttribute("data-stopvideo")){
-				}else{
+				if(ev.target.getAttribute("data-stopvideo") == null){
 					ev.target.setAttribute("data-stopvideo","true");
 				}
 				if(ev.target.getAttribute("data-stopvideo")){
@@ -200,7 +170,7 @@ function autostopdetectionstart(){
 							});
 							}
 						}
-						rock = ev.target.getAttribute("data-videonum");
+						var rock = ev.target.getAttribute("data-videonum");
 						if(document.getElementById("stefanvdautostoppanel" + rock)){
 							document.getElementById("stefanvdautostoppanel" + rock).style.display = "block";
 							refreshsize();
@@ -272,11 +242,11 @@ function autostopdetectionstart(){
 			var templearn = event.target.id;
 			templearn = templearn.substr(0, 26);
 			if(templearn != "stefanvdautostoppanellearn"){
-			rock = this.getAttribute("data-videonum");
+			var rock = this.getAttribute("data-videonum");
 			document.getElementById("stefanvdautostoppanel" + rock).style.display = "none";
 			document.getElementsByTagName("video")[rock].setAttribute("data-stopvideo","false");
 			var playPromise = document.getElementsByTagName("video")[rock].play();
-			if(playPromise !== undefined) {
+			if(playPromise !== undefined){
 				playPromise.then(_ => {
 					// Automatic playback started!
 				})
@@ -303,7 +273,7 @@ function autostopdetectionstart(){
 		var newautostoplearn = document.createElement("div");
 		newautostoplearn.setAttribute("id","stefanvdautostoppanellearn" + i);
 		newautostoplearn.className = "stefanvdautostoplearn";
-		newautostoplearn.addEventListener("click", function(event){
+		newautostoplearn.addEventListener("click", function(){
 			window.open("https://www.turnoffthelights.com/support/browser-extension/what-is-the-autostop-feature/", "_blank");
 		},false);
 		newautostoplearn.innerText = chrome.i18n.getMessage("autostopdetails");
@@ -322,8 +292,8 @@ var cusid_ele = document.getElementsByClassName("stefanvdautostop");
 var i;
 var l = cusid_ele.length;
 for(i = 0; i < l; ++i){
-	var item = cusid_ele[i];  
-	myElement = document.getElementsByTagName("video")[i];
+	var item = cusid_ele[i];
+	var myElement = document.getElementsByTagName("video")[i];
 	if(myElement){
 		if(myElement.currentStyle){
 			var d = myElement.currentStyle["display"];
@@ -368,7 +338,7 @@ for(i = 0; i < l; ++i){
 		item.style.width = w;
 		item.style.height = h;
 
-		if(d == "none"){item.style.display = "none";}
+		if(d == "none"){ item.style.display = "none"; }
 	}else{
 		// remove this stop layer
 		if(item){
@@ -377,6 +347,36 @@ for(i = 0; i < l; ++i){
 	}
 }
 }
+
+if(autostop == true){
+document.addEventListener("DOMContentLoaded", function(){
+if(autostoponly == true){
+var currenturl = window.location.protocol + "//" + window.location.host;
+var stoprabbit = false;
+if(typeof autostopDomains == "string"){
+	autostopDomains = JSON.parse(autostopDomains);
+	var atbuf = [];
+	var domain;
+	for(domain in autostopDomains)
+		atbuf.push(domain);
+		atbuf.sort();
+		var i;
+		var l = atbuf.length;
+		for(i = 0; i < l; i++){
+			if(autostopchecklistwhite == true){
+				if(currenturl == atbuf[i]){ autostopfunction(); }
+			}
+			else if(autostopchecklistblack == true){
+				if(currenturl == atbuf[i]){ stoprabbit = true; }
+			}
+		}
+    }
+	if(autostopchecklistblack == true){
+		if(stoprabbit == false){ autostopfunction(); }
+	}
+}else{ autostopfunction(); }
+}, false);
+
 window.addEventListener("resize", function(){ refreshsize(); },false);
 window.addEventListener("scroll", function(){ refreshsize(); },false);
 
