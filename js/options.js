@@ -314,7 +314,7 @@ $("select_dialect").addEventListener("change", function(){ save_options(); });
 //---
 // open multi opacity
 $("btnmultiopacity").addEventListener("click", function(){
-    materialAlert(function(result){ console.log(result) });
+    materialAlert(function(result){ console.log(result); });
 });
 
 $("materialModal").addEventListener("click", function(e){
@@ -397,7 +397,7 @@ function closeMaterialIntroduceAlert(e){
 //---
 
 	chrome.storage.sync.get(["firstDate","interval","lightcolor","lightimage","lightimagea","lightimagen","autoplay","playlist","flash","head","fadein","fadeout","infobar","sharebutton","likebutton","readera","readern","shortcutlight","eyea","eyen","suggestions","videoheadline","eastereggs","contextmenus","viewcount","eyealist","mousespotlighto","mousespotlightc","mousespotlighta","nighttime","begintime","endtime","addvideobutton","likebar","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","mousespotlightt","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","password","enterpassword","noflash","hardflash","ecosaver","ecosavertime","dynamic","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","autoplayonly","blur","maxquality","autowidthyoutube","customqualityyoutube","cinemaontop","alllightsoff","spotlightradius","atmosphereonly","optionskipremember","nighttheme","nightonly","nightenabletheme","autoplaydelay","autoplaydelaytime","motion","lightimagelin","linearsq","colora","intervallina","colorb","intervallinb","speech","speechlang","speechcountry","atmosvivid","countremember","excludedDomains","autoplayDomains","atmosphereDomains","nightDomains","cammotiononly","speechonly","cammotionDomains","speechDomains","autoplaychecklistwhite","autoplaychecklistblack","reviewedlastonversion","applastonversion","autostop","autostoponly","autostopchecklistwhite","autostopchecklistblack","nightmodechecklistwhite","nightmodechecklistblack","autostopDomains","nighthover","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nightactivetime","nmbegintime","nmendtime","lampandnightmode","eyechecklistblack","eyechecklistwhite","nightmodebck","nightmodetxt","mobilelastonversion","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolchecklistwhite","videotoolchecklistblack","videotoolDomains","nightmodehyperlink","block60fps","videovolume","videovolumecolor","videovolumesteps","videovolumelabel","icon","visopacity","videotoolcolor","hovervideo","hovervideoamount","mousespotlights","drawatmosfps","aplay","apause","astop","videozoom","playrate","playrateamount","speedtoolbar","atmosontotlmode","titleinvertcolor","vpause","darkbrowsertheme","autostopred","autostoptrans","videovolumeposa","videovolumeposb","videovolumeposc","videovolumehold","multiopacityDomains","multiopacall","multiopacsel","firstsawrate","videovolumealt","nightmodebydomain","nightmodebypage","introduce","seeanalytics","nightmodegesture","nightmodeswitchhide","nightmodeswitchhidetime","atmosfpsauto","atmosfpsmanual"], function(items){
-		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow",items["interval"]); $("slider").setAttribute("aria-valuenow",items["interval"]); $("example1").style.opacity = (items["interval"]/100); $("example2").style.opacity = (items["interval"] / 100); }
+		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow",items["interval"]); $("slider").setAttribute("aria-valuenow",items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }
 		else{ $("interval").value = 80; }
 		if(items["lightcolor"]){ $("lightcolor").value = items["lightcolor"]; }
 		else{ $("lightcolor").value = "#000000"; }
@@ -607,7 +607,7 @@ function closeMaterialIntroduceAlert(e){
 // show introduce
 if(items["introduce"] != true){
     window.setTimeout(function(){
-        materialIntroduceAlert(function(result){ console.log(result) });
+        materialIntroduceAlert(function(result){ console.log(result); });
     }, 2500);
     chrome.storage.sync.set({"introduce": true});
 }
@@ -661,7 +661,7 @@ $("sectionreviewbox").style.display = "none";
     var id;
     for(id in tabLinks){
         tabLinks[id].onclick = showTab;
-		tabLinks[id].onfocus = function(){ this.blur() };
+		tabLinks[id].onfocus = function(){ this.blur(); };
 		if(i == 0) tabLinks[id].className = "navbar-item-selected";
 		i++;
     }
@@ -1273,7 +1273,7 @@ function nightaddWhitelistDomain(){
 
 function nightremoveSelectedExcludedDomain(){
     var nightDomainsBox = $("nightDomainsBox");
-    var i = nightDomainsBox.length-1
+    var i = nightDomainsBox.length - 1;
     for(i; i >= 0; i--){
         if(nightDomainsBox.options[i].selected)
             nightDomainsBox.remove(i);
@@ -1391,7 +1391,7 @@ if($("onoffrange").value == 0)
 if($("fadeout").checked == true){ ReducingFinished = false; fader("hide"); }else{ $("example2").style.opacity = 0; $("example2").style.display = "none"; }
 }
 else{
-if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = jump/100; $("example2").style.display = ""; }
+if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = jump / 100; $("example2").style.display = ""; }
 }
 }
 
@@ -1607,7 +1607,7 @@ else{ $("autostopchecklistwhite").disabled = true; $("autostopchecklistblack").d
 if($("videotoolonly").checked == true){ $("videotoolchecklistwhite").disabled = false; $("videotoolchecklistblack").disabled = false; $("videotoolDomainsBox").disabled = false; $("videotoolwebsiteurl").disabled = false; $("videotooladdbutton").disabled = false; $("videotoolremovebutton").disabled = false; }
 else{ $("videotoolchecklistwhite").disabled = true; $("videotoolchecklistblack").disabled = true; $("videotoolDomainsBox").disabled = true; $("videotoolwebsiteurl").disabled = true; $("videotooladdbutton").disabled = true; $("videotoolremovebutton").disabled = true; }
 
-if($("reflection").checked == true){ $("reflectionamount").disabled = false; $("beeld").style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop("+(100-$("reflectionamount").value)/100+", transparent))"; }
+if($("reflection").checked == true){ $("reflectionamount").disabled = false; $("beeld").style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + (100 - $("reflectionamount").value) / 100 + ", transparent))"; }
 else{ $("reflectionamount").disabled = true; $("beeld").style.webkitBoxReflect = ""; }
 
 if($("multiopacall").checked == true){ $("multiopacityname").disabled = true; $("multiopacitynumber").disabled = true; $("multiopacityDomainsBox").disabled = true; $("multiopacitynumberBox").disabled = true; $("multiopacityremovebutton").disabled = true; $("multiopacityaddbutton").disabled = true; }
@@ -1650,8 +1650,8 @@ dynamictest();
 
 // wizard user profile
 $("ska").style.background = $("profileAcolor").value;
-$("ska").style.opacity = $("profileAopacity").value/100;
-$("ska").style.opacity = $("profileAopacity").value/100;
+$("ska").style.opacity = $("profileAopacity").value / 100;
+$("ska").style.opacity = $("profileAopacity").value / 100;
 if($("profileAmouse").checked == true){
     $("ska").style.pointerEvents = "none";
 }else{
@@ -1661,13 +1661,13 @@ $("profileB").style.background = $("profileBnightback").value;
 $("profileB").style.color = $("profileBnighttext").value;
 $("profileBlink").style.color = $("profileBnightlink").value;
 $("skc").style.background = $("profileCcolor").value;
-$("skc").style.opacity = $("profileCopacity").value/100;
+$("skc").style.opacity = $("profileCopacity").value / 100;
 // end wizard ---
 
 // function available
 try{
 if(typeof browser !== "undefined"){
-    if(typeof browser.theme.update !== "undefined"|| browser.theme.update != null){
+    if(typeof browser.theme.update !== "undefined" || browser.theme.update != null){
     $("brotheme").style.display = "block";
     }else{
     $("brotheme").style.display = "none";
@@ -1711,13 +1711,13 @@ removedynamic();
 
     var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
     var i;
-	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+""); newdynleft.appendChild(newdyn); }
+	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
 	var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
     var i;
-    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+""); newdynmid.appendChild(newdyn); }			
-	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);	
+    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
+	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
     var i;
-    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles"+i+""); newdynright.appendChild(newdyn); }
+    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
 }
 else if($("dynamic2").checked == true){
 removedynamic();
@@ -1738,15 +1738,15 @@ removedynamic();
 else if($("dynamic4").checked == true){
 removedynamic();
 	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
-	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);			
+	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
 (function(){
 		var lastTime = 0;
         var vendors = ["ms", "moz", "webkit", "o"];
         var x;
         var lvendor = vendors.length;
 		for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
-			window.requestAnimationFrame = window[vendors[x]+"RequestAnimationFrame"];
-			window.cancelRequestAnimationFrame = window[vendors[x]+"CancelRequestAnimationFrame"];
+			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
 		}
 		if(!window.requestAnimationFrame)
 			window.requestAnimationFrame = function(callback){
@@ -1768,23 +1768,23 @@ removedynamic();
 	function createCloud(){
 		var div = document.createElement("div");
 		div.className = "stefanvdcloudBase";
-		var x = 256 - ( Math.random() * 512 );
-		var y = 256 - ( Math.random() * 512 );
-		var z = 256 - ( Math.random() * 512 );
+		var x = 256 - (Math.random() * 512);
+		var y = 256 - (Math.random() * 512);
+		var z = 256 - (Math.random() * 512);
 		var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
 		div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
 		world.appendChild(div);
 
         var j;
-        var l = 5 + Math.round( Math.random() * 10 );
+        var l = 5 + Math.round(Math.random() * 10);
 		for(j = 0; j < l; j++){
 			var cloud = document.createElement("div");
 			cloud.style.opacity = 0;
 			cloud.style.opacity = .8;
 			cloud.className = "stefanvdcloudLayer";
-			var x = 256 - ( Math.random() * 512 );
-			var y = 256 - ( Math.random() * 512 );
-			var z = 100 - ( Math.random() * 200 );
+			var x = 256 - (Math.random() * 512);
+			var y = 256 - (Math.random() * 512);
+			var z = 100 - (Math.random() * 200);
 			var a = Math.random() * 360;
 			var s = .25 + Math.random();
 			x *= .2; y *= .2;
@@ -1800,7 +1800,7 @@ removedynamic();
 	function generate(){
 		objects = [];
 		if(world.hasChildNodes()){
-			while ( world.childNodes.length >= 1 ){ world.removeChild(world.firstChild); } 
+			while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); } 
         }
         var j;
 		for(j = 0; j < 5; j++){ objects.push(createCloud()); }
@@ -1816,7 +1816,7 @@ removedynamic();
 		for(j = 0; j < l; j++){
 			var layer = layers[j];
 			layer.data.a += layer.data.speed;
-			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + ( - worldYAngle ) + "deg) rotateX(" + ( - worldXAngle ) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
+			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
 			layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
 		}
 		requestAnimationFrame(update);
@@ -1833,13 +1833,13 @@ if($("hoveroptiondyn5").checked == true){
 	var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
     var j;
     for(j = 1; j < 17; j++){
-	if(j <= 9){ j="0"+j }
+	if(j <= 9){ j = "0" + j; }
 		var newdynpart1 = document.createElement("div");
         newdynpart1.setAttribute("id","p" + j); newdynspaceworld.appendChild(newdynpart1);
         var i;
 		for(i = 1; i < 31; i++){
 		if(i <= 9){ i = "0" + i; }
-		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","s0"+i+""); newdynpart1.appendChild(newdynlow);
+		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","s0" + i + ""); newdynpart1.appendChild(newdynlow);
 		}
 	}
 }else{
@@ -1862,7 +1862,7 @@ if($("hoveroptiondyn5").checked == true){
 }else if($("dynamic6").checked == true){
 removedynamic();
 var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
-var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);	
+var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
 
 // Create an array to store our particles
 var particles = [];
@@ -1912,11 +1912,11 @@ function Particle(context){
 
     // The function to draw the particle on the canvas.
     this.draw = function(){
-        
+
         // If an image is set draw it
         if(this.image){
-            this.context.drawImage(this.image, this.x-128, this.y-128);         
-            // If the image is being rendered do not draw the circle so break out of the draw function                
+            this.context.drawImage(this.image, this.x - 128, this.y - 128);
+            // If the image is being rendered do not draw the circle so break out of the draw function
             return;
         }
         // Draw the circle as before, with the addition of using the position and the radius from this object.
@@ -1949,7 +1949,7 @@ function Particle(context){
             this.yVelocity = -this.yVelocity;
             this.y = canvasHeight;
         }
-        
+
         // Check if has crossed the top edge
         else if(this.y <= 0){
             this.yVelocity = -this.yVelocity;
@@ -1968,10 +1968,10 @@ function Particle(context){
         this.xVelocity = x;
         this.yVelocity = y;
     };
-    
+
     this.setImage = function(image){
         this.image = image;
-    }
+    };
 }
 
 // A function to generate a random number between 2 values
@@ -1988,13 +1988,13 @@ function runsmoke(){
         var i;
         for(i = 0; i < particleCount; ++i){
             var particle = new Particle(context);
-            
+
             // Set the position to be inside the canvas bounds
             particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
-            
+
             // Set the initial velocity to be either random and either negative or positive
             particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
-            particles.push(particle);            
+            particles.push(particle);
         }
     }
 }
@@ -2065,7 +2065,7 @@ var drop_count;
 var drops = [];
 
 function randomFrom(min, max){
-  return (Math.random() * (max - min) + min);
+  return(Math.random() * (max - min) + min);
 }
 
 function resizer(){
@@ -2086,7 +2086,7 @@ function paintSky(){
             drops[i] = new drop();
             drops[i].reset();
         }
-  
+
         rain();
     }
 }
@@ -2118,45 +2118,45 @@ function drop(){
     this.opacity = (this.r * randomFrom(0.2, 0.6));
     this.drip = this.render();
   };
-  
-  this.render = function(){
-    var canv = document.createElement("canvas");
-    var ctx = canv.getContext("2d", {desynchronized: true});
-    canv.setAttribute("width", Math.abs(this.offset) + this.r);
-    canv.setAttribute("height", this.l);
-    
-    ctx.beginPath();
-    
-    var drip = ctx.createLinearGradient(0, 0, 0, this.l);
-    drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
-    drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
-    ctx.fillStyle = drip;
-        
-    //sky.rect(this.x, this.y, this.r, this.l);
-    var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
-    ctx.moveTo(startX, 0);
-    ctx.lineTo(startX + this.r, 0);
-    ctx.lineTo(startX + this.r + this.offset, this.l);
-    ctx.lineTo(startX + this.offset, this.l);
 
-    ctx.closePath();
-    ctx.fill();
-    
-    return canv;
-  };
-  
-  this.draw = function(){
-    sky.drawImage(this.drip, this.x, this.y);
-  };
-  
-  this.fall = function(){
-    this.x += this.dx;
-    this.y += this.dy;
-    
-    if(this.y > (window_height * 1.25)){
-      this.reset();
-    }
-  };
+    this.render = function(){
+        var canv = document.createElement("canvas");
+        var ctx = canv.getContext("2d", {desynchronized: true});
+        canv.setAttribute("width", Math.abs(this.offset) + this.r);
+        canv.setAttribute("height", this.l);
+
+        ctx.beginPath();
+
+        var drip = ctx.createLinearGradient(0, 0, 0, this.l);
+        drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
+        drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
+        ctx.fillStyle = drip;
+
+        //sky.rect(this.x, this.y, this.r, this.l);
+        var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
+        ctx.moveTo(startX, 0);
+        ctx.lineTo(startX + this.r, 0);
+        ctx.lineTo(startX + this.r + this.offset, this.l);
+        ctx.lineTo(startX + this.offset, this.l);
+
+        ctx.closePath();
+        ctx.fill();
+
+        return canv;
+    };
+
+    this.draw = function(){
+        sky.drawImage(this.drip, this.x, this.y);
+    };
+
+    this.fall = function(){
+        this.x += this.dx;
+        this.y += this.dy;
+
+        if(this.y > (window_height * 1.25)){
+        this.reset();
+        }
+    };
 }
 
 resizer();
@@ -2165,7 +2165,7 @@ paintSky();
 }else if($("dynamic9").checked == true){
 removedynamic();
 var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
-	
+
 var refreshDuration = 10000;
 var refreshTimeout;
 var numPointsX;
@@ -2180,11 +2180,11 @@ function trianglerun(){
     triasvg.setAttribute("height",window.innerHeight);
     document.getElementById("triangle").appendChild(triasvg);
 
-    var unitSize = (window.innerWidth+window.innerHeight)/20;
-    numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
-    numPointsY = Math.ceil(window.innerHeight/unitSize)+1;
-    unitWidth = Math.ceil(window.innerWidth/(numPointsX-1));
-    unitHeight = Math.ceil(window.innerHeight/(numPointsY-1));
+    var unitSize = (window.innerWidth + window.innerHeight) / 20;
+    numPointsX = Math.ceil(window.innerWidth / unitSize) + 1;
+    numPointsY = Math.ceil(window.innerHeight / unitSize) + 1;
+    unitWidth = Math.ceil(window.innerWidth / (numPointsX - 1));
+    unitHeight = Math.ceil(window.innerHeight / (numPointsY - 1));
 
     points = [];
 
@@ -2192,7 +2192,7 @@ function trianglerun(){
     for(y = 0; y < numPointsY; y++){
         var x;
         for(x = 0; x < numPointsX; x++){
-            points.push({x:unitWidth*x, y:unitHeight*y, originX:unitWidth*x, originY:unitHeight*y});
+            points.push({x:unitWidth * x, y:unitHeight * y, originX:unitWidth * x, originY:unitHeight * y});
         }
     }
 
@@ -2201,52 +2201,52 @@ function trianglerun(){
     var i;
     var l = points.length;
     for(i = 0; i < l; i++){
-        if(points[i].originX != unitWidth*(numPointsX-1) && points[i].originY != unitHeight*(numPointsY-1)){
+        if(points[i].originX != unitWidth * (numPointsX - 1) && points[i].originY != unitHeight * (numPointsY - 1)){
             var topLeftX = points[i].x;
             var topLeftY = points[i].y;
-            var topRightX = points[i+1].x;
-            var topRightY = points[i+1].y;
-            var bottomLeftX = points[i+numPointsX].x;
-            var bottomLeftY = points[i+numPointsX].y;
-            var bottomRightX = points[i+numPointsX+1].x;
-            var bottomRightY = points[i+numPointsX+1].y;
+            var topRightX = points[i + 1].x;
+            var topRightY = points[i + 1].y;
+            var bottomLeftX = points[i + numPointsX].x;
+            var bottomLeftY = points[i + numPointsX].y;
+            var bottomRightX = points[i + numPointsX + 1].x;
+            var bottomRightY = points[i + numPointsX + 1].y;
 
-            var rando = Math.floor(Math.random()*2);
+            var rando = Math.floor(Math.random() * 2);
 
             var n;
             for(n = 0; n < 2; n++){
                 var polygon = document.createElementNS(triasvg.namespaceURI, "polygon");
 
-                if(rando==0){
-                    if(n==0){
+                if(rando == 0){
+                    if(n == 0){
                         polygon.point1 = i;
-                        polygon.point2 = i+numPointsX;
-                        polygon.point3 = i+numPointsX+1;
-                        polygon.setAttribute("points",topLeftX+","+topLeftY+" "+bottomLeftX+","+bottomLeftY+" "+bottomRightX+","+bottomRightY);
-                    }else if(n==1){
+                        polygon.point2 = i + numPointsX;
+                        polygon.point3 = i + numPointsX + 1;
+                        polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + bottomRightX + "," + bottomRightY);
+                    }else if(n == 1){
                         polygon.point1 = i;
-                        polygon.point2 = i+1;
-                        polygon.point3 = i+numPointsX+1;
-                        polygon.setAttribute("points",topLeftX+","+topLeftY+" "+topRightX+","+topRightY+" "+bottomRightX+","+bottomRightY);
+                        polygon.point2 = i + 1;
+                        polygon.point3 = i + numPointsX + 1;
+                        polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
                     }
-                }else if(rando==1){
-                    if(n==0){
+                }else if(rando == 1){
+                    if(n == 0){
                         polygon.point1 = i;
-                        polygon.point2 = i+numPointsX;
-                        polygon.point3 = i+1;
-                        polygon.setAttribute("points",topLeftX+","+topLeftY+" "+bottomLeftX+","+bottomLeftY+" "+topRightX+","+topRightY);
-                    }else if(n==1){
-                        polygon.point1 = i+numPointsX;
-                        polygon.point2 = i+1;
-                        polygon.point3 = i+numPointsX+1;
-                        polygon.setAttribute("points",bottomLeftX+","+bottomLeftY+" "+topRightX+","+topRightY+" "+bottomRightX+","+bottomRightY);
+                        polygon.point2 = i + numPointsX;
+                        polygon.point3 = i + 1;
+                        polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY);
+                    }else if(n == 1){
+                        polygon.point1 = i + numPointsX;
+                        polygon.point2 = i + 1;
+                        polygon.point3 = i + numPointsX + 1;
+                        polygon.setAttribute("points",bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
                     }
                 }
-                polygon.setAttribute("fill","rgba(0,0,0,"+(Math.random()/3)+")");
+                polygon.setAttribute("fill","rgba(0,0,0," + (Math.random() / 3) + ")");
                 var animate = document.createElementNS("http://www.w3.org/2000/svg","animate");
                 animate.setAttribute("fill","freeze");
                 animate.setAttribute("attributeName","points");
-                animate.setAttribute("dur",refreshDuration+"ms");
+                animate.setAttribute("dur",refreshDuration + "ms");
                 animate.setAttribute("calcMode","linear");
                 polygon.appendChild(animate);
                 triasvg.appendChild(polygon);
@@ -2260,11 +2260,11 @@ function randomize(){
     var i;
     var l = points.length;
     for(i = 0; i < l; i++){
-        if(points[i].originX != 0 && points[i].originX != unitWidth*(numPointsX-1)){
-            points[i].x = points[i].originX + Math.random()*unitWidth-unitWidth/2;
+        if(points[i].originX != 0 && points[i].originX != unitWidth * (numPointsX - 1)){
+            points[i].x = points[i].originX + Math.random() * unitWidth - unitWidth / 2;
         }
-        if(points[i].originY != 0 && points[i].originY != unitHeight*(numPointsY-1)){
-            points[i].y = points[i].originY + Math.random()*unitHeight-unitHeight/2;
+        if(points[i].originY != 0 && points[i].originY != unitHeight * (numPointsY - 1)){
+            points[i].y = points[i].originY + Math.random() * unitHeight - unitHeight / 2;
         }
     }
 }
@@ -2280,7 +2280,7 @@ function refresh(){
         if(animate.getAttribute("to")){
             animate.setAttribute("from",animate.getAttribute("to"));
         }
-        animate.setAttribute("to",points[polygon.point1].x+","+points[polygon.point1].y+" "+points[polygon.point2].x+","+points[polygon.point2].y+" "+points[polygon.point3].x+","+points[polygon.point3].y);
+        animate.setAttribute("to",points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
         animate.beginElement();
     }
     refreshTimeout = window.setTimeout(function(){ refresh(); }, refreshDuration);
@@ -2343,7 +2343,7 @@ var ccanvas = document.getElementById("motioncomp");
 var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 
 // document.getElementById('motionvideo').addEventListener('timeupdate', function(){ dump(); });
-document.getElementById("motionvideo").addEventListener("play", function(){ intervalID = window.setInterval(dump,1000/25); });
+document.getElementById("motionvideo").addEventListener("play", function(){ intervalID = window.setInterval(dump,1000 / 25); });
 
 var compression = 5;
 width = height = 0;
@@ -2436,7 +2436,7 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
 
         last = false; thresh = 150; down = false; wasdown = false;
         function camtest(){
-            delt = canvasgetcont.createImageData(width, height)
+            delt = canvasgetcont.createImageData(width, height);
             if(last !== false){
                 var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, dscl = 0, pix = totaln * 4; while(pix -= 4){
                     var d = Math.abs(
@@ -2842,7 +2842,7 @@ if($("shareboxyoutube")){
     $("shareboxyoutube").addEventListener("click", function(){ window.open(linkyoutube,"_blank"); });
 }
 if($("shareboxfacebook")){
-    $("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u="+ stefanvdurl + "&t=" + sharetext + "", "Share to Facebook","width=600,height=460,menubar=no,location=no,status=no"); });
+    $("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook","width=600,height=460,menubar=no,location=no,status=no"); });
 }
 if($("shareboxtwitter")){
     $("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "", "Share to Twitter","width=600,height=460,menubar=no,location=no,status=no"); });
@@ -2943,10 +2943,10 @@ function getImage(url){
 getImage(this.value);
 });
 
-$("slider").value = default_opacity; $("example1").style.opacity = (default_opacity/100); $("example2").style.opacity = (default_opacity/100);
+$("slider").value = default_opacity; $("example1").style.opacity = (default_opacity / 100); $("example2").style.opacity = (default_opacity / 100);
 $("arangeblur").value = default_arangeblur;
 $("arangespread").value = default_arangespread;
-function showValue(newValue){ $("interval").value = newValue; $("slider").value = newValue; $("interval").setAttribute("aria-valuenow",newValue); $("slider").setAttribute("aria-valuenow",newValue); $("example1").style.opacity = (newValue/100); $("example2").style.opacity = (newValue/100); }
+function showValue(newValue){ $("interval").value = newValue; $("slider").value = newValue; $("interval").setAttribute("aria-valuenow",newValue); $("slider").setAttribute("aria-valuenow",newValue); $("example1").style.opacity = (newValue / 100); $("example2").style.opacity = (newValue / 100); }
 function showambilightblurValue(newValue){ $("ambilightrangeblurradius").value = newValue; $("arangeblur").value = newValue; $("ambilightrangeblurradius").setAttribute("aria-valuenow",newValue); $("arangeblur").setAttribute("aria-valuenow",newValue); }
 function showambilightspreadValue(newValue){ $("ambilightrangespreadradius").value = newValue; $("arangespread").value = newValue; $("ambilightrangespreadradius").setAttribute("aria-valuenow",newValue); $("arangespread").setAttribute("aria-valuenow",newValue); }
 
@@ -2955,7 +2955,7 @@ $("managed-prefs-text-close").addEventListener("click", function(){ $("managed-p
 
 // Slider
 $("slider").addEventListener("change", function(){ showValue(this.value); save_options(); });
-$("slider").addEventListener("input", function(){ showValue(this.value); save_options(); }, false); 
+$("slider").addEventListener("input", function(){ showValue(this.value); save_options(); }, false);
 
 // Interval
 $("interval").addEventListener("change", function(){ showValue(this.value); save_options(); });
@@ -2965,7 +2965,7 @@ $("onoffrange").addEventListener("change", function(){ lightscontrol(); });
 
 // Arangeblur
 $("arangeblur").addEventListener("change", function(){ showambilightblurValue(this.value); save_options(); });
-$("arangeblur").addEventListener("input", function(){ showambilightblurValue(this.value); save_options(); }, false); 
+$("arangeblur").addEventListener("input", function(){ showambilightblurValue(this.value); save_options(); }, false);
 $("ambilightrangeblurradius").addEventListener("change", function(){ showambilightblurValue(this.value); save_options(); });
 
 // Arangespread
@@ -3186,14 +3186,14 @@ document.getElementById("formvideotoolbar").addEventListener("submit", function(
 $("videotoolremovebutton").addEventListener("click", function(){ videotoolremoveSelectedExcludedDomain(); });
 
 // multi opacity Change
-$("multiopacityDomainsBox").addEventListener("click", function(){ multiopacitychangeurl() });
-$("multiopacitynumberBox").addEventListener("click", function(){ multiopacitychangenumberl() });
+$("multiopacityDomainsBox").addEventListener("click", function(){ multiopacitychangeurl(); });
+$("multiopacitynumberBox").addEventListener("click", function(){ multiopacitychangenumberl(); });
 
 // multi opacity Add
 document.getElementById("formmultiopacity").addEventListener("submit", function(e){ e.preventDefault(); multiopacityadd(); });
 
 // multi opacity Remove
-$("multiopacityremovebutton").addEventListener("click", function(){ multiopacityremoveSelectedExcludedDomain() });
+$("multiopacityremovebutton").addEventListener("click", function(){ multiopacityremoveSelectedExcludedDomain(); });
 
 // Reset settings
 $("resettotl").addEventListener("click", function(){ chrome.storage.sync.clear(); location.reload(); });
@@ -3450,10 +3450,10 @@ function gamearea(){
         }
     },false);
 
-    this.canvas.addEventListener("touchstart", function(){ accelerate(0.05) },false);
-    this.canvas.addEventListener("touchend", function(){ accelerate(-0.2) },false);
-    this.canvas.addEventListener("mouseup", function(){ accelerate(0.05) },false);
-    this.canvas.addEventListener("mousedown", function(){ accelerate(-0.2) },false);
+    this.canvas.addEventListener("touchstart", function(){ accelerate(0.05); },false);
+    this.canvas.addEventListener("touchend", function(){ accelerate(-0.2); },false);
+    this.canvas.addEventListener("mouseup", function(){ accelerate(0.05); },false);
+    this.canvas.addEventListener("mousedown", function(){ accelerate(-0.2); },false);
 
     document.getElementById("stefanvdplayground").appendChild(this.canvas);
     this.context = this.canvas.getContext("2d", {desynchronized: true});
@@ -3524,12 +3524,12 @@ function component(width, height, color, x, y, type){
         this.hitBottom();
     };
     this.hitBottom = function(){
-        var rockbottom = myGameArea.canvas.height/2 - this.height;
+        var rockbottom = myGameArea.canvas.height / 2 - this.height;
         if(this.y > rockbottom){
             this.y = rockbottom;
             this.gravitySpeed = 0;
         }
-    }
+    };
     this.crashWith = function(otherobj){
         var myleft = this.x;
         var myright = this.x + (this.width);

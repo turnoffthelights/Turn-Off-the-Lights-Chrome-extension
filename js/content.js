@@ -4061,7 +4061,7 @@ var cancelgesture = function(e){
 		elementList[i].classList.remove("stefanvdlongpress");
 	}
 	document.getElementsByTagName("html")[0].classList.remove("stefanvdnightblur");
-}
+};
 
 var startgesture = function(e){
     if(e.type === "pointerdown" && e.button !== 0){
@@ -4077,7 +4077,7 @@ var startgesture = function(e){
 	var switchelements;
 	if(document.getElementById("stefanvdnighttheme")){
 		if(document.getElementById("stefanvdnighttheme").getElementsByTagName("*")){
-			switchelements = document.getElementById("stefanvdnighttheme").getElementsByTagName("*").length
+			switchelements = document.getElementById("stefanvdnighttheme").getElementsByTagName("*").length;
 		}else{
 			switchelements = 0;
 		}
@@ -4131,7 +4131,7 @@ var startgesture = function(e){
     }, 800);
 
 	return false;
-}
+};
 
 var nightseectionchange = function(){
 	if(window.getSelection){
@@ -4145,7 +4145,7 @@ var nightseectionchange = function(){
 			cancelgesture();
 		}
 	}
-}
+};
 
 function runnightmodegesturecheck(){
 if(nightmodegesture == true){
@@ -4191,7 +4191,7 @@ function drawReflection(reflectionid,ritem){
 			}else{
 				reflectionid.style.webkitBoxReflect = "";
 			}
-		 return false;
+		return false;
 		}
 	}catch(err){}
 
@@ -4237,12 +4237,12 @@ function runreflectioncheck(){
 runreflectioncheck();
 
 function isMacintosh(){
-	return navigator.platform.indexOf("Mac") > -1
+	return navigator.platform.indexOf("Mac") > -1;
 }
 
 function getPosition(el){
 var xPos = 0; var yPos = 0;
-while (el){ xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); el = el.offsetParent; }
+while(el){ xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); el = el.offsetParent; }
 return{x:xPos,y:yPos};
 }
 
@@ -4258,11 +4258,11 @@ var doscroll = function(e){
 			window.addEventListener("keyup", onKeyUp, true);
 
 			function onKeyDown(evt){
-			  rundoscrollfunc = true;
+				rundoscrollfunc = true;
 			}
 
 			function onKeyUp(evt){
-			  rundoscrollfunc = false;
+				rundoscrollfunc = false;
 			}
 		}else{
 			rundoscrollfunc = true; // regular run with no keys down
@@ -4301,20 +4301,20 @@ var doscroll = function(e){
 
 			if(test.nodeName == "VIDEO"){
 				var value = test.getAttribute("data-video");
-				if (typeof value == "string" && value.length) {
+				if(typeof value == "string" && value.length){
 					pop = test.getAttribute("data-video");
 					that = test;
 				}
 			}else{
 				var m;
 				var ml = 5; // limit search to the first 5 - for performance reason
-				for(m = 0; m < ml; m++) {
+				for(m = 0; m < ml; m++){
 					test.classList.add("totlpointereventsnone");
 					test = document.elementFromPoint(e.clientX, e.clientY);
 					stack.push(test);
 					if(test.nodeName == "VIDEO"){
 						var value = test.getAttribute("data-video");
-						if (typeof value == "string" && value.length) {
+						if(typeof value == "string" && value.length){
 							pop = test.getAttribute("data-video");
 							that = test;
 						}
@@ -4334,7 +4334,7 @@ var doscroll = function(e){
 			return;
 		}else{
 			var delta = Math.max(-1, Math.min(1, (e.deltaY || e.wheelDelta || -e.detail)));
-			if(that.muted == true){ that.volume = 0 }
+			if(that.muted == true){ that.volume = 0; }
 
 			if(videovolumesteps != 0.01){
 			that.volume = Math.round(that.volume / videovolumesteps) * videovolumesteps; // fix the correct ceil level (steps of the user)
@@ -4343,27 +4343,27 @@ var doscroll = function(e){
 			var isMac = isMacintosh();
 			if(isMac == true){
 				if(delta == -1 && that.volume > 0.00){ that.volume -= videovolumesteps;
-					that.volume = Math.round(that.volume * 100) / 100
+					that.volume = Math.round(that.volume * 100) / 100;
 					setyoutubevolumemeter(that.volume);
 				}
 				if(delta == 1 && that.volume <= 0.99){
-					that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100
+					that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
 					setyoutubevolumemeter(that.volume);
 				}
 			}else{
 				if(delta == -1 && that.volume <= 0.99){
-					that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100
+					that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
 					setyoutubevolumemeter(that.volume);
 				}
 				if(delta == 1 && that.volume > 0.00){
-					that.volume -= videovolumesteps; that.volume = Math.round(that.volume * 100) / 100
+					that.volume -= videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
 					setyoutubevolumemeter(that.volume);
 				}
 			}
 
 			document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
 			if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
-			if(that.volume <= 0){ that.muted = true }else{ that.muted = false }
+			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
 
 			var el = document.getElementsByClassName("totlmousewheelvideo");
 			if(el[pop]){
@@ -4382,7 +4382,7 @@ var doscroll = function(e){
 			e.preventDefault();
 		}
 		}
-}
+};
 
 function addvolume(){
 // inside video - scroll mouse action
@@ -4453,23 +4453,23 @@ for(i = 0; i < l; i++){
 
 					//check which direction had the highest amplitude and then figure out direction by checking if the value is greater or less than zero
 					if(Math.abs(deltaX) > Math.abs(deltaY) && deltaX > 0){
-						if(document.getElementsByTagName("video")[pop].volume > 0.00){ document.getElementsByTagName("video")[pop].volume -= videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100 }
+						if(document.getElementsByTagName("video")[pop].volume > 0.00){ document.getElementsByTagName("video")[pop].volume -= videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
 						//left
-					} else if(Math.abs(deltaX) > Math.abs(deltaY) && deltaX < 0){
-						if(document.getElementsByTagName("video")[pop].volume <= 0.99){ document.getElementsByTagName("video")[pop].volume += videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100 }
+					}else if(Math.abs(deltaX) > Math.abs(deltaY) && deltaX < 0){
+						if(document.getElementsByTagName("video")[pop].volume <= 0.99){ document.getElementsByTagName("video")[pop].volume += videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
 						//right
-					} else if(Math.abs(deltaY) > Math.abs(deltaX) && deltaY > 0){
-						if(document.getElementsByTagName("video")[pop].volume <= 0.99){ document.getElementsByTagName("video")[pop].volume += videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100 }
+					}else if(Math.abs(deltaY) > Math.abs(deltaX) && deltaY > 0){
+						if(document.getElementsByTagName("video")[pop].volume <= 0.99){ document.getElementsByTagName("video")[pop].volume += videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
 						//up
-					} else if(Math.abs(deltaY) > Math.abs(deltaX) && deltaY < 0){
-						if(document.getElementsByTagName("video")[pop].volume > 0.00){ document.getElementsByTagName("video")[pop].volume -= videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100 }
+					}else if(Math.abs(deltaY) > Math.abs(deltaX) && deltaY < 0){
+						if(document.getElementsByTagName("video")[pop].volume > 0.00){ document.getElementsByTagName("video")[pop].volume -= videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
 						//down
 					}
 				}
 
 				document.getElementById("volumecontrol" + pop).value = Math.round(document.getElementsByTagName("video")[pop].volume * 100);
 				if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(document.getElementsByTagName("video")[pop].volume * 100) + "%"; }
-				if(document.getElementsByTagName("video")[pop].volume <= 0){ document.getElementsByTagName("video")[pop].muted = true }else{ document.getElementsByTagName("video")[pop].muted = false }
+				if(document.getElementsByTagName("video")[pop].volume <= 0){ document.getElementsByTagName("video")[pop].muted = true; }else{ document.getElementsByTagName("video")[pop].muted = false; }
 
 				var el = document.getElementsByClassName("totlmousewheelvideo");
 				el[pop].classList.remove("totlhidevolume");
@@ -4526,13 +4526,13 @@ catch(e){}
 
 addvolume();
 
-var myListenervolume = function(event) {
+var myListenervolume = function(event){
 	var elements = document.getElementsByClassName("totlmousewheelvideo");
 	while(elements.length > 0){
 		elements[0].parentNode.removeChild(elements[0]);
 	}
 	addvolume();
-}
+};
 myListenerWithContextvolume = myListenervolume.bind(this);
 window.addEventListener("resize", myListenerWithContextvolume);
 
@@ -4690,30 +4690,29 @@ if(customqualityyoutube == true){
 // one of "highres", "hd1080", "hd720", "large", "medium", "small" or "default" to let youtube pick
 
 var ythdinit = function onYouTubePlayerReady(player){
-  try{
-      donesetquality = false;
-	  mplayer = player;
-      if(typeof mplayer == "string"){
-    	  mplayer = document.getElementById(mplayer);
-      }
-      if(typeof movie_player != "undefined"){
-    	  mplayer = movie_player;
-	  }
-      mplayer.addEventListener("onStateChange", "onytplayerStateChange");
-	  updateQuality();
-  }
-  catch(e){
-  }
-}
+	try{
+		donesetquality = false;
+		mplayer = player;
+		if(typeof mplayer == "string"){
+			mplayer = document.getElementById(mplayer);
+		}
+		if(typeof movie_player != "undefined"){
+			mplayer = movie_player;
+		}
+		mplayer.addEventListener("onStateChange", "onytplayerStateChange");
+		updateQuality();
+	}
+	catch(e){}
+};
 
 var ythdstatechange = function onytplayerStateChange(newState){
-		if(newState == 3 && !donesetquality){
-			updateQuality();
-		}
-		if(newState == -1){
-			donesetquality = false;
-		}
-}
+	if(newState == 3 && !donesetquality){
+		updateQuality();
+	}
+	if(newState == -1){
+		donesetquality = false;
+	}
+};
 
 var ythduq = function updateQuality(){
 	var aq = mplayer.getAvailableQualityLevels();
@@ -4734,7 +4733,7 @@ var ythduq = function updateQuality(){
 		mplayer.setPlaybackQuality(maxquality);
 	}
 	donesetquality = true;
-}
+};
 
 function injectScript(codetext){
 var messagescript = $("ytScriptMessage");
@@ -5060,7 +5059,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 
 		// remove
 		if(MutationObserver){
-			if(typeof observervideovolume != "undefined" ){
+			if(typeof observervideovolume != "undefined"){
 				observervideovolume.disconnect();
 			}
 		}
@@ -5208,6 +5207,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 
 		});
 	}
-})
+});
 
 });
