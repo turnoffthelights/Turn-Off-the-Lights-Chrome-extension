@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function(){
             chrome.tabs.query({active: true, currentWindow: true},
             function(tabs){
                 var job = tabs[0].url;
-                var currentURL = job.match(/^[\w-]+:\/*\[?([\w\.:-]+)\]?(?::\d+)?/)[0];
+                var currentURL = job.match(/^[\w-]+:\/*\[?([\w.:-]+)\]?(?::\d+)?/)[0];
                     var atbbuf = [];
                     var domain;
                     for(domain in multiopacityDomains){ atbbuf.push(domain); atbbuf.sort(); }
@@ -339,12 +339,14 @@ document.addEventListener("DOMContentLoaded", function(){
     var stefanvdurl = developerwebsite;
     var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
 
-    // date today
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1; //January is 0!
+    function add(a,b){ return a + b; }
 
-    var yyyy = today.getFullYear();
+    // date today
+    var currenttoday = new Date();
+    var dd = currenttoday.getDate();
+    var mm = currenttoday.getMonth() + 1; //January is 0!
+
+    var yyyy = currenttoday.getFullYear();
     if(dd < 10){ dd = "0" + dd; }
     if(mm < 10){ mm = "0" + mm; }
     var today = dd + "/" + mm + "/" + yyyy;
@@ -374,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function(){
             return a.details.time; // in minutes
         });
         var currentimeseconds = timeeverything.reduce(add, 0);
-        function add(a,b){ return a + b; }
+
         // current time
         var currenttimeinhours = currentimeseconds / 3600;
         // default laptop 65W

@@ -28,21 +28,21 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function startinit(){
-// Check for live API permissions
-navigator.permissions.query({name:"camera"})
-.then(function(permissionStatus){
-  permissionStatus.onchange = function(){
-	if(this.state == "granted"){
-		var windowgranted = window.self;
-		windowgranted.opener = window.self;
-		windowgranted.close();
-	}else{
-		var windowdenied = window.self;
-		windowdenied.opener = window.self;
-		windowdenied.close();
-	}
-  };
-});
+	// Check for live API permissions
+	navigator.permissions.query({name:"camera"})
+	.then(function(permissionStatus){
+	permissionStatus.onchange = function(){
+		if(this.state == "granted"){
+			var windowgranted = window.self;
+			windowgranted.opener = window.self;
+			windowgranted.close();
+		}else{
+			var windowdenied = window.self;
+			windowdenied.opener = window.self;
+			windowdenied.close();
+		}
+	};
+	});
 
 	navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 	if(navigator.mediaDevices.getUserMedia){

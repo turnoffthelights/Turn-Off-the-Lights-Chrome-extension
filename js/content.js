@@ -1808,7 +1808,7 @@ function videovisualloop(tovis){
 	}
 }
 
-var myListenervideotoolbar = function(event) {
+var myListenervideotoolbar = function(event){
 	var elements = document.getElementsByClassName("stefanvdspeed");
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
@@ -1831,7 +1831,7 @@ var myListenervideotoolbar = function(event) {
     }
 	adddatavideo(); // recheck remove and add video ID
 	addvisual();
-}
+};
 myListenerWithContext = myListenervideotoolbar.bind(this);
 window.addEventListener("resize", myListenerWithContext);
 
@@ -2112,7 +2112,7 @@ var ecomousekey = function(){
 
     window.clearTimeout(ecothreadkey);
 	ecothreadkey = window.setTimeout(keymouseStopped,ecosavertime * 1000);
-}
+};
 //--
 var ecothreadscroll;
 function scrollmouseStopped(){
@@ -2137,7 +2137,7 @@ var ecomousescroll = function(){
 
     window.clearTimeout(ecothreadscroll);
 	ecothreadscroll = window.setTimeout(scrollmouseStopped,ecosavertime * 1000);
-}
+};
 
 function eyedojob(){
 if(ecosaver == true){
@@ -2581,7 +2581,7 @@ try{
 								el.classList.add("stefanvdvideoauto");
 								}
 							}
-						} while ((el.nodeName.toLowerCase() != "html") && (el = el.parentNode))
+						}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode))
 						}
 
 						var newpositionvivid = getPosition(totlshowtime);
@@ -2942,7 +2942,7 @@ function webgonightmode(){
 
 			if(document.getElementById("stefanvdnighttheme")){
 				if(document.getElementById("stefanvdnighttheme").getElementsByTagName("*")){
-					switchelements = document.getElementById("stefanvdnighttheme").getElementsByTagName("*").length
+					switchelements = document.getElementById("stefanvdnighttheme").getElementsByTagName("*").length;
 				}else{
 					switchelements = 0;
 				}
@@ -3687,7 +3687,7 @@ function gogonightmode(){
 			}
 			else{
 				var pdfcover = document.createElement("div");
-				let css = "position: fixed; pointer-events: none; top: 0; left: 0; width: 100vw; height: 100vh; background-color: " + nightmodebck + "; -webkit-filter: invert(1);filter: invert(1);mix-blend-mode: difference;"
+				let css = "position: fixed; pointer-events: none; top: 0; left: 0; width: 100vw; height: 100vh; background-color: " + nightmodebck + "; -webkit-filter: invert(1);filter: invert(1);mix-blend-mode: difference;";
 				pdfcover.setAttribute("style", css);
 				pdfcover.id = "stefanvdnightpdf";
 				document.body.appendChild(pdfcover);
@@ -3749,7 +3749,7 @@ var mousemoveswitchhide = function(){
 		$("stefanvdnighttheme").classList.add("stefanvdswitchhidden");
 		}
 	}, nightmodeswitchhidetime * 1000);
-}
+};
 
 // automatically hide the switch when video is in full screen (playing and pause status)
 function gohideswitchonplay(){
@@ -3774,17 +3774,17 @@ var fullscreenswitch = function(){
 		// fullscreen is cancelled
 		goshowswitchonpause();
 	}
-}
+};
 
 var nightcurrentvideoplaying = false;
 var playnightfullscreen = function(){
 	nightcurrentvideoplaying = true;
 	if(document.fullscreenElement){ gohideswitchonplay(); }
-}
+};
 var pausenightfullscreen = function(){
 	nightcurrentvideoplaying = false;
 	goshowswitchonpause();
-}
+};
 
 function nightfunction(){
 	if($("stefanvdnighttheme")){}else{
@@ -3794,10 +3794,10 @@ function nightfunction(){
 		if(nighthover == true){
 			newnight.style.opacity = ".2";
 			var item = document.getElementById("stefanvdnighttheme");
-			item.addEventListener("mouseover", function(){ item.style.opacity = "1" }, false);
-			item.addEventListener("mouseout", function(){ item.style.opacity = ".2" }, false);
+			item.addEventListener("mouseover", function(){ item.style.opacity = "1"; }, false);
+			item.addEventListener("mouseout", function(){ item.style.opacity = ".2"; }, false);
 		}
-		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		if(nmcustom == true){ newnight.style.left = nmcustomx; newnight.style.bottom = nmcustomy; }
 		else if(nmtopleft == true){ newnight.style.left = "25px"; newnight.style.top = "25px"; }
 		else if(nmtopright == true){ newnight.style.right = "25px"; newnight.style.top = "25px"; }
@@ -3892,7 +3892,7 @@ var currenturlb;
 function runnightmodecheck(){
 	if(nighttheme == true){
 		if(nightonly != true){
-			showswitchtricker()
+			showswitchtricker();
 		}
 	}
 
@@ -3984,7 +3984,7 @@ function timergonighttricker(){
 }
 
 // draggable object for the Night Mode feature switch
-var dragobject = { z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
+var dragobject = {z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
 	initialize:function(){
 		document.addEventListener("mousedown", this.drag);
 		document.addEventListener("mouseup", this.dragup);
@@ -4032,7 +4032,7 @@ var dragobject = { z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj :
 		return false;
 		}
 	}
-}
+};
 
 function addswitchdrag(){
 	if($("stefanvdnighttheme")){
@@ -5012,7 +5012,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 
 		// remove
 		if(MutationObserver){
-			if(typeof observervideotoolbar != "undefined" ){
+			if(typeof observervideotoolbar != "undefined"){
 				observervideotoolbar.disconnect();
 			}
 		}

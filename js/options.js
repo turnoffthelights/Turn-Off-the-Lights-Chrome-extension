@@ -947,8 +947,8 @@ if(canvas){
 
 	function rgbToHex(r, g, b){
     if(r > 255 || g > 255 || b > 255)
-        throw "Invalid color component";
-    return ((r << 16) | (g << 8) | b).toString(16);
+        throw"Invalid color component";
+    return((r << 16) | (g << 8) | b).toString(16);
 	}
 
 	var p1 = context.getImageData(0 , 0, 1, 1).data;
@@ -1034,8 +1034,8 @@ var colorlamp4Y = (sourceHeight * 50) / 100;
 
 function rgbToHex(r, g, b){
     if(r > 255 || g > 255 || b > 255)
-        throw "Invalid color component";
-    return ((r << 16) | (g << 8) | b).toString(16);
+        throw"Invalid color component";
+    return((r << 16) | (g << 8) | b).toString(16);
 }
 
     var p1 = context.getImageData(0 , 0, 1, 1).data;
@@ -2673,7 +2673,7 @@ function checkdarkmode(){
 }
 
 // Listen for messages
-chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
+chrome.runtime.onMessage.addListener(function(msg){
     // If the received message has the expected format...
     if(msg.text === "receiveallpermissions"){
     // empty ul first
@@ -2688,7 +2688,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
     var perm = msg.value;
     perm.forEach(function(x){
         if($("permissionlist")){
-            if($("permullist")){}else{
+            if($("permullist") == null){
                 var newpermtitle = document.createElement("h4");
                 newpermtitle.textContent = chrome.i18n.getMessage("permissionrequired");
                 $("permissionlist").appendChild(newpermtitle);

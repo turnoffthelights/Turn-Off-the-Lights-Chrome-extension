@@ -69,7 +69,7 @@ elem.parentNode.removeChild(elem);
 }
 
 chrome.runtime.onMessage.addListener(
-function(request, sender){
+function(request){
 	if(request.name == "injectlightcss"){ var style = document.createElement("style"); style.type = "text/css"; style.textContent = request.message; document.getElementsByTagName("head")[0].appendChild(style); }
 });
 
@@ -100,8 +100,7 @@ function searchvideopath(thatvideo){
 		var afterdta = pafter.getPropertyValue("padding-top");
 		var afterdba = pafter.getPropertyValue("padding-bottom");
 
-		if(yta == "auto"){}
-		else{
+		if(yta != "auto"){
 			// if it is not the <video> player element,
 			// and if otherdown class is inside, then remove it
 			if(el.tagName != "VIDEO" && el.tagName != "OBJECT" && el.tagName != "EMBED" && el.tagName != "APPLET" && el.tagName != "IFRAME"){
@@ -138,7 +137,7 @@ if(mousespotlights == true){
 // no video detection
 }else{
 // CSS for pseudo
-if($("csstotlpseudo")){}else{
+if($("csstotlpseudo") == null){
 var totlpseudo = "*:before,*:after,*::before,*::after{z-index:auto!important}";
 var css = document.createElement("style");
 css.setAttribute("id","csstotlpseudo");
@@ -769,8 +768,8 @@ try{
 	var totldailymotion = ".np_ButtonWatermark,.np_Darken,.np_ControlsManager,.np_Gesture,.np_dialog,.np_menu,.np_MenuSettings,.np_row--info,.dmp_SubtitleView{z-index:1001!important}";
 
 	if($("csstotldailymotion")){
-	 var elem = document.getElementById("csstotldailymotion");
-	 elem.parentElement.removeChild(elem);
+		var elem = document.getElementById("csstotldailymotion");
+		elem.parentElement.removeChild(elem);
 	}
 
 	var css = document.createElement("style");
