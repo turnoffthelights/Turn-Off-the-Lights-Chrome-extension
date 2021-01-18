@@ -116,21 +116,22 @@ function autostopdetectionstart(){
 	}
 
 	var visualvideos = document.getElementsByTagName("video");
+	var selectedvideo = null;
 	var i;
 	var l = visualvideos.length;
 	for(i = 0; i < l; i++){
-		video = visualvideos[i];
-		video.setAttribute("data-videonum",i);
-		video.setAttribute("data-stopvideo","true");
+		selectedvideo = visualvideos[i];
+		selectedvideo.setAttribute("data-videonum",i);
+		selectedvideo.setAttribute("data-stopvideo","true");
 
-		if(video.paused == false){
-			var playPromise = video.play();
+		if(selectedvideo.paused == false){
+			var playPromise = selectedvideo.play();
 			if(playPromise !== undefined){
 			playPromise.then(_ => {
 				// Automatic playback started!
 				// Show playing UI.
 				// We can now safely pause video...
-				video.pause(); video.currentTime = 0;
+				selectedvideo.pause(); selectedvideo.currentTime = 0;
 			})
 			.catch(error => {
 				// Auto-play was prevented
@@ -141,13 +142,13 @@ function autostopdetectionstart(){
 
 		var reqId;
 		var stopTracking = function(){
-			if(video.getAttribute("data-stopvideo") == "true"){
+			if(selectedvideo.getAttribute("data-stopvideo") == "true"){
 				if(reqId){
 				cancelAnimationFrame(reqId);
 				}
 			}
 		};
-		video.addEventListener("playing", function(ev){
+		selectedvideo.addEventListener("playing", function(ev){
 			reqId = requestAnimationFrame(function play(){
 				if(ev.target.getAttribute("data-stopvideo") == null){
 					ev.target.setAttribute("data-stopvideo","true");
@@ -181,7 +182,7 @@ function autostopdetectionstart(){
 				}
 			});
 		},false);
-		video.addEventListener("pause", stopTracking);
+		selectedvideo.addEventListener("pause", stopTracking);
 
 		// design panel
 		var myElement = document.getElementsByTagName("video")[i];
@@ -224,7 +225,7 @@ function autostopdetectionstart(){
 			if(adisplay == "none"){
 				newautostoppanel.style.display = "none";
 			}
-		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode))
+		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode));
 		//---
 
 		// YouTube video top position negative value, then minus the height

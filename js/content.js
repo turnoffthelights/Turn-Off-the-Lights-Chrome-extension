@@ -354,7 +354,6 @@ function autoplayfunction(){
 var gracePeriod = 250, lastEvent = null, timeout = null;
 
 			function trigger(data){
-				var that = this;
 				if(gracePeriod > 0 && (lastEvent === null || String(lastEvent).split(":")[0] === String(data).split(":")[0])){
 					window.clearTimeout(timeout);
 					timeout = window.setTimeout(function(){ dispatch(data); }, gracePeriod);
@@ -431,20 +430,17 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 			var delaytime = autoplaydelaytime * 1000;
 			godelay = window.setTimeout(function(){
 				if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
-				else{} // do nothing
 				window.clearTimeout(godelay);
 			},delaytime);
 			}else{
 				if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
-				else{} // do nothing
 			}
 		}
 	}
 	function shadesOn(player){
 		if(player !== null){
 		var blackon = $("stefanvdlightareoff1");
-			if(blackon){} // do nothing
-			else{ chrome.runtime.sendMessage({name: "automatic"}); }
+			if(blackon == null){ chrome.runtime.sendMessage({name: "automatic"}); }
 			if(autoplaydelay == true){
 				try{ window.clearTimeout(godelay); }catch(e){}
 			}
@@ -1686,6 +1682,7 @@ var gtick = 0;
 var btick = 0;
 var requestvideovisualloop = [];
 var timeloop;
+var gradient = null;
 function videovisualloop(tovis){
 	if(document.getElementById("stefanvdvisualizationcanvas" + tovis)){
 		var canvas = document.getElementById("stefanvdvisualizationcanvas" + tovis);
@@ -2369,10 +2366,11 @@ function drawAtmos(playerid, item, totlmode){
 
 	if(ambilightvarcolor == true){
 		if(atmosvivid == true){
+		// regular glow effect
 		}else{
 			var k = item;
 			if(typeof k == "undefined"){
-			return
+			return;
 			}
 			var canvas = $("totlCanvas" + k + "");
 			if(canvas){
@@ -2502,7 +2500,7 @@ try{
 	if(url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))){
 		url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
 	// REMOVES ".??" or ".???" or ".????" FROM END - e.g. ".US", ".COM", ".INFO"
-	} else if(url.match(new RegExp(/\.[a-z]{2,4}$/i))){
+	}else if(url.match(new RegExp(/\.[a-z]{2,4}$/i))){
 		url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
 	}
 	// CHECK TO SEE IF THERE IS A DOT "." LEFT IN THE STRING
@@ -2531,7 +2529,7 @@ try{
 		else if(cross.substring(0, 3) == "../"){ runreal(); }
 		else if((cross.substring(0, 4) != "http") && (cross.substring(0, 5) != "https") && (cross.substring(0, 3) != "ftp")){ runreal(); }
 		else{ rundefault(); }
-	} else if((insideitemlengt > 0) && (yesornosubdomain == false)){
+	}else if((insideitemlengt > 0) && (yesornosubdomain == false)){
 		if(insideitem.substring(0, pageurllengt) == pageurl){ runreal(); }
 		else if(insideitem.substring(0, 2) == "./"){ runreal(); }
 		else if(insideitem.substring(0, 3) == "../"){ runreal(); }
@@ -2866,8 +2864,8 @@ function convertwebnight(node){
 			else{
 
 				// if night class is already added, skip this node
-				if(node.classList.contains("stefanvdnightbck")){
-				}else{
+				// Else create it
+				if(node.classList.contains("stefanvdnightbck") == false){
 					var thatbckishere = false;
 					if(node.currentStyle){
 						var y = node.currentStyle["background-color"];

@@ -1318,7 +1318,7 @@ function lightsgoonoroff(){
 		var oldspoty = 0;
 		function moveSpot(e){
 		var x = 0; var y = 0;
-		if(!e) var e = window.event;
+		if(!e){var e = window.event;}
 		if(e.clientX || e.clientY)
 		{
 			x = e.clientX; y = e.clientY;
@@ -1939,7 +1939,7 @@ if(stretchable){
 		for(j = 0; j < l; j++){
 			var layer = layers[ j ];
 			layer.data.a += layer.data.speed;
-			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + ( - worldYAngle ) + "deg) rotateX(" + ( - worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
+			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
 			layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
 		}
 		requestAnimationFrame(update);
@@ -2448,6 +2448,7 @@ var opacity = 0;
 
 var ReducingFinished = true;
 var OpacityLevelIncrement = 10; // Percentage value: 1-100
+var DIVElementById = null;
 
 //  Function determines whether we show or hide the item referenced by ElementID
 function fader(ActionToTake)
