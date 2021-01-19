@@ -30,7 +30,6 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 document.addEventListener("DOMContentLoaded", function(){ cameramotionlights(); },false);
 chrome.storage.onChanged.addListener(function(changes){
     for(key in changes){
-         var storageChange = changes[key];
          if(changes["motion"]){
              if(changes["motion"].newValue == true){
              //enable this

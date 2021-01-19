@@ -40,7 +40,7 @@ chrome.storage.onChanged.addListener(function(changes){
 				try{
 					if(recognizing){ recognition.stop(); recognizing = false; }
 				}
-				catch(e){}
+				catch(e){ console.log("speech error"); }
 			}
 		}
 		if(changes["speechonly"]){
@@ -61,7 +61,7 @@ chrome.storage.onChanged.addListener(function(changes){
 var speechDomains = null;
 
 // Simple function that checks existence of s in str
-var userSaid = function(str, s){ return str.indexOf(s) > -1; }
+var userSaid = function(str, s){ return str.indexOf(s) > -1; };
 
 function removespeechinfo(){
 // you are speaking now -- remove the bubble
@@ -115,12 +115,12 @@ function startButton(event){
     }
 	final_transcript = "";
 	chrome.storage.sync.get(["speechcountry"], function(response){
-		var speechcountry = response["speechcountry"];if(speechcountry == null)speechcountry = "en-US";
+		var speechcountry = response["speechcountry"]; if(speechcountry == null)speechcountry = "en-US";
 		recognition.lang = speechcountry;
 	});
-	try{recognition.start();}catch(e){}
+	try{ recognition.start(); }catch(e){}
 	ignore_onend = false;
-	try{start_timestamp = event.timeStamp;}catch(e){}
+	try{ start_timestamp = event.timeStamp; }catch(e){}
 }
 
 function PopupCenter(url, title, w, h){
@@ -182,11 +182,11 @@ function speechrecognition(){
 		}
 		if(event.error == "not-allowed"){
 			if(event.timeStamp - start_timestamp < 100){
-				// Permission to use microphone is blocked. 
+				// Permission to use microphone is blocked
 			}else{
 				var speechpermissionpage = chrome.extension.getURL("speech.html");
 				PopupCenter(speechpermissionpage,"stefanpemspeech","685","380");
-				// Permission to use microphone was denied.
+				// Permission to use microphone was denied
 			}
 			ignore_onend = true;
 		}
@@ -233,7 +233,7 @@ function speechrecognition(){
 			if(event.results[i].isFinal){
 				final_transcript = event.results[i][0].transcript;
 				//console.log("I said: "+final_transcript + " heybrowser= "+heybrowser);
-				if(userSaid(final_transcript, i18nlspeechheybrowser)||userSaid(final_transcript, i18nlspeechokbrowser)){
+				if(userSaid(final_transcript, i18nlspeechheybrowser) || userSaid(final_transcript, i18nlspeechokbrowser)){
 					// play sound thing
 					document.getElementById("myAudio").src = "images/chime-start.wav";
 					var playPromise = document.getElementById("myAudio").play();
@@ -257,7 +257,7 @@ function speechrecognition(){
 					actions(final_transcript);
 				}
 
-				exitmode = window.setTimeout(function(){ heybrowser = false;removespeechinfo(); }, 15000);
+				exitmode = window.setTimeout(function(){ heybrowser = false; removespeechinfo(); }, 15000);
 			}else{
 				interim_transcript += event.results[i][0].transcript;
 			}
@@ -333,7 +333,7 @@ speechonly = response["speechonly"];
 
 function speechstartfunction(){
 // start automatic up
-if(!recognizing){startButton(event);}
+if(!recognizing){ startButton(event); }
 }
 
 function extractHostname(url){
@@ -393,7 +393,7 @@ if(speech == true){
 		// on page update
 		chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 			if(tab.url){
-				if((tab.url.match(/^http/i)||tab.url.match(/^https/i)||tab.url.match(/^file/i)||tab.url==browsernewtab)){
+				if((tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab)){
 					if(tabId != null){
 						onlyspeechfunction(tab.url);
 					}
@@ -404,7 +404,7 @@ if(speech == true){
 		chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
 			chrome.tabs.get(tabId, function(tab){
 				if(tab.url){
-					if(tab.url.match(/^http/i)||tab.url.match(/^https/i)||tab.url.match(/^file/i)||tab.url==browsernewtab){
+					if(tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab){
 						onlyspeechfunction(tab.url);
 					}
 				}

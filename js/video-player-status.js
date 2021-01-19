@@ -44,7 +44,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 		window.addEventListener("load", initvideoinject, false);
         document.addEventListener("DOMContentLoaded", initvideoinject, false);
 		initvideoinject();
- 
+
 		// New Mutation Summary API Reference
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 		if(MutationObserver){
