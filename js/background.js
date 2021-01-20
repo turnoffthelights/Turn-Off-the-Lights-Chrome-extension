@@ -33,10 +33,10 @@ if(request.name == "automatic"){ chrome.tabs.executeScript(sender.tab.id, {file:
 else if(request.name == "screenshot"){
 var checkcapturewebsite = totlscreenshotpage;
 chrome.tabs.create({url: checkcapturewebsite}, function(tab){
-    var tabId = tab.id;
+    var currenttabid = tab.id;
     chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
         if(changeInfo.status == "complete"){
-            chrome.tabs.sendMessage(tabId, {action: "receivescreenshot", value: request.value});
+            chrome.tabs.sendMessage(currenttabid, {action: "receivescreenshot", value: request.value});
         }
     });
 });
@@ -152,8 +152,8 @@ chrome.tabs.query({}, function(tabs){
 }
 else{
     if(typeof browser !== "undefined"){
-    var qtest = browser.theme.update;
-    if(typeof qtest !== "undefined"){
+    var qtestbrowsertheme = browser.theme.update;
+    if(typeof qtestbrowsertheme !== "undefined"){
         browser.theme.reset();
     }
     }
@@ -185,7 +185,7 @@ return true;
 });
 
 chrome.tabs.onActivated.addListener(function(activeInfo){
-    chrome.tabs.get(activeInfo.tabId, function(tab){
+    chrome.tabs.get(activeInfo.tabId, function(){
         chrome.storage.sync.get(["icon"], function(items){
             if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
             chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"],"38": items["icon"]}});
@@ -417,7 +417,7 @@ function removecontexmenus(){
         var v;
         var l = contextarrayvideo.length;
         for(v = 0; v < l; v++){
-            if(contextarrayvideo[v] === undefined || contextarrayvideo[v] === null){}else{
+            if(contextarrayvideo[v] != undefined && contextarrayvideo[v] != null){
             chrome.contextMenus.remove(contextarrayvideo[v]);
             }
         }
@@ -426,7 +426,7 @@ function removecontexmenus(){
         var p;
         var pagelength = contextarraypage.length;
         for(p = 0; p < pagelength; p++){
-            if(contextarraypage[p] === undefined || contextarraypage[p] === null){}else{
+            if(contextarraypage[p] != undefined && contextarraypage[p] != null){
             chrome.contextMenus.remove(contextarraypage[p]);
             }
         }
@@ -646,56 +646,56 @@ chrome.storage.onChanged.addListener(function(changes){
         // Group Policy
         // check the values with group policy, if different values. Then change it back
         if(changes["autoplay"]){
-            if(policygrouparray.hasOwnProperty("AutoPlay")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoPlay")){
                 if(changes["autoplay"].newValue != policygrouparray["AutoPlay"]){
                     chrome.storage.sync.set({"autoplay": policygrouparray["AutoPlay"]});
                 }
             }
         }
         if(changes["autostop"]){
-            if(policygrouparray.hasOwnProperty("AutoStop")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoStop")){
                 if(changes["autostop"].newValue != policygrouparray["AutoStop"]){
                 chrome.storage.sync.set({"autostop": policygrouparray["AutoStop"]});
                 }
             }
         }
         if(changes["customqualityyoutube"]){
-            if(policygrouparray.hasOwnProperty("AutoHD")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHD")){
                 if(changes["customqualityyoutube"].newValue != policygrouparray["AutoHD"]){
                 chrome.storage.sync.set({"customqualityyoutube": policygrouparray["AutoHD"]});
                 }
             }
         }
         if(changes["maxquality"]){
-            if(policygrouparray.hasOwnProperty("AutoHDQuality")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHDQuality")){
                 if(changes["maxquality"].newValue != policygrouparray["AutoHDQuality"]){
                     chrome.storage.sync.set({"maxquality": policygrouparray["AutoHDQuality"]});
                 }
             }
         }
         if(changes["block60fps"]){
-            if(policygrouparray.hasOwnProperty("Block60FPS")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "Block60FPS")){
                 if(changes["block60fps"].newValue != policygrouparray["Block60FPS"]){
                 chrome.storage.sync.set({"block60fps": policygrouparray["Block60FPS"]});
                 }
             }
         }
         if(changes["nighttheme"]){
-            if(policygrouparray.hasOwnProperty("NightModeSwitch")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "NightModeSwitch")){
                 if(changes["nighttheme"].newValue != policygrouparray["NightModeSwitch"]){
                 chrome.storage.sync.set({"nighttheme": policygrouparray["NightModeSwitch"]});
                 }
             }
         }
         if(changes["videovolume"]){
-            if(policygrouparray.hasOwnProperty("MouseVolumeScroll")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "MouseVolumeScroll")){
                 if(changes["videovolume"].newValue != policygrouparray["MouseVolumeScroll"]){
                 chrome.storage.sync.set({"videovolume": policygrouparray["MouseVolumeScroll"]});
                 }
             }
         }
         if(changes["videotool"]){
-            if(policygrouparray.hasOwnProperty("VideoToolbar")){
+            if(Object.prototype.hasOwnProperty.call(policygrouparray, "VideoToolbar")){
                 if(changes["videotool"].newValue != policygrouparray["VideoToolbar"]){
                 chrome.storage.sync.set({"videotool": policygrouparray["VideoToolbar"]});
                 }

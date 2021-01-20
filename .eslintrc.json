@@ -33,9 +33,11 @@
         "semi": ["error"]
     },
     "globals": {
+        "angular": "readonly",
         "totlscreenshotpage": "readonly",
         "developerwebsite": "readonly",
         "totloptionspage": "readonly",
+        "turnoffthelightsproduct": "readonly",
         "donatewebsite": "readonly",
         "writereview": "readonly",
         "linkchangelog": "readonly",
