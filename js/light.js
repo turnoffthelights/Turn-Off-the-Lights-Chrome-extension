@@ -265,7 +265,7 @@ try{
 			iframeVideoTags.item(j).classList.add('stefanvdvideotop');
 		}
 	}
-}catch(e){}
+}catch(e){ console.error(e); }
 */
 
 // Show all iframe embed video objects -> Flash detection
@@ -290,7 +290,7 @@ try{
 			}
 		}
 	}
-}catch(e){}
+}catch(e){ console.error(e); }
 }else if(hardflash == true){
 	var j, t;
 	for(j = 0; t = ["object","embed","applet","iframe"][j]; ++j)
@@ -654,7 +654,7 @@ for(i = 0; i < l; i++){
 		var iwidth = iframe[i].contentDocument.body.clientWidth;
 		iframe[i].style.height = iheight + "px";
 		iframe[i].style.width = iwidth + "px";
-	}catch(e){}
+	}catch(e){ console.error(e); }
 }
 
 // var embed = document.querySelectorAll('embed');
@@ -667,7 +667,7 @@ for(i = 0; i < l; i++){
 		// var spar = targetComputedStyleHeight.replace("px","");embed[i].style.height = Math.round(spar) + "px";
 		// var targetComputedStyleWidth=document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("width");
 		// var been = targetComputedStyleWidth.replace("px","");embed[i].style.width = Math.round(been) + "px";
-		// }catch(e){}
+		// }catch(e){ console.error(e); }
 	// }
 // }
 }
@@ -779,7 +779,7 @@ try{
 	document.getElementsByTagName("head")[0].appendChild(css);
 
 }
-catch(e){}
+catch(e){ console.error(e); }
 }
 // vk.com, fixed show video
 else if(window.location.href.match(/((http:\/\/.*vk\.com\/.*)|(https:\/\/.*vk\.com\/.*))/i)){
@@ -2484,7 +2484,7 @@ var div = document.querySelectorAll("div.stefanvdlightareoff");
 var i;
 var l = div.length;
 for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
-}catch(e){}
+}catch(e){ console.error(e); }
 }
 
 //  Makes div reduce

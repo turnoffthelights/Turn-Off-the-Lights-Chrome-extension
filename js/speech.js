@@ -40,7 +40,7 @@ chrome.storage.onChanged.addListener(function(changes){
 				try{
 					if(recognizing){ recognition.stop(); recognizing = false; }
 				}
-				catch(e){ console.log("speech error"); }
+				catch(e){ console.error(e); }
 			}
 		}
 		if(changes["speechonly"]){
@@ -49,7 +49,7 @@ chrome.storage.onChanged.addListener(function(changes){
 				try{
 					if(recognizing){ recognition.stop(); recognizing = false; }
 				}
-				catch(e){}
+				catch(e){ console.error(e); }
 			}else{
 				//enable this
 				speechrecognition();
@@ -118,9 +118,9 @@ function startButton(event){
 		var speechcountry = response["speechcountry"]; if(speechcountry == null)speechcountry = "en-US";
 		recognition.lang = speechcountry;
 	});
-	try{ recognition.start(); }catch(e){}
+	try{ recognition.start(); }catch(e){ console.error(e); }
 	ignore_onend = false;
-	try{ start_timestamp = event.timeStamp; }catch(e){}
+	try{ start_timestamp = event.timeStamp; }catch(e){ console.error(e); }
 }
 
 function PopupCenter(url, title, w, h){
@@ -151,7 +151,7 @@ navigator.permissions.query({name:"microphone"})
 	}
   };
 });
-}catch(e){}
+}catch(e){ console.error(e); }
 
 var final_transcript = "";
 var recognizing = false;
@@ -381,7 +381,7 @@ function onlyspeechfunction(tab){
 			try{ // stop it
 				if(recognizing){ recognition.stop(); recognizing = false; }
 			}
-			catch(e){}
+			catch(e){ console.error(e); }
 		}
 		// reset
 		foundtheurlspeech = false;
@@ -418,7 +418,7 @@ if(speech == true){
 try{
 	if(recognizing){ recognition.stop(); recognizing = false; }
 }
-catch(e){}
+catch(e){ console.error(e); }
 }
 });
 }

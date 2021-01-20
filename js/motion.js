@@ -52,7 +52,7 @@ chrome.storage.onChanged.addListener(function(changes){
                         window.clearInterval(intervalID);
                     }
                 }
-                catch(e){}
+                catch(e){ console.error(e); }
              }
          }
          if(changes["cammotiononly"]){
@@ -74,7 +74,7 @@ chrome.storage.onChanged.addListener(function(changes){
                         window.clearInterval(intervalID);
                     }
                 }
-                catch(e){}
+                catch(e){ console.error(e); }
              }else{
                  //enable this
                  cameramotionlights();
@@ -151,7 +151,7 @@ function onlycammotionfunction(tab){
 					window.clearInterval(intervalID);
 				}
 			}
-			catch(e){}
+			catch(e){ console.error(e); }
 		}
 		// reset
         foundtheurlcamera = false;

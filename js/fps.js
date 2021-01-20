@@ -36,5 +36,5 @@ chrome.runtime.onMessage.addListener(
 function(request){
     if(request.name == "injectfps"){ var script = document.createElement("script"); script.type = "text/javascript"; script.textContent = request.message; script.onload = function(){ this.parentNode.removeChild(this); }; document.getElementsByTagName("head")[0].appendChild(script); }
 });
-}catch(e){}
+}catch(e){ console.error(e); }
 } });

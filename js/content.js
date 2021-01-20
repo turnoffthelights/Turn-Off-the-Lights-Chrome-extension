@@ -376,7 +376,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 									//playerReset(this.player);
 									//playerStop(this.player);
 									playerPause(this.player);
-									}catch(e){}
+									}catch(e){ console.error(e); }
 								}
 							}else{
 								// play action is active
@@ -442,7 +442,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 		var blackon = $("stefanvdlightareoff1");
 			if(blackon == null){ chrome.runtime.sendMessage({name: "automatic"}); }
 			if(autoplaydelay == true){
-				try{ window.clearTimeout(godelay); }catch(e){}
+				try{ window.clearTimeout(godelay); }catch(e){ console.error(e); }
 			}
 		}
 	}
@@ -607,7 +607,7 @@ var dovisenable = function(){
 					try{
 					vissources[tempvis] = audiocontext[tempvis].createMediaElementSource(myElement);
 					vissources[tempvis].connect(analyser[tempvis]);
-					}catch(e){}
+					}catch(e){ console.error(e); }
 				}
 				analyser[tempvis].connect(audiocontext[tempvis].destination);
 			}
@@ -1650,7 +1650,7 @@ var visualvideos = document.getElementsByTagName("video");
 			screenshot.width = onevideo.offsetWidth;
 			screenshot.height = onevideo.offsetHeight;
 			context.drawImage(onevideo, 0, 0, onevideo.offsetWidth, onevideo.offsetHeight);
-			try{ var dataURL = screenshot.toDataURL("image/png"); }catch(e){}
+			try{ var dataURL = screenshot.toDataURL("image/png"); }catch(e){ console.error(e); }
 			// save the video screenshot
 			chrome.runtime.sendMessage({name:"screenshot",value:dataURL});
 		}, false);
@@ -2409,7 +2409,7 @@ function drawAtmos(playerid, item, totlmode){
 					if(typeof downhex1 != "undefined" || typeof downhex2 != "undefined" || typeof downhex3 != "undefined" || typeof downhex4 != "undefined"){
 						try{
 						youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + downhex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
-						}catch(e){}
+						}catch(e){ console.error(e); }
 					}
 					else{
 						youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
@@ -4520,7 +4520,7 @@ css.type = "text/css";
 css.appendChild(document.createTextNode(totlvideovolume));
 document.getElementsByTagName("head")[0].appendChild(css);
 }
-catch(e){}
+catch(e){ console.error(e); }
 
 addvolume();
 
@@ -4700,7 +4700,7 @@ var ythdinit = function onYouTubePlayerReady(player){
 		mplayer.addEventListener("onStateChange", "onytplayerStateChange");
 		updateQuality();
 	}
-	catch(e){}
+	catch(e){ console.error(e); }
 };
 
 var ythdstatechange = function onytplayerStateChange(newState){

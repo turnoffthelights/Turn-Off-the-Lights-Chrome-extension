@@ -329,5 +329,5 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
   }
 });
 window.clearInterval(refreshIntervalId);
-}catch(e){}
+}catch(e){ console.error(e); }
 });

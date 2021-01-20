@@ -38,9 +38,9 @@ function startButton(event){
     }
 	final_transcript = "";
 	recognition.lang = "en-US";
-	try{ recognition.start(); }catch(e){}
+	try{ recognition.start(); }catch(e){ console.error(e); }
 	ignore_onend = false;
-	try{ start_timestamp = event.timeStamp; }catch(e){}
+	try{ start_timestamp = event.timeStamp; }catch(e){ console.error(e); }
 }
 
 var final_transcript = "";
