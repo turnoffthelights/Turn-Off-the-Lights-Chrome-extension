@@ -366,8 +366,8 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 				if(data !== lastEvent){
 					lastEvent = data;
 					data = String(data).split(":");
-					switch (data[0]){
-						case "playerStateChange":
+					switch(data[0]){
+						case"playerStateChange":
 							//console.log("received playerStateChange", data[1]);
 							if(data[1] === "2" || data[1] === "0" || data[1] === "-1" || data[1] === "5"){
 								if((data[1] === "2" && apause == true) || (data[1] === "0" && astop == true)){ shadesOff(this.player); }
@@ -1360,10 +1360,10 @@ var visualvideos = document.getElementsByTagName("video");
 		newonvispanel.style.left = visposition.x + "px";
 		newonvispanel.style.width = tempwidthvideo + "px";
 		newonvispanel.style.height = 36 + "px";
-		newonvispanel.addEventListener("mouseover", function(event){
+		newonvispanel.addEventListener("mouseover", function(){
 			document.getElementById("stefanvdvispanel" + rock).style.display = "block";
 		},false);
-		newonvispanel.addEventListener("mouseout", function(event){
+		newonvispanel.addEventListener("mouseout", function(){
 			document.getElementById("stefanvdvispanel" + rock).style.display = "none";
 		},false);
 		document.body.appendChild(newonvispanel);
@@ -1688,7 +1688,7 @@ function videovisualloop(tovis){
 		var canvas = document.getElementById("stefanvdvisualizationcanvas" + tovis);
 		var ctx = canvas.getContext("2d",{desynchronized: true});
 
-		requestvideovisualloop[tovis] = window.requestAnimFrame(function(){ videovisualloop(tovis) });
+		requestvideovisualloop[tovis] = window.requestAnimFrame(function(){ videovisualloop(tovis); });
 		analyser[tovis].fftSize = 2048;
 		var bufferLength = analyser[tovis].fftSize;
 		var dataArray = new Uint8Array(bufferLength);
@@ -1805,7 +1805,7 @@ function videovisualloop(tovis){
 	}
 }
 
-var myListenervideotoolbar = function(event){
+var myListenervideotoolbar = function(){
 	var elements = document.getElementsByClassName("stefanvdspeed");
     while(elements.length > 0){
         elements[0].parentNode.removeChild(elements[0]);
@@ -2228,7 +2228,7 @@ var frameCount = 0;
 var fps, fpsInterval, startTime, now, then, elapsed;
 var countA = [], countB = [], countC = []; // start from zero (blur spread) and size (left right top under) position
 
-function stopAnimation(e){
+function stopAnimation(){
     window.cancelAnimationFrame(requestId);
 }
 
@@ -2579,7 +2579,7 @@ try{
 								el.classList.add("stefanvdvideoauto");
 								}
 							}
-						}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode))
+						}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode));
 						}
 
 						var newpositionvivid = getPosition(totlshowtime);

@@ -49,18 +49,18 @@ var ignore_onend;
 var start_timestamp;
 var recognition;
 function startinit(){
-// Check for live API permissions  
+// Check for live API permissions
 navigator.permissions.query({name:"microphone"})
 .then(function(permissionStatus){
   permissionStatus.onchange = function(){
 	if(this.state == "granted"){
-		var lol = window.self;
-		lol.opener = window.self;
-		lol.close();
+		var micaccess = window.self;
+		micaccess.opener = window.self;
+		micaccess.close();
 	}else{
-		var lol = window.self;
-		lol.opener = window.self;
-		lol.close();
+		var micdenied = window.self;
+		micdenied.opener = window.self;
+		micdenied.close();
 	}
   };
 });

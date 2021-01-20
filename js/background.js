@@ -45,19 +45,13 @@ chrome.tabs.create({url: checkcapturewebsite}, function(tab){
 else if(request.name == "contextmenuon"){ checkcontextmenus(); }
 else if(request.name == "contextmenuoff"){ removecontexmenus(); }
 else if(request.name == "sendautoplay"){
-	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: oReq.responseText}); } };
-	oReq.open("GET","/js/video-player-status.js",true); oReq.send();
+    chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus",message: readhttpcontent("/js/video-player-status.js")});
 }
 else if(request.name == "sendfps"){
-	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: oReq.responseText}); } };
-	oReq.open("GET","/js/fpsinject.js",true); oReq.send();
+    chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps",message: readhttpcontent("/js/fpsinject.js")});
 }
 else if(request.name == "sendlightcss"){
-	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: oReq.responseText}); } };
-	oReq.open("GET","/css/light.css",true); oReq.send();
+    chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss",message: readhttpcontent("/css/light.css")});
 }
 else if(request.name == "emergencyalf"){
 chrome.tabs.query({}, function(tabs){
@@ -202,7 +196,7 @@ chrome.tabs.onActivated.addListener(function(activeInfo){
     });
 });
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
     // tab loaded, recheck all the video players on the current web page
     if(changeInfo.status == "complete"){
         chrome.tabs.query({},function(tabs){
@@ -222,13 +216,18 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 });
 
 chrome.tabs.onHighlighted.addListener(function(o){ var tabId = o.tabIds[0];
-    chrome.tabs.get(tabId, function(tab){
+    chrome.tabs.get(tabId, function(){
         // for highlighted tab
         // update the badge value
         checkbadge();
     });
 });
 
+function readhttpcontent(fileurl){
+    var oReq = new XMLHttpRequest();
+    oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ return oReq.responseText; } };
+    oReq.open("GET",fileurl,true); oReq.send();
+}
 
 // Set click to false at beginning
 var alreadyClicked = false;
@@ -344,23 +343,24 @@ catch(e){
 }
 
 // Create a parent item and two children.
+var parent = null;
 try{
     // try show web browsers that do support "icons"
     // Firefox, Opera, Microsoft Edge
-    var parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts": contexts, "icons": {"16": "images/IconShare.png","32": "images/IconShare@2x.png"}});
-    var child1 = chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconEmail.png","32": "images/IconEmail@2x.png"}});
+    parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts": contexts, "icons": {"16": "images/IconShare.png","32": "images/IconShare@2x.png"}});
+    chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconEmail.png","32": "images/IconEmail@2x.png"}});
     chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-    var child2 = chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconTwitter.png","32": "images/IconTwitter@2x.png"}});
-    var child3 = chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconFacebook.png","32": "images/IconFacebook@2x.png"}});
+    chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconTwitter.png","32": "images/IconTwitter@2x.png"}});
+    chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconFacebook.png","32": "images/IconFacebook@2x.png"}});
 }
 catch(e){
     // catch web browsers that do NOT show the icon
     // Google Chrome
-    var parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts": contexts});
-    var child1 = chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "contexts": contexts, "parentId": parent});
+    parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts": contexts});
+    chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "contexts": contexts, "parentId": parent});
     chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-    var child2 = chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "contexts": contexts, "parentId": parent});
-    var child3 = chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "contexts": contexts, "parentId": parent});
+    chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "contexts": contexts, "parentId": parent});
+    chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "contexts": contexts, "parentId": parent});
 }
 
 chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
@@ -389,23 +389,23 @@ function checkcontextmenus(){
 
     // video
     var contextsvideo = ["video"];
-    var i;
-    var l = contextsvideo.length;
-    for(i = 0; i < l; i++){
-    var contextvideo = contextsvideo[i];
+    var k;
+    var addvideolength = contextsvideo.length;
+    for(k = 0; k < addvideolength; k++){
+    var contextvideo = contextsvideo[k];
     var videotitle = chrome.i18n.getMessage("videotitle");
-    menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo" + i, "contexts":[contextvideo]});
+    menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo" + k, "contexts":[contextvideo]});
     contextarrayvideo.push(menuvideo);
     }
 
     // page
     var contexts = ["page","selection","link","editable","image","audio"];
-    var i;
-    var l = contexts.length;
-    for(i = 0; i < l; i++){
-    var context = contexts[i];
+    var m;
+    var addpagelength = contexts.length;
+    for(m = 0; m < addpagelength; m++){
+    var context = contexts[m];
     var pagetitle = chrome.i18n.getMessage("pagetitle");
-    menupage = chrome.contextMenus.create({"title": pagetitle, "type":"normal", "id": "totlpage" + i, "contexts":[context]});
+    menupage = chrome.contextMenus.create({"title": pagetitle, "type":"normal", "id": "totlpage" + m, "contexts":[context]});
     contextarraypage.push(menupage);
     }
 
@@ -414,20 +414,20 @@ function checkcontextmenus(){
 
 function removecontexmenus(){
     if(contextarrayvideo.length > 0){
-        var i;
+        var v;
         var l = contextarrayvideo.length;
-        for(i = 0; i < l; i++){
-            if(contextarrayvideo[i] === undefined || contextarrayvideo[i] === null){}else{
-            chrome.contextMenus.remove(contextarrayvideo[i]);
+        for(v = 0; v < l; v++){
+            if(contextarrayvideo[v] === undefined || contextarrayvideo[v] === null){}else{
+            chrome.contextMenus.remove(contextarrayvideo[v]);
             }
         }
     }
     if(contextarraypage.length > 0){
-        var i;
-        var l = contextarraypage.length;
-        for(i = 0; i < l; i++){
-            if(contextarraypage[i] === undefined || contextarraypage[i] === null){}else{
-            chrome.contextMenus.remove(contextarraypage[i]);
+        var p;
+        var pagelength = contextarraypage.length;
+        for(p = 0; p < pagelength; p++){
+            if(contextarraypage[p] === undefined || contextarraypage[p] === null){}else{
+            chrome.contextMenus.remove(contextarraypage[p]);
             }
         }
     }
