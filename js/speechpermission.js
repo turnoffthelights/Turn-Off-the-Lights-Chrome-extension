@@ -27,6 +27,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+var recognizing = false;
+var ignore_onend;
+var start_timestamp;
+var recognition;
+
 function speechstartfunction(){
 	// start automatic up
 	if(!recognizing){ startButton(event); }
@@ -36,18 +41,12 @@ function startButton(event){
     if(recognition && recognition.abort){
         recognition.abort();
     }
-	final_transcript = "";
 	recognition.lang = "en-US";
 	try{ recognition.start(); }catch(e){ console.error(e); }
 	ignore_onend = false;
 	try{ start_timestamp = event.timeStamp; }catch(e){ console.error(e); }
 }
 
-var final_transcript = "";
-var recognizing = false;
-var ignore_onend;
-var start_timestamp;
-var recognition;
 function startinit(){
 // Check for live API permissions
 navigator.permissions.query({name:"microphone"})
@@ -79,22 +78,25 @@ navigator.permissions.query({name:"microphone"})
 		};
 
 		recognition.onerror = function(event){
-		if(event.error == "no-speech"){
-			// No speech was detected.
-			ignore_onend = true;
-		}
-		if(event.error == "audio-capture"){
-			// No microphone was found.
-			ignore_onend = true;
-		}
-		if(event.error == "not-allowed"){
-			if(event.timeStamp - start_timestamp < 100){
-				// Permission to use microphone is blocked.
-			}else{
-				// Permission to use microphone was denied.
+			if(event.error == "no-speech"){
+				// No speech was detected.
+				ignore_onend = true;
 			}
-			ignore_onend = true;
-		}
+			if(event.error == "audio-capture"){
+				// No microphone was found.
+				ignore_onend = true;
+			}
+			if(event.error == "not-allowed"){
+				if(event.timeStamp - start_timestamp < 100){
+					// Permission to use microphone is blocked.
+				}else{
+					// Permission to use microphone was denied.
+				}
+				ignore_onend = true;
+			}
+			if(ignore_onend == true){
+				console.log("ignore onend");
+			}
 		};
 
 	}

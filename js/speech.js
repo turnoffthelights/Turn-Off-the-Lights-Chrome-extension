@@ -259,6 +259,7 @@ function speechrecognition(){
 				exitmode = window.setTimeout(function(){ heybrowser = false; removespeechinfo(); }, 15000);
 			}else{
 				interim_transcript += event.results[i][0].transcript;
+				console.log(interim_transcript);
 			}
 		}
 		};

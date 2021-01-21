@@ -145,7 +145,7 @@ chrome.storage.sync.get(["fadein","fadeout","readera","readern","lightimagea","l
     // find no localstore lightimage
 	if(items["lightimagea"] == null && items["lightimagen"] == null){ firstdefaultvalues["lightimagen"] = true; firstdefaultvalues["lightimagea"] = false; }
     // find no localstore mouse
-	if(items["mousespotlighta"] == null && items["mousespotlightc"] == null && items["mousespotlighto"] == null && items["mousespotlightt"] == null && items["mousespotlights"] == null ){ firstdefaultvalues["mousespotlighto"] = true; firstdefaultvalues["mousespotlightc"] = false; firstdefaultvalues["mousespotlighta"] = false; firstdefaultvalues["mousespotlightt"] = false; firstdefaultvalues["mousespotlights"] = false; }
+	if(items["mousespotlighta"] == null && items["mousespotlightc"] == null && items["mousespotlighto"] == null && items["mousespotlightt"] == null && items["mousespotlights"] == null){ firstdefaultvalues["mousespotlighto"] = true; firstdefaultvalues["mousespotlightc"] = false; firstdefaultvalues["mousespotlighta"] = false; firstdefaultvalues["mousespotlightt"] = false; firstdefaultvalues["mousespotlights"] = false; }
     // find no localstore eye
 	if(items["eyea"] == null && items["eyen"] == null && items["eyealist"] == null){ firstdefaultvalues["eyen"] = true; firstdefaultvalues["eyea"] = false; firstdefaultvalues["eyealist"] = false; }
 
@@ -698,8 +698,7 @@ if(typeof excludedDomains == "string"){
 
 var requestId = 0;
 var stop = false;
-var frameCount = 0;
-var fps, fpsInterval, startTime, now, then, elapsed;
+var fps, fpsInterval, now, then, elapsed;
 
 function stopAnimation(){
     window.cancelAnimationFrame(requestId);
@@ -707,14 +706,12 @@ function stopAnimation(){
 
 // yes show time
 // ambilight play detect
-drawatmosfps = $("drawatmosfps").value;
-startAnimating(drawatmosfps);
+fps = $("drawatmosfps").value;
+startAnimating(fps);
 
 function startAnimating(fps){
     fpsInterval = 1000 / fps;
     then = window.performance.now();
-    startTime = then;
-	//console.log(startTime);
 	animate();
 }
 
@@ -747,12 +744,7 @@ function animate(){
             }
         }
 	}
-	catch(e){ console.log(e); } // I see nothing, that is good
-
-    // TESTING...Report #seconds since start and achieved fps.
-    //var sinceStart = now - startTime;
-    //var currentFps = Math.round(1000 / (sinceStart / ++frameCount) * 100) / 100;
-    //console.log("Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @ " + currentFps + " fps.");
+	catch(e){ console.log(e); }
     }
 }
 
@@ -928,6 +920,12 @@ return{x:xPos,y:yPos};
 
 var countA = 0, countB = 0, countC = 0; // start from zero (blur spread) and size (left right top under) position
 
+function rgbToHex(r, g, b){
+    if(r > 255 || g > 255 || b > 255)
+        throw"Invalid color component";
+    return((r << 16) | (g << 8) | b).toString(16);
+}
+
 // ambilight draw code
 function drawAtmos(){
 	var v = $("beeld");
@@ -944,12 +942,6 @@ if(canvas){
 	var context = canvas.getContext("2d", {desynchronized: true});
 	var imageData = context.getImageData(0, 0, 1, 1);
 	var data = imageData.data;
-
-	function rgbToHex(r, g, b){
-    if(r > 255 || g > 255 || b > 255)
-        throw"Invalid color component";
-    return((r << 16) | (g << 8) | b).toString(16);
-	}
 
 	var p1 = context.getImageData(0 , 0, 1, 1).data;
 	var p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -974,7 +966,7 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
             $("stefanvdvivideffect1").style.display = "none";
             }
         }else{
-            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + ""; 
+            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
         }
 	}
 	else if($("ambilightfixcolor").checked == true){
@@ -1004,7 +996,7 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
     var sourceHeight = showtime.videoHeight;
 
 var totlcheckcanvas = $("totlCanvas1");
-if(totlcheckcanvas){}else{
+if(totlcheckcanvas == null){
     var totlnewcanvas = document.createElement("canvas");
 	totlnewcanvas.setAttribute("id","totlCanvas1");
 	totlnewcanvas.width = "4";
@@ -1032,11 +1024,7 @@ var colorlamp4Y = (sourceHeight * 50) / 100;
     var imageData = context.getImageData(0, 0, 1, 1);
     var data = imageData.data;
 
-function rgbToHex(r, g, b){
-    if(r > 255 || g > 255 || b > 255)
-        throw"Invalid color component";
-    return((r << 16) | (g << 8) | b).toString(16);
-}
+
 
     var p1 = context.getImageData(0 , 0, 1, 1).data;
     var p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -1103,6 +1091,7 @@ var opacity = 0;
 
 var ReducingFinished = true;
 var OpacityLevelIncrement = 10; // Percentage value: 1-100
+var DIVElementById = null;
 
 //  Function determines whether we show or hide the item referenced by ElementID
 function fader(ActionToTake)
@@ -1523,7 +1512,7 @@ else{ $("eastereggs").disabled = true; $("eastereggs").checked = false; } // act
 if($("mousespotlighta").checked == true){ $("spotlightradius").disabled = false; }
 else{ $("spotlightradius").disabled = true; }
 
-if($("nighttime").checked == true){}
+if($("nighttime").checked == true){ /* see further */ }
 else{ $("begintime").disabled = true; $("endtime").disabled = true; }
 
 if($("password").checked == true){ $("enterpassword").disabled = false; $("confirmpassword").disabled = false; }
