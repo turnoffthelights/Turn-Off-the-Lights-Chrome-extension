@@ -29,31 +29,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 document.addEventListener("DOMContentLoaded", function(){ speechrecognition(); },false);
 chrome.storage.onChanged.addListener(function(changes){
-   for(key in changes){
-        var storageChange = changes[key];
-        if(changes["speech"]){
-			if(changes["speech"].newValue == true){
+	if(changes["speech"]){
+		if(changes["speech"].newValue == true){
+		//enable this
+		speechrecognition();
+		}else{
+			//disable this
+			try{
+				if(recognizing){ recognition.stop(); recognizing = false; }
+			}
+			catch(e){ console.error(e); }
+		}
+	}
+	if(changes["speechonly"]){
+		if(changes["speechonly"].newValue == true){
+			//disable this
+			try{
+				if(recognizing){ recognition.stop(); recognizing = false; }
+			}
+			catch(e){ console.error(e); }
+		}else{
 			//enable this
 			speechrecognition();
-			}else{
-				//disable this
-				try{
-					if(recognizing){ recognition.stop(); recognizing = false; }
-				}
-				catch(e){ console.error(e); }
-			}
-		}
-		if(changes["speechonly"]){
-			if(changes["speechonly"].newValue == true){
-				//disable this
-				try{
-					if(recognizing){ recognition.stop(); recognizing = false; }
-				}
-				catch(e){ console.error(e); }
-			}else{
-				//enable this
-				speechrecognition();
-			}
 		}
 	}
 });
@@ -95,13 +92,14 @@ function actiondone(){
 	document.getElementById("myAudio").src = "images/chime-end.wav";
 	var playPromise = document.getElementById("myAudio").play();
 	if(playPromise !== undefined){
-		playPromise.then(_ =>{
+		playPromise.then(() => {
 		// Automatic playback started!
 		// Show playing UI.
 		})
-		.catch(error =>{
+		.catch((e) =>{
 		// Auto-play was prevented
 		// Show paused UI.
+		console.log(e);
 		});
 	}
 	heybrowser = false;
@@ -153,16 +151,33 @@ navigator.permissions.query({name:"microphone"})
 });
 }catch(e){ console.error(e); }
 
+var interim_transcript = "";
 var final_transcript = "";
 var recognizing = false;
 var ignore_onend;
 var start_timestamp;
 var recognition;
+var heybrowser = false;
+var exitmode;
+var i18nlspeechheybrowser = chrome.i18n.getMessage("speechheybrowser"); // Hey browser
+i18nlspeechheybrowser = i18nlspeechheybrowser.toLowerCase();
+var i18nlspeechokbrowser = chrome.i18n.getMessage("speechokbrowser"); // OK browser
+i18nlspeechokbrowser = i18nlspeechokbrowser.toLowerCase();
+var i18nldesspeech1command = chrome.i18n.getMessage("desspeech1command"); // turn off the lights
+i18nldesspeech1command = i18nldesspeech1command.toLowerCase();
+var i18nldesspeech2command = chrome.i18n.getMessage("desspeech2command"); // turn on the lights
+i18nldesspeech2command = i18nldesspeech2command.toLowerCase();
+var i18nldesspeech3command = chrome.i18n.getMessage("desspeech3command"); // play video
+i18nldesspeech3command = i18nldesspeech3command.toLowerCase();
+var i18nldesspeech4command = chrome.i18n.getMessage("desspeech4command"); // pause video
+i18nldesspeech4command = i18nldesspeech4command.toLowerCase();
+
 function speechrecognition(){
-	if(!("webkitSpeechRecognition" in window)){
+	const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+	if(typeof SpeechRecognition === "undefined"){
 	// not supported
 	}else{
-		recognition = new webkitSpeechRecognition();
+		recognition = new SpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
 
@@ -208,25 +223,8 @@ function speechrecognition(){
 			}
 		};
 
-	var heybrowser = false;
-	var exitmode;
-	var i18nlspeechheybrowser = chrome.i18n.getMessage("speechheybrowser"); // Hey browser
-	i18nlspeechheybrowser = i18nlspeechheybrowser.toLowerCase();
-	var i18nlspeechokbrowser = chrome.i18n.getMessage("speechokbrowser"); // OK browser
-	i18nlspeechokbrowser = i18nlspeechokbrowser.toLowerCase();
-	var i18nldesspeech1command = chrome.i18n.getMessage("desspeech1command"); // turn off the lights
-	i18nldesspeech1command = i18nldesspeech1command.toLowerCase();
-	var i18nldesspeech2command = chrome.i18n.getMessage("desspeech2command"); // turn on the lights
-	i18nldesspeech2command = i18nldesspeech2command.toLowerCase();
-	var i18nldesspeech3command = chrome.i18n.getMessage("desspeech3command"); // play video
-	i18nldesspeech3command = i18nldesspeech3command.toLowerCase();
-	var i18nldesspeech4command = chrome.i18n.getMessage("desspeech4command"); // pause video
-	i18nldesspeech4command = i18nldesspeech4command.toLowerCase();
-	var i18nldesspeech5command = chrome.i18n.getMessage("desspeech5command"); // browser lamp
-	i18nldesspeech5command = i18nldesspeech5command.toLowerCase();
-
 		recognition.onresult = function(event){
-		var interim_transcript = "";
+		interim_transcript = "";
 		var i;
 		var l = event.results.length;
 		for(i = event.resultIndex; i < l; ++i){
@@ -238,13 +236,14 @@ function speechrecognition(){
 					document.getElementById("myAudio").src = "images/chime-start.wav";
 					var playPromise = document.getElementById("myAudio").play();
 					if(playPromise !== undefined){
-						playPromise.then(_ =>{
+						playPromise.then(() => {
 						// Automatic playback started!
 						// Show playing UI.
 						})
-						.catch(error =>{
+						.catch((e) =>{
 						// Auto-play was prevented
 						// Show paused UI.
+						console.log(e);
 						});
 					}
 
@@ -323,6 +322,8 @@ function speechrecognition(){
 		}
 	}
 
+var speech;
+var speechonly;
 chrome.storage.sync.get(["speech", "speechonly", "speechDomains"], function(response){
 speech = response["speech"];
 speechonly = response["speechonly"];
@@ -334,25 +335,6 @@ speechonly = response["speechonly"];
 function speechstartfunction(){
 // start automatic up
 if(!recognizing){ startButton(event); }
-}
-
-function extractHostname(url){
-    var hostname;
-    //find & remove protocol (http, ftp, etc.) and get hostname
-
-    if(url.indexOf("://") > -1){
-        hostname = url.split("/")[2];
-    }
-    else{
-        hostname = url.split("/")[0];
-    }
-
-    //find & remove port number
-    hostname = hostname.split(":")[0];
-    //find & remove "?"
-    hostname = hostname.split("?")[0];
-
-    return hostname;
 }
 
 var foundtheurlspeech = false;

@@ -28,16 +28,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, contextmenus = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosavertime = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, autostop = null, autostoponly = null, autostopDomains = null, autostopchecklistwhite = null, autostopchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, screenshader = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null;
 /* -------------------------------------------------- */
-chrome.storage.sync.get(["autoplay","eastereggs","shortcutlight","eyen","eyea","eyealist","contextmenus","excludedDomains","nighttime","begintime","endtime","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","ecosaver","ecosavertime","autoplayonly","autoplayDomains","interval","maxquality","autowidthyoutube","customqualityyoutube","atmosphereonly","atmosphereDomains","nighttheme","nightonly","nightDomains","nightenabletheme","autoplaydelay","autoplaydelaytime","atmosvivid","autoplaychecklistwhite","autoplaychecklistblack","nighthover","nightactivetime","nmbegintime","nmendtime","nightmodechecklistblack","nightmodechecklistwhite","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nmcustomx","nmcustomy","lampandnightmode","autostop","autostoponly","autostopDomains","autostopchecklistwhite","autostopchecklistblack","eyechecklistwhite","eyechecklistblack","nightmodebck","nightmodetxt","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolDomains","videotoolchecklistwhite","videotoolchecklistblack","nightmodehyperlink","videovolume","videovolumecolor","videovolumesteps","videovolumelabel","visopacity","videotoolcolor","hovervideo","hovervideoamount","mousespotlights","screenshader","drawatmosfps","aplay","apause","astop","videozoom","playrate","playrateamount","speedtoolbar","atmosontotlmode","vpause","videovolumeposa","videovolumeposb","videovolumeposc","videovolumehold","videovolumealt","nightmodebydomain","nightmodebypage","nightmodegesture","nightmodeswitchhide","nightmodeswitchhidetime","atmosfpsauto","atmosfpsmanual"],function(response){
+chrome.storage.sync.get(["autoplay","eastereggs","shortcutlight","eyen","eyea","eyealist","excludedDomains","nighttime","begintime","endtime","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","ecosaver","ecosavertime","autoplayonly","autoplayDomains","interval","maxquality","autowidthyoutube","customqualityyoutube","atmosphereonly","atmosphereDomains","nighttheme","nightonly","nightDomains","nightenabletheme","autoplaydelay","autoplaydelaytime","atmosvivid","autoplaychecklistwhite","autoplaychecklistblack","nighthover","nightactivetime","nmbegintime","nmendtime","nightmodechecklistblack","nightmodechecklistwhite","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nmcustomx","nmcustomy","lampandnightmode","eyechecklistwhite","eyechecklistblack","nightmodebck","nightmodetxt","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolDomains","videotoolchecklistwhite","videotoolchecklistblack","nightmodehyperlink","videovolume","videovolumecolor","videovolumesteps","videovolumelabel","visopacity","videotoolcolor","hovervideo","hovervideoamount","mousespotlights","drawatmosfps","aplay","apause","astop","videozoom","playrate","playrateamount","speedtoolbar","atmosontotlmode","vpause","videovolumeposa","videovolumeposb","videovolumeposc","videovolumehold","videovolumealt","nightmodebydomain","nightmodebypage","nightmodegesture","nightmodeswitchhide","nightmodeswitchhidetime","atmosfpsauto","atmosfpsmanual"],function(response){
 autoplay = response["autoplay"];
 eastereggs = response["eastereggs"];
 shortcutlight = response["shortcutlight"];
 eyen = response["eyen"];
 eyea = response["eyea"];
 eyealist = response["eyealist"];
-contextmenus = response["contextmenus"];
 excludedDomains = response["excludedDomains"];
 nighttime = response["nighttime"];
 begintime = response["begintime"];
@@ -86,11 +85,6 @@ nmcustom = response["nmcustom"];
 nmcustomx = response["nmcustomx"]; if(nmcustomx == null)nmcustomx = "25px";
 nmcustomy = response["nmcustomy"]; if(nmcustomy == null)nmcustomy = "25px";
 lampandnightmode = response["lampandnightmode"];
-autostop = response["autostop"];
-autostoponly = response["autostoponly"];
-autostopDomains = response["autostopDomains"];
-autostopchecklistwhite = response["autostopchecklistwhite"];
-autostopchecklistblack = response["autostopchecklistblack"];
 eyechecklistwhite = response["eyechecklistwhite"];
 eyechecklistblack = response["eyechecklistblack"];
 nightmodebck = response["nightmodebck"]; if(nightmodebck == null)nightmodebck = "#1e1e1e";
@@ -113,7 +107,6 @@ videotoolcolor = response["videotoolcolor"]; if(videotoolcolor == null)videotool
 hovervideo = response["hovervideo"];
 hovervideoamount = response["hovervideoamount"]; if(hovervideoamount == null)hovervideoamount = "3";
 mousespotlights = response["mousespotlights"];
-screenshader = response["screenshader"];
 drawatmosfps = response["drawatmosfps"]; if(drawatmosfps == null)drawatmosfps = "12";
 aplay = response["aplay"]; if(aplay == null)aplay = true;
 apause = response["apause"]; if(apause == null)apause = true;
@@ -467,7 +460,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 			}
 		}
 	}
-	catch(err){} // I see nothing, that is good
+	catch(e){ console.log(e); } // I see nothing, that is good
 	},1000); // 1000 refreshing it
 
 var cinemahandler;
@@ -631,7 +624,7 @@ var dovisenable = function(){
 
 var dovischoose = function(){
 	var shark = this.getAttribute("data-video");
-	if(document.getElementById("stefanvdvisualizationcanvas" + shark).style.display == "none"){}else{
+	if(document.getElementById("stefanvdvisualizationcanvas" + shark).style.display != "none"){
 		if(visualnumber[shark] >= 3){ visualnumber[shark] = 0; }
 		visualnumber[shark] = visualnumber[shark] + 1;
 	}
@@ -776,6 +769,36 @@ var i18ntitelvideotoolfilter = chrome.i18n.getMessage("titelvideotoolfilter");
 var i18ntitelvideotoolfullwindow = chrome.i18n.getMessage("titelvideotoolfullwindow");
 var i18ntitelvideotoolscreenshot = chrome.i18n.getMessage("titelvideotoolscreenshot");
 
+function videorefreshzoomcanvas(bomo){
+	// refresh the first frame layer
+	var testplayerstatus = document.getElementsByTagName("video")[bomo];
+	if(testplayerstatus.paused === false){
+		testplayerstatus.pause();
+		testplayerstatus.play();
+	}else{
+		testplayerstatus.play();
+		testplayerstatus.pause();
+	}
+}
+
+var intervalRewind;
+function rewind(rewindSpeed,v){
+	window.clearInterval(intervalRewind);
+	var startSystemTime = new Date().getTime();
+	var startVideoTime = v.currentTime;
+
+	intervalRewind = window.setInterval(function(){
+		v.playbackRate = 1.0;
+		if(v.currentTime == 0){
+			window.clearInterval(intervalRewind);
+			v.pause();
+		}else{
+			var elapsed = new Date().getTime() - startSystemTime;
+			v.currentTime = Math.max(startVideoTime - elapsed * rewindSpeed / 1000.0, 0);
+		}
+	}, 30);
+}
+
 function addvisual(){
 var visualvideos = document.getElementsByTagName("video");
 	var i;
@@ -891,18 +914,6 @@ var visualvideos = document.getElementsByTagName("video");
 			}
 		}, 0);
 		// End zoom canvas ---
-
-		function videorefreshzoomcanvas(bomo){
-			// refresh the first frame layer
-			var testplayerstatus = document.getElementsByTagName("video")[bomo];
-			if(testplayerstatus.paused === false){
-				testplayerstatus.pause();
-				testplayerstatus.play();
-			}else{
-				testplayerstatus.play();
-				testplayerstatus.pause();
-			}
-		}
 
 		var newzoombuttonplus = document.createElement("div");
 		newzoombuttonplus.textContent = "+";
@@ -1090,7 +1101,6 @@ var visualvideos = document.getElementsByTagName("video");
 		//---
 		//---
 		if(speedtoolbar == true){
-			var intervalRewind;
 			myElement.addEventListener("play", function(){
 				var bomo = this.getAttribute("data-video");
 				var onevideo = document.getElementsByTagName("video")[bomo];
@@ -1113,23 +1123,6 @@ var visualvideos = document.getElementsByTagName("video");
 				else{ onevideo.playbackRate = 1.0; }
 				window.clearInterval(intervalRewind);
 			});
-
-			function rewind(rewindSpeed,v){
-			window.clearInterval(intervalRewind);
-			var startSystemTime = new Date().getTime();
-			var startVideoTime = v.currentTime;
-
-			intervalRewind = window.setInterval(function(){
-				v.playbackRate = 1.0;
-				if(v.currentTime == 0){
-					window.clearInterval(intervalRewind);
-					v.pause();
-				}else{
-					var elapsed = new Date().getTime() - startSystemTime;
-					v.currentTime = Math.max(startVideoTime - elapsed * rewindSpeed / 1000.0, 0);
-				}
-			}, 30);
-			}
 
 			var newspeedpanel = document.createElement("div");
 			newspeedpanel.setAttribute("id","stefanvdspeedpanel" + i);
@@ -1339,7 +1332,7 @@ var visualvideos = document.getElementsByTagName("video");
 		}
 		//---
 
-	if($("stefanvdvisualizationcanvas" + i)){}else{
+	if($("stefanvdvisualizationcanvas" + i) == null){
 		var newvisualizationvideo = document.createElement("canvas");
 		newvisualizationvideo.setAttribute("id","stefanvdvisualizationcanvas" + i);
 		newvisualizationvideo.setAttribute("class","stefanvdvisualization");
@@ -1395,7 +1388,7 @@ var visualvideos = document.getElementsByTagName("video");
 
 		var newonytsbutton = document.createElement("div");
 		newonytsbutton.setAttribute("id","stefanvdyoutubebutton" + i);
-		newonytsbutton.addEventListener("click", function(){ window.open("https://www.youtube.com/c/turnoffthelights?sub_confirmation=1","_blank"); }, false);
+		newonytsbutton.addEventListener("click", function(){ window.open(linkyoutube,"_blank"); }, false);
 		newonytsbutton.setAttribute("data-video",i);
 		newonytsbutton.style.background = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACm0lEQVRoQ+1ZgXETMRDcqwA6gA6gA5IKAhUAHaQD0klCB0kFJB1ABYQOoIJl9kfnkZ3/l/SR/O+MbuZnbL9s3d7une7Phhdi9kJwoAPZGpOdkc5IowicnLRIvgbwAcBHM/vqcTkJICTfArgAcCYAO+fNdv5vFgjJ98F5Oa7XT8y2CoSkoi7HFXmxMGubARL0Hjsv/U/ZHwA/A0vDmlWBRHr/MiWZCMkvADcAbs3skaSY+rFajpAcqky45iTzD8C9HA/O/43pOTqQuEQG51OSGZw3MwGYtKMAmSqRE15JMnL+xsyk+yxrBiSnREYe3rlspPcszw8WVQVSUCKld0nFZbOn96ZAQoRfjWyiBPX6ntK7J6oAVLVsRkhqc1WYEvMSeV+i95INfG0LINL7IJulel8LiE7VrBK5xMHc7yxl5NzMqus81+mxdR1IZ+Q5+qnRohyU354jjQjB0mRXMxe3FeqP1KHqDFnFlgKZc3ZoQwA8nNqBOAdKzOkpTqCyW/IllJYwomnFWFMYN41jTaX7NcgvtC7VJZgNJCdKJJmzLuSXt/F3Zna8Nj7lYHgK/B2tO4+GZu8S349BrftgNUdtAOmTQI14UnmlPu57SV61lNansYEBSSX/5xTD4b7Y8c56Nq9qA5FEPOKqUuoAdvonqXnV9YH8dF+f6ynzTYYEtceTvKoNZG9IFpJaDMhZ3dPlppIcv9fp7BVQwFJ55aVdoOoP6EheAfiWiKyGD2dzORDmXz64E+BUaRewutN4kpcABGhs8wcAlyWJrKCQjEGlJFhv9htFVHLR5f3Ys0/4MNFxYKMSXHWInVnJ9pZFeSX57Ur7yQGJUQUVDOeVmalgDLbZf6xKmetASiPWen1npHWES3+/M1Iasdbr/wNE7m5C7M5pcAAAAABJRU5ErkJggg==)";
 		newonytsbutton.title = i18ntitelvideotoolsubscribe;
@@ -1555,13 +1548,12 @@ var visualvideos = document.getElementsByTagName("video");
 		if(tempwidthvideo <= 360){ newvcpartiarange.style.cssText = "display:none!important"; }
 		newonvispanel.appendChild(newvcpartiarange);
 
-		var lastgovideofulltab;
 		var newonfwbutton = document.createElement("div");
 		newonfwbutton.setAttribute("id","stefanvdyfullwindowbutton" + i);
 		newonfwbutton.setAttribute("data-video",i);
 		newonfwbutton.addEventListener("click", function(){
 			var greenvis = this.getAttribute("data-video");
-			lastgovideofulltab = greenvis;
+
 			windowfullaction();
 			function windowfullaction(){
 			dovisfull(greenvis);
@@ -1958,8 +1950,7 @@ if(eastereggs == true){
 	var lightareoff = $("stefanvdlightareoff1");
 	if(lightareoff != null){
 		// shortcut key T
-		if($("stefanvdtheater")){}
-		else{
+		if($("stefanvdtheater") == null){
 		window.alert(chrome.i18n.getMessage("eastereggsquestion"));
 		var newimg = document.createElement("img");
 		newimg.setAttribute("id","stefanvdtheater");
@@ -2047,10 +2038,9 @@ var centralscroll = false;
 //---
 function checkforscreensaver(){
 	if(centralmove == false && centralkey == false && centralscroll == false){
-		if(screenactiondone == true){}else{
+		if(screenactiondone != true){
 			var blackon = $("stefanvdlightareoff1");
-			if(blackon){}
-			else{
+			if(blackon == null){
 				screenactiondone = true;
 				eyeprotection();
 				//	outscreensaver();
@@ -2075,7 +2065,7 @@ var ecomousemove = function(){
 		// remove the dark layer, and see back the regular page
 		if(screenactiondone == true){
 			var blackon = $("stefanvdlightareoff1");
-			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }else{}
+			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }
 		}
 	}
 	else{
@@ -2100,7 +2090,7 @@ var ecomousekey = function(){
 		// remove the dark layer, and see back the regular page
 		if(screenactiondone == true){
 			var blackon = $("stefanvdlightareoff1");
-			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }else{}
+			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }
 		}
 	}
 	else{
@@ -2125,7 +2115,7 @@ var ecomousescroll = function(){
 		// remove the dark layer, and see back the regular page
 		if(screenactiondone == true){
 			var blackon = $("stefanvdlightareoff1");
-			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }else{}
+			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }
 		}
 	}
 	else{
@@ -2452,7 +2442,7 @@ try{
 	if(typeof k == "undefined"){
 	return;
 	}
-}catch(err){}
+}catch(e){ console.log(e); }
 
     var totlshowtime = playerid;
 	// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
@@ -2558,7 +2548,7 @@ try{
 					// create the vivid effect layer (again)
 					if(totlshowtime.getAttribute("data-video") != null){
 
-						if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}else{
+						if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 						// update background html video
 						var path = [];
 						var el = totlshowtime;
@@ -2570,8 +2560,7 @@ try{
 							else{
 								var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
 							}
-							if(yta == "auto"){}
-							else{
+							if(yta != "auto"){
 								// if it is not the <video> player element,
 								// and if otherdown class is inside, then remove it
 								if(el.tagName != "VIDEO"){
@@ -2609,7 +2598,7 @@ try{
 			var sourceHeight = totlshowtime.videoHeight;
 
 			var totlcheckcanvas = $("totlCanvas" + k + "");
-			if(totlcheckcanvas){}else{
+			if(totlcheckcanvas == null){
 			var totlnewcanvas = document.createElement("canvas");
 			totlnewcanvas.setAttribute("id","totlCanvas" + k + "");
 			totlnewcanvas.width = "4";
@@ -2814,7 +2803,7 @@ var nightcssobserver = new MutationObserver(function(mutations){
     mutations.forEach(function(mutation){
       if((mutation.type === "attributes") && (mutation.attributeName === "class")){
 		// for the night mode live update
-		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}else{
+		if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 		if(isitdark == true){
 			//console.log("Yeah " +mutation.target.className);
 			var na = mutation.target;
@@ -2860,7 +2849,9 @@ function convertwebnight(node){
 				startshow = false;
 			}
 		}else{
-			if(node.tagName == "IMG" || node.tagName == "STYLE" || node.tagName == "SCRIPT" || node.tagName == "HEAD" || node.tagName == "META" || node.tagName == "LINK" || node.tagName == "TITLE" || node.tagName == "IFRAME" || node.tagName == "svg" || node.tagName == "path" || node.tagName == "PICTURE" || node.tagName == "SOURCE" || node.tagName == "VIDEO" || node.tagName == "AUDIO" || node.tagName == "FIGURE" || node.tagName == "A" || node.tagName == "CANVAS" || node.tagName == "MAP" || node.tagName == "TRACK" || node.tagName == "AREA"){}
+			if(node.tagName == "IMG" || node.tagName == "STYLE" || node.tagName == "SCRIPT" || node.tagName == "HEAD" || node.tagName == "META" || node.tagName == "LINK" || node.tagName == "TITLE" || node.tagName == "IFRAME" || node.tagName == "svg" || node.tagName == "path" || node.tagName == "PICTURE" || node.tagName == "SOURCE" || node.tagName == "VIDEO" || node.tagName == "AUDIO" || node.tagName == "FIGURE" || node.tagName == "A" || node.tagName == "CANVAS" || node.tagName == "MAP" || node.tagName == "TRACK" || node.tagName == "AREA"){
+				// do nothing
+			}
 			else{
 
 				// if night class is already added, skip this node
@@ -2926,14 +2917,16 @@ function webgonightmode(){
 		}
 		if($("stefanvdnightthemecheckbox")){ $("stefanvdnightthemecheckbox").checked = true; }
 
-		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){}else{
+		if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 
 			if(document.getElementsByTagName("html")[0].classList.contains("stefanvdnightbck") || document.getElementsByTagName("html")[0].classList.contains("stefanvdnight")){
+				// do nothing
 			}else{
 			document.getElementsByTagName("html")[0].classList.add("stefanvdnightbck", "stefanvdnight");
 			}
 
 			if(document.body.classList.contains("stefanvdnightbck") || document.body.classList.contains("stefanvdnight")){
+				// do nothing
 			}else{
 			document.body.classList.add("stefanvdnightbck", "stefanvdnight");
 			}
@@ -3785,7 +3778,7 @@ var pausenightfullscreen = function(){
 };
 
 function nightfunction(){
-	if($("stefanvdnighttheme")){}else{
+	if($("stefanvdnighttheme") == null){
 		var newnight = document.createElement("label");
 		newnight.setAttribute("id","stefanvdnighttheme");
 		document.body.appendChild(newnight);
@@ -4191,7 +4184,7 @@ function drawReflection(reflectionid,ritem){
 			}
 		return false;
 		}
-	}catch(err){}
+	}catch(e){ console.log(e); }
 
 	try{
 		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
@@ -4201,7 +4194,7 @@ function drawReflection(reflectionid,ritem){
 		}else{
 			reflectionid.style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + calcreflection + ", transparent))";
 		}
-	}catch(err){}
+	}catch(e){ console.log(e); }
 }
 
 var startreflection;
@@ -4228,7 +4221,7 @@ function runreflectioncheck(){
 		}
 
 		}
-		catch(err){} // I see nothing, that is good
+		catch(e){ console.log(e); } // I see nothing, that is good
 		},20); // 20 refreshing it
 	}
 } // end reflection
@@ -4734,13 +4727,12 @@ var ythduq = function updateQuality(){
 };
 
 function injectScript(codetext){
-var messagescript = $("ytScriptMessage");
-if(messagescript){}
-else{
-	var ythdscript = document.createElement("script");
-	ythdscript.setAttribute("id", "ytScriptMessage");
-	ythdscript.textContent = codetext;
-	document.head.appendChild(ythdscript);
+	var messagescript = $("ytScriptMessage");
+	if(messagescript == null){
+		var ythdscript = document.createElement("script");
+		ythdscript.setAttribute("id", "ytScriptMessage");
+		ythdscript.textContent = codetext;
+		document.head.appendChild(ythdscript);
 	}
 }
 
@@ -4786,7 +4778,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 		if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
 	}else if(request.action == "goaddlightoff"){
 		var blackon = $("stefanvdlightareoff1");
-		if(blackon){}else{ chrome.runtime.sendMessage({name: "automatic"}); }
+		if(blackon == null){ chrome.runtime.sendMessage({name: "automatic"}); }
 	}
 	else if(request.action == "masterclick"){
 		var blackon = $("stefanvdlightareoff1");

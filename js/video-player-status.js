@@ -27,6 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+var ytCinema;
 (ytCinema = {
 	players: {objs: [], active: 0},
 	messageEvent: new Event("ytCinemaMessage"),
@@ -57,7 +58,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						initvideoinject();
 					}
 				}
-				if(typeof mutation.addedNodes == "VIDEO" || typeof mutation.removedNodes == "VIDEO"){
+				if(mutation.addedNodes == "VIDEO" || mutation.removedNodes == "VIDEO"){
 					initvideoinject();
 				}
 			});
@@ -111,25 +112,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				setPlayerEvents(htmlplayer);
 
 				(function(o){
-					var triggerDOMChanges = function(){
-						var htmlplayer = document.getElementsByTagName("video") || null;
+					var htmlplayer = document.getElementsByTagName("video") || null;
 
-						if(htmlplayer == null || htmlplayer.length === 0){ o.players.active = 0; if(o.players.active < 1){ o.playerStateChange(0); }return; }
+					if(htmlplayer == null || htmlplayer.length === 0){ o.players.active = 0; if(o.players.active < 1){ o.playerStateChange(0); }return; }
 
-						o.players.active = 0;
+					o.players.active = 0;
 
-						var j;
-						var l = htmlplayer.length;
-						for(j = 0; j < l; j++){
-							if(!htmlplayer[j].paused && !htmlplayer[j].ended){
-								o.players.active += 1;
-							}
+					var j;
+					var l = htmlplayer.length;
+					for(j = 0; j < l; j++){
+						if(!htmlplayer[j].paused && !htmlplayer[j].ended){
+							o.players.active += 1;
 						}
-						if(o.players.active < 1){ o.playerStateChange(0); }
+					}
+					if(o.players.active < 1){ o.playerStateChange(0); }
 
-						setPlayerEvents(htmlplayer);
-					};
-
+					setPlayerEvents(htmlplayer);
 				}(this.ytCinema));
 			}
 		}

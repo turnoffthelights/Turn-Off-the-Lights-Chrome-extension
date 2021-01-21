@@ -65,10 +65,11 @@ navigator.permissions.query({name:"microphone"})
   };
 });
 
-	if(!("webkitSpeechRecognition" in window)){
+	const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+	if(typeof SpeechRecognition === "undefined"){
 	// not supported
 	}else{
-		recognition = new webkitSpeechRecognition();
+		recognition = new SpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
 
