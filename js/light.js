@@ -29,14 +29,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 // settings
-var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, noflash = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
+var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
 // html elements used
 var div = null, video = null;
 // block lights
 var activatelightsoff = true;
 
 /////////// Option page settings
-chrome.storage.sync.get(["suggestions","playlist","videoheadline","head","infobar","likebutton","sharebutton","viewcount","addvideobutton","likebar","flash","noflash","hardflash","no360youtube","mousespotlights","titleinvertcolor"], function(response){
+chrome.storage.sync.get(["suggestions","playlist","videoheadline","head","infobar","likebutton","sharebutton","viewcount","addvideobutton","likebar","flash","hardflash","no360youtube","mousespotlights","titleinvertcolor"], function(response){
 suggestions = response["suggestions"];
 playlist = response["playlist"];
 videoheadline = response["videoheadline"];
@@ -48,7 +48,6 @@ viewcount = response["viewcount"];
 addvideobutton = response["addvideobutton"];
 likebar = response["likebar"];
 flash = response["flash"];
-noflash = response["noflash"];
 hardflash = response["hardflash"];
 no360youtube = response["no360youtube"];
 mousespotlights = response["mousespotlights"];
@@ -674,8 +673,8 @@ for(i = 0; i < l; i++){
 
 //-----------------------------------------------
 
-if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){} // flash detection off for youtube.com
-else{
+if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+// flash detection off for youtube.com
 // video detection: iframe object embed
 var embedplayer = document.querySelectorAll("iframe,object,embed");
 var i;
@@ -1318,9 +1317,8 @@ function lightsgoonoroff(){
 		var oldspoty = 0;
 		function moveSpot(e){
 		var x = 0; var y = 0;
-		if(!e){var e = window.event;}
-		if(e.clientX || e.clientY)
-		{
+		if(!e){ var e = window.event; }
+		if(e.clientX || e.clientY){
 			x = e.clientX; y = e.clientY;
 			oldspotx = x; oldspoty = y;
 		}
@@ -1443,7 +1441,7 @@ if(stretchable){
 			customview.style.left = initx + "px"; customview.style.top = inity + "px";
 			document.body.appendChild(customview);
 		}
-		catch(err){}
+		catch(e){ console.log(e); }
 		});
 		obj.addEventListener("mouseup", function(){ initx = false; inity = false; });
 		if(initx){
@@ -1459,8 +1457,7 @@ if(stretchable){
 
 		// create corner
 		var cornerison = $("stefanvdlightcorner");
-		if(cornerison){}
-		else{
+		if(cornerison == null){
 			var newcornerdiv = document.createElement("div");
 			newcornerdiv.setAttribute("id","stefanvdlightcorner");
 			document.body.appendChild(newcornerdiv);
@@ -1738,7 +1735,7 @@ if(stretchable){
 
 		// blur effect
 		if(blur == true){
-			if($("stefanvdblurimage")){}else{
+			if($("stefanvdblurimage") == null){
 			var newblur = document.createElement("div");
 			newblur.setAttribute("id","stefanvdblurimage");
 			newblur.style.webkitBackdropFilter = "blur(6px)";
@@ -2508,5 +2505,5 @@ var div = document.querySelectorAll("div.stefanvdlightareoff");
 var i;
 var l = div.length;
 for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
-}catch(e){}
+}catch(e){ console.log(e); }
 }

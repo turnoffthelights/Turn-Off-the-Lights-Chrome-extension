@@ -701,7 +701,7 @@ var stop = false;
 var frameCount = 0;
 var fps, fpsInterval, startTime, now, then, elapsed;
 
-function stopAnimation(e){
+function stopAnimation(){
     window.cancelAnimationFrame(requestId);
 }
 
@@ -747,7 +747,7 @@ function animate(){
             }
         }
 	}
-	catch(err){} // I see nothing, that is good
+	catch(e){ console.log(e); } // I see nothing, that is good
 
     // TESTING...Report #seconds since start and achieved fps.
     //var sinceStart = now - startTime;

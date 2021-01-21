@@ -74,14 +74,14 @@ function autostopfunction(){
 				}
 			}
 			// inside it
-			var i;
+			var k;
 			var l = mutation.addedNodes.length;
-			for(i = 0; i < l; i++){
-				if(mutation.addedNodes[i]){
-					var j;
-					var lac = mutation.addedNodes[i].childNodes.length;
-					for(j = 0; j < lac; j++){
-						var detail = mutation.addedNodes[i].childNodes[j];
+			for(i = 0; k < l; k++){
+				if(mutation.addedNodes[k]){
+					var n;
+					var lac = mutation.addedNodes[k].childNodes.length;
+					for(n = 0; n < lac; n++){
+						var detail = mutation.addedNodes[k].childNodes[n];
 						if(detail.nodeName == "VIDEO"){
 							autostopdetectionstart();
 						}
@@ -127,15 +127,16 @@ function autostopdetectionstart(){
 		if(selectedvideo.paused == false){
 			var playPromise = selectedvideo.play();
 			if(playPromise !== undefined){
-			playPromise.then(_ => {
+			playPromise.then(() => {
 				// Automatic playback started!
 				// Show playing UI.
 				// We can now safely pause video...
 				selectedvideo.pause(); selectedvideo.currentTime = 0;
 			})
-			.catch(error => {
+			.catch((e) => {
 				// Auto-play was prevented
 				// Show paused UI.
+				console.log(e);
 			});
 			}
 		}
@@ -158,16 +159,17 @@ function autostopdetectionstart(){
 						if(!ev.target.paused){
 							var playPromise = ev.target.play();
 							if(playPromise !== undefined){
-							playPromise.then(_ => {
+							playPromise.then(() => {
 								// Automatic playback started!
 								// Show playing UI.
 								// We can now safely pause video...
 								ev.target.pause(); ev.target.currentTime = 0;
 								stopTracking();
 							})
-							.catch(error => {
+							.catch((e) => {
 								// Auto-play was prevented
 								// Show paused UI.
+								console.log(e);
 							});
 							}
 						}
@@ -185,19 +187,20 @@ function autostopdetectionstart(){
 		selectedvideo.addEventListener("pause", stopTracking);
 
 		// design panel
+		var d; var w; var h; var t; var st;
 		var myElement = document.getElementsByTagName("video")[i];
 		if(myElement.currentStyle){
-			var d = myElement.currentStyle["display"];
-			var w = myElement.currentStyle["width"];
-			var h = myElement.currentStyle["height"];
-			var t = myElement.currentStyle["top"];
+			d = myElement.currentStyle["display"];
+			w = myElement.currentStyle["width"];
+			h = myElement.currentStyle["height"];
+			t = myElement.currentStyle["top"];
 		}
 		else if(window.getComputedStyle){
-			var st = document.defaultView.getComputedStyle(myElement, null);
-			var d = st.getPropertyValue("display");
-			var w = st.getPropertyValue("width");
-			var h = st.getPropertyValue("height");
-			var t = st.getPropertyValue("top");
+			st = document.defaultView.getComputedStyle(myElement, null);
+			d = st.getPropertyValue("display");
+			w = st.getPropertyValue("width");
+			h = st.getPropertyValue("height");
+			t = st.getPropertyValue("top");
 		}
 
 		var visposition = getPosition(myElement);
@@ -216,11 +219,12 @@ function autostopdetectionstart(){
 		do{
 			var qq = path.unshift(myElement.nodeName);
 
+			var adisplay;
 			if(myElement.currentStyle){
-				var adisplay = qq.currentStyle["display"];
+				adisplay = qq.currentStyle["display"];
 			}else{
-				var st = document.defaultView.getComputedStyle(myElement, null);
-				var adisplay = st.getPropertyValue("display");
+				st = document.defaultView.getComputedStyle(myElement, null);
+				adisplay = st.getPropertyValue("display");
 			}
 			if(adisplay == "none"){
 				newautostoppanel.style.display = "none";
@@ -248,16 +252,17 @@ function autostopdetectionstart(){
 			document.getElementsByTagName("video")[rock].setAttribute("data-stopvideo","false");
 			var playPromise = document.getElementsByTagName("video")[rock].play();
 			if(playPromise !== undefined){
-				playPromise.then(_ => {
+				playPromise.then(() => {
 					// Automatic playback started!
 				})
-				.catch(error => {
+				.catch((e) => {
 					// Auto-play was prevented
+					console.log(e);
 				});
 			}
 			}
 		},false);
-		newautostoppanel.addEventListener("contextmenu", event => event.preventDefault());
+		newautostoppanel.addEventListener("contextmenu", function(e){ e.preventDefault(); }, false);
 		document.body.appendChild(newautostoppanel);
 
 		if(autostopred == true){
@@ -295,33 +300,35 @@ var l = cusid_ele.length;
 for(i = 0; i < l; ++i){
 	var item = cusid_ele[i];
 	var myElement = document.getElementsByTagName("video")[i];
+	var d; var w; var h; var t; var st;
 	if(myElement){
 		if(myElement.currentStyle){
-			var d = myElement.currentStyle["display"];
-			var w = myElement.currentStyle["width"];
-			var h = myElement.currentStyle["height"];
-			var t = myElement.currentStyle["top"];
+			d = myElement.currentStyle["display"];
+			w = myElement.currentStyle["width"];
+			h = myElement.currentStyle["height"];
+			t = myElement.currentStyle["top"];
 		}
 		else if(window.getComputedStyle){
-			var st = document.defaultView.getComputedStyle(myElement, null);
-			var d = st.getPropertyValue("display");
-			var w = st.getPropertyValue("width");
-			var h = st.getPropertyValue("height");
-			var t = st.getPropertyValue("top");
+			st = document.defaultView.getComputedStyle(myElement, null);
+			d = st.getPropertyValue("display");
+			w = st.getPropertyValue("width");
+			h = st.getPropertyValue("height");
+			t = st.getPropertyValue("top");
 		}
 
-		visposition = getPosition(myElement);
+		var visposition = getPosition(myElement);
 
 		// if previous path is none, then hide it too
 		var path = [];
 		do{
 			var qq = path.unshift(myElement.nodeName);
 
+			var adisplay;
 			if(myElement.currentStyle){
-				var adisplay = qq.currentStyle["display"];
+				adisplay = qq.currentStyle["display"];
 			}else{
-				var st = document.defaultView.getComputedStyle(myElement, null);
-				var adisplay = st.getPropertyValue("display");
+				st = document.defaultView.getComputedStyle(myElement, null);
+				adisplay = st.getPropertyValue("display");
 			}
 			if(adisplay == "none"){
 				item.style.display = "none";

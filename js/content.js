@@ -28,9 +28,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, lampandnightmode = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null;
 /* -------------------------------------------------- */
-chrome.storage.sync.get(["autoplay","eastereggs","shortcutlight","eyen","eyea","eyealist","excludedDomains","nighttime","begintime","endtime","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","ecosaver","ecosavertime","autoplayonly","autoplayDomains","interval","maxquality","autowidthyoutube","customqualityyoutube","atmosphereonly","atmosphereDomains","nighttheme","nightonly","nightDomains","nightenabletheme","autoplaydelay","autoplaydelaytime","atmosvivid","autoplaychecklistwhite","autoplaychecklistblack","nighthover","nightactivetime","nmbegintime","nmendtime","nightmodechecklistblack","nightmodechecklistwhite","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nmcustomx","nmcustomy","lampandnightmode","eyechecklistwhite","eyechecklistblack","nightmodebck","nightmodetxt","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolDomains","videotoolchecklistwhite","videotoolchecklistblack","nightmodehyperlink","videovolume","videovolumecolor","videovolumesteps","videovolumelabel","visopacity","videotoolcolor","hovervideo","hovervideoamount","mousespotlights","drawatmosfps","aplay","apause","astop","videozoom","playrate","playrateamount","speedtoolbar","atmosontotlmode","vpause","videovolumeposa","videovolumeposb","videovolumeposc","videovolumehold","videovolumealt","nightmodebydomain","nightmodebypage","nightmodegesture","nightmodeswitchhide","nightmodeswitchhidetime","atmosfpsauto","atmosfpsmanual"],function(response){
+chrome.storage.sync.get(["autoplay","eastereggs","shortcutlight","eyen","eyea","eyealist","excludedDomains","nighttime","begintime","endtime","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","ecosaver","ecosavertime","autoplayonly","autoplayDomains","interval","maxquality","autowidthyoutube","customqualityyoutube","atmosphereonly","atmosphereDomains","nighttheme","nightonly","nightDomains","nightenabletheme","autoplaydelay","autoplaydelaytime","atmosvivid","autoplaychecklistwhite","autoplaychecklistblack","nighthover","nightactivetime","nmbegintime","nmendtime","nightmodechecklistblack","nightmodechecklistwhite","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nmcustomx","nmcustomy","eyechecklistwhite","eyechecklistblack","nightmodebck","nightmodetxt","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolDomains","videotoolchecklistwhite","videotoolchecklistblack","nightmodehyperlink","videovolume","videovolumecolor","videovolumesteps","videovolumelabel","visopacity","videotoolcolor","hovervideo","hovervideoamount","mousespotlights","drawatmosfps","aplay","apause","astop","videozoom","playrate","playrateamount","speedtoolbar","atmosontotlmode","vpause","videovolumeposa","videovolumeposb","videovolumeposc","videovolumehold","videovolumealt","nightmodebydomain","nightmodebypage","nightmodegesture","nightmodeswitchhide","nightmodeswitchhidetime","atmosfpsauto","atmosfpsmanual"],function(response){
 autoplay = response["autoplay"];
 eastereggs = response["eastereggs"];
 shortcutlight = response["shortcutlight"];
@@ -84,7 +84,6 @@ nmbottomleft = response["nmbottomleft"];
 nmcustom = response["nmcustom"];
 nmcustomx = response["nmcustomx"]; if(nmcustomx == null)nmcustomx = "25px";
 nmcustomy = response["nmcustomy"]; if(nmcustomy == null)nmcustomy = "25px";
-lampandnightmode = response["lampandnightmode"];
 eyechecklistwhite = response["eyechecklistwhite"];
 eyechecklistblack = response["eyechecklistblack"];
 nightmodebck = response["nightmodebck"]; if(nightmodebck == null)nightmodebck = "#1e1e1e";
@@ -3826,7 +3825,7 @@ function nightfunction(){
 		newnightspanblockspan.textContent = "≡";
 		newnightspanblock.appendChild(newnightspanblockspan);
 
-		$("stefanvdnighttheme").addEventListener("change", function(e){ gogonightmode(); }, false);
+		$("stefanvdnighttheme").addEventListener("change", function(){ gogonightmode(); }, false);
 
 		// automatically hide the switch
 		if(nightmodeswitchhide == true){
@@ -3866,7 +3865,7 @@ function showswitchtricker(){
 
 			if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
 			nightfunction();
-			} else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
+			}else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
 			nightfunction();
 			}
 			}
@@ -3964,7 +3963,7 @@ function timergonighttricker(){
 
 		if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
 			gogonightmode();
-		} else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
+		}else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
 			gogonightmode();
 		}
 	}
@@ -3980,7 +3979,7 @@ var dragobject = {z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : 
 		document.addEventListener("mousedown", this.drag);
 		document.addEventListener("mouseup", this.dragup);
 	},
-	dragup:function(e){
+	dragup:function(){
 		this.dragapproved = 0;
 		// save the x and y value
 		if(nmcustom == true){
@@ -4038,7 +4037,7 @@ addswitchdrag();
 var bnode = document.body;
 var presstimer = null;
 
-var cancelgesture = function(e){
+var cancelgesture = function(){
     if(presstimer !== null){
         clearTimeout(presstimer);
         presstimer = null;
@@ -4248,11 +4247,11 @@ var doscroll = function(e){
 			window.addEventListener("keydown", onKeyDown, true);
 			window.addEventListener("keyup", onKeyUp, true);
 
-			function onKeyDown(evt){
+			function onKeyDown(){
 				rundoscrollfunc = true;
 			}
 
-			function onKeyUp(evt){
+			function onKeyUp(){
 				rundoscrollfunc = false;
 			}
 		}else{
@@ -4517,7 +4516,7 @@ catch(e){ console.error(e); }
 
 addvolume();
 
-var myListenervolume = function(event){
+var myListenervolume = function(){
 	var elements = document.getElementsByClassName("totlmousewheelvideo");
 	while(elements.length > 0){
 		elements[0].parentNode.removeChild(elements[0]);
@@ -4532,7 +4531,7 @@ window.addEventListener("resize", myListenerWithContextvolume);
 if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.body;
-		observervideovolume = new MutationObserver(function(mutations, observer){
+		observervideovolume = new MutationObserver(function(mutations){
 			mutations.forEach(function(mutation){
 
 				if(mutation.target.tagName == "VIDEO"){
@@ -4636,6 +4635,16 @@ for(z = 0; z < q; z++){
 }
 }
 
+function injectScript(codetext){
+	var messagescript = $("ytScriptMessage");
+	if(messagescript == null){
+		var ythdscript = document.createElement("script");
+		ythdscript.setAttribute("id", "ytScriptMessage");
+		ythdscript.textContent = codetext;
+		document.head.appendChild(ythdscript);
+	}
+}
+
 // YouTube auto width the video player content
 // URL control for YouTube only
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
@@ -4669,17 +4678,17 @@ var yt = yt;
 yt = yt || {};
 yt.playerConfig = {"player_wide": 1};
 document.cookie = "wide=1; domain=.youtube.com; expires=31536e3; path=/";
-function $(a){ return document.getElementById(a); }
+
 // with playlist hide
 if($("watch7-container")){ $("watch7-container").className = "watch-wide watch-playlist-collapsed"; }
 // YouTube wide June 2015
 if($("page")){ $("page").className = "  watch clearfix watch-stage-mode watch-wide"; }
 }
 
+var mplayer;
 if(customqualityyoutube == true){
 //see http://code.google.com/apis/youtube/flash_api_reference.html#setPlaybackQuality
 // one of "highres", "hd1080", "hd720", "large", "medium", "small" or "default" to let youtube pick
-
 var ythdinit = function onYouTubePlayerReady(player){
 	try{
 		donesetquality = false;
@@ -4726,16 +4735,6 @@ var ythduq = function updateQuality(){
 	donesetquality = true;
 };
 
-function injectScript(codetext){
-	var messagescript = $("ytScriptMessage");
-	if(messagescript == null){
-		var ythdscript = document.createElement("script");
-		ythdscript.setAttribute("id", "ytScriptMessage");
-		ythdscript.textContent = codetext;
-		document.head.appendChild(ythdscript);
-	}
-}
-
 var codetext = "var maxquality = \"" + maxquality + "\";\n";
 codetext += (ythdinit.toString() + "\n");
 codetext += (ythdstatechange.toString() + "\n");
@@ -4746,7 +4745,7 @@ injectScript(codetext);
 
 } // end check youtube.com website
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
+chrome.runtime.onMessage.addListener(function(request){
 	if(request.action == "goinnightmode"){
 		if(request.value == "day"){
 			sun = false; gogonightmode(); // sun go up
@@ -4800,9 +4799,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendMessage){
 		});
 	}
 	else if(request.action == "goenablenightmode"){
-		chrome.storage.sync.get(["nighttheme","lampandnightmode","nightmodeswitchhide","nightmodeswitchhidetime","nightonly","nightmodechecklistwhite","nightmodechecklistblack","nightDomains","nightmodebydomain","nightmodebypage","nightactivetime","nmbegintime","nmendtime","nightenabletheme","nighthover","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom"], function(items){
+		chrome.storage.sync.get(["nighttheme","nightmodeswitchhide","nightmodeswitchhidetime","nightonly","nightmodechecklistwhite","nightmodechecklistblack","nightDomains","nightmodebydomain","nightmodebypage","nightactivetime","nmbegintime","nmendtime","nightenabletheme","nighthover","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom"], function(items){
 			nighttheme = items["nighttheme"];
-			lampandnightmode = items["lampandnightmode"];
 			nightmodeswitchhide = items["nightmodeswitchhide"];
 			nightmodeswitchhidetime = items["nightmodeswitchhidetime"];
 			nightonly = items["nightonly"];

@@ -383,7 +383,7 @@ if(speech == true){
 			}
 		});
 		// on highlight
-		chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
+		chrome.tabs.onHighlighted.addListener(function(o){ var tabId = o.tabIds[0];
 			chrome.tabs.get(tabId, function(tab){
 				if(tab.url){
 					if(tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab){
