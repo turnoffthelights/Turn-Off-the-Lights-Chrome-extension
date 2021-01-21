@@ -98,7 +98,6 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
     }
 
     // search if today date is there
-    var myJSON = JSON.stringify(analytics);
     var resultObject = search(today, analytics);
     if(typeof resultObject === "undefined"){
       var array = [{name:today, details:{active:0, time:0, day:{0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0}}}
@@ -120,8 +119,8 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
     }
   }else{
     // if empty, create this empty day
-    var array = [{name:today, details:{active:0, time:0, day:{0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0}}}];
-    chrome.storage.sync.set({"analytics":array});
+    var emptyarray = [{name:today, details:{active:0, time:0, day:{0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0,11:0,12:0,13:0,14:0,15:0,16:0,17:0,18:0,19:0,20:0,21:0,22:0,23:0}}}];
+    chrome.storage.sync.set({"analytics":emptyarray});
   }
   if(items["siteengagement"]){
     siteengagement = items["siteengagement"];
@@ -136,9 +135,8 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
     }
 
     // search if today date is there
-    var myJSON = JSON.stringify(siteengagement);
-    var resultObject = search(today, siteengagement);
-    if(typeof resultObject === "undefined"){
+    var todayresultObject = search(today, siteengagement);
+    if(typeof todayresultObject === "undefined"){
       var site = [{name:today}
       ];
       var finalsite = siteengagement.concat(site);
@@ -157,8 +155,8 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
 
     }
   }else{
-    var site = [{name:today}];
-    chrome.storage.sync.set({"siteengagement":site});
+    var todaysite = [{name:today}];
+    chrome.storage.sync.set({"siteengagement":todaysite});
   }
   }
 });
@@ -185,6 +183,12 @@ var observeDOM = (function(){
   };
 })();
 
+function setTime(){
+  if(document.visibilityState === "visible"){
+    ++totalSeconds;
+  }
+}
+
 var element = document.querySelector("#stefanvdlightareoff1");
 var in_dom = document.body.contains(element);
 if(document.body.contains(element)){
@@ -195,6 +199,9 @@ if(document.body.contains(element)){
 var totalSeconds = 0;
 var refreshIntervalId;
 var taskaddseconds = false; // default false, when refresh the web page it save correct the value
+
+var resultObject;
+var currentseconds;
 observeDOM(document.body,function(){
 
 if(document.getElementById("stefanvdlightareoff1")){
@@ -207,8 +214,7 @@ if(document.getElementById("stefanvdlightareoff1")){
         if(seeanalytics == true){
         if(items["analytics"]){
           analytics = items["analytics"];
-          var myJSON = JSON.stringify(analytics);
-          var resultObject = search(today, analytics);
+          resultObject = search(today, analytics);
           var rest = JSON.stringify(resultObject["details"]["active"]);
           var currentnumber = parseInt(rest);
           currentnumber += 1;
@@ -227,15 +233,10 @@ if(document.getElementById("stefanvdlightareoff1")){
           chrome.runtime.sendMessage({name: "badgeon"});
           // timer
           refreshIntervalId = window.setInterval(setTime, 1000);
-          function setTime(){
-            if(document.visibilityState === "visible"){
-              ++totalSeconds;
-            }
-          }
         }
         }
       });
-      }catch{}
+      }catch(e){ console.log(e); }
 
     }
     in_dom = true;
@@ -249,10 +250,9 @@ if(document.getElementById("stefanvdlightareoff1")){
     if(seeanalytics == true){
     if(items["analytics"]){
       analytics = items["analytics"];
-      var myJSON = JSON.stringify(analytics);
-      var resultObject = search(today, analytics);
+      resultObject = search(today, analytics);
       var over = JSON.stringify(resultObject["details"]["time"]);
-      var currentseconds = parseInt(over);
+      currentseconds = parseInt(over);
       currentseconds += totalSeconds;
       over = currentseconds;
       resultObject["details"]["time"] = over;
@@ -260,14 +260,14 @@ if(document.getElementById("stefanvdlightareoff1")){
     }
     if(items["siteengagement"]){
       siteengagement = items["siteengagement"];
-      var myJSON = JSON.stringify(siteengagement);
-      var resultObject = search(today, siteengagement);
+      resultObject = search(today, siteengagement);
+      var mes;
       if(JSON.stringify(resultObject["'" + window.location.href + "'"])){
-          var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+        mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
       }else{
-        var mes = 0;
+        mes = 0;
       }
-      var currentseconds = parseInt(mes);
+      currentseconds = parseInt(mes);
       currentseconds += totalSeconds;
       mes = currentseconds;
       if(mes > 0){
@@ -279,7 +279,7 @@ if(document.getElementById("stefanvdlightareoff1")){
     totalSeconds = 0;
     }
   });
-  }catch{}
+  }catch(e){ console.log(e); }
 
   window.clearInterval(refreshIntervalId);
 }
@@ -299,8 +299,7 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
   if(items["analytics"]){
     analytics = items["analytics"];
     if(taskaddseconds == false){
-    var myJSON = JSON.stringify(analytics);
-    var resultObject = search(today, analytics);
+    resultObject = search(today, analytics);
     var over = JSON.stringify(resultObject["details"]["time"]);
     var currentseconds = parseInt(over);
     currentseconds += totalSeconds;
@@ -311,14 +310,14 @@ chrome.storage.sync.get(["analytics","siteengagement","seeanalytics"], function(
   }
   if(items["siteengagement"]){
     siteengagement = items["siteengagement"];
-    var myJSON = JSON.stringify(siteengagement);
-    var resultObject = search(today, siteengagement);
+    resultObject = search(today, siteengagement);
+    var mes;
     if(JSON.stringify(resultObject["'" + window.location.href + "'"])){
-      var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+      mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
     }else{
-      var mes = 0;
+      mes = 0;
     }
-    var currentseconds = parseInt(mes);
+    currentseconds = parseInt(mes);
     currentseconds += totalSeconds;
     mes = currentseconds;
     if(mes > 0){
