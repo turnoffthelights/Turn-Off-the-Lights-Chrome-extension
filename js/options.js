@@ -685,13 +685,13 @@ excludedDomains = JSON.stringify({"https://www.nytimes.com": true, "https://www.
 
 if(typeof excludedDomains == "string"){
 	excludedDomains = JSON.parse(excludedDomains);
-    var buf = [];
-    var domain;
+    let buf = [];
+    let domain;
 	for(domain in excludedDomains)
 		buf.push(domain);
         buf.sort();
-    var i;
-    var l = buf.length;
+    let i;
+    let l = buf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("excludedDomainsBox", buf[i]);
 }
@@ -759,13 +759,13 @@ autoplayDomains = JSON.stringify({"https://www.youtube.com": true, "https://vime
 
 if(typeof autoplayDomains == "string"){
 	autoplayDomains = JSON.parse(autoplayDomains);
-    var abuf = [];
-    var domain;
+    let abuf = [];
+    let domain;
 	for(domain in autoplayDomains)
 		abuf.push(domain);
         abuf.sort();
-    var i;
-    var l = abuf.length;
+    let i;
+    let l = abuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("autoplayDomainsBox", abuf[i]);
 }
@@ -777,13 +777,13 @@ atmosphereDomains = JSON.stringify({"https://www.youtube.com": true, "https://vi
 
 if(typeof atmosphereDomains == "string"){
 	atmosphereDomains = JSON.parse(atmosphereDomains);
-    var albuf = [];
-    var domain;
+    let albuf = [];
+    let domain;
 	for(domain in atmosphereDomains)
 		albuf.push(domain);
         albuf.sort();
-    var i;
-    var l = albuf.length;
+    let i;
+    let l = albuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("atmosphereDomainsBox", albuf[i]);
 }
@@ -795,13 +795,13 @@ nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nyt
 
 if(typeof nightDomains == "string"){
 	nightDomains = JSON.parse(nightDomains);
-    var nbuf = [];
-    var domain;
+    let nbuf = [];
+    let domain;
 	for(domain in nightDomains)
 		nbuf.push(domain);
         nbuf.sort();
-    var i;
-    var l = nbuf.length;
+    let i;
+    let l = nbuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("nightDomainsBox", nbuf[i]);
 }
@@ -813,13 +813,13 @@ cammotionDomains = JSON.stringify({"https://www.youtube.com": true, "https://vim
 
 if(typeof cammotionDomains == "string"){
 	cammotionDomains = JSON.parse(cammotionDomains);
-    var cmbuf = [];
-    var domain;
+    let cmbuf = [];
+    let domain;
 	for(domain in cammotionDomains)
 		cmbuf.push(domain);
         cmbuf.sort();
-    var i;
-    var l = cmbuf.length;
+    let i;
+    let l = cmbuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("cammotionDomainsBox", cmbuf[i]);
 }
@@ -831,13 +831,13 @@ speechDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.
 
 if(typeof speechDomains == "string"){
 	speechDomains = JSON.parse(speechDomains);
-    var srbuf = [];
-    var domain;
+    let srbuf = [];
+    let domain;
 	for(domain in speechDomains)
 		srbuf.push(domain);
         srbuf.sort();
-    var i;
-    var l = srbuf.length;
+    let i;
+    let l = srbuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("speechDomainsBox", srbuf[i]);
 }
@@ -849,13 +849,13 @@ autostopDomains = JSON.stringify({"https://www.youtube.com": true, "https://vime
 
 if(typeof autostopDomains == "string"){
 	autostopDomains = JSON.parse(autostopDomains);
-    var asbuf = [];
-    var domain;
+    let asbuf = [];
+    let domain;
 	for(domain in autostopDomains)
 		asbuf.push(domain);
         asbuf.sort();
-    var i;
-    var l = asbuf.length;
+    let i;
+    let l = asbuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("autostopDomainsBox", asbuf[i]);
 }
@@ -867,13 +867,13 @@ videotoolDomains = JSON.stringify({"https://www.youtube.com": true, "https://vim
 
 if(typeof videotoolDomains == "string"){
 	videotoolDomains = JSON.parse(videotoolDomains);
-    var vtbbuf = [];
-    var domain;
+    let vtbbuf = [];
+    let domain;
 	for(domain in videotoolDomains)
 		vtbbuf.push(domain);
         vtbbuf.sort();
-    var i;
-    var l = vtbbuf.length;
+    let i;
+    let l = vtbbuf.length;
 	for(i = 0; i < l; i++)
 		appendToListBox("videotoolDomainsBox", vtbbuf[i]);
 }
@@ -886,13 +886,13 @@ if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
 
 if(typeof multiopacityDomains == "string"){
 	multiopacityDomains = JSON.parse(multiopacityDomains);
-    var mpbbuf = [];
-    var domain;
+    let mpbbuf = [];
+    let domain;
 	for(domain in multiopacityDomains)
         mpbbuf.push(domain);
         mpbbuf.sort();
-    var i;
-    var l = mpbbuf.length;
+    let i;
+    let l = mpbbuf.length;
 	for(i = 0; i < l; i++){
 		multiappendToListBox("multiopacityDomainsBox", mpbbuf[i],multiopacityDomains["" + mpbbuf[i] + ""]);
     }
@@ -1023,8 +1023,6 @@ var colorlamp4Y = (sourceHeight * 50) / 100;
 
     var imageData = context.getImageData(0, 0, 1, 1);
     var data = imageData.data;
-
-
 
     var p1 = context.getImageData(0 , 0, 1, 1).data;
     var p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -1484,7 +1482,7 @@ else{ $("arangespread").disabled = true; $("ambilightrangespreadradius").disable
 if("requestVideoFrameCallback" in HTMLVideoElement.prototype){
     // do nothing
 }else{
-   // the API is supported! 
+   // the API is supported!
    $("boxfpsauto").className = "hidden";
 }
 
@@ -1828,6 +1826,9 @@ function smokeupdate(){
 }
 //---
 // Dynamic Background: Cloud
+var layers = [];
+var objects = [];
+var worldXAngle = 0; var worldYAngle = 0;
 function createCloud(){
     var div = document.createElement("div");
     div.className = "stefanvdcloudBase";
@@ -1860,16 +1861,19 @@ function createCloud(){
     return div;
 }
 
+var world;
 function generate(){
+    world = document.getElementById("stefanvdworld");
     objects = [];
     if(world.hasChildNodes()){
-        while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); } 
+        while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); }
     }
     var j;
     for(j = 0; j < 5; j++){ objects.push(createCloud()); }
 }
 
 function updateView(){
+    var d = 0;
     var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
     world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t; }
 
@@ -1885,165 +1889,7 @@ function cloudupdate(){
     requestAnimationFrame(cloudupdate);
 }
 //---
-
-function dynamictest(){
-if($("dynamic").checked == true){
-    if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }
-    else{ $("hoveroptiondyn5").disabled = true; }
-}else{
-    $("hoveroptiondyn5").disabled = true;
-}
-
-var newdynmaster = $("stefanvddynamicbackground");
-if($("dynamic").checked == true){
-if($("dynamic1").checked == true){
-removedynamic();
-	var fishtanks = document.createElement("div"); fishtanks.setAttribute("id","fishtanks"); newdynmaster.appendChild(fishtanks);
-
-    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
-    var i;
-	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
-	var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
-    var i;
-    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
-	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
-    var i;
-    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
-}
-else if($("dynamic2").checked == true){
-removedynamic();
-	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
-
-    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynleft);
-    var i;
-	for(i = 1; i < 21; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynleft.appendChild(newdyn); }
-}
-else if($("dynamic3").checked == true){
-removedynamic();
-	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
-
-	var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynleft);
-    var i;
-    for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
-}
-else if($("dynamic4").checked == true){
-removedynamic();
-	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
-	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
-(function(){
-		var lastTime = 0;
-        var vendors = ["ms", "moz", "webkit", "o"];
-        var x;
-        var lvendor = vendors.length;
-		for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
-			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
-			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
-		}
-		if(!window.requestAnimationFrame)
-			window.requestAnimationFrame = function(callback){
-				var currTime = new Date().getTime();
-				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
-				lastTime = currTime + timeToCall;
-				return id;
-			};
-
-		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
-	}());
-
-	var layers = [],objects = [],world = document.getElementById("stefanvdworld"),viewport = document.getElementById("stefanvddynamicbackground"), d = 0,p = 400,worldXAngle = 0,worldYAngle = 0;
-
-	viewport.style.webkitPerspective = p; viewport.style.MozPerspective = p; viewport.style.oPerspective = p;
-	generate();
-	cloudupdate();
-}
-else if($("dynamic5").checked == true){
-removedynamic();
-if($("hoveroptiondyn5").checked == true){
-	var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
-
-	var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
-    var j;
-    for(j = 1; j < 17; j++){
-	if(j <= 9){ j = "0" + j; }
-		var newdynpart1 = document.createElement("div");
-        newdynpart1.setAttribute("id","p" + j); newdynspaceworld.appendChild(newdynpart1);
-        var i;
-		for(i = 1; i < 31; i++){
-		if(i <= 9){ i = "0" + i; }
-		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","s0" + i + ""); newdynpart1.appendChild(newdynlow);
-		}
-	}
-}else{
-	var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
-
-    var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspacenoflying"); space.appendChild(newdynspaceworld);
-    var j;
-	for(j = 1; j < 17; j++){
-	if(j <= 9){ j = "0" + j; }
-		var newdynpart1 = document.createElement("div");
-        newdynpart1.setAttribute("id","np" + j); newdynspaceworld.appendChild(newdynpart1);
-        var i;
-		for(i = 1; i < 31; i++){
-		if(i <= 9){ i = "0" + i; }
-		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","ns0" + i + ""); newdynpart1.appendChild(newdynlow);
-		}
-	}
-}
-
-}else if($("dynamic6").checked == true){
-removedynamic();
-var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
-var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
-
-// Create an image object (only need one instance)
-var imageObj = new Image();
-
-// Once the image has been downloaded then set the image on all of the particles
-imageObj.onload = function(){
-    particles.forEach(function(particle){
-            particle.setImage(imageObj);
-    });
-};
-
-// Once the callback is arranged then set the source of the image
-imageObj.src = "images/Smoke10.webp";
-
-
-// Initialize the scene
-runsmoke();
-
-// If the context is set then we can draw the scene (if not then the browser does not support canvas)
-if(context){
-    if(document.visibilityState === "visible"){
-    window.setInterval(function(){
-        // Update the scene before drawing
-        smokeupdate();
-
-        // Draw the scene
-        smokedraw();
-    }, 1000 / targetFPS);
-    }
-}
-
-}else if($("dynamic7").checked == true){
-removedynamic();
-var flyingdots = document.createElement("div"); flyingdots.setAttribute("id","flyingdots"); newdynmaster.appendChild(flyingdots);
-    var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id","stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
-    var j;
-	for(j = 1; j < 100; j++){
-		var newminic = document.createElement("div");
-		newminic.className = "c";
-		newdyndotsworld.appendChild(newminic);
-	}
-}else if($("dynamic8").checked == true){
-removedynamic();
-var storm = document.createElement("div"); storm.setAttribute("id","storm"); newdynmaster.appendChild(storm);
-var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id","stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
-
-var stormcanvas = document.getElementById("stefanvddynamicstorm");
-var sky = stormcanvas.getContext("2d", {desynchronized: true});
-
+// Dynamic Background: Rain
 var window_width = window.innerWidth * 1.5;
 var window_height = window.innerHeight * 1.5;
 
@@ -2056,20 +1902,21 @@ var rain_color = "255,255,255";
 var drop_count;
 var drops = [];
 
+var stormcanvas;
+var sky;
+
 function randomFrom(min, max){
-  return(Math.random() * (max - min) + min);
+    return(Math.random() * (max - min) + min);
 }
 
-function resizer(){
-  window_width = window.innerWidth * 1.5;
-  window_height = window.innerHeight * 1.5;
-  drop_count = window_width * rain_weight;
+function rainresizer(){
+    window_width = window.innerWidth * 1.5;
+    window_height = window.innerHeight * 1.5;
+    drop_count = window_width * rain_weight;
 
-  stormcanvas.setAttribute("width", window_width);
-  stormcanvas.setAttribute("height", window_height);
+    stormcanvas.setAttribute("width", window_width);
+    stormcanvas.setAttribute("height", window_height);
 }
-
-window.addEventListener("resize", resizer, false);
 
 function paintSky(){
     if(document.visibilityState === "visible"){
@@ -2084,32 +1931,32 @@ function paintSky(){
 }
 
 function rain(){
-  sky.clearRect(0, 0, window_width, window_height);
+    sky.clearRect(0, 0, window_width, window_height);
 
-  var drops_length = drops.length;
+    var drops_length = drops.length;
 
-  var i;
-  for(i = 0; i < drops_length; i++){
-    var drop = drops[i];
-    drop.fall();
-    drop.draw();
-  }
+    var i;
+    for(i = 0; i < drops_length; i++){
+      var drop = drops[i];
+      drop.fall();
+      drop.draw();
+    }
 
-  window.requestAnimFrame(rain);
+    window.requestAnimFrame(rain);
 }
 
 function drop(){
-  this.reset = function(){
-    this.r = randomFrom(0.8, 1.6);
-    this.l = (this.r * 250);
-    this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
-    this.y = randomFrom((window_height * -0.25), (window_height * -1));
-    this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
-    this.dy = (this.r * (100 * fall_speed));
-    this.offset = (this.l * (this.dx / this.dy));
-    this.opacity = (this.r * randomFrom(0.2, 0.6));
-    this.drip = this.render();
-  };
+    this.reset = function(){
+        this.r = randomFrom(0.8, 1.6);
+        this.l = (this.r * 250);
+        this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
+        this.y = randomFrom((window_height * -0.25), (window_height * -1));
+        this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
+        this.dy = (this.r * (100 * fall_speed));
+        this.offset = (this.l * (this.dx / this.dy));
+        this.opacity = (this.r * randomFrom(0.2, 0.6));
+        this.drip = this.render();
+    };
 
     this.render = function(){
         var canv = document.createElement("canvas");
@@ -2150,14 +1997,8 @@ function drop(){
         }
     };
 }
-
-resizer();
-paintSky();
-
-}else if($("dynamic9").checked == true){
-removedynamic();
-var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
-
+//---
+// Dynamic Background: Triangle
 var refreshDuration = 10000;
 var refreshTimeout;
 var numPointsX;
@@ -2245,7 +2086,7 @@ function trianglerun(){
             }
         }
     }
-    refresh();
+    trianglerefresh();
 }
 
 function randomize(){
@@ -2261,7 +2102,7 @@ function randomize(){
     }
 }
 
-function refresh(){
+function trianglerefresh(){
     if(document.visibilityState === "visible"){
     randomize();
     var i;
@@ -2275,20 +2116,170 @@ function refresh(){
         animate.setAttribute("to",points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
         animate.beginElement();
     }
-    refreshTimeout = window.setTimeout(function(){ refresh(); }, refreshDuration);
+    refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
     }
 }
-
-trianglerun();
 
 function onResize(){
 document.querySelector("#triangle svg").remove();
 window.clearTimeout(refreshTimeout);
 trianglerun();
 }
+//---
 
+function dynamictest(){
+if($("dynamic").checked == true){
+    if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }
+    else{ $("hoveroptiondyn5").disabled = true; }
+}else{
+    $("hoveroptiondyn5").disabled = true;
+}
+
+var newdynmaster = $("stefanvddynamicbackground");
+if($("dynamic").checked == true){
+if($("dynamic1").checked == true){
+removedynamic();
+	var fishtanks = document.createElement("div"); fishtanks.setAttribute("id","fishtanks"); newdynmaster.appendChild(fishtanks);
+
+    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
+    var i;
+	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
+	var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
+    var i;
+    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
+	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
+    var i;
+    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
+}
+else if($("dynamic2").checked == true){
+removedynamic();
+	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
+
+    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynleft);
+    var i;
+	for(i = 1; i < 21; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynleft.appendChild(newdyn); }
+}
+else if($("dynamic3").checked == true){
+removedynamic();
+	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
+
+	var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynleft);
+    var i;
+    for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
+}
+else if($("dynamic4").checked == true){
+removedynamic();
+	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
+	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
+(function(){
+		var lastTime = 0;
+        var vendors = ["ms", "moz", "webkit", "o"];
+        var x;
+        var lvendor = vendors.length;
+		for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
+			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
+		}
+		if(!window.requestAnimationFrame)
+			window.requestAnimationFrame = function(callback){
+				var currTime = new Date().getTime();
+				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
+				lastTime = currTime + timeToCall;
+				return id;
+			};
+
+		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
+	}());
+
+    var p = 400;
+	newdynmaster.style.webkitPerspective = p; newdynmaster.style.MozPerspective = p; newdynmaster.style.oPerspective = p;
+	generate();
+	cloudupdate();
+}
+else if($("dynamic5").checked == true){
+removedynamic();
+
+var flying = "";
+if($("hoveroptiondyn5").checked == true){
+    // with the letter n include, then it see the flying in effect
+    flying = "n";
+}
+var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
+
+var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
+var j;
+for(j = 1; j < 17; j++){
+if(j <= 9){ j = "0" + j; }
+    var newdynpart1 = document.createElement("div");
+    newdynpart1.setAttribute("id",flying + "p" + j); newdynspaceworld.appendChild(newdynpart1);
+    var i;
+    for(i = 1; i < 31; i++){
+    if(i <= 9){ i = "0" + i; }
+    var newdynlow = document.createElement("b"); newdynlow.setAttribute("class",flying + "s0" + i + ""); newdynpart1.appendChild(newdynlow);
+    }
+}
+}else if($("dynamic6").checked == true){
+removedynamic();
+var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
+var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
+
+// Create an image object (only need one instance)
+var imageObj = new Image();
+
+// Once the image has been downloaded then set the image on all of the particles
+imageObj.onload = function(){
+    particles.forEach(function(particle){
+            particle.setImage(imageObj);
+    });
+};
+
+// Once the callback is arranged then set the source of the image
+imageObj.src = "images/Smoke10.webp";
+
+// Initialize the scene
+runsmoke();
+
+// If the context is set then we can draw the scene (if not then the browser does not support canvas)
+if(context){
+    if(document.visibilityState === "visible"){
+    window.setInterval(function(){
+        // Update the scene before drawing
+        smokeupdate();
+
+        // Draw the scene
+        smokedraw();
+    }, 1000 / targetFPS);
+    }
+}
+
+}else if($("dynamic7").checked == true){
+removedynamic();
+var flyingdots = document.createElement("div"); flyingdots.setAttribute("id","flyingdots"); newdynmaster.appendChild(flyingdots);
+    var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id","stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
+    var j;
+	for(j = 1; j < 100; j++){
+		var newminic = document.createElement("div");
+		newminic.className = "c";
+		newdyndotsworld.appendChild(newminic);
+	}
+}else if($("dynamic8").checked == true){
+removedynamic();
+var storm = document.createElement("div"); storm.setAttribute("id","storm"); newdynmaster.appendChild(storm);
+var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id","stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
+
+stormcanvas = document.getElementById("stefanvddynamicstorm");
+sky = stormcanvas.getContext("2d", {desynchronized: true});
+
+window.addEventListener("resize", rainresizer, false);
+
+rainresizer();
+paintSky();
+}else if($("dynamic9").checked == true){
+removedynamic();
+var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
+trianglerun();
 window.onresize = onResize;
-
 }else if($("dynamic10").checked == true){
 removedynamic();
 var stars = document.createElement("div"); stars.setAttribute("id","stars"); newdynmaster.appendChild(stars);
@@ -2557,6 +2548,35 @@ function PopupCenter(url, title, w, h){
     }
 }
 
+function runcamerasettings(){
+    // reset everything
+    if(localMediaStream){
+    document.getElementById("motionvideo").pause();
+    document.getElementById("motionvideo").src = "";
+    localMediaStream.getTracks().forEach(track => track.stop());
+    localMediaStream = null;
+    document.getElementById("motionvideo").load();
+    canvas = document.getElementById("motioncanvas");
+    canvasgetcont = canvas.getContext("2d", {desynchronized: true});
+    canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
+    ccanvas = document.getElementById("motioncomp");
+    ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+    ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
+    }
+
+    if(navigator.mediaDevices.getUserMedia){
+        navigator.mediaDevices.getUserMedia({audio: false, video: true})
+        .then(function(stream){
+            //Display the video stream in the video object
+            localMediaStream = stream; // Store the video stream
+            video.srcObject = stream;
+         })
+         .catch(function(e){
+              //console.log(e.name + ": " + e.message);
+        });
+    }
+}
+
 function cameramotionlights(){
 if($("motion").checked == true){
 
@@ -2579,34 +2599,6 @@ var canvasgetcont = canvas.getContext("2d", {desynchronized: true});
 var ccanvas = document.getElementById("motioncomp");
 var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 
-function runcamerasettings(){
-// reset everything
-if(localMediaStream){
-document.getElementById("motionvideo").pause();
-document.getElementById("motionvideo").src = "";
-localMediaStream.getTracks().forEach(track => track.stop());
-localMediaStream = null;
-document.getElementById("motionvideo").load();
-canvas = document.getElementById("motioncanvas");
-canvasgetcont = canvas.getContext("2d", {desynchronized: true});
-canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-ccanvas = document.getElementById("motioncomp");
-ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
-}
-
-if(navigator.mediaDevices.getUserMedia){
-    navigator.mediaDevices.getUserMedia({audio: false, video: true})
-    .then(function(stream){
-        //Display the video stream in the video object
-        localMediaStream = stream; // Store the video stream
-        video.srcObject = stream;
-     })
-     .catch(function(e){
-          //console.log(e.name + ": " + e.message);
-    });
-}
-}
 
 }else{
 	// remove everything
@@ -3791,7 +3783,7 @@ function OnSearch(input){
         newplaygroundfilter.style.justifyContent = "center";
         $("mainview-content").appendChild(newplaygroundfilter);
 
-        var newplayground = document.createElement("div"); 
+        var newplayground = document.createElement("div");
 		newplayground.setAttribute("id","stefanvdplayground");
         $("mainview-content").appendChild(newplayground);
 
@@ -3801,12 +3793,12 @@ function OnSearch(input){
         newbtnplaygroundrestart.innerText = "Restart";
         newplaygroundfilter.appendChild(newbtnplaygroundrestart);
 
-        var newbtnplaygroundfb = document.createElement("div"); 
+        var newbtnplaygroundfb = document.createElement("div");
         newbtnplaygroundfb.setAttribute("id","stefanvdbtnplaygroundfacebook");
         newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); },false);
         newplaygroundfilter.appendChild(newbtnplaygroundfb);
 
-        var newbtnplaygroundtw = document.createElement("div"); 
+        var newbtnplaygroundtw = document.createElement("div");
         newbtnplaygroundtw.setAttribute("id","stefanvdbtnplaygroundtwitter");
         newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var sturnoffthelightsproductcodeurl = encodeURIComponent(stringgame + " " + turnoffthelightsproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); },false);
         newplaygroundfilter.appendChild(newbtnplaygroundtw);
@@ -3843,21 +3835,19 @@ function OnSearch(input){
     // hide the h2 if there is no sections visible
     var pages = document.getElementsByClassName("page");
     var z;
-    var l = pages.length;
-    for(z = 0; z < l; z++){
-      var sections = pages[z].getElementsByTagName("section");
+    var tabpagelength = pages.length;
+    for(z = 0; z < tabpagelength; z++){
+      var tabsections = pages[z].getElementsByTagName("section");
       var countnothingcheck = 0;
-      var x;
-      var q = sections.length;
-      for(x = 0; x < q; x++){
-        var section = sections[x];
-
-        if(section.classList.contains("searchfoundnothing")){
+      var w;
+      var q = tabsections.length;
+      for(w = 0; w < q; w++){
+        var currenttabsection = tabsections[w];
+        if(currenttabsection.classList.contains("searchfoundnothing")){
           countnothingcheck += 1;
         }
-
       }
-      if(countnothingcheck == sections.length){
+      if(countnothingcheck == tabsections.length){
         // total sections with nothing inside is the same as all the section -> hide the page
         pages[z].classList.add("searchfoundnothing");
       }
