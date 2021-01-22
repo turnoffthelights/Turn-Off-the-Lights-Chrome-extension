@@ -1684,175 +1684,8 @@ function ariacheck(){
     }
 }
 
-function dynamictest(){
-if($("dynamic").checked == true){
-    if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }
-    else{ $("hoveroptiondyn5").disabled = true; }
-}else{
-    $("hoveroptiondyn5").disabled = true;
-}
 
-var newdynmaster = $("stefanvddynamicbackground");
-if($("dynamic").checked == true){
-if($("dynamic1").checked == true){
-removedynamic();
-	var fishtanks = document.createElement("div"); fishtanks.setAttribute("id","fishtanks"); newdynmaster.appendChild(fishtanks);
-
-    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
-    var i;
-	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
-	var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
-    var i;
-    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
-	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
-    var i;
-    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
-}
-else if($("dynamic2").checked == true){
-removedynamic();
-	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
-
-    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynleft);
-    var i;
-	for(i = 1; i < 21; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynleft.appendChild(newdyn); }
-}
-else if($("dynamic3").checked == true){
-removedynamic();
-	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
-
-	var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynleft);
-    var i;
-    for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
-}
-else if($("dynamic4").checked == true){
-removedynamic();
-	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
-	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
-(function(){
-		var lastTime = 0;
-        var vendors = ["ms", "moz", "webkit", "o"];
-        var x;
-        var lvendor = vendors.length;
-		for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
-			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
-			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
-		}
-		if(!window.requestAnimationFrame)
-			window.requestAnimationFrame = function(callback){
-				var currTime = new Date().getTime();
-				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
-				lastTime = currTime + timeToCall;
-				return id;
-			};
-
-		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
-	}());
-
-	var layers = [],objects = [],world = document.getElementById("stefanvdworld"),viewport = document.getElementById("stefanvddynamicbackground"), d = 0,p = 400,worldXAngle = 0,worldYAngle = 0;
-
-	viewport.style.webkitPerspective = p; viewport.style.MozPerspective = p; viewport.style.oPerspective = p;
-	generate();
-
-	function createCloud(){
-		var div = document.createElement("div");
-		div.className = "stefanvdcloudBase";
-		var x = 256 - (Math.random() * 512);
-		var y = 256 - (Math.random() * 512);
-		var z = 256 - (Math.random() * 512);
-		var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
-		div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
-		world.appendChild(div);
-
-        var j;
-        var l = 5 + Math.round(Math.random() * 10);
-		for(j = 0; j < l; j++){
-			var cloud = document.createElement("div");
-			cloud.style.opacity = 0;
-			cloud.style.opacity = .8;
-			cloud.className = "stefanvdcloudLayer";
-			var x = 256 - (Math.random() * 512);
-			var y = 256 - (Math.random() * 512);
-			var z = 100 - (Math.random() * 200);
-			var a = Math.random() * 360;
-			var s = .25 + Math.random();
-			x *= .2; y *= .2;
-			cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};
-			var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px) rotateZ(" + a + "deg) scale(" + s + ")";
-			cloud.style.webkitTransform = t; cloud.style.MozTransform = t; cloud.style.oTransform = t;
-			div.appendChild(cloud);
-			layers.push(cloud);
-		}
-		return div;
-	}
-
-	function generate(){
-		objects = [];
-		if(world.hasChildNodes()){
-			while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); } 
-        }
-        var j;
-		for(j = 0; j < 5; j++){ objects.push(createCloud()); }
-	}
-
-	function updateView(){
-		var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
-		world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t; }
-
-	function update(){
-        var j;
-        var l = layers.length;
-		for(j = 0; j < l; j++){
-			var layer = layers[j];
-			layer.data.a += layer.data.speed;
-			var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
-			layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
-		}
-		requestAnimationFrame(update);
-	}
-	update();
-
-
-}
-else if($("dynamic5").checked == true){
-removedynamic();
-if($("hoveroptiondyn5").checked == true){
-	var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
-
-	var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
-    var j;
-    for(j = 1; j < 17; j++){
-	if(j <= 9){ j = "0" + j; }
-		var newdynpart1 = document.createElement("div");
-        newdynpart1.setAttribute("id","p" + j); newdynspaceworld.appendChild(newdynpart1);
-        var i;
-		for(i = 1; i < 31; i++){
-		if(i <= 9){ i = "0" + i; }
-		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","s0" + i + ""); newdynpart1.appendChild(newdynlow);
-		}
-	}
-}else{
-	var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
-
-    var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspacenoflying"); space.appendChild(newdynspaceworld);
-    var j;
-	for(j = 1; j < 17; j++){
-	if(j <= 9){ j = "0" + j; }
-		var newdynpart1 = document.createElement("div");
-        newdynpart1.setAttribute("id","np" + j); newdynspaceworld.appendChild(newdynpart1);
-        var i;
-		for(i = 1; i < 31; i++){
-		if(i <= 9){ i = "0" + i; }
-		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","ns0" + i + ""); newdynpart1.appendChild(newdynlow);
-		}
-	}
-}
-
-}else if($("dynamic6").checked == true){
-removedynamic();
-var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
-var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
-
+// Dynamic Background: Smoke
 // Create an array to store our particles
 var particles = [];
 
@@ -1868,19 +1701,6 @@ var targetFPS = 20;
 // Set the dimensions of the canvas as variables so they can be used.
 var canvasWidth = 400;
 var canvasHeight = 400;
-
-// Create an image object (only need one instance)
-var imageObj = new Image();
-
-// Once the image has been downloaded then set the image on all of the particles
-imageObj.onload = function(){
-    particles.forEach(function(particle){
-            particle.setImage(imageObj);
-    });
-};
-
-// Once the callback is arranged then set the source of the image
-imageObj.src = "images/Smoke10.webp";
 
 // A function to create a particle object.
 function Particle(context){
@@ -1900,7 +1720,7 @@ function Particle(context){
     this.context = context;
 
     // The function to draw the particle on the canvas.
-    this.draw = function(){
+    this.smokedraw = function(){
 
         // If an image is set draw it
         if(this.image){
@@ -1989,14 +1809,14 @@ function runsmoke(){
 }
 
 // The function to draw the scene
-function draw(){
+function smokedraw(){
     // Clear the drawing surface and fill it with a black background
     context.fillStyle = "rgba(0, 0, 0, 0.0)";
     context.fillRect(0, 0, 400, 400);
 
     // Go through all of the particles and draw them.
     particles.forEach(function(particle){
-        particle.draw();
+        particle.smokedraw();
     });
 }
 
@@ -2006,6 +1826,189 @@ function smokeupdate(){
         particle.update();
     });
 }
+//---
+// Dynamic Background: Cloud
+function createCloud(){
+    var div = document.createElement("div");
+    div.className = "stefanvdcloudBase";
+    var x = 256 - (Math.random() * 512);
+    var y = 256 - (Math.random() * 512);
+    var z = 256 - (Math.random() * 512);
+    var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
+    div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
+    world.appendChild(div);
+
+    var j;
+    var l = 5 + Math.round(Math.random() * 10);
+    for(j = 0; j < l; j++){
+        var cloud = document.createElement("div");
+        cloud.style.opacity = 0;
+        cloud.style.opacity = .8;
+        cloud.className = "stefanvdcloudLayer";
+        var x = 256 - (Math.random() * 512);
+        var y = 256 - (Math.random() * 512);
+        var z = 100 - (Math.random() * 200);
+        var a = Math.random() * 360;
+        var s = .25 + Math.random();
+        x *= .2; y *= .2;
+        cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};
+        var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px) rotateZ(" + a + "deg) scale(" + s + ")";
+        cloud.style.webkitTransform = t; cloud.style.MozTransform = t; cloud.style.oTransform = t;
+        div.appendChild(cloud);
+        layers.push(cloud);
+    }
+    return div;
+}
+
+function generate(){
+    objects = [];
+    if(world.hasChildNodes()){
+        while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); } 
+    }
+    var j;
+    for(j = 0; j < 5; j++){ objects.push(createCloud()); }
+}
+
+function updateView(){
+    var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
+    world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t; }
+
+function cloudupdate(){
+    var j;
+    var l = layers.length;
+    for(j = 0; j < l; j++){
+        var layer = layers[j];
+        layer.data.a += layer.data.speed;
+        var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
+        layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
+    }
+    requestAnimationFrame(cloudupdate);
+}
+//---
+
+function dynamictest(){
+if($("dynamic").checked == true){
+    if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }
+    else{ $("hoveroptiondyn5").disabled = true; }
+}else{
+    $("hoveroptiondyn5").disabled = true;
+}
+
+var newdynmaster = $("stefanvddynamicbackground");
+if($("dynamic").checked == true){
+if($("dynamic1").checked == true){
+removedynamic();
+	var fishtanks = document.createElement("div"); fishtanks.setAttribute("id","fishtanks"); newdynmaster.appendChild(fishtanks);
+
+    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
+    var i;
+	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
+	var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
+    var i;
+    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
+	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
+    var i;
+    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
+}
+else if($("dynamic2").checked == true){
+removedynamic();
+	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
+
+    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynleft);
+    var i;
+	for(i = 1; i < 21; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynleft.appendChild(newdyn); }
+}
+else if($("dynamic3").checked == true){
+removedynamic();
+	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
+
+	var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynleft);
+    var i;
+    for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
+}
+else if($("dynamic4").checked == true){
+removedynamic();
+	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
+	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
+(function(){
+		var lastTime = 0;
+        var vendors = ["ms", "moz", "webkit", "o"];
+        var x;
+        var lvendor = vendors.length;
+		for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
+			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
+		}
+		if(!window.requestAnimationFrame)
+			window.requestAnimationFrame = function(callback){
+				var currTime = new Date().getTime();
+				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
+				lastTime = currTime + timeToCall;
+				return id;
+			};
+
+		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
+	}());
+
+	var layers = [],objects = [],world = document.getElementById("stefanvdworld"),viewport = document.getElementById("stefanvddynamicbackground"), d = 0,p = 400,worldXAngle = 0,worldYAngle = 0;
+
+	viewport.style.webkitPerspective = p; viewport.style.MozPerspective = p; viewport.style.oPerspective = p;
+	generate();
+	cloudupdate();
+}
+else if($("dynamic5").checked == true){
+removedynamic();
+if($("hoveroptiondyn5").checked == true){
+	var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
+
+	var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
+    var j;
+    for(j = 1; j < 17; j++){
+	if(j <= 9){ j = "0" + j; }
+		var newdynpart1 = document.createElement("div");
+        newdynpart1.setAttribute("id","p" + j); newdynspaceworld.appendChild(newdynpart1);
+        var i;
+		for(i = 1; i < 31; i++){
+		if(i <= 9){ i = "0" + i; }
+		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","s0" + i + ""); newdynpart1.appendChild(newdynlow);
+		}
+	}
+}else{
+	var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
+
+    var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspacenoflying"); space.appendChild(newdynspaceworld);
+    var j;
+	for(j = 1; j < 17; j++){
+	if(j <= 9){ j = "0" + j; }
+		var newdynpart1 = document.createElement("div");
+        newdynpart1.setAttribute("id","np" + j); newdynspaceworld.appendChild(newdynpart1);
+        var i;
+		for(i = 1; i < 31; i++){
+		if(i <= 9){ i = "0" + i; }
+		var newdynlow = document.createElement("b"); newdynlow.setAttribute("class","ns0" + i + ""); newdynpart1.appendChild(newdynlow);
+		}
+	}
+}
+
+}else if($("dynamic6").checked == true){
+removedynamic();
+var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
+var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
+
+// Create an image object (only need one instance)
+var imageObj = new Image();
+
+// Once the image has been downloaded then set the image on all of the particles
+imageObj.onload = function(){
+    particles.forEach(function(particle){
+            particle.setImage(imageObj);
+    });
+};
+
+// Once the callback is arranged then set the source of the image
+imageObj.src = "images/Smoke10.webp";
+
 
 // Initialize the scene
 runsmoke();
@@ -2018,7 +2021,7 @@ if(context){
         smokeupdate();
 
         // Draw the scene
-        draw();
+        smokedraw();
     }, 1000 / targetFPS);
     }
 }
