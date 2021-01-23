@@ -2689,7 +2689,7 @@ function ambilightfunction(){
 	if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.body;
-		var observer = new MutationObserver(function(mutations, observer){
+		var observer = new MutationObserver(function(mutations){
 			mutations.forEach(function(mutation){
 
 				// detect change style - this for floating box in div detection

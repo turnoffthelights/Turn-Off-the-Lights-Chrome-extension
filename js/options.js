@@ -73,61 +73,61 @@ function save_options(){
     // autoplay Excluded domains
     var autoplayDomainsBox = $("autoplayDomainsBox");
     var autoplayDomains = {};
-    var i;
-    var l = autoplayDomainsBox.length;
-    for(i = 0; i < l; i++){ autoplayDomains[autoplayDomainsBox.options[i].value] = true; }
+    var autoplayi;
+    var autoplayl = autoplayDomainsBox.length;
+    for(autoplayi = 0; autoplayi < autoplayl; autoplayi++){ autoplayDomains[autoplayDomainsBox.options[autoplayi].value] = true; }
 
     // atmosphere Excluded domains
     var atmosphereDomainsBox = $("atmosphereDomainsBox");
     var atmosphereDomains = {};
-    var i;
-    var l = atmosphereDomainsBox.length;
-    for(i = 0; i < l; i++){ atmosphereDomains[atmosphereDomainsBox.options[i].value] = true; }
+    var atmospherei;
+    var atmospherel = atmosphereDomainsBox.length;
+    for(atmospherei = 0; atmospherei < atmospherel; atmospherei++){ atmosphereDomains[atmosphereDomainsBox.options[atmospherei].value] = true; }
 
     // night Excluded domains
     var nightDomainsBox = $("nightDomainsBox");
     var nightDomains = {};
-    var i;
-    var l = nightDomainsBox.length;
-    for(i = 0; i < l; i++){ nightDomains[nightDomainsBox.options[i].value] = true; }
+    var nighti;
+    var nightl = nightDomainsBox.length;
+    for(nighti = 0; nighti < nightl; nighti++){ nightDomains[nightDomainsBox.options[nighti].value] = true; }
 
     // cammotion Excluded domains
     var cammotionDomainsBox = $("cammotionDomainsBox");
     var cammotionDomains = {};
-    var i;
-    var l = cammotionDomainsBox.length;
-    for(i = 0; i < l; i++){ cammotionDomains[cammotionDomainsBox.options[i].value] = true; }
+    var cammotioni;
+    var cammotionl = cammotionDomainsBox.length;
+    for(cammotioni = 0; cammotioni < cammotionl; cammotioni++){ cammotionDomains[cammotionDomainsBox.options[cammotioni].value] = true; }
 
     // speech Excluded domains
     var speechDomainsBox = $("speechDomainsBox");
     var speechDomains = {};
-    var i;
-    var l = speechDomainsBox.length;
-    for(i = 0; i < l; i++){ speechDomains[speechDomainsBox.options[i].value] = true; }
+    var speechi;
+    var speechl = speechDomainsBox.length;
+    for(speechi = 0; speechi < speechl; speechi++){ speechDomains[speechDomainsBox.options[speechi].value] = true; }
 
     // autostop Excluded domains
     var autostopDomainsBox = $("autostopDomainsBox");
     var autostopDomains = {};
-    var i;
-    var l = autostopDomainsBox.length;
-    for(i = 0; i < l; i++){ autostopDomains[autostopDomainsBox.options[i].value] = true; }
+    var autostopi;
+    var autostopl = autostopDomainsBox.length;
+    for(autostopi = 0; autostopi < autostopl; autostopi++){ autostopDomains[autostopDomainsBox.options[autostopi].value] = true; }
 
     // videotool Excluded domains
     var videotoolDomainsBox = $("videotoolDomainsBox");
     var videotoolDomains = {};
-    var i;
-    var l = videotoolDomainsBox.length;
-    for(i = 0; i < l; i++){ videotoolDomains[videotoolDomainsBox.options[i].value] = true; }
+    var videotooli;
+    var videotooll = videotoolDomainsBox.length;
+    for(videotooli = 0; videotooli < videotooll; videotooli++){ videotoolDomains[videotoolDomainsBox.options[videotooli].value] = true; }
 
     // multiopacity Excluded domains
     var multiopacityDomainsBox = $("multiopacityDomainsBox");
     var multiopacitynumberBox = $("multiopacitynumberBox");
     var websitemulti = {};
-    var i;
-    var l = multiopacityDomainsBox.length;
-    for(i = 0; i < l; i++){
-      var getnumber = multiopacitynumberBox.options[i].text;
-      websitemulti[multiopacityDomainsBox.options[i].value] = getnumber;
+    var multiopacityi;
+    var multiopacityl = multiopacityDomainsBox.length;
+    for(multiopacityi = 0; multiopacityi < multiopacityl; multiopacityi++){
+      var getnumber = multiopacitynumberBox.options[multiopacityi].text;
+      websitemulti[multiopacityDomainsBox.options[multiopacityi].value] = getnumber;
     }
 
 	chrome.storage.sync.set({"interval":$("interval").value,"lightcolor":$("lightcolor").value,"autoplay":$("autoplay").checked,"playlist":$("playlist").checked,"flash":$("flash").checked,"head":$("head").checked,"fadein":$("fadein").checked,"fadeout":$("fadeout").checked,"infobar":$("infobar").checked,"sharebutton":$("sharebutton").checked,"likebutton":$("likebutton").checked,"readera":$("readera").checked,"readern":$("readern").checked,"shortcutlight":$("shortcutlight").checked,"eyea":$("eyea").checked,"eyen":$("eyen").checked,"suggestions":$("suggestions").checked,"videoheadline":$("videoheadline").checked,"eastereggs":$("eastereggs").checked,"contextmenus":$("contextmenus").checked,"viewcount":$("viewcount").checked,"lightimage":$("lightimage").value,"lightimagea":$("lightimagea").checked,"lightimagen":$("lightimagen").checked,"eyealist":$("eyealist").checked,"mousespotlighto":$("mousespotlighto").checked,"mousespotlighta":$("mousespotlighta").checked,"mousespotlightc":$("mousespotlightc").checked,"nighttime":$("nighttime").checked,"begintime":$("begintime").value,"endtime":$("endtime").value,"addvideobutton":$("addvideobutton").checked,"likebar":$("likebar").checked,"ambilight":$("ambilight").checked,"ambilightrangeblurradius":$("ambilightrangeblurradius").value,"ambilightrangespreadradius":$("ambilightrangespreadradius").value,"mousespotlightt":$("mousespotlightt").checked,"ambilightfixcolor":$("ambilightfixcolor").checked,"ambilightvarcolor":$("ambilightvarcolor").checked,"ambilightcolorhex":$("ambilightcolorhex").value,"ambilight4color":$("ambilight4color").checked,"ambilight1colorhex":$("ambilight1colorhex").value,"ambilight2colorhex":$("ambilight2colorhex").value,"ambilight3colorhex":$("ambilight3colorhex").value,"ambilight4colorhex":$("ambilight4colorhex").value,"password":$("password").checked,"enterpassword":$("enterpassword").value,"noflash":$("noflash").checked,"hardflash":$("hardflash").checked,"ecosaver":$("ecosaver").checked,"ecosavertime":$("ecosavertime").value,"dynamic":$("dynamic").checked,"dynamic1":$("dynamic1").checked,"dynamic2":$("dynamic2").checked,"dynamic3":$("dynamic3").checked,"dynamic4":$("dynamic4").checked,"dynamic5":$("dynamic5").checked,"dynamic6":$("dynamic6").checked,"dynamic7":$("dynamic7").checked,"dynamic8":$("dynamic8").checked,"dynamic9":$("dynamic9").checked,"dynamic10":$("dynamic10").checked,"hoveroptiondyn5":$("hoveroptiondyn5").checked,"autoplayonly":$("autoplayonly").checked,"blur":$("blur").checked,"maxquality":ytselq.options[ytselq.selectedIndex].value,"autowidthyoutube":$("autowidthyoutube").checked,"customqualityyoutube":$("customqualityyoutube").checked,"cinemaontop":$("cinemaontop").checked,"alllightsoff":$("alllightsoff").checked,"spotlightradius":$("spotlightradius").value,"atmosphereonly":$("atmosphereonly").checked,"optionskipremember":$("optionskipremember").checked,"nighttheme":$("nighttheme").checked,"nightonly":$("nightonly").checked,"nightenabletheme":$("nightenabletheme").checked,"autoplaydelay":$("autoplaydelay").checked,"autoplaydelaytime":$("autoplaydelaytime").value,"motion":$("motion").checked,"lightimagelin":$("lightimagelin").checked,"linearsq":linearsq.options[linearsq.selectedIndex].value,"colora":$("colora").value,"intervallina":$("intervallina").value,"colorb":$("colorb").value,"intervallinb":$("intervallinb").value,"speech":$("speech").checked,"speechlang":savewebspeechlang,"speechcountry":savewebspeechcountry,"atmosvivid":$("atmosvivid").checked,"cammotiononly":$("cammotiononly").checked,"speechonly":$("speechonly").checked,"autoplaychecklistwhite":$("autoplaychecklistwhite").checked,"autoplaychecklistblack":$("autoplaychecklistblack").checked,"autostop":$("autostop").checked,"autostoponly":$("autostoponly").checked,"autostopchecklistwhite":$("autostopchecklistwhite").checked,"autostopchecklistblack":$("autostopchecklistblack").checked,"nighthover":$("nighthover").checked,"nightmodechecklistwhite":$("nightmodechecklistwhite").checked,"nightmodechecklistblack":$("nightmodechecklistblack").checked,"nmtopleft":$("nmtopleft").checked,"nmtopright":$("nmtopright").checked,"nmbottomright":$("nmbottomright").checked,"nmbottomleft":$("nmbottomleft").checked,"nmcustom":$("nmcustom").checked,"nightactivetime":$("nightactivetime").checked,"nmbegintime":$("nmbegintime").value,"nmendtime":$("nmendtime").value,"lampandnightmode":$("lampandnightmode").checked,"eyechecklistwhite":$("eyechecklistwhite").checked,"eyechecklistblack":$("eyechecklistblack").checked,"nightmodebck":$("nightmodebck").value,"nightmodetxt":$("nightmodetxt").value,"no360youtube":$("no360youtube").checked,"videotool":$("videotool").checked,"reflection":$("reflection").checked,"reflectionamount":$("reflectionamount").value,"videotoolonly":$("videotoolonly").checked,"videotoolchecklistwhite":$("videotoolchecklistwhite").checked,"videotoolchecklistblack":$("videotoolchecklistblack").checked,"nightmodehyperlink":$("nightmodehyperlink").value,"block60fps":$("block60fps").checked,"excludedDomains":JSON.stringify(excludedDomains),"autoplayDomains":JSON.stringify(autoplayDomains),"atmosphereDomains":JSON.stringify(atmosphereDomains),"nightDomains":JSON.stringify(nightDomains),"cammotionDomains":JSON.stringify(cammotionDomains),"speechDomains":JSON.stringify(speechDomains),"autostopDomains":JSON.stringify(autostopDomains),"videotoolDomains":JSON.stringify(videotoolDomains),"videovolume":$("videovolume").checked,"videovolumecolor":$("videovolumecolor").value,"videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value,"videovolumelabel":$("videovolumelabel").checked,"icon":$("btnpreview").getAttribute("data-icon"),"visopacity":$("visopacity").value,"videotoolcolor":$("videotoolcolor").value,"hovervideo":$("hovervideo").checked,"hovervideoamount":$("hovervideoamount").value,"mousespotlights":$("mousespotlights").checked,"drawatmosfps":$("drawatmosfps").value,"aplay":$("aplay").checked,"apause":$("apause").checked,"astop":$("astop").checked,"videozoom":$("videozoom").checked,"playrate":$("playrate").checked,"playrateamount":$("playrateamount").value,"speedtoolbar":$("speedtoolbar").checked,"atmosontotlmode":$("atmosontotlmode").checked,"titleinvertcolor":$("titleinvertcolor").value,"vpause":$("vpause").checked,"darkbrowsertheme":$("darkbrowsertheme").checked,"autostopred":$("autostopred").checked,"autostoptrans":$("autostoptrans").checked,"videovolumeposa":$("videovolumeposa").checked,"videovolumeposb":$("videovolumeposb").checked,"videovolumeposc":$("videovolumeposc").checked,"videovolumehold":$("videovolumehold").checked,"multiopacall":$("multiopacall").checked,"multiopacsel":$("multiopacsel").checked,"multiopacityDomains":JSON.stringify(websitemulti),"videovolumealt":$("videovolumealt").checked,"nightmodebydomain":$("nightmodebydomain").checked,"nightmodebypage":$("nightmodebypage").checked,"seeanalytics":$("seeanalytics").checked,"nightmodegesture":$("nightmodegesture").checked,"nightmodeswitchhide":$("nightmodeswitchhide").checked,"nightmodeswitchhidetime":$("nightmodeswitchhidetime").value,"atmosfpsauto":$("atmosfpsauto").checked,"atmosfpsmanual":$("atmosfpsmanual").checked});
@@ -291,10 +291,10 @@ function updateCountry(){
 		$("select_dialect").remove(i);
 	}
     var list = langs[$("select_language").selectedIndex];
-    var i;
-    var l = list.length;
-	for(i = 1; i < l; i++){
-		$("select_dialect").options.add(new Option(list[i][1], list[i][0]));
+    var listi;
+    var listl = list.length;
+	for(listi = 1; listi < listl; listi++){
+		$("select_dialect").options.add(new Option(list[listi][1], list[listi][0]));
 	}
 	$("select_dialect").style.visibility = list[1].length == 1 ? "hidden" : "visible";
 }
@@ -657,21 +657,21 @@ $("sectionreviewbox").style.display = "none";
 
     // Assign onclick events to the tab links, and
     // highlight the first tab
-    var i = 0;
-    var id;
+    var tabi = 0;
+    var tabid;
     for(id in tabLinks){
-        tabLinks[id].onclick = showTab;
-		tabLinks[id].onfocus = function(){ this.blur(); };
-		if(i == 0) tabLinks[id].className = "navbar-item-selected";
-		i++;
+        tabLinks[tabid].onclick = showTab;
+		tabLinks[tabid].onfocus = function(){ this.blur(); };
+		if(tabi == 0) tabLinks[tabid].className = "navbar-item-selected";
+		tabi++;
     }
 
     // Hide all content divs except the first
-    var i = 0;
-    var id;
-    for(id in contentDivs){
-        if(i != 0) contentDivs[id].className = "page hidden";
-        i++;
+    var contenti = 0;
+    var contentid;
+    for(contentid in contentDivs){
+        if(contenti != 0) contentDivs[contentid].className = "page hidden";
+        contenti++;
     }
 
     // display version number
@@ -706,8 +706,12 @@ function stopAnimation(){
 
 // yes show time
 // ambilight play detect
-fps = $("drawatmosfps").value;
-startAnimating(fps);
+if($("ambilight").checked == true){
+    fps = $("drawatmosfps").value;
+    startAnimating(fps);
+}else{
+    stopAnimation();
+}
 
 function startAnimating(fps){
     fpsInterval = 1000 / fps;
@@ -926,6 +930,12 @@ function rgbToHex(r, g, b){
     return((r << 16) | (g << 8) | b).toString(16);
 }
 
+var textcountA;
+var textcountB;
+var imageData;
+var data;
+var p1; var p2; var p3; var p4;
+var hex1; var hex2; var hex3; var hex4;
 // ambilight draw code
 function drawAtmos(){
 	var v = $("beeld");
@@ -934,23 +944,23 @@ function drawAtmos(){
 	countA = countA - 1; if(countA <= 0){ countA = 0; }
 	countB = countB - 1; if(countB <= 0){ countB = 0; }
 	countC = countC - 1; if(countC <= 0){ countC = 0; }
-	var textcountA = countA + "px";
-	var textcountB = countB + "px";
+	textcountA = countA + "px";
+	textcountB = countB + "px";
 
 var canvas = $("totlCanvas1");
 if(canvas){
 	var context = canvas.getContext("2d", {desynchronized: true});
-	var imageData = context.getImageData(0, 0, 1, 1);
-	var data = imageData.data;
+	imageData = context.getImageData(0, 0, 1, 1);
+	data = imageData.data;
 
-	var p1 = context.getImageData(0 , 0, 1, 1).data;
-	var p2 = context.getImageData(1 , 0, 1, 1).data;
-	var p3 = context.getImageData(2 , 0, 1, 1).data;
-	var p4 = context.getImageData(3 , 0, 1, 1).data;
-	var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-	var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-	var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-	var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+	p1 = context.getImageData(0 , 0, 1, 1).data;
+	p2 = context.getImageData(1 , 0, 1, 1).data;
+	p3 = context.getImageData(2 , 0, 1, 1).data;
+	p4 = context.getImageData(3 , 0, 1, 1).data;
+	hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+	hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+	hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+	hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 }
 var downhex1 = hex1; if(!hex1){ hex1 = "#000000"; } // previous value
 var downhex2 = hex2; if(!hex2){ hex2 = "#000000"; } // previous value
@@ -980,107 +990,105 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
 	return false;
 	}
 	if($("ambilight").checked == true){
-    var showtime = $("beeld");
-	var getblur = $("ambilightrangeblurradius").value + "px";
-	var getspread = $("ambilightrangespreadradius").value + "px";
+        var showtime = $("beeld");
 
-	// animate out and in
-	if(countA < $("ambilightrangespreadradius").value){ countA = countA + 1; }
-	if(countB < $("ambilightrangeblurradius").value){ countB = countB + 1; }
-	if(countC < 20){ countC = countC + .5; }
-	var textcountA = countA + "px";
-	var textcountB = countB + "px";
+        // animate out and in
+        if(countA < $("ambilightrangespreadradius").value){ countA = countA + 1; }
+        if(countB < $("ambilightrangeblurradius").value){ countB = countB + 1; }
+        if(countC < 20){ countC = countC + .5; }
+        textcountA = countA + "px";
+        textcountB = countB + "px";
 
-	if($("ambilightvarcolor").checked == true){
-    var sourceWidth = showtime.videoWidth;
-    var sourceHeight = showtime.videoHeight;
+        if($("ambilightvarcolor").checked == true){
+        var sourceWidth = showtime.videoWidth;
+        var sourceHeight = showtime.videoHeight;
 
-var totlcheckcanvas = $("totlCanvas1");
-if(totlcheckcanvas == null){
-    var totlnewcanvas = document.createElement("canvas");
-	totlnewcanvas.setAttribute("id","totlCanvas1");
-	totlnewcanvas.width = "4";
-	totlnewcanvas.height = "1";
-	totlnewcanvas.style.display = "none";
-	document.body.appendChild(totlnewcanvas);
-	}
+        var totlcheckcanvas = $("totlCanvas1");
+        if(totlcheckcanvas == null){
+            var totlnewcanvas = document.createElement("canvas");
+            totlnewcanvas.setAttribute("id","totlCanvas1");
+            totlnewcanvas.width = "4";
+            totlnewcanvas.height = "1";
+            totlnewcanvas.style.display = "none";
+            document.body.appendChild(totlnewcanvas);
+        }
 
-var canvas = $("totlCanvas1");
-var context = canvas.getContext("2d", {desynchronized: true});
-var colorlamp1X = (sourceWidth * 50) / 100; // up midden
-var colorlamp1Y = (sourceHeight * 95) / 100;
-var colorlamp2X = (sourceWidth * 95) / 100; // right midden
-var colorlamp2Y = (sourceHeight * 50) / 100;
-var colorlamp3X = (sourceWidth * 50) / 100; // down midden
-var colorlamp3Y = (sourceHeight * 5) / 100;
-var colorlamp4X = (sourceWidth * 5) / 100; // left midden
-var colorlamp4Y = (sourceHeight * 50) / 100;
+        var totlcanvas = $("totlCanvas1");
+        var colorcontext = totlcanvas.getContext("2d", {desynchronized: true});
+        var colorlamp1X = (sourceWidth * 50) / 100; // up midden
+        var colorlamp1Y = (sourceHeight * 95) / 100;
+        var colorlamp2X = (sourceWidth * 95) / 100; // right midden
+        var colorlamp2Y = (sourceHeight * 50) / 100;
+        var colorlamp3X = (sourceWidth * 50) / 100; // down midden
+        var colorlamp3Y = (sourceHeight * 5) / 100;
+        var colorlamp4X = (sourceWidth * 5) / 100; // left midden
+        var colorlamp4Y = (sourceHeight * 50) / 100;
 
-	context.drawImage(showtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
-	context.drawImage(showtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
-	context.drawImage(showtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
-	context.drawImage(showtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
+        colorcontext.drawImage(showtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
+        colorcontext.drawImage(showtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
+        colorcontext.drawImage(showtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
+        colorcontext.drawImage(showtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
 
-    var imageData = context.getImageData(0, 0, 1, 1);
-    var data = imageData.data;
+        imageData = colorcontext.getImageData(0, 0, 1, 1);
+        data = imageData.data;
 
-    var p1 = context.getImageData(0 , 0, 1, 1).data;
-    var p2 = context.getImageData(1 , 0, 1, 1).data;
-    var p3 = context.getImageData(2 , 0, 1, 1).data;
-    var p4 = context.getImageData(3 , 0, 1, 1).data;
-    var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-    var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-    var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-    var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+        p1 = colorcontext.getImageData(0 , 0, 1, 1).data;
+        p2 = colorcontext.getImageData(1 , 0, 1, 1).data;
+        p3 = colorcontext.getImageData(2 , 0, 1, 1).data;
+        p4 = colorcontext.getImageData(3 , 0, 1, 1).data;
+        hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+        hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+        hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+        hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 
         if($("atmosvivid").checked == true){
-				if($("stefanvdvivideffect1")){
-                    showtime.style["boxShadow"] = "none";
-                    var newpositionvivid = getPosition(showtime);
-					var tempwidthvideo = showtime.offsetWidth;
-					var tempheightvideo = showtime.offsetHeight;
-					var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
-					var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
-                    var newvivid = $("stefanvdvivideffect1");
-					newvivid.style.webkitTransform = "scale(" + 1.1 + ")";
-					newvivid.style.webkitFilter = "blur(" + 30 + "px)";
-                    newvivid.style.top = 0;
-                    newvivid.style.bottom = 0;
-                    newvivid.style.right = 0;
-                    newvivid.style.left = 0;
-                    newvivid.style.margin = "auto";
-                    newvivid.style.width = "640px";
-                    newvivid.style.height = "360px";
-					newvivid.style.opacity = .88;
-                    newvivid.style.display = "block";
-                    newvivid.width = Math.floor(tempwidthvideo * 0.08);
-                    newvivid.height = Math.floor(tempheightvideo * 0.08);
-                    var vividctx = newvivid.getContext("2d", {desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
-					vividctx.drawImage(showtime,0,0,vividx,vividy);
-				}
+			if($("stefanvdvivideffect1")){
+                showtime.style["boxShadow"] = "none";
+                var newpositionvivid = getPosition(showtime);
+                var tempwidthvideo = showtime.offsetWidth;
+                var tempheightvideo = showtime.offsetHeight;
+                var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
+                var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
+                var newvivid = $("stefanvdvivideffect1");
+                newvivid.style.webkitTransform = "scale(" + 1.1 + ")";
+                newvivid.style.webkitFilter = "blur(" + 30 + "px)";
+                newvivid.style.top = 0;
+                newvivid.style.bottom = 0;
+                newvivid.style.right = 0;
+                newvivid.style.left = 0;
+                newvivid.style.margin = "auto";
+                newvivid.style.width = "640px";
+                newvivid.style.height = "360px";
+                newvivid.style.opacity = .88;
+                newvivid.style.display = "block";
+                newvivid.width = Math.floor(tempwidthvideo * 0.08);
+                newvivid.height = Math.floor(tempheightvideo * 0.08);
+                var vividctx = newvivid.getContext("2d", {desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
+                vividctx.drawImage(showtime,0,0,vividx,vividy);
+			}
         }else{
             if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
             v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + hex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + hex4 + "";
         }
-	}else if($("ambilightfixcolor").checked == true){
-    if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-	var fixhex = $("ambilightcolorhex").value;
-	if(fixhex)fixhex = fixhex; else fixhex = "#000000";
-	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
-	}else if($("ambilight4color").checked == true){
-    if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-	var fix1hex = $("ambilight1colorhex").value;
-	var fix2hex = $("ambilight2colorhex").value;
-	var fix3hex = $("ambilight3colorhex").value;
-	var fix4hex = $("ambilight4colorhex").value;
-	if(fix1hex)fix1hex = fix1hex; else fix1hex = "#FF0000";
-	if(fix2hex)fix2hex = fix2hex; else fix2hex = "#FFEE00";
-	if(fix3hex)fix3hex = fix3hex; else fix3hex = "#00FF00";
-	if(fix4hex)fix4hex = fix4hex; else fix4hex = "#0000FF";
-	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
-	}
+        }else if($("ambilightfixcolor").checked == true){
+            if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
+            var fixhex = $("ambilightcolorhex").value;
+            if(fixhex == null){ fixhex = "#000000"; }
+            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
+        }else if($("ambilight4color").checked == true){
+            if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
+            var fix1hex = $("ambilight1colorhex").value;
+            var fix2hex = $("ambilight2colorhex").value;
+            var fix3hex = $("ambilight3colorhex").value;
+            var fix4hex = $("ambilight4colorhex").value;
+            if(fix1hex == null){ fix1hex = "#FF0000"; }
+            if(fix2hex == null){ fix2hex = "#FFEE00"; }
+            if(fix3hex == null){ fix3hex = "#00FF00"; }
+            if(fix4hex == null){ fix4hex = "#0000FF"; }
+            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
+        }
 
-}else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
+    }else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
 }
 
 // Fade engine
@@ -1784,17 +1792,17 @@ function Particle(context){
 // A function to generate a random number between 2 values
 function generateRandom(min, max){ return Math.random() * (max - min) + min; }
 
-var context;
+var smokecontext;
 // Initialise the scene and set the context if possible
 function runsmoke(){
-    var canvas = document.getElementById("stefanvddynamicsmoke");
-    if(canvas.getContext){
+    var smokecanvas = document.getElementById("stefanvddynamicsmoke");
+    if(smokecanvas.getContext){
         // Set the context variable so it can be re-used
-        context = canvas.getContext("2d", {desynchronized: true});
+        smokecontext = smokecanvas.getContext("2d", {desynchronized: true});
         // Create the particles and set their initial positions and velocities
         var i;
         for(i = 0; i < particleCount; ++i){
-            var particle = new Particle(context);
+            var particle = new Particle(smokecontext);
 
             // Set the position to be inside the canvas bounds
             particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
@@ -1809,8 +1817,8 @@ function runsmoke(){
 // The function to draw the scene
 function smokedraw(){
     // Clear the drawing surface and fill it with a black background
-    context.fillStyle = "rgba(0, 0, 0, 0.0)";
-    context.fillRect(0, 0, 400, 400);
+    smokecontext.fillStyle = "rgba(0, 0, 0, 0.0)";
+    smokecontext.fillRect(0, 0, 400, 400);
 
     // Go through all of the particles and draw them.
     particles.forEach(function(particle){
@@ -1846,15 +1854,15 @@ function createCloud(){
         cloud.style.opacity = 0;
         cloud.style.opacity = .8;
         cloud.className = "stefanvdcloudLayer";
-        var x = 256 - (Math.random() * 512);
-        var y = 256 - (Math.random() * 512);
-        var z = 100 - (Math.random() * 200);
-        var a = Math.random() * 360;
-        var s = .25 + Math.random();
+        var cloudx = 256 - (Math.random() * 512);
+        var cloudy = 256 - (Math.random() * 512);
+        var cloudz = 100 - (Math.random() * 200);
+        var clouda = Math.random() * 360;
+        var clouds = .25 + Math.random();
         x *= .2; y *= .2;
-        cloud.data = {x: x,y: y,z: z,a: a,s: s,speed: .1 * Math.random()};
-        var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px) rotateZ(" + a + "deg) scale(" + s + ")";
-        cloud.style.webkitTransform = t; cloud.style.MozTransform = t; cloud.style.oTransform = t;
+        cloud.data = {x: cloudx,y: cloudy,z: cloudz,a: clouda,s: clouds,speed: .1 * Math.random()};
+        var cloudt = "translateX(" + cloudx + "px) translateY(" + cloudy + "px) translateZ(" + cloudz + "px) rotateZ(" + clouda + "deg) scale(" + clouds + ")";
+        cloud.style.webkitTransform = cloudt; cloud.style.MozTransform = cloudt; cloud.style.oTransform = cloudt;
         div.appendChild(cloud);
         layers.push(cloud);
     }
@@ -1875,7 +1883,8 @@ function generate(){
 function updateView(){
     var d = 0;
     var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
-    world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t; }
+    world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t;
+}
 
 function cloudupdate(){
     var j;
@@ -2142,14 +2151,16 @@ removedynamic();
 	var fishtanks = document.createElement("div"); fishtanks.setAttribute("id","fishtanks"); newdynmaster.appendChild(fishtanks);
 
     var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
-    var i;
-	for(i = 0; i < 5; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynleft.appendChild(newdyn); }
-	var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
-    var i;
-    for(i = 6; i < 10; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynmid.appendChild(newdyn); }
-	var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
-    var i;
-    for(i = 11; i < 16; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + i + ""); newdynright.appendChild(newdyn); }
+    var dynlefti;
+    for(dynlefti = 0; dynlefti < 5; dynlefti++){ var newdynbubbleleft = document.createElement("div"); newdynbubbleleft.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynlefti + ""); newdynleft.appendChild(newdynbubbleleft); }
+
+    var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
+    var dynmidi;
+    for(dynmidi = 6; dynmidi < 10; dynmidi++){ var newdynbubblemid = document.createElement("div"); newdynbubblemid.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynmidi + ""); newdynmid.appendChild(newdynbubblemid); }
+
+    var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
+    var dynrighti;
+    for(dynrighti = 11; dynrighti < 16; dynrighti++){ var newdynbubble = document.createElement("div"); newdynbubble.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynrighti + ""); newdynright.appendChild(newdynbubble); }
 }
 else if($("dynamic2").checked == true){
 removedynamic();
@@ -2208,15 +2219,15 @@ if($("hoveroptiondyn5").checked == true){
 var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
 
 var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
-var j;
-for(j = 1; j < 17; j++){
-if(j <= 9){ j = "0" + j; }
+var spacej;
+for(spacej = 1; spacej < 17; spacej++){
+if(spacej <= 9){ spacej = "0" + spacej; }
     var newdynpart1 = document.createElement("div");
-    newdynpart1.setAttribute("id",flying + "p" + j); newdynspaceworld.appendChild(newdynpart1);
-    var i;
-    for(i = 1; i < 31; i++){
-    if(i <= 9){ i = "0" + i; }
-    var newdynlow = document.createElement("b"); newdynlow.setAttribute("class",flying + "s0" + i + ""); newdynpart1.appendChild(newdynlow);
+    newdynpart1.setAttribute("id",flying + "p" + spacej); newdynspaceworld.appendChild(newdynpart1);
+    var spacei;
+    for(spacei = 1; spacei < 31; spacei++){
+    if(spacei <= 9){ spacei = "0" + spacei; }
+    var newdynlow = document.createElement("b"); newdynlow.setAttribute("class",flying + "s0" + spacei + ""); newdynpart1.appendChild(newdynlow);
     }
 }
 }else if($("dynamic6").checked == true){
@@ -2570,9 +2581,9 @@ function runcamerasettings(){
             //Display the video stream in the video object
             localMediaStream = stream; // Store the video stream
             video.srcObject = stream;
-         })
-         .catch(function(e){
-              //console.log(e.name + ": " + e.message);
+        })
+        .catch(function(e){
+            console.log(e.name + ": " + e.message);
         });
     }
 }
@@ -3532,6 +3543,11 @@ function component(width, height, color, x, y, type){
     };
 }
 
+function removeElement(elementId){
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
+
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var gameaudiocontext;
 function updateGameArea(){
@@ -3706,13 +3722,11 @@ function OnSearch(input){
     $("atmossettingspanel").className = "hidden";
 
     if($("stefanvdbtnplaygroundfilter")){
-        var playgroundfilter = document.getElementById("stefanvdbtnplaygroundfilter");
-        playgroundfilter.parentNode.removeChild(playgroundfilter);
+        removeElement("stefanvdbtnplaygroundfilter");
     }
 
     if($("stefanvdplayground")){
-        var playground = document.getElementById("stefanvdplayground");
-        playground.parentNode.removeChild(playground);
+        removeElement("stefanvdplayground");
     }
   }
   else{
@@ -3742,26 +3756,24 @@ function OnSearch(input){
 
     // receive the total tab pages
     var tabListItems = $("navbar").childNodes;
-    var i;
-    var l = tabListItems.length;
-    for(i = 0; i < l; i++){
+    var tabListi;
+    var tabListl = tabListItems.length;
+    for(tabListi = 0; tabListi < tabListl; tabListi++){
         if(tabListItems[i].nodeName == "LI"){
-        var tabLink = getFirstChildWithTagName(tabListItems[i],"A");
+        var tabLink = getFirstChildWithTagName(tabListItems[tabListi],"A");
         var id = getHash(tabLink.getAttribute("data-tab"));
         contentDivs[id] = document.getElementById(id);
         }
     }
 
     // show all tab pages
-    var i = 0;
-    var id;
-    for(id in contentDivs){
-        if(id != "tab4"){
-            if((contentDivs[id])){
-                contentDivs[id].className = "page";
+    var showaltabid;
+    for(showaltabid in contentDivs){
+        if(showaltabid != "tab4"){
+            if((contentDivs[showaltabid])){
+                contentDivs[showaltabid].className = "page";
             }
         }
-        i++;
     }
     //---
     var searchword = input.value;
@@ -3807,16 +3819,15 @@ function OnSearch(input){
         }
     }else{
         if($("stefanvdplayground")){
-            var playground = document.getElementById("stefanvdplayground");
-            playground.parentNode.removeChild(playground);
+            removeElement("stefanvdplayground");
         }
     }
 
-    var sections = document.getElementsByTagName("section");
-    var x;
-    var l = sections.length;
-    for(x = 0; x < l; x++){
-        var section = sections[x];
+    var allsections = document.getElementsByTagName("section");
+    var sectionsx;
+    var sectionsl = allsections.length;
+    for(sectionsx = 0; sectionsx < sectionsl; sectionsx++){
+        var partsection = allsections[sectionsx];
         var content = section.innerHTML;
 
         // remove first the help message, because not a feature
@@ -3826,9 +3837,9 @@ function OnSearch(input){
         content = content.replace(i18nhelpeyeprotection, "");
 
         if(content.search(new RegExp(searchword, "i")) < 1){
-            section.classList.add("searchfoundnothing");
+            partsection.classList.add("searchfoundnothing");
         }else{
-            section.classList.remove("searchfoundnothing");
+            partsection.classList.remove("searchfoundnothing");
         }
     }
 
