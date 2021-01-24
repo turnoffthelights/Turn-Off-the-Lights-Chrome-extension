@@ -263,7 +263,7 @@ window.addEventListener("keydown", function(e){
 			// Shortcutlight
 			if(shortcutlight == true){
 			if($("stefanvdlightareoff1")){
-				var shorcutcurrentopacity = $("stefanvdlightareoff1").style.opacity;
+				let shorcutcurrentopacity = $("stefanvdlightareoff1").style.opacity;
 				shorcutcurrentopacity -= 0.01;
 				// if zero
 				if(shorcutcurrentopacity <= 0){
@@ -277,9 +277,9 @@ window.addEventListener("keydown", function(e){
 					if(stefanvdlightareoff4){ document.body.removeChild(stefanvdlightareoff4); }
 				}else{
 				//control opacity for all <div>
-				var div = document.querySelectorAll("div.stefanvdlightareoff");
-				var i;
-				var l = div.length;
+				let div = document.querySelectorAll("div.stefanvdlightareoff");
+				let i;
+				let l = div.length;
 				for(i = 0; i < l; i++){ div[i].style.opacity = shorcutcurrentopacity; }
 				}
 			}
@@ -304,7 +304,7 @@ window.addEventListener("keydown", function(e){
 				var i18ntiteleye = chrome.i18n.getMessage("titeleye");
 
 			// enable/disable the "Eye Protection" feature
-			if(eyea == true){ var eyeoptionvalue = false;
+			if(eyea == true){
 			var stefanvdlightseye = $("stefanvdlightseye");
 			if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
 			// create div on top page, and say this is OFF
@@ -312,17 +312,17 @@ window.addEventListener("keydown", function(e){
 				neweyediv.setAttribute("id","stefanvdlightseye");
 				neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivoff + "";
 				document.body.appendChild(neweyediv);
-				chrome.runtime.sendMessage({"name" : "eyesavemeOFF", "value" : eyeoptionvalue});
+				chrome.runtime.sendMessage({"name" : "eyesavemeOFF", "value" : false});
 			}
-			else{ var eyeoptionvalue = true;
-			var stefanvdlightseye = $("stefanvdlightseye");
-			if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
-			// create div on top page, and say this is ON
-				var neweyediv = document.createElement("div");
+			else{
+				let stefanvdlightseye = $("stefanvdlightseye");
+				if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
+				// create div on top page, and say this is ON
+				let neweyediv = document.createElement("div");
 				neweyediv.setAttribute("id","stefanvdlightseye");
 				neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivon + "";
 				document.body.appendChild(neweyediv);
-				chrome.runtime.sendMessage({"name" : "eyesavemeON", "value" : eyeoptionvalue});
+				chrome.runtime.sendMessage({"name" : "eyesavemeON", "value" : true});
 			}
 
 			// remove div after 3s
@@ -4745,6 +4745,11 @@ injectScript(codetext);
 
 } // end check youtube.com website
 
+function removeElement(elementId){
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
+
 chrome.runtime.onMessage.addListener(function(request){
 	if(request.action == "goinnightmode"){
 		if(request.value == "day"){
@@ -4973,12 +4978,10 @@ chrome.runtime.onMessage.addListener(function(request){
 			// remove
 			window.clearInterval(startautoplay);
 			if(document.getElementById("totlautoplay")){
-				var element = document.getElementById("totlautoplay");
-				element.parentNode.removeChild(element);
+				removeElement("totlautoplay");
 			}
 			if(document.getElementById("ytCinemaMessage")){
-				var element = document.getElementById("ytCinemaMessage");
-				element.parentNode.removeChild(element);
+				removeElement("ytCinemaMessage");
 			}
 
 			if(autoplay == true){
@@ -5007,25 +5010,25 @@ chrome.runtime.onMessage.addListener(function(request){
 
 		window.removeEventListener("resize", myListenerWithContext);
 
-		var elements = document.getElementsByClassName("stefanvdspeed");
-		while(elements.length > 0){
-			elements[0].parentNode.removeChild(elements[0]);
+		var removespeedelement = document.getElementsByClassName("stefanvdspeed");
+		while(removespeedelement.length > 0){
+			removespeedelement[0].parentNode.removeChild(removespeedelement[0]);
 		}
-		var elements = document.getElementsByClassName("stefanvdzoomstage");
-		while(elements.length > 0){
-			elements[0].parentNode.removeChild(elements[0]);
+		var removezoomstageelement = document.getElementsByClassName("stefanvdzoomstage");
+		while(removezoomstageelement.length > 0){
+			removezoomstageelement[0].parentNode.removeChild(removezoomstageelement[0]);
 		}
-		var elements = document.getElementsByClassName("stefanvdzoom");
-		while(elements.length > 0){
-			elements[0].parentNode.removeChild(elements[0]);
+		var removezoomelement = document.getElementsByClassName("stefanvdzoom");
+		while(removezoomelement.length > 0){
+			removezoomelement[0].parentNode.removeChild(removezoomelement[0]);
 		}
-		var elements = document.getElementsByClassName("stefanvdvisualization");
-		while(elements.length > 0){
-			elements[0].parentNode.removeChild(elements[0]);
+		var removevisualizationelement = document.getElementsByClassName("stefanvdvisualization");
+		while(removevisualizationelement.length > 0){
+			removevisualizationelement[0].parentNode.removeChild(removevisualizationelement[0]);
 		}
-		var elements = document.getElementsByClassName("stefanvdvis");
-		while(elements.length > 0){
-			elements[0].parentNode.removeChild(elements[0]);
+		var removeviselement = document.getElementsByClassName("stefanvdvis");
+		while(removeviselement.length > 0){
+			removeviselement[0].parentNode.removeChild(removeviselement[0]);
 		}
 
 		if(videotool == true){

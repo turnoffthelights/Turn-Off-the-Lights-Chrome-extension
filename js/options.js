@@ -916,11 +916,11 @@ window.requestAnimFrame = function(){
     );
 }();
 
-function getPosition(el){
+/*function getPosition(el){
 var xPos = 0; var yPos = 0;
 while(el){ xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); el = el.offsetParent; }
 return{x:xPos,y:yPos};
-}
+}*/
 
 var countA = 0, countB = 0, countC = 0; // start from zero (blur spread) and size (left right top under) position
 
@@ -932,8 +932,6 @@ function rgbToHex(r, g, b){
 
 var textcountA;
 var textcountB;
-var imageData;
-var data;
 var p1; var p2; var p3; var p4;
 var hex1; var hex2; var hex3; var hex4;
 // ambilight draw code
@@ -950,8 +948,6 @@ function drawAtmos(){
 var canvas = $("totlCanvas1");
 if(canvas){
 	var context = canvas.getContext("2d", {desynchronized: true});
-	imageData = context.getImageData(0, 0, 1, 1);
-	data = imageData.data;
 
 	p1 = context.getImageData(0 , 0, 1, 1).data;
 	p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -1029,9 +1025,6 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
         colorcontext.drawImage(showtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
         colorcontext.drawImage(showtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
 
-        imageData = colorcontext.getImageData(0, 0, 1, 1);
-        data = imageData.data;
-
         p1 = colorcontext.getImageData(0 , 0, 1, 1).data;
         p2 = colorcontext.getImageData(1 , 0, 1, 1).data;
         p3 = colorcontext.getImageData(2 , 0, 1, 1).data;
@@ -1044,11 +1037,11 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
         if($("atmosvivid").checked == true){
 			if($("stefanvdvivideffect1")){
                 showtime.style["boxShadow"] = "none";
-                var newpositionvivid = getPosition(showtime);
+                //var newpositionvivid = getPosition(showtime);
                 var tempwidthvideo = showtime.offsetWidth;
                 var tempheightvideo = showtime.offsetHeight;
-                var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
-                var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
+                //var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
+                //var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
                 var newvivid = $("stefanvdvivideffect1");
                 newvivid.style.webkitTransform = "scale(" + 1.1 + ")";
                 newvivid.style.webkitFilter = "blur(" + 30 + "px)";
@@ -1880,12 +1873,6 @@ function generate(){
     for(j = 0; j < 5; j++){ objects.push(createCloud()); }
 }
 
-function updateView(){
-    var d = 0;
-    var t = "translateZ( " + d + "px ) rotateX( " + worldXAngle + "deg) rotateY( " + worldYAngle + "deg)";
-    world.style.webkitTransform = t; world.style.MozTransform = t; world.style.oTransform = t;
-}
-
 function cloudupdate(){
     var j;
     var l = layers.length;
@@ -2166,15 +2153,15 @@ else if($("dynamic2").checked == true){
 removedynamic();
 	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
 
-    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynleft);
-    var i;
-	for(i = 1; i < 21; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + i + ""); newdynleft.appendChild(newdyn); }
+    var newdynblockleft = document.createElement("div"); newdynblockleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynblockleft);
+    var blocki;
+	for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynleft.appendChild(newdynblock); }
 }
 else if($("dynamic3").checked == true){
 removedynamic();
 	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
 
-	var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynleft);
+	var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynrainleft);
     var i;
     for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
 }
@@ -2252,7 +2239,7 @@ imageObj.src = "images/Smoke10.webp";
 runsmoke();
 
 // If the context is set then we can draw the scene (if not then the browser does not support canvas)
-if(context){
+if(smokecontext){
     if(document.visibilityState === "visible"){
     window.setInterval(function(){
         // Update the scene before drawing
@@ -2294,10 +2281,10 @@ window.onresize = onResize;
 }else if($("dynamic10").checked == true){
 removedynamic();
 var stars = document.createElement("div"); stars.setAttribute("id","stars"); newdynmaster.appendChild(stars);
-var j;
-	for(j = 1; j < 3; j++){
+var starsj;
+	for(starsj = 1; starsj < 3; starsj++){
 		var newmstar = document.createElement("div");
-		newmstar.id = "mstars" + [j];
+		newmstar.id = "mstars" + [starsj];
 		stars.appendChild(newmstar);
 	}
 }
@@ -2331,8 +2318,8 @@ if(window.location.href != totloptionspage){
 
 function cameradomcontentloaded(){
 var video = document.getElementById("motionvideo");
-var canvas = document.getElementById("motioncanvas");
-var canvasgetcont = canvas.getContext("2d", {desynchronized: true});
+var motioncanvas = document.getElementById("motioncanvas");
+var canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
 var ccanvas = document.getElementById("motioncomp");
 var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 
@@ -2344,11 +2331,11 @@ width = height = 0;
 
         function dump(){
             if(localMediaStream){
-                if(canvas.width != video.videoWidth){
+                if(motioncanvas.width != video.videoWidth){
                     width = Math.floor(video.videoWidth / compression);
                     height = Math.floor(video.videoHeight / compression);
-                    canvas.width = ccanvas.width = width;
-                    canvas.height = ccanvas.height = height;
+                    motioncanvas.width = ccanvas.width = width;
+                    motioncanvas.height = ccanvas.height = height;
                 }
                 if(width != 0){
                     canvasgetcont.drawImage(video, width, 0, -width, height);
@@ -2432,19 +2419,18 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
         function camtest(){
             delt = canvasgetcont.createImageData(width, height);
             if(last !== false){
-                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, dscl = 0, pix = totaln * 4; while(pix -= 4){
-                    var d = Math.abs(
-                            draw.data[pix] - last.data[pix]
-                    ) + Math.abs(
-                            draw.data[pix + 1] - last.data[pix + 1]
-                    ) + Math.abs(
-                            draw.data[pix + 2] - last.data[pix + 2]
-                    );
+                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
+                var testcondition = pix -= 4;
+                // Any number that is not 0 evaluates to true
+                // if 0 evaluates to false
+                while(testcondition){
+                    var d = Math.abs(draw.data[pix] - last.data[pix]
+                    ) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
+                    ) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
                     if(d > thresh){
                         delt.data[pix] = 160;
                         delt.data[pix + 1] = 255;
-                        delt.data[pix + 2] =
-                delt.data[pix + 3] = 255;
+                        delt.data[pix + 2] = delt.data[pix + 3] = 255;
                         totald += 1;
                         totalx += ((pix / 4) % width);
                         totaly += (Math.floor((pix / 4) / delt.height));
@@ -2541,35 +2527,21 @@ var container = document.getElementById("stefanmotion"); container.insertBefore(
 
 }
 
-function PopupCenter(url, title, w, h){
-    // Fixes dual-screen position                         Most browsers      Firefox
-    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : window.screenX;
-    var dualScreenTop = window.screenTop != undefined ? window.screenTop : window.screenY;
-
-    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-
-    var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-    var top = ((height / 2) - (h / 2)) + dualScreenTop;
-    var newWindow = window.open(url, title, "scrollbars=yes, width=" + w + ", height=" + h + ", top=" + top + ", left=" + left);
-
-    // Puts focus on the newWindow
-    if(window.focus){
-        newWindow.focus();
-    }
-}
-
+var motioncanvas;
+var canvasgetcont;
+var ccanvas;
+var ccgetcont;
 function runcamerasettings(){
     // reset everything
     if(localMediaStream){
     document.getElementById("motionvideo").pause();
     document.getElementById("motionvideo").src = "";
-    localMediaStream.getTracks().forEach(track => track.stop());
+    localMediaStream.getTracks().forEach((track) => track.stop());
     localMediaStream = null;
     document.getElementById("motionvideo").load();
-    canvas = document.getElementById("motioncanvas");
-    canvasgetcont = canvas.getContext("2d", {desynchronized: true});
-    canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
+    motioncanvas = document.getElementById("motioncanvas");
+    canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+    canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
     ccanvas = document.getElementById("motioncomp");
     ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
     ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
@@ -2588,6 +2560,7 @@ function runcamerasettings(){
     }
 }
 
+var video;
 function cameramotionlights(){
 if($("motion").checked == true){
 
@@ -2604,12 +2577,11 @@ navigator.permissions.query({name:"camera"})
   };
 });
 
-var video = document.getElementById("motionvideo");
-var canvas = document.getElementById("motioncanvas");
-var canvasgetcont = canvas.getContext("2d", {desynchronized: true});
-var ccanvas = document.getElementById("motioncomp");
-var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-
+video = document.getElementById("motionvideo");
+motioncanvas = document.getElementById("motioncanvas");
+canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+ccanvas = document.getElementById("motioncomp");
+ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 
 }else{
 	// remove everything
@@ -2620,14 +2592,14 @@ var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 			document.getElementById("motionvideo").pause();
 			document.getElementById("motionvideo").src = "";
 		}
-		localMediaStream.getTracks().forEach(track => track.stop());
+		localMediaStream.getTracks().forEach((track) => track.stop());
 		localMediaStream = null;
 		document.getElementById("motionvideo").load();
-		canvas = document.getElementById("motioncanvas");
-		canvasgetcont = canvas.getContext("2d", {desynchronized: true});
-		canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-		canvas.width = 0;
-		canvas.height = 0;
+		motioncanvas = document.getElementById("motioncanvas");
+		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+		canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
+		motioncanvas.width = 0;
+		motioncanvas.height = 0;
 		ccanvas = document.getElementById("motioncomp");
 		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
@@ -2673,11 +2645,11 @@ chrome.runtime.onMessage.addListener(function(msg){
     if(msg.text === "receiveallpermissions"){
     // empty ul first
     if($("permullist")){
-        var lis = document.querySelectorAll("#permullist li");
-        var i;
-        var li;
-        for(i = 0; li = lis[i]; i++){
-            li.parentNode.removeChild(li);
+        var ul = document.querySelector("#permullist");
+        var listLength = ul.children.length;
+        var listi;
+        for(listi = 0; listi < listLength; listi++){
+            ul.removeChild(ul.childNodes[listi]);
         }
     }
     var perm = msg.value;
@@ -2746,7 +2718,7 @@ if((window.location.href != totloptionspage) && devmode == false){
                 throw new Error(response.statusText);
             }
 
-        }).catch(e=>{
+        }).catch(()=>{
         // is not there
         // use offline page
         // Add the YouTube player
@@ -3495,21 +3467,21 @@ function component(width, height, color, x, y, type){
     this.gravity = 0;
     this.gravitySpeed = 0;
     this.update = function(){
-        ctx = myGameArea.context;
+        var gamectx = myGameArea.context;
         if(this.type == "text"){
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = this.color;
-            ctx.shadowBlur = 1;
-            ctx.shadowColor = "rgba(255,255,255,1)";
-            ctx.fillText(this.text, this.x, this.y);
+            gamectx.font = this.width + " " + this.height;
+            gamectx.fillStyle = this.color;
+            gamectx.shadowBlur = 1;
+            gamectx.shadowColor = "rgba(255,255,255,1)";
+            gamectx.fillText(this.text, this.x, this.y);
         }
         else if(type == "image"){
-            ctx.imageSmoothingEnabled = false;
-            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+            gamectx.imageSmoothingEnabled = false;
+            gamectx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
         else{
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+            gamectx.fillStyle = color;
+            gamectx.fillRect(this.x, this.y, this.width, this.height);
         }
     };
     this.newPos = function(){
@@ -3583,11 +3555,11 @@ function updateGameArea(){
         myObstacles.push(new component(10, height, "#666666", x, 0));
         myObstacles.push(new component(10, x - height - gap, "#666666", x, height + gap));
     }
-    var i;
-    var l = myObstacles.length;
-    for(i = 0; i < l; i += 1){
-        myObstacles[i].x += -1;
-        myObstacles[i].update();
+    var obstaclesi;
+    var obstaclesl = myObstacles.length;
+    for(obstaclesi = 0; obstaclesi < obstaclesl; obstaclesi += 1){
+        myObstacles[obstaclesi].x += -1;
+        myObstacles[obstaclesi].update();
     }
 
     myScore.text = "SCORE: " + myScore.score;
@@ -3632,9 +3604,6 @@ function updateGameArea(){
           })(0);
         };
 
-        beep.destroy = function(){
-          if(!options.context) context.close();
-        };
         beep();
         // blink text
         myScore.color = "rgb(0,0,0,.2)";

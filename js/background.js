@@ -449,7 +449,6 @@ chrome.storage.onChanged.addListener(function(changes){
                             "38": changes["icon"].newValue
                         }
                     });
-
                 }
             }
             );

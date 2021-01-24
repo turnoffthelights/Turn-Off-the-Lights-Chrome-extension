@@ -27,60 +27,62 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+var motioncanvas;
+var canvasgetcont;
+var ccanvas;
+var ccgetcont;
 document.addEventListener("DOMContentLoaded", function(){ cameramotionlights(); },false);
 chrome.storage.onChanged.addListener(function(changes){
-    for(key in changes){
-         if(changes["motion"]){
-             if(changes["motion"].newValue == true){
-             //enable this
-             cameramotionlights();
-             }else{
-                 //disable this
-                 try{ // stop it
-                    if(localMediaStream){ // stop it
-                        document.getElementById("motionvideo").pause();
-                        document.getElementById("motionvideo").src = "";
-                        localMediaStream.getTracks().forEach(track => track.stop());
-                        localMediaStream = null;
-                        document.getElementById("motionvideo").load();
-                        canvas = document.getElementById("motioncanvas");
-                        canvasgetcont = canvas.getContext("2d");
-                        canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-                        ccanvas = document.getElementById("motioncomp");
-                        ccgetcont = ccanvas.getContext("2d");
-                        ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
-                        window.clearInterval(intervalID);
-                    }
-                }
-                catch(e){ console.error(e); }
-             }
-         }
-         if(changes["cammotiononly"]){
-             if(changes["cammotiononly"].newValue == true){
-                 //disable this
-                 try{ // stop it
-                    if(localMediaStream){ // stop it
-                        document.getElementById("motionvideo").pause();
-                        document.getElementById("motionvideo").src = "";
-                        localMediaStream.getTracks().forEach(track => track.stop());
-                        localMediaStream = null;
-                        document.getElementById("motionvideo").load();
-                        canvas = document.getElementById("motioncanvas");
-                        canvasgetcont = canvas.getContext("2d");
-                        canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
-                        ccanvas = document.getElementById("motioncomp");
-                        ccgetcont = ccanvas.getContext("2d");
-                        ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
-                        window.clearInterval(intervalID);
-                    }
-                }
-                catch(e){ console.error(e); }
-             }else{
-                 //enable this
-                 cameramotionlights();
-             }
-         }
-     }
+    if(changes["motion"]){
+        if(changes["motion"].newValue == true){
+        //enable this
+        cameramotionlights();
+        }else{
+            //disable this
+            try{ // stop it
+            if(localMediaStream){ // stop it
+                document.getElementById("motionvideo").pause();
+                document.getElementById("motionvideo").src = "";
+                localMediaStream.getTracks().forEach((track) => track.stop());
+                localMediaStream = null;
+                document.getElementById("motionvideo").load();
+                motioncanvas = document.getElementById("motioncanvas");
+                canvasgetcont = motioncanvas.getContext("2d");
+                canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
+                ccanvas = document.getElementById("motioncomp");
+                ccgetcont = ccanvas.getContext("2d");
+                ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
+                window.clearInterval(intervalID);
+            }
+        }
+        catch(e){ console.error(e); }
+        }
+    }
+    if(changes["cammotiononly"]){
+        if(changes["cammotiononly"].newValue == true){
+            //disable this
+            try{ // stop it
+            if(localMediaStream){ // stop it
+                document.getElementById("motionvideo").pause();
+                document.getElementById("motionvideo").src = "";
+                localMediaStream.getTracks().forEach((track) => track.stop());
+                localMediaStream = null;
+                document.getElementById("motionvideo").load();
+                motioncanvas = document.getElementById("motioncanvas");
+                canvasgetcont = motioncanvas.getContext("2d");
+                canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
+                ccanvas = document.getElementById("motioncomp");
+                ccgetcont = ccanvas.getContext("2d");
+                ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
+                window.clearInterval(intervalID);
+            }
+        }
+        catch(e){ console.error(e); }
+        }else{
+            //enable this
+            cameramotionlights();
+        }
+    }
  });
 
 var cammotionDomains = null;
@@ -117,12 +119,12 @@ function onlycammotionfunction(tab){
 	var currenturl = tab;
 	var thatwebsite = new URL(currenturl);
     var thatpage = thatwebsite.protocol + "//" + thatwebsite.hostname;
-	speechDomains = response["cammotionDomains"]; // get latest setting
-	if(typeof speechDomains == "string"){
-		speechDomains = JSON.parse(speechDomains);
+	cammotionDomains = response["cammotionDomains"]; // get latest setting
+	if(typeof cammotionDomains == "string"){
+		cammotionDomains = JSON.parse(cammotionDomains);
         var sbuf = [];
         var domain;
-		for(domain in speechDomains)
+		for(domain in cammotionDomains)
 			sbuf.push(domain);
             sbuf.sort();
         var i;
@@ -139,12 +141,12 @@ function onlycammotionfunction(tab){
 				if(localMediaStream){ // stop it
 					document.getElementById("motionvideo").pause();
 					document.getElementById("motionvideo").src = "";
-                    localMediaStream.getTracks().forEach(track => track.stop());
+                    localMediaStream.getTracks().forEach((track) => track.stop());
 					localMediaStream = null;
 					document.getElementById("motionvideo").load();
-					canvas = document.getElementById("motioncanvas");
-					canvasgetcont = canvas.getContext("2d");
-					canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
+					motioncanvas = document.getElementById("motioncanvas");
+					canvasgetcont = motioncanvas.getContext("2d");
+					canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
 					ccanvas = document.getElementById("motioncomp");
 					ccgetcont = ccanvas.getContext("2d");
 					ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
@@ -171,7 +173,7 @@ if(motion == true){
 			}
         });
         // on highlight
-		chrome.tabs.onHighlighted.addListener(function(o){ tabId = o.tabIds[0];
+		chrome.tabs.onHighlighted.addListener(function(o){ var tabId = o.tabIds[0];
 			chrome.tabs.get(tabId, function(tab){
 				if(tab.url){
 					if(tab.url.match(/^http/i) || tab.url.match(/^https/i) || tab.url.match(/^file/i) || tab.url == browsernewtab){
@@ -189,16 +191,16 @@ if(motion == true){
 	if(localMediaStream){
 		document.getElementById("motionvideo").pause();
 		document.getElementById("motionvideo").src = "";
-        localMediaStream.getTracks().forEach(track => track.stop());
+        localMediaStream.getTracks().forEach((track) => track.stop());
 		localMediaStream = null;
 		document.getElementById("motionvideo").load();
-		canvas = document.getElementById("motioncanvas");
-		canvasgetcont = canvas.getContext("2d");
-		canvasgetcont.clearRect(0,0,canvas.width,canvas.height);
+		motioncanvas = document.getElementById("motioncanvas");
+		canvasgetcont = motioncanvas.getContext("2d");
+		canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
 		ccanvas = document.getElementById("motioncomp");
 		ccgetcont = ccanvas.getContext("2d");
 		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
-		clearInterval(intervalID);
+		window.clearInterval(intervalID);
 		location.reload(); // to make sure everything is removed of the motion camera
     }
 
@@ -236,7 +238,7 @@ var ccgetcont = ccanvas.getContext("2d");
 if(localMediaStream){
 document.getElementById("motionvideo").pause();
 document.getElementById("motionvideo").src = "";
-localMediaStream.getTracks().forEach(track => track.stop());
+localMediaStream.getTracks().forEach((track) => track.stop());
 localMediaStream = null;
 document.getElementById("motionvideo").load();
 canvas = document.getElementById("motioncanvas");
@@ -360,14 +362,14 @@ huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 
         function camtest(){
             delt = canvasgetcont.createImageData(width, height);
             if(last !== false){
-                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, dscl = 0, pix = totaln * 4; while(pix -= 4){
-                    var d = Math.abs(
-                            draw.data[pix] - last.data[pix]
-                    ) + Math.abs(
-                            draw.data[pix + 1] - last.data[pix + 1]
-                    ) + Math.abs(
-                            draw.data[pix + 2] - last.data[pix + 2]
-                    );
+                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
+                var testcondition = pix -= 4;
+                // Any number that is not 0 evaluates to true
+                // if 0 evaluates to false
+                while(testcondition){
+                    var d = Math.abs(draw.data[pix] - last.data[pix]
+                    ) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
+                    ) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
                     if(d > thresh){
                         delt.data[pix] = 160;
                         delt.data[pix + 1] = 255;
