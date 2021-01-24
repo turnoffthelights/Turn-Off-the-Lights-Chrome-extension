@@ -27,6 +27,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+//var localMediaStream;
+var video;
 function startinit(){
 	// Check for live API permissions
 	navigator.permissions.query({name:"camera"})
@@ -49,7 +51,7 @@ function startinit(){
 		navigator.mediaDevices.getUserMedia({audio: false, video: true})
 		.then(function(stream){
 			//Display the video stream in the video object
-			localMediaStream = stream; // Store the video stream
+			//localMediaStream = stream; // Store the video stream
 			video.srcObject = stream;
 		})
 		.catch(function(e){ console.log(e.name + ": " + e.message);
@@ -58,7 +60,7 @@ function startinit(){
 	else{
 	navigator.getWebcam({audio: false, video: true}, function(stream){
 			//Display the video stream in the video object
-			localMediaStream = stream; // Store the video stream
+			//localMediaStream = stream; // Store the video stream
 			video.srcObject = stream;
 		}, function(){ console.log("Web cam is not accessible."); });
 	}

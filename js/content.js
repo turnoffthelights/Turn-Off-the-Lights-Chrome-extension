@@ -396,7 +396,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 		//this.playerPause(player);
 		//this.playerReset(player);
 	}
-	function playerReset(player){
+	/*function playerReset(player){
 		if(player !== null){
 			if(typeof(player.seekTo) === "function"){
 				player.seekTo(0, false);
@@ -413,7 +413,7 @@ var gracePeriod = 250, lastEvent = null, timeout = null;
 				player.pause();
 			}
 		}
-	}
+	}*/
 	var godelay;
 	function shadesOff(player){
 		if(player !== null){
@@ -564,14 +564,12 @@ function videotoolfunction(){
 // HTML5 video visualization
 // Videotool filters
 visopacity = visopacity / 100;
-var audio;
-var canvas, ctx, source, blockarray, bars, barx, barwidth, barheight;
+var blockarray, bars, barx, barwidth, barheight;
 var audiocontext = [];
 var analyser = [];
 var vissources = [];
 var visualnumber = [];
 var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audiocontext;
 
 var vis; var tempvis = 0;
 var dovisenable = function(){
@@ -843,8 +841,8 @@ var visualvideos = document.getElementsByTagName("video");
 			}
 		},false);
 
-		var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
-		var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
+		//var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
+		//var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
 
 		//---
 		if(videozoom == true){
@@ -1595,8 +1593,8 @@ var visualvideos = document.getElementsByTagName("video");
 							}
 						}
 						else if(ytplayerapi){
-							var stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
-							var stefanyoutubecontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
+							let stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
+							let stefanyoutubecontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
 							if(stefanvdregularhtmlplayer){
 								ytplayerapi.classList.remove("stefanvdvideowindow");
 								onevideo.classList.remove("stefanvdvideowindow");
@@ -1725,8 +1723,8 @@ function videovisualloop(tovis){
 			ctx.beginPath();
 
 			var sliceWidth = w * 1.0 / bufferLength;
-			var x = 0;
-			var i;
+			let x = 0;
+			let i;
 			for(i = 0; i < bufferLength; i++){
 				var v = dataArray[i] / 128.0;
 				var y = v * h / 2;
@@ -1777,7 +1775,10 @@ function videovisualloop(tovis){
 			bctx2[tovis].lineWidth = 2 * amp;
 			bctx2[tovis].beginPath();
 
-			var i;
+			let i;
+			let j;
+			let a;
+			let r;
 			for(i = (data.length / 2) - 1, j = analyser[tovis].wave.length; i >= 0; i--){
 				a = i / 22 * 2 * Math.PI;
 				r = amp * 256 / 2 * (0.5 + analyser[tovis].wave[i] / 255);
@@ -1797,26 +1798,7 @@ function videovisualloop(tovis){
 }
 
 var myListenervideotoolbar = function(){
-	var elements = document.getElementsByClassName("stefanvdspeed");
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-    }
-	var elements = document.getElementsByClassName("stefanvdzoomstage");
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-    }
-	var elements = document.getElementsByClassName("stefanvdzoom");
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-    }
-    var elements = document.getElementsByClassName("stefanvdvisualization");
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-    }
-	var elements = document.getElementsByClassName("stefanvdvis");
-    while(elements.length > 0){
-        elements[0].parentNode.removeChild(elements[0]);
-    }
+	removevideotool();
 	adddatavideo(); // recheck remove and add video ID
 	addvisual();
 };
@@ -1828,7 +1810,7 @@ window.addEventListener("resize", myListenerWithContext);
 if(MutationObserver){
 		// setup MutationSummary observer
 		var videolist = document.body;
-		observervideotoolbar = new MutationObserver(function(mutations, observer){
+		observervideotoolbar = new MutationObserver(function(mutations){
 			mutations.forEach(function(mutation){
 
 				if(mutation.target.tagName == "VIDEO"){
@@ -2063,8 +2045,7 @@ var ecomousemove = function(){
 	if(blackon){
 		// remove the dark layer, and see back the regular page
 		if(screenactiondone == true){
-			var blackon = $("stefanvdlightareoff1");
-			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }
+			screenactiondone = false; eyeprotection(); eyedojob();
 		}
 	}
 	else{
@@ -4750,6 +4731,32 @@ function removeElement(elementId){
     element.parentNode.removeChild(element);
 }
 
+function removevideotool(){
+	var removespeedelement = document.getElementsByClassName("stefanvdspeed");
+	while(removespeedelement.length > 0){
+		removespeedelement[0].parentNode.removeChild(removespeedelement[0]);
+	}
+	var removezoomstageelement = document.getElementsByClassName("stefanvdzoomstage");
+	while(removezoomstageelement.length > 0){
+		removezoomstageelement[0].parentNode.removeChild(removezoomstageelement[0]);
+	}
+	var removezoomelement = document.getElementsByClassName("stefanvdzoom");
+	while(removezoomelement.length > 0){
+		removezoomelement[0].parentNode.removeChild(removezoomelement[0]);
+	}
+	var removevisualizationelement = document.getElementsByClassName("stefanvdvisualization");
+	while(removevisualizationelement.length > 0){
+		removevisualizationelement[0].parentNode.removeChild(removevisualizationelement[0]);
+	}
+	var removeviselement = document.getElementsByClassName("stefanvdvis");
+	while(removeviselement.length > 0){
+		removeviselement[0].parentNode.removeChild(removeviselement[0]);
+	}
+}
+
+
+
+
 chrome.runtime.onMessage.addListener(function(request){
 	if(request.action == "goinnightmode"){
 		if(request.value == "day"){
@@ -4920,13 +4927,13 @@ chrome.runtime.onMessage.addListener(function(request){
 			}
 			else{
 				atmosvivid = false;
-				var htmlplayer = document.getElementsByTagName("video");
-				var j;
-				var l = htmlplayer.length;
+				let htmlplayer = document.getElementsByTagName("video");
+				let j;
+				let l = htmlplayer.length;
 				for(j = 0; j < l; j++){
 					if(htmlplayer[j]){
 						if($("stefanvdvivideffect" + htmlplayer[j].getAttribute("data-video"))){
-							var stefanvdvivideffect = $("stefanvdvivideffect" + htmlplayer[j].getAttribute("data-video"));
+							let stefanvdvivideffect = $("stefanvdvivideffect" + htmlplayer[j].getAttribute("data-video"));
 							stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
 						}
 					}
@@ -4950,13 +4957,13 @@ chrome.runtime.onMessage.addListener(function(request){
 					if(htmlplayer[j]){
 						htmlplayer[j].style["boxShadow"] = "none";
 						if($("stefanvdvivideffect" + htmlplayer[j].getAttribute("data-video"))){
-							var stefanvdvivideffect = $("stefanvdvivideffect" + htmlplayer[j].getAttribute("data-video"));
+							let stefanvdvivideffect = $("stefanvdvivideffect" + htmlplayer[j].getAttribute("data-video"));
 							stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
 						}
 					}
 				}
 				if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-					var youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
+					let youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
 					youtubewindow.style["boxShadow"] = "none";
 				}
 			}
@@ -5010,26 +5017,7 @@ chrome.runtime.onMessage.addListener(function(request){
 
 		window.removeEventListener("resize", myListenerWithContext);
 
-		var removespeedelement = document.getElementsByClassName("stefanvdspeed");
-		while(removespeedelement.length > 0){
-			removespeedelement[0].parentNode.removeChild(removespeedelement[0]);
-		}
-		var removezoomstageelement = document.getElementsByClassName("stefanvdzoomstage");
-		while(removezoomstageelement.length > 0){
-			removezoomstageelement[0].parentNode.removeChild(removezoomstageelement[0]);
-		}
-		var removezoomelement = document.getElementsByClassName("stefanvdzoom");
-		while(removezoomelement.length > 0){
-			removezoomelement[0].parentNode.removeChild(removezoomelement[0]);
-		}
-		var removevisualizationelement = document.getElementsByClassName("stefanvdvisualization");
-		while(removevisualizationelement.length > 0){
-			removevisualizationelement[0].parentNode.removeChild(removevisualizationelement[0]);
-		}
-		var removeviselement = document.getElementsByClassName("stefanvdvis");
-		while(removeviselement.length > 0){
-			removeviselement[0].parentNode.removeChild(removeviselement[0]);
-		}
+		removevideotool();
 
 		if(videotool == true){
 			runvideotoolbarcheck();
