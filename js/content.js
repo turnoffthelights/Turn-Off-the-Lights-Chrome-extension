@@ -250,10 +250,10 @@ window.addEventListener("keydown", function(e){
 				// if higher then 1, stay 1
 				if(shorcutcurrentopacity >= 1){ shorcutcurrentopacity = 1; }
 				//control opacity for all <div>
-				var div = document.querySelectorAll("div.stefanvdlightareoff");
-				var i;
-				var l = div.length;
-				for(i = 0; i < l; i++){ div[i].style.opacity = shorcutcurrentopacity; }
+				var divlightoff = document.querySelectorAll("div.stefanvdlightareoff");
+				var lightoffi;
+				var lightoffl = divlightoff.length;
+				for(lightoffi = 0; lightoffi < lightoffl; lightoffi++){ divlightoff[lightoffi].style.opacity = shorcutcurrentopacity; }
 			}
 			}
 		}
