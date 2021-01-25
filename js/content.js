@@ -2007,11 +2007,6 @@ if(typeof excludedDomains == "string"){
 }
 
 var screenactiondone = false;
-var outthread;
-var thread;
-var threadkey;
-var threadscroll;
-
 
 var centralmove = false;
 var centralkey = false;
@@ -2069,8 +2064,7 @@ var ecomousekey = function(){
 	if(blackon){
 		// remove the dark layer, and see back the regular page
 		if(screenactiondone == true){
-			var blackon = $("stefanvdlightareoff1");
-			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }
+			screenactiondone = false; eyeprotection(); eyedojob();
 		}
 	}
 	else{
@@ -2094,8 +2088,7 @@ var ecomousescroll = function(){
 	if(blackon){
 		// remove the dark layer, and see back the regular page
 		if(screenactiondone == true){
-			var blackon = $("stefanvdlightareoff1");
-			if(blackon){ screenactiondone = false; eyeprotection(); eyedojob(); }
+			screenactiondone = false; eyeprotection(); eyedojob();
 		}
 	}
 	else{
@@ -2192,10 +2185,36 @@ function fixyoutubeatmos(){
 	}
 }
 
+function subDomain(url){
+	// IF THERE, REMOVE WHITE SPACE FROM BOTH ENDS
+	url = url.replace(new RegExp(/^\s+/),""); // START
+	url = url.replace(new RegExp(/\s+$/),""); // END
+	// IF FOUND, CONVERT BACK SLASHES TO FORWARD SLASHES
+	url = url.replace(new RegExp(/\\/g),"/");
+	// IF THERE, REMOVES "http://", "https://" or "ftp://" FROM THE START
+	url = url.replace(new RegExp(/^http:\/\/|^https:\/\/|^ftp:\/\//i),"");
+	// IF THERE, REMOVES "www." FROM THE START OF THE STRING
+	url = url.replace(new RegExp(/^www\./i),"");
+	// REMOVE COMPLETE STRING FROM FIRST FORWARD SLASH ON
+	url = url.replace(new RegExp(/\/(.*)/),"");
+	// REMOVES ".??.??" OR ".???.??" FROM END - e.g. ".CO.UK", ".COM.AU"
+	if(url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))){
+		url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
+	// REMOVES ".??" or ".???" or ".????" FROM END - e.g. ".US", ".COM", ".INFO"
+	}else if(url.match(new RegExp(/\.[a-z]{2,4}$/i))){
+		url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
+	}
+	// CHECK TO SEE IF THERE IS A DOT "." LEFT IN THE STRING
+	var subDomain = (url.match(new RegExp(/\./g))) ? true : false;
+
+	return(subDomain);
+}
+
 var requestId = 0;
 var stop = false;
-var frameCount = 0;
-var fps, fpsInterval, startTime, now, then, elapsed;
+//var frameCount = 0;
+//var fps, startTime;
+var fpsInterval, now, then, elapsed;
 var countA = [], countB = [], countC = []; // start from zero (blur spread) and size (left right top under) position
 
 function stopAnimation(){
@@ -2205,7 +2224,7 @@ function stopAnimation(){
 function startAnimating(fps){
     fpsInterval = 1000 / fps;
     then = window.performance.now();
-    startTime = then;
+    //startTime = then;
 	//console.log(startTime);
 	animate();
 }
@@ -2280,10 +2299,10 @@ function animate(){
 			}
 
 			if(document.visibilityState === "visible"){
-				var htmlplayer = document.getElementsByTagName("video") || null;
-				var playerid = null, item = null;
-				var j;
-				var l = htmlplayer.length;
+				let htmlplayer = document.getElementsByTagName("video") || null;
+				let playerid = null, item = null;
+				let j;
+				let l = htmlplayer.length;
 				for(j = 0; j < l; j++){
 					if(htmlplayer[j].play){ playerid = htmlplayer[j]; item = j + 1; drawAtmos(playerid, item, totlmode); }
 				}
@@ -2345,8 +2364,6 @@ function drawAtmos(playerid, item, totlmode){
 			var canvas = $("totlCanvas" + k + "");
 			if(canvas){
 				var context = canvas.getContext("2d",{desynchronized: true});
-				var imageData = context.getImageData(0, 0, 1, 1);
-				var data = imageData.data;
 
 				var p1 = context.getImageData(0 , 0, 1, 1).data;
 				var p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -2397,7 +2414,7 @@ function drawAtmos(playerid, item, totlmode){
 		if(ambilightvarcolor == true){
 			if(atmosvivid == true){
 				if($("stefanvdvivideffect" + playerid.getAttribute("data-video"))){
-				var stefanvdvivideffect = $("stefanvdvivideffect" + playerid.getAttribute("data-video"));
+				let stefanvdvivideffect = $("stefanvdvivideffect" + playerid.getAttribute("data-video"));
 				stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
 				}
 			}else{
@@ -2454,30 +2471,6 @@ try{
 	var pageurl = window.location.protocol + "//" + window.location.host; // https://www.stefanvd.net
 	var pageurllengt = pageurl.length; // lengte url
 
-	function subDomain(url){
-	// IF THERE, REMOVE WHITE SPACE FROM BOTH ENDS
-	url = url.replace(new RegExp(/^\s+/),""); // START
-	url = url.replace(new RegExp(/\s+$/),""); // END
-	// IF FOUND, CONVERT BACK SLASHES TO FORWARD SLASHES
-	url = url.replace(new RegExp(/\\/g),"/");
-	// IF THERE, REMOVES "http://", "https://" or "ftp://" FROM THE START
-	url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i),"");
-	// IF THERE, REMOVES "www." FROM THE START OF THE STRING
-	url = url.replace(new RegExp(/^www\./i),"");
-	// REMOVE COMPLETE STRING FROM FIRST FORWARD SLASH ON
-	url = url.replace(new RegExp(/\/(.*)/),"");
-	// REMOVES ".??.??" OR ".???.??" FROM END - e.g. ".CO.UK", ".COM.AU"
-	if(url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))){
-		url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
-	// REMOVES ".??" or ".???" or ".????" FROM END - e.g. ".US", ".COM", ".INFO"
-	}else if(url.match(new RegExp(/\.[a-z]{2,4}$/i))){
-		url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
-	}
-	// CHECK TO SEE IF THERE IS A DOT "." LEFT IN THE STRING
-	var subDomain = (url.match(new RegExp(/\./g))) ? true : false;
-
-	return(subDomain);
-	}
 	var yesornosubdomain = subDomain(pageurl);
 
 	if(totlshowtime != typeof HTMLVideoElement !== "undefined"){
@@ -4222,19 +4215,20 @@ var myListenerWithContextvolume;
 var observervideovolume;
 var scrollTimer = -1;
 var rundoscrollfunc = false;
+
+function onKeyDown(){
+	rundoscrollfunc = true;
+}
+
+function onKeyUp(){
+	rundoscrollfunc = false;
+}
+
 var doscroll = function(e){
 
 		if(videovolumealt == true){
 			window.addEventListener("keydown", onKeyDown, true);
 			window.addEventListener("keyup", onKeyUp, true);
-
-			function onKeyDown(){
-				rundoscrollfunc = true;
-			}
-
-			function onKeyUp(){
-				rundoscrollfunc = false;
-			}
 		}else{
 			rundoscrollfunc = true; // regular run with no keys down
 		}
@@ -4580,6 +4574,7 @@ function refreshvolume(){
 
 // YouTube embed iframe
 if(customqualityyoutube == true){
+var newvideoid;
 var ytembed = document.getElementsByTagName("iframe");
 var z;
 var q = ytembed.length;
@@ -4603,11 +4598,11 @@ for(z = 0; z < q; z++){
 					else if(video_id.indexOf("vq=small")){ video_id.replace("vq=small", "vq=" + maxquality + ""); }
 					else if(video_id.indexOf("vq=tiny")){ video_id.replace("vq=tiny", "vq=" + maxquality + ""); }
 					else if(video_id.indexOf("vq=default")){ video_id.replace("vq=default", "vq=" + maxquality + ""); }
-					var newvideoid = video_id + "&vq=" + maxquality + "";
+					newvideoid = video_id + "&vq=" + maxquality + "";
 				}
 				else{
-					if(video_id.indexOf("?") != -1){ var newvideoid = video_id + "&vq=" + maxquality + ""; }
-					else{ var newvideoid = video_id + "?vq=" + maxquality + ""; }
+					if(video_id.indexOf("?") != -1){ newvideoid = video_id + "&vq=" + maxquality + ""; }
+					else{ newvideoid = video_id + "?vq=" + maxquality + ""; }
 				}
 				ytembed[z].src = "https://www.youtube.com/embed/" + newvideoid;
 			}
@@ -4785,14 +4780,14 @@ chrome.runtime.onMessage.addListener(function(request){
 		});
 	}
 	else if(request.action == "goremovelightoff"){
-		var blackon = $("stefanvdlightareoff1");
+		let blackon = $("stefanvdlightareoff1");
 		if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
 	}else if(request.action == "goaddlightoff"){
-		var blackon = $("stefanvdlightareoff1");
+		let blackon = $("stefanvdlightareoff1");
 		if(blackon == null){ chrome.runtime.sendMessage({name: "automatic"}); }
 	}
 	else if(request.action == "masterclick"){
-		var blackon = $("stefanvdlightareoff1");
+		let blackon = $("stefanvdlightareoff1");
 		if(blackon){ chrome.runtime.sendMessage({name: "mastertabdark", value: true}); }
 		else{ chrome.runtime.sendMessage({name: "mastertabdark", value: false}); }
 	}

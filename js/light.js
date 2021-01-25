@@ -29,7 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 // settings
-var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
+var default_opacity = null, suggestions = null, playlist = null, videoheadline = null, flash = null, head = null, infobar = null, likebutton = null, sharebutton = null, viewcount = null, addvideobutton = null, likebar = null, mousespotlighto = null, mousespotlightc = null, mousespotlighta = null, lightcolor = null, lightimagea = null, lightimage = null, interval = null, fadein = null, fadeout = null, readera = null, readerlargestyle = null, mousespotlightt = null, password = null, enterpassword = null, hardflash = null, dynamic = null, dynamic1 = null, dynamic2 = null, dynamic3 = null, dynamic4 = null, dynamic5 = null, dynamic6 = null, dynamic7 = null, dynamic8 = null, dynamic9 = null, dynamic10 = null, hoveroptiondyn5 = null, blur = null, cinemaontop = null, spotlightradius = null, slideeffect = null, lightimagelin = null, linearsq = null, colora = null, intervallina = null, colorb = null, intervallinb = null, no360youtube = null, mousespotlights = null, titleinvertcolor = null, darkbrowsertheme = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, lampandnightmode = null;
 // html elements used
 var div = null, video = null;
 // block lights
@@ -78,7 +78,6 @@ function hasClass(a, b){
 
 // search video path function
 function searchvideopath(thatvideo){
-	var path = [];
 	var el = thatvideo;
 	var divpaddintop = false;
 	do{
@@ -179,10 +178,10 @@ for(i = 0; i < l; i++){
 		}
 		var s = q[i].shadowRoot.querySelectorAll("*");
 		var j;
-		var l = s.length;
-		for(j = 0; j < l; j++){
-			var st = document.defaultView.getComputedStyle(s[j], null);
-			var k = st.getPropertyValue("z-Index");
+		var shadowrootl = s.length;
+		for(j = 0; j < shadowrootl; j++){
+			var computerst = document.defaultView.getComputedStyle(s[j], null);
+			var k = computerst.getPropertyValue("z-Index");
 			if(k >= 1000){
 				s[j].classList.add("stefanvdotherdown");
 			}
@@ -194,8 +193,9 @@ for(i = 0; i < l; i++){
 		var elementa = document.getElementsByTagName("screenshader")[0];//Stefan screenshader
 		var elementstefanvd = q[i].id; elementstefanvd = elementstefanvd.substring(0, 8); // everthing with stefanvd element is whitelist
 		if(elementa == q[i].parentNode || elementstefanvd == "stefanvd" || q[i].tagName == "VIDEO"){
+			// Do nothing
 		}else{
-		q[i].classList.add("stefanvdotherdown");
+			q[i].classList.add("stefanvdotherdown");
 		}
 	} // its value from its parent element
 	// remove contain that block z-index level
@@ -211,34 +211,34 @@ if(websiteidapi){ $("dont-turn-off-the-lights").classList.add("stefanvdvideotop"
 
 // class way
 var websiteclassapi = document.getElementsByClassName("dont-turn-off-the-lights");
-var i;
-var l = websiteclassapi.length;
-for(i = 0; i < l; i++){ websiteclassapi[i].classList.add("stefanvdvideotop"); }
+var classi;
+var classl = websiteclassapi.length;
+for(classi = 0; classi < classl; classi++){ websiteclassapi[classi].classList.add("stefanvdvideotop"); }
 
 /////////// HTML5 video
 // default html5 video detection
 video = document.getElementsByTagName("video");
-var i;
-var l = video.length;
-for(i = 0; i < l; i++){
+var videoi;
+var videol = video.length;
+for(videoi = 0; videoi < videol; videoi++){
 var targetComputedStylePosition = document.defaultView.getComputedStyle(video[i],null).getPropertyValue("position");
 // search for the video player, and set the previous path all to z-index "auto"
-if(searchvideopath(video[i]) == true && targetComputedStylePosition == "absolute"){
-	video[i].classList.add("stefanvdposfixed");
+if(searchvideopath(video[videoi]) == true && targetComputedStylePosition == "absolute"){
+	video[videoi].classList.add("stefanvdposfixed");
 }
 
 // other file then "mp3" then run this code
-if(video[i].currentSrc.lastIndexOf(".mp3") == -1){ video[i].classList.add("stefanvdvideotop"); if(video[i].classList.contains("stefanvdtransformauto")){ video[i].classList.remove("stefanvdtransformauto"); } }
+if(video[videoi].currentSrc.lastIndexOf(".mp3") == -1){ video[videoi].classList.add("stefanvdvideotop"); if(video[videoi].classList.contains("stefanvdtransformauto")){ video[videoi].classList.remove("stefanvdtransformauto"); } }
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 	if(no360youtube == true){
-		video[i].style.cssText += "display:block !important";
-		var webgl = document.querySelector(".webgl");
+		video[videoi].style.cssText += "display:block !important";
+		let webgl = document.querySelector(".webgl");
 		if(webgl){ webgl.classList.add("stefanvdvideoauto"); }
 	}else{
-	// default the regular player
-	// also the 360 frame push to front
-	var webgl = document.querySelector(".webgl");
-	if(webgl){ webgl.classList.add("stefanvdvideocontrolsitem"); }
+		// default the regular player
+		// also the 360 frame push to front
+		let webgl = document.querySelector(".webgl");
+		if(webgl){ webgl.classList.add("stefanvdvideocontrolsitem"); }
 	}
 	var playerapi = $("player-api");
 	if(playerapi){
@@ -270,10 +270,10 @@ try{
 // Show all iframe embed video objects -> Flash detection
 if(flash == true){
 try{
-	var j, t;
-	for(j = 0; t = ["object","embed","applet","iframe"][j]; ++j)
+	var flashj, flasht;
+	for(flashj = 0; flasht = ["object","embed","applet","iframe"][flashj]; ++flashj)
 	{
-		var a = document.getElementsByTagName(t);
+		var a = document.getElementsByTagName(flasht);
 		var i;
 		var N,C;
 		for(i = a.length - 1; (i + 1) && (N = a[i]); --i)
@@ -291,10 +291,10 @@ try{
 	}
 }catch(e){ console.error(e); }
 }else if(hardflash == true){
-	var j, t;
-	for(j = 0; t = ["object","embed","applet","iframe"][j]; ++j)
+	var hardflashj, hardflasht;
+	for(hardflashj = 0; hardflasht = ["object","embed","applet","iframe"][hardflashj]; ++hardflashj)
 	{
-		var a = document.getElementsByTagName(t);
+		var a = document.getElementsByTagName(hardflasht);
 		var i;
 		var l = a.length;
 		for(i = 0; i < l; i++)
@@ -770,7 +770,7 @@ try{
 	var totldailymotion = ".np_ButtonWatermark,.np_Darken,.np_ControlsManager,.np_Gesture,.np_dialog,.np_menu,.np_MenuSettings,.np_row--info,.dmp_SubtitleView{z-index:1001!important}";
 
 	if($("csstotldailymotion")){
-		var elem = document.getElementById("csstotldailymotion");
+		let elem = document.getElementById("csstotldailymotion");
 		elem.parentElement.removeChild(elem);
 	}
 
@@ -1066,46 +1066,46 @@ document.getElementsByTagName("video")[0].style.cssText += "z-index:auto !import
 		if(csstotlpseudo){ document.getElementsByTagName("head")[0].removeChild(csstotlpseudo); }
 
 		// remove video player on top
-		var div = document.querySelectorAll(".stefanvdvideotop");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideotop"); }
-		var div = document.querySelectorAll(".stefanvditemtop");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvditemtop"); }
-		var div = document.querySelectorAll(".stefanvdvideoauto");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideoauto"); }
-		var div = document.querySelectorAll(".stefanvdotherdown");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdotherdown"); }
-		var div = document.querySelectorAll(".stefanvdcontainauto");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdcontainauto"); }
-		var div = document.querySelectorAll(".stefanvdtransformauto");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdtransformauto"); }
-		var div = document.querySelectorAll(".stefanvdvideocontrolsitem");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideocontrolsitem"); }
-		var div = document.querySelectorAll(".stefanvdvideocontrolstop");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdvideocontrolstop"); }
-		var div = document.querySelectorAll(".stefanvdposfixed");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdposfixed"); }
-		var div = document.querySelectorAll(".stefanvdpossticky");
-		var i;
-		var l = div.length;
-		for(i = 0; i < l; i++){ div[i].classList.remove("stefanvdpossticky"); }
+		var videotopdiv = document.querySelectorAll(".stefanvdvideotop");
+		var videotopi;
+		var videotopl = videotopdiv.length;
+		for(videotopi = 0; videotopi < videotopl; videotopi++){ videotopdiv[videotopi].classList.remove("stefanvdvideotop"); }
+		var itemtopdiv = document.querySelectorAll(".stefanvditemtop");
+		var itemtopi;
+		var itemtopl = itemtopdiv.length;
+		for(itemtopi = 0; itemtopi < itemtopl; itemtopi++){ div[itemtopi].classList.remove("stefanvditemtop"); }
+		var videoautodiv = document.querySelectorAll(".stefanvdvideoauto");
+		var videoautoi;
+		var videoautol = videoautodiv.length;
+		for(videoautoi = 0; videoautoi < videoautol; videoautoi++){ div[videoautoi].classList.remove("stefanvdvideoauto"); }
+		var otherdowndiv = document.querySelectorAll(".stefanvdotherdown");
+		var otherdowni;
+		var otherdownl = otherdowndiv.length;
+		for(otherdowni = 0; otherdowni < l; otherdowni++){ div[otherdowni].classList.remove("stefanvdotherdown"); }
+		var containautodiv = document.querySelectorAll(".stefanvdcontainauto");
+		var containautoi;
+		var containautol = containautodiv.length;
+		for(containautoi = 0; containautoi < containautol; containautoi++){ div[containautoi].classList.remove("stefanvdcontainauto"); }
+		var transformautodiv = document.querySelectorAll(".stefanvdtransformauto");
+		var transformautoi;
+		var transformautol = transformautodiv.length;
+		for(transformautoi = 0; transformautoi < transformautol; transformautoi++){ div[transformautoi].classList.remove("stefanvdtransformauto"); }
+		var videocontrolsitemdiv = document.querySelectorAll(".stefanvdvideocontrolsitem");
+		var videocontrolsitemi;
+		var videocontrolsiteml = videocontrolsitemdiv.length;
+		for(videocontrolsitemi = 0; videocontrolsitemi < videocontrolsiteml; videocontrolsitemi++){ div[videocontrolsitemi].classList.remove("stefanvdvideocontrolsitem"); }
+		var videocontrolstopdiv = document.querySelectorAll(".stefanvdvideocontrolstop");
+		var videocontrolstopi;
+		var videocontrolstopl = videocontrolstopdiv.length;
+		for(videocontrolstopi = 0; videocontrolstopi < videocontrolstopl; videocontrolstopi++){ div[videocontrolstopi].classList.remove("stefanvdvideocontrolstop"); }
+		var posfixeddiv = document.querySelectorAll(".stefanvdposfixed");
+		var posfixedi;
+		var posfixedl = posfixeddiv.length;
+		for(posfixedi = 0; posfixedi < posfixedl; i++){ posfixeddiv[posfixedi].classList.remove("stefanvdposfixed"); }
+		var posstickydiv = document.querySelectorAll(".stefanvdpossticky");
+		var posstickyi;
+		var posstickyl = posstickydiv.length;
+		for(posstickyi = 0; posstickyi < posstickyl; posstickyi++){ div[posstickyi].classList.remove("stefanvdpossticky"); }
 
 		// inside the root
 		var q = document.getElementsByTagName("*");
