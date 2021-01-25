@@ -947,7 +947,7 @@ function drawAtmos(){
 
 var canvas = $("totlCanvas1");
 if(canvas){
-	var context = canvas.getContext("2d", {desynchronized: true});
+	var context = canvas.getContext("2d",{desynchronized: true});
 
 	p1 = context.getImageData(0 , 0, 1, 1).data;
 	p2 = context.getImageData(1 , 0, 1, 1).data;
@@ -1010,7 +1010,7 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
         }
 
         var totlcanvas = $("totlCanvas1");
-        var colorcontext = totlcanvas.getContext("2d", {desynchronized: true});
+        var colorcontext = totlcanvas.getContext("2d",{desynchronized: true});
         var colorlamp1X = (sourceWidth * 50) / 100; // up midden
         var colorlamp1Y = (sourceHeight * 95) / 100;
         var colorlamp2X = (sourceWidth * 95) / 100; // right midden
@@ -1056,7 +1056,7 @@ var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
                 newvivid.style.display = "block";
                 newvivid.width = Math.floor(tempwidthvideo * 0.08);
                 newvivid.height = Math.floor(tempheightvideo * 0.08);
-                var vividctx = newvivid.getContext("2d", {desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
+                var vividctx = newvivid.getContext("2d",{desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
                 vividctx.drawImage(showtime,0,0,vividx,vividy);
 			}
         }else{
@@ -1791,7 +1791,7 @@ function runsmoke(){
     var smokecanvas = document.getElementById("stefanvddynamicsmoke");
     if(smokecanvas.getContext){
         // Set the context variable so it can be re-used
-        smokecontext = smokecanvas.getContext("2d", {desynchronized: true});
+        smokecontext = smokecanvas.getContext("2d",{desynchronized: true});
         // Create the particles and set their initial positions and velocities
         var i;
         for(i = 0; i < particleCount; ++i){
@@ -1815,7 +1815,7 @@ function smokedraw(){
 
     // Go through all of the particles and draw them.
     particles.forEach(function(particle){
-        particle.smokedraw();
+        particle.draw();
     });
 }
 
@@ -1956,7 +1956,7 @@ function drop(){
 
     this.render = function(){
         var canv = document.createElement("canvas");
-        var ctx = canv.getContext("2d", {desynchronized: true});
+        var ctx = canv.getContext("2d",{desynchronized: true});
         canv.setAttribute("width", Math.abs(this.offset) + this.r);
         canv.setAttribute("height", this.l);
 
@@ -2025,7 +2025,7 @@ function trianglerun(){
         }
     }
 
-    randomize();
+    trianglerandomize();
 
     var i;
     var l = points.length;
@@ -2085,7 +2085,7 @@ function trianglerun(){
     trianglerefresh();
 }
 
-function randomize(){
+function trianglerandomize(){
     var i;
     var l = points.length;
     for(i = 0; i < l; i++){
@@ -2100,7 +2100,7 @@ function randomize(){
 
 function trianglerefresh(){
     if(document.visibilityState === "visible"){
-    randomize();
+    trianglerandomize();
     var i;
     var l = document.querySelector("#triangle svg").childNodes.length;
     for(i = 0; i < l; i++){
@@ -2148,28 +2148,25 @@ removedynamic();
     var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
     var dynrighti;
     for(dynrighti = 11; dynrighti < 16; dynrighti++){ var newdynbubble = document.createElement("div"); newdynbubble.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynrighti + ""); newdynright.appendChild(newdynbubble); }
-}
-else if($("dynamic2").checked == true){
+}else if($("dynamic2").checked == true){
 removedynamic();
 	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
 
     var newdynblockleft = document.createElement("div"); newdynblockleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynblockleft);
     var blocki;
 	for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynleft.appendChild(newdynblock); }
-}
-else if($("dynamic3").checked == true){
+}else if($("dynamic3").checked == true){
 removedynamic();
 	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
 
 	var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynrainleft);
-    var i;
-    for(i = 0; i < 15; i++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + i + ""); newdynleft.appendChild(newdyn); }
-}
-else if($("dynamic4").checked == true){
-removedynamic();
+    var rainlefti;
+    for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynleft.appendChild(newdyn); }
+}else if($("dynamic4").checked == true){
+    removedynamic();
 	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
 	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
-(function(){
+    (function(){
 		var lastTime = 0;
         var vendors = ["ms", "moz", "webkit", "o"];
         var x;
@@ -2194,99 +2191,97 @@ removedynamic();
 	newdynmaster.style.webkitPerspective = p; newdynmaster.style.MozPerspective = p; newdynmaster.style.oPerspective = p;
 	generate();
 	cloudupdate();
-}
-else if($("dynamic5").checked == true){
-removedynamic();
+}else if($("dynamic5").checked == true){
+    removedynamic();
 
-var flying = "";
-if($("hoveroptiondyn5").checked == true){
-    // with the letter n include, then it see the flying in effect
-    flying = "n";
-}
-var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
-
-var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
-var spacej;
-for(spacej = 1; spacej < 17; spacej++){
-if(spacej <= 9){ spacej = "0" + spacej; }
-    var newdynpart1 = document.createElement("div");
-    newdynpart1.setAttribute("id",flying + "p" + spacej); newdynspaceworld.appendChild(newdynpart1);
-    var spacei;
-    for(spacei = 1; spacei < 31; spacei++){
-    if(spacei <= 9){ spacei = "0" + spacei; }
-    var newdynlow = document.createElement("b"); newdynlow.setAttribute("class",flying + "s0" + spacei + ""); newdynpart1.appendChild(newdynlow);
+    var flying = "";
+    if($("hoveroptiondyn5").checked == true){
+        // with the letter n include, then it see the flying in effect
+        flying = "n";
     }
-}
+    var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
+
+    var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
+    var spacej;
+    for(spacej = 1; spacej < 17; spacej++){
+    if(spacej <= 9){ spacej = "0" + spacej; }
+        var newdynpart1 = document.createElement("div");
+        newdynpart1.setAttribute("id",flying + "p" + spacej); newdynspaceworld.appendChild(newdynpart1);
+        var spacei;
+        for(spacei = 1; spacei < 31; spacei++){
+        if(spacei <= 9){ spacei = "0" + spacei; }
+        var newdynlow = document.createElement("b"); newdynlow.setAttribute("class",flying + "s0" + spacei + ""); newdynpart1.appendChild(newdynlow);
+        }
+    }
 }else if($("dynamic6").checked == true){
-removedynamic();
-var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
-var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
+    removedynamic();
+    var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
+    var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
 
-// Create an image object (only need one instance)
-var imageObj = new Image();
+    // Create an image object (only need one instance)
+    var imageObj = new Image();
 
-// Once the image has been downloaded then set the image on all of the particles
-imageObj.onload = function(){
-    particles.forEach(function(particle){
-            particle.setImage(imageObj);
-    });
-};
+    // Once the image has been downloaded then set the image on all of the particles
+    imageObj.onload = function(){
+        particles.forEach(function(particle){
+                particle.setImage(imageObj);
+        });
+    };
 
-// Once the callback is arranged then set the source of the image
-imageObj.src = "images/Smoke10.webp";
+    // Once the callback is arranged then set the source of the image
+    imageObj.src = "images/Smoke10.webp";
 
-// Initialize the scene
-runsmoke();
+    // Initialize the scene
+    runsmoke();
 
-// If the context is set then we can draw the scene (if not then the browser does not support canvas)
-if(smokecontext){
-    if(document.visibilityState === "visible"){
-    window.setInterval(function(){
-        // Update the scene before drawing
-        smokeupdate();
+    // If the context is set then we can draw the scene (if not then the browser does not support canvas)
+    if(smokecontext){
+        if(document.visibilityState === "visible"){
+        window.setInterval(function(){
+            // Update the scene before drawing
+            smokeupdate();
 
-        // Draw the scene
-        smokedraw();
-    }, 1000 / targetFPS);
+            // Draw the scene
+            smokedraw();
+        }, 1000 / targetFPS);
+        }
     }
-}
-
 }else if($("dynamic7").checked == true){
-removedynamic();
-var flyingdots = document.createElement("div"); flyingdots.setAttribute("id","flyingdots"); newdynmaster.appendChild(flyingdots);
+    removedynamic();
+    var flyingdots = document.createElement("div"); flyingdots.setAttribute("id","flyingdots"); newdynmaster.appendChild(flyingdots);
     var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id","stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
-    var j;
-	for(j = 1; j < 100; j++){
+    var flyingj;
+	for(flyingj = 1; flyingj < 100; flyingj++){
 		var newminic = document.createElement("div");
 		newminic.className = "c";
 		newdyndotsworld.appendChild(newminic);
 	}
 }else if($("dynamic8").checked == true){
-removedynamic();
-var storm = document.createElement("div"); storm.setAttribute("id","storm"); newdynmaster.appendChild(storm);
-var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id","stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
+    removedynamic();
+    var storm = document.createElement("div"); storm.setAttribute("id","storm"); newdynmaster.appendChild(storm);
+    var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id","stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
 
-stormcanvas = document.getElementById("stefanvddynamicstorm");
-sky = stormcanvas.getContext("2d", {desynchronized: true});
+    stormcanvas = document.getElementById("stefanvddynamicstorm");
+    sky = stormcanvas.getContext("2d",{desynchronized: true});
 
-window.addEventListener("resize", rainresizer, false);
+    window.addEventListener("resize", rainresizer, false);
 
-rainresizer();
-paintSky();
+    rainresizer();
+    paintSky();
 }else if($("dynamic9").checked == true){
-removedynamic();
-var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
-trianglerun();
-window.onresize = onResize;
+    removedynamic();
+    var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
+    trianglerun();
+    window.onresize = onResize;
 }else if($("dynamic10").checked == true){
-removedynamic();
-var stars = document.createElement("div"); stars.setAttribute("id","stars"); newdynmaster.appendChild(stars);
-var starsj;
-	for(starsj = 1; starsj < 3; starsj++){
-		var newmstar = document.createElement("div");
-		newmstar.id = "mstars" + [starsj];
-		stars.appendChild(newmstar);
-	}
+    removedynamic();
+    var stars = document.createElement("div"); stars.setAttribute("id","stars"); newdynmaster.appendChild(stars);
+    var starsj;
+        for(starsj = 1; starsj < 3; starsj++){
+            var newmstar = document.createElement("div");
+            newmstar.id = "mstars" + [starsj];
+            stars.appendChild(newmstar);
+        }
 }
 
 }
@@ -2319,9 +2314,9 @@ if(window.location.href != totloptionspage){
 function cameradomcontentloaded(){
 var video = document.getElementById("motionvideo");
 var motioncanvas = document.getElementById("motioncanvas");
-var canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+var canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
 var ccanvas = document.getElementById("motioncomp");
-var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+var ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
 
 // document.getElementById('motionvideo').addEventListener('timeupdate', function(){ dump(); });
 document.getElementById("motionvideo").addEventListener("play", function(){ intervalID = window.setInterval(dump,1000 / 25); });
@@ -2540,10 +2535,10 @@ function runcamerasettings(){
     localMediaStream = null;
     document.getElementById("motionvideo").load();
     motioncanvas = document.getElementById("motioncanvas");
-    canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+    canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
     canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
     ccanvas = document.getElementById("motioncomp");
-    ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+    ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
     ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
     }
 
@@ -2579,9 +2574,9 @@ navigator.permissions.query({name:"camera"})
 
 video = document.getElementById("motionvideo");
 motioncanvas = document.getElementById("motioncanvas");
-canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
 ccanvas = document.getElementById("motioncomp");
-ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
 
 }else{
 	// remove everything
@@ -2596,12 +2591,12 @@ ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 		localMediaStream = null;
 		document.getElementById("motionvideo").load();
 		motioncanvas = document.getElementById("motioncanvas");
-		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+		canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
 		canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
 		motioncanvas.width = 0;
 		motioncanvas.height = 0;
 		ccanvas = document.getElementById("motioncomp");
-		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+		ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
 		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
 		ccanvas.width = 0;
 		ccanvas.height = 0;
@@ -3423,7 +3418,7 @@ function gamearea(){
     this.canvas.addEventListener("mousedown", function(){ accelerate(-0.2); },false);
 
     document.getElementById("stefanvdplayground").appendChild(this.canvas);
-    this.context = this.canvas.getContext("2d", {desynchronized: true});
+    this.context = this.canvas.getContext("2d",{desynchronized: true});
 
     // retina support
     this.canvas.width = 480 * 2;
