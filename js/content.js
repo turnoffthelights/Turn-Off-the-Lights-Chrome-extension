@@ -1656,8 +1656,9 @@ var t = 0;
 function setTime(){ ++t; }
 
 function analamp(hz,v){
-	var l = hz / audiocontext[v].sampleRate * analyser[v].freq.length | 0;
-	var sum;
+	let l = hz / audiocontext[v].sampleRate * analyser[v].freq.length | 0;
+	let sum;
+	let i;
     for(sum = 0, i = 0; i < l;) sum += analyser[v].freq[i++];
     return sum / l / 255;
 }
@@ -1776,10 +1777,10 @@ function videovisualloop(tovis){
 			bctx2[tovis].beginPath();
 
 			let i;
-			let j;
+			let j = analyser[tovis].wave.length;
 			let a;
 			let r;
-			for(i = (data.length / 2) - 1, j = analyser[tovis].wave.length; i >= 0; i--){
+			for(i = (data.length / 2) - 1, j; i >= 0; i--){
 				a = i / 22 * 2 * Math.PI;
 				r = amp * 256 / 2 * (0.5 + analyser[tovis].wave[i] / 255);
 				bctx2[tovis].lineTo(r * Math.sin(a) + w / 2, r * Math.cos(a) + h / 2);
@@ -2333,6 +2334,11 @@ function autoframeglow(){
 	}
 }
 
+var textcountA;
+var textcountB;
+var textcountC;
+var p1; var p2; var p3; var p4;
+var hex1; var hex2; var hex3; var hex4;
 // ambilight draw code
 function drawAtmos(playerid, item, totlmode){
 	var statusdetectvideo = playerid.paused || playerid.ended;
@@ -2348,9 +2354,9 @@ function drawAtmos(playerid, item, totlmode){
 	countA[item] = countA[item] - 1; if(countA[item] <= 0){ countA[item] = 0; }
 	countB[item] = countB[item] - 1; if(countB[item] <= 0){ countB[item] = 0; }
 	countC[item] = countC[item] - 1; if(countC[item] <= 0){ countC[item] = 0; }
-	var textcountA = countA[item] + "px";
-	var textcountB = countB[item] + "px";
-	var textcountC = countC[item] + "px";
+	textcountA = countA[item] + "px";
+	textcountB = countB[item] + "px";
+	textcountC = countC[item] + "px";
 	}
 
 	if(ambilightvarcolor == true){
@@ -2365,14 +2371,14 @@ function drawAtmos(playerid, item, totlmode){
 			if(canvas){
 				var context = canvas.getContext("2d",{desynchronized: true});
 
-				var p1 = context.getImageData(0 , 0, 1, 1).data;
-				var p2 = context.getImageData(1 , 0, 1, 1).data;
-				var p3 = context.getImageData(2 , 0, 1, 1).data;
-				var p4 = context.getImageData(3 , 0, 1, 1).data;
-				var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-				var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-				var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-				var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+				p1 = context.getImageData(0 , 0, 1, 1).data;
+				p2 = context.getImageData(1 , 0, 1, 1).data;
+				p3 = context.getImageData(2 , 0, 1, 1).data;
+				p4 = context.getImageData(3 , 0, 1, 1).data;
+				hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+				hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+				hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+				hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 			}
 			var downhex1 = hex1; if(!hex1){ hex1 = "#000000"; } // previous value
 			var downhex2 = hex2; if(!hex2){ hex2 = "#000000"; } // previous value
@@ -2435,8 +2441,8 @@ function drawAtmos(playerid, item, totlmode){
 if(totlmode == false){ return; }
 
 try{
-	var k = item;
-	if(typeof k == "undefined"){
+	var l = item;
+	if(typeof l == "undefined"){
 	return;
 	}
 }catch(e){ console.log(e); }
@@ -2444,8 +2450,6 @@ try{
     var totlshowtime = playerid;
 	// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 	var youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
-	var getblur = ambilightrangeblurradius + "px";
-	var getspread = ambilightrangespreadradius + "px";
 
 	// animate out and in
 	// but not for the vivid mode
@@ -2456,9 +2460,9 @@ try{
 	if(countA[item] < ambilightrangespreadradius){ countA[item] = countA[item] + 1; }
 	if(countB[item] < ambilightrangeblurradius){ countB[item] = countB[item] + 1; }
 	if(countC[item] < 20){ countC[item] = countC[item] + .5; }
-	var textcountA = countA[item] + "px";
-	var textcountB = countB[item] + "px";
-	var textcountC = countC[item] + "px";
+	textcountA = countA[item] + "px";
+	textcountB = countB[item] + "px";
+	textcountC = countC[item] + "px";
 	}
 
 	if(ambilightvarcolor == true){
@@ -2600,14 +2604,14 @@ try{
 			var imageData = context.getImageData(0, 0, 1, 1);
 			var data = imageData.data;
 
-			var p1 = context.getImageData(0 , 0, 1, 1).data;
-			var p2 = context.getImageData(1 , 0, 1, 1).data;
-			var p3 = context.getImageData(2 , 0, 1, 1).data;
-			var p4 = context.getImageData(3 , 0, 1, 1).data;
-			var hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-			var hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-			var hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-			var hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+			p1 = context.getImageData(0 , 0, 1, 1).data;
+			p2 = context.getImageData(1 , 0, 1, 1).data;
+			p3 = context.getImageData(2 , 0, 1, 1).data;
+			p4 = context.getImageData(3 , 0, 1, 1).data;
+			hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+			hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+			hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+			hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 
 			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 				if(youtubewindow){
@@ -3258,10 +3262,10 @@ function webgonightmode(){
 		var i;
 		var l = ytdminiguiderenderer.length;
 		for(i = 0; i < l; i++){ ytdminiguiderenderer[i].style.backgroundColor = nightmodebck; }
-		var ytdminiguideentryrenderer = document.querySelectorAll("ytd-mini-guide-entry-renderer");
+		var ytdminiguideentryrenderera = document.querySelectorAll("ytd-mini-guide-entry-renderer");
 		var i;
-		var l = ytdminiguideentryrenderer.length;
-		for(i = 0; i < l; i++){ ytdminiguideentryrenderer[i].style.backgroundColor = nightmodebck; }
+		var l = ytdminiguideentryrenderera.length;
+		for(i = 0; i < l; i++){ ytdminiguideentryrenderera[i].style.backgroundColor = nightmodebck; }
 	}
 //-----
 }else{
@@ -3622,10 +3626,10 @@ function webgonightmode(){
 		var i;
 		var l = ytdminiguiderenderer.length;
 		for(i = 0; i < l; i++){ ytdminiguiderenderer[i].style.backgroundColor = ""; }
-		var ytdminiguideentryrenderer = document.querySelectorAll("ytd-mini-guide-entry-renderer");
-		var i;
-		var l = ytdminiguideentryrenderer.length;
-		for(i = 0; i < l; i++){ ytdminiguideentryrenderer[i].style.backgroundColor = ""; }
+		var ytdminiguideentryrendererb = document.querySelectorAll("ytd-mini-guide-entry-renderer");
+		var ytminiguideentryi;
+		var ytminiguideentryl = ytdminiguideentryrendererb.length;
+		for(ytminiguideentryi = 0; ytminiguideentryi < ytminiguideentryl; ytminiguideentryi++){ ytdminiguideentryrendererb[ytminiguideentryi].style.backgroundColor = ""; }
 	}
 }
 
@@ -3761,7 +3765,7 @@ function nightfunction(){
 			item.addEventListener("mouseover", function(){ item.style.opacity = "1"; }, false);
 			item.addEventListener("mouseout", function(){ item.style.opacity = ".2"; }, false);
 		}
-		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		//var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		if(nmcustom == true){ newnight.style.left = nmcustomx; newnight.style.bottom = nmcustomy; }
 		else if(nmtopleft == true){ newnight.style.left = "25px"; newnight.style.top = "25px"; }
 		else if(nmtopright == true){ newnight.style.right = "25px"; newnight.style.top = "25px"; }
@@ -4144,13 +4148,13 @@ bnode.addEventListener("contextmenu", cancelgesture);
 runnightmodegesturecheck();
 
 // reflection
-function drawReflection(reflectionid,ritem){
+function drawReflection(reflectionid){
 	var calcreflection = (100 - reflectionamount) / 100;
 	try{
 		if(reflectionid.paused || reflectionid.ended || $("movie_player").getPlayerState() == 0 || $("movie_player").getPlayerState() == 2){
 			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 				// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
-				var youtubewindow = $("movie_player");
+				let youtubewindow = $("movie_player");
 				youtubewindow.style.webkitBoxReflect = "";
 			}else{
 				reflectionid.style.webkitBoxReflect = "";
@@ -4162,7 +4166,7 @@ function drawReflection(reflectionid,ritem){
 	try{
 		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 			// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
-			var youtubewindow = $("movie_player");
+			let youtubewindow = $("movie_player");
 			youtubewindow.style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + calcreflection + ", transparent))";
 		}else{
 			reflectionid.style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + calcreflection + ", transparent))";
@@ -4175,24 +4179,13 @@ function runreflectioncheck(){
 	if(reflection == true){
 		startreflection = window.setInterval(function(){
 		try{
-		var reflectionplayer = document.getElementsByTagName("video") || null;
-		var reflectionid = null, ritem = null;
-		var k;
-		var l = reflectionplayer.length;
-		for(k = 0; k < l; k++){
-			if(reflectionplayer[k].play){ reflectionid = reflectionplayer[k]; ritem = k + 1; drawReflection(reflectionid, ritem); }
-		}
-
-		// YouTube flash detect play
-		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-		var yttest = $("movie_player"); ritem = 1;
-
-		if(yttest){
-		if($("movie_player").getPlayerState() == 1){ drawReflection(youtubewindow, ritem); }
-		else{ drawReflection(youtubewindow, ritem); }
-		}
-		}
-
+			var reflectionplayer = document.getElementsByTagName("video") || null;
+			var reflectionid = null;
+			var k;
+			var l = reflectionplayer.length;
+			for(k = 0; k < l; k++){
+				if(reflectionplayer[k].play){ reflectionid = reflectionplayer[k]; drawReflection(reflectionid); }
+			}
 		}
 		catch(e){ console.log(e); } // I see nothing, that is good
 		},20); // 20 refreshing it
@@ -4278,8 +4271,8 @@ var doscroll = function(e){
 					test = document.elementFromPoint(e.clientX, e.clientY);
 					stack.push(test);
 					if(test.nodeName == "VIDEO"){
-						var value = test.getAttribute("data-video");
-						if(typeof value == "string" && value.length){
+						var getattvalue = test.getAttribute("data-video");
+						if(typeof getattvalue == "string" && getattvalue.length){
 							pop = test.getAttribute("data-video");
 							that = test;
 						}
@@ -4581,10 +4574,9 @@ var q = ytembed.length;
 for(z = 0; z < q; z++){
 	var ytembedurl = ytembed[z].src;
 		if(ytembedurl != undefined || ytembedurl != ""){
-
-			var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
+			var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
 			var match = ytembedurl.match(regExp);
-			if(match && match[2].length == 11){
+			if(match && match[7].length == 11){
 				var video_id = ytembedurl.split("embed/")[1];
 				if(video_id.indexOf("vq=") != -1){
 					if(video_id.indexOf("vq=highres")){ video_id.replace("vq=highres", "vq=" + maxquality + ""); }
@@ -4626,15 +4618,15 @@ function injectScript(codetext){
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 if(no360youtube == true){
 	var ytfullvideo = document.getElementsByTagName("video");
-	var i;
-	var l = ytfullvideo.length;
-	for(i = 0; i < l; i++){
-        ytfullvideo[i].classList.add("stefanvdvideotop");
+	var ytfulli;
+	var ytfulll = ytfullvideo.length;
+	for(ytfulli = 0; ytfulli < ytfulll; ytfulli++){
+        ytfullvideo[ytfulli].classList.add("stefanvdvideotop");
 	}
 	var ytwebgl = document.getElementsByClassName("webgl");
-	var i;
-	var l = ytwebgl.length;
-	for(i = 0; i < l; i++){ ytwebgl[i].style.display = "none"; }
+	var ytgli;
+	var ytgll = ytwebgl.length;
+	for(ytgli = 0; ytgli < ytgll; ytgli++){ ytwebgl[ytgli].style.display = "none"; }
 }
 
 // new YouTube october 2013
@@ -4673,9 +4665,11 @@ var ythdinit = function onYouTubePlayerReady(player){
 			mplayer = document.getElementById(mplayer);
 		}
 		if(typeof movie_player != "undefined"){
+			// eslint-disable-next-line no-undef
 			mplayer = movie_player;
 		}
 		mplayer.addEventListener("onStateChange", "onytplayerStateChange");
+		// eslint-disable-next-line no-undef
 		updateQuality();
 	}
 	catch(e){ console.error(e); }
@@ -4683,6 +4677,7 @@ var ythdinit = function onYouTubePlayerReady(player){
 
 var ythdstatechange = function onytplayerStateChange(newState){
 	if(newState == 3 && !donesetquality){
+		// eslint-disable-next-line no-undef
 		updateQuality();
 	}
 	if(newState == -1){
@@ -4845,13 +4840,13 @@ chrome.runtime.onMessage.addListener(function(request){
 
 			sun = true; isitdark = false;
 			// search all elements and remove night class
-			var elems = document.querySelectorAll(".stefanvdnight");
-			[].forEach.call(elems, function(el){
+			var elemscolor = document.querySelectorAll(".stefanvdnight");
+			[].forEach.call(elemscolor, function(el){
 				el.classList.remove("stefanvdnight");
 			});
 
-			var elems = document.querySelectorAll(".stefanvdnightbck");
-			[].forEach.call(elems, function(el){
+			var elemsbck = document.querySelectorAll(".stefanvdnightbck");
+			[].forEach.call(elemsbck, function(el){
 				el.classList.remove("stefanvdnightbck");
 			});
 
@@ -4945,9 +4940,9 @@ chrome.runtime.onMessage.addListener(function(request){
 				stop = true;
 				stopAnimation();
 
-				var htmlplayer = document.getElementsByTagName("video");
-				var j;
-				var l = htmlplayer.length;
+				let htmlplayer = document.getElementsByTagName("video");
+				let j;
+				let l = htmlplayer.length;
 				for(j = 0; j < l; j++){
 					if(htmlplayer[j]){
 						htmlplayer[j].style["boxShadow"] = "none";
