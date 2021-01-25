@@ -302,29 +302,36 @@ try{
 // Show all iframe embed video objects -> Flash detection
 if(flash == true){
 try{
-	var flashj, flasht;
-	for(flashj = 0; flasht = ["object","embed","applet","iframe"][flashj]; ++flashj)
+	var flasht = ["object","embed","applet","iframe"];
+	var flashtlength = hardflasht.length;
+	var flashj;
+	for(flashj = 0; flashj < flashtlength; ++flashj)
 	{
 		let a = document.getElementsByTagName(flasht);
 		let i;
-		let N,C;
-		for(i = a.length - 1; (i + 1) && (N = a[i]); --i)
-		if(j != 3 || !R((C = N.contentWindow) ? C : N.contentDocument.defaultView))
+		let l = a.length;
+		for(i = 0; i < l; i++)
 		{
-			let targetComputedStylePosition = document.defaultView.getComputedStyle(N,null).getPropertyValue("position");
+			// Can access the elements inside the local iframe inner document
+			var innerDoc = a[i].contentDocument || a[i].contentWindow.document;
+			if(innerDoc){
+				let targetComputedStylePosition = document.defaultView.getComputedStyle(a[i],null).getPropertyValue("position");
 
-			N.classList.add("stefanvdvideotop");
+				a[i].classList.add("stefanvdvideotop");
 
-			// search for the video player, and set the previous path all to z-index "auto"
-			if(searchvideopath(N) == true && targetComputedStylePosition == "absolute"){
-				N.classList.add("stefanvdposfixed");
+				// search for the video player, and set the previous path all to z-index "auto"
+				if(searchvideopath(a[i]) == true && targetComputedStylePosition == "absolute"){
+					a[i].classList.add("stefanvdposfixed");
+				}
 			}
 		}
 	}
 }catch(e){ console.error(e); }
 }else if(hardflash == true){
-	var hardflashj, hardflasht;
-	for(hardflashj = 0; hardflasht = ["object","embed","applet","iframe"][hardflashj]; ++hardflashj)
+	var hardflasht = ["object","embed","applet","iframe"];
+	var hardflashtlength = hardflasht.length;
+	var hardflashj;
+	for(hardflashj = 0; hardflashj < hardflashtlength; ++hardflashj)
 	{
 		let a = document.getElementsByTagName(hardflasht);
 		let i;
@@ -347,18 +354,18 @@ try{
 if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 // Show the debug mode of YouTube
 var youtubedebuginfopanel = document.querySelectorAll("div.html5-video-info-panel");
-var i;
-var l = youtubedebuginfopanel.length;
-for(i = 0; i < l; i++){ youtubedebuginfopanel[i].style.zIndex = "1001"; }
+var ytdebuginfoi;
+var ytdebuginfol = youtubedebuginfopanel.length;
+for(ytdebuginfoi = 0; ytdebuginfoi < ytdebuginfol; ytdebuginfoi++){ youtubedebuginfopanel[ytdebuginfoi].style.zIndex = "1001"; }
 var youtubedebugpanel = document.querySelectorAll("div.ytp-dialog-holder");
-var i;
-var l = youtubedebugpanel.length;
-for(i = 0; i < l; i++){ youtubedebugpanel[i].style.zIndex = "1001"; }
+var ytdebugpani;
+var ytdebugpanl = youtubedebugpanel.length;
+for(ytdebugpani = 0; ytdebugpani < ytdebugpanl; ytdebugpani++){ youtubedebugpanel[ytdebugpani].style.zIndex = "1001"; }
 // 21 august 2015
 var youtubedebugcontextmenu = document.querySelectorAll("div.ytp-contextmenu");
-var i;
-var l = youtubedebugcontextmenu.length;
-for(i = 0; i < l; i++){ youtubedebugcontextmenu[i].style.zIndex = "1001"; }
+var ytdebugctxi;
+var ytdebugctxl = youtubedebugcontextmenu.length;
+for(ytdebugctxi = 0; ytdebugctxi < ytdebugctxl; ytdebugctxi++){ youtubedebugcontextmenu[ytdebugctxi].style.zIndex = "1001"; }
 
 // YouTube video OK
 var watch7 = $("watch7");
@@ -443,14 +450,14 @@ var likebuttonrenderdislike = document.querySelector(".like-button-renderer-disl
 if(likebuttonrenderdislike){ likebuttonrenderdislike.style.zIndex = 1000; likebuttonrenderdislike.style.position = "relative"; likebuttonrenderdislike.style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmateriallikebutton = document.querySelectorAll("ytd-toggle-button-renderer");
-var i;
-var l = ytmateriallikebutton.length;
-for(i = 0; i < l; i++){
-var ytgetobject = ytmateriallikebutton[i].getElementsByTagName("button")[0];
+var ytmatlikei;
+var ytmatlikel = ytmateriallikebutton.length;
+for(ytmatlikei = 0; ytmatlikei < ytmatlikel; ytmatlikei++){
+var ytgetobject = ytmateriallikebutton[ytmatlikei].getElementsByTagName("button")[0];
 if(ytgetobject != null){ var ytgetstring = ytgetobject.getAttribute("aria-label");
 if(ytgetstring != null){
-if(ytgetstring.substring(0, 7) == "dislike"){ ytmateriallikebutton[i].classList.add("stefanvditemtop"); ytmateriallikebutton[i].style.background = "white"; }
-else if(ytgetstring.substring(0, 4) == "like"){ ytmateriallikebutton[i].classList.add("stefanvditemtop"); ytmateriallikebutton[i].style.background = "white"; }
+if(ytgetstring.substring(0, 7) == "dislike"){ ytmateriallikebutton[ytmatlikei].classList.add("stefanvditemtop"); ytmateriallikebutton[ytmatlikei].style.background = "white"; }
+else if(ytgetstring.substring(0, 4) == "like"){ ytmateriallikebutton[ytmatlikei].classList.add("stefanvditemtop"); ytmateriallikebutton[ytmatlikei].style.background = "white"; }
 } } }
 }
 
@@ -461,13 +468,13 @@ var actionsharepanel = document.querySelector(".action-panel-trigger-share");
 if(actionsharepanel){ actionsharepanel.style.zIndex = 1000; actionsharepanel.style.position = "relative"; actionsharepanel.style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
-var i;
-var l = ytmaterialsharebutton.length;
-for(i = 0; i < l; i++){
-var ytgetshareobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
+var ytmatsharei;
+var ytmatsharel = ytmaterialsharebutton.length;
+for(ytmatsharei = 0; ytmatsharei < ytmatsharel; ytmatsharei++){
+var ytgetshareobject = ytmaterialsharebutton[ytmatsharei].getElementsByTagName("button")[0];
 if(ytgetshareobject != null){ var ytgetsharestring = ytgetshareobject.getAttribute("aria-label");
 if(ytgetsharestring != null){
-if(ytgetsharestring.substring(0, 5) == "Share"){ ytmaterialsharebutton[i].classList.add("stefanvditemtop"); ytmaterialsharebutton[i].style.background = "white"; }
+if(ytgetsharestring.substring(0, 5) == "Share"){ ytmaterialsharebutton[ytmatsharei].classList.add("stefanvditemtop"); ytmaterialsharebutton[ytmatsharei].style.background = "white"; }
 } } }
 }
 
@@ -491,13 +498,13 @@ var addtobutton = document.querySelector(".addto-button");
 if(addtobutton){ addtobutton.style.zIndex = 1000; addtobutton.style.position = "relative"; addtobutton.style.background = "white"; }
 // update YouTube material 21 march 2017
 var ytmaterialaddbutton = document.querySelectorAll("ytd-button-renderer");
-var i;
-var l = ytmaterialaddbutton.length;
-for(i = 0; i < l; i++){
-var ytgetaddobject = ytmaterialaddbutton[i].getElementsByTagName("button")[0];
+var ytmati;
+var ytmatl = ytmaterialaddbutton.length;
+for(ytmati = 0; ytmati < ytmatl; ytmati++){
+var ytgetaddobject = ytmaterialaddbutton[ytmati].getElementsByTagName("button")[0];
 if(ytgetaddobject != null){ var ytgetaddstring = ytgetaddobject.getAttribute("aria-label");
 if(ytgetaddstring != null){
-if(ytgetaddstring.substring(0, 4) == "Save"){ ytmaterialaddbutton[i].classList.add("stefanvditemtop"); ytmaterialaddbutton[i].style.background = "white"; }
+if(ytgetaddstring.substring(0, 4) == "Save"){ ytmaterialaddbutton[ytmati].classList.add("stefanvditemtop"); ytmaterialaddbutton[ytmati].style.background = "white"; }
 } } }
 }
 
@@ -516,57 +523,57 @@ if(ytmateriallikebar){ ytmateriallikebar.classList.add("stefanvditemtop"); }
 
 // show YouTube HTML5 annotation
 div = document.getElementsByTagName("div");
-var i;
-var l = div.length;
-for(i = 0; i < l; i++)
-{ if(div[i].className == ("video-annotations iv-module")){ div[i].classList.add("stefanvdvideocontrolsitem"); } }
+var ytdivi;
+var ytdivl = div.length;
+for(ytdivi = 0; ytdivi < ytdivl; ytdivi++)
+{ if(div[ytdivi].className == ("video-annotations iv-module")){ div[ytdivi].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube show annotation 25 february 2016
 var videoannotations = document.getElementsByTagName("div");
-var i;
-var l = videoannotations.length;
-for(i = 0; i < l; i++)
-{ if(videoannotations[i].className == ("video-annotations")){ videoannotations[i].classList.add("stefanvdvideocontrolsitem"); } }
+var ytannotvidi;
+var ytannotvidl = videoannotations.length;
+for(ytannotvidi = 0; ytannotvidi < ytannotvidl; ytannotvidi++)
+{ if(videoannotations[ytannotvidi].className == ("video-annotations")){ videoannotations[ytannotvidi].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube show channel 29 february 2016
 var annotationbranding = document.getElementsByTagName("div");
-var i;
-var l = annotationbranding.length;
-for(i = 0; i < l; i++)
-{ if(annotationbranding[i].className == ("annotation annotation-type-custom iv-branding")){ annotationbranding[i].classList.add("stefanvdvideocontrolstop"); } }
+var ytannotbrandi;
+var ytannotbrandl = annotationbranding.length;
+for(ytannotbrandi = 0; ytannotbrandi < ytannotbrandl; ytannotbrandi++)
+{ if(annotationbranding[ytannotbrandi].className == ("annotation annotation-type-custom iv-branding")){ annotationbranding[ytannotbrandi].classList.add("stefanvdvideocontrolstop"); } }
 
 var annotationtvpromo = document.getElementsByTagName("div");
-var i;
-var l = annotationtvpromo.length;
-for(i = 0; i < l; i++)
-{ if(annotationtvpromo[i].className == ("annotation annotation-type-custom iv-promo iv-promo-video")){ annotationtvpromo[i].classList.add("stefanvdvideocontrolstop"); } }
+var ytanoti;
+var ytanotl = annotationtvpromo.length;
+for(ytanoti = 0; ytanoti < ytanotl; ytanoti++)
+{ if(annotationtvpromo[ytanoti].className == ("annotation annotation-type-custom iv-promo iv-promo-video")){ annotationtvpromo[ytanoti].classList.add("stefanvdvideocontrolstop"); } }
 
 // info button
 var ytpcardsteaser = document.getElementsByTagName("div");
-var i;
-var l = ytpcardsteaser.length;
-for(i = 0; i < l; i++)
-{ if(ytpcardsteaser[i].className == ("ytp-cards-teaser")){ ytpcardsteaser[i].classList.add("stefanvdvideocontrolsitem"); } }
+var ytcardsteasi;
+var ytcardsteasl = ytpcardsteaser.length;
+for(ytcardsteasi = 0; ytcardsteasi < ytcardsteasl; ytcardsteasi++)
+{ if(ytpcardsteaser[ytcardsteasi].className == ("ytp-cards-teaser")){ ytpcardsteaser[ytcardsteasi].classList.add("stefanvdvideocontrolsitem"); } }
 
 var ytpcardsbutton = document.getElementsByTagName("button");
-var i;
-var l = ytpcardsbutton.length;
-for(i = 0; i < l; i++)
-{ if(ytpcardsbutton[i].className == ("ytp-button ytp-cards-button")){ ytpcardsbutton[i].classList.add("stefanvdvideocontrolstop"); } }
+var ytcardi;
+var ytcardl = ytpcardsbutton.length;
+for(ytcardi = 0; ytcardi < ytcardl; ytcardi++)
+{ if(ytpcardsbutton[ytcardi].className == ("ytp-button ytp-cards-button")){ ytpcardsbutton[ytcardi].classList.add("stefanvdvideocontrolstop"); } }
 
 // edit video card end screen
 var ytplayergridsafe = document.getElementsByTagName("div");
-var i;
-var l = ytplayergridsafe.length;
-for(i = 0; i < l; i++)
-{ if(ytplayergridsafe[i].className == ("playergrid-safe-area")){ ytplayergridsafe[i].classList.add("stefanvdvideocontrolsitem"); } }
+var ytplaygridi;
+var ytplaygridl = ytplayergridsafe.length;
+for(ytplaygridi = 0; ytplaygridi < ytplaygridl; ytplaygridi++)
+{ if(ytplayergridsafe[ytplaygridi].className == ("playergrid-safe-area")){ ytplayergridsafe[ytplaygridi].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube video sidebar info button
 var ivdrawer = document.getElementsByTagName("div");
-var i;
-var l = ivdrawer.length;
-for(i = 0; i < l; i++)
-{ if(ivdrawer[i].className == ("iv-drawer")){ ivdrawer[i].classList.add("stefanvdvideocontrolsitem"); } }
+var ytsidebari;
+var ytsidebarl = ivdrawer.length;
+for(ytsidebari = 0; ytsidebari < ytsidebarl; ytsidebari++)
+{ if(ivdrawer[ytsidebari].className == ("iv-drawer")){ ivdrawer[ytsidebari].classList.add("stefanvdvideocontrolsitem"); } }
 
 // channel page
 var c4player = $("c4-player");
@@ -601,10 +608,10 @@ var dclasses = ["ytp-upnext ytp-endscreen-upnext-autoplay-paused ytp-suggestion-
 var ytdivs = document.getElementsByTagName("div");
 var div;
 for(div in ytdivs){
-	var i;
-	var j = dclasses.length;
-	for(i = 0; i < j; i++){
-	if(hasClass(ytdivs[div], dclasses[i])){
+	var ytelemi;
+	var ytelemj = dclasses.length;
+	for(ytelemi = 0; ytelemi < ytelemj; ytelemi++){
+	if(hasClass(ytdivs[div], dclasses[ytelemi])){
 		if(ytdivs[div].classList.contains("stefanvdvideoauto")){ ytdivs[div].classList.remove("stefanvdvideoauto"); }
 		if(ytdivs[div].classList.contains("stefanvdotherdown")){ ytdivs[div].classList.remove("stefanvdotherdown"); }
 		ytdivs[div].classList.add("stefanvdvideocontrolsitem");
@@ -614,16 +621,16 @@ for(div in ytdivs){
 
 // YouTube show sub title
 var subtitel = document.getElementsByTagName("div");
-var i;
-var l = subtitel.length;
-for(i = 0; i < l; i++)
-{ if(subtitel[i].className == ("ytp-player-content ytp-subtitles-player-content")){ subtitel[i].classList.add("stefanvdvideocontrolsitem"); subtitel[i].style.pointerEvents = "none"; } }
+var ytsubi;
+var ytsubl = subtitel.length;
+for(ytsubi = 0; ytsubi < ytsubl; ytsubi++)
+{ if(subtitel[ytsubi].className == ("ytp-player-content ytp-subtitles-player-content")){ subtitel[i].classList.add("stefanvdvideocontrolsitem"); subtitel[ytsubi].style.pointerEvents = "none"; } }
 
 var ytbezel = document.getElementsByTagName("div");
-var i;
-var l = ytbezel.length;
-for(i = 0; i < l; i++)
-{ if(ytbezel[i].className == ("html5-bezel html5-center-overlay")){ ytbezel[i].classList.add("stefanvdvideocontrolsitem"); } }
+var ytbi;
+var ytbl = ytbezel.length;
+for(ytbi = 0; ytbi < ytbl; ytbi++)
+{ if(ytbezel[ytbi].className == ("html5-bezel html5-center-overlay")){ ytbezel[ytbi].classList.add("stefanvdvideocontrolsitem"); } }
 
 // YouTube still showing the skip button for the ads
 var ytvideoadui = document.querySelector(".videoAdUi");
@@ -649,10 +656,10 @@ if(ytpadoverlayslot){ ytpadoverlayslot.classList.add("stefanvdvideocontrolsitem"
 
 // show HTML5 controls
 var ytpprogress = document.getElementsByTagName("div");
-var i;
-var l = ytpprogress.length;
-for(i = 0; i < l; i++)
-{ if(ytpprogress[i].className == ("ytp-progress-bar-container")){ ytpprogress[i].classList.add("stefanvdvideocontrolstop"); } }
+var ytpi;
+var ytpl = ytpprogress.length;
+for(ytpi = 0; ytpi < ytpl; ytpi++)
+{ if(ytpprogress[ytpi].className == ("ytp-progress-bar-container")){ ytpprogress[ytpi].classList.add("stefanvdvideocontrolstop"); } }
 
 // popup share container
 var ytpopupsharecon = document.querySelector("ytd-popup-container");
@@ -738,13 +745,13 @@ var vimeovideo = document.querySelector(".video");
 if(vimeovideo){ vimeovideo.classList.add("stefanvdvideocontrolsitem"); }
 //fixed 25/03/2016
 var vimeocontainer = document.querySelectorAll("div.player_container");
-var i;
-var l = vimeocontainer.length;
-for(i = 0; i < l; i++){ vimeocontainer[i].style.transform = "initial"; vimeocontainer[i].style.webkitTransform = "initial"; vimeocontainer[i].style.margin = "auto"; vimeocontainer[i].style.left = "0px"; vimeocontainer[i].style.right = "0px"; }
+var vimeoconi;
+var vimeoconl = vimeocontainer.length;
+for(vimeoconi = 0; vimeoconi < vimeoconl; vimeoconi++){ vimeocontainer[vimeoconi].style.transform = "initial"; vimeocontainer[vimeoconi].style.webkitTransform = "initial"; vimeocontainer[vimeoconi].style.margin = "auto"; vimeocontainer[vimeoconi].style.left = "0px"; vimeocontainer[vimeoconi].style.right = "0px"; }
 var vimeovideoplayerarea = document.querySelectorAll("div.player_area");
-var i;
-var l = vimeovideoplayerarea.length;
-for(i = 0; i < l; i++){ vimeovideoplayerarea[i].style.transformStyle = "initial"; vimeovideoplayerarea[i].style.webkitTransformStyle = "initial"; }
+var vemeoplayi;
+var vemeoplayl = vimeovideoplayerarea.length;
+for(vemeoplayi = 0; vemeoplayi < vemeoplayl; vemeoplayi++){ vimeovideoplayerarea[vemeoplayi].style.transformStyle = "initial"; vimeovideoplayerarea[vemeoplayi].style.webkitTransformStyle = "initial"; }
 
 var vimeoprogress = document.querySelector(".progress");
 if(vimeoprogress){ vimeoprogress.classList.add("stefanvdvideocontrolsitem"); }
@@ -796,20 +803,20 @@ if(mvlayerwrap){ mvlayerwrap.style.cssText += "position:absolute !important"; }
 // steampowered.com, fixed show control
 else if(window.location.href.match(/((http:\/\/.*steampowered\.com\/.*)|(https:\/\/.*steampowered\.com\/.*))/i)){
 div = document.getElementsByTagName("div");
-var i;
-var l = div.length;
-for(i = 0; i < l; i++)
-{ if(div[i].className == ("html5_video_overlay")){ div[i].classList.add("stefanvdvideocontrolsitem"); } }
+var steampowi;
+var steampowl = div.length;
+for(steampowi = 0; steampowi < steampowl; steampowi++)
+{ if(div[steampowi].className == ("html5_video_overlay")){ div[steampowi].classList.add("stefanvdvideocontrolsitem"); } }
 }
 // twich.tv
 // fixed 15 january 2016
 else if(window.location.href.match(/((http:\/\/.*twitch\.tv\/.*)|(https:\/\/.*twitch\.tv\/.*))/i)){
 div = document.getElementsByTagName("div");
-var i;
-var l = div.length;
-for(i = 0; i < l; i++)
+var twitchi;
+var twitchl = div.length;
+for(twitchi = 0; twitchi < twitchl; twitchi++)
 {
-    if(div[i].className == ("player-video")){ div[i].style.height = "100%"; }
+    if(div[twitchi].className == ("player-video")){ div[twitchi].style.height = "100%"; }
 }
 
 var twzdefault = document.querySelectorAll(".tw-z-default");
@@ -851,13 +858,13 @@ else if(window.location.href.match(/((http:\/\/.*yahoo\.com\/.*)|(https:\/\/.*ya
 else if(window.location.href.match(/((http:\/\/.*facebook\.com\/.*)|(https:\/\/.*facebook\.com\/.*))/i)){
 // separate video page
 var videoStage = document.getElementsByClassName("videoStage");
-var i;
-var l = videoStage.length;
-for(i = 0; i < l; i++){
-    videoStage[i].classList.add("stefanvdvideocontrolsitem");
-		div = videoStage[i].getElementsByTagName("div");
-		var j;
-		var q = div.length;
+var fbvideoi;
+var fbivideol = videoStage.length;
+for(fbvideoi = 0; fbvideoi < fbivideol; fbvideoi++){
+    videoStage[fbvideoi].classList.add("stefanvdvideocontrolsitem");
+		div = videoStage[fbvideoi].getElementsByTagName("div");
+		let j;
+		let q = div.length;
         for(j = 0; j < q; j++){
             // all div get a higher level
             div[j].classList.add("stefanvdvideocontrolsitem");
@@ -865,13 +872,13 @@ for(i = 0; i < l; i++){
 }
 // main facebook video control
 var i5q = document.getElementsByClassName("_i5q");
-var i;
-var l = i5q.length;
-for(i = 0; i < l; i++){
-    i5q[i].classList.add("stefanvdvideocontrolsitem");
-		div = i5q[i].getElementsByTagName("div");
-		var j;
-		var q = div.length;
+var fbi;
+var fbl = i5q.length;
+for(fbi = 0; fbi < fbl; fbi++){
+    i5q[fbi].classList.add("stefanvdvideocontrolsitem");
+		div = i5q[fbi].getElementsByTagName("div");
+		let j;
+		let q = div.length;
         for(j = 0; j < q; j++){
 			// all div get a higher level
             div[j].classList.add("stefanvdvideocontrolsitem");
@@ -951,24 +958,24 @@ function reader(){
 
 		// YouTube share button
 		var ytmaterialsharebutton = document.querySelectorAll("ytd-button-renderer");
-		var i;
-		var l = ytmaterialsharebutton.length;
-		for(i = 0; i < l; i++){
-		var ytgetshareobject = ytmaterialsharebutton[i].getElementsByTagName("button")[0];
+		var sharei;
+		var sharel = ytmaterialsharebutton.length;
+		for(sharei = 0; sharei < sharel; sharei++){
+		var ytgetshareobject = ytmaterialsharebutton[sharei].getElementsByTagName("button")[0];
 		if(ytgetshareobject != null){ var ytgetsharestring = ytgetshareobject.getAttribute("aria-label");
 		if(ytgetsharestring != null){
-		if(ytgetsharestring.substring(0, 5) == "Share"){ ytmaterialsharebutton[i].style.background = ""; }
+		if(ytgetsharestring.substring(0, 5) == "Share"){ ytmaterialsharebutton[sharei].style.background = ""; }
 		} } }
 
 		// YouTube save button
 		var ytmaterialsavebutton = document.querySelectorAll("ytd-button-renderer");
-		var i;
-		var l = ytmaterialsavebutton.length;
-		for(i = 0; i < l; i++){
-		var ytgetsaveobject = ytmaterialsavebutton[i].getElementsByTagName("button")[0];
+		var savei;
+		var savel = ytmaterialsavebutton.length;
+		for(savei = 0; savei < savel; savei++){
+		var ytgetsaveobject = ytmaterialsavebutton[savei].getElementsByTagName("button")[0];
 		if(ytgetsaveobject != null){ var ytgetsavestring = ytgetsaveobject.getAttribute("aria-label");
 		if(ytgetsavestring != null){
-		if(ytgetsavestring.substring(0, 4) == "Save"){ ytmaterialsavebutton[i].style.background = ""; }
+		if(ytgetsavestring.substring(0, 4) == "Save"){ ytmaterialsavebutton[savei].style.background = ""; }
 		} } }
 
 		// YouTube head
