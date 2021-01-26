@@ -2334,6 +2334,135 @@ function autoframeglow(){
 	}
 }
 
+// Atmosphere Lighting
+var totlshowtime;
+var youtubewindow;
+function runreal(){
+try{
+	if(atmosvivid == true){
+		var calcvividscale = 1 + (ambilightrangespreadradius / 100);
+		if($("stefanvdvivideffect" + totlshowtime.getAttribute("data-video"))){
+			var stefanvdvivideffect = $("stefanvdvivideffect" + totlshowtime.getAttribute("data-video"));
+			if((stefanvdvivideffect.style.height != totlshowtime.style.height) && (totlshowtime.style.height != "")){
+				stefanvdvivideffect.style.height = totlshowtime.offsetHeight;
+				stefanvdvivideffect.style.width = totlshowtime.offsetWidth;
+			}
+			var vividctx = stefanvdvivideffect.getContext("2d",{desynchronized: true}); var vividx = Math.floor(totlshowtime.offsetWidth * 0.08); var vividy = Math.floor(totlshowtime.offsetHeight * 0.08);
+			vividctx.drawImage(totlshowtime,0,0,vividx,vividy);
+			if(!totlshowtime.classList.contains("stefanvdvideotop")){ totlshowtime.classList.add("stefanvdvideotop"); }
+
+		}else{
+			// if first run, or paused or stoped video before
+			// create the vivid effect layer (again)
+			if(totlshowtime.getAttribute("data-video") != null){
+
+				if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+				// update background html video
+				var path = [];
+				var el = totlshowtime;
+				do{
+					var qq = path.unshift(el.nodeName);
+					var yta;
+					if(el.currentStyle){
+						yta = qq.currentStyle["z-Index"];
+					}
+					else{
+						yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
+					}
+					if(yta != "auto"){
+						// if it is not the <video> player element,
+						// and if otherdown class is inside, then remove it
+						if(el.tagName != "VIDEO"){
+						if(el.classList.contains("stefanvdotherdown")){ el.classList.remove("stefanvdotherdown"); }
+						el.classList.add("stefanvdvideoauto");
+						}
+					}
+				}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode));
+				}
+
+				var newpositionvivid = getPosition(totlshowtime);
+				var tempwidthvideo = totlshowtime.offsetWidth;
+				var tempheightvideo = totlshowtime.offsetHeight;
+				//var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
+				//var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
+				totlshowtime.setAttribute("class","stefanvdvideotop");
+				var newvivid = document.createElement("canvas");
+				newvivid.setAttribute("id","stefanvdvivideffect" + totlshowtime.getAttribute("data-video"));
+				newvivid.setAttribute("data-video",totlshowtime.getAttribute("data-video"));
+				newvivid.setAttribute("class","stefanvdvivideffect");
+				newvivid.style.transform = "scale3d(" + calcvividscale + "," + calcvividscale + "," + calcvividscale + ")";
+				newvivid.style.webkitFilter = "blur(" + ambilightrangeblurradius + "px)";
+				newvivid.style.filter = "blur(" + ambilightrangeblurradius + "px)";
+				newvivid.style.top = newpositionvivid.y + "px"; // with NO    +tempvisscrolltop
+				newvivid.style.left = newpositionvivid.x + "px"; // with NO    +tempvisscrollleft
+				newvivid.style.width = tempwidthvideo + "px";
+				newvivid.style.height = tempheightvideo + "px";
+				newvivid.width = Math.floor(tempwidthvideo * 0.08);
+				newvivid.height = Math.floor(tempheightvideo * 0.08);
+				document.body.appendChild(newvivid);
+			}
+		}
+	}else{
+		var sourceWidth = totlshowtime.videoWidth;
+		var sourceHeight = totlshowtime.videoHeight;
+
+		var totlcheckcanvas = $("totlCanvas" + k + "");
+		if(totlcheckcanvas == null){
+		var totlnewcanvas = document.createElement("canvas");
+		totlnewcanvas.setAttribute("id","totlCanvas" + k + "");
+		totlnewcanvas.width = "4";
+		totlnewcanvas.height = "1";
+		totlnewcanvas.style.display = "none";
+		document.body.appendChild(totlnewcanvas);
+		}
+
+		var canvas = $("totlCanvas" + k + "");
+		var context = canvas.getContext("2d",{desynchronized: true});
+
+		var colorlamp1X = (sourceWidth * 50) / 100; // up midden
+		var colorlamp1Y = (sourceHeight * 95) / 100;
+		var colorlamp2X = (sourceWidth * 95) / 100; // right midden
+		var colorlamp2Y = (sourceHeight * 50) / 100;
+		var colorlamp3X = (sourceWidth * 50) / 100; // down midden
+		var colorlamp3Y = (sourceHeight * 5) / 100;
+		var colorlamp4X = (sourceWidth * 5) / 100; // left midden
+		var colorlamp4Y = (sourceHeight * 50) / 100;
+
+		context.drawImage(totlshowtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
+		context.drawImage(totlshowtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
+		context.drawImage(totlshowtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
+		context.drawImage(totlshowtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
+
+		p1 = context.getImageData(0 , 0, 1, 1).data;
+		p2 = context.getImageData(1 , 0, 1, 1).data;
+		p3 = context.getImageData(2 , 0, 1, 1).data;
+		p4 = context.getImageData(3 , 0, 1, 1).data;
+		hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+		hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+		hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+		hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+
+		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+			if(youtubewindow){
+			youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+			}
+		}else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+	}
+	}
+}catch(e){ rundefault(); }
+}
+
+// if catch error in URL
+function rundefault(){
+	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+		if(youtubewindow){
+		youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
+		}
+	}
+	else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
+}
+
+var k;
 var textcountA;
 var textcountB;
 var textcountC;
@@ -2363,7 +2492,7 @@ function drawAtmos(playerid, item, totlmode){
 		if(atmosvivid == true){
 		// regular glow effect
 		}else{
-			var k = item;
+			k = item;
 			if(typeof k == "undefined"){
 			return;
 			}
@@ -2441,15 +2570,15 @@ function drawAtmos(playerid, item, totlmode){
 if(totlmode == false){ return; }
 
 try{
-	var l = item;
-	if(typeof l == "undefined"){
+	var k = item;
+	if(typeof k == "undefined"){
 	return;
 	}
 }catch(e){ console.log(e); }
 
-    var totlshowtime = playerid;
+    totlshowtime = playerid;
 	// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
-	var youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
+	youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
 
 	// animate out and in
 	// but not for the vivid mode
@@ -2477,11 +2606,12 @@ try{
 
 	var yesornosubdomain = subDomain(pageurl);
 
+	var insideitemlengt;
 	if(totlshowtime != typeof HTMLVideoElement !== "undefined"){
 		var insideitem = totlshowtime.src;
-		var insideitemlengt = 0;
-		if(insideitem){ var insideitemlengt = insideitem.length; } // length URL
-	}else{ var insideitemlengt = "undefined"; }
+		insideitemlengt = 0;
+		if(insideitem){ insideitemlengt = insideitem.length; } // length URL
+	}else{ insideitemlengt = "undefined"; }
 
 	// begin mission control
 	if((insideitemlengt == 0) && (yesornosubdomain == false)){
@@ -2506,133 +2636,6 @@ try{
 	}else{ rundefault(); }
     // end mission control
 
-function runreal(){
-try{
-		if(atmosvivid == true){
-			var calcvividscale = 1 + (ambilightrangespreadradius / 100);
-				if($("stefanvdvivideffect" + totlshowtime.getAttribute("data-video"))){
-					var stefanvdvivideffect = $("stefanvdvivideffect" + totlshowtime.getAttribute("data-video"));
-					if((stefanvdvivideffect.style.height != totlshowtime.style.height) && (totlshowtime.style.height != "")){
-						stefanvdvivideffect.style.height = totlshowtime.offsetHeight;
-						stefanvdvivideffect.style.width = totlshowtime.offsetWidth;
-					}
-					var vividctx = stefanvdvivideffect.getContext("2d",{desynchronized: true}); var vividx = Math.floor(totlshowtime.offsetWidth * 0.08); var vividy = Math.floor(totlshowtime.offsetHeight * 0.08);
-					vividctx.drawImage(totlshowtime,0,0,vividx,vividy);
-					if(!totlshowtime.classList.contains("stefanvdvideotop")){ totlshowtime.classList.add("stefanvdvideotop"); }
-
-				}else{
-					// if first run, or paused or stoped video before
-					// create the vivid effect layer (again)
-					if(totlshowtime.getAttribute("data-video") != null){
-
-						if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-						// update background html video
-						var path = [];
-						var el = totlshowtime;
-						do{
-							var qq = path.unshift(el.nodeName);
-							if(el.currentStyle){
-								var yta = qq.currentStyle["z-Index"];
-							}
-							else{
-								var yta = document.defaultView.getComputedStyle(el,null).getPropertyValue("z-Index");
-							}
-							if(yta != "auto"){
-								// if it is not the <video> player element,
-								// and if otherdown class is inside, then remove it
-								if(el.tagName != "VIDEO"){
-								if(el.classList.contains("stefanvdotherdown")){ el.classList.remove("stefanvdotherdown"); }
-								el.classList.add("stefanvdvideoauto");
-								}
-							}
-						}while((el.nodeName.toLowerCase() != "html") && (el = el.parentNode));
-						}
-
-						var newpositionvivid = getPosition(totlshowtime);
-						var tempwidthvideo = totlshowtime.offsetWidth;
-						var tempheightvideo = totlshowtime.offsetHeight;
-						var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
-						var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
-						totlshowtime.setAttribute("class","stefanvdvideotop");
-						var newvivid = document.createElement("canvas");
-						newvivid.setAttribute("id","stefanvdvivideffect" + totlshowtime.getAttribute("data-video"));
-						newvivid.setAttribute("data-video",totlshowtime.getAttribute("data-video"));
-						newvivid.setAttribute("class","stefanvdvivideffect");
-						newvivid.style.transform = "scale3d(" + calcvividscale + "," + calcvividscale + "," + calcvividscale + ")";
-						newvivid.style.webkitFilter = "blur(" + ambilightrangeblurradius + "px)";
-						newvivid.style.filter = "blur(" + ambilightrangeblurradius + "px)";
-						newvivid.style.top = newpositionvivid.y + "px"; // with NO    +tempvisscrolltop
-						newvivid.style.left = newpositionvivid.x + "px"; // with NO    +tempvisscrollleft
-						newvivid.style.width = tempwidthvideo + "px";
-						newvivid.style.height = tempheightvideo + "px";
-						newvivid.width = Math.floor(tempwidthvideo * 0.08);
-						newvivid.height = Math.floor(tempheightvideo * 0.08);
-						document.body.appendChild(newvivid);
-					}
-				}
-		}else{
-			var sourceWidth = totlshowtime.videoWidth;
-			var sourceHeight = totlshowtime.videoHeight;
-
-			var totlcheckcanvas = $("totlCanvas" + k + "");
-			if(totlcheckcanvas == null){
-			var totlnewcanvas = document.createElement("canvas");
-			totlnewcanvas.setAttribute("id","totlCanvas" + k + "");
-			totlnewcanvas.width = "4";
-			totlnewcanvas.height = "1";
-			totlnewcanvas.style.display = "none";
-			document.body.appendChild(totlnewcanvas);
-			}
-
-			var canvas = $("totlCanvas" + k + "");
-			var context = canvas.getContext("2d",{desynchronized: true});
-
-			var colorlamp1X = (sourceWidth * 50) / 100; // up midden
-			var colorlamp1Y = (sourceHeight * 95) / 100;
-			var colorlamp2X = (sourceWidth * 95) / 100; // right midden
-			var colorlamp2Y = (sourceHeight * 50) / 100;
-			var colorlamp3X = (sourceWidth * 50) / 100; // down midden
-			var colorlamp3Y = (sourceHeight * 5) / 100;
-			var colorlamp4X = (sourceWidth * 5) / 100; // left midden
-			var colorlamp4Y = (sourceHeight * 50) / 100;
-
-			context.drawImage(totlshowtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
-			context.drawImage(totlshowtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
-			context.drawImage(totlshowtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
-			context.drawImage(totlshowtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
-
-			var imageData = context.getImageData(0, 0, 1, 1);
-			var data = imageData.data;
-
-			p1 = context.getImageData(0 , 0, 1, 1).data;
-			p2 = context.getImageData(1 , 0, 1, 1).data;
-			p3 = context.getImageData(2 , 0, 1, 1).data;
-			p4 = context.getImageData(3 , 0, 1, 1).data;
-			hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-			hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-			hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-			hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
-
-			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-				if(youtubewindow){
-				youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
-				}
-			}else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
-		}
-	}
-
-}catch(e){ rundefault(); }
-}
-
-		// if catch error in URL
-		function rundefault(){
-		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-			if(youtubewindow){
-			youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
-			}
-		}
-		else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
-		}
 	}else if(ambilightfixcolor == true){
 		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 			if(youtubewindow){
@@ -2731,13 +2734,13 @@ observeDOM(document.getElementById("content"), function(){
         // for the no360 live update
 		if(no360youtube == true){
 		var ytfullvideo = document.getElementsByTagName("video");
-		var i;
-		var l = ytfullvideo.length;
-        for(i = 0; i < l; i++){ ytfullvideo[i].classList.add("stefanvdvideotop"); }
+		var ytfui;
+		var ytful = ytfullvideo.length;
+        for(ytfui = 0; ytfui < ytful; ytfui++){ ytfullvideo[ytfui].classList.add("stefanvdvideotop"); }
 		var ytwebgl = document.getElementsByClassName("webgl");
-		var i;
-		var l = ytwebgl.length;
-        for(i = 0; i < l; i++){ ytwebgl[i].style.display = "none"; }
+		var ytwi;
+		var ytwl = ytwebgl.length;
+        for(ytwi = 0; ytwi < ytwl; ytwi++){ ytwebgl[ytwi].style.display = "none"; }
         }
 
 });
@@ -2761,7 +2764,7 @@ observeDOM(document.body,function(){
 });
 
 function realtimewebgonightmode(na){
-	return new Promise(function(fulfill, reject){
+	return new Promise(function(fulfill){
 		var aninside = na.getElementsByTagName("*");
 		var i;
 		var l = aninside.length;
@@ -2830,19 +2833,21 @@ function convertwebnight(node){
 				// do nothing
 			}
 			else{
-
+				var st;
+				var y;
+				var z;
 				// if night class is already added, skip this node
 				// Else create it
 				if(node.classList.contains("stefanvdnightbck") == false){
 					var thatbckishere = false;
 					if(node.currentStyle){
-						var y = node.currentStyle["background-color"];
-						var z = node.currentStyle["background-image"];
+						y = node.currentStyle["background-color"];
+						z = node.currentStyle["background-image"];
 					}
 					else if(window.getComputedStyle){
-						var st = document.defaultView.getComputedStyle(node, null);
-						var y = st.getPropertyValue("background-color");
-						var z = st.getPropertyValue("background-image");
+						st = document.defaultView.getComputedStyle(node, null);
+						y = st.getPropertyValue("background-color");
+						z = st.getPropertyValue("background-image");
 					}
 
 					if(y == "rgba(0, 0, 0, 0)" || y.includes("rgba(0, 0, 0, 0")){
@@ -2886,7 +2891,7 @@ var oldtextcolor = document.body.style.color;
 var oldbackgroundColorhtml = document.getElementsByTagName("html")[0].style.background;
 
 function webgonightmode(){
-	return new Promise(function(fulfill, reject){
+	return new Promise(function(fulfill){
     if(sun == true){
 		sun = false;
 		if($("stefanvdnighti")){
@@ -3063,160 +3068,160 @@ function webgonightmode(){
 		var i;
 		var l = ytmetadata.length;
 		for(i = 0; i < l; i++){ ytmetadata[i].style.color = nightmodetxt; }
-		var ytironicon = document.querySelectorAll(".iron-icon-0");
-		var i;
-		var l = ytironicon.length;
-		for(i = 0; i < l; i++){ ytironicon[i].style.color = nightmodetxt; }
+		var ytironicona = document.querySelectorAll(".iron-icon-0");
+		var ytironi;
+		var ytironl = ytironicona.length;
+		for(ytironi = 0; ytironi < ytironl; ytironi++){ ytironicona[ytironi].style.color = nightmodetxt; }
 		var ytverifiedbox = document.querySelectorAll("#guide-icon.ytd-topbar-logo-renderer");
-		var i;
-		var l = ytverifiedbox.length;
-		for(i = 0; i < l; i++){ ytverifiedbox[i].style.fill = nightmodetxt; }
+		var ytveri;
+		var ytverl = ytverifiedbox.length;
+		for(ytveri = 0; ytveri < ytverl; ytveri++){ ytverifiedbox[ytveri].style.fill = nightmodetxt; }
 		var yttitlevideo = document.querySelectorAll(".ytd-video-primary-info-renderer");
-		var i;
-		var l = yttitlevideo.length;
-		for(i = 0; i < l; i++){ yttitlevideo[i].style.color = nightmodetxt; }
+		var yttiti;
+		var yttitl = yttitlevideo.length;
+		for(yttiti = 0; yttiti < yttitl; yttiti++){ yttitlevideo[yttiti].style.color = nightmodetxt; }
 		var ytforview = document.querySelectorAll(".yt-view-count-renderer");
-		var i;
-		var l = ytforview.length;
-		for(i = 0; i < l; i++){ ytforview[i].style.color = nightmodetxt; }
+		var ytfori;
+		var ytforl = ytforview.length;
+		for(ytfori = 0; ytfori < ytforl; ytfori++){ ytforview[ytfori].style.color = nightmodetxt; }
 		var ytsecondinfo = document.querySelectorAll(".ytd-video-secondary-info-renderer");
-		var i;
-		var l = ytsecondinfo.length;
-		for(i = 0; i < l; i++){ ytsecondinfo[i].style.color = nightmodetxt; }
+		var ytseci;
+		var ytsecl = ytsecondinfo.length;
+		for(ytseci = 0; ytseci < ytsecl; ytseci++){ ytsecondinfo[ytseci].style.color = nightmodetxt; }
 		var ytcommentshead = document.querySelectorAll(".ytd-comments-header-renderer");
-		var i;
-		var l = ytcommentshead.length;
-		for(i = 0; i < l; i++){ ytcommentshead[i].style.color = nightmodetxt; }
+		var ytcomi;
+		var ytcoml = ytcommentshead.length;
+		for(ytcomi = 0; ytcomi < ytcoml; ytcomi++){ ytcommentshead[ytcomi].style.color = nightmodetxt; }
 		var ytcommentsimplebox = document.querySelectorAll(".ytd-comment-simplebox-renderer");
-		var i;
-		var l = ytcommentsimplebox.length;
-		for(i = 0; i < l; i++){ ytcommentsimplebox[i].style.color = nightmodetxt; }
+		var ytcomsimi;
+		var ytcomsiml = ytcommentsimplebox.length;
+		for(ytcomsimi = 0; ytcomsimi < ytcomsiml; ytcomsimi++){ ytcommentsimplebox[ytcomsimi].style.color = nightmodetxt; }
 		var ytcommentrender = document.querySelectorAll(".ytd-comment-renderer");
-		var i;
-		var l = ytcommentrender.length;
-		for(i = 0; i < l; i++){ ytcommentrender[i].style.color = nightmodetxt; }
+		var ytcomreni;
+		var ytcomrenl = ytcommentrender.length;
+		for(ytcomreni = 0; ytcomreni < ytcomrenl; ytcomreni++){ ytcommentrender[ytcomreni].style.color = nightmodetxt; }
 		var ytcommentaction = document.querySelectorAll(".ytd-comment-action-buttons-renderer");
-		var i;
-		var l = ytcommentaction.length;
-		for(i = 0; i < l; i++){ ytcommentaction[i].style.color = nightmodetxt; }
+		var ytcomaci;
+		var ytcomacl = ytcommentaction.length;
+		for(ytcomaci = 0; ytcomaci < ytcomacl; ytcomaci++){ ytcommentaction[ytcomaci].style.color = nightmodetxt; }
 		var ytsigninpromo = document.querySelectorAll(".ytd-guide-signin-promo-renderer");
-		var i;
-		var l = ytsigninpromo.length;
-		for(i = 0; i < l; i++){ ytsigninpromo[i].style.color = nightmodetxt; }
+		var ytsigni;
+		var ytsignl = ytsigninpromo.length;
+		for(ytsigni = 0; ytsigni < ytsignl; ytsigni++){ ytsigninpromo[ytsigni].style.color = nightmodetxt; }
 		var ytguidesectionrenderer = document.querySelectorAll(".ytd-guide-section-renderer");
-		var i;
-		var l = ytguidesectionrenderer.length;
-		for(i = 0; i < l; i++){ ytguidesectionrenderer[i].style.color = nightmodetxt; }
+		var ytguidseci;
+		var ytguidsecl = ytguidesectionrenderer.length;
+		for(ytguidseci = 0; ytguidseci < ytguidsecl; ytguidseci++){ ytguidesectionrenderer[ytguidseci].style.color = nightmodetxt; }
 		var ytguideentryhover = document.querySelectorAll(".ytd-guide-entry-renderer:hover");
-		var i;
-		var l = ytguideentryhover.length;
-		for(i = 0; i < l; i++){ ytguideentryhover[i].style.backgroundColor = "#292929"; }
+		var ytguidei;
+		var ytguidel = ytguideentryhover.length;
+		for(ytguidei = 0; ytguidei < ytguidel; ytguidei++){ ytguideentryhover[ytguidei].style.backgroundColor = "#292929"; }
 		var ytgridrenderer = document.querySelectorAll(".ytd-grid-renderer");
-		var i;
-		var l = ytgridrenderer.length;
-		for(i = 0; i < l; i++){ ytgridrenderer[i].style.color = nightmodetxt; }
+		var ytgridai;
+		var ytgridal = ytgridrenderer.length;
+		for(ytgridai = 0; ytgridai < ytgridal; ytgridai++){ ytgridrenderer[ytgridai].style.color = nightmodetxt; }
 		var ytaccountsettings = document.querySelectorAll(".ytd-account-settings-0");
-		var i;
-		var l = ytaccountsettings.length;
-		for(i = 0; i < l; i++){ ytaccountsettings[i].style.backgroundColor = nightmodebck; }
+		var ytacci;
+		var ytaccl = ytaccountsettings.length;
+		for(ytacci = 0; ytacci < ytaccl; ytacci++){ ytaccountsettings[ytacci].style.backgroundColor = nightmodebck; }
 		var ytmultipagerenderer = document.querySelectorAll(".ytd-multi-page-menu-renderer-0");
-		var i;
-		var l = ytmultipagerenderer.length;
-		for(i = 0; i < l; i++){ ytmultipagerenderer[i].style.backgroundColor = nightmodebck; }
+		var ytmultii;
+		var ytmultil = ytmultipagerenderer.length;
+		for(ytmultii = 0; ytmultii < ytmultil; ytmultii++){ ytmultipagerenderer[ytmultii].style.backgroundColor = nightmodebck; }
 		var ytheadchannelname = document.querySelectorAll(".yt-endpoint-1");
-		var i;
-		var l = ytheadchannelname.length;
-		for(i = 0; i < l; i++){ ytheadchannelname[i].style.color = nightmodetxt; }
+		var ytheadi;
+		var ytheadl = ytheadchannelname.length;
+		for(ytheadi = 0; ytheadi < ytheadl; ytheadi++){ ytheadchannelname[ytheadi].style.color = nightmodetxt; }
 		var ytendpoint = document.querySelectorAll(".yt-endpoint-3");
-		var i;
-		var l = ytendpoint.length;
-		for(i = 0; i < l; i++){ ytendpoint[i].style.color = nightmodetxt; }
+		var ytendi;
+		var ytendl = ytendpoint.length;
+		for(ytendi = 0; ytendi < ytendl; ytendi++){ ytendpoint[ytendi].style.color = nightmodetxt; }
 		var ytendpointfour = document.querySelectorAll(".yt-endpoint-4");
-		var i;
-		var l = ytendpointfour.length;
-		for(i = 0; i < l; i++){ ytendpointfour[i].style.color = nightmodetxt; }
+		var ytendfi;
+		var ytendfl = ytendpointfour.length;
+		for(ytendfi = 0; ytendfi < ytendfl; ytendfi++){ ytendpointfour[ytendfi].style.color = nightmodetxt; }
 		var ytformatstring = document.querySelectorAll("yt-formatted-string");
-		var i;
-		var l = ytformatstring.length;
-		for(i = 0; i < l; i++){ ytformatstring[i].style.color = nightmodetxt; }
+		var ytformi;
+		var ytforml = ytformatstring.length;
+		for(ytformi = 0; ytformi < ytforml; ytformi++){ ytformatstring[ytformi].style.color = nightmodetxt; }
 		// update YouTube 27 December 2017
 		var ytpagemanager = document.querySelectorAll("ytd-page-manager");
-		var i;
-		var l = ytpagemanager.length;
-		for(i = 0; i < l; i++){ ytpagemanager[i].style.color = nightmodetxt; ytpagemanager[i].style.backgroundColor = nightmodebck; }
+		var ytpai;
+		var ytpal = ytpagemanager.length;
+		for(ytpai = 0; ytpai < ytpal; ytpai++){ ytpagemanager[ytpai].style.color = nightmodetxt; ytpagemanager[ytpai].style.backgroundColor = nightmodebck; }
 		var ytwatch = document.querySelectorAll("ytd-watch");
-		var i;
-		var l = ytwatch.length;
-		for(i = 0; i < l; i++){ ytwatch[i].style.color = nightmodetxt; ytwatch[i].style.backgroundColor = nightmodebck; }
+		var ytwi;
+		var ytwl = ytwatch.length;
+		for(ytwi = 0; ytwi < ytwl; ytwi++){ ytwatch[ytwi].style.color = nightmodetxt; ytwatch[ytwi].style.backgroundColor = nightmodebck; }
 		var ytdtopbarlogorenderer = document.querySelectorAll("ytd-topbar-logo-renderer");
-		var i;
-		var l = ytdtopbarlogorenderer.length;
-		for(i = 0; i < l; i++){ ytdtopbarlogorenderer[i].style.cssText = "-webkit-filter: invert(1) grayscale(1);"; }
+		var ytdtoi;
+		var ytdtol = ytdtopbarlogorenderer.length;
+		for(ytdtoi = 0; ytdtoi < ytdtol; ytdtoi++){ ytdtopbarlogorenderer[ytdtoi].style.cssText = "-webkit-filter: invert(1) grayscale(1);"; }
 		if($("guide-button")){ $("guide-button").style.cssText = "-webkit-filter: invert(1) grayscale(1);"; }
 		if($("buttons")){ $("buttons").style.cssText = "-webkit-filter: invert(1) grayscale(1);"; }
 		if($("guide-content")){ $("guide-content").style.color = nightmodetxt; $("guide-content").style.backgroundColor = nightmodebck; }
 		var ytdguidenentry = document.querySelectorAll(".ytd-guide-entry-renderer");
-		var i;
-		var l = ytdguidenentry.length;
-		for(i = 0; i < l; i++){ ytdguidenentry[i].style.color = nightmodetxt; ytdguidenentry[i].style.backgroundColor = nightmodebck; }
-		var ytdguidenentry = document.querySelectorAll(".ytd-toggle-button-renderer");
-		var i;
-		var l = ytdguidenentry.length;
-		for(i = 0; i < l; i++){ ytdguidenentry[i].style.color = nightmodetxt; }
+		var ytdguidei;
+		var ytdguidel = ytdguidenentry.length;
+		for(ytdguidei = 0; ytdguidei < ytdguidel; ytdguidei++){ ytdguidenentry[ytdguidei].style.color = nightmodetxt; ytdguidenentry[ytdguidei].style.backgroundColor = nightmodebck; }
+		var ytdguidenentryc = document.querySelectorAll(".ytd-toggle-button-renderer");
+		var ytguideni;
+		var ytguidenl = ytdguidenentryc.length;
+		for(ytguideni = 0; ytguideni < ytguidenl; ytguideni++){ ytdguidenentryc[ytguideni].style.color = nightmodetxt; }
 		var ytdbuttonrenderer = document.querySelectorAll("yt-icon");
-		var i;
-		var l = ytdbuttonrenderer.length;
-		for(i = 0; i < l; i++){ ytdbuttonrenderer[i].style.cssText = "-webkit-filter: invert(1) grayscale(1) contrast(0);"; }
+		var ytdbuti;
+		var ytdbutl = ytdbuttonrenderer.length;
+		for(ytdbuti = 0; ytdbuti < ytdbutl; ytdbuti++){ ytdbuttonrenderer[ytdbuti].style.cssText = "-webkit-filter: invert(1) grayscale(1) contrast(0);"; }
 		var paperbutton = document.querySelectorAll("paper-button");
-		var i;
-		var l = paperbutton.length;
-		for(i = 0; i < l; i++){ paperbutton[i].style.color = nightmodetxt; }
+		var papi;
+		var papl = paperbutton.length;
+		for(papi = 0; papi < papl; papi++){ paperbutton[papi].style.color = nightmodetxt; }
 		var ytsimple = document.querySelectorAll(".yt-simple-endpoint style-scope ytd-guide-entry-renderer a");
-		var i;
-		var l = ytsimple.length;
-		for(i = 0; i < l; i++){ ytsimple[i].style.color = nightmodetxt; }
+		var ytsimi;
+		var ytsiml = ytsimple.length;
+		for(ytsimi = 0; ytsimi < ytsiml; ytsimi++){ ytsimple[ytsimi].style.color = nightmodetxt; }
 		var ytcompact = document.querySelectorAll(".ytd-compact-autoplay-renderer");
-		var i;
-		var l = ytcompact.length;
-		for(i = 0; i < l; i++){ ytcompact[i].style.color = nightmodetxt; }
+		var ytcoi;
+		var ytcol = ytcompact.length;
+		for(ytcoi = 0; ytcoi < ytcol; ytcoi++){ ytcompact[ytcoi].style.color = nightmodetxt; }
 		var ytgridvideorenderera = document.querySelectorAll(".style-scope ytd-grid-video-renderer a");
-		var i;
-		var l = ytgridvideorenderera.length;
-		for(i = 0; i < l; i++){ ytgridvideorenderera[i].style.color = nightmodetxt; }
+		var ytgridi;
+		var ytgridl = ytgridvideorenderera.length;
+		for(ytgridi = 0; ytgridi < ytgridl; ytgridi++){ ytgridvideorenderera[ytgridi].style.color = nightmodetxt; }
 		var ytgridvideorendererspan = document.querySelectorAll(".style-scope ytd-grid-video-renderer span");
-		var i;
-		var l = ytgridvideorendererspan.length;
-		for(i = 0; i < l; i++){ ytgridvideorendererspan[i].style.color = nightmodetxt; }
+		var ytgrivi;
+		var ytgrivl = ytgridvideorendererspan.length;
+		for(ytgrivi = 0; ytgrivi < ytgrivl; ytgrivi++){ ytgridvideorendererspan[ytgrivi].style.color = nightmodetxt; }
 		var ytshelfspan = document.querySelectorAll(".style-scope ytd-shelf-renderer span");
-		var i;
-		var l = ytshelfspan.length;
-		for(i = 0; i < l; i++){ ytshelfspan[i].style.color = nightmodetxt; }
+		var ytsheli;
+		var ytshell = ytshelfspan.length;
+		for(ytsheli = 0; ytsheli < ytshell; ytsheli++){ ytshelfspan[ytsheli].style.color = nightmodetxt; }
 		// update YouTube 8 March 2018
 		var ytdbrowse = document.querySelectorAll("ytd-browse");
-		var i;
-		var l = ytdbrowse.length;
-		for(i = 0; i < l; i++){ ytdbrowse[i].style.color = nightmodetxt; ytdbrowse[i].style.backgroundColor = nightmodebck; }
+		var ytdbri;
+		var ytdbrl = ytdbrowse.length;
+		for(ytdbri = 0; ytdbri < ytdbrl; ytdbri++){ ytdbrowse[ytdbri].style.color = nightmodetxt; ytdbrowse[ytdbri].style.backgroundColor = nightmodebck; }
 		if($("channel-container")){ $("channel-container").style.color = nightmodetxt; $("channel-container").style.backgroundColor = nightmodebck; }
 		if($("channel-header")){ $("channel-header").style.color = nightmodetxt; $("channel-header").style.backgroundColor = nightmodebck; }
 		if($("channel-title")){ $("channel-title").style.color = nightmodetxt; }
 		if($("tabs-inner-container")){ $("tabs-inner-container").style.color = nightmodetxt; $("tabs-inner-container").style.backgroundColor = nightmodebck; }
 		var tabsinnerpapertabs = document.querySelectorAll("#tabs-inner-container paper-tabs");
-		var i;
-		var l = tabsinnerpapertabs.length;
-		for(i = 0; i < l; i++){ tabsinnerpapertabs[i].style.color = nightmodetxt; }
+		var tabsini;
+		var tabsinl = tabsinnerpapertabs.length;
+		for(tabsini = 0; tabsini < tabsinl; tabsini++){ tabsinnerpapertabs[tabsini].style.color = nightmodetxt; }
 		var ytdsearchboxcont = document.querySelectorAll("ytd-searchbox #container");
-		var i;
-		var l = ytdsearchboxcont.length;
-		for(i = 0; i < l; i++){ ytdsearchboxcont[i].style.color = nightmodetxt; ytdsearchboxcont[i].style.backgroundColor = nightmodebck; }
+		var ytseai;
+		var ytseal = ytdsearchboxcont.length;
+		for(ytseai = 0; ytseai < ytseal; ytseai++){ ytdsearchboxcont[ytseai].style.color = nightmodetxt; ytdsearchboxcont[ytseai].style.backgroundColor = nightmodebck; }
 		var h3ytdcompact = document.querySelectorAll("h3.ytd-compact-radio-renderer");
-		var i;
-		var l = h3ytdcompact.length;
-		for(i = 0; i < l; i++){ h3ytdcompact[i].style.color = nightmodetxt; }
+		var h3ytdi;
+		var h3ytdl = h3ytdcompact.length;
+		for(h3ytdi = 0; h3ytdi < h3ytdl; h3ytdi++){ h3ytdcompact[h3ytdi].style.color = nightmodetxt; }
 		// 27 June 2018
-		var ytdbrowse = document.querySelectorAll(".ytd-watch-flexy");
-		var i;
-		var l = ytdbrowse.length;
-		for(i = 0; i < l; i++){ ytdbrowse[i].style.color = nightmodetxt; ytdbrowse[i].style.backgroundColor = nightmodebck; }
+		var ytdbrowsea = document.querySelectorAll(".ytd-watch-flexy");
+		var ytbrowi;
+		var ytbrowl = ytdbrowse.length;
+		for(ytbrowi = 0; ytbrowi < ytbrowl; ytbrowi++){ ytdbrowsea[ytbrowi].style.color = nightmodetxt; ytdbrowsea[ytbrowi].style.backgroundColor = nightmodebck; }
 		// 14 December 2018
 		var papertabselected = document.querySelectorAll(".iron-selected");
 		var i;
@@ -3283,13 +3288,13 @@ function webgonightmode(){
 		document.querySelector("html").style.backgroundColor = oldbackgroundColorhtml;
 	}else{
 		// search all elements and remove night class
-		var elems = document.querySelectorAll(".stefanvdnight");
-		[].forEach.call(elems, function(el){
+		var elemsnight = document.querySelectorAll(".stefanvdnight");
+		[].forEach.call(elemsnight, function(el){
 			el.classList.remove("stefanvdnight");
 		});
 
-		var elems = document.querySelectorAll(".stefanvdnightbck");
-		[].forEach.call(elems, function(el){
+		var elemsbcka = document.querySelectorAll(".stefanvdnightbck");
+		[].forEach.call(elemsbcka, function(el){
 			el.classList.remove("stefanvdnightbck");
 		});
 	}
@@ -3504,18 +3509,18 @@ function webgonightmode(){
 		var l = ytformatstring.length;
 		for(i = 0; i < l; i++){ ytformatstring[i].style.color = ""; }
 		// update YouTube 3 August 2017
-		var ytpagemanager = document.querySelectorAll("ytd-page-manager");
-		var i;
-		var l = ytpagemanager.length;
-		for(i = 0; i < l; i++){ ytpagemanager[i].style.color = "black"; ytpagemanager[i].style.backgroundColor = "white"; }
-		var ytwatch = document.querySelectorAll("ytd-watch");
-		var i;
-		var l = ytwatch.length;
-		for(i = 0; i < l; i++){ ytwatch[i].style.color = "black"; ytwatch[i].style.backgroundColor = "white"; }
-		var ytdtopbarlogorenderer = document.querySelectorAll("ytd-topbar-logo-renderer");
-		var i;
-		var l = ytdtopbarlogorenderer.length;
-		for(i = 0; i < l; i++){ ytdtopbarlogorenderer[i].style.cssText = ""; }
+		var ytpagemanagera = document.querySelectorAll("ytd-page-manager");
+		var ytpagemi;
+		var ytpageml = ytpagemanagera.length;
+		for(ytpagemi = 0; ytpagemi < ytpageml; ytpagemi++){ ytpagemanagera[ytpagemi].style.color = "black"; ytpagemanagera[ytpagemi].style.backgroundColor = "white"; }
+		var ytwatcha = document.querySelectorAll("ytd-watch");
+		var ytwai;
+		var ytwal = ytwatcha.length;
+		for(ytwai = 0; ytwai < ytwal; ytwai++){ ytwatcha[ytwai].style.color = "black"; ytwatcha[ytwai].style.backgroundColor = "white"; }
+		var ytdtopbarlogorendererd = document.querySelectorAll("ytd-topbar-logo-renderer");
+		var ytdtopi;
+		var ytdtopl = ytdtopbarlogorendererd.length;
+		for(ytdtopi = 0; ytdtopi < ytdtopl; ytdtopi++){ ytdtopbarlogorendererd[ytdtopi].style.cssText = ""; }
 		if($("guide-button")){ $("guide-button").style.cssText = ""; }
 		if($("buttons")){ $("buttons").style.cssText = ""; }
 		if($("guide-content")){ $("guide-content").style.color = "black"; $("guide-content").style.backgroundColor = "white"; }
@@ -3590,42 +3595,42 @@ function webgonightmode(){
 		var i;
 		var l = searchboxtext.length;
 		for(i = 0; i < l; i++){ searchboxtext[i].style.color = ""; }
-		var titleytmini = document.querySelectorAll(".title.ytd-mini-channel-renderer");
-		var i;
-		var l = titleytmini.length;
-		for(i = 0; i < l; i++){ titleytmini[i].style.color = ""; }
-		var ytverticalsection = document.querySelectorAll(".ytd-vertical-channel-section-renderer");
-		var i;
-		var l = ytverticalsection.length;
-		for(i = 0; i < l; i++){ ytverticalsection[i].style.color = ""; }
-		var ytformattedstring = document.querySelectorAll(".yt-formatted-string");
-		var i;
-		var l = ytformattedstring.length;
-		for(i = 0; i < l; i++){ ytformattedstring[i].style.color = ""; }
-		var ytdrichgridvideorenderer = document.querySelectorAll(".ytd-rich-grid-video-renderer");
-		var i;
-		var l = ytdrichgridvideorenderer.length;
-		for(i = 0; i < l; i++){ ytdrichgridvideorenderer[i].style.color = ""; }
-		var ytdrichgridrenderer = document.querySelectorAll(".ytd-rich-grid-renderer");
-		var i;
-		var l = ytdrichgridrenderer.length;
-		for(i = 0; i < l; i++){ ytdrichgridrenderer[i].style.color = ""; }
-		var ytdrichshelfrenderer = document.querySelectorAll(".ytd-rich-shelf-renderer");
-		var i;
-		var l = ytdrichshelfrenderer.length;
-		for(i = 0; i < l; i++){ ytdrichshelfrenderer[i].style.color = ""; }
-		var ytdrichitemrenderer = document.querySelectorAll(".ytd-rich-item-renderer");
-		var i;
-		var l = ytdrichitemrenderer.length;
-		for(i = 0; i < l; i++){ ytdrichitemrenderer[i].style.backgroundColor = ""; }
-		var ytdvideorenderer = document.querySelectorAll(".ytd-video-renderer");
-		var i;
-		var l = ytdvideorenderer.length;
-		for(i = 0; i < l; i++){ ytdvideorenderer[i].style.color = ""; }
-		var ytdminiguiderenderer = document.querySelectorAll("ytd-mini-guide-renderer");
-		var i;
-		var l = ytdminiguiderenderer.length;
-		for(i = 0; i < l; i++){ ytdminiguiderenderer[i].style.backgroundColor = ""; }
+		var titleytminia = document.querySelectorAll(".title.ytd-mini-channel-renderer");
+		var yttii;
+		var yttil = titleytminia.length;
+		for(yttii = 0; yttii < yttil; yttii++){ titleytminia[yttii].style.color = ""; }
+		var ytverticalsectiona = document.querySelectorAll(".ytd-vertical-channel-section-renderer");
+		var ytverti;
+		var ytvertl = ytverticalsectiona.length;
+		for(ytverti = 0; ytverti < ytvertl; ytverti++){ ytverticalsectiona[ytverti].style.color = ""; }
+		var ytformattedstringc = document.querySelectorAll(".yt-formatted-string");
+		var ytfotti;
+		var ytfottl = ytformattedstringc.length;
+		for(ytfotti = 0; ytfotti < ytfottl; ytfotti++){ ytformattedstringc[ytfotti].style.color = ""; }
+		var ytdrichgridvideorendererh = document.querySelectorAll(".ytd-rich-grid-video-renderer");
+		var ytrichrei;
+		var ytrichrel = ytdrichgridvideorendererh.length;
+		for(ytrichrei = 0; ytrichrei < ytrichrel; ytrichrei++){ ytdrichgridvideorendererh[ytrichrei].style.color = ""; }
+		var ytdrichgridrendererg = document.querySelectorAll(".ytd-rich-grid-renderer");
+		var ytrigri;
+		var ytrigrl = ytdrichgridrendererg.length;
+		for(ytrigri = 0; ytrigri < ytrigrl; ytrigri++){ ytdrichgridrendererg[ytrigri].style.color = ""; }
+		var ytdrichshelfrendererf = document.querySelectorAll(".ytd-rich-shelf-renderer");
+		var ytrichshi;
+		var ytrichshl = ytdrichshelfrendererf.length;
+		for(ytrichshi = 0; ytrichshi < ytrichshl; ytrichshi++){ ytdrichshelfrendererf[ytrichshi].style.color = ""; }
+		var ytdrichitemrenderera = document.querySelectorAll(".ytd-rich-item-renderer");
+		var ytrichi;
+		var ytrichl = ytdrichitemrenderera.length;
+		for(ytrichi = 0; ytrichi < ytrichl; ytrichi++){ ytdrichitemrenderera[ytrichi].style.backgroundColor = ""; }
+		var ytdvideorendererd = document.querySelectorAll(".ytd-video-renderer");
+		var ytviei;
+		var ytviel = ytdvideorendererd.length;
+		for(ytviei = 0; ytviei < ytviel; ytviei++){ ytdvideorendererd[ytviei].style.color = ""; }
+		var ytdminiguiderendererc = document.querySelectorAll("ytd-mini-guide-renderer");
+		var ytminiguidi;
+		var ytminiguidl = ytdminiguiderendererc.length;
+		for(ytminiguidi = 0; ytminiguidi < ytminiguidl; ytminiguidi++){ ytdminiguiderendererc[ytminiguidi].style.backgroundColor = ""; }
 		var ytdminiguideentryrendererb = document.querySelectorAll("ytd-mini-guide-entry-renderer");
 		var ytminiguideentryi;
 		var ytminiguideentryl = ytdminiguideentryrendererb.length;
