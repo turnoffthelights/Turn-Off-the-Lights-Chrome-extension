@@ -53,6 +53,7 @@
         "linkyoutube": "readonly",
         "linkauroraplayerapp": "readonly",
         "linktotlmobileapp": "readonly",
-        "devmode": "readonly"
+        "devmode": "readonly",
+        "Chart": "readonly"
     }
 }

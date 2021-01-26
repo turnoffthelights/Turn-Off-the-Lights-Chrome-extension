@@ -27,26 +27,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function search(nameKey, myArray){
-  var i;
-  var l = myArray.length;
-  for(i = 0; i < l; i++){
-      if(myArray[i].name === nameKey){
-        return myArray[i];
-      }
-  }
-}
-
 function isKeyInObject(obj, key){
-    var res = Object.keys(obj).some(v => v == key);
+    var res = Object.keys(obj).some((v) => v == key);
     return res;
-}
-
-function sortObject(obj){
-    return Object.keys(obj)
-      .sort().reduce((a, v) => {
-      a[v] = obj[v];
-      return a; }, {});
 }
 
 function getDomain(url){
@@ -56,7 +39,7 @@ var TLDs = ["ac", "ad", "ae", "aero", "af", "ag", "ai", "al", "am", "an", "ao", 
         url = url.replace(/www./g, "");
         var parts = url.split("/");
         url = parts[0];
-        var parts = url.split(".");
+        parts = url.split(".");
         if(parts[0] === "www" && parts[1] !== "com"){
             parts.shift();
         }
@@ -66,7 +49,8 @@ var TLDs = ["ac", "ad", "ae", "aero", "af", "ag", "ai", "al", "am", "an", "ao", 
           , part;
 
         // iterate backwards
-        while(part = parts[--i]){
+        var cond = part = parts[--i];
+        while(cond){
             // stop when we find a non-TLD part
             if(i === 0 // 'asia.com' (last remaining must be the SLD)
                 || i < ln - 2 // TLDs only span 2 levels
@@ -102,15 +86,12 @@ function add(a,b){ return a + b; }
 var factorpower = 0.6; // factor: power lower to 40%
 var labelsvals = [];
 var activevals = [];
-var timevals = [];
 var timevalm = [];
 var currentkwh;
 
-var labels30days = [];
-var active30days = [];
 var time30days = [];
 
-var whwithregu30days;
+var kwhwithregu30days;
 var kwhwithdark30days;
 var currentkwh30days;
 
@@ -173,7 +154,7 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
       var memhigh = 0;
       var memdayweek = "";
       var countday = 0;
-      var day7everything = last7days.map(function(a){
+      last7days.map(function(a){
             if(a.details.time > memhigh){
               memhigh = a.details.time; memdayweek = a.name;
             }
@@ -197,9 +178,9 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
 
       if(memhigh == 0){
         ct7sinminutes = 0;
-        var zz = new Date();
-        var dayOfWeek = days[zz.getDay()];
-        ct7favoritedayweek = dayOfWeek;
+        var zzm = new Date();
+        var dayOfWeekm = days[zzm.getDay()];
+        ct7favoritedayweek = dayOfWeekm;
       }
 
       var lastdays;
@@ -230,17 +211,17 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
         newsharewattvalue = currentkwh;
         shareenergytext = chrome.i18n.getMessage("shareanalyticenergy", "" + newsharewattvalue + "");
       }
-      $("shareenergytext").innerText = shareenergytext;
+      document.getElementById("shareenergytext").innerText = shareenergytext;
 
       //----Chart1
-      var last90days;
+      var last90daysa;
       if(analytics.length > 90){
-      last90days = analytics.slice(90);
-      }else{ last90days = analytics; }
-      labelsvals = last90days.map(function(a){ return a.name; });
-      activevals = last90days.map(function(a){ return a.details.active; });
-      timevals = last90days.map(function(a){
-        timevalm.push(parseFloat(Math.round(a.details.time/60 * 100) / 100).toFixed(2)); // in minutes
+        last90daysa = analytics.slice(90);
+      }else{ last90daysa = analytics; }
+      labelsvals = last90daysa.map(function(a){ return a.name; });
+      activevals = last90daysa.map(function(a){ return a.details.active; });
+      last90daysa.map(function(a){
+        timevalm.push(parseFloat(Math.round(a.details.time / 60 * 100) / 100).toFixed(2)); // in minutes
         return a.details.time; // in minutes
       });
 
@@ -249,9 +230,9 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
       if(analytics.length > 30){
       last30days = analytics.slice(30);
       }else{ last30days = analytics; }
-      labels30days = last30days.map(function(a){ return a.name; });
-      active30days = last30days.map(function(a){ return a.details.active; });
-      time30days = last30days.map(function(a){
+      last30days.map(function(a){ return a.name; });
+      last30days.map(function(a){ return a.details.active; });
+      last30days.map(function(a){
         return a.details.time;
       });
 
@@ -324,22 +305,23 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
       siteengagement = items["siteengagement"];
 
       //----Table1
-      var last30days;
+      var last30daysb;
       if(siteengagement.length > 30){
-      last30days = siteengagement.slice(30);
-      }else{ last30days = siteengagement; }
+        last30daysb = siteengagement.slice(30);
+      }else{ last30daysb = siteengagement; }
       var i;
-      for(i in last30days){
-        if(last30days[i]){
-          var oma = last30days[i];
+      for(i in last30daysb){
+        if(last30daysb[i]){
+          var key;
+          var oma = last30daysb[i];
           for(key in oma){
-            if(oma.hasOwnProperty(key)){
+            if(Object.prototype.hasOwnProperty.call(omaa, key)){
                 if(key != "name"){ // not the date
                 var value = parseFloat(Math.round(oma[key] / 60 * 100) / 100).toFixed(2);
                 var app = isKeyInObject(newtablesite, key);
                 if(app == true){
                     var currentnumber = parseInt(newtablesite[key]);
-                    currentnumber += parseFloat(value); 
+                    currentnumber += parseFloat(value);
                     var rest = currentnumber;
                     newtablesite[key] = rest;
                 }else{
@@ -365,21 +347,21 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
       if(siteengagement.length > 30){
         last30daysdomainonly = siteengagement.slice(30);
       }else{ last30daysdomainonly = siteengagement; }
-      var i;
-      for(i in last30daysdomainonly){
-        if(last30daysdomainonly[i]){
-          var oma = last30daysdomainonly[i];
-          for(key in oma){
+      var v;
+      for(v in last30daysdomainonly){
+        if(last30daysdomainonly[v]){
+          var omaa = last30daysdomainonly[v];
+          for(key in omaa){
             var abc = getDomain(key);
-            if(oma.hasOwnProperty(key)){
+            if(Object.prototype.hasOwnProperty.call(omaa, key)){
                 if(key != "name"){ // not the date
-                var value = parseFloat(Math.round(oma[key] / 60 * 100) / 100).toFixed(2);
-                var app = isKeyInObject(newtablesitedomain, abc);
-                if(app == true){
-                    var currentnumber = parseInt(newtablesitedomain[abc]);
-                    currentnumber += parseFloat(value);
-                    var rest = currentnumber;
-                    newtablesitedomain[abc] = rest;
+                var valuee = parseFloat(Math.round(omaa[key] / 60 * 100) / 100).toFixed(2);
+                var appe = isKeyInObject(newtablesitedomain, abc);
+                if(appe == true){
+                    var currentnumbera = parseInt(newtablesitedomain[abc]);
+                    currentnumbera += parseFloat(valuee);
+                    var resta = currentnumbera;
+                    newtablesitedomain[abc] = resta;
                 }else{
                     newtablesitedomain[abc] = value;
                 }
@@ -389,9 +371,9 @@ chrome.storage.sync.get(["analytics","siteengagement"], function(items){
         }
       }
 
-      var e;
-      for(e in newtablesitedomain){
-        sortabledomain.push([e, newtablesitedomain[e]]);
+      var h;
+      for(h in newtablesitedomain){
+        sortabledomain.push([h, newtablesitedomain[h]]);
       }
 
       sortabledomain.sort(function(a, b){
@@ -408,7 +390,7 @@ function createcharts(){
 Chart.platform.disableCSSInjection = true;
 // --- Begin chart1
 var ctx = document.getElementById("myChart").getContext("2d");
-var myChart = new Chart(ctx, {
+new Chart(ctx, {
     type: "line",
     data: {
       datasets: [{
@@ -446,7 +428,7 @@ var myChart = new Chart(ctx, {
 });
 // --- End chart1
 // --- Begin chart3
-var ctx = document.getElementById("myChartthree").getContext("2d");
+var ctx3 = document.getElementById("myChartthree").getContext("2d");
 var data = {
   labels: [chrome.i18n.getMessage("charttitlelblenergysaved"),chrome.i18n.getMessage("charttitlelblenergytotal")],
     datasets: [
@@ -470,15 +452,15 @@ var options = {
       rotation: -0.7 * Math.PI,
       legend: {display:false,position:"top"}
 };
-var myBarChart = new Chart(ctx, {
+new Chart(ctx3, {
   type: "doughnut",
   data: data,
   options: options
 });
 // --- End chart3
 // --- Begin chart4
-var ctx = document.getElementById("myChartfour").getContext("2d");
-var myChart = new Chart(ctx, {
+var ctx4 = document.getElementById("myChartfour").getContext("2d");
+new Chart(ctx4, {
     type: "line",
     data: {
       datasets: [{
@@ -519,7 +501,7 @@ for(key in sortabledomain){
     if(testlove == false){
         var mostuseddoman = getDomain(sortabledomain[key][0]);
         sharelovetext = chrome.i18n.getMessage("shareanalyticlove", "" + mostuseddoman + "");
-        $("sharelovetext").innerText = sharelovetext;
+        document.getElementById("sharelovetext").innerText = sharelovetext;
         testlove = true;
     }
     var value = sortabledomain[key][1];
@@ -528,7 +510,7 @@ for(key in sortabledomain){
 }
 if(typeof key == "undefined"){
     sharelovetext = chrome.i18n.getMessage("shareanalyticlove", "turnoffthelights.com");
-    $("sharelovetext").innerText = sharelovetext;
+    document.getElementById("sharelovetext").innerText = sharelovetext;
 }
 var data = {
     labels: sitenamedomain,
@@ -554,7 +536,7 @@ var options = {
         legend: {display:false,position:"top"}
 };
 
-var myBarChart = new Chart(ctx, {
+new Chart(ctx, {
     type: "doughnut",
     data: data,
     options: options
@@ -564,12 +546,12 @@ var myBarChart = new Chart(ctx, {
 // --- Share Love
 // --- Begin table1
 var table = document.getElementById("tablesiteeng");
-var key;
-for(key in sortable){
-    var value = sortable[key][1];
+var keyb;
+for(keyb in sortable){
+    var valuee = sortable[keyb][1];
     var row = document.createElement("tr");
     var cella = document.createElement("td");
-        var cellaText = sortable[key][0];
+        var cellaText = sortable[keyb][0];
         cellaText = cellaText.replace(/^'|'$/g, "");
         var link = document.createElement("a");
         link.textContent = cellaText;
@@ -578,7 +560,7 @@ for(key in sortable){
         cella.appendChild(link);
     row.appendChild(cella);
     var cellb = document.createElement("td");
-        var cellbText = document.createTextNode(value);
+        var cellbText = document.createTextNode(valuee);
     cellb.appendChild(cellbText);
     row.appendChild(cellb);
     table.appendChild(row);
