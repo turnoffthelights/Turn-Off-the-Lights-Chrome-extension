@@ -253,7 +253,7 @@ video = document.getElementsByTagName("video");
 var videoi;
 var videol = video.length;
 for(videoi = 0; videoi < videol; videoi++){
-var targetComputedStylePosition = document.defaultView.getComputedStyle(video[i],null).getPropertyValue("position");
+var targetComputedStylePosition = document.defaultView.getComputedStyle(video[videoi],null).getPropertyValue("position");
 // search for the video player, and set the previous path all to z-index "auto"
 if(searchvideopath(video[videoi]) == true && targetComputedStylePosition == "absolute"){
 	video[videoi].classList.add("stefanvdposfixed");
@@ -1079,31 +1079,31 @@ function removenewframe(){
 	var itemtopdiv = document.querySelectorAll(".stefanvditemtop");
 	var itemtopi;
 	var itemtopl = itemtopdiv.length;
-	for(itemtopi = 0; itemtopi < itemtopl; itemtopi++){ div[itemtopi].classList.remove("stefanvditemtop"); }
+	for(itemtopi = 0; itemtopi < itemtopl; itemtopi++){ itemtopdiv[itemtopi].classList.remove("stefanvditemtop"); }
 	var videoautodiv = document.querySelectorAll(".stefanvdvideoauto");
 	var videoautoi;
 	var videoautol = videoautodiv.length;
-	for(videoautoi = 0; videoautoi < videoautol; videoautoi++){ div[videoautoi].classList.remove("stefanvdvideoauto"); }
+	for(videoautoi = 0; videoautoi < videoautol; videoautoi++){ videoautodiv[videoautoi].classList.remove("stefanvdvideoauto"); }
 	var otherdowndiv = document.querySelectorAll(".stefanvdotherdown");
 	var otherdowni;
 	var otherdownl = otherdowndiv.length;
-	for(otherdowni = 0; otherdowni < otherdownl; otherdowni++){ div[otherdowni].classList.remove("stefanvdotherdown"); }
+	for(otherdowni = 0; otherdowni < otherdownl; otherdowni++){ otherdowndiv[otherdowni].classList.remove("stefanvdotherdown"); }
 	var containautodiv = document.querySelectorAll(".stefanvdcontainauto");
 	var containautoi;
 	var containautol = containautodiv.length;
-	for(containautoi = 0; containautoi < containautol; containautoi++){ div[containautoi].classList.remove("stefanvdcontainauto"); }
+	for(containautoi = 0; containautoi < containautol; containautoi++){ containautodiv[containautoi].classList.remove("stefanvdcontainauto"); }
 	var transformautodiv = document.querySelectorAll(".stefanvdtransformauto");
 	var transformautoi;
 	var transformautol = transformautodiv.length;
-	for(transformautoi = 0; transformautoi < transformautol; transformautoi++){ div[transformautoi].classList.remove("stefanvdtransformauto"); }
+	for(transformautoi = 0; transformautoi < transformautol; transformautoi++){ transformautodiv[transformautoi].classList.remove("stefanvdtransformauto"); }
 	var videocontrolsitemdiv = document.querySelectorAll(".stefanvdvideocontrolsitem");
 	var videocontrolsitemi;
 	var videocontrolsiteml = videocontrolsitemdiv.length;
-	for(videocontrolsitemi = 0; videocontrolsitemi < videocontrolsiteml; videocontrolsitemi++){ div[videocontrolsitemi].classList.remove("stefanvdvideocontrolsitem"); }
+	for(videocontrolsitemi = 0; videocontrolsitemi < videocontrolsiteml; videocontrolsitemi++){ videocontrolsitemdiv[videocontrolsitemi].classList.remove("stefanvdvideocontrolsitem"); }
 	var videocontrolstopdiv = document.querySelectorAll(".stefanvdvideocontrolstop");
 	var videocontrolstopi;
 	var videocontrolstopl = videocontrolstopdiv.length;
-	for(videocontrolstopi = 0; videocontrolstopi < videocontrolstopl; videocontrolstopi++){ div[videocontrolstopi].classList.remove("stefanvdvideocontrolstop"); }
+	for(videocontrolstopi = 0; videocontrolstopi < videocontrolstopl; videocontrolstopi++){ videocontrolstopdiv[videocontrolstopi].classList.remove("stefanvdvideocontrolstop"); }
 	var posfixeddiv = document.querySelectorAll(".stefanvdposfixed");
 	var posfixedi;
 	var posfixedl = posfixeddiv.length;
@@ -1111,7 +1111,7 @@ function removenewframe(){
 	var posstickydiv = document.querySelectorAll(".stefanvdpossticky");
 	var posstickyi;
 	var posstickyl = posstickydiv.length;
-	for(posstickyi = 0; posstickyi < posstickyl; posstickyi++){ div[posstickyi].classList.remove("stefanvdpossticky"); }
+	for(posstickyi = 0; posstickyi < posstickyl; posstickyi++){ posstickydiv[posstickyi].classList.remove("stefanvdpossticky"); }
 
 	// inside the root
 	var q = document.getElementsByTagName("*");
@@ -2511,7 +2511,7 @@ try{
 		// When finished, make sure the DIVElementById is set to remove element
 		if(DIVElementById.style.opacity <= 0){ document.body.removeChild(DIVElementById); removenewframe(); }
 	}
-	//control opacity for all <div>
+	// Control opacity for all <div>
 	var div = document.querySelectorAll("div.stefanvdlightareoff");
 	var i;
 	var l = div.length;
