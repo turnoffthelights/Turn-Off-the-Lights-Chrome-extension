@@ -37,13 +37,19 @@ document.addEventListener("DOMContentLoaded", function(){
 	}, false);
 
 	chrome.storage.sync.get(["darkmode"], function(items){
-		darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
+		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 
 		// dark mode
-		if(darkmode == true){
+		if(darkmode == 1){
 			document.body.className = "dark";
-		}else{
+		}else if(darkmode == 0){
 			document.body.className = "light";
+		}else if(darkmode == 2){
+			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
+				document.body.className = "dark";
+			}else{
+				document.body.className = "light";
+			}
 		}
 	});
 	$("opentrywebsite").addEventListener("click", function(){ chrome.tabs.create({url: linkyoutube, active:true}); });

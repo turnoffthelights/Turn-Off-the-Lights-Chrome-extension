@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	}, false);
 
 	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate"], function(items){
-		darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default false
+		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 		interval = items["interval"]; if(interval == null)interval = 80; // default 80%
 		ambilight = items["ambilight"]; if(ambilight == null)ambilight = false; // default false
 		ambilightfixcolor = items["ambilightfixcolor"]; if(ambilightfixcolor == null)ambilightfixcolor = true; // default true
@@ -67,10 +67,16 @@ document.addEventListener("DOMContentLoaded", function(){
 		badge = items["badge"]; if(badge == null)badge = false; // default false
 
 		// dark mode
-		if(darkmode == true){
+		if(darkmode == 1){
 			document.body.className = "dark";
-		}else{
+		}else if(darkmode == 0){
 			document.body.className = "light";
+		}else if(darkmode == 2){
+			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
+				document.body.className = "dark";
+			}else{
+				document.body.className = "light";
+			}
 		}
 
 		var editzoom = interval;
