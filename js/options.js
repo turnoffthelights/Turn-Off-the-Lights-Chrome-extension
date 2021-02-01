@@ -36,373 +36,370 @@ var darkmode = false;
 
 window.addEventListener("message", (event) => {
 	if(event.origin == "https://www.turnoffthelights.com"){
-    if(event.source == window &&
+		if(event.source == window &&
         event.data &&
         event.data.direction == "from-page-script"){
-        //alert("Content script received message: \"" + event.data.message + "\"");
-        var myid = chrome.runtime.id;
-        var myversion = chrome.runtime.getManifest().version;
-        window.postMessage({
-            direction: "from-totl-script",
-            message: myid,
-            version: myversion
-        }, "https://www.turnoffthelights.com");
-    }
-    }
+			// alert("Content script received message: \"" + event.data.message + "\"");
+			var myid = chrome.runtime.id;
+			var myversion = chrome.runtime.getManifest().version;
+			window.postMessage({
+				direction: "from-totl-script",
+				message: myid,
+				version: myversion
+			}, "https://www.turnoffthelights.com");
+		}
+	}
 });
 
 // Option to save current value to chrome.storage
 function save_options(){
-    chrome.runtime.sendMessage({name: "getallpermissions"});
+	chrome.runtime.sendMessage({name: "getallpermissions"});
 
-    var ytselq = document.getElementById("youtubequality");
-    var html5volumesteps = document.getElementById("videovolumesteps");
-    var linearsq = document.getElementById("linearsq");
-    var webspeechlang = document.getElementById("select_language");
-    if(webspeechlang.selectedIndex != -1){ var savewebspeechlang = webspeechlang.options[webspeechlang.selectedIndex].value; }
-    var webspeechcountry = document.getElementById("select_dialect");
-    if(webspeechcountry.selectedIndex != -1){ var savewebspeechcountry = webspeechcountry.options[webspeechcountry.selectedIndex].value; }
+	var ytselq = document.getElementById("youtubequality");
+	var html5volumesteps = document.getElementById("videovolumesteps");
+	var linearsq = document.getElementById("linearsq");
+	var webspeechlang = document.getElementById("select_language");
+	if(webspeechlang.selectedIndex != -1){ var savewebspeechlang = webspeechlang.options[webspeechlang.selectedIndex].value; }
+	var webspeechcountry = document.getElementById("select_dialect");
+	if(webspeechcountry.selectedIndex != -1){ var savewebspeechcountry = webspeechcountry.options[webspeechcountry.selectedIndex].value; }
 
-    // Excluded domains
-    var excludedDomainsBox = $("excludedDomainsBox");
-    var excludedDomains = {};
-    var i;
-    var l = excludedDomainsBox.length;
-    for(i = 0; i < l; i++){ excludedDomains[excludedDomainsBox.options[i].value] = true; }
+	// Excluded domains
+	var excludedDomainsBox = $("excludedDomainsBox");
+	var excludedDomains = {};
+	var i;
+	var l = excludedDomainsBox.length;
+	for(i = 0; i < l; i++){ excludedDomains[excludedDomainsBox.options[i].value] = true; }
 
-    // autoplay Excluded domains
-    var autoplayDomainsBox = $("autoplayDomainsBox");
-    var autoplayDomains = {};
-    var autoplayi;
-    var autoplayl = autoplayDomainsBox.length;
-    for(autoplayi = 0; autoplayi < autoplayl; autoplayi++){ autoplayDomains[autoplayDomainsBox.options[autoplayi].value] = true; }
+	// autoplay Excluded domains
+	var autoplayDomainsBox = $("autoplayDomainsBox");
+	var autoplayDomains = {};
+	var autoplayi;
+	var autoplayl = autoplayDomainsBox.length;
+	for(autoplayi = 0; autoplayi < autoplayl; autoplayi++){ autoplayDomains[autoplayDomainsBox.options[autoplayi].value] = true; }
 
-    // atmosphere Excluded domains
-    var atmosphereDomainsBox = $("atmosphereDomainsBox");
-    var atmosphereDomains = {};
-    var atmospherei;
-    var atmospherel = atmosphereDomainsBox.length;
-    for(atmospherei = 0; atmospherei < atmospherel; atmospherei++){ atmosphereDomains[atmosphereDomainsBox.options[atmospherei].value] = true; }
+	// atmosphere Excluded domains
+	var atmosphereDomainsBox = $("atmosphereDomainsBox");
+	var atmosphereDomains = {};
+	var atmospherei;
+	var atmospherel = atmosphereDomainsBox.length;
+	for(atmospherei = 0; atmospherei < atmospherel; atmospherei++){ atmosphereDomains[atmosphereDomainsBox.options[atmospherei].value] = true; }
 
-    // night Excluded domains
-    var nightDomainsBox = $("nightDomainsBox");
-    var nightDomains = {};
-    var nighti;
-    var nightl = nightDomainsBox.length;
-    for(nighti = 0; nighti < nightl; nighti++){ nightDomains[nightDomainsBox.options[nighti].value] = true; }
+	// night Excluded domains
+	var nightDomainsBox = $("nightDomainsBox");
+	var nightDomains = {};
+	var nighti;
+	var nightl = nightDomainsBox.length;
+	for(nighti = 0; nighti < nightl; nighti++){ nightDomains[nightDomainsBox.options[nighti].value] = true; }
 
-    // cammotion Excluded domains
-    var cammotionDomainsBox = $("cammotionDomainsBox");
-    var cammotionDomains = {};
-    var cammotioni;
-    var cammotionl = cammotionDomainsBox.length;
-    for(cammotioni = 0; cammotioni < cammotionl; cammotioni++){ cammotionDomains[cammotionDomainsBox.options[cammotioni].value] = true; }
+	// cammotion Excluded domains
+	var cammotionDomainsBox = $("cammotionDomainsBox");
+	var cammotionDomains = {};
+	var cammotioni;
+	var cammotionl = cammotionDomainsBox.length;
+	for(cammotioni = 0; cammotioni < cammotionl; cammotioni++){ cammotionDomains[cammotionDomainsBox.options[cammotioni].value] = true; }
 
-    // speech Excluded domains
-    var speechDomainsBox = $("speechDomainsBox");
-    var speechDomains = {};
-    var speechi;
-    var speechl = speechDomainsBox.length;
-    for(speechi = 0; speechi < speechl; speechi++){ speechDomains[speechDomainsBox.options[speechi].value] = true; }
+	// speech Excluded domains
+	var speechDomainsBox = $("speechDomainsBox");
+	var speechDomains = {};
+	var speechi;
+	var speechl = speechDomainsBox.length;
+	for(speechi = 0; speechi < speechl; speechi++){ speechDomains[speechDomainsBox.options[speechi].value] = true; }
 
-    // autostop Excluded domains
-    var autostopDomainsBox = $("autostopDomainsBox");
-    var autostopDomains = {};
-    var autostopi;
-    var autostopl = autostopDomainsBox.length;
-    for(autostopi = 0; autostopi < autostopl; autostopi++){ autostopDomains[autostopDomainsBox.options[autostopi].value] = true; }
+	// autostop Excluded domains
+	var autostopDomainsBox = $("autostopDomainsBox");
+	var autostopDomains = {};
+	var autostopi;
+	var autostopl = autostopDomainsBox.length;
+	for(autostopi = 0; autostopi < autostopl; autostopi++){ autostopDomains[autostopDomainsBox.options[autostopi].value] = true; }
 
-    // videotool Excluded domains
-    var videotoolDomainsBox = $("videotoolDomainsBox");
-    var videotoolDomains = {};
-    var videotooli;
-    var videotooll = videotoolDomainsBox.length;
-    for(videotooli = 0; videotooli < videotooll; videotooli++){ videotoolDomains[videotoolDomainsBox.options[videotooli].value] = true; }
+	// videotool Excluded domains
+	var videotoolDomainsBox = $("videotoolDomainsBox");
+	var videotoolDomains = {};
+	var videotooli;
+	var videotooll = videotoolDomainsBox.length;
+	for(videotooli = 0; videotooli < videotooll; videotooli++){ videotoolDomains[videotoolDomainsBox.options[videotooli].value] = true; }
 
-    // multiopacity Excluded domains
-    var multiopacityDomainsBox = $("multiopacityDomainsBox");
-    var multiopacitynumberBox = $("multiopacitynumberBox");
-    var websitemulti = {};
-    var multiopacityi;
-    var multiopacityl = multiopacityDomainsBox.length;
-    for(multiopacityi = 0; multiopacityi < multiopacityl; multiopacityi++){
-      var getnumber = multiopacitynumberBox.options[multiopacityi].text;
-      websitemulti[multiopacityDomainsBox.options[multiopacityi].value] = getnumber;
-    }
+	// multiopacity Excluded domains
+	var multiopacityDomainsBox = $("multiopacityDomainsBox");
+	var multiopacitynumberBox = $("multiopacitynumberBox");
+	var websitemulti = {};
+	var multiopacityi;
+	var multiopacityl = multiopacityDomainsBox.length;
+	for(multiopacityi = 0; multiopacityi < multiopacityl; multiopacityi++){
+		var getnumber = multiopacitynumberBox.options[multiopacityi].text;
+		websitemulti[multiopacityDomainsBox.options[multiopacityi].value] = getnumber;
+	}
 
-	chrome.storage.sync.set({"interval":$("interval").value,"lightcolor":$("lightcolor").value,"autoplay":$("autoplay").checked,"playlist":$("playlist").checked,"flash":$("flash").checked,"head":$("head").checked,"fadein":$("fadein").checked,"fadeout":$("fadeout").checked,"infobar":$("infobar").checked,"sharebutton":$("sharebutton").checked,"likebutton":$("likebutton").checked,"readera":$("readera").checked,"readern":$("readern").checked,"shortcutlight":$("shortcutlight").checked,"eyea":$("eyea").checked,"eyen":$("eyen").checked,"suggestions":$("suggestions").checked,"videoheadline":$("videoheadline").checked,"eastereggs":$("eastereggs").checked,"contextmenus":$("contextmenus").checked,"viewcount":$("viewcount").checked,"lightimage":$("lightimage").value,"lightimagea":$("lightimagea").checked,"lightimagen":$("lightimagen").checked,"eyealist":$("eyealist").checked,"mousespotlighto":$("mousespotlighto").checked,"mousespotlighta":$("mousespotlighta").checked,"mousespotlightc":$("mousespotlightc").checked,"nighttime":$("nighttime").checked,"begintime":$("begintime").value,"endtime":$("endtime").value,"addvideobutton":$("addvideobutton").checked,"likebar":$("likebar").checked,"ambilight":$("ambilight").checked,"ambilightrangeblurradius":$("ambilightrangeblurradius").value,"ambilightrangespreadradius":$("ambilightrangespreadradius").value,"mousespotlightt":$("mousespotlightt").checked,"ambilightfixcolor":$("ambilightfixcolor").checked,"ambilightvarcolor":$("ambilightvarcolor").checked,"ambilightcolorhex":$("ambilightcolorhex").value,"ambilight4color":$("ambilight4color").checked,"ambilight1colorhex":$("ambilight1colorhex").value,"ambilight2colorhex":$("ambilight2colorhex").value,"ambilight3colorhex":$("ambilight3colorhex").value,"ambilight4colorhex":$("ambilight4colorhex").value,"password":$("password").checked,"enterpassword":$("enterpassword").value,"noflash":$("noflash").checked,"hardflash":$("hardflash").checked,"ecosaver":$("ecosaver").checked,"ecosavertime":$("ecosavertime").value,"dynamic":$("dynamic").checked,"dynamic1":$("dynamic1").checked,"dynamic2":$("dynamic2").checked,"dynamic3":$("dynamic3").checked,"dynamic4":$("dynamic4").checked,"dynamic5":$("dynamic5").checked,"dynamic6":$("dynamic6").checked,"dynamic7":$("dynamic7").checked,"dynamic8":$("dynamic8").checked,"dynamic9":$("dynamic9").checked,"dynamic10":$("dynamic10").checked,"hoveroptiondyn5":$("hoveroptiondyn5").checked,"autoplayonly":$("autoplayonly").checked,"blur":$("blur").checked,"maxquality":ytselq.options[ytselq.selectedIndex].value,"autowidthyoutube":$("autowidthyoutube").checked,"customqualityyoutube":$("customqualityyoutube").checked,"cinemaontop":$("cinemaontop").checked,"alllightsoff":$("alllightsoff").checked,"spotlightradius":$("spotlightradius").value,"atmosphereonly":$("atmosphereonly").checked,"optionskipremember":$("optionskipremember").checked,"nighttheme":$("nighttheme").checked,"nightonly":$("nightonly").checked,"nightenabletheme":$("nightenabletheme").checked,"autoplaydelay":$("autoplaydelay").checked,"autoplaydelaytime":$("autoplaydelaytime").value,"motion":$("motion").checked,"lightimagelin":$("lightimagelin").checked,"linearsq":linearsq.options[linearsq.selectedIndex].value,"colora":$("colora").value,"intervallina":$("intervallina").value,"colorb":$("colorb").value,"intervallinb":$("intervallinb").value,"speech":$("speech").checked,"speechlang":savewebspeechlang,"speechcountry":savewebspeechcountry,"atmosvivid":$("atmosvivid").checked,"cammotiononly":$("cammotiononly").checked,"speechonly":$("speechonly").checked,"autoplaychecklistwhite":$("autoplaychecklistwhite").checked,"autoplaychecklistblack":$("autoplaychecklistblack").checked,"autostop":$("autostop").checked,"autostoponly":$("autostoponly").checked,"autostopchecklistwhite":$("autostopchecklistwhite").checked,"autostopchecklistblack":$("autostopchecklistblack").checked,"nighthover":$("nighthover").checked,"nightmodechecklistwhite":$("nightmodechecklistwhite").checked,"nightmodechecklistblack":$("nightmodechecklistblack").checked,"nmtopleft":$("nmtopleft").checked,"nmtopright":$("nmtopright").checked,"nmbottomright":$("nmbottomright").checked,"nmbottomleft":$("nmbottomleft").checked,"nmcustom":$("nmcustom").checked,"nightactivetime":$("nightactivetime").checked,"nmbegintime":$("nmbegintime").value,"nmendtime":$("nmendtime").value,"lampandnightmode":$("lampandnightmode").checked,"eyechecklistwhite":$("eyechecklistwhite").checked,"eyechecklistblack":$("eyechecklistblack").checked,"nightmodebck":$("nightmodebck").value,"nightmodetxt":$("nightmodetxt").value,"no360youtube":$("no360youtube").checked,"videotool":$("videotool").checked,"reflection":$("reflection").checked,"reflectionamount":$("reflectionamount").value,"videotoolonly":$("videotoolonly").checked,"videotoolchecklistwhite":$("videotoolchecklistwhite").checked,"videotoolchecklistblack":$("videotoolchecklistblack").checked,"nightmodehyperlink":$("nightmodehyperlink").value,"block60fps":$("block60fps").checked,"excludedDomains":JSON.stringify(excludedDomains),"autoplayDomains":JSON.stringify(autoplayDomains),"atmosphereDomains":JSON.stringify(atmosphereDomains),"nightDomains":JSON.stringify(nightDomains),"cammotionDomains":JSON.stringify(cammotionDomains),"speechDomains":JSON.stringify(speechDomains),"autostopDomains":JSON.stringify(autostopDomains),"videotoolDomains":JSON.stringify(videotoolDomains),"videovolume":$("videovolume").checked,"videovolumecolor":$("videovolumecolor").value,"videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value,"videovolumelabel":$("videovolumelabel").checked,"icon":$("btnpreview").getAttribute("data-icon"),"visopacity":$("visopacity").value,"videotoolcolor":$("videotoolcolor").value,"hovervideo":$("hovervideo").checked,"hovervideoamount":$("hovervideoamount").value,"mousespotlights":$("mousespotlights").checked,"drawatmosfps":$("drawatmosfps").value,"aplay":$("aplay").checked,"apause":$("apause").checked,"astop":$("astop").checked,"videozoom":$("videozoom").checked,"playrate":$("playrate").checked,"playrateamount":$("playrateamount").value,"speedtoolbar":$("speedtoolbar").checked,"atmosontotlmode":$("atmosontotlmode").checked,"titleinvertcolor":$("titleinvertcolor").value,"vpause":$("vpause").checked,"darkbrowsertheme":$("darkbrowsertheme").checked,"autostopred":$("autostopred").checked,"autostoptrans":$("autostoptrans").checked,"videovolumeposa":$("videovolumeposa").checked,"videovolumeposb":$("videovolumeposb").checked,"videovolumeposc":$("videovolumeposc").checked,"videovolumehold":$("videovolumehold").checked,"multiopacall":$("multiopacall").checked,"multiopacsel":$("multiopacsel").checked,"multiopacityDomains":JSON.stringify(websitemulti),"videovolumealt":$("videovolumealt").checked,"nightmodebydomain":$("nightmodebydomain").checked,"nightmodebypage":$("nightmodebypage").checked,"seeanalytics":$("seeanalytics").checked,"nightmodegesture":$("nightmodegesture").checked,"nightmodeswitchhide":$("nightmodeswitchhide").checked,"nightmodeswitchhidetime":$("nightmodeswitchhidetime").value,"atmosfpsauto":$("atmosfpsauto").checked,"atmosfpsmanual":$("atmosfpsmanual").checked});
+	chrome.storage.sync.set({"interval":$("interval").value, "lightcolor":$("lightcolor").value, "autoplay":$("autoplay").checked, "playlist":$("playlist").checked, "flash":$("flash").checked, "head":$("head").checked, "fadein":$("fadein").checked, "fadeout":$("fadeout").checked, "infobar":$("infobar").checked, "sharebutton":$("sharebutton").checked, "likebutton":$("likebutton").checked, "readera":$("readera").checked, "readern":$("readern").checked, "shortcutlight":$("shortcutlight").checked, "eyea":$("eyea").checked, "eyen":$("eyen").checked, "suggestions":$("suggestions").checked, "videoheadline":$("videoheadline").checked, "eastereggs":$("eastereggs").checked, "contextmenus":$("contextmenus").checked, "viewcount":$("viewcount").checked, "lightimage":$("lightimage").value, "lightimagea":$("lightimagea").checked, "lightimagen":$("lightimagen").checked, "eyealist":$("eyealist").checked, "mousespotlighto":$("mousespotlighto").checked, "mousespotlighta":$("mousespotlighta").checked, "mousespotlightc":$("mousespotlightc").checked, "nighttime":$("nighttime").checked, "begintime":$("begintime").value, "endtime":$("endtime").value, "addvideobutton":$("addvideobutton").checked, "likebar":$("likebar").checked, "ambilight":$("ambilight").checked, "ambilightrangeblurradius":$("ambilightrangeblurradius").value, "ambilightrangespreadradius":$("ambilightrangespreadradius").value, "mousespotlightt":$("mousespotlightt").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "ambilightcolorhex":$("ambilightcolorhex").value, "ambilight4color":$("ambilight4color").checked, "ambilight1colorhex":$("ambilight1colorhex").value, "ambilight2colorhex":$("ambilight2colorhex").value, "ambilight3colorhex":$("ambilight3colorhex").value, "ambilight4colorhex":$("ambilight4colorhex").value, "password":$("password").checked, "enterpassword":$("enterpassword").value, "noflash":$("noflash").checked, "hardflash":$("hardflash").checked, "ecosaver":$("ecosaver").checked, "ecosavertime":$("ecosavertime").value, "dynamic":$("dynamic").checked, "dynamic1":$("dynamic1").checked, "dynamic2":$("dynamic2").checked, "dynamic3":$("dynamic3").checked, "dynamic4":$("dynamic4").checked, "dynamic5":$("dynamic5").checked, "dynamic6":$("dynamic6").checked, "dynamic7":$("dynamic7").checked, "dynamic8":$("dynamic8").checked, "dynamic9":$("dynamic9").checked, "dynamic10":$("dynamic10").checked, "hoveroptiondyn5":$("hoveroptiondyn5").checked, "autoplayonly":$("autoplayonly").checked, "blur":$("blur").checked, "maxquality":ytselq.options[ytselq.selectedIndex].value, "autowidthyoutube":$("autowidthyoutube").checked, "customqualityyoutube":$("customqualityyoutube").checked, "cinemaontop":$("cinemaontop").checked, "alllightsoff":$("alllightsoff").checked, "spotlightradius":$("spotlightradius").value, "atmosphereonly":$("atmosphereonly").checked, "optionskipremember":$("optionskipremember").checked, "nighttheme":$("nighttheme").checked, "nightonly":$("nightonly").checked, "nightenabletheme":$("nightenabletheme").checked, "autoplaydelay":$("autoplaydelay").checked, "autoplaydelaytime":$("autoplaydelaytime").value, "motion":$("motion").checked, "lightimagelin":$("lightimagelin").checked, "linearsq":linearsq.options[linearsq.selectedIndex].value, "colora":$("colora").value, "intervallina":$("intervallina").value, "colorb":$("colorb").value, "intervallinb":$("intervallinb").value, "speech":$("speech").checked, "speechlang":savewebspeechlang, "speechcountry":savewebspeechcountry, "atmosvivid":$("atmosvivid").checked, "cammotiononly":$("cammotiononly").checked, "speechonly":$("speechonly").checked, "autoplaychecklistwhite":$("autoplaychecklistwhite").checked, "autoplaychecklistblack":$("autoplaychecklistblack").checked, "autostop":$("autostop").checked, "autostoponly":$("autostoponly").checked, "autostopchecklistwhite":$("autostopchecklistwhite").checked, "autostopchecklistblack":$("autostopchecklistblack").checked, "nighthover":$("nighthover").checked, "nightmodechecklistwhite":$("nightmodechecklistwhite").checked, "nightmodechecklistblack":$("nightmodechecklistblack").checked, "nmtopleft":$("nmtopleft").checked, "nmtopright":$("nmtopright").checked, "nmbottomright":$("nmbottomright").checked, "nmbottomleft":$("nmbottomleft").checked, "nmcustom":$("nmcustom").checked, "nightactivetime":$("nightactivetime").checked, "nmbegintime":$("nmbegintime").value, "nmendtime":$("nmendtime").value, "lampandnightmode":$("lampandnightmode").checked, "eyechecklistwhite":$("eyechecklistwhite").checked, "eyechecklistblack":$("eyechecklistblack").checked, "nightmodebck":$("nightmodebck").value, "nightmodetxt":$("nightmodetxt").value, "no360youtube":$("no360youtube").checked, "videotool":$("videotool").checked, "reflection":$("reflection").checked, "reflectionamount":$("reflectionamount").value, "videotoolonly":$("videotoolonly").checked, "videotoolchecklistwhite":$("videotoolchecklistwhite").checked, "videotoolchecklistblack":$("videotoolchecklistblack").checked, "nightmodehyperlink":$("nightmodehyperlink").value, "block60fps":$("block60fps").checked, "excludedDomains":JSON.stringify(excludedDomains), "autoplayDomains":JSON.stringify(autoplayDomains), "atmosphereDomains":JSON.stringify(atmosphereDomains), "nightDomains":JSON.stringify(nightDomains), "cammotionDomains":JSON.stringify(cammotionDomains), "speechDomains":JSON.stringify(speechDomains), "autostopDomains":JSON.stringify(autostopDomains), "videotoolDomains":JSON.stringify(videotoolDomains), "videovolume":$("videovolume").checked, "videovolumecolor":$("videovolumecolor").value, "videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value, "videovolumelabel":$("videovolumelabel").checked, "icon":$("btnpreview").getAttribute("data-icon"), "visopacity":$("visopacity").value, "videotoolcolor":$("videotoolcolor").value, "hovervideo":$("hovervideo").checked, "hovervideoamount":$("hovervideoamount").value, "mousespotlights":$("mousespotlights").checked, "drawatmosfps":$("drawatmosfps").value, "aplay":$("aplay").checked, "apause":$("apause").checked, "astop":$("astop").checked, "videozoom":$("videozoom").checked, "playrate":$("playrate").checked, "playrateamount":$("playrateamount").value, "speedtoolbar":$("speedtoolbar").checked, "atmosontotlmode":$("atmosontotlmode").checked, "titleinvertcolor":$("titleinvertcolor").value, "vpause":$("vpause").checked, "darkbrowsertheme":$("darkbrowsertheme").checked, "autostopred":$("autostopred").checked, "autostoptrans":$("autostoptrans").checked, "videovolumeposa":$("videovolumeposa").checked, "videovolumeposb":$("videovolumeposb").checked, "videovolumeposc":$("videovolumeposc").checked, "videovolumehold":$("videovolumehold").checked, "multiopacall":$("multiopacall").checked, "multiopacsel":$("multiopacsel").checked, "multiopacityDomains":JSON.stringify(websitemulti), "videovolumealt":$("videovolumealt").checked, "nightmodebydomain":$("nightmodebydomain").checked, "nightmodebypage":$("nightmodebypage").checked, "seeanalytics":$("seeanalytics").checked, "nightmodegesture":$("nightmodegesture").checked, "nightmodeswitchhide":$("nightmodeswitchhide").checked, "nightmodeswitchhidetime":$("nightmodeswitchhidetime").value, "atmosfpsauto":$("atmosfpsauto").checked, "atmosfpsmanual":$("atmosfpsmanual").checked});
 }
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["fadein","fadeout","readera","readern","lightimagea","lightimagen","mousespotlighta","mousespotlightc","mousespotlighto","mousespotlightt","eyea","eyen","eyealist","interval","ambilightrangeblurradius","ambilightrangespreadradius","ambilightvarcolor","ambilightfixcolor","ambilight4color","flash","noflash","noflash","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","maxquality","autoplaychecklistwhite","autoplaychecklistblack","autostopchecklistwhite","autostopchecklistblack","videotoolchecklistwhite","videotoolchecklistblack","nightmodechecklistwhite","nightmodechecklistblack","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","eyechecklistwhite","eyechecklistblack","videovolumesteps","videovolumelabel","mousespotlights","aplay","apause","astop","autostopred","autostoptrans","videovolumeposa","videovolumeposb","videovolumeposc","multiopacall","multiopacsel","nightmodebydomain","nightmodebypage","seeanalytics","atmosfpsauto","atmosfpsmanual"], function(items){
-    // find no localstore fadein
+chrome.storage.sync.get(["fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual"], function(items){
+	// find no localstore fadein
 	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
-    // find no localstore fadeout
+	// find no localstore fadeout
 	if(items["fadeout"] == null){ firstdefaultvalues["fadeout"] = true; }
-    // find no localstore reader
+	// find no localstore reader
 	if(items["readera"] == null && items["readern"] == null){ firstdefaultvalues["readern"] = true; firstdefaultvalues["readera"] = false; }
-    // find no localstore lightimage
+	// find no localstore lightimage
 	if(items["lightimagea"] == null && items["lightimagen"] == null){ firstdefaultvalues["lightimagen"] = true; firstdefaultvalues["lightimagea"] = false; }
-    // find no localstore mouse
+	// find no localstore mouse
 	if(items["mousespotlighta"] == null && items["mousespotlightc"] == null && items["mousespotlighto"] == null && items["mousespotlightt"] == null && items["mousespotlights"] == null){ firstdefaultvalues["mousespotlighto"] = true; firstdefaultvalues["mousespotlightc"] = false; firstdefaultvalues["mousespotlighta"] = false; firstdefaultvalues["mousespotlightt"] = false; firstdefaultvalues["mousespotlights"] = false; }
-    // find no localstore eye
+	// find no localstore eye
 	if(items["eyea"] == null && items["eyen"] == null && items["eyealist"] == null){ firstdefaultvalues["eyen"] = true; firstdefaultvalues["eyea"] = false; firstdefaultvalues["eyealist"] = false; }
 
-    // find no default value
+	// find no default value
 	if(items["interval"]){ default_opacity = items["interval"]; }
-    // find and use default ambilight blur radius
+	// find and use default ambilight blur radius
 	if(items["ambilightrangeblurradius"]){ default_arangeblur = items["ambilightrangeblurradius"]; }
-    // find and use default ambilight spread radius
+	// find and use default ambilight spread radius
 	if(items["ambilightrangespreadradius"]){ default_arangespread = items["ambilightrangespreadradius"]; }
 
-    // find no localstore atmos
+	// find no localstore atmos
 	if(items["ambilightvarcolor"] == null && items["ambilightfixcolor"] == null && items["ambilight4color"] == null){ firstdefaultvalues["ambilightfixcolor"] = true; firstdefaultvalues["ambilightvarcolor"] = false; firstdefaultvalues["ambilight4color"] = false; }
-    // find no localstore flash
+	// find no localstore flash
 	if(items["flash"] == null && items["noflash"] == null && items["noflash"] == null){ firstdefaultvalues["noflash"] = true; firstdefaultvalues["flash"] = false; firstdefaultvalues["hardflash"] = false; }
-    // find no localstore dynamic
+	// find no localstore dynamic
 	if(items["dynamic1"] == null && items["dynamic2"] == null && items["dynamic3"] == null && items["dynamic4"] == null && items["dynamic5"] == null && items["dynamic6"] == null && items["dynamic7"] == null && items["dynamic8"] == null && items["dynamic9"] == null && items["dynamic10"] == null){ firstdefaultvalues["dynamic1"] = true; firstdefaultvalues["dynamic2"] = false; firstdefaultvalues["dynamic3"] = false; firstdefaultvalues["dynamic4"] = false; firstdefaultvalues["dynamic5"] = false; firstdefaultvalues["dynamic6"] = false; firstdefaultvalues["dynamic7"] = false; firstdefaultvalues["dynamic8"] = false; firstdefaultvalues["dynamic9"] = false; firstdefaultvalues["dynamic10"] = false; }
-    // find no localstore hoverdyn
+	// find no localstore hoverdyn
 	if(items["hoveroptiondyn5"] == null){ firstdefaultvalues["hoveroptiondyn5"] = true; }
-    // find no localstore maxquality
+	// find no localstore maxquality
 	if(items["maxquality"] == null){ firstdefaultvalues["maxquality"] = "hd1080"; }
-    // find no localstore autoplay whitelist
+	// find no localstore autoplay whitelist
 	if(items["autoplaychecklistwhite"] == null && items["autoplaychecklistblack"] == null){ firstdefaultvalues["autoplaychecklistwhite"] = true; firstdefaultvalues["autoplaychecklistblack"] = false; }
-    // find no localstore autostop whitelist
+	// find no localstore autostop whitelist
 	if(items["autostopchecklistwhite"] == null && items["autostopchecklistblack"] == null){ firstdefaultvalues["autostopchecklistwhite"] = true; firstdefaultvalues["autostopchecklistblack"] = false; }
-    // find no localstore videotool whitelist
+	// find no localstore videotool whitelist
 	if(items["videotoolchecklistwhite"] == null && items["videotoolchecklistblack"] == null){ firstdefaultvalues["videotoolchecklistwhite"] = true; firstdefaultvalues["videotoolchecklistblack"] = false; }
-    // find no localstore nightmode whitelist
+	// find no localstore nightmode whitelist
 	if(items["nightmodechecklistwhite"] == null && items["nightmodechecklistblack"] == null){ firstdefaultvalues["nightmodechecklistwhite"] = true; firstdefaultvalues["nightmodechecklistblack"] = false; }
-    // find no localstore eye
+	// find no localstore eye
 	if(items["nmtopleft"] == null && items["nmtopright"] == null && items["nmbottomright"] == null && items["nmbottomleft"] == null && items["nmcustom"] == null){ firstdefaultvalues["nmtopleft"] = false; firstdefaultvalues["nmtopright"] = false; firstdefaultvalues["nmbottomright"] = false; firstdefaultvalues["nmbottomleft"] = true; firstdefaultvalues["nmcustom"] = false; }
-    // find no localstore eye whitelist
+	// find no localstore eye whitelist
 	if(items["eyechecklistwhite"] == null && items["eyechecklistblack"] == null){ firstdefaultvalues["eyechecklistwhite"] = true; firstdefaultvalues["eyechecklistblack"] = false; }
 
-    // find no localstore volume steps
-    if(items["videovolumesteps"] == null){ firstdefaultvalues["videovolumesteps"] = 5; }
-    // find no localstore volume label
-    if(items["videovolumelabel"] == null){ firstdefaultvalues["videovolumelabel"] = true; }
+	// find no localstore volume steps
+	if(items["videovolumesteps"] == null){ firstdefaultvalues["videovolumesteps"] = 5; }
+	// find no localstore volume label
+	if(items["videovolumelabel"] == null){ firstdefaultvalues["videovolumelabel"] = true; }
 
-    // find no localstore a play pause and stop button
-    if(items["aplay"] == null){ firstdefaultvalues["aplay"] = true; }
-    if(items["apause"] == null){ firstdefaultvalues["apause"] = true; }
-    if(items["astop"] == null){ firstdefaultvalues["astop"] = true; }
+	// find no localstore a play pause and stop button
+	if(items["aplay"] == null){ firstdefaultvalues["aplay"] = true; }
+	if(items["apause"] == null){ firstdefaultvalues["apause"] = true; }
+	if(items["astop"] == null){ firstdefaultvalues["astop"] = true; }
 
-    // find no localstore a autostopred
-    if(items["autostopred"] == null && items["autostoptrans"] == null){ firstdefaultvalues["autostopred"] = true; firstdefaultvalues["autostoptrans"] = false; }
+	// find no localstore a autostopred
+	if(items["autostopred"] == null && items["autostoptrans"] == null){ firstdefaultvalues["autostopred"] = true; firstdefaultvalues["autostoptrans"] = false; }
 
-    // find no localstore volume meter position
+	// find no localstore volume meter position
 	if(items["videovolumeposa"] == null && items["videovolumeposb"] == null && items["videovolumeposc"] == null){ firstdefaultvalues["videovolumeposa"] = true; firstdefaultvalues["videovolumeposb"] = false; firstdefaultvalues["videovolumeposc"] = false; }
 
-    // find no localstore a multiopacity
-    if(items["multiopacall"] == null && items["multiopacsel"] == null){ firstdefaultvalues["multiopacall"] = true; firstdefaultvalues["multiopacsel"] = false; }
+	// find no localstore a multiopacity
+	if(items["multiopacall"] == null && items["multiopacsel"] == null){ firstdefaultvalues["multiopacall"] = true; firstdefaultvalues["multiopacsel"] = false; }
 
-    // find no localstore a nightmodebydomain
-    if(items["nightmodebydomain"] == null && items["nightmodebypage"] == null){ firstdefaultvalues["nightmodebydomain"] = true; firstdefaultvalues["nightmodebypage"] = false; }
+	// find no localstore a nightmodebydomain
+	if(items["nightmodebydomain"] == null && items["nightmodebypage"] == null){ firstdefaultvalues["nightmodebydomain"] = true; firstdefaultvalues["nightmodebypage"] = false; }
 
-    // find no localstore a seeanalytics
-    if(items["seeanalytics"] == null){ firstdefaultvalues["seeanalytics"] = true; }
+	// find no localstore a seeanalytics
+	if(items["seeanalytics"] == null){ firstdefaultvalues["seeanalytics"] = true; }
 
-    // find no localstore atmos fps
-    if(items["atmosfpsauto"] == null && items["atmosfpsmanual"] == null){ firstdefaultvalues["atmosfpsmanual"] = true; firstdefaultvalues["atmosfpsauto"] = false; }
+	// find no localstore atmos fps
+	if(items["atmosfpsauto"] == null && items["atmosfpsmanual"] == null){ firstdefaultvalues["atmosfpsmanual"] = true; firstdefaultvalues["atmosfpsauto"] = false; }
 
-    // Save the init value
-    chrome.storage.sync.set(firstdefaultvalues, function(){
-    //console.log('Settings saved');
-    });
+	// Save the init value
+	chrome.storage.sync.set(firstdefaultvalues, function(){
+		// console.log('Settings saved');
+	});
 });
 
 function read_options(){
 // speech
-var langs =
+	var langs =
 [["Afrikaans", ["af-ZA"]],
- ["Bahasa Indonesia", ["id-ID"]],
- ["Bahasa Melayu", ["ms-MY"]],
- ["Català", ["ca-ES"]],
- ["Čeština", ["cs-CZ"]],
- ["Deutsch", ["de-DE"]],
- ["English", ["en-AU", "Australia"],
-                     ["en-CA", "Canada"],
-                     ["en-IN", "India"],
-                     ["en-NZ", "New Zealand"],
-                     ["en-ZA", "South Africa"],
-                     ["en-GB", "United Kingdom"],
-                     ["en-US", "United States"]],
- ["Español", ["es-AR", "Argentina"],
-                     ["es-BO", "Bolivia"],
-                     ["es-CL", "Chile"],
-                     ["es-CO", "Colombia"],
-                     ["es-CR", "Costa Rica"],
-                     ["es-EC", "Ecuador"],
-                     ["es-SV", "El Salvador"],
-                     ["es-ES", "España"],
-                     ["es-US", "Estados Unidos"],
-                     ["es-GT", "Guatemala"],
-                     ["es-HN", "Honduras"],
-                     ["es-MX", "México"],
-                     ["es-NI", "Nicaragua"],
-                     ["es-PA", "Panamá"],
-                     ["es-PY", "Paraguay"],
-                     ["es-PE", "Perú"],
-                     ["es-PR", "Puerto Rico"],
-                     ["es-DO", "República Dominicana"],
-                     ["es-UY", "Uruguay"],
-                     ["es-VE", "Venezuela"]],
- ["Euskara", ["eu-ES"]],
- ["Français", ["fr-FR"]],
- ["Galego", ["gl-ES"]],
- ["Hrvatski", ["hr_HR"]],
- ["IsiZulu", ["zu-ZA"]],
- ["Íslenska", ["is-IS"]],
- ["Italiano", ["it-IT", "Italia"],
-                     ["it-CH", "Svizzera"]],
- ["Magyar", ["hu-HU"]],
- ["Nederlands", ["nl-NL"]],
- ["Norsk bokmål", ["nb-NO"]],
- ["Polski", ["pl-PL"]],
- ["Português", ["pt-BR", "Brasil"],
-                     ["pt-PT", "Portugal"]],
- ["Română", ["ro-RO"]],
- ["Slovenčina", ["sk-SK"]],
- ["Suomi", ["fi-FI"]],
- ["Svenska", ["sv-SE"]],
- ["Türkçe", ["tr-TR"]],
- ["български", ["bg-BG"]],
- ["Pусский", ["ru-RU"]],
- ["Српски", ["sr-RS"]],
- ["한국어", ["ko-KR"]],
- ["中文", ["cmn-Hans-CN", "普通话 (中国大陆)"],
-                     ["cmn-Hans-HK", "普通话 (香港)"],
-                     ["cmn-Hant-TW", "中文 (台灣)"],
-                     ["yue-Hant-HK", "粵語 (香港)"]],
- ["日本語", ["ja-JP"]],
- ["Lingua latīna", ["la"]]];
+	["Bahasa Indonesia", ["id-ID"]],
+	["Bahasa Melayu", ["ms-MY"]],
+	["Català", ["ca-ES"]],
+	["Čeština", ["cs-CZ"]],
+	["Deutsch", ["de-DE"]],
+	["English", ["en-AU", "Australia"],
+		["en-CA", "Canada"],
+		["en-IN", "India"],
+		["en-NZ", "New Zealand"],
+		["en-ZA", "South Africa"],
+		["en-GB", "United Kingdom"],
+		["en-US", "United States"]],
+	["Español", ["es-AR", "Argentina"],
+		["es-BO", "Bolivia"],
+		["es-CL", "Chile"],
+		["es-CO", "Colombia"],
+		["es-CR", "Costa Rica"],
+		["es-EC", "Ecuador"],
+		["es-SV", "El Salvador"],
+		["es-ES", "España"],
+		["es-US", "Estados Unidos"],
+		["es-GT", "Guatemala"],
+		["es-HN", "Honduras"],
+		["es-MX", "México"],
+		["es-NI", "Nicaragua"],
+		["es-PA", "Panamá"],
+		["es-PY", "Paraguay"],
+		["es-PE", "Perú"],
+		["es-PR", "Puerto Rico"],
+		["es-DO", "República Dominicana"],
+		["es-UY", "Uruguay"],
+		["es-VE", "Venezuela"]],
+	["Euskara", ["eu-ES"]],
+	["Français", ["fr-FR"]],
+	["Galego", ["gl-ES"]],
+	["Hrvatski", ["hr_HR"]],
+	["IsiZulu", ["zu-ZA"]],
+	["Íslenska", ["is-IS"]],
+	["Italiano", ["it-IT", "Italia"],
+		["it-CH", "Svizzera"]],
+	["Magyar", ["hu-HU"]],
+	["Nederlands", ["nl-NL"]],
+	["Norsk bokmål", ["nb-NO"]],
+	["Polski", ["pl-PL"]],
+	["Português", ["pt-BR", "Brasil"],
+		["pt-PT", "Portugal"]],
+	["Română", ["ro-RO"]],
+	["Slovenčina", ["sk-SK"]],
+	["Suomi", ["fi-FI"]],
+	["Svenska", ["sv-SE"]],
+	["Türkçe", ["tr-TR"]],
+	["български", ["bg-BG"]],
+	["Pусский", ["ru-RU"]],
+	["Српски", ["sr-RS"]],
+	["한국어", ["ko-KR"]],
+	["中文", ["cmn-Hans-CN", "普通话 (中国大陆)"],
+		["cmn-Hans-HK", "普通话 (香港)"],
+		["cmn-Hant-TW", "中文 (台灣)"],
+		["yue-Hant-HK", "粵語 (香港)"]],
+	["日本語", ["ja-JP"]],
+	["Lingua latīna", ["la"]]];
 
-var i;
-var l = langs.length;
-for(i = 0; i < l; i++){
-if($("select_language")){ $("select_language").options[i] = new Option(langs[i][0], i); }
-}
-
-function updateCountry(){
-    var i;
-	for(i = $("select_dialect").options.length - 1; i >= 0; i--){
-		$("select_dialect").remove(i);
+	var i;
+	var l = langs.length;
+	for(i = 0; i < l; i++){
+		if($("select_language")){ $("select_language").options[i] = new Option(langs[i][0], i); }
 	}
-    var list = langs[$("select_language").selectedIndex];
-    var listi;
-    var listl = list.length;
-	for(listi = 1; listi < listl; listi++){
-		$("select_dialect").options.add(new Option(list[listi][1], list[listi][0]));
+
+	function updateCountry(){
+		var i;
+		for(i = $("select_dialect").options.length - 1; i >= 0; i--){
+			$("select_dialect").remove(i);
+		}
+		var list = langs[$("select_language").selectedIndex];
+		var listi;
+		var listl = list.length;
+		for(listi = 1; listi < listl; listi++){
+			$("select_dialect").options.add(new Option(list[listi][1], list[listi][0]));
+		}
+		$("select_dialect").style.visibility = list[1].length == 1 ? "hidden" : "visible";
 	}
-	$("select_dialect").style.visibility = list[1].length == 1 ? "hidden" : "visible";
-}
 
-// add default language for first run
-// will be rewritten if there is a 'saved setting'
-var webspeechlang = document.getElementById("select_language");
-if(webspeechlang.selectedIndex != -1){ webspeechlang.selectedIndex = "6"; updateCountry(); }
-var webspeechcountry = document.getElementById("select_dialect");
-if(webspeechcountry.selectedIndex != -1){ webspeechcountry.selectedIndex = "6"; }
-//---
+	// add default language for first run
+	// will be rewritten if there is a 'saved setting'
+	var webspeechlang = document.getElementById("select_language");
+	if(webspeechlang.selectedIndex != -1){ webspeechlang.selectedIndex = "6"; updateCountry(); }
+	var webspeechcountry = document.getElementById("select_dialect");
+	if(webspeechcountry.selectedIndex != -1){ webspeechcountry.selectedIndex = "6"; }
+	//---
 
-$("select_language").addEventListener("click", function(){ updateCountry(); },false);
-$("select_language").addEventListener("change", function(){ updateCountry(); save_options(); });
-$("select_dialect").addEventListener("change", function(){ save_options(); });
+	$("select_language").addEventListener("click", function(){ updateCountry(); }, false);
+	$("select_language").addEventListener("change", function(){ updateCountry(); save_options(); });
+	$("select_dialect").addEventListener("change", function(){ save_options(); });
 
-//---
-// open multi opacity
-$("btnmultiopacity").addEventListener("click", function(){
-    materialAlert(function(result){ console.log(result); });
-});
+	//---
+	// open multi opacity
+	$("btnmultiopacity").addEventListener("click", function(){
+		materialAlert(function(result){ console.log(result); });
+	});
 
-$("materialModal").addEventListener("click", function(e){
-    closeMaterialAlert(e, false);
-});
-$("materialModalContent").addEventListener("click", function(e){
-    e.stopPropagation();
-});
-$("materialModalButtonOK").addEventListener("click", function(e){
-    closeMaterialAlert(e, true);
-});
-$("materialModalButtonCANCEL").addEventListener("click", function(e){
-    closeMaterialAlert(e, false);
-});
+	$("materialModal").addEventListener("click", function(e){
+		closeMaterialAlert(e, false);
+	});
+	$("materialModalContent").addEventListener("click", function(e){
+		e.stopPropagation();
+	});
+	$("materialModalButtonOK").addEventListener("click", function(e){
+		closeMaterialAlert(e, true);
+	});
+	$("materialModalButtonCANCEL").addEventListener("click", function(e){
+		closeMaterialAlert(e, false);
+	});
 
-// rate
-$("materialModalRate").addEventListener("click", function(e){
-    closeMaterialRateAlert(e, false);
-});
-$("materialModalRateContent").addEventListener("click", function(e){
-    e.stopPropagation();
-});
-$("materialModalRateButtonOK").addEventListener("click", function(e){
-    closeMaterialRateAlert(e, true);
-    window.open(writereview); $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});
-});
-$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
-    closeMaterialRateAlert(e, false);
-    chrome.storage.sync.set({"firstsawrate": false});
-});
+	// rate
+	$("materialModalRate").addEventListener("click", function(e){
+		closeMaterialRateAlert(e, false);
+	});
+	$("materialModalRateContent").addEventListener("click", function(e){
+		e.stopPropagation();
+	});
+	$("materialModalRateButtonOK").addEventListener("click", function(e){
+		closeMaterialRateAlert(e, true);
+		window.open(writereview); $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});
+	});
+	$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
+		closeMaterialRateAlert(e, false);
+		chrome.storage.sync.set({"firstsawrate": false});
+	});
 
-// introduce
-$("materialModalIntroduce").addEventListener("click", function(e){
-    closeMaterialIntroduceAlert(e, false);
-});
-$("materialModalIntroduceContent").addEventListener("click", function(e){
-    e.stopPropagation();
-});
-$("materialModalIntroduceButtonOK").addEventListener("click", function(e){
-    closeMaterialIntroduceAlert(e, true);
-});
-$("materialModalIntroduceButtonCANCEL").addEventListener("click", function(e){
-    closeMaterialIntroduceAlert(e, false);
-});
+	// introduce
+	$("materialModalIntroduce").addEventListener("click", function(e){
+		closeMaterialIntroduceAlert(e, false);
+	});
+	$("materialModalIntroduceContent").addEventListener("click", function(e){
+		e.stopPropagation();
+	});
+	$("materialModalIntroduceButtonOK").addEventListener("click", function(e){
+		closeMaterialIntroduceAlert(e, true);
+	});
+	$("materialModalIntroduceButtonCANCEL").addEventListener("click", function(e){
+		closeMaterialIntroduceAlert(e, false);
+	});
 
-// dialog
-function materialAlert(){
-    document.getElementById("materialModalButtonCANCEL").style.display = "none";
-    document.getElementById("materialModal").className = "show";
-    document.getElementById("materialModal").setAttribute("aria-disabled", "false");
-}
-function closeMaterialAlert(e){
-    e.stopPropagation();
-    document.getElementById("materialModal").className = "hide";
-    document.getElementById("materialModal").setAttribute("aria-disabled", "true");
-}
+	// dialog
+	function materialAlert(){
+		document.getElementById("materialModalButtonCANCEL").style.display = "none";
+		document.getElementById("materialModal").className = "show";
+		document.getElementById("materialModal").setAttribute("aria-disabled", "false");
+	}
+	function closeMaterialAlert(e){
+		e.stopPropagation();
+		document.getElementById("materialModal").className = "hide";
+		document.getElementById("materialModal").setAttribute("aria-disabled", "true");
+	}
 
-// rate
-function materialRateAlert(){
-    document.getElementById("materialModalRate").className = "show";
-    document.getElementById("materialModalRate").setAttribute("aria-disabled", "false");
-}
-function closeMaterialRateAlert(e){
-    e.stopPropagation();
-    document.getElementById("materialModalRate").className = "hide";
-    document.getElementById("materialModalRate").setAttribute("aria-disabled", "true");
-}
+	// rate
+	function materialRateAlert(){
+		document.getElementById("materialModalRate").className = "show";
+		document.getElementById("materialModalRate").setAttribute("aria-disabled", "false");
+	}
+	function closeMaterialRateAlert(e){
+		e.stopPropagation();
+		document.getElementById("materialModalRate").className = "hide";
+		document.getElementById("materialModalRate").setAttribute("aria-disabled", "true");
+	}
 
-// introduce
-function materialIntroduceAlert(){
-    document.getElementById("materialModalIntroduceButtonCANCEL").style.display = "none";
-    document.getElementById("materialModalIntroduce").className = "show";
-    document.getElementById("materialModalIntroduce").setAttribute("aria-disabled", "false");
-}
-function closeMaterialIntroduceAlert(e){
-    e.stopPropagation();
-    document.getElementById("materialModalIntroduce").className = "hide";
-    document.getElementById("materialModalIntroduce").setAttribute("aria-disabled", "true");
-}
-//---
+	// introduce
+	function materialIntroduceAlert(){
+		document.getElementById("materialModalIntroduceButtonCANCEL").style.display = "none";
+		document.getElementById("materialModalIntroduce").className = "show";
+		document.getElementById("materialModalIntroduce").setAttribute("aria-disabled", "false");
+	}
+	function closeMaterialIntroduceAlert(e){
+		e.stopPropagation();
+		document.getElementById("materialModalIntroduce").className = "hide";
+		document.getElementById("materialModalIntroduce").setAttribute("aria-disabled", "true");
+	}
+	//---
 
-	chrome.storage.sync.get(["firstDate","interval","lightcolor","lightimage","lightimagea","lightimagen","autoplay","playlist","flash","head","fadein","fadeout","infobar","sharebutton","likebutton","readera","readern","shortcutlight","eyea","eyen","suggestions","videoheadline","eastereggs","contextmenus","viewcount","eyealist","mousespotlighto","mousespotlightc","mousespotlighta","nighttime","begintime","endtime","addvideobutton","likebar","ambilight","ambilightrangeblurradius","ambilightrangespreadradius","mousespotlightt","ambilightfixcolor","ambilightvarcolor","ambilightcolorhex","ambilight4color","ambilight1colorhex","ambilight2colorhex","ambilight3colorhex","ambilight4colorhex","password","enterpassword","noflash","hardflash","ecosaver","ecosavertime","dynamic","dynamic1","dynamic2","dynamic3","dynamic4","dynamic5","dynamic6","dynamic7","dynamic8","dynamic9","dynamic10","hoveroptiondyn5","autoplayonly","blur","maxquality","autowidthyoutube","customqualityyoutube","cinemaontop","alllightsoff","spotlightradius","atmosphereonly","optionskipremember","nighttheme","nightonly","nightenabletheme","autoplaydelay","autoplaydelaytime","motion","lightimagelin","linearsq","colora","intervallina","colorb","intervallinb","speech","speechlang","speechcountry","atmosvivid","countremember","excludedDomains","autoplayDomains","atmosphereDomains","nightDomains","cammotiononly","speechonly","cammotionDomains","speechDomains","autoplaychecklistwhite","autoplaychecklistblack","reviewedlastonversion","applastonversion","autostop","autostoponly","autostopchecklistwhite","autostopchecklistblack","nightmodechecklistwhite","nightmodechecklistblack","autostopDomains","nighthover","nmtopleft","nmtopright","nmbottomright","nmbottomleft","nmcustom","nightactivetime","nmbegintime","nmendtime","lampandnightmode","eyechecklistblack","eyechecklistwhite","nightmodebck","nightmodetxt","mobilelastonversion","no360youtube","videotool","reflection","reflectionamount","videotoolonly","videotoolchecklistwhite","videotoolchecklistblack","videotoolDomains","nightmodehyperlink","block60fps","videovolume","videovolumecolor","videovolumesteps","videovolumelabel","icon","visopacity","videotoolcolor","hovervideo","hovervideoamount","mousespotlights","drawatmosfps","aplay","apause","astop","videozoom","playrate","playrateamount","speedtoolbar","atmosontotlmode","titleinvertcolor","vpause","darkbrowsertheme","autostopred","autostoptrans","videovolumeposa","videovolumeposb","videovolumeposc","videovolumehold","multiopacityDomains","multiopacall","multiopacsel","firstsawrate","videovolumealt","nightmodebydomain","nightmodebypage","introduce","seeanalytics","nightmodegesture","nightmodeswitchhide","nightmodeswitchhidetime","atmosfpsauto","atmosfpsmanual"], function(items){
-		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow",items["interval"]); $("slider").setAttribute("aria-valuenow",items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }
-		else{ $("interval").value = 80; }
-		if(items["lightcolor"]){ $("lightcolor").value = items["lightcolor"]; }
-		else{ $("lightcolor").value = "#000000"; }
-		if(items["lightimage"]){ $("lightimage").value = items["lightimage"]; }
-		else{ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
+	chrome.storage.sync.get(["firstDate", "interval", "lightcolor", "lightimage", "lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "begintime", "endtime", "addvideobutton", "likebar", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "password", "enterpassword", "noflash", "hardflash", "ecosaver", "ecosavertime", "dynamic", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "autoplayonly", "blur", "maxquality", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "spotlightradius", "atmosphereonly", "optionskipremember", "nighttheme", "nightonly", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "motion", "lightimagelin", "linearsq", "colora", "intervallina", "colorb", "intervallinb", "speech", "speechlang", "speechcountry", "atmosvivid", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotiononly", "speechonly", "cammotionDomains", "speechDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "reviewedlastonversion", "applastonversion", "autostop", "autostoponly", "autostopchecklistwhite", "autostopchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "autostopDomains", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "nmbegintime", "nmendtime", "lampandnightmode", "eyechecklistblack", "eyechecklistwhite", "nightmodebck", "nightmodetxt", "mobilelastonversion", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "videotoolDomains", "nightmodehyperlink", "block60fps", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "icon", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "titleinvertcolor", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacityDomains", "multiopacall", "multiopacsel", "firstsawrate", "videovolumealt", "nightmodebydomain", "nightmodebypage", "introduce", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual"], function(items){
+		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow", items["interval"]); $("slider").setAttribute("aria-valuenow", items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }else{ $("interval").value = 80; }
+		if(items["lightcolor"]){ $("lightcolor").value = items["lightcolor"]; }else{ $("lightcolor").value = "#000000"; }
+		if(items["lightimage"]){ $("lightimage").value = items["lightimage"]; }else{ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
 		if(items["lightimagea"] == true){ $("lightimagea").checked = true; }
 		if(items["lightimagen"] == true){ $("lightimagen").checked = true; }
 		if(items["autoplay"] == true){ $("autoplay").checked = true; }
@@ -429,40 +426,29 @@ function closeMaterialIntroduceAlert(e){
 		if(items["mousespotlightc"] == true){ $("mousespotlightc").checked = true; }
 		if(items["mousespotlighta"] == true){ $("mousespotlighta").checked = true; }
 		if(items["nighttime"] == true){ $("nighttime").checked = true; }
-		if(items["begintime"]){ $("begintime").value = items["begintime"]; }
-		else{ $("begintime").value = "21:00"; }
-		if(items["endtime"]){ $("endtime").value = items["endtime"]; }
-		else{ $("endtime").value = "23:45"; }
+		if(items["begintime"]){ $("begintime").value = items["begintime"]; }else{ $("begintime").value = "21:00"; }
+		if(items["endtime"]){ $("endtime").value = items["endtime"]; }else{ $("endtime").value = "23:45"; }
 		if(items["addvideobutton"] == true){ $("addvideobutton").checked = true; }
 		if(items["likebar"] == true){ $("likebar").checked = true; }
 		if(items["ambilight"] == true){ $("ambilight").checked = true; }
-		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow",items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow",items["ambilightrangeblurradius"]); }
-		else{ $("ambilightrangeblurradius").value = 70; }
-		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow",items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow",items["ambilightrangespreadradius"]); }
-		else{ $("ambilightrangespreadradius").value = 20; }
+		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; }
+		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
 		if(items["mousespotlightt"] == true){ $("mousespotlightt").checked = true; }
 		if(items["ambilightfixcolor"] == true){ $("ambilightfixcolor").checked = true; }
 		if(items["ambilightvarcolor"] == true){ $("ambilightvarcolor").checked = true; }
-		if(items["ambilightcolorhex"]){ $("ambilightcolorhex").value = items["ambilightcolorhex"]; }
-		else{ $("ambilightcolorhex").value = "#47C2FF"; }
+		if(items["ambilightcolorhex"]){ $("ambilightcolorhex").value = items["ambilightcolorhex"]; }else{ $("ambilightcolorhex").value = "#47C2FF"; }
 		if(items["ambilight4color"] == true){ $("ambilight4color").checked = true; }
-		if(items["ambilight1colorhex"]){ $("ambilight1colorhex").value = items["ambilight1colorhex"]; }
-		else{ $("ambilight1colorhex").value = "#FF0000"; }
-		if(items["ambilight2colorhex"]){ $("ambilight2colorhex").value = items["ambilight2colorhex"]; }
-		else{ $("ambilight2colorhex").value = "#FFEE00"; }
-		if(items["ambilight3colorhex"]){ $("ambilight3colorhex").value = items["ambilight3colorhex"]; }
-		else{ $("ambilight3colorhex").value = "#00FF00"; }
-		if(items["ambilight4colorhex"]){ $("ambilight4colorhex").value = items["ambilight4colorhex"]; }
-		else{ $("ambilight4colorhex").value = "#0000FF"; }
+		if(items["ambilight1colorhex"]){ $("ambilight1colorhex").value = items["ambilight1colorhex"]; }else{ $("ambilight1colorhex").value = "#FF0000"; }
+		if(items["ambilight2colorhex"]){ $("ambilight2colorhex").value = items["ambilight2colorhex"]; }else{ $("ambilight2colorhex").value = "#FFEE00"; }
+		if(items["ambilight3colorhex"]){ $("ambilight3colorhex").value = items["ambilight3colorhex"]; }else{ $("ambilight3colorhex").value = "#00FF00"; }
+		if(items["ambilight4colorhex"]){ $("ambilight4colorhex").value = items["ambilight4colorhex"]; }else{ $("ambilight4colorhex").value = "#0000FF"; }
 		if(items["password"] == true){ $("password").checked = true; }
 		if(items["enterpassword"]){ $("enterpassword").value = items["enterpassword"]; }
 		if(items["noflash"] == true){ $("noflash").checked = true; }
 		if(items["hardflash"] == true){ $("hardflash").checked = true; }
 		if(items["ecosaver"] == true){ $("ecosaver").checked = true; }
-		if(items["ecosavertime"]){ $("ecosavertime").value = items["ecosavertime"]; }
-		else{ $("ecosavertime").value = "60"; }
-		if(items["dynamic"] == true){ $("dynamic").checked = true; }
-		else{ $("lightdynamic").disabled = true; }
+		if(items["ecosavertime"]){ $("ecosavertime").value = items["ecosavertime"]; }else{ $("ecosavertime").value = "60"; }
+		if(items["dynamic"] == true){ $("dynamic").checked = true; }else{ $("lightdynamic").disabled = true; }
 		if(items["dynamic1"] == true){ $("dynamic1").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicfishtank"); }
 		if(items["dynamic2"] == true){ $("dynamic2").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicblocks"); }
 		if(items["dynamic3"] == true){ $("dynamic3").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicraindrops"); }
@@ -474,52 +460,39 @@ function closeMaterialIntroduceAlert(e){
 		if(items["dynamic9"] == true){ $("dynamic9").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamictriangulation"); }
 		if(items["dynamic10"] == true){ $("dynamic10").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstars"); }
 		if(items["hoveroptiondyn5"] == true){ $("hoveroptiondyn5").checked = true; }
-		if(items["autoplayonly"] == true){ $("autoplayonly").checked = true; }
-		else{ $("autoplayonly").checked = false; }
+		if(items["autoplayonly"] == true){ $("autoplayonly").checked = true; }else{ $("autoplayonly").checked = false; }
 		if(items["blur"] == true){ $("blur").checked = true; }
 		if(items["maxquality"]){ $("youtubequality").value = items["maxquality"]; }
 		if(items["autowidthyoutube"] == true){ $("autowidthyoutube").checked = true; }
 		if(items["customqualityyoutube"] == true){ $("customqualityyoutube").checked = true; }
 		if(items["cinemaontop"] == true){ $("cinemaontop").checked = true; }
 		if(items["alllightsoff"] == true){ $("alllightsoff").checked = true; }
-		if(items["spotlightradius"]){ $("spotlightradius").value = items["spotlightradius"]; }
-		else{ $("spotlightradius").value = 50; }
-		if(items["atmosphereonly"] == true){ $("atmosphereonly").checked = true; }
-		else{ $("atmosphereonly").checked = false; }
+		if(items["spotlightradius"]){ $("spotlightradius").value = items["spotlightradius"]; }else{ $("spotlightradius").value = 50; }
+		if(items["atmosphereonly"] == true){ $("atmosphereonly").checked = true; }else{ $("atmosphereonly").checked = false; }
 		if(items["optionskipremember"] == true){ $("optionskipremember").checked = true; }
 		if(items["nighttheme"] == true){ $("nighttheme").checked = true; }
-		if(items["nightonly"] == true){ $("nightonly").checked = true; }
-		else{ $("nightonly").checked = false; }
+		if(items["nightonly"] == true){ $("nightonly").checked = true; }else{ $("nightonly").checked = false; }
 		if(items["nightenabletheme"] == true){ $("nightenabletheme").checked = true; }
 		if(items["autoplaydelay"] == true){ $("autoplaydelay").checked = true; }
-		if(items["autoplaydelaytime"]){ $("autoplaydelaytime").value = items["autoplaydelaytime"]; }
-		else{ $("autoplaydelaytime").value = 3; }
+		if(items["autoplaydelaytime"]){ $("autoplaydelaytime").value = items["autoplaydelaytime"]; }else{ $("autoplaydelaytime").value = 3; }
 		if(items["motion"] == true){ $("motion").checked = true; }
 		if(items["lightimagelin"] == true){ $("lightimagelin").checked = true; }
-		if(items["linearsq"]){ $("linearsq").value = items["linearsq"]; }
-		else{ $("linearsq").value = "top"; }
-		if(items["colora"]){ $("colora").value = items["colora"]; }
-		else{ $("colora").value = "#000000"; }
-		if(items["intervallina"]){ $("intervallina").value = items["intervallina"]; }
-		else{ $("intervallina").value = "0"; }
-		if(items["colorb"]){ $("colorb").value = items["colorb"]; }
-		else{ $("colorb").value = "#858585"; }
-		if(items["intervallinb"]){ $("intervallinb").value = items["intervallinb"]; }
-		else{ $("intervallinb").value = "100"; }
+		if(items["linearsq"]){ $("linearsq").value = items["linearsq"]; }else{ $("linearsq").value = "top"; }
+		if(items["colora"]){ $("colora").value = items["colora"]; }else{ $("colora").value = "#000000"; }
+		if(items["intervallina"]){ $("intervallina").value = items["intervallina"]; }else{ $("intervallina").value = "0"; }
+		if(items["colorb"]){ $("colorb").value = items["colorb"]; }else{ $("colorb").value = "#858585"; }
+		if(items["intervallinb"]){ $("intervallinb").value = items["intervallinb"]; }else{ $("intervallinb").value = "100"; }
 		if(items["speech"] == true){ $("speech").checked = true; }
 		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
 		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
 		if(items["atmosvivid"] == true){ $("atmosvivid").checked = true; }
-		if(items["cammotiononly"] == true){ $("cammotiononly").checked = true; }
-		else{ $("cammotiononly").checked = false; }
-		if(items["speechonly"] == true){ $("speechonly").checked = true; }
-		else{ $("speechonly").checked = false; }
+		if(items["cammotiononly"] == true){ $("cammotiononly").checked = true; }else{ $("cammotiononly").checked = false; }
+		if(items["speechonly"] == true){ $("speechonly").checked = true; }else{ $("speechonly").checked = false; }
 		if(items["autoplaychecklistwhite"] == true){ $("autoplaychecklistwhite").checked = true; }
 		if(items["autoplaychecklistblack"] == true){ $("autoplaychecklistblack").checked = true; }
 		if(items["applastonversion"] == chrome.runtime.getManifest().version){ $("sectionauroraplayerappbox").style.display = "none"; }
 		if(items["autostop"] == true){ $("autostop").checked = true; }
-		if(items["autostoponly"] == true){ $("autostoponly").checked = true; }
-		else{ $("autostoponly").checked = false; }
+		if(items["autostoponly"] == true){ $("autostoponly").checked = true; }else{ $("autostoponly").checked = false; }
 		if(items["autostopchecklistwhite"] == true){ $("autostopchecklistwhite").checked = true; }
 		if(items["autostopchecklistblack"] == true){ $("autostopchecklistblack").checked = true; }
 		if(items["nighthover"] == true){ $("nighthover").checked = true; }
@@ -531,392 +504,374 @@ function closeMaterialIntroduceAlert(e){
 		if(items["nmbottomleft"] == true){ $("nmbottomleft").checked = true; }
 		if(items["nmcustom"] == true){ $("nmcustom").checked = true; }
 		if(items["nightactivetime"] == true){ $("nightactivetime").checked = true; }
-		if(items["nmbegintime"]){ $("nmbegintime").value = items["nmbegintime"]; }
-		else{ $("nmbegintime").value = "21:00"; }
-		if(items["nmendtime"]){ $("nmendtime").value = items["nmendtime"]; }
-		else{ $("nmendtime").value = "23:45"; }
-		if(items["lampandnightmode"] == true){ $("lampandnightmode").checked = true; }
-		else{ $("lampandnightmode").checked = false; }
+		if(items["nmbegintime"]){ $("nmbegintime").value = items["nmbegintime"]; }else{ $("nmbegintime").value = "21:00"; }
+		if(items["nmendtime"]){ $("nmendtime").value = items["nmendtime"]; }else{ $("nmendtime").value = "23:45"; }
+		if(items["lampandnightmode"] == true){ $("lampandnightmode").checked = true; }else{ $("lampandnightmode").checked = false; }
 		if(items["eyechecklistwhite"] == true){ $("eyechecklistwhite").checked = true; }
 		if(items["eyechecklistblack"] == true){ $("eyechecklistblack").checked = true; }
-		if(items["nightmodebck"]){ $("nightmodebck").value = items["nightmodebck"]; }
-		else{ $("nightmodebck").value = "#1e1e1e"; }
-		if(items["nightmodetxt"]){ $("nightmodetxt").value = items["nightmodetxt"]; }
-		else{ $("nightmodetxt").value = "#ffffff"; }
+		if(items["nightmodebck"]){ $("nightmodebck").value = items["nightmodebck"]; }else{ $("nightmodebck").value = "#1e1e1e"; }
+		if(items["nightmodetxt"]){ $("nightmodetxt").value = items["nightmodetxt"]; }else{ $("nightmodetxt").value = "#ffffff"; }
 		if(items["mobilelastonversion"] == chrome.runtime.getManifest().version){ $("sectionmobileappbox").style.display = "none"; }
 		if(items["no360youtube"] == true){ $("no360youtube").checked = true; }
 		if(items["videotool"] == true){ $("videotool").checked = true; }
 		if(items["reflection"] == true){ $("reflection").checked = true; }
-		if(items["reflectionamount"]){ $("reflectionamount").value = items["reflectionamount"]; }
-		else{ $("reflectionamount").value = "20"; }
+		if(items["reflectionamount"]){ $("reflectionamount").value = items["reflectionamount"]; }else{ $("reflectionamount").value = "20"; }
 		if(items["videotoolonly"] == true){ $("videotoolonly").checked = true; }
 		if(items["videotoolchecklistwhite"] == true){ $("videotoolchecklistwhite").checked = true; }
 		if(items["videotoolchecklistblack"] == true){ $("videotoolchecklistblack").checked = true; }
-		if(items["nightmodehyperlink"]){ $("nightmodehyperlink").value = items["nightmodehyperlink"]; }
-		else{ $("nightmodehyperlink").value = "#ffffff"; }
+		if(items["nightmodehyperlink"]){ $("nightmodehyperlink").value = items["nightmodehyperlink"]; }else{ $("nightmodehyperlink").value = "#ffffff"; }
 		if(items["block60fps"] == true){ $("block60fps").checked = true; }
 		if(items["videovolume"] == true){ $("videovolume").checked = true; }
-		if(items["videovolumecolor"]){ $("videovolumecolor").value = items["videovolumecolor"]; }
-		else{ $("videovolumecolor").value = "#167ac6"; }
-		if(items["videovolumesteps"]){ $("videovolumesteps").value = items["videovolumesteps"]; }
-		else{ $("videovolumesteps").value = 5; }
+		if(items["videovolumecolor"]){ $("videovolumecolor").value = items["videovolumecolor"]; }else{ $("videovolumecolor").value = "#167ac6"; }
+		if(items["videovolumesteps"]){ $("videovolumesteps").value = items["videovolumesteps"]; }else{ $("videovolumesteps").value = 5; }
 		if(items["videovolumelabel"] == true){ $("videovolumelabel").checked = true; }
-		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon",items["icon"]); }
-		if(items["visopacity"]){ $("visopacity").value = items["visopacity"]; }
-		else{ $("visopacity").value = "80"; }
-		if(items["videotoolcolor"]){ $("videotoolcolor").value = items["videotoolcolor"]; }
-		else{ $("videotoolcolor").value = "#000000"; }
+		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon", items["icon"]); }
+		if(items["visopacity"]){ $("visopacity").value = items["visopacity"]; }else{ $("visopacity").value = "80"; }
+		if(items["videotoolcolor"]){ $("videotoolcolor").value = items["videotoolcolor"]; }else{ $("videotoolcolor").value = "#000000"; }
 		if(items["hovervideo"] == true){ $("hovervideo").checked = true; }
-		if(items["hovervideoamount"]){ $("hovervideoamount").value = items["hovervideoamount"]; }
-		else{ $("hovervideoamount").value = "3"; }
+		if(items["hovervideoamount"]){ $("hovervideoamount").value = items["hovervideoamount"]; }else{ $("hovervideoamount").value = "3"; }
 		if(items["mousespotlights"] == true){ $("mousespotlights").checked = true; }
-		if(items["drawatmosfps"]){ $("drawatmosfps").value = items["drawatmosfps"]; }
-		else{ $("drawatmosfps").value = "12"; }
+		if(items["drawatmosfps"]){ $("drawatmosfps").value = items["drawatmosfps"]; }else{ $("drawatmosfps").value = "12"; }
 		if(items["aplay"] == true){ $("aplay").checked = true; }
 		if(items["apause"] == true){ $("apause").checked = true; }
 		if(items["astop"] == true){ $("astop").checked = true; }
 		if(items["videozoom"] == true){ $("videozoom").checked = true; }
 		if(items["playrate"] == true){ $("playrate").checked = true; }
-		if(items["playrateamount"]){ $("playrateamount").value = items["playrateamount"]; }
-		else{ $("playrateamount").value = "1"; }
+		if(items["playrateamount"]){ $("playrateamount").value = items["playrateamount"]; }else{ $("playrateamount").value = "1"; }
 		if(items["speedtoolbar"] == true){ $("speedtoolbar").checked = true; }
 		if(items["atmosontotlmode"] == true){ $("atmosontotlmode").checked = true; }
-		if(items["titleinvertcolor"]){ $("titleinvertcolor").value = items["titleinvertcolor"]; }
-		else{ $("titleinvertcolor").value = "#ffffff"; }
+		if(items["titleinvertcolor"]){ $("titleinvertcolor").value = items["titleinvertcolor"]; }else{ $("titleinvertcolor").value = "#ffffff"; }
 		if(items["vpause"] == true){ $("vpause").checked = true; }
-        if(items["darkbrowsertheme"] == true){ $("darkbrowsertheme").checked = true; }
-        if(items["autostopred"] == true){ $("autostopred").checked = true; }
-        if(items["autostoptrans"] == true){ $("autostoptrans").checked = true; }
-        if(items["videovolumeposa"] == true){ $("videovolumeposa").checked = true; }
-        if(items["videovolumeposb"] == true){ $("videovolumeposb").checked = true; }
-        if(items["videovolumeposc"] == true){ $("videovolumeposc").checked = true; }
-        if(items["videovolumehold"] == true){ $("videovolumehold").checked = true; }
-        if(items["multiopacall"] == true){ $("multiopacall").checked = true; }
-        if(items["multiopacsel"] == true){ $("multiopacsel").checked = true; }
-        if(items["videovolumealt"] == true){ $("videovolumealt").checked = true; }
-        if(items["nightmodebydomain"] == true){ $("nightmodebydomain").checked = true; }
-        if(items["nightmodebypage"] == true){ $("nightmodebypage").checked = true; }
-        if(items["seeanalytics"] == true){ $("seeanalytics").checked = true; }
-        if(items["nightmodegesture"] == true){ $("nightmodegesture").checked = true; }
-        if(items["nightmodeswitchhide"] == true){ $("nightmodeswitchhide").checked = true; }
-        if(items["nightmodeswitchhidetime"]){ $("nightmodeswitchhidetime").value = items["nightmodeswitchhidetime"]; }
-        else{ $("nightmodeswitchhidetime").value = "3"; }
-        if(items["atmosfpsauto"] == true){ $("atmosfpsauto").checked = true; }
-        if(items["atmosfpsmanual"] == true){ $("atmosfpsmanual").checked = true; }
+		if(items["darkbrowsertheme"] == true){ $("darkbrowsertheme").checked = true; }
+		if(items["autostopred"] == true){ $("autostopred").checked = true; }
+		if(items["autostoptrans"] == true){ $("autostoptrans").checked = true; }
+		if(items["videovolumeposa"] == true){ $("videovolumeposa").checked = true; }
+		if(items["videovolumeposb"] == true){ $("videovolumeposb").checked = true; }
+		if(items["videovolumeposc"] == true){ $("videovolumeposc").checked = true; }
+		if(items["videovolumehold"] == true){ $("videovolumehold").checked = true; }
+		if(items["multiopacall"] == true){ $("multiopacall").checked = true; }
+		if(items["multiopacsel"] == true){ $("multiopacsel").checked = true; }
+		if(items["videovolumealt"] == true){ $("videovolumealt").checked = true; }
+		if(items["nightmodebydomain"] == true){ $("nightmodebydomain").checked = true; }
+		if(items["nightmodebypage"] == true){ $("nightmodebypage").checked = true; }
+		if(items["seeanalytics"] == true){ $("seeanalytics").checked = true; }
+		if(items["nightmodegesture"] == true){ $("nightmodegesture").checked = true; }
+		if(items["nightmodeswitchhide"] == true){ $("nightmodeswitchhide").checked = true; }
+		if(items["nightmodeswitchhidetime"]){ $("nightmodeswitchhidetime").value = items["nightmodeswitchhidetime"]; }else{ $("nightmodeswitchhidetime").value = "3"; }
+		if(items["atmosfpsauto"] == true){ $("atmosfpsauto").checked = true; }
+		if(items["atmosfpsmanual"] == true){ $("atmosfpsmanual").checked = true; }
 
-// show introduce
-if(items["introduce"] != true){
-    window.setTimeout(function(){
-        materialIntroduceAlert(function(result){ console.log(result); });
-    }, 2500);
-    chrome.storage.sync.set({"introduce": true});
-}
+		// show introduce
+		if(items["introduce"] != true){
+			window.setTimeout(function(){
+				materialIntroduceAlert(function(result){ console.log(result); });
+			}, 2500);
+			chrome.storage.sync.set({"introduce": true});
+		}
 
-// show remember page
-var firstmonth = false;
-var currentDate = new Date().getTime();
-if(items["firstDate"]){
-    var datestart = items["firstDate"];
-    var dateend = datestart + (30 * 24 * 60 * 60 * 1000);
-    if(currentDate >= dateend){ firstmonth = false; }
-    else{ firstmonth = true; }
-}else{
-    chrome.storage.sync.set({"firstDate": currentDate});
-    firstmonth = true;
-}
+		// show remember page
+		var firstmonth = false;
+		var currentDate = new Date().getTime();
+		if(items["firstDate"]){
+			var datestart = items["firstDate"];
+			var dateend = datestart + (30 * 24 * 60 * 60 * 1000);
+			if(currentDate >= dateend){ firstmonth = false; }else{ firstmonth = true; }
+		}else{
+			chrome.storage.sync.set({"firstDate": currentDate});
+			firstmonth = true;
+		}
 
-if(firstmonth){
-// show nothing
-$("sectionreviewbox").style.display = "none";
-}else{
-    if($("optionskipremember").checked != true){
-        $("sectionreviewbox").style.display = "block"; // show now always the banner
-        if(items["firstsawrate"] != true){
-            window.setTimeout(function(){
-                materialRateAlert(function(result){ console.log(result); });
-            }, 2500);
-            chrome.storage.sync.set({"firstsawrate": true});
-        }
-    }else{
-        $("sectionreviewbox").style.display = "none";
-    }
-}
+		if(firstmonth){
+			// show nothing
+			$("sectionreviewbox").style.display = "none";
+		}else{
+			if($("optionskipremember").checked != true){
+				$("sectionreviewbox").style.display = "block"; // show now always the banner
+				if(items["firstsawrate"] != true){
+					window.setTimeout(function(){
+						materialRateAlert(function(result){ console.log(result); });
+					}, 2500);
+					chrome.storage.sync.set({"firstsawrate": true});
+				}
+			}else{
+				$("sectionreviewbox").style.display = "none";
+			}
+		}
 
-	// load tab div
-    var tabListItems = $("navbar").childNodes;
-    var i;
-    var l = tabListItems.length;
-	for(i = 0; i < l; i++){
-		if(tabListItems[i].nodeName == "LI"){
-		var tabLink = getFirstChildWithTagName(tabListItems[i],"A");
-		var id = getHash(tabLink.getAttribute("data-tab"));
-		tabLinks[id] = tabLink;
-		contentDivs[id] = document.getElementById(id);
-        }
-    }
+		// load tab div
+		var tabListItems = $("navbar").childNodes;
+		var i;
+		var l = tabListItems.length;
+		for(i = 0; i < l; i++){
+			if(tabListItems[i].nodeName == "LI"){
+				var tabLink = getFirstChildWithTagName(tabListItems[i], "A");
+				var id = getHash(tabLink.getAttribute("data-tab"));
+				tabLinks[id] = tabLink;
+				contentDivs[id] = document.getElementById(id);
+			}
+		}
 
-    // Assign onclick events to the tab links, and
-    // highlight the first tab
-    var tabi = 0;
-    var tabid;
-    for(id in tabLinks){
-        tabLinks[tabid].onclick = showTab;
-		tabLinks[tabid].onfocus = function(){ this.blur(); };
-		if(tabi == 0) tabLinks[tabid].className = "navbar-item-selected";
-		tabi++;
-    }
+		// Assign onclick events to the tab links, and
+		// highlight the first tab
+		var tabi = 0;
+		var tabid;
+		for(id in tabLinks){
+			tabLinks[tabid].onclick = showTab;
+			tabLinks[tabid].onfocus = function(){ this.blur(); };
+			if(tabi == 0) tabLinks[tabid].className = "navbar-item-selected";
+			tabi++;
+		}
 
-    // Hide all content divs except the first
-    var contenti = 0;
-    var contentid;
-    for(contentid in contentDivs){
-        if(contenti != 0) contentDivs[contentid].className = "page hidden";
-        contenti++;
-    }
+		// Hide all content divs except the first
+		var contenti = 0;
+		var contentid;
+		for(contentid in contentDivs){
+			if(contenti != 0) contentDivs[contentid].className = "page hidden";
+			contenti++;
+		}
 
-    // display version number
-	var manifestData = chrome.runtime.getManifest();
-	$("version_number").innerText = manifestData.version;
+		// display version number
+		var manifestData = chrome.runtime.getManifest();
+		$("version_number").innerText = manifestData.version;
 
-// Excluded domains - sort these alphabetically
-var excludedDomains = items["excludedDomains"];
-if(typeof excludedDomains == "undefined" || excludedDomains == null)
-excludedDomains = JSON.stringify({"https://www.nytimes.com": true, "https://www.blogger.com": true});
+		// Excluded domains - sort these alphabetically
+		var excludedDomains = items["excludedDomains"];
+		if(typeof excludedDomains == "undefined" || excludedDomains == null)
+			excludedDomains = JSON.stringify({"https://www.nytimes.com": true, "https://www.blogger.com": true});
 
-if(typeof excludedDomains == "string"){
-	excludedDomains = JSON.parse(excludedDomains);
-    let buf = [];
-    let domain;
-	for(domain in excludedDomains)
-		buf.push(domain);
-        buf.sort();
-    let i;
-    let l = buf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("excludedDomainsBox", buf[i]);
-}
+		if(typeof excludedDomains == "string"){
+			excludedDomains = JSON.parse(excludedDomains);
+			let buf = [];
+			let domain;
+			for(domain in excludedDomains)
+				buf.push(domain);
+			buf.sort();
+			let i;
+			let l = buf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("excludedDomainsBox", buf[i]);
+		}
 
-var requestId = 0;
-var stop = false;
-var fps, fpsInterval, now, then, elapsed;
+		var requestId = 0;
+		var stop = false;
+		var fps, fpsInterval, now, then, elapsed;
 
-function stopAnimation(){
-    window.cancelAnimationFrame(requestId);
-}
+		function stopAnimation(){
+			window.cancelAnimationFrame(requestId);
+		}
 
-// yes show time
-// ambilight play detect
-if($("ambilight").checked == true){
-    fps = $("drawatmosfps").value;
-    startAnimating(fps);
-}else{
-    stopAnimation();
-}
+		// yes show time
+		// ambilight play detect
+		if($("ambilight").checked == true){
+			fps = $("drawatmosfps").value;
+			startAnimating(fps);
+		}else{
+			stopAnimation();
+		}
 
-function startAnimating(fps){
-    fpsInterval = 1000 / fps;
-    then = window.performance.now();
-	animate();
-}
+		function startAnimating(fps){
+			fpsInterval = 1000 / fps;
+			then = window.performance.now();
+			animate();
+		}
 
-function animate(){
-    // stop
-    if(stop){ return; }
+		function animate(){
+			// stop
+			if(stop){ return; }
 
-    // request another frame
-    requestId = window.requestAnimFrame(animate);
+			// request another frame
+			requestId = window.requestAnimFrame(animate);
 
-    // calc elapsed time since last loop
-    now = window.performance.now();
-    elapsed = now - then;
+			// calc elapsed time since last loop
+			now = window.performance.now();
+			elapsed = now - then;
 
-    // if enough time has elapsed, draw the next frame
-    if(elapsed > fpsInterval){
+			// if enough time has elapsed, draw the next frame
+			if(elapsed > fpsInterval){
 
-        // Get ready for next frame by setting then=now, but...
-        // Also, adjust for fpsInterval not being multiple of 16.67
-        then = now - (elapsed % fpsInterval);
+				// Get ready for next frame by setting then=now, but...
+				// Also, adjust for fpsInterval not being multiple of 16.67
+				then = now - (elapsed % fpsInterval);
 
-    try{
-        if(document.visibilityState === "visible"){
-            var htmlplayer = document.getElementsByTagName("video") || null;
-            var playerid = null, item = null;
-            var j;
-            var l = htmlplayer.length;
-            for(j = 0; j < l; j++){
-                if(htmlplayer[j].play){ playerid = htmlplayer[j]; item = j + 1; drawAtmos(playerid, item); }
-            }
-        }
-	}
-	catch(e){ console.log(e); }
-    }
-}
+				try{
+					if(document.visibilityState === "visible"){
+						var htmlplayer = document.getElementsByTagName("video") || null;
+						var playerid = null, item = null;
+						var j;
+						var l = htmlplayer.length;
+						for(j = 0; j < l; j++){
+							if(htmlplayer[j].play){ playerid = htmlplayer[j]; item = j + 1; drawAtmos(playerid, item); }
+						}
+					}
+				}catch(e){ console.log(e); }
+			}
+		}
 
-// default example2 is not display
-$("example2").style.opacity = 0; $("example2").style.display = "none";
-// default hide this buttons
-$("wallpapershow").className = "hidden"; $("dynamicshow").className = "hidden";
-// autoplay - Excluded domains - sort these alphabetically
-var autoplayDomains = items["autoplayDomains"];
-if(typeof autoplayDomains == "undefined" || autoplayDomains == null)
-autoplayDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		// default example2 is not display
+		$("example2").style.opacity = 0; $("example2").style.display = "none";
+		// default hide this buttons
+		$("wallpapershow").className = "hidden"; $("dynamicshow").className = "hidden";
+		// autoplay - Excluded domains - sort these alphabetically
+		var autoplayDomains = items["autoplayDomains"];
+		if(typeof autoplayDomains == "undefined" || autoplayDomains == null)
+			autoplayDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 
-if(typeof autoplayDomains == "string"){
-	autoplayDomains = JSON.parse(autoplayDomains);
-    let abuf = [];
-    let domain;
-	for(domain in autoplayDomains)
-		abuf.push(domain);
-        abuf.sort();
-    let i;
-    let l = abuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("autoplayDomainsBox", abuf[i]);
-}
+		if(typeof autoplayDomains == "string"){
+			autoplayDomains = JSON.parse(autoplayDomains);
+			let abuf = [];
+			let domain;
+			for(domain in autoplayDomains)
+				abuf.push(domain);
+			abuf.sort();
+			let i;
+			let l = abuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("autoplayDomainsBox", abuf[i]);
+		}
 
-// atmosphere - Excluded domains - sort these alphabetically
-var atmosphereDomains = items["atmosphereDomains"];
-if(typeof atmosphereDomains == "undefined" || atmosphereDomains == null)
-atmosphereDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		// atmosphere - Excluded domains - sort these alphabetically
+		var atmosphereDomains = items["atmosphereDomains"];
+		if(typeof atmosphereDomains == "undefined" || atmosphereDomains == null)
+			atmosphereDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 
-if(typeof atmosphereDomains == "string"){
-	atmosphereDomains = JSON.parse(atmosphereDomains);
-    let albuf = [];
-    let domain;
-	for(domain in atmosphereDomains)
-		albuf.push(domain);
-        albuf.sort();
-    let i;
-    let l = albuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("atmosphereDomainsBox", albuf[i]);
-}
+		if(typeof atmosphereDomains == "string"){
+			atmosphereDomains = JSON.parse(atmosphereDomains);
+			let albuf = [];
+			let domain;
+			for(domain in atmosphereDomains)
+				albuf.push(domain);
+			albuf.sort();
+			let i;
+			let l = albuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("atmosphereDomainsBox", albuf[i]);
+		}
 
-// night - Excluded domains - sort these alphabetically
-var nightDomains = items["nightDomains"];
-if(typeof nightDomains == "undefined" || nightDomains == null)
-nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
+		// night - Excluded domains - sort these alphabetically
+		var nightDomains = items["nightDomains"];
+		if(typeof nightDomains == "undefined" || nightDomains == null)
+			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
 
-if(typeof nightDomains == "string"){
-	nightDomains = JSON.parse(nightDomains);
-    let nbuf = [];
-    let domain;
-	for(domain in nightDomains)
-		nbuf.push(domain);
-        nbuf.sort();
-    let i;
-    let l = nbuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("nightDomainsBox", nbuf[i]);
-}
+		if(typeof nightDomains == "string"){
+			nightDomains = JSON.parse(nightDomains);
+			let nbuf = [];
+			let domain;
+			for(domain in nightDomains)
+				nbuf.push(domain);
+			nbuf.sort();
+			let i;
+			let l = nbuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("nightDomainsBox", nbuf[i]);
+		}
 
-// cammotion - Excluded domains - sort these alphabetically
-var cammotionDomains = items["cammotionDomains"];
-if(typeof cammotionDomains == "undefined" || cammotionDomains == null)
-cammotionDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		// cammotion - Excluded domains - sort these alphabetically
+		var cammotionDomains = items["cammotionDomains"];
+		if(typeof cammotionDomains == "undefined" || cammotionDomains == null)
+			cammotionDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 
-if(typeof cammotionDomains == "string"){
-	cammotionDomains = JSON.parse(cammotionDomains);
-    let cmbuf = [];
-    let domain;
-	for(domain in cammotionDomains)
-		cmbuf.push(domain);
-        cmbuf.sort();
-    let i;
-    let l = cmbuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("cammotionDomainsBox", cmbuf[i]);
-}
+		if(typeof cammotionDomains == "string"){
+			cammotionDomains = JSON.parse(cammotionDomains);
+			let cmbuf = [];
+			let domain;
+			for(domain in cammotionDomains)
+				cmbuf.push(domain);
+			cmbuf.sort();
+			let i;
+			let l = cmbuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("cammotionDomainsBox", cmbuf[i]);
+		}
 
-// speech - Excluded domains - sort these alphabetically
-var speechDomains = items["speechDomains"];
-if(typeof speechDomains == "undefined" || speechDomains == null)
-speechDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		// speech - Excluded domains - sort these alphabetically
+		var speechDomains = items["speechDomains"];
+		if(typeof speechDomains == "undefined" || speechDomains == null)
+			speechDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 
-if(typeof speechDomains == "string"){
-	speechDomains = JSON.parse(speechDomains);
-    let srbuf = [];
-    let domain;
-	for(domain in speechDomains)
-		srbuf.push(domain);
-        srbuf.sort();
-    let i;
-    let l = srbuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("speechDomainsBox", srbuf[i]);
-}
+		if(typeof speechDomains == "string"){
+			speechDomains = JSON.parse(speechDomains);
+			let srbuf = [];
+			let domain;
+			for(domain in speechDomains)
+				srbuf.push(domain);
+			srbuf.sort();
+			let i;
+			let l = srbuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("speechDomainsBox", srbuf[i]);
+		}
 
-// autostop - Excluded domains - sort these alphabetically
-var autostopDomains = items["autostopDomains"];
-if(typeof autostopDomains == "undefined" || autostopDomains == null)
-autostopDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		// autostop - Excluded domains - sort these alphabetically
+		var autostopDomains = items["autostopDomains"];
+		if(typeof autostopDomains == "undefined" || autostopDomains == null)
+			autostopDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 
-if(typeof autostopDomains == "string"){
-	autostopDomains = JSON.parse(autostopDomains);
-    let asbuf = [];
-    let domain;
-	for(domain in autostopDomains)
-		asbuf.push(domain);
-        asbuf.sort();
-    let i;
-    let l = asbuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("autostopDomainsBox", asbuf[i]);
-}
+		if(typeof autostopDomains == "string"){
+			autostopDomains = JSON.parse(autostopDomains);
+			let asbuf = [];
+			let domain;
+			for(domain in autostopDomains)
+				asbuf.push(domain);
+			asbuf.sort();
+			let i;
+			let l = asbuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("autostopDomainsBox", asbuf[i]);
+		}
 
-// video tool bar - Excluded domains - sort these alphabetically
-var videotoolDomains = items["videotoolDomains"];
-if(typeof videotoolDomains == "undefined" || videotoolDomains == null)
-videotoolDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		// video tool bar - Excluded domains - sort these alphabetically
+		var videotoolDomains = items["videotoolDomains"];
+		if(typeof videotoolDomains == "undefined" || videotoolDomains == null)
+			videotoolDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 
-if(typeof videotoolDomains == "string"){
-	videotoolDomains = JSON.parse(videotoolDomains);
-    let vtbbuf = [];
-    let domain;
-	for(domain in videotoolDomains)
-		vtbbuf.push(domain);
-        vtbbuf.sort();
-    let i;
-    let l = vtbbuf.length;
-	for(i = 0; i < l; i++)
-		appendToListBox("videotoolDomainsBox", vtbbuf[i]);
-}
+		if(typeof videotoolDomains == "string"){
+			videotoolDomains = JSON.parse(videotoolDomains);
+			let vtbbuf = [];
+			let domain;
+			for(domain in videotoolDomains)
+				vtbbuf.push(domain);
+			vtbbuf.sort();
+			let i;
+			let l = vtbbuf.length;
+			for(i = 0; i < l; i++)
+				appendToListBox("videotoolDomainsBox", vtbbuf[i]);
+		}
 
-// multi opacity Excluded domains - sort these alphabetically
-var multiopacityDomains = items["multiopacityDomains"];
-if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
-    multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
-}
+		// multi opacity Excluded domains - sort these alphabetically
+		var multiopacityDomains = items["multiopacityDomains"];
+		if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
+			multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
+		}
 
-if(typeof multiopacityDomains == "string"){
-	multiopacityDomains = JSON.parse(multiopacityDomains);
-    let mpbbuf = [];
-    let domain;
-	for(domain in multiopacityDomains)
-        mpbbuf.push(domain);
-        mpbbuf.sort();
-    let i;
-    let l = mpbbuf.length;
-	for(i = 0; i < l; i++){
-		multiappendToListBox("multiopacityDomainsBox", mpbbuf[i],multiopacityDomains["" + mpbbuf[i] + ""]);
-    }
-}
+		if(typeof multiopacityDomains == "string"){
+			multiopacityDomains = JSON.parse(multiopacityDomains);
+			let mpbbuf = [];
+			let domain;
+			for(domain in multiopacityDomains)
+				mpbbuf.push(domain);
+			mpbbuf.sort();
+			let i;
+			let l = mpbbuf.length;
+			for(i = 0; i < l; i++){
+				multiappendToListBox("multiopacityDomainsBox", mpbbuf[i], multiopacityDomains["" + mpbbuf[i] + ""]);
+			}
+		}
 
-    test(); // everything readed, do the "test"
-    ariacheck();
+		test(); // everything readed, do the "test"
+		ariacheck();
 	});// chrome storage end
 } // end read
 
 // animation browser engine
 window.requestAnimFrame = function(){
-    return(
-        window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(/* function */ callback){
-            window.setTimeout(callback, 1000 / 60);
-        }
-    );
+	return(
+		window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(/* function */ callback){
+			window.setTimeout(callback, 1000 / 60);
+		}
+	);
 }();
 
-/*function getPosition(el){
+/* function getPosition(el){
 var xPos = 0; var yPos = 0;
 while(el){ xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); el = el.offsetParent; }
 return{x:xPos,y:yPos};
@@ -925,9 +880,9 @@ return{x:xPos,y:yPos};
 var countA = 0, countB = 0, countC = 0; // start from zero (blur spread) and size (left right top under) position
 
 function rgbToHex(r, g, b){
-    if(r > 255 || g > 255 || b > 255)
-        throw"Invalid color component";
-    return((r << 16) | (g << 8) | b).toString(16);
+	if(r > 255 || g > 255 || b > 255)
+		throw"Invalid color component";
+	return((r << 16) | (g << 8) | b).toString(16);
 }
 
 var textcountA;
@@ -939,149 +894,147 @@ function drawAtmos(){
 	var v = $("beeld");
 	if(v.paused || v.ended){
 	// animation go out
-	countA = countA - 1; if(countA <= 0){ countA = 0; }
-	countB = countB - 1; if(countB <= 0){ countB = 0; }
-	countC = countC - 1; if(countC <= 0){ countC = 0; }
-	textcountA = countA + "px";
-	textcountB = countB + "px";
+		countA = countA - 1; if(countA <= 0){ countA = 0; }
+		countB = countB - 1; if(countB <= 0){ countB = 0; }
+		countC = countC - 1; if(countC <= 0){ countC = 0; }
+		textcountA = countA + "px";
+		textcountB = countB + "px";
 
-var canvas = $("totlCanvas1");
-if(canvas){
-	var context = canvas.getContext("2d",{desynchronized: true});
+		var canvas = $("totlCanvas1");
+		if(canvas){
+			var context = canvas.getContext("2d", {desynchronized: true});
 
-	p1 = context.getImageData(0 , 0, 1, 1).data;
-	p2 = context.getImageData(1 , 0, 1, 1).data;
-	p3 = context.getImageData(2 , 0, 1, 1).data;
-	p4 = context.getImageData(3 , 0, 1, 1).data;
-	hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-	hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-	hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-	hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
-}
-var downhex1 = hex1; if(!hex1){ hex1 = "#000000"; } // previous value
-var downhex2 = hex2; if(!hex2){ hex2 = "#000000"; } // previous value
-var downhex3 = hex3; if(!hex3){ hex3 = "#000000"; } // previous value
-var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
+			p1 = context.getImageData(0, 0, 1, 1).data;
+			p2 = context.getImageData(1, 0, 1, 1).data;
+			p3 = context.getImageData(2, 0, 1, 1).data;
+			p4 = context.getImageData(3, 0, 1, 1).data;
+			hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+			hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+			hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+			hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+		}
+		var downhex1 = hex1; if(!hex1){ hex1 = "#000000"; } // previous value
+		var downhex2 = hex2; if(!hex2){ hex2 = "#000000"; } // previous value
+		var downhex3 = hex3; if(!hex3){ hex3 = "#000000"; } // previous value
+		var downhex4 = hex4; if(!hex4){ hex4 = "#000000"; } // previous value
 
-    if($("stefanvdvivideffect1")){
-    $("stefanvdvivideffect1").style.display = "none";
-    }
-	if($("ambilightvarcolor").checked == true){
-        if($("atmosvivid").checked == true){
-            if($("stefanvdvivideffect1")){
-            $("stefanvdvivideffect1").style.display = "none";
-            }
-        }else{
-            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
-        }
-	}
-	else if($("ambilightfixcolor").checked == true){
-	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + "";
-    }
-	else if($("ambilight4color").checked == true){
-	v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight1colorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight2colorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight3colorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight4colorhex").value + "";
-	}
-	// ----
+		if($("stefanvdvivideffect1")){
+			$("stefanvdvivideffect1").style.display = "none";
+		}
+		if($("ambilightvarcolor").checked == true){
+			if($("atmosvivid").checked == true){
+				if($("stefanvdvivideffect1")){
+					$("stefanvdvivideffect1").style.display = "none";
+				}
+			}else{
+				v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
+			}
+		}else if($("ambilightfixcolor").checked == true){
+			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + "";
+		}else if($("ambilight4color").checked == true){
+			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight1colorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight2colorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight3colorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight4colorhex").value + "";
+		}
+		// ----
 
-	return false;
+		return false;
 	}
 	if($("ambilight").checked == true){
-        var showtime = $("beeld");
+		var showtime = $("beeld");
 
-        // animate out and in
-        if(countA < $("ambilightrangespreadradius").value){ countA = countA + 1; }
-        if(countB < $("ambilightrangeblurradius").value){ countB = countB + 1; }
-        if(countC < 20){ countC = countC + .5; }
-        textcountA = countA + "px";
-        textcountB = countB + "px";
+		// animate out and in
+		if(countA < $("ambilightrangespreadradius").value){ countA = countA + 1; }
+		if(countB < $("ambilightrangeblurradius").value){ countB = countB + 1; }
+		if(countC < 20){ countC = countC + .5; }
+		textcountA = countA + "px";
+		textcountB = countB + "px";
 
-        if($("ambilightvarcolor").checked == true){
-        var sourceWidth = showtime.videoWidth;
-        var sourceHeight = showtime.videoHeight;
+		if($("ambilightvarcolor").checked == true){
+			var sourceWidth = showtime.videoWidth;
+			var sourceHeight = showtime.videoHeight;
 
-        var totlcheckcanvas = $("totlCanvas1");
-        if(totlcheckcanvas == null){
-            var totlnewcanvas = document.createElement("canvas");
-            totlnewcanvas.setAttribute("id","totlCanvas1");
-            totlnewcanvas.width = "4";
-            totlnewcanvas.height = "1";
-            totlnewcanvas.style.display = "none";
-            document.body.appendChild(totlnewcanvas);
-        }
-
-        var totlcanvas = $("totlCanvas1");
-        var colorcontext = totlcanvas.getContext("2d",{desynchronized: true});
-        var colorlamp1X = (sourceWidth * 50) / 100; // up midden
-        var colorlamp1Y = (sourceHeight * 95) / 100;
-        var colorlamp2X = (sourceWidth * 95) / 100; // right midden
-        var colorlamp2Y = (sourceHeight * 50) / 100;
-        var colorlamp3X = (sourceWidth * 50) / 100; // down midden
-        var colorlamp3Y = (sourceHeight * 5) / 100;
-        var colorlamp4X = (sourceWidth * 5) / 100; // left midden
-        var colorlamp4Y = (sourceHeight * 50) / 100;
-
-        colorcontext.drawImage(showtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
-        colorcontext.drawImage(showtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
-        colorcontext.drawImage(showtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
-        colorcontext.drawImage(showtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
-
-        p1 = colorcontext.getImageData(0 , 0, 1, 1).data;
-        p2 = colorcontext.getImageData(1 , 0, 1, 1).data;
-        p3 = colorcontext.getImageData(2 , 0, 1, 1).data;
-        p4 = colorcontext.getImageData(3 , 0, 1, 1).data;
-        hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
-        hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
-        hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
-        hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
-
-        if($("atmosvivid").checked == true){
-			if($("stefanvdvivideffect1")){
-                showtime.style["boxShadow"] = "none";
-                //var newpositionvivid = getPosition(showtime);
-                var tempwidthvideo = showtime.offsetWidth;
-                var tempheightvideo = showtime.offsetHeight;
-                //var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
-                //var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
-                var newvivid = $("stefanvdvivideffect1");
-                newvivid.style.webkitTransform = "scale(" + 1.1 + ")";
-                newvivid.style.webkitFilter = "blur(" + 30 + "px)";
-                newvivid.style.top = 0;
-                newvivid.style.bottom = 0;
-                newvivid.style.right = 0;
-                newvivid.style.left = 0;
-                newvivid.style.margin = "auto";
-                newvivid.style.width = "640px";
-                newvivid.style.height = "360px";
-                newvivid.style.opacity = .88;
-                newvivid.style.display = "block";
-                newvivid.width = Math.floor(tempwidthvideo * 0.08);
-                newvivid.height = Math.floor(tempheightvideo * 0.08);
-                var vividctx = newvivid.getContext("2d",{desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
-                vividctx.drawImage(showtime,0,0,vividx,vividy);
+			var totlcheckcanvas = $("totlCanvas1");
+			if(totlcheckcanvas == null){
+				var totlnewcanvas = document.createElement("canvas");
+				totlnewcanvas.setAttribute("id", "totlCanvas1");
+				totlnewcanvas.width = "4";
+				totlnewcanvas.height = "1";
+				totlnewcanvas.style.display = "none";
+				document.body.appendChild(totlnewcanvas);
 			}
-        }else{
-            if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + hex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + hex4 + "";
-        }
-        }else if($("ambilightfixcolor").checked == true){
-            if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-            var fixhex = $("ambilightcolorhex").value;
-            if(fixhex == null){ fixhex = "#000000"; }
-            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
-        }else if($("ambilight4color").checked == true){
-            if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-            var fix1hex = $("ambilight1colorhex").value;
-            var fix2hex = $("ambilight2colorhex").value;
-            var fix3hex = $("ambilight3colorhex").value;
-            var fix4hex = $("ambilight4colorhex").value;
-            if(fix1hex == null){ fix1hex = "#FF0000"; }
-            if(fix2hex == null){ fix2hex = "#FFEE00"; }
-            if(fix3hex == null){ fix3hex = "#00FF00"; }
-            if(fix4hex == null){ fix4hex = "#0000FF"; }
-            v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
-        }
 
-    }else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
+			var totlcanvas = $("totlCanvas1");
+			var colorcontext = totlcanvas.getContext("2d", {desynchronized: true});
+			var colorlamp1X = (sourceWidth * 50) / 100; // up midden
+			var colorlamp1Y = (sourceHeight * 95) / 100;
+			var colorlamp2X = (sourceWidth * 95) / 100; // right midden
+			var colorlamp2Y = (sourceHeight * 50) / 100;
+			var colorlamp3X = (sourceWidth * 50) / 100; // down midden
+			var colorlamp3Y = (sourceHeight * 5) / 100;
+			var colorlamp4X = (sourceWidth * 5) / 100; // left midden
+			var colorlamp4Y = (sourceHeight * 50) / 100;
+
+			colorcontext.drawImage(showtime, colorlamp1X, colorlamp1Y, 1, 1, 0, 0, 1, 1);
+			colorcontext.drawImage(showtime, colorlamp2X, colorlamp2Y, 1, 1, 1, 0, 1, 1);
+			colorcontext.drawImage(showtime, colorlamp3X, colorlamp3Y, 1, 1, 2, 0, 1, 1);
+			colorcontext.drawImage(showtime, colorlamp4X, colorlamp4Y, 1, 1, 3, 0, 1, 1);
+
+			p1 = colorcontext.getImageData(0, 0, 1, 1).data;
+			p2 = colorcontext.getImageData(1, 0, 1, 1).data;
+			p3 = colorcontext.getImageData(2, 0, 1, 1).data;
+			p4 = colorcontext.getImageData(3, 0, 1, 1).data;
+			hex1 = "#" + ("000000" + rgbToHex(p1[0], p1[1], p1[2])).slice(-6);
+			hex2 = "#" + ("000000" + rgbToHex(p2[0], p2[1], p2[2])).slice(-6);
+			hex3 = "#" + ("000000" + rgbToHex(p3[0], p3[1], p3[2])).slice(-6);
+			hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
+
+			if($("atmosvivid").checked == true){
+				if($("stefanvdvivideffect1")){
+					showtime.style["boxShadow"] = "none";
+					// var newpositionvivid = getPosition(showtime);
+					var tempwidthvideo = showtime.offsetWidth;
+					var tempheightvideo = showtime.offsetHeight;
+					// var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
+					// var tempvisscrolltop = window.pageYOffset || document.documentElement.scrollTop;
+					var newvivid = $("stefanvdvivideffect1");
+					newvivid.style.webkitTransform = "scale(" + 1.1 + ")";
+					newvivid.style.webkitFilter = "blur(" + 30 + "px)";
+					newvivid.style.top = 0;
+					newvivid.style.bottom = 0;
+					newvivid.style.right = 0;
+					newvivid.style.left = 0;
+					newvivid.style.margin = "auto";
+					newvivid.style.width = "640px";
+					newvivid.style.height = "360px";
+					newvivid.style.opacity = .88;
+					newvivid.style.display = "block";
+					newvivid.width = Math.floor(tempwidthvideo * 0.08);
+					newvivid.height = Math.floor(tempheightvideo * 0.08);
+					var vividctx = newvivid.getContext("2d", {desynchronized: true}); var vividx = Math.floor(showtime.offsetWidth * 0.08); var vividy = Math.floor(showtime.offsetHeight * 0.08);
+					vividctx.drawImage(showtime, 0, 0, vividx, vividy);
+				}
+			}else{
+				if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
+				v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + hex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+			}
+		}else if($("ambilightfixcolor").checked == true){
+			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
+			var fixhex = $("ambilightcolorhex").value;
+			if(fixhex == null){ fixhex = "#000000"; }
+			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
+		}else if($("ambilight4color").checked == true){
+			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
+			var fix1hex = $("ambilight1colorhex").value;
+			var fix2hex = $("ambilight2colorhex").value;
+			var fix3hex = $("ambilight3colorhex").value;
+			var fix4hex = $("ambilight4colorhex").value;
+			if(fix1hex == null){ fix1hex = "#FF0000"; }
+			if(fix2hex == null){ fix2hex = "#FFEE00"; }
+			if(fix3hex == null){ fix3hex = "#00FF00"; }
+			if(fix4hex == null){ fix4hex = "#0000FF"; }
+			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
+		}
+
+	}else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
 }
 
 // Fade engine
@@ -1093,594 +1046,527 @@ var OpacityLevelIncrement = 10; // Percentage value: 1-100
 var DIVElementById = null;
 
 //  Function determines whether we show or hide the item referenced by ElementID
-function fader(ActionToTake)
-{
-  DIVElementById = $("example2");
-  if(ActionToTake == "hide")
-  { opacity = default_opacity; reduceOpacity(); }
-  else if(ActionToTake == "show")
-  { increaseOpacity(); }
+function fader(ActionToTake){
+	DIVElementById = $("example2");
+	if(ActionToTake == "hide"){ opacity = default_opacity; reduceOpacity(); }else if(ActionToTake == "show"){ increaseOpacity(); }
 }
 
 //  Makes div increase
-function increaseOpacity()
-{
-DIVElementById.style.display = "";
-  //  If opacity level is less than default_opacity, we can still increase the opacity
-  if((opacity < default_opacity) && (ReducingFinished == true))
-  {
-	if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
-    ReducingFinished = true;
-    opacity += (default_opacity - opacity);
-    DIVElementById.style.opacity = opacity / 100;
-	window.requestAnimFrame(increaseOpacity);
+function increaseOpacity(){
+	DIVElementById.style.display = "";
+	//  If opacity level is less than default_opacity, we can still increase the opacity
+	if((opacity < default_opacity) && (ReducingFinished == true)){
+		if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
+			ReducingFinished = true;
+			opacity += (default_opacity - opacity);
+			DIVElementById.style.opacity = opacity / 100;
+			window.requestAnimFrame(increaseOpacity);
+		}else{
+			ReducingFinished = true;
+			opacity += OpacityLevelIncrement;
+			DIVElementById.style.opacity = opacity / 100;
+			window.requestAnimFrame(increaseOpacity);
+		}
+	}else{
+		ReducingFinished = false;
 	}
-	else{
-    ReducingFinished = true;
-    opacity += OpacityLevelIncrement;
-    DIVElementById.style.opacity = opacity / 100;
-	window.requestAnimFrame(increaseOpacity);
-	}
-  }
-  else
-  {
-    ReducingFinished = false;
-  }
 }
 
 // Makes div reduce
 function reduceOpacity(){
-  // If opacity level is greater than 0, we can still reduce the opacity
-  if((opacity > 0) && (ReducingFinished == false))
-  {
-    ReducingFinished = false;
-    opacity -= OpacityLevelIncrement;
-    DIVElementById.style.opacity = opacity / 100;
-	window.requestAnimFrame(reduceOpacity);
-  }
-  else
-  {
-    ReducingFinished = true;
+	// If opacity level is greater than 0, we can still reduce the opacity
+	if((opacity > 0) && (ReducingFinished == false)){
+		ReducingFinished = false;
+		opacity -= OpacityLevelIncrement;
+		DIVElementById.style.opacity = opacity / 100;
+		window.requestAnimFrame(reduceOpacity);
+	}else{
+		ReducingFinished = true;
 
-    // When finished, make sure the DIVElementById is set to remove element
-    if(DIVElementById.style.opacity <= 0){ DIVElementById.style.display = "none"; }
-  }
+		// When finished, make sure the DIVElementById is set to remove element
+		if(DIVElementById.style.opacity <= 0){ DIVElementById.style.display = "none"; }
+	}
 }
 
 // Add a filter string to the list box.
 function appendToListBox(boxId, text){ var elt = document.createElement("option"); elt.role = "option"; elt.text = text; elt.value = text; $(boxId).add(elt, null); }
 
 function multiappendToListBox(boxId, text, phonenumber){
-    var elt = document.createElement("option");
-    elt.role = "option";
-    elt.text = text;
-    elt.value = text;
-    $(boxId).add(elt, null);
+	var elt = document.createElement("option");
+	elt.role = "option";
+	elt.text = text;
+	elt.value = text;
+	$(boxId).add(elt, null);
 
-    var phelt = document.createElement("option");
-    phelt.role = "option";
-    phelt.text = phonenumber;
-    phelt.value = text;
-    $("multiopacitynumberBox").add(phelt, null);
+	var phelt = document.createElement("option");
+	phelt.role = "option";
+	phelt.text = phonenumber;
+	phelt.value = text;
+	$("multiopacitynumberBox").add(phelt, null);
 }
 
 // tabel script
-    var tabLinks = new Array();
-    var contentDivs = new Array();
+var tabLinks = new Array();
+var contentDivs = new Array();
 
-    function showTab(){
-      var selectedId = getHash(this.getAttribute("data-tab"));
+function showTab(){
+	var selectedId = getHash(this.getAttribute("data-tab"));
 
-      // Highlight the selected tab, and dim all others.
-      // Also show the selected content div, and hide all others.
-      var id;
-      for(id in contentDivs){
-        if(id == selectedId){
-          tabLinks[id].className = "navbar-item-selected";
-          contentDivs[id].className = "page";
-        }else{
-          tabLinks[id].className = "navbar-item";
-          contentDivs[id].className = "page hidden";
-        }
-      }
+	// Highlight the selected tab, and dim all others.
+	// Also show the selected content div, and hide all others.
+	var id;
+	for(id in contentDivs){
+		if(id == selectedId){
+			tabLinks[id].className = "navbar-item-selected";
+			contentDivs[id].className = "page";
+		}else{
+			tabLinks[id].className = "navbar-item";
+			contentDivs[id].className = "page hidden";
+		}
+	}
 
-      // Stop the browser following the link
-      return false;
-    }
+	// Stop the browser following the link
+	return false;
+}
 
-    function getFirstChildWithTagName(element,tagName){
-        var i;
-        var l = element.childNodes.length;
-        for(i = 0; i < l; i++){
-            if(element.childNodes[i].nodeName == tagName)return element.childNodes[i];
-        }
-    }
+function getFirstChildWithTagName(element, tagName){
+	var i;
+	var l = element.childNodes.length;
+	for(i = 0; i < l; i++){
+		if(element.childNodes[i].nodeName == tagName)return element.childNodes[i];
+	}
+}
 
-    function getHash(url){
-      var hashPos = url.lastIndexOf("#");
-      return url.substring(hashPos + 1);
-    }
+function getHash(url){
+	var hashPos = url.lastIndexOf("#");
+	return url.substring(hashPos + 1);
+}
 
 // whitelist eye domain
 function addWhitelistDomain(){
-    var domain = $("websiteurl").value;
-    appendToListBox("excludedDomainsBox", domain);
-    save_options();
+	var domain = $("websiteurl").value;
+	appendToListBox("excludedDomainsBox", domain);
+	save_options();
 }
 
 function removeSelectedExcludedDomain(){
-    var excludedDomainsBox = $("excludedDomainsBox");
-    var i = excludedDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(excludedDomainsBox.options[i].selected)
-            excludedDomainsBox.remove(i);
-    }
-    save_options();
+	var excludedDomainsBox = $("excludedDomainsBox");
+	var i = excludedDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(excludedDomainsBox.options[i].selected)
+			excludedDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist autoplay domain
 function autoplayaddWhitelistDomain(){
-    var domain = $("autoplaywebsiteurl").value;
-    appendToListBox("autoplayDomainsBox", domain);
-    save_options();
+	var domain = $("autoplaywebsiteurl").value;
+	appendToListBox("autoplayDomainsBox", domain);
+	save_options();
 }
 
 function autoplayremoveSelectedExcludedDomain(){
-    var autoplayDomainsBox = $("autoplayDomainsBox");
-    var i = autoplayDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(autoplayDomainsBox.options[i].selected)
-            autoplayDomainsBox.remove(i);
-    }
-    save_options();
+	var autoplayDomainsBox = $("autoplayDomainsBox");
+	var i = autoplayDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(autoplayDomainsBox.options[i].selected)
+			autoplayDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist atmosphere domain
 function atmosphereaddWhitelistDomain(){
-    var domain = $("atmospherewebsiteurl").value;
-    appendToListBox("atmosphereDomainsBox", domain);
-    save_options();
+	var domain = $("atmospherewebsiteurl").value;
+	appendToListBox("atmosphereDomainsBox", domain);
+	save_options();
 }
 
 function atmosphereremoveSelectedExcludedDomain(){
-    var atmosphereDomainsBox = $("atmosphereDomainsBox");
-    var i = atmosphereDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(atmosphereDomainsBox.options[i].selected)
-            atmosphereDomainsBox.remove(i);
-    }
-    save_options();
+	var atmosphereDomainsBox = $("atmosphereDomainsBox");
+	var i = atmosphereDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(atmosphereDomainsBox.options[i].selected)
+			atmosphereDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist night domain
 function nightaddWhitelistDomain(){
-    var domain = $("nightwebsiteurl").value;
-    appendToListBox("nightDomainsBox", domain);
-    save_options();
+	var domain = $("nightwebsiteurl").value;
+	appendToListBox("nightDomainsBox", domain);
+	save_options();
 }
 
 function nightremoveSelectedExcludedDomain(){
-    var nightDomainsBox = $("nightDomainsBox");
-    var i = nightDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(nightDomainsBox.options[i].selected)
-            nightDomainsBox.remove(i);
-    }
-    save_options();
+	var nightDomainsBox = $("nightDomainsBox");
+	var i = nightDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(nightDomainsBox.options[i].selected)
+			nightDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist cam motion domain
 function cammotionaddWhitelistDomain(){
-    var domain = $("cammotionwebsiteurl").value;
-    appendToListBox("cammotionDomainsBox", domain);
-    save_options();
+	var domain = $("cammotionwebsiteurl").value;
+	appendToListBox("cammotionDomainsBox", domain);
+	save_options();
 }
 
 function cammotionremoveSelectedExcludedDomain(){
-    var cammotionDomainsBox = $("cammotionDomainsBox");
-    var i = cammotionDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(cammotionDomainsBox.options[i].selected)
-            cammotionDomainsBox.remove(i);
-    }
-    save_options();
+	var cammotionDomainsBox = $("cammotionDomainsBox");
+	var i = cammotionDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(cammotionDomainsBox.options[i].selected)
+			cammotionDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist speech domain
 function speechaddWhitelistDomain(){
-    var domain = $("speechwebsiteurl").value;
-    appendToListBox("speechDomainsBox", domain);
-    save_options();
+	var domain = $("speechwebsiteurl").value;
+	appendToListBox("speechDomainsBox", domain);
+	save_options();
 }
 
 function speechremoveSelectedExcludedDomain(){
-    var speechDomainsBox = $("speechDomainsBox");
-    var i = speechDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(speechDomainsBox.options[i].selected)
-            speechDomainsBox.remove(i);
-    }
-    save_options();
+	var speechDomainsBox = $("speechDomainsBox");
+	var i = speechDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(speechDomainsBox.options[i].selected)
+			speechDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist autostop domain
 function autostopaddWhitelistDomain(){
-    var domain = $("autostopwebsiteurl").value;
-    appendToListBox("autostopDomainsBox", domain);
-    save_options();
+	var domain = $("autostopwebsiteurl").value;
+	appendToListBox("autostopDomainsBox", domain);
+	save_options();
 }
 
 function autostopremoveSelectedExcludedDomain(){
-    var autostopDomainsBox = $("autostopDomainsBox");
-    var i = autostopDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(autostopDomainsBox.options[i].selected)
-            autostopDomainsBox.remove(i);
-    }
-    save_options();
+	var autostopDomainsBox = $("autostopDomainsBox");
+	var i = autostopDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(autostopDomainsBox.options[i].selected)
+			autostopDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist videotool domain
 function videotooladdWhitelistDomain(){
-    var domain = $("videotoolwebsiteurl").value;
-    appendToListBox("videotoolDomainsBox", domain);
-    save_options();
+	var domain = $("videotoolwebsiteurl").value;
+	appendToListBox("videotoolDomainsBox", domain);
+	save_options();
 }
 
 function videotoolremoveSelectedExcludedDomain(){
-    var videotoolDomainsBox = $("videotoolDomainsBox");
-    var i = videotoolDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(videotoolDomainsBox.options[i].selected)
-            videotoolDomainsBox.remove(i);
-    }
-    save_options();
+	var videotoolDomainsBox = $("videotoolDomainsBox");
+	var i = videotoolDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(videotoolDomainsBox.options[i].selected)
+			videotoolDomainsBox.remove(i);
+	}
+	save_options();
 }
 
 // whitelist multiopacity domain
 function multiopacitychangeurl(){
-  var selwzv = $("multiopacityDomainsBox").selectedIndex;
-  $("multiopacitynumberBox").selectedIndex = selwzv;
+	var selwzv = $("multiopacityDomainsBox").selectedIndex;
+	$("multiopacitynumberBox").selectedIndex = selwzv;
 }
 
 function multiopacitychangenumberl(){
-  var selwzv = $("multiopacitynumberBox").selectedIndex;
-  $("multiopacityDomainsBox").selectedIndex = selwzv;
+	var selwzv = $("multiopacitynumberBox").selectedIndex;
+	$("multiopacityDomainsBox").selectedIndex = selwzv;
 }
 
 function multiopacityadd(){
-    var domain = $("multiopacityname").value;
-    var number = $("multiopacitynumber").value;
-    if(domain == ""){ return; }
-    if(number == ""){ return; }
-    multiappendToListBox("multiopacityDomainsBox", domain, number);
-    save_options();
+	var domain = $("multiopacityname").value;
+	var number = $("multiopacitynumber").value;
+	if(domain == ""){ return; }
+	if(number == ""){ return; }
+	multiappendToListBox("multiopacityDomainsBox", domain, number);
+	save_options();
 }
 
 function multiopacityremoveSelectedExcludedDomain(){
-    var multiopacityDomainsBox = $("multiopacityDomainsBox");
-    var multiopacitynumberBox = $("multiopacitynumberBox");
-    var i = multiopacityDomainsBox.length - 1;
-    for(i; i >= 0; i--){
-        if(multiopacityDomainsBox.options[i].selected){
-            multiopacityDomainsBox.remove(i);
-            multiopacitynumberBox.remove(i);
-        }
-    }
-    save_options();
+	var multiopacityDomainsBox = $("multiopacityDomainsBox");
+	var multiopacitynumberBox = $("multiopacitynumberBox");
+	var i = multiopacityDomainsBox.length - 1;
+	for(i; i >= 0; i--){
+		if(multiopacityDomainsBox.options[i].selected){
+			multiopacityDomainsBox.remove(i);
+			multiopacitynumberBox.remove(i);
+		}
+	}
+	save_options();
 }
 
 // fade effects control -> not when loaded page
 function lightscontrol(){
-var jump = $("interval").value;
-default_opacity = jump;
-if($("onoffrange").value == 0)
-{
-if($("fadeout").checked == true){ ReducingFinished = false; fader("hide"); }else{ $("example2").style.opacity = 0; $("example2").style.display = "none"; }
-}
-else{
-if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = jump / 100; $("example2").style.display = ""; }
-}
+	var jump = $("interval").value;
+	default_opacity = jump;
+	if($("onoffrange").value == 0){
+		if($("fadeout").checked == true){ ReducingFinished = false; fader("hide"); }else{ $("example2").style.opacity = 0; $("example2").style.display = "none"; }
+	}else{
+		if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = jump / 100; $("example2").style.display = ""; }
+	}
 }
 
 // remove dynamic elements
 function removedynamic(){
-var newdynmaster = $("stefanvddynamicbackground");
-var fishtanks = $("fishtanks");
-if(fishtanks){ newdynmaster.removeChild(fishtanks); }
-var blocks = $("blocks");
-if(blocks){ newdynmaster.removeChild(blocks); }
-var raindrops = $("raindrops");
-if(raindrops){ newdynmaster.removeChild(raindrops); }
-var clouds = $("clouds");
-if(clouds){ newdynmaster.removeChild(clouds); }
-var space = $("space");
-if(space){ newdynmaster.removeChild(space); }
-var smoke = $("smoke");
-if(smoke){ newdynmaster.removeChild(smoke); }
-var flyingdots = $("flyingdots");
-if(flyingdots){ newdynmaster.removeChild(flyingdots); }
-var storm = $("storm");
-if(storm){ newdynmaster.removeChild(storm); }
-var triangle = $("triangle");
-if(triangle){ newdynmaster.removeChild(triangle); }
-var stars = $("stars");
-if(stars){ newdynmaster.removeChild(stars); }
+	var newdynmaster = $("stefanvddynamicbackground");
+	var fishtanks = $("fishtanks");
+	if(fishtanks){ newdynmaster.removeChild(fishtanks); }
+	var blocks = $("blocks");
+	if(blocks){ newdynmaster.removeChild(blocks); }
+	var raindrops = $("raindrops");
+	if(raindrops){ newdynmaster.removeChild(raindrops); }
+	var clouds = $("clouds");
+	if(clouds){ newdynmaster.removeChild(clouds); }
+	var space = $("space");
+	if(space){ newdynmaster.removeChild(space); }
+	var smoke = $("smoke");
+	if(smoke){ newdynmaster.removeChild(smoke); }
+	var flyingdots = $("flyingdots");
+	if(flyingdots){ newdynmaster.removeChild(flyingdots); }
+	var storm = $("storm");
+	if(storm){ newdynmaster.removeChild(storm); }
+	var triangle = $("triangle");
+	if(triangle){ newdynmaster.removeChild(triangle); }
+	var stars = $("stars");
+	if(stars){ newdynmaster.removeChild(stars); }
 }
 
 // test general
 function test(){
-if($("ambilight").checked == true){
-drawAtmos();
-}
+	if($("ambilight").checked == true){
+		drawAtmos();
+	}
 
-// show alert warning
-if($("ambilightvarcolor").checked == true)
-{ $("showwarningambilight").style.display = ""; }
-else{ $("showwarningambilight").style.display = "none"; }
+	// show alert warning
+	if($("ambilightvarcolor").checked == true){ $("showwarningambilight").style.display = ""; }else{ $("showwarningambilight").style.display = "none"; }
 
-// YouTube preview sample
-if($("head").checked == true)
-{ $("samplechannel").style.zIndex = 100; $("samplechannel").style.position = "relative"; $("videochannel").style.zIndex = 100; $("videochannel").style.position = "relative"; }
-else{ $("samplechannel").style.zIndex = 1; $("samplechannel").style.position = "relative"; $("videochannel").style.zIndex = 1; $("videochannel").style.position = "relative"; }
+	// YouTube preview sample
+	if($("head").checked == true){ $("samplechannel").style.zIndex = 100; $("samplechannel").style.position = "relative"; $("videochannel").style.zIndex = 100; $("videochannel").style.position = "relative"; }else{ $("samplechannel").style.zIndex = 1; $("samplechannel").style.position = "relative"; $("videochannel").style.zIndex = 1; $("videochannel").style.position = "relative"; }
 
-if($("playlist").checked == true){ /*nothing*/ } // not visible in the preview
-else{ /*nothing*/ }
+	// not visible in the preview
+	if($("playlist").checked == true){ /* nothing*/ }else{ /* nothing*/ }
 
-if($("infobar").checked == true)
-{ $("sampleinforbar").style.zIndex = 100; $("sampleinforbar").style.position = "relative"; }
-else{ $("sampleinforbar").style.zIndex = 1; $("sampleinforbar").style.position = "relative"; }
+	if($("infobar").checked == true){ $("sampleinforbar").style.zIndex = 100; $("sampleinforbar").style.position = "relative"; }else{ $("sampleinforbar").style.zIndex = 1; $("sampleinforbar").style.position = "relative"; }
 
-if($("likebutton").checked == true)
-{ $("sampledislikebutton").style.zIndex = 100; $("sampledislikebutton").style.position = "relative"; }
-else{ $("sampledislikebutton").style.zIndex = 1; $("sampledislikebutton").style.position = "relative"; }
+	if($("likebutton").checked == true){ $("sampledislikebutton").style.zIndex = 100; $("sampledislikebutton").style.position = "relative"; }else{ $("sampledislikebutton").style.zIndex = 1; $("sampledislikebutton").style.position = "relative"; }
 
-if($("sharebutton").checked == true)
-{ $("samplesharebutton").style.zIndex = 100; $("samplesharebutton").style.position = "relative"; }
-else{ $("samplesharebutton").style.zIndex = 1; $("samplesharebutton").style.position = "relative"; }
+	if($("sharebutton").checked == true){ $("samplesharebutton").style.zIndex = 100; $("samplesharebutton").style.position = "relative"; }else{ $("samplesharebutton").style.zIndex = 1; $("samplesharebutton").style.position = "relative"; }
 
-if($("suggestions").checked == true)
-{ $("samplesug").style.zIndex = 100; $("samplesug").style.position = "relative"; }
-else{ $("samplesug").style.zIndex = 1; $("samplesug").style.position = "relative"; }
+	if($("suggestions").checked == true){ $("samplesug").style.zIndex = 100; $("samplesug").style.position = "relative"; }else{ $("samplesug").style.zIndex = 1; $("samplesug").style.position = "relative"; }
 
-if($("videoheadline").checked == true){ $("sampletitle").style.zIndex = 100; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#FFFFFF"; }
-else{ $("sampletitle").style.zIndex = 1; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#000000"; }
+	if($("videoheadline").checked == true){ $("sampletitle").style.zIndex = 100; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#FFFFFF"; }else{ $("sampletitle").style.zIndex = 1; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#000000"; }
 
-if($("viewcount").checked == true)
-{ $("sampleview").style.zIndex = 100; $("sampleview").style.color = "white"; $("sampleview").style.position = "relative"; }
-else{ $("sampleview").style.zIndex = 1; $("sampleview").style.color = "black"; $("sampleview").style.position = "relative"; }
+	if($("viewcount").checked == true){ $("sampleview").style.zIndex = 100; $("sampleview").style.color = "white"; $("sampleview").style.position = "relative"; }else{ $("sampleview").style.zIndex = 1; $("sampleview").style.color = "black"; $("sampleview").style.position = "relative"; }
 
-if($("addvideobutton").checked == true)
-{ $("sampleaddbutton").style.zIndex = 100; $("sampleaddbutton").style.position = "relative"; }
-else{ $("sampleaddbutton").style.zIndex = 1; $("sampleaddbutton").style.position = "relative"; }
+	if($("addvideobutton").checked == true){ $("sampleaddbutton").style.zIndex = 100; $("sampleaddbutton").style.position = "relative"; }else{ $("sampleaddbutton").style.zIndex = 1; $("sampleaddbutton").style.position = "relative"; }
 
-if($("likebar").checked == true)
-{ $("samplelikebar").style.zIndex = 101; $("samplelikebar").style.position = "relative"; }
-else{ $("samplelikebar").style.zIndex = "auto"; $("samplelikebar").style.position = "relative"; }
+	if($("likebar").checked == true){ $("samplelikebar").style.zIndex = 101; $("samplelikebar").style.position = "relative"; }else{ $("samplelikebar").style.zIndex = "auto"; $("samplelikebar").style.position = "relative"; }
 
-/* --- end YouTube preview --- */
-if($("ambilight").checked == true)
-{ $("arangespread").disabled = false; $("ambilightrangespreadradius").disabled = false; $("arangeblur").disabled = false; $("ambilightrangeblurradius").disabled = false; $("ambilightfixcolor").disabled = false; $("ambilightvarcolor").disabled = false; $("ambilightcolorhex").disabled = false; $("ambilight4color").disabled = false; $("ambilight1colorhex").disabled = false; $("ambilight2colorhex").disabled = false; $("ambilight3colorhex").disabled = false; $("ambilight4colorhex").disabled = false; $("atmosontotlmode").disabled = false; $("atmosphereonly").disabled = false; $("vpause").disabled = false;
-    if($("ambilightvarcolor").checked == true){
-        $("atmosvivid").disabled = false;
-        if($("atmosvivid").checked == true){
-            $("atmosfpsauto").disabled = false; $("atmosfpsmanual").disabled = false;
-            if($("atmosfpsauto").checked == true){
-                $("drawatmosfps").disabled = true;
-            }else if($("atmosfpsmanual").checked == true){
-                $("drawatmosfps").disabled = false;
-            }
-        }else{
-            $("atmosfpsauto").disabled = true; $("atmosfpsmanual").disabled = true; $("drawatmosfps").disabled = true;
-        }
+	/* --- end YouTube preview --- */
+	if($("ambilight").checked == true){
+		$("arangespread").disabled = false; $("ambilightrangespreadradius").disabled = false; $("arangeblur").disabled = false; $("ambilightrangeblurradius").disabled = false; $("ambilightfixcolor").disabled = false; $("ambilightvarcolor").disabled = false; $("ambilightcolorhex").disabled = false; $("ambilight4color").disabled = false; $("ambilight1colorhex").disabled = false; $("ambilight2colorhex").disabled = false; $("ambilight3colorhex").disabled = false; $("ambilight4colorhex").disabled = false; $("atmosontotlmode").disabled = false; $("atmosphereonly").disabled = false; $("vpause").disabled = false;
+		if($("ambilightvarcolor").checked == true){
+			$("atmosvivid").disabled = false;
+			if($("atmosvivid").checked == true){
+				$("atmosfpsauto").disabled = false; $("atmosfpsmanual").disabled = false;
+				if($("atmosfpsauto").checked == true){
+					$("drawatmosfps").disabled = true;
+				}else if($("atmosfpsmanual").checked == true){
+					$("drawatmosfps").disabled = false;
+				}
+			}else{
+				$("atmosfpsauto").disabled = true; $("atmosfpsmanual").disabled = true; $("drawatmosfps").disabled = true;
+			}
+		}else{
+			$("atmosvivid").disabled = true; $("drawatmosfps").disabled = true; $("atmosfpsauto").disabled = true; $("atmosfpsmanual").disabled = true;
+		}
 	}else{
-    $("atmosvivid").disabled = true; $("drawatmosfps").disabled = true; $("atmosfpsauto").disabled = true; $("atmosfpsmanual").disabled = true;
-    }
-}
-else{ $("arangespread").disabled = true; $("ambilightrangespreadradius").disabled = true; $("arangeblur").disabled = true; $("ambilightrangeblurradius").disabled = true; $("ambilightfixcolor").disabled = true; $("ambilightvarcolor").disabled = true; $("ambilightcolorhex").disabled = true; $("ambilight4color").disabled = true; $("ambilight1colorhex").disabled = true; $("ambilight2colorhex").disabled = true; $("ambilight3colorhex").disabled = true; $("ambilight4colorhex").disabled = true; $("atmosontotlmode").disabled = true; $("atmosphereonly").disabled = true; $("vpause").disabled = true; $("atmosvivid").disabled = true; $("drawatmosfps").disabled = true; $("atmosfpsauto").disabled = true; $("atmosfpsmanual").disabled = true;
-}
-
-if("requestVideoFrameCallback" in HTMLVideoElement.prototype){
-    // do nothing
-}else{
-   // the API is supported!
-   $("boxfpsauto").className = "hidden";
-}
-
-if($("lightimagea").checked == true)
-{ $("lightimagen").checked = false; $("example1").style.background = "url(" + $("lightimage").value + ")"; $("example1").style.backgroundSize = "100% 100%"; $("example2").style.background = "url(" + $("lightimage").value + ")"; $("example2").style.backgroundSize = "100% 100%"; $("lightimage").disabled = false; $("lightcolor").disabled = true;
-$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true; $("mousespotlighto").checked = true; }
-else if($("lightimagen").checked == true){ $("lightimagen").checked = true; $("example1").style.background = $("lightcolor").value; $("example2").style.background = $("lightcolor").value; $("lightimage").disabled = true; $("lightcolor").disabled = false;
-$("mousespotlighta").disabled = false; $("mousespotlightc").disabled = false; }
-else if($("lightimagelin").checked == true)
-{ var linearsq = document.getElementById("linearsq");
-$("example1").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
-$("example2").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
-$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true;
-if($("mousespotlighta").checked == true || $("mousespotlightc").checked == true){ $("mousespotlighto").checked = true; }
-}
-
-if($("eyen").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = "none"; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplay").disabled = false; $("autoplaydelay").disabled = false; $("autoplaydelaytime").disabled = false; $("addbutton").disabled = true; $("removebutton").disabled = true; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = "none"; $("eyechecklistwhite").disabled = true; $("eyechecklistblack").disabled = true; }
-else if($("eyea").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = ""; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplay").checked = false; $("autoplaydelay").disabled = true; $("autoplaydelaytime").disabled = true; $("addbutton").disabled = true; $("removebutton").disabled = true; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = ""; $("eyechecklistwhite").disabled = true; $("eyechecklistblack").disabled = true; }
-else if($("eyealist").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = ""; $("excludedDomainsBox").disabled = false; $("websiteurl").disabled = false; $("autoplay").checked = false; $("autoplaydelay").disabled = true; $("autoplaydelaytime").disabled = true; $("addbutton").disabled = false; $("removebutton").disabled = false; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = ""; $("eyechecklistwhite").disabled = false; $("eyechecklistblack").disabled = false; }
-
-if($("mousespotlighto").checked == true)
-{ $("eastereggs").disabled = false; } // eastereggs OFF
-else{ $("eastereggs").disabled = true; $("eastereggs").checked = false; } // active box eastereggs
-
-if($("mousespotlighta").checked == true){ $("spotlightradius").disabled = false; }
-else{ $("spotlightradius").disabled = true; }
-
-if($("nighttime").checked == true){ /* see further */ }
-else{ $("begintime").disabled = true; $("endtime").disabled = true; }
-
-if($("password").checked == true){ $("enterpassword").disabled = false; $("confirmpassword").disabled = false; }
-else{ $("enterpassword").disabled = true; $("confirmpassword").disabled = true; }
-
-if($("ecosaver").checked == true){ $("ecosavertime").disabled = false; $("nighttime").disabled = false;
-	if($("eyen").checked == true){
-	$("begintime").disabled = false; $("endtime").disabled = false;
+		$("arangespread").disabled = true; $("ambilightrangespreadradius").disabled = true; $("arangeblur").disabled = true; $("ambilightrangeblurradius").disabled = true; $("ambilightfixcolor").disabled = true; $("ambilightvarcolor").disabled = true; $("ambilightcolorhex").disabled = true; $("ambilight4color").disabled = true; $("ambilight1colorhex").disabled = true; $("ambilight2colorhex").disabled = true; $("ambilight3colorhex").disabled = true; $("ambilight4colorhex").disabled = true; $("atmosontotlmode").disabled = true; $("atmosphereonly").disabled = true; $("vpause").disabled = true; $("atmosvivid").disabled = true; $("drawatmosfps").disabled = true; $("atmosfpsauto").disabled = true; $("atmosfpsmanual").disabled = true;
 	}
-}
-else{
-    $("ecosavertime").disabled = true;
-	if($("eyen").checked == true){
-	$("nighttime").disabled = true; $("begintime").disabled = true; $("endtime").disabled = true;
+
+	if("requestVideoFrameCallback" in HTMLVideoElement.prototype){
+		// do nothing
+	}else{
+		// the API is supported!
+		$("boxfpsauto").className = "hidden";
 	}
-}
 
-if($("autoplayonly").checked == true)
-{ $("autoplayonly").checked = true; $("autoplayDomainsBox").disabled = false; $("autoplaywebsiteurl").disabled = false; $("autoplayaddbutton").disabled = false; $("autoplayremovebutton").disabled = false; $("autoplaychecklistwhite").disabled = false; $("autoplaychecklistblack").disabled = false; }
-else{ $("autoplayonly").checked = false; $("autoplayDomainsBox").disabled = true; $("autoplaywebsiteurl").disabled = true; $("autoplayaddbutton").disabled = true; $("autoplayremovebutton").disabled = true; $("autoplaychecklistwhite").disabled = true; $("autoplaychecklistblack").disabled = true; }
+	if($("lightimagea").checked == true){
+		$("lightimagen").checked = false; $("example1").style.background = "url(" + $("lightimage").value + ")"; $("example1").style.backgroundSize = "100% 100%"; $("example2").style.background = "url(" + $("lightimage").value + ")"; $("example2").style.backgroundSize = "100% 100%"; $("lightimage").disabled = false; $("lightcolor").disabled = true;
+		$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true; $("mousespotlighto").checked = true;
+	}else if($("lightimagen").checked == true){
+		$("lightimagen").checked = true; $("example1").style.background = $("lightcolor").value; $("example2").style.background = $("lightcolor").value; $("lightimage").disabled = true; $("lightcolor").disabled = false;
+		$("mousespotlighta").disabled = false; $("mousespotlightc").disabled = false;
+	}else if($("lightimagelin").checked == true){
+		var linearsq = document.getElementById("linearsq");
+		$("example1").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
+		$("example2").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
+		$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true;
+		if($("mousespotlighta").checked == true || $("mousespotlightc").checked == true){ $("mousespotlighto").checked = true; }
+	}
 
-if($("atmosphereonly").checked == true)
-{ $("atmosphereonly").checked = true; $("atmosphereDomainsBox").disabled = false; $("atmospherewebsiteurl").disabled = false; $("atmosphereaddbutton").disabled = false; $("atmosphereremovebutton").disabled = false; }
-else{ $("atmosphereonly").checked = false; $("atmosphereDomainsBox").disabled = true; $("atmospherewebsiteurl").disabled = true; $("atmosphereaddbutton").disabled = true; $("atmosphereremovebutton").disabled = true; }
+	if($("eyen").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = "none"; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplay").disabled = false; $("autoplaydelay").disabled = false; $("autoplaydelaytime").disabled = false; $("addbutton").disabled = true; $("removebutton").disabled = true; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = "none"; $("eyechecklistwhite").disabled = true; $("eyechecklistblack").disabled = true; }else if($("eyea").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = ""; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplay").checked = false; $("autoplaydelay").disabled = true; $("autoplaydelaytime").disabled = true; $("addbutton").disabled = true; $("removebutton").disabled = true; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = ""; $("eyechecklistwhite").disabled = true; $("eyechecklistblack").disabled = true; }else if($("eyealist").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = ""; $("excludedDomainsBox").disabled = false; $("websiteurl").disabled = false; $("autoplay").checked = false; $("autoplaydelay").disabled = true; $("autoplaydelaytime").disabled = true; $("addbutton").disabled = false; $("removebutton").disabled = false; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = ""; $("eyechecklistwhite").disabled = false; $("eyechecklistblack").disabled = false; }
 
-if($("nightonly").checked == true)
-{ $("nightonly").checked = true; $("nightDomainsBox").disabled = false; $("nightwebsiteurl").disabled = false; $("nightaddbutton").disabled = false; $("nightremovebutton").disabled = false; $("nightmodechecklistwhite").disabled = false; $("nightmodechecklistblack").disabled = false; }
-else{ $("nightonly").checked = false; $("nightDomainsBox").disabled = true; $("nightwebsiteurl").disabled = true; $("nightaddbutton").disabled = true; $("nightremovebutton").disabled = true; $("nightmodechecklistwhite").disabled = true; $("nightmodechecklistblack").disabled = true; }
+	if($("mousespotlighto").checked == true){ /* eastereggs OFF*/ $("eastereggs").disabled = false; }else{ /* active box eastereggs */ $("eastereggs").disabled = true; $("eastereggs").checked = false; }
 
-if($("autoplay").checked == true)
-{
-    $("aplay").disabled = false; $("apause").disabled = false; $("astop").disabled = false; $("eyen").checked = true; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplaydelay").disabled = false;
-    if($("autoplaydelay").checked == true)
-    { $("autoplaydelaytime").disabled = false; }
-    else{ $("autoplaydelaytime").disabled = true; }
-}
-else{ $("aplay").disabled = true; $("apause").disabled = true; $("astop").disabled = true; $("autoplaydelay").disabled = true;
-    if($("autoplaydelay").checked == true)
-    { $("autoplaydelaytime").disabled = false; }
-    else{ $("autoplaydelaytime").disabled = true; }
-}
+	if($("mousespotlighta").checked == true){ $("spotlightradius").disabled = false; }else{ $("spotlightradius").disabled = true; }
 
-if($("videovolume").checked == true){ $("videovolumealt").disabled = false; }
-else{ $("videovolumealt").disabled = true; }
+	if($("nighttime").checked == true){ /* see further */ }else{ $("begintime").disabled = true; $("endtime").disabled = true; }
 
-if($("motion").checked == true){
-    cameramotionlights();
-    $("cammotiononly").disabled = false;
-    if($("cammotiononly").checked == true)
-    { $("cammotiononly").checked = true; $("cammotionDomainsBox").disabled = false; $("cammotionwebsiteurl").disabled = false; $("cammotionaddbutton").disabled = false; $("cammotionremovebutton").disabled = false; }
-    else{ $("cammotionDomainsBox").disabled = true; $("cammotionwebsiteurl").disabled = true; $("cammotionaddbutton").disabled = true; $("cammotionremovebutton").disabled = true; }
-}
-else{
-    cameramotionlights();
-    $("cammotiononly").disabled = true; $("cammotionDomainsBox").disabled = true; $("cammotionwebsiteurl").disabled = true; $("cammotionaddbutton").disabled = true; $("cammotionremovebutton").disabled = true;
-}
+	if($("password").checked == true){ $("enterpassword").disabled = false; $("confirmpassword").disabled = false; }else{ $("enterpassword").disabled = true; $("confirmpassword").disabled = true; }
 
-if($("speech").checked == true){
-    $("select_language").disabled = false; $("select_dialect").disabled = false;
-    $("speechonly").disabled = false;
-    if($("speechonly").checked == true){ $("speechDomainsBox").disabled = false; $("speechwebsiteurl").disabled = false; $("speechaddbutton").disabled = false; $("speechremovebutton").disabled = false; }
-    else{ $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true; }
-}
-else{
-    $("select_language").disabled = true; $("select_dialect").disabled = true;
-    $("speechonly").disabled = true; $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true;
-}
+	if($("ecosaver").checked == true){
+		$("ecosavertime").disabled = false; $("nighttime").disabled = false;
+		if($("eyen").checked == true){
+			$("begintime").disabled = false; $("endtime").disabled = false;
+		}
+	}else{
+		$("ecosavertime").disabled = true;
+		if($("eyen").checked == true){
+			$("nighttime").disabled = true; $("begintime").disabled = true; $("endtime").disabled = true;
+		}
+	}
 
-if($("nightactivetime").checked == true){ $("nmbegintime").disabled = false; $("nmendtime").disabled = false; }
-else{ $("nmbegintime").disabled = true; $("nmendtime").disabled = true; }
+	if($("autoplayonly").checked == true){ $("autoplayonly").checked = true; $("autoplayDomainsBox").disabled = false; $("autoplaywebsiteurl").disabled = false; $("autoplayaddbutton").disabled = false; $("autoplayremovebutton").disabled = false; $("autoplaychecklistwhite").disabled = false; $("autoplaychecklistblack").disabled = false; }else{ $("autoplayonly").checked = false; $("autoplayDomainsBox").disabled = true; $("autoplaywebsiteurl").disabled = true; $("autoplayaddbutton").disabled = true; $("autoplayremovebutton").disabled = true; $("autoplaychecklistwhite").disabled = true; $("autoplaychecklistblack").disabled = true; }
 
-if($("nighttheme").checked == true){ $("lampandnightmode").disabled = false; $("nightmodeswitchhide").disabled = false; $("nightmodeswitchhidetime").disabled = false; }
-else{ $("lampandnightmode").disabled = true; $("nightmodeswitchhide").disabled = true; $("nightmodeswitchhidetime").disabled = true; }
+	if($("atmosphereonly").checked == true){ $("atmosphereonly").checked = true; $("atmosphereDomainsBox").disabled = false; $("atmospherewebsiteurl").disabled = false; $("atmosphereaddbutton").disabled = false; $("atmosphereremovebutton").disabled = false; }else{ $("atmosphereonly").checked = false; $("atmosphereDomainsBox").disabled = true; $("atmospherewebsiteurl").disabled = true; $("atmosphereaddbutton").disabled = true; $("atmosphereremovebutton").disabled = true; }
 
-if($("autostop").checked == true){ $("autostopred").disabled = false; $("autostoptrans").disabled = false; }
-else{ $("autostopred").disabled = true; $("autostoptrans").disabled = true; }
+	if($("nightonly").checked == true){ $("nightonly").checked = true; $("nightDomainsBox").disabled = false; $("nightwebsiteurl").disabled = false; $("nightaddbutton").disabled = false; $("nightremovebutton").disabled = false; $("nightmodechecklistwhite").disabled = false; $("nightmodechecklistblack").disabled = false; }else{ $("nightonly").checked = false; $("nightDomainsBox").disabled = true; $("nightwebsiteurl").disabled = true; $("nightaddbutton").disabled = true; $("nightremovebutton").disabled = true; $("nightmodechecklistwhite").disabled = true; $("nightmodechecklistblack").disabled = true; }
 
-if($("autostoponly").checked == true){ $("autostopchecklistwhite").disabled = false; $("autostopchecklistblack").disabled = false; $("autostopDomainsBox").disabled = false; $("autostopwebsiteurl").disabled = false; $("autostopaddbutton").disabled = false; $("autostopremovebutton").disabled = false; }
-else{ $("autostopchecklistwhite").disabled = true; $("autostopchecklistblack").disabled = true; $("autostopDomainsBox").disabled = true; $("autostopwebsiteurl").disabled = true; $("autostopaddbutton").disabled = true; $("autostopremovebutton").disabled = true; }
+	if($("autoplay").checked == true){
+		$("aplay").disabled = false; $("apause").disabled = false; $("astop").disabled = false; $("eyen").checked = true; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplaydelay").disabled = false;
+		if($("autoplaydelay").checked == true){ $("autoplaydelaytime").disabled = false; }else{ $("autoplaydelaytime").disabled = true; }
+	}else{
+		$("aplay").disabled = true; $("apause").disabled = true; $("astop").disabled = true; $("autoplaydelay").disabled = true;
+		if($("autoplaydelay").checked == true){ $("autoplaydelaytime").disabled = false; }else{ $("autoplaydelaytime").disabled = true; }
+	}
 
-if($("videotoolonly").checked == true){ $("videotoolchecklistwhite").disabled = false; $("videotoolchecklistblack").disabled = false; $("videotoolDomainsBox").disabled = false; $("videotoolwebsiteurl").disabled = false; $("videotooladdbutton").disabled = false; $("videotoolremovebutton").disabled = false; }
-else{ $("videotoolchecklistwhite").disabled = true; $("videotoolchecklistblack").disabled = true; $("videotoolDomainsBox").disabled = true; $("videotoolwebsiteurl").disabled = true; $("videotooladdbutton").disabled = true; $("videotoolremovebutton").disabled = true; }
+	if($("videovolume").checked == true){ $("videovolumealt").disabled = false; }else{ $("videovolumealt").disabled = true; }
 
-if($("reflection").checked == true){ $("reflectionamount").disabled = false; $("beeld").style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + (100 - $("reflectionamount").value) / 100 + ", transparent))"; }
-else{ $("reflectionamount").disabled = true; $("beeld").style.webkitBoxReflect = ""; }
+	if($("motion").checked == true){
+		cameramotionlights();
+		$("cammotiononly").disabled = false;
+		if($("cammotiononly").checked == true){ $("cammotiononly").checked = true; $("cammotionDomainsBox").disabled = false; $("cammotionwebsiteurl").disabled = false; $("cammotionaddbutton").disabled = false; $("cammotionremovebutton").disabled = false; }else{ $("cammotionDomainsBox").disabled = true; $("cammotionwebsiteurl").disabled = true; $("cammotionaddbutton").disabled = true; $("cammotionremovebutton").disabled = true; }
+	}else{
+		cameramotionlights();
+		$("cammotiononly").disabled = true; $("cammotionDomainsBox").disabled = true; $("cammotionwebsiteurl").disabled = true; $("cammotionaddbutton").disabled = true; $("cammotionremovebutton").disabled = true;
+	}
 
-if($("multiopacall").checked == true){ $("multiopacityname").disabled = true; $("multiopacitynumber").disabled = true; $("multiopacityDomainsBox").disabled = true; $("multiopacitynumberBox").disabled = true; $("multiopacityremovebutton").disabled = true; $("multiopacityaddbutton").disabled = true; }
-else{ $("multiopacityname").disabled = false; $("multiopacitynumber").disabled = false; $("multiopacityDomainsBox").disabled = false; $("multiopacitynumberBox").disabled = false; $("multiopacityremovebutton").disabled = false; $("multiopacityaddbutton").disabled = false; }
+	if($("speech").checked == true){
+		$("select_language").disabled = false; $("select_dialect").disabled = false;
+		$("speechonly").disabled = false;
+		if($("speechonly").checked == true){ $("speechDomainsBox").disabled = false; $("speechwebsiteurl").disabled = false; $("speechaddbutton").disabled = false; $("speechremovebutton").disabled = false; }else{ $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true; }
+	}else{
+		$("select_language").disabled = true; $("select_dialect").disabled = true;
+		$("speechonly").disabled = true; $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true;
+	}
 
-if($("hovervideo").checked == true){ $("hovervideoamount").disabled = false; }
-else{ $("hovervideoamount").disabled = true; }
+	if($("nightactivetime").checked == true){ $("nmbegintime").disabled = false; $("nmendtime").disabled = false; }else{ $("nmbegintime").disabled = true; $("nmendtime").disabled = true; }
 
-if($("playrate").checked == true){ $("playrateamount").disabled = false; }
-else{ $("playrateamount").disabled = true; }
+	if($("nighttheme").checked == true){ $("lampandnightmode").disabled = false; $("nightmodeswitchhide").disabled = false; $("nightmodeswitchhidetime").disabled = false; }else{ $("lampandnightmode").disabled = true; $("nightmodeswitchhide").disabled = true; $("nightmodeswitchhidetime").disabled = true; }
 
-if($("customqualityyoutube").checked == true){ $("youtubequality").disabled = false; $("block60fps").disabled = false; }
-else{ $("youtubequality").disabled = true; $("block60fps").disabled = true; }
+	if($("autostop").checked == true){ $("autostopred").disabled = false; $("autostoptrans").disabled = false; }else{ $("autostopred").disabled = true; $("autostoptrans").disabled = true; }
 
-if($("seeanalytics").checked == true){
-    $("seeanalparta").style.display = "";
-    $("seeanalpartb").style.display = "";
-    $("seeanalpartc").style.display = "";
-    $("seeanalpartd").style.display = "";
-    $("seeanalparte").style.display = "";
-    $("seeanalpartf").style.display = "";
-    $("seeanalreset").style.display = "";
-}
-else{
-    $("seeanalparta").style.display = "none";
-    $("seeanalpartb").style.display = "none";
-    $("seeanalpartc").style.display = "none";
-    $("seeanalpartd").style.display = "none";
-    $("seeanalparte").style.display = "none";
-    $("seeanalpartf").style.display = "none";
-    $("seeanalreset").style.display = "none";
+	if($("autostoponly").checked == true){ $("autostopchecklistwhite").disabled = false; $("autostopchecklistblack").disabled = false; $("autostopDomainsBox").disabled = false; $("autostopwebsiteurl").disabled = false; $("autostopaddbutton").disabled = false; $("autostopremovebutton").disabled = false; }else{ $("autostopchecklistwhite").disabled = true; $("autostopchecklistblack").disabled = true; $("autostopDomainsBox").disabled = true; $("autostopwebsiteurl").disabled = true; $("autostopaddbutton").disabled = true; $("autostopremovebutton").disabled = true; }
 
-    // reset the analytics
-    chrome.storage.sync.set({"analytics":null,"siteengagement":null});
-}
+	if($("videotoolonly").checked == true){ $("videotoolchecklistwhite").disabled = false; $("videotoolchecklistblack").disabled = false; $("videotoolDomainsBox").disabled = false; $("videotoolwebsiteurl").disabled = false; $("videotooladdbutton").disabled = false; $("videotoolremovebutton").disabled = false; }else{ $("videotoolchecklistwhite").disabled = true; $("videotoolchecklistblack").disabled = true; $("videotoolDomainsBox").disabled = true; $("videotoolwebsiteurl").disabled = true; $("videotooladdbutton").disabled = true; $("videotoolremovebutton").disabled = true; }
 
-// done with reading
-// run now the dynamic background if enabled
-dynamictest();
+	if($("reflection").checked == true){ $("reflectionamount").disabled = false; $("beeld").style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + (100 - $("reflectionamount").value) / 100 + ", transparent))"; }else{ $("reflectionamount").disabled = true; $("beeld").style.webkitBoxReflect = ""; }
 
-// wizard user profile
-$("ska").style.background = $("profileAcolor").value;
-$("ska").style.opacity = $("profileAopacity").value / 100;
-$("ska").style.opacity = $("profileAopacity").value / 100;
-if($("profileAmouse").checked == true){
-    $("ska").style.pointerEvents = "none";
-}else{
-   $("ska").style.pointerEvents = "";
-}
-$("profileB").style.background = $("profileBnightback").value;
-$("profileB").style.color = $("profileBnighttext").value;
-$("profileBlink").style.color = $("profileBnightlink").value;
-$("skc").style.background = $("profileCcolor").value;
-$("skc").style.opacity = $("profileCopacity").value / 100;
-// end wizard ---
+	if($("multiopacall").checked == true){ $("multiopacityname").disabled = true; $("multiopacitynumber").disabled = true; $("multiopacityDomainsBox").disabled = true; $("multiopacitynumberBox").disabled = true; $("multiopacityremovebutton").disabled = true; $("multiopacityaddbutton").disabled = true; }else{ $("multiopacityname").disabled = false; $("multiopacitynumber").disabled = false; $("multiopacityDomainsBox").disabled = false; $("multiopacitynumberBox").disabled = false; $("multiopacityremovebutton").disabled = false; $("multiopacityaddbutton").disabled = false; }
 
-// function available
-try{
-if(typeof browser !== "undefined"){
-    if(typeof browser.theme.update !== "undefined" || browser.theme.update != null){
-    $("brotheme").style.display = "block";
-    }else{
-    $("brotheme").style.display = "none";
-    }
-}else{
-    $("brotheme").style.display = "none";
-}
-}catch(e){
-    $("brotheme").style.display = "none";
-}
+	if($("hovervideo").checked == true){ $("hovervideoamount").disabled = false; }else{ $("hovervideoamount").disabled = true; }
+
+	if($("playrate").checked == true){ $("playrateamount").disabled = false; }else{ $("playrateamount").disabled = true; }
+
+	if($("customqualityyoutube").checked == true){ $("youtubequality").disabled = false; $("block60fps").disabled = false; }else{ $("youtubequality").disabled = true; $("block60fps").disabled = true; }
+
+	if($("seeanalytics").checked == true){
+		$("seeanalparta").style.display = "";
+		$("seeanalpartb").style.display = "";
+		$("seeanalpartc").style.display = "";
+		$("seeanalpartd").style.display = "";
+		$("seeanalparte").style.display = "";
+		$("seeanalpartf").style.display = "";
+		$("seeanalreset").style.display = "";
+	}else{
+		$("seeanalparta").style.display = "none";
+		$("seeanalpartb").style.display = "none";
+		$("seeanalpartc").style.display = "none";
+		$("seeanalpartd").style.display = "none";
+		$("seeanalparte").style.display = "none";
+		$("seeanalpartf").style.display = "none";
+		$("seeanalreset").style.display = "none";
+
+		// reset the analytics
+		chrome.storage.sync.set({"analytics":null, "siteengagement":null});
+	}
+
+	// done with reading
+	// run now the dynamic background if enabled
+	dynamictest();
+
+	// wizard user profile
+	$("ska").style.background = $("profileAcolor").value;
+	$("ska").style.opacity = $("profileAopacity").value / 100;
+	$("ska").style.opacity = $("profileAopacity").value / 100;
+	if($("profileAmouse").checked == true){
+		$("ska").style.pointerEvents = "none";
+	}else{
+		$("ska").style.pointerEvents = "";
+	}
+	$("profileB").style.background = $("profileBnightback").value;
+	$("profileB").style.color = $("profileBnighttext").value;
+	$("profileBlink").style.color = $("profileBnightlink").value;
+	$("skc").style.background = $("profileCcolor").value;
+	$("skc").style.opacity = $("profileCopacity").value / 100;
+	// end wizard ---
+
+	// function available
+	try{
+		if(typeof browser !== "undefined"){
+			if(typeof browser.theme.update !== "undefined" || browser.theme.update != null){
+				$("brotheme").style.display = "block";
+			}else{
+				$("brotheme").style.display = "none";
+			}
+		}else{
+			$("brotheme").style.display = "none";
+		}
+	}catch(e){
+		$("brotheme").style.display = "none";
+	}
 }
 
 function ariacheck(){
-    var inputs = document.querySelectorAll("input");
-    var i;
-    var l = inputs.length;
-    for(i = 0; i < l; i++){
-        if(inputs[i].getAttribute("role") == "radio" || inputs[i].getAttribute("role") == "checkbox"){
-            if(inputs[i].checked == true){
-                inputs[i].setAttribute("aria-checked", true);
-            }else{
-                inputs[i].setAttribute("aria-checked", false);
-            }
-        }
-    }
+	var inputs = document.querySelectorAll("input");
+	var i;
+	var l = inputs.length;
+	for(i = 0; i < l; i++){
+		if(inputs[i].getAttribute("role") == "radio" || inputs[i].getAttribute("role") == "checkbox"){
+			if(inputs[i].checked == true){
+				inputs[i].setAttribute("aria-checked", true);
+			}else{
+				inputs[i].setAttribute("aria-checked", false);
+			}
+		}
+	}
 }
 
 
@@ -1704,82 +1590,79 @@ var canvasHeight = 400;
 // A function to create a particle object.
 function Particle(context){
 
-    // Set the initial x and y positions
-    this.x = 0;
-    this.y = 0;
+	// Set the initial x and y positions
+	this.x = 0;
+	this.y = 0;
 
-    // Set the initial velocity
-    this.xVelocity = 0;
-    this.yVelocity = 0;
+	// Set the initial velocity
+	this.xVelocity = 0;
+	this.yVelocity = 0;
 
-    // Set the radius
-    this.radius = 5;
+	// Set the radius
+	this.radius = 5;
 
-    // Store the context which will be used to draw the particle
-    this.context = context;
+	// Store the context which will be used to draw the particle
+	this.context = context;
 
-    // The function to draw the particle on the canvas.
-    this.smokedraw = function(){
+	// The function to draw the particle on the canvas.
+	this.smokedraw = function(){
 
-        // If an image is set draw it
-        if(this.image){
-            this.context.drawImage(this.image, this.x - 128, this.y - 128);
-            // If the image is being rendered do not draw the circle so break out of the draw function
-            return;
-        }
-        // Draw the circle as before, with the addition of using the position and the radius from this object.
-        this.context.beginPath();
-        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
-        this.context.fillStyle = "rgba(88, 88, 88, 1)";
-        this.context.fill();
-        this.context.closePath();
-    };
+		// If an image is set draw it
+		if(this.image){
+			this.context.drawImage(this.image, this.x - 128, this.y - 128);
+			// If the image is being rendered do not draw the circle so break out of the draw function
+			return;
+		}
+		// Draw the circle as before, with the addition of using the position and the radius from this object.
+		this.context.beginPath();
+		this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+		this.context.fillStyle = "rgba(88, 88, 88, 1)";
+		this.context.fill();
+		this.context.closePath();
+	};
 
-    // Update the particle.
-    this.update = function(){
-        // Update the position of the particle with the addition of the velocity.
-        this.x += this.xVelocity;
-        this.y += this.yVelocity;
+	// Update the particle.
+	this.update = function(){
+		// Update the position of the particle with the addition of the velocity.
+		this.x += this.xVelocity;
+		this.y += this.yVelocity;
 
-        // Check if has crossed the right edge
-        if(this.x >= canvasWidth){
-            this.xVelocity = -this.xVelocity;
-            this.x = canvasWidth;
-        }
-        // Check if has crossed the left edge
-        else if(this.x <= 0){
-            this.xVelocity = -this.xVelocity;
-            this.x = 0;
-        }
+		if(this.x >= canvasWidth){
+			// Check if has crossed the right edge
+			this.xVelocity = -this.xVelocity;
+			this.x = canvasWidth;
+		}else if(this.x <= 0){
+			// Check if has crossed the left edge
+			this.xVelocity = -this.xVelocity;
+			this.x = 0;
+		}
 
-        // Check if has crossed the bottom edge
-        if(this.y >= canvasHeight){
-            this.yVelocity = -this.yVelocity;
-            this.y = canvasHeight;
-        }
+		if(this.y >= canvasHeight){
+			// Check if has crossed the bottom edge
+			this.yVelocity = -this.yVelocity;
+			this.y = canvasHeight;
+		}else if(this.y <= 0){
+			// Check if has crossed the top edge
+			this.yVelocity = -this.yVelocity;
+			this.y = 0;
+		}
+	};
 
-        // Check if has crossed the top edge
-        else if(this.y <= 0){
-            this.yVelocity = -this.yVelocity;
-            this.y = 0;
-        }
-    };
+	// A function to set the position of the particle.
+	this.setPosition = function(x, y){
+		this.x = x;
+		this.y = y;
+	};
 
-    // A function to set the position of the particle.
-    this.setPosition = function(x, y){
-        this.x = x;
-        this.y = y;
-    };
+	// Function to set the velocity.
+	this.setVelocity = function(x, y){
+		this.xVelocity = x;
+		this.yVelocity = y;
+	};
 
-    // Function to set the velocity.
-    this.setVelocity = function(x, y){
-        this.xVelocity = x;
-        this.yVelocity = y;
-    };
-
-    this.setImage = function(image){
-        this.image = image;
-    };
+	this.setImage = function(image){
+		this.image = image;
+	};
 }
 
 // A function to generate a random number between 2 values
@@ -1788,42 +1671,42 @@ function generateRandom(min, max){ return Math.random() * (max - min) + min; }
 var smokecontext;
 // Initialise the scene and set the context if possible
 function runsmoke(){
-    var smokecanvas = document.getElementById("stefanvddynamicsmoke");
-    if(smokecanvas.getContext){
-        // Set the context variable so it can be re-used
-        smokecontext = smokecanvas.getContext("2d",{desynchronized: true});
-        // Create the particles and set their initial positions and velocities
-        var i;
-        for(i = 0; i < particleCount; ++i){
-            var particle = new Particle(smokecontext);
+	var smokecanvas = document.getElementById("stefanvddynamicsmoke");
+	if(smokecanvas.getContext){
+		// Set the context variable so it can be re-used
+		smokecontext = smokecanvas.getContext("2d", {desynchronized: true});
+		// Create the particles and set their initial positions and velocities
+		var i;
+		for(i = 0; i < particleCount; ++i){
+			var particle = new Particle(smokecontext);
 
-            // Set the position to be inside the canvas bounds
-            particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+			// Set the position to be inside the canvas bounds
+			particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
 
-            // Set the initial velocity to be either random and either negative or positive
-            particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
-            particles.push(particle);
-        }
-    }
+			// Set the initial velocity to be either random and either negative or positive
+			particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+			particles.push(particle);
+		}
+	}
 }
 
 // The function to draw the scene
 function smokedraw(){
-    // Clear the drawing surface and fill it with a black background
-    smokecontext.fillStyle = "rgba(0, 0, 0, 0.0)";
-    smokecontext.fillRect(0, 0, 400, 400);
+	// Clear the drawing surface and fill it with a black background
+	smokecontext.fillStyle = "rgba(0, 0, 0, 0.0)";
+	smokecontext.fillRect(0, 0, 400, 400);
 
-    // Go through all of the particles and draw them.
-    particles.forEach(function(particle){
-        particle.draw();
-    });
+	// Go through all of the particles and draw them.
+	particles.forEach(function(particle){
+		particle.draw();
+	});
 }
 
 // Update the scene
 function smokeupdate(){
-    particles.forEach(function(particle){
-        particle.update();
-    });
+	particles.forEach(function(particle){
+		particle.update();
+	});
 }
 //---
 // Dynamic Background: Cloud
@@ -1831,58 +1714,58 @@ var layers = [];
 var objects = [];
 var worldXAngle = 0; var worldYAngle = 0;
 function createCloud(){
-    var div = document.createElement("div");
-    div.className = "stefanvdcloudBase";
-    var x = 256 - (Math.random() * 512);
-    var y = 256 - (Math.random() * 512);
-    var z = 256 - (Math.random() * 512);
-    var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
-    div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
-    world.appendChild(div);
+	var div = document.createElement("div");
+	div.className = "stefanvdcloudBase";
+	var x = 256 - (Math.random() * 512);
+	var y = 256 - (Math.random() * 512);
+	var z = 256 - (Math.random() * 512);
+	var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
+	div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
+	world.appendChild(div);
 
-    var j;
-    var l = 5 + Math.round(Math.random() * 10);
-    for(j = 0; j < l; j++){
-        var cloud = document.createElement("div");
-        cloud.style.opacity = 0;
-        cloud.style.opacity = .8;
-        cloud.className = "stefanvdcloudLayer";
-        var cloudx = 256 - (Math.random() * 512);
-        var cloudy = 256 - (Math.random() * 512);
-        var cloudz = 100 - (Math.random() * 200);
-        var clouda = Math.random() * 360;
-        var clouds = .25 + Math.random();
-        x *= .2; y *= .2;
-        cloud.data = {x: cloudx,y: cloudy,z: cloudz,a: clouda,s: clouds,speed: .1 * Math.random()};
-        var cloudt = "translateX(" + cloudx + "px) translateY(" + cloudy + "px) translateZ(" + cloudz + "px) rotateZ(" + clouda + "deg) scale(" + clouds + ")";
-        cloud.style.webkitTransform = cloudt; cloud.style.MozTransform = cloudt; cloud.style.oTransform = cloudt;
-        div.appendChild(cloud);
-        layers.push(cloud);
-    }
-    return div;
+	var j;
+	var l = 5 + Math.round(Math.random() * 10);
+	for(j = 0; j < l; j++){
+		var cloud = document.createElement("div");
+		cloud.style.opacity = 0;
+		cloud.style.opacity = .8;
+		cloud.className = "stefanvdcloudLayer";
+		var cloudx = 256 - (Math.random() * 512);
+		var cloudy = 256 - (Math.random() * 512);
+		var cloudz = 100 - (Math.random() * 200);
+		var clouda = Math.random() * 360;
+		var clouds = .25 + Math.random();
+		x *= .2; y *= .2;
+		cloud.data = {x: cloudx, y: cloudy, z: cloudz, a: clouda, s: clouds, speed: .1 * Math.random()};
+		var cloudt = "translateX(" + cloudx + "px) translateY(" + cloudy + "px) translateZ(" + cloudz + "px) rotateZ(" + clouda + "deg) scale(" + clouds + ")";
+		cloud.style.webkitTransform = cloudt; cloud.style.MozTransform = cloudt; cloud.style.oTransform = cloudt;
+		div.appendChild(cloud);
+		layers.push(cloud);
+	}
+	return div;
 }
 
 var world;
 function generate(){
-    world = document.getElementById("stefanvdworld");
-    objects = [];
-    if(world.hasChildNodes()){
-        while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); }
-    }
-    var j;
-    for(j = 0; j < 5; j++){ objects.push(createCloud()); }
+	world = document.getElementById("stefanvdworld");
+	objects = [];
+	if(world.hasChildNodes()){
+		while(world.childNodes.length >= 1){ world.removeChild(world.firstChild); }
+	}
+	var j;
+	for(j = 0; j < 5; j++){ objects.push(createCloud()); }
 }
 
 function cloudupdate(){
-    var j;
-    var l = layers.length;
-    for(j = 0; j < l; j++){
-        var layer = layers[j];
-        layer.data.a += layer.data.speed;
-        var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
-        layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
-    }
-    requestAnimationFrame(cloudupdate);
+	var j;
+	var l = layers.length;
+	for(j = 0; j < l; j++){
+		var layer = layers[j];
+		layer.data.a += layer.data.speed;
+		var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
+		layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;
+	}
+	requestAnimationFrame(cloudupdate);
 }
 //---
 // Dynamic Background: Rain
@@ -1902,96 +1785,96 @@ var stormcanvas;
 var sky;
 
 function randomFrom(min, max){
-    return(Math.random() * (max - min) + min);
+	return(Math.random() * (max - min) + min);
 }
 
 function rainresizer(){
-    window_width = window.innerWidth * 1.5;
-    window_height = window.innerHeight * 1.5;
-    drop_count = window_width * rain_weight;
+	window_width = window.innerWidth * 1.5;
+	window_height = window.innerHeight * 1.5;
+	drop_count = window_width * rain_weight;
 
-    stormcanvas.setAttribute("width", window_width);
-    stormcanvas.setAttribute("height", window_height);
+	stormcanvas.setAttribute("width", window_width);
+	stormcanvas.setAttribute("height", window_height);
 }
 
 function paintSky(){
-    if(document.visibilityState === "visible"){
-        var i;
-        for(i = 0; i < drop_count; i++){
-            drops[i] = new drop();
-            drops[i].reset();
-        }
+	if(document.visibilityState === "visible"){
+		var i;
+		for(i = 0; i < drop_count; i++){
+			drops[i] = new drop();
+			drops[i].reset();
+		}
 
-        rain();
-    }
+		rain();
+	}
 }
 
 function rain(){
-    sky.clearRect(0, 0, window_width, window_height);
+	sky.clearRect(0, 0, window_width, window_height);
 
-    var drops_length = drops.length;
+	var drops_length = drops.length;
 
-    var i;
-    for(i = 0; i < drops_length; i++){
-      var drop = drops[i];
-      drop.fall();
-      drop.draw();
-    }
+	var i;
+	for(i = 0; i < drops_length; i++){
+		var drop = drops[i];
+		drop.fall();
+		drop.draw();
+	}
 
-    window.requestAnimFrame(rain);
+	window.requestAnimFrame(rain);
 }
 
 function drop(){
-    this.reset = function(){
-        this.r = randomFrom(0.8, 1.6);
-        this.l = (this.r * 250);
-        this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
-        this.y = randomFrom((window_height * -0.25), (window_height * -1));
-        this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
-        this.dy = (this.r * (100 * fall_speed));
-        this.offset = (this.l * (this.dx / this.dy));
-        this.opacity = (this.r * randomFrom(0.2, 0.6));
-        this.drip = this.render();
-    };
+	this.reset = function(){
+		this.r = randomFrom(0.8, 1.6);
+		this.l = (this.r * 250);
+		this.x = randomFrom((window_width * -0.25), (window_width * 1.125));
+		this.y = randomFrom((window_height * -0.25), (window_height * -1));
+		this.dx = randomFrom((wind_speed - 3), (wind_speed + 3));
+		this.dy = (this.r * (100 * fall_speed));
+		this.offset = (this.l * (this.dx / this.dy));
+		this.opacity = (this.r * randomFrom(0.2, 0.6));
+		this.drip = this.render();
+	};
 
-    this.render = function(){
-        var canv = document.createElement("canvas");
-        var ctx = canv.getContext("2d",{desynchronized: true});
-        canv.setAttribute("width", Math.abs(this.offset) + this.r);
-        canv.setAttribute("height", this.l);
+	this.render = function(){
+		var canv = document.createElement("canvas");
+		var ctx = canv.getContext("2d", {desynchronized: true});
+		canv.setAttribute("width", Math.abs(this.offset) + this.r);
+		canv.setAttribute("height", this.l);
 
-        ctx.beginPath();
+		ctx.beginPath();
 
-        var drip = ctx.createLinearGradient(0, 0, 0, this.l);
-        drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
-        drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
-        ctx.fillStyle = drip;
+		var drip = ctx.createLinearGradient(0, 0, 0, this.l);
+		drip.addColorStop(0, "rgba(" + rain_color + ", 0)");
+		drip.addColorStop(1, "rgba(" + rain_color + ", " + this.opacity + ")");
+		ctx.fillStyle = drip;
 
-        //sky.rect(this.x, this.y, this.r, this.l);
-        var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
-        ctx.moveTo(startX, 0);
-        ctx.lineTo(startX + this.r, 0);
-        ctx.lineTo(startX + this.r + this.offset, this.l);
-        ctx.lineTo(startX + this.offset, this.l);
+		// sky.rect(this.x, this.y, this.r, this.l);
+		var startX = (this.offset >= 0) ? 0 : Math.abs(this.offset);
+		ctx.moveTo(startX, 0);
+		ctx.lineTo(startX + this.r, 0);
+		ctx.lineTo(startX + this.r + this.offset, this.l);
+		ctx.lineTo(startX + this.offset, this.l);
 
-        ctx.closePath();
-        ctx.fill();
+		ctx.closePath();
+		ctx.fill();
 
-        return canv;
-    };
+		return canv;
+	};
 
-    this.draw = function(){
-        sky.drawImage(this.drip, this.x, this.y);
-    };
+	this.draw = function(){
+		sky.drawImage(this.drip, this.x, this.y);
+	};
 
-    this.fall = function(){
-        this.x += this.dx;
-        this.y += this.dy;
+	this.fall = function(){
+		this.x += this.dx;
+		this.y += this.dy;
 
-        if(this.y > (window_height * 1.25)){
-        this.reset();
-        }
-    };
+		if(this.y > (window_height * 1.25)){
+			this.reset();
+		}
+	};
 }
 //---
 // Dynamic Background: Triangle
@@ -2004,287 +1887,286 @@ var unitHeight;
 var points;
 
 function trianglerun(){
-    var triasvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    triasvg.setAttribute("width",window.innerWidth);
-    triasvg.setAttribute("height",window.innerHeight);
-    document.getElementById("triangle").appendChild(triasvg);
+	var triasvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	triasvg.setAttribute("width", window.innerWidth);
+	triasvg.setAttribute("height", window.innerHeight);
+	document.getElementById("triangle").appendChild(triasvg);
 
-    var unitSize = (window.innerWidth + window.innerHeight) / 20;
-    numPointsX = Math.ceil(window.innerWidth / unitSize) + 1;
-    numPointsY = Math.ceil(window.innerHeight / unitSize) + 1;
-    unitWidth = Math.ceil(window.innerWidth / (numPointsX - 1));
-    unitHeight = Math.ceil(window.innerHeight / (numPointsY - 1));
+	var unitSize = (window.innerWidth + window.innerHeight) / 20;
+	numPointsX = Math.ceil(window.innerWidth / unitSize) + 1;
+	numPointsY = Math.ceil(window.innerHeight / unitSize) + 1;
+	unitWidth = Math.ceil(window.innerWidth / (numPointsX - 1));
+	unitHeight = Math.ceil(window.innerHeight / (numPointsY - 1));
 
-    points = [];
+	points = [];
 
-    var y;
-    for(y = 0; y < numPointsY; y++){
-        var x;
-        for(x = 0; x < numPointsX; x++){
-            points.push({x:unitWidth * x, y:unitHeight * y, originX:unitWidth * x, originY:unitHeight * y});
-        }
-    }
+	var y;
+	for(y = 0; y < numPointsY; y++){
+		var x;
+		for(x = 0; x < numPointsX; x++){
+			points.push({x:unitWidth * x, y:unitHeight * y, originX:unitWidth * x, originY:unitHeight * y});
+		}
+	}
 
-    trianglerandomize();
+	trianglerandomize();
 
-    var i;
-    var l = points.length;
-    for(i = 0; i < l; i++){
-        if(points[i].originX != unitWidth * (numPointsX - 1) && points[i].originY != unitHeight * (numPointsY - 1)){
-            var topLeftX = points[i].x;
-            var topLeftY = points[i].y;
-            var topRightX = points[i + 1].x;
-            var topRightY = points[i + 1].y;
-            var bottomLeftX = points[i + numPointsX].x;
-            var bottomLeftY = points[i + numPointsX].y;
-            var bottomRightX = points[i + numPointsX + 1].x;
-            var bottomRightY = points[i + numPointsX + 1].y;
+	var i;
+	var l = points.length;
+	for(i = 0; i < l; i++){
+		if(points[i].originX != unitWidth * (numPointsX - 1) && points[i].originY != unitHeight * (numPointsY - 1)){
+			var topLeftX = points[i].x;
+			var topLeftY = points[i].y;
+			var topRightX = points[i + 1].x;
+			var topRightY = points[i + 1].y;
+			var bottomLeftX = points[i + numPointsX].x;
+			var bottomLeftY = points[i + numPointsX].y;
+			var bottomRightX = points[i + numPointsX + 1].x;
+			var bottomRightY = points[i + numPointsX + 1].y;
 
-            var rando = Math.floor(Math.random() * 2);
+			var rando = Math.floor(Math.random() * 2);
 
-            var n;
-            for(n = 0; n < 2; n++){
-                var polygon = document.createElementNS(triasvg.namespaceURI, "polygon");
+			var n;
+			for(n = 0; n < 2; n++){
+				var polygon = document.createElementNS(triasvg.namespaceURI, "polygon");
 
-                if(rando == 0){
-                    if(n == 0){
-                        polygon.point1 = i;
-                        polygon.point2 = i + numPointsX;
-                        polygon.point3 = i + numPointsX + 1;
-                        polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + bottomRightX + "," + bottomRightY);
-                    }else if(n == 1){
-                        polygon.point1 = i;
-                        polygon.point2 = i + 1;
-                        polygon.point3 = i + numPointsX + 1;
-                        polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
-                    }
-                }else if(rando == 1){
-                    if(n == 0){
-                        polygon.point1 = i;
-                        polygon.point2 = i + numPointsX;
-                        polygon.point3 = i + 1;
-                        polygon.setAttribute("points",topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY);
-                    }else if(n == 1){
-                        polygon.point1 = i + numPointsX;
-                        polygon.point2 = i + 1;
-                        polygon.point3 = i + numPointsX + 1;
-                        polygon.setAttribute("points",bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
-                    }
-                }
-                polygon.setAttribute("fill","rgba(0,0,0," + (Math.random() / 3) + ")");
-                var animate = document.createElementNS("http://www.w3.org/2000/svg","animate");
-                animate.setAttribute("fill","freeze");
-                animate.setAttribute("attributeName","points");
-                animate.setAttribute("dur",refreshDuration + "ms");
-                animate.setAttribute("calcMode","linear");
-                polygon.appendChild(animate);
-                triasvg.appendChild(polygon);
-            }
-        }
-    }
-    trianglerefresh();
+				if(rando == 0){
+					if(n == 0){
+						polygon.point1 = i;
+						polygon.point2 = i + numPointsX;
+						polygon.point3 = i + numPointsX + 1;
+						polygon.setAttribute("points", topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + bottomRightX + "," + bottomRightY);
+					}else if(n == 1){
+						polygon.point1 = i;
+						polygon.point2 = i + 1;
+						polygon.point3 = i + numPointsX + 1;
+						polygon.setAttribute("points", topLeftX + "," + topLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
+					}
+				}else if(rando == 1){
+					if(n == 0){
+						polygon.point1 = i;
+						polygon.point2 = i + numPointsX;
+						polygon.point3 = i + 1;
+						polygon.setAttribute("points", topLeftX + "," + topLeftY + " " + bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY);
+					}else if(n == 1){
+						polygon.point1 = i + numPointsX;
+						polygon.point2 = i + 1;
+						polygon.point3 = i + numPointsX + 1;
+						polygon.setAttribute("points", bottomLeftX + "," + bottomLeftY + " " + topRightX + "," + topRightY + " " + bottomRightX + "," + bottomRightY);
+					}
+				}
+				polygon.setAttribute("fill", "rgba(0,0,0," + (Math.random() / 3) + ")");
+				var animate = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+				animate.setAttribute("fill", "freeze");
+				animate.setAttribute("attributeName", "points");
+				animate.setAttribute("dur", refreshDuration + "ms");
+				animate.setAttribute("calcMode", "linear");
+				polygon.appendChild(animate);
+				triasvg.appendChild(polygon);
+			}
+		}
+	}
+	trianglerefresh();
 }
 
 function trianglerandomize(){
-    var i;
-    var l = points.length;
-    for(i = 0; i < l; i++){
-        if(points[i].originX != 0 && points[i].originX != unitWidth * (numPointsX - 1)){
-            points[i].x = points[i].originX + Math.random() * unitWidth - unitWidth / 2;
-        }
-        if(points[i].originY != 0 && points[i].originY != unitHeight * (numPointsY - 1)){
-            points[i].y = points[i].originY + Math.random() * unitHeight - unitHeight / 2;
-        }
-    }
+	var i;
+	var l = points.length;
+	for(i = 0; i < l; i++){
+		if(points[i].originX != 0 && points[i].originX != unitWidth * (numPointsX - 1)){
+			points[i].x = points[i].originX + Math.random() * unitWidth - unitWidth / 2;
+		}
+		if(points[i].originY != 0 && points[i].originY != unitHeight * (numPointsY - 1)){
+			points[i].y = points[i].originY + Math.random() * unitHeight - unitHeight / 2;
+		}
+	}
 }
 
 function trianglerefresh(){
-    if(document.visibilityState === "visible"){
-    trianglerandomize();
-    var i;
-    var l = document.querySelector("#triangle svg").childNodes.length;
-    for(i = 0; i < l; i++){
-        var polygon = document.querySelector("#triangle svg").childNodes[i];
-        var animate = polygon.childNodes[0];
-        if(animate.getAttribute("to")){
-            animate.setAttribute("from",animate.getAttribute("to"));
-        }
-        animate.setAttribute("to",points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
-        animate.beginElement();
-    }
-    refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
-    }
+	if(document.visibilityState === "visible"){
+		trianglerandomize();
+		var i;
+		var l = document.querySelector("#triangle svg").childNodes.length;
+		for(i = 0; i < l; i++){
+			var polygon = document.querySelector("#triangle svg").childNodes[i];
+			var animate = polygon.childNodes[0];
+			if(animate.getAttribute("to")){
+				animate.setAttribute("from", animate.getAttribute("to"));
+			}
+			animate.setAttribute("to", points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
+			animate.beginElement();
+		}
+		refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
+	}
 }
 
 function onResize(){
-document.querySelector("#triangle svg").remove();
-window.clearTimeout(refreshTimeout);
-trianglerun();
+	document.querySelector("#triangle svg").remove();
+	window.clearTimeout(refreshTimeout);
+	trianglerun();
 }
 //---
 
 function dynamictest(){
-if($("dynamic").checked == true){
-    if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }
-    else{ $("hoveroptiondyn5").disabled = true; }
-}else{
-    $("hoveroptiondyn5").disabled = true;
-}
+	if($("dynamic").checked == true){
+		if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }else{ $("hoveroptiondyn5").disabled = true; }
+	}else{
+		$("hoveroptiondyn5").disabled = true;
+	}
 
-var newdynmaster = $("stefanvddynamicbackground");
-if($("dynamic").checked == true){
-if($("dynamic1").checked == true){
-removedynamic();
-	var fishtanks = document.createElement("div"); fishtanks.setAttribute("id","fishtanks"); newdynmaster.appendChild(fishtanks);
+	var newdynmaster = $("stefanvddynamicbackground");
+	if($("dynamic").checked == true){
+		if($("dynamic1").checked == true){
+			removedynamic();
+			var fishtanks = document.createElement("div"); fishtanks.setAttribute("id", "fishtanks"); newdynmaster.appendChild(fishtanks);
 
-    var newdynleft = document.createElement("div"); newdynleft.setAttribute("class","stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
-    var dynlefti;
-    for(dynlefti = 0; dynlefti < 5; dynlefti++){ var newdynbubbleleft = document.createElement("div"); newdynbubbleleft.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynlefti + ""); newdynleft.appendChild(newdynbubbleleft); }
+			var newdynleft = document.createElement("div"); newdynleft.setAttribute("class", "stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
+			var dynlefti;
+			for(dynlefti = 0; dynlefti < 5; dynlefti++){ var newdynbubbleleft = document.createElement("div"); newdynbubbleleft.setAttribute("class", "stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynlefti + ""); newdynleft.appendChild(newdynbubbleleft); }
 
-    var newdynmid = document.createElement("div"); newdynmid.setAttribute("class","stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
-    var dynmidi;
-    for(dynmidi = 6; dynmidi < 10; dynmidi++){ var newdynbubblemid = document.createElement("div"); newdynbubblemid.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynmidi + ""); newdynmid.appendChild(newdynbubblemid); }
+			var newdynmid = document.createElement("div"); newdynmid.setAttribute("class", "stefanvddynamicbackgroundbubblemid"); fishtanks.appendChild(newdynmid);
+			var dynmidi;
+			for(dynmidi = 6; dynmidi < 10; dynmidi++){ var newdynbubblemid = document.createElement("div"); newdynbubblemid.setAttribute("class", "stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynmidi + ""); newdynmid.appendChild(newdynbubblemid); }
 
-    var newdynright = document.createElement("div"); newdynright.setAttribute("class","stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
-    var dynrighti;
-    for(dynrighti = 11; dynrighti < 16; dynrighti++){ var newdynbubble = document.createElement("div"); newdynbubble.setAttribute("class","stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynrighti + ""); newdynright.appendChild(newdynbubble); }
-}else if($("dynamic2").checked == true){
-removedynamic();
-	var blocks = document.createElement("div"); blocks.setAttribute("id","blocks"); newdynmaster.appendChild(blocks);
+			var newdynright = document.createElement("div"); newdynright.setAttribute("class", "stefanvddynamicbackgroundbubbleright"); fishtanks.appendChild(newdynright);
+			var dynrighti;
+			for(dynrighti = 11; dynrighti < 16; dynrighti++){ var newdynbubble = document.createElement("div"); newdynbubble.setAttribute("class", "stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynrighti + ""); newdynright.appendChild(newdynbubble); }
+		}else if($("dynamic2").checked == true){
+			removedynamic();
+			var blocks = document.createElement("div"); blocks.setAttribute("id", "blocks"); newdynmaster.appendChild(blocks);
 
-    var newdynblockleft = document.createElement("div"); newdynblockleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynblockleft);
-    var blocki;
-	for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class","stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynleft.appendChild(newdynblock); }
-}else if($("dynamic3").checked == true){
-removedynamic();
-	var raindrops = document.createElement("div"); raindrops.setAttribute("id","raindrops"); newdynmaster.appendChild(raindrops);
+			var newdynblockleft = document.createElement("div"); newdynblockleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynblockleft);
+			var blocki;
+			for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynleft.appendChild(newdynblock); }
+		}else if($("dynamic3").checked == true){
+			removedynamic();
+			var raindrops = document.createElement("div"); raindrops.setAttribute("id", "raindrops"); newdynmaster.appendChild(raindrops);
 
-	var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class","stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynrainleft);
-    var rainlefti;
-    for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class","stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynleft.appendChild(newdyn); }
-}else if($("dynamic4").checked == true){
-    removedynamic();
-	var clouds = document.createElement("div"); clouds.setAttribute("id","clouds"); newdynmaster.appendChild(clouds);
-	var newdynworld = document.createElement("div"); newdynworld.setAttribute("id","stefanvdworld"); clouds.appendChild(newdynworld);
-    (function(){
-		var lastTime = 0;
-        var vendors = ["ms", "moz", "webkit", "o"];
-        var x;
-        var lvendor = vendors.length;
-		for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
-			window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
-			window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
-		}
-		if(!window.requestAnimationFrame)
-			window.requestAnimationFrame = function(callback){
-				var currTime = new Date().getTime();
-				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-				var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
-				lastTime = currTime + timeToCall;
-				return id;
+			var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynrainleft);
+			var rainlefti;
+			for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class", "stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynleft.appendChild(newdyn); }
+		}else if($("dynamic4").checked == true){
+			removedynamic();
+			var clouds = document.createElement("div"); clouds.setAttribute("id", "clouds"); newdynmaster.appendChild(clouds);
+			var newdynworld = document.createElement("div"); newdynworld.setAttribute("id", "stefanvdworld"); clouds.appendChild(newdynworld);
+			(function(){
+				var lastTime = 0;
+				var vendors = ["ms", "moz", "webkit", "o"];
+				var x;
+				var lvendor = vendors.length;
+				for(x = 0; x < lvendor && !window.requestAnimationFrame; ++x){
+					window.requestAnimationFrame = window[vendors[x] + "RequestAnimationFrame"];
+					window.cancelRequestAnimationFrame = window[vendors[x] + "CancelRequestAnimationFrame"];
+				}
+				if(!window.requestAnimationFrame)
+					window.requestAnimationFrame = function(callback){
+						var currTime = new Date().getTime();
+						var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+						var id = window.setTimeout(function(){ callback(currTime + timeToCall); }, timeToCall);
+						lastTime = currTime + timeToCall;
+						return id;
+					};
+
+				if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
+			}());
+
+			var p = 400;
+			newdynmaster.style.webkitPerspective = p; newdynmaster.style.MozPerspective = p; newdynmaster.style.oPerspective = p;
+			generate();
+			cloudupdate();
+		}else if($("dynamic5").checked == true){
+			removedynamic();
+
+			var flying = "";
+			if($("hoveroptiondyn5").checked == true){
+				// with the letter n include, then it see the flying in effect
+				flying = "n";
+			}
+			var space = document.createElement("div"); space.setAttribute("id", "space"); newdynmaster.appendChild(space);
+
+			var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspace"); space.appendChild(newdynspaceworld);
+			var spacej;
+			for(spacej = 1; spacej < 17; spacej++){
+				if(spacej <= 9){ spacej = "0" + spacej; }
+				var newdynpart1 = document.createElement("div");
+				newdynpart1.setAttribute("id", flying + "p" + spacej); newdynspaceworld.appendChild(newdynpart1);
+				var spacei;
+				for(spacei = 1; spacei < 31; spacei++){
+					if(spacei <= 9){ spacei = "0" + spacei; }
+					var newdynlow = document.createElement("b"); newdynlow.setAttribute("class", flying + "s0" + spacei + ""); newdynpart1.appendChild(newdynlow);
+				}
+			}
+		}else if($("dynamic6").checked == true){
+			removedynamic();
+			var smoke = document.createElement("div"); smoke.setAttribute("id", "smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
+			var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id", "stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
+
+			// Create an image object (only need one instance)
+			var imageObj = new Image();
+
+			// Once the image has been downloaded then set the image on all of the particles
+			imageObj.onload = function(){
+				particles.forEach(function(particle){
+					particle.setImage(imageObj);
+				});
 			};
 
-		if(!window.cancelAnimationFrame)window.cancelAnimationFrame = function(id){ window.clearTimeout(id); };
-	}());
+			// Once the callback is arranged then set the source of the image
+			imageObj.src = "images/Smoke10.webp";
 
-    var p = 400;
-	newdynmaster.style.webkitPerspective = p; newdynmaster.style.MozPerspective = p; newdynmaster.style.oPerspective = p;
-	generate();
-	cloudupdate();
-}else if($("dynamic5").checked == true){
-    removedynamic();
+			// Initialize the scene
+			runsmoke();
 
-    var flying = "";
-    if($("hoveroptiondyn5").checked == true){
-        // with the letter n include, then it see the flying in effect
-        flying = "n";
-    }
-    var space = document.createElement("div"); space.setAttribute("id","space"); newdynmaster.appendChild(space);
+			// If the context is set then we can draw the scene (if not then the browser does not support canvas)
+			if(smokecontext){
+				if(document.visibilityState === "visible"){
+					window.setInterval(function(){
+						// Update the scene before drawing
+						smokeupdate();
 
-    var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id","stefanvddynamicspace"); space.appendChild(newdynspaceworld);
-    var spacej;
-    for(spacej = 1; spacej < 17; spacej++){
-    if(spacej <= 9){ spacej = "0" + spacej; }
-        var newdynpart1 = document.createElement("div");
-        newdynpart1.setAttribute("id",flying + "p" + spacej); newdynspaceworld.appendChild(newdynpart1);
-        var spacei;
-        for(spacei = 1; spacei < 31; spacei++){
-        if(spacei <= 9){ spacei = "0" + spacei; }
-        var newdynlow = document.createElement("b"); newdynlow.setAttribute("class",flying + "s0" + spacei + ""); newdynpart1.appendChild(newdynlow);
-        }
-    }
-}else if($("dynamic6").checked == true){
-    removedynamic();
-    var smoke = document.createElement("div"); smoke.setAttribute("id","smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
-    var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id","stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
+						// Draw the scene
+						smokedraw();
+					}, 1000 / targetFPS);
+				}
+			}
+		}else if($("dynamic7").checked == true){
+			removedynamic();
+			var flyingdots = document.createElement("div"); flyingdots.setAttribute("id", "flyingdots"); newdynmaster.appendChild(flyingdots);
+			var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id", "stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
+			var flyingj;
+			for(flyingj = 1; flyingj < 100; flyingj++){
+				var newminic = document.createElement("div");
+				newminic.className = "c";
+				newdyndotsworld.appendChild(newminic);
+			}
+		}else if($("dynamic8").checked == true){
+			removedynamic();
+			var storm = document.createElement("div"); storm.setAttribute("id", "storm"); newdynmaster.appendChild(storm);
+			var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id", "stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
 
-    // Create an image object (only need one instance)
-    var imageObj = new Image();
+			stormcanvas = document.getElementById("stefanvddynamicstorm");
+			sky = stormcanvas.getContext("2d", {desynchronized: true});
 
-    // Once the image has been downloaded then set the image on all of the particles
-    imageObj.onload = function(){
-        particles.forEach(function(particle){
-                particle.setImage(imageObj);
-        });
-    };
+			window.addEventListener("resize", rainresizer, false);
 
-    // Once the callback is arranged then set the source of the image
-    imageObj.src = "images/Smoke10.webp";
+			rainresizer();
+			paintSky();
+		}else if($("dynamic9").checked == true){
+			removedynamic();
+			var triangle = document.createElement("div"); triangle.setAttribute("id", "triangle"); newdynmaster.appendChild(triangle);
+			trianglerun();
+			window.onresize = onResize;
+		}else if($("dynamic10").checked == true){
+			removedynamic();
+			var stars = document.createElement("div"); stars.setAttribute("id", "stars"); newdynmaster.appendChild(stars);
+			var starsj;
+			for(starsj = 1; starsj < 3; starsj++){
+				var newmstar = document.createElement("div");
+				newmstar.id = "mstars" + [starsj];
+				stars.appendChild(newmstar);
+			}
+		}
 
-    // Initialize the scene
-    runsmoke();
-
-    // If the context is set then we can draw the scene (if not then the browser does not support canvas)
-    if(smokecontext){
-        if(document.visibilityState === "visible"){
-        window.setInterval(function(){
-            // Update the scene before drawing
-            smokeupdate();
-
-            // Draw the scene
-            smokedraw();
-        }, 1000 / targetFPS);
-        }
-    }
-}else if($("dynamic7").checked == true){
-    removedynamic();
-    var flyingdots = document.createElement("div"); flyingdots.setAttribute("id","flyingdots"); newdynmaster.appendChild(flyingdots);
-    var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id","stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
-    var flyingj;
-	for(flyingj = 1; flyingj < 100; flyingj++){
-		var newminic = document.createElement("div");
-		newminic.className = "c";
-		newdyndotsworld.appendChild(newminic);
 	}
-}else if($("dynamic8").checked == true){
-    removedynamic();
-    var storm = document.createElement("div"); storm.setAttribute("id","storm"); newdynmaster.appendChild(storm);
-    var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id","stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
-
-    stormcanvas = document.getElementById("stefanvddynamicstorm");
-    sky = stormcanvas.getContext("2d",{desynchronized: true});
-
-    window.addEventListener("resize", rainresizer, false);
-
-    rainresizer();
-    paintSky();
-}else if($("dynamic9").checked == true){
-    removedynamic();
-    var triangle = document.createElement("div"); triangle.setAttribute("id","triangle"); newdynmaster.appendChild(triangle);
-    trianglerun();
-    window.onresize = onResize;
-}else if($("dynamic10").checked == true){
-    removedynamic();
-    var stars = document.createElement("div"); stars.setAttribute("id","stars"); newdynmaster.appendChild(stars);
-    var starsj;
-        for(starsj = 1; starsj < 3; starsj++){
-            var newmstar = document.createElement("div");
-            newmstar.id = "mstars" + [starsj];
-            stars.appendChild(newmstar);
-        }
-}
-
-}
 }
 
 // Cam Motion
@@ -2306,219 +2188,214 @@ var delt;
 window.URL = window.URL || window.webkitURL;
 
 if(window.location.href != totloptionspage){
-    document.addEventListener("DOMContentLoaded", cameradomcontentloaded);
+	document.addEventListener("DOMContentLoaded", cameradomcontentloaded);
 }else{
-    cameradomcontentloaded();
+	cameradomcontentloaded();
 }
 
 function cameradomcontentloaded(){
-var video = document.getElementById("motionvideo");
-var motioncanvas = document.getElementById("motioncanvas");
-var canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
-var ccanvas = document.getElementById("motioncomp");
-var ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
+	var video = document.getElementById("motionvideo");
+	var motioncanvas = document.getElementById("motioncanvas");
+	var canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+	var ccanvas = document.getElementById("motioncomp");
+	var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
 
-// document.getElementById('motionvideo').addEventListener('timeupdate', function(){ dump(); });
-document.getElementById("motionvideo").addEventListener("play", function(){ intervalID = window.setInterval(dump,1000 / 25); });
+	// document.getElementById('motionvideo').addEventListener('timeupdate', function(){ dump(); });
+	document.getElementById("motionvideo").addEventListener("play", function(){ intervalID = window.setInterval(dump, 1000 / 25); });
 
-var compression = 5;
-width = height = 0;
+	var compression = 5;
+	width = height = 0;
 
-        function dump(){
-            if(localMediaStream){
-                if(motioncanvas.width != video.videoWidth){
-                    width = Math.floor(video.videoWidth / compression);
-                    height = Math.floor(video.videoHeight / compression);
-                    motioncanvas.width = ccanvas.width = width;
-                    motioncanvas.height = ccanvas.height = height;
-                }
-                if(width != 0){
-                    canvasgetcont.drawImage(video, width, 0, -width, height);
-                    draw = canvasgetcont.getImageData(0, 0, width, height);
-                    //ccgetcont.putImageData(draw,0,0);
-                    skinfilter();
-                    camtest();
-                }
-            }
-        }
+	function dump(){
+		if(localMediaStream){
+			if(motioncanvas.width != video.videoWidth){
+				width = Math.floor(video.videoWidth / compression);
+				height = Math.floor(video.videoHeight / compression);
+				motioncanvas.width = ccanvas.width = width;
+				motioncanvas.height = ccanvas.height = height;
+			}
+			if(width != 0){
+				canvasgetcont.drawImage(video, width, 0, -width, height);
+				draw = canvasgetcont.getImageData(0, 0, width, height);
+				// ccgetcont.putImageData(draw,0,0);
+				skinfilter();
+				camtest();
+			}
+		}
+	}
 
-huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
-        function skinfilter(){
-            skin_filter = canvasgetcont.getImageData(0, 0, width, height);
-            var total_pixels = skin_filter.width * skin_filter.height;
-            var index_value = total_pixels * 4;
+	huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
+	function skinfilter(){
+		skin_filter = canvasgetcont.getImageData(0, 0, width, height);
+		var total_pixels = skin_filter.width * skin_filter.height;
+		var index_value = total_pixels * 4;
 
-            var count_data_big_array = 0;
-            var y;
-            for(y = 0; y < height; y++){
-                var x;
-                for(x = 0; x < width; x++){
-                    index_value = x + y * width;
-                    r = draw.data[count_data_big_array];
-                    g = draw.data[count_data_big_array + 1];
-                    b = draw.data[count_data_big_array + 2];
-                    a = draw.data[count_data_big_array + 3];
+		var count_data_big_array = 0;
+		var y;
+		for(y = 0; y < height; y++){
+			var x;
+			for(x = 0; x < width; x++){
+				index_value = x + y * width;
+				r = draw.data[count_data_big_array];
+				g = draw.data[count_data_big_array + 1];
+				b = draw.data[count_data_big_array + 2];
+				a = draw.data[count_data_big_array + 3];
 
-                    hsv = rgb2Hsv(r, g, b);
-                    //When the hand is too lose (hsv[0] > 0.59 && hsv[0] < 1.0)
-                    //Skin Range on HSV values
-                    if(((hsv[0] > huemin && hsv[0] < huemax) || (hsv[0] > 0.59 && hsv[0] < 1.0)) && (hsv[1] > satmin && hsv[1] < satmax) && (hsv[2] > valmin && hsv[2] < valmax)){
-                        skin_filter[count_data_big_array] = r;
-                        skin_filter[count_data_big_array + 1] = g;
-                        skin_filter[count_data_big_array + 2] = b;
-                        skin_filter[count_data_big_array + 3] = a;
-                    }else{
-                        skin_filter.data[count_data_big_array] =
+				hsv = rgb2Hsv(r, g, b);
+				// When the hand is too lose (hsv[0] > 0.59 && hsv[0] < 1.0)
+				// Skin Range on HSV values
+				if(((hsv[0] > huemin && hsv[0] < huemax) || (hsv[0] > 0.59 && hsv[0] < 1.0)) && (hsv[1] > satmin && hsv[1] < satmax) && (hsv[2] > valmin && hsv[2] < valmax)){
+					skin_filter[count_data_big_array] = r;
+					skin_filter[count_data_big_array + 1] = g;
+					skin_filter[count_data_big_array + 2] = b;
+					skin_filter[count_data_big_array + 3] = a;
+				}else{
+					skin_filter.data[count_data_big_array] =
                         skin_filter.data[count_data_big_array + 1] =
                         skin_filter.data[count_data_big_array + 2] = 0;
-                        skin_filter.data[count_data_big_array + 3] = 0;
-                    }
+					skin_filter.data[count_data_big_array + 3] = 0;
+				}
 
-                    count_data_big_array = index_value * 4;
-                }
-            }
-            draw = skin_filter;
-        }
+				count_data_big_array = index_value * 4;
+			}
+		}
+		draw = skin_filter;
+	}
 
-        function rgb2Hsv(r, g, b){
+	function rgb2Hsv(r, g, b){
 
-            r = r / 255;
-            g = g / 255;
-            b = b / 255;
+		r = r / 255;
+		g = g / 255;
+		b = b / 255;
 
-            var max = Math.max(r, g, b);
-            var min = Math.min(r, g, b);
+		var max = Math.max(r, g, b);
+		var min = Math.min(r, g, b);
 
-            var h, s, v = max;
+		var h, s, v = max;
 
-            var d = max - min;
+		var d = max - min;
 
-            s = max == 0 ? 0 : d / max;
+		s = max == 0 ? 0 : d / max;
 
-            if(max == min){
-                h = 0; // achromatic
-            }else{
+		if(max == min){
+			h = 0; // achromatic
+		}else{
 
-                switch(max){
-                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-                    case g: h = (b - r) / d + 2; break;
-                    case b: h = (r - g) / d + 4; break;
-                }
-                h /= 6;
-            }
+			switch(max){
+			case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+			case g: h = (b - r) / d + 2; break;
+			case b: h = (r - g) / d + 4; break;
+			}
+			h /= 6;
+		}
 
-            return[h, s, v];
-        }
+		return[h, s, v];
+	}
 
-        last = false; thresh = 150; down = false; wasdown = false;
-        function camtest(){
-            delt = canvasgetcont.createImageData(width, height);
-            if(last !== false){
-                var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
-                var testcondition = pix -= 4;
-                // Any number that is not 0 evaluates to true
-                // if 0 evaluates to false
-                while(testcondition){
-                    var d = Math.abs(draw.data[pix] - last.data[pix]
-                    ) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
-                    ) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
-                    if(d > thresh){
-                        delt.data[pix] = 160;
-                        delt.data[pix + 1] = 255;
-                        delt.data[pix + 2] = delt.data[pix + 3] = 255;
-                        totald += 1;
-                        totalx += ((pix / 4) % width);
-                        totaly += (Math.floor((pix / 4) / delt.height));
-                    }
-                    else{
-                        delt.data[pix] =
+	last = false; thresh = 150; down = false; wasdown = false;
+	function camtest(){
+		delt = canvasgetcont.createImageData(width, height);
+		if(last !== false){
+			var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
+			var testcondition = pix -= 4;
+			// Any number that is not 0 evaluates to true
+			// if 0 evaluates to false
+			while(testcondition){
+				var d = Math.abs(draw.data[pix] - last.data[pix]
+				) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
+				) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
+				if(d > thresh){
+					delt.data[pix] = 160;
+					delt.data[pix + 1] = 255;
+					delt.data[pix + 2] = delt.data[pix + 3] = 255;
+					totald += 1;
+					totalx += ((pix / 4) % width);
+					totaly += (Math.floor((pix / 4) / delt.height));
+				}else{
+					delt.data[pix] =
                                 delt.data[pix + 1] =
                                 delt.data[pix + 2] = 0;
-                        delt.data[pix + 3] = 0;
-                    }
-                }
-            }
-            //slide.setAttribute('style','display:initial')
-            //slide.value=(totalx/totald)/width
-            if(totald){
-                down = {
-                    x: totalx / totald,
-                    y: totaly / totald,
-                    d: totald
-                };
-                handledown();
-            }
-            //console.log(totald)
-            last = draw;
-            ccgetcont.putImageData(delt, 0, 0);
-        }
-        movethresh = 2; brightthresh = 300; overthresh = 1000;
-        function calibrate(){
-            wasdown = {
-                x: down.x,
-                y: down.y,
-                d: down.d
-            };
-        }
-        avg = 0;
-        state = 0;//States: 0 waiting for gesture, 1 waiting for next move after gesture, 2 waiting for gesture to end
-        function handledown(){
-        avg = 0.9 * avg + 0.1 * down.d;
-            var davg = down.d - avg, good = davg > brightthresh;
-            //console.log(davg)
-            switch(state){
-                case 0:
-                    if(good){ //Found a gesture, waiting for next move
-                        state = 1;
-                        calibrate();
-                    }
-                    break;
-                case 2://Wait for gesture to end
-                    if(!good){ //Gesture ended
-                        state = 0;
-                    }
-                    break;
-                case 1://Got next move, do something based on direction
-                    var dx = down.x - wasdown.x, dy = down.y - wasdown.y;
-                    var dirx = Math.abs(dy) < Math.abs(dx); //(dx,dy) is on a bowtie
-                    //console.log(good,davg)
-                    if(dx < -movethresh && dirx){
-                        //console.log('right')
-                    }
-                    else if(dx > movethresh && dirx){
-                        //console.log('left')
-                    }
-                    if(dy > movethresh && !dirx){
-                        if(davg > overthresh){
-                            //console.log('over up');
-							writeinlog("over up");
-                        }
-                        else{
-                            //console.log('up')
-							writeinlog("up");
-                        }
-                    }
-                    else if(dy < -movethresh && !dirx){
-                        if(davg > overthresh){
-							//console.log('over down')
-							//writeinlog("over down");
-                        }
-                        else{
-							//console.log('down')
-							//writeinlog("down");
-                        }
-                    }
-                    state = 2;
-                    break;
-            }
-        }
+					delt.data[pix + 3] = 0;
+				}
+			}
+		}
+		// slide.setAttribute('style','display:initial')
+		// slide.value=(totalx/totald)/width
+		if(totald){
+			down = {
+				x: totalx / totald,
+				y: totaly / totald,
+				d: totald
+			};
+			handledown();
+		}
+		// console.log(totald)
+		last = draw;
+		ccgetcont.putImageData(delt, 0, 0);
+	}
+	movethresh = 2; brightthresh = 300; overthresh = 1000;
+	function calibrate(){
+		wasdown = {
+			x: down.x,
+			y: down.y,
+			d: down.d
+		};
+	}
+	avg = 0;
+	state = 0;// States: 0 waiting for gesture, 1 waiting for next move after gesture, 2 waiting for gesture to end
+	function handledown(){
+		avg = 0.9 * avg + 0.1 * down.d;
+		var davg = down.d - avg, good = davg > brightthresh;
+		// console.log(davg)
+		switch(state){
+		case 0:
+			if(good){ // Found a gesture, waiting for next move
+				state = 1;
+				calibrate();
+			}
+			break;
+		case 2:// Wait for gesture to end
+			if(!good){ // Gesture ended
+				state = 0;
+			}
+			break;
+		case 1:// Got next move, do something based on direction
+			var dx = down.x - wasdown.x, dy = down.y - wasdown.y;
+			var dirx = Math.abs(dy) < Math.abs(dx); // (dx,dy) is on a bowtie
+			// console.log(good,davg)
+			if(dx < -movethresh && dirx){
+				// console.log('right')
+			}else if(dx > movethresh && dirx){
+				// console.log('left')
+			}
+			if(dy > movethresh && !dirx){
+				if(davg > overthresh){
+					// console.log('over up');
+					writeinlog("over up");
+				}else{
+					// console.log('up')
+					writeinlog("up");
+				}
+			}else if(dy < -movethresh && !dirx){
+				if(davg > overthresh){
+					// console.log('over down')
+					// writeinlog("over down");
+				}else{
+					// console.log('down')
+					// writeinlog("down");
+				}
+			}
+			state = 2;
+			break;
+		}
+	}
 
-function writeinlog(text){
-var currentdate = new Date();
-var datetime = "Last Action: " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
-var para = document.createElement("p"); para.textContent = datetime + " " + text;
-var container = document.getElementById("stefanmotion"); container.insertBefore(para, container.firstChild);
-}
+	function writeinlog(text){
+		var currentdate = new Date();
+		var datetime = "Last Action: " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+		var para = document.createElement("p"); para.textContent = datetime + " " + text;
+		var container = document.getElementById("stefanmotion"); container.insertBefore(para, container.firstChild);
+	}
 
 }
 
@@ -2527,1319 +2404,1305 @@ var canvasgetcont;
 var ccanvas;
 var ccgetcont;
 function runcamerasettings(){
-    // reset everything
-    if(localMediaStream){
-    document.getElementById("motionvideo").pause();
-    document.getElementById("motionvideo").src = "";
-    localMediaStream.getTracks().forEach((track) => track.stop());
-    localMediaStream = null;
-    document.getElementById("motionvideo").load();
-    motioncanvas = document.getElementById("motioncanvas");
-    canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
-    canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
-    ccanvas = document.getElementById("motioncomp");
-    ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
-    ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
-    }
-
-    if(navigator.mediaDevices.getUserMedia){
-        navigator.mediaDevices.getUserMedia({audio: false, video: true})
-        .then(function(stream){
-            //Display the video stream in the video object
-            localMediaStream = stream; // Store the video stream
-            video.srcObject = stream;
-        })
-        .catch(function(e){
-            console.log(e.name + ": " + e.message);
-        });
-    }
-}
-
-var video;
-function cameramotionlights(){
-if($("motion").checked == true){
-
-// Check for live API permissions
-navigator.permissions.query({name:"camera"})
-.then(function(permissionStatus){
-  if(permissionStatus.state == "granted"){
-    runcamerasettings();
-  }
-  permissionStatus.onchange = function(){
-	if(this.state == "granted"){
-        runcamerasettings();
-	}
-  };
-});
-
-video = document.getElementById("motionvideo");
-motioncanvas = document.getElementById("motioncanvas");
-canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
-ccanvas = document.getElementById("motioncomp");
-ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
-
-}else{
-	// remove everything
-	document.getElementById("stefanmotion").textContent = "";
-
+	// reset everything
 	if(localMediaStream){
-		if($("motionvideo")){
-			document.getElementById("motionvideo").pause();
-			document.getElementById("motionvideo").src = "";
-		}
+		document.getElementById("motionvideo").pause();
+		document.getElementById("motionvideo").src = "";
 		localMediaStream.getTracks().forEach((track) => track.stop());
 		localMediaStream = null;
 		document.getElementById("motionvideo").load();
 		motioncanvas = document.getElementById("motioncanvas");
-		canvasgetcont = motioncanvas.getContext("2d",{desynchronized: true});
-		canvasgetcont.clearRect(0,0,motioncanvas.width,motioncanvas.height);
-		motioncanvas.width = 0;
-		motioncanvas.height = 0;
+		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+		canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
 		ccanvas = document.getElementById("motioncomp");
-		ccgetcont = ccanvas.getContext("2d",{desynchronized: true});
-		ccgetcont.clearRect(0,0,ccanvas.width,ccanvas.height);
-		ccanvas.width = 0;
-		ccanvas.height = 0;
-		window.clearInterval(intervalID);
+		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+		ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
 	}
 
+	if(navigator.mediaDevices.getUserMedia){
+		navigator.mediaDevices.getUserMedia({audio: false, video: true})
+			.then(function(stream){
+				// Display the video stream in the video object
+				localMediaStream = stream; // Store the video stream
+				video.srcObject = stream;
+			})
+			.catch(function(e){
+				console.log(e.name + ": " + e.message);
+			});
+	}
 }
+
+var video;
+function cameramotionlights(){
+	if($("motion").checked == true){
+
+		// Check for live API permissions
+		navigator.permissions.query({name:"camera"})
+			.then(function(permissionStatus){
+				if(permissionStatus.state == "granted"){
+					runcamerasettings();
+				}
+				permissionStatus.onchange = function(){
+					if(this.state == "granted"){
+						runcamerasettings();
+					}
+				};
+			});
+
+		video = document.getElementById("motionvideo");
+		motioncanvas = document.getElementById("motioncanvas");
+		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+		ccanvas = document.getElementById("motioncomp");
+		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+
+	}else{
+	// remove everything
+		document.getElementById("stefanmotion").textContent = "";
+
+		if(localMediaStream){
+			if($("motionvideo")){
+				document.getElementById("motionvideo").pause();
+				document.getElementById("motionvideo").src = "";
+			}
+			localMediaStream.getTracks().forEach((track) => track.stop());
+			localMediaStream = null;
+			document.getElementById("motionvideo").load();
+			motioncanvas = document.getElementById("motioncanvas");
+			canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
+			canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
+			motioncanvas.width = 0;
+			motioncanvas.height = 0;
+			ccanvas = document.getElementById("motioncomp");
+			ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
+			ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
+			ccanvas.width = 0;
+			ccanvas.height = 0;
+			window.clearInterval(intervalID);
+		}
+
+	}
 }
 
 // Current year
 function yearnow(){
-var today = new Date(); var y0 = today.getFullYear(); $("yearnow").innerText = y0;
+	var today = new Date(); var y0 = today.getFullYear(); $("yearnow").innerText = y0;
 }
 
 function checkdarkmode(){
-    chrome.storage.sync.get(["darkmode"], function(items){
-        darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
+	chrome.storage.sync.get(["darkmode"], function(items){
+		darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
 
-        // dark mode
-        if(darkmode == true){
-            $("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeon");
-            document.body.className = "dark";
-            $("headlamp").style.webkitFilter = "invert(1) brightness(2)";
-            $("headlamp").style.filter = "invert(1) brightness(2)";
-            $("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
-            $("loadinglamp").style.filter = "invert(1) brightness(2)";
-        }else{
-            $("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeoff");
-            document.body.className = "light";
-            $("headlamp").style.webkitFilter = "invert(0)";
-            $("headlamp").style.filter = "invert(0)";
-            $("loadinglamp").style.webkitFilter = "invert(0)";
-            $("loadinglamp").style.filter = "invert(0)";
-        }
-    });
+		// dark mode
+		if(darkmode == true){
+			$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeon");
+			document.body.className = "dark";
+			$("headlamp").style.webkitFilter = "invert(1) brightness(2)";
+			$("headlamp").style.filter = "invert(1) brightness(2)";
+			$("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
+			$("loadinglamp").style.filter = "invert(1) brightness(2)";
+		}else{
+			$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeoff");
+			document.body.className = "light";
+			$("headlamp").style.webkitFilter = "invert(0)";
+			$("headlamp").style.filter = "invert(0)";
+			$("loadinglamp").style.webkitFilter = "invert(0)";
+			$("loadinglamp").style.filter = "invert(0)";
+		}
+	});
 }
 
 // Listen for messages
 chrome.runtime.onMessage.addListener(function(msg){
-    // If the received message has the expected format...
-    if(msg.text === "receiveallpermissions"){
-    // empty ul first
-    if($("permullist")){
-        var ul = document.querySelector("#permullist");
-        var listLength = ul.children.length;
-        var listi;
-        for(listi = 0; listi < listLength; listi++){
-            ul.removeChild(ul.childNodes[listi]);
-        }
-    }
-    var perm = msg.value;
-    perm.forEach(function(x){
-        if($("permissionlist")){
-            if($("permullist") == null){
-                var newpermtitle = document.createElement("h4");
-                newpermtitle.textContent = chrome.i18n.getMessage("permissionrequired");
-                $("permissionlist").appendChild(newpermtitle);
+	// If the received message has the expected format...
+	if(msg.text === "receiveallpermissions"){
+		// empty ul first
+		if($("permullist")){
+			var ul = document.querySelector("#permullist");
+			var listLength = ul.children.length;
+			var listi;
+			for(listi = 0; listi < listLength; listi++){
+				ul.removeChild(ul.childNodes[listi]);
+			}
+		}
+		var perm = msg.value;
+		perm.forEach(function(x){
+			if($("permissionlist")){
+				if($("permullist") == null){
+					var newpermtitle = document.createElement("h4");
+					newpermtitle.textContent = chrome.i18n.getMessage("permissionrequired");
+					$("permissionlist").appendChild(newpermtitle);
 
-                var newpermul = document.createElement("ul");
-                newpermul.setAttribute("id","permullist");
-                $("permissionlist").appendChild(newpermul);
-            }
+					var newpermul = document.createElement("ul");
+					newpermul.setAttribute("id", "permullist");
+					$("permissionlist").appendChild(newpermul);
+				}
 
-            var newperm = document.createElement("li");
-            $("permullist").appendChild(newperm);
+				var newperm = document.createElement("li");
+				$("permullist").appendChild(newperm);
 
-            var newpermspan = document.createElement("span");
-            newpermspan.textContent = x + ": ";
-            newperm.appendChild(newpermspan);
+				var newpermspan = document.createElement("span");
+				newpermspan.textContent = x + ": ";
+				newperm.appendChild(newpermspan);
 
-            var textperm = "";
-            var newpermspandes = document.createElement("span");
-            if(x == "activeTab"){ textperm = chrome.i18n.getMessage("permissionactivetab"); }
-            else if(x == "contextMenus"){ textperm = chrome.i18n.getMessage("permissioncontextmenu"); }
-            else if(x == "storage"){ textperm = chrome.i18n.getMessage("permissionstorage"); }
-            else if(x == "tabs"){ textperm = chrome.i18n.getMessage("permissiontabs"); }
-            else if(x == "theme"){ textperm = chrome.i18n.getMessage("permissiontheme"); }
-            else if(x == "<all_urls>"){ textperm = chrome.i18n.getMessage("permissionallurl"); }
-            newpermspandes.textContent = textperm;
-            newpermspandes.className = "item";
-            newperm.appendChild(newpermspandes);
-        }
-    });
-    }
+				var textperm = "";
+				var newpermspandes = document.createElement("span");
+				if(x == "activeTab"){ textperm = chrome.i18n.getMessage("permissionactivetab"); }else if(x == "contextMenus"){ textperm = chrome.i18n.getMessage("permissioncontextmenu"); }else if(x == "storage"){ textperm = chrome.i18n.getMessage("permissionstorage"); }else if(x == "tabs"){ textperm = chrome.i18n.getMessage("permissiontabs"); }else if(x == "theme"){ textperm = chrome.i18n.getMessage("permissiontheme"); }else if(x == "<all_urls>"){ textperm = chrome.i18n.getMessage("permissionallurl"); }
+				newpermspandes.textContent = textperm;
+				newpermspandes.className = "item";
+				newperm.appendChild(newpermspandes);
+			}
+		});
+	}
 });
 
 /* Option page body action */
 // Read current value settings
 window.addEventListener("load", function(){
-    // remove loading screen
-    $("loading").style.display = "none";
+	// remove loading screen
+	$("loading").style.display = "none";
 });
 
 if(window.location.href != totloptionspage){
-    document.addEventListener("DOMContentLoaded", domcontentloaded);
+	document.addEventListener("DOMContentLoaded", domcontentloaded);
 }else{
-    domcontentloaded();
+	domcontentloaded();
 }
 
 function domcontentloaded(){
-checkdarkmode();
+	checkdarkmode();
 
-if((window.location.href != totloptionspage) && devmode == false){
+	if((window.location.href != totloptionspage) && devmode == false){
 
-    var condition = navigator.onLine ? "online" : "offline";
-    if(condition == "online"){
-        fetch(developerwebsite).then(function(response){
-            if(response.status === 200){
-                // website is online
-                // redirect to there
-                window.location.href = totloptionspage;
-            }
-            else{
-                throw new Error(response.statusText);
-            }
+		var condition = navigator.onLine ? "online" : "offline";
+		if(condition == "online"){
+			fetch(developerwebsite).then(function(response){
+				if(response.status === 200){
+					// website is online
+					// redirect to there
+					window.location.href = totloptionspage;
+				}else{
+					throw new Error(response.statusText);
+				}
 
-        }).catch(()=>{
-        // is not there
-        // use offline page
-        // Add the YouTube player
-        $("dont-turn-off-the-lights").src = youtubeembed;
-        read_options();
-        yearnow();
-        });
-    }else{
-        // Add the YouTube player
-        $("dont-turn-off-the-lights").src = youtubeembed;
-        read_options();
-        yearnow();
-    }
+			}).catch(()=>{
+				// is not there
+				// use offline page
+				// Add the YouTube player
+				$("dont-turn-off-the-lights").src = youtubeembed;
+				read_options();
+				yearnow();
+			});
+		}else{
+			// Add the YouTube player
+			$("dont-turn-off-the-lights").src = youtubeembed;
+			read_options();
+			yearnow();
+		}
 
-}else{
-    // Add the YouTube player
-    $("dont-turn-off-the-lights").src = youtubeembed;
-    read_options();
-    yearnow();
-}
+	}else{
+		// Add the YouTube player
+		$("dont-turn-off-the-lights").src = youtubeembed;
+		read_options();
+		yearnow();
+	}
 
-// browser check
-var nAgt = navigator.userAgent;
-var browserName;
-var urlbrowservendor = window.navigator.vendor;
-if((nAgt.indexOf("OPR/")) != -1){ browserName = "Opera"; }
-else if(urlbrowservendor.search("Yandex") >= 0){ browserName = "Yandex"; }
-else if(urlbrowservendor.search("Google") >= 0){ browserName = "Google Chrome"; }
-else if(urlbrowservendor.search("Apple Computer, Inc.") >= 0){ browserName = "Safari"; }
-else if(navigator.appCodeName == "Mozilla"){ browserName = "Firefox"; }
-else if((nAgt.indexOf("Maxthon/")) != -1){ browserName = "Maxthon"; }
+	// browser check
+	var nAgt = navigator.userAgent;
+	var browserName;
+	var urlbrowservendor = window.navigator.vendor;
+	if((nAgt.indexOf("OPR/")) != -1){ browserName = "Opera"; }else if(urlbrowservendor.search("Yandex") >= 0){ browserName = "Yandex"; }else if(urlbrowservendor.search("Google") >= 0){ browserName = "Google Chrome"; }else if(urlbrowservendor.search("Apple Computer, Inc.") >= 0){ browserName = "Safari"; }else if(navigator.appCodeName == "Mozilla"){ browserName = "Firefox"; }else if((nAgt.indexOf("Maxthon/")) != -1){ browserName = "Maxthon"; }
 
-// browser check
-if(browserName == "Opera"){
+	// browser check
+	if(browserName == "Opera"){
 	// feature check speech and camera
 	// no support
-	$("helpcameramotion").classList.remove("hidden");
-	$("helpspeech").classList.remove("hidden");
-	$("speech").disabled = true;
-	$("select_language").disabled = true;
-	$("select_dialect").disabled = true;
-	$("speechonly").disabled = true;
-	$("motion").disabled = true;
-	$("cammotiononly").disabled = true;
-}else if(browserName == "Google Chrome"){
+		$("helpcameramotion").classList.remove("hidden");
+		$("helpspeech").classList.remove("hidden");
+		$("speech").disabled = true;
+		$("select_language").disabled = true;
+		$("select_dialect").disabled = true;
+		$("speechonly").disabled = true;
+		$("motion").disabled = true;
+		$("cammotiononly").disabled = true;
+	}else if(browserName == "Google Chrome"){
 	// feature check speech and camera
 	// support
-	$("helpcameramotion").classList.add("hidden");
-	$("helpspeech").classList.add("hidden");
-}else if(browserName == "Firefox"){
+		$("helpcameramotion").classList.add("hidden");
+		$("helpspeech").classList.add("hidden");
+	}else if(browserName == "Firefox"){
 	// feature check speech and camera
 	// no support
-	$("helpcameramotion").classList.remove("hidden");
-	$("helpspeech").classList.remove("hidden");
-	$("speech").disabled = true;
-	$("select_language").disabled = true;
-	$("select_dialect").disabled = true;
-	$("speechonly").disabled = true;
-	$("motion").disabled = true;
-    $("cammotiononly").disabled = true;
-}else if(browserName == "Safari"){
+		$("helpcameramotion").classList.remove("hidden");
+		$("helpspeech").classList.remove("hidden");
+		$("speech").disabled = true;
+		$("select_language").disabled = true;
+		$("select_dialect").disabled = true;
+		$("speechonly").disabled = true;
+		$("motion").disabled = true;
+		$("cammotiononly").disabled = true;
+	}else if(browserName == "Safari"){
 	// feature check speech and camera
 	// no support
-	$("helpcameramotion").classList.remove("hidden");
-	$("helpspeech").classList.remove("hidden");
-	$("speech").disabled = true;
-	$("select_language").disabled = true;
-	$("select_dialect").disabled = true;
-	$("speechonly").disabled = true;
-	$("motion").disabled = true;
-    $("cammotiononly").disabled = true;
-    $("tabmotion").style.display = "none";
-    $("tabspeech").style.display = "none";
-}
-else{
+		$("helpcameramotion").classList.remove("hidden");
+		$("helpspeech").classList.remove("hidden");
+		$("speech").disabled = true;
+		$("select_language").disabled = true;
+		$("select_dialect").disabled = true;
+		$("speechonly").disabled = true;
+		$("motion").disabled = true;
+		$("cammotiononly").disabled = true;
+		$("tabmotion").style.display = "none";
+		$("tabspeech").style.display = "none";
+	}else{
 	// feature check speech and camera
 	// support
-	$("helpcameramotion").classList.add("hidden");
-    $("helpspeech").classList.add("hidden");
-}
-
-// Remove remember
-var sharetext = chrome.i18n.getMessage("sharetextd");
-var stefanvdurl = turnoffthelightsproduct;
-var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
-
-if($("shareboxyoutube")){
-    $("shareboxyoutube").addEventListener("click", function(){ window.open(linkyoutube,"_blank"); });
-}
-if($("shareboxfacebook")){
-    $("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook","width=600,height=460,menubar=no,location=no,status=no"); });
-}
-if($("shareboxtwitter")){
-    $("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "", "Share to Twitter","width=600,height=460,menubar=no,location=no,status=no"); });
-}
-
-var isMenuClick = false;
-var menu = document.getElementById("dotmenu");
-document.addEventListener("click",()=>{
-    if(!isMenuClick){
-       //Hide the menu here
-       $("dropmenu").className = "hide";
-    }
-    //Reset isMenuClick
-    isMenuClick = false;
-});
-menu.addEventListener("click",()=>{
-    isMenuClick = true;
-});
-
-$("dotmenu").addEventListener("click", function(){
-    if($("dropmenu").className == "show"){
-        $("dropmenu").className = "hide";
-    }else{
-        $("dropmenu").className = "show";
-    }
-});
-
-$("darkpanel").addEventListener("click", function(){
-    $("menuToggle").click();
-});
-
-$("titleex").addEventListener("click", function(){
-    window.open(developerwebsite);
-});
-
-$("btnsupport").addEventListener("click", function(){
-    window.open(linksupport); $("dropmenu").className = "hide";
-});
-
-$("btnactivedarkmode").addEventListener("click", function(){
-    chrome.storage.sync.get(["darkmode"], function(items){
-        darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
-        // dark mode
-        if(darkmode == true){
-            $("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeoff");
-            $("dropmenu").className = "hide";
-            document.body.className = "light";
-            $("headlamp").style.webkitFilter = "invert(0)";
-            $("headlamp").style.filter = "invert(0)";
-            $("loadinglamp").style.webkitFilter = "invert(0)";
-            $("loadinglamp").style.filter = "invert(0)";
-            chrome.storage.sync.set({"darkmode":false});
-        }else{
-            $("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeon");
-            $("dropmenu").className = "hide";
-            document.body.className = "dark";
-            $("headlamp").style.webkitFilter = "invert(1) brightness(2)";
-            $("headlamp").style.filter = "invert(1) brightness(2)";
-            $("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
-            $("loadinglamp").style.filter = "invert(1) brightness(2)";
-            chrome.storage.sync.set({"darkmode":true});
-        }
-    });
-});
-
-// Detect click / change to save the page and test it.
-var inputs = document.querySelectorAll("input");
-var i;
-var l = inputs.length;
-for(i = 0; i < l; i++){ inputs[i].addEventListener("change", test); inputs[i].addEventListener("change", ariacheck); inputs[i].addEventListener("change", save_options); }
-
-// show all the active permissions in a list
-chrome.runtime.sendMessage({name: "getallpermissions"});
-
-// Detect lightcolor change
-$("lightcolor").addEventListener("change", function(){ $("lightimagen").checked = true; $("example1").style.background = this.value; $("example2").style.background = this.value; save_options(); });
-
-// Detect image change
-$("lightimage").addEventListener("change", function(){
-function getImage(url){
-    var bkimage = new Image();
-    bkimage.onload = function(){
-	$("lightimagea").checked = true;
-	$("example1").style.background = "url(" + this.value + ")";
-	$("example2").style.background = "url(" + this.value + ")";
-	save_options();
-	};
-    bkimage.onerror = function(){
-	var optionwrongimg = chrome.i18n.getMessage("optionwrongimg"); window.alert(optionwrongimg);
-	$("lightimagea").checked = true;
-	$("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg";
-	$("example1").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
-	$("example2").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
-	save_options();
-	};
-	bkimage.src = url;
-}
-getImage(this.value);
-});
-
-$("slider").value = default_opacity; $("example1").style.opacity = (default_opacity / 100); $("example2").style.opacity = (default_opacity / 100);
-$("arangeblur").value = default_arangeblur;
-$("arangespread").value = default_arangespread;
-function showValue(newValue){ $("interval").value = newValue; $("slider").value = newValue; $("interval").setAttribute("aria-valuenow",newValue); $("slider").setAttribute("aria-valuenow",newValue); $("example1").style.opacity = (newValue / 100); $("example2").style.opacity = (newValue / 100); }
-function showambilightblurValue(newValue){ $("ambilightrangeblurradius").value = newValue; $("arangeblur").value = newValue; $("ambilightrangeblurradius").setAttribute("aria-valuenow",newValue); $("arangeblur").setAttribute("aria-valuenow",newValue); }
-function showambilightspreadValue(newValue){ $("ambilightrangespreadradius").value = newValue; $("arangespread").value = newValue; $("ambilightrangespreadradius").setAttribute("aria-valuenow",newValue); $("arangespread").setAttribute("aria-valuenow",newValue); }
-
-// Close yellow bar
-$("managed-prefs-text-close").addEventListener("click", function(){ $("managed-prefs-banner").style.display = "none"; });
-
-// Slider
-$("slider").addEventListener("change", function(){ showValue(this.value); save_options(); });
-$("slider").addEventListener("input", function(){ showValue(this.value); save_options(); }, false);
-
-// Interval
-$("interval").addEventListener("change", function(){ showValue(this.value); save_options(); });
-
-// Light switch
-$("onoffrange").addEventListener("change", function(){ lightscontrol(); });
-
-// Arangeblur
-$("arangeblur").addEventListener("change", function(){ showambilightblurValue(this.value); save_options(); });
-$("arangeblur").addEventListener("input", function(){ showambilightblurValue(this.value); save_options(); }, false);
-$("ambilightrangeblurradius").addEventListener("change", function(){ showambilightblurValue(this.value); save_options(); });
-
-// Arangespread
-$("arangespread").addEventListener("change", function(){ showambilightspreadValue(this.value); save_options(); });
-$("arangespread").addEventListener("input", function(){ showambilightspreadValue(this.value); save_options(); }, false);
-$("ambilightrangespreadradius").addEventListener("change", function(){ showambilightspreadValue(this.value); save_options(); });
-
-// Add website
-document.getElementById("formeyeprotection").addEventListener("submit", function(e){ e.preventDefault(); addWhitelistDomain(); });
-
-// Remove website
-$("removebutton").addEventListener("click", function(){ removeSelectedExcludedDomain(); });
-
-// Save password
-$("confirmpassword").addEventListener("click", function(){ save_options(); var optionpastemp = chrome.i18n.getMessage("optionpasswordsaved"); window.alert(optionpastemp); });
-
-var guidekb = true;
-function memguide(){
-    if(guidekb == true){
-        // already visible
-    }else{
-        $("managed-prefs-banner").style.display = "";
-    }
-}
-
-function mobilecheck(){
-    if(window.innerWidth < 480){ $("menuToggle").click(); }
-}
-
-// Save KB download
-$("tabbasic").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundbugfromsafari(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabvisual").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabadvan").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabnight").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundnight(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabmotion").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundmotion(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabspeech").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabguide").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = linkguide; $("managed-prefs-banner").style.display = "none"; guidekb = false; mobilecheck(); });
-$("tabanalytics").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-$("tabhelp").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-
-$("buttonreportissue").addEventListener("click", function(){ window.open(linksupport); });
-$("buttonchangelog").addEventListener("click", function(){ window.open(linkchangelog); });
-$("buttontranslateme").addEventListener("click", function(){ window.open(linktranslate); });
-
-// scroll to top
-function Scrolltotop(){ $("mainview").scrollTop = 0; }
-
-// remove all videos
-function ONworkaroundbugpreview(){ $("dont-turn-off-the-lights").src = ""; $("videopreviewA").src = ""; $("videopreviewB").src = ""; $("videopreviewC").src = ""; $("videopreviewnight").src = ""; $("videopreviewmotion").src = ""; $("videopreviewspeech").src = ""; }
-
-// add a video
-function OFFworkaroundbugfromsafari(){
-    $("dont-turn-off-the-lights").src = youtubeembed;
-}
-
-function OFFworkaroundbugpreview(){
-    $("videopreviewA").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBDJATUnIE3koQ-63Ld-4OX&amp;showinfo=0";
-    $("videopreviewB").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdCGQd-Ftbhw73gyGA-hN71C&amp;showinfo=0";
-    $("videopreviewC").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdCDL6HzWwYmTg2Xkp9AIP5F&amp;showinfo=0";
-}
-
-function OFFworkaroundnight(){
-    $("videopreviewnight").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdC0jpbT-SOLhoRWcTZhIHcu&rel=0";
-}
-
-function OFFworkaroundmotion(){
-    $("videopreviewmotion").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdAUBYAjj8ZE-RZzStwUqFJm&rel=0";
-}
-function OFFworkaroundspeech(){
-    $("videopreviewspeech").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBRi5tDACN0R1a3uYWNBsU_&rel=0";
-}
-
-// wizard profile
-$("submitbuttonA").addEventListener("click", function(){
-    if($("profileAmouse").checked == true){
-    $("mousespotlightt").checked = true;
-    }else{
-    $("mousespotlighto").checked = true;
-    }
-    $("lightcolor").value = $("profileAcolor").value;
-    $("interval").value = $("profileAopacity").value; $("slider").value = $("profileAopacity").value; showValue($("profileAopacity").value);
-    $("lampandnightmode").checked = false;
-var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
-save_options(); test(); ariacheck();
-});
-$("submitbuttonB").addEventListener("click", function(){
-    $("nightmodebck").value = $("profileBnightback").value;
-    $("nightmodetxt").value = $("profileBnighttext").value;
-    $("nightmodehyperlink").value = $("profileBnightlink").value;
-    $("interval").value = 0; $("slider").value = 0; showValue(0);
-    $("mousespotlightt").checked = true;
-    $("lampandnightmode").checked = true;
-var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
-save_options(); test(); ariacheck();
-});
-$("submitbuttonC").addEventListener("click", function(){
-    $("lightcolor").value = $("profileCcolor").value;
-    $("interval").value = $("profileCopacity").value; $("slider").value = $("profileCopacity").value; showValue($("profileCopacity").value);
-    $("lampandnightmode").checked = false;
-    $("mousespotlights").checked = true;
-var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
-save_options(); test(); ariacheck();
-});
-
-// Check screenshot
-$("wallpaperhide").addEventListener("click", function(){
-    $("imagegallery").classList.remove("hidden"); $("wallpapershow").classList.remove("hidden"); $("wallpaperhide").className = "hidden";
-    $("bckimage1").setAttribute("src","images/totlminis1.webp"); $("bckimage1").setAttribute("src","images/totlminis1@2x.webp");
-    $("bckimage2").setAttribute("src","images/totlminis2.webp"); $("bckimage2").setAttribute("src","images/totlminis2@2x.webp");
-    $("bckimage3").setAttribute("src","images/totlminis3.webp"); $("bckimage3").setAttribute("src","images/totlminis3@2x.webp");
-    $("bckimage4").setAttribute("src","images/totlminis4.webp"); $("bckimage4").setAttribute("src","images/totlminis4@2x.webp");
-    $("bckimage5").setAttribute("src","images/totlminis5.webp"); $("bckimage5").setAttribute("src","images/totlminis5@2x.webp");
-});
-$("wallpapershow").addEventListener("click", function(){
-    $("imagegallery").className = "hidden"; $("wallpapershow").className = "hidden"; $("wallpaperhide").classList.remove("hidden");
-    $("bckimage1").setAttribute("src",""); $("bckimage1").setAttribute("srcset","");
-    $("bckimage2").setAttribute("src",""); $("bckimage2").setAttribute("srcset","");
-    $("bckimage3").setAttribute("src",""); $("bckimage3").setAttribute("srcset","");
-    $("bckimage4").setAttribute("src",""); $("bckimage4").setAttribute("srcset","");
-    $("bckimage5").setAttribute("src",""); $("bckimage5").setAttribute("srcset","");
-});
-$("totlswallpaper5").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls5.jpg"; test(); ariacheck(); save_options(); });
-$("totlswallpaper4").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls4.jpg"; test(); ariacheck(); save_options(); });
-$("totlswallpaper3").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls3.jpg"; test(); ariacheck(); save_options(); });
-$("totlswallpaper2").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls2.jpg"; test(); ariacheck(); save_options(); });
-$("totlswallpaper1").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; test(); ariacheck(); save_options(); });
-
-// dynamic test
-$("dynamic").addEventListener("click", function(){ if($("dynamic").checked == true){ dynamictest(); $("lightdynamic").disabled = false; }else{ removedynamic(); $("lightdynamic").disabled = true; } });
-
-// Check dynamic
-$("dynamichide").addEventListener("click", function(){
-    $("dynamicgallery").classList.remove("hidden"); $("dynamicshow").classList.remove("hidden"); $("dynamichide").className = "hidden";
-    $("bckdyn1").setAttribute("src","images/totldyn1.webp"); $("bckdyn1").setAttribute("srcset","images/totldyn1@2x.webp");
-    $("bckdyn2").setAttribute("src","images/totldyn2.webp"); $("bckdyn2").setAttribute("srcset","images/totldyn2@2x.webp");
-    $("bckdyn3").setAttribute("src","images/totldyn3.webp"); $("bckdyn3").setAttribute("srcset","images/totldyn3@2x.webp");
-    $("bckdyn4").setAttribute("src","images/totldyn4.webp"); $("bckdyn4").setAttribute("srcset","images/totldyn4@2x.webp");
-    $("bckdyn5").setAttribute("src","images/totldyn5.webp"); $("bckdyn5").setAttribute("srcset","images/totldyn5@2x.webp");
-    $("bckdyn6").setAttribute("src","images/totldyn6.webp"); $("bckdyn6").setAttribute("srcset","images/totldyn6@2x.webp");
-    $("bckdyn7").setAttribute("src","images/totldyn7.webp"); $("bckdyn7").setAttribute("srcset","images/totldyn7@2x.webp");
-    $("bckdyn8").setAttribute("src","images/totldyn8.webp"); $("bckdyn8").setAttribute("srcset","images/totldyn8@2x.webp");
-    $("bckdyn9").setAttribute("src","images/totldyn9.webp"); $("bckdyn9").setAttribute("srcset","images/totldyn9@2x.webp");
-    $("bckdyn10").setAttribute("src","images/totldyn10.webp"); $("bckdyn10").setAttribute("srcset","images/totldyn10@2x.webp");
-});
-$("dynamicshow").addEventListener("click", function(){
-    $("dynamicgallery").className = "hidden"; $("dynamicshow").className = "hidden"; $("dynamichide").classList.remove("hidden");
-    $("bckdyn1").setAttribute("src",""); $("bckdyn1").setAttribute("srcset","");
-    $("bckdyn2").setAttribute("src",""); $("bckdyn2").setAttribute("srcset","");
-    $("bckdyn3").setAttribute("src",""); $("bckdyn3").setAttribute("srcset","");
-    $("bckdyn4").setAttribute("src",""); $("bckdyn4").setAttribute("srcset","");
-    $("bckdyn5").setAttribute("src",""); $("bckdyn5").setAttribute("srcset","");
-    $("bckdyn6").setAttribute("src",""); $("bckdyn6").setAttribute("srcset","");
-    $("bckdyn7").setAttribute("src",""); $("bckdyn7").setAttribute("srcset","");
-    $("bckdyn8").setAttribute("src",""); $("bckdyn8").setAttribute("srcset","");
-    $("bckdyn9").setAttribute("src",""); $("bckdyn9").setAttribute("srcset","");
-    $("bckdyn10").setAttribute("src",""); $("bckdyn10").setAttribute("srcset","");
-});
-$("totldynpaper10").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstars"); $("dynamic10").checked = true; dynamictest(); save_options(); });
-$("totldynpaper9").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamictriangulation"); $("dynamic9").checked = true; dynamictest(); save_options(); });
-$("totldynpaper8").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstorm"); $("dynamic8").checked = true; dynamictest(); save_options(); });
-$("totldynpaper7").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicdotscolor"); $("dynamic7").checked = true; dynamictest(); save_options(); });
-$("totldynpaper6").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicsmoke"); $("dynamic6").checked = true; dynamictest(); save_options(); });
-$("totldynpaper5").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicspace"); $("dynamic5").checked = true; dynamictest(); save_options(); });
-$("totldynpaper4").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamiccloud"); $("dynamic4").checked = true; dynamictest(); save_options(); });
-$("totldynpaper3").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicraindrops"); $("dynamic3").checked = true; dynamictest(); save_options(); });
-$("totldynpaper2").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicblocks"); $("dynamic2").checked = true; dynamictest(); save_options(); });
-$("totldynpaper1").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicfishtank"); $("dynamic1").checked = true; dynamictest(); save_options(); });
-$("hoveroptiondyn5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
-
-// autoplay Add website
-document.getElementById("formautoplay").addEventListener("submit", function(e){ e.preventDefault(); autoplayaddWhitelistDomain(); });
-
-// autoplay Remove website
-$("autoplayremovebutton").addEventListener("click", function(){ autoplayremoveSelectedExcludedDomain(); });
-
-// YouTube quality
-$("youtubequality").addEventListener("click", function(){ save_options(); });
-$("youtubequality").addEventListener("change", function(){ save_options(); });
-
-// HTML5 video volume steps
-$("videovolumesteps").addEventListener("click", function(){ save_options(); });
-$("videovolumesteps").addEventListener("change", function(){ save_options(); });
-
-// atmosphere Add website
-document.getElementById("formatmospherelighting").addEventListener("submit", function(e){ e.preventDefault(); atmosphereaddWhitelistDomain(); });
-
-// atmosphere Remove website
-$("atmosphereremovebutton").addEventListener("click", function(){ atmosphereremoveSelectedExcludedDomain(); });
-
-// night Add website
-document.getElementById("formnightmode").addEventListener("submit", function(e){ e.preventDefault(); nightaddWhitelistDomain(); });
-
-// night Remove website
-$("nightremovebutton").addEventListener("click", function(){ nightremoveSelectedExcludedDomain(); });
-
-// cam motion Add website
-document.getElementById("formcameramotion").addEventListener("submit", function(e){ e.preventDefault(); cammotionaddWhitelistDomain(); });
-
-// cam motion Remove website
-$("cammotionremovebutton").addEventListener("click", function(){ cammotionremoveSelectedExcludedDomain(); });
-
-// speech Add website
-document.getElementById("formspeech").addEventListener("submit", function(e){ e.preventDefault(); speechaddWhitelistDomain(); });
-
-// speech Remove website
-$("speechremovebutton").addEventListener("click", function(){ speechremoveSelectedExcludedDomain(); });
-
-// autostop Add website
-document.getElementById("formautostop").addEventListener("submit", function(e){ e.preventDefault(); autostopaddWhitelistDomain(); });
-
-// autostop Remove website
-$("autostopremovebutton").addEventListener("click", function(){ autostopremoveSelectedExcludedDomain(); });
-
-// video Add website
-document.getElementById("formvideotoolbar").addEventListener("submit", function(e){ e.preventDefault(); videotooladdWhitelistDomain(); });
-
-// video Remove website
-$("videotoolremovebutton").addEventListener("click", function(){ videotoolremoveSelectedExcludedDomain(); });
-
-// multi opacity Change
-$("multiopacityDomainsBox").addEventListener("click", function(){ multiopacitychangeurl(); });
-$("multiopacitynumberBox").addEventListener("click", function(){ multiopacitychangenumberl(); });
-
-// multi opacity Add
-document.getElementById("formmultiopacity").addEventListener("submit", function(e){ e.preventDefault(); multiopacityadd(); });
-
-// multi opacity Remove
-$("multiopacityremovebutton").addEventListener("click", function(){ multiopacityremoveSelectedExcludedDomain(); });
-
-// Reset settings
-$("resettotl").addEventListener("click", function(){ chrome.storage.sync.clear(); location.reload(); });
-
-// linearsq
-$("linearsq").addEventListener("click", function(){ test(); ariacheck(); save_options(); });
-$("linearsq").addEventListener("change", function(){ test(); ariacheck(); save_options(); });
-
-// Review box
-$("war").addEventListener("click", function(){ window.open(writereview); $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version}); });
-$("nt").addEventListener("click", function(){ $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version}); });
-
-// Aurora Player app box
-$("apgetapp").addEventListener("click", function(){ window.open(linkauroraplayerapp); $("sectionauroraplayerappbox").style.display = "none"; chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version}); });
-$("apnt").addEventListener("click", function(){ $("sectionauroraplayerappbox").style.display = "none"; chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version}); });
-
-// Mobile app box
-$("magetapp").addEventListener("click", function(){ window.open(linktotlmobileapp); $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
-$("mant").addEventListener("click", function(){ $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
-
-// Lamp Icons
-$("p1").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon","icons/iconstick38.png"); document.images["btnpreview"].src = "icons/iconstick38.png"; save_options(); });
-$("p2").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon","icons/icongold38.png"); document.images["btnpreview"].src = "icons/icongold38.png"; save_options(); });
-$("p3").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon","icons/iconrose38.png"); document.images["btnpreview"].src = "icons/iconrose38.png"; save_options(); });
-$("p4").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon","icons/iconrainbow38.png"); document.images["btnpreview"].src = "icons/iconrainbow38.png"; save_options(); });
-$("p5").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon","icons/iconwhite38.png"); document.images["btnpreview"].src = "icons/iconwhite38.png"; save_options(); });
-
-// get permission
-$("darkbrowsertheme").addEventListener("click", function(){
-    if($("darkbrowsertheme").checked == true){
-
-        // Permissions must be requested from inside a user gesture, like a button's
-        // click handler.
-        chrome.permissions.request({
-          permissions: ["theme"]
-        }, function(granted){
-          // The callback argument will be true if the user granted the permissions.
-          if(granted){
-            saveindarktheme();
-          }else{
-            removeindarktheme();
-            $("darkbrowsertheme").checked = false; // disable it back
-            save_options();
-          }
-        });
-
-    }else{
-        removeindarktheme();
-    }
-});
-
-function saveindarktheme(){
-    chrome.permissions.contains({
-        permissions: ["theme"]
-      }, function(result){
-        if(result){
-          // The extension has the permissions.
-        }else{
-          // The extension doesn't have the permissions.
-        }
-      });
-}
-
-function removeindarktheme(){
-chrome.permissions.remove({
-        permissions: ["theme"]
-      }, function(removed){
-        if(removed){
-          // The permissions have been removed.
-        }else{
-          // The permissions have not been removed (e.g., you tried to remove
-          // required permissions).
-        }
-      });
-}
-
-$("sub1").addEventListener("click", function(){
-    $("colorpanel").className = "";
-    $("gradientpanel").className = "hidden";
-    $("imagepanel").className = "hidden";
-    $("dynamicpanel").className = "hidden";
-    $("blurpanel").className = "hidden";
-
-    $("sub1").className = "tabbutton tabhighlight";
-    $("sub2").className = "tabbutton";
-    $("sub3").className = "tabbutton";
-    $("sub4").className = "tabbutton";
-    $("sub5").className = "tabbutton";
-});
-$("sub2").addEventListener("click", function(){
-    $("colorpanel").className = "hidden";
-    $("gradientpanel").className = "";
-    $("imagepanel").className = "hidden";
-    $("dynamicpanel").className = "hidden";
-    $("blurpanel").className = "hidden";
-
-    $("sub1").className = "tabbutton";
-    $("sub2").className = "tabbutton tabhighlight";
-    $("sub3").className = "tabbutton";
-    $("sub4").className = "tabbutton";
-    $("sub5").className = "tabbutton";
-});
-$("sub3").addEventListener("click", function(){
-    $("colorpanel").className = "hidden";
-    $("gradientpanel").className = "hidden";
-    $("imagepanel").className = "";
-    $("dynamicpanel").className = "hidden";
-    $("blurpanel").className = "hidden";
-
-    $("sub1").className = "tabbutton";
-    $("sub2").className = "tabbutton";
-    $("sub3").className = "tabbutton tabhighlight";
-    $("sub4").className = "tabbutton";
-    $("sub5").className = "tabbutton";
-});
-$("sub4").addEventListener("click", function(){
-    $("colorpanel").className = "hidden";
-    $("gradientpanel").className = "hidden";
-    $("imagepanel").className = "hidden";
-    $("dynamicpanel").className = "";
-    $("blurpanel").className = "hidden";
-
-    $("sub1").className = "tabbutton";
-    $("sub2").className = "tabbutton";
-    $("sub3").className = "tabbutton";
-    $("sub4").className = "tabbutton tabhighlight";
-    $("sub5").className = "tabbutton";
-});
-$("sub5").addEventListener("click", function(){
-    $("colorpanel").className = "hidden";
-    $("gradientpanel").className = "hidden";
-    $("imagepanel").className = "hidden";
-    $("dynamicpanel").className = "hidden";
-    $("blurpanel").className = "";
-
-    $("sub1").className = "tabbutton";
-    $("sub2").className = "tabbutton";
-    $("sub3").className = "tabbutton";
-    $("sub4").className = "tabbutton";
-    $("sub5").className = "tabbutton tabhighlight";
-});
-
-/* atmos */
-$("tv1").addEventListener("click", function(){
-    $("atmospanel").className = "";
-    $("atmosonepanel").className = "hidden";
-    $("atmosfourpanel").className = "hidden";
-    $("atmosvividpanel").className = "hidden";
-    $("atmossettingspanel").className = "hidden";
-
-    $("tv1").className = "tabbutton tabhighlight";
-    $("tv2").className = "tabbutton";
-    $("tv3").className = "tabbutton";
-    $("tv4").className = "tabbutton";
-    $("tv5").className = "tabbutton";
-});
-$("tv2").addEventListener("click", function(){
-    $("atmospanel").className = "hidden";
-    $("atmosonepanel").className = "";
-    $("atmosfourpanel").className = "hidden";
-    $("atmosvividpanel").className = "hidden";
-    $("atmossettingspanel").className = "hidden";
-
-    $("tv1").className = "tabbutton";
-    $("tv2").className = "tabbutton tabhighlight";
-    $("tv3").className = "tabbutton";
-    $("tv4").className = "tabbutton";
-    $("tv5").className = "tabbutton";
-});
-$("tv3").addEventListener("click", function(){
-    $("atmospanel").className = "hidden";
-    $("atmosonepanel").className = "hidden";
-    $("atmosfourpanel").className = "";
-    $("atmosvividpanel").className = "hidden";
-    $("atmossettingspanel").className = "hidden";
-
-    $("tv1").className = "tabbutton";
-    $("tv2").className = "tabbutton";
-    $("tv3").className = "tabbutton tabhighlight";
-    $("tv4").className = "tabbutton";
-    $("tv5").className = "tabbutton";
-});
-$("tv4").addEventListener("click", function(){
-    $("atmospanel").className = "hidden";
-    $("atmosonepanel").className = "hidden";
-    $("atmosfourpanel").className = "hidden";
-    $("atmosvividpanel").className = "";
-    $("atmossettingspanel").className = "hidden";
-
-    $("tv1").className = "tabbutton";
-    $("tv2").className = "tabbutton";
-    $("tv3").className = "tabbutton";
-    $("tv4").className = "tabbutton tabhighlight";
-    $("tv5").className = "tabbutton";
-});
-$("tv5").addEventListener("click", function(){
-    $("atmospanel").className = "hidden";
-    $("atmosonepanel").className = "hidden";
-    $("atmosfourpanel").className = "hidden";
-    $("atmosvividpanel").className = "hidden";
-    $("atmossettingspanel").className = "";
-
-    $("tv1").className = "tabbutton";
-    $("tv2").className = "tabbutton";
-    $("tv3").className = "tabbutton";
-    $("tv4").className = "tabbutton";
-    $("tv5").className = "tabbutton tabhighlight";
-});
-
-// easter egg game - playground
-var myGameArea;
-var myGamePiece;
-var myObstacles = [];
-var myScore;
-var myHighScore;
-var myGameOver;
-var previoushigh = 0;
-var levels = [250,500,750,1000,1500,2000,5000,10000];
-
-function restartGame(){
-    document.getElementById("stefanvdbtnplaygroundfilter").style.display = "none";
-    myGameArea.stop();
-    myGameArea.clear();
-    myGameArea = {};
-    myGamePiece = {};
-    myObstacles = [];
-    myScore = {};
-    document.getElementById("stefanvdplayground").innerHTML = "";
-    startGame();
-}
-
-function startGame(){
-    myGameArea = new gamearea();
-    myGamePiece = new component(16, 30, "images/party-balloon@2x.webp", 15, 30,"image");
-    myGamePiece.gravity = 0.05;
-    myScore = new component("15px", "Verdana", "black", 330, 25, "text");
-    myHighScore = new component("15px", "Verdana", "black", 330, 45, "text");
-    myGameArea.start();
-}
-
-function gamearea(){
-    this.refreshSpeed = 25;
-    this.canvas = document.createElement("canvas");
-    document.body.addEventListener("keydown", function(){
-        const key = event.key;
-        if(key == "ArrowUp"){
-            accelerate(-0.2);
-        }
-    },false);
-    document.body.addEventListener("keyup", function(){
-        const key = event.key;
-        if(key == "ArrowUp"){
-            accelerate(0.05);
-        }
-    },false);
-
-    this.canvas.addEventListener("touchstart", function(){ accelerate(0.05); },false);
-    this.canvas.addEventListener("touchend", function(){ accelerate(-0.2); },false);
-    this.canvas.addEventListener("mouseup", function(){ accelerate(0.05); },false);
-    this.canvas.addEventListener("mousedown", function(){ accelerate(-0.2); },false);
-
-    document.getElementById("stefanvdplayground").appendChild(this.canvas);
-    this.context = this.canvas.getContext("2d",{desynchronized: true});
-
-    // retina support
-    this.canvas.width = 480 * 2;
-    this.canvas.height = 270 * 2;
-    //this.canvas.style.width = "480px";
-    //this.canvas.style.height = "270px";
-    this.context.scale(2, 2);
-    //---
-
-    this.pause = false;
-    this.frameNo = 0;
-    this.start = function(){
-        this.stopped = false;
-        updateGameArea();
-    };
-    this.stop = function(){
-        this.pause = true;
-		this.stopped = true;
-    };
-    this.clear = function(){
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    };
-}
-
-function component(width, height, color, x, y, type){
-    this.type = type;
-    if(type == "image"){
-        this.image = new Image();
-        this.image.width = 16;
-        this.image.height = 30;
-        this.image.src = color;
-    }
-    this.score = 0;
-    this.width = width;
-    this.height = height;
-    this.color = color;
-    this.speedX = 0;
-    this.speedY = 0;
-    this.x = x;
-    this.y = y;
-    this.gravity = 0;
-    this.gravitySpeed = 0;
-    this.update = function(){
-        var gamectx = myGameArea.context;
-        if(this.type == "text"){
-            gamectx.font = this.width + " " + this.height;
-            gamectx.fillStyle = this.color;
-            gamectx.shadowBlur = 1;
-            gamectx.shadowColor = "rgba(255,255,255,1)";
-            gamectx.fillText(this.text, this.x, this.y);
-        }
-        else if(type == "image"){
-            gamectx.imageSmoothingEnabled = false;
-            gamectx.drawImage(this.image, this.x, this.y, this.width, this.height);
-        }
-        else{
-            gamectx.fillStyle = color;
-            gamectx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    };
-    this.newPos = function(){
-        this.gravitySpeed += this.gravity;
-        this.x += this.speedX;
-        this.y += this.speedY + this.gravitySpeed;
-        this.hitBottom();
-    };
-    this.hitBottom = function(){
-        var rockbottom = myGameArea.canvas.height / 2 - this.height;
-        if(this.y > rockbottom){
-            this.y = rockbottom;
-            this.gravitySpeed = 0;
-        }
-    };
-    this.crashWith = function(otherobj){
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)){
-            crash = false;
-        }
-        if(this.y < 0){ crash = true; }
-        return crash;
-    };
-}
-
-function removeElement(elementId){
-    var element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
-}
-
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var gameaudiocontext;
-function updateGameArea(){
-    if(myGameArea.stopped){ return; }
-    var x, height, gap, minHeight, maxHeight, minGap, maxGap, i;
-    for(i = 0; i < myObstacles.length; i += 1){
-        if(myGamePiece.crashWith(myObstacles[i])){
-            if(myGameArea.frameNo > previoushigh){
-                previoushigh = myGameArea.frameNo;
-            }
-            myGameArea.stop();
-            myGameOver = new component("15px", "Verdana", "black", 195, 110, "text");
-            myGameOver.text = "Game Over";
-            myGameOver.update();
-            if(document.getElementById("stefanvdbtnplaygroundfilter")){
-                document.getElementById("stefanvdbtnplaygroundfilter").style.display = "flex";
-            }
-            return;
-        }
-    }
-    if(myGameArea.pause == false){
-    myGameArea.clear();
-    myGameArea.frameNo += 1;
-    myScore.score += 1;
-    if(myGameArea.frameNo == 1 || everyinterval(150)){
-        x = myGameArea.canvas.width / 2;
-        minHeight = 20;
-        maxHeight = 200;
-        height = Math.floor(Math.random() * (maxHeight - minHeight + 1) + minHeight);
-        minGap = 50;
-        maxGap = 200;
-        gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
-        myObstacles.push(new component(10, height, "#666666", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "#666666", x, height + gap));
-    }
-    var obstaclesi;
-    var obstaclesl = myObstacles.length;
-    for(obstaclesi = 0; obstaclesi < obstaclesl; obstaclesi += 1){
-        myObstacles[obstaclesi].x += -1;
-        myObstacles[obstaclesi].update();
-    }
-
-    myScore.text = "SCORE: " + myScore.score;
-    if(myScore.score % 100 == 0){
-        var FREQUENCY = 440;
-        var INTERVAL = 250;
-        var RAMP_VALUE = 0.00001;
-        var RAMP_DURATION = 1;
-
-        var frequency = FREQUENCY;
-        var interval = INTERVAL;
-
-        var play = function(){
-          gameaudiocontext.resume().then(() => {
-          //console.log('Playback resumed successfully');
-          });
-          var currentTime = gameaudiocontext.currentTime;
-          var osc = gameaudiocontext.createOscillator();
-          var gain = gameaudiocontext.createGain();
-
-          osc.connect(gain);
-          gain.connect(gameaudiocontext.destination);
-
-          gain.gain.setValueAtTime(gain.gain.value, currentTime);
-          gain.gain.exponentialRampToValueAtTime(RAMP_VALUE, currentTime + RAMP_DURATION);
-
-          osc.onended = function(){
-            gain.disconnect(gameaudiocontext.destination);
-            osc.disconnect(gain);
-          };
-
-          osc.type = "sine";
-          osc.frequency.value = frequency;
-          osc.start(currentTime);
-          osc.stop(currentTime + RAMP_DURATION);
-        };
-
-        var beep = function(times){
-          if(!times) times = 1; (function loop(i){
-            play();
-            if(++i < times) window.setTimeout(loop, interval, i);
-          })(0);
-        };
-
-        beep();
-        // blink text
-        myScore.color = "rgb(0,0,0,.2)";
-        myScore.update();
-        window.setTimeout(function(){
-            myScore.color = "rgb(0,0,0,1)";
-            myScore.update();
-        }, 100);
-        window.setTimeout(function(){
-            myScore.color = "rgb(0,0,0,.2)";
-            myScore.update();
-        }, 200);
-        window.setTimeout(function(){
-            myScore.color = "rgb(0,0,0,1)";
-            myScore.update();
-        }, 300);
-        window.setTimeout(function(){
-            myScore.color = "rgb(0,0,0,.2)";
-            myScore.update();
-        }, 400);
-        window.setTimeout(function(){
-            myScore.color = "rgb(0,0,0,1)";
-            myScore.update();
-        }, 500);
-    }
-
-    if(levels.indexOf(myScore.score) != -1){
-        myGameArea.refreshSpeed -= 2;
-        //console.log( 'level '+levels.indexOf(myScore.score) + '; refreshRate: '+ myGameArea.refreshSpeed);
-    }
-    myScore.update();
-    if(previoushigh > 0){
-        myHighScore.text = "HI: " + previoushigh;
-        myHighScore.update();
-    }
-    myGamePiece.newPos();
-    myGamePiece.update();
-
-    window.setTimeout(updateGameArea, myGameArea.refreshSpeed);
-    }
-}
-
-function everyinterval(n){
-    if((myGameArea.frameNo / n) % 1 == 0){ return true; }
-    return false;
-}
-
-function accelerate(n){
-    myGamePiece.gravity = n;
-}
-
-// search
-var pageinsearch = false;
-function OnSearch(input){
-  if(input.value == ""){
-    pageinsearch = false;
-    input.blur();
-
-    var sections = document.getElementsByTagName("section");
-    var x;
-    var l = sections.length;
-    for(x = 0; x < l; x++){
-      var section = sections[x];
-      section.classList.remove("searchfoundnothing");
-    }
-
-    // set view back to the current selected tab
-    // and hide back all videos
-    var y = document.getElementsByClassName("navbar-item-selected");
-    y[0].click();
-
-    // hide preview toolbar tabs
-    document.getElementsByClassName("tabbar")[0].classList.remove("hidden");
-    $("colorpanel").className = "";
-    $("gradientpanel").className = "hidden";
-    $("imagepanel").className = "hidden";
-    $("dynamicpanel").className = "hidden";
-    $("blurpanel").className = "hidden";
-
-    document.getElementsByClassName("tabbar")[1].classList.remove("hidden");
-    $("atmospanel").className = "";
-    $("atmosonepanel").className = "hidden";
-    $("atmosfourpanel").className = "hidden";
-    $("atmosvividpanel").className = "hidden";
-    $("atmossettingspanel").className = "hidden";
-
-    if($("stefanvdbtnplaygroundfilter")){
-        removeElement("stefanvdbtnplaygroundfilter");
-    }
-
-    if($("stefanvdplayground")){
-        removeElement("stefanvdplayground");
-    }
-  }
-  else{
-    if(pageinsearch == false){
-        pageinsearch = true;
-        // load all the videos
-        OFFworkaroundbugfromsafari();
-        OFFworkaroundbugpreview();
-        OFFworkaroundnight();
-        OFFworkaroundmotion();
-        OFFworkaroundspeech();
-
-        document.getElementsByClassName("tabbar")[0].classList.add("hidden");
-        $("colorpanel").className = "";
-        $("gradientpanel").className = "";
-        $("imagepanel").className = "";
-        $("dynamicpanel").className = "";
-        $("blurpanel").className = "";
-
-        document.getElementsByClassName("tabbar")[1].classList.add("hidden");
-        $("atmospanel").className = "";
-        $("atmosonepanel").className = "";
-        $("atmosfourpanel").className = "";
-        $("atmosvividpanel").className = "";
-        $("atmossettingspanel").className = "";
-    }
-
-    // receive the total tab pages
-    var tabListItems = $("navbar").childNodes;
-    var tabListi;
-    var tabListl = tabListItems.length;
-    for(tabListi = 0; tabListi < tabListl; tabListi++){
-        if(tabListItems[i].nodeName == "LI"){
-        var tabLink = getFirstChildWithTagName(tabListItems[tabListi],"A");
-        var id = getHash(tabLink.getAttribute("data-tab"));
-        contentDivs[id] = document.getElementById(id);
-        }
-    }
-
-    // show all tab pages
-    var showaltabid;
-    for(showaltabid in contentDivs){
-        if(showaltabid != "tab4"){
-            if((contentDivs[showaltabid])){
-                contentDivs[showaltabid].className = "page";
-            }
-        }
-    }
-    //---
-    var searchword = input.value;
-    if(searchword == "balloon"){
-        // easteregg Party Balloon
-        if(!$("stefanvdplayground")){
-        // user gesture activate the game audio ping
-        gameaudiocontext = new AudioContext();
-
-        var newplaygroundfilter = document.createElement("div");
-        newplaygroundfilter.setAttribute("id","stefanvdbtnplaygroundfilter");
-        newplaygroundfilter.style.zIndex = 200;
-        newplaygroundfilter.style.position = "absolute";
-        newplaygroundfilter.style.width = "calc(100% - 46px)";
-        newplaygroundfilter.style.height = "calc(100% - 3px)";
-        newplaygroundfilter.style.background = "rgba(0,0,0,.6)";
-        newplaygroundfilter.style.display = "none";
-        newplaygroundfilter.style.alignItems = "center";
-        newplaygroundfilter.style.justifyContent = "center";
-        $("mainview-content").appendChild(newplaygroundfilter);
-
-        var newplayground = document.createElement("div");
-		newplayground.setAttribute("id","stefanvdplayground");
-        $("mainview-content").appendChild(newplayground);
-
-        var newbtnplaygroundrestart = document.createElement("button");
-        newbtnplaygroundrestart.setAttribute("id","stefanvdbtnplaygroundrestart");
-        newbtnplaygroundrestart.addEventListener("click", function(){ restartGame(); },false);
-        newbtnplaygroundrestart.innerText = "Restart";
-        newplaygroundfilter.appendChild(newbtnplaygroundrestart);
-
-        var newbtnplaygroundfb = document.createElement("div");
-        newbtnplaygroundfb.setAttribute("id","stefanvdbtnplaygroundfacebook");
-        newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); },false);
-        newplaygroundfilter.appendChild(newbtnplaygroundfb);
-
-        var newbtnplaygroundtw = document.createElement("div");
-        newbtnplaygroundtw.setAttribute("id","stefanvdbtnplaygroundtwitter");
-        newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var sturnoffthelightsproductcodeurl = encodeURIComponent(stringgame + " " + turnoffthelightsproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); },false);
-        newplaygroundfilter.appendChild(newbtnplaygroundtw);
-
-        startGame();
-        }
-    }else{
-        if($("stefanvdplayground")){
-            removeElement("stefanvdplayground");
-        }
-    }
-
-    var allsections = document.getElementsByTagName("section");
-    var sectionsx;
-    var sectionsl = allsections.length;
-    for(sectionsx = 0; sectionsx < sectionsl; sectionsx++){
-        var partsection = allsections[sectionsx];
-        var content = section.innerHTML;
-
-        // remove first the help message, because not a feature
-        var i18nhelpautoplay = chrome.i18n.getMessage("helpautoplay");
-        content = content.replace(i18nhelpautoplay, "");
-        var i18nhelpeyeprotection = chrome.i18n.getMessage("helpeyeprotection");
-        content = content.replace(i18nhelpeyeprotection, "");
-
-        if(content.search(new RegExp(searchword, "i")) < 1){
-            partsection.classList.add("searchfoundnothing");
-        }else{
-            partsection.classList.remove("searchfoundnothing");
-        }
-    }
-
-    // hide the h2 if there is no sections visible
-    var pages = document.getElementsByClassName("page");
-    var z;
-    var tabpagelength = pages.length;
-    for(z = 0; z < tabpagelength; z++){
-      var tabsections = pages[z].getElementsByTagName("section");
-      var countnothingcheck = 0;
-      var w;
-      var q = tabsections.length;
-      for(w = 0; w < q; w++){
-        var currenttabsection = tabsections[w];
-        if(currenttabsection.classList.contains("searchfoundnothing")){
-          countnothingcheck += 1;
-        }
-      }
-      if(countnothingcheck == tabsections.length){
-        // total sections with nothing inside is the same as all the section -> hide the page
-        pages[z].classList.add("searchfoundnothing");
-      }
-      else{
-        pages[z].classList.remove("searchfoundnothing");
-      }
-   }
-
-
-  }
-}
-
-if(document.getElementById("appsearch")){
-    document.getElementById("appsearch").addEventListener("search", function(){ OnSearch(this); }, false);
-    document.getElementById("appsearch").addEventListener("input", function(){ OnSearch(this); }, false);
-    document.getElementById("btnsearchicon").addEventListener("input", function(){ OnSearch(this); }, false);
-    document.getElementById("appsearch").placeholder = chrome.i18n.getMessage("searchplaceholder");
-}
+		$("helpcameramotion").classList.add("hidden");
+		$("helpspeech").classList.add("hidden");
+	}
+
+	// Remove remember
+	var sharetext = chrome.i18n.getMessage("sharetextd");
+	var stefanvdurl = turnoffthelightsproduct;
+	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
+
+	if($("shareboxyoutube")){
+		$("shareboxyoutube").addEventListener("click", function(){ window.open(linkyoutube, "_blank"); });
+	}
+	if($("shareboxfacebook")){
+		$("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook", "width=600,height=460,menubar=no,location=no,status=no"); });
+	}
+	if($("shareboxtwitter")){
+		$("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no"); });
+	}
+
+	var isMenuClick = false;
+	var menu = document.getElementById("dotmenu");
+	document.addEventListener("click", ()=>{
+		if(!isMenuClick){
+			// Hide the menu here
+			$("dropmenu").className = "hide";
+		}
+		// Reset isMenuClick
+		isMenuClick = false;
+	});
+	menu.addEventListener("click", ()=>{
+		isMenuClick = true;
+	});
+
+	$("dotmenu").addEventListener("click", function(){
+		if($("dropmenu").className == "show"){
+			$("dropmenu").className = "hide";
+		}else{
+			$("dropmenu").className = "show";
+		}
+	});
+
+	$("darkpanel").addEventListener("click", function(){
+		$("menuToggle").click();
+	});
+
+	$("titleex").addEventListener("click", function(){
+		window.open(developerwebsite);
+	});
+
+	$("btnsupport").addEventListener("click", function(){
+		window.open(linksupport); $("dropmenu").className = "hide";
+	});
+
+	$("btnactivedarkmode").addEventListener("click", function(){
+		chrome.storage.sync.get(["darkmode"], function(items){
+			darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
+			// dark mode
+			if(darkmode == true){
+				$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeoff");
+				$("dropmenu").className = "hide";
+				document.body.className = "light";
+				$("headlamp").style.webkitFilter = "invert(0)";
+				$("headlamp").style.filter = "invert(0)";
+				$("loadinglamp").style.webkitFilter = "invert(0)";
+				$("loadinglamp").style.filter = "invert(0)";
+				chrome.storage.sync.set({"darkmode":false});
+			}else{
+				$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeon");
+				$("dropmenu").className = "hide";
+				document.body.className = "dark";
+				$("headlamp").style.webkitFilter = "invert(1) brightness(2)";
+				$("headlamp").style.filter = "invert(1) brightness(2)";
+				$("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
+				$("loadinglamp").style.filter = "invert(1) brightness(2)";
+				chrome.storage.sync.set({"darkmode":true});
+			}
+		});
+	});
+
+	// Detect click / change to save the page and test it.
+	var inputs = document.querySelectorAll("input");
+	var i;
+	var l = inputs.length;
+	for(i = 0; i < l; i++){ inputs[i].addEventListener("change", test); inputs[i].addEventListener("change", ariacheck); inputs[i].addEventListener("change", save_options); }
+
+	// show all the active permissions in a list
+	chrome.runtime.sendMessage({name: "getallpermissions"});
+
+	// Detect lightcolor change
+	$("lightcolor").addEventListener("change", function(){ $("lightimagen").checked = true; $("example1").style.background = this.value; $("example2").style.background = this.value; save_options(); });
+
+	// Detect image change
+	$("lightimage").addEventListener("change", function(){
+		function getImage(url){
+			var bkimage = new Image();
+			bkimage.onload = function(){
+				$("lightimagea").checked = true;
+				$("example1").style.background = "url(" + this.value + ")";
+				$("example2").style.background = "url(" + this.value + ")";
+				save_options();
+			};
+			bkimage.onerror = function(){
+				var optionwrongimg = chrome.i18n.getMessage("optionwrongimg"); window.alert(optionwrongimg);
+				$("lightimagea").checked = true;
+				$("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg";
+				$("example1").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
+				$("example2").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
+				save_options();
+			};
+			bkimage.src = url;
+		}
+		getImage(this.value);
+	});
+
+	$("slider").value = default_opacity; $("example1").style.opacity = (default_opacity / 100); $("example2").style.opacity = (default_opacity / 100);
+	$("arangeblur").value = default_arangeblur;
+	$("arangespread").value = default_arangespread;
+	function showValue(newValue){ $("interval").value = newValue; $("slider").value = newValue; $("interval").setAttribute("aria-valuenow", newValue); $("slider").setAttribute("aria-valuenow", newValue); $("example1").style.opacity = (newValue / 100); $("example2").style.opacity = (newValue / 100); }
+	function showambilightblurValue(newValue){ $("ambilightrangeblurradius").value = newValue; $("arangeblur").value = newValue; $("ambilightrangeblurradius").setAttribute("aria-valuenow", newValue); $("arangeblur").setAttribute("aria-valuenow", newValue); }
+	function showambilightspreadValue(newValue){ $("ambilightrangespreadradius").value = newValue; $("arangespread").value = newValue; $("ambilightrangespreadradius").setAttribute("aria-valuenow", newValue); $("arangespread").setAttribute("aria-valuenow", newValue); }
+
+	// Close yellow bar
+	$("managed-prefs-text-close").addEventListener("click", function(){ $("managed-prefs-banner").style.display = "none"; });
+
+	// Slider
+	$("slider").addEventListener("change", function(){ showValue(this.value); save_options(); });
+	$("slider").addEventListener("input", function(){ showValue(this.value); save_options(); }, false);
+
+	// Interval
+	$("interval").addEventListener("change", function(){ showValue(this.value); save_options(); });
+
+	// Light switch
+	$("onoffrange").addEventListener("change", function(){ lightscontrol(); });
+
+	// Arangeblur
+	$("arangeblur").addEventListener("change", function(){ showambilightblurValue(this.value); save_options(); });
+	$("arangeblur").addEventListener("input", function(){ showambilightblurValue(this.value); save_options(); }, false);
+	$("ambilightrangeblurradius").addEventListener("change", function(){ showambilightblurValue(this.value); save_options(); });
+
+	// Arangespread
+	$("arangespread").addEventListener("change", function(){ showambilightspreadValue(this.value); save_options(); });
+	$("arangespread").addEventListener("input", function(){ showambilightspreadValue(this.value); save_options(); }, false);
+	$("ambilightrangespreadradius").addEventListener("change", function(){ showambilightspreadValue(this.value); save_options(); });
+
+	// Add website
+	document.getElementById("formeyeprotection").addEventListener("submit", function(e){ e.preventDefault(); addWhitelistDomain(); });
+
+	// Remove website
+	$("removebutton").addEventListener("click", function(){ removeSelectedExcludedDomain(); });
+
+	// Save password
+	$("confirmpassword").addEventListener("click", function(){ save_options(); var optionpastemp = chrome.i18n.getMessage("optionpasswordsaved"); window.alert(optionpastemp); });
+
+	var guidekb = true;
+	function memguide(){
+		if(guidekb == true){
+			// already visible
+		}else{
+			$("managed-prefs-banner").style.display = "";
+		}
+	}
+
+	function mobilecheck(){
+		if(window.innerWidth < 480){ $("menuToggle").click(); }
+	}
+
+	// Save KB download
+	$("tabbasic").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundbugfromsafari(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabvisual").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabadvan").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabnight").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundnight(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabmotion").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundmotion(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabspeech").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabguide").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = linkguide; $("managed-prefs-banner").style.display = "none"; guidekb = false; mobilecheck(); });
+	$("tabanalytics").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabhelp").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+
+	$("buttonreportissue").addEventListener("click", function(){ window.open(linksupport); });
+	$("buttonchangelog").addEventListener("click", function(){ window.open(linkchangelog); });
+	$("buttontranslateme").addEventListener("click", function(){ window.open(linktranslate); });
+
+	// scroll to top
+	function Scrolltotop(){ $("mainview").scrollTop = 0; }
+
+	// remove all videos
+	function ONworkaroundbugpreview(){ $("dont-turn-off-the-lights").src = ""; $("videopreviewA").src = ""; $("videopreviewB").src = ""; $("videopreviewC").src = ""; $("videopreviewnight").src = ""; $("videopreviewmotion").src = ""; $("videopreviewspeech").src = ""; }
+
+	// add a video
+	function OFFworkaroundbugfromsafari(){
+		$("dont-turn-off-the-lights").src = youtubeembed;
+	}
+
+	function OFFworkaroundbugpreview(){
+		$("videopreviewA").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBDJATUnIE3koQ-63Ld-4OX&amp;showinfo=0";
+		$("videopreviewB").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdCGQd-Ftbhw73gyGA-hN71C&amp;showinfo=0";
+		$("videopreviewC").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdCDL6HzWwYmTg2Xkp9AIP5F&amp;showinfo=0";
+	}
+
+	function OFFworkaroundnight(){
+		$("videopreviewnight").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdC0jpbT-SOLhoRWcTZhIHcu&rel=0";
+	}
+
+	function OFFworkaroundmotion(){
+		$("videopreviewmotion").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdAUBYAjj8ZE-RZzStwUqFJm&rel=0";
+	}
+	function OFFworkaroundspeech(){
+		$("videopreviewspeech").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBRi5tDACN0R1a3uYWNBsU_&rel=0";
+	}
+
+	// wizard profile
+	$("submitbuttonA").addEventListener("click", function(){
+		if($("profileAmouse").checked == true){
+			$("mousespotlightt").checked = true;
+		}else{
+			$("mousespotlighto").checked = true;
+		}
+		$("lightcolor").value = $("profileAcolor").value;
+		$("interval").value = $("profileAopacity").value; $("slider").value = $("profileAopacity").value; showValue($("profileAopacity").value);
+		$("lampandnightmode").checked = false;
+		var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
+		save_options(); test(); ariacheck();
+	});
+	$("submitbuttonB").addEventListener("click", function(){
+		$("nightmodebck").value = $("profileBnightback").value;
+		$("nightmodetxt").value = $("profileBnighttext").value;
+		$("nightmodehyperlink").value = $("profileBnightlink").value;
+		$("interval").value = 0; $("slider").value = 0; showValue(0);
+		$("mousespotlightt").checked = true;
+		$("lampandnightmode").checked = true;
+		var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
+		save_options(); test(); ariacheck();
+	});
+	$("submitbuttonC").addEventListener("click", function(){
+		$("lightcolor").value = $("profileCcolor").value;
+		$("interval").value = $("profileCopacity").value; $("slider").value = $("profileCopacity").value; showValue($("profileCopacity").value);
+		$("lampandnightmode").checked = false;
+		$("mousespotlights").checked = true;
+		var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
+		save_options(); test(); ariacheck();
+	});
+
+	// Check screenshot
+	$("wallpaperhide").addEventListener("click", function(){
+		$("imagegallery").classList.remove("hidden"); $("wallpapershow").classList.remove("hidden"); $("wallpaperhide").className = "hidden";
+		$("bckimage1").setAttribute("src", "images/totlminis1.webp"); $("bckimage1").setAttribute("src", "images/totlminis1@2x.webp");
+		$("bckimage2").setAttribute("src", "images/totlminis2.webp"); $("bckimage2").setAttribute("src", "images/totlminis2@2x.webp");
+		$("bckimage3").setAttribute("src", "images/totlminis3.webp"); $("bckimage3").setAttribute("src", "images/totlminis3@2x.webp");
+		$("bckimage4").setAttribute("src", "images/totlminis4.webp"); $("bckimage4").setAttribute("src", "images/totlminis4@2x.webp");
+		$("bckimage5").setAttribute("src", "images/totlminis5.webp"); $("bckimage5").setAttribute("src", "images/totlminis5@2x.webp");
+	});
+	$("wallpapershow").addEventListener("click", function(){
+		$("imagegallery").className = "hidden"; $("wallpapershow").className = "hidden"; $("wallpaperhide").classList.remove("hidden");
+		$("bckimage1").setAttribute("src", ""); $("bckimage1").setAttribute("srcset", "");
+		$("bckimage2").setAttribute("src", ""); $("bckimage2").setAttribute("srcset", "");
+		$("bckimage3").setAttribute("src", ""); $("bckimage3").setAttribute("srcset", "");
+		$("bckimage4").setAttribute("src", ""); $("bckimage4").setAttribute("srcset", "");
+		$("bckimage5").setAttribute("src", ""); $("bckimage5").setAttribute("srcset", "");
+	});
+	$("totlswallpaper5").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls5.jpg"; test(); ariacheck(); save_options(); });
+	$("totlswallpaper4").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls4.jpg"; test(); ariacheck(); save_options(); });
+	$("totlswallpaper3").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls3.jpg"; test(); ariacheck(); save_options(); });
+	$("totlswallpaper2").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls2.jpg"; test(); ariacheck(); save_options(); });
+	$("totlswallpaper1").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; test(); ariacheck(); save_options(); });
+
+	// dynamic test
+	$("dynamic").addEventListener("click", function(){
+		if($("dynamic").checked == true){ dynamictest(); $("lightdynamic").disabled = false; }else{ removedynamic(); $("lightdynamic").disabled = true; }
+	});
+
+	// Check dynamic
+	$("dynamichide").addEventListener("click", function(){
+		$("dynamicgallery").classList.remove("hidden"); $("dynamicshow").classList.remove("hidden"); $("dynamichide").className = "hidden";
+		$("bckdyn1").setAttribute("src", "images/totldyn1.webp"); $("bckdyn1").setAttribute("srcset", "images/totldyn1@2x.webp");
+		$("bckdyn2").setAttribute("src", "images/totldyn2.webp"); $("bckdyn2").setAttribute("srcset", "images/totldyn2@2x.webp");
+		$("bckdyn3").setAttribute("src", "images/totldyn3.webp"); $("bckdyn3").setAttribute("srcset", "images/totldyn3@2x.webp");
+		$("bckdyn4").setAttribute("src", "images/totldyn4.webp"); $("bckdyn4").setAttribute("srcset", "images/totldyn4@2x.webp");
+		$("bckdyn5").setAttribute("src", "images/totldyn5.webp"); $("bckdyn5").setAttribute("srcset", "images/totldyn5@2x.webp");
+		$("bckdyn6").setAttribute("src", "images/totldyn6.webp"); $("bckdyn6").setAttribute("srcset", "images/totldyn6@2x.webp");
+		$("bckdyn7").setAttribute("src", "images/totldyn7.webp"); $("bckdyn7").setAttribute("srcset", "images/totldyn7@2x.webp");
+		$("bckdyn8").setAttribute("src", "images/totldyn8.webp"); $("bckdyn8").setAttribute("srcset", "images/totldyn8@2x.webp");
+		$("bckdyn9").setAttribute("src", "images/totldyn9.webp"); $("bckdyn9").setAttribute("srcset", "images/totldyn9@2x.webp");
+		$("bckdyn10").setAttribute("src", "images/totldyn10.webp"); $("bckdyn10").setAttribute("srcset", "images/totldyn10@2x.webp");
+	});
+	$("dynamicshow").addEventListener("click", function(){
+		$("dynamicgallery").className = "hidden"; $("dynamicshow").className = "hidden"; $("dynamichide").classList.remove("hidden");
+		$("bckdyn1").setAttribute("src", ""); $("bckdyn1").setAttribute("srcset", "");
+		$("bckdyn2").setAttribute("src", ""); $("bckdyn2").setAttribute("srcset", "");
+		$("bckdyn3").setAttribute("src", ""); $("bckdyn3").setAttribute("srcset", "");
+		$("bckdyn4").setAttribute("src", ""); $("bckdyn4").setAttribute("srcset", "");
+		$("bckdyn5").setAttribute("src", ""); $("bckdyn5").setAttribute("srcset", "");
+		$("bckdyn6").setAttribute("src", ""); $("bckdyn6").setAttribute("srcset", "");
+		$("bckdyn7").setAttribute("src", ""); $("bckdyn7").setAttribute("srcset", "");
+		$("bckdyn8").setAttribute("src", ""); $("bckdyn8").setAttribute("srcset", "");
+		$("bckdyn9").setAttribute("src", ""); $("bckdyn9").setAttribute("srcset", "");
+		$("bckdyn10").setAttribute("src", ""); $("bckdyn10").setAttribute("srcset", "");
+	});
+	$("totldynpaper10").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstars"); $("dynamic10").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper9").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamictriangulation"); $("dynamic9").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper8").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstorm"); $("dynamic8").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper7").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicdotscolor"); $("dynamic7").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper6").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicsmoke"); $("dynamic6").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper5").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicspace"); $("dynamic5").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper4").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamiccloud"); $("dynamic4").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper3").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicraindrops"); $("dynamic3").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper2").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicblocks"); $("dynamic2").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper1").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicfishtank"); $("dynamic1").checked = true; dynamictest(); save_options(); });
+	$("hoveroptiondyn5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
+
+	// autoplay Add website
+	document.getElementById("formautoplay").addEventListener("submit", function(e){ e.preventDefault(); autoplayaddWhitelistDomain(); });
+
+	// autoplay Remove website
+	$("autoplayremovebutton").addEventListener("click", function(){ autoplayremoveSelectedExcludedDomain(); });
+
+	// YouTube quality
+	$("youtubequality").addEventListener("click", function(){ save_options(); });
+	$("youtubequality").addEventListener("change", function(){ save_options(); });
+
+	// HTML5 video volume steps
+	$("videovolumesteps").addEventListener("click", function(){ save_options(); });
+	$("videovolumesteps").addEventListener("change", function(){ save_options(); });
+
+	// atmosphere Add website
+	document.getElementById("formatmospherelighting").addEventListener("submit", function(e){ e.preventDefault(); atmosphereaddWhitelistDomain(); });
+
+	// atmosphere Remove website
+	$("atmosphereremovebutton").addEventListener("click", function(){ atmosphereremoveSelectedExcludedDomain(); });
+
+	// night Add website
+	document.getElementById("formnightmode").addEventListener("submit", function(e){ e.preventDefault(); nightaddWhitelistDomain(); });
+
+	// night Remove website
+	$("nightremovebutton").addEventListener("click", function(){ nightremoveSelectedExcludedDomain(); });
+
+	// cam motion Add website
+	document.getElementById("formcameramotion").addEventListener("submit", function(e){ e.preventDefault(); cammotionaddWhitelistDomain(); });
+
+	// cam motion Remove website
+	$("cammotionremovebutton").addEventListener("click", function(){ cammotionremoveSelectedExcludedDomain(); });
+
+	// speech Add website
+	document.getElementById("formspeech").addEventListener("submit", function(e){ e.preventDefault(); speechaddWhitelistDomain(); });
+
+	// speech Remove website
+	$("speechremovebutton").addEventListener("click", function(){ speechremoveSelectedExcludedDomain(); });
+
+	// autostop Add website
+	document.getElementById("formautostop").addEventListener("submit", function(e){ e.preventDefault(); autostopaddWhitelistDomain(); });
+
+	// autostop Remove website
+	$("autostopremovebutton").addEventListener("click", function(){ autostopremoveSelectedExcludedDomain(); });
+
+	// video Add website
+	document.getElementById("formvideotoolbar").addEventListener("submit", function(e){ e.preventDefault(); videotooladdWhitelistDomain(); });
+
+	// video Remove website
+	$("videotoolremovebutton").addEventListener("click", function(){ videotoolremoveSelectedExcludedDomain(); });
+
+	// multi opacity Change
+	$("multiopacityDomainsBox").addEventListener("click", function(){ multiopacitychangeurl(); });
+	$("multiopacitynumberBox").addEventListener("click", function(){ multiopacitychangenumberl(); });
+
+	// multi opacity Add
+	document.getElementById("formmultiopacity").addEventListener("submit", function(e){ e.preventDefault(); multiopacityadd(); });
+
+	// multi opacity Remove
+	$("multiopacityremovebutton").addEventListener("click", function(){ multiopacityremoveSelectedExcludedDomain(); });
+
+	// Reset settings
+	$("resettotl").addEventListener("click", function(){ chrome.storage.sync.clear(); location.reload(); });
+
+	// linearsq
+	$("linearsq").addEventListener("click", function(){ test(); ariacheck(); save_options(); });
+	$("linearsq").addEventListener("change", function(){ test(); ariacheck(); save_options(); });
+
+	// Review box
+	$("war").addEventListener("click", function(){ window.open(writereview); $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version}); });
+	$("nt").addEventListener("click", function(){ $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version}); });
+
+	// Aurora Player app box
+	$("apgetapp").addEventListener("click", function(){ window.open(linkauroraplayerapp); $("sectionauroraplayerappbox").style.display = "none"; chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version}); });
+	$("apnt").addEventListener("click", function(){ $("sectionauroraplayerappbox").style.display = "none"; chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version}); });
+
+	// Mobile app box
+	$("magetapp").addEventListener("click", function(){ window.open(linktotlmobileapp); $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
+	$("mant").addEventListener("click", function(){ $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
+
+	// Lamp Icons
+	$("p1").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconstick38.png"); document.images["btnpreview"].src = "icons/iconstick38.png"; save_options(); });
+	$("p2").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/icongold38.png"); document.images["btnpreview"].src = "icons/icongold38.png"; save_options(); });
+	$("p3").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconrose38.png"); document.images["btnpreview"].src = "icons/iconrose38.png"; save_options(); });
+	$("p4").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconrainbow38.png"); document.images["btnpreview"].src = "icons/iconrainbow38.png"; save_options(); });
+	$("p5").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconwhite38.png"); document.images["btnpreview"].src = "icons/iconwhite38.png"; save_options(); });
+
+	// get permission
+	$("darkbrowsertheme").addEventListener("click", function(){
+		if($("darkbrowsertheme").checked == true){
+
+			// Permissions must be requested from inside a user gesture, like a button's
+			// click handler.
+			chrome.permissions.request({
+				permissions: ["theme"]
+			}, function(granted){
+				// The callback argument will be true if the user granted the permissions.
+				if(granted){
+					saveindarktheme();
+				}else{
+					removeindarktheme();
+					$("darkbrowsertheme").checked = false; // disable it back
+					save_options();
+				}
+			});
+
+		}else{
+			removeindarktheme();
+		}
+	});
+
+	function saveindarktheme(){
+		chrome.permissions.contains({
+			permissions: ["theme"]
+		}, function(result){
+			if(result){
+				// The extension has the permissions.
+			}else{
+				// The extension doesn't have the permissions.
+			}
+		});
+	}
+
+	function removeindarktheme(){
+		chrome.permissions.remove({
+			permissions: ["theme"]
+		}, function(removed){
+			if(removed){
+				// The permissions have been removed.
+			}else{
+				// The permissions have not been removed (e.g., you tried to remove
+				// required permissions).
+			}
+		});
+	}
+
+	$("sub1").addEventListener("click", function(){
+		$("colorpanel").className = "";
+		$("gradientpanel").className = "hidden";
+		$("imagepanel").className = "hidden";
+		$("dynamicpanel").className = "hidden";
+		$("blurpanel").className = "hidden";
+
+		$("sub1").className = "tabbutton tabhighlight";
+		$("sub2").className = "tabbutton";
+		$("sub3").className = "tabbutton";
+		$("sub4").className = "tabbutton";
+		$("sub5").className = "tabbutton";
+	});
+	$("sub2").addEventListener("click", function(){
+		$("colorpanel").className = "hidden";
+		$("gradientpanel").className = "";
+		$("imagepanel").className = "hidden";
+		$("dynamicpanel").className = "hidden";
+		$("blurpanel").className = "hidden";
+
+		$("sub1").className = "tabbutton";
+		$("sub2").className = "tabbutton tabhighlight";
+		$("sub3").className = "tabbutton";
+		$("sub4").className = "tabbutton";
+		$("sub5").className = "tabbutton";
+	});
+	$("sub3").addEventListener("click", function(){
+		$("colorpanel").className = "hidden";
+		$("gradientpanel").className = "hidden";
+		$("imagepanel").className = "";
+		$("dynamicpanel").className = "hidden";
+		$("blurpanel").className = "hidden";
+
+		$("sub1").className = "tabbutton";
+		$("sub2").className = "tabbutton";
+		$("sub3").className = "tabbutton tabhighlight";
+		$("sub4").className = "tabbutton";
+		$("sub5").className = "tabbutton";
+	});
+	$("sub4").addEventListener("click", function(){
+		$("colorpanel").className = "hidden";
+		$("gradientpanel").className = "hidden";
+		$("imagepanel").className = "hidden";
+		$("dynamicpanel").className = "";
+		$("blurpanel").className = "hidden";
+
+		$("sub1").className = "tabbutton";
+		$("sub2").className = "tabbutton";
+		$("sub3").className = "tabbutton";
+		$("sub4").className = "tabbutton tabhighlight";
+		$("sub5").className = "tabbutton";
+	});
+	$("sub5").addEventListener("click", function(){
+		$("colorpanel").className = "hidden";
+		$("gradientpanel").className = "hidden";
+		$("imagepanel").className = "hidden";
+		$("dynamicpanel").className = "hidden";
+		$("blurpanel").className = "";
+
+		$("sub1").className = "tabbutton";
+		$("sub2").className = "tabbutton";
+		$("sub3").className = "tabbutton";
+		$("sub4").className = "tabbutton";
+		$("sub5").className = "tabbutton tabhighlight";
+	});
+
+	/* atmos */
+	$("tv1").addEventListener("click", function(){
+		$("atmospanel").className = "";
+		$("atmosonepanel").className = "hidden";
+		$("atmosfourpanel").className = "hidden";
+		$("atmosvividpanel").className = "hidden";
+		$("atmossettingspanel").className = "hidden";
+
+		$("tv1").className = "tabbutton tabhighlight";
+		$("tv2").className = "tabbutton";
+		$("tv3").className = "tabbutton";
+		$("tv4").className = "tabbutton";
+		$("tv5").className = "tabbutton";
+	});
+	$("tv2").addEventListener("click", function(){
+		$("atmospanel").className = "hidden";
+		$("atmosonepanel").className = "";
+		$("atmosfourpanel").className = "hidden";
+		$("atmosvividpanel").className = "hidden";
+		$("atmossettingspanel").className = "hidden";
+
+		$("tv1").className = "tabbutton";
+		$("tv2").className = "tabbutton tabhighlight";
+		$("tv3").className = "tabbutton";
+		$("tv4").className = "tabbutton";
+		$("tv5").className = "tabbutton";
+	});
+	$("tv3").addEventListener("click", function(){
+		$("atmospanel").className = "hidden";
+		$("atmosonepanel").className = "hidden";
+		$("atmosfourpanel").className = "";
+		$("atmosvividpanel").className = "hidden";
+		$("atmossettingspanel").className = "hidden";
+
+		$("tv1").className = "tabbutton";
+		$("tv2").className = "tabbutton";
+		$("tv3").className = "tabbutton tabhighlight";
+		$("tv4").className = "tabbutton";
+		$("tv5").className = "tabbutton";
+	});
+	$("tv4").addEventListener("click", function(){
+		$("atmospanel").className = "hidden";
+		$("atmosonepanel").className = "hidden";
+		$("atmosfourpanel").className = "hidden";
+		$("atmosvividpanel").className = "";
+		$("atmossettingspanel").className = "hidden";
+
+		$("tv1").className = "tabbutton";
+		$("tv2").className = "tabbutton";
+		$("tv3").className = "tabbutton";
+		$("tv4").className = "tabbutton tabhighlight";
+		$("tv5").className = "tabbutton";
+	});
+	$("tv5").addEventListener("click", function(){
+		$("atmospanel").className = "hidden";
+		$("atmosonepanel").className = "hidden";
+		$("atmosfourpanel").className = "hidden";
+		$("atmosvividpanel").className = "hidden";
+		$("atmossettingspanel").className = "";
+
+		$("tv1").className = "tabbutton";
+		$("tv2").className = "tabbutton";
+		$("tv3").className = "tabbutton";
+		$("tv4").className = "tabbutton";
+		$("tv5").className = "tabbutton tabhighlight";
+	});
+
+	// easter egg game - playground
+	var myGameArea;
+	var myGamePiece;
+	var myObstacles = [];
+	var myScore;
+	var myHighScore;
+	var myGameOver;
+	var previoushigh = 0;
+	var levels = [250, 500, 750, 1000, 1500, 2000, 5000, 10000];
+
+	function restartGame(){
+		document.getElementById("stefanvdbtnplaygroundfilter").style.display = "none";
+		myGameArea.stop();
+		myGameArea.clear();
+		myGameArea = {};
+		myGamePiece = {};
+		myObstacles = [];
+		myScore = {};
+		document.getElementById("stefanvdplayground").innerHTML = "";
+		startGame();
+	}
+
+	function startGame(){
+		myGameArea = new gamearea();
+		myGamePiece = new component(16, 30, "images/party-balloon@2x.webp", 15, 30, "image");
+		myGamePiece.gravity = 0.05;
+		myScore = new component("15px", "Verdana", "black", 330, 25, "text");
+		myHighScore = new component("15px", "Verdana", "black", 330, 45, "text");
+		myGameArea.start();
+	}
+
+	function gamearea(){
+		this.refreshSpeed = 25;
+		this.canvas = document.createElement("canvas");
+		document.body.addEventListener("keydown", function(){
+			const key = event.key;
+			if(key == "ArrowUp"){
+				accelerate(-0.2);
+			}
+		}, false);
+		document.body.addEventListener("keyup", function(){
+			const key = event.key;
+			if(key == "ArrowUp"){
+				accelerate(0.05);
+			}
+		}, false);
+
+		this.canvas.addEventListener("touchstart", function(){ accelerate(0.05); }, false);
+		this.canvas.addEventListener("touchend", function(){ accelerate(-0.2); }, false);
+		this.canvas.addEventListener("mouseup", function(){ accelerate(0.05); }, false);
+		this.canvas.addEventListener("mousedown", function(){ accelerate(-0.2); }, false);
+
+		document.getElementById("stefanvdplayground").appendChild(this.canvas);
+		this.context = this.canvas.getContext("2d", {desynchronized: true});
+
+		// retina support
+		this.canvas.width = 480 * 2;
+		this.canvas.height = 270 * 2;
+		// this.canvas.style.width = "480px";
+		// this.canvas.style.height = "270px";
+		this.context.scale(2, 2);
+		//---
+
+		this.pause = false;
+		this.frameNo = 0;
+		this.start = function(){
+			this.stopped = false;
+			updateGameArea();
+		};
+		this.stop = function(){
+			this.pause = true;
+			this.stopped = true;
+		};
+		this.clear = function(){
+			this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		};
+	}
+
+	function component(width, height, color, x, y, type){
+		this.type = type;
+		if(type == "image"){
+			this.image = new Image();
+			this.image.width = 16;
+			this.image.height = 30;
+			this.image.src = color;
+		}
+		this.score = 0;
+		this.width = width;
+		this.height = height;
+		this.color = color;
+		this.speedX = 0;
+		this.speedY = 0;
+		this.x = x;
+		this.y = y;
+		this.gravity = 0;
+		this.gravitySpeed = 0;
+		this.update = function(){
+			var gamectx = myGameArea.context;
+			if(this.type == "text"){
+				gamectx.font = this.width + " " + this.height;
+				gamectx.fillStyle = this.color;
+				gamectx.shadowBlur = 1;
+				gamectx.shadowColor = "rgba(255,255,255,1)";
+				gamectx.fillText(this.text, this.x, this.y);
+			}else if(type == "image"){
+				gamectx.imageSmoothingEnabled = false;
+				gamectx.drawImage(this.image, this.x, this.y, this.width, this.height);
+			}else{
+				gamectx.fillStyle = color;
+				gamectx.fillRect(this.x, this.y, this.width, this.height);
+			}
+		};
+		this.newPos = function(){
+			this.gravitySpeed += this.gravity;
+			this.x += this.speedX;
+			this.y += this.speedY + this.gravitySpeed;
+			this.hitBottom();
+		};
+		this.hitBottom = function(){
+			var rockbottom = myGameArea.canvas.height / 2 - this.height;
+			if(this.y > rockbottom){
+				this.y = rockbottom;
+				this.gravitySpeed = 0;
+			}
+		};
+		this.crashWith = function(otherobj){
+			var myleft = this.x;
+			var myright = this.x + (this.width);
+			var mytop = this.y;
+			var mybottom = this.y + (this.height);
+			var otherleft = otherobj.x;
+			var otherright = otherobj.x + (otherobj.width);
+			var othertop = otherobj.y;
+			var otherbottom = otherobj.y + (otherobj.height);
+			var crash = true;
+			if((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)){
+				crash = false;
+			}
+			if(this.y < 0){ crash = true; }
+			return crash;
+		};
+	}
+
+	function removeElement(elementId){
+		var element = document.getElementById(elementId);
+		element.parentNode.removeChild(element);
+	}
+
+	var AudioContext = window.AudioContext || window.webkitAudioContext;
+	var gameaudiocontext;
+	function updateGameArea(){
+		if(myGameArea.stopped){ return; }
+		var x, height, gap, minHeight, maxHeight, minGap, maxGap, i;
+		for(i = 0; i < myObstacles.length; i += 1){
+			if(myGamePiece.crashWith(myObstacles[i])){
+				if(myGameArea.frameNo > previoushigh){
+					previoushigh = myGameArea.frameNo;
+				}
+				myGameArea.stop();
+				myGameOver = new component("15px", "Verdana", "black", 195, 110, "text");
+				myGameOver.text = "Game Over";
+				myGameOver.update();
+				if(document.getElementById("stefanvdbtnplaygroundfilter")){
+					document.getElementById("stefanvdbtnplaygroundfilter").style.display = "flex";
+				}
+				return;
+			}
+		}
+		if(myGameArea.pause == false){
+			myGameArea.clear();
+			myGameArea.frameNo += 1;
+			myScore.score += 1;
+			if(myGameArea.frameNo == 1 || everyinterval(150)){
+				x = myGameArea.canvas.width / 2;
+				minHeight = 20;
+				maxHeight = 200;
+				height = Math.floor(Math.random() * (maxHeight - minHeight + 1) + minHeight);
+				minGap = 50;
+				maxGap = 200;
+				gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
+				myObstacles.push(new component(10, height, "#666666", x, 0));
+				myObstacles.push(new component(10, x - height - gap, "#666666", x, height + gap));
+			}
+			var obstaclesi;
+			var obstaclesl = myObstacles.length;
+			for(obstaclesi = 0; obstaclesi < obstaclesl; obstaclesi += 1){
+				myObstacles[obstaclesi].x += -1;
+				myObstacles[obstaclesi].update();
+			}
+
+			myScore.text = "SCORE: " + myScore.score;
+			if(myScore.score % 100 == 0){
+				var FREQUENCY = 440;
+				var INTERVAL = 250;
+				var RAMP_VALUE = 0.00001;
+				var RAMP_DURATION = 1;
+
+				var frequency = FREQUENCY;
+				var interval = INTERVAL;
+
+				var play = function(){
+					gameaudiocontext.resume().then(() => {
+						// console.log('Playback resumed successfully');
+					});
+					var currentTime = gameaudiocontext.currentTime;
+					var osc = gameaudiocontext.createOscillator();
+					var gain = gameaudiocontext.createGain();
+
+					osc.connect(gain);
+					gain.connect(gameaudiocontext.destination);
+
+					gain.gain.setValueAtTime(gain.gain.value, currentTime);
+					gain.gain.exponentialRampToValueAtTime(RAMP_VALUE, currentTime + RAMP_DURATION);
+
+					osc.onended = function(){
+						gain.disconnect(gameaudiocontext.destination);
+						osc.disconnect(gain);
+					};
+
+					osc.type = "sine";
+					osc.frequency.value = frequency;
+					osc.start(currentTime);
+					osc.stop(currentTime + RAMP_DURATION);
+				};
+
+				var beep = function(times){
+					if(!times) times = 1; (function loop(i){
+						play();
+						if(++i < times) window.setTimeout(loop, interval, i);
+					})(0);
+				};
+
+				beep();
+				// blink text
+				myScore.color = "rgb(0,0,0,.2)";
+				myScore.update();
+				window.setTimeout(function(){
+					myScore.color = "rgb(0,0,0,1)";
+					myScore.update();
+				}, 100);
+				window.setTimeout(function(){
+					myScore.color = "rgb(0,0,0,.2)";
+					myScore.update();
+				}, 200);
+				window.setTimeout(function(){
+					myScore.color = "rgb(0,0,0,1)";
+					myScore.update();
+				}, 300);
+				window.setTimeout(function(){
+					myScore.color = "rgb(0,0,0,.2)";
+					myScore.update();
+				}, 400);
+				window.setTimeout(function(){
+					myScore.color = "rgb(0,0,0,1)";
+					myScore.update();
+				}, 500);
+			}
+
+			if(levels.indexOf(myScore.score) != -1){
+				myGameArea.refreshSpeed -= 2;
+				// console.log( 'level '+levels.indexOf(myScore.score) + '; refreshRate: '+ myGameArea.refreshSpeed);
+			}
+			myScore.update();
+			if(previoushigh > 0){
+				myHighScore.text = "HI: " + previoushigh;
+				myHighScore.update();
+			}
+			myGamePiece.newPos();
+			myGamePiece.update();
+
+			window.setTimeout(updateGameArea, myGameArea.refreshSpeed);
+		}
+	}
+
+	function everyinterval(n){
+		if((myGameArea.frameNo / n) % 1 == 0){ return true; }
+		return false;
+	}
+
+	function accelerate(n){
+		myGamePiece.gravity = n;
+	}
+
+	// search
+	var pageinsearch = false;
+	function OnSearch(input){
+		if(input.value == ""){
+			pageinsearch = false;
+			input.blur();
+
+			var sections = document.getElementsByTagName("section");
+			var x;
+			var l = sections.length;
+			for(x = 0; x < l; x++){
+				var section = sections[x];
+				section.classList.remove("searchfoundnothing");
+			}
+
+			// set view back to the current selected tab
+			// and hide back all videos
+			var y = document.getElementsByClassName("navbar-item-selected");
+			y[0].click();
+
+			// hide preview toolbar tabs
+			document.getElementsByClassName("tabbar")[0].classList.remove("hidden");
+			$("colorpanel").className = "";
+			$("gradientpanel").className = "hidden";
+			$("imagepanel").className = "hidden";
+			$("dynamicpanel").className = "hidden";
+			$("blurpanel").className = "hidden";
+
+			document.getElementsByClassName("tabbar")[1].classList.remove("hidden");
+			$("atmospanel").className = "";
+			$("atmosonepanel").className = "hidden";
+			$("atmosfourpanel").className = "hidden";
+			$("atmosvividpanel").className = "hidden";
+			$("atmossettingspanel").className = "hidden";
+
+			if($("stefanvdbtnplaygroundfilter")){
+				removeElement("stefanvdbtnplaygroundfilter");
+			}
+
+			if($("stefanvdplayground")){
+				removeElement("stefanvdplayground");
+			}
+		}else{
+			if(pageinsearch == false){
+				pageinsearch = true;
+				// load all the videos
+				OFFworkaroundbugfromsafari();
+				OFFworkaroundbugpreview();
+				OFFworkaroundnight();
+				OFFworkaroundmotion();
+				OFFworkaroundspeech();
+
+				document.getElementsByClassName("tabbar")[0].classList.add("hidden");
+				$("colorpanel").className = "";
+				$("gradientpanel").className = "";
+				$("imagepanel").className = "";
+				$("dynamicpanel").className = "";
+				$("blurpanel").className = "";
+
+				document.getElementsByClassName("tabbar")[1].classList.add("hidden");
+				$("atmospanel").className = "";
+				$("atmosonepanel").className = "";
+				$("atmosfourpanel").className = "";
+				$("atmosvividpanel").className = "";
+				$("atmossettingspanel").className = "";
+			}
+
+			// receive the total tab pages
+			var tabListItems = $("navbar").childNodes;
+			var tabListi;
+			var tabListl = tabListItems.length;
+			for(tabListi = 0; tabListi < tabListl; tabListi++){
+				if(tabListItems[i].nodeName == "LI"){
+					var tabLink = getFirstChildWithTagName(tabListItems[tabListi], "A");
+					var id = getHash(tabLink.getAttribute("data-tab"));
+					contentDivs[id] = document.getElementById(id);
+				}
+			}
+
+			// show all tab pages
+			var showaltabid;
+			for(showaltabid in contentDivs){
+				if(showaltabid != "tab4"){
+					if((contentDivs[showaltabid])){
+						contentDivs[showaltabid].className = "page";
+					}
+				}
+			}
+			//---
+			var searchword = input.value;
+			if(searchword == "balloon"){
+				// easteregg Party Balloon
+				if(!$("stefanvdplayground")){
+					// user gesture activate the game audio ping
+					gameaudiocontext = new AudioContext();
+
+					var newplaygroundfilter = document.createElement("div");
+					newplaygroundfilter.setAttribute("id", "stefanvdbtnplaygroundfilter");
+					newplaygroundfilter.style.zIndex = 200;
+					newplaygroundfilter.style.position = "absolute";
+					newplaygroundfilter.style.width = "calc(100% - 46px)";
+					newplaygroundfilter.style.height = "calc(100% - 3px)";
+					newplaygroundfilter.style.background = "rgba(0,0,0,.6)";
+					newplaygroundfilter.style.display = "none";
+					newplaygroundfilter.style.alignItems = "center";
+					newplaygroundfilter.style.justifyContent = "center";
+					$("mainview-content").appendChild(newplaygroundfilter);
+
+					var newplayground = document.createElement("div");
+					newplayground.setAttribute("id", "stefanvdplayground");
+					$("mainview-content").appendChild(newplayground);
+
+					var newbtnplaygroundrestart = document.createElement("button");
+					newbtnplaygroundrestart.setAttribute("id", "stefanvdbtnplaygroundrestart");
+					newbtnplaygroundrestart.addEventListener("click", function(){ restartGame(); }, false);
+					newbtnplaygroundrestart.innerText = "Restart";
+					newplaygroundfilter.appendChild(newbtnplaygroundrestart);
+
+					var newbtnplaygroundfb = document.createElement("div");
+					newbtnplaygroundfb.setAttribute("id", "stefanvdbtnplaygroundfacebook");
+					newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }, false);
+					newplaygroundfilter.appendChild(newbtnplaygroundfb);
+
+					var newbtnplaygroundtw = document.createElement("div");
+					newbtnplaygroundtw.setAttribute("id", "stefanvdbtnplaygroundtwitter");
+					newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var sturnoffthelightsproductcodeurl = encodeURIComponent(stringgame + " " + turnoffthelightsproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }, false);
+					newplaygroundfilter.appendChild(newbtnplaygroundtw);
+
+					startGame();
+				}
+			}else{
+				if($("stefanvdplayground")){
+					removeElement("stefanvdplayground");
+				}
+			}
+
+			var allsections = document.getElementsByTagName("section");
+			var sectionsx;
+			var sectionsl = allsections.length;
+			for(sectionsx = 0; sectionsx < sectionsl; sectionsx++){
+				var partsection = allsections[sectionsx];
+				var content = section.innerHTML;
+
+				// remove first the help message, because not a feature
+				var i18nhelpautoplay = chrome.i18n.getMessage("helpautoplay");
+				content = content.replace(i18nhelpautoplay, "");
+				var i18nhelpeyeprotection = chrome.i18n.getMessage("helpeyeprotection");
+				content = content.replace(i18nhelpeyeprotection, "");
+
+				if(content.search(new RegExp(searchword, "i")) < 1){
+					partsection.classList.add("searchfoundnothing");
+				}else{
+					partsection.classList.remove("searchfoundnothing");
+				}
+			}
+
+			// hide the h2 if there is no sections visible
+			var pages = document.getElementsByClassName("page");
+			var z;
+			var tabpagelength = pages.length;
+			for(z = 0; z < tabpagelength; z++){
+				var tabsections = pages[z].getElementsByTagName("section");
+				var countnothingcheck = 0;
+				var w;
+				var q = tabsections.length;
+				for(w = 0; w < q; w++){
+					var currenttabsection = tabsections[w];
+					if(currenttabsection.classList.contains("searchfoundnothing")){
+						countnothingcheck += 1;
+					}
+				}
+				if(countnothingcheck == tabsections.length){
+					// total sections with nothing inside is the same as all the section -> hide the page
+					pages[z].classList.add("searchfoundnothing");
+				}else{
+					pages[z].classList.remove("searchfoundnothing");
+				}
+			}
+
+
+		}
+	}
+
+	if(document.getElementById("appsearch")){
+		document.getElementById("appsearch").addEventListener("search", function(){ OnSearch(this); }, false);
+		document.getElementById("appsearch").addEventListener("input", function(){ OnSearch(this); }, false);
+		document.getElementById("btnsearchicon").addEventListener("input", function(){ OnSearch(this); }, false);
+		document.getElementById("appsearch").placeholder = chrome.i18n.getMessage("searchplaceholder");
+	}
 
 }

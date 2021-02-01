@@ -38,9 +38,9 @@ function speechstartfunction(){
 }
 function startButton(event){
 	// Abort previous instances of recognition already running
-    if(recognition && recognition.abort){
-        recognition.abort();
-    }
+	if(recognition && recognition.abort){
+		recognition.abort();
+	}
 	recognition.lang = "en-US";
 	try{ recognition.start(); }catch(e){ console.error(e); }
 	ignore_onend = false;
@@ -49,20 +49,20 @@ function startButton(event){
 
 function startinit(){
 // Check for live API permissions
-navigator.permissions.query({name:"microphone"})
-.then(function(permissionStatus){
-  permissionStatus.onchange = function(){
-	if(this.state == "granted"){
-		var micaccess = window.self;
-		micaccess.opener = window.self;
-		micaccess.close();
-	}else{
-		var micdenied = window.self;
-		micdenied.opener = window.self;
-		micdenied.close();
-	}
-  };
-});
+	navigator.permissions.query({name:"microphone"})
+		.then(function(permissionStatus){
+			permissionStatus.onchange = function(){
+				if(this.state == "granted"){
+					var micaccess = window.self;
+					micaccess.opener = window.self;
+					micaccess.close();
+				}else{
+					var micdenied = window.self;
+					micdenied.opener = window.self;
+					micdenied.close();
+				}
+			};
+		});
 
 	const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 	if(typeof SpeechRecognition === "undefined"){
@@ -104,4 +104,4 @@ navigator.permissions.query({name:"microphone"})
 	speechstartfunction();
 }
 
-document.addEventListener("DOMContentLoaded", function(){ startinit(); },false);
+document.addEventListener("DOMContentLoaded", function(){ startinit(); }, false);

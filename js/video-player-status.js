@@ -43,37 +43,37 @@ var ytCinema;
 	initialize: function(){
 		this.messageEvent;
 		window.addEventListener("load", initvideoinject, false);
-        document.addEventListener("DOMContentLoaded", initvideoinject, false);
+		document.addEventListener("DOMContentLoaded", initvideoinject, false);
 		initvideoinject();
 
 		// New Mutation Summary API Reference
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 		if(MutationObserver){
 		// setup MutationSummary observer
-		var videolist = document.querySelector("body");
-		var observer = new MutationObserver(function(mutations){
-			mutations.forEach(function(mutation){
-				if(mutation.target.tagName == "VIDEO"){
-					if(mutation.attributeName === "src"){
+			var videolist = document.querySelector("body");
+			var observer = new MutationObserver(function(mutations){
+				mutations.forEach(function(mutation){
+					if(mutation.target.tagName == "VIDEO"){
+						if(mutation.attributeName === "src"){
+							initvideoinject();
+						}
+					}
+					if(mutation.addedNodes == "VIDEO" || mutation.removedNodes == "VIDEO"){
 						initvideoinject();
 					}
-				}
-				if(mutation.addedNodes == "VIDEO" || mutation.removedNodes == "VIDEO"){
-					initvideoinject();
-				}
+				});
 			});
-        });
 
-		observer.observe(videolist, {
-			subtree: true, // observe the subtree rooted at ...videolist...
-			childList: true, // include childNode insertion/removals
-			characterData: false, // include textContent changes
-			attributes: true // include changes to attributes within the subtree
+			observer.observe(videolist, {
+				subtree: true, // observe the subtree rooted at ...videolist...
+				childList: true, // include childNode insertion/removals
+				characterData: false, // include textContent changes
+				attributes: true // include changes to attributes within the subtree
 			});
 		}else{
 		// setup DOM event listeners
-		document.addEventListener("DOMNodeRemoved", initvideoinject, false);
-		document.addEventListener("DOMNodeInserted", initvideoinject, false);
+			document.addEventListener("DOMNodeRemoved", initvideoinject, false);
+			document.addEventListener("DOMNodeInserted", initvideoinject, false);
 		}
 
 		function initvideoinject(){

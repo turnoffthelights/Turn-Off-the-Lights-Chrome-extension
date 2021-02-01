@@ -30,7 +30,11 @@
         "arrow-parens": ["error", "always"],
         "block-spacing": ["error", "always"],
         "jsx-quotes": ["error", "prefer-double"],
-        "semi": ["error"]
+        "semi": ["error"],
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "comma-spacing": ["error"],
+        "indent": ["error", "tab"],
+        "spaced-comment": ["error", "always", {"exceptions": ["=","-"]}]
     },
     "globals": {
         "angular": "writable",
