@@ -102,6 +102,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-subtitle-color:#717171;
 --totl-card-background:#232323;
 --totl-card-info:#4285f4;
+--totl-page-a:#3ea6ff;
 }
 .light{
 --totl-primary-background:#fff;
@@ -178,6 +179,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-subtitle-color:#b0b0b0;
 --totl-card-background:#fff;
 --totl-card-info:#4285f4;
+--totl-page-a:#065fd4;
 }
 
 html{overflow:hidden}
@@ -212,10 +214,10 @@ section>div:only-of-type{-webkit-box-flex:1}
 #multiopacityDomainsBox{width:235px}
 #multiopacitynumberBox{width:65px}
 /* Hyperlinks */
-#mainview-content section a{color:rgb(51, 103, 214);text-decoration:underline}
-#mainview-content section a:active{color:rgb(51, 103, 214)}
-#mainview-content section a:visited{color:rgb(51, 103, 214)}
-#mainview-content section a:hover{color:rgb(51, 103, 214)}
+#mainview-content section a{color:var(--totl-page-a);text-decoration:underline}
+#mainview-content section a:active{color:var(--totl-page-a)}
+#mainview-content section a:visited{color:var(--totl-page-a)}
+#mainview-content section a:hover{color:var(--totl-page-a)}
 .btnspace{margin:0 8px 0 0}
 .grey-text{color:grey}
 .hidden{display:none}
@@ -744,6 +746,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .imageshaduw{margin:10px 12px;padding:1px;border:1px solid #bebebe}
 /* loading bar */
 #loadinghelp{bottom:10px;position:absolute;right:15px}
+#loadinghelp a,#loadinghelp a:active,#loadinghelp a:visited,#loadinghelp a:hover{color:var(--totl-page-a)}
 #loading{position:fixed;width:100%;height:100%;z-index:500;background:var(--totl-body-background);margin:0;padding:0;left:0;top:0}
 #loadingcenter{margin:20% auto;width:500px}
 #progressbar{width:500px;height:5px;background-color:rgba(33,150,243,0.5);clear:both;margin:5px 0}

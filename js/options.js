@@ -2735,10 +2735,10 @@ function domcontentloaded(){
 		window.open(linksupport); $("dropmenu").className = "hide";
 	});
 
-	$("btnactivedarkmodeauto").addEventListener("click", function(){console.log("jaja auto");
-		if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){console.log("jaja auto => dark");
+	$("btnactivedarkmodeauto").addEventListener("click", function(){
+		if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
 			godarkmode();
-		}else{console.log("jaja auto => LIGHT");
+		}else{
 			golightmode();
 		}
 		$("icondarkauto").style.opacity = 1;
@@ -2747,7 +2747,7 @@ function domcontentloaded(){
 		chrome.storage.sync.set({"darkmode":2});
 	});
 
-	$("btnactivedarkmodeoff").addEventListener("click", function(){console.log("jaja off");
+	$("btnactivedarkmodeoff").addEventListener("click", function(){
 		golightmode();
 		$("icondarkauto").style.opacity = 0;
 		$("icondarkoff").style.opacity = 1;
@@ -2755,7 +2755,7 @@ function domcontentloaded(){
 		chrome.storage.sync.set({"darkmode":0});
 	});
 
-	$("btnactivedarkmodeon").addEventListener("click", function(){console.log("jaja ON here");
+	$("btnactivedarkmodeon").addEventListener("click", function(){
 		godarkmode();
 		$("icondarkauto").style.opacity = 0;
 		$("icondarkoff").style.opacity = 0;
