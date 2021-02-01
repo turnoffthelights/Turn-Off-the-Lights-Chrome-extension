@@ -950,6 +950,7 @@ header .rightmenu:hover{background:var(--totl-svg-fill-color-hover);cursor:point
 #dropmenu ul li{height:48px;user-select:none;padding:0px 16px;color:var(--totl-primary-font-color);cursor:pointer}
 #dropmenu ul li:hover{background-color:var(--totl-dropmenu-li-background-hover)}
 #dropmenu ul li:active{background-color:var(--totl-dropmenu-li-background-active)}
+#dropmenu ul li.topline{border-top:var(--totl-section-border)}
 #menu{-webkit-user-select:none;user-select:none;z-index:399;position:fixed;top:5px;left:5px;height:45px;width:45px;border-radius:50%}
 #menu:hover{ background:var(--totl-menu-background-hover);cursor:pointer}
 #menuToggle{height:12px;width:20px;border-radius:50%;position:absolute;top:0;bottom:0;margin:auto;left:0;right:0}

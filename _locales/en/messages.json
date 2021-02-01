@@ -407,6 +407,7 @@
     "titlecancel": {"message": "Cancel"},
     "titledarkmodeon": {"message": "Dark Mode ON"},
     "titledarkmodeoff": {"message": "Dark Mode OFF"},
+    "titledarkmodeauto": {"message": "Use device appearance"},
     "titlelprivacy": {"message": "Privacy Policy"},
     "titleprofile": {"message": "Profile"},
     "descolorfixcolor": {"message": "Choose your dark layer color"},

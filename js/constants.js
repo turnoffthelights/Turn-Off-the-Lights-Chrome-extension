@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function $(id){ return document.getElementById(id); }
 // Install on www.stefanvd.net
 // Install on www.turnoffthelights.com
@@ -32,4 +33,4 @@ const browserstore = "https://chrome.google.com";
 const linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";
 const linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
 const linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
-const devmode = false;
+const devmode = true;

@@ -615,7 +615,7 @@ function read_options(){
 		// highlight the first tab
 		var tabi = 0;
 		var tabid;
-		for(id in tabLinks){
+		for(tabid in tabLinks){
 			tabLinks[tabid].onclick = showTab;
 			tabLinks[tabid].onfocus = function(){ this.blur(); };
 			if(tabi == 0) tabLinks[tabid].className = "navbar-item-selected";
@@ -2488,25 +2488,48 @@ function yearnow(){
 	var today = new Date(); var y0 = today.getFullYear(); $("yearnow").innerText = y0;
 }
 
+function godarkmode(){
+	$("dropmenu").className = "hide";
+	document.body.className = "dark";
+	$("headlamp").style.webkitFilter = "invert(1) brightness(2)";
+	$("headlamp").style.filter = "invert(1) brightness(2)";
+	$("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
+	$("loadinglamp").style.filter = "invert(1) brightness(2)";
+}
+
+function golightmode(){
+	$("dropmenu").className = "hide";
+	document.body.className = "light";
+	$("headlamp").style.webkitFilter = "invert(0)";
+	$("headlamp").style.filter = "invert(0)";
+	$("loadinglamp").style.webkitFilter = "invert(0)";
+	$("loadinglamp").style.filter = "invert(0)";
+}
+
 function checkdarkmode(){
 	chrome.storage.sync.get(["darkmode"], function(items){
-		darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
+		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 
 		// dark mode
-		if(darkmode == true){
-			$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeon");
-			document.body.className = "dark";
-			$("headlamp").style.webkitFilter = "invert(1) brightness(2)";
-			$("headlamp").style.filter = "invert(1) brightness(2)";
-			$("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
-			$("loadinglamp").style.filter = "invert(1) brightness(2)";
-		}else{
-			$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeoff");
-			document.body.className = "light";
-			$("headlamp").style.webkitFilter = "invert(0)";
-			$("headlamp").style.filter = "invert(0)";
-			$("loadinglamp").style.webkitFilter = "invert(0)";
-			$("loadinglamp").style.filter = "invert(0)";
+		if(darkmode == 1){
+			godarkmode();
+			$("icondarkauto").style.opacity = 0;
+			$("icondarkoff").style.opacity = 0;
+			$("icondarkon").style.opacity = 1;
+		}else if(darkmode == 0){
+			golightmode();
+			$("icondarkauto").style.opacity = 0;
+			$("icondarkoff").style.opacity = 1;
+			$("icondarkon").style.opacity = 0;
+		}else if(darkmode == 2){
+			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
+				godarkmode();
+			}else{
+				golightmode();
+			}
+			$("icondarkauto").style.opacity = 1;
+			$("icondarkoff").style.opacity = 0;
+			$("icondarkon").style.opacity = 0;
 		}
 	});
 }
@@ -2570,6 +2593,9 @@ if(window.location.href != totloptionspage){
 
 function domcontentloaded(){
 	checkdarkmode();
+	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function(){
+		checkdarkmode();
+	});
 
 	if((window.location.href != totloptionspage) && devmode == false){
 
@@ -2709,30 +2735,32 @@ function domcontentloaded(){
 		window.open(linksupport); $("dropmenu").className = "hide";
 	});
 
-	$("btnactivedarkmode").addEventListener("click", function(){
-		chrome.storage.sync.get(["darkmode"], function(items){
-			darkmode = items["darkmode"]; if(darkmode == null)darkmode = false; // default darkmode false
-			// dark mode
-			if(darkmode == true){
-				$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeoff");
-				$("dropmenu").className = "hide";
-				document.body.className = "light";
-				$("headlamp").style.webkitFilter = "invert(0)";
-				$("headlamp").style.filter = "invert(0)";
-				$("loadinglamp").style.webkitFilter = "invert(0)";
-				$("loadinglamp").style.filter = "invert(0)";
-				chrome.storage.sync.set({"darkmode":false});
-			}else{
-				$("currentdarkmode").innerText = chrome.i18n.getMessage("titledarkmodeon");
-				$("dropmenu").className = "hide";
-				document.body.className = "dark";
-				$("headlamp").style.webkitFilter = "invert(1) brightness(2)";
-				$("headlamp").style.filter = "invert(1) brightness(2)";
-				$("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
-				$("loadinglamp").style.filter = "invert(1) brightness(2)";
-				chrome.storage.sync.set({"darkmode":true});
-			}
-		});
+	$("btnactivedarkmodeauto").addEventListener("click", function(){console.log("jaja auto");
+		if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){console.log("jaja auto => dark");
+			godarkmode();
+		}else{console.log("jaja auto => LIGHT");
+			golightmode();
+		}
+		$("icondarkauto").style.opacity = 1;
+		$("icondarkoff").style.opacity = 0;
+		$("icondarkon").style.opacity = 0;
+		chrome.storage.sync.set({"darkmode":2});
+	});
+
+	$("btnactivedarkmodeoff").addEventListener("click", function(){console.log("jaja off");
+		golightmode();
+		$("icondarkauto").style.opacity = 0;
+		$("icondarkoff").style.opacity = 1;
+		$("icondarkon").style.opacity = 0;
+		chrome.storage.sync.set({"darkmode":0});
+	});
+
+	$("btnactivedarkmodeon").addEventListener("click", function(){console.log("jaja ON here");
+		godarkmode();
+		$("icondarkauto").style.opacity = 0;
+		$("icondarkoff").style.opacity = 0;
+		$("icondarkon").style.opacity = 1;
+		chrome.storage.sync.set({"darkmode":1});
 	});
 
 	// Detect click / change to save the page and test it.
