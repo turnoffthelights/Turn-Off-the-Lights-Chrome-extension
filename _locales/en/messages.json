@@ -481,5 +481,8 @@
     "desatmosfpsauto": {"message": "Synchronized as a best effort with the frame rate of the video playing on screen"},
     "desvideovolumeonly": {"message": "Activate the Mouse Volume Scroll only on the following site(s):"},
     "titelvideovolumewhitelist": {"message": "Whitelist"},
-    "titelvideovolumeblacklist": {"message": "Blacklist"}
+    "titelvideovolumeblacklist": {"message": "Blacklist"},
+    "desvolumescrolla": {"message": "Automatically adjust the scroll direction depending on the current operating system"},
+    "desvolumescrollb": {"message": "Scrolling up increases the volume"},
+    "desvolumescrollc": {"message": "Scrolling down increases the volume"}
 }

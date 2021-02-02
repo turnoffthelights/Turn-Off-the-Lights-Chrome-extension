@@ -477,7 +477,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			}
 		});
 	}
-	if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"] || changes["videovolumeonly"] || changes["videovolumeDomains"] || changes["videovolumechecklistwhite"] || changes["videovolumechecklistblack"]){
+	if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"] || changes["videovolumeonly"] || changes["videovolumeDomains"] || changes["videovolumechecklistwhite"] || changes["videovolumechecklistblack"] || changes["videovolumescrolla"] || changes["videovolumescrollb"] || changes["videovolumescrollc"]){
 		chrome.tabs.query({}, function(tabs){
 			var i;
 			var l = tabs.length;
