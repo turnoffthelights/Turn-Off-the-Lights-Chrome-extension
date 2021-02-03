@@ -1381,6 +1381,8 @@ function removedynamic(){
 	if(triangle){ newdynmaster.removeChild(triangle); }
 	var stars = $("stars");
 	if(stars){ newdynmaster.removeChild(stars); }
+
+	window.onresize = null;
 }
 
 // test general
@@ -1643,7 +1645,7 @@ function Particle(context){
 	this.context = context;
 
 	// The function to draw the particle on the canvas.
-	this.smokedraw = function(){
+	this.draw = function(){
 
 		// If an image is set draw it
 		if(this.image){
@@ -2022,18 +2024,20 @@ function trianglerandomize(){
 function trianglerefresh(){
 	if(document.visibilityState === "visible"){
 		trianglerandomize();
-		var i;
-		var l = document.querySelector("#triangle svg").childNodes.length;
-		for(i = 0; i < l; i++){
-			var polygon = document.querySelector("#triangle svg").childNodes[i];
-			var animate = polygon.childNodes[0];
-			if(animate.getAttribute("to")){
-				animate.setAttribute("from", animate.getAttribute("to"));
+		if(document.getElementById("triangle")){
+			var i;
+			var l = document.querySelector("#triangle svg").childNodes.length;
+			for(i = 0; i < l; i++){
+				var polygon = document.querySelector("#triangle svg").childNodes[i];
+				var animate = polygon.childNodes[0];
+				if(animate.getAttribute("to")){
+					animate.setAttribute("from", animate.getAttribute("to"));
+				}
+				animate.setAttribute("to", points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
+				animate.beginElement();
 			}
-			animate.setAttribute("to", points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
-			animate.beginElement();
+			refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
 		}
-		refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
 	}
 }
 
@@ -2074,14 +2078,14 @@ function dynamictest(){
 
 			var newdynblockleft = document.createElement("div"); newdynblockleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynblockleft);
 			var blocki;
-			for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynleft.appendChild(newdynblock); }
+			for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynblockleft.appendChild(newdynblock); }
 		}else if($("dynamic3").checked == true){
 			removedynamic();
 			var raindrops = document.createElement("div"); raindrops.setAttribute("id", "raindrops"); newdynmaster.appendChild(raindrops);
 
 			var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynrainleft);
 			var rainlefti;
-			for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class", "stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynleft.appendChild(newdyn); }
+			for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class", "stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynrainleft.appendChild(newdyn); }
 		}else if($("dynamic4").checked == true){
 			removedynamic();
 			var clouds = document.createElement("div"); clouds.setAttribute("id", "clouds"); newdynmaster.appendChild(clouds);
@@ -2115,13 +2119,19 @@ function dynamictest(){
 			removedynamic();
 
 			var flying = "";
-			if($("hoveroptiondyn5").checked == true){
+			if($("hoveroptiondyn5").checked != true){
 				// with the letter n include, then it see the flying in effect
 				flying = "n";
 			}
 			var space = document.createElement("div"); space.setAttribute("id", "space"); newdynmaster.appendChild(space);
 
-			var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspace"); space.appendChild(newdynspaceworld);
+			var newdynspaceworld;
+			if($("hoveroptiondyn5").checked != true){
+				newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspacenoflying"); space.appendChild(newdynspaceworld);
+			}else{
+				newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspace"); space.appendChild(newdynspaceworld);
+			}
+
 			var spacej;
 			for(spacej = 1; spacej < 17; spacej++){
 				if(spacej <= 9){ spacej = "0" + spacej; }
@@ -2578,11 +2588,11 @@ chrome.runtime.onMessage.addListener(function(msg){
 	if(msg.text === "receiveallpermissions"){
 		// empty ul first
 		if($("permullist")){
-			var ul = document.querySelector("#permullist");
-			var listLength = ul.children.length;
-			var listi;
-			for(listi = 0; listi < listLength; listi++){
-				ul.removeChild(ul.childNodes[listi]);
+			var ul = document.getElementById("permullist");
+			if(ul){
+				while(ul.firstChild){
+					ul.removeChild(ul.firstChild);
+				}
 			}
 		}
 		var perm = msg.value;

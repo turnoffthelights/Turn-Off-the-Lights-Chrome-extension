@@ -2192,7 +2192,7 @@ function lightsgoonoroff(){
 
 				var newdynblockright = document.createElement("div"); newdynblockright.setAttribute("class", "stefanvddynamicbackgroundblockright"); newdynmaster.appendChild(newdynblockright);
 				var blockbi;
-				for(blockbi = 22; blockbi < 42; blockbi++){ var newdynblockb = document.createElement("div"); newdynblockb.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blockbi + ""); newdynright.appendChild(newdynblockb); }
+				for(blockbi = 22; blockbi < 42; blockbi++){ var newdynblockb = document.createElement("div"); newdynblockb.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blockbi + ""); newdynblockright.appendChild(newdynblockb); }
 			}else if(dynamic3 == true){
 				var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); newdynmaster.appendChild(newdynrainleft);
 				var rainlefti;
@@ -2230,11 +2230,18 @@ function lightsgoonoroff(){
 				cloudupdate();
 			}else if(dynamic5 == true){
 				var flying = "";
-				if(hoveroptiondyn5 == true){
+				if(hoveroptiondyn5 != true){
 					// with the letter n include, then it see the flying in effect
 					flying = "n";
 				}
-				var newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspace"); newdynmaster.appendChild(newdynspaceworld);
+
+				var newdynspaceworld;
+				if(hoveroptiondyn5 != true){
+					newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspacenoflying"); newdynmaster.appendChild(newdynspaceworld);
+				}else{
+					newdynspaceworld = document.createElement("div"); newdynspaceworld.setAttribute("id", "stefanvddynamicspace"); newdynmaster.appendChild(newdynspaceworld);
+				}
+
 				var spacej;
 				for(spacej = 1; spacej < 17; spacej++){
 					if(spacej <= 9){ spacej = "0" + spacej; }

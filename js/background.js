@@ -477,7 +477,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			}
 		});
 	}
-	if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"] || changes["videovolumeonly"] || changes["videovolumeDomains"] || changes["videovolumechecklistwhite"] || changes["videovolumechecklistblack"] || changes["videovolumescrolla"] || changes["videovolumescrollb"] || changes["videovolumescrollc"] || changes["videovolumeposd"]|| changes["videovolumepose"]){
+	if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"] || changes["videovolumeonly"] || changes["videovolumeDomains"] || changes["videovolumechecklistwhite"] || changes["videovolumechecklistblack"] || changes["videovolumescrolla"] || changes["videovolumescrollb"] || changes["videovolumescrollc"] || changes["videovolumeposd"] || changes["videovolumepose"]){
 		chrome.tabs.query({}, function(tabs){
 			var i;
 			var l = tabs.length;
