@@ -82,11 +82,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 /* Theater */
 #stefanvdtheater{position:fixed!important;top:0!important;left:0!important;width:100%!important;height:100%!important;margin:0!important;z-index:998!important}
 /* Eye div */
-@keyframes slidedown{from{top:-100%;-webkit-animation-timing-function:ease-out}to{top:5px}}
-#stefanvdlightseye{-webkit-animation-name:slidedown;-webkit-animation-duration:.75s;animation-name:slidedown;animation-duration:.75s;position:fixed!important;top:5px!important;right:5px!important;background-color:rgba(0,0,0,.8)!important;font-family:arial,sans-serif!important;font-size:12px!important;line-height:1!important;color:#fff!important;border-radius:5px!important;padding:10px!important;border:1px solid gray!important;margin:0!important;z-index:5000!important}
+@keyframes slidedown{from{top:-100%;animation-timing-function:ease-out}to{top:5px}}
+#stefanvdlightseye{animation-name:slidedown;animation-duration:.75s;position:fixed!important;top:5px!important;right:5px!important;background-color:rgba(0,0,0,.8)!important;font-family:arial,sans-serif!important;font-size:12px!important;line-height:1!important;color:#fff!important;border-radius:5px!important;padding:10px!important;border:1px solid gray!important;margin:0!important;z-index:5000!important}
 /* Readerbar */
-@keyframes slideup{from{bottom:-100%;-webkit-animation-timing-function:ease-out}to{bottom:10px}}
-#stefanvdreaderbar{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;-webkit-animation-name:slideup;-webkit-animation-duration:.75s;animation-name:slideup;animation-duration:.75s;position:fixed!important;bottom:10px!important;right:10px!important;z-index:2147483647!important;border-radius:2px!important;background-color:rgba(0,0,0,0.4)!important;overflow:hidden!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24)!important}
+@keyframes slideup{from{bottom:-100%;animation-timing-function:ease-out}to{bottom:10px}}
+#stefanvdreaderbar{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;animation-name:slideup;animation-duration:.75s;position:fixed!important;bottom:10px!important;right:10px!important;z-index:2147483647!important;border-radius:2px!important;background-color:rgba(0,0,0,0.4)!important;overflow:hidden!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24)!important}
 #stefanvdreaderbar #stefanvdreaderbarinnerbox{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;display:inline-block!important;padding:0px!important;margin:0px!important;width:200px!important;background-color:transparent!important}
 #stefanvdreaderbar #stefanvdreaderbarinnerbox .stefanvdreaderbaroa{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;display:flex!important;float:left!important;width:calc(84% - 20px)!important;padding:0 10px 12px 10px!important;background-color:transparent!important}
 #stefanvdreaderbar #stefanvdreaderbarinnerbox .stefanvdreaderbaran{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;display:flex!important;float:left!important;width:calc(10% - 20px)!important;height:20px;align-items:center!important;background-color:transparent!important}
@@ -122,176 +122,176 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvddynamicbackground .stefanvddynamicbackgroundbubblemid{height:100%;margin-left:auto;margin-right:auto;position:fixed;display:block;left:0;right:0;top:0;width:300px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundbubbles{background-color:rgba(255,255,255,0.16);border:1px solid rgba(88,88,88,0.2);border-radius:100px 100px 100px 100px;position:absolute}
 /* Left */
-#stefanvddynamicbackground .stefanvddynamicbubbles0{left:33px;bottom:0;height:17px;width:17px;-webkit-animation:totlbubbles0 10s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles0{left:33px;bottom:0;height:17px;width:17px;animation:totlbubbles0 10s 0s linear infinite}
 @keyframes totlbubbles0{from{bottom:0;left:33px}50%{left:39px}to{bottom:100%;left:33px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles1{left:35px;bottom:0;height:21px;width:21px;-webkit-animation:totlbubbles1 10s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles1{left:35px;bottom:0;height:21px;width:21px;animation:totlbubbles1 10s 0s linear infinite}
 @keyframes totlbubbles1{from{bottom:0;left:50px}20%{bottom:18%;left:51px}37%{left:52px}59%{left:53px}to{bottom:100%;left:50px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles2{left:70px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles2 18s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles2{left:70px;bottom:0;height:20px;width:20px;animation:totlbubbles2 18s 0s linear infinite}
 @keyframes totlbubbles2{from{bottom:0;left:70px}20%{bottom:18%;left:71px}37%{left:72px}59%{left:73px}to{bottom:100%;left:70px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles3{left:135px;bottom:0;height:19px;width:19px;-webkit-animation:totlbubbles3 10s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles3{left:135px;bottom:0;height:19px;width:19px;animation:totlbubbles3 10s 0s linear infinite}
 @keyframes totlbubbles3{from{bottom:0;left:135px}59%{left:132px;bottom:65%}to{bottom:100%;left:135px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles4{left:155px;bottom:0;height:18px;width:18px;-webkit-animation:totlbubbles4 7s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles4{left:155px;bottom:0;height:18px;width:18px;animation:totlbubbles4 7s 0s linear infinite}
 @keyframes totlbubbles4{from{bottom:0;left:155px}59%{left:152px}to{bottom:100%;left:155px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles5{left:225px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles5 10s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles5{left:225px;bottom:0;height:20px;width:20px;animation:totlbubbles5 10s 0s linear infinite}
 @keyframes totlbubbles5{from{bottom:0;left:225px}29%{left:222px}to{bottom:100%;left:225px}}
 /* Mid */
-#stefanvddynamicbackground .stefanvddynamicbubbles6{left:135px;bottom:0;height:23px;width:23px;-webkit-animation:totlbubbles6 8s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles6{left:135px;bottom:0;height:23px;width:23px;animation:totlbubbles6 8s 0s linear infinite}
 @keyframes totlbubbles6{from{bottom:0;left:135px}20%{left:132px;bottom:25%}to{bottom:100%;left:105px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles7{left:155px;bottom:0;height:12px;width:12px;-webkit-animation:totlbubbles7 12s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles7{left:155px;bottom:0;height:12px;width:12px;animation:totlbubbles7 12s 0s linear infinite}
 @keyframes totlbubbles7{from{bottom:0;left:165px}79%{left:167px}to{bottom:100%;left:165px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles8{left:225px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles8 10s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles8{left:225px;bottom:0;height:20px;width:20px;animation:totlbubbles8 10s 0s linear infinite}
 @keyframes totlbubbles8{from{bottom:0;left:225px}88%{bottom:92%;left:222px}to{bottom:100%;left:225px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles9{left:239px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles9 11s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles9{left:239px;bottom:0;height:20px;width:20px;animation:totlbubbles9 11s 0s linear infinite}
 @keyframes totlbubbles9{from{bottom:0;left:239px}42%{bottom:35%;left:245px}to{bottom:100%;left:248px}}
 /* Right */
-#stefanvddynamicbackground .stefanvddynamicbubbles10{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles10 15s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles10{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles10 15s 0s linear infinite}
 @keyframes totlbubbles10{from{bottom:0;left:30px}62%{left:28px}to{bottom:100%;left:25px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles11{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles11 8s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles11{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles11 8s 0s linear infinite}
 @keyframes totlbubbles11{from{bottom:0;left:48px}27%{left:45px}to{bottom:100%;left:45px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles12{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles12 16s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles12{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles12 16s 0s linear infinite}
 @keyframes totlbubbles12{from{bottom:0;left:77px}18%{bottom:28%;left:76px}to{bottom:100%;left:75px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles13{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles13 12s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles13{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles13 12s 0s linear infinite}
 @keyframes totlbubbles13{from{bottom:0;left:138px}58%{bottom:59%;left:135px}to{bottom:100%;left:135px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles14{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles14 21s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles14{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles14 21s 0s linear infinite}
 @keyframes totlbubbles14{from{bottom:0;left:168px}38%{bottom:36%;left:167px}58%{bottom:60%;left:167px}to{bottom:100%;left:166px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles15{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles15 16s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles15{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles15 16s 0s linear infinite}
 @keyframes totlbubbles15{from{bottom:0;left:208px}to{bottom:100%;left:206px}}
-#stefanvddynamicbackground .stefanvddynamicbubbles16{left:30px;bottom:0;height:20px;width:20px;-webkit-animation:totlbubbles16 10s 0s linear infinite}
+#stefanvddynamicbackground .stefanvddynamicbubbles16{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles16 10s 0s linear infinite}
 @keyframes totlbubbles16{from{bottom:0;left:248px}5%{bottom:7%;left:232px}to{bottom:100%;left:236px}}
 /* Dynamic Background Squares */
 #stefanvddynamicbackground .stefanvddynamicbackgroundblockleft{height:100%;left:7px;position:fixed;top:0;width:700px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundblockright{height:100%;right:7px;position:fixed;top:0;width:700px;z-index:1000;-webkit-transform:scaleX(-1)}
 #stefanvddynamicbackground .stefanvddynamicbackgroundblocks{background-color:rgba(255,255,255,0.16);border:1px solid rgba(88,88,88,0.2);position:absolute}
 /* Left */
-#stefanvddynamicbackground .stefanvddynamicblocks1{left:47px;top:60px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks1 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks1{left:47px;top:60px;opacity:0;height:37px;width:37px;animation:totlblocks1 6s 0s ease-out infinite}
 @keyframes totlblocks1{70%{transform:scale(0,0);opacity:0}80%{opacity:1}90%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks2{left:89px;top:60px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks2 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks2{left:89px;top:60px;opacity:0;height:37px;width:37px;animation:totlblocks2 6s 0s ease-out infinite}
 @keyframes totlblocks2{50%{transform:scale(0,0);opacity:0}60%{opacity:1}70%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks3{left:92px;top:503px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks3 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks3{left:92px;top:503px;opacity:0;height:37px;width:37px;animation:totlblocks3 6s 0s ease-out infinite}
 @keyframes totlblocks3{20%{transform:scale(0,0);opacity:0}30%{opacity:1}40%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks4{left:135px;top:228px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks4 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks4{left:135px;top:228px;opacity:0;height:37px;width:37px;animation:totlblocks4 6s 0s ease-out infinite}
 @keyframes totlblocks4{80%{transform:scale(0,0);opacity:0}90%{opacity:1}100%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks5{left:174px;top:267px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks5 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks5{left:174px;top:267px;opacity:0;height:37px;width:37px;animation:totlblocks5 6s 0s ease-out infinite}
 @keyframes totlblocks5{65%{transform:scale(0,0);opacity:0}75%{opacity:1}85%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks6{left:16px;top:331px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks6 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks6{left:16px;top:331px;opacity:0;height:37px;width:37px;animation:totlblocks6 6s 0s ease-out infinite}
 @keyframes totlblocks6{10%{transform:scale(0,0);opacity:0}20%{opacity:1}30%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks7{left:54px;top:368px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks7 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks7{left:54px;top:368px;opacity:0;height:37px;width:37px;animation:totlblocks7 6s 0s ease-out infinite}
 @keyframes totlblocks7{70%{transform:scale(0,0);opacity:0}80%{opacity:1}90%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks8{left:90px;top:330px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks8 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks8{left:90px;top:330px;opacity:0;height:37px;width:37px;animation:totlblocks8 6s 0s ease-out infinite}
 @keyframes totlblocks8{40%{transform:scale(0,0);opacity:0}50%{opacity:1}60%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks9{left:128px;top:368px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks9 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks9{left:128px;top:368px;opacity:0;height:37px;width:37px;animation:totlblocks9 6s 0s ease-out infinite}
 @keyframes totlblocks9{0%{transform:scale(0,0);opacity:0}10%{opacity:1}20%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks10{left:72px;top:785px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks10 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks10{left:72px;top:785px;opacity:0;height:37px;width:37px;animation:totlblocks10 6s 0s ease-out infinite}
 @keyframes totlblocks10{50%{transform:scale(0,0);opacity:0}60%{opacity:1}70%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks11{left:271px;top:471px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks11 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks11{left:271px;top:471px;opacity:0;height:37px;width:37px;animation:totlblocks11 6s 0s ease-out infinite}
 @keyframes totlblocks11{3%{transform:scale(0,0);opacity:0}13%{opacity:1}23%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks12{left:245px;top:85px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks12 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks12{left:245px;top:85px;opacity:0;height:37px;width:37px;animation:totlblocks12 6s 0s ease-out infinite}
 @keyframes totlblocks12{24%{transform:scale(0,0);opacity:0}34%{opacity:1}44%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks13{left:285px;top:13px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks13 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks13{left:285px;top:13px;opacity:0;height:37px;width:37px;animation:totlblocks13 6s 0s ease-out infinite}
 @keyframes totlblocks13{68%{transform:scale(0,0);opacity:0}78%{opacity:1}88%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks14{left:323px;top:51px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks14 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks14{left:323px;top:51px;opacity:0;height:37px;width:37px;animation:totlblocks14 6s 0s ease-out infinite}
 @keyframes totlblocks14{55%{transform:scale(0,0);opacity:0}65%{opacity:1}75%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks15{left:565px;top:167px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks15 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks15{left:565px;top:167px;opacity:0;height:37px;width:37px;animation:totlblocks15 6s 0s ease-out infinite}
 @keyframes totlblocks15{69%{transform:scale(0,0);opacity:0}79%{opacity:1}89%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks16{left:450px;top:426px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks16 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks16{left:450px;top:426px;opacity:0;height:37px;width:37px;animation:totlblocks16 6s 0s ease-out infinite}
 @keyframes totlblocks16{23%{transform:scale(0,0);opacity:0}33%{opacity:1}43%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks17{left:258px;top:695px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks17 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks17{left:258px;top:695px;opacity:0;height:37px;width:37px;animation:totlblocks17 6s 0s ease-out infinite}
 @keyframes totlblocks17{1%{transform:scale(0,0);opacity:0}11%{opacity:1}21%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks18{left:395px;top:795px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks18 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks18{left:395px;top:795px;opacity:0;height:37px;width:37px;animation:totlblocks18 6s 0s ease-out infinite}
 @keyframes totlblocks18{31%{transform:scale(0,0);opacity:0}41%{opacity:1}51%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks19{left:154px;top:695px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks19 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks19{left:154px;top:695px;opacity:0;height:37px;width:37px;animation:totlblocks19 6s 0s ease-out infinite}
 @keyframes totlblocks19{56%{transform:scale(0,0);opacity:0}66%{opacity:1}76%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks20{left:384px;top:643px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks20 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks20{left:384px;top:643px;opacity:0;height:37px;width:37px;animation:totlblocks20 6s 0s ease-out infinite}
 @keyframes totlblocks20{72%{transform:scale(0,0);opacity:0}82%{opacity:1}92%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks21{left:47px;top:19px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks21 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks21{left:47px;top:19px;opacity:0;height:37px;width:37px;animation:totlblocks21 6s 0s ease-out infinite}
 @keyframes totlblocks21{0%{transform:scale(0,0);opacity:0}10%{opacity:1}20%{opacity:0;transform:scale(1.2,1.2)}}
 /* Right */
-#stefanvddynamicbackground .stefanvddynamicblocks22{left:114px;top:128px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks22 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks22{left:114px;top:128px;opacity:0;height:37px;width:37px;animation:totlblocks22 6s 0s ease-out infinite}
 @keyframes totlblocks22{32%{transform:scale(0,0);opacity:0}42%{opacity:1}52%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks22{left:97px;top:144px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks22 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks22{left:97px;top:144px;opacity:0;height:37px;width:37px;animation:totlblocks22 6s 0s ease-out infinite}
 @keyframes totlblocks22{54%{transform:scale(0,0);opacity:0}64%{opacity:1}74%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks23{left:114px;top:203px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks23 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks23{left:114px;top:203px;opacity:0;height:37px;width:37px;animation:totlblocks23 6s 0s ease-out infinite}
 @keyframes totlblocks23{80%{transform:scale(0,0);opacity:0}90%{opacity:1}100%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks24{left:153px;top:165px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks24 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks24{left:153px;top:165px;opacity:0;height:37px;width:37px;animation:totlblocks24 6s 0s ease-out infinite}
 @keyframes totlblocks24{80%{transform:scale(0,0);opacity:0}90%{opacity:1}100%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks24{left:147px;top:164px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks24 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks24{left:147px;top:164px;opacity:0;height:37px;width:37px;animation:totlblocks24 6s 0s ease-out infinite}
 @keyframes totlblocks24{3%{transform:scale(0,0);opacity:0}13%{opacity:1}23%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks25{left:187px;top:202px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks24 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks25{left:187px;top:202px;opacity:0;height:37px;width:37px;animation:totlblocks24 6s 0s ease-out infinite}
 @keyframes totlblocks25{33%{transform:scale(0,0);opacity:0}43%{opacity:1}53%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks25{left:154px;top:482px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks25 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks25{left:154px;top:482px;opacity:0;height:37px;width:37px;animation:totlblocks25 6s 0s ease-out infinite}
 @keyframes totlblocks25{49%{transform:scale(0,0);opacity:0}59%{opacity:1}69%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks26{left:159px;top:591px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks26 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks26{left:159px;top:591px;opacity:0;height:37px;width:37px;animation:totlblocks26 6s 0s ease-out infinite}
 @keyframes totlblocks26{15%{transform:scale(0,0);opacity:0}25%{opacity:1}35%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks27{left:233px;top:311px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks27 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks27{left:233px;top:311px;opacity:0;height:37px;width:37px;animation:totlblocks27 6s 0s ease-out infinite}
 @keyframes totlblocks27{61%{transform:scale(0,0);opacity:0}71%{opacity:1}81%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks28{left:303px;top:235px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks28 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks28{left:303px;top:235px;opacity:0;height:37px;width:37px;animation:totlblocks28 6s 0s ease-out infinite}
 @keyframes totlblocks28{8%{transform:scale(0,0);opacity:0}18%{opacity:1}28%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks29{left:348px;top:278px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks29 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks29{left:348px;top:278px;opacity:0;height:37px;width:37px;animation:totlblocks29 6s 0s ease-out infinite}
 @keyframes totlblocks29{12%{transform:scale(0,0);opacity:0}22%{opacity:1}32%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks30{left:444px;top:40px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks30 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks30{left:444px;top:40px;opacity:0;height:37px;width:37px;animation:totlblocks30 6s 0s ease-out infinite}
 @keyframes totlblocks30{34%{transform:scale(0,0);opacity:0}44%{opacity:1}54%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks31{left:528px;top:82px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks31 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks31{left:528px;top:82px;opacity:0;height:37px;width:37px;animation:totlblocks31 6s 0s ease-out infinite}
 @keyframes totlblocks31{36%{transform:scale(0,0);opacity:0}46%{opacity:1}56%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks32{left:659px;top:44px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks32 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks32{left:659px;top:44px;opacity:0;height:37px;width:37px;animation:totlblocks32 6s 0s ease-out infinite}
 @keyframes totlblocks32{16%{transform:scale(0,0);opacity:0}26%{opacity:1}36%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks33{left:584px;top:464px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks33 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks33{left:584px;top:464px;opacity:0;height:37px;width:37px;animation:totlblocks33 6s 0s ease-out infinite}
 @keyframes totlblocks33{15%{transform:scale(0,0);opacity:0}25%{opacity:1}35%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks34{left:412px;top:387px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks34 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks34{left:412px;top:387px;opacity:0;height:37px;width:37px;animation:totlblocks34 6s 0s ease-out infinite}
 @keyframes totlblocks34{80%{transform:scale(0,0);opacity:0}90%{opacity:1}100%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks35{left:559px;top:299px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks35 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks35{left:559px;top:299px;opacity:0;height:37px;width:37px;animation:totlblocks35 6s 0s ease-out infinite}
 @keyframes totlblocks35{68%{transform:scale(0,0);opacity:0}78%{opacity:1}88%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks36{left:629px;top:699px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks36 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks36{left:629px;top:699px;opacity:0;height:37px;width:37px;animation:totlblocks36 6s 0s ease-out infinite}
 @keyframes totlblocks36{58%{transform:scale(0,0);opacity:0}68%{opacity:1}78%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks37{left:405px;top:82px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks37 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks37{left:405px;top:82px;opacity:0;height:37px;width:37px;animation:totlblocks37 6s 0s ease-out infinite}
 @keyframes totlblocks37{53%{transform:scale(0,0);opacity:0}63%{opacity:1}73%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks38{left:359px;top:83px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks38 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks38{left:359px;top:83px;opacity:0;height:37px;width:37px;animation:totlblocks38 6s 0s ease-out infinite}
 @keyframes totlblocks38{62%{transform:scale(0,0);opacity:0}72%{opacity:1}82%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks38{left:499px;top:593px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks38 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks38{left:499px;top:593px;opacity:0;height:37px;width:37px;animation:totlblocks38 6s 0s ease-out infinite}
 @keyframes totlblocks38{4%{transform:scale(0,0);opacity:0}14%{opacity:1}24%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks39{left:232px;top:433px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks39 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks39{left:232px;top:433px;opacity:0;height:37px;width:37px;animation:totlblocks39 6s 0s ease-out infinite}
 @keyframes totlblocks39{4%{transform:scale(0,0);opacity:0}14%{opacity:1}24%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks40{left:358px;top:843px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks40 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks40{left:358px;top:843px;opacity:0;height:37px;width:37px;animation:totlblocks40 6s 0s ease-out infinite}
 @keyframes totlblocks40{4%{transform:scale(0,0);opacity:0}14%{opacity:1}24%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks41{left:38px;top:843px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks41 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks41{left:38px;top:843px;opacity:0;height:37px;width:37px;animation:totlblocks41 6s 0s ease-out infinite}
 @keyframes totlblocks41{24%{transform:scale(0,0);opacity:0}34%{opacity:1}44%{opacity:0;transform:scale(1.2,1.2)}}
-#stefanvddynamicbackground .stefanvddynamicblocks42{left:3px;top:17px;opacity:0;height:37px;width:37px;-webkit-animation:totlblocks42 6s 0s ease-out infinite}
+#stefanvddynamicbackground .stefanvddynamicblocks42{left:3px;top:17px;opacity:0;height:37px;width:37px;animation:totlblocks42 6s 0s ease-out infinite}
 @keyframes totlblocks42{1%{transform:scale(0,0);opacity:0}11%{opacity:1}21%{opacity:0;transform:scale(1.2,1.2)}}
 /* Dynamic Background Raindrups */
 #stefanvddynamicbackground .stefanvddynamicbackgroundraindrupsleft{height:100%;left:7px;position:absolute;top:0;width:200px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundraindrupsright{height:100%;right:7px;position:fixed;top:0;width:700px;-webkit-transform:scaleX(-1)}
 #stefanvddynamicbackground .stefanvddynamicbackgroundraindrups{position:fixed;-webkit-transform:rotate(45deg);display:block;background:rgba(0,0,0,0.2);box-shadow:inset 1px 0 0 0 rgba(255,255,255,0.25),inset 0 1px 0 0 rgba(255,255,255,0.25),inset 1px 0 3px 0 rgba(255,255,255,0.25),inset 0 1px 3px 0 rgba(255,255,255,0.75),inset -1px 0 0 0 rgba(255,255,255,0.15),inset 0 -1px 0 0 rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.05)}
 @keyframes drups{0%{top:0;opacity:0}5%{top:5%;opacity:1}95%{top:95%;opacity:1}100%{top:99%;opacity:0}}
-#stefanvddynamicbackground .b0{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:33px;top:0;-webkit-animation:drups 15s 0s linear infinite}
-#stefanvddynamicbackground .b1{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:93px;top:0;-webkit-animation:drups 12s 2s linear infinite}
-#stefanvddynamicbackground .b2{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:150px;top:0;-webkit-animation:drups 14s 3s linear infinite}
-#stefanvddynamicbackground .b3{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:183px;top:0;-webkit-animation:drups 9s 5s linear infinite}
-#stefanvddynamicbackground .b4{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:222px;top:0;-webkit-animation:drups 11s 2s linear infinite}
-#stefanvddynamicbackground .b5{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:258px;top:0;-webkit-animation:drups 12s 1s linear infinite}
-#stefanvddynamicbackground .b6{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:301px;top:0;-webkit-animation:drups 15s 4s linear infinite}
-#stefanvddynamicbackground .b7{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:344px;top:0;-webkit-animation:drups 10s 0s linear infinite}
-#stefanvddynamicbackground .b8{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:379px;top:0;-webkit-animation:drups 16s 3s linear infinite}
-#stefanvddynamicbackground .b9{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:409px;top:0;-webkit-animation:drups 15s 1s linear infinite}
-#stefanvddynamicbackground .b10{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:463px;top:0;-webkit-animation:drups 14s 0s linear infinite}
-#stefanvddynamicbackground .b11{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:482px;top:0;-webkit-animation:drups 13s 0s linear infinite}
-#stefanvddynamicbackground .b12{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:548px;top:0;-webkit-animation:drups 14s 1s linear infinite}
-#stefanvddynamicbackground .b13{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:582px;top:0;-webkit-animation:drups 12s 3s linear infinite}
-#stefanvddynamicbackground .b14{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:604px;top:0;-webkit-animation:drups 15s 2s linear infinite}
-#stefanvddynamicbackground .b15{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:660px;top:0;-webkit-animation:drups 15s 0s linear infinite}
-#stefanvddynamicbackground .b16{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:13px;top:0;-webkit-animation:drups 13s 3s linear infinite}
-#stefanvddynamicbackground .b17{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:56px;top:0;-webkit-animation:drups 14s 1s linear infinite}
-#stefanvddynamicbackground .b18{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:100px;top:0;-webkit-animation:drups 10s 2s linear infinite}
-#stefanvddynamicbackground .b19{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:153px;top:0;-webkit-animation:drups 17s 0s linear infinite}
-#stefanvddynamicbackground .b20{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:190px;top:0;-webkit-animation:drups 16s 7s linear infinite}
-#stefanvddynamicbackground .b21{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:253px;top:0;-webkit-animation:drups 15s 5s linear infinite}
-#stefanvddynamicbackground .b22{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:281px;top:0;-webkit-animation:drups 18s 0s linear infinite}
-#stefanvddynamicbackground .b23{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:320px;top:0;-webkit-animation:drups 19s 0s linear infinite}
-#stefanvddynamicbackground .b24{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:383px;top:0;-webkit-animation:drups 16s 4s linear infinite}
-#stefanvddynamicbackground .b25{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:430px;top:0;-webkit-animation:drups 13s 3s linear infinite}
-#stefanvddynamicbackground .b26{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:470px;top:0;-webkit-animation:drups 12s 0s linear infinite}
-#stefanvddynamicbackground .b27{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:510px;top:0;-webkit-animation:drups 12s 1s linear infinite}
-#stefanvddynamicbackground .b28{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:550px;top:0;-webkit-animation:drups 10s 0s linear infinite}
-#stefanvddynamicbackground .b29{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:620px;top:0;-webkit-animation:drups 11s 2s linear infinite}
-#stefanvddynamicbackground .b30{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:680px;top:0;-webkit-animation:drups 9s 4s linear infinite}
+#stefanvddynamicbackground .b0{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:33px;top:0;animation:drups 15s 0s linear infinite}
+#stefanvddynamicbackground .b1{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:93px;top:0;animation:drups 12s 2s linear infinite}
+#stefanvddynamicbackground .b2{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:150px;top:0;animation:drups 14s 3s linear infinite}
+#stefanvddynamicbackground .b3{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:183px;top:0;animation:drups 9s 5s linear infinite}
+#stefanvddynamicbackground .b4{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:222px;top:0;animation:drups 11s 2s linear infinite}
+#stefanvddynamicbackground .b5{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:258px;top:0;animation:drups 12s 1s linear infinite}
+#stefanvddynamicbackground .b6{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:301px;top:0;animation:drups 15s 4s linear infinite}
+#stefanvddynamicbackground .b7{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:344px;top:0;animation:drups 10s 0s linear infinite}
+#stefanvddynamicbackground .b8{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:379px;top:0;animation:drups 16s 3s linear infinite}
+#stefanvddynamicbackground .b9{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:409px;top:0;animation:drups 15s 1s linear infinite}
+#stefanvddynamicbackground .b10{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:463px;top:0;animation:drups 14s 0s linear infinite}
+#stefanvddynamicbackground .b11{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:482px;top:0;animation:drups 13s 0s linear infinite}
+#stefanvddynamicbackground .b12{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:548px;top:0;animation:drups 14s 1s linear infinite}
+#stefanvddynamicbackground .b13{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:582px;top:0;animation:drups 12s 3s linear infinite}
+#stefanvddynamicbackground .b14{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:604px;top:0;animation:drups 15s 2s linear infinite}
+#stefanvddynamicbackground .b15{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:660px;top:0;animation:drups 15s 0s linear infinite}
+#stefanvddynamicbackground .b16{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:13px;top:0;animation:drups 13s 3s linear infinite}
+#stefanvddynamicbackground .b17{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:56px;top:0;animation:drups 14s 1s linear infinite}
+#stefanvddynamicbackground .b18{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:100px;top:0;animation:drups 10s 2s linear infinite}
+#stefanvddynamicbackground .b19{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:153px;top:0;animation:drups 17s 0s linear infinite}
+#stefanvddynamicbackground .b20{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:190px;top:0;animation:drups 16s 7s linear infinite}
+#stefanvddynamicbackground .b21{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:253px;top:0;animation:drups 15s 5s linear infinite}
+#stefanvddynamicbackground .b22{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:281px;top:0;animation:drups 18s 0s linear infinite}
+#stefanvddynamicbackground .b23{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:320px;top:0;animation:drups 19s 0s linear infinite}
+#stefanvddynamicbackground .b24{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:383px;top:0;animation:drups 16s 4s linear infinite}
+#stefanvddynamicbackground .b25{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:430px;top:0;animation:drups 13s 3s linear infinite}
+#stefanvddynamicbackground .b26{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:470px;top:0;animation:drups 12s 0s linear infinite}
+#stefanvddynamicbackground .b27{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:510px;top:0;animation:drups 12s 1s linear infinite}
+#stefanvddynamicbackground .b28{width:8px;height:8px;border-radius:4px 8px 8px 8px;left:550px;top:0;animation:drups 10s 0s linear infinite}
+#stefanvddynamicbackground .b29{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:620px;top:0;animation:drups 11s 2s linear infinite}
+#stefanvddynamicbackground .b30{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:680px;top:0;animation:drups 9s 4s linear infinite}
 /* Dynamic Background Cloud */
 #stefanvddynamicbackground #stefanvdworld{position:absolute;height:100%;width:100%;-webkit-transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld div{-webkit-transform-style:preserve-3d}
@@ -302,104 +302,104 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvddynamicbackground #stefanvddynamicspace{height:100%;width:100%;-webkit-perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
 #stefanvddynamicbackground #stefanvddynamicspace b{position:absolute;height:2px;width:2px;background:#FFF;box-shadow:0 0 5px #FFF}
 @keyframes totlspace{from{-webkit-transform:translateZ(-300px);opacity:0}50%{-webkit-transform:translateZ(00px);opacity:1}to{-webkit-transform:translateZ(300px);opacity:0}}
-#stefanvddynamicbackground #stefanvddynamicspace .s001{top:5%;left:92%;-webkit-animation:totlspace 6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s002{top:26%;left:7%;-webkit-animation:totlspace 7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s003{top:89%;left:24%;-webkit-animation:totlspace 6.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s004{top:85%;left:87%;-webkit-animation:totlspace 5.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s005{top:26%;left:56%;-webkit-animation:totlspace 4.4s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s006{top:74%;left:32%;-webkit-animation:totlspace 7.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s007{top:15%;left:74%;-webkit-animation:totlspace 5.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s008{top:68%;left:51%;-webkit-animation:totlspace 5.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s009{top:21%;left:37%;-webkit-animation:totlspace 6.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s010{top:53%;left:41%;-webkit-animation:totlspace 6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s011{top:33%;left:81%;-webkit-animation:totlspace 7.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s012{top:49%;left:64%;-webkit-animation:totlspace 3.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s013{top:24%;left:51%;-webkit-animation:totlspace 5.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s014{top:57%;left:22%;-webkit-animation:totlspace 6.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s015{top:19%;left:7%;-webkit-animation:totlspace 6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s016{top:62%;left:42%;-webkit-animation:totlspace 4.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s017{top:52%;left:63%;-webkit-animation:totlspace 3.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s018{top:43%;left:19%;-webkit-animation:totlspace 5.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s019{top:95%;left:28%;-webkit-animation:totlspace 7.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s020{top:5%;left:71%;-webkit-animation:totlspace 6.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s021{top:67%;left:53%;-webkit-animation:totlspace 7.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s022{top:32%;left:25%;-webkit-animation:totlspace 5.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s023{top:47%;left:38%;-webkit-animation:totlspace 5.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s024{top:19%;left:42%;-webkit-animation:totlspace 6.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s025{top:11%;left:18%;-webkit-animation:totlspace 6.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s026{top:37%;left:29%;-webkit-animation:totlspace 8.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s027{top:64%;left:94%;-webkit-animation:totlspace 7.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s028{top:28%;left:82%;-webkit-animation:totlspace 7.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s029{top:71%;left:99%;-webkit-animation:totlspace 6.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace .s030{top:94%;left:37%;-webkit-animation:totlspace 7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p01{top:0;left:0;height:25%;width:25%;transform:rotate(182deg);-webkit-animation:totlspacepart 7.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p02{top:0;left:25%;height:25%;width:25%;transform:rotate(179deg);-webkit-animation:totlspacepart 5.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p03{top:0;left:50%;height:25%;width:25%;transform:rotate(185deg);-webkit-animation:totlspacepart 7.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p04{top:0;left:75%;height:25%;width:25%;transform:rotate(183deg);-webkit-animation:totlspacepart 6.6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p05{top:25%;left:0;height:25%;width:25%;transform:rotate(174deg);-webkit-animation:totlspacepart 8.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p06{top:25%;left:25%;height:25%;width:25%;transform:rotate(178deg);-webkit-animation:totlspacepart 8.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p07{top:25%;left:50%;height:25%;width:25%;transform:rotate(181deg);-webkit-animation:totlspacepart 7.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p08{top:25%;left:75%;height:25%;width:25%;transform:rotate(177deg);-webkit-animation:totlspacepart 9.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p09{top:50%;left:0;height:25%;width:25%;transform:rotate(186deg);-webkit-animation:totlspacepart 5.6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p10{top:50%;left:25%;height:25%;width:25%;transform:rotate(184deg);-webkit-animation:totlspacepart 6.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p11{top:50%;left:50%;height:25%;width:25%;transform:rotate(180deg);-webkit-animation:totlspacepart 6.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p12{top:50%;left:75%;height:25%;width:25%;transform:rotate(176deg);-webkit-animation:totlspacepart 5.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p13{top:75%;left:0;height:25%;width:25%;transform:rotate(183deg);-webkit-animation:totlspacepart 7.6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p14{top:75%;left:25%;height:25%;width:25%;transform:rotate(177deg);-webkit-animation:totlspacepart 8.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p15{top:75%;left:50%;height:25%;width:25%;transform:rotate(181deg);-webkit-animation:totlspacepart 7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspace #p16{top:75%;left:75%;height:25%;width:25%;transform:rotate(179deg);-webkit-animation:totlspacepart 5.4s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s001{top:5%;left:92%;animation:totlspace 6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s002{top:26%;left:7%;animation:totlspace 7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s003{top:89%;left:24%;animation:totlspace 6.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s004{top:85%;left:87%;animation:totlspace 5.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s005{top:26%;left:56%;animation:totlspace 4.4s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s006{top:74%;left:32%;animation:totlspace 7.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s007{top:15%;left:74%;animation:totlspace 5.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s008{top:68%;left:51%;animation:totlspace 5.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s009{top:21%;left:37%;animation:totlspace 6.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s010{top:53%;left:41%;animation:totlspace 6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s011{top:33%;left:81%;animation:totlspace 7.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s012{top:49%;left:64%;animation:totlspace 3.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s013{top:24%;left:51%;animation:totlspace 5.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s014{top:57%;left:22%;animation:totlspace 6.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s015{top:19%;left:7%;animation:totlspace 6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s016{top:62%;left:42%;animation:totlspace 4.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s017{top:52%;left:63%;animation:totlspace 3.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s018{top:43%;left:19%;animation:totlspace 5.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s019{top:95%;left:28%;animation:totlspace 7.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s020{top:5%;left:71%;animation:totlspace 6.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s021{top:67%;left:53%;animation:totlspace 7.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s022{top:32%;left:25%;animation:totlspace 5.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s023{top:47%;left:38%;animation:totlspace 5.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s024{top:19%;left:42%;animation:totlspace 6.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s025{top:11%;left:18%;animation:totlspace 6.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s026{top:37%;left:29%;animation:totlspace 8.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s027{top:64%;left:94%;animation:totlspace 7.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s028{top:28%;left:82%;animation:totlspace 7.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s029{top:71%;left:99%;animation:totlspace 6.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace .s030{top:94%;left:37%;animation:totlspace 7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p01{top:0;left:0;height:25%;width:25%;transform:rotate(182deg);animation:totlspacepart 7.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p02{top:0;left:25%;height:25%;width:25%;transform:rotate(179deg);animation:totlspacepart 5.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p03{top:0;left:50%;height:25%;width:25%;transform:rotate(185deg);animation:totlspacepart 7.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p04{top:0;left:75%;height:25%;width:25%;transform:rotate(183deg);animation:totlspacepart 6.6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p05{top:25%;left:0;height:25%;width:25%;transform:rotate(174deg);animation:totlspacepart 8.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p06{top:25%;left:25%;height:25%;width:25%;transform:rotate(178deg);animation:totlspacepart 8.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p07{top:25%;left:50%;height:25%;width:25%;transform:rotate(181deg);animation:totlspacepart 7.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p08{top:25%;left:75%;height:25%;width:25%;transform:rotate(177deg);animation:totlspacepart 9.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p09{top:50%;left:0;height:25%;width:25%;transform:rotate(186deg);animation:totlspacepart 5.6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p10{top:50%;left:25%;height:25%;width:25%;transform:rotate(184deg);animation:totlspacepart 6.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p11{top:50%;left:50%;height:25%;width:25%;transform:rotate(180deg);animation:totlspacepart 6.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p12{top:50%;left:75%;height:25%;width:25%;transform:rotate(176deg);animation:totlspacepart 5.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p13{top:75%;left:0;height:25%;width:25%;transform:rotate(183deg);animation:totlspacepart 7.6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p14{top:75%;left:25%;height:25%;width:25%;transform:rotate(177deg);animation:totlspacepart 8.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p15{top:75%;left:50%;height:25%;width:25%;transform:rotate(181deg);animation:totlspacepart 7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspace #p16{top:75%;left:75%;height:25%;width:25%;transform:rotate(179deg);animation:totlspacepart 5.4s 0s linear infinite}
 @keyframes totlspacepart{from{-webkit-transform:translateZ(-300px);opacity:0}50%{-webkit-transform:translateZ(0px);opacity:1}to{-webkit-transform:translateZ(300px);opacity:0}}
 /* Dynamic Background Space with no flying */
 #stefanvddynamicbackground #stefanvddynamicspacenoflying div{position:absolute}
 #stefanvddynamicbackground #stefanvddynamicspacenoflying{height:100%;width:100%;-webkit-perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
 #stefanvddynamicbackground #stefanvddynamicspacenoflying b{position:absolute;height:2px;width:2px;background:#FFF;box-shadow:0 0 5px #FFF}
 @keyframes totlspacenoflying{from{-webkit-transform:translateZ(-300px);opacity:0}50%{-webkit-transform:translateZ(00px);opacity:1}to{-webkit-transform:translateZ(300px);opacity:0}}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns001{top:5%;left:92%;-webkit-animation:totlspacenoflying 6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns002{top:26%;left:7%;-webkit-animation:totlspacenoflying 7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns003{top:89%;left:24%;-webkit-animation:totlspacenoflying 6.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns004{top:85%;left:87%;-webkit-animation:totlspacenoflying 5.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns005{top:26%;left:56%;-webkit-animation:totlspacenoflying 4.4s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns006{top:74%;left:32%;-webkit-animation:totlspacenoflying 7.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns007{top:15%;left:74%;-webkit-animation:totlspacenoflying 5.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns008{top:68%;left:51%;-webkit-animation:totlspacenoflying 5.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns009{top:21%;left:37%;-webkit-animation:totlspacenoflying 6.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns010{top:53%;left:41%;-webkit-animation:totlspacenoflying 6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns011{top:33%;left:81%;-webkit-animation:totlspacenoflying 7.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns012{top:49%;left:64%;-webkit-animation:totlspacenoflying 3.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns013{top:24%;left:51%;-webkit-animation:totlspacenoflying 5.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns014{top:57%;left:22%;-webkit-animation:totlspacenoflying 6.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns015{top:19%;left:7%;-webkit-animation:totlspacenoflying 6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns016{top:62%;left:42%;-webkit-animation:totlspacenoflying 4.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns017{top:52%;left:63%;-webkit-animation:totlspacenoflying 3.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns018{top:43%;left:19%;-webkit-animation:totlspacenoflying 5.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns019{top:95%;left:28%;-webkit-animation:totlspacenoflying 7.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns020{top:5%;left:71%;-webkit-animation:totlspacenoflying 6.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns021{top:67%;left:53%;-webkit-animation:totlspacenoflying 7.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns022{top:32%;left:25%;-webkit-animation:totlspacenoflying 5.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns023{top:47%;left:38%;-webkit-animation:totlspacenoflying 5.8s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns024{top:19%;left:42%;-webkit-animation:totlspacenoflying 6.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns025{top:11%;left:18%;-webkit-animation:totlspacenoflying 6.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns026{top:37%;left:29%;-webkit-animation:totlspacenoflying 8.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns027{top:64%;left:94%;-webkit-animation:totlspacenoflying 7.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns028{top:28%;left:82%;-webkit-animation:totlspacenoflying 7.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns029{top:71%;left:99%;-webkit-animation:totlspacenoflying 6.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns030{top:94%;left:37%;-webkit-animation:totlspacenoflying 7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np01{top:0;left:0;height:25%;width:25%;transform:rotate(182deg);-webkit-animation:totlspacepartnoflying 7.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np02{top:0;left:25%;height:25%;width:25%;transform:rotate(179deg);-webkit-animation:totlspacepartnoflying 5.3s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np03{top:0;left:50%;height:25%;width:25%;transform:rotate(185deg);-webkit-animation:totlspacepartnoflying 7.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np04{top:0;left:75%;height:25%;width:25%;transform:rotate(183deg);-webkit-animation:totlspacepartnoflying 6.6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np05{top:25%;left:0;height:25%;width:25%;transform:rotate(174deg);-webkit-animation:totlspacepartnoflying 8.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np06{top:25%;left:25%;height:25%;width:25%;transform:rotate(178deg);-webkit-animation:totlspacepartnoflying 8.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np07{top:25%;left:50%;height:25%;width:25%;transform:rotate(181deg);-webkit-animation:totlspacepartnoflying 7.2s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np08{top:25%;left:75%;height:25%;width:25%;transform:rotate(177deg);-webkit-animation:totlspacepartnoflying 9.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np09{top:50%;left:0;height:25%;width:25%;transform:rotate(186deg);-webkit-animation:totlspacepartnoflying 5.6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np10{top:50%;left:25%;height:25%;width:25%;transform:rotate(184deg);-webkit-animation:totlspacepartnoflying 6.1s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np11{top:50%;left:50%;height:25%;width:25%;transform:rotate(180deg);-webkit-animation:totlspacepartnoflying 6.5s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np12{top:50%;left:75%;height:25%;width:25%;transform:rotate(176deg);-webkit-animation:totlspacepartnoflying 5.9s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np13{top:75%;left:0;height:25%;width:25%;transform:rotate(183deg);-webkit-animation:totlspacepartnoflying 7.6s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np14{top:75%;left:25%;height:25%;width:25%;transform:rotate(177deg);-webkit-animation:totlspacepartnoflying 8.7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np15{top:75%;left:50%;height:25%;width:25%;transform:rotate(181deg);-webkit-animation:totlspacepartnoflying 7s 0s linear infinite}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying #np16{top:75%;left:75%;height:25%;width:25%;transform:rotate(179deg);-webkit-animation:totlspacepartnoflying 5.4s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns001{top:5%;left:92%;animation:totlspacenoflying 6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns002{top:26%;left:7%;animation:totlspacenoflying 7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns003{top:89%;left:24%;animation:totlspacenoflying 6.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns004{top:85%;left:87%;animation:totlspacenoflying 5.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns005{top:26%;left:56%;animation:totlspacenoflying 4.4s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns006{top:74%;left:32%;animation:totlspacenoflying 7.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns007{top:15%;left:74%;animation:totlspacenoflying 5.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns008{top:68%;left:51%;animation:totlspacenoflying 5.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns009{top:21%;left:37%;animation:totlspacenoflying 6.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns010{top:53%;left:41%;animation:totlspacenoflying 6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns011{top:33%;left:81%;animation:totlspacenoflying 7.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns012{top:49%;left:64%;animation:totlspacenoflying 3.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns013{top:24%;left:51%;animation:totlspacenoflying 5.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns014{top:57%;left:22%;animation:totlspacenoflying 6.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns015{top:19%;left:7%;animation:totlspacenoflying 6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns016{top:62%;left:42%;animation:totlspacenoflying 4.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns017{top:52%;left:63%;animation:totlspacenoflying 3.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns018{top:43%;left:19%;animation:totlspacenoflying 5.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns019{top:95%;left:28%;animation:totlspacenoflying 7.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns020{top:5%;left:71%;animation:totlspacenoflying 6.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns021{top:67%;left:53%;animation:totlspacenoflying 7.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns022{top:32%;left:25%;animation:totlspacenoflying 5.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns023{top:47%;left:38%;animation:totlspacenoflying 5.8s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns024{top:19%;left:42%;animation:totlspacenoflying 6.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns025{top:11%;left:18%;animation:totlspacenoflying 6.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns026{top:37%;left:29%;animation:totlspacenoflying 8.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns027{top:64%;left:94%;animation:totlspacenoflying 7.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns028{top:28%;left:82%;animation:totlspacenoflying 7.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns029{top:71%;left:99%;animation:totlspacenoflying 6.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying .ns030{top:94%;left:37%;animation:totlspacenoflying 7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np01{top:0;left:0;height:25%;width:25%;transform:rotate(182deg);animation:totlspacepartnoflying 7.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np02{top:0;left:25%;height:25%;width:25%;transform:rotate(179deg);animation:totlspacepartnoflying 5.3s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np03{top:0;left:50%;height:25%;width:25%;transform:rotate(185deg);animation:totlspacepartnoflying 7.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np04{top:0;left:75%;height:25%;width:25%;transform:rotate(183deg);animation:totlspacepartnoflying 6.6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np05{top:25%;left:0;height:25%;width:25%;transform:rotate(174deg);animation:totlspacepartnoflying 8.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np06{top:25%;left:25%;height:25%;width:25%;transform:rotate(178deg);animation:totlspacepartnoflying 8.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np07{top:25%;left:50%;height:25%;width:25%;transform:rotate(181deg);animation:totlspacepartnoflying 7.2s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np08{top:25%;left:75%;height:25%;width:25%;transform:rotate(177deg);animation:totlspacepartnoflying 9.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np09{top:50%;left:0;height:25%;width:25%;transform:rotate(186deg);animation:totlspacepartnoflying 5.6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np10{top:50%;left:25%;height:25%;width:25%;transform:rotate(184deg);animation:totlspacepartnoflying 6.1s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np11{top:50%;left:50%;height:25%;width:25%;transform:rotate(180deg);animation:totlspacepartnoflying 6.5s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np12{top:50%;left:75%;height:25%;width:25%;transform:rotate(176deg);animation:totlspacepartnoflying 5.9s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np13{top:75%;left:0;height:25%;width:25%;transform:rotate(183deg);animation:totlspacepartnoflying 7.6s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np14{top:75%;left:25%;height:25%;width:25%;transform:rotate(177deg);animation:totlspacepartnoflying 8.7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np15{top:75%;left:50%;height:25%;width:25%;transform:rotate(181deg);animation:totlspacepartnoflying 7s 0s linear infinite}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying #np16{top:75%;left:75%;height:25%;width:25%;transform:rotate(179deg);animation:totlspacepartnoflying 5.4s 0s linear infinite}
 @keyframes totlspacepartnoflying{from{opacity:0}50%{opacity:1}to{opacity:0}}
 /* Flying Dots */
 #stefanvddynamicdots{position:relative;transform-style:preserve-3d}
@@ -639,8 +639,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvdspeechbox #stefanvdspeechsaidtext{position:absolute;top:50px;right:20px;font-size:24px;color:gray}
 .stefanvdspeechloading{color:#ccc;font-family:sans-serif;font-size:14px;width:100px;height:100px;line-height:100px;margin:10px auto;position:relative;box-sizing:border-box;text-align:center;z-index:0;text-transform:uppercase}
 .stefanvdspeechloading:before,.stefanvdspeechloading:after{opacity:0;box-sizing:border-box;content:"\0020";position:absolute;top:0;left:0;width:100%;height:100%;border-radius:100px;border:5px solid #1f94ed;box-shadow:0 0 50px #1f94ed,inset 0 0 50px #1f94ed}
-.stefanvdspeechloading:after{z-index:1;-webkit-animation:gogoloader 2s infinite 1s}
-.stefanvdspeechloading:before{z-index:2;-webkit-animation:gogoloader 2s infinite}
+.stefanvdspeechloading:after{z-index:1;animation:gogoloader 2s infinite 1s}
+.stefanvdspeechloading:before{z-index:2;animation:gogoloader 2s infinite}
 @keyframes gogoloader{0%{-webkit-transform:scale(0);opacity:0}50%{opacity:1}100%{-webkit-transform:scale(1);opacity:0}}
 .turnoffthelightsdrag{position:relative;cursor:hand;z-index:100}
 #stefanvdspeechbox .speechicon{-webkit-transform:scale(0.3);transform:scale(0.3);display:inline-block;top:25px;position:absolute;left:25px}
