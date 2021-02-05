@@ -67,10 +67,9 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 		elem.parentNode.removeChild(elem);
 	}
 
-	chrome.runtime.onMessage.addListener(
-		function(request){
-			if(request.name == "injectlightcss"){ var style = document.createElement("style"); style.type = "text/css"; style.textContent = request.message; document.getElementsByTagName("head")[0].appendChild(style); }
-		});
+	chrome.runtime.onMessage.addListener(function(request){
+		if(request.name == "injectlightcss"){ var style = document.createElement("style"); style.type = "text/css"; style.textContent = request.message; document.getElementsByTagName("head")[0].appendChild(style); }
+	});
 
 	function hasClass(a, b){
 		return(" " + a.className + " ").indexOf(" " + b + " ") > -1;
@@ -152,9 +151,9 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 	// for(i = 0; i < l; i++){
 	// if(document.defaultView && document.defaultView.getComputedStyle){
 	// try{
-	// var targetComputedStyleHeight=document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("height");
+	// var targetComputedStyleHeight = document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("height");
 	// var spar = targetComputedStyleHeight.replace("px","");embed[i].style.height = Math.round(spar) + "px";
-	// var targetComputedStyleWidth=document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("width");
+	// var targetComputedStyleWidth = document.defaultView.getComputedStyle(embed[i],null).getPropertyValue("width");
 	// var been = targetComputedStyleWidth.replace("px","");embed[i].style.width = Math.round(been) + "px";
 	// }catch(e){ console.error(e); }
 	// }
@@ -249,6 +248,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 
 		// ///////// HTML5 video
 		// default html5 video detection
+
 		video = document.getElementsByTagName("video");
 		var videoi;
 		var videol = video.length;
@@ -278,26 +278,25 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 					playerapi.classList.add("stefanvdvideocontrolsitem");
 				}
 			}
-
 		}
 
 		// default html5 video detection inside a iframe element
 		/*
-try{
-	var frames = document.getElementsByTagName("iframe");
-	var i;
-	var l = frames.length;
-	for(i = 0; i < l; i++){
-		var innerDoc = (frames.item(i).contentDocument) ? frames.item(i).contentDocument : frames.item(i).contentWindow.document;
-		var iframeVideoTags = innerDoc.getElementsByTagName("video");
-		var j;
-		var q = iframeVideoTags.length;
-		for(j = 0; j < q; j++){
-			iframeVideoTags.item(j).classList.add('stefanvdvideotop');
-		}
-	}
-}catch(e){ console.error(e); }
-*/
+		try{
+			var frames = document.getElementsByTagName("iframe");
+			var i;
+			var l = frames.length;
+			for(i = 0; i < l; i++){
+				var innerDoc = (frames.item(i).contentDocument) ? frames.item(i).contentDocument : frames.item(i).contentWindow.document;
+				var iframeVideoTags = innerDoc.getElementsByTagName("video");
+				var j;
+				var q = iframeVideoTags.length;
+				for(j = 0; j < q; j++){
+					iframeVideoTags.item(j).classList.add('stefanvdvideotop');
+				}
+			}
+		}catch(e){ console.error(e); }
+		*/
 
 		// Show all iframe embed video objects -> Flash detection
 		if(flash == true){
@@ -676,7 +675,6 @@ try{
 		// see inside video-player-status.js
 
 		// ///////// Turn Off the Lights -> on
-
 		if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 			// flash detection off for youtube.com
 			// video detection: iframe object embed
@@ -1100,7 +1098,7 @@ function removenewframe(){
 	var posfixeddiv = document.querySelectorAll(".stefanvdposfixed");
 	var posfixedi;
 	var posfixedl = posfixeddiv.length;
-	for(posfixedi = 0; posfixedi < posfixedl; i++){ posfixeddiv[posfixedi].classList.remove("stefanvdposfixed"); }
+	for(posfixedi = 0; posfixedi < posfixedl; posfixedi++){ posfixeddiv[posfixedi].classList.remove("stefanvdposfixed"); }
 	var posstickydiv = document.querySelectorAll(".stefanvdpossticky");
 	var posstickyi;
 	var posstickyl = posstickydiv.length;
@@ -2391,8 +2389,6 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 		}
 	}else{
 		if(activatelightsoff == true){
-
-
 			// Password enable
 			var pwon = $("stefanvdlightareoffpw");
 			if(password == true){
@@ -2409,8 +2405,6 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 			}else{
 				lightsgoonoroff();
 			}
-
-
 		} // end activatelightsoff
 	} // end mousespotlightt
 });
