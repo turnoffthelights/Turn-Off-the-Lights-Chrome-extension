@@ -328,5 +328,9 @@ window.addEventListener("beforeunload", function(){
 			}
 		});
 		window.clearInterval(refreshIntervalId);
-	}catch(e){ console.error(e); }
+	}catch(e){
+		// background page already reloaded, clear the interval
+		// console.error(e);
+		window.clearInterval(refreshIntervalId);
+	}
 });
