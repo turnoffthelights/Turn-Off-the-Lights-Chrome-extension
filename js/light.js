@@ -521,7 +521,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 				if(ytmateriallikebar){ ytmateriallikebar.classList.add("stefanvditemtop"); }
 			}
 
-			// MAC & PC & LINUX
+			// MAC & WINDOWS & LINUX
 			// HTML5
 
 			// show YouTube HTML5 annotation
