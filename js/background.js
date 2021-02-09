@@ -151,7 +151,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 						chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": items["icon"], "38": items["icon"]}});
 					}
 				});
-			});// chrome storage end
+			});
 		}
 	}else if(request.name == "badgeon"){ checkbadge(); }else if(request.name == "sendnightmodeindark"){
 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});

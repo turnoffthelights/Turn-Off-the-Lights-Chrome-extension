@@ -131,6 +131,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(firstDate){ firstDate = items["firstDate"]; }
 		if(firstsawrate){ firstsawrate = items["firstsawrate"]; }
 
+		$("colornightmodebckcustom").value = nightmodebck;
+		$("colornightmodetxtcustom").value = nightmodetxt;
+		$("colornightmodehyperlinkcustom").value = nightmodehyperlink;
+
 		// final
 		test();
 
@@ -308,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("colornightmodebck6").addEventListener("click", nightmodebckcolorchange);
 	$("colornightmodebck7").addEventListener("click", nightmodebckcolorchange);
 	$("colornightmodebck8").addEventListener("click", nightmodebckcolorchange);
+	$("colornightmodebckcustom").addEventListener("input", nightmodebckcolorchangecustom);
 
 	$("colortitelnightmodetxt1").addEventListener("click", nightmodetextcolorchange);
 	$("colortitelnightmodetxt2").addEventListener("click", nightmodetextcolorchange);
@@ -316,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("colortitelnightmodetxt5").addEventListener("click", nightmodetextcolorchange);
 	$("colortitelnightmodetxt6").addEventListener("click", nightmodetextcolorchange);
 	$("colortitelnightmodetxt7").addEventListener("click", nightmodetextcolorchange);
-	$("colortitelnightmodetxt8").addEventListener("click", nightmodetextcolorchange);
+	$("colornightmodetxtcustom").addEventListener("input", nightmodetextcolorchangecustom);
 
 	$("colortitelnightmodehyperlink1").addEventListener("click", nightmodelinkcolorchange);
 	$("colortitelnightmodehyperlink2").addEventListener("click", nightmodelinkcolorchange);
@@ -326,6 +331,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("colortitelnightmodehyperlink6").addEventListener("click", nightmodelinkcolorchange);
 	$("colortitelnightmodehyperlink7").addEventListener("click", nightmodelinkcolorchange);
 	$("colortitelnightmodehyperlink8").addEventListener("click", nightmodelinkcolorchange);
+	$("colornightmodehyperlinkcustom").addEventListener("input", nightmodelinkcolorchangecustom);
 
 	$("btngonight").addEventListener("click", function(){
 		chrome.tabs.executeScript(null, {code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
@@ -601,6 +607,11 @@ function nightmodebckcolorchange(){
 	chrome.storage.sync.set({"nightmodebck": rgb2hex(nightmodebck)});
 }
 
+function nightmodebckcolorchangecustom(){
+	nightmodebck = $("colornightmodebckcustom").value;
+	chrome.storage.sync.set({"nightmodebck": nightmodebck});
+}
+
 function nightmodetextcolorchange(){
 	var elem = this;
 	nightmodetxt = window.getComputedStyle(elem, null).getPropertyValue("background-color");
@@ -608,9 +619,19 @@ function nightmodetextcolorchange(){
 	chrome.storage.sync.set({"nightmodetxt": rgb2hex(nightmodetxt)});
 }
 
+function nightmodetextcolorchangecustom(){
+	nightmodetxt = $("colornightmodetxtcustom").value;
+	chrome.storage.sync.set({"nightmodetxt": nightmodetxt});
+}
+
 function nightmodelinkcolorchange(){
 	var elem = this;
 	nightmodehyperlink = window.getComputedStyle(elem, null).getPropertyValue("background-color");
 
 	chrome.storage.sync.set({"nightmodehyperlink": rgb2hex(nightmodehyperlink)});
+}
+
+function nightmodelinkcolorchangecustom(){
+	nightmodehyperlink = $("colornightmodehyperlinkcustom").value;
+	chrome.storage.sync.set({"nightmodehyperlink": nightmodehyperlink});
 }
