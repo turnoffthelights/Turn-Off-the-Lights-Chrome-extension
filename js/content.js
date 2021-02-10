@@ -559,6 +559,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 	runvideotoolbarcheck();
 
+	var audiocontext = [];
+	var analyser = [];
+	var vissources = [];
+	var visualnumber = [];
+	var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 	var myListenerWithContext;
 	var observervideotoolbar;
@@ -567,11 +572,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		// Videotool filters
 		visopacity = visopacity / 100;
 		var blockarray, bars, barx, barwidth, barheight;
-		var audiocontext = [];
-		var analyser = [];
-		var vissources = [];
-		var visualnumber = [];
-		var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 		var vis; var tempvis = 0;
 		var dovisenable = function(){
@@ -4729,12 +4729,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	// PIP
-	var pipaudiocontext;
-	var pipvissources;
 	var pipblockarray, pipbars, pipbarx, pipbarwidth, pipbarheight;
 
 	var requestvideopiploop;
-	var pipanalyser;
 	var pipbuffer1;
 	var pipbuffer2;
 	var pipbctx1;
@@ -4749,10 +4746,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function pipsetTime(){ ++g; }
 
 	function pipanalamp(hz){
-		let l = hz / pipaudiocontext.sampleRate * pipanalyser.freq.length | 0;
+		let l = hz / audiocontext[0].sampleRate * analyser[0].freq.length | 0;
 		let sum;
 		let i;
-		for(sum = 0, i = 0; i < l;) sum += pipanalyser.freq[i++];
+		for(sum = 0, i = 0; i < l;) sum += analyser[0].freq[i++];
 		return sum / l / 255;
 	}
 
@@ -4763,20 +4760,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var ctx = canvas.getContext("2d", {desynchronized: true});
 
 			requestvideopiploop = window.requestAnimFrame(function(){ pipvideovisualloop(); });
-			pipanalyser.fftSize = 2048;
-			var bufferLength = pipanalyser.fftSize;
+			analyser[0].fftSize = 2048;
+			var bufferLength = analyser[0].fftSize;
 			var dataArray = new Uint8Array(bufferLength);
-			pipanalyser.getByteTimeDomainData(dataArray);
-			pipanalyser.getByteFrequencyData(pipanalyser.freq);
-			pipanalyser.getByteTimeDomainData(pipanalyser.wave);
+			analyser[0].getByteTimeDomainData(dataArray);
+			analyser[0].getByteFrequencyData(analyser[0].freq);
+			analyser[0].getByteTimeDomainData(analyser[0].wave);
 			piptimeloop = window.setInterval(pipsetTime, 1000);
 
 			var w = canvas.width = canvas.clientWidth;
 			var h = canvas.height = canvas.clientHeight;
 
 			if(pipvisualnumber == 1){
-				pipblockarray = new Uint8Array(pipanalyser.frequencyBinCount);
-				pipanalyser.getByteFrequencyData(pipblockarray);
+				pipblockarray = new Uint8Array(analyser[0].frequencyBinCount);
+				analyser[0].getByteFrequencyData(pipblockarray);
 				ctx.clearRect(0, 0, w, h);
 				ctx.fillStyle = "rgba(0,0,0,1)";
 				ctx.fillRect(0, 0, w, h);
@@ -4797,7 +4794,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 			}else if(pipvisualnumber == 2){
 				ctx.clearRect(0, 0, w, h);
-				pipanalyser.getByteTimeDomainData(dataArray);
+				analyser[0].getByteTimeDomainData(dataArray);
 
 				ctx.fillStyle = "rgba(0,0,0,1)";
 				ctx.fillRect(0, 0, w, h);
@@ -4843,7 +4840,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 				// get audio data
 				var data = new Uint8Array(2048);
-				pipanalyser.getByteFrequencyData(data);
+				analyser[0].getByteFrequencyData(data);
 
 				var currenvisvideoplayer = document.getElementsByTagName("video")[0];
 				var amp = currenvisvideoplayer.duration ? Math.min(1, Math.pow(1.25 * pipanalamp(10e3), 2)) : 0.5 - 0.25 * Math.cos(g);
@@ -4858,12 +4855,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				pipbctx2.beginPath();
 
 				let i;
-				let j = pipanalyser.wave.length;
+				let j = analyser[0].wave.length;
 				let a;
 				let r;
 				for(i = (data.length / 2) - 1, j; i >= 0; i--){
 					a = i / 22 * 2 * Math.PI;
-					r = amp * 256 / 2 * (0.5 + pipanalyser.wave[i] / 255);
+					r = amp * 256 / 2 * (0.5 + analyser[0].wave[i] / 255);
 					pipbctx2.lineTo(r * Math.sin(a) + w / 2, r * Math.cos(a) + h / 2);
 				}
 
@@ -5337,29 +5334,29 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				document.body.appendChild(pipvideo);
 			}
 
-			if(typeof pipaudiocontext == "undefined"){
+			if(typeof audiocontext == "undefined"){
 			// I am new now
-				pipaudiocontext = new AudioContext();
-				pipanalyser = pipaudiocontext.createAnalyser();
+				audiocontext[0] = new AudioContext();
+				analyser[0] = audiocontext[0].createAnalyser();
 			}
 			var myElement = document.getElementsByTagName("video")[0];
 
 			// Fix Chrome 71
-			pipaudiocontext.resume().then(() =>{
+			audiocontext[0].resume().then(() =>{
 			// console.log("Turn Off the Lights - Visualization resumed successfully");
 			// refresh the visualization
-				if(typeof pipaudiocontext != "undefined"){
-					if(pipvissources == undefined){
+				if(typeof audiocontext[0] != "undefined"){
+					if(vissources[0] == undefined){
 						try{
-							pipvissources = pipaudiocontext.createMediaElementSource(myElement);
-							pipvissources.connect(pipanalyser);
+							vissources[0] = audiocontext[0].createMediaElementSource(myElement);
+							vissources[0].connect(analyser[0]);
 						}catch(e){ console.error(e); }
 					}
-					pipanalyser.connect(pipaudiocontext.destination);
+					analyser[0].connect(audiocontext[0].destination);
 				}
 			});
-			pipanalyser.wave = new Uint8Array(pipanalyser.frequencyBinCount * 2);
-			pipanalyser.freq = new Uint8Array(pipanalyser.frequencyBinCount);
+			analyser[0].wave = new Uint8Array(analyser[0].frequencyBinCount * 2);
+			analyser[0].freq = new Uint8Array(analyser[0].frequencyBinCount);
 
 			pipvideovisualloop();
 
