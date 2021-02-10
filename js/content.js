@@ -4731,7 +4731,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// PIP
 	var pipaudiocontext;
 	var pipvissources;
-	var AudioContext = window.AudioContext || window.webkitAudioContext;
 	var pipblockarray, pipbars, pipbarx, pipbarwidth, pipbarheight;
 
 	var requestvideopiploop;
@@ -4750,7 +4749,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function pipsetTime(){ ++g; }
 
 	function pipanalamp(hz){
-		let l = hz / pipanalyser.sampleRate * pipanalyser.freq.length | 0;
+		let l = hz / pipaudiocontext.sampleRate * pipanalyser.freq.length | 0;
 		let sum;
 		let i;
 		for(sum = 0, i = 0; i < l;) sum += pipanalyser.freq[i++];
@@ -4846,8 +4845,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var data = new Uint8Array(2048);
 				pipanalyser.getByteFrequencyData(data);
 
-				var currenvisvideoplayer = document.getElementsByTagName("video");
-				var amp = currenvisvideoplayer.duration ? Math.min(1, Math.pow(1.25 * pipanalamp(10e3, 1), 2)) : 0.5 - 0.25 * Math.cos(g);
+				var currenvisvideoplayer = document.getElementsByTagName("video")[0];
+				var amp = currenvisvideoplayer.duration ? Math.min(1, Math.pow(1.25 * pipanalamp(10e3), 2)) : 0.5 - 0.25 * Math.cos(g);
 
 				// draw the audio into buffer 2
 				piprtick = (piprtick + 1) % 255;
@@ -5338,7 +5337,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				document.body.appendChild(pipvideo);
 			}
 
-			if(typeof audiocontext == "undefined"){
+			if(typeof pipaudiocontext == "undefined"){
 			// I am new now
 				pipaudiocontext = new AudioContext();
 				pipanalyser = pipaudiocontext.createAnalyser();
@@ -5359,9 +5358,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					pipanalyser.connect(pipaudiocontext.destination);
 				}
 			});
-
 			pipanalyser.wave = new Uint8Array(pipanalyser.frequencyBinCount * 2);
 			pipanalyser.freq = new Uint8Array(pipanalyser.frequencyBinCount);
+
 			pipvideovisualloop();
 
 			const canvas = document.getElementById("stefanvdpipvisualizationcanvas");
@@ -5382,6 +5381,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			});
 			videopipvisual.addEventListener("leavepictureinpicture", () => {
 				removepipvisual();
+			});
+
+			// Show a play/pause button in the Picture-in-Picture window
+			navigator.mediaSession.setActionHandler("play", function(){
+				document.getElementsByTagName("video")[0].play();
+				navigator.mediaSession.playbackState = "playing";
+			});
+
+			navigator.mediaSession.setActionHandler("pause", function(){
+				document.getElementsByTagName("video")[0].pause();
+				navigator.mediaSession.playbackState = "paused";
 			});
 
 		}
