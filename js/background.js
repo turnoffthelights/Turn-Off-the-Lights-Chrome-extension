@@ -161,6 +161,14 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			result = permissions.permissions;
 			chrome.tabs.sendMessage(sender.tab.id, {text: "receiveallpermissions", value: result});
 		});
+	}else if(request.name == "pipvideo"){
+		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
+			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvideo"});
+		});
+	}else if(request.name == "pipvisual"){
+		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
+			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvisual"});
+		});
 	}
 	return true;
 });
@@ -612,6 +620,20 @@ chrome.storage.onChanged.addListener(function(changes){
 				if(protocol == "http" || protocol == "https"){
 					if(tabs[i].url != totloptionspage){
 						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshnighttime"});
+					}
+				}
+			}
+		});
+	}
+	if(changes["pipvisualtype"]){
+		chrome.tabs.query({}, function(tabs){
+			var i;
+			var l = tabs.length;
+			for(i = 0; i < l; i++){
+				var protocol = tabs[i].url.split(":")[0];
+				if(protocol == "http" || protocol == "https"){
+					if(tabs[i].url != totloptionspage){
+						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshpipvisualtype"});
 					}
 				}
 			}

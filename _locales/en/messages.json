@@ -486,5 +486,7 @@
     "desvolumescrollb": {"message": "Scrolling up increases the volume"},
     "desvolumescrollc": {"message": "Scrolling down increases the volume"},
     "desvolumeposd": {"message": "Show the volume meter on top left of the current video player"},
-    "desvolumepose": {"message": "Show the volume meter on top right of the current video player"}
+    "desvolumepose": {"message": "Show the volume meter on top right of the current video player"},
+    "titelpipvideo": {"message": "Picture in Picture the current Video"},
+    "titelpipvisual": {"message": "Picture in Picture the Music Visualization"}
 }

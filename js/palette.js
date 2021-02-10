@@ -29,10 +29,19 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge;
+var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype;
 
 function save_options(){
-	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "badge":$("badge").checked});
+	var getpipvisualtype;
+	if(document.getElementById("btnpipvisualA").checked == true){
+		getpipvisualtype = 1;
+	}else if(document.getElementById("btnpipvisualB").checked == true){
+		getpipvisualtype = 2;
+	}else if(document.getElementById("btnpipvisualC").checked == true){
+		getpipvisualtype = 3;
+	}
+
+	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "badge":$("badge").checked, "pipvisualtype": getpipvisualtype});
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -41,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate"], function(items){
+	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype"], function(items){
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 		interval = items["interval"]; if(interval == null)interval = 80; // default 80%
 		ambilight = items["ambilight"]; if(ambilight == null)ambilight = false; // default false
@@ -65,6 +74,15 @@ document.addEventListener("DOMContentLoaded", function(){
 		nightmodehyperlink = items["nightmodehyperlink"]; if(nightmodehyperlink == null)nightmodehyperlink = "#ffffff"; // default #ffffff
 
 		badge = items["badge"]; if(badge == null)badge = false; // default false
+		pipvisualtype = items["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1; // default 1
+
+		if(pipvisualtype == 1){
+			document.getElementById("btnpipvisualA").checked = true;
+		}else if(pipvisualtype == 2){
+			document.getElementById("btnpipvisualB").checked = true;
+		}else if(pipvisualtype == 3){
+			document.getElementById("btnpipvisualC").checked = true;
+		}
 
 		// dark mode
 		if(darkmode == 1){
@@ -173,11 +191,13 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("morepanel").className = "hidden";
 		$("atmospanel").className = "hidden";
 		$("analyticspanel").className = "hidden";
+		$("videopanel").className = "hidden";
 
 		$("tab1").className = "tabbutton tabhighlight";
 		$("tab2").className = "tabbutton";
 		$("tab3").className = "tabbutton";
 		$("tab4").className = "tabbutton";
+		$("tab5").className = "tabbutton";
 	}, false);
 
 	$("tab2").addEventListener("click", function(){
@@ -185,11 +205,13 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("morepanel").className = "";
 		$("atmospanel").className = "hidden";
 		$("analyticspanel").className = "hidden";
+		$("videopanel").className = "hidden";
 
 		$("tab1").className = "tabbutton";
 		$("tab2").className = "tabbutton tabhighlight";
 		$("tab3").className = "tabbutton";
 		$("tab4").className = "tabbutton";
+		$("tab5").className = "tabbutton";
 	}, false);
 
 	$("tab3").addEventListener("click", function(){
@@ -197,11 +219,13 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("morepanel").className = "hidden";
 		$("atmospanel").className = "";
 		$("analyticspanel").className = "hidden";
+		$("videopanel").className = "hidden";
 
 		$("tab1").className = "tabbutton";
 		$("tab2").className = "tabbutton";
 		$("tab3").className = "tabbutton tabhighlight";
 		$("tab4").className = "tabbutton";
+		$("tab5").className = "tabbutton";
 	}, false);
 
 	$("tab4").addEventListener("click", function(){
@@ -209,11 +233,27 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("morepanel").className = "hidden";
 		$("atmospanel").className = "hidden";
 		$("analyticspanel").className = "";
+		$("videopanel").className = "hidden";
 
 		$("tab1").className = "tabbutton";
 		$("tab2").className = "tabbutton";
 		$("tab3").className = "tabbutton";
 		$("tab4").className = "tabbutton tabhighlight";
+		$("tab5").className = "tabbutton";
+	}, false);
+
+	$("tab5").addEventListener("click", function(){
+		$("basicspanel").className = "hidden";
+		$("morepanel").className = "hidden";
+		$("atmospanel").className = "hidden";
+		$("analyticspanel").className = "hidden";
+		$("videopanel").className = "";
+
+		$("tab1").className = "tabbutton";
+		$("tab2").className = "tabbutton";
+		$("tab3").className = "tabbutton";
+		$("tab4").className = "tabbutton";
+		$("tab5").className = "tabbutton tabhighlight";
 	}, false);
 
 	var tempcurrentpopup = "";
@@ -512,6 +552,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no"); });
 
 	$("energybox").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+
+	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvideo"}); });
+	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvisual"}); });
 
 	// rate
 	function materialRateAlert(){
