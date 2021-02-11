@@ -218,6 +218,10 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .analyticsheader{position:relative;height:105px;background:#43A047;;color:white;font-size:20px;line-height:58px;padding:0 16px;overflow:hidden}
 .analyticsheader video{position:absolute;top:-45px;left:0}
 .analyticsheader span{position:absolute}
+.pipheader{position:relative;height:105px;background:#757575;color:white;font-size:20px;line-height:58px;padding:0 16px;overflow:hidden}
+.pipheader video{position:absolute;top:-45px;left:0}
+.pipheader span{position:absolute}
+#btnpipvideo,#btnpipvisual{width:100%}
 #btngonight{width:100%}
 /* Checkbox */
 .md-checkbox{position:relative;margin:16px 0;box-sizing:border-box;height:18px}

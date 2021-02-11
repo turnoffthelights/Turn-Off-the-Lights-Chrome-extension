@@ -487,6 +487,8 @@
     "desvolumescrollc": {"message": "Scrolling down increases the volume"},
     "desvolumeposd": {"message": "Show the volume meter on top left of the current video player"},
     "desvolumepose": {"message": "Show the volume meter on top right of the current video player"},
-    "titelpipvideo": {"message": "Picture in Picture the current Video"},
-    "titelpipvisual": {"message": "Picture in Picture the Music Visualization"}
+    "titelpipvideo": {"message": "The current Video"},
+    "titelpipvisual": {"message": "The Music Visualization"},
+    "titelpip": {"message": "Picture-in-Picture"},
+    "despip": {"message": "The Picture-in-Picture allows you to create a floating video window that is always on top of other windows."}
 }

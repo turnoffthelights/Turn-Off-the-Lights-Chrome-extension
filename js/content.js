@@ -4729,6 +4729,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	// PIP
+	var statuspipvideomode = false;
+	var statuspipvisualmode = false;
 	var pipblockarray, pipbars, pipbarx, pipbarwidth, pipbarheight;
 
 	var requestvideopiploop;
@@ -5310,14 +5312,41 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				pipvisualtype = items["pipvisualtype"];
 			});
 		}else if(request.action == "gopipvideo"){
+			console.log("0 statuspipvisualmode= "+statuspipvisualmode)
 			var videotopipvideo = document.getElementsByTagName("video")[0];
-			if(document.pictureInPictureElement){
-				document.exitPictureInPicture();
+			if(statuspipvisualmode == true){
+				// auto close the visual pip mode
+				if(document.pictureInPictureElement){
+					document.exitPictureInPicture();
+					statuspipvideomode = false;
+					statuspipvisualmode = false;
+					if(document.pictureInPictureEnabled){
+						console.log("3 statuspipvisualmode= "+statuspipvisualmode)
+						videotopipvideo.requestPictureInPicture();
+						statuspipvideomode = true;
+						statuspipvisualmode = false;
+					}
+
+				}
 			}else{
-				if(document.pictureInPictureEnabled){
-					videotopipvideo.requestPictureInPicture();
+				if(document.pictureInPictureElement){	console.log("1 statuspipvisualmode= "+statuspipvisualmode)
+					document.exitPictureInPicture();
+					statuspipvideomode = false;
+					statuspipvisualmode = false;
+				}else{console.log("2 statuspipvisualmode= "+statuspipvisualmode)
+					if(document.pictureInPictureEnabled){
+						console.log("3 statuspipvisualmode= "+statuspipvisualmode)
+						videotopipvideo.requestPictureInPicture();
+						statuspipvideomode = true;
+						statuspipvisualmode = false;
+					}
 				}
 			}
+			videotopipvideo.addEventListener("leavepictureinpicture", () => {
+				statuspipvideomode = false;
+				statuspipvisualmode = false;
+			});
+
 		}else if(request.action == "gopipvisual"){
 			if(!document.getElementById("stefanvdpipvisualizationcanvas")){
 				var pipcanvas = document.createElement("canvas");
@@ -5334,7 +5363,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				document.body.appendChild(pipvideo);
 			}
 
-			if(typeof audiocontext == "undefined"){
+			if(typeof audiocontext[0] == "undefined"){
 			// I am new now
 				audiocontext[0] = new AudioContext();
 				analyser[0] = audiocontext[0].createAnalyser();
@@ -5366,18 +5395,32 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			const stream = canvas.captureStream();
 			videopipvisual.srcObject = stream;
 
+			if(statuspipvideomode == true){
+				// auto close the video pip mode
+				if(document.pictureInPictureElement){
+					document.exitPictureInPicture();
+					statuspipvideomode = false;
+					statuspipvisualmode = false;
+				}
+			}
 			videopipvisual.addEventListener("loadedmetadata", () => {
 				if(document.pictureInPictureElement){
 					document.exitPictureInPicture();
 					removepipvisual();
+					statuspipvideomode = false;
+					statuspipvisualmode = false;
 				}else{
 					if(document.pictureInPictureEnabled){
 						videopipvisual.requestPictureInPicture();
+						statuspipvideomode = false;
+						statuspipvisualmode = true;
 					}
 				}
 			});
 			videopipvisual.addEventListener("leavepictureinpicture", () => {
 				removepipvisual();
+				statuspipvideomode = false;
+				statuspipvisualmode = false;
 			});
 
 			// Show a play/pause button in the Picture-in-Picture window
