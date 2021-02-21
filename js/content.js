@@ -5284,7 +5284,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.removeEventListener("wheel", ecomousescroll);
 
 				gonighttime();
-
 			});
 		}else if(request.action == "gorefreshnighttime"){
 			chrome.storage.sync.get(["nighttime", "begintime", "endtime"], function(items){
@@ -5305,7 +5304,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.removeEventListener("wheel", ecomousescroll);
 
 				gonighttime();
-
 			});
 		}else if(request.action == "gorefreshpipvisualtype"){
 			chrome.storage.sync.get(["pipvisualtype"], function(items){
@@ -5346,7 +5344,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				statuspipvideomode = false;
 				statuspipvisualmode = false;
 			});
-
 		}else if(request.action == "gopipvisual"){
 			if(!document.getElementById("stefanvdpipvisualizationcanvas")){
 				var pipcanvas = document.createElement("canvas");

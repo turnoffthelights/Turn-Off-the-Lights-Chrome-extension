@@ -31,7 +31,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 .ytd-browse-0 #header.ytd-browse{z-index:auto!important}
 .ytp-chrome-top{z-index:1001!important}
 .ytp-ce-element,.ytp-ce-shadow{z-index:1001!important}
-#masthead-container.ytd-app{z-index:980!important}
+#masthead-container.ytd-app{z-index:982!important}
+tp-yt-app-drawer.ytd-app[persistent]{z-index:980!important}
 #masthead-positioner{z-index:980!important}
 .ytp-contextmenu{z-index:1001!important}
 .ytp-chrome-bottom{z-index:1001!important}
