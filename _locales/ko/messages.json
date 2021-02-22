@@ -228,7 +228,6 @@
     "sharemenutellafriend": {"message": "친구에게 알려주기"},
     "sharemenusendatweet": {"message": "트윗하기"},
     "sharemenupostonfacebook": {"message": "페이스북에서 공유"},
-    "sharemenupostongoogleplus": {"message": "Google +에서 공유"},
     "sharemenuratetitle": {"message": "평점주기"},
     "sharemenudonatetitle": {"message": "개발자를 지원하기"},
     "titelautostop": {"message": "자동 멈춤"},

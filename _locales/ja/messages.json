@@ -228,7 +228,6 @@
     "sharemenutellafriend": {"message": "友達に教える"},
     "sharemenusendatweet": {"message": "つぶやく"},
     "sharemenupostonfacebook": {"message": "Facebook に投稿"},
-    "sharemenupostongoogleplus": {"message": "Google + に投稿"},
     "sharemenuratetitle": {"message": "この拡張機能を評価"},
     "sharemenudonatetitle": {"message": "開発をサポートする"},
     "titelautostop": {"message": "自動停止"},

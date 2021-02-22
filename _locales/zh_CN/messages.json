@@ -228,7 +228,6 @@
     "sharemenutellafriend": {"message": "告诉朋友"},
     "sharemenusendatweet": {"message": "发推"},
     "sharemenupostonfacebook": {"message": "发到 Facebook"},
-    "sharemenupostongoogleplus": {"message": "发到 Google+"},
     "sharemenuratetitle": {"message": "评价本扩展"},
     "sharemenudonatetitle": {"message": "支持开发"},
     "titelautostop": {"message": "自动停止"},
