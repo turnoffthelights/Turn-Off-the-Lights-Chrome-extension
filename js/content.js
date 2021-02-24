@@ -5310,7 +5310,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				pipvisualtype = items["pipvisualtype"];
 			});
 		}else if(request.action == "gopipvideo"){
-			console.log("0 statuspipvisualmode= "+statuspipvisualmode)
 			var videotopipvideo = document.getElementsByTagName("video")[0];
 			if(statuspipvisualmode == true){
 				// auto close the visual pip mode
@@ -5319,7 +5318,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					statuspipvideomode = false;
 					statuspipvisualmode = false;
 					if(document.pictureInPictureEnabled){
-						console.log("3 statuspipvisualmode= "+statuspipvisualmode)
 						videotopipvideo.requestPictureInPicture();
 						statuspipvideomode = true;
 						statuspipvisualmode = false;
@@ -5327,13 +5325,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 				}
 			}else{
-				if(document.pictureInPictureElement){	console.log("1 statuspipvisualmode= "+statuspipvisualmode)
+				if(document.pictureInPictureElement){
 					document.exitPictureInPicture();
 					statuspipvideomode = false;
 					statuspipvisualmode = false;
-				}else{console.log("2 statuspipvisualmode= "+statuspipvisualmode)
+				}else{
 					if(document.pictureInPictureEnabled){
-						console.log("3 statuspipvisualmode= "+statuspipvisualmode)
 						videotopipvideo.requestPictureInPicture();
 						statuspipvideomode = true;
 						statuspipvisualmode = false;
