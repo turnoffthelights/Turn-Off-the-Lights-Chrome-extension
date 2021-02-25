@@ -742,6 +742,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		var currentvideostepfilter = 0;
 		var filtertype = "normal";
 		var videowindow = false;
+		var checktheatermode;
+		var initialtheatermode = false;
 		var timeout;
 		var vzoom = [];
 		var vrotate = [];
@@ -1563,24 +1565,50 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 									if(playercontainer){
 										var stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
 										var stefanyoutubecontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
+										var original = document.getElementsByClassName("ytp-size-button")[0];
+										var watchContainer = document.querySelector("ytd-watch") || document.querySelector("ytd-watch-flexy");
 										if(stefanvdregularhtmlplayer){
+											if(!initialtheatermode){
+												original.click();
+											}
 											playercontainer.classList.remove("stefanvdvideowindow");
-											onevideo.classList.remove("stefanvdvideowindow");
+											document.getElementsByTagName("video")[0].classList.remove("stefanvdvideowindow");
+											videowindow = false;
 										}else{
+											checktheatermode = watchContainer ? watchContainer.hasAttribute("theater") : true;
+											initialtheatermode = checktheatermode;
+											if(!checktheatermode){
+												original.click();
+												checktheatermode = true;
+											}
 											playercontainer.classList.add("stefanvdvideowindow");
-											onevideo.classList.add("stefanvdvideowindow");
+											document.getElementsByTagName("video")[0].classList.add("stefanvdvideowindow");
 											stefanyoutubecontrols.style.cssText = "width:100% !important";
+											videowindow = true;
 										}
 									}else if(ytplayerapi){
-										let stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
-										let stefanyoutubecontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
-										if(stefanvdregularhtmlplayer){
+										var stefanvdregularhtmlplayerb = document.getElementsByClassName("stefanvdvideowindow")[0];
+										var stefanyoutubecontrolsb = document.getElementsByClassName("ytp-chrome-bottom")[0];
+										var originalb = document.getElementsByClassName("ytp-size-button")[0];
+										var watchContainerb = document.querySelector("ytd-watch") || document.querySelector("ytd-watch-flexy");
+										if(stefanvdregularhtmlplayerb){
+											checktheatermode = watchContainerb ? watchContainerb.hasAttribute("theater") : true;
+											initialtheatermode = checktheatermode;
+											if(!checktheatermode){
+												originalb.click();
+											}
 											ytplayerapi.classList.remove("stefanvdvideowindow");
-											onevideo.classList.remove("stefanvdvideowindow");
+											document.getElementsByTagName("video")[0].classList.remove("stefanvdvideowindow");
+											videowindow = false;
 										}else{
+											if(!initialtheatermode){
+												originalb.click();
+												checktheatermode = true;
+											}
 											ytplayerapi.classList.add("stefanvdvideowindow");
-											onevideo.classList.add("stefanvdvideowindow");
-											stefanyoutubecontrols.style.width = "98%";
+											document.getElementsByTagName("video")[0].classList.add("stefanvdvideowindow");
+											stefanyoutubecontrolsb.style.width = "98%";
+											videowindow = true;
 										}
 									}
 
