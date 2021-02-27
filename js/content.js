@@ -4757,6 +4757,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	// PIP
+	var i18ntitelpiperror = chrome.i18n.getMessage("titelpiperror");
+
 	var statuspipvideomode = false;
 	var statuspipvisualmode = false;
 	var pipblockarray, pipbars, pipbarx, pipbarwidth, pipbarheight;
@@ -4916,6 +4918,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		var elemvideo = document.getElementById("stefanvdpipvisualizationvideo");
 		if(elemvideo){ elemvideo.parentNode.removeChild(elemvideo); }
 	}
+
 	//---
 
 	chrome.runtime.onMessage.addListener(function(request){
@@ -5339,123 +5342,132 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			});
 		}else if(request.action == "gopipvideo"){
 			var videotopipvideo = document.getElementsByTagName("video")[0];
-			if(statuspipvisualmode == true){
-				// auto close the visual pip mode
-				if(document.pictureInPictureElement){
-					document.exitPictureInPicture();
-					statuspipvideomode = false;
-					statuspipvisualmode = false;
-					if(document.pictureInPictureEnabled){
-						videotopipvideo.requestPictureInPicture();
-						statuspipvideomode = true;
+			if(videotopipvideo){
+				if(statuspipvisualmode == true){
+					// auto close the visual pip mode
+					if(document.pictureInPictureElement){
+						document.exitPictureInPicture();
+						statuspipvideomode = false;
 						statuspipvisualmode = false;
-					}
+						if(document.pictureInPictureEnabled){
+							videotopipvideo.requestPictureInPicture();
+							statuspipvideomode = true;
+							statuspipvisualmode = false;
+						}
 
-				}
-			}else{
-				if(document.pictureInPictureElement){
-					document.exitPictureInPicture();
-					statuspipvideomode = false;
-					statuspipvisualmode = false;
+					}
 				}else{
-					if(document.pictureInPictureEnabled){
-						videotopipvideo.requestPictureInPicture();
-						statuspipvideomode = true;
+					if(document.pictureInPictureElement){
+						document.exitPictureInPicture();
+						statuspipvideomode = false;
+						statuspipvisualmode = false;
+					}else{
+						if(document.pictureInPictureEnabled){
+							videotopipvideo.requestPictureInPicture();
+							statuspipvideomode = true;
+							statuspipvisualmode = false;
+						}
+					}
+				}
+				videotopipvideo.addEventListener("leavepictureinpicture", () => {
+					statuspipvideomode = false;
+					statuspipvisualmode = false;
+				});
+			}else{
+				window.alert(i18ntitelpiperror);
+			}
+		}else if(request.action == "gopipvisual"){
+			var videotopipvisual = document.getElementsByTagName("video")[0];
+			if(videotopipvisual){
+				if(!document.getElementById("stefanvdpipvisualizationcanvas")){
+					var pipcanvas = document.createElement("canvas");
+					pipcanvas.id = "stefanvdpipvisualizationcanvas";
+					pipcanvas.style.width = "640" + "px";
+					pipcanvas.style.height = "360" + "px";
+					document.body.appendChild(pipcanvas);
+
+					var pipvideo = document.createElement("video");
+					pipvideo.id = "stefanvdpipvisualizationvideo";
+					pipvideo.playsinline = true;
+					pipvideo.autoplay = true;
+					pipvideo.muted = true;
+					document.body.appendChild(pipvideo);
+				}
+
+				if(typeof audiocontext[0] == "undefined"){
+				// I am new now
+					audiocontext[0] = new AudioContext();
+					analyser[0] = audiocontext[0].createAnalyser();
+				}
+				var myElement = document.getElementsByTagName("video")[0];
+
+				// Fix Chrome 71
+				audiocontext[0].resume().then(() =>{
+				// console.log("Turn Off the Lights - Visualization resumed successfully");
+				// refresh the visualization
+					if(typeof audiocontext[0] != "undefined"){
+						if(vissources[0] == undefined){
+							try{
+								vissources[0] = audiocontext[0].createMediaElementSource(myElement);
+								vissources[0].connect(analyser[0]);
+							}catch(e){ console.error(e); }
+						}
+						analyser[0].connect(audiocontext[0].destination);
+					}
+				});
+				analyser[0].wave = new Uint8Array(analyser[0].frequencyBinCount * 2);
+				analyser[0].freq = new Uint8Array(analyser[0].frequencyBinCount);
+
+				pipvideovisualloop();
+
+				const canvas = document.getElementById("stefanvdpipvisualizationcanvas");
+				const videopipvisual = document.getElementById("stefanvdpipvisualizationvideo");
+
+				const stream = canvas.captureStream();
+				videopipvisual.srcObject = stream;
+
+				if(statuspipvideomode == true){
+					// auto close the video pip mode
+					if(document.pictureInPictureElement){
+						document.exitPictureInPicture();
+						statuspipvideomode = false;
 						statuspipvisualmode = false;
 					}
 				}
-			}
-			videotopipvideo.addEventListener("leavepictureinpicture", () => {
-				statuspipvideomode = false;
-				statuspipvisualmode = false;
-			});
-		}else if(request.action == "gopipvisual"){
-			if(!document.getElementById("stefanvdpipvisualizationcanvas")){
-				var pipcanvas = document.createElement("canvas");
-				pipcanvas.id = "stefanvdpipvisualizationcanvas";
-				pipcanvas.style.width = "640" + "px";
-				pipcanvas.style.height = "360" + "px";
-				document.body.appendChild(pipcanvas);
-
-				var pipvideo = document.createElement("video");
-				pipvideo.id = "stefanvdpipvisualizationvideo";
-				pipvideo.playsinline = true;
-				pipvideo.autoplay = true;
-				pipvideo.muted = true;
-				document.body.appendChild(pipvideo);
-			}
-
-			if(typeof audiocontext[0] == "undefined"){
-			// I am new now
-				audiocontext[0] = new AudioContext();
-				analyser[0] = audiocontext[0].createAnalyser();
-			}
-			var myElement = document.getElementsByTagName("video")[0];
-
-			// Fix Chrome 71
-			audiocontext[0].resume().then(() =>{
-			// console.log("Turn Off the Lights - Visualization resumed successfully");
-			// refresh the visualization
-				if(typeof audiocontext[0] != "undefined"){
-					if(vissources[0] == undefined){
-						try{
-							vissources[0] = audiocontext[0].createMediaElementSource(myElement);
-							vissources[0].connect(analyser[0]);
-						}catch(e){ console.error(e); }
+				videopipvisual.addEventListener("loadedmetadata", () => {
+					if(document.pictureInPictureElement){
+						document.exitPictureInPicture();
+						removepipvisual();
+						statuspipvideomode = false;
+						statuspipvisualmode = false;
+					}else{
+						if(document.pictureInPictureEnabled){
+							videopipvisual.requestPictureInPicture();
+							statuspipvideomode = false;
+							statuspipvisualmode = true;
+						}
 					}
-					analyser[0].connect(audiocontext[0].destination);
-				}
-			});
-			analyser[0].wave = new Uint8Array(analyser[0].frequencyBinCount * 2);
-			analyser[0].freq = new Uint8Array(analyser[0].frequencyBinCount);
-
-			pipvideovisualloop();
-
-			const canvas = document.getElementById("stefanvdpipvisualizationcanvas");
-			const videopipvisual = document.getElementById("stefanvdpipvisualizationvideo");
-
-			const stream = canvas.captureStream();
-			videopipvisual.srcObject = stream;
-
-			if(statuspipvideomode == true){
-				// auto close the video pip mode
-				if(document.pictureInPictureElement){
-					document.exitPictureInPicture();
-					statuspipvideomode = false;
-					statuspipvisualmode = false;
-				}
-			}
-			videopipvisual.addEventListener("loadedmetadata", () => {
-				if(document.pictureInPictureElement){
-					document.exitPictureInPicture();
+				});
+				videopipvisual.addEventListener("leavepictureinpicture", () => {
 					removepipvisual();
 					statuspipvideomode = false;
 					statuspipvisualmode = false;
-				}else{
-					if(document.pictureInPictureEnabled){
-						videopipvisual.requestPictureInPicture();
-						statuspipvideomode = false;
-						statuspipvisualmode = true;
-					}
-				}
-			});
-			videopipvisual.addEventListener("leavepictureinpicture", () => {
-				removepipvisual();
-				statuspipvideomode = false;
-				statuspipvisualmode = false;
-			});
+				});
 
-			// Show a play/pause button in the Picture-in-Picture window
-			navigator.mediaSession.setActionHandler("play", function(){
-				document.getElementsByTagName("video")[0].play();
-				navigator.mediaSession.playbackState = "playing";
-			});
+				// Show a play/pause button in the Picture-in-Picture window
+				navigator.mediaSession.setActionHandler("play", function(){
+					document.getElementsByTagName("video")[0].play();
+					navigator.mediaSession.playbackState = "playing";
+				});
 
-			navigator.mediaSession.setActionHandler("pause", function(){
-				document.getElementsByTagName("video")[0].pause();
-				navigator.mediaSession.playbackState = "paused";
-			});
+				navigator.mediaSession.setActionHandler("pause", function(){
+					document.getElementsByTagName("video")[0].pause();
+					navigator.mediaSession.playbackState = "paused";
+				});
 
+			}else{
+				window.alert(i18ntitelpiperror);
+			}
 		}
 	});
 
