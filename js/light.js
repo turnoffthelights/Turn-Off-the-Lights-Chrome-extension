@@ -1040,59 +1040,31 @@ function reader(){
 	}
 }
 
-function removeElement(id) {
-    var elem = document.getElementById(id);
-	if(elem){elem.parentNode.removeChild(elem);}
+function removeId(idname){
+	var elem = document.getElementById(idname);
+	if(elem){ elem.parentNode.removeChild(elem); }
+}
+
+function removeClass(classelement){
+	var videotopdiv = document.querySelectorAll("." + classelement);
+	var videotopi;
+	var videotopl = videotopdiv.length;
+	for(videotopi = 0; videotopi < videotopl; videotopi++){
+		videotopdiv[videotopi].classList.remove(classelement);
+	}
 }
 
 function removenewframe(){
-	var removedarklayerid = ["stefanvdlightareoff1", "stefanvdlightareoff2", "stefanvdlightareoff3", "stefanvdlightareoff4","stefanvdtheater","stefanvdblurimage","stefanvdlightcorner"];
-	removedarklayerid.forEach(removeElement);
+	// remove dark layers
+	var removedarklayerid = ["stefanvdlightareoff1", "stefanvdlightareoff2", "stefanvdlightareoff3", "stefanvdlightareoff4", "stefanvdtheater", "stefanvdblurimage", "stefanvdlightcorner"];
+	removedarklayerid.forEach(removeId);
 
 	var csstotlpseudo = $("csstotlpseudo");
 	if(csstotlpseudo){ document.getElementsByTagName("head")[0].removeChild(csstotlpseudo); }
 
 	// remove video player on top
-	var videotopdiv = document.querySelectorAll(".stefanvdvideotop");
-	var videotopi;
-	var videotopl = videotopdiv.length;
-	for(videotopi = 0; videotopi < videotopl; videotopi++){ videotopdiv[videotopi].classList.remove("stefanvdvideotop"); }
-	var itemtopdiv = document.querySelectorAll(".stefanvditemtop");
-	var itemtopi;
-	var itemtopl = itemtopdiv.length;
-	for(itemtopi = 0; itemtopi < itemtopl; itemtopi++){ itemtopdiv[itemtopi].classList.remove("stefanvditemtop"); }
-	var videoautodiv = document.querySelectorAll(".stefanvdvideoauto");
-	var videoautoi;
-	var videoautol = videoautodiv.length;
-	for(videoautoi = 0; videoautoi < videoautol; videoautoi++){ videoautodiv[videoautoi].classList.remove("stefanvdvideoauto"); }
-	var otherdowndiv = document.querySelectorAll(".stefanvdotherdown");
-	var otherdowni;
-	var otherdownl = otherdowndiv.length;
-	for(otherdowni = 0; otherdowni < otherdownl; otherdowni++){ otherdowndiv[otherdowni].classList.remove("stefanvdotherdown"); }
-	var containautodiv = document.querySelectorAll(".stefanvdcontainauto");
-	var containautoi;
-	var containautol = containautodiv.length;
-	for(containautoi = 0; containautoi < containautol; containautoi++){ containautodiv[containautoi].classList.remove("stefanvdcontainauto"); }
-	var transformautodiv = document.querySelectorAll(".stefanvdtransformauto");
-	var transformautoi;
-	var transformautol = transformautodiv.length;
-	for(transformautoi = 0; transformautoi < transformautol; transformautoi++){ transformautodiv[transformautoi].classList.remove("stefanvdtransformauto"); }
-	var videocontrolsitemdiv = document.querySelectorAll(".stefanvdvideocontrolsitem");
-	var videocontrolsitemi;
-	var videocontrolsiteml = videocontrolsitemdiv.length;
-	for(videocontrolsitemi = 0; videocontrolsitemi < videocontrolsiteml; videocontrolsitemi++){ videocontrolsitemdiv[videocontrolsitemi].classList.remove("stefanvdvideocontrolsitem"); }
-	var videocontrolstopdiv = document.querySelectorAll(".stefanvdvideocontrolstop");
-	var videocontrolstopi;
-	var videocontrolstopl = videocontrolstopdiv.length;
-	for(videocontrolstopi = 0; videocontrolstopi < videocontrolstopl; videocontrolstopi++){ videocontrolstopdiv[videocontrolstopi].classList.remove("stefanvdvideocontrolstop"); }
-	var posfixeddiv = document.querySelectorAll(".stefanvdposfixed");
-	var posfixedi;
-	var posfixedl = posfixeddiv.length;
-	for(posfixedi = 0; posfixedi < posfixedl; posfixedi++){ posfixeddiv[posfixedi].classList.remove("stefanvdposfixed"); }
-	var posstickydiv = document.querySelectorAll(".stefanvdpossticky");
-	var posstickyi;
-	var posstickyl = posstickydiv.length;
-	for(posstickyi = 0; posstickyi < posstickyl; posstickyi++){ posstickydiv[posstickyi].classList.remove("stefanvdpossticky"); }
+	var removetoplayerclass = ["stefanvdvideotop", "stefanvditemtop", "stefanvdvideoauto", "stefanvdotherdown", "stefanvdcontainauto", "stefanvdtransformauto", "stefanvdvideocontrolsitem", "stefanvdvideocontrolstop", "stefanvdposfixed", "stefanvdpossticky"];
+	removetoplayerclass.forEach(removeClass);
 
 	// inside the root
 	var q = document.getElementsByTagName("*");
