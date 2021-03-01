@@ -2073,7 +2073,7 @@ function lightsgoonoroff(){
 
 			// Motion fall down effect
 			if(slideeffect == true){
-			// -webkit-animation: totlbounceInDown 1.5s 0.0s linear 1;
+				// -webkit-animation: totlbounceInDown 1.5s 0.0s linear 1;
 				newdiv.style.WebkitAnimation = "totlbounceInDown 1.5s 0.0s linear 1";
 				slideeffect = false;
 				chrome.storage.sync.set({"slideeffect": false});
