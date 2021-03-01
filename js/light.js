@@ -1116,11 +1116,11 @@ function removenewdynamic(){
 }
 
 // Password in document
-// taart make it remove or not
+// lockscreen make it remove or not
 var i18nlockentername = chrome.i18n.getMessage("lockentername");
 var i18nlockwrongpassword = chrome.i18n.getMessage("lockwrongpassword");
 
-function taart(){
+function lockscreen(){
 	var pwon2 = $("stefanvdlightareoffpw");
 	if(pwon2){
 		var entername = window.prompt(i18nlockentername, "");
@@ -1898,10 +1898,10 @@ function lightsgoonoroff(){
 		}
 		if((mousespotlightc == true) || (mousespotlighta == true)){
 			// fade out effect
-			if(fadeout == true){ taart(); }else{ taart(); }
+			if(fadeout == true){ lockscreen(); }else{ lockscreen(); }
 		}else{
 		// fade out effect
-			if(fadeout == true){ taart(); }else{ taart(); }
+			if(fadeout == true){ lockscreen(); }else{ lockscreen(); }
 		}
 	}else{
 		// lamp and night mode active with one click
@@ -1999,15 +1999,15 @@ function lightsgoonoroff(){
 
 			// fade out effect
 			if(fadeout == true){
-				newframe1.addEventListener("click", function(){ taart(); });
-				newframe2.addEventListener("click", function(){ taart(); });
-				newframe3.addEventListener("click", function(){ taart(); });
-				newframe4.addEventListener("click", function(){ taart(); });
+				newframe1.addEventListener("click", function(){ lockscreen(); });
+				newframe2.addEventListener("click", function(){ lockscreen(); });
+				newframe3.addEventListener("click", function(){ lockscreen(); });
+				newframe4.addEventListener("click", function(){ lockscreen(); });
 			}else{
-				newframe1.addEventListener("click", function(){ taart(); });
-				newframe2.addEventListener("click", function(){ taart(); });
-				newframe3.addEventListener("click", function(){ taart(); });
-				newframe4.addEventListener("click", function(){ taart(); });
+				newframe1.addEventListener("click", function(){ lockscreen(); });
+				newframe2.addEventListener("click", function(){ lockscreen(); });
+				newframe3.addEventListener("click", function(){ lockscreen(); });
+				newframe4.addEventListener("click", function(){ lockscreen(); });
 			}
 
 			// fade in effect
@@ -2031,7 +2031,7 @@ function lightsgoonoroff(){
 			document.body.appendChild(newdivthrough);
 
 			// fade out effect
-			if(fadeout == true){ newdivthrough.addEventListener("click", function(){ taart(); }); }else{ newdivthrough.addEventListener("click", function(){ taart(); }); }
+			if(fadeout == true){ newdivthrough.addEventListener("click", function(){ lockscreen(); }); }else{ newdivthrough.addEventListener("click", function(){ lockscreen(); }); }
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newdivthrough.style.opacity = default_opacity / 100; } // no fade effect
@@ -2071,7 +2071,7 @@ function lightsgoonoroff(){
 			document.body.appendChild(newdiv);
 
 			// fade out effect
-			if(fadeout == true){ newdiv.addEventListener("click", function(){ taart(); }); }else{ newdiv.addEventListener("click", function(){ taart(); }); }
+			if(fadeout == true){ newdiv.addEventListener("click", function(){ lockscreen(); }); }else{ newdiv.addEventListener("click", function(){ lockscreen(); }); }
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newdiv.style.opacity = default_opacity / 100; } // no fade effect
@@ -2403,11 +2403,7 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 // animation browser engine
 window.requestAnimFrame = function(){
 	return(
-		window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
+		window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
         function(/* function */ callback){ window.setTimeout(callback, 1000 / 60); }
 	);
 }();
