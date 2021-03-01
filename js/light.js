@@ -1040,24 +1040,14 @@ function reader(){
 	}
 }
 
+function removeElement(id) {
+    var elem = document.getElementById(id);
+	if(elem){elem.parentNode.removeChild(elem);}
+}
+
 function removenewframe(){
-	var stefanvdlightareoff1 = $("stefanvdlightareoff1");
-	var stefanvdlightareoff2 = $("stefanvdlightareoff2");
-	var stefanvdlightareoff3 = $("stefanvdlightareoff3");
-	var stefanvdlightareoff4 = $("stefanvdlightareoff4");
-	if(stefanvdlightareoff1){ document.body.removeChild(stefanvdlightareoff1); }
-	if(stefanvdlightareoff2){ document.body.removeChild(stefanvdlightareoff2); }
-	if(stefanvdlightareoff3){ document.body.removeChild(stefanvdlightareoff3); }
-	if(stefanvdlightareoff4){ document.body.removeChild(stefanvdlightareoff4); }
-
-	var stefanvdeastereggs = $("stefanvdtheater");
-	if(stefanvdeastereggs){ document.body.removeChild(stefanvdeastereggs); }
-
-	var stefanvdblurimage = $("stefanvdblurimage");
-	if(stefanvdblurimage){ document.body.removeChild(stefanvdblurimage); }
-
-	var stefanvdlightcorner = $("stefanvdlightcorner");
-	if(stefanvdlightcorner){ document.body.removeChild(stefanvdlightcorner); }
+	var removedarklayerid = ["stefanvdlightareoff1", "stefanvdlightareoff2", "stefanvdlightareoff3", "stefanvdlightareoff4","stefanvdtheater","stefanvdblurimage","stefanvdlightcorner"];
+	removedarklayerid.forEach(removeElement);
 
 	var csstotlpseudo = $("csstotlpseudo");
 	if(csstotlpseudo){ document.getElementsByTagName("head")[0].removeChild(csstotlpseudo); }
