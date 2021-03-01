@@ -2656,21 +2656,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						if(mutation.target.tagName == "VIDEO"){
 							if(mutation.target.hasAttribute("data-video")){
 							// update the style
-								if(ambilight == true){
-									if(ambilightvarcolor == true){
-										if(atmosvivid == true){
-											var potvis = mutation.target.getAttribute("data-video");
-											var visposition = getPosition(mutation.target);
-											if(document.getElementById("stefanvdvivideffect" + potvis)){
-												document.getElementById("stefanvdvivideffect" + potvis).style.width = mutation.target.offsetWidth + "px";
-												document.getElementById("stefanvdvivideffect" + potvis).style.height = mutation.target.offsetHeight + "px";
-												document.getElementById("stefanvdvivideffect" + potvis).style.top = visposition.y + "px";
-												document.getElementById("stefanvdvivideffect" + potvis).style.left = visposition.x + "px";
-											}
-											if(mutation.target.play){
-												animate();
-											}
-										}
+								if(ambilight == true && ambilightvarcolor == true && atmosvivid == true){
+									var potvis = mutation.target.getAttribute("data-video");
+									var visposition = getPosition(mutation.target);
+									if(document.getElementById("stefanvdvivideffect" + potvis)){
+										document.getElementById("stefanvdvivideffect" + potvis).style.width = mutation.target.offsetWidth + "px";
+										document.getElementById("stefanvdvivideffect" + potvis).style.height = mutation.target.offsetHeight + "px";
+										document.getElementById("stefanvdvivideffect" + potvis).style.top = visposition.y + "px";
+										document.getElementById("stefanvdvivideffect" + potvis).style.left = visposition.x + "px";
+									}
+									if(mutation.target.play){
+										animate();
 									}
 								}
 							//---
