@@ -4063,9 +4063,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var selectObj = window.getSelection();
 			// if text selection, stop the function
 			if(selectObj.isCollapsed){
-			// console.log("NO TEXT selected here!");
+				// console.log("NO TEXT selected here!");
 			}else{
-			// console.log("TEXT selected here! + CANCEL");
+				// console.log("TEXT selected here! + CANCEL");
 				cancelgesture();
 			}
 		}
@@ -4109,7 +4109,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		try{
 			if(reflectionid.paused || reflectionid.ended || $("movie_player").getPlayerState() == 0 || $("movie_player").getPlayerState() == 2){
 				if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-				// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
+					// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 					let youtubewindow = $("movie_player");
 					youtubewindow.style.webkitBoxReflect = "";
 				}else{
@@ -4121,7 +4121,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		try{
 			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-			// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
+				// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 				let youtubewindow = $("movie_player");
 				youtubewindow.style.webkitBoxReflect = "below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(black),color-stop(" + calcreflection + ", transparent))";
 			}else{
@@ -4715,7 +4715,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			codetext += (ythdstatechange.toString() + "\n");
 			codetext += (ythduq.toString() + "\n");
 			injectScript(codetext);
-
 		}
 
 	} // end check youtube.com website
