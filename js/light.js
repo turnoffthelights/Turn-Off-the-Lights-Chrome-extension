@@ -1083,8 +1083,7 @@ function removenewframe(){
 }
 
 function removenewdynamic(){
-	var stefanvddynamicbackground = $("stefanvddynamicbackground");
-	if(stefanvddynamicbackground){ document.body.removeChild(stefanvddynamicbackground); }
+	removeId("stefanvddynamicbackground");
 }
 
 // Password in document
