@@ -405,16 +405,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				player.currentTime = 0;
 			}
 		}
-	}
-	function playerStop(player){
-		if(player !== null){
-			if(typeof(player.stopVideo) === "function"){
-				player.stopVideo();
-			}else if(typeof(player.pause) === "function"){
-				player.pause();
-			}
 		}
-	}*/
+		function playerStop(player){
+			if(player !== null){
+				if(typeof(player.stopVideo) === "function"){
+					player.stopVideo();
+				}else if(typeof(player.pause) === "function"){
+					player.pause();
+				}
+			}
+		}*/
 		var godelay;
 		function shadesOff(player){
 			if(player !== null){
