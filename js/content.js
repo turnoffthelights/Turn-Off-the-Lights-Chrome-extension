@@ -2268,7 +2268,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			// YouTube flash detect play
 			fixyoutubeatmos();
 		}else{
-		// request another frame
+			// request another frame
 			requestId = window.requestAnimFrame(animate);
 
 			// calc elapsed time since last loop
