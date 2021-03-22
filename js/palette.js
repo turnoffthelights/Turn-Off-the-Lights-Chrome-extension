@@ -139,10 +139,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(ambilightvarcolor == true)$("ambilightvarcolor").checked = true;
 		if(atmosvivid == true)$("atmosvivid").checked = true;
 
-		if(nightmodebck){ nightmodebck = items["nightmodebck"]; }else{ nightmodebck = "#1e1e1e"; }
-		if(nightmodetxt){ nightmodetxt = items["nightmodetxt"]; }else{ nightmodetxt = "#ffffff"; }
-		if(nightmodehyperlink){ nightmodehyperlink = items["nightmodehyperlink"]; }else{ nightmodehyperlink = "#ffffff"; }
-
 		if(badge == true)$("badge").checked = true;
 
 		if(optionskipremember){ optionskipremember = items["optionskipremember"]; }
