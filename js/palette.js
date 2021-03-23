@@ -29,7 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype;
+var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain;
 
 function save_options(){
 	var getpipvisualtype;
@@ -41,7 +41,7 @@ function save_options(){
 		getpipvisualtype = 3;
 	}
 
-	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "badge":$("badge").checked, "pipvisualtype": getpipvisualtype});
+	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "badge":$("badge").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype"], function(items){
+	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain"], function(items){
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 		interval = items["interval"]; if(interval == null)interval = 80; // default 80%
 		ambilight = items["ambilight"]; if(ambilight == null)ambilight = false; // default false
@@ -72,6 +72,12 @@ document.addEventListener("DOMContentLoaded", function(){
 		nightmodebck = items["nightmodebck"]; if(nightmodebck == null)nightmodebck = "#1e1e1e"; // default #1e1e1e
 		nightmodetxt = items["nightmodetxt"]; if(nightmodetxt == null)nightmodetxt = "#ffffff"; // default #ffffff
 		nightmodehyperlink = items["nightmodehyperlink"]; if(nightmodehyperlink == null)nightmodehyperlink = "#ffffff"; // default #ffffff
+		nightmodebutton = items["nightmodebutton"]; if(nightmodebutton == null)nightmodebutton = "#424242"; // default #424242
+		nightonly = items["nightonly"]; if(nightonly == null)nightonly = false; // default false
+		nightmodebydomain = items["nightmodebydomain"]; if(nightmodebydomain == null)nightmodebydomain = true; // default true
+		nightDomains = items["nightDomains"];
+		if(typeof nightDomains == "undefined" || nightDomains == null)
+			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
 
 		badge = items["badge"]; if(badge == null)badge = false; // default false
 		pipvisualtype = items["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1; // default 1
@@ -148,6 +154,42 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("colornightmodebckcustom").value = nightmodebck;
 		$("colornightmodetxtcustom").value = nightmodetxt;
 		$("colornightmodehyperlinkcustom").value = nightmodehyperlink;
+		$("colornightmodebuttoncustom").value = nightmodebutton;
+
+		if(nightonly == true)$("nightonly").checked = true;
+
+		// get current domain
+		chrome.tabs.query({active: true, currentWindow: true},
+			function(tabs){
+				var job = tabs[0].url;
+				let domain = (new URL(job));
+				var domainname = domain.hostname.replace("www.", "");
+				$("currentweburl").innerText = domainname;
+
+				var currenturl;
+				if(nightmodebydomain == true){
+					currenturl = domain.protocol + "//" + domain.hostname;
+				}else{
+				// WITH end slash
+					currenturl = job;
+					if(currenturl.substr(-1) === "/"){
+						// NO end slash
+						currenturl = currenturl.substr(0, currenturl.length - 1);
+					}
+				}
+				$("currentweburl").setAttribute("data-fullurl", currenturl);
+
+				if(typeof nightDomains == "string"){
+					nightDomains = JSON.parse(nightDomains);
+					let domain;
+					for(domain in nightDomains){
+						if(domain == currenturl){
+							$("sitecheck").checked = true;
+						}
+					}
+				}
+			}
+		);
 
 		// final
 		test();
@@ -369,6 +411,16 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("colortitelnightmodehyperlink8").addEventListener("click", nightmodelinkcolorchange);
 	$("colornightmodehyperlinkcustom").addEventListener("input", nightmodelinkcolorchangecustom);
 
+	$("colortitelnightmodebutton1").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton2").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton3").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton4").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton5").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton6").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton7").addEventListener("click", nightmodebuttoncolorchange);
+	$("colortitelnightmodebutton8").addEventListener("click", nightmodebuttoncolorchange);
+	$("colornightmodebuttoncustom").addEventListener("input", nightmodebuttoncolorchangecustom);
+
 	$("btngonight").addEventListener("click", function(){
 		chrome.tabs.executeScript(null, {code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
 	});
@@ -585,6 +637,16 @@ chrome.storage.onChanged.addListener(function(changes){
 	}
 });
 
+function addtonight(){
+	var thatopenurl = document.getElementById("currentweburl").getAttribute("data-fullurl");
+	nightDomains[thatopenurl] = true;
+}
+
+function removetonight(){
+	var thatopenurl = document.getElementById("currentweburl").getAttribute("data-fullurl");
+	delete nightDomains[thatopenurl];
+}
+
 function test(){
 	if($("nighttheme").checked == true){
 		$("btngonight").disabled = false;
@@ -592,6 +654,18 @@ function test(){
 	}else{
 		$("btngonight").disabled = true;
 		$("lampandnightmode").disabled = true;
+	}
+
+	if($("nightonly").checked == true){
+		$("sitecheck").disabled = false;
+	}else{
+		$("sitecheck").disabled = true;
+	}
+
+	if($("sitecheck").checked == true){
+		addtonight();
+	}else{
+		removetonight();
 	}
 
 	if($("ambilight").checked == true){
@@ -673,4 +747,16 @@ function nightmodelinkcolorchange(){
 function nightmodelinkcolorchangecustom(){
 	nightmodehyperlink = $("colornightmodehyperlinkcustom").value;
 	chrome.storage.sync.set({"nightmodehyperlink": nightmodehyperlink});
+}
+
+function nightmodebuttoncolorchange(){
+	var elem = this;
+	nightmodebutton = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+
+	chrome.storage.sync.set({"nightmodebutton": rgb2hex(nightmodebutton)});
+}
+
+function nightmodebuttoncolorchangecustom(){
+	nightmodebutton = $("colornightmodebuttoncustom").value;
+	chrome.storage.sync.set({"nightmodebutton": nightmodebutton});
 }

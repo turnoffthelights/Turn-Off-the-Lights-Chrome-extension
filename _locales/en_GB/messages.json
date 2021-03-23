@@ -295,7 +295,7 @@
     "desvideotoolonly": {"message": "Activate the Video Tool Bar only on the following site(s):"},
     "titelvideotoolwhitelist": {"message": "Whitelist"},
     "titelvideotoolblacklist": {"message": "Blacklist"},
-    "titelnightmodehyperlink": {"message": "Hyperlink"},
+    "titelnightmodehyperlink": {"message": "Hyperlink colour"},
     "titelblock60fps": {"message": "Block 60fps"},
     "titelvolume": {"message": "Video Volume Slider"},
     "desvideovolume": {"message": "Control the volume of the current video player with a mouse scroll"},
