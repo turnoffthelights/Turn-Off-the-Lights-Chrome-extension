@@ -2777,6 +2777,26 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		});
 	});
 
+	function occurrences(string, subString, allowOverlapping){
+		string += "";
+		subString += "";
+		if(subString.length <= 0)return(string.length + 1);
+
+		var n = 0,
+			pos = 0,
+			step = allowOverlapping ? 1 : subString.length;
+
+		var tempwhile = true;
+		while(tempwhile){
+			pos = string.indexOf(subString, pos);
+			if(pos >= 0){
+				++n;
+				pos += step;
+			}else break;
+		}
+		return n;
+	}
+
 	var switchelements;
 	var startshow = false;
 	var counter = 0;
@@ -2831,7 +2851,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 									thatbckishere = true;
 								}
 							}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
-								thatbckishere = true;
+								// check if use more than 2X gradient white
+								var bla = occurrences(z, "rgb(255, 255, 255)");
+								if(bla >= 2){
+									thatbckishere = true;
+								}
 							}else{
 							// div with background image url inside
 							// thatbckishere = true;
