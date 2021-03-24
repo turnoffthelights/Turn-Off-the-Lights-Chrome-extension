@@ -578,7 +578,7 @@ function read_options(){
 		if(items["videovolumescrollc"] == true){ $("videovolumescrollc").checked = true; }
 		if(items["videovolumeposd"] == true){ $("videovolumeposd").checked = true; }
 		if(items["videovolumepose"] == true){ $("videovolumepose").checked = true; }
-		if(items["nightmodebutton"]){ $("nightmodebutton").value = items["nightmodebutton"]; }else{ $("nightmodebutton").value = "#424242"; }
+		if(items["nightmodebutton"]){ $("nightmodebutton").value = items["nightmodebutton"]; }else{ $("nightmodebutton").value = "#353535"; }
 
 		// show introduce
 		if(items["introduce"] != true){
@@ -2959,6 +2959,7 @@ function domcontentloaded(){
 		$("nightmodebck").value = $("profileBnightback").value;
 		$("nightmodetxt").value = $("profileBnighttext").value;
 		$("nightmodehyperlink").value = $("profileBnightlink").value;
+		$("nightmodebutton").value = $("profileBnightbutton").value;
 		$("interval").value = 0; $("slider").value = 0; showValue(0);
 		$("mousespotlightt").checked = true;
 		$("lampandnightmode").checked = true;

@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		nightmodebck = items["nightmodebck"]; if(nightmodebck == null)nightmodebck = "#1e1e1e"; // default #1e1e1e
 		nightmodetxt = items["nightmodetxt"]; if(nightmodetxt == null)nightmodetxt = "#ffffff"; // default #ffffff
 		nightmodehyperlink = items["nightmodehyperlink"]; if(nightmodehyperlink == null)nightmodehyperlink = "#ffffff"; // default #ffffff
-		nightmodebutton = items["nightmodebutton"]; if(nightmodebutton == null)nightmodebutton = "#424242"; // default #424242
+		nightmodebutton = items["nightmodebutton"]; if(nightmodebutton == null)nightmodebutton = "#353535"; // default #353535
 		nightonly = items["nightonly"]; if(nightonly == null)nightonly = false; // default false
 		nightmodebydomain = items["nightmodebydomain"]; if(nightmodebydomain == null)nightmodebydomain = true; // default true
 		nightDomains = items["nightDomains"];
@@ -399,6 +399,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("colortitelnightmodetxt5").addEventListener("click", nightmodetextcolorchange);
 	$("colortitelnightmodetxt6").addEventListener("click", nightmodetextcolorchange);
 	$("colortitelnightmodetxt7").addEventListener("click", nightmodetextcolorchange);
+	$("colortitelnightmodetxt8").addEventListener("click", nightmodetextcolorchange);
 	$("colornightmodetxtcustom").addEventListener("input", nightmodetextcolorchangecustom);
 
 	$("colortitelnightmodehyperlink1").addEventListener("click", nightmodelinkcolorchange);
@@ -716,7 +717,7 @@ function rgb2hex(rgb){
 function nightmodebckcolorchange(){
 	var elem = this;
 	nightmodebck = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-
+	$("colornightmodebckcustom").value = rgb2hex(nightmodebck);
 	chrome.storage.sync.set({"nightmodebck": rgb2hex(nightmodebck)});
 }
 
@@ -728,7 +729,7 @@ function nightmodebckcolorchangecustom(){
 function nightmodetextcolorchange(){
 	var elem = this;
 	nightmodetxt = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-
+	$("colornightmodetxtcustom").value = rgb2hex(nightmodetxt);
 	chrome.storage.sync.set({"nightmodetxt": rgb2hex(nightmodetxt)});
 }
 
@@ -740,7 +741,7 @@ function nightmodetextcolorchangecustom(){
 function nightmodelinkcolorchange(){
 	var elem = this;
 	nightmodehyperlink = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-
+	$("colornightmodehyperlinkcustom").value = rgb2hex(nightmodehyperlink);
 	chrome.storage.sync.set({"nightmodehyperlink": rgb2hex(nightmodehyperlink)});
 }
 
@@ -752,11 +753,11 @@ function nightmodelinkcolorchangecustom(){
 function nightmodebuttoncolorchange(){
 	var elem = this;
 	nightmodebutton = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-
+	$("colornightmodebuttoncustom").value = rgb2hex(nightmodebutton);
 	chrome.storage.sync.set({"nightmodebutton": rgb2hex(nightmodebutton)});
 }
 
 function nightmodebuttoncolorchangecustom(){
 	nightmodebutton = $("colornightmodebuttoncustom").value;
-	chrome.storage.sync.set({"nightmodebutton": nightmodebutton});
+	chrome.storage.sync.set({"nightmodebutton": rgb2hex(nightmodebutton)});
 }

@@ -555,7 +555,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			}
 		});
 	}
-	if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"]){
+	if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"]){
 		chrome.tabs.query({}, function(tabs){
 			var i;
 			var l = tabs.length;
