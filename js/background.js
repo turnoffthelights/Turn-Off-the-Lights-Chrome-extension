@@ -875,7 +875,7 @@ if(chrome.storage.managed){
 	});
 }
 
-chrome.runtime.onInstalled.addListener(function(){
+//chrome.runtime.onInstalled.addListener(function(){
 	if(chrome.storage.managed){
 		chrome.storage.managed.get(function(items){
 			readgrouppolicy(items);
@@ -887,8 +887,8 @@ chrome.runtime.onInstalled.addListener(function(){
 	}else{
 		initwelcome();
 	}
-	checkbadge();
-});
+	//checkbadge();
+//});
 // first run - check the badge new value for this day
 chrome.runtime.onStartup.addListener(checkbadge);
 
