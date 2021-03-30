@@ -29,7 +29,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain;
+var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll;
 
 function save_options(){
 	var getpipvisualtype;
@@ -47,10 +47,10 @@ function save_options(){
 document.addEventListener("DOMContentLoaded", function(){
 	// disable context menu
 	document.addEventListener("contextmenu", function(e){
-		e.preventDefault();
+		//e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain"], function(items){
+	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 		interval = items["interval"]; if(interval == null)interval = 80; // default 80%
 		ambilight = items["ambilight"]; if(ambilight == null)ambilight = false; // default false
@@ -151,6 +151,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(firstDate){ firstDate = items["firstDate"]; }
 		if(firstsawrate){ firstsawrate = items["firstsawrate"]; }
 
+		firstsawscroll = items["firstsawscroll"]; if(firstsawscroll == null)firstsawscroll = false; // default false
+
 		$("colornightmodebckcustom").value = nightmodebck;
 		$("colornightmodetxtcustom").value = nightmodetxt;
 		$("colornightmodehyperlinkcustom").value = nightmodehyperlink;
@@ -193,6 +195,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		// final
 		test();
+
+		// Show the scroll guide for the first time
+		if(firstsawscroll == false){
+			materialScrollAlert(function(result){ console.log(result); });
+		}
 
 		// show remember page
 		var firstmonth = false;
@@ -615,6 +622,16 @@ document.addEventListener("DOMContentLoaded", function(){
 		document.getElementById("materialModalRate").className = "hide";
 		document.getElementById("materialModalRate").setAttribute("aria-disabled", "true");
 	}
+	// scroll
+	function materialScrollAlert(){
+		document.getElementById("materialModalScroll").className = "show";
+		document.getElementById("materialModalScroll").setAttribute("aria-disabled", "false");
+	}
+	function closeMaterialScrollAlert(e){
+		e.stopPropagation();
+		document.getElementById("materialModalScroll").className = "hide";
+		document.getElementById("materialModalScroll").setAttribute("aria-disabled", "true");
+	}
 
 	$("materialModalRateButtonOK").addEventListener("click", function(e){
 		closeMaterialRateAlert(e, true);
@@ -623,6 +640,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
 		closeMaterialRateAlert(e, false);
 		chrome.storage.sync.set({"firstsawrate": false});
+	});
+	$("materialModalScrollButtonOK").addEventListener("click", function(e){
+		closeMaterialScrollAlert(e, false);
+		chrome.storage.sync.set({"firstsawscroll": true});
 	});
 });
 
