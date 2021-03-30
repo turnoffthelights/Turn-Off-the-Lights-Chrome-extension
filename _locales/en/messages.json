@@ -484,6 +484,6 @@
     "titelnightmodebutton": {"message": "Button color"},
     "dessitewhitelist": {"message": "Whitelist this site?"},
     "handytip": {"message": "Handy Tip..."},
-    "titletipok": {"message": "Thanks for the tip"},
+    "titletipok": {"message": "Got it"},
     "desscrolltip": {"message": "You can scroll inside the top navigation bar and the color bars. When you scroll horizontally, you can see more buttons in this bar."}
 }
