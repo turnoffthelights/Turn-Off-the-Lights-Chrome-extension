@@ -1117,7 +1117,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 #materialModalYouTubeText{margin:15px;margin-bottom:60px}
 #materialModalYouTubeButtons{width:calc(100% - 12px);position:absolute;bottom:0px}
 #materialModalYouTubeButtonOK{background:red;color:white;border-radius:5px}
-#materialModalYouTubeButtonOK:hover{opacity:.8}
+#materialModalYouTubeButtonOK:hover{opacity:.7}
 /* About */
 .aboutbuttons button{margin:15px 10px 0 0;display:inline-block}
 #permullist{padding-inline-start:15px}

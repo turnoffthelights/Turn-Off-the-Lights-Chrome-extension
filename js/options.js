@@ -615,10 +615,6 @@ function read_options(){
 			chrome.storage.sync.set({"introduce": true});
 		}
 
-		window.setTimeout(function(){
-			materialYouTubeAlert();
-		}, 2500);
-
 		// show remember page
 		var firstmonth = false;
 		var currentDate = new Date().getTime();
@@ -645,6 +641,24 @@ function read_options(){
 				}
 			}else{
 				$("sectionreviewbox").style.display = "none";
+			}
+		}
+
+		var firstday = false;
+		if($("optionskipremember").checked != true){
+			var dateinstall = items["firstDate"];
+			var datenextday = dateinstall + (1 * 24 * 60 * 60 * 1000);
+			if(currentDate >= datenextday){ firstday = false; }else{ firstday = true; }
+
+			if(firstday){
+				// show nothing
+			}else{
+				// if the rate box is not visible, then show the YouTube channel box
+				if(items["firstsawrate"] != true){
+					window.setTimeout(function(){
+						materialYouTubeAlert(function(result){ console.log(result); });
+					}, 2500);
+				}
 			}
 		}
 
