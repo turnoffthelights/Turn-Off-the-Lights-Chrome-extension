@@ -485,5 +485,9 @@
     "dessitewhitelist": {"message": "Whitelist this site?"},
     "handytip": {"message": "Handy Tip..."},
     "titletipok": {"message": "Got it"},
-    "desscrolltip": {"message": "You can scroll inside the top navigation bar and the color bars. When you scroll horizontally, you can see more buttons in this bar."}
+    "desscrolltip": {"message": "You can scroll inside the top navigation bar and the color bars. When you scroll horizontally, you can see more buttons in this bar."},
+    "titleyoutube": {"message": "Join Turn Off the Lights Channel."},
+    "desyoutube": {"message": "Uncover the power of the Turn Off the Lights browser extension. Watch it now on YouTube."},
+    "titlesub": {"message": "Subscribe Now!"},
+    "titlelater": {"message": "Later"}
 }
