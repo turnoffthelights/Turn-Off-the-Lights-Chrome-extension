@@ -34,3 +34,4 @@ const linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation
 const linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
 const linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
 const devmode = true;
+const devdonate = true;
