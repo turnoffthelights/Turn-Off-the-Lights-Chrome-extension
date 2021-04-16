@@ -58,6 +58,7 @@
         "linkauroraplayerapp": "writable",
         "linktotlmobileapp": "writable",
         "devmode": "writable",
+        "devdonate": "writable",
         "Chart": "readonly"
     }
 }
