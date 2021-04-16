@@ -663,6 +663,14 @@ function read_options(){
 			}
 		}
 
+		// donation bar
+		if(devdonate == true){
+			var donatebar = document.getElementById("managed-prefs-banner");
+			if(donatebar){
+				donatebar.className = "hidden";
+			}
+		}
+
 		// load tab div
 		var tabListItems = $("navbar").childNodes;
 		var i;
