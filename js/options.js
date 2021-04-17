@@ -665,10 +665,7 @@ function read_options(){
 
 		// donation bar
 		if(devdonate == true){
-			var donatebar = document.getElementById("managed-prefs-banner");
-			if(donatebar){
-				donatebar.className = "hidden";
-			}
+			$("managed-prefs-banner").className = "hidden";
 		}
 
 		// load tab div
@@ -2909,7 +2906,7 @@ function domcontentloaded(){
 	function showambilightspreadValue(newValue){ $("ambilightrangespreadradius").value = newValue; $("arangespread").value = newValue; $("ambilightrangespreadradius").setAttribute("aria-valuenow", newValue); $("arangespread").setAttribute("aria-valuenow", newValue); }
 
 	// Close yellow bar
-	$("managed-prefs-text-close").addEventListener("click", function(){ $("managed-prefs-banner").style.display = "none"; });
+	$("managed-prefs-text-close").addEventListener("click", function(){ $("managed-prefs-banner").className = "hidden"; });
 
 	// Slider
 	$("slider").addEventListener("change", function(){ showValue(this.value); save_options(); });
@@ -2945,7 +2942,7 @@ function domcontentloaded(){
 		if(guidekb == true){
 			// already visible
 		}else{
-			$("managed-prefs-banner").style.display = "";
+			$("managed-prefs-banner").className = "";
 		}
 	}
 
@@ -2960,7 +2957,7 @@ function domcontentloaded(){
 	$("tabnight").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundnight(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabmotion").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundmotion(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabspeech").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-	$("tabguide").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = linkguide; $("managed-prefs-banner").style.display = "none"; guidekb = false; mobilecheck(); });
+	$("tabguide").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = linkguide; $("managed-prefs-banner").className = "hidden"; guidekb = false; mobilecheck(); });
 	$("tabanalytics").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabhelp").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 
