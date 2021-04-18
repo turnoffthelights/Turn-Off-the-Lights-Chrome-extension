@@ -301,6 +301,12 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("tab5").className = "tabbutton tabhighlight";
 	}, false);
 
+	if(devdonate == true){
+		$("btndonate").className = "hidden";
+	}else{
+		$("btnsupport").className = "hidden";
+	}
+
 	var tempcurrentpopup = "";
 	function handle(delta){
 		tempcurrentpopup = document.getElementById("oslider").value;
@@ -434,6 +440,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	$("btnoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
 	$("btndonate").addEventListener("click", function(){ chrome.tabs.create({url: donatewebsite, active:true}); });
+	$("btnsupport").addEventListener("click", function(){ chrome.tabs.create({url: linksupport, active:true}); });
 	$("btnauroraplayer").addEventListener("click", function(){ chrome.tabs.create({url: linkauroraplayerapp, active:true}); });
 	$("analclick").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
 	$("analtotal").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });

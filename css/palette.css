@@ -124,7 +124,7 @@ input[type="range"][disabled]::-webkit-slider-thumb{background-color:var(--totl-
 input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-range-disabled-background)}
 /* regular */
 /* dense button - mini */
-button{-webkit-user-select:none;-moz-user-select:none;user-select:none;background:0 0;border:none;border-radius:2px;color:var(--totl-button-color);position:relative;height:32px;margin:0 8px 0 0;min-width:64px;padding:0 16px;display:inline-block;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;will-change:box-shadow;transition:box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:32px;vertical-align:middle;box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);background-color:var(--totl-button-background)}
+button{-webkit-user-select:none;-moz-user-select:none;user-select:none;background:0 0;border:none;border-radius:2px;color:var(--totl-button-color);position:relative;height:32px;margin:0;min-width:64px;padding:0 16px;display:inline-block;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;will-change:box-shadow;transition:box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:32px;vertical-align:middle;box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);background-color:var(--totl-button-background)}
 button:active{background-color:var(--totl-button-background-active)}
 button:hover{background-color:var(--totl-button-background-hover)}
 /* Disable buttons */
@@ -137,6 +137,7 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .oan .oa{display:flex;width:84%;height:20px;float:left}
 .oan .an{display:flex;width:14%;height:20px;float:left;align-items:center;align-content:center;justify-content:center;flex-direction:column}
 .palette{margin:20px 15px}
+.palette .boxactions{display:flex;justify-content:space-between}
 .palette .boxcolor{width:26px;height:26px;margin:2px;display:inline-block;cursor:pointer;border-radius:26px}
 .palette .boxcolor:hover{transform:scale(1.1);box-shadow:0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24)}
 .colorline{background:var(--totl-button-color-palette);border-radius:4px;padding:4px;margin:10px 0px;width:calc(100% - 8px);font-size:11px;overflow:hidden;overflow-x:auto}

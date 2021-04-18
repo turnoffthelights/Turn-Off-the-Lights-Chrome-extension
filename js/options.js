@@ -2942,7 +2942,9 @@ function domcontentloaded(){
 		if(guidekb == true){
 			// already visible
 		}else{
-			$("managed-prefs-banner").className = "";
+			if(devdonate == false){
+				$("managed-prefs-banner").className = "";
+			}
 		}
 	}
 
