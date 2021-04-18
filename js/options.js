@@ -3718,7 +3718,7 @@ function domcontentloaded(){
 			var tabListi;
 			var tabListl = tabListItems.length;
 			for(tabListi = 0; tabListi < tabListl; tabListi++){
-				if(tabListItems[i].nodeName == "LI"){
+				if(tabListItems[tabListi].nodeName == "LI"){
 					var tabLink = getFirstChildWithTagName(tabListItems[tabListi], "A");
 					var id = getHash(tabLink.getAttribute("data-tab"));
 					contentDivs[id] = document.getElementById(id);
@@ -3787,7 +3787,7 @@ function domcontentloaded(){
 			var sectionsl = allsections.length;
 			for(sectionsx = 0; sectionsx < sectionsl; sectionsx++){
 				var partsection = allsections[sectionsx];
-				var content = section.innerHTML;
+				var content = partsection.innerHTML;
 
 				// remove first the help message, because not a feature
 				var i18nhelpautoplay = chrome.i18n.getMessage("helpautoplay");
