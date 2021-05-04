@@ -302,7 +302,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 		if(flash == true){
 			try{
 				var flasht = ["object", "embed", "applet", "iframe"];
-				var flashtlength = hardflasht.length;
+				var flashtlength = flasht.length;
 				var flashj;
 				for(flashj = 0; flashj < flashtlength; ++flashj){
 					let a = document.getElementsByTagName(flasht);
@@ -525,11 +525,11 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 			// HTML5
 
 			// show YouTube HTML5 annotation
-			div = document.getElementsByTagName("div");
+			var showdiv = document.getElementsByTagName("div");
 			var ytdivi;
-			var ytdivl = div.length;
+			var ytdivl = showdiv.length;
 			for(ytdivi = 0; ytdivi < ytdivl; ytdivi++){
-				if(div[ytdivi].className == ("video-annotations iv-module")){ div[ytdivi].classList.add("stefanvdvideocontrolsitem"); }
+				if(showdiv[ytdivi].className == ("video-annotations iv-module")){ showdiv[ytdivi].classList.add("stefanvdvideocontrolsitem"); }
 			}
 
 			// YouTube show annotation 25 february 2016
