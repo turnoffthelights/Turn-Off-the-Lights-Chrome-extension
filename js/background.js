@@ -217,6 +217,7 @@ function readhttpcontent(fileurl){
 	var oReq = new XMLHttpRequest();
 	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ return oReq.responseText; } };
 	oReq.open("GET", fileurl, true); oReq.send();
+	return oReq.onreadystatechange();
 }
 
 // Set click to false at beginning

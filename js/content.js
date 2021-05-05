@@ -1781,10 +1781,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					bctx2[tovis].beginPath();
 
 					let i;
-					let j = analyser[tovis].wave.length;
+					// let j = analyser[tovis].wave.length;
 					let a;
 					let r;
-					for(i = (data.length / 2) - 1, j; i >= 0; i--){
+					for(i = (data.length / 2) - 1; i >= 0; i--){
 						a = i / 22 * 2 * Math.PI;
 						r = amp * 256 / 2 * (0.5 + analyser[tovis].wave[i] / 255);
 						bctx2[tovis].lineTo(r * Math.sin(a) + w / 2, r * Math.cos(a) + h / 2);
@@ -4921,10 +4921,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				pipbctx2.beginPath();
 
 				let i;
-				let j = analyser[0].wave.length;
+				// let j = analyser[0].wave.length;
 				let a;
 				let r;
-				for(i = (data.length / 2) - 1, j; i >= 0; i--){
+				for(i = (data.length / 2) - 1; i >= 0; i--){
 					a = i / 22 * 2 * Math.PI;
 					r = amp * 256 / 2 * (0.5 + analyser[0].wave[i] / 255);
 					pipbctx2.lineTo(r * Math.sin(a) + w / 2, r * Math.cos(a) + h / 2);
