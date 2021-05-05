@@ -76,7 +76,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 					// inside it
 					var k;
 					var l = mutation.addedNodes.length;
-					for(i = 0; k < l; k++){
+					for(k = 0; k < l; k++){
 						if(mutation.addedNodes[k]){
 							var n;
 							var lac = mutation.addedNodes[k].childNodes.length;
