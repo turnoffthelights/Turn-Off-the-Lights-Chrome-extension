@@ -42,11 +42,17 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			});
 		});
 	}else if(request.name == "contextmenuon"){ checkcontextmenus(); }else if(request.name == "contextmenuoff"){ removecontexmenus(); }else if(request.name == "sendautoplay"){
-		chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus", message: readhttpcontent("/js/video-player-status.js")});
+		var autoplayoReq = new XMLHttpRequest();
+		autoplayoReq.onreadystatechange = function(){ if(autoplayoReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus", message: autoplayoReq.responseText}); } };
+		autoplayoReq.open("GET", "/js/video-player-status.js", true); autoplayoReq.send();
 	}else if(request.name == "sendfps"){
-		chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps", message: readhttpcontent("/js/fpsinject.js")});
+		var fpsoReq = new XMLHttpRequest();
+		fpsoReq.onreadystatechange = function(){ if(fpsoReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps", message: fpsoReq.responseText}); } };
+		fpsoReq.open("GET", "/js/fpsinject.js", true); fpsoReq.send();
 	}else if(request.name == "sendlightcss"){
-		chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss", message: readhttpcontent("/css/light.css")});
+		var cssoReq = new XMLHttpRequest();
+		cssoReq.onreadystatechange = function(){ if(cssoReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss", message: cssoReq.responseText}); } };
+		cssoReq.open("GET", "/css/light.css", true); cssoReq.send();
 	}else if(request.name == "emergencyalf"){
 		chrome.tabs.query({}, function(tabs){
 			var i;
@@ -212,13 +218,6 @@ chrome.tabs.onHighlighted.addListener(function(o){
 		checkbadge();
 	});
 });
-
-function readhttpcontent(fileurl){
-	var oReq = new XMLHttpRequest();
-	oReq.onreadystatechange = function(){ if(oReq.readyState == 4){ return oReq.responseText; } };
-	oReq.open("GET", fileurl, true); oReq.send();
-	return oReq.onreadystatechange();
-}
 
 // Set click to false at beginning
 var alreadyClicked = false;
