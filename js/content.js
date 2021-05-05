@@ -4180,10 +4180,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				try{
 					var reflectionplayer = document.getElementsByTagName("video") || null;
 					var reflectionid = null;
-					var k;
+					var refk;
 					var l = reflectionplayer.length;
-					for(k = 0; k < l; k++){
-						if(reflectionplayer[k].play){ reflectionid = reflectionplayer[k]; drawReflection(reflectionid); }
+					for(refk = 0; refk < l; refk++){
+						if(reflectionplayer[refk].play){ reflectionid = reflectionplayer[refk]; drawReflection(reflectionid); }
 					}
 				}catch(e){ console.log(e); } // I see nothing, that is good
 			}, 20); // 20 refreshing it
@@ -5261,10 +5261,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.clearInterval(startreflection);
 
 				var reflectionplayer = document.getElementsByTagName("video") || null;
-				var k;
+				var refk;
 				var l = reflectionplayer.length;
-				for(k = 0; k < l; k++){
-					reflectionplayer[k].style.webkitBoxReflect = "";
+				for(refk = 0; refk < l; refk++){
+					reflectionplayer[refk].style.webkitBoxReflect = "";
 				}
 
 				if(reflection == true){
