@@ -329,56 +329,56 @@ function read_options(){
 	});
 
 	$("materialModal").addEventListener("click", function(e){
-		closeMaterialAlert(e, false);
+		closeMaterialAlert(e);
 	});
 	$("materialModalContent").addEventListener("click", function(e){
 		e.stopPropagation();
 	});
 	$("materialModalButtonOK").addEventListener("click", function(e){
-		closeMaterialAlert(e, true);
+		closeMaterialAlert(e);
 	});
 	$("materialModalButtonCANCEL").addEventListener("click", function(e){
-		closeMaterialAlert(e, false);
+		closeMaterialAlert(e);
 	});
 
 	// rate
 	$("materialModalRate").addEventListener("click", function(e){
-		closeMaterialRateAlert(e, false);
+		closeMaterialRateAlert(e);
 	});
 	$("materialModalRateContent").addEventListener("click", function(e){
 		e.stopPropagation();
 	});
 	$("materialModalRateButtonOK").addEventListener("click", function(e){
-		closeMaterialRateAlert(e, true);
+		closeMaterialRateAlert(e);
 		window.open(writereview); $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});
 	});
 	$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
-		closeMaterialRateAlert(e, false);
+		closeMaterialRateAlert(e);
 		chrome.storage.sync.set({"firstsawrate": false});
 	});
 
 	// introduce
 	$("materialModalIntroduce").addEventListener("click", function(e){
-		closeMaterialIntroduceAlert(e, false);
+		closeMaterialIntroduceAlert(e);
 	});
 	$("materialModalIntroduceContent").addEventListener("click", function(e){
 		e.stopPropagation();
 	});
 	$("materialModalIntroduceButtonOK").addEventListener("click", function(e){
-		closeMaterialIntroduceAlert(e, true);
+		closeMaterialIntroduceAlert(e);
 	});
 	$("materialModalIntroduceButtonCANCEL").addEventListener("click", function(e){
-		closeMaterialIntroduceAlert(e, false);
+		closeMaterialIntroduceAlert(e);
 	});
 
 	// youtube
 	$("materialModalYouTubeButtonOK").addEventListener("click", function(e){
-		closeMaterialYouTubeAlert(e, true);
+		closeMaterialYouTubeAlert(e);
 		chrome.storage.sync.set({"firstsawyoutube": true});
 	});
 
 	$("materialModalYouTubeButtonCANCEL").addEventListener("click", function(e){
-		closeMaterialYouTubeCancel(e, true);
+		closeMaterialYouTubeCancel(e);
 	});
 
 	// dialog
