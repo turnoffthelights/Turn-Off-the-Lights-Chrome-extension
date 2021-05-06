@@ -2486,11 +2486,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(atmosvivid == true){
 					// regular glow effect
 				}else{
-					k = item;
-					if(typeof k == "undefined"){
+					if(typeof item == "undefined"){
 						return;
 					}
-					var canvas = $("totlCanvas" + k + "");
+					var canvas = $("totlCanvas" + item + "");
 					if(canvas){
 						var context = canvas.getContext("2d", {desynchronized: true});
 
