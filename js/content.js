@@ -504,7 +504,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 				}
 				if(autoplaychecklistblack == true){
-					if(blackrabbit == false){ autoplayfunction(); blackrabbit = false; }
+					if(blackrabbit == false){ autoplayfunction(); }
 				}
 			}else{ autoplayfunction(); }
 		} // option autoplay on end
@@ -549,7 +549,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 				}
 				if(videotoolchecklistblack == true){
-					if(videotoolrabbit == false){ videotoolfunction(); videotoolrabbit = false; }
+					if(videotoolrabbit == false){ videotoolfunction(); }
 				}
 			}else{ videotoolfunction(); }
 		} // option videotool on end
@@ -2004,7 +2004,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 			}
 			if(eyechecklistblack == true){
-				if(eyerabbit == false){ chrome.runtime.sendMessage({name: "automatic"}); eyerabbit = false; }
+				if(eyerabbit == false){ chrome.runtime.sendMessage({name: "automatic"}); }
 			}
 		}
 	}
@@ -2599,7 +2599,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var yesornosubdomain = subDomain(pageurl);
 
 			var insideitemlengt;
-			if(totlshowtime != typeof HTMLVideoElement !== "undefined"){
+			if(typeof HTMLVideoElement !== "undefined" && totlshowtime instanceof HTMLVideoElement){
 				var insideitem = totlshowtime.src;
 				insideitemlengt = 0;
 				if(insideitem){ insideitemlengt = insideitem.length; } // length URL
@@ -4614,7 +4614,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 				}
 				if(videovolumechecklistblack == true){
-					if(videovolumerabbit == false){ videovolumefunction(); videovolumerabbit = false; }
+					if(videovolumerabbit == false){ videovolumefunction(); }
 				}
 			}else{ videovolumefunction(); }
 		} // option videotool on end
