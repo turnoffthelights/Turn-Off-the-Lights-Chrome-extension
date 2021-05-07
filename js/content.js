@@ -2438,6 +2438,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				hex4 = "#" + ("000000" + rgbToHex(p4[0], p4[1], p4[2])).slice(-6);
 
 				if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+					// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
+					youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
 					if(youtubewindow){
 						youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
 					}
