@@ -765,13 +765,8 @@ function read_options(){
 
 				try{
 					if(document.visibilityState === "visible"){
-						var htmlplayer = document.getElementsByTagName("video") || null;
-						var playerid = null, item = null;
-						var j;
-						var l = htmlplayer.length;
-						for(j = 0; j < l; j++){
-							if(htmlplayer[j].play){ playerid = htmlplayer[j]; item = j + 1; drawAtmos(playerid, item); }
-						}
+						var htmlvideo = document.getElementById("beeld");
+						if(htmlvideo.play){ drawAtmos(); }
 					}
 				}catch(e){ console.log(e); }
 			}
