@@ -2401,6 +2401,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var sourceWidth = totlshowtime.videoWidth;
 				var sourceHeight = totlshowtime.videoHeight;
 
+				var k = totlshowtime.getAttribute("data-video");
+
 				var totlcheckcanvas = $("totlCanvas" + k + "");
 				if(totlcheckcanvas == null){
 					var totlnewcanvas = document.createElement("canvas");
@@ -2461,7 +2463,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
 	}
 
-	var k;
 	var textcountA;
 	var textcountB;
 	var textcountC;
@@ -2562,8 +2563,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		if(totlmode == false){ return; }
 
 		try{
-			var k = item;
-			if(typeof k == "undefined"){
+			if(typeof item == "undefined"){
 				return;
 			}
 		}catch(e){ console.log(e); }
