@@ -325,7 +325,7 @@ function read_options(){
 	//---
 	// open multi opacity
 	$("btnmultiopacity").addEventListener("click", function(){
-		materialAlert(function(result){ console.log(result); });
+		materialAlert();
 	});
 
 	$("materialModal").addEventListener("click", function(e){
@@ -611,7 +611,7 @@ function read_options(){
 		// show introduce
 		if(items["introduce"] != true){
 			window.setTimeout(function(){
-				materialIntroduceAlert(function(result){ console.log(result); });
+				materialIntroduceAlert();
 			}, 2500);
 			chrome.storage.sync.set({"introduce": true});
 		}
@@ -636,7 +636,7 @@ function read_options(){
 				$("sectionreviewbox").style.display = "block"; // show now always the banner
 				if(items["firstsawrate"] != true){
 					window.setTimeout(function(){
-						materialRateAlert(function(result){ console.log(result); });
+						materialRateAlert();
 					}, 2500);
 					chrome.storage.sync.set({"firstsawrate": true});
 				}
@@ -657,7 +657,7 @@ function read_options(){
 				// if the rate box is not visible, and never clicked, then show the YouTube channel box
 				if(items["firstsawrate"] != true && items["firstsawyoutube"] != true){
 					window.setTimeout(function(){
-						materialYouTubeAlert(function(result){ console.log(result); });
+						materialYouTubeAlert();
 					}, 2500);
 				}
 			}
