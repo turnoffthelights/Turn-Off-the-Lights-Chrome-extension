@@ -10,7 +10,7 @@
 
 Project<br>
 [![CodeQL](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml)
-
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/turnoffthelights/Turn-Off-the-Lights-Chrome-extension.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/context:javascript)
 
 Using Turn Off the Lights to dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page such as on YouTube.
 
