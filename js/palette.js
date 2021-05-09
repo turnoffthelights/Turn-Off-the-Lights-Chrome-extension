@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		// Show the scroll guide for the first time
 		if(firstsawscroll == false){
-			materialScrollAlert(function(result){ console.log(result); });
+			materialScrollAlert();
 		}
 
 		// show remember page
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		}else{
 			if(optionskipremember != true){
 				if(firstsawrate != true){
-					materialRateAlert(function(result){ console.log(result); });
+					materialRateAlert();
 					chrome.storage.sync.set({"firstsawrate": true});
 				}
 			}
@@ -641,15 +641,15 @@ document.addEventListener("DOMContentLoaded", function(){
 	}
 
 	$("materialModalRateButtonOK").addEventListener("click", function(e){
-		closeMaterialRateAlert(e, true);
+		closeMaterialRateAlert(e);
 		window.open(writereview); chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});
 	});
 	$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
-		closeMaterialRateAlert(e, false);
+		closeMaterialRateAlert(e);
 		chrome.storage.sync.set({"firstsawrate": false});
 	});
 	$("materialModalScrollButtonOK").addEventListener("click", function(e){
-		closeMaterialScrollAlert(e, false);
+		closeMaterialScrollAlert(e);
 		chrome.storage.sync.set({"firstsawscroll": true});
 	});
 });
