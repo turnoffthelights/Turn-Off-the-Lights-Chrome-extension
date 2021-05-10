@@ -1393,7 +1393,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newonrepeatbutton.setAttribute("id", "stefanvdrepeatbutton" + i);
 					newonrepeatbutton.addEventListener("click", function(){
 						var redvis = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[redvis];
+						var onevideo;
 						if(document.getElementById("stefanvdvideowindow")){
 							var ytplayer_window = document.getElementById("stefanvdvideowindow").contentWindow;
 							onevideo = ytplayer_window.document.getElementsByTagName("video")[redvis];
@@ -1417,7 +1417,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newonfilterbutton.addEventListener("click", function(){
 						var yellowvis = this.getAttribute("data-video");
 						var getstefanvdvideotoolrange = document.getElementById("stefanvdvideotoolrange" + yellowvis);
-						var onevideo = document.getElementsByTagName("video")[yellowvis];
+						var onevideo;
 						if(document.getElementById("stefanvdvideowindow")){
 							onevideo = document.getElementById("stefanvdvideowindow");
 						}else{
