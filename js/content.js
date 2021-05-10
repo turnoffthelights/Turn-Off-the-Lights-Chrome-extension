@@ -2470,7 +2470,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var hex1; var hex2; var hex3; var hex4;
 	// ambilight draw code
 	function drawAtmos(playerid, item, totlmode){
-		var statusdetectvideo = playerid.paused || playerid.ended;
+		var statusdetectvideo;
 		if(vpause == true){ statusdetectvideo = playerid.ended; }else{ statusdetectvideo = playerid.paused || playerid.ended; }
 
 		if((statusdetectvideo) || totlmode == false){
