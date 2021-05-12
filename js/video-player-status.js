@@ -41,7 +41,6 @@ var ytCinema;
 		}
 	},
 	initialize: function(){
-		this.messageEvent;
 		window.addEventListener("load", initvideoinject, false);
 		document.addEventListener("DOMContentLoaded", initvideoinject, false);
 		initvideoinject();

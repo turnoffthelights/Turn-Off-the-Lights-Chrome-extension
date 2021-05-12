@@ -289,8 +289,7 @@ function cammotionstartfunction(){
 	function skinfilter(){
 
 		skin_filter = canvasgetcont.getImageData(0, 0, width, height);
-		var total_pixels = skin_filter.width * skin_filter.height;
-		var index_value = total_pixels * 4;
+		var index_value;
 
 		var count_data_big_array = 0;
 		var y;

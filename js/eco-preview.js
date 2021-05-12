@@ -380,8 +380,6 @@ function domcontentloaded(){
 	});
 
 	function createcharts(){
-		// CSP
-		Chart.platform.disableCSSInjection = true;
 		// --- Begin chart1
 		var ctx1 = document.getElementById("myChart").getContext("2d");
 		new Chart(ctx1, {
