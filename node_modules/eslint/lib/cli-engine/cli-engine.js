@@ -27,16 +27,11 @@ const {
         naming,
         CascadingConfigArrayFactory,
         IgnorePattern,
-        getUsedExtractedConfigs
+        getUsedExtractedConfigs,
+        ModuleResolver
     }
 } = require("@eslint/eslintrc");
 
-/*
- * For some reason, ModuleResolver must be included via filepath instead of by
- * API exports in order to work properly. That's why this is separated out onto
- * its own require() statement.
- */
-const ModuleResolver = require("@eslint/eslintrc/lib/shared/relative-module-resolver");
 const { FileEnumerator } = require("./file-enumerator");
 
 const { Linter } = require("../linter");
@@ -531,7 +526,7 @@ function directoryExists(resolvedPath) {
     try {
         return fs.statSync(resolvedPath).isDirectory();
     } catch (error) {
-        if (error && error.code === "ENOENT") {
+        if (error && (error.code === "ENOENT" || error.code === "ENOTDIR")) {
             return false;
         }
         throw error;
@@ -589,7 +584,7 @@ class CLIEngine {
             ignore: options.ignore
         });
         const lintResultCache =
-            options.cache ? new LintResultCache(cacheFilePath) : null;
+            options.cache ? new LintResultCache(cacheFilePath, options.cacheStrategy) : null;
         const linter = new Linter({ cwd: options.cwd });
 
         /** @type {ConfigArray[]} */
