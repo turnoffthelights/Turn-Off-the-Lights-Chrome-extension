@@ -67,7 +67,7 @@ Using Turn Off the Lights to dims the web page and reduces the eye strain caused
 1. If you have already Turn Off the Lights Chrome extension installed, disable it
 1. Check **Developer mode** in the top of the Extensions page
 1. Click **Load unpacked extension...**
-1. Choose the sub-directory **turnoffthelights** (where manifest.json resides)
+1. Choose the sub-directory **src** (where manifest.json resides)
 
 #### Store hyperlinks:
 The Browser extension is available in the following stores:
