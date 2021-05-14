@@ -1,6 +1,6 @@
 # Turn Off the Lights Browser Extension
 
-<img alt="Turn Off the Lights Browser Extension Logo" src="https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/blob/master/icons/icon48.png" align="left" style="padding: 0 10px 5px 0">
+<img alt="Turn Off the Lights Browser Extension Logo" src="https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/blob/master/src/icons/icon48.png" align="left" style="padding: 0 10px 5px 0">
 
 **Turn Off the Lights** is a popular browser extension that works on all major web browsers such as Google Chrome, Firefox, Opera, Safari, Yandex, Maxthon, Brave, Vivaldi, Cốc Cốc, and Microsoft Edge.
 
