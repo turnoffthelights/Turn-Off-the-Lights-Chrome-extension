@@ -440,204 +440,50 @@ chrome.storage.onChanged.addListener(function(changes){
 	}
 	if(changes["ecosaver"]){
 		if(changes["ecosaver"].newValue){
-			chrome.tabs.query({}, function(tabs){
-				var i;
-				var l = tabs.length;
-				for(i = 0; i < l; i++){
-					var protocol = tabs[i].url.split(":")[0];
-					if(protocol == "http" || protocol == "https"){
-						if(tabs[i].url != totloptionspage){
-							chrome.tabs.sendMessage(tabs[i].id, {action: "gorefresheyelight"});
-						}
-					}
-				}
-			});
+			chromerefreshalltabs("gorefresheyelight");
 		}
 	}
 	if(changes["badge"]){
 		if(changes["badge"].newValue == true){ checkbadge(); }else{ checkbadge(); }
 	}
 	if(changes["autoplay"] || changes["mousespotlights"] || changes["autoplayDomains"] || changes["autoplaychecklistwhite"] || changes["autoplaychecklistblack"] || changes["autoplayonly"] || changes["aplay"] || changes["apause"] || changes["astop"] || changes["autoplaydelay"] || changes["autoplaydelaytime"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshautoplay"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshautoplay");
 	}
 	if(changes["videotool"] || changes["videotoolonly"] || changes["videotoolDomains"] || changes["videotoolchecklistwhite"] || changes["videotoolchecklistblack"] || changes["speedtoolbar"] || changes["videozoom"] || changes["visopacity"] || changes["videotoolcolor"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshvideotoolbar"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshvideotoolbar");
 	}
 	if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"] || changes["videovolumeonly"] || changes["videovolumeDomains"] || changes["videovolumechecklistwhite"] || changes["videovolumechecklistblack"] || changes["videovolumescrolla"] || changes["videovolumescrollb"] || changes["videovolumescrollc"] || changes["videovolumeposd"] || changes["videovolumepose"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshmousescroll"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("goenableagorefreshmousescrolltmos");
 	}
 	if(changes["ambilight"] || changes["ambilightfixcolor"] || changes["ambilight4color"] || changes["ambilightvarcolor"] || changes["atmosvivid"] || changes["vpause"] || changes["atmosfpsauto"] || changes["atmosfpsmanual"] || changes["drawatmosfps"] || changes["ambilightcolorhex"] || changes["ambilight1colorhex"] || changes["ambilight2colorhex"] || changes["ambilight3colorhex"] || changes["ambilight4colorhex"] || changes["ambilightrangeblurradius"] || changes["ambilightrangespreadradius"] || changes["atmosontotlmode"] || changes["atmosphereonly"] || changes["atmosphereDomains"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "goenableatmos"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("goenableatmos");
 	}
 	if(changes["reflection"] || changes["reflectionamount"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshreflection"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshreflection");
 	}
 	if(changes["hovervideo"] || changes["hovervideoamount"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshhovervideo"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshhovervideo");
 	}
 	if(changes["playrate"] || changes["playrateamount"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshplayrate"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshplayrate");
 	}
 	if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gonightmodecolors"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gonightmodecolors");
 	}
 	if(changes["nighttheme"] || changes["lampandnightmode"] || changes["nightmodeswitchhide"] || changes["nightmodeswitchhidetime"] || changes["nightonly"] || changes["nightmodechecklistwhite"] || changes["nightmodechecklistblack"] || changes["nightDomains"] || changes["nightmodebydomain"] || changes["nightmodebypage"] || changes["nightactivetime"] || changes["nmbegintime"] || changes["nmendtime"] || changes["nightenabletheme"] || changes["nighthover"] || changes["nmtopleft"] || changes["nmtopright"] || changes["nmbottomright"] || changes["nmbottomleft"] || changes["nmcustom"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "goenablenightmode"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("goenablenightmode");
 	}
 	if(changes["nightmodegesture"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshnightmodegesture"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshnightmodegesture");
 	}
 	if(changes["ecosaver"] || changes["ecosavertime"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefresheyesaver"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefresheyesaver");
 	}
 	if(changes["nighttime"] || changes["begintime"] || changes["endtime"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshnighttime"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshnighttime");
 	}
 	if(changes["pipvisualtype"]){
-		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
-			for(i = 0; i < l; i++){
-				var protocol = tabs[i].url.split(":")[0];
-				if(protocol == "http" || protocol == "https"){
-					if(tabs[i].url != totloptionspage){
-						chrome.tabs.sendMessage(tabs[i].id, {action: "gorefreshpipvisualtype"});
-					}
-				}
-			}
-		});
+		chromerefreshalltabs("gorefreshpipvisualtype");
 	}
 
 	// Group Policy
@@ -699,6 +545,21 @@ chrome.storage.onChanged.addListener(function(changes){
 		}
 	}
 });
+
+function chromerefreshalltabs(name){
+	chrome.tabs.query({}, function(tabs){
+		var i;
+		var l = tabs.length;
+		for(i = 0; i < l; i++){
+			var protocol = tabs[i].url.split(":")[0];
+			if(protocol == "http" || protocol == "https"){
+				if(tabs[i].url != totloptionspage){
+					chrome.tabs.sendMessage(tabs[i].id, {action: name});
+				}
+			}
+		}
+	});
+}
 
 // omnibox
 var i18nomninightmode = chrome.i18n.getMessage("omninightmode").toLowerCase();
