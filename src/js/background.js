@@ -68,23 +68,9 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		if(request.value){ chrome.storage.sync.set({"nmcustomy": request.value}); }
 	}else if(request.name == "mastertabdark"){
 		if(request.value == true){
-			chrome.tabs.query({}, function(tabs){
-				var i;
-				var l = tabs.length;
-				for(i = 0; i < l; i++){
-					chrome.tabs.sendMessage(tabs[i].id, {action: "goremovelightoff"});
-				}
-			}
-			);
+			chromerefreshalltabs("goremovelightoff");
 		}else{
-			chrome.tabs.query({}, function(tabs){
-				var i;
-				var l = tabs.length;
-				for(i = 0; i < l; i++){
-					chrome.tabs.sendMessage(tabs[i].id, {action: "goaddlightoff"});
-				}
-			}
-			);
+			chromerefreshalltabs("goaddlightoff");
 		}
 	}else if(request.name == "browsertheme"){
 		if(request.value == "dark"){
