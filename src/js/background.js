@@ -42,17 +42,11 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			});
 		});
 	}else if(request.name == "contextmenuon"){ checkcontextmenus(); }else if(request.name == "contextmenuoff"){ removecontexmenus(); }else if(request.name == "sendautoplay"){
-		var autoplayoReq = new XMLHttpRequest();
-		autoplayoReq.onreadystatechange = function(){ if(autoplayoReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectvideostatus", message: autoplayoReq.responseText}); } };
-		autoplayoReq.open("GET", "/js/video-player-status.js", true); autoplayoReq.send();
+		restcontent("/js/video-player-status.js", "injectvideostatus", sender.tab.id);
 	}else if(request.name == "sendfps"){
-		var fpsoReq = new XMLHttpRequest();
-		fpsoReq.onreadystatechange = function(){ if(fpsoReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectfps", message: fpsoReq.responseText}); } };
-		fpsoReq.open("GET", "/js/fpsinject.js", true); fpsoReq.send();
+		restcontent("/js/fpsinject.js", "injectfps", sender.tab.id);
 	}else if(request.name == "sendlightcss"){
-		var cssoReq = new XMLHttpRequest();
-		cssoReq.onreadystatechange = function(){ if(cssoReq.readyState == 4){ chrome.tabs.sendMessage(sender.tab.id, {name: "injectlightcss", message: cssoReq.responseText}); } };
-		cssoReq.open("GET", "/css/light.css", true); cssoReq.send();
+		restcontent("/css/light.css", "injectlightcss", sender.tab.id);
 	}else if(request.name == "emergencyalf"){
 		chrome.tabs.query({}, function(tabs){
 			var i;
@@ -178,6 +172,12 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	}
 	return true;
 });
+
+function restcontent(path, name, sendertab){
+	var cssoReq = new XMLHttpRequest();
+	cssoReq.onreadystatechange = function(){ if(cssoReq.readyState == 4){ chrome.tabs.sendMessage(sendertab, {name: name, message: cssoReq.responseText}); } };
+	cssoReq.open("GET", path, true); cssoReq.send();
+}
 
 chrome.tabs.onActivated.addListener(function(activeInfo){
 	chrome.tabs.get(activeInfo.tabId, function(){
