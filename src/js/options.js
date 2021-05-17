@@ -1572,11 +1572,9 @@ function test(){
 }
 
 function ariacheck(){
-	var inputs = document.querySelectorAll("input"), i, l = inputs.length;
+	var inputs = document.querySelectorAll("input[role='checkbox'], input[role='radio']"), i, l = inputs.length;
 	for(i = 0; i < l; i++){
-		if(inputs[i].getAttribute("role") == "radio" || inputs[i].getAttribute("role") == "checkbox"){
-			inputs[i].checked == true ? inputs[i].setAttribute("aria-checked", true) : inputs[i].setAttribute("aria-checked", false);
-		}
+		inputs[i].checked == true ? inputs[i].setAttribute("aria-checked", true) : inputs[i].setAttribute("aria-checked", false);
 	}
 }
 
