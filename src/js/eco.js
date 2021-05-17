@@ -106,12 +106,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 				chrome.storage.sync.set({"analytics":finalarray}, function(){
 					if(chrome.runtime.lastError){
-						if(chrome.runtime.lastError == "QUOTA_BYTES"){
-							autoanalyticscleanup();
-						}else if(chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM"){
-							autoanalyticscleanup();
-						}
-						if(chrome.runtime.lastError == "MAX_ITEMS"){
+						if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
 							autoanalyticscleanup();
 						}
 					}
@@ -144,11 +139,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 				chrome.storage.sync.set({"siteengagement":finalsite}, function(){
 					if(chrome.runtime.lastError){
-						if(chrome.runtime.lastError == "QUOTA_BYTES"){
-							autositeengagementcleanup();
-						}else if(chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM"){
-							autositeengagementcleanup();
-						}if(chrome.runtime.lastError == "MAX_ITEMS"){
+						if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
 							autositeengagementcleanup();
 						}
 					}

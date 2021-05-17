@@ -1601,7 +1601,6 @@ var canvasHeight = 400;
 
 // A function to create a particle object.
 function Particle(context){
-
 	// Set the initial x and y positions
 	this.x = 0;
 	this.y = 0;
@@ -2282,7 +2281,6 @@ function cameradomcontentloaded(){
 	}
 
 	function rgb2Hsv(r, g, b){
-
 		r = r / 255;
 		g = g / 255;
 		b = b / 255;
