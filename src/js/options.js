@@ -1232,30 +1232,10 @@ function addWhitelistDomain(){
 	save_options();
 }
 
-function removeSelectedExcludedDomain(){
-	var excludedDomainsBox = $("excludedDomainsBox");
-	var i = excludedDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(excludedDomainsBox.options[i].selected)
-			excludedDomainsBox.remove(i);
-	}
-	save_options();
-}
-
 // whitelist autoplay domain
 function autoplayaddWhitelistDomain(){
 	var domain = $("autoplaywebsiteurl").value;
 	appendToListBox("autoplayDomainsBox", domain);
-	save_options();
-}
-
-function autoplayremoveSelectedExcludedDomain(){
-	var autoplayDomainsBox = $("autoplayDomainsBox");
-	var i = autoplayDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(autoplayDomainsBox.options[i].selected)
-			autoplayDomainsBox.remove(i);
-	}
 	save_options();
 }
 
@@ -1266,30 +1246,10 @@ function atmosphereaddWhitelistDomain(){
 	save_options();
 }
 
-function atmosphereremoveSelectedExcludedDomain(){
-	var atmosphereDomainsBox = $("atmosphereDomainsBox");
-	var i = atmosphereDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(atmosphereDomainsBox.options[i].selected)
-			atmosphereDomainsBox.remove(i);
-	}
-	save_options();
-}
-
 // whitelist night domain
 function nightaddWhitelistDomain(){
 	var domain = $("nightwebsiteurl").value;
 	appendToListBox("nightDomainsBox", domain);
-	save_options();
-}
-
-function nightremoveSelectedExcludedDomain(){
-	var nightDomainsBox = $("nightDomainsBox");
-	var i = nightDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(nightDomainsBox.options[i].selected)
-			nightDomainsBox.remove(i);
-	}
 	save_options();
 }
 
@@ -1300,30 +1260,10 @@ function cammotionaddWhitelistDomain(){
 	save_options();
 }
 
-function cammotionremoveSelectedExcludedDomain(){
-	var cammotionDomainsBox = $("cammotionDomainsBox");
-	var i = cammotionDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(cammotionDomainsBox.options[i].selected)
-			cammotionDomainsBox.remove(i);
-	}
-	save_options();
-}
-
 // whitelist speech domain
 function speechaddWhitelistDomain(){
 	var domain = $("speechwebsiteurl").value;
 	appendToListBox("speechDomainsBox", domain);
-	save_options();
-}
-
-function speechremoveSelectedExcludedDomain(){
-	var speechDomainsBox = $("speechDomainsBox");
-	var i = speechDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(speechDomainsBox.options[i].selected)
-			speechDomainsBox.remove(i);
-	}
 	save_options();
 }
 
@@ -1334,16 +1274,6 @@ function autostopaddWhitelistDomain(){
 	save_options();
 }
 
-function autostopremoveSelectedExcludedDomain(){
-	var autostopDomainsBox = $("autostopDomainsBox");
-	var i = autostopDomainsBox.length - 1;
-	for(i; i >= 0; i--){
-		if(autostopDomainsBox.options[i].selected)
-			autostopDomainsBox.remove(i);
-	}
-	save_options();
-}
-
 // whitelist videotool domain
 function videotooladdWhitelistDomain(){
 	var domain = $("videotoolwebsiteurl").value;
@@ -1351,8 +1281,8 @@ function videotooladdWhitelistDomain(){
 	save_options();
 }
 
-function videotoolremoveSelectedExcludedDomain(){
-	var videotoolDomainsBox = $("videotoolDomainsBox");
+function removedselectedwebsite(boxelement){
+	var videotoolDomainsBox = $(boxelement);
 	var i = videotoolDomainsBox.length - 1;
 	for(i; i >= 0; i--){
 		if(videotoolDomainsBox.options[i].selected)
@@ -2921,7 +2851,7 @@ function domcontentloaded(){
 	document.getElementById("formeyeprotection").addEventListener("submit", function(e){ e.preventDefault(); addWhitelistDomain(); });
 
 	// Remove website
-	$("removebutton").addEventListener("click", function(){ removeSelectedExcludedDomain(); });
+	$("removebutton").addEventListener("click", function(){ removedselectedwebsite("excludedDomainsBox"); });
 
 	// Save password
 	$("confirmpassword").addEventListener("click", function(){ save_options(); var optionpastemp = chrome.i18n.getMessage("optionpasswordsaved"); window.alert(optionpastemp); });
@@ -3088,7 +3018,7 @@ function domcontentloaded(){
 	document.getElementById("formautoplay").addEventListener("submit", function(e){ e.preventDefault(); autoplayaddWhitelistDomain(); });
 
 	// autoplay Remove website
-	$("autoplayremovebutton").addEventListener("click", function(){ autoplayremoveSelectedExcludedDomain(); });
+	$("autoplayremovebutton").addEventListener("click", function(){ removedselectedwebsite("autoplayDomainsBox"); });
 
 	// YouTube quality
 	$("youtubequality").addEventListener("click", function(){ save_options(); });
@@ -3102,37 +3032,37 @@ function domcontentloaded(){
 	document.getElementById("formatmospherelighting").addEventListener("submit", function(e){ e.preventDefault(); atmosphereaddWhitelistDomain(); });
 
 	// atmosphere Remove website
-	$("atmosphereremovebutton").addEventListener("click", function(){ atmosphereremoveSelectedExcludedDomain(); });
+	$("atmosphereremovebutton").addEventListener("click", function(){ removedselectedwebsite("atmosphereDomainsBox"); });
 
 	// night Add website
 	document.getElementById("formnightmode").addEventListener("submit", function(e){ e.preventDefault(); nightaddWhitelistDomain(); });
 
 	// night Remove website
-	$("nightremovebutton").addEventListener("click", function(){ nightremoveSelectedExcludedDomain(); });
+	$("nightremovebutton").addEventListener("click", function(){ removedselectedwebsite("nightDomainsBox"); });
 
 	// cam motion Add website
 	document.getElementById("formcameramotion").addEventListener("submit", function(e){ e.preventDefault(); cammotionaddWhitelistDomain(); });
 
 	// cam motion Remove website
-	$("cammotionremovebutton").addEventListener("click", function(){ cammotionremoveSelectedExcludedDomain(); });
+	$("cammotionremovebutton").addEventListener("click", function(){ removedselectedwebsite("cammotionDomainsBox"); });
 
 	// speech Add website
 	document.getElementById("formspeech").addEventListener("submit", function(e){ e.preventDefault(); speechaddWhitelistDomain(); });
 
 	// speech Remove website
-	$("speechremovebutton").addEventListener("click", function(){ speechremoveSelectedExcludedDomain(); });
+	$("speechremovebutton").addEventListener("click", function(){ removedselectedwebsite("speechDomainsBox"); });
 
 	// autostop Add website
 	document.getElementById("formautostop").addEventListener("submit", function(e){ e.preventDefault(); autostopaddWhitelistDomain(); });
 
 	// autostop Remove website
-	$("autostopremovebutton").addEventListener("click", function(){ autostopremoveSelectedExcludedDomain(); });
+	$("autostopremovebutton").addEventListener("click", function(){ removedselectedwebsite("autostopDomainsBox"); });
 
 	// video Add website
 	document.getElementById("formvideotoolbar").addEventListener("submit", function(e){ e.preventDefault(); videotooladdWhitelistDomain(); });
 
 	// video Remove website
-	$("videotoolremovebutton").addEventListener("click", function(){ videotoolremoveSelectedExcludedDomain(); });
+	$("videotoolremovebutton").addEventListener("click", function(){ removedselectedwebsite("videotoolDomainsBox"); });
 
 	// multi opacity Change
 	$("multiopacityDomainsBox").addEventListener("click", function(){ multiopacitychangeurl(); });
