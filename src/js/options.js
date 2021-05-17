@@ -1647,15 +1647,10 @@ function ariacheck(){
 	var l = inputs.length;
 	for(i = 0; i < l; i++){
 		if(inputs[i].getAttribute("role") == "radio" || inputs[i].getAttribute("role") == "checkbox"){
-			if(inputs[i].checked == true){
-				inputs[i].setAttribute("aria-checked", true);
-			}else{
-				inputs[i].setAttribute("aria-checked", false);
-			}
+			inputs[i].checked == true ? inputs[i].setAttribute("aria-checked", true) : inputs[i].setAttribute("aria-checked", false);
 		}
 	}
 }
-
 
 // Dynamic Background: Smoke
 // Create an array to store our particles
