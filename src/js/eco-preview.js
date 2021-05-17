@@ -108,6 +108,12 @@ if(window.location.href != totloptionspage){
 	domcontentloaded();
 }
 
+function shareanalytictwitter(message){
+	var stefanvdurl = developerwebsite;
+	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
+	window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + message + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no");
+}
+
 function domcontentloaded(){
 	// reset
 	document.getElementById("btnresetanalytics").addEventListener("click", function(){
@@ -116,15 +122,11 @@ function domcontentloaded(){
 	}, false);
 
 	document.getElementById("sharestatsenergysaved").addEventListener("click", function(){
-		var stefanvdurl = developerwebsite;
-		var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
-		window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + shareenergytext + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no");
+		shareanalytictwitter(shareenergytext);
 	}, false);
 
 	document.getElementById("sharestatslove").addEventListener("click", function(){
-		var stefanvdurl = developerwebsite;
-		var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
-		window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharelovetext + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no");
+		shareanalytictwitter(sharelovetext);
 	}, false);
 
 	// Collect data
