@@ -35,13 +35,9 @@ function startinit(){
 		.then(function(permissionStatus){
 			permissionStatus.onchange = function(){
 				if(this.state == "granted"){
-					var windowgranted = window.self;
-					windowgranted.opener = window.self;
-					windowgranted.close();
+					var windowgranted = window.self; windowgranted.opener = window.self; windowgranted.close();
 				}else{
-					var windowdenied = window.self;
-					windowdenied.opener = window.self;
-					windowdenied.close();
+					var windowdenied = window.self; windowdenied.opener = window.self; windowdenied.close();
 				}
 			};
 		});
