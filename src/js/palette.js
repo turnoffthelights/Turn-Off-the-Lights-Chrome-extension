@@ -117,6 +117,24 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 
 		// dark mode
+		var thattheme;
+		switch(darkmode){
+		case 1:
+			thattheme = "dark";
+			break;
+		case 0:
+			thattheme = "light";
+			break;
+		case 2:
+			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
+				thattheme = "dark";
+			}else{
+				thattheme = "light";
+			}
+			break;
+		}
+		document.body.className = thattheme;
+
 		if(darkmode == 1){
 			document.body.className = "dark";
 		}else if(darkmode == 0){
