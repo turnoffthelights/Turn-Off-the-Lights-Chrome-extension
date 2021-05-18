@@ -135,18 +135,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 		document.body.className = thattheme;
 
-		if(darkmode == 1){
-			document.body.className = "dark";
-		}else if(darkmode == 0){
-			document.body.className = "light";
-		}else if(darkmode == 2){
-			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
-				document.body.className = "dark";
-			}else{
-				document.body.className = "light";
-			}
-		}
-
 		var editzoom = interval;
 		var editdone = false;
 		if(multiopacall == true){
