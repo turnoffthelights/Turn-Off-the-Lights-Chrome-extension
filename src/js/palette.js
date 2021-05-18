@@ -578,25 +578,26 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvideo"}); });
 	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvisual"}); });
 
+	function showhidemodal(name, visible, status){
+		document.getElementById(name).className = visible;
+		document.getElementById(name).setAttribute("aria-disabled", status);
+	}
+
 	// rate
 	function materialRateAlert(){
-		document.getElementById("materialModalRate").className = "show";
-		document.getElementById("materialModalRate").setAttribute("aria-disabled", "false");
+		showhidemodal("materialModalRate", "show", "false");
 	}
 	function closeMaterialRateAlert(e){
 		e.stopPropagation();
-		document.getElementById("materialModalRate").className = "hide";
-		document.getElementById("materialModalRate").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModalRate", "hide", "true");
 	}
 	// scroll
 	function materialScrollAlert(){
-		document.getElementById("materialModalScroll").className = "show";
-		document.getElementById("materialModalScroll").setAttribute("aria-disabled", "false");
+		showhidemodal("materialModalScroll", "show", "false");
 	}
 	function closeMaterialScrollAlert(e){
 		e.stopPropagation();
-		document.getElementById("materialModalScroll").className = "hide";
-		document.getElementById("materialModalScroll").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModalScroll", "hide", "true");
 	}
 
 	$("materialModalRateButtonOK").addEventListener("click", function(e){
