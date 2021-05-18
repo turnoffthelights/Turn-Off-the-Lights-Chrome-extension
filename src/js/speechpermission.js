@@ -53,13 +53,9 @@ function startinit(){
 		.then(function(permissionStatus){
 			permissionStatus.onchange = function(){
 				if(this.state == "granted"){
-					var micaccess = window.self;
-					micaccess.opener = window.self;
-					micaccess.close();
+					var micaccess = window.self; micaccess.opener = window.self; micaccess.close();
 				}else{
-					var micdenied = window.self;
-					micdenied.opener = window.self;
-					micdenied.close();
+					var micdenied = window.self; micdenied.opener = window.self; micdenied.close();
 				}
 			};
 		});

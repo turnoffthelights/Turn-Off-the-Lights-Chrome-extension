@@ -1448,7 +1448,6 @@ var canvasHeight = 200;
 
 // A function to create a particle object.
 function Particle(context){
-
 	// Set the initial x and y positions
 	this.x = 0;
 	this.y = 0;
