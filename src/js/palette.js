@@ -649,16 +649,18 @@ function test(){
 	$("sitecheck").checked == true ? addtonight() : removetonight();
 
 	if($("ambilight").checked == true){
-		$("ambilightfixcolor").disabled = false;
-		$("ambilight4color").disabled = false;
-		$("ambilightvarcolor").disabled = false;
+		atmosdisable(false);
 		if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = false; }else{ $("atmosvivid").disabled = true; }
 	}else{
-		$("ambilightfixcolor").disabled = true;
-		$("ambilight4color").disabled = true;
-		$("ambilightvarcolor").disabled = true;
+		atmosdisable(true);
 		if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = true; }else{ $("atmosvivid").disabled = true; }
 	}
+}
+
+function atmosdisable(status){
+	$("ambilightfixcolor").disabled = status;
+	$("ambilight4color").disabled = status;
+	$("ambilightvarcolor").disabled = status;
 }
 
 function colorchange(){
