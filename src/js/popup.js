@@ -27,8 +27,6 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id){ return document.getElementById(id); }
-
 function action1(){ chrome.tabs.create({url: linkyoutube, active:true}); }
 function action2(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); }
 function action3(){ chrome.tabs.create({url: linksupport, active:true}); }
@@ -63,11 +61,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	});
-	$("opentrywebsite").addEventListener("click", function(){ chrome.tabs.create({url: linkyoutube, active:true}); });
-	$("openoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
-	$("opensupport").addEventListener("click", function(){ chrome.tabs.create({url: linksupport, active:true}); });
-	$("openwelcomeguide").addEventListener("click", function(){ chrome.tabs.create({url: linkguide, active:true}); });
-
 
 	eventFunc("opentrywebsite", "click", action1);
 	eventFunc("openoptions", "click", action2);
