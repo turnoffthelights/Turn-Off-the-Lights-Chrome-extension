@@ -159,11 +159,9 @@ document.addEventListener("DOMContentLoaded", function(){
 							if($("otext")){ $("otext").innerText = editzoom; }
 							editdone = true;
 						}
-						if(i == atbbuf.length - 1){
-							if(editdone == false){
-								if($("oslider")){ $("oslider").value = editzoom; }
-								if($("otext")){ $("otext").innerText = editzoom; }
-							}
+						if((i == atbbuf.length - 1) && (editdone == false)){
+							if($("oslider")){ $("oslider").value = editzoom; }
+							if($("otext")){ $("otext").innerText = editzoom; }
 						}
 					}
 				});
