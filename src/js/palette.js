@@ -29,6 +29,12 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 
+function eventFunc(selector, event, callback){
+	document.getElementById(selector).addEventListener(event, function(){
+		callback();
+	});
+}
+
 var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll;
 
 function save_options(){
@@ -332,59 +338,59 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("oslider").addEventListener("change", opacitychange, false);
 	$("oslider").addEventListener("input", opacitychange, false);
 
-	$("color1a").addEventListener("click", colorchange);
-	$("color1b").addEventListener("click", colorchange);
-	$("color1c").addEventListener("click", colorchange);
-	$("color1d").addEventListener("click", colorchange);
-	$("color1e").addEventListener("click", colorchange);
-	$("color1f").addEventListener("click", colorchange);
-	$("color1g").addEventListener("click", colorchange);
-	$("color1h").addEventListener("click", colorchange);
+	eventFunc("color1a", "click", colorchange);
+	eventFunc("color1b", "click", colorchange);
+	eventFunc("color1c", "click", colorchange);
+	eventFunc("color1d", "click", colorchange);
+	eventFunc("color1e", "click", colorchange);
+	eventFunc("color1f", "click", colorchange);
+	eventFunc("color1g", "click", colorchange);
+	eventFunc("color1h", "click", colorchange);
 
-	$("color2a").addEventListener("click", colorchange);
-	$("color2b").addEventListener("click", colorchange);
-	$("color2c").addEventListener("click", colorchange);
-	$("color2d").addEventListener("click", colorchange);
-	$("color2e").addEventListener("click", colorchange);
-	$("color2f").addEventListener("click", colorchange);
-	$("color2g").addEventListener("click", colorchange);
-	$("color2h").addEventListener("click", colorchange);
+	eventFunc("color2a", "click", colorchange);
+	eventFunc("color2b", "click", colorchange);
+	eventFunc("color2c", "click", colorchange);
+	eventFunc("color2d", "click", colorchange);
+	eventFunc("color2e", "click", colorchange);
+	eventFunc("color2f", "click", colorchange);
+	eventFunc("color2g", "click", colorchange);
+	eventFunc("color2h", "click", colorchange);
 
-	$("color3a").addEventListener("click", colorchange);
-	$("color3b").addEventListener("click", colorchange);
-	$("color3c").addEventListener("click", colorchange);
-	$("color3d").addEventListener("click", colorchange);
-	$("color3e").addEventListener("click", colorchange);
-	$("color3f").addEventListener("click", colorchange);
-	$("color3g").addEventListener("click", colorchange);
-	$("color3h").addEventListener("click", colorchange);
+	eventFunc("color3a", "click", colorchange);
+	eventFunc("color3b", "click", colorchange);
+	eventFunc("color3c", "click", colorchange);
+	eventFunc("color3d", "click", colorchange);
+	eventFunc("color3e", "click", colorchange);
+	eventFunc("color3f", "click", colorchange);
+	eventFunc("color3g", "click", colorchange);
+	eventFunc("color3h", "click", colorchange);
 
-	$("color4a").addEventListener("click", colorchange);
-	$("color4b").addEventListener("click", colorchange);
-	$("color4c").addEventListener("click", colorchange);
-	$("color4d").addEventListener("click", colorchange);
-	$("color4e").addEventListener("click", colorchange);
-	$("color4f").addEventListener("click", colorchange);
-	$("color4g").addEventListener("click", colorchange);
-	$("color4h").addEventListener("click", colorchange);
+	eventFunc("color4a", "click", colorchange);
+	eventFunc("color4b", "click", colorchange);
+	eventFunc("color4c", "click", colorchange);
+	eventFunc("color4d", "click", colorchange);
+	eventFunc("color4e", "click", colorchange);
+	eventFunc("color4f", "click", colorchange);
+	eventFunc("color4g", "click", colorchange);
+	eventFunc("color4h", "click", colorchange);
 
-	$("color5a").addEventListener("click", colorchange);
-	$("color5b").addEventListener("click", colorchange);
-	$("color5c").addEventListener("click", colorchange);
-	$("color5d").addEventListener("click", colorchange);
-	$("color5e").addEventListener("click", colorchange);
-	$("color5f").addEventListener("click", colorchange);
-	$("color5g").addEventListener("click", colorchange);
-	$("color5h").addEventListener("click", colorchange);
+	eventFunc("color5a", "click", colorchange);
+	eventFunc("color5b", "click", colorchange);
+	eventFunc("color5c", "click", colorchange);
+	eventFunc("color5d", "click", colorchange);
+	eventFunc("color5e", "click", colorchange);
+	eventFunc("color5f", "click", colorchange);
+	eventFunc("color5g", "click", colorchange);
+	eventFunc("color5h", "click", colorchange);
 
-	$("color6a").addEventListener("click", colorchange);
-	$("color6b").addEventListener("click", colorchange);
-	$("color6c").addEventListener("click", colorchange);
-	$("color6d").addEventListener("click", colorchange);
-	$("color6e").addEventListener("click", colorchange);
-	$("color6f").addEventListener("click", colorchange);
-	$("color6g").addEventListener("click", colorchange);
-	$("color6h").addEventListener("click", colorchange);
+	eventFunc("color6a", "click", colorchange);
+	eventFunc("color6b", "click", colorchange);
+	eventFunc("color6c", "click", colorchange);
+	eventFunc("color6d", "click", colorchange);
+	eventFunc("color6e", "click", colorchange);
+	eventFunc("color6f", "click", colorchange);
+	eventFunc("color6g", "click", colorchange);
+	eventFunc("color6h", "click", colorchange);
 
 	$("btnlights").addEventListener("click", function(){
 		chrome.tabs.query({
