@@ -375,24 +375,22 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 	});
 
-	var arraybck = ["colornightmodebck1", "colornightmodebck2", "colornightmodebck3", "colornightmodebck4", "colornightmodebck5", "colornightmodebck6", "colornightmodebck7", "colornightmodebck8"];
-	for(var inightbck = 0; inightbck < arraybck.length; inightbck++)
-		document.getElementById(arraybck[inightbck]).addEventListener("click", nightmodebckcolorchange);
+	var arraynm = ["colornightmodebck1", "colornightmodebck2", "colornightmodebck3", "colornightmodebck4", "colornightmodebck5", "colornightmodebck6", "colornightmodebck7", "colornightmodebck8", "colortitelnightmodetxt1", "colortitelnightmodetxt2", "colortitelnightmodetxt3", "colortitelnightmodetxt4", "colortitelnightmodetxt5", "colortitelnightmodetxt6", "colortitelnightmodetxt7", "colortitelnightmodetxt8", "colortitelnightmodehyperlink1", "colortitelnightmodehyperlink2", "colortitelnightmodehyperlink3", "colortitelnightmodehyperlink4", "colortitelnightmodehyperlink5", "colortitelnightmodehyperlink6", "colortitelnightmodehyperlink7", "colortitelnightmodehyperlink8", "colortitelnightmodebutton1", "colortitelnightmodebutton2", "colortitelnightmodebutton3", "colortitelnightmodebutton4", "colortitelnightmodebutton5", "colortitelnightmodebutton6", "colortitelnightmodebutton7", "colortitelnightmodebutton8"];
+	for(var inm = 0; inm < arraynm.length; inm++){
+		if(arraynm[inm].includes("colornightmodebck")){
+			document.getElementById(arraynm[inm]).addEventListener("click", nightmodebckcolorchange);
+		}else if(arraynm[inm].includes("colortitelnightmodetxt")){
+			document.getElementById(arraynm[inm]).addEventListener("click", nightmodetextcolorchange);
+		}else if(arraynm[inm].includes("colortitelnightmodehyperlink")){
+			document.getElementById(arraynm[inm]).addEventListener("click", nightmodelinkcolorchange);
+		}else if(arraynm[inm].includes("colortitelnightmodebutton")){
+			document.getElementById(arraynm[inm]).addEventListener("click", nightmodebuttoncolorchange);
+		}
+	}
+
 	eventFunc("colornightmodebckcustom", "input", nightmodebckcolorchangecustom);
-
-	var arraytxt = ["colortitelnightmodetxt1", "colortitelnightmodetxt2", "colortitelnightmodetxt3", "colortitelnightmodetxt4", "colortitelnightmodetxt5", "colortitelnightmodetxt6", "colortitelnightmodetxt7", "colortitelnightmodetxt8"];
-	for(var inighttxt = 0; inighttxt < arraytxt.length; inighttxt++)
-		document.getElementById(arraytxt[inighttxt]).addEventListener("click", nightmodetextcolorchange);
 	eventFunc("colornightmodetxtcustom", "input", nightmodetextcolorchangecustom);
-
-	var arraylink = ["colortitelnightmodehyperlink1", "colortitelnightmodehyperlink2", "colortitelnightmodehyperlink3", "colortitelnightmodehyperlink4", "colortitelnightmodehyperlink5", "colortitelnightmodehyperlink6", "colortitelnightmodehyperlink7", "colortitelnightmodehyperlink8"];
-	for(var inightlink = 0; inightlink < arraylink.length; inightlink++)
-		document.getElementById(arraylink[inightlink]).addEventListener("click", nightmodelinkcolorchange);
 	eventFunc("colornightmodehyperlinkcustom", "input", nightmodelinkcolorchangecustom);
-
-	var arraybtn = ["colortitelnightmodebutton1", "colortitelnightmodebutton2", "colortitelnightmodebutton3", "colortitelnightmodebutton4", "colortitelnightmodebutton5", "colortitelnightmodebutton6", "colortitelnightmodebutton7", "colortitelnightmodebutton8"];
-	for(var inightbtn = 0; inightbtn < arraybtn.length; inightbtn++)
-		document.getElementById(arraybtn[inightbtn]).addEventListener("click", nightmodebuttoncolorchange);
 	eventFunc("colornightmodebuttoncustom", "input", nightmodebuttoncolorchangecustom);
 
 	eventFunc("btngonight", "click", executenightmode);
@@ -590,6 +588,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	function closeMaterialRateAlert(e){
 		e.stopPropagation();
 		showhidemodal("materialModalRate", "hide", "true");
+		chrome.storage.sync.set({"firstsawrate": false});
 	}
 	// scroll
 	function materialScrollAlert(){
@@ -598,6 +597,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	function closeMaterialScrollAlert(e){
 		e.stopPropagation();
 		showhidemodal("materialModalScroll", "hide", "true");
+		chrome.storage.sync.set({"firstsawscroll": true});
 	}
 
 	$("materialModalRateButtonOK").addEventListener("click", function(e){
@@ -606,11 +606,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 	$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
 		closeMaterialRateAlert(e);
-		chrome.storage.sync.set({"firstsawrate": false});
 	});
 	$("materialModalScrollButtonOK").addEventListener("click", function(e){
 		closeMaterialScrollAlert(e);
-		chrome.storage.sync.set({"firstsawscroll": true});
 	});
 });
 
