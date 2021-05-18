@@ -29,14 +29,13 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 var recognizing = false;
 var ignore_onend;
-var start_timestamp;
 var recognition;
 
 function speechstartfunction(){
 	// start automatic up
-	if(!recognizing){ startButton(event); }
+	if(!recognizing){ startButton(); }
 }
-function startButton(event){
+function startButton(){
 	// Abort previous instances of recognition already running
 	if(recognition && recognition.abort){
 		recognition.abort();
@@ -44,7 +43,6 @@ function startButton(event){
 	recognition.lang = "en-US";
 	try{ recognition.start(); }catch(e){ console.error(e); }
 	ignore_onend = false;
-	try{ start_timestamp = event.timeStamp; }catch(e){ console.error(e); }
 }
 
 function startinit(){
@@ -74,20 +72,7 @@ function startinit(){
 		};
 
 		recognition.onerror = function(event){
-			if(event.error == "no-speech"){
-				// No speech was detected.
-				ignore_onend = true;
-			}
-			if(event.error == "audio-capture"){
-				// No microphone was found.
-				ignore_onend = true;
-			}
-			if(event.error == "not-allowed"){
-				if(event.timeStamp - start_timestamp < 100){
-					// Permission to use microphone is blocked.
-				}else{
-					// Permission to use microphone was denied.
-				}
+			if(event.error == "no-speech" || event.error == "audio-capture" || event.error == "not-allowed"){
 				ignore_onend = true;
 			}
 			if(ignore_onend == true){
