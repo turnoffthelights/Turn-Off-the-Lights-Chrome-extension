@@ -358,9 +358,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("oslider").addEventListener("change", opacitychange, false);
 	$("oslider").addEventListener("input", opacitychange, false);
 
-	var array = ["color1a", "color1b", "color1c", "color1d", "color1e", "color1f", "color1g", "color1h", "color2a", "color2b", "color2c", "color2d", "color2e", "color2f", "color2g", "color2h", "color3a", "color3b", "color3c", "color3d", "color3e", "color3f", "color3g", "color3h", "color4a", "color4b", "color4c", "color4d", "color4e", "color4f", "color4g", "color4h", "color5a", "color5b", "color5c", "color5d", "color5e", "color5f", "color5g", "color5h", "color6a", "color6b", "color6c", "color6d", "color6e", "color6f", "color6g", "color6h"];
-	for(var icolor = 0; icolor < array.length; icolor++)
-		document.getElementById(array[icolor]).addEventListener("click", colorchange);
+	var arraycolor = ["color1a", "color1b", "color1c", "color1d", "color1e", "color1f", "color1g", "color1h", "color2a", "color2b", "color2c", "color2d", "color2e", "color2f", "color2g", "color2h", "color3a", "color3b", "color3c", "color3d", "color3e", "color3f", "color3g", "color3h", "color4a", "color4b", "color4c", "color4d", "color4e", "color4f", "color4g", "color4h", "color5a", "color5b", "color5c", "color5d", "color5e", "color5f", "color5g", "color5h", "color6a", "color6b", "color6c", "color6d", "color6e", "color6f", "color6g", "color6h"];
+	for(var icolor = 0; icolor < arraycolor.length; icolor++)
+		document.getElementById(arraycolor[icolor]).addEventListener("click", colorchange);
 
 	$("btnlights").addEventListener("click", function(){
 		chrome.tabs.query({
@@ -371,44 +371,24 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 	});
 
-	eventFunc("colornightmodebck1", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck2", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck3", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck4", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck5", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck6", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck7", "click", nightmodebckcolorchange);
-	eventFunc("colornightmodebck8", "click", nightmodebckcolorchange);
+	var arraybck = ["colornightmodebck1", "colornightmodebck2", "colornightmodebck3", "colornightmodebck4", "colornightmodebck5", "colornightmodebck6", "colornightmodebck7", "colornightmodebck8"];
+	for(var inightbck = 0; inightbck < arraybck.length; inightbck++)
+		document.getElementById(arraybck[inightbck]).addEventListener("click", nightmodebckcolorchange);
 	eventFunc("colornightmodebckcustom", "input", nightmodebckcolorchangecustom);
 
-	eventFunc("colortitelnightmodetxt1", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt2", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt3", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt4", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt5", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt6", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt7", "click", nightmodetextcolorchange);
-	eventFunc("colortitelnightmodetxt8", "click", nightmodetextcolorchange);
+	var arraytxt = ["colortitelnightmodetxt1", "colortitelnightmodetxt2", "colortitelnightmodetxt3", "colortitelnightmodetxt4", "colortitelnightmodetxt5", "colortitelnightmodetxt6", "colortitelnightmodetxt7", "colortitelnightmodetxt8"];
+	for(var inighttxt = 0; inighttxt < arraytxt.length; inighttxt++)
+		document.getElementById(arraytxt[inighttxt]).addEventListener("click", nightmodetextcolorchange);
 	eventFunc("colornightmodetxtcustom", "input", nightmodetextcolorchangecustom);
 
-	eventFunc("colortitelnightmodehyperlink1", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink2", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink3", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink4", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink5", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink6", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink7", "click", nightmodelinkcolorchange);
-	eventFunc("colortitelnightmodehyperlink8", "click", nightmodelinkcolorchange);
+	var arraylink = ["colortitelnightmodehyperlink1", "colortitelnightmodehyperlink2", "colortitelnightmodehyperlink3", "colortitelnightmodehyperlink4", "colortitelnightmodehyperlink5", "colortitelnightmodehyperlink6", "colortitelnightmodehyperlink7", "colortitelnightmodehyperlink8"];
+	for(var inightlink = 0; inightlink < arraylink.length; inightlink++)
+		document.getElementById(arraylink[inightlink]).addEventListener("click", nightmodelinkcolorchange);
 	eventFunc("colornightmodehyperlinkcustom", "input", nightmodelinkcolorchangecustom);
 
-	eventFunc("colortitelnightmodebutton1", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton2", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton3", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton4", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton5", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton6", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton7", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
+	var arraybtn = ["colortitelnightmodebutton1", "colortitelnightmodebutton2", "colortitelnightmodebutton3", "colortitelnightmodebutton4", "colortitelnightmodebutton5", "colortitelnightmodebutton6", "colortitelnightmodebutton7", "colortitelnightmodebutton8"];
+	for(var inightbtn = 0; inightbtn < arraybtn.length; inightbtn++)
+		document.getElementById(arraybtn[inightbtn]).addEventListener("click", nightmodebuttoncolorchange);
 	eventFunc("colornightmodebuttoncustom", "input", nightmodebuttoncolorchangecustom);
 
 	eventFunc("btngonight", "click", executenightmode);
@@ -419,13 +399,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	$("analclick").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
 	$("analtotal").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
-
-	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
-	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
-
 
 	var stefanvdurl = developerwebsite;
 	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
