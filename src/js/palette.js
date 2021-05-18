@@ -403,8 +403,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	eventFunc("btnsupport", "click", opensupportpage);
 	eventFunc("btnauroraplayer", "click", openaurorapage);
 
-	$("analclick").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
-	$("analtotal").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+	eventFunc("analclick", "click", openoptionspage);
+	eventFunc("analtotal", "click", openoptionspage);
 
 	var stefanvdurl = developerwebsite;
 	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
@@ -575,7 +575,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook", "width=600,height=460,menubar=no,location=no,status=no"); });
 	$("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no"); });
 
-	$("energybox").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+	eventFunc("energybox", "click", openoptionspage);
 
 	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvideo"}); });
 	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvisual"}); });
@@ -646,17 +646,8 @@ function test(){
 		$("lampandnightmode").disabled = true;
 	}
 
-	if($("nightonly").checked == true){
-		$("sitecheck").disabled = false;
-	}else{
-		$("sitecheck").disabled = true;
-	}
-
-	if($("sitecheck").checked == true){
-		addtonight();
-	}else{
-		removetonight();
-	}
+	$("nightonly").checked == true ? $("sitecheck").disabled = false : $("sitecheck").disabled = true;
+	$("sitecheck").checked == true ? addtonight() : removetonight();
 
 	if($("ambilight").checked == true){
 		$("ambilightfixcolor").disabled = false;
