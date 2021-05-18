@@ -50,6 +50,26 @@ function save_options(){
 	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "badge":$("badge").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
 }
 
+function executenightmode(){
+	chrome.tabs.executeScript(null, {code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
+}
+
+function openoptionspage(){
+	chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true});
+}
+
+function opendonationpage(){
+	chrome.tabs.create({url: donatewebsite, active:true});
+}
+
+function opensupportpage(){
+	chrome.tabs.create({url: linksupport, active:true});
+}
+
+function openaurorapage(){
+	chrome.tabs.create({url: linkauroraplayerapp, active:true});
+}
+
 document.addEventListener("DOMContentLoaded", function(){
 	// disable context menu
 	document.addEventListener("contextmenu", function(e){
@@ -441,15 +461,21 @@ document.addEventListener("DOMContentLoaded", function(){
 	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
 	eventFunc("colornightmodebuttoncustom", "input", nightmodebuttoncolorchangecustom);
 
-	$("btngonight").addEventListener("click", function(){
-		chrome.tabs.executeScript(null, {code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
-	});
-	$("btnoptions").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
-	$("btndonate").addEventListener("click", function(){ chrome.tabs.create({url: donatewebsite, active:true}); });
-	$("btnsupport").addEventListener("click", function(){ chrome.tabs.create({url: linksupport, active:true}); });
-	$("btnauroraplayer").addEventListener("click", function(){ chrome.tabs.create({url: linkauroraplayerapp, active:true}); });
+	eventFunc("btngonight", "click", executenightmode);
+	eventFunc("btnoptions", "click", openoptionspage);
+	eventFunc("btndonate", "click", opendonationpage);
+	eventFunc("btnsupport", "click", opensupportpage);
+	eventFunc("btnauroraplayer", "click", openaurorapage);
+
 	$("analclick").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
 	$("analtotal").addEventListener("click", function(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); });
+
+	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
+	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
+	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
+	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
+	eventFunc("colortitelnightmodebutton8", "click", nightmodebuttoncolorchange);
+
 
 	var stefanvdurl = developerwebsite;
 	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
