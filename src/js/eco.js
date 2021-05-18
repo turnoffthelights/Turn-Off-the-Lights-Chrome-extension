@@ -105,10 +105,8 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 				var finalarray = analytics.concat(array);
 
 				chrome.storage.sync.set({"analytics":finalarray}, function(){
-					if(chrome.runtime.lastError){
-						if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
-							autoanalyticscleanup();
-						}
+					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
+						autoanalyticscleanup();
 					}
 				});
 
@@ -138,10 +136,8 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 				var finalsite = siteengagement.concat(site);
 
 				chrome.storage.sync.set({"siteengagement":finalsite}, function(){
-					if(chrome.runtime.lastError){
-						if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
-							autositeengagementcleanup();
-						}
+					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
+						autositeengagementcleanup();
 					}
 				});
 
