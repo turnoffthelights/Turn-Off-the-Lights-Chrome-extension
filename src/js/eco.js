@@ -83,6 +83,7 @@ var analytics;
 var siteengagement;
 var seeanalytics;
 var emptyarray = [{name:today, details:{active:0, time:0, day:{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0, 21:0, 22:0, 23:0}}}];
+var todaysite = [{name:today}];
 chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
 	seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
 	if(seeanalytics == true){
@@ -129,9 +130,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 			// search if today date is there
 			var todayresultObject = search(today, siteengagement);
 			if(typeof todayresultObject === "undefined"){
-				var site = [{name:today}
-				];
-				var finalsite = siteengagement.concat(site);
+				var finalsite = siteengagement.concat(todaysite);
 
 				chrome.storage.sync.set({"siteengagement":finalsite}, function(){
 					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
@@ -141,7 +140,6 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 			}
 		}else{
-			var todaysite = [{name:today}];
 			chrome.storage.sync.set({"siteengagement":todaysite});
 		}
 	}
