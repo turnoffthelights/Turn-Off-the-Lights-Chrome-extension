@@ -38,13 +38,8 @@ if(mm < 10){ mm = "0" + mm; }
 var today = dd + "/" + mm + "/" + yyyy;
 
 function search(nameKey, myArray){
-	var i;
-	var l = myArray.length;
-	for(i = 0; i < l; i++){
-		if(myArray[i].name === nameKey){
-			return myArray[i];
-		}
-	}
+	var item = myArray.find((item) => item.name === nameKey);
+	return item;
 }
 
 function autoanalyticscleanup(){
@@ -94,6 +89,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 			// search if today date is there
 			var resultObject = search(today, analytics);
+			console.log("4stefan: ", resultObject);
 			if(typeof resultObject === "undefined"){
 				var finalarray = analytics.concat(emptyarray);
 
