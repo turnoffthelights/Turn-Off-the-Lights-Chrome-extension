@@ -191,35 +191,33 @@ observeDOM(document.body, function(){
 		if(!in_dom){
 			taskaddseconds = false;
 
-			try{
-				chrome.storage.sync.get(["analytics", "seeanalytics"], function(items){
-					seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-					if(seeanalytics == true){
-						if(items["analytics"]){
-							analytics = items["analytics"];
-							resultObject = search(today, analytics);
-							var rest = JSON.stringify(resultObject["details"]["active"]);
-							var currentnumber = parseInt(rest);
-							currentnumber += 1;
-							rest = currentnumber;
-							resultObject["details"]["active"] = rest;
-							// when used the light off
-							var d = new Date();
-							var n = d.getHours();
-							var thatime = resultObject["details"]["day"][n];
-							var timenumber = parseInt(thatime);
-							timenumber += 1;
-							thatime = timenumber;
-							resultObject["details"]["day"][n] = thatime;
-							// general save
-							chrome.storage.sync.set({"analytics":analytics});
-							chrome.runtime.sendMessage({name: "badgeon"});
-							// timer
-							refreshIntervalId = window.setInterval(setTime, 1000);
-						}
+			chrome.storage.sync.get(["analytics", "seeanalytics"], function(items){
+				seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
+				if(seeanalytics == true){
+					if(items["analytics"]){
+						analytics = items["analytics"];
+						resultObject = search(today, analytics);
+						var rest = JSON.stringify(resultObject["details"]["active"]);
+						var currentnumber = parseInt(rest);
+						currentnumber += 1;
+						rest = currentnumber;
+						resultObject["details"]["active"] = rest;
+						// when used the light off
+						var d = new Date();
+						var n = d.getHours();
+						var thatime = resultObject["details"]["day"][n];
+						var timenumber = parseInt(thatime);
+						timenumber += 1;
+						thatime = timenumber;
+						resultObject["details"]["day"][n] = thatime;
+						// general save
+						chrome.storage.sync.set({"analytics":analytics});
+						chrome.runtime.sendMessage({name: "badgeon"});
+						// timer
+						refreshIntervalId = window.setInterval(setTime, 1000);
 					}
-				});
-			}catch(e){ console.log(e); }
+				}
+			});
 
 		}
 		in_dom = true;
@@ -227,40 +225,38 @@ observeDOM(document.body, function(){
 	}else if(in_dom){
 		in_dom = false;
 
-		try{
-			chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
-				seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-				if(seeanalytics == true){
-					if(items["analytics"]){
-						analytics = items["analytics"];
-						resultObject = search(today, analytics);
-						var over = JSON.stringify(resultObject["details"]["time"]);
-						currentseconds = parseInt(over);
-						currentseconds += totalSeconds;
-						over = currentseconds;
-						resultObject["details"]["time"] = over;
-						chrome.storage.sync.set({"analytics":analytics});
-					}
-					if(items["siteengagement"]){
-						siteengagement = items["siteengagement"];
-						resultObject = search(today, siteengagement);
-						var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-						if(!mes){
-							mes = 0;
-						}
-						currentseconds = parseInt(mes);
-						currentseconds += totalSeconds;
-						mes = currentseconds;
-						if(mes > 0){
-							resultObject["'" + window.location.href + "'"] = mes;
-							chrome.storage.sync.set({"siteengagement":siteengagement});
-						}
-					}
-					taskaddseconds = true;
-					totalSeconds = 0;
+		chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
+			seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
+			if(seeanalytics == true){
+				if(items["analytics"]){
+					analytics = items["analytics"];
+					resultObject = search(today, analytics);
+					var over = JSON.stringify(resultObject["details"]["time"]);
+					currentseconds = parseInt(over);
+					currentseconds += totalSeconds;
+					over = currentseconds;
+					resultObject["details"]["time"] = over;
+					chrome.storage.sync.set({"analytics":analytics});
 				}
-			});
-		}catch(e){ console.log(e); }
+				if(items["siteengagement"]){
+					siteengagement = items["siteengagement"];
+					resultObject = search(today, siteengagement);
+					var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+					if(!mes){
+						mes = 0;
+					}
+					currentseconds = parseInt(mes);
+					currentseconds += totalSeconds;
+					mes = currentseconds;
+					if(mes > 0){
+						resultObject["'" + window.location.href + "'"] = mes;
+						chrome.storage.sync.set({"siteengagement":siteengagement});
+					}
+				}
+				taskaddseconds = true;
+				totalSeconds = 0;
+			}
+		});
 
 		window.clearInterval(refreshIntervalId);
 	}
