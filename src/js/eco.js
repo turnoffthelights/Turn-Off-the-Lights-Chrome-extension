@@ -65,10 +65,11 @@ var todaysite = [{name:today}];
 chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
 	seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
 	if(seeanalytics == true){
-		if(items["analytics"]){
+		if(items["analytics"] && items["siteengagement"]){
 			analytics = items["analytics"];
+			siteengagement = items["siteengagement"];
 
-			chrome.storage.sync.getBytesInUse(["analytics"], logbytesanalytics);
+			chrome.storage.sync.getBytesInUse(["analytics", "siteengagement"], logbytesanalytics);
 
 			// search if today date is there
 			var resultObject = search(today, analytics);
@@ -82,14 +83,6 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 				});
 
 			}
-		}else{
-			// if empty, create this empty day
-			chrome.storage.sync.set({"analytics":emptyarray});
-		}
-		if(items["siteengagement"]){
-			siteengagement = items["siteengagement"];
-
-			chrome.storage.sync.getBytesInUse(["siteengagement"], logbytesanalytics);
 
 			// search if today date is there
 			var todayresultObject = search(today, siteengagement);
@@ -104,8 +97,10 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 			}
 		}else{
-			chrome.storage.sync.set({"siteengagement":todaysite});
+			// if empty, create this empty day
+			chrome.storage.sync.set({"analytics":emptyarray, "siteengagement":todaysite});
 		}
+
 	}
 });
 
