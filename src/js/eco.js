@@ -82,6 +82,7 @@ function logbytessiteengagement(bytes){
 var analytics;
 var siteengagement;
 var seeanalytics;
+var emptyarray = [{name:today, details:{active:0, time:0, day:{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0, 21:0, 22:0, 23:0}}}];
 chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
 	seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
 	if(seeanalytics == true){
@@ -100,9 +101,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 			// search if today date is there
 			var resultObject = search(today, analytics);
 			if(typeof resultObject === "undefined"){
-				var array = [{name:today, details:{active:0, time:0, day:{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0, 21:0, 22:0, 23:0}}}
-				];
-				var finalarray = analytics.concat(array);
+				var finalarray = analytics.concat(emptyarray);
 
 				chrome.storage.sync.set({"analytics":finalarray}, function(){
 					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
@@ -113,7 +112,6 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 			}
 		}else{
 			// if empty, create this empty day
-			var emptyarray = [{name:today, details:{active:0, time:0, day:{0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0, 21:0, 22:0, 23:0}}}];
 			chrome.storage.sync.set({"analytics":emptyarray});
 		}
 		if(items["siteengagement"]){

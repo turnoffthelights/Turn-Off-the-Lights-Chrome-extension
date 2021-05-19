@@ -1860,7 +1860,6 @@ function onResize(){
 	trianglerun();
 }
 
-
 function lightsgoonoroff(){
 	if(blackon){
 		if(dynamic == true){
