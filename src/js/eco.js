@@ -44,14 +44,8 @@ function search(nameKey, myArray){
 
 function autoanalyticscleanup(){
 	// autoclean up to the last 7 days
-	if(analytics.length > 7){
-		var last7daysanal = analytics.slice(-7);
-		chrome.storage.sync.set({"analytics":last7daysanal});
-	}
-	// autoclean up to the last 7 days
-	if(siteengagement.length > 7){
-		var last7dayssiten = siteengagement.slice(-7);
-		chrome.storage.sync.set({"siteengagement":last7dayssiten});
+	if(analytics.length > 7 && siteengagement.length > 7){
+		chrome.storage.sync.set({"analytics":analytics.slice(-7), "siteengagement":siteengagement.slice(-7)});
 	}
 }
 
