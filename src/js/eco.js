@@ -48,9 +48,6 @@ function autoanalyticscleanup(){
 		var last7daysanal = analytics.slice(-7);
 		chrome.storage.sync.set({"analytics":last7daysanal});
 	}
-}
-
-function autositeengagementcleanup(){
 	// autoclean up to the last 7 days
 	if(siteengagement.length > 7){
 		var last7dayssiten = siteengagement.slice(-7);
@@ -63,14 +60,6 @@ function logbytesanalytics(bytes){
 	// limit in Google Chrome => 8192
 	if(bytes >= 5000){
 		autoanalyticscleanup();
-	}
-}
-
-function logbytessiteengagement(bytes){
-	// cleanup the big files
-	// limit in Google Chrome => 8192
-	if(bytes >= 5000){
-		autositeengagementcleanup();
 	}
 }
 
@@ -106,7 +95,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 		if(items["siteengagement"]){
 			siteengagement = items["siteengagement"];
 
-			chrome.storage.sync.getBytesInUse(["siteengagement"], logbytessiteengagement);
+			chrome.storage.sync.getBytesInUse(["siteengagement"], logbytesanalytics);
 
 			// search if today date is there
 			var todayresultObject = search(today, siteengagement);
@@ -115,7 +104,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 				chrome.storage.sync.set({"siteengagement":finalsite}, function(){
 					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
-						autositeengagementcleanup();
+						autoanalyticscleanup();
 					}
 				});
 
