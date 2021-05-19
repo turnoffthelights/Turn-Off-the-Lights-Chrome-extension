@@ -128,9 +128,7 @@ function endlayer(){
 				analytics = items["analytics"];
 				resultObject = search(today, analytics);
 				var over = JSON.stringify(resultObject["details"]["time"]);
-				currentseconds = parseInt(over);
-				currentseconds += totalSeconds;
-				over = currentseconds;
+				currentseconds = parseInt(over); currentseconds += totalSeconds; over = currentseconds;
 				resultObject["details"]["time"] = over;
 				chrome.storage.sync.set({"analytics":analytics});
 			}
@@ -138,8 +136,7 @@ function endlayer(){
 			resultObject = search(today, siteengagement);
 			var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
 			if(!mes){ mes = 0; }
-			currentseconds = parseInt(mes);
-			currentseconds += totalSeconds;
+			currentseconds = parseInt(mes); currentseconds += totalSeconds;
 			mes = currentseconds;
 			if(mes > 0){
 				resultObject["'" + window.location.href + "'"] = mes;
