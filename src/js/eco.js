@@ -71,31 +71,11 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 			chrome.storage.sync.getBytesInUse(["analytics", "siteengagement"], logbytesanalytics);
 
-			// search if today date is there
-			var resultObject = search(today, analytics);
-			if(typeof resultObject === "undefined"){
-				var finalarray = analytics.concat(emptyarray);
-
-				chrome.storage.sync.set({"analytics":finalarray}, function(){
-					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
-						autoanalyticscleanup();
-					}
-				});
-
-			}
-
-			// search if today date is there
-			var todayresultObject = search(today, siteengagement);
-			if(typeof todayresultObject === "undefined"){
-				var finalsite = siteengagement.concat(todaysite);
-
-				chrome.storage.sync.set({"siteengagement":finalsite}, function(){
-					if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
-						autoanalyticscleanup();
-					}
-				});
-
-			}
+			chrome.storage.sync.set({"analytics":analytics.concat(emptyarray), "siteengagement":siteengagement.concat(todaysite)}, function(){
+				if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
+					autoanalyticscleanup();
+				}
+			});
 		}else{
 			// if empty, create this empty day
 			chrome.storage.sync.set({"analytics":emptyarray, "siteengagement":todaysite});
