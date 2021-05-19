@@ -114,6 +114,10 @@ function shareanalytictwitter(message){
 	window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + message + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no");
 }
 
+function settext(id, message){
+	document.getElementById(id).innerText = message;
+}
+
 function domcontentloaded(){
 	// reset
 	document.getElementById("btnresetanalytics").addEventListener("click", function(){
@@ -563,9 +567,9 @@ function domcontentloaded(){
 	}
 	function showcard(){
 		// --- Begin Card
-		document.getElementById("txtdayweek").innerText = chrome.i18n.getMessage("cardtextfavdayweek") + ": " + ct7favoritedayweek;
-		document.getElementById("txtyestime").innerText = chrome.i18n.getMessage("cardtextyestime") + ": " + parseFloat(Math.round(ct1sinminutes * 100) / 100).toFixed(2);
-		document.getElementById("txtavgweektime").innerText = chrome.i18n.getMessage("cardavgprevweektime") + ": " + parseFloat(Math.round(ct7sinminutes * 100) / 100).toFixed(2);
+		settext("txtdayweek", chrome.i18n.getMessage("cardtextfavdayweek") + ": " + ct7favoritedayweek);
+		settext("txtyestime", chrome.i18n.getMessage("cardtextyestime") + ": " + parseFloat(Math.round(ct1sinminutes * 100) / 100).toFixed(2));
+		settext("txtavgweektime", chrome.i18n.getMessage("cardavgprevweektime") + ": " + parseFloat(Math.round(ct7sinminutes * 100) / 100).toFixed(2));
 		// --- End Card
 	}
 //---
