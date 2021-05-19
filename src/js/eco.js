@@ -89,7 +89,6 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 
 			// search if today date is there
 			var resultObject = search(today, analytics);
-			console.log("4stefan: ", resultObject);
 			if(typeof resultObject === "undefined"){
 				var finalarray = analytics.concat(emptyarray);
 
@@ -270,10 +269,8 @@ window.addEventListener("beforeunload", function(){
 				if(items["siteengagement"]){
 					siteengagement = items["siteengagement"];
 					resultObject = search(today, siteengagement);
-					var mes;
-					if(JSON.stringify(resultObject["'" + window.location.href + "'"])){
-						mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-					}else{
+					var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+					if(!mes){
 						mes = 0;
 					}
 					currentseconds = parseInt(mes);
