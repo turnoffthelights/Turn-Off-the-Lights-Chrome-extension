@@ -232,32 +232,29 @@ window.addEventListener("beforeunload", function(){
 				return;
 			}
 			if(seeanalytics == true){
-				if(items["analytics"]){
-					analytics = items["analytics"];
-					if(taskaddseconds == false){
-						resultObject = search(today, analytics);
-						var over = JSON.stringify(resultObject["details"]["time"]);
-						var currentseconds = parseInt(over);
-						currentseconds += totalSeconds;
-						over = currentseconds;
-						resultObject["details"]["time"] = over;
-						chrome.storage.sync.set({"analytics":analytics});
-					}
-				}
-				if(items["siteengagement"]){
-					siteengagement = items["siteengagement"];
-					resultObject = search(today, siteengagement);
-					var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-					if(!mes){
-						mes = 0;
-					}
-					currentseconds = parseInt(mes);
+				analytics = items["analytics"];
+				if(taskaddseconds == false){
+					resultObject = search(today, analytics);
+					var over = JSON.stringify(resultObject["details"]["time"]);
+					var currentseconds = parseInt(over);
 					currentseconds += totalSeconds;
-					mes = currentseconds;
-					if(mes > 0){
-						resultObject["'" + window.location.href + "'"] = mes;
-						chrome.storage.sync.set({"siteengagement":siteengagement});
-					}
+					over = currentseconds;
+					resultObject["details"]["time"] = over;
+					chrome.storage.sync.set({"analytics":analytics});
+				}
+
+				siteengagement = items["siteengagement"];
+				resultObject = search(today, siteengagement);
+				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+				if(!mes){
+					mes = 0;
+				}
+				currentseconds = parseInt(mes);
+				currentseconds += totalSeconds;
+				mes = currentseconds;
+				if(mes > 0){
+					resultObject["'" + window.location.href + "'"] = mes;
+					chrome.storage.sync.set({"siteengagement":siteengagement});
 				}
 			}
 		});
