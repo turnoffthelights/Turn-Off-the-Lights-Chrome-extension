@@ -70,7 +70,6 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 			siteengagement = items["siteengagement"];
 
 			chrome.storage.sync.getBytesInUse(["analytics", "siteengagement"], logbytesanalytics);
-
 			chrome.storage.sync.set({"analytics":analytics.concat(emptyarray), "siteengagement":siteengagement.concat(todaysite)}, function(){
 				if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
 					autoanalyticscleanup();
