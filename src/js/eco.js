@@ -90,14 +90,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 		if(items["analytics"]){
 			analytics = items["analytics"];
 
-			try{
-				chrome.storage.sync.getBytesInUse(["analytics"], logbytesanalytics);
-			}catch(e){
-				// web browsers that do not support the bytes in use size
-				if(analytics.length > 30){
-					autoanalyticscleanup();
-				}
-			}
+			chrome.storage.sync.getBytesInUse(["analytics"], logbytesanalytics);
 
 			// search if today date is there
 			var resultObject = search(today, analytics);
@@ -118,14 +111,7 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 		if(items["siteengagement"]){
 			siteengagement = items["siteengagement"];
 
-			try{
-				chrome.storage.sync.getBytesInUse(["siteengagement"], logbytessiteengagement);
-			}catch(e){
-				// web browsers that do not support the bytes in use size
-				if(siteengagement.length > 30){
-					autositeengagementcleanup();
-				}
-			}
+			chrome.storage.sync.getBytesInUse(["siteengagement"], logbytessiteengagement);
 
 			// search if today date is there
 			var todayresultObject = search(today, siteengagement);
