@@ -244,10 +244,8 @@ observeDOM(document.body, function(){
 					if(items["siteengagement"]){
 						siteengagement = items["siteengagement"];
 						resultObject = search(today, siteengagement);
-						var mes;
-						if(JSON.stringify(resultObject["'" + window.location.href + "'"])){
-							mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-						}else{
+						var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+						if(!mes){
 							mes = 0;
 						}
 						currentseconds = parseInt(mes);
