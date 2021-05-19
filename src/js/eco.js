@@ -113,11 +113,8 @@ function setTime(){
 
 var element = document.querySelector("#stefanvdlightareoff1");
 var in_dom = document.body.contains(element);
-if(document.body.contains(element)){
-	in_dom = true;
-}else if(in_dom){
-	in_dom = false;
-}
+if(document.body.contains(element)){ in_dom = true; }
+else if(in_dom){ in_dom = false; }
 var totalSeconds = 0;
 var refreshIntervalId;
 var taskaddseconds = false; // default false, when refresh the web page it save correct the value
@@ -125,10 +122,6 @@ var taskaddseconds = false; // default false, when refresh the web page it save 
 function endlayer(){
 	chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
 		seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-		if(chrome.runtime.lastError){
-			/* error */
-			return;
-		}
 		if(seeanalytics == true){
 			if(taskaddseconds == false){
 				analytics = items["analytics"];
@@ -140,13 +133,10 @@ function endlayer(){
 				resultObject["details"]["time"] = over;
 				chrome.storage.sync.set({"analytics":analytics});
 			}
-
 			siteengagement = items["siteengagement"];
 			resultObject = search(today, siteengagement);
 			var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-			if(!mes){
-				mes = 0;
-			}
+			if(!mes){ mes = 0; }
 			currentseconds = parseInt(mes);
 			currentseconds += totalSeconds;
 			mes = currentseconds;
@@ -154,7 +144,6 @@ function endlayer(){
 				resultObject["'" + window.location.href + "'"] = mes;
 				chrome.storage.sync.set({"siteengagement":siteengagement});
 			}
-
 			taskaddseconds = true;
 			totalSeconds = 0;
 		}
