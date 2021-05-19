@@ -142,6 +142,45 @@ var totalSeconds = 0;
 var refreshIntervalId;
 var taskaddseconds = false; // default false, when refresh the web page it save correct the value
 
+function endlayer(){
+	chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
+		seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
+		if(chrome.runtime.lastError){
+			/* error */
+			return;
+		}
+		if(seeanalytics == true){
+			if(taskaddseconds == false){
+				analytics = items["analytics"];
+				resultObject = search(today, analytics);
+				var over = JSON.stringify(resultObject["details"]["time"]);
+				currentseconds = parseInt(over);
+				currentseconds += totalSeconds;
+				over = currentseconds;
+				resultObject["details"]["time"] = over;
+				chrome.storage.sync.set({"analytics":analytics});
+			}
+
+			siteengagement = items["siteengagement"];
+			resultObject = search(today, siteengagement);
+			var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+			if(!mes){
+				mes = 0;
+			}
+			currentseconds = parseInt(mes);
+			currentseconds += totalSeconds;
+			mes = currentseconds;
+			if(mes > 0){
+				resultObject["'" + window.location.href + "'"] = mes;
+				chrome.storage.sync.set({"siteengagement":siteengagement});
+			}
+
+			taskaddseconds = true;
+			totalSeconds = 0;
+		}
+	});
+}
+
 var resultObject;
 var currentseconds;
 observeDOM(document.body, function(){
@@ -183,85 +222,15 @@ observeDOM(document.body, function(){
 
 	}else if(in_dom){
 		in_dom = false;
-
-		chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
-			seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-			if(seeanalytics == true){
-				if(items["analytics"]){
-					analytics = items["analytics"];
-					resultObject = search(today, analytics);
-					var over = JSON.stringify(resultObject["details"]["time"]);
-					currentseconds = parseInt(over);
-					currentseconds += totalSeconds;
-					over = currentseconds;
-					resultObject["details"]["time"] = over;
-					chrome.storage.sync.set({"analytics":analytics});
-				}
-				if(items["siteengagement"]){
-					siteengagement = items["siteengagement"];
-					resultObject = search(today, siteengagement);
-					var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-					if(!mes){
-						mes = 0;
-					}
-					currentseconds = parseInt(mes);
-					currentseconds += totalSeconds;
-					mes = currentseconds;
-					if(mes > 0){
-						resultObject["'" + window.location.href + "'"] = mes;
-						chrome.storage.sync.set({"siteengagement":siteengagement});
-					}
-				}
-				taskaddseconds = true;
-				totalSeconds = 0;
-			}
-		});
-
+		// stop the timer
+		endlayer();
 		window.clearInterval(refreshIntervalId);
 	}
 
 });
 
 window.addEventListener("beforeunload", function(){
-	try{
-		// stop the timer
-		chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
-			seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-			if(chrome.runtime.lastError){
-				/* error */
-				return;
-			}
-			if(seeanalytics == true){
-				analytics = items["analytics"];
-				if(taskaddseconds == false){
-					resultObject = search(today, analytics);
-					var over = JSON.stringify(resultObject["details"]["time"]);
-					var currentseconds = parseInt(over);
-					currentseconds += totalSeconds;
-					over = currentseconds;
-					resultObject["details"]["time"] = over;
-					chrome.storage.sync.set({"analytics":analytics});
-				}
-
-				siteengagement = items["siteengagement"];
-				resultObject = search(today, siteengagement);
-				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-				if(!mes){
-					mes = 0;
-				}
-				currentseconds = parseInt(mes);
-				currentseconds += totalSeconds;
-				mes = currentseconds;
-				if(mes > 0){
-					resultObject["'" + window.location.href + "'"] = mes;
-					chrome.storage.sync.set({"siteengagement":siteengagement});
-				}
-			}
-		});
-		window.clearInterval(refreshIntervalId);
-	}catch(e){
-		// background page already reloaded, clear the interval
-		// console.error(e);
-		window.clearInterval(refreshIntervalId);
-	}
+	// stop the timer
+	endlayer();
+	window.clearInterval(refreshIntervalId);
 });
