@@ -113,8 +113,9 @@ function setTime(){
 
 var element = document.querySelector("#stefanvdlightareoff1");
 var in_dom = document.body.contains(element);
-if(document.body.contains(element)){ in_dom = true; }
-else if(in_dom){ in_dom = false; }
+if(document.body.contains(element)){
+	in_dom = true;
+}else if(in_dom){ in_dom = false; }
 var totalSeconds = 0;
 var refreshIntervalId;
 var taskaddseconds = false; // default false, when refresh the web page it save correct the value
