@@ -69,7 +69,7 @@
     },
     {
       "matches": ["*://*.turnoffthelights.com/extension/options.html"],
-      "js": ["js/constants.js","js/options.js","js/Chart.js","js/eco-preview.js"],
+      "js": ["js/constants.js","js/options.js","js/chart.js","js/eco-preview.js"],
       "run_at": "document_end"
     }
   ],
