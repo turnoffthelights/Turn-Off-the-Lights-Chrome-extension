@@ -128,7 +128,6 @@ function endlayer(){
 				currentseconds = parseInt(over); currentseconds += totalSeconds;
 				resultObject["details"]["time"] = currentseconds;
 				chrome.storage.sync.set({"analytics":analytics});
-
 				siteengagement = items["siteengagement"];
 				resultObject = search(today, siteengagement);
 				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
