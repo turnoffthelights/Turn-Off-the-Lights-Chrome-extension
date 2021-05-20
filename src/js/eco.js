@@ -122,7 +122,6 @@ function endlayer(){
 			if(seeanalytics == true){
 				// stop the timer
 				window.clearInterval(refreshIntervalId);
-
 				analytics = items["analytics"];
 				resultObject = search(today, analytics);
 				var over = JSON.stringify(resultObject["details"]["time"]);
