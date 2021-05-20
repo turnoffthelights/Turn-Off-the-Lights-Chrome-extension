@@ -53,14 +53,8 @@ var ytCinema;
 					}
 				});
 			});
-			observer.observe(videolist, {
-				subtree: true, // observe the subtree rooted at ...videolist...
-				childList: true, // include childNode insertion/removals
-				characterData: false, // include textContent changes
-				attributes: true // include changes to attributes within the subtree
-			});
+			observer.observe(videolist, {subtree: true, childList: true, characterData: false, attributes: true});
 		}else{
-			// setup DOM event listeners
 			document.addEventListener("DOMNodeRemoved", ytCinema.initvideoinject, false);
 			document.addEventListener("DOMNodeInserted", ytCinema.initvideoinject, false);
 		}
