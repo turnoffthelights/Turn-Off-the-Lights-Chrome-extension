@@ -79,11 +79,7 @@ var ytCinema;
 				var j, l = players.length;
 				for(j = 0; j < l; j++){
 					(function(o, p){
-						var ev = {
-							pause: function(){ if(!p.ended){ o.players.active -= 1; }if(o.players.active < 1){ o.playerStateChange(2); } },
-							play: function(){ o.players.active += 1; o.playerStateChange(1); },
-							ended: function(){ o.players.active -= 1; if(o.players.active < 1){ o.playerStateChange(0); } }
-						};
+						var ev = {pause: function(){ if(!p.ended){ o.players.active -= 1; }if(o.players.active < 1){ o.playerStateChange(2); } }, play: function(){ o.players.active += 1; o.playerStateChange(1); }, ended: function(){ o.players.active -= 1; if(o.players.active < 1){ o.playerStateChange(0); } }};
 						p.removeEventListener("pause", ev.pause); p.removeEventListener("play", ev.play); p.removeEventListener("ended", ev.ended); p.addEventListener("pause", ev.pause); p.addEventListener("play", ev.play); p.addEventListener("ended", ev.ended);
 						o.players.objs.push(p);
 					}(this.ytCinema, htmlplayer[j]));
