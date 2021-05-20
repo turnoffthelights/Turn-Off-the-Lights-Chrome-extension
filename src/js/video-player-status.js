@@ -41,8 +41,6 @@ var ytCinema;
 		}
 	},
 	initialize: function(){
-		//window.addEventListener("load", ytCinema.initvideoinject, false);
-		//document.addEventListener("DOMContentLoaded", ytCinema.initvideoinject, false);
 		ytCinema.initvideoinject();
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 		if(MutationObserver){
@@ -53,8 +51,14 @@ var ytCinema;
 					}
 				});
 			});
-			observer.observe(videolist, {subtree: true, childList: true, characterData: false, attributes: true});
+			observer.observe(videolist, {
+				subtree: true, // observe the subtree rooted at ...videolist...
+				childList: true, // include childNode insertion/removals
+				characterData: false, // include textContent changes
+				attributes: true // include changes to attributes within the subtree
+			});
 		}else{
+			// setup DOM event listeners
 			document.addEventListener("DOMNodeRemoved", ytCinema.initvideoinject, false);
 			document.addEventListener("DOMNodeInserted", ytCinema.initvideoinject, false);
 		}
