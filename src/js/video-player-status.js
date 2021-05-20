@@ -44,11 +44,9 @@ var ytCinema;
 		window.addEventListener("load", ytCinema.initvideoinject, false);
 		document.addEventListener("DOMContentLoaded", ytCinema.initvideoinject, false);
 		ytCinema.initvideoinject();
-		// New Mutation Summary API Reference
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 		if(MutationObserver){
-			var videolist = document.querySelector("body");
-			var observer = new MutationObserver(function(mutations){
+			var videolist = document.querySelector("body"), observer = new MutationObserver(function(mutations){
 				mutations.forEach(function(mutation){
 					if(mutation.target.tagName == "VIDEO" && mutation.attributeName === "src"){
 						ytCinema.initvideoinject();
