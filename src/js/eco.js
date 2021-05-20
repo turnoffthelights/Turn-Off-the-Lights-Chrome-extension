@@ -120,7 +120,6 @@ function endlayer(){
 		chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
 			seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
 			if(seeanalytics == true){
-				// stop the timer
 				window.clearInterval(refreshIntervalId);
 				analytics = items["analytics"];
 				resultObject = search(today, analytics);
@@ -133,8 +132,7 @@ function endlayer(){
 				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
 				if(!mes){ mes = 0; }
 				currentseconds = parseInt(mes); currentseconds += totalSeconds;
-				mes = currentseconds;
-				if(mes > 0){
+				if(currentseconds > 0){
 					resultObject["'" + window.location.href + "'"] = mes;
 					chrome.storage.sync.set({"siteengagement":siteengagement});
 				}
