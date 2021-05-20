@@ -47,7 +47,6 @@ var ytCinema;
 		// New Mutation Summary API Reference
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 		if(MutationObserver){
-			// setup MutationSummary observer
 			var videolist = document.querySelector("body");
 			var observer = new MutationObserver(function(mutations){
 				mutations.forEach(function(mutation){
@@ -76,8 +75,7 @@ var ytCinema;
 		if(youtubeplayer !== null){ // YouTube video element
 			var interval = window.setInterval(function(){
 				if(youtubeplayer.pause || youtubeplayer.pauseVideo){
-					window.clearInterval(interval);
-					if(youtubeplayer.pauseVideo){ youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange"); }
+					window.clearInterval(interval); if(youtubeplayer.pauseVideo){ youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange"); }
 				}
 			}, 10);
 		}
@@ -91,10 +89,7 @@ var ytCinema;
 							play: function(){ o.players.active += 1; o.playerStateChange(1); },
 							ended: function(){ o.players.active -= 1; if(o.players.active < 1){ o.playerStateChange(0); } }
 						};
-						p.removeEventListener("pause", ev.pause); p.removeEventListener("play", ev.play); p.removeEventListener("ended", ev.ended);
-						p.addEventListener("pause", ev.pause);
-						p.addEventListener("play", ev.play);
-						p.addEventListener("ended", ev.ended);
+						p.removeEventListener("pause", ev.pause); p.removeEventListener("play", ev.play); p.removeEventListener("ended", ev.ended); p.addEventListener("pause", ev.pause); p.addEventListener("play", ev.play); p.addEventListener("ended", ev.ended);
 						o.players.objs.push(p);
 					}(this.ytCinema, htmlplayer[j]));
 				}
