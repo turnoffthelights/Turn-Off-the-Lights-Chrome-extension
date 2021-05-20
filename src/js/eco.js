@@ -51,7 +51,7 @@ function autoanalyticscleanup(){
 
 function logbytesanalytics(bytes){
 	// cleanup the big files
-	// limit in Google Chrome => 8192
+	// item limit in Google Chrome => 8192
 	if(bytes >= 5000){
 		autoanalyticscleanup();
 	}
@@ -69,7 +69,8 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 			analytics = items["analytics"];
 			siteengagement = items["siteengagement"];
 
-			chrome.storage.sync.getBytesInUse(["analytics", "siteengagement"], logbytesanalytics);
+			chrome.storage.sync.getBytesInUse(["analytics"], logbytesanalytics);
+			chrome.storage.sync.getBytesInUse(["siteengagement"], logbytesanalytics);
 			chrome.storage.sync.set({"analytics":analytics.concat(emptyarray), "siteengagement":siteengagement.concat(todaysite)}, function(){
 				if(chrome.runtime.lastError == "QUOTA_BYTES" || chrome.runtime.lastError == "QUOTA_BYTES_PER_ITEM" || chrome.runtime.lastError == "MAX_ITEMS"){
 					autoanalyticscleanup();
@@ -79,7 +80,6 @@ chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], functio
 			// if empty, create this empty day
 			chrome.storage.sync.set({"analytics":emptyarray, "siteengagement":todaysite});
 		}
-
 	}
 });
 
@@ -110,11 +110,7 @@ function setTime(){
 	}
 }
 
-var element = document.querySelector("#stefanvdlightareoff1");
-var in_dom = document.body.contains(element);
-if(document.body.contains(element)){
-	in_dom = true;
-}else if(in_dom){ in_dom = false; }
+var in_dom = false;
 var totalSeconds = 0;
 var refreshIntervalId;
 var taskaddseconds = false; // default false, when refresh the web page it save correct the value
@@ -143,6 +139,8 @@ function endlayer(){
 			}
 			taskaddseconds = true;
 			totalSeconds = 0;
+			// stop the timer
+			window.clearInterval(refreshIntervalId);
 		}
 	});
 }
@@ -164,19 +162,18 @@ observeDOM(document.body, function(){
 						var rest = JSON.stringify(resultObject["details"]["active"]);
 						var currentnumber = parseInt(rest);
 						currentnumber += 1;
-						rest = currentnumber;
-						resultObject["details"]["active"] = rest;
-						// when used the light off
+						resultObject["details"]["active"] = currentnumber;
+						// what hour the light are off
 						var d = new Date();
 						var n = d.getHours();
 						var thatime = resultObject["details"]["day"][n];
 						var timenumber = parseInt(thatime);
 						timenumber += 1;
-						thatime = timenumber;
-						resultObject["details"]["day"][n] = thatime;
-						// general save
-						chrome.storage.sync.set({"analytics":analytics});
-						chrome.runtime.sendMessage({name: "badgeon"});
+						resultObject["details"]["day"][n] = timenumber;
+						// save
+						chrome.storage.sync.set({"analytics":analytics}, function(){
+							chrome.runtime.sendMessage({name: "badgeon"});
+						});
 						// timer
 						refreshIntervalId = window.setInterval(setTime, 1000);
 					}
@@ -188,15 +185,11 @@ observeDOM(document.body, function(){
 
 	}else if(in_dom){
 		in_dom = false;
-		// stop the timer
 		endlayer();
-		window.clearInterval(refreshIntervalId);
 	}
 
 });
 
 window.addEventListener("beforeunload", function(){
-	// stop the timer
 	endlayer();
-	window.clearInterval(refreshIntervalId);
 });
