@@ -48,10 +48,7 @@ var ytCinema;
 		if(MutationObserver){
 			var videolist = document.querySelector("body"), observer = new MutationObserver(function(mutations){
 				mutations.forEach(function(mutation){
-					if(mutation.target.tagName == "VIDEO" && mutation.attributeName === "src"){
-						ytCinema.initvideoinject();
-					}
-					if(mutation.addedNodes == "VIDEO" || mutation.removedNodes == "VIDEO"){
+					if((mutation.target.tagName == "VIDEO" && mutation.attributeName === "src") || mutation.addedNodes == "VIDEO" || mutation.removedNodes == "VIDEO"){
 						ytCinema.initvideoinject();
 					}
 				});
