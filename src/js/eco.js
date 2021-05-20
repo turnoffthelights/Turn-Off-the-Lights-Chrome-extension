@@ -113,81 +113,80 @@ function setTime(){
 var in_dom = false;
 var totalSeconds = 0;
 var refreshIntervalId;
-var taskaddseconds = false; // default false, when refresh the web page it save correct the value
+var currentseconds;
 
 function endlayer(){
-	chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
-		seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-		if(seeanalytics == true){
-			if(taskaddseconds == false){
+	try{
+		chrome.storage.sync.get(["analytics", "siteengagement", "seeanalytics"], function(items){
+			seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
+			if(seeanalytics == true){
+				// stop the timer
+				window.clearInterval(refreshIntervalId);
+
 				analytics = items["analytics"];
 				resultObject = search(today, analytics);
 				var over = JSON.stringify(resultObject["details"]["time"]);
-				currentseconds = parseInt(over); currentseconds += totalSeconds; over = currentseconds;
-				resultObject["details"]["time"] = over;
+				currentseconds = parseInt(over); currentseconds += totalSeconds;
+				resultObject["details"]["time"] = currentseconds;
 				chrome.storage.sync.set({"analytics":analytics});
+
+				siteengagement = items["siteengagement"];
+				resultObject = search(today, siteengagement);
+				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
+				if(!mes){ mes = 0; }
+				currentseconds = parseInt(mes); currentseconds += totalSeconds;
+				mes = currentseconds;
+				if(mes > 0){
+					resultObject["'" + window.location.href + "'"] = mes;
+					chrome.storage.sync.set({"siteengagement":siteengagement});
+				}
+				totalSeconds = 0;
 			}
-			siteengagement = items["siteengagement"];
-			resultObject = search(today, siteengagement);
-			var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-			if(!mes){ mes = 0; }
-			currentseconds = parseInt(mes); currentseconds += totalSeconds;
-			mes = currentseconds;
-			if(mes > 0){
-				resultObject["'" + window.location.href + "'"] = mes;
-				chrome.storage.sync.set({"siteengagement":siteengagement});
-			}
-			taskaddseconds = true;
-			totalSeconds = 0;
-			// stop the timer
-			window.clearInterval(refreshIntervalId);
-		}
-	});
+		});
+	}catch(e){
+		// console.log(e);
+	}
 }
 
 var resultObject;
-var currentseconds;
 observeDOM(document.body, function(){
-
 	if(document.getElementById("stefanvdlightareoff1")){
 		if(!in_dom){
-			taskaddseconds = false;
-
-			chrome.storage.sync.get(["analytics", "seeanalytics"], function(items){
-				seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
-				if(seeanalytics == true){
-					if(items["analytics"]){
-						analytics = items["analytics"];
-						resultObject = search(today, analytics);
-						var rest = JSON.stringify(resultObject["details"]["active"]);
-						var currentnumber = parseInt(rest);
-						currentnumber += 1;
-						resultObject["details"]["active"] = currentnumber;
-						// what hour the light are off
-						var d = new Date();
-						var n = d.getHours();
-						var thatime = resultObject["details"]["day"][n];
-						var timenumber = parseInt(thatime);
-						timenumber += 1;
-						resultObject["details"]["day"][n] = timenumber;
-						// save
-						chrome.storage.sync.set({"analytics":analytics}, function(){
-							chrome.runtime.sendMessage({name: "badgeon"});
-						});
-						// timer
-						refreshIntervalId = window.setInterval(setTime, 1000);
+			try{
+				chrome.storage.sync.get(["analytics", "seeanalytics"], function(items){
+					seeanalytics = items["seeanalytics"]; if(seeanalytics == null)seeanalytics = true;
+					if(seeanalytics == true){
+						if(items["analytics"]){
+							analytics = items["analytics"];
+							resultObject = search(today, analytics);
+							var rest = JSON.stringify(resultObject["details"]["active"]);
+							var currentnumber = parseInt(rest);
+							currentnumber += 1;
+							resultObject["details"]["active"] = currentnumber;
+							// what hour the light are off
+							var n = new Date().getHours();
+							var thatime = resultObject["details"]["day"][n];
+							var timenumber = parseInt(thatime);
+							timenumber += 1;
+							resultObject["details"]["day"][n] = timenumber;
+							// save
+							chrome.storage.sync.set({"analytics":analytics}, function(){
+								chrome.runtime.sendMessage({name: "badgeon"});
+							});
+							// timer
+							refreshIntervalId = window.setInterval(setTime, 1000);
+						}
 					}
-				}
-			});
-
+				});
+			}catch(e){
+				// console.log(e);
+			}
 		}
 		in_dom = true;
-
 	}else if(in_dom){
 		in_dom = false;
 		endlayer();
 	}
-
 });
 
 window.addEventListener("beforeunload", function(){
