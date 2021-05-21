@@ -1123,49 +1123,36 @@ function drawAtmos(){
 // Fade engine
 // Variable for the fade in and out effect
 var opacity = 0;
-
 var ReducingFinished = true;
 var OpacityLevelIncrement = 10; // Percentage value: 1-100
 var DIVElementById = null;
 
-//  Function determines whether we show or hide the item referenced by ElementID
+// Function determines whether we show or hide the item referenced by ElementID
 function fader(ActionToTake){
 	DIVElementById = $("example2");
 	if(ActionToTake == "hide"){ opacity = default_opacity; reduceOpacity(); }else if(ActionToTake == "show"){ increaseOpacity(); }
 }
 
-//  Makes div increase
+// Makes div increase
 function increaseOpacity(){
 	DIVElementById.style.display = "";
-	//  If opacity level is less than default_opacity, we can still increase the opacity
+	// If opacity level is less than default_opacity, we can still increase the opacity
 	if((opacity < default_opacity) && (ReducingFinished == true)){
-		if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
-			ReducingFinished = true;
-			opacity += (default_opacity - opacity);
-			DIVElementById.style.opacity = opacity / 100;
-			window.requestAnimFrame(increaseOpacity);
-		}else{
-			ReducingFinished = true;
-			opacity += OpacityLevelIncrement;
-			DIVElementById.style.opacity = opacity / 100;
-			window.requestAnimFrame(increaseOpacity);
-		}
-	}else{
-		ReducingFinished = false;
-	}
+		(opacity > (default_opacity - 10)) ? opacity += (default_opacity - opacity) : opacity += OpacityLevelIncrement;
+		DIVElementById.style.opacity = opacity / 100;
+		window.requestAnimFrame(increaseOpacity);
+	}else{ ReducingFinished = false; }
 }
 
 // Makes div reduce
 function reduceOpacity(){
 	// If opacity level is greater than 0, we can still reduce the opacity
 	if((opacity > 0) && (ReducingFinished == false)){
-		ReducingFinished = false;
 		opacity -= OpacityLevelIncrement;
 		DIVElementById.style.opacity = opacity / 100;
 		window.requestAnimFrame(reduceOpacity);
 	}else{
 		ReducingFinished = true;
-
 		// When finished, make sure the DIVElementById is set to remove element
 		if(DIVElementById.style.opacity <= 0){ DIVElementById.style.display = "none"; }
 	}
