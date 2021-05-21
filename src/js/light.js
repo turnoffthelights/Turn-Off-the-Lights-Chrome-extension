@@ -2378,13 +2378,11 @@ function increaseOpacity(){
 	if((opacity < default_opacity) && (ReducingFinished == true)){
 		if(opacity > (default_opacity - 10)){
 			opacity += (default_opacity - opacity);
-			DIVElementById.style.opacity = opacity / 100;
-			window.requestAnimFrame(increaseOpacity);
 		}else{
 			opacity += OpacityLevelIncrement;
-			DIVElementById.style.opacity = opacity / 100;
-			window.requestAnimFrame(increaseOpacity);
 		}
+		DIVElementById.style.opacity = opacity / 100;
+		window.requestAnimFrame(increaseOpacity);
 	}else{
 		ReducingFinished = false;
 	}
