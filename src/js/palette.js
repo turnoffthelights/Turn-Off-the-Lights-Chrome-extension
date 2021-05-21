@@ -618,27 +618,28 @@ function atmosdisable(status){
 	$("ambilightvarcolor").disabled = status;
 }
 
+var currentlayercolor;
 function colorchange(){
 	var elem = this;
 	var bckbutton = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-	chrome.storage.sync.set({"lightcolor": rgb2hex(bckbutton), "lightimagea": false, "lightimagen": true, "lightimagelin": false});
-	chrome.tabs.query({
-		active: true,
-		currentWindow: true
-	}, function(tab){
-		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + bckbutton + "';}}"});
-	});
+	currentlayercolor = rgb2hex(bckbutton);
+	chrome.storage.sync.set({"lightcolor": currentlayercolor, "lightimagea": false, "lightimagen": true, "lightimagelin": false});
+	executelivechange();
 }
 
 function opacitychange(){
 	var thatvalue = $("oslider").value;
 	$("otext").innerText = thatvalue;
 	chrome.storage.sync.set({"interval": thatvalue});
+	executelivechange();
+}
+
+function executelivechange(){
 	chrome.tabs.query({
 		active: true,
 		currentWindow: true
 	}, function(tab){
-		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.opacity = (" + thatvalue + "/100);}}"});
+		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + $("oslider").value + "/100);}}"});
 	});
 }
 
