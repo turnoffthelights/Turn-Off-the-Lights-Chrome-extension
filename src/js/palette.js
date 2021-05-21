@@ -657,42 +657,17 @@ function savecolorvalue(elem, name){
 	chrome.storage.sync.set(pair);
 }
 
-function nightmodebckcolorchange(){
+function savecolorchange(id, savename, elem){
 	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
-	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
-	savecolorvalue("colornightmodebckcustom", "nightmodebck");
+	$(id).value = rgb2hex(currentcolor);
+	savecolorvalue(elem, savename);
 }
 
-function nightmodebckcolorchangecustom(){
-	savecolorvalue("colornightmodebckcustom", "nightmodebck");
-}
-
-function nightmodetextcolorchange(){
-	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
-	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
-	savecolorvalue("colornightmodetxtcustom", "nightmodetxt");
-}
-
-function nightmodetextcolorchangecustom(){
-	savecolorvalue("colornightmodetxtcustom", "nightmodetxt");
-}
-
-function nightmodelinkcolorchange(){
-	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
-	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
-	savecolorvalue("colornightmodehyperlinkcustom", "nightmodehyperlink");
-}
-
-function nightmodelinkcolorchangecustom(){
-	savecolorvalue("colornightmodehyperlinkcustom", "nightmodehyperlink");
-}
-
-function nightmodebuttoncolorchange(){
-	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
-	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
-	savecolorvalue("colornightmodebuttoncustom", "nightmodebutton");
-}
-
-function nightmodebuttoncolorchangecustom(){
-	savecolorvalue("colornightmodebuttoncustom", "nightmodebutton");
-}
+function nightmodebckcolorchange(){ savecolorchange("colornightmodebuttoncustom", "nightmodebck", "colornightmodebckcustom"); }
+function nightmodebckcolorchangecustom(){ savecolorvalue("colornightmodebckcustom", "nightmodebck"); }
+function nightmodetextcolorchange(){ savecolorchange("colornightmodetxtcustom", "nightmodetxt", "colornightmodebuttoncustom"); }
+function nightmodetextcolorchangecustom(){ savecolorvalue("colornightmodetxtcustom", "nightmodetxt"); }
+function nightmodelinkcolorchange(){ savecolorchange("colornightmodehyperlinkcustom", "nightmodehyperlink", "colornightmodebuttoncustom"); }
+function nightmodelinkcolorchangecustom(){ savecolorvalue("colornightmodehyperlinkcustom", "nightmodehyperlink"); }
+function nightmodebuttoncolorchange(){ savecolorchange("colornightmodebuttoncustom", "nightmodebutton", "colornightmodebuttoncustom"); }
+function nightmodebuttoncolorchangecustom(){ savecolorvalue("colornightmodebuttoncustom", "nightmodebutton"); }
