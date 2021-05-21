@@ -257,8 +257,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	// Detect click / change to save the page and test it.
 	var inputs = document.querySelectorAll("input");
-	var i;
-	var l = inputs.length;
+	var i, l = inputs.length;
 	for(i = 0; i < l; i++){ inputs[i].addEventListener("change", test); inputs[i].addEventListener("change", save_options); }
 
 	var pagearray = ["basicspanel", "morepanel", "atmospanel", "analyticspanel", "videopanel"];
@@ -657,6 +656,12 @@ function rgb2hex(rgb){
   ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : "";
 }
 
+function savecolorvalue(elem, name){
+	var currentcolor = $(elem).value;
+	var pair = {}; pair[name] = currentcolor;
+	chrome.storage.sync.set(pair);
+}
+
 function nightmodebckcolorchange(){
 	var elem = this;
 	nightmodebck = window.getComputedStyle(elem, null).getPropertyValue("background-color");
@@ -665,8 +670,7 @@ function nightmodebckcolorchange(){
 }
 
 function nightmodebckcolorchangecustom(){
-	nightmodebck = $("colornightmodebckcustom").value;
-	chrome.storage.sync.set({"nightmodebck": nightmodebck});
+	savecolorvalue("colornightmodebckcustom", "nightmodebck");
 }
 
 function nightmodetextcolorchange(){
@@ -677,8 +681,7 @@ function nightmodetextcolorchange(){
 }
 
 function nightmodetextcolorchangecustom(){
-	nightmodetxt = $("colornightmodetxtcustom").value;
-	chrome.storage.sync.set({"nightmodetxt": nightmodetxt});
+	savecolorvalue("colornightmodetxtcustom", "nightmodetxt");
 }
 
 function nightmodelinkcolorchange(){
@@ -689,8 +692,7 @@ function nightmodelinkcolorchange(){
 }
 
 function nightmodelinkcolorchangecustom(){
-	nightmodehyperlink = $("colornightmodehyperlinkcustom").value;
-	chrome.storage.sync.set({"nightmodehyperlink": nightmodehyperlink});
+	savecolorvalue("colornightmodehyperlinkcustom", "nightmodehyperlink");
 }
 
 function nightmodebuttoncolorchange(){
@@ -701,6 +703,5 @@ function nightmodebuttoncolorchange(){
 }
 
 function nightmodebuttoncolorchangecustom(){
-	nightmodebutton = $("colornightmodebuttoncustom").value;
-	chrome.storage.sync.set({"nightmodebutton": rgb2hex(nightmodebutton)});
+	savecolorvalue("colornightmodebuttoncustom", "nightmodebutton");
 }
