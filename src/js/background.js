@@ -363,27 +363,21 @@ function checkcontextmenus(){
 	}
 }
 
-function removecontexmenus(){
-	if(contextarrayvideo.length > 0){
-		var v;
-		var l = contextarrayvideo.length;
+function cleanrightclickmenu(menu){
+	if(menu.length > 0){
+		var v, l = menu.length;
 		for(v = 0; v < l; v++){
-			if(contextarrayvideo[v] != undefined && contextarrayvideo[v] != null){
-				chrome.contextMenus.remove(contextarrayvideo[v]);
+			if(menu[v] != undefined && menu[v] != null){
+				chrome.contextMenus.remove(menu[v]);
 			}
 		}
 	}
-	if(contextarraypage.length > 0){
-		var p;
-		var pagelength = contextarraypage.length;
-		for(p = 0; p < pagelength; p++){
-			if(contextarraypage[p] != undefined && contextarraypage[p] != null){
-				chrome.contextMenus.remove(contextarraypage[p]);
-			}
-		}
-	}
-	contextarrayvideo = [];
-	contextarraypage = [];
+	menu = [];
+}
+
+function removecontexmenus(){
+	cleanrightclickmenu(contextarrayvideo);
+	cleanrightclickmenu(contextarraypage);
 	contextmenuadded = false;
 }
 
@@ -394,8 +388,7 @@ chrome.storage.onChanged.addListener(function(changes){
 	if(changes["icon"]){
 		if(changes["icon"].newValue){
 			chrome.tabs.query({}, function(tabs){
-				var i;
-				var l = tabs.length;
+				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
 					chrome.browserAction.setIcon({tabId : tabs[i].id,
 						path : {
@@ -518,8 +511,7 @@ chrome.storage.onChanged.addListener(function(changes){
 
 function chromerefreshalltabs(name){
 	chrome.tabs.query({}, function(tabs){
-		var i;
-		var l = tabs.length;
+		var i, l = tabs.length;
 		for(i = 0; i < l; i++){
 			var protocol = tabs[i].url.split(":")[0];
 			if(protocol == "http" || protocol == "https"){
@@ -589,8 +581,7 @@ if(mm < 10){ mm = "0" + mm; }
 var today = dd + "/" + mm + "/" + yyyy;
 
 function search(nameKey, myArray){
-	var i;
-	var l = myArray.length;
+	var i, l = myArray.length;
 	for(i = 0; i < l; i++){
 		if(myArray[i].name === nameKey){
 			return myArray[i];
@@ -600,7 +591,7 @@ function search(nameKey, myArray){
 
 var analytics; var rest;
 function checkbadge(){
-	chrome.storage.sync.get(["analytics", "badge"], function(items){
+	chrome.storage.sync.get(["analytics", "badge", "contextmenus"], function(items){
 		if(items["analytics"]){
 			analytics = items["analytics"];
 			var resultObject = search(today, analytics);
@@ -612,6 +603,9 @@ function checkbadge(){
 			if(items["badge"] == true){ chrome.browserAction.setBadgeText({text: rest}); }else{ chrome.browserAction.setBadgeText({text: ""}); }
 			chrome.browserAction.setBadgeBackgroundColor({color: "#43A047"});
 		}else{ chrome.browserAction.setBadgeText({text: ""}); } // no data found, automatically clean this
+		if(items["contextmenus"]){
+			if(items["contextmenus"] == true){ checkcontextmenus(); }
+		}
 	});
 }
 

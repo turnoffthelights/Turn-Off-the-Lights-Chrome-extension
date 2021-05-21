@@ -164,30 +164,26 @@ function domcontentloaded(){
 						var newcomp = memdayweek.split("/");
 						var suprisenew = newcomp[2] + "/" + newcomp[1] + "/" + newcomp[0];
 						var abc = new Date(suprisenew);
-						var dayOfWeek = days[abc.getDay()];
-						ct7favoritedayweek = dayOfWeek;
+						ct7favoritedayweek = days[abc.getDay()];
 					}
 				});
 
 			}else{
 				ct7sinminutes = 0;
 				var zz = new Date();
-				var dayOfWeek = days[zz.getDay()];
-				ct7favoritedayweek = dayOfWeek;
+				ct7favoritedayweek = days[zz.getDay()];
 			}
 
 			if(memhigh == 0){
 				ct7sinminutes = 0;
 				var zzm = new Date();
-				var dayOfWeekm = days[zzm.getDay()];
-				ct7favoritedayweek = dayOfWeekm;
+				ct7favoritedayweek = days[zzm.getDay()];
 			}
 
 			var lastdays;
 			if(analytics.length > 2){
-				lastdays = analytics[analytics.length - 2];
-				var timeyesterday = lastdays.details.time; // in minutes
-				ct1sinminutes = timeyesterday / 60;
+				lastdays = analytics[analytics.length - 2]; // in minutes
+				ct1sinminutes = lastdays.details.time / 60;
 			}else{ ct1sinminutes = 0; }
 
 			// ----Share Energy saved
@@ -434,7 +430,7 @@ function domcontentloaded(){
 					fill: true,
 					backgroundColor: ["#43A047"],
 					data: [currentkwh30days, kwhwithregu30days],
-					borderColor:	["#43A047"],
+					borderColor: ["#43A047"],
 					borderWidth: 1
 				}
 			]

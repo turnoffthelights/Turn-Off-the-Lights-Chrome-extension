@@ -1040,15 +1040,25 @@ function reader(){
 	}
 }
 
+function setAttributes(el, attrs){
+	for(var key in attrs){
+		el.setAttribute(key, attrs[key]);
+	}
+}
+
+function multiaddEventListeners(action, attrs, runfunc){
+	for(var key in attrs){
+		attrs[key].addEventListener(action, runfunc, false);
+	}
+}
+
 function removeId(idname){
 	var elem = document.getElementById(idname);
 	if(elem){ elem.parentNode.removeChild(elem); }
 }
 
 function removeClass(classelement){
-	var videotopdiv = document.querySelectorAll("." + classelement);
-	var videotopi;
-	var videotopl = videotopdiv.length;
+	var videotopdiv = document.querySelectorAll("." + classelement), videotopi, videotopl = videotopdiv.length;
 	for(videotopi = 0; videotopi < videotopl; videotopi++){
 		videotopdiv[videotopi].classList.remove(classelement);
 	}
@@ -1067,13 +1077,10 @@ function removenewframe(){
 	removetoplayerclass.forEach(removeClass);
 
 	// inside the root
-	var q = document.getElementsByTagName("*");
-	var i;
-	var l = q.length;
+	var q = document.getElementsByTagName("*"), i, l = q.length;
 	for(i = 0; i < l; i++){
 		if(q[i].shadowRoot){
 			if(q[i].shadowRoot.querySelector("#rootstefan")){ q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector("#rootstefan")); }
-
 			var rootdiv = q[i].shadowRoot.querySelectorAll(".stefanvdotherdown");
 			var k;
 			var m = rootdiv.length;
@@ -1213,22 +1220,27 @@ function watchMouse(e){
 
 function dragBorder(arg, delta){
 	if(stretchable){
-		if(arg == "right"){
+		switch(arg){
+		case"right":
 			rect.style.width = (width + delta) + "px";
 			$("stefanvdlightareoff3").style.width = (parseInt($("stefanvdlightareoff3").style.width) + delta) + "px"; $("stefanvdlightareoff3").style.left = (parseInt($("stefanvdlightareoff3").style.left) + delta) + "px";
-		}else if(arg == "left"){
+			break;
+		case"left":
 			rect.style.width = (width - delta) + "px"; rect.style.left = (parseInt(rect.style.left) + delta) + "px";
 			$("stefanvdlightareoff2").style.width = (parseInt($("stefanvdlightareoff2").style.width) + delta) + "px";
-		}else if(arg == "bottom"){
+			break;
+		case"bottom":
 			rect.style.height = (height + delta) + "px";
 			$("stefanvdlightareoff4").style.height = (parseInt($("stefanvdlightareoff4").style.height) - delta) + "px"; $("stefanvdlightareoff4").style.top = (parseInt($("stefanvdlightareoff4").style.top) + delta) + "px";
 			$("stefanvdlightareoff2").style.height = (parseInt($("stefanvdlightareoff2").style.height) + delta) + "px";
 			$("stefanvdlightareoff3").style.height = (parseInt($("stefanvdlightareoff3").style.height) + delta) + "px";
-		}else if(arg == "top"){
+			break;
+		case"top":
 			rect.style.height = (height - delta) + "px"; rect.style.top = (parseInt(rect.style.top) + delta) + "px";
 			$("stefanvdlightareoff1").style.height = (parseInt($("stefanvdlightareoff1").style.height) + delta) + "px";
 			$("stefanvdlightareoff2").style.height = (parseInt($("stefanvdlightareoff2").style.height) - delta) + "px"; $("stefanvdlightareoff2").style.top = (parseInt($("stefanvdlightareoff2").style.top) + delta) + "px";
 			$("stefanvdlightareoff3").style.height = (parseInt($("stefanvdlightareoff3").style.height) - delta) + "px"; $("stefanvdlightareoff3").style.top = (parseInt($("stefanvdlightareoff3").style.top) + delta) + "px";
+			break;
 		}
 	}
 }
@@ -1418,8 +1430,7 @@ function getMouse(obj, e){
 // script readerbar
 function showValue(newValue){
 	$("totlgammaVal").value = newValue; $("totlrange").value = newValue; div = document.getElementsByTagName("div");
-	var i;
-	var l = div.length;
+	var i, l = div.length;
 	for(i = 0; i < l; i++){ if(div[i].className == ("stefanvdlightareoff")){ div[i].style.opacity = (newValue / 100); } }
 }
 
@@ -1614,8 +1625,7 @@ function generate(){
 }
 
 function cloudupdate(){
-	var j;
-	var l = layers.length;
+	var j, l = layers.length;
 	for(j = 0; j < l; j++){
 		var layer = layers[ j ];
 		layer.data.a += layer.data.speed;
@@ -1649,9 +1659,7 @@ function resizer(){
 	window_width = window.innerWidth * 1.5;
 	window_height = window.innerHeight * 1.5;
 	drop_count = window_width * rain_weight;
-
-	stormcanvas.setAttribute("width", window_width);
-	stormcanvas.setAttribute("height", window_height);
+	setAttributes(stormcanvas, {"width": window_width, "height": window_height});
 }
 
 function paintSky(){
@@ -1744,8 +1752,7 @@ var points;
 
 function trianglerun(){
 	var triasvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-	triasvg.setAttribute("width", window.innerWidth);
-	triasvg.setAttribute("height", window.innerHeight);
+	setAttributes(triasvg, {"width": window.innerWidth, "height": window.innerHeight});
 	document.getElementById("triangle").appendChild(triasvg);
 
 	var unitSize = (window.innerWidth + window.innerHeight) / 20;
@@ -1812,10 +1819,7 @@ function trianglerun(){
 				}
 				polygon.setAttribute("fill", "rgba(0,0,0," + (Math.random() / 3) + ")");
 				var animate = document.createElementNS("http://www.w3.org/2000/svg", "animate");
-				animate.setAttribute("fill", "freeze");
-				animate.setAttribute("attributeName", "points");
-				animate.setAttribute("dur", refreshDuration + "ms");
-				animate.setAttribute("calcMode", "linear");
+				setAttributes(animate, {"fill": "freeze", "attributeName": "points", "dur": refreshDuration + "ms", "calcMode": "linear"});
 				polygon.appendChild(animate);
 				triasvg.appendChild(polygon);
 			}
@@ -1903,8 +1907,7 @@ function lightsgoonoroff(){
 
 		if(mousespotlighta == true){
 			var newframe1always = document.createElement("div");
-			newframe1always.setAttribute("id", "stefanvdlightareoff1");
-			newframe1always.setAttribute("class", "stefanvdlightareoff");
+			setAttributes(newframe1always, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
 			fullspotlightsize = spotlightradius;
 			borderspotlightsize = spotlightradius - 8;
 			mousespotlightstyle = "-webkit-gradient(radial, -50 -50, " + fullspotlightsize + ", -50 -50, " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
@@ -1943,14 +1946,10 @@ function lightsgoonoroff(){
 			var newframe3 = document.createElement("div");
 			var newframe4 = document.createElement("div");
 			var newframe5 = document.createElement("div");
-			newframe1.setAttribute("id", "stefanvdlightareoff1");
-			newframe2.setAttribute("id", "stefanvdlightareoff2");
-			newframe3.setAttribute("id", "stefanvdlightareoff3");
-			newframe4.setAttribute("id", "stefanvdlightareoff4");
-			newframe1.setAttribute("class", "stefanvdlightareoff");
-			newframe2.setAttribute("class", "stefanvdlightareoff");
-			newframe3.setAttribute("class", "stefanvdlightareoff");
-			newframe4.setAttribute("class", "stefanvdlightareoff");
+			setAttributes(newframe1, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
+			setAttributes(newframe2, {"id": "stefanvdlightareoff2", "class": "stefanvdlightareoff"});
+			setAttributes(newframe3, {"id": "stefanvdlightareoff3", "class": "stefanvdlightareoff"});
+			setAttributes(newframe4, {"id": "stefanvdlightareoff4", "class": "stefanvdlightareoff"});
 			newframe5.setAttribute("id", "stefanvdlightareoffcustom");
 			newframe1.style.background = lightcolor;
 			newframe2.style.background = lightcolor;
@@ -1968,23 +1967,16 @@ function lightsgoonoroff(){
 
 			// fade out effect
 			if(fadeout == true){
-				newframe1.addEventListener("click", function(){ lockscreen(); });
-				newframe2.addEventListener("click", function(){ lockscreen(); });
-				newframe3.addEventListener("click", function(){ lockscreen(); });
-				newframe4.addEventListener("click", function(){ lockscreen(); });
+				multiaddEventListeners("click", [newframe1, newframe2, newframe3, newframe4], lockscreen);
 			}else{
-				newframe1.addEventListener("click", function(){ lockscreen(); });
-				newframe2.addEventListener("click", function(){ lockscreen(); });
-				newframe3.addEventListener("click", function(){ lockscreen(); });
-				newframe4.addEventListener("click", function(){ lockscreen(); });
+				multiaddEventListeners("click", [newframe1, newframe2, newframe3, newframe4], lockscreen);
 			}
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newframe1.style.opacity = default_opacity / 100; newframe2.style.opacity = default_opacity / 100; newframe3.style.opacity = default_opacity / 100; newframe4.style.opacity = default_opacity / 100; } // no fade effect
 		}else if(mousespotlightt == true){
 			var newdivthrough = document.createElement("div");
-			newdivthrough.setAttribute("id", "stefanvdlightareoff1");
-			newdivthrough.setAttribute("class", "stefanvdlightareoff");
+			setAttributes(newdivthrough, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
 			newdivthrough.style.width = "100%";
 			newdivthrough.style.height = "100%";
 			newdivthrough.style.left = 0;
@@ -2006,8 +1998,7 @@ function lightsgoonoroff(){
 			if(fadein == true){ fader("show"); }else{ newdivthrough.style.opacity = default_opacity / 100; } // no fade effect
 		}else{ // Begin normal lights off
 			var newdiv = document.createElement("div");
-			newdiv.setAttribute("id", "stefanvdlightareoff1");
-			newdiv.setAttribute("class", "stefanvdlightareoff");
+			setAttributes(newdiv, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
 			newdiv.style.width = "100%";
 			newdiv.style.height = "100%";
 			newdiv.style.left = 0;
@@ -2099,12 +2090,7 @@ function lightsgoonoroff(){
 			stefanvdreaderbardiv1.appendChild(stefanvdreaderbaroa);
 
 			var stefanvdreaderinput1 = document.createElement("input");
-			stefanvdreaderinput1.setAttribute("type", "range");
-			stefanvdreaderinput1.setAttribute("id", "totlrange");
-			stefanvdreaderinput1.setAttribute("min", "0");
-			stefanvdreaderinput1.setAttribute("max", "100");
-			stefanvdreaderinput1.setAttribute("step", "1");
-			stefanvdreaderinput1.setAttribute("value", "0");
+			setAttributes(stefanvdreaderinput1, {"type": "range", "id": "totlrange", "min": "0", "max": "100", "step": "1", "value": "0"});
 			stefanvdreaderinput1.addEventListener("change", function(){ showValue(this.value); }, true);
 			stefanvdreaderinput1.addEventListener("input", function(){ showValue(this.value); }, true);
 			stefanvdreaderbaroa.appendChild(stefanvdreaderinput1);
@@ -2114,11 +2100,7 @@ function lightsgoonoroff(){
 			stefanvdreaderbardiv1.appendChild(stefanvdreaderbaran);
 
 			var stefanvdreaderinput2 = document.createElement("input");
-			stefanvdreaderinput2.setAttribute("id", "totlgammaVal");
-			stefanvdreaderinput2.setAttribute("maxlength", "3");
-			stefanvdreaderinput2.setAttribute("size", "3");
-			stefanvdreaderinput2.setAttribute("type", "text");
-			stefanvdreaderinput2.setAttribute("value", "0");
+			setAttributes(stefanvdreaderinput2, {"id": "totlgammaVal", "maxlength": "3", "size": "3", "type": "text", "value": "0"});
 			stefanvdreaderinput2.addEventListener("change", function(){ showValue(this.value); }, true);
 			stefanvdreaderbaran.appendChild(stefanvdreaderinput2);
 
@@ -2337,8 +2319,7 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 		}else{
 			if(document.documentElement){
 				var newscreenshader = document.createElement("div");
-				newscreenshader.setAttribute("id", "stefanvdscreenshader");
-				newscreenshader.setAttribute("class", "stefanvdscreenshader");
+				setAttributes(newscreenshader, {"id": "stefanvdscreenshader", "class": "stefanvdscreenshader"});
 				newscreenshader.style.background = lightcolor;
 				newscreenshader.style.mixBlendMode = "multiply";
 				newscreenshader.style.opacity = default_opacity / 100;
@@ -2394,7 +2375,7 @@ function fader(ActionToTake){
 //  Makes div increase
 function increaseOpacity(){
 	try{
-	// If opacity level is less than default_opacity, we can still increase the opacity
+		// If opacity level is less than default_opacity, we can still increase the opacity
 		if((opacity < default_opacity) && (ReducingFinished == true)){
 			if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
 				ReducingFinished = true;
@@ -2411,9 +2392,7 @@ function increaseOpacity(){
 			ReducingFinished = false;
 		}
 		// control opacity for all <div>
-		var div = document.querySelectorAll("div.stefanvdlightareoff");
-		var i;
-		var l = div.length;
+		var div = document.querySelectorAll("div.stefanvdlightareoff"), i, l = div.length;
 		for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
 	}catch(e){ console.error(e); }
 }
@@ -2421,7 +2400,7 @@ function increaseOpacity(){
 //  Makes div reduce
 function reduceOpacity(){
 	try{
-	// If opacity level is greater than 0, we can still reduce the opacity
+		// If opacity level is greater than 0, we can still reduce the opacity
 		if((opacity > 0) && (ReducingFinished == false)){
 			ReducingFinished = false;
 			opacity -= OpacityLevelIncrement;
@@ -2434,9 +2413,7 @@ function reduceOpacity(){
 			if(DIVElementById.style.opacity <= 0){ document.body.removeChild(DIVElementById); removenewframe(); }
 		}
 		// Control opacity for all <div>
-		var div = document.querySelectorAll("div.stefanvdlightareoff");
-		var i;
-		var l = div.length;
+		var div = document.querySelectorAll("div.stefanvdlightareoff"), i, l = div.length;
 		for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
 	}catch(e){ console.log(e); }
 }
