@@ -41,6 +41,55 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 		return{x:xPos, y:yPos};
 	}
 
+	var d; var w; var h; var t; var st;
+	function refreshdesign(item, myElement){
+		// design panel
+		if(myElement.currentStyle){
+			d = myElement.currentStyle["display"];
+			w = myElement.currentStyle["width"];
+			h = myElement.currentStyle["height"];
+			t = myElement.currentStyle["top"];
+		}else if(window.getComputedStyle){
+			st = document.defaultView.getComputedStyle(myElement, null);
+			d = st.getPropertyValue("display");
+			w = st.getPropertyValue("width");
+			h = st.getPropertyValue("height");
+			t = st.getPropertyValue("top");
+		}
+
+		var visposition = getPosition(myElement);
+
+		// if previous path is none, then hide it too
+		var path = [];
+		do{
+			var qq = path.unshift(myElement.nodeName);
+
+			var adisplay;
+			if(myElement.currentStyle){
+				adisplay = qq.currentStyle["display"];
+			}else{
+				st = document.defaultView.getComputedStyle(myElement, null);
+				adisplay = st.getPropertyValue("display");
+			}
+			if(adisplay == "none"){
+				item.style.display = "none";
+			}
+		}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode));
+		//---
+
+		// YouTube video top position negative value, then minus the height
+		if(parseInt(t, 10) < 0){
+			item.style.top = visposition.y - h + "px";
+		}else{
+			item.style.top = visposition.y + "px";
+		}
+		item.style.left = visposition.x + "px";
+		item.style.width = w;
+		item.style.height = h;
+
+		if(d == "none"){ item.style.display = "none"; }
+	}
+
 	function autostopfunction(){
 	// A regular on first run
 		autostopdetectionstart();
@@ -111,8 +160,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 
 		var visualvideos = document.getElementsByTagName("video");
 		var selectedvideo = null;
-		var i;
-		var l = visualvideos.length;
+		var i, l = visualvideos.length;
 		for(i = 0; i < l; i++){
 			selectedvideo = visualvideos[i];
 			selectedvideo.setAttribute("data-videonum", i);
@@ -180,24 +228,6 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 			}, false);
 			selectedvideo.addEventListener("pause", stopTracking);
 
-			// design panel
-			var d; var w; var h; var t; var st;
-			var myElement = document.getElementsByTagName("video")[i];
-			if(myElement.currentStyle){
-				d = myElement.currentStyle["display"];
-				w = myElement.currentStyle["width"];
-				h = myElement.currentStyle["height"];
-				t = myElement.currentStyle["top"];
-			}else if(window.getComputedStyle){
-				st = document.defaultView.getComputedStyle(myElement, null);
-				d = st.getPropertyValue("display");
-				w = st.getPropertyValue("width");
-				h = st.getPropertyValue("height");
-				t = st.getPropertyValue("top");
-			}
-
-			var visposition = getPosition(myElement);
-
 			var newautostoppanel = document.createElement("div");
 			newautostoppanel.setAttribute("id", "stefanvdautostoppanel" + i);
 			newautostoppanel.setAttribute("data-videonum", i);
@@ -207,34 +237,8 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 				newautostoppanel.setAttribute("style", "background:rgba(165,8,0,0.88)!important");
 			}
 
-			// if previous path is none, then hide it too
-			var path = [];
-			do{
-				var qq = path.unshift(myElement.nodeName);
-
-				var adisplay;
-				if(myElement.currentStyle){
-					adisplay = qq.currentStyle["display"];
-				}else{
-					st = document.defaultView.getComputedStyle(myElement, null);
-					adisplay = st.getPropertyValue("display");
-				}
-				if(adisplay == "none"){
-					newautostoppanel.style.display = "none";
-				}
-			}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode));
-			//---
-
-			// YouTube video top position negative value, then minus the height
-			if(parseInt(t, 10) < 0){
-				newautostoppanel.style.top = visposition.y - h + "px";
-			}else{
-				newautostoppanel.style.top = visposition.y + "px";
-			}
-			newautostoppanel.style.left = visposition.x + "px";
-			newautostoppanel.style.width = w;
-			newautostoppanel.style.height = h;
-			if(d == "none"){ newautostoppanel.style.display = "none"; }
+			var myElement = document.getElementsByTagName("video")[i];
+			refreshdesign(newautostoppanel, myElement);
 
 			newautostoppanel.addEventListener("click", function(event){
 				var templearn = event.target.id;
@@ -292,52 +296,8 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 		for(i = 0; i < l; ++i){
 			var item = cusid_ele[i];
 			var myElement = document.getElementsByTagName("video")[i];
-			var d; var w; var h; var t; var st;
 			if(myElement){
-				if(myElement.currentStyle){
-					d = myElement.currentStyle["display"];
-					w = myElement.currentStyle["width"];
-					h = myElement.currentStyle["height"];
-					t = myElement.currentStyle["top"];
-				}else if(window.getComputedStyle){
-					st = document.defaultView.getComputedStyle(myElement, null);
-					d = st.getPropertyValue("display");
-					w = st.getPropertyValue("width");
-					h = st.getPropertyValue("height");
-					t = st.getPropertyValue("top");
-				}
-
-				var visposition = getPosition(myElement);
-
-				// if previous path is none, then hide it too
-				var path = [];
-				do{
-					var qq = path.unshift(myElement.nodeName);
-
-					var adisplay;
-					if(myElement.currentStyle){
-						adisplay = qq.currentStyle["display"];
-					}else{
-						st = document.defaultView.getComputedStyle(myElement, null);
-						adisplay = st.getPropertyValue("display");
-					}
-					if(adisplay == "none"){
-						item.style.display = "none";
-					}
-				}while((myElement.nodeName.toLowerCase() != "html") && (myElement = myElement.parentNode));
-				//---
-
-				// YouTube video top position negative value, then minus the height
-				if(parseInt(t, 10) < 0){
-					item.style.top = visposition.y - h + "px";
-				}else{
-					item.style.top = visposition.y + "px";
-				}
-				item.style.left = visposition.x + "px";
-				item.style.width = w;
-				item.style.height = h;
-
-				if(d == "none"){ item.style.display = "none"; }
+				refreshdesign(item, myElement);
 			}else{
 				// remove this stop layer
 				if(item){
@@ -359,8 +319,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 					for(domain in autostopDomains)
 						atbuf.push(domain);
 					atbuf.sort();
-					var i;
-					var l = atbuf.length;
+					var i, l = atbuf.length;
 					for(i = 0; i < l; i++){
 						if(autostopchecklistwhite == true){
 							if(currenturl == atbuf[i]){ autostopfunction(); }
