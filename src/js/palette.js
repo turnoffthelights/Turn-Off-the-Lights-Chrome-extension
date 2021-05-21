@@ -599,22 +599,16 @@ function removetonight(){
 
 function test(){
 	if($("nighttheme").checked == true){
-		$("btngonight").disabled = false;
-		$("lampandnightmode").disabled = false;
+		$("btngonight").disabled = false; $("lampandnightmode").disabled = false;
 	}else{
-		$("btngonight").disabled = true;
-		$("lampandnightmode").disabled = true;
+		$("btngonight").disabled = true; $("lampandnightmode").disabled = true;
 	}
-
 	$("nightonly").checked == true ? $("sitecheck").disabled = false : $("sitecheck").disabled = true;
 	$("sitecheck").checked == true ? addtonight() : removetonight();
-
 	if($("ambilight").checked == true){
-		atmosdisable(false);
-		if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = false; }else{ $("atmosvivid").disabled = true; }
+		atmosdisable(false); if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = false; }else{ $("atmosvivid").disabled = true; }
 	}else{
-		atmosdisable(true);
-		if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = true; }else{ $("atmosvivid").disabled = true; }
+		atmosdisable(true); if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = true; }else{ $("atmosvivid").disabled = true; }
 	}
 }
 
