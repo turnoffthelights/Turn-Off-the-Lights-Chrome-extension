@@ -2359,39 +2359,34 @@ window.requestAnimFrame = function(){
 }();
 
 // Fade engine
-//  Variable for the fade in and out effect
+// Variable for the fade in and out effect
 var opacity = 0;
-
 var ReducingFinished = true;
 var OpacityLevelIncrement = 10; // Percentage value: 1-100
 var DIVElementById = null;
 
-//  Function determines whether we show or hide the item referenced by ElementID
+// Function determines whether we show or hide the item referenced by ElementID
 function fader(ActionToTake){
 	DIVElementById = $("stefanvdlightareoff1");
 	if(ActionToTake == "hide"){ opacity = default_opacity; reduceOpacity(); }else if(ActionToTake == "show"){ increaseOpacity(); }
 }
 
-//  Makes div increase
+// Makes div increase
 function increaseOpacity(){
 	// If opacity level is less than default_opacity, we can still increase the opacity
 	if((opacity < default_opacity) && (ReducingFinished == true)){
 		if(opacity > (default_opacity - 10)){
 			opacity += (default_opacity - opacity);
-		}else{
-			opacity += OpacityLevelIncrement;
-		}
+		}else{ opacity += OpacityLevelIncrement; }
 		DIVElementById.style.opacity = opacity / 100;
 		window.requestAnimFrame(increaseOpacity);
-	}else{
-		ReducingFinished = false;
-	}
+	}else{ ReducingFinished = false; }
 	// control opacity for all <div>
 	var div = document.querySelectorAll("div.stefanvdlightareoff"), i, l = div.length;
 	for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
 }
 
-//  Makes div reduce
+// Makes div reduce
 function reduceOpacity(){
 	// If opacity level is greater than 0, we can still reduce the opacity
 	if((opacity > 0) && (ReducingFinished == false)){
