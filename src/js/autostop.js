@@ -51,22 +51,18 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 			var videolist = document.body;
 			var observer = new MutationObserver(function(mutations){
 				mutations.forEach(function(mutation){
-					if(mutation.target.tagName == "VIDEO"){
-						if(mutation.attributeName === "src" && mutation.target.currentSrc != ""){
-							autostopdetectionstart();
-						}
+					if(mutation.target.tagName == "VIDEO" && mutation.attributeName === "src" && mutation.target.currentSrc != ""){
+						autostopdetectionstart();
 					}
 					// dynamic add and remove video
 					if(mutation.type == "childList"){
-						var i;
-						var la = mutation.addedNodes.length;
+						var i, la = mutation.addedNodes.length;
 						for(i = 0; i < la; i++){
 							if(mutation.addedNodes[i].tagName == "VIDEO"){
 								autostopdetectionstart();
 							}
 						}
-						var j;
-						var lr = mutation.removedNodes.length;
+						var j, lr = mutation.removedNodes.length;
 						for(j = 0; j < lr; j++){
 							if(mutation.removedNodes[j].tagName == "VIDEO"){
 								autostopdetectionstart();
@@ -74,12 +70,10 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 						}
 					}
 					// inside it
-					var k;
-					var l = mutation.addedNodes.length;
+					var k, l = mutation.addedNodes.length;
 					for(k = 0; k < l; k++){
 						if(mutation.addedNodes[k]){
-							var n;
-							var lac = mutation.addedNodes[k].childNodes.length;
+							var n, lac = mutation.addedNodes[k].childNodes.length;
 							for(n = 0; n < lac; n++){
 								var detail = mutation.addedNodes[k].childNodes[n];
 								if(detail.nodeName == "VIDEO"){
@@ -294,8 +288,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 
 	function refreshsize(){
 		var cusid_ele = document.getElementsByClassName("stefanvdautostop");
-		var i;
-		var l = cusid_ele.length;
+		var i, l = cusid_ele.length;
 		for(i = 0; i < l; ++i){
 			var item = cusid_ele[i];
 			var myElement = document.getElementsByTagName("video")[i];
