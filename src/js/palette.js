@@ -261,64 +261,37 @@ document.addEventListener("DOMContentLoaded", function(){
 	var l = inputs.length;
 	for(i = 0; i < l; i++){ inputs[i].addEventListener("change", test); inputs[i].addEventListener("change", save_options); }
 
+	var pagearray = ["basicspanel", "morepanel", "atmospanel", "analyticspanel", "videopanel"];
 	var tabarray = ["tab1", "tab2", "tab3", "tab4", "tab5"];
 	function tabselected(id){
 		for(var itab = 0; itab < tabarray.length; itab++){
 			if(id == tabarray[itab]){
 				$(tabarray[itab]).className = "tabbutton tabhighlight";
+				$(pagearray[itab]).className = "";
 			}else{
 				$(tabarray[itab]).className = "tabbutton";
+				$(pagearray[itab]).className = "hidden";
 			}
 		}
 	}
 
 	$("tab1").addEventListener("click", function(){
-		$("basicspanel").className = "";
-		$("morepanel").className = "hidden";
-		$("atmospanel").className = "hidden";
-		$("analyticspanel").className = "hidden";
-		$("videopanel").className = "hidden";
-
 		tabselected("tab1");
 	}, false);
 
 	$("tab2").addEventListener("click", function(){
-		$("basicspanel").className = "hidden";
-		$("morepanel").className = "";
-		$("atmospanel").className = "hidden";
-		$("analyticspanel").className = "hidden";
-		$("videopanel").className = "hidden";
-
 		tabselected("tab2");
 	}, false);
 
 	$("tab3").addEventListener("click", function(){
-		$("basicspanel").className = "hidden";
-		$("morepanel").className = "hidden";
-		$("atmospanel").className = "";
-		$("analyticspanel").className = "hidden";
-		$("videopanel").className = "hidden";
-
 		tabselected("tab3");
 	}, false);
 
 	$("tab4").addEventListener("click", function(){
-		$("basicspanel").className = "hidden";
-		$("morepanel").className = "hidden";
-		$("atmospanel").className = "hidden";
-		$("analyticspanel").className = "";
-		$("videopanel").className = "hidden";
-
 		tabselected("tab4");
 	}, false);
 
 	$("tab5").addEventListener("click", function(){
-		$("basicspanel").className = "hidden";
-		$("morepanel").className = "hidden";
-		$("atmospanel").className = "hidden";
-		$("analyticspanel").className = "hidden";
-		$("videopanel").className = "";
-
 		tabselected("tab5");
 	}, false);
 
