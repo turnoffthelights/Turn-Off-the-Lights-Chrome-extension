@@ -657,10 +657,9 @@ function savecolorvalue(elem, name){
 }
 
 function nightmodebckcolorchange(){
-	var elem = this;
-	nightmodebck = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-	$("colornightmodebckcustom").value = rgb2hex(nightmodebck);
-	chrome.storage.sync.set({"nightmodebck": rgb2hex(nightmodebck)});
+	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
+	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
+	savecolorvalue("colornightmodebckcustom", "nightmodebck");
 }
 
 function nightmodebckcolorchangecustom(){
@@ -668,10 +667,9 @@ function nightmodebckcolorchangecustom(){
 }
 
 function nightmodetextcolorchange(){
-	var elem = this;
-	nightmodetxt = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-	$("colornightmodetxtcustom").value = rgb2hex(nightmodetxt);
-	chrome.storage.sync.set({"nightmodetxt": rgb2hex(nightmodetxt)});
+	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
+	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
+	savecolorvalue("colornightmodetxtcustom", "nightmodetxt");
 }
 
 function nightmodetextcolorchangecustom(){
@@ -679,10 +677,9 @@ function nightmodetextcolorchangecustom(){
 }
 
 function nightmodelinkcolorchange(){
-	var elem = this;
-	nightmodehyperlink = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-	$("colornightmodehyperlinkcustom").value = rgb2hex(nightmodehyperlink);
-	chrome.storage.sync.set({"nightmodehyperlink": rgb2hex(nightmodehyperlink)});
+	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
+	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
+	savecolorvalue("colornightmodehyperlinkcustom", "nightmodehyperlink");
 }
 
 function nightmodelinkcolorchangecustom(){
@@ -690,10 +687,9 @@ function nightmodelinkcolorchangecustom(){
 }
 
 function nightmodebuttoncolorchange(){
-	var elem = this;
-	nightmodebutton = window.getComputedStyle(elem, null).getPropertyValue("background-color");
-	$("colornightmodebuttoncustom").value = rgb2hex(nightmodebutton);
-	chrome.storage.sync.set({"nightmodebutton": rgb2hex(nightmodebutton)});
+	var currentcolor = window.getComputedStyle(this, null).getPropertyValue("background-color");
+	$("colornightmodebuttoncustom").value = rgb2hex(currentcolor);
+	savecolorvalue("colornightmodebuttoncustom", "nightmodebutton");
 }
 
 function nightmodebuttoncolorchangecustom(){
