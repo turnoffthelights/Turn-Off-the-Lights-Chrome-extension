@@ -2371,6 +2371,12 @@ function fader(ActionToTake){
 	if(ActionToTake == "hide"){ opacity = default_opacity; reduceOpacity(); }else if(ActionToTake == "show"){ increaseOpacity(); }
 }
 
+function setallopacity(opacity){
+	// Control opacity for all <div>
+	var div = document.querySelectorAll("div.stefanvdlightareoff"), i, l = div.length;
+	for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
+}
+
 // Makes div increase
 function increaseOpacity(){
 	// If opacity level is less than default_opacity, we can still increase the opacity
@@ -2381,9 +2387,7 @@ function increaseOpacity(){
 		DIVElementById.style.opacity = opacity / 100;
 		window.requestAnimFrame(increaseOpacity);
 	}else{ ReducingFinished = false; }
-	// control opacity for all <div>
-	var div = document.querySelectorAll("div.stefanvdlightareoff"), i, l = div.length;
-	for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
+	setallopacity(opacity);
 }
 
 // Makes div reduce
@@ -2395,11 +2399,8 @@ function reduceOpacity(){
 		window.requestAnimFrame(reduceOpacity);
 	}else{
 		ReducingFinished = true;
-
 		// When finished, make sure the DIVElementById is set to remove element
 		if(DIVElementById.style.opacity <= 0){ document.body.removeChild(DIVElementById); removenewframe(); }
 	}
-	// Control opacity for all <div>
-	var div = document.querySelectorAll("div.stefanvdlightareoff"), i, l = div.length;
-	for(i = 0; i < l; i++){ div[i].style.opacity = opacity / 100; }
+	setallopacity(opacity);
 }
