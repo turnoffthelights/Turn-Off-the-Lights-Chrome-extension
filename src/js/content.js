@@ -1827,22 +1827,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 					// dynamic add and remove video
 					if(mutation.type == "childList"){
-						var i;
-						var la = mutation.addedNodes.length;
+						var i, la = mutation.addedNodes.length;
 						for(i = 0; i < la; i++){
-							if(mutation.addedNodes[i].tagName == "VIDEO"){
-								if(videotool == true){
-									myListenervideotoolbar();
-								}
+							if(mutation.addedNodes[i].tagName == "VIDEO" && videotool == true){
+								myListenervideotoolbar();
 							}
 						}
-						var j;
-						var lr = mutation.removedNodes.length;
+						var j, lr = mutation.removedNodes.length;
 						for(j = 0; j < lr; j++){
-							if(mutation.removedNodes[j].tagName == "VIDEO"){
-								if(videotool == true){
-									myListenervideotoolbar();
-								}
+							if(mutation.removedNodes[j].tagName == "VIDEO" && videotool == true){
+								myListenervideotoolbar();
 							}
 						}
 					}

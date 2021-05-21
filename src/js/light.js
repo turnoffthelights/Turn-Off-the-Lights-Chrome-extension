@@ -1844,8 +1844,7 @@ function trianglerandomize(){
 function trianglerefresh(){
 	if(document.visibilityState === "visible"){
 		trianglerandomize();
-		var i;
-		var l = document.querySelector("#triangle svg").childNodes.length;
+		var i, l = document.querySelector("#triangle svg").childNodes.length;
 		for(i = 0; i < l; i++){
 			var polygon = document.querySelector("#triangle svg").childNodes[i];
 			var animate = polygon.childNodes[0];
