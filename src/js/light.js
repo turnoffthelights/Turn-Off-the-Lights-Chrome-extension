@@ -2377,13 +2377,11 @@ function increaseOpacity(){
 	try{
 		// If opacity level is less than default_opacity, we can still increase the opacity
 		if((opacity < default_opacity) && (ReducingFinished == true)){
-			if((opacity > (default_opacity - 10)) && (ReducingFinished == true)){
-				ReducingFinished = true;
+			if(opacity > (default_opacity - 10)){
 				opacity += (default_opacity - opacity);
 				DIVElementById.style.opacity = opacity / 100;
 				window.requestAnimFrame(increaseOpacity);
 			}else{
-				ReducingFinished = true;
 				opacity += OpacityLevelIncrement;
 				DIVElementById.style.opacity = opacity / 100;
 				window.requestAnimFrame(increaseOpacity);
@@ -2402,7 +2400,6 @@ function reduceOpacity(){
 	try{
 		// If opacity level is greater than 0, we can still reduce the opacity
 		if((opacity > 0) && (ReducingFinished == false)){
-			ReducingFinished = false;
 			opacity -= OpacityLevelIncrement;
 			DIVElementById.style.opacity = opacity / 100;
 			window.requestAnimFrame(reduceOpacity);
