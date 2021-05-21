@@ -261,6 +261,17 @@ document.addEventListener("DOMContentLoaded", function(){
 	var l = inputs.length;
 	for(i = 0; i < l; i++){ inputs[i].addEventListener("change", test); inputs[i].addEventListener("change", save_options); }
 
+	var tabarray = ["tab1", "tab2", "tab3", "tab4", "tab5"];
+	function tabselected(id){
+		for(var itab = 0; itab < tabarray.length; itab++){
+			if(id == tabarray[itab]){
+				$(tabarray[itab]).className = "tabbutton tabhighlight";
+			}else{
+				$(tabarray[itab]).className = "tabbutton";
+			}
+		}
+	}
+
 	$("tab1").addEventListener("click", function(){
 		$("basicspanel").className = "";
 		$("morepanel").className = "hidden";
@@ -268,11 +279,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("analyticspanel").className = "hidden";
 		$("videopanel").className = "hidden";
 
-		$("tab1").className = "tabbutton tabhighlight";
-		$("tab2").className = "tabbutton";
-		$("tab3").className = "tabbutton";
-		$("tab4").className = "tabbutton";
-		$("tab5").className = "tabbutton";
+		tabselected("tab1");
 	}, false);
 
 	$("tab2").addEventListener("click", function(){
@@ -282,11 +289,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("analyticspanel").className = "hidden";
 		$("videopanel").className = "hidden";
 
-		$("tab1").className = "tabbutton";
-		$("tab2").className = "tabbutton tabhighlight";
-		$("tab3").className = "tabbutton";
-		$("tab4").className = "tabbutton";
-		$("tab5").className = "tabbutton";
+		tabselected("tab2");
 	}, false);
 
 	$("tab3").addEventListener("click", function(){
@@ -296,11 +299,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("analyticspanel").className = "hidden";
 		$("videopanel").className = "hidden";
 
-		$("tab1").className = "tabbutton";
-		$("tab2").className = "tabbutton";
-		$("tab3").className = "tabbutton tabhighlight";
-		$("tab4").className = "tabbutton";
-		$("tab5").className = "tabbutton";
+		tabselected("tab3");
 	}, false);
 
 	$("tab4").addEventListener("click", function(){
@@ -310,11 +309,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("analyticspanel").className = "";
 		$("videopanel").className = "hidden";
 
-		$("tab1").className = "tabbutton";
-		$("tab2").className = "tabbutton";
-		$("tab3").className = "tabbutton";
-		$("tab4").className = "tabbutton tabhighlight";
-		$("tab5").className = "tabbutton";
+		tabselected("tab4");
 	}, false);
 
 	$("tab5").addEventListener("click", function(){
@@ -324,11 +319,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("analyticspanel").className = "hidden";
 		$("videopanel").className = "";
 
-		$("tab1").className = "tabbutton";
-		$("tab2").className = "tabbutton";
-		$("tab3").className = "tabbutton";
-		$("tab4").className = "tabbutton";
-		$("tab5").className = "tabbutton tabhighlight";
+		tabselected("tab5");
 	}, false);
 
 	if(devdonate == true){
