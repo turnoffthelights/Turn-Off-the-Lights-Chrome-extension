@@ -2381,9 +2381,7 @@ function setallopacity(opacity){
 function increaseOpacity(){
 	// If opacity level is less than default_opacity, we can still increase the opacity
 	if((opacity < default_opacity) && (ReducingFinished == true)){
-		if(opacity > (default_opacity - 10)){
-			opacity += (default_opacity - opacity);
-		}else{ opacity += OpacityLevelIncrement; }
+		(opacity > (default_opacity - 10)) ? opacity += (default_opacity - opacity) : opacity += OpacityLevelIncrement;
 		DIVElementById.style.opacity = opacity / 100;
 		window.requestAnimFrame(increaseOpacity);
 	}else{ ReducingFinished = false; }
