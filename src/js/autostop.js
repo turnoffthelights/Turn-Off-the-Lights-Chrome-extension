@@ -151,7 +151,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 			firstautostopremove[0].parentNode.removeChild(firstautostopremove[0]);
 		}
 
-		var visualvideos = document.getElementsByTagName("video"), selectedvideo = null i, l = visualvideos.length;
+		var visualvideos = document.getElementsByTagName("video"), selectedvideo = null, i, l = visualvideos.length;
 		for(i = 0; i < l; i++){
 			selectedvideo = visualvideos[i];
 			selectedvideo.setAttribute("data-videonum", i);
