@@ -676,5 +676,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 .totlpointereventsnone{pointer-events:none!important}
 #stefanvdpipvisualizationcanvas{position:absolute;top:-320px;left:-640px;z-index:10000000}
 #stefanvdpipvisualizationvideo{position:absolute;top:-320px;left:-640px;z-index:10000000}
+.stefanvdremote{z-index:2147483647!important;box-shadow:0px 0px 1px black;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:rgba(255,255,255,.5);position:absolute;top:0;left:0;right:0;width:200pt;opacity:0.98;height:50pt;border-radius:25pt;margin:0 auto;text-align:center;margin-top:20pt;animation:wrapper 3.5s both}
+.stefanvdremote h3{margin:0;font-size:15px;padding-top:10pt;animation:h3 2.5s}
+.stefanvdremote p{margin:0;font-size:13px;color:#888;padding-top:4pt;animation:p 2.5s}
+@keyframes h3{0%{opacity:0}50%{opacity:0}80%{opacity:1;transform:scale(1.5) translate(0,4px)}}
+@keyframes p{0%{opacity:0}80%{opacity:0;transform:scale(1.5) translate(0,12px);}100%{opacity:1;transform:scale(1)}}
+@keyframes wrapper{0%{opacity:0;}20%{opacity:0;transform:translate(0,-100px)}40%{opacity:0.98;transform:translate(0,0);}80%{opacity:0.98;transform:translate(0,0)}100%{opacity:0;transform:translate(0, -100px)}}
 @media print{#stefanvdnighttheme{display:none!important}}
 @media all and (display-mode:fullscreen){}

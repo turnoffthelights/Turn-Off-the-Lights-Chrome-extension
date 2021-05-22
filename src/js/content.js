@@ -4637,12 +4637,74 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			window.setInterval(() => {
 					const myGamepad = navigator.getGamepads()[0];
 					myGamepad.buttons.forEach((button, index) => {
-
-						
 						if(button.pressed){
 							if(buttonsstate[index] != true){
 								buttonsstate[index] = button.pressed;
 								console.log(`Pressed button ${index}`, "dus=",button.pressed);
+
+
+								var video = document.getElementsByTagName("video")[0];
+								if(video){
+									// playstation
+									switch(index) {
+									case 0:
+										// X
+										break;
+									case 1:
+										// O
+										break;
+									case 2:
+										// Square
+										break;
+									case 3:
+										// Triangle
+										break;
+									case 4:
+										// L1
+										threesecondbackward();
+										break;
+									case 5:
+										// R1
+										threesecondforward();
+										break;
+									case 6:
+										// L2
+										onesecondbackward();
+										break;
+									case 7:
+										// R2
+										onesecondforward();
+										break;
+									case 8:
+										// Share
+										break;
+									case 9:
+										// Options
+										gamepadplaypause();
+										break;
+									case 10:
+										// Left Stick Pressed
+										break;
+									case 11:
+										// Right Stick Pressed
+										break;
+									case 12:
+										// Directional Up
+										break;
+									case 13:
+										// Directional Down
+										break;
+									case 14:
+										// Directional Left
+										break;
+									case 15:
+										// Directional Right
+										break;
+									case 16:
+										// PlayStation Logo
+										break;
+									}
+								}
 							}
 						}else{
 							buttonsstate[index] = button.pressed;
@@ -4658,7 +4720,18 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 // }, 100) // print axes 10 times per second
 
 
+var span = document.createElement("div");
+span.setAttribute("id", "main");
+span.className = "stefanvdremote";
+document.body.appendChild(span);
 
+var h3 = document.createElement("h3");
+h3.innerText = "Playstation";
+span.appendChild(h3);
+
+var p = document.createElement("p");
+p.innerText = "Connected";
+span.appendChild(p);
 
 
 		});
@@ -4667,6 +4740,48 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			e.gamepad.index, e.gamepad.id);
 		});
 
+	}
+
+	function gamepadplaypause(){
+		var videoPlayer = document.getElementsByTagName("video")[0];
+		if(videoPlayer){
+			if(videoPlayer.paused == true){
+				videoPlayer.play();
+			}else{
+				videoPlayer.pause();
+			}
+		}
+	}
+
+	function seek(secs) {
+		var videoPlayer = document.getElementsByTagName("video")[0];
+		if(videoPlayer){
+			let time = videoPlayer.currentTime + secs;
+			if(time < 0){
+				time = 0;
+			}
+			videoPlayer.currentTime = time;
+		};
+	}
+
+	function onesecondbackward(video){
+		// var videoPlayer = document.getElementsByTagName("video")[0];
+		// if(videoPlayer){
+		// 	videoPlayer.currentTime += 5;
+		// }
+   		seek(-1);
+	}
+
+	function threesecondbackward(video){
+		seek(-3);
+	}
+
+	function onesecondforward(video){
+		seek(1);
+	}
+
+	function threesecondforward(video){
+		seek(3);
 	}
 
 	// YouTube embed iframe
