@@ -4629,88 +4629,88 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// control the current video with your remote gamepad controller
 	if(gamepad == true){
 		window.addEventListener("gamepadconnected", function(e) {
-		console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-			e.gamepad.index, e.gamepad.id,
-			e.gamepad.buttons.length, e.gamepad.axes.length);
-
+			// console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.", e.gamepad.index, e.gamepad.id, e.gamepad.buttons.length, e.gamepad.axes.length);
 			var buttonsstate = [];
 			window.setInterval(() => {
 					const myGamepad = navigator.getGamepads()[0];
-					myGamepad.buttons.forEach((button, index) => {
-						if(button.pressed){
-							if(buttonsstate[index] != true){
-								buttonsstate[index] = button.pressed;
-								console.log(`Pressed button ${index}`, "dus=",button.pressed);
-
-
-								var video = document.getElementsByTagName("video")[0];
-								if(video){
-									// playstation
-									switch(index) {
-									case 0:
-										// X
-										break;
-									case 1:
-										// O
-										break;
-									case 2:
-										// Square
-										break;
-									case 3:
-										// Triangle
-										break;
-									case 4:
-										// L1
-										threesecondbackward();
-										break;
-									case 5:
-										// R1
-										threesecondforward();
-										break;
-									case 6:
-										// L2
-										onesecondbackward();
-										break;
-									case 7:
-										// R2
-										onesecondforward();
-										break;
-									case 8:
-										// Share
-										break;
-									case 9:
-										// Options
-										gamepadplaypause();
-										break;
-									case 10:
-										// Left Stick Pressed
-										break;
-									case 11:
-										// Right Stick Pressed
-										break;
-									case 12:
-										// Directional Up
-										break;
-									case 13:
-										// Directional Down
-										break;
-									case 14:
-										// Directional Left
-										break;
-									case 15:
-										// Directional Right
-										break;
-									case 16:
-										// PlayStation Logo
-										break;
+					if(myGamepad){
+						myGamepad.buttons.forEach((button, index) => {
+							if(button.pressed){
+								if(buttonsstate[index] != true){
+									buttonsstate[index] = button.pressed;
+									//console.log(`Pressed button ${index}`, "dus=",button.pressed);
+									var video = document.getElementsByTagName("video")[0];
+									if(video){
+										// playstation
+										switch(index) {
+										case 0:
+											// X
+											break;
+										case 1:
+											// O
+											break;
+										case 2:
+											// Square
+											break;
+										case 3:
+											// Triangle
+											break;
+										case 4:
+											// L1
+											threesecondbackward();
+											break;
+										case 5:
+											// R1
+											threesecondforward();
+											break;
+										case 6:
+											// L2
+											onesecondbackward();
+											break;
+										case 7:
+											// R2
+											onesecondforward();
+											break;
+										case 8:
+											// Share
+											break;
+										case 9:
+											// Options
+											gamepadplaypause();
+											break;
+										case 10:
+											// Left Stick Pressed
+											break;
+										case 11:
+											// Right Stick Pressed
+											break;
+										case 12:
+											// Directional Up
+											break;
+										case 13:
+											// Directional Down
+											break;
+										case 14:
+											// Directional Left
+											break;
+										case 15:
+											// Directional Right
+											break;
+										}
 									}
-								}
-							}
-						}else{
-							buttonsstate[index] = button.pressed;
-						}
 
-					})
+									if(index == 16){
+										// PlayStation Logo
+										window.open(donatewebsite, "_blank");
+									}
+
+								}
+							}else{
+								buttonsstate[index] = button.pressed;
+							}
+
+						})
+					}
 			}, 100) // print axes 10 times per second
 
 // 	setInterval(() => {
@@ -4718,28 +4718,62 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 //     console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
 //     console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
 // }, 100) // print axes 10 times per second
-
-
-var span = document.createElement("div");
-span.setAttribute("id", "main");
-span.className = "stefanvdremote";
-document.body.appendChild(span);
-
-var h3 = document.createElement("h3");
-h3.innerText = "Playstation";
-span.appendChild(h3);
-
-var p = document.createElement("p");
-p.innerText = "Connected";
-span.appendChild(p);
-
-
+		
+			var devicename = e.gamepad.id; addremotebadge(devicename);
 		});
+
 		window.addEventListener("gamepaddisconnected", function(e) {
-		console.log("Gamepad disconnected from index %d: %s",
-			e.gamepad.index, e.gamepad.id);
+			// console.log("Gamepad disconnected from index %d: %s", e.gamepad.index, e.gamepad.id);
+			var devicename = e.gamepad.id; discontectremotebadge(devicename);
 		});
+	}
 
+	function shortname(name){
+		var shortname;
+		if(name.includes("PLAYSTATION")){ shortname = "PlayStation Controller"; }
+		else if(name.includes("Xbox")){ shortname = "Xbox Controller"; }
+		else{ shortname = "Game Controller";}
+		return shortname;
+	}
+
+	function addremotebadge(name){
+		var div = document.createElement("div");
+		div.setAttribute("id", "stefanvdremoteadd");
+		div.className = "stefanvdremote";
+		document.body.appendChild(div);
+
+		var h3 = document.createElement("h3");
+		h3.innerText = shortname(name);
+		div.appendChild(h3);
+
+		var p = document.createElement("p");
+		p.innerText = "Connected";
+		div.appendChild(p);
+
+		window.setTimeout(function(){
+			var element = document.getElementById("stefanvdremoteadd");
+			element.parentNode.removeChild(element);
+		}, 3500);
+	}
+
+	function discontectremotebadge(name){
+		var div = document.createElement("div");
+		div.setAttribute("id", "stefanvdremotedisc");
+		div.className = "stefanvdremote";
+		document.body.appendChild(div);
+
+		var h3 = document.createElement("h3");
+		h3.innerText = shortname(name);
+		div.appendChild(h3);
+
+		var p = document.createElement("p");
+		p.innerText = "Disconnected";
+		div.appendChild(p);
+
+		window.setTimeout(function(){
+			var element = document.getElementById("stefanvdremotedisc");
+			element.parentNode.removeChild(element);
+		}, 3500);
 	}
 
 	function gamepadplaypause(){
@@ -4765,10 +4799,6 @@ span.appendChild(p);
 	}
 
 	function onesecondbackward(video){
-		// var videoPlayer = document.getElementsByTagName("video")[0];
-		// if(videoPlayer){
-		// 	videoPlayer.currentTime += 5;
-		// }
    		seek(-1);
 	}
 
