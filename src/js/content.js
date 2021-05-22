@@ -5422,7 +5422,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					pipvideo.id = "stefanvdpipvisualizationvideo";
 					pipvideo.playsinline = true;
 					pipvideo.autoplay = true;
-					pipvideo.muted = true;
+					//pipvideo.muted = true; // disable else it will not render
 					document.body.appendChild(pipvideo);
 				}
 
