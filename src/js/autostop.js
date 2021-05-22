@@ -78,15 +78,10 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 		//---
 
 		// YouTube video top position negative value, then minus the height
-		if(parseInt(t, 10) < 0){
-			item.style.top = visposition.y - h + "px";
-		}else{
-			item.style.top = visposition.y + "px";
-		}
+		if(parseInt(t, 10) < 0){ item.style.top = visposition.y - h + "px"; }else{ item.style.top = visposition.y + "px"; }
 		item.style.left = visposition.x + "px";
 		item.style.width = w;
 		item.style.height = h;
-
 		if(d == "none"){ item.style.display = "none"; }
 	}
 

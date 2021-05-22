@@ -372,7 +372,7 @@ function cleanrightclickmenu(menu){
 			}
 		}
 	}
-	menu = [];
+	menu.length = 0;
 }
 
 function removecontexmenus(){
