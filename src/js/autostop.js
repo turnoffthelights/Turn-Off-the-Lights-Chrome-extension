@@ -119,8 +119,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 						if(mutation.addedNodes[k]){
 							var n, lac = mutation.addedNodes[k].childNodes.length;
 							for(n = 0; n < lac; n++){
-								var detail = mutation.addedNodes[k].childNodes[n];
-								if(detail.nodeName == "VIDEO"){
+								if(mutation.addedNodes[k].childNodes[n].nodeName == "VIDEO"){
 									autostopdetectionstart();
 								}
 							}
@@ -128,8 +127,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 					}
 					// detect change style - this for floating box in div detection
 					if(mutation.attributeName == "style"){
-						var currentClass = mutation.target.className;
-						if(currentClass != "stefanvdautostop"){
+						if(mutation.target.className != "stefanvdautostop"){
 							refreshsize();
 						}
 					}
@@ -289,8 +287,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 		var cusid_ele = document.getElementsByClassName("stefanvdautostop");
 		var i, l = cusid_ele.length;
 		for(i = 0; i < l; ++i){
-			var item = cusid_ele[i];
-			var myElement = document.getElementsByTagName("video")[i];
+			var item = cusid_ele[i], myElement = document.getElementsByTagName("video")[i];
 			if(myElement){
 				refreshdesign(item, myElement);
 			}else{
@@ -309,8 +306,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 				var stoprabbit = false;
 				if(typeof autostopDomains == "string"){
 					autostopDomains = JSON.parse(autostopDomains);
-					var atbuf = [];
-					var domain;
+					var atbuf = [], domain;
 					for(domain in autostopDomains)
 						atbuf.push(domain);
 					atbuf.sort();
