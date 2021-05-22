@@ -4632,13 +4632,41 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
 			e.gamepad.index, e.gamepad.id,
 			e.gamepad.buttons.length, e.gamepad.axes.length);
+
+			var buttonsstate = [];
+			window.setInterval(() => {
+					const myGamepad = navigator.getGamepads()[0];
+					myGamepad.buttons.forEach((button, index) => {
+
+						
+						if(button.pressed){
+							if(buttonsstate[index] != true){
+								buttonsstate[index] = button.pressed;
+								console.log(`Pressed button ${index}`, "dus=",button.pressed);
+							}
+						}else{
+							buttonsstate[index] = button.pressed;
+						}
+
+					})
+			}, 100) // print axes 10 times per second
+
+// 	setInterval(() => {
+//     const myGamepad = navigator.getGamepads()[0]; // use the first gamepad
+//     console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
+//     console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
+// }, 100) // print axes 10 times per second
+
+
+
+
+
 		});
 		window.addEventListener("gamepaddisconnected", function(e) {
 		console.log("Gamepad disconnected from index %d: %s",
 			e.gamepad.index, e.gamepad.id);
 		});
 
-		
 	}
 
 	// YouTube embed iframe
