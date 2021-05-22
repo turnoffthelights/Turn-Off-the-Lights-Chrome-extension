@@ -109,8 +109,7 @@ if(window.location.href != totloptionspage){
 }
 
 function shareanalytictwitter(message){
-	var stefanvdurl = developerwebsite;
-	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
+	var stefanvdaacodeurl = encodeURIComponent(developerwebsite);
 	window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + message + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no");
 }
 
