@@ -367,9 +367,7 @@ function cleanrightclickmenu(menu){
 	if(menu.length > 0){
 		var v, l = menu.length;
 		for(v = 0; v < l; v++){
-			if(menu[v] != undefined && menu[v] != null){
-				chrome.contextMenus.remove(menu[v]);
-			}
+			if(menu[v] != undefined && menu[v] != null){ chrome.contextMenus.remove(menu[v]); }
 		}
 	}
 	menu.length = 0;
