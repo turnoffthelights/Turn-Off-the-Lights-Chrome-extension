@@ -4704,14 +4704,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								break;
 							}
 						}
-
+						// pressed => one action
 						if(index == 16){
 							// PlayStation Logo
 							window.open(donatewebsite, "_blank");
 						}
-
 					}
-
+					// pressed => continue actions loop
 					if(index == 12){
 						// Directional Up
 						zoompadup();
@@ -4725,16 +4724,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						// Directional Right
 						zoompadright();
 					}
-
-
 				}else{
 					buttonsstate[index] = button.pressed;
 				}
-
-
-
 			});
 		}
+		window.requestAnimFrame(updategamepadbuttons);
 	};
 
 	const updategamepadaxes = () => {
@@ -4768,7 +4763,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else if(currentaxesrightvert < -0.1){
 			zoompadup();
 		}
-
 		window.requestAnimFrame(updategamepadaxes);
 	};
 
