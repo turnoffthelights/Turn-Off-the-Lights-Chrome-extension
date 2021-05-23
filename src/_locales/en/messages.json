@@ -489,5 +489,6 @@
     "titleyoutube": {"message": "Join Turn Off the Lights Channel."},
     "desyoutube": {"message": "Uncover the power of the Turn Off the Lights browser extension. Watch it now on YouTube."},
     "titlesub": {"message": "Subscribe Now!"},
-    "titlelater": {"message": "Later"}
+    "titlelater": {"message": "Later"},
+    "gamepadoption": {"message": "Game Controller"}
 }

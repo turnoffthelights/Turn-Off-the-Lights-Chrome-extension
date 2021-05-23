@@ -4631,6 +4631,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		addvolume();
 	}
 
+	// Game controller
 	var gamepad = true;
 	var buttonsstate = [];
 	// control the current video with your remote gamepad controller
@@ -4645,6 +4646,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		window.addEventListener("gamepaddisconnected", function(e){
 			// console.log("Gamepad disconnected from index %d: %s", e.gamepad.index, e.gamepad.id);
 			var devicename = e.gamepad.id; discontectremotebadge(devicename);
+			window.cancelAnimationFrame(updategamepadbuttons);
 			window.cancelAnimationFrame(updategamepadaxes);
 		});
 	}
