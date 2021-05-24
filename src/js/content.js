@@ -926,12 +926,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonplus.setAttribute("data-video", i);
 					newzoombuttonplus.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						vzoom[bomo] = vzoom[bomo] + 0.1;
-						onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+						zoomin(bomo);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonplus);
 
@@ -942,12 +937,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonmin.setAttribute("data-video", i);
 					newzoombuttonmin.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						vzoom[bomo] = vzoom[bomo] - 0.1;
-						onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+						zoommout(bomo);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonmin);
 
@@ -958,11 +948,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonleft.setAttribute("data-video", i);
 					newzoombuttonleft.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						onevideo.style.left = (parseInt(onevideo.style.left, 10) - 5) + "px";
+						zoompadleft(bomo);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonleft);
 
@@ -973,11 +959,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonright.setAttribute("data-video", i);
 					newzoombuttonright.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						onevideo.style.left = (parseInt(onevideo.style.left, 10) + 5) + "px";
+						zoompadright(bomo);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonright);
 
@@ -988,11 +970,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonup.setAttribute("data-video", i);
 					newzoombuttonup.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						onevideo.style.top = (parseInt(onevideo.style.top, 10) - 5) + "px";
+						zoompadup(bomo);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonup);
 
@@ -1003,11 +981,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttondown.setAttribute("data-video", i);
 					newzoombuttondown.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						onevideo.style.top = (parseInt(onevideo.style.top, 10) + 5) + "px";
+						zoompaddown(bomo);
 					}, false);
 					newzoompanel.appendChild(newzoombuttondown);
 
@@ -4715,16 +4689,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					// pressed => continue actions loop
 					if(index == 12){
 						// Directional Up
-						zoompadup();
+						zoompadup(0);
 					}else if(index == 13){
 						// Directional Down
-						zoompaddown();
+						zoompaddown(0);
 					}else if(index == 14){
 						// Directional Left
-						zoompadleft();
+						zoompadleft(0);
 					}else if(index == 15){
 						// Directional Right
-						zoompadright();
+						zoompadright(0);
 					}
 				}else{
 					buttonsstate[index] = button.pressed;
@@ -4741,29 +4715,29 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		var currentaxesleft = Number(myGamepad.axes[1]).toFixed(1);
 		if(currentaxesleft > 0.1){
-			zoommout();
+			zoommout(0);
 		}else if(Math.abs(currentaxesleft) == 0.0){
 			// do nothing
 		}else if(currentaxesleft < -0.1){
-			zoomin();
+			zoomin(0);
 		}
 
 		var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
 		if(currentaxesrighthoz > 0.1){
-			zoompadright();
+			zoompadright(0);
 		}else if(Math.abs(currentaxesrighthoz) == 0.0){
 			// do nothing
 		}else if(currentaxesrighthoz < -0.1){
-			zoompadleft();
+			zoompadleft(0);
 		}
 
 		var currentaxesrightvert = Number(myGamepad.axes[3]).toFixed(1);
 		if(currentaxesrightvert > 0.1){
-			zoompaddown();
+			zoompaddown(0);
 		}else if(Math.abs(currentaxesrightvert) == 0.0){
 			// do nothing
 		}else if(currentaxesrightvert < -0.1){
-			zoompadup();
+			zoompadup(0);
 		}
 		window.requestAnimFrame(updategamepadaxes);
 	};
@@ -4820,8 +4794,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}, 3500);
 	}
 
-	function zoommout(){
-		var bomo = 0; // this.getAttribute("data-video");
+	function zoommout(videonum){
+		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
@@ -4830,8 +4804,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
-	function zoomin(){
-		var bomo = 0; // this.getAttribute("data-video");
+	function zoomin(videonum){
+		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
@@ -4840,8 +4814,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
-	function zoompadleft(){
-		var bomo = 0; // this.getAttribute("data-video");
+	function zoompadleft(videonum){
+		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
@@ -4849,8 +4823,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style.left = (parseInt(onevideo.style.left, 10) - 5) + "px";
 	}
 
-	function zoompadright(){
-		var bomo = 0; // this.getAttribute("data-video");
+	function zoompadright(videonum){
+		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
@@ -4858,8 +4832,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style.left = (parseInt(onevideo.style.left, 10) + 5) + "px";
 	}
 
-	function zoompadup(){
-		var bomo = 0; // this.getAttribute("data-video");
+	function zoompadup(videonum){
+		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
@@ -4867,8 +4841,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style.top = (parseInt(onevideo.style.top, 10) - 5) + "px";
 	}
 
-	function zoompaddown(){
-		var bomo = 0; // this.getAttribute("data-video");
+	function zoompaddown(videonum){
+		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
