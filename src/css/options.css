@@ -943,6 +943,12 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .tabledatalist td:first-child{width:80%}
 .tabledatalist tr:hover{background-color:var(--totl-table-tr-background-hover)}
 .tabledatalist tr:active{background-color:var(--totl-table-tr-background-active)}
+.tablegamepadlist{border-spacing:0;width:100%;table-layout:fixed;overflow:hidden}
+.tablegamepadlist tr:first-child{background:var(--totl-table-first-background);color:var(--totl-table-first-color)}
+.tablegamepadlist td{border-bottom:var(--totl-table-td-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden}
+.tablegamepadlist td:first-child{width:30%}
+.tablegamepadlist tr:hover{background-color:var(--totl-table-tr-background-hover)}
+.tablegamepadlist tr:active{background-color:var(--totl-table-tr-background-active)}
 header{background:var(--totl-primary-background);color:var(--totl-primary-font-color);-webkit-user-select:none;-moz-user-select:none;user-select:none;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.26);display:block;flex-direction:row;align-items:center;z-index:399;position:fixed}
 header .messagehead{align-items:center;display:flex;width:100%;position:relative;margin:0;padding:0}
 header .masterhead{min-height:56px;align-items:center;display:flex;position:relative;margin:0;padding:0 16px}
@@ -1177,8 +1183,8 @@ only screen and (max-device-width:480px){
   .sharestatsenergy .text{font-size:14px}
   .sharestatslove .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
   .sharestatslove .text{font-size:14px}
-  #tablesiteeng{table-layout:fixed}
-  #tablesiteeng td{overflow:hidden;text-overflow:ellipsis;word-wrap:break-word}
+  #tablesiteeng,#tablegamepad{table-layout:fixed}
+  #tablesiteeng td,#tablegamepad td{overflow:hidden;text-overflow:ellipsis;word-wrap:break-word}
   .aboutbuttons button{margin:15px 0;display:block}
   /* for mobile only */
   input[type=checkbox]:checked ~ #navbar-container{display:block;animation:slide-in 0.5s ease;animation-fill-mode:forwards}
