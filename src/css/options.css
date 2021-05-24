@@ -1134,6 +1134,10 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 #permullist{padding-inline-start:15px}
 @keyframes slide-in{from{left:-280px}to{left:0}}
 @keyframes slide-out{from{left:0}to{left:-280px}}
+/* Gamepad */
+.pslogo{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
+.st3{fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
+.st4{font-family:'Arial';font-size:12px}
 /* mobile */
 @media only screen and (max-width:982px),
 only screen and (max-device-width:982px){
