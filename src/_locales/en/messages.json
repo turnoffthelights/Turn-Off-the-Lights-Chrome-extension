@@ -513,5 +513,12 @@
     "desgamepaddirleft": {"message": "Directional Left"},
     "desgamepaddirright": {"message": "Directional Right"},
     "desgamepadxboxlogo": {"message": "Xbox Light-Up Logo"},
-    "desgamepadpslogo": {"message": "PlayStation Logo"}
+    "desgamepadpslogo": {"message": "PlayStation Logo"},
+    "desgpbuttonzoominout": {"message": "Zoom in or out"},
+    "desgpbuttonzoompos": {"message": "Zoom position"},
+    "desgpbuttonbackwardsmall": {"message": "play back 1 second"},
+    "desgpbuttonbackwardbig": {"message": "play back 3 seconds"},
+    "desgpbuttonforwardsmall": {"message": "play forward 1 second"},
+    "desgpbuttonforwardbig": {"message": "play forward 3 seconds"},
+    "desgpbuttonhome": {"message": "Gamepad test page"}
 }

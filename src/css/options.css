@@ -1135,9 +1135,10 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 @keyframes slide-in{from{left:-280px}to{left:0}}
 @keyframes slide-out{from{left:0}to{left:-280px}}
 /* Gamepad */
+.gpbox{padding:15px}
 .pslogo{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
-.st3{fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
-.st4{font-family:'Arial';font-size:12px}
+.xb3{fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
+.xb4{font-family:'Arial';font-size:12px}
 /* mobile */
 @media only screen and (max-width:982px),
 only screen and (max-device-width:982px){
