@@ -520,5 +520,12 @@
     "desgpbuttonbackwardbig": {"message": "play back 3 seconds"},
     "desgpbuttonforwardsmall": {"message": "play forward 1 second"},
     "desgpbuttonforwardbig": {"message": "play forward 3 seconds"},
-    "desgpbuttonhome": {"message": "Gamepad test page"}
+    "desgpbuttonhome": {"message": "Gamepad test page"},
+    "desgpbuttondirup": {"message": "Move the view up"},
+    "desgpbuttondirdown": {"message": "Move the view down"},
+    "desgpbuttondirleft": {"message": "Move the view left"},
+    "desgpbuttondirright": {"message": "Move the view right"},
+    "desgpbuttondirreset": {"message": "Reset the view"},
+    "desgpbuttonshare": {"message": "Share this"},
+    "desgpbuttonplaypause": {"message": "Play/Pause the current video"}
 }
