@@ -4639,15 +4639,19 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 							switch(index){
 							case 0:
 								// X
+								decreasevolume();
 								break;
 							case 1:
 								// O
+								playnext();
 								break;
 							case 2:
 								// Square
+								playprev();
 								break;
 							case 3:
 								// Triangle
+								increasevolume();
 								break;
 							case 4:
 								// L1
@@ -4674,9 +4678,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								break;
 							case 10:
 								// Left Stick Pressed
+								resetzoom();
 								break;
 							case 11:
 								// Right Stick Pressed
+								resetzoom();
 								break;
 							}
 						}
@@ -4792,6 +4798,32 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var element = document.getElementById("stefanvdremotedisc");
 			element.parentNode.removeChild(element);
 		}, 3500);
+	}
+
+	function playnext(){
+		var nextButton = document.getElementsByClassName("ytp-next-button")[0];
+		if(nextButton){
+			nextButton.click();
+		}
+	}
+
+	function playprev(){
+		var prevButton = document.getElementsByClassName("ytp-prev-button")[0];
+		if(prevButton){
+			prevButton.click();
+		}
+	}
+
+	function increasevolume(){
+
+	}
+
+	function decreasevolume(){
+
+	}
+
+	function resetzoom(){
+
 	}
 
 	function zoommout(videonum){
