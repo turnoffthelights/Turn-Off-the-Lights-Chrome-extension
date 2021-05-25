@@ -520,12 +520,16 @@
     "desgpbuttonbackwardbig": {"message": "play back 3 seconds"},
     "desgpbuttonforwardsmall": {"message": "play forward 1 second"},
     "desgpbuttonforwardbig": {"message": "play forward 3 seconds"},
-    "desgpbuttonhome": {"message": "Gamepad test page"},
+    "desgpbuttonhome": {"message": "Gamepad video test page"},
     "desgpbuttondirup": {"message": "Move the view up"},
     "desgpbuttondirdown": {"message": "Move the view down"},
     "desgpbuttondirleft": {"message": "Move the view left"},
     "desgpbuttondirright": {"message": "Move the view right"},
-    "desgpbuttondirreset": {"message": "Reset the view"},
+    "desgpbuttondirreset": {"message": "Reset the zoom view"},
     "desgpbuttonshare": {"message": "Share this"},
-    "desgpbuttonplaypause": {"message": "Play/Pause the current video"}
+    "desgpbuttonplaypause": {"message": "Play/Pause the current video"},
+    "desgpbuttonvolumeincrease": {"message": "Increase volume"},
+    "desgpbuttonvolumedecrease": {"message": "Decrease volume"},
+    "desgpbuttonnextvideo": {"message": "Play next YouTube video"},
+    "desgpbuttonprevvideo": {"message": "Play previous YouTube video"}
 }
