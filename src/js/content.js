@@ -4629,10 +4629,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		const myGamepad = navigator.getGamepads()[0];
 		if(myGamepad){
 			myGamepad.buttons.forEach((button, index) => {
+				// pressed => one action
+				if(index == 16){
+					// PlayStation Logo
+					if(button.pressed && buttonsstate[index] != true){
+						console.log("C 16 staat op pressed:", button.pressed, "dd", buttonsstate[index]);
+						buttonsstate[index] = true;
+						window.open("https://www.bing.com", "_blank");
+						// window.open(donatewebsite, "_blank");
+					}
+				}
 				if(button.pressed){
 					if(buttonsstate[index] != true){
-						buttonsstate[index] = button.pressed;
-						// console.log(`Pressed button ${index}`, "dus=",button.pressed);
+						buttonsstate[index] = true;
+						// console.log(`Pressed button ${index}`, "on status=",button.pressed, "compare with=",buttonsstate[index]);
 						var video = document.getElementsByTagName("video")[0];
 						if(video){
 							// playstation
@@ -4671,6 +4681,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								break;
 							case 8:
 								// Share
+								exitzoom(0);
 								break;
 							case 9:
 								// Options
@@ -4678,72 +4689,77 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								break;
 							case 10:
 								// Left Stick Pressed
-								resetzoom();
+								resetzoom(0);
 								break;
 							case 11:
 								// Right Stick Pressed
-								resetzoom();
+								resetzoom(0);
 								break;
 							}
 						}
-						// pressed => one action
-						if(index == 16){
-							// PlayStation Logo
-							window.open(donatewebsite, "_blank");
+					}
+
+					// pressed => continue actions loop
+					if(document.getElementsByTagName("video")[0]){
+						if(index == 12){
+							// Directional Up
+							zoompadup(0);
+						}else if(index == 13){
+							// Directional Down
+							zoompaddown(0);
+						}else if(index == 14){
+							// Directional Left
+							zoompadleft(0);
+						}else if(index == 15){
+							// Directional Right
+							zoompadright(0);
 						}
 					}
-					// pressed => continue actions loop
-					if(index == 12){
-						// Directional Up
-						zoompadup(0);
-					}else if(index == 13){
-						// Directional Down
-						zoompaddown(0);
-					}else if(index == 14){
-						// Directional Left
-						zoompadleft(0);
-					}else if(index == 15){
-						// Directional Right
-						zoompadright(0);
-					}
 				}else{
-					buttonsstate[index] = button.pressed;
+					// console.log("NOT pressed anymore",index, "status=",button.pressed)
+					buttonsstate[index] = false;
 				}
 			});
 		}
-		window.requestAnimFrame(updategamepadbuttons);
+		// window.requestAnimFrame(updategamepadbuttons)
+		// needed time out to detect button down and up
+		console.log("refresh now ");
+		// window.requestAnimFrame(updategamepadbuttons);
+		setTimeout(() => window.requestAnimFrame(updategamepadbuttons), 1000);
 	};
 
 	const updategamepadaxes = () => {
-		const myGamepad = navigator.getGamepads()[0]; // use the first gamepad
-		// console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
-		// console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
+		if(document.getElementsByTagName("video")[0]){
+			const myGamepad = navigator.getGamepads()[0]; // use the first gamepad
+			// console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
+			// console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
 
-		var currentaxesleft = Number(myGamepad.axes[1]).toFixed(1);
-		if(currentaxesleft > 0.1){
-			zoommout(0);
-		}else if(Math.abs(currentaxesleft) == 0.0){
-			// do nothing
-		}else if(currentaxesleft < -0.1){
-			zoomin(0);
-		}
+			var currentaxesleft = Number(myGamepad.axes[1]).toFixed(1);
+			if(currentaxesleft > 0.1){
+				zoommout(0);
+			}else if(Math.abs(currentaxesleft) == 0.0){
+				// do nothing
+			}else if(currentaxesleft < -0.1){
+				zoomin(0);
+			}
 
-		var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
-		if(currentaxesrighthoz > 0.1){
-			zoompadright(0);
-		}else if(Math.abs(currentaxesrighthoz) == 0.0){
-			// do nothing
-		}else if(currentaxesrighthoz < -0.1){
-			zoompadleft(0);
-		}
+			var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
+			if(currentaxesrighthoz > 0.1){
+				zoompadright(0);
+			}else if(Math.abs(currentaxesrighthoz) == 0.0){
+				// do nothing
+			}else if(currentaxesrighthoz < -0.1){
+				zoompadleft(0);
+			}
 
-		var currentaxesrightvert = Number(myGamepad.axes[3]).toFixed(1);
-		if(currentaxesrightvert > 0.1){
-			zoompaddown(0);
-		}else if(Math.abs(currentaxesrightvert) == 0.0){
-			// do nothing
-		}else if(currentaxesrightvert < -0.1){
-			zoompadup(0);
+			var currentaxesrightvert = Number(myGamepad.axes[3]).toFixed(1);
+			if(currentaxesrightvert > 0.1){
+				zoompaddown(0);
+			}else if(Math.abs(currentaxesrightvert) == 0.0){
+				// do nothing
+			}else if(currentaxesrightvert < -0.1){
+				zoompadup(0);
+			}
 		}
 		window.requestAnimFrame(updategamepadaxes);
 	};
@@ -4822,8 +4838,30 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	}
 
-	function resetzoom(){
+	function exitzoom(videonum){
+		var bomo = videonum;
+		var onevideo = $("stefanvdzoomcanvas" + bomo);
+		vzoom[bomo] = 1;
+		vrotate[bomo] = 0;
+		onevideo.style.top = 0 + "px";
+		onevideo.style.left = 0 + "px";
+		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+		$("stefanvdzoomstage" + bomo).style.display = "none";
+		$("stefanvdzoomexit" + bomo).style.setProperty("display", "none", "important");
+		$("stefanvdzoompanel" + bomo).style.display = "none";
+	}
 
+	function resetzoom(videonum){
+		var bomo = videonum;
+		videorefreshzoomcanvas(bomo);
+		$("stefanvdzoomstage" + bomo).style.display = "block";
+		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
+		var onevideo = $("stefanvdzoomcanvas" + bomo);
+		vzoom[bomo] = 1;
+		vrotate[bomo] = 0;
+		onevideo.style.top = 0 + "px";
+		onevideo.style.left = 0 + "px";
+		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
 	function zoommout(videonum){
