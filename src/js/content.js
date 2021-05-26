@@ -4633,12 +4633,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(index == 16){
 					// PlayStation Logo
 					if(button.pressed && buttonsstate[index] != true){
-						console.log("C 16 staat op pressed:", button.pressed, "dd", buttonsstate[index]);
+						// console.log("Click 16 on pressed:", button.pressed, "arry set on:", buttonsstate[index]);
 						buttonsstate[index] = true;
-						window.open("https://www.bing.com", "_blank");
-						// window.open(donatewebsite, "_blank");
+						// set delay to prevent double openening new tab when open this on the other web browser tab
+						window.setTimeout(function(){
+							window.open("https://www.bing.com", "_blank");
+						}, 2500);
 					}
 				}
+
 				if(button.pressed){
 					if(buttonsstate[index] != true){
 						buttonsstate[index] = true;
@@ -4721,11 +4724,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 			});
 		}
-		// window.requestAnimFrame(updategamepadbuttons)
-		// needed time out to detect button down and up
-		console.log("refresh now ");
-		// window.requestAnimFrame(updategamepadbuttons);
-		setTimeout(() => window.requestAnimFrame(updategamepadbuttons), 1000);
+		window.requestAnimFrame(updategamepadbuttons);
 	};
 
 	const updategamepadaxes = () => {
