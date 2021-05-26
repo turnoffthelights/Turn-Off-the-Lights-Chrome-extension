@@ -1844,23 +1844,27 @@ function trianglerandomize(){
 function trianglerefresh(){
 	if(document.visibilityState === "visible"){
 		trianglerandomize();
-		var i, l = document.querySelector("#triangle svg").childNodes.length;
-		for(i = 0; i < l; i++){
-			var polygon = document.querySelector("#triangle svg").childNodes[i];
+		var l = document.querySelector("#triangle svg").childNodes;
+		l.forEach(function(item){
+			var polygon = item;
 			var animate = polygon.childNodes[0];
 			if(animate.getAttribute("to")){
 				animate.setAttribute("from", animate.getAttribute("to"));
 			}
 			animate.setAttribute("to", points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
 			animate.beginElement();
-		}
+		});
 		refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
 	}
 }
+
 function onResize(){
-	document.querySelector("#triangle svg").remove();
-	window.clearTimeout(refreshTimeout);
-	trianglerun();
+	if(document.getElementById("stefanvddynamicbackground")){
+		var elem = document.querySelector("#triangle svg");
+		if(elem){ elem.parentNode.removeChild(elem); }
+		window.clearTimeout(refreshTimeout);
+		trianglerun();
+	}
 }
 
 function lightsgoonoroff(){
