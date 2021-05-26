@@ -531,5 +531,7 @@
     "desgpbuttonvolumeincrease": {"message": "Increase volume"},
     "desgpbuttonvolumedecrease": {"message": "Decrease volume"},
     "desgpbuttonnextvideo": {"message": "Play next YouTube video"},
-    "desgpbuttonprevvideo": {"message": "Play previous YouTube video"}
+    "desgpbuttonprevvideo": {"message": "Play previous YouTube video"},
+    "titelgpconnect": {"message": "Connected"},
+    "titelgpdisconnect": {"message": "Disconnected"}
 }

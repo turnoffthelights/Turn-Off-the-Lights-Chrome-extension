@@ -28,9 +28,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, nightmodebutton = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, nightmodebutton = null, gamepad = null;
 /* -------------------------------------------------- */
-chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eyea", "eyealist", "excludedDomains", "nighttime", "begintime", "endtime", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ecosaver", "ecosavertime", "autoplayonly", "autoplayDomains", "interval", "maxquality", "autowidthyoutube", "customqualityyoutube", "atmosphereonly", "atmosphereDomains", "nighttheme", "nightonly", "nightDomains", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "nighthover", "nightactivetime", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "eyechecklistwhite", "eyechecklistblack", "nightmodebck", "nightmodetxt", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodehyperlink", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "vpause", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "videovolumealt", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "pipvisualtype", "nightmodebutton"], function(response){
+chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eyea", "eyealist", "excludedDomains", "nighttime", "begintime", "endtime", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ecosaver", "ecosavertime", "autoplayonly", "autoplayDomains", "interval", "maxquality", "autowidthyoutube", "customqualityyoutube", "atmosphereonly", "atmosphereDomains", "nighttheme", "nightonly", "nightDomains", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "nighthover", "nightactivetime", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "eyechecklistwhite", "eyechecklistblack", "nightmodebck", "nightmodetxt", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodehyperlink", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "vpause", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "videovolumealt", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "pipvisualtype", "nightmodebutton", "gamepad"], function(response){
 	autoplay = response["autoplay"];
 	eastereggs = response["eastereggs"];
 	shortcutlight = response["shortcutlight"];
@@ -139,6 +139,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	videovolumepose = response["videovolumepose"];
 	pipvisualtype = response["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1;
 	nightmodebutton = response["nightmodebutton"]; if(nightmodebutton == null)nightmodebutton = "#353535";
+	gamepad = response["gamepad"];
 
 	function $(id){ return document.getElementById(id); }
 
@@ -4192,6 +4193,25 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		rundoscrollfunc = false;
 	}
 
+	// ----youtube
+	function setyoutubevolumemeter(volume){
+		if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+			var SVGpath = document.getElementById("ytp-id-15");
+			if(SVGpath){
+				if(volume <= 0.01){
+					SVGpath.setAttribute("d", "M12.39,15.54 L10,15.54 L10,20.44 L12.4,20.44 L17,25.50 L17,10.48 L12.39,15.54 Z");
+				}else if(volume <= 0.5){
+					SVGpath.setAttribute("d", "M12.39,15.54 L10,15.54 L10,20.44 L12.4,20.44 L17,25.50 L17,10.48 L12.39,15.54 Z M22,17.99 C22,16.4 20.74,15.05 19,14.54 L19,21.44 C20.74,20.93 22,19.59 22,17.99 Z");
+				}else{
+					SVGpath.setAttribute("d", "M12.39,15.54 L10,15.54 L10,20.44 L12.4,20.44 L17,25.50 L17,10.48 L12.39,15.54 Z M22,17.99 C22,16.4 20.74,15.05 19,14.54 L19,21.44 C20.74,20.93 22,19.59 22,17.99 Z M19,24.31 L19,26 C22.99,25.24 26,21.94 26,18 C26,14.05 22.99,10.75 19,10 L19,11.68 C22.01,12.41 24.24,14.84 24.24,18 C24.24,21.15 22.01,23.58 19,24.31 Z");
+				}
+			}
+			document.querySelector(".ytp-volume-panel").setAttribute("aria-valuenow", (volume * 100).toFixed(0));
+			document.querySelector(".ytp-volume-slider-handle").style.left = ((volume * 100) * 0.4) + "px";
+		}
+	}
+	//---
+
 	var doscroll = function(e){
 
 		if(videovolumealt == true){
@@ -4200,25 +4220,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else{
 			rundoscrollfunc = true; // regular run with no keys down
 		}
-
-		// ----youtube
-		function setyoutubevolumemeter(volume){
-			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-				var SVGpath = document.getElementById("ytp-id-15");
-				if(SVGpath){
-					if(volume <= 0.01){
-						SVGpath.setAttribute("d", "M12.39,15.54 L10,15.54 L10,20.44 L12.4,20.44 L17,25.50 L17,10.48 L12.39,15.54 Z");
-					}else if(volume <= 0.5){
-						SVGpath.setAttribute("d", "M12.39,15.54 L10,15.54 L10,20.44 L12.4,20.44 L17,25.50 L17,10.48 L12.39,15.54 Z M22,17.99 C22,16.4 20.74,15.05 19,14.54 L19,21.44 C20.74,20.93 22,19.59 22,17.99 Z");
-					}else{
-						SVGpath.setAttribute("d", "M12.39,15.54 L10,15.54 L10,20.44 L12.4,20.44 L17,25.50 L17,10.48 L12.39,15.54 Z M22,17.99 C22,16.4 20.74,15.05 19,14.54 L19,21.44 C20.74,20.93 22,19.59 22,17.99 Z M19,24.31 L19,26 C22.99,25.24 26,21.94 26,18 C26,14.05 22.99,10.75 19,10 L19,11.68 C22.01,12.41 24.24,14.84 24.24,18 C24.24,21.15 22.01,23.58 19,24.31 Z");
-					}
-				}
-				document.querySelector(".ytp-volume-panel").setAttribute("aria-valuenow", (volume * 100).toFixed(0));
-				document.querySelector(".ytp-volume-slider-handle").style.left = ((volume * 100) * 0.4) + "px";
-			}
-		}
-		//---
 
 		if(rundoscrollfunc == true){
 			e = window.event || e;
@@ -4474,7 +4475,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	function videovolumefunction(){
-		if(videovolume == true || videovolumehold == true){
+		if(videovolume == true || videovolumehold == true || gamepad == true){
 			videovolumesteps = Math.round(videovolumesteps * 100) / 10000;
 
 			// inject CSS for the progress bar
@@ -4606,7 +4607,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	// Game controller
-	var gamepad = true;
 	var buttonsstate = [];
 	// control the current video with your remote gamepad controller
 	if(gamepad == true){
@@ -4625,6 +4625,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		});
 	}
 
+	var logoclicked = false;
 	const updategamepadbuttons = () => {
 		const myGamepad = navigator.getGamepads()[0];
 		if(myGamepad){
@@ -4636,9 +4637,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						// console.log("Click 16 on pressed:", button.pressed, "arry set on:", buttonsstate[index]);
 						buttonsstate[index] = true;
 						// set delay to prevent double openening new tab when open this on the other web browser tab
-						window.setTimeout(function(){
-							window.open("https://www.bing.com", "_blank");
-						}, 2500);
+						if(logoclicked == false){
+							logoclicked = true;
+							window.setTimeout(function(){
+								window.open(linkgamepad, "_blank");
+								logoclicked = false;
+							}, 2500);
+						}
 					}
 				}
 
@@ -4775,6 +4780,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		return shortname;
 	}
 
+	var i18ntitelgpconnect = chrome.i18n.getMessage("titelgpconnect");
+	var i18ntitelgpdisconnect = chrome.i18n.getMessage("titelgpdisconnect");
 	function addremotebadge(name){
 		var div = document.createElement("div");
 		div.setAttribute("id", "stefanvdremoteadd");
@@ -4786,13 +4793,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		div.appendChild(h3);
 
 		var p = document.createElement("p");
-		p.innerText = "Connected";
+		p.innerText = i18ntitelgpconnect;
 		div.appendChild(p);
 
 		window.setTimeout(function(){
 			var element = document.getElementById("stefanvdremoteadd");
 			element.parentNode.removeChild(element);
-		}, 3500);
+		}, 4000);
 	}
 
 	function discontectremotebadge(name){
@@ -4806,13 +4813,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		div.appendChild(h3);
 
 		var p = document.createElement("p");
-		p.innerText = "Disconnected";
+		p.innerText = i18ntitelgpdisconnect;
 		div.appendChild(p);
 
 		window.setTimeout(function(){
 			var element = document.getElementById("stefanvdremotedisc");
 			element.parentNode.removeChild(element);
-		}, 3500);
+		}, 4000);
 	}
 
 	function playnext(){
@@ -4830,11 +4837,70 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	function increasevolume(){
+		var that = document.getElementsByTagName("video")[0];
+		if(that){
+			if(videovolumesteps != 0.01){
+				that.volume = Math.round(that.volume / videovolumesteps) * videovolumesteps; // fix the correct ceil level (steps of the user)
+			}
 
+			if(that.volume <= 0.99){
+				that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
+				setyoutubevolumemeter(that.volume);
+			}
+
+			var pop = 0;
+			document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
+			if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
+			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
+
+			var el = document.getElementsByClassName("totlmousewheelvideo");
+			if(el[pop]){
+				el[pop].classList.remove("totlhidevolume");
+				el[pop].classList.add("totlvisiblevolume");
+			}
+
+			if(scrollTimer != -1){ window.clearTimeout(scrollTimer); }
+			scrollTimer = window.setTimeout(function(){
+				if(el[pop]){
+					el[pop].classList.remove("totlvisiblevolume");
+					el[pop].classList.add("totlhidevolume");
+				}
+			}, 750);
+		}
 	}
 
 	function decreasevolume(){
+		var that = document.getElementsByTagName("video")[0];
+		if(that){
+			if(videovolumesteps != 0.01){
+				that.volume = Math.round(that.volume / videovolumesteps) * videovolumesteps; // fix the correct ceil level (steps of the user)
+			}
 
+			if(that.volume > 0.00){
+				that.volume -= videovolumesteps;
+				that.volume = Math.round(that.volume * 100) / 100;
+				setyoutubevolumemeter(that.volume);
+			}
+
+			var pop = 0;
+			document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
+			if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
+			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
+
+			var el = document.getElementsByClassName("totlmousewheelvideo");
+			if(el[pop]){
+				el[pop].classList.remove("totlhidevolume");
+				el[pop].classList.add("totlvisiblevolume");
+			}
+
+			if(scrollTimer != -1){ window.clearTimeout(scrollTimer); }
+			scrollTimer = window.setTimeout(function(){
+				if(el[pop]){
+					el[pop].classList.remove("totlvisiblevolume");
+					el[pop].classList.add("totlhidevolume");
+				}
+			}, 750);
+		}
 	}
 
 	function exitzoom(videonum){

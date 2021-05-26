@@ -1138,7 +1138,6 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .gpbox{padding:15px}
 .pslogo{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
 .xb3{fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
-.xb4{font-family:'Arial';font-size:12px}
 /* mobile */
 @media only screen and (max-width:982px),
 only screen and (max-device-width:982px){

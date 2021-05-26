@@ -57,6 +57,7 @@
         "linkyoutube": "writable",
         "linkauroraplayerapp": "writable",
         "linktotlmobileapp": "writable",
+        "linkgamepad": "writable",
         "devmode": "writable",
         "devdonate": "writable",
         "Chart": "readonly"
