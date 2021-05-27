@@ -4588,9 +4588,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 					}
 				}
-				if(videovolumechecklistblack == true){
-					if(videovolumerabbit == false){ videovolumefunction(); }
-				}
+				if(videovolumechecklistblack == true && videovolumerabbit == false){ videovolumefunction(); }
 			}else{ videovolumefunction(); }
 		} // option videotool on end
 	}
