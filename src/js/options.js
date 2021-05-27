@@ -1980,17 +1980,16 @@ function trianglerefresh(){
 	if(document.visibilityState === "visible"){
 		trianglerandomize();
 		if(document.getElementById("triangle")){
-			var i;
-			var l = document.querySelector("#triangle svg").childNodes.length;
-			for(i = 0; i < l; i++){
-				var polygon = document.querySelector("#triangle svg").childNodes[i];
+			var l = document.querySelector("#triangle svg").childNodes;
+			l.forEach(function(item){
+				var polygon = item;
 				var animate = polygon.childNodes[0];
 				if(animate.getAttribute("to")){
 					animate.setAttribute("from", animate.getAttribute("to"));
 				}
 				animate.setAttribute("to", points[polygon.point1].x + "," + points[polygon.point1].y + " " + points[polygon.point2].x + "," + points[polygon.point2].y + " " + points[polygon.point3].x + "," + points[polygon.point3].y);
 				animate.beginElement();
-			}
+			});
 			refreshTimeout = window.setTimeout(function(){ trianglerefresh(); }, refreshDuration);
 		}
 	}
