@@ -504,9 +504,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 					}
 				}
-				if(autoplaychecklistblack == true){
-					if(blackrabbit == false){ autoplayfunction(); }
-				}
+				if(autoplaychecklistblack == true && blackrabbit == false){ autoplayfunction(); }
 			}else{ autoplayfunction(); }
 		} // option autoplay on end
 	}
@@ -567,9 +565,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 					}
 				}
-				if(videotoolchecklistblack == true){
-					if(videotoolrabbit == false){ videotoolfunction(); }
-				}
+				if(videotoolchecklistblack == true && videotoolrabbit == false){ videotoolfunction(); }
 			}else{ videotoolfunction(); }
 		} // option videotool on end
 	}

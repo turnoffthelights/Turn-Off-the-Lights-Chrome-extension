@@ -1596,7 +1596,6 @@ function createCloud(){
 	var lcalc = 5 + Math.round(Math.random() * 10);
 	for(j = 0; j < lcalc; j++){
 		var cloud = document.createElement("div");
-		cloud.style.opacity = 0;
 		cloud.style.opacity = .8;
 		cloud.className = "stefanvdcloudLayer";
 		var cloudx = 256 - (Math.random() * 512);

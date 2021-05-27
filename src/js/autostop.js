@@ -317,9 +317,7 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 						}
 					}
 				}
-				if(autostopchecklistblack == true){
-					if(stoprabbit == false){ autostopfunction(); }
-				}
+				if(autostopchecklistblack == true && stoprabbit == false){ autostopfunction(); }
 			}else{ autostopfunction(); }
 		}, false);
 
