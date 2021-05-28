@@ -4812,6 +4812,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
+	var pop = 0;
 	function decreasevolume(){
 		var that = document.getElementsByTagName("video")[0];
 		if(that){
@@ -4825,7 +4826,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				setyoutubevolumemeter(that.volume);
 			}
 
-			var pop = 0;
 			document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
 			if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
 			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
