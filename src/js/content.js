@@ -4380,18 +4380,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								deltaY = last_position.y - event.clientY;
 
 							// check which direction had the highest amplitude and then figure out direction by checking if the value is greater or less than zero
-							if(Math.abs(deltaX) > Math.abs(deltaY) && deltaX > 0){
+							if((Math.abs(deltaX) > Math.abs(deltaY) && deltaX > 0) || (Math.abs(deltaY) > Math.abs(deltaX) && deltaY < 0)){
 								if(document.getElementsByTagName("video")[pop].volume > 0.00){ document.getElementsByTagName("video")[pop].volume -= videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
-								// left
-							}else if(Math.abs(deltaX) > Math.abs(deltaY) && deltaX < 0){
+								// left and down
+							}else if((Math.abs(deltaX) > Math.abs(deltaY) && deltaX < 0) || (Math.abs(deltaY) > Math.abs(deltaX) && deltaY > 0)){
 								if(document.getElementsByTagName("video")[pop].volume <= 0.99){ document.getElementsByTagName("video")[pop].volume += videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
-								// right
-							}else if(Math.abs(deltaY) > Math.abs(deltaX) && deltaY > 0){
-								if(document.getElementsByTagName("video")[pop].volume <= 0.99){ document.getElementsByTagName("video")[pop].volume += videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
-								// up
-							}else if(Math.abs(deltaY) > Math.abs(deltaX) && deltaY < 0){
-								if(document.getElementsByTagName("video")[pop].volume > 0.00){ document.getElementsByTagName("video")[pop].volume -= videovolumesteps; document.getElementsByTagName("video")[pop].volume = Math.round(document.getElementsByTagName("video")[pop].volume * 100) / 100; }
-								// down
+								// right and up
 							}
 						}
 
@@ -4404,18 +4398,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						el[pop].classList.add("totlvisiblevolume");
 
 						if(scrollTimer != -1){ window.clearTimeout(scrollTimer); }
-						scrollTimer = window.setTimeout(function(){
-							el[pop].classList.remove("totlvisiblevolume");
-							el[pop].classList.add("totlhidevolume");
-						}, 750);
+						scrollTimer = window.setTimeout(function(){ el[pop].classList.remove("totlvisiblevolume"); el[pop].classList.add("totlhidevolume"); }, 750);
 
 						event.preventDefault();
 
 						// set the new last position to the current for next time
-						last_position = {
-							x : event.clientX,
-							y : event.clientY
-						};
+						last_position = {x : event.clientX, y : event.clientY};
 					}
 				};
 

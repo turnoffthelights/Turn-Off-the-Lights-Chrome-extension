@@ -2251,8 +2251,8 @@ function cameradomcontentloaded(){
 					skin_filter[count_data_big_array + 3] = a;
 				}else{
 					skin_filter.data[count_data_big_array] =
-                        skin_filter.data[count_data_big_array + 1] =
-                        skin_filter.data[count_data_big_array + 2] = 0;
+                    skin_filter.data[count_data_big_array + 1] =
+                    skin_filter.data[count_data_big_array + 2] = 0;
 					skin_filter.data[count_data_big_array + 3] = 0;
 				}
 
