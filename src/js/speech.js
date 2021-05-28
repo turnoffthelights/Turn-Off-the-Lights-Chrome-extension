@@ -223,8 +223,7 @@ function speechrecognition(){
 
 		recognition.onresult = function(event){
 			interim_transcript = "";
-			var i;
-			var l = event.results.length;
+			var i, l = event.results.length;
 			for(i = event.resultIndex; i < l; ++i){
 				if(event.results[i].isFinal){
 					final_transcript = event.results[i][0].transcript;
@@ -269,8 +268,7 @@ function speechrecognition(){
 		// console.log("yes: turn off the lights");
 			chrome.storage.sync.set({"slideeffect": true});
 			chrome.tabs.query({active: true}, function(tabs){
-				var i;
-				var l = tabs.length;
+				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
 					if(tabs[i].url.match(/^http/i)){
 						chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
@@ -282,8 +280,7 @@ function speechrecognition(){
 		// console.log("yes: turn on the lights");
 			chrome.storage.sync.set({"slideeffect": true});
 			chrome.tabs.query({active: true}, function(tabs){
-				var i;
-				var l = tabs.length;
+				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
 					if(tabs[i].url.match(/^http/i)){
 						chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
@@ -293,8 +290,7 @@ function speechrecognition(){
 			});
 		}else if(userSaid(final_transcript, i18nldesspeech3command)){ // Play the video
 			chrome.tabs.query({active: true}, function(tabs){
-				var i;
-				var l = tabs.length;
+				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
 					if(tabs[i].url.match(/^http/i)){
 						chrome.tabs.executeScript(tabs[i].id, {file: "js/videoplay.js"});
@@ -304,8 +300,7 @@ function speechrecognition(){
 			});
 		}else if(userSaid(final_transcript, i18nldesspeech4command)){ // Stop the video
 			chrome.tabs.query({active: true}, function(tabs){
-				var i;
-				var l = tabs.length;
+				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
 					if(tabs[i].url.match(/^http/i)){
 						chrome.tabs.executeScript(tabs[i].id, {file: "js/videopause.js"});
@@ -316,8 +311,7 @@ function speechrecognition(){
 		}
 	}
 
-	var speech;
-	var speechonly;
+	var speech, speechonly;
 	chrome.storage.sync.get(["speech", "speechonly", "speechDomains"], function(response){
 		speech = response["speech"];
 		speechonly = response["speechonly"];
@@ -344,8 +338,7 @@ function speechrecognition(){
 				for(domain in speechDomains)
 					sbuf.push(domain);
 				sbuf.sort();
-				var i;
-				var l = sbuf.length;
+				var i, l = sbuf.length;
 				for(i = 0; i < l; i++){
 					if(foundtheurlspeech == false){
 						if(thatpage == sbuf[i]){ speechstartfunction(); foundtheurlspeech = true; }

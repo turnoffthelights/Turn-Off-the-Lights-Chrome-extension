@@ -219,7 +219,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	// Shortcutlight
 	window.addEventListener("keydown", function(e){
-		if(e.which == 119 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.key == "F8" && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+F8
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -233,7 +233,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
-		if(e.which == 120 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.key == "F9" && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+F9
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -244,7 +244,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
-		if(e.which == 38 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.key == "ArrowUp" && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+arrow up
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -262,7 +262,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
-		if(e.which == 40 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.key == "ArrowDown" && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+arrow down
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -282,15 +282,14 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}else{
 						// control opacity for all <div>
 						let div = document.querySelectorAll("div.stefanvdlightareoff");
-						let i;
-						let l = div.length;
+						let i, l = div.length;
 						for(i = 0; i < l; i++){ div[i].style.opacity = shorcutcurrentopacity; }
 					}
 				}
 			}
 		}
 
-		if(e.which == 106 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.key == "*" && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+*
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -299,7 +298,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
-		if(e.which == 121 && !e.ctrlKey && !e.shiftKey && e.altKey){
+		if(e.key == "F10" && !e.ctrlKey && !e.shiftKey && e.altKey){
 		// Run code for Alt+F10
 			// Shortcutlight
 			if(shortcutlight == true){
@@ -339,7 +338,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	}, false);
 	window.addEventListener("keypress", function(e){
-		if(e.which == 116){
+		// press the key t
+		if(e.key == "t"){
 			gogotheater();
 		}
 	}, false);
