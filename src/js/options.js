@@ -1710,10 +1710,7 @@ var worldXAngle = 0; var worldYAngle = 0;
 function createCloud(){
 	var div = document.createElement("div");
 	div.className = "stefanvdcloudBase";
-	var x = 256 - (Math.random() * 512);
-	var y = 256 - (Math.random() * 512);
-	var z = 256 - (Math.random() * 512);
-	var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
+	var t = "translateX(" + (256 - (Math.random() * 512)) + "px) translateY(" + (256 - (Math.random() * 512)) + "px) translateZ(" + (256 - (Math.random() * 512)) + "px)";
 	div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
 	world.appendChild(div);
 
