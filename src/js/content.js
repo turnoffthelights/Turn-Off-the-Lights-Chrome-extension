@@ -1222,13 +1222,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos025.setAttribute("data-video", i);
 					newspeedbuttonpos025.textContent = "+0.25";
 					newspeedbuttonpos025.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						if(onevideo.paused)onevideo.play();
-						window.setTimeout(function(){
-							onevideo.playbackRate = 0.25;
-						}, 0);
+						var num = this.getAttribute("data-video");
+						playrate(num, 0.25);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos025);
 
@@ -1237,13 +1232,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos05.setAttribute("data-video", i);
 					newspeedbuttonpos05.textContent = "+0.5";
 					newspeedbuttonpos05.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						if(onevideo.paused)onevideo.play();
-						window.setTimeout(function(){
-							onevideo.playbackRate = 0.5;
-						}, 0);
+						var num = this.getAttribute("data-video");
+						playrate(num, 0.5);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos05);
 
@@ -1252,13 +1242,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos075.setAttribute("data-video", i);
 					newspeedbuttonpos075.textContent = "+0.75";
 					newspeedbuttonpos075.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						if(onevideo.paused)onevideo.play();
-						window.setTimeout(function(){
-							onevideo.playbackRate = 0.75;
-						}, 0);
+						var num = this.getAttribute("data-video");
+						playrate(num, 0.75);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos075);
 
