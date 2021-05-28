@@ -37,9 +37,7 @@ function speechstartfunction(){
 }
 function startButton(){
 	// Abort previous instances of recognition already running
-	if(recognition && recognition.abort){
-		recognition.abort();
-	}
+	if(recognition && recognition.abort){ recognition.abort(); }
 	recognition.lang = "en-US";
 	try{ recognition.start(); }catch(e){ console.error(e); }
 	ignore_onend = false;
@@ -65,23 +63,15 @@ function startinit(){
 		recognition = new SpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
-
 		recognition.onstart = function(){
 			recognizing = true;
 			// console.log("speak now");
 		};
-
 		recognition.onerror = function(event){
-			if(event.error == "no-speech" || event.error == "audio-capture" || event.error == "not-allowed"){
-				ignore_onend = true;
-			}
-			if(ignore_onend == true){
-				console.log("ignore onend");
-			}
+			if(event.error == "no-speech" || event.error == "audio-capture" || event.error == "not-allowed"){ ignore_onend = true; }
+			if(ignore_onend == true){ console.log("ignore onend"); }
 		};
-
 	}
-
 	speechstartfunction();
 }
 
