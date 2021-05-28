@@ -1314,12 +1314,11 @@ function multiopacityremoveSelectedExcludedDomain(){
 
 // fade effects control -> not when loaded page
 function lightscontrol(){
-	var jump = $("interval").value;
-	default_opacity = jump;
+	default_opacity = $("interval").value;
 	if($("onoffrange").value == 0){
 		if($("fadeout").checked == true){ ReducingFinished = false; fader("hide"); }else{ $("example2").style.opacity = 0; $("example2").style.display = "none"; }
 	}else{
-		if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = jump / 100; $("example2").style.display = ""; }
+		if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = default_opacity / 100; $("example2").style.display = ""; }
 	}
 }
 
@@ -2435,7 +2434,6 @@ function runcamerasettings(){
 var video;
 function cameramotionlights(){
 	if($("motion").checked == true){
-
 		// Check for live API permissions
 		navigator.permissions.query({name:"camera"})
 			.then(function(permissionStatus){
@@ -2448,17 +2446,14 @@ function cameramotionlights(){
 					}
 				};
 			});
-
 		video = document.getElementById("motionvideo");
 		motioncanvas = document.getElementById("motioncanvas");
 		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
 		ccanvas = document.getElementById("motioncomp");
 		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-
 	}else{
-	// remove everything
+		// remove everything
 		document.getElementById("stefanmotion").textContent = "";
-
 		if(localMediaStream){
 			if($("motionvideo")){
 				document.getElementById("motionvideo").pause();
@@ -2479,7 +2474,6 @@ function cameramotionlights(){
 			ccanvas.height = 0;
 			window.clearInterval(intervalID);
 		}
-
 	}
 }
 
