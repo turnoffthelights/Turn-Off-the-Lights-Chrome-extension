@@ -1783,58 +1783,56 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 					}
 					// detect change style - this for floating box in div detection
-					if(mutation.attributeName == "style"){
-						if(mutation.target.tagName == "VIDEO"){
-							if(mutation.target.hasAttribute("data-video")){
-							// data is available
-							// update the style
+					if(mutation.attributeName == "style" && mutation.target.tagName == "VIDEO"){
+						if(mutation.target.hasAttribute("data-video")){
+						// data is available
+						// update the style
 
-								// video toolbar update location
-								var potvis = mutation.target.getAttribute("data-video");
-								var visposition = getPosition(mutation.target);
-								if(document.getElementById("stefanvdvispanel" + potvis)){
-									document.getElementById("stefanvdvispanel" + potvis).style.width = mutation.target.offsetWidth + "px";
-									document.getElementById("stefanvdvispanel" + potvis).style.top = visposition.y + "px";
-									document.getElementById("stefanvdvispanel" + potvis).style.left = visposition.x + "px";
-								}
-								// canvas update location
-								if(document.getElementById("stefanvdvisualizationcanvas" + potvis)){
-									document.getElementById("stefanvdvisualizationcanvas" + potvis).style.width = mutation.target.offsetWidth + "px";
-									document.getElementById("stefanvdvisualizationcanvas" + potvis).style.height = mutation.target.offsetHeight + "px";
-									document.getElementById("stefanvdvisualizationcanvas" + potvis).style.top = visposition.y + "px";
-									document.getElementById("stefanvdvisualizationcanvas" + potvis).style.left = visposition.x + "px";
-								}
-								// speed update location
-								if(document.getElementById("stefanvdspeedpanel" + potvis)){
-									document.getElementById("stefanvdspeedpanel" + potvis).style.top = visposition.y + "px";
-									document.getElementById("stefanvdspeedpanel" + potvis).style.left = visposition.x - 64 + "px";
-									document.getElementById("stefanvdspeedpanel" + potvis).style.height = mutation.target.offsetHeight - 40 + "px";
-								}
-								// zoom update location
-								if(document.getElementById("stefanvdzoompanel" + potvis)){
-									document.getElementById("stefanvdzoompanel" + potvis).style.top = visposition.y + "px";
-									document.getElementById("stefanvdzoompanel" + potvis).style.left = mutation.target.offsetWidth + visposition.x + "px";
-									document.getElementById("stefanvdzoompanel" + potvis).style.height = mutation.target.offsetHeight - 40 + "px";
-								}
-								// zoom canvas update location
-								if(document.getElementById("stefanvdzoomcanvas" + potvis)){
-									document.getElementById("stefanvdzoomcanvas" + potvis).width = mutation.target.offsetWidth;
-									document.getElementById("stefanvdzoomcanvas" + potvis).height = mutation.target.offsetHeight;
-									document.getElementById("stefanvdzoomcanvas" + potvis).style.width = mutation.target.offsetWidth + "px";
-									document.getElementById("stefanvdzoomcanvas" + potvis).style.height = mutation.target.offsetHeight + "px";
-								}
-								// zoom stage location
-								if(document.getElementById("stefanvdzoomstage" + potvis)){
-									document.getElementById("stefanvdzoomstage" + potvis).style.width = mutation.target.offsetWidth + "px";
-									document.getElementById("stefanvdzoomstage" + potvis).style.height = mutation.target.offsetHeight + "px";
-									document.getElementById("stefanvdzoomstage" + potvis).style.top = visposition.y + "px";
-									document.getElementById("stefanvdzoomstage" + potvis).style.left = visposition.x + "px";
-								}
-							}else{
-							// there is no data
-							// create everything again
-								myListenervideotoolbar();
+							// video toolbar update location
+							var potvis = mutation.target.getAttribute("data-video");
+							var visposition = getPosition(mutation.target);
+							if(document.getElementById("stefanvdvispanel" + potvis)){
+								document.getElementById("stefanvdvispanel" + potvis).style.width = mutation.target.offsetWidth + "px";
+								document.getElementById("stefanvdvispanel" + potvis).style.top = visposition.y + "px";
+								document.getElementById("stefanvdvispanel" + potvis).style.left = visposition.x + "px";
 							}
+							// canvas update location
+							if(document.getElementById("stefanvdvisualizationcanvas" + potvis)){
+								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.width = mutation.target.offsetWidth + "px";
+								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.height = mutation.target.offsetHeight + "px";
+								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.top = visposition.y + "px";
+								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.left = visposition.x + "px";
+							}
+							// speed update location
+							if(document.getElementById("stefanvdspeedpanel" + potvis)){
+								document.getElementById("stefanvdspeedpanel" + potvis).style.top = visposition.y + "px";
+								document.getElementById("stefanvdspeedpanel" + potvis).style.left = visposition.x - 64 + "px";
+								document.getElementById("stefanvdspeedpanel" + potvis).style.height = mutation.target.offsetHeight - 40 + "px";
+							}
+							// zoom update location
+							if(document.getElementById("stefanvdzoompanel" + potvis)){
+								document.getElementById("stefanvdzoompanel" + potvis).style.top = visposition.y + "px";
+								document.getElementById("stefanvdzoompanel" + potvis).style.left = mutation.target.offsetWidth + visposition.x + "px";
+								document.getElementById("stefanvdzoompanel" + potvis).style.height = mutation.target.offsetHeight - 40 + "px";
+							}
+							// zoom canvas update location
+							if(document.getElementById("stefanvdzoomcanvas" + potvis)){
+								document.getElementById("stefanvdzoomcanvas" + potvis).width = mutation.target.offsetWidth;
+								document.getElementById("stefanvdzoomcanvas" + potvis).height = mutation.target.offsetHeight;
+								document.getElementById("stefanvdzoomcanvas" + potvis).style.width = mutation.target.offsetWidth + "px";
+								document.getElementById("stefanvdzoomcanvas" + potvis).style.height = mutation.target.offsetHeight + "px";
+							}
+							// zoom stage location
+							if(document.getElementById("stefanvdzoomstage" + potvis)){
+								document.getElementById("stefanvdzoomstage" + potvis).style.width = mutation.target.offsetWidth + "px";
+								document.getElementById("stefanvdzoomstage" + potvis).style.height = mutation.target.offsetHeight + "px";
+								document.getElementById("stefanvdzoomstage" + potvis).style.top = visposition.y + "px";
+								document.getElementById("stefanvdzoomstage" + potvis).style.left = visposition.x + "px";
+							}
+						}else{
+						// there is no data
+						// create everything again
+							myListenervideotoolbar();
 						}
 					}
 
