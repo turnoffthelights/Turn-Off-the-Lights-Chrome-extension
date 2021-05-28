@@ -805,6 +805,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}, 30);
 		}
 
+		function playrate(num, rate){
+			var onevideo = document.getElementsByTagName("video")[num];
+			window.clearInterval(intervalRewind);
+			onevideo.playbackRate = rate;
+			if(onevideo.paused)onevideo.play();
+		}
+
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
 			var i;
@@ -1260,11 +1267,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos1.setAttribute("data-video", i);
 					newspeedbuttonpos1.textContent = "+1";
 					newspeedbuttonpos1.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						onevideo.playbackRate = 1.0;
-						if(onevideo.paused)onevideo.play();
+						var num = this.getAttribute("data-video");
+						playrate(num, 1.0);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos1);
 
@@ -1273,11 +1277,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos125.setAttribute("data-video", i);
 					newspeedbuttonpos125.textContent = "+1.25";
 					newspeedbuttonpos125.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						onevideo.playbackRate = 1.25;
-						if(onevideo.paused)onevideo.play();
+						var num = this.getAttribute("data-video");
+						playrate(num, 1.25);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos125);
 
@@ -1286,11 +1287,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos15.setAttribute("data-video", i);
 					newspeedbuttonpos15.textContent = "+1.5";
 					newspeedbuttonpos15.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						onevideo.playbackRate = 1.5;
-						if(onevideo.paused)onevideo.play();
+						var num = this.getAttribute("data-video");
+						playrate(num, 1.5);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos15);
 
@@ -1299,11 +1297,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonpos2.setAttribute("data-video", i);
 					newspeedbuttonpos2.textContent = "+2";
 					newspeedbuttonpos2.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[bomo];
-						window.clearInterval(intervalRewind);
-						onevideo.playbackRate = 2.0;
-						if(onevideo.paused)onevideo.play();
+						var num = this.getAttribute("data-video");
+						playrate(num, 2.0);
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonpos2);
 				}
