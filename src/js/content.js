@@ -3780,9 +3780,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var getotherdaypart = 86400; // ... to 24:00 end
 				var getothernightpart = 0; // start from 0:00 to seconds2 (example 11:00)
 
-				if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
-					return true;
-				}else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
+				if(((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)) || ((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2))){ // 13 -> 24 OR 0 -> 11
 					return true;
 				}
 			}
