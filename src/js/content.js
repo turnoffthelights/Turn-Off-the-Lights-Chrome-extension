@@ -525,9 +525,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 	adddatavideo();
 
-
-
-
 	var vzoom = [];
 	var vrotate = [];
 
