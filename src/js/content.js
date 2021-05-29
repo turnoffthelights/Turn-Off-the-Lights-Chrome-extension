@@ -815,8 +815,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
-			var i;
-			var l = visualvideos.length;
+			var i, l = visualvideos.length;
 			for(i = 0; i < l; i++){
 				var myElement = document.getElementsByTagName("video")[i];
 

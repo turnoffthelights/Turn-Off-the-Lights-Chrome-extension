@@ -874,13 +874,11 @@ function read_options(){
 
 		if(typeof autostopDomains == "string"){
 			autostopDomains = JSON.parse(autostopDomains);
-			let asbuf = [];
-			let domain;
+			let asbuf = [], domain;
 			for(domain in autostopDomains)
 				asbuf.push(domain);
 			asbuf.sort();
-			let i;
-			let l = asbuf.length;
+			let i, l = asbuf.length;
 			for(i = 0; i < l; i++)
 				appendToListBox("autostopDomainsBox", asbuf[i]);
 		}
