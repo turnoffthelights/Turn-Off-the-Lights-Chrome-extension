@@ -3802,10 +3802,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var currenturl;
 	var currenturlb;
 	function runnightmodecheck(){
-		if(nighttheme == true){
-			if(nightonly != true){
-				showswitchtricker();
-			}
+		if(nighttheme == true && nightonly != true){
+			showswitchtricker();
 		}
 
 		if(nightonly == true){
@@ -3824,20 +3822,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var nightrabbit = false;
 			if(typeof nightDomains == "string"){
 				nightDomains = JSON.parse(nightDomains);
-				var nbuf = [];
-				var domain;
+				var nbuf = [], domain;
 				for(domain in nightDomains)
 					nbuf.push(domain);
 				nbuf.sort();
-				var i;
-				var l = nbuf.length;
+				var i, l = nbuf.length;
 				for(i = 0; i < l; i++){
 					if(nightmodechecklistwhite == true){
 						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
 							if(nighttheme == true){ showswitchtricker(); }
-							if(nightenabletheme == true){
-								timergonighttricker();
-							}
+							if(nightenabletheme == true){ timergonighttricker(); }
 						}
 					}else if(nightmodechecklistblack == true){
 						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
@@ -3849,9 +3843,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(nightmodechecklistblack == true){
 				if(nightrabbit == false){
 					if(nighttheme == true){ showswitchtricker(); }
-					if(nightenabletheme == true){
-						timergonighttricker();
-					}
+					if(nightenabletheme == true){ timergonighttricker(); }
 				}
 			}
 		}else{
