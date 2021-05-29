@@ -1026,19 +1026,14 @@ function drawAtmos(){
 			}
 		}else if($("ambilightfixcolor").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-			var fixhex = $("ambilightcolorhex").value;
-			if(fixhex == null){ fixhex = "#000000"; }
+			var fixhex = $("ambilightcolorhex").value || "#000000";
 			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
 		}else if($("ambilight4color").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-			var fix1hex = $("ambilight1colorhex").value;
-			var fix2hex = $("ambilight2colorhex").value;
-			var fix3hex = $("ambilight3colorhex").value;
-			var fix4hex = $("ambilight4colorhex").value;
-			if(fix1hex == null){ fix1hex = "#FF0000"; }
-			if(fix2hex == null){ fix2hex = "#FFEE00"; }
-			if(fix3hex == null){ fix3hex = "#00FF00"; }
-			if(fix4hex == null){ fix4hex = "#0000FF"; }
+			var fix1hex = $("ambilight1colorhex").value || "#FF0000";
+			var fix2hex = $("ambilight2colorhex").value || "#FFEE00";
+			var fix3hex = $("ambilight3colorhex").value || "#00FF00";
+			var fix4hex = $("ambilight4colorhex").value || "#0000FF";
 			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
 		}
 
