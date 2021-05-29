@@ -3124,70 +3124,38 @@ function domcontentloaded(){
 		});
 	}
 
+	var pagearray = ["colorpanel", "gradientpanel", "imagepanel", "dynamicpanel", "blurpanel"];
+	var tabarray = ["sub1", "sub2", "sub3", "sub'", "sub5"];
+	function subselected(id){
+		for(var itab = 0; itab < tabarray.length; itab++){
+			if(id == tabarray[itab]){
+				$(tabarray[itab]).className = "tabbutton tabhighlight";
+				$(pagearray[itab]).className = "";
+			}else{
+				$(tabarray[itab]).className = "tabbutton";
+				$(pagearray[itab]).className = "hidden";
+			}
+		}
+	}
+
 	$("sub1").addEventListener("click", function(){
-		$("colorpanel").className = "";
-		$("gradientpanel").className = "hidden";
-		$("imagepanel").className = "hidden";
-		$("dynamicpanel").className = "hidden";
-		$("blurpanel").className = "hidden";
-
-		$("sub1").className = "tabbutton tabhighlight";
-		$("sub2").className = "tabbutton";
-		$("sub3").className = "tabbutton";
-		$("sub4").className = "tabbutton";
-		$("sub5").className = "tabbutton";
+		subselected("sub1");
 	});
+
 	$("sub2").addEventListener("click", function(){
-		$("colorpanel").className = "hidden";
-		$("gradientpanel").className = "";
-		$("imagepanel").className = "hidden";
-		$("dynamicpanel").className = "hidden";
-		$("blurpanel").className = "hidden";
-
-		$("sub1").className = "tabbutton";
-		$("sub2").className = "tabbutton tabhighlight";
-		$("sub3").className = "tabbutton";
-		$("sub4").className = "tabbutton";
-		$("sub5").className = "tabbutton";
+		subselected("sub2");
 	});
+
 	$("sub3").addEventListener("click", function(){
-		$("colorpanel").className = "hidden";
-		$("gradientpanel").className = "hidden";
-		$("imagepanel").className = "";
-		$("dynamicpanel").className = "hidden";
-		$("blurpanel").className = "hidden";
-
-		$("sub1").className = "tabbutton";
-		$("sub2").className = "tabbutton";
-		$("sub3").className = "tabbutton tabhighlight";
-		$("sub4").className = "tabbutton";
-		$("sub5").className = "tabbutton";
+		subselected("sub3");
 	});
+
 	$("sub4").addEventListener("click", function(){
-		$("colorpanel").className = "hidden";
-		$("gradientpanel").className = "hidden";
-		$("imagepanel").className = "hidden";
-		$("dynamicpanel").className = "";
-		$("blurpanel").className = "hidden";
-
-		$("sub1").className = "tabbutton";
-		$("sub2").className = "tabbutton";
-		$("sub3").className = "tabbutton";
-		$("sub4").className = "tabbutton tabhighlight";
-		$("sub5").className = "tabbutton";
+		subselected("sub4");
 	});
-	$("sub5").addEventListener("click", function(){
-		$("colorpanel").className = "hidden";
-		$("gradientpanel").className = "hidden";
-		$("imagepanel").className = "hidden";
-		$("dynamicpanel").className = "hidden";
-		$("blurpanel").className = "";
 
-		$("sub1").className = "tabbutton";
-		$("sub2").className = "tabbutton";
-		$("sub3").className = "tabbutton";
-		$("sub4").className = "tabbutton";
-		$("sub5").className = "tabbutton tabhighlight";
+	$("sub5").addEventListener("click", function(){
+		subselected("sub5");
 	});
 
 	/* atmos */
