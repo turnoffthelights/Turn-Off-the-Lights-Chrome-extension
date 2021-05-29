@@ -3125,7 +3125,7 @@ function domcontentloaded(){
 	}
 
 	var pagearray = ["colorpanel", "gradientpanel", "imagepanel", "dynamicpanel", "blurpanel"];
-	var tabarray = ["sub1", "sub2", "sub3", "sub'", "sub5"];
+	var tabarray = ["sub1", "sub2", "sub3", "sub4", "sub5"];
 	function subselected(id){
 		for(var itab = 0; itab < tabarray.length; itab++){
 			if(id == tabarray[itab]){
@@ -3159,70 +3159,38 @@ function domcontentloaded(){
 	});
 
 	/* atmos */
+	var atpartarray = ["atmospanel", "atmosonepanel", "atmosfourpanel", "atmosvividpanel", "atmossettingspanel"];
+	var tvarray = ["tv1", "tv2", "tv3", "tv4'", "tv5"];
+	function tvselected(id){
+		for(var itab = 0; itab < tvarray.length; itab++){
+			if(id == tvarray[itab]){
+				$(tvarray[itab]).className = "tabbutton tabhighlight";
+				$(atpartarray[itab]).className = "";
+			}else{
+				$(tvarray[itab]).className = "tabbutton";
+				$(atpartarray[itab]).className = "hidden";
+			}
+		}
+	}
+
 	$("tv1").addEventListener("click", function(){
-		$("atmospanel").className = "";
-		$("atmosonepanel").className = "hidden";
-		$("atmosfourpanel").className = "hidden";
-		$("atmosvividpanel").className = "hidden";
-		$("atmossettingspanel").className = "hidden";
-
-		$("tv1").className = "tabbutton tabhighlight";
-		$("tv2").className = "tabbutton";
-		$("tv3").className = "tabbutton";
-		$("tv4").className = "tabbutton";
-		$("tv5").className = "tabbutton";
+		tvselected("tv1");
 	});
+
 	$("tv2").addEventListener("click", function(){
-		$("atmospanel").className = "hidden";
-		$("atmosonepanel").className = "";
-		$("atmosfourpanel").className = "hidden";
-		$("atmosvividpanel").className = "hidden";
-		$("atmossettingspanel").className = "hidden";
-
-		$("tv1").className = "tabbutton";
-		$("tv2").className = "tabbutton tabhighlight";
-		$("tv3").className = "tabbutton";
-		$("tv4").className = "tabbutton";
-		$("tv5").className = "tabbutton";
+		tvselected("tv2");
 	});
+
 	$("tv3").addEventListener("click", function(){
-		$("atmospanel").className = "hidden";
-		$("atmosonepanel").className = "hidden";
-		$("atmosfourpanel").className = "";
-		$("atmosvividpanel").className = "hidden";
-		$("atmossettingspanel").className = "hidden";
-
-		$("tv1").className = "tabbutton";
-		$("tv2").className = "tabbutton";
-		$("tv3").className = "tabbutton tabhighlight";
-		$("tv4").className = "tabbutton";
-		$("tv5").className = "tabbutton";
+		tvselected("tv3");
 	});
+
 	$("tv4").addEventListener("click", function(){
-		$("atmospanel").className = "hidden";
-		$("atmosonepanel").className = "hidden";
-		$("atmosfourpanel").className = "hidden";
-		$("atmosvividpanel").className = "";
-		$("atmossettingspanel").className = "hidden";
-
-		$("tv1").className = "tabbutton";
-		$("tv2").className = "tabbutton";
-		$("tv3").className = "tabbutton";
-		$("tv4").className = "tabbutton tabhighlight";
-		$("tv5").className = "tabbutton";
+		tvselected("tv4");
 	});
-	$("tv5").addEventListener("click", function(){
-		$("atmospanel").className = "hidden";
-		$("atmosonepanel").className = "hidden";
-		$("atmosfourpanel").className = "hidden";
-		$("atmosvividpanel").className = "hidden";
-		$("atmossettingspanel").className = "";
 
-		$("tv1").className = "tabbutton";
-		$("tv2").className = "tabbutton";
-		$("tv3").className = "tabbutton";
-		$("tv4").className = "tabbutton";
-		$("tv5").className = "tabbutton tabhighlight";
+	$("tv5").addEventListener("click", function(){
+		tvselected("tv5");
 	});
 
 	// easter egg game - playground
