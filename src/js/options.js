@@ -746,6 +746,19 @@ function read_options(){
 			animate();
 		}
 
+		function setlistbox(a, b){
+			if(typeof b == "string"){
+				b = JSON.parse(b);
+				let srbuf = [], domain;
+				for(domain in b)
+					srbuf.push(domain);
+				srbuf.sort();
+				let i, l = srbuf.length;
+				for(i = 0; i < l; i++)
+					appendToListBox(a, srbuf[i]);
+			}
+		}
+
 		function animate(){
 			// stop
 			if(stop){ return; }
@@ -779,165 +792,66 @@ function read_options(){
 		$("wallpapershow").className = "hidden"; $("dynamicshow").className = "hidden";
 		// autoplay - Excluded domains - sort these alphabetically
 		var autoplayDomains = items["autoplayDomains"];
-		if(typeof autoplayDomains == "undefined" || autoplayDomains == null)
+		if(typeof autoplayDomains == "undefined" || autoplayDomains == null){
 			autoplayDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof autoplayDomains == "string"){
-			autoplayDomains = JSON.parse(autoplayDomains);
-			let abuf = [];
-			let domain;
-			for(domain in autoplayDomains)
-				abuf.push(domain);
-			abuf.sort();
-			let i;
-			let l = abuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("autoplayDomainsBox", abuf[i]);
 		}
+		setlistbox("autoplayDomainsBox", autoplayDomains);
 
 		// atmosphere - Excluded domains - sort these alphabetically
 		var atmosphereDomains = items["atmosphereDomains"];
-		if(typeof atmosphereDomains == "undefined" || atmosphereDomains == null)
+		if(typeof atmosphereDomains == "undefined" || atmosphereDomains == null){
 			atmosphereDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof atmosphereDomains == "string"){
-			atmosphereDomains = JSON.parse(atmosphereDomains);
-			let albuf = [];
-			let domain;
-			for(domain in atmosphereDomains)
-				albuf.push(domain);
-			albuf.sort();
-			let i;
-			let l = albuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("atmosphereDomainsBox", albuf[i]);
 		}
+		setlistbox("atmosphereDomainsBox", atmosphereDomains);
 
 		// night - Excluded domains - sort these alphabetically
 		var nightDomains = items["nightDomains"];
-		if(typeof nightDomains == "undefined" || nightDomains == null)
+		if(typeof nightDomains == "undefined" || nightDomains == null){
 			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
-
-		if(typeof nightDomains == "string"){
-			nightDomains = JSON.parse(nightDomains);
-			let nbuf = [];
-			let domain;
-			for(domain in nightDomains)
-				nbuf.push(domain);
-			nbuf.sort();
-			let i;
-			let l = nbuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("nightDomainsBox", nbuf[i]);
 		}
+		setlistbox("nightDomainsBox", nightDomains);
 
 		// cammotion - Excluded domains - sort these alphabetically
 		var cammotionDomains = items["cammotionDomains"];
-		if(typeof cammotionDomains == "undefined" || cammotionDomains == null)
+		if(typeof cammotionDomains == "undefined" || cammotionDomains == null){
 			cammotionDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof cammotionDomains == "string"){
-			cammotionDomains = JSON.parse(cammotionDomains);
-			let cmbuf = [];
-			let domain;
-			for(domain in cammotionDomains)
-				cmbuf.push(domain);
-			cmbuf.sort();
-			let i;
-			let l = cmbuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("cammotionDomainsBox", cmbuf[i]);
 		}
+		setlistbox("cammotionDomainsBox", cammotionDomains);
 
 		// speech - Excluded domains - sort these alphabetically
 		var speechDomains = items["speechDomains"];
-		if(typeof speechDomains == "undefined" || speechDomains == null)
+		if(typeof speechDomains == "undefined" || speechDomains == null){
 			speechDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof speechDomains == "string"){
-			speechDomains = JSON.parse(speechDomains);
-			let srbuf = [];
-			let domain;
-			for(domain in speechDomains)
-				srbuf.push(domain);
-			srbuf.sort();
-			let i;
-			let l = srbuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("speechDomainsBox", srbuf[i]);
 		}
+		setlistbox("speechDomainsBox", speechDomains);
 
 		// autostop - Excluded domains - sort these alphabetically
 		var autostopDomains = items["autostopDomains"];
-		if(typeof autostopDomains == "undefined" || autostopDomains == null)
+		if(typeof autostopDomains == "undefined" || autostopDomains == null){
 			autostopDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof autostopDomains == "string"){
-			autostopDomains = JSON.parse(autostopDomains);
-			let asbuf = [], domain;
-			for(domain in autostopDomains)
-				asbuf.push(domain);
-			asbuf.sort();
-			let i, l = asbuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("autostopDomainsBox", asbuf[i]);
 		}
+		setlistbox("autostopDomainsBox", autostopDomains);
 
 		// video tool bar - Excluded domains - sort these alphabetically
 		var videotoolDomains = items["videotoolDomains"];
-		if(typeof videotoolDomains == "undefined" || videotoolDomains == null)
+		if(typeof videotoolDomains == "undefined" || videotoolDomains == null){
 			videotoolDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof videotoolDomains == "string"){
-			videotoolDomains = JSON.parse(videotoolDomains);
-			let vtbbuf = [];
-			let domain;
-			for(domain in videotoolDomains)
-				vtbbuf.push(domain);
-			vtbbuf.sort();
-			let i;
-			let l = vtbbuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("videotoolDomainsBox", vtbbuf[i]);
 		}
+		setlistbox("videotoolDomainsBox", videotoolDomains);
 
 		// video volume bar - Excluded domains - sort these alphabetically
 		var videovolumeDomains = items["videovolumeDomains"];
-		if(typeof videovolumeDomains == "undefined" || videovolumeDomains == null)
+		if(typeof videovolumeDomains == "undefined" || videovolumeDomains == null){
 			videovolumeDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-
-		if(typeof videovolumeDomains == "string"){
-			videovolumeDomains = JSON.parse(videovolumeDomains);
-			let vvbbuf = [];
-			let domain;
-			for(domain in videovolumeDomains)
-				vvbbuf.push(domain);
-			vvbbuf.sort();
-			let i;
-			let l = vvbbuf.length;
-			for(i = 0; i < l; i++)
-				appendToListBox("videovolumeDomainsBox", vvbbuf[i]);
 		}
+		setlistbox("videovolumeDomainsBox", videovolumeDomains);
 
 		// multi opacity Excluded domains - sort these alphabetically
 		var multiopacityDomains = items["multiopacityDomains"];
 		if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
 			multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
 		}
-
-		if(typeof multiopacityDomains == "string"){
-			multiopacityDomains = JSON.parse(multiopacityDomains);
-			let mpbbuf = [];
-			let domain;
-			for(domain in multiopacityDomains)
-				mpbbuf.push(domain);
-			mpbbuf.sort();
-			let i;
-			let l = mpbbuf.length;
-			for(i = 0; i < l; i++){
-				multiappendToListBox("multiopacityDomainsBox", mpbbuf[i], multiopacityDomains["" + mpbbuf[i] + ""]);
-			}
-		}
+		setlistbox("multiopacityDomainsBox", multiopacityDomains);
 
 		test(); // everything readed, do the "test"
 		ariacheck();
