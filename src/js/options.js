@@ -2487,6 +2487,12 @@ function golightmode(){
 	$("loadinglamp").style.filter = "invert(0)";
 }
 
+function seticonstyle(a, b, c){
+	$("icondarkauto").style.opacity = a;
+	$("icondarkoff").style.opacity = b;
+	$("icondarkon").style.opacity = c;
+}
+
 function checkdarkmode(){
 	chrome.storage.sync.get(["darkmode"], function(items){
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
@@ -2494,23 +2500,17 @@ function checkdarkmode(){
 		// dark mode
 		if(darkmode == 1){
 			godarkmode();
-			$("icondarkauto").style.opacity = 0;
-			$("icondarkoff").style.opacity = 0;
-			$("icondarkon").style.opacity = 1;
+			seticonstyle(0, 0, 1);
 		}else if(darkmode == 0){
 			golightmode();
-			$("icondarkauto").style.opacity = 0;
-			$("icondarkoff").style.opacity = 1;
-			$("icondarkon").style.opacity = 0;
+			seticonstyle(0, 1, 0);
 		}else if(darkmode == 2){
 			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
 				godarkmode();
 			}else{
 				golightmode();
 			}
-			$("icondarkauto").style.opacity = 1;
-			$("icondarkoff").style.opacity = 0;
-			$("icondarkon").style.opacity = 0;
+			seticonstyle(1, 0, 0);
 		}
 	});
 }
@@ -2722,25 +2722,19 @@ function domcontentloaded(){
 		}else{
 			golightmode();
 		}
-		$("icondarkauto").style.opacity = 1;
-		$("icondarkoff").style.opacity = 0;
-		$("icondarkon").style.opacity = 0;
+		seticonstyle(1, 0, 0);
 		chrome.storage.sync.set({"darkmode":2});
 	});
 
 	$("btnactivedarkmodeoff").addEventListener("click", function(){
 		golightmode();
-		$("icondarkauto").style.opacity = 0;
-		$("icondarkoff").style.opacity = 1;
-		$("icondarkon").style.opacity = 0;
+		seticonstyle(0, 1, 0);
 		chrome.storage.sync.set({"darkmode":0});
 	});
 
 	$("btnactivedarkmodeon").addEventListener("click", function(){
 		godarkmode();
-		$("icondarkauto").style.opacity = 0;
-		$("icondarkoff").style.opacity = 0;
-		$("icondarkon").style.opacity = 1;
+		seticonstyle(0, 0, 1);
 		chrome.storage.sync.set({"darkmode":1});
 	});
 
