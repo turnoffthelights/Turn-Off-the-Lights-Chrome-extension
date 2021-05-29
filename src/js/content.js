@@ -4556,12 +4556,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			// console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.", e.gamepad.index, e.gamepad.id, e.gamepad.buttons.length, e.gamepad.axes.length);
 			updategamepadbuttons();
 			updategamepadaxes();
-			var devicename = e.gamepad.id; addremotebadge(devicename);
+			var devicename = e.gamepad.id; statusremotebadge(devicename, "add");
 		});
 
 		window.addEventListener("gamepaddisconnected", function(e){
 			// console.log("Gamepad disconnected from index %d: %s", e.gamepad.index, e.gamepad.id);
-			var devicename = e.gamepad.id; discontectremotebadge(devicename);
+			var devicename = e.gamepad.id; statusremotebadge(devicename, "dis");
 			window.cancelAnimationFrame(updategamepadbuttons);
 			window.cancelAnimationFrame(updategamepadaxes);
 		});
@@ -4724,7 +4724,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	var i18ntitelgpconnect = chrome.i18n.getMessage("titelgpconnect");
 	var i18ntitelgpdisconnect = chrome.i18n.getMessage("titelgpdisconnect");
-	function addremotebadge(name){
+
+	function statusremotebadge(name, status){
 		var div = document.createElement("div");
 		div.setAttribute("id", "stefanvdremoteadd");
 		div.className = "stefanvdremote";
@@ -4735,31 +4736,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		div.appendChild(h3);
 
 		var p = document.createElement("p");
-		p.innerText = i18ntitelgpconnect;
+		if(status == "add"){
+			p.innerText = i18ntitelgpconnect;
+		}else{
+			p.innerText = i18ntitelgpdisconnect;
+		}
 		div.appendChild(p);
 
 		window.setTimeout(function(){
 			var element = document.getElementById("stefanvdremoteadd");
-			element.parentNode.removeChild(element);
-		}, 4000);
-	}
-
-	function discontectremotebadge(name){
-		var div = document.createElement("div");
-		div.setAttribute("id", "stefanvdremotedisc");
-		div.className = "stefanvdremote";
-		document.body.appendChild(div);
-
-		var h3 = document.createElement("h3");
-		h3.innerText = shortname(name);
-		div.appendChild(h3);
-
-		var p = document.createElement("p");
-		p.innerText = i18ntitelgpdisconnect;
-		div.appendChild(p);
-
-		window.setTimeout(function(){
-			var element = document.getElementById("stefanvdremotedisc");
 			element.parentNode.removeChild(element);
 		}, 4000);
 	}
