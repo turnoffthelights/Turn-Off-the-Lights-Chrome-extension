@@ -1336,6 +1336,10 @@ function removedynamic(){
 	window.onresize = null;
 }
 
+function previewyoutubeelement(a, b){
+	if($(a).checked == true){ $(b).style.zIndex = 100; $(b).style.position = "relative"; }else{ $(b).style.zIndex = 1; $(b).style.position = "relative"; }
+}
+
 // test general
 function test(){
 	if($("ambilight").checked == true){
@@ -1351,19 +1355,16 @@ function test(){
 	// not visible in the preview
 	if($("playlist").checked == true){ /* nothing*/ }else{ /* nothing*/ }
 
-	if($("infobar").checked == true){ $("sampleinforbar").style.zIndex = 100; $("sampleinforbar").style.position = "relative"; }else{ $("sampleinforbar").style.zIndex = 1; $("sampleinforbar").style.position = "relative"; }
-
-	if($("likebutton").checked == true){ $("sampledislikebutton").style.zIndex = 100; $("sampledislikebutton").style.position = "relative"; }else{ $("sampledislikebutton").style.zIndex = 1; $("sampledislikebutton").style.position = "relative"; }
-
-	if($("sharebutton").checked == true){ $("samplesharebutton").style.zIndex = 100; $("samplesharebutton").style.position = "relative"; }else{ $("samplesharebutton").style.zIndex = 1; $("samplesharebutton").style.position = "relative"; }
-
-	if($("suggestions").checked == true){ $("samplesug").style.zIndex = 100; $("samplesug").style.position = "relative"; }else{ $("samplesug").style.zIndex = 1; $("samplesug").style.position = "relative"; }
+	previewyoutubeelement("infobar", "sampleinforbar");
+	previewyoutubeelement("likebutton", "sampledislikebutton");
+	previewyoutubeelement("sharebutton", "samplesharebutton");
+	previewyoutubeelement("suggestions", "samplesug");
 
 	if($("videoheadline").checked == true){ $("sampletitle").style.zIndex = 100; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#FFFFFF"; }else{ $("sampletitle").style.zIndex = 1; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#000000"; }
 
 	if($("viewcount").checked == true){ $("sampleview").style.zIndex = 100; $("sampleview").style.color = "white"; $("sampleview").style.position = "relative"; }else{ $("sampleview").style.zIndex = 1; $("sampleview").style.color = "black"; $("sampleview").style.position = "relative"; }
 
-	if($("addvideobutton").checked == true){ $("sampleaddbutton").style.zIndex = 100; $("sampleaddbutton").style.position = "relative"; }else{ $("sampleaddbutton").style.zIndex = 1; $("sampleaddbutton").style.position = "relative"; }
+	previewyoutubeelement("addvideobutton", "sampleaddbutton");
 
 	if($("likebar").checked == true){ $("samplelikebar").style.zIndex = 101; $("samplelikebar").style.position = "relative"; }else{ $("samplelikebar").style.zIndex = "auto"; $("samplelikebar").style.position = "relative"; }
 
