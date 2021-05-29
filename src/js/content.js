@@ -547,18 +547,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var videotoolrabbit = false;
 				if(typeof videotoolDomains == "string"){
 					videotoolDomains = JSON.parse(videotoolDomains);
-					var vtbbuf = [];
-					var domain;
+					var vtbbuf = [], domain;
 					for(domain in videotoolDomains)
 						vtbbuf.push(domain);
 					vtbbuf.sort();
-					var i;
-					var l = vtbbuf.length;
+					var i, l = vtbbuf.length;
 					for(i = 0; i < l; i++){
-						if(videotoolchecklistwhite == true){
-							if(currenturl == vtbbuf[i]){ videotoolfunction(); }
-						}else if(videotoolchecklistblack == true){
-							if(currenturl == vtbbuf[i]){ videotoolrabbit = true; }
+						if((videotoolchecklistwhite == true) && (currenturl == vtbbuf[i])){
+							videotoolfunction();
+						}else if((videotoolchecklistblack == true) && (currenturl == vtbbuf[i])){
+							videotoolrabbit = true;
 						}
 					}
 				}
