@@ -851,7 +851,19 @@ function read_options(){
 		if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
 			multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
 		}
-		setlistbox("multiopacityDomainsBox", multiopacityDomains);
+		if(typeof multiopacityDomains == "string"){
+			multiopacityDomains = JSON.parse(multiopacityDomains);
+			let mpbbuf = [];
+			let domain;
+			for(domain in multiopacityDomains)
+				mpbbuf.push(domain);
+			mpbbuf.sort();
+			let i;
+			let l = mpbbuf.length;
+			for(i = 0; i < l; i++){
+				multiappendToListBox("multiopacityDomainsBox", mpbbuf[i], multiopacityDomains["" + mpbbuf[i] + ""]);
+			}
+		}
 
 		test(); // everything readed, do the "test"
 		ariacheck();

@@ -3762,8 +3762,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
-	// tricker the switch
-	function showswitchtricker(){
+	function checknightactivetime(){
 		if(nightactivetime == true){
 			var now = new Date(); var hours = now.getHours(); var minutes = now.getMinutes(); var gettime = hours + ":" + minutes;
 			var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
@@ -3776,18 +3775,26 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			// if begintime set 10:00 but endtime is 18:00
 			// then do this
 			if(seconds1 <= seconds2){ // default for user
-				if((seconds1 <= gettimesecond) && (gettimesecond <= seconds2)){ nightfunction(); }
+				if((seconds1 <= gettimesecond) && (gettimesecond <= seconds2)){ return true; }
 			}else if(seconds1 > seconds2){
 				var getotherdaypart = 86400; // ... to 24:00 end
 				var getothernightpart = 0; // start from 0:00 to seconds2 (example 11:00)
 
 				if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
-					nightfunction();
+					return true;
 				}else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
-					nightfunction();
+					return true;
 				}
 			}
 		}else{
+			return true;
+		}
+		return false;
+	}
+
+	// tricker the switch
+	function showswitchtricker(){
+		if(checknightactivetime() == true){
 			nightfunction();
 		}
 	}
@@ -3858,30 +3865,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	runnightmodecheck();
 
 	function timergonighttricker(){
-		if(nightactivetime == true){
-			var now = new Date(); var hours = now.getHours(); var minutes = now.getMinutes(); var gettime = hours + ":" + minutes;
-			var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
-
-			var time1 = nmbegintime; var time2 = nmendtime;
-			var seconds1 = time1.split(":")[0] * 3600 + time1.split(":")[1] * 60;
-			var seconds2 = time2.split(":")[0] * 3600 + time2.split(":")[1] * 60;
-
-			// example
-			// if begintime set 10:00 but endtime is 18:00
-			// then do this
-			if(seconds1 <= seconds2){ // default for user
-				if((seconds1 <= gettimesecond) && (gettimesecond <= seconds2)){ gogonightmode(); }
-			}else if(seconds1 > seconds2){
-				var getotherdaypart = 86400; // ... to 24:00 end
-				var getothernightpart = 0; // start from 0:00 to seconds2 (example 11:00)
-
-				if((seconds1 <= gettimesecond) && (gettimesecond <= getotherdaypart)){ // 13 -> 24
-					gogonightmode();
-				}else if((getothernightpart <= gettimesecond) && (gettimesecond <= seconds2)){ // 0 -> 11
-					gogonightmode();
-				}
-			}
-		}else{
+		if(checknightactivetime() == true){
 			gogonightmode();
 		}
 	}
