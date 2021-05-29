@@ -1121,6 +1121,11 @@ function drawAtmos(){
 	}else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
 }
 
+function removeElement(elementId){
+	var element = document.getElementById(elementId);
+	if(element){ element.parentNode.removeChild(element); }
+}
+
 // Fade engine
 // Variable for the fade in and out effect
 var opacity = 0;
@@ -1324,28 +1329,10 @@ function lightscontrol(){
 
 // remove dynamic elements
 function removedynamic(){
-	var newdynmaster = $("stefanvddynamicbackground");
-	var fishtanks = $("fishtanks");
-	if(fishtanks){ newdynmaster.removeChild(fishtanks); }
-	var blocks = $("blocks");
-	if(blocks){ newdynmaster.removeChild(blocks); }
-	var raindrops = $("raindrops");
-	if(raindrops){ newdynmaster.removeChild(raindrops); }
-	var clouds = $("clouds");
-	if(clouds){ newdynmaster.removeChild(clouds); }
-	var space = $("space");
-	if(space){ newdynmaster.removeChild(space); }
-	var smoke = $("smoke");
-	if(smoke){ newdynmaster.removeChild(smoke); }
-	var flyingdots = $("flyingdots");
-	if(flyingdots){ newdynmaster.removeChild(flyingdots); }
-	var storm = $("storm");
-	if(storm){ newdynmaster.removeChild(storm); }
-	var triangle = $("triangle");
-	if(triangle){ newdynmaster.removeChild(triangle); }
-	var stars = $("stars");
-	if(stars){ newdynmaster.removeChild(stars); }
-
+	var dynarray = ["fishtanks", "blocks", "raindrops", "clouds", "space", "smoke", "flyingdots", "storm", "triangle", "stars"];
+	for(var idyn = 0; idyn < dynarray.length; idyn++){
+		removeElement(dynarray[idyn]);
+	}
 	window.onresize = null;
 }
 
@@ -3336,11 +3323,6 @@ function domcontentloaded(){
 		};
 	}
 
-	function removeElement(elementId){
-		var element = document.getElementById(elementId);
-		element.parentNode.removeChild(element);
-	}
-
 	var AudioContext = window.AudioContext || window.webkitAudioContext;
 	var gameaudiocontext;
 	function updateGameArea(){
@@ -3511,13 +3493,8 @@ function domcontentloaded(){
 			$("atmosvividpanel").className = "hidden";
 			$("atmossettingspanel").className = "hidden";
 
-			if($("stefanvdbtnplaygroundfilter")){
-				removeElement("stefanvdbtnplaygroundfilter");
-			}
-
-			if($("stefanvdplayground")){
-				removeElement("stefanvdplayground");
-			}
+			removeElement("stefanvdbtnplaygroundfilter");
+			removeElement("stefanvdplayground");
 		}else{
 			if(pageinsearch == false){
 				pageinsearch = true;
@@ -3607,9 +3584,7 @@ function domcontentloaded(){
 					startGame();
 				}
 			}else{
-				if($("stefanvdplayground")){
-					removeElement("stefanvdplayground");
-				}
+				removeElement("stefanvdplayground");
 			}
 
 			var allsections = document.getElementsByTagName("section");
