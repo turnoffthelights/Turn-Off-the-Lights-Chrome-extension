@@ -813,6 +813,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			document.getElementById(a + b).style.display = c;
 		}
 
+		function changevideotoolbarrange(){
+			var brownvis = this.getAttribute("data-video");
+			var onevideo = document.getElementsByTagName("video")[brownvis];
+			var gsvtrange = document.getElementById("stefanvdvideotoolrange" + brownvis).value;
+			if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
+		}
+
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
 			var i, l = visualvideos.length;
@@ -1447,18 +1454,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newvcpartiarange.setAttribute("step", "0.1");
 					newvcpartiarange.setAttribute("min", "0");
 					newvcpartiarange.setAttribute("max", "10");
-					newvcpartiarange.addEventListener("change", function(){
-						var brownvis = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[brownvis];
-						var gsvtrange = document.getElementById("stefanvdvideotoolrange" + brownvis).value;
-						if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
-					}, false);
-					newvcpartiarange.addEventListener("input", function(){
-						var brownvis = this.getAttribute("data-video");
-						var onevideo = document.getElementsByTagName("video")[brownvis];
-						var gsvtrange = document.getElementById("stefanvdvideotoolrange" + brownvis).value;
-						if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
-					}, false);
+					newvcpartiarange.addEventListener("change", changevideotoolbarrange, false);
+					newvcpartiarange.addEventListener("input", changevideotoolbarrange, false);
 					if(tempwidthvideo <= 360){ newvcpartiarange.style.cssText = "display:none!important"; }
 					newonvispanel.appendChild(newvcpartiarange);
 
