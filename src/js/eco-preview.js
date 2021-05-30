@@ -61,12 +61,8 @@ function getDomain(url){
 	}
 	// console.log(actual_domain);
 	var tid;
-	if(typeof parts[ln - 1] != "undefined" && TLDs.indexOf(parts[ln - 1]) >= 0){
-		tid = "." + parts[ln - 1];
-	}
-	if(typeof parts[ln - 2] != "undefined" && TLDs.indexOf(parts[ln - 2]) >= 0){
-		tid = "." + parts[ln - 2] + tid;
-	}
+	if(typeof parts[ln - 1] != "undefined" && TLDs.indexOf(parts[ln - 1]) >= 0){ tid = "." + parts[ln - 1]; }
+	if(typeof parts[ln - 2] != "undefined" && TLDs.indexOf(parts[ln - 2]) >= 0){ tid = "." + parts[ln - 2] + tid; }
 	if(typeof tid != "undefined")
 		actual_domain = actual_domain + tid;
 	else
