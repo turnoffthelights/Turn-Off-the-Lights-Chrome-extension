@@ -114,23 +114,17 @@ function cameramotionlights(){
 
 		var foundtheurlcamera = false;
 		function onlycammotionfunction(tab){
-			var currenturl = tab;
-			var thatwebsite = new URL(currenturl);
-			var thatpage = thatwebsite.protocol + "//" + thatwebsite.hostname;
+			var currenturl = tab, thatwebsite = new URL(currenturl), thatpage = thatwebsite.protocol + "//" + thatwebsite.hostname;
 			cammotionDomains = response["cammotionDomains"]; // get latest setting
 			if(typeof cammotionDomains == "string"){
 				cammotionDomains = JSON.parse(cammotionDomains);
-				var sbuf = [];
-				var domain;
+				var sbuf = [], domain;
 				for(domain in cammotionDomains)
 					sbuf.push(domain);
 				sbuf.sort();
-				var i;
-				var l = sbuf.length;
+				var i, l = sbuf.length;
 				for(i = 0; i < l; i++){
-					if(foundtheurlcamera == false){
-						if(thatpage == sbuf[i]){ cammotionstartfunction(); foundtheurlcamera = true; }
-					}
+					if(foundtheurlcamera == false && thatpage == sbuf[i]){ cammotionstartfunction(); foundtheurlcamera = true; }
 				}
 			}
 			// stop
