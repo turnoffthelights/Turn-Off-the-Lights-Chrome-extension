@@ -1081,9 +1081,7 @@ function removenewframe(){
 	for(i = 0; i < l; i++){
 		if(q[i].shadowRoot){
 			if(q[i].shadowRoot.querySelector("#rootstefan")){ q[i].shadowRoot.removeChild(q[i].shadowRoot.querySelector("#rootstefan")); }
-			var rootdiv = q[i].shadowRoot.querySelectorAll(".stefanvdotherdown");
-			var k;
-			var m = rootdiv.length;
+			var rootdiv = q[i].shadowRoot.querySelectorAll(".stefanvdotherdown"), k, m = rootdiv.length;
 			for(k = 0; k < m; k++){ rootdiv[k].classList.remove("stefanvdotherdown"); }
 		}
 	}
