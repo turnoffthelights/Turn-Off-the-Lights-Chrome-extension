@@ -1615,17 +1615,13 @@ var layers = [];
 var objects = [];
 var worldXAngle = 0; var worldYAngle = 0;
 function createCloud(){
-	var div = document.createElement("div");
-	div.className = "stefanvdcloudBase";
-	var x = 256 - (Math.random() * 512);
-	var y = 256 - (Math.random() * 512);
-	var z = 256 - (Math.random() * 512);
+	var div = document.createElement("div"); div.className = "stefanvdcloudBase";
+	var x = 256 - (Math.random() * 512); var y = 256 - (Math.random() * 512); var z = 256 - (Math.random() * 512);
 	var t = "translateX(" + x + "px) translateY(" + y + "px) translateZ(" + z + "px)";
 	div.style.webkitTransform = t; div.style.MozTransform = t; div.style.oTransform = t;
 	world.appendChild(div);
 
-	var j;
-	var l = 5 + Math.round(Math.random() * 10);
+	var j, l = 5 + Math.round(Math.random() * 10);
 	for(j = 0; j < l; j++){
 		var cloud = document.createElement("div");
 		cloud.style.opacity = 0;
@@ -2135,10 +2131,7 @@ function cameradomcontentloaded(){
 	huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
 	function skinfilter(){
 		skin_filter = canvasgetcont.getImageData(0, 0, width, height);
-		var index_value;
-
-		var count_data_big_array = 0;
-		var y;
+		var index_value, count_data_big_array = 0, y;
 		for(y = 0; y < height; y++){
 			var x;
 			for(x = 0; x < width; x++){
