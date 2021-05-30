@@ -130,9 +130,10 @@ function endlayer(){
 				siteengagement = items["siteengagement"];
 				resultObject = search(today, siteengagement);
 				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
-				if(!mes){ mes = 0; }
+				if(typeof mes == "undefined"){ mes = 0; }
 				currentseconds = parseInt(mes); currentseconds += totalSeconds;
-				if(currentseconds > 0){
+				mes = currentseconds;
+				if(mes > 0){
 					resultObject["'" + window.location.href + "'"] = mes;
 					chrome.storage.sync.set({"siteengagement":siteengagement});
 				}
