@@ -300,18 +300,16 @@ function domcontentloaded(){
 					var key;
 					var omaa = last30daysb[i];
 					for(key in omaa){
-						if(key != "name"){ // not the date
-							if(Object.prototype.hasOwnProperty.call(omaa, key)){
-								var value = parseFloat(Math.round(omaa[key] / 60 * 100) / 100).toFixed(2);
-								var app = isKeyInObject(newtablesite, key);
-								if(app == true){
-									var currentnumber = parseInt(newtablesite[key]);
-									currentnumber += parseFloat(value);
-									var rest = currentnumber;
-									newtablesite[key] = rest;
-								}else{
-									newtablesite[key] = value;
-								}
+						if(key != "name" && Object.prototype.hasOwnProperty.call(omaa, key)){ // key is not the date
+							var value = parseFloat(Math.round(omaa[key] / 60 * 100) / 100).toFixed(2);
+							var app = isKeyInObject(newtablesite, key);
+							if(app == true){
+								var currentnumber = parseInt(newtablesite[key]);
+								currentnumber += parseFloat(value);
+								var rest = currentnumber;
+								newtablesite[key] = rest;
+							}else{
+								newtablesite[key] = value;
 							}
 						}
 					}
@@ -337,19 +335,17 @@ function domcontentloaded(){
 				if(last30daysdomainonly[v]){
 					var oma = last30daysdomainonly[v];
 					for(key in oma){
-						if(key != "name"){ // not the date
+						if(key != "name" && Object.prototype.hasOwnProperty.call(oma, key)){ // key is not the date
 							var abc = getDomain(key);
-							if(Object.prototype.hasOwnProperty.call(oma, key)){
-								var valuee = parseFloat(Math.round(oma[key] / 60 * 100) / 100).toFixed(2);
-								var appe = isKeyInObject(newtablesitedomain, abc);
-								if(appe == true){
-									var currentnumbera = parseInt(newtablesitedomain[abc]);
-									currentnumbera += parseFloat(valuee);
-									var resta = currentnumbera;
-									newtablesitedomain[abc] = resta;
-								}else{
-									newtablesitedomain[abc] = valuee;
-								}
+							var valuee = parseFloat(Math.round(oma[key] / 60 * 100) / 100).toFixed(2);
+							var appe = isKeyInObject(newtablesitedomain, abc);
+							if(appe == true){
+								var currentnumbera = parseInt(newtablesitedomain[abc]);
+								currentnumbera += parseFloat(valuee);
+								var resta = currentnumbera;
+								newtablesitedomain[abc] = resta;
+							}else{
+								newtablesitedomain[abc] = valuee;
 							}
 						}
 					}
