@@ -45,19 +45,12 @@ if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*yo
 		}
 	}
 }else{
-	var htmlplayer = document.getElementsByTagName("video");
+	var htmlplayer = document.getElementsByTagName("video")[0];
 	if(htmlplayer !== null){
-		var j;
-		var l = htmlplayer.length;
-		for(j = 0; j < l; j++){
-			if(htmlplayer[0]){
-				if(speechsetplay == true){
-					htmlplayer[0].play();
-				}else{
-					htmlplayer[0].pause();
-				}
-
-			}
+		if(speechsetplay == true){
+			htmlplayer.play();
+		}else{
+			htmlplayer.pause();
 		}
 	}
 }
