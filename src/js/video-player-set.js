@@ -32,9 +32,17 @@ if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*yo
 	var video = document.querySelector("video");
 
 	if(typeof(sp.pauseVideo) === "function"){
-		sp.playVideo();
+		if(speechsetplay == true){
+			sp.playVideo();
+		}else{
+			sp.pauseVideo();
+		}
 	}else if(typeof(video.pause) === "function"){
-		video.play();
+		if(speechsetplay == true){
+			video.play();
+		}else{
+			video.pause();
+		}
 	}
 }else{
 	var htmlplayer = document.getElementsByTagName("video");
@@ -42,7 +50,14 @@ if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*yo
 		var j;
 		var l = htmlplayer.length;
 		for(j = 0; j < l; j++){
-			if(htmlplayer[0]){ htmlplayer[0].play(); }
+			if(htmlplayer[0]){
+				if(speechsetplay == true){
+					htmlplayer[0].play();
+				}else{
+					htmlplayer[0].pause();
+				}
+
+			}
 		}
 	}
 }

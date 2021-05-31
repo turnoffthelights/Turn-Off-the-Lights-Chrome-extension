@@ -60,6 +60,7 @@
         "linkgamepad": "writable",
         "devmode": "writable",
         "devdonate": "writable",
-        "Chart": "readonly"
+        "Chart": "readonly",
+        "speechsetplay": "writable"
     }
 }

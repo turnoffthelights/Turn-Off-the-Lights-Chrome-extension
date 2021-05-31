@@ -265,47 +265,43 @@ function speechrecognition(){
 	function actions(final_transcript){
 		chrome.storage.sync.set({"speechhistorysave": final_transcript});
 		if(userSaid(final_transcript, i18nldesspeech1command)){
-		// console.log("yes: turn off the lights");
+			// console.log("yes: turn off the lights");
 			chrome.storage.sync.set({"slideeffect": true});
 			chrome.tabs.query({active: true}, function(tabs){
-				var i, l = tabs.length;
-				for(i = 0; i < l; i++){
-					if(tabs[i].url.match(/^http/i)){
-						chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
-						actiondone();
-					}
+				if(tabs[0].url.match(/^http/i)){
+					chrome.tabs.executeScript(tabs[0].id, {file: "js/light.js"});
+					actiondone();
 				}
 			});
 		}else if(userSaid(final_transcript, i18nldesspeech2command)){
-		// console.log("yes: turn on the lights");
+			// console.log("yes: turn on the lights");
 			chrome.storage.sync.set({"slideeffect": true});
 			chrome.tabs.query({active: true}, function(tabs){
-				var i, l = tabs.length;
-				for(i = 0; i < l; i++){
-					if(tabs[i].url.match(/^http/i)){
-						chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
-						actiondone();
-					}
+				if(tabs[0].url.match(/^http/i)){
+					chrome.tabs.executeScript(tabs[0].id, {file: "js/light.js"});
+					actiondone();
 				}
 			});
 		}else if(userSaid(final_transcript, i18nldesspeech3command)){ // Play the video
 			chrome.tabs.query({active: true}, function(tabs){
-				var i, l = tabs.length;
-				for(i = 0; i < l; i++){
-					if(tabs[i].url.match(/^http/i)){
-						chrome.tabs.executeScript(tabs[i].id, {file: "js/videoplay.js"});
-						actiondone();
-					}
+				if(tabs[0].url.match(/^http/i)){
+					chrome.tabs.executeScript(tabs[0].id, {
+						code: "var speechsetplay = true;"
+					}, function(){
+						chrome.tabs.executeScript(tabs[0].id, {file: "js/video-player-set.js"});
+					});
+					actiondone();
 				}
 			});
 		}else if(userSaid(final_transcript, i18nldesspeech4command)){ // Stop the video
 			chrome.tabs.query({active: true}, function(tabs){
-				var i, l = tabs.length;
-				for(i = 0; i < l; i++){
-					if(tabs[i].url.match(/^http/i)){
-						chrome.tabs.executeScript(tabs[i].id, {file: "js/videopause.js"});
-						actiondone();
-					}
+				if(tabs[0].url.match(/^http/i)){
+					chrome.tabs.executeScript(tabs[0].id, {
+						code: "var speechsetplay = false;"
+					}, function(){
+						chrome.tabs.executeScript(tabs[0].id, {file: "js/video-player-set.js"});
+					});
+					actiondone();
 				}
 			});
 		}
