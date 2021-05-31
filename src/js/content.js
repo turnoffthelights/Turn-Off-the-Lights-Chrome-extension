@@ -1398,7 +1398,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								onevideo.style.webkitFilter = "grayscale(1)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolgrayscale;
 							}else if(currentvideostepfilter == 1){
 								filtertype = "sepia";
-								settoolbarrange(getstefanvdvideotoolrange,["0.1", "0", "1", "1"]);
+								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "1", "1"]);
 								onevideo.style.webkitFilter = "sepia(1)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolsepia;
 							}else if(currentvideostepfilter == 2){
 								filtertype = "invert";
