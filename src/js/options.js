@@ -3012,7 +3012,7 @@ function domcontentloaded(){
 
 	/* atmos */
 	var atpartarray = ["atmospanel", "atmosonepanel", "atmosfourpanel", "atmosvividpanel", "atmossettingspanel"];
-	var tvarray = ["tv1", "tv2", "tv3", "tv4'", "tv5"];
+	var tvarray = ["tv1", "tv2", "tv3", "tv4", "tv5"];
 	function tvselected(id){
 		for(var itab = 0; itab < tvarray.length; itab++){
 			if(id == tvarray[itab]){
