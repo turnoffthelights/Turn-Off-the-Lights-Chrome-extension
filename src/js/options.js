@@ -28,6 +28,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id){ return document.getElementById(id); }
+
+function eventsubmitFunc(selector, callback){
+	document.getElementById(selector).addEventListener("submit", function(e){
+		e.preventDefault();
+		callback();
+	});
+}
+
 var default_opacity = 80;
 var default_arangeblur = 70;
 var default_arangespread = 20;
@@ -2538,8 +2546,8 @@ function domcontentloaded(){
 
 	// browser check
 	if(browserName == "Opera"){
-	// feature check speech and camera
-	// no support
+		// feature check speech and camera
+		// no support
 		$("helpcameramotion").classList.remove("hidden");
 		$("helpspeech").classList.remove("hidden");
 		$("speech").disabled = true;
@@ -2549,13 +2557,13 @@ function domcontentloaded(){
 		$("motion").disabled = true;
 		$("cammotiononly").disabled = true;
 	}else if(browserName == "Google Chrome"){
-	// feature check speech and camera
-	// support
+		// feature check speech and camera
+		// support
 		$("helpcameramotion").classList.add("hidden");
 		$("helpspeech").classList.add("hidden");
 	}else if(browserName == "Firefox"){
-	// feature check speech and camera
-	// no support
+		// feature check speech and camera
+		// no support
 		$("helpcameramotion").classList.remove("hidden");
 		$("helpspeech").classList.remove("hidden");
 		$("speech").disabled = true;
@@ -2565,8 +2573,8 @@ function domcontentloaded(){
 		$("motion").disabled = true;
 		$("cammotiononly").disabled = true;
 	}else if(browserName == "Safari"){
-	// feature check speech and camera
-	// no support
+		// feature check speech and camera
+		// no support
 		$("helpcameramotion").classList.remove("hidden");
 		$("helpspeech").classList.remove("hidden");
 		$("speech").disabled = true;
@@ -2578,8 +2586,8 @@ function domcontentloaded(){
 		$("tabmotion").style.display = "none";
 		$("tabspeech").style.display = "none";
 	}else{
-	// feature check speech and camera
-	// support
+		// feature check speech and camera
+		// support
 		$("helpcameramotion").classList.add("hidden");
 		$("helpspeech").classList.add("hidden");
 	}
@@ -2657,8 +2665,7 @@ function domcontentloaded(){
 
 	// Detect click / change to save the page and test it.
 	var inputs = document.querySelectorAll("input");
-	var i;
-	var l = inputs.length;
+	var i, l = inputs.length;
 	for(i = 0; i < l; i++){ inputs[i].addEventListener("change", test); inputs[i].addEventListener("change", ariacheck); inputs[i].addEventListener("change", save_options); }
 
 	// show all the active permissions in a list
@@ -2721,7 +2728,7 @@ function domcontentloaded(){
 	$("ambilightrangespreadradius").addEventListener("change", function(){ showambilightspreadValue(this.value); save_options(); });
 
 	// Add website
-	document.getElementById("formeyeprotection").addEventListener("submit", function(e){ e.preventDefault(); addWhitelistDomain(); });
+	eventsubmitFunc("formeyeprotection", addWhitelistDomain);
 
 	// Remove website
 	$("removebutton").addEventListener("click", function(){ removedselectedwebsite("excludedDomainsBox"); });
@@ -2783,6 +2790,7 @@ function domcontentloaded(){
 	function OFFworkaroundmotion(){
 		$("videopreviewmotion").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdAUBYAjj8ZE-RZzStwUqFJm&rel=0";
 	}
+
 	function OFFworkaroundspeech(){
 		$("videopreviewspeech").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBRi5tDACN0R1a3uYWNBsU_&rel=0";
 	}
@@ -2888,7 +2896,7 @@ function domcontentloaded(){
 	$("hoveroptiondyn5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
 
 	// autoplay Add website
-	document.getElementById("formautoplay").addEventListener("submit", function(e){ e.preventDefault(); autoplayaddWhitelistDomain(); });
+	eventsubmitFunc("formautoplay", autoplayaddWhitelistDomain);
 
 	// autoplay Remove website
 	$("autoplayremovebutton").addEventListener("click", function(){ removedselectedwebsite("autoplayDomainsBox"); });
@@ -2902,37 +2910,37 @@ function domcontentloaded(){
 	$("videovolumesteps").addEventListener("change", function(){ save_options(); });
 
 	// atmosphere Add website
-	document.getElementById("formatmospherelighting").addEventListener("submit", function(e){ e.preventDefault(); atmosphereaddWhitelistDomain(); });
+	eventsubmitFunc("formatmospherelighting", atmosphereaddWhitelistDomain);
 
 	// atmosphere Remove website
 	$("atmosphereremovebutton").addEventListener("click", function(){ removedselectedwebsite("atmosphereDomainsBox"); });
 
 	// night Add website
-	document.getElementById("formnightmode").addEventListener("submit", function(e){ e.preventDefault(); nightaddWhitelistDomain(); });
+	eventsubmitFunc("formnightmode", nightaddWhitelistDomain);
 
 	// night Remove website
 	$("nightremovebutton").addEventListener("click", function(){ removedselectedwebsite("nightDomainsBox"); });
 
 	// cam motion Add website
-	document.getElementById("formcameramotion").addEventListener("submit", function(e){ e.preventDefault(); cammotionaddWhitelistDomain(); });
+	eventsubmitFunc("formcameramotion", cammotionaddWhitelistDomain);
 
 	// cam motion Remove website
 	$("cammotionremovebutton").addEventListener("click", function(){ removedselectedwebsite("cammotionDomainsBox"); });
 
 	// speech Add website
-	document.getElementById("formspeech").addEventListener("submit", function(e){ e.preventDefault(); speechaddWhitelistDomain(); });
+	eventsubmitFunc("formspeech", speechaddWhitelistDomain);
 
 	// speech Remove website
 	$("speechremovebutton").addEventListener("click", function(){ removedselectedwebsite("speechDomainsBox"); });
 
 	// autostop Add website
-	document.getElementById("formautostop").addEventListener("submit", function(e){ e.preventDefault(); autostopaddWhitelistDomain(); });
+	eventsubmitFunc("formautostop", autostopaddWhitelistDomain);
 
 	// autostop Remove website
 	$("autostopremovebutton").addEventListener("click", function(){ removedselectedwebsite("autostopDomainsBox"); });
 
 	// video Add website
-	document.getElementById("formvideotoolbar").addEventListener("submit", function(e){ e.preventDefault(); videotooladdWhitelistDomain(); });
+	eventsubmitFunc("formvideotoolbar", videotooladdWhitelistDomain);
 
 	// video Remove website
 	$("videotoolremovebutton").addEventListener("click", function(){ removedselectedwebsite("videotoolDomainsBox"); });
@@ -2942,7 +2950,7 @@ function domcontentloaded(){
 	$("multiopacitynumberBox").addEventListener("click", function(){ multiopacitychangenumberl(); });
 
 	// multi opacity Add
-	document.getElementById("formmultiopacity").addEventListener("submit", function(e){ e.preventDefault(); multiopacityadd(); });
+	eventsubmitFunc("formmultiopacity", multiopacityadd);
 
 	// multi opacity Remove
 	$("multiopacityremovebutton").addEventListener("click", function(){ multiopacityremoveSelectedExcludedDomain(); });
