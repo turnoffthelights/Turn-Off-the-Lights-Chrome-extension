@@ -1239,11 +1239,15 @@ function multiopacityremoveSelectedExcludedDomain(){
 // fade effects control -> not when loaded page
 function lightscontrol(){
 	default_opacity = $("interval").value;
-	if($("onoffrange").value == 0){
-		if($("fadeout").checked == true){ ReducingFinished = false; fader("hide"); }else{ $("example2").style.opacity = 0; $("example2").style.display = "none"; }
-	}else{
-		if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = default_opacity / 100; $("example2").style.display = ""; }
-	}
+	if($("onoffrange").value == 0){ lighton(); }else{ lightoff(); }
+}
+
+function lighton(){
+	if($("fadeout").checked == true){ ReducingFinished = false; fader("hide"); }else{ $("example2").style.opacity = 0; $("example2").style.display = "none"; }
+}
+
+function lightoff(){
+	if($("fadein").checked == true){ ReducingFinished = true; fader("show"); }else{ $("example2").style.opacity = default_opacity / 100; $("example2").style.display = ""; }
 }
 
 // remove dynamic elements

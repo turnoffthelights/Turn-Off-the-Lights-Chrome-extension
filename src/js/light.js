@@ -1905,7 +1905,7 @@ function lightsgoonoroff(){
 			document.body.appendChild(newframe1always);
 
 			// fade out effect
-			// no click posible
+			// no click possible
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newframe1always.style.opacity = default_opacity / 100; } // no fade effect
