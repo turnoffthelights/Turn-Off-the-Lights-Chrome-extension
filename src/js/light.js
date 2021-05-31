@@ -1863,16 +1863,7 @@ function onResize(){
 
 function lightsgoonoroff(){
 	if(blackon){
-		if(dynamic == true){
-			removenewdynamic();
-		}
-		if((mousespotlightc == true) || (mousespotlighta == true)){
-			// fade out effect
-			if(fadeout == true){ lockscreen(); }else{ lockscreen(); }
-		}else{
-		// fade out effect
-			if(fadeout == true){ lockscreen(); }else{ lockscreen(); }
-		}
+		lockscreen();
 	}else{
 		// lamp and night mode active with one click
 		if(lampandnightmode == true){
@@ -1889,11 +1880,9 @@ function lightsgoonoroff(){
 		if(multiopacall == true){
 			default_opacity = interval;
 		}else{
-			var atbbuf = [];
-			var domain;
+			var atbbuf = [], domain;
 			for(domain in multiopacityDomains){ atbbuf.push(domain); atbbuf.sort(); }
-			var i;
-			var l = atbbuf.length;
+			var i, l = atbbuf.length;
 			for(i = 0; i < l; i++){
 				if(atbbuf[i] == currentURL){
 					var editzoom = multiopacityDomains[atbbuf[i]];
