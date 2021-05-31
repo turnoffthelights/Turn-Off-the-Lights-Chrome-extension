@@ -62,10 +62,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 	if(a != 88){
 		chrome.runtime.sendMessage({name: "sendlightcss"});
 	}
-	if(document.getElementById("stefanvdtest")){
-		var elem = document.getElementById("stefanvdtest");
-		elem.parentNode.removeChild(elem);
-	}
+	removeId("stefanvdtest");
 
 	chrome.runtime.onMessage.addListener(function(request){
 		if(request.name == "injectlightcss"){ var style = document.createElement("style"); style.type = "text/css"; style.textContent = request.message; document.getElementsByTagName("head")[0].appendChild(style); }
