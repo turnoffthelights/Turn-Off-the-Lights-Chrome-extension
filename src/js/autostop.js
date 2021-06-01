@@ -45,25 +45,15 @@ chrome.storage.sync.get(["autostop", "autostoponly", "autostopDomains", "autosto
 	function refreshdesign(item, myElement){
 		// design panel
 		if(myElement.currentStyle){
-			d = myElement.currentStyle["display"];
-			w = myElement.currentStyle["width"];
-			h = myElement.currentStyle["height"];
-			t = myElement.currentStyle["top"];
+			d = myElement.currentStyle["display"]; w = myElement.currentStyle["width"]; h = myElement.currentStyle["height"]; t = myElement.currentStyle["top"];
 		}else if(window.getComputedStyle){
-			st = document.defaultView.getComputedStyle(myElement, null);
-			d = st.getPropertyValue("display");
-			w = st.getPropertyValue("width");
-			h = st.getPropertyValue("height");
-			t = st.getPropertyValue("top");
+			st = document.defaultView.getComputedStyle(myElement, null); d = st.getPropertyValue("display"); w = st.getPropertyValue("width"); h = st.getPropertyValue("height"); t = st.getPropertyValue("top");
 		}
-
 		var visposition = getPosition(myElement);
-
 		// if previous path is none, then hide it too
 		var path = [];
 		do{
 			var qq = path.unshift(myElement.nodeName);
-
 			var adisplay;
 			if(myElement.currentStyle){
 				adisplay = qq.currentStyle["display"];
