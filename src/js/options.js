@@ -1876,8 +1876,8 @@ function dynamictest(){
 
 	var newdynmaster = $("stefanvddynamicbackground");
 	if($("dynamic").checked == true){
+		removedynamic();
 		if($("dynamic1").checked == true){
-			removedynamic();
 			var fishtanks = document.createElement("div"); fishtanks.setAttribute("id", "fishtanks"); newdynmaster.appendChild(fishtanks);
 
 			var newdynleft = document.createElement("div"); newdynleft.setAttribute("class", "stefanvddynamicbackgroundbubbleleft"); fishtanks.appendChild(newdynleft);
@@ -1892,21 +1892,18 @@ function dynamictest(){
 			var dynrighti;
 			for(dynrighti = 11; dynrighti < 16; dynrighti++){ var newdynbubble = document.createElement("div"); newdynbubble.setAttribute("class", "stefanvddynamicbackgroundbubbles stefanvddynamicbubbles" + dynrighti + ""); newdynright.appendChild(newdynbubble); }
 		}else if($("dynamic2").checked == true){
-			removedynamic();
 			var blocks = document.createElement("div"); blocks.setAttribute("id", "blocks"); newdynmaster.appendChild(blocks);
 
 			var newdynblockleft = document.createElement("div"); newdynblockleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); blocks.appendChild(newdynblockleft);
 			var blocki;
 			for(blocki = 1; blocki < 21; blocki++){ var newdynblock = document.createElement("div"); newdynblock.setAttribute("class", "stefanvddynamicbackgroundblocks stefanvddynamicblocks" + blocki + ""); newdynblockleft.appendChild(newdynblock); }
 		}else if($("dynamic3").checked == true){
-			removedynamic();
 			var raindrops = document.createElement("div"); raindrops.setAttribute("id", "raindrops"); newdynmaster.appendChild(raindrops);
 
 			var newdynrainleft = document.createElement("div"); newdynrainleft.setAttribute("class", "stefanvddynamicbackgroundblockleft"); raindrops.appendChild(newdynrainleft);
 			var rainlefti;
 			for(rainlefti = 0; rainlefti < 15; rainlefti++){ var newdyn = document.createElement("div"); newdyn.setAttribute("class", "stefanvddynamicbackgroundraindrups b" + rainlefti + ""); newdynrainleft.appendChild(newdyn); }
 		}else if($("dynamic4").checked == true){
-			removedynamic();
 			var clouds = document.createElement("div"); clouds.setAttribute("id", "clouds"); newdynmaster.appendChild(clouds);
 			var newdynworld = document.createElement("div"); newdynworld.setAttribute("id", "stefanvdworld"); clouds.appendChild(newdynworld);
 			(function(){
@@ -1935,8 +1932,6 @@ function dynamictest(){
 			generate();
 			cloudupdate();
 		}else if($("dynamic5").checked == true){
-			removedynamic();
-
 			var flying = "";
 			if($("hoveroptiondyn5").checked != true){
 				// with the letter n include, then it see the flying in effect
@@ -1963,7 +1958,6 @@ function dynamictest(){
 				}
 			}
 		}else if($("dynamic6").checked == true){
-			removedynamic();
 			var smoke = document.createElement("div"); smoke.setAttribute("id", "smoke"); smoke.style.width = "100%"; smoke.style.height = "100%"; newdynmaster.appendChild(smoke);
 			var newsmokecanvas = document.createElement("canvas"); newsmokecanvas.setAttribute("id", "stefanvddynamicsmoke"); newsmokecanvas.style.width = "100%"; newsmokecanvas.style.height = "100%"; smoke.appendChild(newsmokecanvas);
 
@@ -1996,7 +1990,6 @@ function dynamictest(){
 				}
 			}
 		}else if($("dynamic7").checked == true){
-			removedynamic();
 			var flyingdots = document.createElement("div"); flyingdots.setAttribute("id", "flyingdots"); newdynmaster.appendChild(flyingdots);
 			var newdyndotsworld = document.createElement("div"); newdyndotsworld.setAttribute("id", "stefanvddynamicdots"); flyingdots.appendChild(newdyndotsworld);
 			var flyingj;
@@ -2006,7 +1999,6 @@ function dynamictest(){
 				newdyndotsworld.appendChild(newminic);
 			}
 		}else if($("dynamic8").checked == true){
-			removedynamic();
 			var storm = document.createElement("div"); storm.setAttribute("id", "storm"); newdynmaster.appendChild(storm);
 			var newstormcanvas = document.createElement("canvas"); newstormcanvas.setAttribute("id", "stefanvddynamicstorm"); newstormcanvas.style.width = "100%"; newstormcanvas.style.height = "100%"; storm.appendChild(newstormcanvas);
 
@@ -2018,12 +2010,10 @@ function dynamictest(){
 			rainresizer();
 			paintSky();
 		}else if($("dynamic9").checked == true){
-			removedynamic();
 			var triangle = document.createElement("div"); triangle.setAttribute("id", "triangle"); newdynmaster.appendChild(triangle);
 			trianglerun();
 			window.onresize = onResize;
 		}else if($("dynamic10").checked == true){
-			removedynamic();
 			var stars = document.createElement("div"); stars.setAttribute("id", "stars"); newdynmaster.appendChild(stars);
 			var starsj;
 			for(starsj = 1; starsj < 3; starsj++){
