@@ -894,7 +894,6 @@ function drawAtmos(){
 					$("stefanvdvivideffect1").style.display = "none";
 				}
 			}else{
-				v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
 				setatmosplayer(v, [countC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
 			}
 		}else if($("ambilightfixcolor").checked == true){
@@ -982,19 +981,19 @@ function drawAtmos(){
 				}
 			}else{
 				if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-				v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + hex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+				setatmosplayer(v, [countC, textcountB, textcountA], [hex1, hex2, hex3, hex4]);
 			}
 		}else if($("ambilightfixcolor").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
 			var fixhex = $("ambilightcolorhex").value || "#000000";
-			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fixhex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fixhex + "";
+			setatmosplayer(v, [countC, textcountB, textcountA], [fixhex, fixhex, fixhex, fixhex]);
 		}else if($("ambilight4color").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
 			var fix1hex = $("ambilight1colorhex").value || "#FF0000";
 			var fix2hex = $("ambilight2colorhex").value || "#FFEE00";
 			var fix3hex = $("ambilight3colorhex").value || "#00FF00";
 			var fix4hex = $("ambilight4colorhex").value || "#0000FF";
-			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + fix1hex + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + fix2hex + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + fix3hex + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + fix4hex + "";
+			setatmosplayer(v, [countC, textcountB, textcountA], [fix1hex, fix2hex, fix3hex, fix4hex]);
 		}
 
 	}else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
