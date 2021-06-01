@@ -1621,7 +1621,7 @@ function generate(){
 function cloudupdate(){
 	var j, l = layers.length;
 	for(j = 0; j < l; j++){
-		var layer = layers[ j ];
+		var layer = layers[j];
 		layer.data.a += layer.data.speed;
 		var t = "translateX(" + layer.data.x + "px) translateY(" + layer.data.y + "px) translateZ(" + layer.data.z + "px) rotateY(" + (- worldYAngle) + "deg) rotateX(" + (- worldXAngle) + "deg) rotateZ(" + layer.data.a + "deg) scale(" + layer.data.s + ")";
 		layer.style.webkitTransform = t; layer.style.MozTransform = t; layer.style.oTransform = t;

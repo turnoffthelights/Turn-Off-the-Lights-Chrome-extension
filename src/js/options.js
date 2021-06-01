@@ -851,6 +851,11 @@ var textcountA;
 var textcountB;
 var p1; var p2; var p3; var p4;
 var hex1; var hex2; var hex3; var hex4;
+
+function setatmosplayer(v, a, b){
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + a[0] + "px " + a[1] + " " + a[2] + " " + b[0] + ", 0px " + a[0] + "px " + a[1] + " " + a[2] + " " + b[1] + ", " + a[0] + "px 0px " + a[1] + " " + a[2] + " " + b[2] + ", -" + a[0] + "px 0px " + a[1] + " " + a[2] + " " + b[3] + "";
+}
+
 // ambilight draw code
 function drawAtmos(){
 	var v = $("beeld");
@@ -890,11 +895,12 @@ function drawAtmos(){
 				}
 			}else{
 				v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + downhex1 + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
+				setatmosplayer(v, [countC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
 			}
 		}else if($("ambilightfixcolor").checked == true){
-			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilightcolorhex").value + "";
+			setatmosplayer(v, [countC, textcountB, textcountA], [$("ambilightcolorhex").value, $("ambilightcolorhex").value, $("ambilightcolorhex").value, $("ambilightcolorhex").value]);
 		}else if($("ambilight4color").checked == true){
-			v.style.boxShadow = "0px 0px 0px black , 0px -" + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight1colorhex").value + ", 0px " + countC + "px " + textcountB + " " + textcountA + " " + $("ambilight2colorhex").value + ", " + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight3colorhex").value + ", -" + countC + "px 0px " + textcountB + " " + textcountA + " " + $("ambilight4colorhex").value + "";
+			setatmosplayer(v, [countC, textcountB, textcountA], [$("ambilight1colorhex").value, $("ambilight2colorhex").value, $("ambilight3colorhex").value, $("ambilight4colorhex").value]);
 		}
 		// ----
 
