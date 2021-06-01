@@ -2487,34 +2487,7 @@ function domcontentloaded(){
 	if((nAgt.indexOf("OPR/")) != -1){ browserName = "Opera"; }else if(urlbrowservendor.search("Yandex") >= 0){ browserName = "Yandex"; }else if(urlbrowservendor.search("Google") >= 0){ browserName = "Google Chrome"; }else if(urlbrowservendor.search("Apple Computer, Inc.") >= 0){ browserName = "Safari"; }else if(navigator.appCodeName == "Mozilla"){ browserName = "Firefox"; }else if((nAgt.indexOf("Maxthon/")) != -1){ browserName = "Maxthon"; }
 
 	// browser check
-	if(browserName == "Opera"){
-		// feature check speech and camera
-		// no support
-		$("helpcameramotion").classList.remove("hidden");
-		$("helpspeech").classList.remove("hidden");
-		$("speech").disabled = true;
-		$("select_language").disabled = true;
-		$("select_dialect").disabled = true;
-		$("speechonly").disabled = true;
-		$("motion").disabled = true;
-		$("cammotiononly").disabled = true;
-	}else if(browserName == "Google Chrome"){
-		// feature check speech and camera
-		// support
-		$("helpcameramotion").classList.add("hidden");
-		$("helpspeech").classList.add("hidden");
-	}else if(browserName == "Firefox"){
-		// feature check speech and camera
-		// no support
-		$("helpcameramotion").classList.remove("hidden");
-		$("helpspeech").classList.remove("hidden");
-		$("speech").disabled = true;
-		$("select_language").disabled = true;
-		$("select_dialect").disabled = true;
-		$("speechonly").disabled = true;
-		$("motion").disabled = true;
-		$("cammotiononly").disabled = true;
-	}else if(browserName == "Safari"){
+	if(browserName == "Opera" || browserName == "Safari" || browserName == "Firefox"){
 		// feature check speech and camera
 		// no support
 		$("helpcameramotion").classList.remove("hidden");
@@ -2527,6 +2500,11 @@ function domcontentloaded(){
 		$("cammotiononly").disabled = true;
 		$("tabmotion").style.display = "none";
 		$("tabspeech").style.display = "none";
+	}else if(browserName == "Google Chrome"){
+		// feature check speech and camera
+		// support
+		$("helpcameramotion").classList.add("hidden");
+		$("helpspeech").classList.add("hidden");
 	}else{
 		// feature check speech and camera
 		// support
