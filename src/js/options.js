@@ -96,7 +96,7 @@ function save_options(){
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
+chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
 	// find no localstore lightcolor
 	if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
 	// find no localstore ambilightcolorhex
@@ -115,6 +115,12 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["nightmodehyperlink"] == null){ firstdefaultvalues["nightmodehyperlink"] = "#ffffff"; }
 
 	if(items["videovolumecolor"] == null){ firstdefaultvalues["videovolumecolor"] = "#167ac6"; }
+
+	if(items["videotoolcolor"] == null){ firstdefaultvalues["videotoolcolor"] = "#000000"; }
+
+	if(items["titleinvertcolor"] == null){ firstdefaultvalues["titleinvertcolor"] = "#ffffff"; }
+
+	if(items["nightmodebutton"] == null){ firstdefaultvalues["nightmodebutton"] = "#353535"; }
 
 	// find no localstore fadein
 	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
@@ -409,7 +415,7 @@ function read_options(){
 		}
 	}
 
-	var settingscolorarray = ["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor"];
+	var settingscolorarray = ["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton"];
 	function setcoloroptions(a){
 		for(var iset = 0; iset < settingscolorarray.length; iset++){
 			if(a[settingscolorarray[iset]]){ $(settingscolorarray[iset]).value = a[settingscolorarray[iset]]; }
@@ -431,7 +437,6 @@ function read_options(){
 		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; }
 		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
 
-
 		if(items["enterpassword"]){ $("enterpassword").value = items["enterpassword"]; }
 
 		if(items["ecosavertime"]){ $("ecosavertime").value = items["ecosavertime"]; }else{ $("ecosavertime").value = "60"; }
@@ -446,7 +451,6 @@ function read_options(){
 		if(items["dynamic8"] == true){ $("dynamic8").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstorm"); }
 		if(items["dynamic9"] == true){ $("dynamic9").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamictriangulation"); }
 		if(items["dynamic10"] == true){ $("dynamic10").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstars"); }
-
 
 		if(items["autoplayonly"] == true){ $("autoplayonly").checked = true; }else{ $("autoplayonly").checked = false; }
 
@@ -477,7 +481,6 @@ function read_options(){
 		if(items["nmendtime"]){ $("nmendtime").value = items["nmendtime"]; }else{ $("nmendtime").value = "23:45"; }
 		if(items["lampandnightmode"] == true){ $("lampandnightmode").checked = true; }else{ $("lampandnightmode").checked = false; }
 
-
 		if(items["mobilelastonversion"] == chrome.runtime.getManifest().version){ $("sectionmobileappbox").style.display = "none"; }
 
 		if(items["reflectionamount"]){ $("reflectionamount").value = items["reflectionamount"]; }else{ $("reflectionamount").value = "20"; }
@@ -486,7 +489,6 @@ function read_options(){
 
 		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon", items["icon"]); }
 		if(items["visopacity"]){ $("visopacity").value = items["visopacity"]; }else{ $("visopacity").value = "80"; }
-		if(items["videotoolcolor"]){ $("videotoolcolor").value = items["videotoolcolor"]; }else{ $("videotoolcolor").value = "#000000"; }
 
 		if(items["hovervideoamount"]){ $("hovervideoamount").value = items["hovervideoamount"]; }else{ $("hovervideoamount").value = "3"; }
 
@@ -494,11 +496,7 @@ function read_options(){
 
 		if(items["playrateamount"]){ $("playrateamount").value = items["playrateamount"]; }else{ $("playrateamount").value = "1"; }
 
-		if(items["titleinvertcolor"]){ $("titleinvertcolor").value = items["titleinvertcolor"]; }else{ $("titleinvertcolor").value = "#ffffff"; }
-
 		if(items["nightmodeswitchhidetime"]){ $("nightmodeswitchhidetime").value = items["nightmodeswitchhidetime"]; }else{ $("nightmodeswitchhidetime").value = "3"; }
-
-		if(items["nightmodebutton"]){ $("nightmodebutton").value = items["nightmodebutton"]; }else{ $("nightmodebutton").value = "#353535"; }
 
 		// show introduce
 		if(items["introduce"] != true){
