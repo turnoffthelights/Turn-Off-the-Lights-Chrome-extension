@@ -2342,11 +2342,13 @@ function setappearancemode(a, b, c){
 }
 
 function godarkmode(){
+	$("dropmenu").className = "hide";
 	setappearancemode("hide", "dark", "invert(1) brightness(2)");
 }
 
 function golightmode(){
 	$("dropmenu").className = "hide";
+	setappearancemode("hide", "light", "invert(0)");
 }
 
 function seticonstyle(a, b, c){
