@@ -1242,13 +1242,14 @@ function test(){
 	previewyoutubeelement("sharebutton", "samplesharebutton");
 	previewyoutubeelement("suggestions", "samplesug");
 
-	if($("videoheadline").checked == true){ $("sampletitle").style.zIndex = 100; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#FFFFFF"; }else{ $("sampletitle").style.zIndex = 1; $("sampletitle").style.position = "relative"; $("sampletitle").style.color = "#000000"; }
+	previewyoutubeelement("videoheadline", "sampletitle");
+	if($("videoheadline").checked == true){ $("sampletitle").style.color = "#FFFFFF"; }else{ $("sampletitle").style.color = "#000000"; }
 
-	if($("viewcount").checked == true){ $("sampleview").style.zIndex = 100; $("sampleview").style.color = "white"; $("sampleview").style.position = "relative"; }else{ $("sampleview").style.zIndex = 1; $("sampleview").style.color = "black"; $("sampleview").style.position = "relative"; }
+	previewyoutubeelement("viewcount", "sampleview");
+	if($("viewcount").checked == true){ $("sampleview").style.color = "white"; }else{ $("sampleview").style.color = "black"; }
 
 	previewyoutubeelement("addvideobutton", "sampleaddbutton");
-
-	if($("likebar").checked == true){ $("samplelikebar").style.zIndex = 101; $("samplelikebar").style.position = "relative"; }else{ $("samplelikebar").style.zIndex = "auto"; $("samplelikebar").style.position = "relative"; }
+	previewyoutubeelement("likebar", "samplelikebar");
 
 	/* --- end YouTube preview --- */
 	if($("ambilight").checked == true){
