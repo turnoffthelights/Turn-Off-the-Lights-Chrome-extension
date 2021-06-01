@@ -2336,22 +2336,21 @@ function yearnow(){
 	var today = new Date(); var y0 = today.getFullYear(); $("yearnow").innerText = y0;
 }
 
+function setappearancemode(a, b, c){
+	$("dropmenu").className = a;
+	document.body.className = b;
+	$("headlamp").style.webkitFilter = c;
+	$("headlamp").style.filter = c;
+	$("loadinglamp").style.webkitFilter = c;
+	$("loadinglamp").style.filter = c;
+}
+
 function godarkmode(){
-	$("dropmenu").className = "hide";
-	document.body.className = "dark";
-	$("headlamp").style.webkitFilter = "invert(1) brightness(2)";
-	$("headlamp").style.filter = "invert(1) brightness(2)";
-	$("loadinglamp").style.webkitFilter = "invert(1) brightness(2)";
-	$("loadinglamp").style.filter = "invert(1) brightness(2)";
+	setappearancemode("hide", "dark", "invert(1) brightness(2)");
 }
 
 function golightmode(){
 	$("dropmenu").className = "hide";
-	document.body.className = "light";
-	$("headlamp").style.webkitFilter = "invert(0)";
-	$("headlamp").style.filter = "invert(0)";
-	$("loadinglamp").style.webkitFilter = "invert(0)";
-	$("loadinglamp").style.filter = "invert(0)";
 }
 
 function seticonstyle(a, b, c){
