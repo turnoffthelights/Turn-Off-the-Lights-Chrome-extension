@@ -335,56 +335,52 @@ function read_options(){
 		closeMaterialYouTubeCancel(e);
 	});
 
+	function showhidemodal(name, visible, status){
+		document.getElementById(name).className = visible;
+		document.getElementById(name).setAttribute("aria-disabled", status);
+	}
+
 	// dialog
 	function materialAlert(){
 		document.getElementById("materialModalButtonCANCEL").style.display = "none";
-		document.getElementById("materialModal").className = "show";
-		document.getElementById("materialModal").setAttribute("aria-disabled", "false");
+		showhidemodal("materialModal", "show", "false");
 	}
 	function closeMaterialAlert(e){
 		e.stopPropagation();
-		document.getElementById("materialModal").className = "hide";
-		document.getElementById("materialModal").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModal", "hide", "true");
 	}
 
 	// rate
 	function materialRateAlert(){
-		document.getElementById("materialModalRate").className = "show";
-		document.getElementById("materialModalRate").setAttribute("aria-disabled", "false");
+		showhidemodal("materialModalRate", "show", "false");
 	}
 	function closeMaterialRateAlert(e){
 		e.stopPropagation();
-		document.getElementById("materialModalRate").className = "hide";
-		document.getElementById("materialModalRate").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModalRate", "hide", "true");
 	}
 
 	// introduce
 	function materialIntroduceAlert(){
 		document.getElementById("materialModalIntroduceButtonCANCEL").style.display = "none";
-		document.getElementById("materialModalIntroduce").className = "show";
-		document.getElementById("materialModalIntroduce").setAttribute("aria-disabled", "false");
+		showhidemodal("materialModalIntroduce", "show", "false");
 	}
 	function closeMaterialIntroduceAlert(e){
 		e.stopPropagation();
-		document.getElementById("materialModalIntroduce").className = "hide";
-		document.getElementById("materialModalIntroduce").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModalIntroduce", "hide", "true");
 	}
 
 	// youtube
 	function materialYouTubeAlert(){
-		document.getElementById("materialModalYouTube").className = "show";
-		document.getElementById("materialModalYouTube").setAttribute("aria-disabled", "false");
+		showhidemodal("materialModalYouTube", "show", "false");
 	}
 	function closeMaterialYouTubeCancel(e){
 		e.stopPropagation();
-		document.getElementById("materialModalYouTube").className = "hide";
-		document.getElementById("materialModalYouTube").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModalYouTube", "hide", "true");
 	}
 	function closeMaterialYouTubeAlert(e){
 		e.stopPropagation();
 		window.open(linkyoutube, "_blank");
-		document.getElementById("materialModalYouTube").className = "hide";
-		document.getElementById("materialModalYouTube").setAttribute("aria-disabled", "true");
+		showhidemodal("materialModalYouTube", "hide", "true");
 	}
 
 	//---
@@ -2685,6 +2681,10 @@ function domcontentloaded(){
 	$("buttonchangelog").addEventListener("click", function(){ window.open(linkchangelog); });
 	$("buttontranslateme").addEventListener("click", function(){ window.open(linktranslate); });
 
+	function setpreviewlampicon(a){
+		document.images["btnpreview"].setAttribute("data-icon", a); document.images["btnpreview"].src = a; save_options();
+	}
+
 	// scroll to top
 	function Scrolltotop(){ $("mainview").scrollTop = 0; }
 
@@ -2894,11 +2894,11 @@ function domcontentloaded(){
 	$("mant").addEventListener("click", function(){ $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
 
 	// Lamp Icons
-	$("p1").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconstick38.png"); document.images["btnpreview"].src = "icons/iconstick38.png"; save_options(); });
-	$("p2").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/icongold38.png"); document.images["btnpreview"].src = "icons/icongold38.png"; save_options(); });
-	$("p3").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconrose38.png"); document.images["btnpreview"].src = "icons/iconrose38.png"; save_options(); });
-	$("p4").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconrainbow38.png"); document.images["btnpreview"].src = "icons/iconrainbow38.png"; save_options(); });
-	$("p5").addEventListener("click", function(){ document.images["btnpreview"].setAttribute("data-icon", "icons/iconwhite38.png"); document.images["btnpreview"].src = "icons/iconwhite38.png"; save_options(); });
+	$("p1").addEventListener("click", function(){ setpreviewlampicon("icons/iconstick38.png"); });
+	$("p2").addEventListener("click", function(){ setpreviewlampicon("icons/icongold38.png"); });
+	$("p3").addEventListener("click", function(){ setpreviewlampicon("icons/iconrose38.png"); });
+	$("p4").addEventListener("click", function(){ setpreviewlampicon("icons/iconrainbow38.png"); });
+	$("p5").addEventListener("click", function(){ setpreviewlampicon("icons/iconwhite38.png"); });
 
 	// get permission
 	$("darkbrowsertheme").addEventListener("click", function(){
