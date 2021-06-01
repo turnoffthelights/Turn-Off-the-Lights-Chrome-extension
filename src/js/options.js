@@ -2685,6 +2685,10 @@ function domcontentloaded(){
 		document.images["btnpreview"].setAttribute("data-icon", a); document.images["btnpreview"].src = a; save_options();
 	}
 
+	function setpreviewimagelayer(a){
+		$("lightimage").value = a; test(); ariacheck(); save_options();
+	}
+
 	// scroll to top
 	function Scrolltotop(){ $("mainview").scrollTop = 0; }
 
@@ -2764,11 +2768,11 @@ function domcontentloaded(){
 		$("bckimage4").setAttribute("src", ""); $("bckimage4").setAttribute("srcset", "");
 		$("bckimage5").setAttribute("src", ""); $("bckimage5").setAttribute("srcset", "");
 	});
-	$("totlswallpaper5").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls5.jpg"; test(); ariacheck(); save_options(); });
-	$("totlswallpaper4").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls4.jpg"; test(); ariacheck(); save_options(); });
-	$("totlswallpaper3").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls3.jpg"; test(); ariacheck(); save_options(); });
-	$("totlswallpaper2").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/totls2.jpg"; test(); ariacheck(); save_options(); });
-	$("totlswallpaper1").addEventListener("click", function(){ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; test(); ariacheck(); save_options(); });
+	$("totlswallpaper5").addEventListener("click", function(){ setpreviewimagelayer("https://www.turnoffthelights.com/extension/images/totls5.jpg"); });
+	$("totlswallpaper4").addEventListener("click", function(){ setpreviewimagelayer("https://www.turnoffthelights.com/extension/images/totls4.jpg"); });
+	$("totlswallpaper3").addEventListener("click", function(){ setpreviewimagelayer("https://www.turnoffthelights.com/extension/images/totls3.jpg"); });
+	$("totlswallpaper2").addEventListener("click", function(){ setpreviewimagelayer("https://www.turnoffthelights.com/extension/images/totls2.jpg"); });
+	$("totlswallpaper1").addEventListener("click", function(){ setpreviewimagelayer("https://www.turnoffthelights.com/extension/images/theater.jpg"); });
 
 	// dynamic test
 	$("dynamic").addEventListener("click", function(){
