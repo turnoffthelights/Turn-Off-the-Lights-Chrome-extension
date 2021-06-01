@@ -383,58 +383,36 @@ function read_options(){
 		showhidemodal("materialModalYouTube", "hide", "true");
 	}
 
+	var settingscheckboxarray = ["lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "addvideobutton", "likebar", "ambilight", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilight4color", "password", "noflash", "hardflash", "ecosaver", "hoveroptiondyn5", "blur", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "optionskipremember", "nighttheme", "nightenabletheme", "autoplaydelay", "motion", "lightimagelin", "speech", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "autostop", "autostopchecklistwhite", "autostopchecklistblack", "nighthover", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "block60fps", "videovolume", "videovolumelabel", "hovervideo", "mousespotlights", "aplay", "apause", "astop", "videozoom", "playrate", "speedtoolbar", "atmosontotlmode", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacall", "multiopacsel", "videovolumealt", "nightmodebydomain", "nightmodebypage", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gamepad"];
+	function setoptions(a){
+		for(var iset = 0; iset < settingscheckboxarray.length; iset++){
+			if(a[settingscheckboxarray[iset]] == true){ $(settingscheckboxarray[iset]).checked = true; }
+		}
+	}
+
 	//---
 	chrome.storage.sync.get(["firstDate", "interval", "lightcolor", "lightimage", "lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "begintime", "endtime", "addvideobutton", "likebar", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "password", "enterpassword", "noflash", "hardflash", "ecosaver", "ecosavertime", "dynamic", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "autoplayonly", "blur", "maxquality", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "spotlightradius", "atmosphereonly", "optionskipremember", "nighttheme", "nightonly", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "motion", "lightimagelin", "linearsq", "colora", "intervallina", "colorb", "intervallinb", "speech", "speechlang", "speechcountry", "atmosvivid", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotiononly", "speechonly", "cammotionDomains", "speechDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "reviewedlastonversion", "applastonversion", "autostop", "autostoponly", "autostopchecklistwhite", "autostopchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "autostopDomains", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "nmbegintime", "nmendtime", "lampandnightmode", "eyechecklistblack", "eyechecklistwhite", "nightmodebck", "nightmodetxt", "mobilelastonversion", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "videotoolDomains", "nightmodehyperlink", "block60fps", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "icon", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "titleinvertcolor", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacityDomains", "multiopacall", "multiopacsel", "firstsawrate", "videovolumealt", "nightmodebydomain", "nightmodebypage", "introduce", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumeDomains", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "nightmodebutton", "firstsawyoutube", "gamepad"], function(items){
+		setoptions(items);
+
 		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow", items["interval"]); $("slider").setAttribute("aria-valuenow", items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }else{ $("interval").value = 80; }
 		if(items["lightcolor"]){ $("lightcolor").value = items["lightcolor"]; }else{ $("lightcolor").value = "#000000"; }
 		if(items["lightimage"]){ $("lightimage").value = items["lightimage"]; }else{ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
-		if(items["lightimagea"] == true){ $("lightimagea").checked = true; }
-		if(items["lightimagen"] == true){ $("lightimagen").checked = true; }
-		if(items["autoplay"] == true){ $("autoplay").checked = true; }
-		if(items["playlist"] == true){ $("playlist").checked = true; }
-		if(items["flash"] == true){ $("flash").checked = true; }
-		if(items["head"] == true){ $("head").checked = true; }
-		if(items["fadein"] == true){ $("fadein").checked = true; }
-		if(items["fadeout"] == true){ $("fadeout").checked = true; }
-		if(items["infobar"] == true){ $("infobar").checked = true; }
-		if(items["sharebutton"] == true){ $("sharebutton").checked = true; }
-		if(items["likebutton"] == true){ $("likebutton").checked = true; }
-		if(items["readera"] == true){ $("readera").checked = true; }
-		if(items["readern"] == true){ $("readern").checked = true; }
-		if(items["shortcutlight"] == true){ $("shortcutlight").checked = true; }
-		if(items["eyea"] == true){ $("eyea").checked = true; }
-		if(items["eyen"] == true){ $("eyen").checked = true; }
-		if(items["suggestions"] == true){ $("suggestions").checked = true; }
-		if(items["videoheadline"] == true){ $("videoheadline").checked = true; }
-		if(items["eastereggs"] == true){ $("eastereggs").checked = true; }
-		if(items["contextmenus"] == true){ $("contextmenus").checked = true; }
-		if(items["viewcount"] == true){ $("viewcount").checked = true; }
-		if(items["eyealist"] == true){ $("eyealist").checked = true; }
-		if(items["mousespotlighto"] == true){ $("mousespotlighto").checked = true; }
-		if(items["mousespotlightc"] == true){ $("mousespotlightc").checked = true; }
-		if(items["mousespotlighta"] == true){ $("mousespotlighta").checked = true; }
-		if(items["nighttime"] == true){ $("nighttime").checked = true; }
+
 		if(items["begintime"]){ $("begintime").value = items["begintime"]; }else{ $("begintime").value = "21:00"; }
 		if(items["endtime"]){ $("endtime").value = items["endtime"]; }else{ $("endtime").value = "23:45"; }
-		if(items["addvideobutton"] == true){ $("addvideobutton").checked = true; }
-		if(items["likebar"] == true){ $("likebar").checked = true; }
-		if(items["ambilight"] == true){ $("ambilight").checked = true; }
+
 		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; }
 		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
-		if(items["mousespotlightt"] == true){ $("mousespotlightt").checked = true; }
-		if(items["ambilightfixcolor"] == true){ $("ambilightfixcolor").checked = true; }
-		if(items["ambilightvarcolor"] == true){ $("ambilightvarcolor").checked = true; }
+
 		if(items["ambilightcolorhex"]){ $("ambilightcolorhex").value = items["ambilightcolorhex"]; }else{ $("ambilightcolorhex").value = "#47C2FF"; }
-		if(items["ambilight4color"] == true){ $("ambilight4color").checked = true; }
+
 		if(items["ambilight1colorhex"]){ $("ambilight1colorhex").value = items["ambilight1colorhex"]; }else{ $("ambilight1colorhex").value = "#FF0000"; }
 		if(items["ambilight2colorhex"]){ $("ambilight2colorhex").value = items["ambilight2colorhex"]; }else{ $("ambilight2colorhex").value = "#FFEE00"; }
 		if(items["ambilight3colorhex"]){ $("ambilight3colorhex").value = items["ambilight3colorhex"]; }else{ $("ambilight3colorhex").value = "#00FF00"; }
 		if(items["ambilight4colorhex"]){ $("ambilight4colorhex").value = items["ambilight4colorhex"]; }else{ $("ambilight4colorhex").value = "#0000FF"; }
-		if(items["password"] == true){ $("password").checked = true; }
+
 		if(items["enterpassword"]){ $("enterpassword").value = items["enterpassword"]; }
-		if(items["noflash"] == true){ $("noflash").checked = true; }
-		if(items["hardflash"] == true){ $("hardflash").checked = true; }
-		if(items["ecosaver"] == true){ $("ecosaver").checked = true; }
+
 		if(items["ecosavertime"]){ $("ecosavertime").value = items["ecosavertime"]; }else{ $("ecosavertime").value = "60"; }
 		if(items["dynamic"] == true){ $("dynamic").checked = true; }else{ $("lightdynamic").disabled = true; }
 		if(items["dynamic1"] == true){ $("dynamic1").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicfishtank"); }
@@ -447,117 +425,65 @@ function read_options(){
 		if(items["dynamic8"] == true){ $("dynamic8").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstorm"); }
 		if(items["dynamic9"] == true){ $("dynamic9").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamictriangulation"); }
 		if(items["dynamic10"] == true){ $("dynamic10").checked = true; $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstars"); }
-		if(items["hoveroptiondyn5"] == true){ $("hoveroptiondyn5").checked = true; }
+
+
 		if(items["autoplayonly"] == true){ $("autoplayonly").checked = true; }else{ $("autoplayonly").checked = false; }
-		if(items["blur"] == true){ $("blur").checked = true; }
+
 		if(items["maxquality"]){ $("youtubequality").value = items["maxquality"]; }
-		if(items["autowidthyoutube"] == true){ $("autowidthyoutube").checked = true; }
-		if(items["customqualityyoutube"] == true){ $("customqualityyoutube").checked = true; }
-		if(items["cinemaontop"] == true){ $("cinemaontop").checked = true; }
-		if(items["alllightsoff"] == true){ $("alllightsoff").checked = true; }
+
 		if(items["spotlightradius"]){ $("spotlightradius").value = items["spotlightradius"]; }else{ $("spotlightradius").value = 50; }
 		if(items["atmosphereonly"] == true){ $("atmosphereonly").checked = true; }else{ $("atmosphereonly").checked = false; }
-		if(items["optionskipremember"] == true){ $("optionskipremember").checked = true; }
-		if(items["nighttheme"] == true){ $("nighttheme").checked = true; }
+
 		if(items["nightonly"] == true){ $("nightonly").checked = true; }else{ $("nightonly").checked = false; }
-		if(items["nightenabletheme"] == true){ $("nightenabletheme").checked = true; }
-		if(items["autoplaydelay"] == true){ $("autoplaydelay").checked = true; }
+
 		if(items["autoplaydelaytime"]){ $("autoplaydelaytime").value = items["autoplaydelaytime"]; }else{ $("autoplaydelaytime").value = 3; }
-		if(items["motion"] == true){ $("motion").checked = true; }
-		if(items["lightimagelin"] == true){ $("lightimagelin").checked = true; }
+
 		if(items["linearsq"]){ $("linearsq").value = items["linearsq"]; }else{ $("linearsq").value = "top"; }
 		if(items["colora"]){ $("colora").value = items["colora"]; }else{ $("colora").value = "#000000"; }
 		if(items["intervallina"]){ $("intervallina").value = items["intervallina"]; }else{ $("intervallina").value = "0"; }
 		if(items["colorb"]){ $("colorb").value = items["colorb"]; }else{ $("colorb").value = "#858585"; }
 		if(items["intervallinb"]){ $("intervallinb").value = items["intervallinb"]; }else{ $("intervallinb").value = "100"; }
-		if(items["speech"] == true){ $("speech").checked = true; }
+
 		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
 		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
-		if(items["atmosvivid"] == true){ $("atmosvivid").checked = true; }
+
 		if(items["cammotiononly"] == true){ $("cammotiononly").checked = true; }else{ $("cammotiononly").checked = false; }
 		if(items["speechonly"] == true){ $("speechonly").checked = true; }else{ $("speechonly").checked = false; }
-		if(items["autoplaychecklistwhite"] == true){ $("autoplaychecklistwhite").checked = true; }
-		if(items["autoplaychecklistblack"] == true){ $("autoplaychecklistblack").checked = true; }
+
 		if(items["applastonversion"] == chrome.runtime.getManifest().version){ $("sectionauroraplayerappbox").style.display = "none"; }
-		if(items["autostop"] == true){ $("autostop").checked = true; }
+
 		if(items["autostoponly"] == true){ $("autostoponly").checked = true; }else{ $("autostoponly").checked = false; }
-		if(items["autostopchecklistwhite"] == true){ $("autostopchecklistwhite").checked = true; }
-		if(items["autostopchecklistblack"] == true){ $("autostopchecklistblack").checked = true; }
-		if(items["nighthover"] == true){ $("nighthover").checked = true; }
-		if(items["nightmodechecklistwhite"] == true){ $("nightmodechecklistwhite").checked = true; }
-		if(items["nightmodechecklistblack"] == true){ $("nightmodechecklistblack").checked = true; }
-		if(items["nmtopleft"] == true){ $("nmtopleft").checked = true; }
-		if(items["nmtopright"] == true){ $("nmtopright").checked = true; }
-		if(items["nmbottomright"] == true){ $("nmbottomright").checked = true; }
-		if(items["nmbottomleft"] == true){ $("nmbottomleft").checked = true; }
-		if(items["nmcustom"] == true){ $("nmcustom").checked = true; }
-		if(items["nightactivetime"] == true){ $("nightactivetime").checked = true; }
+
 		if(items["nmbegintime"]){ $("nmbegintime").value = items["nmbegintime"]; }else{ $("nmbegintime").value = "21:00"; }
 		if(items["nmendtime"]){ $("nmendtime").value = items["nmendtime"]; }else{ $("nmendtime").value = "23:45"; }
 		if(items["lampandnightmode"] == true){ $("lampandnightmode").checked = true; }else{ $("lampandnightmode").checked = false; }
-		if(items["eyechecklistwhite"] == true){ $("eyechecklistwhite").checked = true; }
-		if(items["eyechecklistblack"] == true){ $("eyechecklistblack").checked = true; }
+
 		if(items["nightmodebck"]){ $("nightmodebck").value = items["nightmodebck"]; }else{ $("nightmodebck").value = "#1e1e1e"; }
 		if(items["nightmodetxt"]){ $("nightmodetxt").value = items["nightmodetxt"]; }else{ $("nightmodetxt").value = "#ffffff"; }
 		if(items["mobilelastonversion"] == chrome.runtime.getManifest().version){ $("sectionmobileappbox").style.display = "none"; }
-		if(items["no360youtube"] == true){ $("no360youtube").checked = true; }
-		if(items["videotool"] == true){ $("videotool").checked = true; }
-		if(items["reflection"] == true){ $("reflection").checked = true; }
+
 		if(items["reflectionamount"]){ $("reflectionamount").value = items["reflectionamount"]; }else{ $("reflectionamount").value = "20"; }
-		if(items["videotoolonly"] == true){ $("videotoolonly").checked = true; }
-		if(items["videotoolchecklistwhite"] == true){ $("videotoolchecklistwhite").checked = true; }
-		if(items["videotoolchecklistblack"] == true){ $("videotoolchecklistblack").checked = true; }
+
 		if(items["nightmodehyperlink"]){ $("nightmodehyperlink").value = items["nightmodehyperlink"]; }else{ $("nightmodehyperlink").value = "#ffffff"; }
-		if(items["block60fps"] == true){ $("block60fps").checked = true; }
-		if(items["videovolume"] == true){ $("videovolume").checked = true; }
+
 		if(items["videovolumecolor"]){ $("videovolumecolor").value = items["videovolumecolor"]; }else{ $("videovolumecolor").value = "#167ac6"; }
 		if(items["videovolumesteps"]){ $("videovolumesteps").value = items["videovolumesteps"]; }else{ $("videovolumesteps").value = 5; }
-		if(items["videovolumelabel"] == true){ $("videovolumelabel").checked = true; }
+
 		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon", items["icon"]); }
 		if(items["visopacity"]){ $("visopacity").value = items["visopacity"]; }else{ $("visopacity").value = "80"; }
 		if(items["videotoolcolor"]){ $("videotoolcolor").value = items["videotoolcolor"]; }else{ $("videotoolcolor").value = "#000000"; }
-		if(items["hovervideo"] == true){ $("hovervideo").checked = true; }
+
 		if(items["hovervideoamount"]){ $("hovervideoamount").value = items["hovervideoamount"]; }else{ $("hovervideoamount").value = "3"; }
-		if(items["mousespotlights"] == true){ $("mousespotlights").checked = true; }
+
 		if(items["drawatmosfps"]){ $("drawatmosfps").value = items["drawatmosfps"]; }else{ $("drawatmosfps").value = "12"; }
-		if(items["aplay"] == true){ $("aplay").checked = true; }
-		if(items["apause"] == true){ $("apause").checked = true; }
-		if(items["astop"] == true){ $("astop").checked = true; }
-		if(items["videozoom"] == true){ $("videozoom").checked = true; }
-		if(items["playrate"] == true){ $("playrate").checked = true; }
+
 		if(items["playrateamount"]){ $("playrateamount").value = items["playrateamount"]; }else{ $("playrateamount").value = "1"; }
-		if(items["speedtoolbar"] == true){ $("speedtoolbar").checked = true; }
-		if(items["atmosontotlmode"] == true){ $("atmosontotlmode").checked = true; }
+
 		if(items["titleinvertcolor"]){ $("titleinvertcolor").value = items["titleinvertcolor"]; }else{ $("titleinvertcolor").value = "#ffffff"; }
-		if(items["vpause"] == true){ $("vpause").checked = true; }
-		if(items["darkbrowsertheme"] == true){ $("darkbrowsertheme").checked = true; }
-		if(items["autostopred"] == true){ $("autostopred").checked = true; }
-		if(items["autostoptrans"] == true){ $("autostoptrans").checked = true; }
-		if(items["videovolumeposa"] == true){ $("videovolumeposa").checked = true; }
-		if(items["videovolumeposb"] == true){ $("videovolumeposb").checked = true; }
-		if(items["videovolumeposc"] == true){ $("videovolumeposc").checked = true; }
-		if(items["videovolumehold"] == true){ $("videovolumehold").checked = true; }
-		if(items["multiopacall"] == true){ $("multiopacall").checked = true; }
-		if(items["multiopacsel"] == true){ $("multiopacsel").checked = true; }
-		if(items["videovolumealt"] == true){ $("videovolumealt").checked = true; }
-		if(items["nightmodebydomain"] == true){ $("nightmodebydomain").checked = true; }
-		if(items["nightmodebypage"] == true){ $("nightmodebypage").checked = true; }
-		if(items["seeanalytics"] == true){ $("seeanalytics").checked = true; }
-		if(items["nightmodegesture"] == true){ $("nightmodegesture").checked = true; }
-		if(items["nightmodeswitchhide"] == true){ $("nightmodeswitchhide").checked = true; }
+
 		if(items["nightmodeswitchhidetime"]){ $("nightmodeswitchhidetime").value = items["nightmodeswitchhidetime"]; }else{ $("nightmodeswitchhidetime").value = "3"; }
-		if(items["atmosfpsauto"] == true){ $("atmosfpsauto").checked = true; }
-		if(items["atmosfpsmanual"] == true){ $("atmosfpsmanual").checked = true; }
-		if(items["videovolumeonly"] == true){ $("videovolumeonly").checked = true; }
-		if(items["videovolumechecklistwhite"] == true){ $("videovolumechecklistwhite").checked = true; }
-		if(items["videovolumechecklistblack"] == true){ $("videovolumechecklistblack").checked = true; }
-		if(items["videovolumescrolla"] == true){ $("videovolumescrolla").checked = true; }
-		if(items["videovolumescrollb"] == true){ $("videovolumescrollb").checked = true; }
-		if(items["videovolumescrollc"] == true){ $("videovolumescrollc").checked = true; }
-		if(items["videovolumeposd"] == true){ $("videovolumeposd").checked = true; }
-		if(items["videovolumepose"] == true){ $("videovolumepose").checked = true; }
+
 		if(items["nightmodebutton"]){ $("nightmodebutton").value = items["nightmodebutton"]; }else{ $("nightmodebutton").value = "#353535"; }
-		if(items["gamepad"] == true){ $("gamepad").checked = true; }
 
 		// show introduce
 		if(items["introduce"] != true){
