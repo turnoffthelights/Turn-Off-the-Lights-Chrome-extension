@@ -96,9 +96,26 @@ function save_options(){
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["lightcolor", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
+chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
 	// find no localstore lightcolor
 	if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
+	// find no localstore ambilightcolorhex
+	if(items["ambilightcolorhex"] == null){ firstdefaultvalues["ambilightcolorhex"] = "#47C2FF"; }
+	// find no localstore ambilight1colorhex
+	if(items["ambilight1colorhex"] == null){ firstdefaultvalues["ambilight1colorhex"] = "#FF0000"; }
+	if(items["ambilight2colorhex"] == null){ firstdefaultvalues["ambilight2colorhex"] = "#FFEE00"; }
+	if(items["ambilight3colorhex"] == null){ firstdefaultvalues["ambilight3colorhex"] = "#00FF00"; }
+	if(items["ambilight4colorhex"] == null){ firstdefaultvalues["ambilight4colorhex"] = "#0000FF"; }
+
+	if(items["colora"] == null){ firstdefaultvalues["colora"] = "#000000"; }
+	if(items["colorb"] == null){ firstdefaultvalues["colorb"] = "#858585"; }
+
+	if(items["nightmodebck"] == null){ firstdefaultvalues["nightmodebck"] = "#1e1e1e"; }
+	if(items["nightmodetxt"] == null){ firstdefaultvalues["nightmodetxt"] = "#ffffff"; }
+	if(items["nightmodehyperlink"] == null){ firstdefaultvalues["nightmodehyperlink"] = "#ffffff"; }
+
+	if(items["videovolumecolor"] == null){ firstdefaultvalues["videovolumecolor"] = "#167ac6"; }
+
 	// find no localstore fadein
 	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
 	// find no localstore fadeout
@@ -392,7 +409,7 @@ function read_options(){
 		}
 	}
 
-	var settingscolorarray = ["lightcolor"];
+	var settingscolorarray = ["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor"];
 	function setcoloroptions(a){
 		for(var iset = 0; iset < settingscolorarray.length; iset++){
 			if(a[settingscolorarray[iset]]){ $(settingscolorarray[iset]).value = a[settingscolorarray[iset]]; }
@@ -414,12 +431,6 @@ function read_options(){
 		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; }
 		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
 
-		if(items["ambilightcolorhex"]){ $("ambilightcolorhex").value = items["ambilightcolorhex"]; }else{ $("ambilightcolorhex").value = "#47C2FF"; }
-
-		if(items["ambilight1colorhex"]){ $("ambilight1colorhex").value = items["ambilight1colorhex"]; }else{ $("ambilight1colorhex").value = "#FF0000"; }
-		if(items["ambilight2colorhex"]){ $("ambilight2colorhex").value = items["ambilight2colorhex"]; }else{ $("ambilight2colorhex").value = "#FFEE00"; }
-		if(items["ambilight3colorhex"]){ $("ambilight3colorhex").value = items["ambilight3colorhex"]; }else{ $("ambilight3colorhex").value = "#00FF00"; }
-		if(items["ambilight4colorhex"]){ $("ambilight4colorhex").value = items["ambilight4colorhex"]; }else{ $("ambilight4colorhex").value = "#0000FF"; }
 
 		if(items["enterpassword"]){ $("enterpassword").value = items["enterpassword"]; }
 
@@ -449,9 +460,7 @@ function read_options(){
 		if(items["autoplaydelaytime"]){ $("autoplaydelaytime").value = items["autoplaydelaytime"]; }else{ $("autoplaydelaytime").value = 3; }
 
 		if(items["linearsq"]){ $("linearsq").value = items["linearsq"]; }else{ $("linearsq").value = "top"; }
-		if(items["colora"]){ $("colora").value = items["colora"]; }else{ $("colora").value = "#000000"; }
 		if(items["intervallina"]){ $("intervallina").value = items["intervallina"]; }else{ $("intervallina").value = "0"; }
-		if(items["colorb"]){ $("colorb").value = items["colorb"]; }else{ $("colorb").value = "#858585"; }
 		if(items["intervallinb"]){ $("intervallinb").value = items["intervallinb"]; }else{ $("intervallinb").value = "100"; }
 
 		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
@@ -468,15 +477,11 @@ function read_options(){
 		if(items["nmendtime"]){ $("nmendtime").value = items["nmendtime"]; }else{ $("nmendtime").value = "23:45"; }
 		if(items["lampandnightmode"] == true){ $("lampandnightmode").checked = true; }else{ $("lampandnightmode").checked = false; }
 
-		if(items["nightmodebck"]){ $("nightmodebck").value = items["nightmodebck"]; }else{ $("nightmodebck").value = "#1e1e1e"; }
-		if(items["nightmodetxt"]){ $("nightmodetxt").value = items["nightmodetxt"]; }else{ $("nightmodetxt").value = "#ffffff"; }
+
 		if(items["mobilelastonversion"] == chrome.runtime.getManifest().version){ $("sectionmobileappbox").style.display = "none"; }
 
 		if(items["reflectionamount"]){ $("reflectionamount").value = items["reflectionamount"]; }else{ $("reflectionamount").value = "20"; }
 
-		if(items["nightmodehyperlink"]){ $("nightmodehyperlink").value = items["nightmodehyperlink"]; }else{ $("nightmodehyperlink").value = "#ffffff"; }
-
-		if(items["videovolumecolor"]){ $("videovolumecolor").value = items["videovolumecolor"]; }else{ $("videovolumecolor").value = "#167ac6"; }
 		if(items["videovolumesteps"]){ $("videovolumesteps").value = items["videovolumesteps"]; }else{ $("videovolumesteps").value = 5; }
 
 		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon", items["icon"]); }
