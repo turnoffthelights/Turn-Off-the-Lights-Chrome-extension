@@ -2725,16 +2725,12 @@ function domcontentloaded(){
 		$("dynamicgallery").className = "hidden"; $("dynamicshow").className = "hidden"; $("dynamichide").classList.remove("hidden");
 		setdynimages(0);
 	});
-	$("totldynpaper10").addEventListener("click", function(){ $("dynamic10").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper9").addEventListener("click", function(){ $("dynamic9").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper8").addEventListener("click", function(){ $("dynamic8").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper7").addEventListener("click", function(){ $("dynamic7").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper6").addEventListener("click", function(){ $("dynamic6").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper4").addEventListener("click", function(){ $("dynamic4").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper3").addEventListener("click", function(){ $("dynamic3").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper2").addEventListener("click", function(){ $("dynamic2").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper1").addEventListener("click", function(){ $("dynamic1").checked = true; dynamictest(); save_options(); });
+
+	let dynn = 0;
+	while(dynn < 10){
+		dynn++;
+		$("totldynpaper" + dynn + "").addEventListener("click", function(){ $("dynamic" + dynn + "").checked = true; dynamictest(); save_options(); });
+	}
 	$("hoveroptiondyn5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
 
 	// autoplay Add website
