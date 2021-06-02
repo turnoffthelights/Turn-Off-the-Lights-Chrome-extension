@@ -47,16 +47,15 @@ function getalldomains(a){
 
 function setdynimages(a){
 	let n = 0;
-	if(a == 1){
-		while(n < 10){
-			n++;
-			$("bckdyn" + n + "").setAttribute("src", "images/totldyn" + n + ".webp"); $("bckdyn" + n + "").setAttribute("srcset", "images/totldyn" + n + "@2x.webp");
+	while(n < 10){
+		n++;
+		var path;
+		if(a == 1){
+			path = ["images/totldyn" + n + ".webp", "images/totldyn" + n + "@2x.webp"];
+		}else{
+			path = ["", ""];
 		}
-	}else{
-		while(n < 10){
-			n++;
-			$("bckdyn" + n + "").setAttribute("src", ""); $("bckdyn" + n + "").setAttribute("srcset", "");
-		}
+		$("bckdyn" + n + "").setAttribute("src", path[0]); $("bckdyn" + n + "").setAttribute("srcset", path[1]);
 	}
 }
 
