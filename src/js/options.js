@@ -72,7 +72,7 @@ window.addEventListener("message", (event) => {
 function save_options(){
 	chrome.runtime.sendMessage({name: "getallpermissions"});
 
-	var ytselq = document.getElementById("youtubequality");
+	var ytselq = document.getElementById("maxquality");
 	var html5volumesteps = document.getElementById("videovolumesteps");
 	var linearsq = document.getElementById("linearsq");
 	var webspeechlang = document.getElementById("select_language");
@@ -96,7 +96,7 @@ function save_options(){
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
+chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "interval", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
 	// find no localstore lightcolor
 	if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
 	// find no localstore ambilightcolorhex
@@ -151,6 +151,7 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 
 	if(items["autoplaydelaytime"] == null){ firstdefaultvalues["autoplaydelaytime"] = 3; }
 
+	if(items["interval"] == null){ firstdefaultvalues["interval"] = 80; }
 
 
 	// find no localstore fadein
@@ -453,7 +454,7 @@ function read_options(){
 		}
 	}
 
-	var settingsvaluearray = ["lightimage", "enterpassword", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime"];
+	var settingsvaluearray = ["lightimage", "enterpassword", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "maxquality", "interval"];
 	function setvalueoptions(a){
 		for(var iset = 0; iset < settingsvaluearray.length; iset++){
 			if(a[settingsvaluearray[iset]]){ $(settingsvaluearray[iset]).value = a[settingsvaluearray[iset]]; }
@@ -468,12 +469,8 @@ function read_options(){
 		setcoloroptions(items);
 		setvalueoptions(items);
 
-		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow", items["interval"]); $("slider").setAttribute("aria-valuenow", items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }else{ $("interval").value = 80; }
-
-		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; }
+		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; $("arangeblur").setAttribute("aria-valuenow", 70); }
 		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
-
-		if(items["maxquality"]){ $("youtubequality").value = items["maxquality"]; }
 
 		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
 		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
@@ -1138,6 +1135,13 @@ function previewyoutubeelement(a, b){
 
 // test general
 function test(){
+	var currenopacity = $("interval").value;
+	$("slider").value = currenopacity;
+	$("interval").setAttribute("aria-valuenow", currenopacity);
+	$("slider").setAttribute("aria-valuenow", currenopacity);
+	$("example1").style.opacity = (currenopacity / 100);
+	$("example2").style.opacity = (currenopacity / 100);
+
 	if($("ambilight").checked == true){
 		drawAtmos();
 	}
@@ -1282,7 +1286,7 @@ function test(){
 
 	if($("playrate").checked == true){ $("playrateamount").disabled = false; }else{ $("playrateamount").disabled = true; }
 
-	if($("customqualityyoutube").checked == true){ $("youtubequality").disabled = false; $("block60fps").disabled = false; }else{ $("youtubequality").disabled = true; $("block60fps").disabled = true; }
+	if($("customqualityyoutube").checked == true){ $("maxquality").disabled = false; $("block60fps").disabled = false; }else{ $("maxquality").disabled = true; $("block60fps").disabled = true; }
 
 	if($("videovolumeonly").checked == true){ $("videovolumechecklistwhite").disabled = false; $("videovolumechecklistblack").disabled = false; $("videovolumeDomainsBox").disabled = false; $("videovolumewebsiteurl").disabled = false; $("videovolumeaddbutton").disabled = false; $("videovolumeremovebutton").disabled = false; }else{ $("videovolumechecklistwhite").disabled = true; $("videovolumechecklistblack").disabled = true; $("videovolumeDomainsBox").disabled = true; $("videovolumewebsiteurl").disabled = true; $("videovolumeaddbutton").disabled = true; $("videovolumeremovebutton").disabled = true; }
 
@@ -2757,8 +2761,8 @@ function domcontentloaded(){
 	$("autoplayremovebutton").addEventListener("click", function(){ removedselectedwebsite("autoplayDomainsBox"); });
 
 	// YouTube quality
-	$("youtubequality").addEventListener("click", function(){ save_options(); });
-	$("youtubequality").addEventListener("change", function(){ save_options(); });
+	$("maxquality").addEventListener("click", function(){ save_options(); });
+	$("maxquality").addEventListener("change", function(){ save_options(); });
 
 	// HTML5 video volume steps
 	$("videovolumesteps").addEventListener("click", function(){ save_options(); });
