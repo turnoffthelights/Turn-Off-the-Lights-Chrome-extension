@@ -2724,16 +2724,16 @@ function domcontentloaded(){
 		$("bckdyn9").setAttribute("src", ""); $("bckdyn9").setAttribute("srcset", "");
 		$("bckdyn10").setAttribute("src", ""); $("bckdyn10").setAttribute("srcset", "");
 	});
-	$("totldynpaper10").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstars"); $("dynamic10").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper9").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamictriangulation"); $("dynamic9").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper8").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicstorm"); $("dynamic8").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper7").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicdotscolor"); $("dynamic7").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper6").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicsmoke"); $("dynamic6").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper5").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicspace"); $("dynamic5").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper4").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamiccloud"); $("dynamic4").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper3").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicraindrops"); $("dynamic3").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper2").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicblocks"); $("dynamic2").checked = true; dynamictest(); save_options(); });
-	$("totldynpaper1").addEventListener("click", function(){ $("lightdynamic").value = chrome.i18n.getMessage("desdynamicfishtank"); $("dynamic1").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper10").addEventListener("click", function(){ $("dynamic10").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper9").addEventListener("click", function(){ $("dynamic9").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper8").addEventListener("click", function(){ $("dynamic8").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper7").addEventListener("click", function(){ $("dynamic7").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper6").addEventListener("click", function(){ $("dynamic6").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper4").addEventListener("click", function(){ $("dynamic4").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper3").addEventListener("click", function(){ $("dynamic3").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper2").addEventListener("click", function(){ $("dynamic2").checked = true; dynamictest(); save_options(); });
+	$("totldynpaper1").addEventListener("click", function(){ $("dynamic1").checked = true; dynamictest(); save_options(); });
 	$("hoveroptiondyn5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
 
 	// autoplay Add website
