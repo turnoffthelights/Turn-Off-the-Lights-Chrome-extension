@@ -173,9 +173,7 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["nightDomains"] == null){ firstdefaultvalues["nightDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true}); }
 
 	if(items["autoplayDomains"] == null || items["atmosphereDomains"] == null || items["cammotionDomains"] == null || items["speechDomains"] == null || items["autostopDomains"] == null || items["videotoolDomains"] == null || items["videovolumeDomains"] == null){
-		var emptyarray = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		firstdefaultvalues["autoplayDomains"] = firstdefaultvalues["atmosphereDomains"] = firstdefaultvalues["cammotionDomains"] = firstdefaultvalues["speechDomains"] = firstdefaultvalues["autostopDomains"] = 
-		firstdefaultvalues["videotoolDomains"] = firstdefaultvalues["videovolumeDomains"] = emptyarray;
+		firstdefaultvalues["autoplayDomains"] = firstdefaultvalues["atmosphereDomains"] = firstdefaultvalues["cammotionDomains"] = firstdefaultvalues["speechDomains"] = firstdefaultvalues["autostopDomains"] = firstdefaultvalues["videotoolDomains"] = firstdefaultvalues["videovolumeDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 	}
 
 	if(items["multiopacityDomains"] == null){ firstdefaultvalues["multiopacityDomains"] = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]}); }
