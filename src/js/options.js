@@ -2013,11 +2013,10 @@ function cameradomcontentloaded(){
 	}
 
 	huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
+	var index_value, count_data_big_array = 0, x, y;
 	function skinfilter(){
 		skin_filter = canvasgetcont.getImageData(0, 0, width, height);
-		var index_value, count_data_big_array = 0, y;
 		for(y = 0; y < height; y++){
-			var x;
 			for(x = 0; x < width; x++){
 				index_value = x + y * width;
 				r = draw.data[count_data_big_array];
