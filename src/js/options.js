@@ -920,15 +920,11 @@ function drawAtmos(){
 			}
 		}else if($("ambilightfixcolor").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-			var fixhex = $("ambilightcolorhex").value || "#000000";
+			var fixhex = $("ambilightcolorhex").value;
 			setatmosplayer(v, [countC, textcountB, textcountA], [fixhex, fixhex, fixhex, fixhex]);
 		}else if($("ambilight4color").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-			var fix1hex = $("ambilight1colorhex").value || "#FF0000";
-			var fix2hex = $("ambilight2colorhex").value || "#FFEE00";
-			var fix3hex = $("ambilight3colorhex").value || "#00FF00";
-			var fix4hex = $("ambilight4colorhex").value || "#0000FF";
-			setatmosplayer(v, [countC, textcountB, textcountA], [fix1hex, fix2hex, fix3hex, fix4hex]);
+			setatmosplayer(v, [countC, textcountB, textcountA], [$("ambilight1colorhex").value, $("ambilight2colorhex").value, $("ambilight3colorhex").value, $("ambilight4colorhex").value]);
 		}
 
 	}else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
