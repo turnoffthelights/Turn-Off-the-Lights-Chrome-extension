@@ -153,6 +153,8 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 
 	if(items["interval"] == null){ firstdefaultvalues["interval"] = 80; }
 
+	if(items["ambilightrangeblurradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 70; }
+	if(items["ambilightrangespreadradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 20; }
 
 	// find no localstore fadein
 	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
@@ -166,13 +168,6 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["mousespotlighta"] == null && items["mousespotlightc"] == null && items["mousespotlighto"] == null && items["mousespotlightt"] == null && items["mousespotlights"] == null){ firstdefaultvalues["mousespotlighto"] = true; firstdefaultvalues["mousespotlightc"] = false; firstdefaultvalues["mousespotlighta"] = false; firstdefaultvalues["mousespotlightt"] = false; firstdefaultvalues["mousespotlights"] = false; }
 	// find no localstore eye
 	if(items["eyea"] == null && items["eyen"] == null && items["eyealist"] == null){ firstdefaultvalues["eyen"] = true; firstdefaultvalues["eyea"] = false; firstdefaultvalues["eyealist"] = false; }
-
-	// find no default value
-	if(items["interval"]){ default_opacity = items["interval"]; }
-	// find and use default ambilight blur radius
-	if(items["ambilightrangeblurradius"]){ default_arangeblur = items["ambilightrangeblurradius"]; }
-	// find and use default ambilight spread radius
-	if(items["ambilightrangespreadradius"]){ default_arangespread = items["ambilightrangespreadradius"]; }
 
 	// find no localstore atmos
 	if(items["ambilightvarcolor"] == null && items["ambilightfixcolor"] == null && items["ambilight4color"] == null){ firstdefaultvalues["ambilightfixcolor"] = true; firstdefaultvalues["ambilightvarcolor"] = false; firstdefaultvalues["ambilight4color"] = false; }
@@ -454,7 +449,7 @@ function read_options(){
 		}
 	}
 
-	var settingsvaluearray = ["lightimage", "enterpassword", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "maxquality", "interval"];
+	var settingsvaluearray = ["lightimage", "enterpassword", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "maxquality", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius"];
 	function setvalueoptions(a){
 		for(var iset = 0; iset < settingsvaluearray.length; iset++){
 			if(a[settingsvaluearray[iset]]){ $(settingsvaluearray[iset]).value = a[settingsvaluearray[iset]]; }
@@ -468,9 +463,6 @@ function read_options(){
 		setcheckboxoptions(items);
 		setcoloroptions(items);
 		setvalueoptions(items);
-
-		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; $("arangeblur").setAttribute("aria-valuenow", 70); }
-		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
 
 		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
 		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
@@ -1135,12 +1127,20 @@ function previewyoutubeelement(a, b){
 
 // test general
 function test(){
-	var currenopacity = $("interval").value;
-	$("slider").value = currenopacity;
-	$("interval").setAttribute("aria-valuenow", currenopacity);
-	$("slider").setAttribute("aria-valuenow", currenopacity);
-	$("example1").style.opacity = (currenopacity / 100);
-	$("example2").style.opacity = (currenopacity / 100);
+	default_opacity = $("interval").value;
+	$("slider").value = default_opacity;
+	$("interval").setAttribute("aria-valuenow", default_opacity);
+	$("slider").setAttribute("aria-valuenow", default_opacity);
+	$("example1").style.opacity = (default_opacity / 100);
+	$("example2").style.opacity = (default_opacity / 100);
+
+	default_arangeblur = $("ambilightrangeblurradius").value;
+	$("arangeblur").value = default_arangeblur;
+	$("arangeblur").setAttribute("aria-valuenow", default_arangeblur);
+
+	default_arangespread = $("ambilightrangespreadradius").value;
+	$("arangespread").value = default_arangespread;
+	$("arangespread").setAttribute("aria-valuenow", default_arangespread);
 
 	if($("ambilight").checked == true){
 		drawAtmos();
