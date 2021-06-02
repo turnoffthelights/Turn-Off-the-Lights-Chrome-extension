@@ -96,7 +96,7 @@ function save_options(){
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "interval", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
+chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "interval", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "autostopDomains", "videotoolDomains", "videovolumeDomains", "multiopacityDomains", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
 	// find no localstore lightcolor
 	if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
 	// find no localstore ambilightcolorhex
@@ -155,6 +155,16 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 
 	if(items["ambilightrangeblurradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 70; }
 	if(items["ambilightrangespreadradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 20; }
+
+	if(items["autoplayDomains"] == null){ firstdefaultvalues["autoplayDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["atmosphereDomains"] == null){ firstdefaultvalues["atmosphereDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["nightDomains"] == null){ firstdefaultvalues["nightDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true}); }
+	if(items["cammotionDomains"] == null){ firstdefaultvalues["cammotionDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["speechDomains"] == null){ firstdefaultvalues["speechDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["autostopDomains"] == null){ firstdefaultvalues["autostopDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["videotoolDomains"] == null){ firstdefaultvalues["videotoolDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["videovolumeDomains"] == null){ firstdefaultvalues["videovolumeDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true}); }
+	if(items["multiopacityDomains"] == null){ firstdefaultvalues["multiopacityDomains"] = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]}); }
 
 	// find no localstore fadein
 	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
@@ -653,65 +663,38 @@ function read_options(){
 		$("wallpapershow").className = "hidden"; $("dynamicshow").className = "hidden";
 		// autoplay - Excluded domains - sort these alphabetically
 		var autoplayDomains = items["autoplayDomains"];
-		if(typeof autoplayDomains == "undefined" || autoplayDomains == null){
-			autoplayDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("autoplayDomainsBox", autoplayDomains);
 
 		// atmosphere - Excluded domains - sort these alphabetically
 		var atmosphereDomains = items["atmosphereDomains"];
-		if(typeof atmosphereDomains == "undefined" || atmosphereDomains == null){
-			atmosphereDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("atmosphereDomainsBox", atmosphereDomains);
 
 		// night - Excluded domains - sort these alphabetically
 		var nightDomains = items["nightDomains"];
-		if(typeof nightDomains == "undefined" || nightDomains == null){
-			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
-		}
 		setlistbox("nightDomainsBox", nightDomains);
 
 		// cammotion - Excluded domains - sort these alphabetically
 		var cammotionDomains = items["cammotionDomains"];
-		if(typeof cammotionDomains == "undefined" || cammotionDomains == null){
-			cammotionDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("cammotionDomainsBox", cammotionDomains);
 
 		// speech - Excluded domains - sort these alphabetically
 		var speechDomains = items["speechDomains"];
-		if(typeof speechDomains == "undefined" || speechDomains == null){
-			speechDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("speechDomainsBox", speechDomains);
 
 		// autostop - Excluded domains - sort these alphabetically
 		var autostopDomains = items["autostopDomains"];
-		if(typeof autostopDomains == "undefined" || autostopDomains == null){
-			autostopDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("autostopDomainsBox", autostopDomains);
 
 		// video tool bar - Excluded domains - sort these alphabetically
 		var videotoolDomains = items["videotoolDomains"];
-		if(typeof videotoolDomains == "undefined" || videotoolDomains == null){
-			videotoolDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("videotoolDomainsBox", videotoolDomains);
 
 		// video volume bar - Excluded domains - sort these alphabetically
 		var videovolumeDomains = items["videovolumeDomains"];
-		if(typeof videovolumeDomains == "undefined" || videovolumeDomains == null){
-			videovolumeDomains = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-		}
 		setlistbox("videovolumeDomainsBox", videovolumeDomains);
 
 		// multi opacity Excluded domains - sort these alphabetically
 		var multiopacityDomains = items["multiopacityDomains"];
-		if(typeof multiopacityDomains == "undefined" || multiopacityDomains == null){
-			multiopacityDomains = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]});
-		}
 		if(typeof multiopacityDomains == "string"){
 			multiopacityDomains = JSON.parse(multiopacityDomains);
 			let mpbbuf = [];
