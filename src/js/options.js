@@ -96,7 +96,7 @@ function save_options(){
 
 var firstdefaultvalues = {};
 // Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
+chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"], function(items){
 	// find no localstore lightcolor
 	if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
 	// find no localstore ambilightcolorhex
@@ -121,6 +121,8 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["titleinvertcolor"] == null){ firstdefaultvalues["titleinvertcolor"] = "#ffffff"; }
 
 	if(items["nightmodebutton"] == null){ firstdefaultvalues["nightmodebutton"] = "#353535"; }
+
+	if(items["lightimage"] == null){ firstdefaultvalues["lightimage"] = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
 
 	// find no localstore fadein
 	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
@@ -421,22 +423,29 @@ function read_options(){
 			if(a[settingscolorarray[iset]]){ $(settingscolorarray[iset]).value = a[settingscolorarray[iset]]; }
 		}
 	}
+
+	var settingsvaluearray = ["lightimage", "enterpassword"];
+	function setvalueoptions(a){
+		for(var iset = 0; iset < settingsvaluearray.length; iset++){
+			if(a[settingsvaluearray[iset]]){ $(settingsvaluearray[iset]).value = a[settingsvaluearray[iset]]; }
+		}
+	}
+
+	var a = settingscheckboxarray, b = settingscolorarray, c = settingsvaluearray;
+	var allsettings = a.concat(b, c);
 	//---
 	chrome.storage.sync.get(["firstDate", "interval", "lightcolor", "lightimage", "lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "begintime", "endtime", "addvideobutton", "likebar", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "password", "enterpassword", "noflash", "hardflash", "ecosaver", "ecosavertime", "dynamic", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "autoplayonly", "blur", "maxquality", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "spotlightradius", "atmosphereonly", "optionskipremember", "nighttheme", "nightonly", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "motion", "lightimagelin", "linearsq", "colora", "intervallina", "colorb", "intervallinb", "speech", "speechlang", "speechcountry", "atmosvivid", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotiononly", "speechonly", "cammotionDomains", "speechDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "reviewedlastonversion", "applastonversion", "autostop", "autostoponly", "autostopchecklistwhite", "autostopchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "autostopDomains", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "nmbegintime", "nmendtime", "lampandnightmode", "eyechecklistblack", "eyechecklistwhite", "nightmodebck", "nightmodetxt", "mobilelastonversion", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "videotoolDomains", "nightmodehyperlink", "block60fps", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "icon", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "titleinvertcolor", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacityDomains", "multiopacall", "multiopacsel", "firstsawrate", "videovolumealt", "nightmodebydomain", "nightmodebypage", "introduce", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumeDomains", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "nightmodebutton", "firstsawyoutube", "gamepad"], function(items){
 		setcheckboxoptions(items);
 		setcoloroptions(items);
+		setvalueoptions(items);
 
 		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow", items["interval"]); $("slider").setAttribute("aria-valuenow", items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }else{ $("interval").value = 80; }
-
-		if(items["lightimage"]){ $("lightimage").value = items["lightimage"]; }else{ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
 
 		if(items["begintime"]){ $("begintime").value = items["begintime"]; }else{ $("begintime").value = "21:00"; }
 		if(items["endtime"]){ $("endtime").value = items["endtime"]; }else{ $("endtime").value = "23:45"; }
 
 		if(items["ambilightrangeblurradius"]){ $("ambilightrangeblurradius").value = items["ambilightrangeblurradius"]; $("arangeblur").value = items["ambilightrangeblurradius"]; $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); $("arangeblur").setAttribute("aria-valuenow", items["ambilightrangeblurradius"]); }else{ $("ambilightrangeblurradius").value = 70; }
 		if(items["ambilightrangespreadradius"]){ $("ambilightrangespreadradius").value = items["ambilightrangespreadradius"]; $("arangespread").value = items["ambilightrangespreadradius"]; $("ambilightrangespreadradius").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); $("arangespread").setAttribute("aria-valuenow", items["ambilightrangespreadradius"]); }else{ $("ambilightrangespreadradius").value = 20; }
-
-		if(items["enterpassword"]){ $("enterpassword").value = items["enterpassword"]; }
 
 		if(items["ecosavertime"]){ $("ecosavertime").value = items["ecosavertime"]; }else{ $("ecosavertime").value = "60"; }
 
@@ -539,8 +548,7 @@ function read_options(){
 
 		// load tab div
 		var tabListItems = $("navbar").childNodes;
-		var i;
-		var l = tabListItems.length;
+		var i, l = tabListItems.length;
 		for(i = 0; i < l; i++){
 			if(tabListItems[i].nodeName == "LI"){
 				var tabLink = getFirstChildWithTagName(tabListItems[i], "A");
@@ -580,13 +588,11 @@ function read_options(){
 
 		if(typeof excludedDomains == "string"){
 			excludedDomains = JSON.parse(excludedDomains);
-			let buf = [];
-			let domain;
+			let buf = [], domain;
 			for(domain in excludedDomains)
 				buf.push(domain);
 			buf.sort();
-			let i;
-			let l = buf.length;
+			let i, l = buf.length;
 			for(i = 0; i < l; i++)
 				appendToListBox("excludedDomainsBox", buf[i]);
 		}
