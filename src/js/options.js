@@ -45,6 +45,21 @@ function getalldomains(a){
 	return JSON.stringify(atmosphereDomains);
 }
 
+function setdynimages(a){
+	let n = 0;
+	if(a == 1){
+		while(n < 10){
+			n++;
+			$("bckdyn" + n + "").setAttribute("src", "images/totldyn" + n + ".webp"); $("bckdyn" + n + "").setAttribute("srcset", "images/totldyn" + n + "@2x.webp");
+		}
+	}else{
+		while(n < 10){
+			n++;
+			$("bckdyn" + n + "").setAttribute("src", ""); $("bckdyn" + n + "").setAttribute("srcset", "");
+		}
+	}
+}
+
 var default_opacity = 80;
 var default_arangeblur = 70;
 var default_arangespread = 20;
@@ -2700,29 +2715,11 @@ function domcontentloaded(){
 	// Check dynamic
 	$("dynamichide").addEventListener("click", function(){
 		$("dynamicgallery").classList.remove("hidden"); $("dynamicshow").classList.remove("hidden"); $("dynamichide").className = "hidden";
-		$("bckdyn1").setAttribute("src", "images/totldyn1.webp"); $("bckdyn1").setAttribute("srcset", "images/totldyn1@2x.webp");
-		$("bckdyn2").setAttribute("src", "images/totldyn2.webp"); $("bckdyn2").setAttribute("srcset", "images/totldyn2@2x.webp");
-		$("bckdyn3").setAttribute("src", "images/totldyn3.webp"); $("bckdyn3").setAttribute("srcset", "images/totldyn3@2x.webp");
-		$("bckdyn4").setAttribute("src", "images/totldyn4.webp"); $("bckdyn4").setAttribute("srcset", "images/totldyn4@2x.webp");
-		$("bckdyn5").setAttribute("src", "images/totldyn5.webp"); $("bckdyn5").setAttribute("srcset", "images/totldyn5@2x.webp");
-		$("bckdyn6").setAttribute("src", "images/totldyn6.webp"); $("bckdyn6").setAttribute("srcset", "images/totldyn6@2x.webp");
-		$("bckdyn7").setAttribute("src", "images/totldyn7.webp"); $("bckdyn7").setAttribute("srcset", "images/totldyn7@2x.webp");
-		$("bckdyn8").setAttribute("src", "images/totldyn8.webp"); $("bckdyn8").setAttribute("srcset", "images/totldyn8@2x.webp");
-		$("bckdyn9").setAttribute("src", "images/totldyn9.webp"); $("bckdyn9").setAttribute("srcset", "images/totldyn9@2x.webp");
-		$("bckdyn10").setAttribute("src", "images/totldyn10.webp"); $("bckdyn10").setAttribute("srcset", "images/totldyn10@2x.webp");
+		setdynimages(1);
 	});
 	$("dynamicshow").addEventListener("click", function(){
 		$("dynamicgallery").className = "hidden"; $("dynamicshow").className = "hidden"; $("dynamichide").classList.remove("hidden");
-		$("bckdyn1").setAttribute("src", ""); $("bckdyn1").setAttribute("srcset", "");
-		$("bckdyn2").setAttribute("src", ""); $("bckdyn2").setAttribute("srcset", "");
-		$("bckdyn3").setAttribute("src", ""); $("bckdyn3").setAttribute("srcset", "");
-		$("bckdyn4").setAttribute("src", ""); $("bckdyn4").setAttribute("srcset", "");
-		$("bckdyn5").setAttribute("src", ""); $("bckdyn5").setAttribute("srcset", "");
-		$("bckdyn6").setAttribute("src", ""); $("bckdyn6").setAttribute("srcset", "");
-		$("bckdyn7").setAttribute("src", ""); $("bckdyn7").setAttribute("srcset", "");
-		$("bckdyn8").setAttribute("src", ""); $("bckdyn8").setAttribute("srcset", "");
-		$("bckdyn9").setAttribute("src", ""); $("bckdyn9").setAttribute("srcset", "");
-		$("bckdyn10").setAttribute("src", ""); $("bckdyn10").setAttribute("srcset", "");
+		setdynimages(0);
 	});
 	$("totldynpaper10").addEventListener("click", function(){ $("dynamic10").checked = true; dynamictest(); save_options(); });
 	$("totldynpaper9").addEventListener("click", function(){ $("dynamic9").checked = true; dynamictest(); save_options(); });
