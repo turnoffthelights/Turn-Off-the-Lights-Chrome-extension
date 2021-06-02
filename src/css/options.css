@@ -290,6 +290,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 /* Black div */
 #example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99;background-size:cover}
 #example2{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:480px;opacity:1;position:absolute;background-color:#000;z-index:99}
+/* Blur */
+#stefanvdblurimage{pointer-events:none;width:100%;height:380px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}
 /* Dynamic */
 #stefanvddynamicbackground{pointer-events:none;width:100%;height:380px;position:absolute;z-index:99;overflow:hidden}
 /* Dynamic Background Bubbles */
@@ -1159,7 +1161,7 @@ only screen and (max-device-width:480px){
   .videopreview{width:100%;padding-right:0}
   .videopreview iframe{width:100%;height:auto}
   .youtubesuggpanel{display:none}
-  #videochannel,#samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
+  #samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
   #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
   #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:80px;float:left}
   #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:155px;margin-right:0px}

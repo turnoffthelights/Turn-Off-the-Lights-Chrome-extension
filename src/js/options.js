@@ -1113,6 +1113,14 @@ function previewyoutubeelement(a, b){
 	if($(a).checked == true){ $(b).style.zIndex = 100; $(b).style.position = "relative"; }else{ $(b).style.zIndex = 1; $(b).style.position = "relative"; }
 }
 
+function previewyoutubecolor(a, b){
+	if($(a).checked == true){
+		$(b).style.color = "white";
+	}else{
+		$(b).style.color = "black";
+	}
+}
+
 // test general
 function test(){
 	default_opacity = $("interval").value;
@@ -1138,21 +1146,17 @@ function test(){
 	if($("ambilightvarcolor").checked == true){ $("showwarningambilight").style.display = ""; }else{ $("showwarningambilight").style.display = "none"; }
 
 	// YouTube preview sample
-	if($("head").checked == true){ $("samplechannel").style.zIndex = 100; $("samplechannel").style.position = "relative"; $("videochannel").style.zIndex = 100; $("videochannel").style.position = "relative"; }else{ $("samplechannel").style.zIndex = 1; $("samplechannel").style.position = "relative"; $("videochannel").style.zIndex = 1; $("videochannel").style.position = "relative"; }
-
-	// not visible in the preview
-	if($("playlist").checked == true){ /* nothing*/ }else{ /* nothing*/ }
-
+	previewyoutubeelement("head", "samplechannel");
 	previewyoutubeelement("infobar", "sampleinforbar");
 	previewyoutubeelement("likebutton", "sampledislikebutton");
 	previewyoutubeelement("sharebutton", "samplesharebutton");
 	previewyoutubeelement("suggestions", "samplesug");
 
 	previewyoutubeelement("videoheadline", "sampletitle");
-	if($("videoheadline").checked == true){ $("sampletitle").style.color = "#FFFFFF"; }else{ $("sampletitle").style.color = "#000000"; }
+	previewyoutubecolor("videoheadline", "sampletitle");
 
 	previewyoutubeelement("viewcount", "sampleview");
-	if($("viewcount").checked == true){ $("sampleview").style.color = "white"; }else{ $("sampleview").style.color = "black"; }
+	previewyoutubecolor("viewcount", "sampleview");
 
 	previewyoutubeelement("addvideobutton", "sampleaddbutton");
 	previewyoutubeelement("likebar", "samplelikebar");
@@ -1198,6 +1202,12 @@ function test(){
 		$("example2").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
 		$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true;
 		if($("mousespotlighta").checked == true || $("mousespotlightc").checked == true){ $("mousespotlighto").checked = true; }
+	}
+
+	if($("blur").checked == true){
+		$("stefanvdblurimage").style.display = "";
+	}else{
+		$("stefanvdblurimage").style.display = "none";
 	}
 
 	if($("eyen").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = "none"; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplay").disabled = false; $("autoplaydelay").disabled = false; $("autoplaydelaytime").disabled = false; $("addbutton").disabled = true; $("removebutton").disabled = true; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = "none"; $("eyechecklistwhite").disabled = true; $("eyechecklistblack").disabled = true; }else if($("eyea").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = ""; $("excludedDomainsBox").disabled = true; $("websiteurl").disabled = true; $("autoplay").checked = false; $("autoplaydelay").disabled = true; $("autoplaydelaytime").disabled = true; $("addbutton").disabled = true; $("removebutton").disabled = true; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = ""; $("eyechecklistwhite").disabled = true; $("eyechecklistblack").disabled = true; }else if($("eyealist").checked == true){ $("ecosaver").disabled = false; $("ecosavertime").disabled = false; $("helpeyeprotection").style.display = ""; $("excludedDomainsBox").disabled = false; $("websiteurl").disabled = false; $("autoplay").checked = false; $("autoplaydelay").disabled = true; $("autoplaydelaytime").disabled = true; $("addbutton").disabled = false; $("removebutton").disabled = false; $("nighttime").disabled = false; $("begintime").disabled = false; $("endtime").disabled = false; $("helpautoplay").style.display = ""; $("eyechecklistwhite").disabled = false; $("eyechecklistblack").disabled = false; }
