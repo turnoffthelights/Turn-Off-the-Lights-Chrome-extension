@@ -408,7 +408,7 @@ function read_options(){
 		showhidemodal("materialModalYouTube", "hide", "true");
 	}
 
-	var settingscheckboxarray = ["lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "addvideobutton", "likebar", "ambilight", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilight4color", "password", "noflash", "hardflash", "ecosaver", "hoveroptiondyn5", "blur", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "optionskipremember", "nighttheme", "nightenabletheme", "autoplaydelay", "motion", "lightimagelin", "speech", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "autostop", "autostopchecklistwhite", "autostopchecklistblack", "nighthover", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "block60fps", "videovolume", "videovolumelabel", "hovervideo", "mousespotlights", "aplay", "apause", "astop", "videozoom", "playrate", "speedtoolbar", "atmosontotlmode", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacall", "multiopacsel", "videovolumealt", "nightmodebydomain", "nightmodebypage", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gamepad", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10"];
+	var settingscheckboxarray = ["lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "addvideobutton", "likebar", "ambilight", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilight4color", "password", "noflash", "hardflash", "ecosaver", "hoveroptiondyn5", "blur", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "optionskipremember", "nighttheme", "nightenabletheme", "autoplaydelay", "motion", "lightimagelin", "speech", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "autostop", "autostopchecklistwhite", "autostopchecklistblack", "nighthover", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "block60fps", "videovolume", "videovolumelabel", "hovervideo", "mousespotlights", "aplay", "apause", "astop", "videozoom", "playrate", "speedtoolbar", "atmosontotlmode", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacall", "multiopacsel", "videovolumealt", "nightmodebydomain", "nightmodebypage", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gamepad", "dynamic", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "autoplayonly", "atmosphereonly", "nightonly", "cammotiononly", "speechonly", "lampandnightmode"];
 	function setcheckboxoptions(a){
 		for(var iset = 0; iset < settingscheckboxarray.length; iset++){
 			if(a[settingscheckboxarray[iset]] == true){ $(settingscheckboxarray[iset]).checked = true; }
@@ -428,7 +428,6 @@ function read_options(){
 
 		if(items["interval"]){ $("interval").value = items["interval"]; $("slider").value = items["interval"]; $("interval").setAttribute("aria-valuenow", items["interval"]); $("slider").setAttribute("aria-valuenow", items["interval"]); $("example1").style.opacity = (items["interval"] / 100); $("example2").style.opacity = (items["interval"] / 100); }else{ $("interval").value = 80; }
 
-
 		if(items["lightimage"]){ $("lightimage").value = items["lightimage"]; }else{ $("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
 
 		if(items["begintime"]){ $("begintime").value = items["begintime"]; }else{ $("begintime").value = "21:00"; }
@@ -440,16 +439,10 @@ function read_options(){
 		if(items["enterpassword"]){ $("enterpassword").value = items["enterpassword"]; }
 
 		if(items["ecosavertime"]){ $("ecosavertime").value = items["ecosavertime"]; }else{ $("ecosavertime").value = "60"; }
-		if(items["dynamic"] == true){ $("dynamic").checked = true; }else{ $("lightdynamic").disabled = true; }
-
-		if(items["autoplayonly"] == true){ $("autoplayonly").checked = true; }else{ $("autoplayonly").checked = false; }
 
 		if(items["maxquality"]){ $("youtubequality").value = items["maxquality"]; }
 
 		if(items["spotlightradius"]){ $("spotlightradius").value = items["spotlightradius"]; }else{ $("spotlightradius").value = 50; }
-		if(items["atmosphereonly"] == true){ $("atmosphereonly").checked = true; }else{ $("atmosphereonly").checked = false; }
-
-		if(items["nightonly"] == true){ $("nightonly").checked = true; }else{ $("nightonly").checked = false; }
 
 		if(items["autoplaydelaytime"]){ $("autoplaydelaytime").value = items["autoplaydelaytime"]; }else{ $("autoplaydelaytime").value = 3; }
 
@@ -460,16 +453,12 @@ function read_options(){
 		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
 		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
 
-		if(items["cammotiononly"] == true){ $("cammotiononly").checked = true; }else{ $("cammotiononly").checked = false; }
-		if(items["speechonly"] == true){ $("speechonly").checked = true; }else{ $("speechonly").checked = false; }
-
 		if(items["applastonversion"] == chrome.runtime.getManifest().version){ $("sectionauroraplayerappbox").style.display = "none"; }
 
 		if(items["autostoponly"] == true){ $("autostoponly").checked = true; }else{ $("autostoponly").checked = false; }
 
 		if(items["nmbegintime"]){ $("nmbegintime").value = items["nmbegintime"]; }else{ $("nmbegintime").value = "21:00"; }
 		if(items["nmendtime"]){ $("nmendtime").value = items["nmendtime"]; }else{ $("nmendtime").value = "23:45"; }
-		if(items["lampandnightmode"] == true){ $("lampandnightmode").checked = true; }else{ $("lampandnightmode").checked = false; }
 
 		if(items["mobilelastonversion"] == chrome.runtime.getManifest().version){ $("sectionmobileappbox").style.display = "none"; }
 
@@ -1791,8 +1780,10 @@ function onResize(){
 
 function dynamictest(){
 	if($("dynamic").checked == true){
+		$("lightdynamic").disabled = false;
 		if($("dynamic5").checked == true){ $("hoveroptiondyn5").disabled = false; }else{ $("hoveroptiondyn5").disabled = true; }
 	}else{
+		$("lightdynamic").disabled = true;
 		$("hoveroptiondyn5").disabled = true;
 	}
 
