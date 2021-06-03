@@ -29,9 +29,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
 // eye protection & autoplay & shortcut
-	if(request.name == "automatic"){
+	switch(request.name){
+	case"automatic":
 		chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});
-	}else if(request.name == "screenshot"){
+		break;
+	case"screenshot":
 		var checkcapturewebsite = totlscreenshotpage;
 		chrome.tabs.create({url: checkcapturewebsite}, function(tab){
 			var currenttabid = tab.id;
@@ -41,13 +43,23 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 				}
 			});
 		});
-	}else if(request.name == "contextmenuon"){ checkcontextmenus(); }else if(request.name == "contextmenuoff"){ removecontexmenus(); }else if(request.name == "sendautoplay"){
+		break;
+	case"contextmenuon":
+		checkcontextmenus();
+		break;
+	case"contextmenuoff":
+		removecontexmenus();
+		break;
+	case"sendautoplay":
 		restcontent("/js/video-player-status.js", "injectvideostatus", sender.tab.id);
-	}else if(request.name == "sendfps"){
+		break;
+	case"sendfps":
 		restcontent("/js/fpsinject.js", "injectfps", sender.tab.id);
-	}else if(request.name == "sendlightcss"){
+		break;
+	case"sendlightcss":
 		restcontent("/css/light.css", "injectlightcss", sender.tab.id);
-	}else if(request.name == "emergencyalf"){
+		break;
+	case"emergencyalf":
 		chrome.tabs.query({}, function(tabs){
 			var i;
 			var l = tabs.length;
@@ -56,21 +68,26 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			}
 		}
 		);
-	}else if(request.name == "eyesavemeOFF"){
+		break;
+	case"eyesavemeOFF":
 		if(request.value == true){ chrome.storage.sync.set({"eyea": true}); chrome.storage.sync.set({"eyen": false}); }else{ chrome.storage.sync.set({"eyea": false}); chrome.storage.sync.set({"eyen": true}); }
 		chromerefreshalltabs("gorefresheyelight");
-	}else if(request.name == "eyesavemeON"){
+		break;
+	case"eyesavemeON":
 		if(request.value == true){ chrome.storage.sync.set({"eyea": true}); chrome.storage.sync.set({"eyen": false}); }else{ chrome.storage.sync.set({"eyea": false}); chrome.storage.sync.set({"eyen": true}); }
 		chromerefreshalltabs("gorefresheyedark");
-	}else if(request.name == "nmcustomvalues"){
+		break;
+	case"nmcustomvalues":
 		if(request.valuex && request.valuey){ chrome.storage.sync.set({"nmcustomx": request.valuex, "nmcustomy": request.valuey}); }
-	}else if(request.name == "mastertabdark"){
+		break;
+	case"mastertabdark":
 		if(request.value == true){
 			chromerefreshalltabs("goremovelightoff");
 		}else{
 			chromerefreshalltabs("goaddlightoff");
 		}
-	}else if(request.name == "browsertheme"){
+		break;
+	case"browsertheme":
 		if(request.value == "dark"){
 			if(typeof browser !== "undefined"){
 				var qtest = browser.theme.update;
@@ -121,24 +138,31 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 				});
 			});
 		}
-	}else if(request.name == "badgeon"){ checkbadge(); }else if(request.name == "sendnightmodeindark"){
+		break;
+	case"badgeon":
+		checkbadge();
+		break;
+	case"sendnightmodeindark":
 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
-	}else if(request.name == "getallpermissions"){
+		break;
+	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
 			result = permissions.permissions;
 			chrome.tabs.sendMessage(sender.tab.id, {text: "receiveallpermissions", value: result});
 		});
-	}else if(request.name == "pipvideo"){
+		break;
+	case"pipvideo":
 		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
 			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvideo"});
 		});
-	}else if(request.name == "pipvisual"){
+		break;
+	case"pipvisual":
 		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
 			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvisual"});
 		});
+		break;
 	}
-	return true;
 });
 
 function restcontent(path, name, sendertab){
