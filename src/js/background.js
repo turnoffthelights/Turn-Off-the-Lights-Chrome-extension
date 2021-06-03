@@ -433,7 +433,9 @@ chrome.storage.onChanged.addListener(function(changes){
 		if(changes["autoplay"] || changes["mousespotlights"] || changes["autoplayDomains"] || changes["autoplaychecklistwhite"] || changes["autoplaychecklistblack"] || changes["autoplayonly"] || changes["aplay"] || changes["apause"] || changes["astop"] || changes["autoplaydelay"] || changes["autoplaydelaytime"]){
 			chromerefreshalltabs("gorefreshautoplay");
 		}
-		if(changes["videotool"] || changes["videotoolonly"] || changes["videotoolDomains"] || changes["videotoolchecklistwhite"] || changes["videotoolchecklistblack"] || changes["speedtoolbar"] || changes["videozoom"] || changes["visopacity"] || changes["videotoolcolor"]){
+
+		var changenamevideotoolbar = ["videotool", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "speedtoolbar", "videozoom", "visopacity", "videotoolcolor"];
+		if(changenamevideotoolbar.includes(key)){
 			chromerefreshalltabs("gorefreshvideotoolbar");
 		}
 
@@ -442,9 +444,11 @@ chrome.storage.onChanged.addListener(function(changes){
 			chromerefreshalltabs("gorefreshmousescroll");
 		}
 
-		if(changes["ambilight"] || changes["ambilightfixcolor"] || changes["ambilight4color"] || changes["ambilightvarcolor"] || changes["atmosvivid"] || changes["vpause"] || changes["atmosfpsauto"] || changes["atmosfpsmanual"] || changes["drawatmosfps"] || changes["ambilightcolorhex"] || changes["ambilight1colorhex"] || changes["ambilight2colorhex"] || changes["ambilight3colorhex"] || changes["ambilight4colorhex"] || changes["ambilightrangeblurradius"] || changes["ambilightrangespreadradius"] || changes["atmosontotlmode"] || changes["atmosphereonly"] || changes["atmosphereDomains"]){
+		var changenameatmos = ["ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "vpause", "atmosfpsauto", "atmosfpsmanual", "drawatmosfps", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ambilightrangeblurradius", "ambilightrangespreadradius", "atmosontotlmode", "atmosphereonly", "atmosphereDomains"];
+		if(changenameatmos.includes(key)){
 			chromerefreshalltabs("goenableatmos");
 		}
+
 		if(changes["reflection"] || changes["reflectionamount"]){
 			chromerefreshalltabs("gorefreshreflection");
 		}
