@@ -3893,10 +3893,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			this.dragapproved = 0;
 			// save the x and y value
 			if(nmcustom == true){
-				var getnmcx = $("stefanvdnighttheme").style.left;
-				var getnmcy = $("stefanvdnighttheme").style.bottom;
-				chrome.runtime.sendMessage({"name" : "nmcustomx", "value" : getnmcx});
-				chrome.runtime.sendMessage({"name" : "nmcustomy", "value" : getnmcy});
+				chrome.runtime.sendMessage({"name" : "nmcustomvalues", "valuex" : $("stefanvdnighttheme").style.left, "valuey" : $("stefanvdnighttheme").style.bottom});
 			}
 		},
 		drag:function(e){
