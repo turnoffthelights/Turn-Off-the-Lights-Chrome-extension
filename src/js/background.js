@@ -61,8 +61,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		break;
 	case"emergencyalf":
 		chrome.tabs.query({}, function(tabs){
-			var i;
-			var l = tabs.length;
+			var i, l = tabs.length;
 			for(i = 0; i < l; i++){
 				chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
 			}
@@ -130,8 +129,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			chrome.storage.sync.get(["icon"], function(items){
 				if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
 				chrome.tabs.query({}, function(tabs){
-					var i;
-					var l = tabs.length;
+					var i, l = tabs.length;
 					for(i = 0; i < l; i++){
 						chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": items["icon"], "38": items["icon"]}});
 					}
@@ -578,15 +576,9 @@ if(typeof chrome.omnibox !== "undefined"){
 		function(text){
 			var onmniresult = text.toLowerCase();
 			if(onmniresult == i18nomninightmode){
-				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-					var tab = tabs[0];
-					chrome.tabs.sendMessage(tab.id, {action: "goinnightmode", value:"night"});
-				});
+				omnidaynightmode(1);
 			}else if(onmniresult == i18nomnidaymode){
-				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-					var tab = tabs[0];
-					chrome.tabs.sendMessage(tab.id, {action: "goinnightmode", value:"day"});
-				});
+				omnidaynightmode(0);
 			}else if(onmniresult == i18nomnilightoff || text == i18nomnilighton){
 				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
 					var tab = tabs[0];
@@ -599,6 +591,15 @@ if(typeof chrome.omnibox !== "undefined"){
 				});
 			}
 		});
+}
+
+function omnidaynightmode(a){
+	var result = "";
+	if(a == 0){ result = "day"; }else{ result = "night"; }
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+		var tab = tabs[0];
+		chrome.tabs.sendMessage(tab.id, {action: "goinnightmode", value:result});
+	});
 }
 
 // date today
