@@ -430,7 +430,9 @@ chrome.storage.onChanged.addListener(function(changes){
 		if(changes["badge"]){
 			if(changes["badge"].newValue == true){ checkbadge(); }else{ checkbadge(); }
 		}
-		if(changes["autoplay"] || changes["mousespotlights"] || changes["autoplayDomains"] || changes["autoplaychecklistwhite"] || changes["autoplaychecklistblack"] || changes["autoplayonly"] || changes["aplay"] || changes["apause"] || changes["astop"] || changes["autoplaydelay"] || changes["autoplaydelaytime"]){
+
+		var changenameautoplay = ["autoplay", "mousespotlights", "autoplayDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "autoplayonly", "aplay", "apause", "astop", "autoplaydelay", "autoplaydelaytime"];
+		if(changenameautoplay.includes(key)){
 			chromerefreshalltabs("gorefreshautoplay");
 		}
 
