@@ -395,10 +395,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	chrome.storage.sync.get("analytics", function(items){
 		if(items["analytics"]){
 			analytics = items["analytics"];
-			var resultObject = search(today, analytics);
-			if($("analclicktoday")){
-				$("analclicktoday").innerText = JSON.stringify(resultObject);
-			}
+			$("analclicktoday").innerText = JSON.stringify(search(today, analytics));
 
 			var timeeverything = analytics.map(function(a){
 				return a.details.time; // in minutes
