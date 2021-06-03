@@ -271,14 +271,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					shorcutcurrentopacity -= 0.01;
 					// if zero
 					if(shorcutcurrentopacity <= 0){
-						var stefanvdlightareoff1 = $("stefanvdlightareoff1");
-						var stefanvdlightareoff2 = $("stefanvdlightareoff2");
-						var stefanvdlightareoff3 = $("stefanvdlightareoff3");
-						var stefanvdlightareoff4 = $("stefanvdlightareoff4");
-						if(stefanvdlightareoff1){ document.body.removeChild(stefanvdlightareoff1); }
-						if(stefanvdlightareoff2){ document.body.removeChild(stefanvdlightareoff2); }
-						if(stefanvdlightareoff3){ document.body.removeChild(stefanvdlightareoff3); }
-						if(stefanvdlightareoff4){ document.body.removeChild(stefanvdlightareoff4); }
+						var sli;
+						for(sli = 1; sli < 5; sli++){
+							var lightelement = document.getElementById("stefanvdlightareoff" + sli);
+							if(lightelement){ lightelement.parentNode.removeChild(lightelement); }
+						}
 					}else{
 						// control opacity for all <div>
 						let div = document.querySelectorAll("div.stefanvdlightareoff");
