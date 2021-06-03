@@ -2393,6 +2393,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var textcountC;
 	var p1; var p2; var p3; var p4;
 	var hex1; var hex2; var hex3; var hex4;
+
+	function setatmosplayer(v, a, b){
+		v.style.boxShadow = "0px 0px 0px black , 0px -" + a[0] + " " + a[1] + " " + a[2] + " " + b[0] + ", 0px " + a[0] + " " + a[1] + " " + a[2] + " " + b[1] + ", " + a[0] + " 0px " + a[1] + " " + a[2] + " " + b[2] + ", -" + a[0] + " 0px " + a[1] + " " + a[2] + " " + b[3] + "";
+	}
+
 	// ambilight draw code
 	function drawAtmos(playerid, item, totlmode){
 		var statusdetectvideo;
@@ -2453,16 +2458,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}else{
 							if(typeof downhex1 != "undefined" || typeof downhex2 != "undefined" || typeof downhex3 != "undefined" || typeof downhex4 != "undefined"){
 								try{
-									youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + downhex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
+									setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
 								}catch(e){ console.error(e); }
 							}else{
-								youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
+								setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [ambilightcolorhex, ambilightcolorhex, ambilightcolorhex, ambilightcolorhex]);
 							}
 						}
 					}else if(ambilightfixcolor == true){
-						youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
+						setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [ambilightcolorhex, ambilightcolorhex, ambilightcolorhex, ambilightcolorhex]);
 					}else if(ambilight4color == true){
-						youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + "";
+						setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [ambilight1colorhex, ambilight2colorhex, ambilight3colorhex, ambilight4colorhex]);
 					}
 				}
 			}else{
@@ -2473,12 +2478,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 							stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
 						}
 					}else{
-						playerid.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + downhex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + downhex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + downhex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + downhex4 + "";
+						setatmosplayer(playerid, [textcountC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
 					}
 				}else if(ambilightfixcolor == true){
-					playerid.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
+					setatmosplayer(playerid, [textcountC, textcountB, textcountA], [ambilightcolorhex, ambilightcolorhex, ambilightcolorhex, ambilightcolorhex]);
 				}else if(ambilight4color == true){
-					playerid.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + "";
+					setatmosplayer(playerid, [textcountC, textcountB, textcountA], [ambilight1colorhex, ambilight2colorhex, ambilight3colorhex, ambilight4colorhex]);
 				}
 			}
 

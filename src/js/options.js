@@ -744,11 +744,12 @@ function rgbToHex(r, g, b){
 
 var textcountA;
 var textcountB;
+var textcountC;
 var p1; var p2; var p3; var p4;
 var hex1; var hex2; var hex3; var hex4;
 
 function setatmosplayer(v, a, b){
-	v.style.boxShadow = "0px 0px 0px black , 0px -" + a[0] + "px " + a[1] + " " + a[2] + " " + b[0] + ", 0px " + a[0] + "px " + a[1] + " " + a[2] + " " + b[1] + ", " + a[0] + "px 0px " + a[1] + " " + a[2] + " " + b[2] + ", -" + a[0] + "px 0px " + a[1] + " " + a[2] + " " + b[3] + "";
+	v.style.boxShadow = "0px 0px 0px black , 0px -" + a[0] + " " + a[1] + " " + a[2] + " " + b[0] + ", 0px " + a[0] + " " + a[1] + " " + a[2] + " " + b[1] + ", " + a[0] + " 0px " + a[1] + " " + a[2] + " " + b[2] + ", -" + a[0] + " 0px " + a[1] + " " + a[2] + " " + b[3] + "";
 }
 
 // ambilight draw code
@@ -761,6 +762,7 @@ function drawAtmos(){
 		countC = countC - 1; if(countC <= 0){ countC = 0; }
 		textcountA = countA + "px";
 		textcountB = countB + "px";
+		textcountC = countC + "px";
 
 		var canvas = $("totlCanvas1");
 		if(canvas){
@@ -789,12 +791,12 @@ function drawAtmos(){
 					$("stefanvdvivideffect1").style.display = "none";
 				}
 			}else{
-				setatmosplayer(v, [countC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
+				setatmosplayer(v, [textcountC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
 			}
 		}else if($("ambilightfixcolor").checked == true){
-			setatmosplayer(v, [countC, textcountB, textcountA], [$("ambilightcolorhex").value, $("ambilightcolorhex").value, $("ambilightcolorhex").value, $("ambilightcolorhex").value]);
+			setatmosplayer(v, [textcountC, textcountB, textcountA], [$("ambilightcolorhex").value, $("ambilightcolorhex").value, $("ambilightcolorhex").value, $("ambilightcolorhex").value]);
 		}else if($("ambilight4color").checked == true){
-			setatmosplayer(v, [countC, textcountB, textcountA], [$("ambilight1colorhex").value, $("ambilight2colorhex").value, $("ambilight3colorhex").value, $("ambilight4colorhex").value]);
+			setatmosplayer(v, [textcountC, textcountB, textcountA], [$("ambilight1colorhex").value, $("ambilight2colorhex").value, $("ambilight3colorhex").value, $("ambilight4colorhex").value]);
 		}
 		// ----
 
@@ -809,6 +811,7 @@ function drawAtmos(){
 		if(countC < 20){ countC = countC + .5; }
 		textcountA = countA + "px";
 		textcountB = countB + "px";
+		textcountC = countC + "px";
 
 		if($("ambilightvarcolor").checked == true){
 			var sourceWidth = showtime.videoWidth;
@@ -876,15 +879,15 @@ function drawAtmos(){
 				}
 			}else{
 				if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-				setatmosplayer(v, [countC, textcountB, textcountA], [hex1, hex2, hex3, hex4]);
+				setatmosplayer(v, [textcountC, textcountB, textcountA], [hex1, hex2, hex3, hex4]);
 			}
 		}else if($("ambilightfixcolor").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
 			var fixhex = $("ambilightcolorhex").value;
-			setatmosplayer(v, [countC, textcountB, textcountA], [fixhex, fixhex, fixhex, fixhex]);
+			setatmosplayer(v, [textcountC, textcountB, textcountA], [fixhex, fixhex, fixhex, fixhex]);
 		}else if($("ambilight4color").checked == true){
 			if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; }
-			setatmosplayer(v, [countC, textcountB, textcountA], [$("ambilight1colorhex").value, $("ambilight2colorhex").value, $("ambilight3colorhex").value, $("ambilight4colorhex").value]);
+			setatmosplayer(v, [textcountC, textcountB, textcountA], [$("ambilight1colorhex").value, $("ambilight2colorhex").value, $("ambilight3colorhex").value, $("ambilight4colorhex").value]);
 		}
 
 	}else{ v.style.boxShadow = ""; if($("stefanvdvivideffect1")){ $("stefanvdvivideffect1").style.display = "none"; } }
