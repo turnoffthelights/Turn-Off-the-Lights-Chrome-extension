@@ -111,12 +111,19 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 
 				// if padding-top used
 				// if padding-bottom used
-				if((parseInt(dta, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(dta, 10) == parseInt(hta, 10) && (parseInt(dta, 10) > 0)) ||
-		(parseInt(dba, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(dba, 10) == parseInt(hta, 10) && (parseInt(dba, 10) > 0)) ||
-		(parseInt(beforedta, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(beforedta, 10) == parseInt(hta, 10) && (parseInt(beforedta, 10) > 0)) ||
-		(parseInt(beforedba, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(beforedba, 10) == parseInt(hta, 10) && (parseInt(beforedba, 10) > 0)) ||
-		(parseInt(afterdta, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(afterdta, 10) == parseInt(hta, 10) && (parseInt(afterdta, 10) > 0)) ||
-		(parseInt(afterdba, 10) > 0 && parseInt(hta, 10) == 0) || (parseInt(afterdba, 10) == parseInt(hta, 10) && (parseInt(afterdba, 10) > 0))
+				var parhta = parseInt(hta, 10);
+				var pardba = parseInt(dba, 10);
+				var pardta = parseInt(dta, 10);
+				var parbefdba = parseInt(beforedba, 10);
+				var parbefdta = parseInt(beforedta, 10);
+				var parafdta = parseInt(afterdta, 10);
+				var parafdba = parseInt(afterdba, 10);
+				if((pardta > 0 && parhta == 0) || (pardta == parhta && (pardta > 0)) ||
+					(pardba > 0 && parhta == 0) || (pardba == parhta && (pardba > 0)) ||
+					(parbefdta > 0 && parhta == 0) || (parbefdta == parhta && (parbefdta > 0)) ||
+					(parbefdba > 0 && parhta == 0) || (parbefdba == parhta && (parbefdba > 0)) ||
+					(parafdta > 0 && parhta == 0) || (parafdta == parhta && (parafdta > 0)) ||
+					(parafdba > 0 && parhta == 0) || (parafdba == parhta && (parafdba > 0))
 				){
 					// and there is a video in position absolute. Keep position absolute
 					divpaddintop = true;
