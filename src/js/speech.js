@@ -172,9 +172,7 @@ i18nldesspeech4command = i18nldesspeech4command.toLowerCase();
 
 function speechrecognition(){
 	const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-	if(typeof SpeechRecognition === "undefined"){
-	// not supported
-	}else{
+	if(typeof SpeechRecognition != "undefined"){
 		recognition = new SpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
