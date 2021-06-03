@@ -358,9 +358,7 @@ function cammotionstartfunction(){
 					totalx += ((pix / 4) % width);
 					totaly += (Math.floor((pix / 4) / delt.height));
 				}else{
-					delt.data[pix] =
-                                delt.data[pix + 1] =
-                                delt.data[pix + 2] = 0;
+					delt.data[pix] = delt.data[pix + 1] = delt.data[pix + 2] = 0;
 					delt.data[pix + 3] = 0;
 				}
 			}
@@ -368,11 +366,7 @@ function cammotionstartfunction(){
 		// slide.setAttribute('style','display:initial')
 		// slide.value=(totalx/totald)/width
 		if(totald){
-			down = {
-				x: totalx / totald,
-				y: totaly / totald,
-				d: totald
-			};
+			down = {x: totalx / totald, y: totaly / totald, d: totald};
 			handledown();
 		}
 		// console.log(totald)
@@ -381,11 +375,7 @@ function cammotionstartfunction(){
 	}
 	movethresh = 2; brightthresh = 300; overthresh = 1000;
 	function calibrate(){
-		wasdown = {
-			x: down.x,
-			y: down.y,
-			d: down.d
-		};
+		wasdown = {x: down.x, y: down.y, d: down.d};
 	}
 	avg = 0;
 	state = 0;// States: 0 waiting for gesture, 1 waiting for next move after gesture, 2 waiting for gesture to end
@@ -420,11 +410,9 @@ function cammotionstartfunction(){
 					// to enable the fall down effect
 					chrome.storage.sync.set({"slideeffect": true});
 					chrome.tabs.query({active: true}, function(tabs){
-						var i;
-						var l = tabs.length;
+						var i, l = tabs.length;
 						for(i = 0; i < l; i++){
-							var protocol = tabs[i].url.split(":")[0];
-							if(protocol == "http" || protocol == "https"){
+							if(tabs[i].url.match(/^http/i)){
 								chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
 							}
 						}
@@ -434,11 +422,9 @@ function cammotionstartfunction(){
 					// to enable the fall down effect
 					chrome.storage.sync.set({"slideeffect": true});
 					chrome.tabs.query({active: true}, function(tabs){
-						var i;
-						var l = tabs.length;
+						var i, l = tabs.length;
 						for(i = 0; i < l; i++){
-							var protocol = tabs[i].url.split(":")[0];
-							if(protocol == "http" || protocol == "https"){
+							if(tabs[i].url.match(/^http/i)){
 								chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
 							}
 						}
