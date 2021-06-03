@@ -3215,178 +3215,184 @@ function domcontentloaded(){
 	}
 
 	// search
+	function emptysearch(input){
+		pageinsearch = false;
+		input.blur();
+
+		var sections = document.getElementsByTagName("section");
+		var x;
+		var l = sections.length;
+		for(x = 0; x < l; x++){
+			var section = sections[x];
+			section.classList.remove("searchfoundnothing");
+		}
+
+		// set view back to the current selected tab
+		// and hide back all videos
+		var y = document.getElementsByClassName("navbar-item-selected");
+		y[0].click();
+
+		// hide preview toolbar tabs
+		document.getElementsByClassName("tabbar")[0].classList.remove("hidden");
+		$("colorpanel").className = "";
+		$("gradientpanel").className = "hidden";
+		$("imagepanel").className = "hidden";
+		$("dynamicpanel").className = "hidden";
+		$("blurpanel").className = "hidden";
+
+		document.getElementsByClassName("tabbar")[1].classList.remove("hidden");
+		$("atmospanel").className = "";
+		$("atmosonepanel").className = "hidden";
+		$("atmosfourpanel").className = "hidden";
+		$("atmosvividpanel").className = "hidden";
+		$("atmossettingspanel").className = "hidden";
+
+		removeElement("stefanvdbtnplaygroundfilter");
+		removeElement("stefanvdplayground");
+	}
+
+	function textsearch(input){
+		if(pageinsearch == false){
+			pageinsearch = true;
+			// load all the videos
+			OFFworkaroundbugfromsafari();
+			OFFworkaroundbugpreview();
+			OFFworkaroundnight();
+			OFFworkaroundmotion();
+			OFFworkaroundspeech();
+
+			document.getElementsByClassName("tabbar")[0].classList.add("hidden");
+			$("colorpanel").className = "";
+			$("gradientpanel").className = "";
+			$("imagepanel").className = "";
+			$("dynamicpanel").className = "";
+			$("blurpanel").className = "";
+
+			document.getElementsByClassName("tabbar")[1].classList.add("hidden");
+			$("atmospanel").className = "";
+			$("atmosonepanel").className = "";
+			$("atmosfourpanel").className = "";
+			$("atmosvividpanel").className = "";
+			$("atmossettingspanel").className = "";
+		}
+
+		// receive the total tab pages
+		var tabListItems = $("navbar").childNodes;
+		var tabListi;
+		var tabListl = tabListItems.length;
+		for(tabListi = 0; tabListi < tabListl; tabListi++){
+			if(tabListItems[tabListi].nodeName == "LI"){
+				var tabLink = getFirstChildWithTagName(tabListItems[tabListi], "A");
+				var id = getHash(tabLink.getAttribute("data-tab"));
+				contentDivs[id] = document.getElementById(id);
+			}
+		}
+
+		// show all tab pages
+		var showaltabid;
+		for(showaltabid in contentDivs){
+			if(showaltabid != "tab4"){
+				if((contentDivs[showaltabid])){
+					contentDivs[showaltabid].className = "page";
+				}
+			}
+		}
+		//---
+		var searchword = input.value;
+		if(searchword == "balloon"){
+			// easteregg Party Balloon
+			if(!$("stefanvdplayground")){
+				// user gesture activate the game audio ping
+				gameaudiocontext = new AudioContext();
+
+				var newplaygroundfilter = document.createElement("div");
+				newplaygroundfilter.setAttribute("id", "stefanvdbtnplaygroundfilter");
+				newplaygroundfilter.style.zIndex = 200;
+				newplaygroundfilter.style.position = "absolute";
+				newplaygroundfilter.style.width = "calc(100% - 46px)";
+				newplaygroundfilter.style.height = "calc(100% - 3px)";
+				newplaygroundfilter.style.background = "rgba(0,0,0,.6)";
+				newplaygroundfilter.style.display = "none";
+				newplaygroundfilter.style.alignItems = "center";
+				newplaygroundfilter.style.justifyContent = "center";
+				$("mainview-content").appendChild(newplaygroundfilter);
+
+				var newplayground = document.createElement("div");
+				newplayground.setAttribute("id", "stefanvdplayground");
+				$("mainview-content").appendChild(newplayground);
+
+				var newbtnplaygroundrestart = document.createElement("button");
+				newbtnplaygroundrestart.setAttribute("id", "stefanvdbtnplaygroundrestart");
+				newbtnplaygroundrestart.addEventListener("click", function(){ restartGame(); }, false);
+				newbtnplaygroundrestart.innerText = "Restart";
+				newplaygroundfilter.appendChild(newbtnplaygroundrestart);
+
+				var newbtnplaygroundfb = document.createElement("div");
+				newbtnplaygroundfb.setAttribute("id", "stefanvdbtnplaygroundfacebook");
+				newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }, false);
+				newplaygroundfilter.appendChild(newbtnplaygroundfb);
+
+				var newbtnplaygroundtw = document.createElement("div");
+				newbtnplaygroundtw.setAttribute("id", "stefanvdbtnplaygroundtwitter");
+				newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var sturnoffthelightsproductcodeurl = encodeURIComponent(stringgame + " " + turnoffthelightsproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }, false);
+				newplaygroundfilter.appendChild(newbtnplaygroundtw);
+
+				startGame();
+			}
+		}else{
+			removeElement("stefanvdplayground");
+		}
+
+		var allsections = document.getElementsByTagName("section");
+		var sectionsx;
+		var sectionsl = allsections.length;
+		for(sectionsx = 0; sectionsx < sectionsl; sectionsx++){
+			var partsection = allsections[sectionsx];
+			var content = partsection.innerHTML;
+
+			// remove first the help message, because not a feature
+			var i18nhelpautoplay = chrome.i18n.getMessage("helpautoplay");
+			content = content.replace(i18nhelpautoplay, "");
+			var i18nhelpeyeprotection = chrome.i18n.getMessage("helpeyeprotection");
+			content = content.replace(i18nhelpeyeprotection, "");
+
+			if(content.search(new RegExp(searchword, "i")) < 1){
+				partsection.classList.add("searchfoundnothing");
+			}else{
+				partsection.classList.remove("searchfoundnothing");
+			}
+		}
+
+		// hide the h2 if there is no sections visible
+		var pages = document.getElementsByClassName("page");
+		var z;
+		var tabpagelength = pages.length;
+		for(z = 0; z < tabpagelength; z++){
+			var tabsections = pages[z].getElementsByTagName("section");
+			var countnothingcheck = 0;
+			var w;
+			var q = tabsections.length;
+			for(w = 0; w < q; w++){
+				var currenttabsection = tabsections[w];
+				if(currenttabsection.classList.contains("searchfoundnothing")){
+					countnothingcheck += 1;
+				}
+			}
+			if(countnothingcheck == tabsections.length){
+				// total sections with nothing inside is the same as all the section -> hide the page
+				pages[z].classList.add("searchfoundnothing");
+			}else{
+				pages[z].classList.remove("searchfoundnothing");
+			}
+		}
+	}
+
 	var pageinsearch = false;
 	function OnSearch(input){
 		if(input.value == ""){
-			pageinsearch = false;
-			input.blur();
-
-			var sections = document.getElementsByTagName("section");
-			var x;
-			var l = sections.length;
-			for(x = 0; x < l; x++){
-				var section = sections[x];
-				section.classList.remove("searchfoundnothing");
-			}
-
-			// set view back to the current selected tab
-			// and hide back all videos
-			var y = document.getElementsByClassName("navbar-item-selected");
-			y[0].click();
-
-			// hide preview toolbar tabs
-			document.getElementsByClassName("tabbar")[0].classList.remove("hidden");
-			$("colorpanel").className = "";
-			$("gradientpanel").className = "hidden";
-			$("imagepanel").className = "hidden";
-			$("dynamicpanel").className = "hidden";
-			$("blurpanel").className = "hidden";
-
-			document.getElementsByClassName("tabbar")[1].classList.remove("hidden");
-			$("atmospanel").className = "";
-			$("atmosonepanel").className = "hidden";
-			$("atmosfourpanel").className = "hidden";
-			$("atmosvividpanel").className = "hidden";
-			$("atmossettingspanel").className = "hidden";
-
-			removeElement("stefanvdbtnplaygroundfilter");
-			removeElement("stefanvdplayground");
+			emptysearch(input);
 		}else{
-			if(pageinsearch == false){
-				pageinsearch = true;
-				// load all the videos
-				OFFworkaroundbugfromsafari();
-				OFFworkaroundbugpreview();
-				OFFworkaroundnight();
-				OFFworkaroundmotion();
-				OFFworkaroundspeech();
-
-				document.getElementsByClassName("tabbar")[0].classList.add("hidden");
-				$("colorpanel").className = "";
-				$("gradientpanel").className = "";
-				$("imagepanel").className = "";
-				$("dynamicpanel").className = "";
-				$("blurpanel").className = "";
-
-				document.getElementsByClassName("tabbar")[1].classList.add("hidden");
-				$("atmospanel").className = "";
-				$("atmosonepanel").className = "";
-				$("atmosfourpanel").className = "";
-				$("atmosvividpanel").className = "";
-				$("atmossettingspanel").className = "";
-			}
-
-			// receive the total tab pages
-			var tabListItems = $("navbar").childNodes;
-			var tabListi;
-			var tabListl = tabListItems.length;
-			for(tabListi = 0; tabListi < tabListl; tabListi++){
-				if(tabListItems[tabListi].nodeName == "LI"){
-					var tabLink = getFirstChildWithTagName(tabListItems[tabListi], "A");
-					var id = getHash(tabLink.getAttribute("data-tab"));
-					contentDivs[id] = document.getElementById(id);
-				}
-			}
-
-			// show all tab pages
-			var showaltabid;
-			for(showaltabid in contentDivs){
-				if(showaltabid != "tab4"){
-					if((contentDivs[showaltabid])){
-						contentDivs[showaltabid].className = "page";
-					}
-				}
-			}
-			//---
-			var searchword = input.value;
-			if(searchword == "balloon"){
-				// easteregg Party Balloon
-				if(!$("stefanvdplayground")){
-					// user gesture activate the game audio ping
-					gameaudiocontext = new AudioContext();
-
-					var newplaygroundfilter = document.createElement("div");
-					newplaygroundfilter.setAttribute("id", "stefanvdbtnplaygroundfilter");
-					newplaygroundfilter.style.zIndex = 200;
-					newplaygroundfilter.style.position = "absolute";
-					newplaygroundfilter.style.width = "calc(100% - 46px)";
-					newplaygroundfilter.style.height = "calc(100% - 3px)";
-					newplaygroundfilter.style.background = "rgba(0,0,0,.6)";
-					newplaygroundfilter.style.display = "none";
-					newplaygroundfilter.style.alignItems = "center";
-					newplaygroundfilter.style.justifyContent = "center";
-					$("mainview-content").appendChild(newplaygroundfilter);
-
-					var newplayground = document.createElement("div");
-					newplayground.setAttribute("id", "stefanvdplayground");
-					$("mainview-content").appendChild(newplayground);
-
-					var newbtnplaygroundrestart = document.createElement("button");
-					newbtnplaygroundrestart.setAttribute("id", "stefanvdbtnplaygroundrestart");
-					newbtnplaygroundrestart.addEventListener("click", function(){ restartGame(); }, false);
-					newbtnplaygroundrestart.innerText = "Restart";
-					newplaygroundfilter.appendChild(newbtnplaygroundrestart);
-
-					var newbtnplaygroundfb = document.createElement("div");
-					newbtnplaygroundfb.setAttribute("id", "stefanvdbtnplaygroundfacebook");
-					newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }, false);
-					newplaygroundfilter.appendChild(newbtnplaygroundfb);
-
-					var newbtnplaygroundtw = document.createElement("div");
-					newbtnplaygroundtw.setAttribute("id", "stefanvdbtnplaygroundtwitter");
-					newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var sturnoffthelightsproductcodeurl = encodeURIComponent(stringgame + " " + turnoffthelightsproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }, false);
-					newplaygroundfilter.appendChild(newbtnplaygroundtw);
-
-					startGame();
-				}
-			}else{
-				removeElement("stefanvdplayground");
-			}
-
-			var allsections = document.getElementsByTagName("section");
-			var sectionsx;
-			var sectionsl = allsections.length;
-			for(sectionsx = 0; sectionsx < sectionsl; sectionsx++){
-				var partsection = allsections[sectionsx];
-				var content = partsection.innerHTML;
-
-				// remove first the help message, because not a feature
-				var i18nhelpautoplay = chrome.i18n.getMessage("helpautoplay");
-				content = content.replace(i18nhelpautoplay, "");
-				var i18nhelpeyeprotection = chrome.i18n.getMessage("helpeyeprotection");
-				content = content.replace(i18nhelpeyeprotection, "");
-
-				if(content.search(new RegExp(searchword, "i")) < 1){
-					partsection.classList.add("searchfoundnothing");
-				}else{
-					partsection.classList.remove("searchfoundnothing");
-				}
-			}
-
-			// hide the h2 if there is no sections visible
-			var pages = document.getElementsByClassName("page");
-			var z;
-			var tabpagelength = pages.length;
-			for(z = 0; z < tabpagelength; z++){
-				var tabsections = pages[z].getElementsByTagName("section");
-				var countnothingcheck = 0;
-				var w;
-				var q = tabsections.length;
-				for(w = 0; w < q; w++){
-					var currenttabsection = tabsections[w];
-					if(currenttabsection.classList.contains("searchfoundnothing")){
-						countnothingcheck += 1;
-					}
-				}
-				if(countnothingcheck == tabsections.length){
-					// total sections with nothing inside is the same as all the section -> hide the page
-					pages[z].classList.add("searchfoundnothing");
-				}else{
-					pages[z].classList.remove("searchfoundnothing");
-				}
-			}
-
-
+			textsearch(input);
 		}
 	}
 
