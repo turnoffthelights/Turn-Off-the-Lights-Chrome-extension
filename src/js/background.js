@@ -283,7 +283,35 @@ chrome.commands.onCommand.addListener(function(command){
 // contextMenus
 function onClickHandler(info, tab){
 	var str = info.menuItemId;
-	if(str.includes("totlvideo") || str.includes("totlpage")){ chrome.tabs.executeScript(tab.id, {file: "js/light.js"}); }else if(info.menuItemId == "totlguideemenu"){ chrome.tabs.create({url: linkguide, active:true}); }else if(info.menuItemId == "totldevelopmenu"){ chrome.tabs.create({url: donatewebsite, active:true}); }else if(info.menuItemId == "totlratemenu"){ chrome.tabs.create({url: writereview, active:true}); }else if(info.menuItemId == "totlsharemenu"){ chrome.tabs.create({url: linkshare, active:true}); }else if(info.menuItemId == "totlshareemail"){ var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true}); }else if(info.menuItemId == "totlsharetwitter"){ var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }else if(info.menuItemId == "totlsharefacebook"){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }else if(info.menuItemId == "totlsubscribe"){ chrome.tabs.create({url: linkyoutube, active:true}); }
+	switch(str){
+	case(str.includes("totlvideo") || str.includes("totlpage")):
+		chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+		break;
+	case"totlguideemenu":
+		chrome.tabs.create({url: linkguide, active:true});
+		break;
+	case"totldevelopmenu":
+		chrome.tabs.create({url: donatewebsite, active:true});
+		break;
+	case"totlratemen":
+		chrome.tabs.create({url: writereview, active:true});
+		break;
+	case"totlsharemenu":
+		chrome.tabs.create({url: linkshare, active:true});
+		break;
+	case"totlshareemail":
+		var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
+		break;
+	case"totlsharetwitter":
+		var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true});
+		break;
+	case"totlsharefacebook":
+		chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
+		break;
+	case"totlsubscribe":
+		chrome.tabs.create({url: linkyoutube, active:true});
+		break;
+	}
 }
 
 // check to remove all contextmenus
