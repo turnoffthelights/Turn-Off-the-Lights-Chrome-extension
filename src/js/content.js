@@ -2032,15 +2032,18 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else{ eyeprotection(); }
 	}
 
+	function returntimetoseconds(a){
+		return a.split(":")[0] * 3600 + a.split(":")[1] * 60;
+	}
+
 	// night time
 	function gonighttime(){
 		if(nighttime == true){ // yes night time
 			var now = new Date(); var hours = now.getHours(); var minutes = now.getMinutes(); var gettime = hours + ":" + minutes;
 			var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
 
-			var time1 = begintime; var time2 = endtime;
-			var seconds1 = time1.split(":")[0] * 3600 + time1.split(":")[1] * 60;
-			var seconds2 = time2.split(":")[0] * 3600 + time2.split(":")[1] * 60;
+			var seconds1 = returntimetoseconds(begintime);
+			var seconds2 = returntimetoseconds(endtime);
 
 			// example
 			// if begintime set 10:00 but endtime is 18:00
@@ -3790,9 +3793,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var now = new Date(); var hours = now.getHours(); var minutes = now.getMinutes(); var gettime = hours + ":" + minutes;
 			var gettimesecond = gettime.split(":")[0] * 3600 + gettime.split(":")[1] * 60;
 
-			var time1 = nmbegintime; var time2 = nmendtime;
-			var seconds1 = time1.split(":")[0] * 3600 + time1.split(":")[1] * 60;
-			var seconds2 = time2.split(":")[0] * 3600 + time2.split(":")[1] * 60;
+			var seconds1 = returntimetoseconds(nmbegintime);
+			var seconds2 = returntimetoseconds(nmendtime);
 
 			// example
 			// if begintime set 10:00 but endtime is 18:00
