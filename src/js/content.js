@@ -2368,10 +2368,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 					youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
 					if(youtubewindow){
-						youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+						setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [hex1, hex2, hex3, hex4]);
 					}
 				}else{
-					totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + hex3 + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + hex1 + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex2 + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + hex4 + "";
+					setatmosplayer(totlshowtime, [textcountC, textcountB, textcountA], [hex1, hex2, hex3, hex4]);
 				}
 			}
 		}catch(e){ rundefault(); }
@@ -2383,9 +2383,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			// var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 			youtubewindow = $("movie_player") || document.getElementsByTagName("ytg-persistent-player")[0];
 			if(youtubewindow){
-				youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
+				setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [ambilightcolorhex, ambilightcolorhex, ambilightcolorhex, ambilightcolorhex]);
 			}
-		}else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
+		}else{ setatmosplayer(totlshowtime, [textcountC, textcountB, textcountA], [ambilightcolorhex, ambilightcolorhex, ambilightcolorhex, ambilightcolorhex]); }
 	}
 
 	var textcountA;
@@ -2553,15 +2553,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else if(ambilightfixcolor == true){
 			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 				if(youtubewindow){
-					youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + "";
+					setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [ambilightcolorhex, ambilightcolorhex, ambilightcolorhex, ambilightcolorhex]);
 				}
 			}else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilightcolorhex + ""; }
 		}else if(ambilight4color == true){
 			if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 				if(youtubewindow){
-					youtubewindow.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + "";
+					setatmosplayer(youtubewindow, [textcountC, textcountB, textcountA], [ambilight1colorhex, ambilight2colorhex, ambilight3colorhex, ambilight4colorhex]);
 				}
-			}else{ totlshowtime.style.boxShadow = "0px 0px 0px black , 0px -" + textcountC + " " + textcountB + " " + textcountA + " " + ambilight1colorhex + ", 0px " + textcountC + " " + textcountB + " " + textcountA + " " + ambilight2colorhex + ", " + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight3colorhex + ", -" + textcountC + " 0px " + textcountB + " " + textcountA + " " + ambilight4colorhex + ""; }
+			}else{ setatmosplayer(totlshowtime, [textcountC, textcountB, textcountA], [ambilight1colorhex, ambilight2colorhex, ambilight3colorhex, ambilight4colorhex]); }
 		}
 
 	}
