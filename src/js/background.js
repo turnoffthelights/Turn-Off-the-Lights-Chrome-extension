@@ -400,129 +400,135 @@ function removecontexmenus(){
 	contextmenuadded = false;
 }
 
+var key;
 chrome.storage.onChanged.addListener(function(changes){
-	if(changes["contextmenus"]){
-		if(changes["contextmenus"].newValue == true){ checkcontextmenus(); }else{ removecontexmenus(); }
-	}
-	if(changes["icon"]){
-		if(changes["icon"].newValue){
-			chrome.tabs.query({}, function(tabs){
-				var i, l = tabs.length;
-				for(i = 0; i < l; i++){
-					chrome.browserAction.setIcon({tabId : tabs[i].id,
-						path : {
-							"19": changes["icon"].newValue,
-							"38": changes["icon"].newValue
-						}
-					});
+	for(key in changes){
+		if(changes["contextmenus"]){
+			if(changes["contextmenus"].newValue == true){ checkcontextmenus(); }else{ removecontexmenus(); }
+		}
+		if(changes["icon"]){
+			if(changes["icon"].newValue){
+				chrome.tabs.query({}, function(tabs){
+					var i, l = tabs.length;
+					for(i = 0; i < l; i++){
+						chrome.browserAction.setIcon({tabId : tabs[i].id,
+							path : {
+								"19": changes["icon"].newValue,
+								"38": changes["icon"].newValue
+							}
+						});
+					}
+				}
+				);
+			}
+		}
+		if(changes["ecosaver"]){
+			if(changes["ecosaver"].newValue){
+				chromerefreshalltabs("gorefresheyelight");
+			}
+		}
+		if(changes["badge"]){
+			if(changes["badge"].newValue == true){ checkbadge(); }else{ checkbadge(); }
+		}
+		if(changes["autoplay"] || changes["mousespotlights"] || changes["autoplayDomains"] || changes["autoplaychecklistwhite"] || changes["autoplaychecklistblack"] || changes["autoplayonly"] || changes["aplay"] || changes["apause"] || changes["astop"] || changes["autoplaydelay"] || changes["autoplaydelaytime"]){
+			chromerefreshalltabs("gorefreshautoplay");
+		}
+		if(changes["videotool"] || changes["videotoolonly"] || changes["videotoolDomains"] || changes["videotoolchecklistwhite"] || changes["videotoolchecklistblack"] || changes["speedtoolbar"] || changes["videozoom"] || changes["visopacity"] || changes["videotoolcolor"]){
+			chromerefreshalltabs("gorefreshvideotoolbar");
+		}
+
+		var changenamevolume = ["videovolume", "videovolumealt", "videovolumehold", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumecolor", "videovolumelabel", "videovolumesteps", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose"];
+		if(changenamevolume.includes(key)){
+			chromerefreshalltabs("gorefreshmousescroll");
+		}
+
+		if(changes["ambilight"] || changes["ambilightfixcolor"] || changes["ambilight4color"] || changes["ambilightvarcolor"] || changes["atmosvivid"] || changes["vpause"] || changes["atmosfpsauto"] || changes["atmosfpsmanual"] || changes["drawatmosfps"] || changes["ambilightcolorhex"] || changes["ambilight1colorhex"] || changes["ambilight2colorhex"] || changes["ambilight3colorhex"] || changes["ambilight4colorhex"] || changes["ambilightrangeblurradius"] || changes["ambilightrangespreadradius"] || changes["atmosontotlmode"] || changes["atmosphereonly"] || changes["atmosphereDomains"]){
+			chromerefreshalltabs("goenableatmos");
+		}
+		if(changes["reflection"] || changes["reflectionamount"]){
+			chromerefreshalltabs("gorefreshreflection");
+		}
+		if(changes["hovervideo"] || changes["hovervideoamount"]){
+			chromerefreshalltabs("gorefreshhovervideo");
+		}
+		if(changes["playrate"] || changes["playrateamount"]){
+			chromerefreshalltabs("gorefreshplayrate");
+		}
+		if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"]){
+			chromerefreshalltabs("gonightmodecolors");
+		}
+		if(changes["nighttheme"] || changes["lampandnightmode"] || changes["nightmodeswitchhide"] || changes["nightmodeswitchhidetime"] || changes["nightonly"] || changes["nightmodechecklistwhite"] || changes["nightmodechecklistblack"] || changes["nightDomains"] || changes["nightmodebydomain"] || changes["nightmodebypage"] || changes["nightactivetime"] || changes["nmbegintime"] || changes["nmendtime"] || changes["nightenabletheme"] || changes["nighthover"] || changes["nmtopleft"] || changes["nmtopright"] || changes["nmbottomright"] || changes["nmbottomleft"] || changes["nmcustom"]){
+			chromerefreshalltabs("goenablenightmode");
+		}
+		if(changes["nightmodegesture"]){
+			chromerefreshalltabs("gorefreshnightmodegesture");
+		}
+		if(changes["ecosaver"] || changes["ecosavertime"]){
+			chromerefreshalltabs("gorefresheyesaver");
+		}
+		if(changes["nighttime"] || changes["begintime"] || changes["endtime"]){
+			chromerefreshalltabs("gorefreshnighttime");
+		}
+		if(changes["pipvisualtype"]){
+			chromerefreshalltabs("gorefreshpipvisualtype");
+		}
+
+		// Group Policy
+		// check the values with group policy, if different values. Then change it back
+		if(changes["autoplay"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoPlay")){
+				if(changes["autoplay"].newValue != policygrouparray["AutoPlay"]){
+					chrome.storage.sync.set({"autoplay": policygrouparray["AutoPlay"]});
 				}
 			}
-			);
 		}
-	}
-	if(changes["ecosaver"]){
-		if(changes["ecosaver"].newValue){
-			chromerefreshalltabs("gorefresheyelight");
-		}
-	}
-	if(changes["badge"]){
-		if(changes["badge"].newValue == true){ checkbadge(); }else{ checkbadge(); }
-	}
-	if(changes["autoplay"] || changes["mousespotlights"] || changes["autoplayDomains"] || changes["autoplaychecklistwhite"] || changes["autoplaychecklistblack"] || changes["autoplayonly"] || changes["aplay"] || changes["apause"] || changes["astop"] || changes["autoplaydelay"] || changes["autoplaydelaytime"]){
-		chromerefreshalltabs("gorefreshautoplay");
-	}
-	if(changes["videotool"] || changes["videotoolonly"] || changes["videotoolDomains"] || changes["videotoolchecklistwhite"] || changes["videotoolchecklistblack"] || changes["speedtoolbar"] || changes["videozoom"] || changes["visopacity"] || changes["videotoolcolor"]){
-		chromerefreshalltabs("gorefreshvideotoolbar");
-	}
-	if(changes["videovolume"] || changes["videovolumealt"] || changes["videovolumehold"] || changes["videovolumeposa"] || changes["videovolumeposb"] || changes["videovolumeposc"] || changes["videovolumecolor"] || changes["videovolumelabel"] || changes["videovolumesteps"] || changes["videovolumeonly"] || changes["videovolumeDomains"] || changes["videovolumechecklistwhite"] || changes["videovolumechecklistblack"] || changes["videovolumescrolla"] || changes["videovolumescrollb"] || changes["videovolumescrollc"] || changes["videovolumeposd"] || changes["videovolumepose"]){
-		chromerefreshalltabs("goenableagorefreshmousescrolltmos");
-	}
-	if(changes["ambilight"] || changes["ambilightfixcolor"] || changes["ambilight4color"] || changes["ambilightvarcolor"] || changes["atmosvivid"] || changes["vpause"] || changes["atmosfpsauto"] || changes["atmosfpsmanual"] || changes["drawatmosfps"] || changes["ambilightcolorhex"] || changes["ambilight1colorhex"] || changes["ambilight2colorhex"] || changes["ambilight3colorhex"] || changes["ambilight4colorhex"] || changes["ambilightrangeblurradius"] || changes["ambilightrangespreadradius"] || changes["atmosontotlmode"] || changes["atmosphereonly"] || changes["atmosphereDomains"]){
-		chromerefreshalltabs("goenableatmos");
-	}
-	if(changes["reflection"] || changes["reflectionamount"]){
-		chromerefreshalltabs("gorefreshreflection");
-	}
-	if(changes["hovervideo"] || changes["hovervideoamount"]){
-		chromerefreshalltabs("gorefreshhovervideo");
-	}
-	if(changes["playrate"] || changes["playrateamount"]){
-		chromerefreshalltabs("gorefreshplayrate");
-	}
-	if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"]){
-		chromerefreshalltabs("gonightmodecolors");
-	}
-	if(changes["nighttheme"] || changes["lampandnightmode"] || changes["nightmodeswitchhide"] || changes["nightmodeswitchhidetime"] || changes["nightonly"] || changes["nightmodechecklistwhite"] || changes["nightmodechecklistblack"] || changes["nightDomains"] || changes["nightmodebydomain"] || changes["nightmodebypage"] || changes["nightactivetime"] || changes["nmbegintime"] || changes["nmendtime"] || changes["nightenabletheme"] || changes["nighthover"] || changes["nmtopleft"] || changes["nmtopright"] || changes["nmbottomright"] || changes["nmbottomleft"] || changes["nmcustom"]){
-		chromerefreshalltabs("goenablenightmode");
-	}
-	if(changes["nightmodegesture"]){
-		chromerefreshalltabs("gorefreshnightmodegesture");
-	}
-	if(changes["ecosaver"] || changes["ecosavertime"]){
-		chromerefreshalltabs("gorefresheyesaver");
-	}
-	if(changes["nighttime"] || changes["begintime"] || changes["endtime"]){
-		chromerefreshalltabs("gorefreshnighttime");
-	}
-	if(changes["pipvisualtype"]){
-		chromerefreshalltabs("gorefreshpipvisualtype");
-	}
-
-	// Group Policy
-	// check the values with group policy, if different values. Then change it back
-	if(changes["autoplay"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoPlay")){
-			if(changes["autoplay"].newValue != policygrouparray["AutoPlay"]){
-				chrome.storage.sync.set({"autoplay": policygrouparray["AutoPlay"]});
+		if(changes["autostop"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoStop")){
+				if(changes["autostop"].newValue != policygrouparray["AutoStop"]){
+					chrome.storage.sync.set({"autostop": policygrouparray["AutoStop"]});
+				}
 			}
 		}
-	}
-	if(changes["autostop"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoStop")){
-			if(changes["autostop"].newValue != policygrouparray["AutoStop"]){
-				chrome.storage.sync.set({"autostop": policygrouparray["AutoStop"]});
+		if(changes["customqualityyoutube"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHD")){
+				if(changes["customqualityyoutube"].newValue != policygrouparray["AutoHD"]){
+					chrome.storage.sync.set({"customqualityyoutube": policygrouparray["AutoHD"]});
+				}
 			}
 		}
-	}
-	if(changes["customqualityyoutube"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHD")){
-			if(changes["customqualityyoutube"].newValue != policygrouparray["AutoHD"]){
-				chrome.storage.sync.set({"customqualityyoutube": policygrouparray["AutoHD"]});
+		if(changes["maxquality"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHDQuality")){
+				if(changes["maxquality"].newValue != policygrouparray["AutoHDQuality"]){
+					chrome.storage.sync.set({"maxquality": policygrouparray["AutoHDQuality"]});
+				}
 			}
 		}
-	}
-	if(changes["maxquality"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHDQuality")){
-			if(changes["maxquality"].newValue != policygrouparray["AutoHDQuality"]){
-				chrome.storage.sync.set({"maxquality": policygrouparray["AutoHDQuality"]});
+		if(changes["block60fps"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "Block60FPS")){
+				if(changes["block60fps"].newValue != policygrouparray["Block60FPS"]){
+					chrome.storage.sync.set({"block60fps": policygrouparray["Block60FPS"]});
+				}
 			}
 		}
-	}
-	if(changes["block60fps"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "Block60FPS")){
-			if(changes["block60fps"].newValue != policygrouparray["Block60FPS"]){
-				chrome.storage.sync.set({"block60fps": policygrouparray["Block60FPS"]});
+		if(changes["nighttheme"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "NightModeSwitch")){
+				if(changes["nighttheme"].newValue != policygrouparray["NightModeSwitch"]){
+					chrome.storage.sync.set({"nighttheme": policygrouparray["NightModeSwitch"]});
+				}
 			}
 		}
-	}
-	if(changes["nighttheme"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "NightModeSwitch")){
-			if(changes["nighttheme"].newValue != policygrouparray["NightModeSwitch"]){
-				chrome.storage.sync.set({"nighttheme": policygrouparray["NightModeSwitch"]});
+		if(changes["videovolume"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "MouseVolumeScroll")){
+				if(changes["videovolume"].newValue != policygrouparray["MouseVolumeScroll"]){
+					chrome.storage.sync.set({"videovolume": policygrouparray["MouseVolumeScroll"]});
+				}
 			}
 		}
-	}
-	if(changes["videovolume"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "MouseVolumeScroll")){
-			if(changes["videovolume"].newValue != policygrouparray["MouseVolumeScroll"]){
-				chrome.storage.sync.set({"videovolume": policygrouparray["MouseVolumeScroll"]});
-			}
-		}
-	}
-	if(changes["videotool"]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, "VideoToolbar")){
-			if(changes["videotool"].newValue != policygrouparray["VideoToolbar"]){
-				chrome.storage.sync.set({"videotool": policygrouparray["VideoToolbar"]});
+		if(changes["videotool"]){
+			if(Object.prototype.hasOwnProperty.call(policygrouparray, "VideoToolbar")){
+				if(changes["videotool"].newValue != policygrouparray["VideoToolbar"]){
+					chrome.storage.sync.set({"videotool": policygrouparray["VideoToolbar"]});
+				}
 			}
 		}
 	}
