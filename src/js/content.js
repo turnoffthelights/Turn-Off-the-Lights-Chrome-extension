@@ -2751,9 +2751,30 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					startshow = false;
 				}
 			}else{
-				if(node.tagName == "IMG" || node.tagName == "STYLE" || node.tagName == "SCRIPT" || node.tagName == "HEAD" || node.tagName == "META" || node.tagName == "LINK" || node.tagName == "TITLE" || node.tagName == "IFRAME" || node.tagName == "svg" || node.tagName == "path" || node.tagName == "PICTURE" || node.tagName == "SOURCE" || node.tagName == "VIDEO" || node.tagName == "AUDIO" || node.tagName == "FIGURE" || node.tagName == "A" || node.tagName == "CANVAS" || node.tagName == "MAP" || node.tagName == "TRACK" || node.tagName == "AREA"){
-				// do nothing
-				}else{
+				switch(node.tagName){
+				case"IMG":
+				case"STYLE":
+				case"SCRIPT":
+				case"HEAD":
+				case"META":
+				case"LINK":
+				case"TITLE":
+				case"IFRAME":
+				case"svg":
+				case"path":
+				case"PICTURE":
+				case"SOURCE":
+				case"VIDEO":
+				case"AUDIO":
+				case"FIGURE":
+				case"A":
+				case"CANVAS":
+				case"MAP":
+				case"TRACK":
+				case"AREA":
+					// do nothing
+					break;
+				default:
 					var st;
 					var y;
 					var z;
@@ -2810,7 +2831,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 
 					}
-
 				}
 			}
 
