@@ -296,9 +296,6 @@ function onClickHandler(info, tab){
 	case"totlratemen":
 		chrome.tabs.create({url: writereview, active:true});
 		break;
-	case"totlsharemenu":
-		chrome.tabs.create({url: linkshare, active:true});
-		break;
 	case"totlshareemail":
 		var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
 		break;
@@ -489,9 +486,12 @@ chrome.storage.onChanged.addListener(function(changes){
 		if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"]){
 			chromerefreshalltabs("gonightmodecolors");
 		}
-		if(changes["nighttheme"] || changes["lampandnightmode"] || changes["nightmodeswitchhide"] || changes["nightmodeswitchhidetime"] || changes["nightonly"] || changes["nightmodechecklistwhite"] || changes["nightmodechecklistblack"] || changes["nightDomains"] || changes["nightmodebydomain"] || changes["nightmodebypage"] || changes["nightactivetime"] || changes["nmbegintime"] || changes["nmendtime"] || changes["nightenabletheme"] || changes["nighthover"] || changes["nmtopleft"] || changes["nmtopright"] || changes["nmbottomright"] || changes["nmbottomleft"] || changes["nmcustom"]){
+
+		var changenamenight = ["nighttheme", "lampandnightmode", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom"];
+		if(changenamenight.includes(key)){
 			chromerefreshalltabs("goenablenightmode");
 		}
+
 		if(changes["nightmodegesture"]){
 			chromerefreshalltabs("gorefreshnightmodegesture");
 		}
