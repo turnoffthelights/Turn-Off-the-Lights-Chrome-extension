@@ -431,9 +431,14 @@ function domcontentloaded(){
 	// --- End table1
 	}
 	function showcard(){
-		settext("txtdayweek", chrome.i18n.getMessage("cardtextfavdayweek") + ": " + ct7favoritedayweek);
-		settext("txtyestime", chrome.i18n.getMessage("cardtextyestime") + ": " + parseFloat(Math.round(ct1sinminutes * 100) / 100).toFixed(2));
-		settext("txtavgweektime", chrome.i18n.getMessage("cardavgprevweektime") + ": " + parseFloat(Math.round(ct7sinminutes * 100) / 100).toFixed(2));
+		var ct7 = chrome.i18n.getMessage("cardtextfavdayweek") + ": " + ct7favoritedayweek;
+		var ctm = chrome.i18n.getMessage("cardtextyestime") + ": " + parseFloat(Math.round(ct1sinminutes * 100) / 100).toFixed(2);
+		var ct7w = chrome.i18n.getMessage("cardavgprevweektime") + ": " + parseFloat(Math.round(ct7sinminutes * 100) / 100).toFixed(2);
+		var elemarray = ["txtdayweek", "txtyestime", "txtavgweektime"];
+		var desarray = [ct7, ctm, ct7w];
+		for(var itab = 0; itab < desarray.length; itab++){
+			settext(elemarray[itab], desarray[itab]);
+		}
 	}
 //---
 }

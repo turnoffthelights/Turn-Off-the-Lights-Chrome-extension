@@ -310,8 +310,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 				var flashj;
 				for(flashj = 0; flashj < flashtlength; ++flashj){
 					let a = document.getElementsByTagName(flasht);
-					let i;
-					let l = a.length;
+					let i, l = a.length;
 					for(i = 0; i < l; i++){
 						// Can access the elements inside the local iframe inner document
 						var innerDoc = a[i].contentDocument || a[i].contentWindow.document;
@@ -334,8 +333,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 			var hardflashj;
 			for(hardflashj = 0; hardflashj < hardflashtlength; ++hardflashj){
 				let a = document.getElementsByTagName(hardflasht);
-				let i;
-				let l = a.length;
+				let i, l = a.length;
 				for(i = 0; i < l; i++){
 					let targetComputedStylePosition = document.defaultView.getComputedStyle(a[i], null).getPropertyValue("position");
 
