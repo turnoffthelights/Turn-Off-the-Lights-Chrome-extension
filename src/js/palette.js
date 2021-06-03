@@ -381,11 +381,11 @@ document.addEventListener("DOMContentLoaded", function(){
 	var today = dd + "/" + mm + "/" + yyyy;
 
 	function search(nameKey, myArray){
-		var i;
-		var l = myArray.length;
+		var i, l = myArray.length;
 		for(i = 0; i < l; i++){
 			if(myArray[i].name === nameKey){
-				return myArray[i];
+				var thatarray = myArray[i];
+				return thatarray["details"]["active"];
 			}
 		}
 	}
@@ -396,9 +396,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(items["analytics"]){
 			analytics = items["analytics"];
 			var resultObject = search(today, analytics);
-			var rest = JSON.stringify(resultObject["details"]["active"]);
 			if($("analclicktoday")){
-				$("analclicktoday").innerText = rest;
+				$("analclicktoday").innerText = JSON.stringify(resultObject);
 			}
 
 			var timeeverything = analytics.map(function(a){
