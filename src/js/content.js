@@ -3941,7 +3941,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		// if it is a click on: A, INPUT, etc do nothing
 		var targetlongpress = e.target.nodeName;
-		if(targetlongpress == "A" || targetlongpress == "INPUT" || targetlongpress == "OPTION" || targetlongpress == "NAV" || targetlongpress == "METER" || targetlongpress == "PROGRESS" || targetlongpress == "SELECT" || targetlongpress == "BUTTON" || targetlongpress == "VIDEO" || targetlongpress == "AUDIO"){
+		switch(targetlongpress){
+		case"A":
+		case"INPUT":
+		case"OPTION":
+		case"NAV":
+		case"METER":
+		case"PROGRESS":
+		case"SELECT":
+		case"BUTTON":
+		case"VIDEO":
+		case"AUDIO":
 			return;
 		}
 
