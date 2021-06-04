@@ -423,6 +423,16 @@ function removecontexmenus(){
 	contextmenuadded = false;
 }
 
+function checkreturnpolicyvalues(a, b, c){
+	if(a[b]){
+		if(Object.prototype.hasOwnProperty.call(policygrouparray, c)){
+			if(a[b].newValue != policygrouparray[c]){
+				chrome.storage.sync.set({b: policygrouparray[c]});
+			}
+		}
+	}
+}
+
 var key;
 chrome.storage.onChanged.addListener(function(changes){
 	for(key in changes){
@@ -507,62 +517,14 @@ chrome.storage.onChanged.addListener(function(changes){
 
 		// Group Policy
 		// check the values with group policy, if different values. Then change it back
-		if(changes["autoplay"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoPlay")){
-				if(changes["autoplay"].newValue != policygrouparray["AutoPlay"]){
-					chrome.storage.sync.set({"autoplay": policygrouparray["AutoPlay"]});
-				}
-			}
-		}
-		if(changes["autostop"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoStop")){
-				if(changes["autostop"].newValue != policygrouparray["AutoStop"]){
-					chrome.storage.sync.set({"autostop": policygrouparray["AutoStop"]});
-				}
-			}
-		}
-		if(changes["customqualityyoutube"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHD")){
-				if(changes["customqualityyoutube"].newValue != policygrouparray["AutoHD"]){
-					chrome.storage.sync.set({"customqualityyoutube": policygrouparray["AutoHD"]});
-				}
-			}
-		}
-		if(changes["maxquality"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "AutoHDQuality")){
-				if(changes["maxquality"].newValue != policygrouparray["AutoHDQuality"]){
-					chrome.storage.sync.set({"maxquality": policygrouparray["AutoHDQuality"]});
-				}
-			}
-		}
-		if(changes["block60fps"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "Block60FPS")){
-				if(changes["block60fps"].newValue != policygrouparray["Block60FPS"]){
-					chrome.storage.sync.set({"block60fps": policygrouparray["Block60FPS"]});
-				}
-			}
-		}
-		if(changes["nighttheme"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "NightModeSwitch")){
-				if(changes["nighttheme"].newValue != policygrouparray["NightModeSwitch"]){
-					chrome.storage.sync.set({"nighttheme": policygrouparray["NightModeSwitch"]});
-				}
-			}
-		}
-		if(changes["videovolume"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "MouseVolumeScroll")){
-				if(changes["videovolume"].newValue != policygrouparray["MouseVolumeScroll"]){
-					chrome.storage.sync.set({"videovolume": policygrouparray["MouseVolumeScroll"]});
-				}
-			}
-		}
-		if(changes["videotool"]){
-			if(Object.prototype.hasOwnProperty.call(policygrouparray, "VideoToolbar")){
-				if(changes["videotool"].newValue != policygrouparray["VideoToolbar"]){
-					chrome.storage.sync.set({"videotool": policygrouparray["VideoToolbar"]});
-				}
-			}
-		}
+		checkreturnpolicyvalues(changes, "autoplay", "AutoPlay");
+		checkreturnpolicyvalues(changes, "autostop", "AutoStop");
+		checkreturnpolicyvalues(changes, "customqualityyoutube", "AutoHD");
+		checkreturnpolicyvalues(changes, "maxquality", "AutoHDQuality");
+		checkreturnpolicyvalues(changes, "block60fps", "Block60FPS");
+		checkreturnpolicyvalues(changes, "nighttheme", "NightModeSwitch");
+		checkreturnpolicyvalues(changes, "videovolume", "MouseVolumeScroll");
+		checkreturnpolicyvalues(changes, "videotool", "VideoToolbar");
 	}
 });
 
