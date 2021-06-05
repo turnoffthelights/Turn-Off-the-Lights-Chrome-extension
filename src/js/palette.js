@@ -532,8 +532,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	eventFunc("energybox", "click", openoptionspage);
 
-	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvideo"}); });
-	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pipvisual"}); });
+	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pip", value: 1}); });
+	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pip", value: 2}); });
 
 	function showhidemodal(name, visible, status){
 		document.getElementById(name).className = visible;

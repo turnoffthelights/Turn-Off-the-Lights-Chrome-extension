@@ -69,11 +69,11 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		);
 		break;
 	case"eyesavemeOFF":
-		if(request.value == true){ chrome.storage.sync.set({"eyea": true}); chrome.storage.sync.set({"eyen": false}); }else{ chrome.storage.sync.set({"eyea": false}); chrome.storage.sync.set({"eyen": true}); }
+		if(request.value == true){ chrome.storage.sync.set({"eyea": true, "eyen": false}); }else{ chrome.storage.sync.set({"eyea": false, "eyen": true}); }
 		chromerefreshalltabs("gorefresheyelight");
 		break;
 	case"eyesavemeON":
-		if(request.value == true){ chrome.storage.sync.set({"eyea": true}); chrome.storage.sync.set({"eyen": false}); }else{ chrome.storage.sync.set({"eyea": false}); chrome.storage.sync.set({"eyen": true}); }
+		if(request.value == true){ chrome.storage.sync.set({"eyea": true, "eyen": false}); }else{ chrome.storage.sync.set({"eyea": false, "eyen": true}); }
 		chromerefreshalltabs("gorefresheyedark");
 		break;
 	case"nmcustomvalues":
@@ -112,8 +112,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			}
 			// set white icon
 			chrome.tabs.query({}, function(tabs){
-				var i;
-				var l = tabs.length;
+				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
 					chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png", "38": "icons/iconwhite38.png"}});
 				}
@@ -150,14 +149,15 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			chrome.tabs.sendMessage(sender.tab.id, {text: "receiveallpermissions", value: result});
 		});
 		break;
-	case"pipvideo":
+	case"pip":
 		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
-			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvideo"});
-		});
-		break;
-	case"pipvisual":
-		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
-			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvisual"});
+			var task;
+			if(request.value == 1){
+				task = "gopipvideo";
+			}else{
+				task = "gopipvisual";
+			}
+			chrome.tabs.sendMessage(tabs[0].id, {action: task});
 		});
 		break;
 	}
