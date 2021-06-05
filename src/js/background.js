@@ -279,29 +279,21 @@ chrome.commands.onCommand.addListener(function(command){
 function onClickHandler(info, tab){
 	var str = info.menuItemId;
 	switch(true){
-	case(str.includes("totlvideo") || str.includes("totlpage")):
-		chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+	case(str.includes("totlvideo") || str.includes("totlpage")): chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
 		break;
-	case(str.includes("totlguideemenu")):
-		chrome.tabs.create({url: linkguide, active:true});
+	case(str.includes("totlguideemenu")): chrome.tabs.create({url: linkguide, active:true});
 		break;
-	case(str.includes("totldevelopmenu")):
-		chrome.tabs.create({url: donatewebsite, active:true});
+	case(str.includes("totldevelopmenu")): chrome.tabs.create({url: donatewebsite, active:true});
 		break;
-	case(str.includes("totlratemen")):
-		chrome.tabs.create({url: writereview, active:true});
+	case(str.includes("totlratemen")): chrome.tabs.create({url: writereview, active:true});
 		break;
-	case(str.includes("totlshareemail")):
-		var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
+	case(str.includes("totlshareemail")): var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
 		break;
-	case(str.includes("totlsharetwitter")):
-		var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true});
+	case(str.includes("totlsharetwitter")): var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true});
 		break;
-	case(str.includes("totlsharefacebook")):
-		chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
+	case(str.includes("totlsharefacebook")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
 		break;
-	case(str.includes("totlsubscribe")):
-		chrome.tabs.create({url: linkyoutube, active:true});
+	case(str.includes("totlsubscribe")): chrome.tabs.create({url: linkyoutube, active:true});
 		break;
 	}
 }
