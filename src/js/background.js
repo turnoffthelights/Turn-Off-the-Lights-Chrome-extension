@@ -364,32 +364,28 @@ var menuvideo = null;
 var contextmenuadded = false;
 var contextarrayvideo = [];
 var contextarraypage = [];
+
+function addwebpagecontext(a, b, c, d){
+	var k;
+	var addvideolength = b.length;
+	for(k = 0; k < addvideolength; k++){
+		var contextvideo = b[k];
+		menuvideo = chrome.contextMenus.create({"title": a, "type":"normal", "id": d + k, "contexts":[contextvideo]});
+		c.push(menuvideo);
+	}
+}
+
 function checkcontextmenus(){
 	if(contextmenuadded == false){
 		contextmenuadded = true;
-
 		// video
+		var videotitle = chrome.i18n.getMessage("videotitle");
 		var contextsvideo = ["video"];
-		var k;
-		var addvideolength = contextsvideo.length;
-		for(k = 0; k < addvideolength; k++){
-			var contextvideo = contextsvideo[k];
-			var videotitle = chrome.i18n.getMessage("videotitle");
-			menuvideo = chrome.contextMenus.create({"title": videotitle, "type":"normal", "id": "totlvideo" + k, "contexts":[contextvideo]});
-			contextarrayvideo.push(menuvideo);
-		}
-
+		addwebpagecontext(videotitle, contextsvideo, contextarrayvideo, "totlvideo");
 		// page
+		var pagetitle = chrome.i18n.getMessage("pagetitle");
 		var contexts = ["page", "selection", "link", "editable", "image", "audio"];
-		var m;
-		var addpagelength = contexts.length;
-		for(m = 0; m < addpagelength; m++){
-			var context = contexts[m];
-			var pagetitle = chrome.i18n.getMessage("pagetitle");
-			menupage = chrome.contextMenus.create({"title": pagetitle, "type":"normal", "id": "totlpage" + m, "contexts":[context]});
-			contextarraypage.push(menupage);
-		}
-
+		addwebpagecontext(pagetitle, contexts, contextarraypage, "totlpage");
 	}
 }
 
