@@ -405,11 +405,9 @@ function removecontexmenus(){
 }
 
 function checkreturnpolicyvalues(a, b, c){
-	if(a[b]){
-		if(Object.prototype.hasOwnProperty.call(policygrouparray, c)){
-			if(a[b].newValue != policygrouparray[c]){
-				chrome.storage.sync.set({b: policygrouparray[c]});
-			}
+	if(a[b] && Object.prototype.hasOwnProperty.call(policygrouparray, c)){
+		if(a[b].newValue != policygrouparray[c]){
+			chrome.storage.sync.set({b: policygrouparray[c]});
 		}
 	}
 }
