@@ -278,29 +278,29 @@ chrome.commands.onCommand.addListener(function(command){
 // contextMenus
 function onClickHandler(info, tab){
 	var str = info.menuItemId;
-	switch(str){
+	switch(true){
 	case(str.includes("totlvideo") || str.includes("totlpage")):
 		chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
 		break;
-	case"totlguideemenu":
+	case(str.includes("totlguideemenu")):
 		chrome.tabs.create({url: linkguide, active:true});
 		break;
-	case"totldevelopmenu":
+	case(str.includes("totldevelopmenu")):
 		chrome.tabs.create({url: donatewebsite, active:true});
 		break;
-	case"totlratemen":
+	case(str.includes("totlratemen")):
 		chrome.tabs.create({url: writereview, active:true});
 		break;
-	case"totlshareemail":
+	case(str.includes("totlshareemail")):
 		var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
 		break;
-	case"totlsharetwitter":
+	case(str.includes("totlsharetwitter")):
 		var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextc") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true});
 		break;
-	case"totlsharefacebook":
+	case(str.includes("totlsharefacebook")):
 		chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
 		break;
-	case"totlsubscribe":
+	case(str.includes("totlsubscribe")):
 		chrome.tabs.create({url: linkyoutube, active:true});
 		break;
 	}
@@ -359,8 +359,7 @@ browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouT
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
 // context menu for page and video
-var menupage = null;
-var menuvideo = null;
+var menuitems = null;
 var contextmenuadded = false;
 var contextarrayvideo = [];
 var contextarraypage = [];
@@ -370,8 +369,8 @@ function addwebpagecontext(a, b, c, d){
 	var addvideolength = b.length;
 	for(k = 0; k < addvideolength; k++){
 		var contextvideo = b[k];
-		menuvideo = chrome.contextMenus.create({"title": a, "type":"normal", "id": d + k, "contexts":[contextvideo]});
-		c.push(menuvideo);
+		menuitems = chrome.contextMenus.create({"title": a, "type":"normal", "id": d + k, "contexts":[contextvideo]});
+		c.push(menuitems);
 	}
 }
 
