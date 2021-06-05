@@ -320,56 +320,41 @@ var sharemenuratetitle = chrome.i18n.getMessage("sharemenuratetitle");
 var sharemenudonatetitle = chrome.i18n.getMessage("sharemenudonatetitle");
 var sharemenusubscribetitle = chrome.i18n.getMessage("desremyoutube");
 
-function browsercontext(a, b, c){
-	var item = {"title": a, "type":"normal", "id": b, "contexts": contexts, "icons": c};
-	chrome.contextMenus.create(item);
+function browsercontext(a, b, c, d){
+	var item = {"title": a, "type": "normal", "id": b, "contexts": contexts};
+	var newitem;
+	if(d != ""){
+		item = Object.assign({}, item, {parentId: d});
+	}
+	if(c != ""){
+		newitem = Object.assign({}, item, {icons: c});
+	}
+	try{
+		// try show web browsers that do support "icons"
+		// Firefox, Opera, Microsoft Edge
+		return chrome.contextMenus.create(newitem);
+	}catch(e){
+		// catch web browsers that do NOT show the icon
+		// Google Chrome
+		return chrome.contextMenus.create(item);
+	}
 }
 
 var contexts = ["browser_action"];
-try{
-	// try show web browsers that do support "icons"
-	// Firefox, Opera, Microsoft Edge
-	browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
-	browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
-	browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
-}catch(e){
-	// catch web browsers that do NOT show the icon
-	// Google Chrome
-	browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu");
-	browsercontext(sharemenudonatetitle, "totldevelopmenu");
-	browsercontext(sharemenuratetitle, "totlratemenu");
-}
+browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
+browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
+browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
 
 // Create a parent item and two children.
 var parent = null;
-try{
-	// try show web browsers that do support "icons"
-	// Firefox, Opera, Microsoft Edge
-	parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts": contexts, "icons": {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"}});
-	chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}});
-	chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-	chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}});
-	chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "contexts": contexts, "parentId": parent, "icons": {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}});
-}catch(e){
-	// catch web browsers that do NOT show the icon
-	// Google Chrome
-	parent = chrome.contextMenus.create({"title": sharemenusharetitle, "id": "totlsharemenu", "contexts": contexts});
-	chrome.contextMenus.create({"title": sharemenutellafriend, "id": "totlshareemail", "contexts": contexts, "parentId": parent});
-	chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-	chrome.contextMenus.create({"title": sharemenusendatweet, "id": "totlsharetwitter", "contexts": contexts, "parentId": parent});
-	chrome.contextMenus.create({"title": sharemenupostonfacebook, "id": "totlsharefacebook", "contexts": contexts, "parentId": parent});
-}
+parent = browsercontext(sharemenusharetitle, "totlsharemenu", {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"});
+browsercontext(sharemenutellafriend, "totlshareemail", {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}, parent);
+chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
+browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
+browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
 
 chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
-try{
-	// try show web browsers that do support "icons"
-	// Firefox, Opera, Microsoft Edge
-	chrome.contextMenus.create({"title": sharemenusubscribetitle, "type":"normal", "id": "totlsubscribe", "contexts":contexts, "icons": {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"}});
-}catch(e){
-	// catch web browsers that do NOT show the icon
-	// Google Chrome
-	chrome.contextMenus.create({"title": sharemenusubscribetitle, "type":"normal", "id": "totlsubscribe", "contexts":contexts});
-}
+browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"});
 
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
