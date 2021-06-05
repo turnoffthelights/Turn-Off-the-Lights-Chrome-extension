@@ -320,19 +320,24 @@ var sharemenuratetitle = chrome.i18n.getMessage("sharemenuratetitle");
 var sharemenudonatetitle = chrome.i18n.getMessage("sharemenudonatetitle");
 var sharemenusubscribetitle = chrome.i18n.getMessage("desremyoutube");
 
+function browsercontext(a, b, c){
+	var item = {"title": a, "type":"normal", "id": b, "contexts": contexts, "icons": c};
+	chrome.contextMenus.create(item);
+}
+
 var contexts = ["browser_action"];
 try{
 	// try show web browsers that do support "icons"
 	// Firefox, Opera, Microsoft Edge
-	chrome.contextMenus.create({"title": sharemenuwelcomeguidetitle, "type":"normal", "id": "totlguideemenu", "contexts": contexts, "icons": {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"}});
-	chrome.contextMenus.create({"title": sharemenudonatetitle, "type":"normal", "id": "totldevelopmenu", "contexts": contexts, "icons": {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"}});
-	chrome.contextMenus.create({"title": sharemenuratetitle, "type":"normal", "id": "totlratemenu", "contexts": contexts, "icons": {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"}});
+	browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
+	browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
+	browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
 }catch(e){
 	// catch web browsers that do NOT show the icon
 	// Google Chrome
-	chrome.contextMenus.create({"title": sharemenuwelcomeguidetitle, "type":"normal", "id": "totlguideemenu", "contexts": contexts});
-	chrome.contextMenus.create({"title": sharemenudonatetitle, "type":"normal", "id": "totldevelopmenu", "contexts": contexts});
-	chrome.contextMenus.create({"title": sharemenuratetitle, "type":"normal", "id": "totlratemenu", "contexts": contexts});
+	browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu");
+	browsercontext(sharemenudonatetitle, "totldevelopmenu");
+	browsercontext(sharemenuratetitle, "totlratemenu");
 }
 
 // Create a parent item and two children.
