@@ -68,13 +68,8 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		}
 		);
 		break;
-	case"eyesavemeOFF":
-		if(request.value == true){ chrome.storage.sync.set({"eyea": true, "eyen": false}); }else{ chrome.storage.sync.set({"eyea": false, "eyen": true}); }
-		chromerefreshalltabs("gorefresheyelight");
-		break;
-	case"eyesavemeON":
-		if(request.value == true){ chrome.storage.sync.set({"eyea": true, "eyen": false}); }else{ chrome.storage.sync.set({"eyea": false, "eyen": true}); }
-		chromerefreshalltabs("gorefresheyedark");
+	case"eyesaveme":
+		if(request.value == true){ chrome.storage.sync.set({"eyea": true, "eyen": false}); chromerefreshalltabs("gorefresheyedark"); }else{ chrome.storage.sync.set({"eyea": false, "eyen": true}); chromerefreshalltabs("gorefresheyelight"); }
 		break;
 	case"nmcustomvalues":
 		if(request.valuex && request.valuey){ chrome.storage.sync.set({"nmcustomx": request.valuex, "nmcustomy": request.valuey}); }

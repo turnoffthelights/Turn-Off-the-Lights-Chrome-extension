@@ -239,7 +239,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(shortcutlight == true){
 				if($("stefanvdlightareoff1")){
 					var F9saving = Math.round(($("stefanvdlightareoff1").style.opacity) * 100);
-					chrome.runtime.sendMessage({"name" : "readersaveme", "value" : F9saving});
+					chrome.runtime.sendMessage({name: "readersaveme", value: F9saving});
 				}
 			}
 		}
@@ -312,7 +312,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					neweyediv.setAttribute("id", "stefanvdlightseye");
 					neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivoff + "";
 					document.body.appendChild(neweyediv);
-					chrome.runtime.sendMessage({"name" : "eyesavemeOFF", "value" : false});
+					chrome.runtime.sendMessage({name: "eyesaveme", value: false});
 				}else{
 					let stefanvdlightseye = $("stefanvdlightseye");
 					if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
@@ -321,7 +321,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					neweyediv.setAttribute("id", "stefanvdlightseye");
 					neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivon + "";
 					document.body.appendChild(neweyediv);
-					chrome.runtime.sendMessage({"name" : "eyesavemeON", "value" : true});
+					chrome.runtime.sendMessage({name: "eyesaveme", value: true});
 				}
 
 				// remove div after 3s
@@ -3892,7 +3892,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			this.dragapproved = 0;
 			// save the x and y value
 			if(nmcustom == true){
-				chrome.runtime.sendMessage({"name" : "nmcustomvalues", "valuex" : $("stefanvdnighttheme").style.left, "valuey" : $("stefanvdnighttheme").style.bottom});
+				chrome.runtime.sendMessage({name: "nmcustomvalues", valuex: $("stefanvdnighttheme").style.left, valuey: $("stefanvdnighttheme").style.bottom});
 			}
 		},
 		drag:function(e){

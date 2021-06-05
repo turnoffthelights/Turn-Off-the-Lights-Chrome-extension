@@ -60,7 +60,7 @@ var userSaid = function(str, s){ return str.indexOf(s) > -1; };
 
 function removespeechinfo(){
 // you are speaking now -- remove the bubble
-	chrome.runtime.sendMessage({"name" : "slidersave", "value" : true});
+	chrome.runtime.sendMessage({name: "slidersave", value: true});
 	chrome.tabs.query({active: true}, function(tabs){
 		var i;
 		var l = tabs.length;
@@ -74,7 +74,7 @@ function removespeechinfo(){
 
 function addspeechinfo(){
 // you are speaking now -- add the bubble
-	chrome.runtime.sendMessage({"name" : "slidersave", "value" : true});
+	chrome.runtime.sendMessage({name: "slidersave", value: true});
 	chrome.tabs.query({active: true}, function(tabs){
 		var i;
 		var l = tabs.length;

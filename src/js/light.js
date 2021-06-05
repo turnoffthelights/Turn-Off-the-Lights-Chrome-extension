@@ -1106,18 +1106,18 @@ function lockscreen(){
 			document.body.removeChild(pwon2);
 			if(fadeout == true){ ReducingFinished = false; fader("hide"); reader(); removenewdynamic(); }else{ removenewframe(); reader(); removenewdynamic(); }
 			if(darkbrowsertheme == true){
-				chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "light"});
+				chrome.runtime.sendMessage({name: "browsertheme", value: "light"});
 			}
 		}else{ window.alert(i18nlockwrongpassword); }
 	}else{
 		if(fadeout == true){ ReducingFinished = false; fader("hide"); reader(); removenewdynamic(); }else{ removenewframe(); reader(); removenewdynamic(); }
 		if(darkbrowsertheme == true){
-			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "light"});
+			chrome.runtime.sendMessage({name: "browsertheme", value: "light"});
 		}
 	}
 	// lamp and night mode active with one click
 	if(lampandnightmode == true){
-		chrome.runtime.sendMessage({"name": "sendnightmodeindark", "value": "day"});
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "day"});
 	}
 }
 
@@ -1872,11 +1872,11 @@ function lightsgoonoroff(){
 	}else{
 		// lamp and night mode active with one click
 		if(lampandnightmode == true){
-			chrome.runtime.sendMessage({"name": "sendnightmodeindark", "value": "night"});
+			chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});
 		}
 
 		if(darkbrowsertheme == true){
-			chrome.runtime.sendMessage({"name" : "browsertheme", "value" : "dark"});
+			chrome.runtime.sendMessage({name: "browsertheme", value: "dark"});
 		}
 
 		// multi opacity
