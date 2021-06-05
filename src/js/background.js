@@ -403,12 +403,16 @@ function checkreturnpolicyvalues(a, b, c){
 	}
 }
 
+function onchangestorage(a, b, c, d){
+	if(a[b]){
+		if(a[b].newValue == true){ c(); }else{ d(); }
+	}
+}
+
 var key;
 chrome.storage.onChanged.addListener(function(changes){
 	for(key in changes){
-		if(changes["contextmenus"]){
-			if(changes["contextmenus"].newValue == true){ checkcontextmenus(); }else{ removecontexmenus(); }
-		}
+		onchangestorage(changes, "contextmenus", checkcontextmenus, removecontexmenus);
 		if(changes["icon"]){
 			if(changes["icon"].newValue){
 				chrome.tabs.query({}, function(tabs){
@@ -430,9 +434,8 @@ chrome.storage.onChanged.addListener(function(changes){
 				chromerefreshalltabs("gorefresheyelight");
 			}
 		}
-		if(changes["badge"]){
-			if(changes["badge"].newValue == true){ checkbadge(); }else{ checkbadge(); }
-		}
+
+		onchangestorage(changes, "badge", checkbadge, checkbadge);
 
 		var changenameautoplay = ["autoplay", "mousespotlights", "autoplayDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "autoplayonly", "aplay", "apause", "astop", "autoplaydelay", "autoplaydelaytime"];
 		if(changenameautoplay.includes(key)){
