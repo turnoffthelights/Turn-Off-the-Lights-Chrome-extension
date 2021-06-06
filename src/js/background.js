@@ -617,6 +617,12 @@ function initwelcome(){
 	});
 }
 
+// saving group policy values
+var savinggroup = {};
+function setsavegroup(a, b){
+	if(a == true){ savinggroup[b] = true; }else if(a == false){ savinggroup[b] = false; }
+}
+
 function readgrouppolicy(items){
 	if(chrome.runtime.lastError){
 		// console.error("managed error: " + chrome.runtime.lastError.message);
@@ -630,24 +636,16 @@ function readgrouppolicy(items){
 			initwelcome();
 		}
 
-		// saving group policy values
-		var savinggroup = {};
-
-		if(items.AutoPlay == true){ savinggroup["autoplay"] = true; }else if(items.AutoPlay == false){ savinggroup["autoplay"] = false; }
-
-		if(items.AutoStop == true){ savinggroup["autostop"] = true; }else if(items.AutoStop == false){ savinggroup["autostop"] = false; }
-
-		if(items.AutoHD == true){ savinggroup["customqualityyoutube"] = true; }else if(items.AutoHD == false){ savinggroup["customqualityyoutube"] = false; }
+		setsavegroup(items.AutoPlay, "autoplay");
+		setsavegroup(items.AutoStop, "autostop");
+		setsavegroup(items.AutoHD, "customqualityyoutube");
 
 		if(items.AutoHDQuality != ""){ savinggroup["maxquality"] = items.AutoHDQuality; }
 
-		if(items.Block60FPS == true){ savinggroup["block60fps"] = true; }else if(items.Block60FPS == false){ savinggroup["block60fps"] = false; }
-
-		if(items.NightModeSwitch == true){ savinggroup["nighttheme"] = true; }else if(items.NightModeSwitch == false){ savinggroup["nighttheme"] = false; }
-
-		if(items.MouseVolumeScroll == true){ savinggroup["videovolume"] = true; }else if(items.MouseVolumeScroll == false){ savinggroup["videovolume"] = false; }
-
-		if(items.VideoToolbar == true){ savinggroup["videotool"] = true; }else if(items.VideoToolbar == false){ savinggroup["videotool"] = false; }
+		setsavegroup(items.Block60FPS, "block60fps");
+		setsavegroup(items.NightModeSwitch, "nighttheme");
+		setsavegroup(items.MouseVolumeScroll, "videovolume");
+		setsavegroup(items.VideoToolbar, "videotool");
 
 		// save total group policy
 		chrome.storage.sync.set(savinggroup);
