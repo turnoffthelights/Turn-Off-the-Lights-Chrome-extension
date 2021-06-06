@@ -304,25 +304,19 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var i18ntiteleye = chrome.i18n.getMessage("titeleye");
 
 				// enable/disable the "Eye Protection" feature
+				var stefanvdlightseye = $("stefanvdlightseye");
+				if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
+				// create div on top page, and say this is OFF
+				var neweyediv = document.createElement("div");
+				neweyediv.setAttribute("id", "stefanvdlightseye");
 				if(eyea == true){
-					var stefanvdlightseye = $("stefanvdlightseye");
-					if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
-					// create div on top page, and say this is OFF
-					var neweyediv = document.createElement("div");
-					neweyediv.setAttribute("id", "stefanvdlightseye");
 					neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivoff + "";
-					document.body.appendChild(neweyediv);
 					chrome.runtime.sendMessage({name: "eyesaveme", value: false});
 				}else{
-					let stefanvdlightseye = $("stefanvdlightseye");
-					if(stefanvdlightseye){ document.body.removeChild(stefanvdlightseye); } // remove it
-					// create div on top page, and say this is ON
-					let neweyediv = document.createElement("div");
-					neweyediv.setAttribute("id", "stefanvdlightseye");
 					neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivon + "";
-					document.body.appendChild(neweyediv);
 					chrome.runtime.sendMessage({name: "eyesaveme", value: true});
 				}
+				document.body.appendChild(neweyediv);
 
 				// remove div after 3s
 				var myVar = window.setInterval(function(){
@@ -815,19 +809,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
 		}
 
-		function camerazoomrotate(a, b, c){
-			var bomo = a;
-			videorefreshzoomcanvas(bomo);
-			$("stefanvdzoomstage" + bomo).style.display = "block";
-			$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-			var onevideo = $("stefanvdzoomcanvas" + bomo);
-			if(b != ""){
-				vzoom[bomo] = vzoom[bomo] + b;
-			}else if(c != ""){
-				vrotate[bomo] = vrotate[bomo] + c;
-			}
-			onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
-		}
+
 
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
@@ -4860,13 +4842,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
-	function zoomtest(videonum, b){
-		var bomo = videonum;
+	function camerazoomrotate(a, b, c){
+		var bomo = a;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		vzoom[bomo] = vzoom[bomo] + b;
+		if(b != ""){
+			vzoom[bomo] = vzoom[bomo] + b;
+		}else if(c != ""){
+			vrotate[bomo] = vrotate[bomo] + c;
+		}
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
