@@ -1194,15 +1194,14 @@ function test(){
 	}
 
 	if($("lightimagea").checked == true){
-		$("lightimagen").checked = false; $("example1").style.background = "url(" + $("lightimage").value + ")"; $("example1").style.backgroundSize = "100% 100%"; $("example2").style.background = "url(" + $("lightimage").value + ")"; $("example2").style.backgroundSize = "100% 100%"; $("lightimage").disabled = false; $("lightcolor").disabled = true;
+		$("lightimagen").checked = false; $("example1").style.background = $("example1").style.backgroundSize = $("example2").style.backgroundSize = "100% 100%"; $("example2").style.background = "url(" + $("lightimage").value + ")"; $("lightimage").disabled = false; $("lightcolor").disabled = true;
 		$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true; $("mousespotlighto").checked = true;
 	}else if($("lightimagen").checked == true){
 		$("lightimagen").checked = true; $("example1").style.background = $("lightcolor").value; $("example2").style.background = $("lightcolor").value; $("lightimage").disabled = true; $("lightcolor").disabled = false;
 		$("mousespotlighta").disabled = false; $("mousespotlightc").disabled = false;
 	}else if($("lightimagelin").checked == true){
 		var linearsq = document.getElementById("linearsq");
-		$("example1").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
-		$("example2").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
+		$("example1").style.background = $("example2").style.background = "linear-gradient(to " + linearsq.options[linearsq.selectedIndex].value + ", " + $("colora").value + " " + $("intervallina").value + "%," + $("colorb").value + " " + $("intervallinb").value + "%)";
 		$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true;
 		if($("mousespotlighta").checked == true || $("mousespotlightc").checked == true){ $("mousespotlighto").checked = true; }
 	}
