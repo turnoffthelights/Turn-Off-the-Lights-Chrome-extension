@@ -1740,6 +1740,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		myListenerWithContext = myListenervideotoolbar.bind(this);
 		window.addEventListener("resize", myListenerWithContext);
 
+		function updatepanelsize(a, b, c){
+			if(document.getElementById(a)){
+				document.getElementById(a).style.width = b.target.offsetWidth + "px";
+				document.getElementById(a).style.height = b.target.offsetHeight + "px";
+				document.getElementById(a).style.top = c.y + "px";
+				document.getElementById(a).style.left = c.x + "px";
+			}
+		}
+
 		// Observe a specific DOM element
 		// New Mutation Summary API Reference
 		if(MutationObserver){
@@ -1785,12 +1794,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								document.getElementById("stefanvdvispanel" + potvis).style.left = visposition.x + "px";
 							}
 							// canvas update location
-							if(document.getElementById("stefanvdvisualizationcanvas" + potvis)){
-								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.width = mutation.target.offsetWidth + "px";
-								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.height = mutation.target.offsetHeight + "px";
-								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.top = visposition.y + "px";
-								document.getElementById("stefanvdvisualizationcanvas" + potvis).style.left = visposition.x + "px";
-							}
+							updatepanelsize("stefanvdvisualizationcanvas" + potvis, mutation, visposition);
+
 							// speed update location
 							if(document.getElementById("stefanvdspeedpanel" + potvis)){
 								document.getElementById("stefanvdspeedpanel" + potvis).style.top = visposition.y + "px";
@@ -1811,12 +1816,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								document.getElementById("stefanvdzoomcanvas" + potvis).style.height = mutation.target.offsetHeight + "px";
 							}
 							// zoom stage location
-							if(document.getElementById("stefanvdzoomstage" + potvis)){
-								document.getElementById("stefanvdzoomstage" + potvis).style.width = mutation.target.offsetWidth + "px";
-								document.getElementById("stefanvdzoomstage" + potvis).style.height = mutation.target.offsetHeight + "px";
-								document.getElementById("stefanvdzoomstage" + potvis).style.top = visposition.y + "px";
-								document.getElementById("stefanvdzoomstage" + potvis).style.left = visposition.x + "px";
-							}
+							updatepanelsize("stefanvdzoomstage" + potvis, mutation, visposition);
+
 						}else{
 						// there is no data
 						// create everything again
