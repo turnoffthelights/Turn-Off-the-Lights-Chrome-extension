@@ -815,6 +815,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
 		}
 
+		function rotatevideo(a, b){
+			var bomo = a;
+			videorefreshzoomcanvas(bomo);
+			$("stefanvdzoomstage" + bomo).style.display = "block";
+			$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
+			var onevideo = $("stefanvdzoomcanvas" + bomo);
+			vrotate[bomo] = vrotate[bomo] + b;
+			onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+		}
+
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
 			var i, l = visualvideos.length;
@@ -1003,12 +1013,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonrotateright.setAttribute("data-video", i);
 					newzoombuttonrotateright.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						vrotate[bomo] = vrotate[bomo] + 5;
-						onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+						rotatevideo(bomo, +5);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonrotateright);
 
@@ -1019,12 +1024,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonrotateleft.setAttribute("data-video", i);
 					newzoombuttonrotateleft.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						vrotate[bomo] = vrotate[bomo] - 5;
-						onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+						rotatevideo(bomo, -5);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonrotateleft);
 
