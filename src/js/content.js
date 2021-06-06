@@ -815,13 +815,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
 		}
 
-		function rotatevideo(a, b){
+		function camerazoomrotate(a, b, c){
 			var bomo = a;
 			videorefreshzoomcanvas(bomo);
 			$("stefanvdzoomstage" + bomo).style.display = "block";
 			$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 			var onevideo = $("stefanvdzoomcanvas" + bomo);
-			vrotate[bomo] = vrotate[bomo] + b;
+			if(b != ""){
+				vzoom[bomo] = vzoom[bomo] + b;
+			}else if(c != ""){
+				vrotate[bomo] = vrotate[bomo] + c;
+			}
 			onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 		}
 
@@ -947,7 +951,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonplus.setAttribute("data-video", i);
 					newzoombuttonplus.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoom(bomo, + 0.05);
+						camerazoomrotate(bomo, + 0.05, "");
 					}, false);
 					newzoompanel.appendChild(newzoombuttonplus);
 
@@ -958,7 +962,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonmin.setAttribute("data-video", i);
 					newzoombuttonmin.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoom(bomo, -0.05);
+						camerazoomrotate(bomo, -0.05, "");
 					}, false);
 					newzoompanel.appendChild(newzoombuttonmin);
 
@@ -1013,7 +1017,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonrotateright.setAttribute("data-video", i);
 					newzoombuttonrotateright.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						rotatevideo(bomo, +5);
+						camerazoomrotate(bomo, "", +5);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonrotateright);
 
@@ -1024,7 +1028,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonrotateleft.setAttribute("data-video", i);
 					newzoombuttonrotateleft.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						rotatevideo(bomo, -5);
+						camerazoomrotate(bomo, "", -5);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonrotateleft);
 
@@ -4682,11 +4686,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			var currentaxesleft = Number(myGamepad.axes[1]).toFixed(1);
 			if(currentaxesleft > 0.1){
-				zoom(0, -0.05);
+				camerazoomrotate(0, -0.05, "");
 			}else if(Math.abs(currentaxesleft) == 0.0){
 				// do nothing
 			}else if(currentaxesleft < -0.1){
-				zoom(0, +0.05);
+				camerazoomrotate(0, +0.05, "");
 			}
 
 			var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
@@ -4856,7 +4860,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
-	function zoom(videonum, b){
+	function zoomtest(videonum, b){
 		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
