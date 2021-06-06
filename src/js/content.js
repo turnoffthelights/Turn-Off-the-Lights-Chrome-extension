@@ -953,7 +953,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonleft.setAttribute("data-video", i);
 					newzoombuttonleft.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompadleft(bomo, [0, 1, 0, 0]);
+						zoompaddirection(bomo, [0, 1, 0, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonleft);
 
@@ -964,7 +964,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonright.setAttribute("data-video", i);
 					newzoombuttonright.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompadright(bomo, [0, 0, 0, 1]);
+						zoompaddirection(bomo, [0, 0, 0, 1]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonright);
 
@@ -975,7 +975,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonup.setAttribute("data-video", i);
 					newzoombuttonup.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompadup(bomo, [1, 0, 0, 0]);
+						zoompaddirection(bomo, [1, 0, 0, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonup);
 
@@ -986,7 +986,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttondown.setAttribute("data-video", i);
 					newzoombuttondown.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompaddown(bomo, [0, 0, 1, 0]);
+						zoompaddirection(bomo, [0, 0, 1, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttondown);
 
@@ -4637,16 +4637,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					if(document.getElementsByTagName("video")[0]){
 						if(index == 12){
 							// Directional Up
-							zoompadup(0);
+							zoompaddirection(0, [1, 0, 0, 0]);
 						}else if(index == 13){
 							// Directional Down
-							zoompaddown(0);
+							zoompaddirection(0, [0, 0, 1, 0]);
 						}else if(index == 14){
 							// Directional Left
-							zoompadleft(0);
+							zoompaddirection(0, [0, 1, 0, 0]);
 						}else if(index == 15){
 							// Directional Right
-							zoompadright(0);
+							zoompaddirection(0, [0, 0, 0, 1]);
 						}
 					}
 				}else{
@@ -4675,20 +4675,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
 			if(currentaxesrighthoz > 0.1){
-				zoompadright(0);
+				zoompaddirection(0, [0, 0, 0, 1]);
 			}else if(Math.abs(currentaxesrighthoz) == 0.0){
 				// do nothing
 			}else if(currentaxesrighthoz < -0.1){
-				zoompadleft(0);
+				zoompaddirection(0, [0, 1, 0, 0]);
 			}
 
 			var currentaxesrightvert = Number(myGamepad.axes[3]).toFixed(1);
 			if(currentaxesrightvert > 0.1){
-				zoompaddown(0);
+				zoompaddirection(0, [0, 0, 1, 0]);
 			}else if(Math.abs(currentaxesrightvert) == 0.0){
 				// do nothing
 			}else if(currentaxesrightvert < -0.1){
-				zoompadup(0);
+				zoompaddirection(0, [1, 0, 0, 0]);
 			}
 		}
 		window.requestAnimFrame(updategamepadaxes);
@@ -4853,7 +4853,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
-	
+
 	// b: [top, left, bottom, right]
 	function zoompaddirection(a, b){
 		var bomo = a;
@@ -4871,42 +4871,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			onevideo.style.left = (parseInt(onevideo.style.left, 10) + 5) + "px";
 		}
 		onevideo.style.left = (parseInt(onevideo.style.left, 10) - 5) + "px";
-	}
-
-	function zoompadleft(videonum){
-		var bomo = videonum;
-		videorefreshzoomcanvas(bomo);
-		$("stefanvdzoomstage" + bomo).style.display = "block";
-		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		onevideo.style.left = (parseInt(onevideo.style.left, 10) - 5) + "px";
-	}
-
-	function zoompadright(videonum){
-		var bomo = videonum;
-		videorefreshzoomcanvas(bomo);
-		$("stefanvdzoomstage" + bomo).style.display = "block";
-		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		onevideo.style.left = (parseInt(onevideo.style.left, 10) + 5) + "px";
-	}
-
-	function zoompadup(videonum){
-		var bomo = videonum;
-		videorefreshzoomcanvas(bomo);
-		$("stefanvdzoomstage" + bomo).style.display = "block";
-		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		onevideo.style.top = (parseInt(onevideo.style.top, 10) - 5) + "px";
-	}
-
-	function zoompaddown(videonum){
-		var bomo = videonum;
-		videorefreshzoomcanvas(bomo);
-		$("stefanvdzoomstage" + bomo).style.display = "block";
-		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		onevideo.style.top = (parseInt(onevideo.style.top, 10) + 5) + "px";
 	}
 
 	function gamepadplaypause(){
