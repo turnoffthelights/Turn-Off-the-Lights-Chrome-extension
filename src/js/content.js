@@ -809,8 +809,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
 		}
 
-
-
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
 			var i, l = visualvideos.length;
@@ -955,7 +953,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonleft.setAttribute("data-video", i);
 					newzoombuttonleft.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompadleft(bomo);
+						zoompadleft(bomo, [0, 1, 0, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonleft);
 
@@ -966,7 +964,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonright.setAttribute("data-video", i);
 					newzoombuttonright.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompadright(bomo);
+						zoompadright(bomo, [0, 0, 0, 1]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonright);
 
@@ -977,7 +975,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonup.setAttribute("data-video", i);
 					newzoombuttonup.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompadup(bomo);
+						zoompadup(bomo, [1, 0, 0, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonup);
 
@@ -988,7 +986,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttondown.setAttribute("data-video", i);
 					newzoombuttondown.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoompaddown(bomo);
+						zoompaddown(bomo, [0, 0, 1, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttondown);
 
@@ -4854,6 +4852,25 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			vrotate[bomo] = vrotate[bomo] + c;
 		}
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+	}
+	
+	// b: [top, left, bottom, right]
+	function zoompaddirection(a, b){
+		var bomo = a;
+		videorefreshzoomcanvas(bomo);
+		$("stefanvdzoomstage" + bomo).style.display = "block";
+		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
+		var onevideo = $("stefanvdzoomcanvas" + bomo);
+		if(b[0] == 1){
+			onevideo.style.top = (parseInt(onevideo.style.top, 10) - 5) + "px";
+		}else if(b[1] == 1){
+			onevideo.style.left = (parseInt(onevideo.style.left, 10) - 5) + "px";
+		}else if(b[2] == 1){
+			onevideo.style.top = (parseInt(onevideo.style.top, 10) + 5) + "px";
+		}else if(b[3] == 1){
+			onevideo.style.left = (parseInt(onevideo.style.left, 10) + 5) + "px";
+		}
+		onevideo.style.left = (parseInt(onevideo.style.left, 10) - 5) + "px";
 	}
 
 	function zoompadleft(videonum){
