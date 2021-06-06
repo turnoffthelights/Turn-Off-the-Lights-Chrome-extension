@@ -947,7 +947,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonplus.setAttribute("data-video", i);
 					newzoombuttonplus.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoomin(bomo);
+						zoom(bomo, + 0.05);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonplus);
 
@@ -958,7 +958,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonmin.setAttribute("data-video", i);
 					newzoombuttonmin.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						zoommout(bomo);
+						zoom(bomo, -0.05);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonmin);
 
@@ -4682,11 +4682,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			var currentaxesleft = Number(myGamepad.axes[1]).toFixed(1);
 			if(currentaxesleft > 0.1){
-				zoommout(0);
+				zoom(0, -0.05);
 			}else if(Math.abs(currentaxesleft) == 0.0){
 				// do nothing
 			}else if(currentaxesleft < -0.1){
-				zoomin(0);
+				zoom(0, +0.05);
 			}
 
 			var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
@@ -4856,23 +4856,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
-	function zoommout(videonum){
+	function zoom(videonum, b){
 		var bomo = videonum;
 		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		vzoom[bomo] = vzoom[bomo] - 0.05;
-		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
-	}
-
-	function zoomin(videonum){
-		var bomo = videonum;
-		videorefreshzoomcanvas(bomo);
-		$("stefanvdzoomstage" + bomo).style.display = "block";
-		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		vzoom[bomo] = vzoom[bomo] + 0.05;
+		vzoom[bomo] = vzoom[bomo] + b;
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
