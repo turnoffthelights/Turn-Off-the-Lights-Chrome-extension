@@ -131,8 +131,7 @@ function endlayer(){
 				resultObject = search(today, siteengagement);
 				var mes = JSON.stringify(resultObject["'" + window.location.href + "'"]);
 				if(typeof mes == "undefined"){ mes = 0; }
-				currentseconds = parseInt(mes); currentseconds += totalSeconds;
-				mes = currentseconds;
+				currentseconds = parseInt(mes); currentseconds += totalSeconds; mes = currentseconds;
 				if(mes > 0){
 					resultObject["'" + window.location.href + "'"] = mes;
 					chrome.storage.sync.set({"siteengagement":siteengagement});
