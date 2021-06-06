@@ -809,6 +809,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(filtertype == "grayscale"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "sepia"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "invert"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "contrast"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "saturate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }else if(filtertype == "hue-rotate"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + "deg)"; }else if(filtertype == "brightness"){ onevideo.style.webkitFilter = "" + filtertype + "(" + gsvtrange + ")"; }
 		}
 
+		function hideshowdiv(a, b){
+			if($(a)){
+				$(a).style.display = b;
+			}
+		}
+
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
 			var i, l = visualvideos.length;
@@ -821,36 +827,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 				myElement.addEventListener("mouseover", function(){
 					rock = this.getAttribute("data-video");
-					if($("stefanvdvispanel" + rock)){
-						$("stefanvdvispanel" + rock).style.display = "block";
-					}
+					hideshowdiv("stefanvdvispanel" + rock, "block");
 					if(this.classList.contains("stefanvdvideowindow")){
-						if($("stefanvdzoompanel" + rock)){
-							$("stefanvdzoompanel" + rock).style.display = "none";
-						}
-						if($("stefanvdspeedpanel" + rock)){
-							$("stefanvdspeedpanel" + rock).style.display = "none";
-						}
+						hideshowdiv("stefanvdzoompanel" + rock, "none");
+						hideshowdiv("stefanvdspeedpanel" + rock, "none");
 					}else{
-						if($("stefanvdzoompanel" + rock)){
-							$("stefanvdzoompanel" + rock).style.display = "block";
-						}
-						if($("stefanvdspeedpanel" + rock)){
-							$("stefanvdspeedpanel" + rock).style.display = "block";
-						}
+						hideshowdiv("stefanvdzoompanel" + rock, "block");
+						hideshowdiv("stefanvdspeedpanel" + rock, "block");
 					}
 				}, false);
 
 				myElement.addEventListener("mouseout", function(){
-					if($("stefanvdvispanel" + rock)){
-						$("stefanvdvispanel" + rock).style.display = "none";
-					}
-					if($("stefanvdzoompanel" + rock)){
-						$("stefanvdzoompanel" + rock).style.display = "none";
-					}
-					if($("stefanvdspeedpanel" + rock)){
-						$("stefanvdspeedpanel" + rock).style.display = "none";
-					}
+					hideshowdiv("stefanvdvispanel" + rock, "none");
+					hideshowdiv("stefanvdzoompanel" + rock, "none");
+					hideshowdiv("stefanvdspeedpanel" + rock, "none");
 				}, false);
 
 				// var tempvisscrollleft = window.pageXOffset || document.documentElement.scrollLeft;
