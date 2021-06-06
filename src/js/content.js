@@ -931,8 +931,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonmin.title = "ctrl+alt+o";
 					newzoombuttonmin.setAttribute("data-video", i);
 					newzoombuttonmin.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						camerazoomrotate(bomo, -0.05, "");
+						camerazoomrotate(this.getAttribute("data-video"), -0.05, "");
 					}, false);
 					newzoompanel.appendChild(newzoombuttonmin);
 
@@ -942,8 +941,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonleft.title = "ctrl+alt+l";
 					newzoombuttonleft.setAttribute("data-video", i);
 					newzoombuttonleft.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						zoompaddirection(bomo, [0, 1, 0, 0]);
+						zoompaddirection(this.getAttribute("data-video"), [0, 1, 0, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonleft);
 
@@ -953,8 +951,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonright.title = "ctrl+alt+r";
 					newzoombuttonright.setAttribute("data-video", i);
 					newzoombuttonright.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						zoompaddirection(bomo, [0, 0, 0, 1]);
+						zoompaddirection(this.getAttribute("data-video"), [0, 0, 0, 1]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonright);
 
@@ -964,8 +961,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonup.title = "ctrl+alt+u";
 					newzoombuttonup.setAttribute("data-video", i);
 					newzoombuttonup.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						zoompaddirection(bomo, [1, 0, 0, 0]);
+						zoompaddirection(this.getAttribute("data-video"), [1, 0, 0, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonup);
 
@@ -975,8 +971,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttondown.title = "ctrl+alt+d";
 					newzoombuttondown.setAttribute("data-video", i);
 					newzoombuttondown.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						zoompaddirection(bomo, [0, 0, 1, 0]);
+						zoompaddirection(this.getAttribute("data-video"), [0, 0, 1, 0]);
 					}, false);
 					newzoompanel.appendChild(newzoombuttondown);
 
@@ -986,8 +981,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonrotateright.title = "ctrl+alt+a";
 					newzoombuttonrotateright.setAttribute("data-video", i);
 					newzoombuttonrotateright.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						camerazoomrotate(bomo, "", +5);
+						camerazoomrotate(this.getAttribute("data-video"), "", +5);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonrotateright);
 
@@ -997,8 +991,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonrotateleft.title = "ctrl+alt+q";
 					newzoombuttonrotateleft.setAttribute("data-video", i);
 					newzoombuttonrotateleft.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						camerazoomrotate(bomo, "", -5);
+						camerazoomrotate(this.getAttribute("data-video"), "", -5);
 					}, false);
 					newzoompanel.appendChild(newzoombuttonrotateleft);
 
