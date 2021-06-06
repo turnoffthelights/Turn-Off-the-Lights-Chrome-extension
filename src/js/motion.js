@@ -31,6 +31,22 @@ var motioncanvas;
 var canvasgetcont;
 var ccanvas;
 var ccgetcont;
+
+function stopcamera(){
+	document.getElementById("motionvideo").pause();
+	document.getElementById("motionvideo").src = "";
+	localMediaStream.getTracks().forEach((track) => track.stop());
+	localMediaStream = null;
+	document.getElementById("motionvideo").load();
+	motioncanvas = document.getElementById("motioncanvas");
+	canvasgetcont = motioncanvas.getContext("2d");
+	canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
+	ccanvas = document.getElementById("motioncomp");
+	ccgetcont = ccanvas.getContext("2d");
+	ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
+	window.clearInterval(intervalID);
+}
+
 document.addEventListener("DOMContentLoaded", function(){ cameramotionlights(); }, false);
 chrome.storage.onChanged.addListener(function(changes){
 	if(changes["motion"]){
@@ -41,18 +57,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			// disable this
 			try{ // stop it
 				if(localMediaStream){ // stop it
-					document.getElementById("motionvideo").pause();
-					document.getElementById("motionvideo").src = "";
-					localMediaStream.getTracks().forEach((track) => track.stop());
-					localMediaStream = null;
-					document.getElementById("motionvideo").load();
-					motioncanvas = document.getElementById("motioncanvas");
-					canvasgetcont = motioncanvas.getContext("2d");
-					canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
-					ccanvas = document.getElementById("motioncomp");
-					ccgetcont = ccanvas.getContext("2d");
-					ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
-					window.clearInterval(intervalID);
+					stopcamera();
 				}
 			}catch(e){ console.error(e); }
 		}
@@ -62,18 +67,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			// disable this
 			try{ // stop it
 				if(localMediaStream){ // stop it
-					document.getElementById("motionvideo").pause();
-					document.getElementById("motionvideo").src = "";
-					localMediaStream.getTracks().forEach((track) => track.stop());
-					localMediaStream = null;
-					document.getElementById("motionvideo").load();
-					motioncanvas = document.getElementById("motioncanvas");
-					canvasgetcont = motioncanvas.getContext("2d");
-					canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
-					ccanvas = document.getElementById("motioncomp");
-					ccgetcont = ccanvas.getContext("2d");
-					ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
-					window.clearInterval(intervalID);
+					stopcamera();
 				}
 			}catch(e){ console.error(e); }
 		}else{
@@ -131,18 +125,7 @@ function cameramotionlights(){
 			if(foundtheurlcamera == false){
 				try{ // stop it
 					if(localMediaStream){ // stop it
-						document.getElementById("motionvideo").pause();
-						document.getElementById("motionvideo").src = "";
-						localMediaStream.getTracks().forEach((track) => track.stop());
-						localMediaStream = null;
-						document.getElementById("motionvideo").load();
-						motioncanvas = document.getElementById("motioncanvas");
-						canvasgetcont = motioncanvas.getContext("2d");
-						canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
-						ccanvas = document.getElementById("motioncomp");
-						ccgetcont = ccanvas.getContext("2d");
-						ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
-						window.clearInterval(intervalID);
+						stopcamera();
 					}
 				}catch(e){ console.error(e); }
 			}
@@ -179,23 +162,10 @@ function cameramotionlights(){
 			}
 
 		}else{
-
 			if(localMediaStream){
-				document.getElementById("motionvideo").pause();
-				document.getElementById("motionvideo").src = "";
-				localMediaStream.getTracks().forEach((track) => track.stop());
-				localMediaStream = null;
-				document.getElementById("motionvideo").load();
-				motioncanvas = document.getElementById("motioncanvas");
-				canvasgetcont = motioncanvas.getContext("2d");
-				canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
-				ccanvas = document.getElementById("motioncomp");
-				ccgetcont = ccanvas.getContext("2d");
-				ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
-				window.clearInterval(intervalID);
+				stopcamera();
 				location.reload(); // to make sure everything is removed of the motion camera
 			}
-
 		}
 	});
 }
