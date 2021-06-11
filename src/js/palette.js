@@ -73,7 +73,7 @@ function openaurorapage(){
 document.addEventListener("DOMContentLoaded", function(){
 	// disable context menu
 	document.addEventListener("contextmenu", function(e){
-		e.preventDefault();
+		//todo e.preventDefault();
 	}, false);
 
 	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
