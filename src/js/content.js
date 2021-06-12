@@ -4264,16 +4264,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(videovolumeposa == true){
 				newmousewheelvideo.style.top = position.y + tempymidvideo + "px";
 				newmousewheelvideo.style.left = position.x + tempxmidvideo + "px";
-			}else if(videovolumeposb == true){
+			}else if(videovolumeposb == true || videovolumeposd == true){
 				newmousewheelvideo.style.top = position.y + 35 + "px";
 				newmousewheelvideo.style.left = position.x + 25 + "px";
-			}else if(videovolumeposc == true){
-				newmousewheelvideo.style.top = position.y + 35 + "px";
-				newmousewheelvideo.style.left = position.x + myElement.offsetWidth - 85 + "px";
-			}else if(videovolumeposd == true){
-				newmousewheelvideo.style.top = position.y + 35 + "px";
-				newmousewheelvideo.style.left = position.x + 25 + "px";
-			}else if(videovolumepose == true){
+			}else if(videovolumeposc == true || videovolumepose == true){
 				newmousewheelvideo.style.top = position.y + 35 + "px";
 				newmousewheelvideo.style.left = position.x + myElement.offsetWidth - 85 + "px";
 			}
