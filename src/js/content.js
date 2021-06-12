@@ -2353,6 +2353,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		v.style.boxShadow = "0px 0px 0px black , 0px -" + a[0] + " " + a[1] + " " + a[2] + " " + b[0] + ", 0px " + a[0] + " " + a[1] + " " + a[2] + " " + b[1] + ", " + a[0] + " 0px " + a[1] + " " + a[2] + " " + b[2] + ", -" + a[0] + " 0px " + a[1] + " " + a[2] + " " + b[3] + "";
 	}
 
+	function removeatmosvivid(playerid){
+		if($("stefanvdvivideffect" + playerid.getAttribute("data-video"))){
+			let stefanvdvivideffect = $("stefanvdvivideffect" + playerid.getAttribute("data-video"));
+			stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
+		}
+	}
+
 	// ambilight draw code
 	function drawAtmos(playerid, item, totlmode){
 		var statusdetectvideo;
@@ -2406,10 +2413,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(youtubewindow){
 					if(ambilightvarcolor == true){
 						if(atmosvivid == true){
-							if($("stefanvdvivideffect" + playerid.getAttribute("data-video"))){
-								var stefanvdvivideffect = $("stefanvdvivideffect" + playerid.getAttribute("data-video"));
-								stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
-							}
+							removeatmosvivid(playerid);
 						}else{
 							if(typeof downhex1 != "undefined" || typeof downhex2 != "undefined" || typeof downhex3 != "undefined" || typeof downhex4 != "undefined"){
 								try{
@@ -2428,10 +2432,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}else{
 				if(ambilightvarcolor == true){
 					if(atmosvivid == true){
-						if($("stefanvdvivideffect" + playerid.getAttribute("data-video"))){
-							let stefanvdvivideffect = $("stefanvdvivideffect" + playerid.getAttribute("data-video"));
-							stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
-						}
+						removeatmosvivid(playerid);
 					}else{
 						setatmosplayer(playerid, [textcountC, textcountB, textcountA], [downhex1, downhex2, downhex3, downhex4]);
 					}
