@@ -1927,11 +1927,7 @@ function lightsgoonoroff(){
 			document.body.style.cursor = "crosshair"; // show cursor
 
 			// fade out effect
-			if(fadeout == true){
-				multiaddEventListeners("click", [newframe1, newframe2, newframe3, newframe4], lockscreen);
-			}else{
-				multiaddEventListeners("click", [newframe1, newframe2, newframe3, newframe4], lockscreen);
-			}
+			multiaddEventListeners("click", [newframe1, newframe2, newframe3, newframe4], lockscreen);
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newframe1.style.opacity = default_opacity / 100; newframe2.style.opacity = default_opacity / 100; newframe3.style.opacity = default_opacity / 100; newframe4.style.opacity = default_opacity / 100; } // no fade effect
@@ -1953,7 +1949,7 @@ function lightsgoonoroff(){
 			document.body.appendChild(newdivthrough);
 
 			// fade out effect
-			if(fadeout == true){ newdivthrough.addEventListener("click", function(){ lockscreen(); }); }else{ newdivthrough.addEventListener("click", function(){ lockscreen(); }); }
+			newdivthrough.addEventListener("click", function(){ lockscreen(); });
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newdivthrough.style.opacity = default_opacity / 100; } // no fade effect
@@ -1992,7 +1988,7 @@ function lightsgoonoroff(){
 			document.body.appendChild(newdiv);
 
 			// fade out effect
-			if(fadeout == true){ newdiv.addEventListener("click", function(){ lockscreen(); }); }else{ newdiv.addEventListener("click", function(){ lockscreen(); }); }
+			newdiv.addEventListener("click", function(){ lockscreen(); });
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newdiv.style.opacity = default_opacity / 100; } // no fade effect
