@@ -1931,28 +1931,6 @@ function lightsgoonoroff(){
 
 			// fade in effect
 			if(fadein == true){ fader("show"); }else{ newframe1.style.opacity = default_opacity / 100; newframe2.style.opacity = default_opacity / 100; newframe3.style.opacity = default_opacity / 100; newframe4.style.opacity = default_opacity / 100; } // no fade effect
-		}else if(mousespotlightt == true){
-			var newdivthrough = document.createElement("div");
-			setAttributes(newdivthrough, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
-			newdivthrough.style.width = "100%";
-			newdivthrough.style.height = "100%";
-			newdivthrough.style.left = 0;
-			newdivthrough.style.top = 0;
-			newdivthrough.style.position = "fixed";
-			newdivthrough.style.pointerEvents = "none"; // make it possible to click on a link
-			// if image background, load it then
-			if(lightimagea == true){ newdivthrough.style.background = "url('" + lightimage + "')"; newdivthrough.style.backgroundSize = "100% 100%"; }else if(lightimagelin == true){ newdivthrough.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)"; }else{ newdivthrough.style.background = lightcolor; }
-			// ---
-			newdivthrough.style.opacity = 0;
-			newdivthrough.style.zIndex = 999;
-
-			document.body.appendChild(newdivthrough);
-
-			// fade out effect
-			newdivthrough.addEventListener("click", function(){ lockscreen(); });
-
-			// fade in effect
-			if(fadein == true){ fader("show"); }else{ newdivthrough.style.opacity = default_opacity / 100; } // no fade effect
 		}else{ // Begin normal lights off
 			var newdiv = document.createElement("div");
 			setAttributes(newdiv, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
@@ -1972,6 +1950,12 @@ function lightsgoonoroff(){
 			}else{
 				newdiv.style.position = "fixed";
 			}
+
+			// make it possible to click on a link
+			if(mousespotlightt == true){
+				newdiv.style.pointerEvents = "none";
+			}
+
 			// if image background, load it then
 			if(lightimagea == true){ newdiv.style.background = "url('" + lightimage + "')"; newdiv.style.backgroundSize = "100% 100%"; }else if(lightimagelin == true){ newdiv.style.background = "linear-gradient(to " + linearsq + ", " + colora + " " + intervallina + "%," + colorb + " " + intervallinb + "%)"; }else{ newdiv.style.background = lightcolor; }
 			//---
