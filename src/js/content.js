@@ -302,6 +302,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var i18neyedivoff = chrome.i18n.getMessage("eyedivoff");
 				var i18neyedivon = chrome.i18n.getMessage("eyedivon");
 				var i18ntiteleye = chrome.i18n.getMessage("titeleye");
+				var eyestatus;
 
 				// enable/disable the "Eye Protection" feature
 				var stefanvdlightseye = $("stefanvdlightseye");
@@ -311,11 +312,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				neweyediv.setAttribute("id", "stefanvdlightseye");
 				if(eyea == true){
 					neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivoff + "";
-					chrome.runtime.sendMessage({name: "eyesaveme", value: false});
+					eyestatus = false;
 				}else{
 					neweyediv.textContent = "" + i18ntiteleye + " " + i18neyedivon + "";
-					chrome.runtime.sendMessage({name: "eyesaveme", value: true});
+					eyestatus = true;
 				}
+				chrome.runtime.sendMessage({name: "eyesaveme", value: eyestatus});
+
 				document.body.appendChild(neweyediv);
 
 				// remove div after 3s
