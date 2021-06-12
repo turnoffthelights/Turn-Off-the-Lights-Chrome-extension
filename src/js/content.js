@@ -2805,11 +2805,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else{
 			style.type = "text/css";
 			style.setAttribute("id", a);
-			if(style.styleSheet){
-				style.styleSheet.cssText = b;
-			}else{
-				style.appendChild(document.createTextNode(b));
-			}
+			style.appendChild(document.createTextNode(b));
 			head.appendChild(style);
 		}
 	}

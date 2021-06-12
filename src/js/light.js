@@ -204,11 +204,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 							style = document.createElement("style");
 						style.id = "rootstefan";
 						style.type = "text/css";
-						if(style.styleSheet){
-							style.styleSheet.cssText = otherdowncss;
-						}else{
-							style.appendChild(document.createTextNode(otherdowncss));
-						}
+						style.appendChild(document.createTextNode(otherdowncss));
 						q[i].shadowRoot.appendChild(style);
 					}
 					var s = q[i].shadowRoot.querySelectorAll("*");
