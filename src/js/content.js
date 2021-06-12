@@ -4714,6 +4714,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
+	var cdv = 0;
 	function increasevolume(){
 		var that = document.getElementsByTagName("video")[0];
 		if(that){
@@ -4726,28 +4727,26 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				setyoutubevolumemeter(that.volume);
 			}
 
-			var pop = 0;
-			document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
-			if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
+			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
+			if(videovolumelabel == true){ document.getElementById("lblvolume" + cdv).textContent = Math.round(that.volume * 100) + "%"; }
 			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
 
 			var el = document.getElementsByClassName("totlmousewheelvideo");
-			if(el[pop]){
-				el[pop].classList.remove("totlhidevolume");
-				el[pop].classList.add("totlvisiblevolume");
+			if(el[cdv]){
+				el[cdv].classList.remove("totlhidevolume");
+				el[cdv].classList.add("totlvisiblevolume");
 			}
 
 			if(scrollTimer != -1){ window.clearTimeout(scrollTimer); }
 			scrollTimer = window.setTimeout(function(){
-				if(el[pop]){
-					el[pop].classList.remove("totlvisiblevolume");
-					el[pop].classList.add("totlhidevolume");
+				if(el[cdv]){
+					el[cdv].classList.remove("totlvisiblevolume");
+					el[cdv].classList.add("totlhidevolume");
 				}
 			}, 750);
 		}
 	}
 
-	var pop = 0;
 	function decreasevolume(){
 		var that = document.getElementsByTagName("video")[0];
 		if(that){
@@ -4761,21 +4760,21 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				setyoutubevolumemeter(that.volume);
 			}
 
-			document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
-			if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
+			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
+			if(videovolumelabel == true){ document.getElementById("lblvolume" + cdv).textContent = Math.round(that.volume * 100) + "%"; }
 			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
 
 			var el = document.getElementsByClassName("totlmousewheelvideo");
-			if(el[pop]){
-				el[pop].classList.remove("totlhidevolume");
-				el[pop].classList.add("totlvisiblevolume");
+			if(el[cdv]){
+				el[cdv].classList.remove("totlhidevolume");
+				el[cdv].classList.add("totlvisiblevolume");
 			}
 
 			if(scrollTimer != -1){ window.clearTimeout(scrollTimer); }
 			scrollTimer = window.setTimeout(function(){
-				if(el[pop]){
-					el[pop].classList.remove("totlvisiblevolume");
-					el[pop].classList.add("totlhidevolume");
+				if(el[cdv]){
+					el[cdv].classList.remove("totlvisiblevolume");
+					el[cdv].classList.add("totlhidevolume");
 				}
 			}, 750);
 		}
