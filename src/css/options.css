@@ -105,6 +105,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-page-a:#3ea6ff;
 --totl-yt-likebar:#909090;
 --totl-yt-disbar:#606060;
+--totl-donation-bar:#FFD54F;
 }
 .light{
 --totl-primary-background:#fff;
@@ -184,6 +185,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-page-a:#065fd4;
 --totl-yt-likebar:#909090;
 --totl-yt-disbar:#cccccc;
+--totl-donation-bar:#FFF59D;
 }
 
 html{overflow:hidden}
@@ -191,7 +193,7 @@ body{min-width:1150px;min-height:800px;background:var(--totl-body-background);co
 #main-content{display:-webkit-box;position:absolute;left:0;right:0;top:0;bottom:0}
 #mainview{padding-left:240px;margin:0;position:fixed;left:0;right:0;top:0;bottom:0;z-index:1;overflow:auto;margin-top:56px}
 #mainview-content{box-sizing:border-box;max-width:1020px;min-width:600px;padding:0 24px;position:relative}
-#managed-prefs-banner{background:#FFF59D;height:31px;width:100%;margin:0;padding:0;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:black;position:relative}
+#managed-prefs-banner{background:var(--totl-donation-bar);height:31px;width:100%;margin:0;padding:0;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:black;position:relative}
 #managed-prefs-icon{display:inline-block;padding:8px 12px 2px 12px;height:21px;vertical-align:middle}
 #managed-prefs-text{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;display:inline-block;margin-right:30px}
 #managed-prefs-text-close{float:right;display:table-cell;cursor:pointer;color:#000;font-size:18px;line-height:10px;margin:10px;background-repeat:no-repeat;background-position:center;position:absolute;top:0;right:0}
