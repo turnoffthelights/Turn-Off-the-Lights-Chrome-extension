@@ -1404,9 +1404,14 @@ function showValue(newValue){
 	for(i = 0; i < l; i++){ if(div[i].className == ("stefanvdlightareoff")){ div[i].style.opacity = (newValue / 100); } }
 }
 
-function toggle_small(){
+function settotlreaderstyle(a, b){
 	var totlreader = $("stefanvdreaderbar"); var totlreadermin = $("stefanvdreaderbartop");
-	if(totlreader.style.width != "30px"){ totlreader.style.width = "30px"; totlreader.style.height = "30px"; totlreadermin.style.opacity = 0; }else{ totlreader.style.width = ""; totlreader.style.height = ""; totlreadermin.style.opacity = 1; }
+	totlreader.style.width = a; totlreader.style.height = a; totlreadermin.style.opacity = b;
+}
+
+function toggle_small(){
+	var totlreader = $("stefanvdreaderbar");
+	if(totlreader.style.width != "30px"){ settotlreaderstyle("30px", 0); }else{ settotlreaderstyle("", 1); }
 }
 //---
 
