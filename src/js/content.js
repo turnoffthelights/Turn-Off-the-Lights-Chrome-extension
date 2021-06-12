@@ -2794,6 +2794,22 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
+	function addcsstext(a, b){
+		var head = document.head || document.getElementsByTagName("head")[0], style = document.createElement("style");
+		if($(a)){
+			$(a).innerText = b;
+		}else{
+			style.type = "text/css";
+			style.setAttribute("id", a);
+			if(style.styleSheet){
+				style.styleSheet.cssText = b;
+			}else{
+				style.appendChild(document.createTextNode(b));
+			}
+			head.appendChild(style);
+		}
+	}
+
 	// Night Theme feature
 	var sun = true;
 	var oldbackgroundImage = document.body.style.backgroundImage;
@@ -3598,22 +3614,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			});
 		}
 
-		var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}",
-			head = document.head || document.getElementsByTagName("head")[0],
-			style = document.createElement("style");
+		var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}";
 
-		if($("totlnightmodestyle")){
-			$("totlnightmodestyle").innerText = css;
-		}else{
-			style.type = "text/css";
-			style.setAttribute("id", "totlnightmodestyle");
-			if(style.styleSheet){
-				style.styleSheet.cssText = css;
-			}else{
-				style.appendChild(document.createTextNode(css));
-			}
-			head.appendChild(style);
-		}
+		addcsstext("totlnightmodestyle", css);
+
 		//---
 		webgonightmode().then(function(){
 		// this function is executed after function
@@ -4001,22 +4005,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	function runnightmodegesturecheck(){
 		if(nightmodegesture == true){
-			var nightblurcss = ".stefanvdnightblur{-webkit-animation:0.8s nightblind;animation:0.8s nightblind}@-webkit-keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}@keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}.stefanvdlongpress{-webkit-animation:0.8s longpress;animation:0.8s longpress}@-webkit-keyframes longpress{0%,20%{background:" + window.getComputedStyle(document.body, null).getPropertyValue("background-color") + "}100%{background:" + nightmodebck + "}}@keyframes longpress{0%,20%{background:" + window.getComputedStyle(document.body, null).getPropertyValue("background-color") + "}100%{background:" + nightmodebck + "}}",
-				head = document.head || document.getElementsByTagName("head")[0],
-				style = document.createElement("style");
+			var nightblurcss = ".stefanvdnightblur{-webkit-animation:0.8s nightblind;animation:0.8s nightblind}@-webkit-keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}@keyframes nightblind{0%,20%{filter:blur(0);-webkit-filter:blur(0)}100%{filter:blur(10px);-webkit-filter:blur(10px)}}.stefanvdlongpress{-webkit-animation:0.8s longpress;animation:0.8s longpress}@-webkit-keyframes longpress{0%,20%{background:" + window.getComputedStyle(document.body, null).getPropertyValue("background-color") + "}100%{background:" + nightmodebck + "}}@keyframes longpress{0%,20%{background:" + window.getComputedStyle(document.body, null).getPropertyValue("background-color") + "}100%{background:" + nightmodebck + "}}";
 
-			if($("totlnightgesturestyle")){
-				$("totlnightgesturestyle").innerText = nightblurcss;
-			}else{
-				style.type = "text/css";
-				style.setAttribute("id", "totlnightgesturestyle");
-				if(style.styleSheet){
-					style.styleSheet.cssText = nightblurcss;
-				}else{
-					style.appendChild(document.createTextNode(nightblurcss));
-				}
-				head.appendChild(style);
-			}
+			addcsstext("totlnightgesturestyle", nightblurcss);
 
 			document.addEventListener("selectionchange", nightseectionchange);
 
