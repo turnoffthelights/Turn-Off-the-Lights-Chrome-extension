@@ -4541,7 +4541,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 							switch(index){
 							case 0:
 								// X
-								decreasevolume();
+								changevolume("-");
 								break;
 							case 1:
 								// O
@@ -4553,7 +4553,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								break;
 							case 3:
 								// Triangle
-								increasevolume();
+								changevolume("+");
 								break;
 							case 4:
 								// L1
@@ -4706,50 +4706,26 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	var cdv = 0;
-	function increasevolume(){
+	function changevolume(a){
 		var that = document.getElementsByTagName("video")[0];
 		if(that){
 			if(videovolumesteps != 0.01){
 				that.volume = Math.round(that.volume / videovolumesteps) * videovolumesteps; // fix the correct ceil level (steps of the user)
 			}
 
-			if(that.volume <= 0.99){
-				that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-				setyoutubevolumemeter(that.volume);
-			}
-
-			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
-			if(videovolumelabel == true){ document.getElementById("lblvolume" + cdv).textContent = Math.round(that.volume * 100) + "%"; }
-			if(that.volume <= 0){ that.muted = true; }else{ that.muted = false; }
-
-			var el = document.getElementsByClassName("totlmousewheelvideo");
-			if(el[cdv]){
-				el[cdv].classList.remove("totlhidevolume");
-				el[cdv].classList.add("totlvisiblevolume");
-			}
-
-			if(scrollTimer != -1){ window.clearTimeout(scrollTimer); }
-			scrollTimer = window.setTimeout(function(){
-				if(el[cdv]){
-					el[cdv].classList.remove("totlvisiblevolume");
-					el[cdv].classList.add("totlhidevolume");
+			if(a == "+"){
+				if(that.volume <= 0.99){
+					that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
+					setyoutubevolumemeter(that.volume);
 				}
-			}, 750);
-		}
-	}
-
-	function decreasevolume(){
-		var that = document.getElementsByTagName("video")[0];
-		if(that){
-			if(videovolumesteps != 0.01){
-				that.volume = Math.round(that.volume / videovolumesteps) * videovolumesteps; // fix the correct ceil level (steps of the user)
+			}else{
+				if(that.volume > 0.00){
+					that.volume -= videovolumesteps;
+					that.volume = Math.round(that.volume * 100) / 100;
+					setyoutubevolumemeter(that.volume);
+				}
 			}
 
-			if(that.volume > 0.00){
-				that.volume -= videovolumesteps;
-				that.volume = Math.round(that.volume * 100) / 100;
-				setyoutubevolumemeter(that.volume);
-			}
 
 			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
 			if(videovolumelabel == true){ document.getElementById("lblvolume" + cdv).textContent = Math.round(that.volume * 100) + "%"; }
