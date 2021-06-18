@@ -299,9 +299,11 @@ function onClickHandler(info, tab){
 }
 
 // check to remove all contextmenus
-chrome.contextMenus.removeAll(function(){
-// console.log("contextMenus.removeAll callback");
-});
+if(chrome.contextMenus){
+	chrome.contextMenus.removeAll(function(){
+	// console.log("contextMenus.removeAll callback");
+	});
+}
 
 var sharemenusharetitle = chrome.i18n.getMessage("sharemenusharetitle");
 var sharemenuwelcomeguidetitle = chrome.i18n.getMessage("sharemenuwelcomeguidetitle");
@@ -332,23 +334,25 @@ function browsercontext(a, b, c, d){
 	}
 }
 
-var contexts = ["browser_action"];
-browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
-browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
-browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
+if(chrome.contextMenus){
+	var contexts = ["browser_action"];
+	browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
+	browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
+	browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
 
-// Create a parent item and two children.
-var parent = null;
-parent = browsercontext(sharemenusharetitle, "totlsharemenu", {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"});
-browsercontext(sharemenutellafriend, "totlshareemail", {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}, parent);
-chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
-browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
-browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
+	// Create a parent item and two children.
+	var parent = null;
+	parent = browsercontext(sharemenusharetitle, "totlsharemenu", {"16": "images/IconShare.png", "32": "images/IconShare@2x.png"});
+	browsercontext(sharemenutellafriend, "totlshareemail", {"16": "images/IconEmail.png", "32": "images/IconEmail@2x.png"}, parent);
+	chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartorshare", "contexts": contexts, "parentId": parent});
+	browsercontext(sharemenusendatweet, "totlsharetwitter", {"16": "images/IconTwitter.png", "32": "images/IconTwitter@2x.png"}, parent);
+	browsercontext(sharemenupostonfacebook, "totlsharefacebook", {"16": "images/IconFacebook.png", "32": "images/IconFacebook@2x.png"}, parent);
 
-chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
-browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"});
+	chrome.contextMenus.create({"title": "", "type":"separator", "id": "totlsepartor", "contexts": contexts});
+	browsercontext(sharemenusubscribetitle, "totlsubscribe", {"16": "images/IconYouTube.png", "32": "images/IconYouTube@2x.png"});
 
-chrome.contextMenus.onClicked.addListener(onClickHandler);
+	chrome.contextMenus.onClicked.addListener(onClickHandler);
+}
 
 // context menu for page and video
 var menuitems = null;
@@ -367,16 +371,18 @@ function addwebpagecontext(a, b, c, d){
 }
 
 function checkcontextmenus(){
-	if(contextmenuadded == false){
-		contextmenuadded = true;
-		// video
-		var videotitle = chrome.i18n.getMessage("videotitle");
-		var contextsvideo = ["video"];
-		addwebpagecontext(videotitle, contextsvideo, contextarrayvideo, "totlvideo");
-		// page
-		var pagetitle = chrome.i18n.getMessage("pagetitle");
-		var contexts = ["page", "selection", "link", "editable", "image", "audio"];
-		addwebpagecontext(pagetitle, contexts, contextarraypage, "totlpage");
+	if(chrome.contextMenus){
+		if(contextmenuadded == false){
+			contextmenuadded = true;
+			// video
+			var videotitle = chrome.i18n.getMessage("videotitle");
+			var contextsvideo = ["video"];
+			addwebpagecontext(videotitle, contextsvideo, contextarrayvideo, "totlvideo");
+			// page
+			var pagetitle = chrome.i18n.getMessage("pagetitle");
+			var contexts = ["page", "selection", "link", "editable", "image", "audio"];
+			addwebpagecontext(pagetitle, contexts, contextarraypage, "totlpage");
+		}
 	}
 }
 
@@ -390,9 +396,11 @@ function cleanrightclickmenu(menu){
 }
 
 function removecontexmenus(){
-	cleanrightclickmenu(contextarrayvideo);
-	cleanrightclickmenu(contextarraypage);
-	contextmenuadded = false;
+	if(chrome.contextMenus){
+		cleanrightclickmenu(contextarrayvideo);
+		cleanrightclickmenu(contextarraypage);
+		contextmenuadded = false;
+	}
 }
 
 function checkreturnpolicyvalues(a, b, c){
