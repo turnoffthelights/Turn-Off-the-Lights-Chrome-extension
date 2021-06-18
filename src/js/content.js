@@ -4699,16 +4699,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			if(a == "+"){
 				if(that.volume <= 0.99){
-					that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-					setyoutubevolumemeter(that.volume);
+					that.volume += videovolumesteps;
 				}
 			}else{
 				if(that.volume > 0.00){
 					that.volume -= videovolumesteps;
-					that.volume = Math.round(that.volume * 100) / 100;
-					setyoutubevolumemeter(that.volume);
 				}
 			}
+			that.volume = Math.round(that.volume * 100) / 100;
+			setyoutubevolumemeter(that.volume);
 
 
 			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
