@@ -3633,9 +3633,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var mousemoveswitchhide = function(){
 		window.clearTimeout(timernightswitch);
 		if($("stefanvdnighttheme")){
-			if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){
-				$("stefanvdnighttheme").classList.remove("stefanvdswitchhidden");
-			}
+			$("stefanvdnighttheme").classList.toggle("stefanvdswitchhidden");
 		}
 		timernightswitch = window.setTimeout(function(){
 			if($("stefanvdnighttheme")){
@@ -3654,7 +3652,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function goshowswitchonpause(){
 		if(!nightmodeswitchhide){ // auto hide switch is not enabled
 			if($("stefanvdnighttheme")){
-				if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){ $("stefanvdnighttheme").classList.remove("stefanvdswitchhidden"); }
+				$("stefanvdnighttheme").classList.toggle("stefanvdswitchhidden");
 			}
 		}
 	}
