@@ -4175,43 +4175,35 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					if(isMac == true){
 						if(delta == -1 && that.volume > 0.00){
 							that.volume -= videovolumesteps;
-							that.volume = Math.round(that.volume * 100) / 100;
-							setyoutubevolumemeter(that.volume);
 						}
 						if(delta == 1 && that.volume <= 0.99){
-							that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-							setyoutubevolumemeter(that.volume);
+							that.volume += videovolumesteps;
 						}
 					}else{
 						if(delta == -1 && that.volume <= 0.99){
-							that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-							setyoutubevolumemeter(that.volume);
+							that.volume += videovolumesteps;
 						}
 						if(delta == 1 && that.volume > 0.00){
-							that.volume -= videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-							setyoutubevolumemeter(that.volume);
+							that.volume -= videovolumesteps;
 						}
 					}
 				}else if(videovolumescrollb == true){
 					if(delta == -1 && that.volume > 0.00){
 						that.volume -= videovolumesteps;
-						that.volume = Math.round(that.volume * 100) / 100;
-						setyoutubevolumemeter(that.volume);
 					}
 					if(delta == 1 && that.volume <= 0.99){
-						that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-						setyoutubevolumemeter(that.volume);
+						that.volume += videovolumesteps;
 					}
 				}else if(videovolumescrollc == true){
 					if(delta == -1 && that.volume <= 0.99){
-						that.volume += videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-						setyoutubevolumemeter(that.volume);
+						that.volume += videovolumesteps;
 					}
 					if(delta == 1 && that.volume > 0.00){
-						that.volume -= videovolumesteps; that.volume = Math.round(that.volume * 100) / 100;
-						setyoutubevolumemeter(that.volume);
+						that.volume -= videovolumesteps;
 					}
 				}
+				that.volume = Math.round(that.volume * 100) / 100;
+				setyoutubevolumemeter(that.volume);
 
 				document.getElementById("volumecontrol" + pop).value = Math.round(that.volume * 100);
 				if(videovolumelabel == true){ document.getElementById("lblvolume" + pop).textContent = Math.round(that.volume * 100) + "%"; }
