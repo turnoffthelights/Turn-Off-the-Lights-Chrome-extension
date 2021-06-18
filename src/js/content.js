@@ -2131,13 +2131,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var j;
 				var l = htmlplayer.length;
 				for(j = 0; j < l; j++){
-					if(htmlplayer[j].play){
-						playerid = htmlplayer[j];
-						item = j + 1;
-						drawAtmos(playerid, item, totlmode);
-						htmlplayer[j].requestVideoFrameCallback(animate);
-					}
-					if(htmlplayer[j].paused){
+					if(htmlplayer[j].play || htmlplayer[j].paused){
 						playerid = htmlplayer[j];
 						item = j + 1;
 						drawAtmos(playerid, item, totlmode);
