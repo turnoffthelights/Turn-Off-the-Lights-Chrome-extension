@@ -778,18 +778,19 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		var intervalRewind;
 		function rewind(rewindSpeed, v){
+			var onevideo = document.getElementsByTagName("video")[v];
 			window.clearInterval(intervalRewind);
 			var startSystemTime = new Date().getTime();
-			var startVideoTime = v.currentTime;
+			var startVideoTime = onevideo.currentTime;
 
 			intervalRewind = window.setInterval(function(){
-				v.playbackRate = 1.0;
-				if(v.currentTime == 0){
+				onevideo.playbackRate = 1.0;
+				if(onevideo.currentTime == 0){
 					window.clearInterval(intervalRewind);
-					v.pause();
+					onevideo.pause();
 				}else{
 					var elapsed = new Date().getTime() - startSystemTime;
-					v.currentTime = Math.max(startVideoTime - elapsed * rewindSpeed / 1000.0, 0);
+					onevideo.currentTime = Math.max(startVideoTime - elapsed * rewindSpeed / 1000.0, 0);
 				}
 			}, 30);
 		}
@@ -1103,8 +1104,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg2.setAttribute("data-video", i);
 					newspeedbuttonneg2.textContent = "-2";
 					newspeedbuttonneg2.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(2.0, onevideo);
+						rewind(2.0, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg2);
 
@@ -1113,8 +1113,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg15.setAttribute("data-video", i);
 					newspeedbuttonneg15.textContent = "-1.5";
 					newspeedbuttonneg15.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(1.5, onevideo);
+						rewind(1.5, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg15);
 
@@ -1123,8 +1122,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg125.setAttribute("data-video", i);
 					newspeedbuttonneg125.textContent = "-1.25";
 					newspeedbuttonneg125.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(1.25, onevideo);
+						rewind(1.25, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg125);
 
@@ -1133,8 +1131,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg1.setAttribute("data-video", i);
 					newspeedbuttonneg1.textContent = "-1";
 					newspeedbuttonneg1.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(1.0, onevideo);
+						rewind(1.0, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg1);
 
@@ -1143,8 +1140,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg075.setAttribute("data-video", i);
 					newspeedbuttonneg075.textContent = "-0.75";
 					newspeedbuttonneg075.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(0.5, onevideo);
+						rewind(0.5, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg075);
 
@@ -1153,8 +1149,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg05.setAttribute("data-video", i);
 					newspeedbuttonneg05.textContent = "-0.5";
 					newspeedbuttonneg05.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(0.5, onevideo);
+						rewind(0.5, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg05);
 
@@ -1163,8 +1158,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedbuttonneg025.setAttribute("data-video", i);
 					newspeedbuttonneg025.textContent = "-0.25";
 					newspeedbuttonneg025.addEventListener("click", function(){
-						var onevideo = document.getElementsByTagName("video")[this.getAttribute("data-video")];
-						rewind(0.25, onevideo);
+						rewind(0.25, this.getAttribute("data-video"));
 					}, false);
 					newspeedpanel.appendChild(newspeedbuttonneg025);
 
