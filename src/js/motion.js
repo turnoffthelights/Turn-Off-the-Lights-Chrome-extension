@@ -47,6 +47,14 @@ function stopcamera(){
 	window.clearInterval(intervalID);
 }
 
+function disablecamera(){
+	try{ // stop it
+		if(localMediaStream){ // stop it
+			stopcamera();
+		}
+	}catch(e){ console.error(e); }
+}
+
 document.addEventListener("DOMContentLoaded", function(){ cameramotionlights(); }, false);
 chrome.storage.onChanged.addListener(function(changes){
 	if(changes["motion"]){
@@ -55,21 +63,13 @@ chrome.storage.onChanged.addListener(function(changes){
 			cameramotionlights();
 		}else{
 			// disable this
-			try{ // stop it
-				if(localMediaStream){ // stop it
-					stopcamera();
-				}
-			}catch(e){ console.error(e); }
+			disablecamera();
 		}
 	}
 	if(changes["cammotiononly"]){
 		if(changes["cammotiononly"].newValue == true){
 			// disable this
-			try{ // stop it
-				if(localMediaStream){ // stop it
-					stopcamera();
-				}
-			}catch(e){ console.error(e); }
+			disablecamera();
 		}else{
 			// enable this
 			cameramotionlights();
@@ -123,11 +123,7 @@ function cameramotionlights(){
 			}
 			// stop
 			if(foundtheurlcamera == false){
-				try{ // stop it
-					if(localMediaStream){ // stop it
-						stopcamera();
-					}
-				}catch(e){ console.error(e); }
+				disablecamera();
 			}
 			// reset
 			foundtheurlcamera = false;
