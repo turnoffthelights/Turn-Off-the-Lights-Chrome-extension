@@ -1343,38 +1343,47 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 
 						if(onevideo){
-							if(currentvideostepfilter == 0){
+							switch(currentvideostepfilter){
+							case 0:
 								filtertype = "grayscale";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "1", "1"]);
 								onevideo.style.webkitFilter = "grayscale(1)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolgrayscale;
-							}else if(currentvideostepfilter == 1){
+								break;
+							case 1:
 								filtertype = "sepia";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "1", "1"]);
 								onevideo.style.webkitFilter = "sepia(1)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolsepia;
-							}else if(currentvideostepfilter == 2){
+								break;
+							case 2:
 								filtertype = "invert";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "1", "1"]);
 								onevideo.style.webkitFilter = "invert(1)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolinvert;
-							}else if(currentvideostepfilter == 3){
+								break;
+							case 3:
 								filtertype = "contrast";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "10", "10"]);
 								onevideo.style.webkitFilter = "contrast(10)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolcontrast;
-							}else if(currentvideostepfilter == 4){
+								break;
+							case 4:
 								filtertype = "saturate";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "10", "10"]);
 								onevideo.style.webkitFilter = "saturate(10)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolsaturate;
-							}else if(currentvideostepfilter == 5){
+								break;
+							case 5:
 								filtertype = "hue-rotate";
 								settoolbarrange(getstefanvdvideotoolrange, ["30", "0", "360", "90"]);
 								onevideo.style.webkitFilter = "hue-rotate(90deg)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolhueroration;
-							}else if(currentvideostepfilter == 6){
+								break;
+							case 6:
 								filtertype = "brightness";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "10", "0.5"]);
 								onevideo.style.webkitFilter = "brightness(1.5)"; currentvideostepfilter += 1; newvcpartiaspan.textContent = i18ntitelvideotoolbrightness;
-							}else if(currentvideostepfilter == 7){
+								break;
+							case 7:
 								filtertype = "normal";
 								settoolbarrange(getstefanvdvideotoolrange, ["0.1", "0", "10", "1"]);
 								onevideo.style.webkitFilter = ""; currentvideostepfilter = 0; newvcpartiaspan.textContent = i18ntitelvideotoolnormal;
+								break;
 							}
 							document.getElementById("stefanvdvideofiltername" + yellowvis).innerText = filtertype;
 						}
