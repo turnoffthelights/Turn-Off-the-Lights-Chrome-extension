@@ -73,7 +73,7 @@ function openaurorapage(){
 document.addEventListener("DOMContentLoaded", function(){
 	// disable context menu
 	document.addEventListener("contextmenu", function(e){
-		//todo e.preventDefault();
+		e.preventDefault();
 	}, false);
 
 	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
@@ -390,16 +390,12 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 
-	var todayclicknumber = function(){
-		return JSON.stringify(search(today, analytics));
-	};
-
 	var analytics;
 	var sharetext;
 	chrome.storage.sync.get("analytics", function(items){
 		if(items["analytics"]){
 			analytics = items["analytics"];
-			$("analclicktoday").innerText = todayclicknumber();
+			$("analclicktoday").innerText = JSON.stringify(search(today, analytics));
 
 			var timeeverything = analytics.map(function(a){
 				return a.details.time; // in minutes
