@@ -390,12 +390,16 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 
+	var todayclicknumber = function(){
+		return JSON.stringify(search(today, analytics));
+	};
+
 	var analytics;
 	var sharetext;
 	chrome.storage.sync.get("analytics", function(items){
 		if(items["analytics"]){
 			analytics = items["analytics"];
-			$("analclicktoday").innerText = JSON.stringify(search(today, analytics));
+			$("analclicktoday").innerText = todayclicknumber();
 
 			var timeeverything = analytics.map(function(a){
 				return a.details.time; // in minutes
