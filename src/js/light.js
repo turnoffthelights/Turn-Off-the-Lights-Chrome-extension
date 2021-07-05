@@ -896,6 +896,10 @@ function reader(){
 	}
 	window.onmousemove = null;
 
+	function ytresettxtcolor(a){
+		if(a != null){ a.style.color = ""; }
+	}
+
 	// Set everything back to the default YouTube theme
 	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 		// update YouTube material 6 August 2017
@@ -956,14 +960,14 @@ function reader(){
 		var ytmaterialvideotitle = document.querySelector("ytd-video-primary-info-renderer");
 		if(ytmaterialvideotitle){
 			var ytgeth = ytmaterialvideotitle.querySelector("h1");
-			if(ytgeth != null){ ytgeth.style.color = ""; }
+			ytresettxtcolor(ytgeth);
 		}
 
 		// YouTube view count
 		var ytmaterialviewcount = document.querySelector("yt-view-count-renderer");
 		if(ytmaterialviewcount){
 			var ytgetformat = ytmaterialviewcount.querySelector(".view-count");
-			if(ytgetformat != null){ ytgetformat.style.color = ""; }
+			ytresettxtcolor(ytgetformat);
 		}
 
 		// old YouTube -----
