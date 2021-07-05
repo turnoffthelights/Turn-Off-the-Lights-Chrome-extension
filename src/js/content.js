@@ -5209,7 +5209,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 			});
 		}else if(request.action == "goenablenightmode"){
-			chrome.storage.sync.get(["nighttheme", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom"], function(items){
+			chrome.storage.sync.get(["nighttheme", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos"], function(items){
 				nighttheme = items["nighttheme"];
 				nightmodeswitchhide = items["nightmodeswitchhide"];
 				nightmodeswitchhidetime = items["nightmodeswitchhidetime"];
@@ -5229,6 +5229,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				nmbottomright = items["nmbottomright"];
 				nmbottomleft = items["nmbottomleft"];
 				nmcustom = items["nmcustom"];
+				nightmodegesture = items["nightmodegesture"];
+				nightmodeos = items["nightmodeos"];
 
 				// remove
 				window.clearTimeout(timernightswitch);
