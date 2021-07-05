@@ -533,5 +533,6 @@
     "desgpbuttonnextvideo": {"message": "Play next YouTube video"},
     "desgpbuttonprevvideo": {"message": "Play previous YouTube video"},
     "titelgpconnect": {"message": "Connected"},
-    "titelgpdisconnect": {"message": "Disconnected"}
+    "titelgpdisconnect": {"message": "Disconnected"},
+    "desnightmodeos": {"message": "Automatically switch the current web page to night mode if the OS appearance is set to Dark"}
 }
