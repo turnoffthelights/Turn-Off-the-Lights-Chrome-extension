@@ -1265,10 +1265,8 @@ function getMouse(obj, e){
 		$("stefanvdlightcorner").addEventListener("mouseup", function(){ stretchable = false; document.body.style.cursor = "auto"; }, false);
 		$("stefanvdlightcorner").addEventListener("mouseout", function(){ stretchable = false; document.body.style.cursor = "auto"; }, false);
 
-		$("stefanvdlightcorner").style.top = parseInt(document.getElementById("stefanvdlightareoff1").style.height) - 10 + "px";
-		$("stefanvdlightcorner").style.height = parseInt(document.getElementById("stefanvdlightareoff2").style.height) - 20 + "px";
-		$("stefanvdlightcorner").style.left = parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 10 + "px";
-		$("stefanvdlightcorner").style.width = parseInt(document.getElementById("stefanvdlightareoff3").style.left) - parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 20 + "px";
+		setAttributes($("stefanvdlightcorner"), {"top": parseInt(document.getElementById("stefanvdlightareoff1").style.height) - 10 + "px", "height": parseInt(document.getElementById("stefanvdlightareoff2").style.height) - 20 + "px", "left": parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 10 + "px", "width": parseInt(document.getElementById("stefanvdlightareoff3").style.left) - parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 20 + "px"});
+
 	}else{ return false; }
 	// var viewpartwidth = customview.style.width;
 	var viewpartheight = customview.style.height;
