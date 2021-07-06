@@ -123,7 +123,7 @@ button[disabled],button[disabled]:hover{box-shadow:none;background-color:var(--t
 .btnacc:active{background-color:rgba(255,215,64,.4)}
 .btnacc:hover{background-color:rgba(255,215,64,.2)}
 hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
-.oan{display:inline-block;width:calc(100% - 40px);margin:17px 20px 18px 20px;height:20px}
+.oan{display:inline-block;width:calc(100% - 30px);margin:17px 15px 18px 15px;height:20px}
 .oan .oa{display:flex;width:84%;height:20px;float:left}
 .oan .an{display:flex;width:14%;height:20px;float:left;align-items:center;align-content:center;justify-content:center;flex-direction:column}
 .palette{margin:20px 15px}
