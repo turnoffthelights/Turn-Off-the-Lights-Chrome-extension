@@ -28,9 +28,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, nightmodebutton = null, gamepad = null, nightmodeos = null;
+var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, eyechecklistwhite = null, eyechecklistblack = null, nightmodebck = null, nightmodetxt = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, nightmodehyperlink = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, nightmodebutton = null, gamepad = null, nightmodeos = null, gpleftstick = null, gprightstick = null, gpbtnx = null, gpbtno = null, gpbtnsquare = null, gpbtntriangle = null, gpbtnlb = null, gpbtnrb = null, gpbtnlt = null, gpbtnrt = null, gpbtnshare = null, gpbtnmenu = null, gpbtnrightstick = null, gpbtnleftstick = null, gpbtndirup = null, gpbtndirdown = null, gpbtndirleft = null, gpbtndirright = null, gpbtnlogo = null;
 /* -------------------------------------------------- */
-chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eyea", "eyealist", "excludedDomains", "nighttime", "begintime", "endtime", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ecosaver", "ecosavertime", "autoplayonly", "autoplayDomains", "interval", "maxquality", "autowidthyoutube", "customqualityyoutube", "atmosphereonly", "atmosphereDomains", "nighttheme", "nightonly", "nightDomains", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "nighthover", "nightactivetime", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "eyechecklistwhite", "eyechecklistblack", "nightmodebck", "nightmodetxt", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodehyperlink", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "vpause", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "videovolumealt", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "pipvisualtype", "nightmodebutton", "gamepad", "nightmodeos"], function(response){
+chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eyea", "eyealist", "excludedDomains", "nighttime", "begintime", "endtime", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ecosaver", "ecosavertime", "autoplayonly", "autoplayDomains", "interval", "maxquality", "autowidthyoutube", "customqualityyoutube", "atmosphereonly", "atmosphereDomains", "nighttheme", "nightonly", "nightDomains", "nightenabletheme", "autoplaydelay", "autoplaydelaytime", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "nighthover", "nightactivetime", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "eyechecklistwhite", "eyechecklistblack", "nightmodebck", "nightmodetxt", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodehyperlink", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "vpause", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "videovolumealt", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightmodeswitchhide", "nightmodeswitchhidetime", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "pipvisualtype", "nightmodebutton", "gamepad", "nightmodeos", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"], function(response){
 	autoplay = response["autoplay"];
 	eastereggs = response["eastereggs"];
 	shortcutlight = response["shortcutlight"];
@@ -141,6 +141,25 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	nightmodebutton = response["nightmodebutton"]; if(nightmodebutton == null)nightmodebutton = "#353535";
 	gamepad = response["gamepad"];
 	nightmodeos = response["nightmodeos"];
+	gpleftstick = response["gpleftstick"]; if(gpleftstick == null)gpleftstick = 0;
+	gprightstick = response["gprightstick"]; if(gprightstick == null)gprightstick = 1;
+	gpbtnx = response["gpbtnx"]; if(gpbtnx == null)gpbtnx = 0;
+	gpbtno = response["gpbtno"]; if(gpbtno == null)gpbtno = 1;
+	gpbtnsquare = response["gpbtnsquare"]; if(gpbtnsquare == null)gpbtnsquare = 2;
+	gpbtntriangle = response["gpbtntriangle"]; if(gpbtntriangle == null)gpbtntriangle = 3;
+	gpbtnlb = response["gpbtnlb"]; if(gpbtnlb == null)gpbtnlb = 4;
+	gpbtnrb = response["gpbtnrb"]; if(gpbtnrb == null)gpbtnrb = 5;
+	gpbtnlt = response["gpbtnlt"]; if(gpbtnlt == null)gpbtnlt = 6;
+	gpbtnrt = response["gpbtnrt"]; if(gpbtnrt == null)gpbtnrt = 7;
+	gpbtnshare = response["gpbtnshare"]; if(gpbtnshare == null)gpbtnshare = 8;
+	gpbtnmenu = response["gpbtnmenu"]; if(gpbtnmenu == null)gpbtnmenu = 9;
+	gpbtnrightstick = response["gpbtnrightstick"]; if(gpbtnrightstick == null)gpbtnrightstick = 10;
+	gpbtnleftstick = response["gpbtnleftstick"]; if(gpbtnleftstick == null)gpbtnleftstick = 10;
+	gpbtndirup = response["gpbtndirup"]; if(gpbtndirup == null)gpbtndirup = 11;
+	gpbtndirdown = response["gpbtndirdown"]; if(gpbtndirdown == null)gpbtndirdown = 12;
+	gpbtndirleft = response["gpbtndirleft"]; if(gpbtndirleft == null)gpbtndirleft = 13;
+	gpbtndirright = response["gpbtndirright"]; if(gpbtndirright == null)gpbtndirright = 14;
+	gpbtnlogo = response["gpbtnlogo"]; if(gpbtnlogo == null)gpbtnlogo = 15;
 
 	function $(id){ return document.getElementById(id); }
 
@@ -4510,6 +4529,69 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	}
 
 	var logoclicked = false;
+	function actionlogo(){
+		if(logoclicked == false){
+			logoclicked = true;
+			window.setTimeout(function(){
+				window.open(linkgamepad, "_blank");
+				logoclicked = false;
+			}, 2500);
+		}
+	}
+
+	function actiongamepad(n){
+		switch(parseInt(n)){
+		case 0:
+			changevolume("-");
+			break;
+		case 1:
+			playnext();
+			break;
+		case 2:
+			playprev();
+			break;
+		case 3:
+			changevolume("+");
+			break;
+		case 4:
+			onesecondbackward();
+			break;
+		case 5:
+			onesecondforward();
+			break;
+		case 6:
+			threesecondbackward();
+			break;
+		case 7:
+			threesecondforward();
+			break;
+		case 8:
+			exitzoom(0);
+			break;
+		case 9:
+			gamepadplaypause();
+			break;
+		case 10:
+			resetzoom(0);
+			break;
+		case 11:
+			zoompaddirection(0, [1, 0, 0, 0]);
+			break;
+		case 12:
+			zoompaddirection(0, [0, 0, 1, 0]);
+			break;
+		case 13:
+			zoompaddirection(0, [0, 1, 0, 0]);
+			break;
+		case 14:
+			zoompaddirection(0, [0, 0, 0, 1]);
+			break;
+		case 15:
+			actionlogo();
+			break;
+		}
+	}
+
 	const updategamepadbuttons = () => {
 		const myGamepad = navigator.getGamepads()[0];
 		if(myGamepad){
@@ -4521,13 +4603,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						// console.log("Click 16 on pressed:", button.pressed, "arry set on:", buttonsstate[index]);
 						buttonsstate[index] = true;
 						// set delay to prevent double openening new tab when open this on the other web browser tab
-						if(logoclicked == false){
-							logoclicked = true;
-							window.setTimeout(function(){
-								window.open(linkgamepad, "_blank");
-								logoclicked = false;
-							}, 2500);
-						}
+						actiongamepad(gpbtnlogo);
 					}
 				}
 
@@ -4541,51 +4617,51 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 							switch(index){
 							case 0:
 								// X
-								changevolume("-");
+								actiongamepad(gpbtnx);
 								break;
 							case 1:
 								// O
-								playnext();
+								actiongamepad(gpbtno);
 								break;
 							case 2:
 								// Square
-								playprev();
+								actiongamepad(gpbtnsquare);
 								break;
 							case 3:
 								// Triangle
-								changevolume("+");
+								actiongamepad(gpbtntriangle);
 								break;
 							case 4:
 								// L1
-								threesecondbackward();
+								actiongamepad(gpbtnlb);
 								break;
 							case 5:
 								// R1
-								threesecondforward();
+								actiongamepad(gpbtnrb);
 								break;
 							case 6:
 								// L2
-								onesecondbackward();
+								actiongamepad(gpbtnlt);
 								break;
 							case 7:
 								// R2
-								onesecondforward();
+								actiongamepad(gpbtnrt);
 								break;
 							case 8:
 								// Share
-								exitzoom(0);
+								actiongamepad(gpbtnshare);
 								break;
 							case 9:
 								// Options
-								gamepadplaypause();
+								actiongamepad(gpbtnmenu);
 								break;
 							case 10:
 								// Left Stick Pressed
-								resetzoom(0);
+								actiongamepad(gpbtnleftstick);
 								break;
 							case 11:
 								// Right Stick Pressed
-								resetzoom(0);
+								actiongamepad(gpbtnrightstick);
 								break;
 							}
 						}
@@ -4595,16 +4671,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					if(document.getElementsByTagName("video")[0]){
 						if(index == 12){
 							// Directional Up
-							zoompaddirection(0, [1, 0, 0, 0]);
+							actiongamepad(gpbtndirup);
 						}else if(index == 13){
 							// Directional Down
-							zoompaddirection(0, [0, 0, 1, 0]);
+							actiongamepad(gpbtndirdown);
 						}else if(index == 14){
 							// Directional Left
-							zoompaddirection(0, [0, 1, 0, 0]);
+							actiongamepad(gpbtndirleft);
 						}else if(index == 15){
 							// Directional Right
-							zoompaddirection(0, [0, 0, 0, 1]);
+							actiongamepad(gpbtndirright);
 						}
 					}
 				}else{
@@ -4616,37 +4692,56 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		window.requestAnimFrame(updategamepadbuttons);
 	};
 
+	function actionzoominout(myGamepad, a){
+		var currentaxesleft = Number(myGamepad.axes[a]).toFixed(1);
+
+		if(currentaxesleft > 0.1){
+			camerazoomrotate(0, -0.05, "");
+		}else if(Math.abs(currentaxesleft) == 0.0){
+			// do nothing
+		}else if(currentaxesleft < -0.1){
+			camerazoomrotate(0, +0.05, "");
+		}
+	}
+
+	function actionzoompad(myGamepad, a, b){
+		var currentaxesrighthoz = Number(myGamepad.axes[a]).toFixed(1);
+		if(currentaxesrighthoz > 0.1){
+			zoompaddirection(0, [0, 0, 0, 1]);
+		}else if(Math.abs(currentaxesrighthoz) == 0.0){
+			// do nothing
+		}else if(currentaxesrighthoz < -0.1){
+			zoompaddirection(0, [0, 1, 0, 0]);
+		}
+
+		var currentaxesrightvert = Number(myGamepad.axes[b]).toFixed(1);
+		if(currentaxesrightvert > 0.1){
+			zoompaddirection(0, [0, 0, 1, 0]);
+		}else if(Math.abs(currentaxesrightvert) == 0.0){
+			// do nothing
+		}else if(currentaxesrightvert < -0.1){
+			zoompaddirection(0, [1, 0, 0, 0]);
+		}
+	}
+
 	const updategamepadaxes = () => {
 		if(document.getElementsByTagName("video")[0]){
 			const myGamepad = navigator.getGamepads()[0]; // use the first gamepad
 			// console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
 			// console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
 
-			var currentaxesleft = Number(myGamepad.axes[1]).toFixed(1);
-			if(currentaxesleft > 0.1){
-				camerazoomrotate(0, -0.05, "");
-			}else if(Math.abs(currentaxesleft) == 0.0){
-				// do nothing
-			}else if(currentaxesleft < -0.1){
-				camerazoomrotate(0, +0.05, "");
+			// left stick
+			if(gpleftstick == 0){
+				actionzoominout(myGamepad, 1);
+			}else if(gpleftstick == 1){
+				actionzoompad(myGamepad, 0, 1);
 			}
 
-			var currentaxesrighthoz = Number(myGamepad.axes[2]).toFixed(1);
-			if(currentaxesrighthoz > 0.1){
-				zoompaddirection(0, [0, 0, 0, 1]);
-			}else if(Math.abs(currentaxesrighthoz) == 0.0){
-				// do nothing
-			}else if(currentaxesrighthoz < -0.1){
-				zoompaddirection(0, [0, 1, 0, 0]);
-			}
-
-			var currentaxesrightvert = Number(myGamepad.axes[3]).toFixed(1);
-			if(currentaxesrightvert > 0.1){
-				zoompaddirection(0, [0, 0, 1, 0]);
-			}else if(Math.abs(currentaxesrightvert) == 0.0){
-				// do nothing
-			}else if(currentaxesrightvert < -0.1){
-				zoompaddirection(0, [1, 0, 0, 0]);
+			// right stick
+			if(gprightstick == 0){
+				actionzoominout(myGamepad, 3);
+			}else if(gprightstick == 1){
+				actionzoompad(myGamepad, 2, 3);
 			}
 		}
 		window.requestAnimFrame(updategamepadaxes);
