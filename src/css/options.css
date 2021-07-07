@@ -945,14 +945,12 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .tabledatalist tr:first-child{background:var(--totl-table-first-background);color:var(--totl-table-first-color)}
 .tabledatalist td{border-bottom:var(--totl-table-td-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden}
 .tabledatalist td:first-child{width:80%}
-.tabledatalist tr:hover{background-color:var(--totl-table-tr-background-hover)}
-.tabledatalist tr:active{background-color:var(--totl-table-tr-background-active)}
 .tablegamepadlist{border-spacing:0;width:100%;table-layout:fixed;overflow:hidden}
 .tablegamepadlist tr:first-child{background:var(--totl-table-first-background);color:var(--totl-table-first-color)}
 .tablegamepadlist td{border-bottom:var(--totl-table-td-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden}
-.tablegamepadlist td:first-child{width:30%}
-.tablegamepadlist tr:hover{background-color:var(--totl-table-tr-background-hover)}
-.tablegamepadlist tr:active{background-color:var(--totl-table-tr-background-active)}
+.tablegamepadlist td:first-child{width:25%}
+.tablegamepadlist td:nth-child(2){width:25%}
+.tablegamepadlist td:nth-child(3){width:50%}
 header{background:var(--totl-primary-background);color:var(--totl-primary-font-color);-webkit-user-select:none;-moz-user-select:none;user-select:none;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.26);display:block;flex-direction:row;align-items:center;z-index:399;position:fixed}
 header .messagehead{align-items:center;display:flex;width:100%;position:relative;margin:0;padding:0}
 header .masterhead{min-height:56px;align-items:center;display:flex;position:relative;margin:0;padding:0 16px}

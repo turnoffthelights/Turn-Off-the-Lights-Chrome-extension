@@ -501,7 +501,7 @@
     "desbuttonps": {"message": "Button on PlayStation"},
     "desbuttonxb": {"message": "Button on Xbox"},
     "desgamepadsquare": {"message": "Square"},
-    "desgamepadtriangle": {"message": "Square"},
+    "desgamepadtriangle": {"message": "Triangle"},
     "desgamepadshowaddress": {"message": "Show Address Bar"},
     "desgamepadshare": {"message": "Share"},
     "desgamepadshowmenu": {"message": "Show Menu"},
