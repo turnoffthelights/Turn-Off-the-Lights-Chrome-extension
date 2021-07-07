@@ -4729,19 +4729,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			const myGamepad = navigator.getGamepads()[0]; // use the first gamepad
 			// console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );
 			// console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
+			if(myGamepad != null){
+				// left stick
+				if(gpleftstick == 0){
+					actionzoominout(myGamepad, 1);
+				}else if(gpleftstick == 1){
+					actionzoompad(myGamepad, 0, 1);
+				}
 
-			// left stick
-			if(gpleftstick == 0){
-				actionzoominout(myGamepad, 1);
-			}else if(gpleftstick == 1){
-				actionzoompad(myGamepad, 0, 1);
-			}
-
-			// right stick
-			if(gprightstick == 0){
-				actionzoominout(myGamepad, 3);
-			}else if(gprightstick == 1){
-				actionzoompad(myGamepad, 2, 3);
+				// right stick
+				if(gprightstick == 0){
+					actionzoominout(myGamepad, 3);
+				}else if(gprightstick == 1){
+					actionzoompad(myGamepad, 2, 3);
+				}
 			}
 		}
 		window.requestAnimFrame(updategamepadaxes);
