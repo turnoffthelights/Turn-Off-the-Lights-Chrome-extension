@@ -496,6 +496,11 @@ chrome.storage.onChanged.addListener(function(changes){
 			chromerefreshalltabs("gorefreshpipvisualtype");
 		}
 
+		var changenamegamepad = ["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"];
+		if(changenamegamepad.includes(key)){
+			chromerefreshalltabs("gorefreshgamepad");
+		}
+
 		// Group Policy
 		// check the values with group policy, if different values. Then change it back
 		checkreturnpolicyvalues(changes, "autoplay", "AutoPlay");

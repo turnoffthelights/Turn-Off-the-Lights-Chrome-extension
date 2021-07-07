@@ -5813,6 +5813,29 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}else{
 				window.alert(i18ntitelpiperror);
 			}
+		}else if(request.action == "gorefreshgamepad"){
+			chrome.storage.sync.get(["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"], function(items){
+				gamepad = items["gamepad"];
+				gpleftstick = items["gpleftstick"];
+				gprightstick = items["gprightstick"];
+				gpbtnx = items["gpbtnx"];
+				gpbtno = items["gpbtno"];
+				gpbtnsquare = items["gpbtnsquare"];
+				gpbtntriangle = items["gpbtntriangle"];
+				gpbtnlb = items["gpbtnlb"];
+				gpbtnrb = items["gpbtnrb"];
+				gpbtnlt = items["gpbtnlt"];
+				gpbtnrt = response["gpbtnrt"];
+				gpbtnshare = items["gpbtnshare"];
+				gpbtnmenu = items["gpbtnmenu"];
+				gpbtnrightstick = items["gpbtnrightstick"];
+				gpbtnleftstick = items["gpbtnleftstick"];
+				gpbtndirup = items["gpbtndirup"];
+				gpbtndirdown = items["gpbtndirdown"];
+				gpbtndirleft = items["gpbtndirleft"];
+				gpbtndirright = items["gpbtndirright"];
+				gpbtnlogo = items["gpbtnlogo"];
+			});
 		}
 	});
 
