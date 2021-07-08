@@ -1169,6 +1169,11 @@ function previewyoutubecolor(a, b){
 
 // test general
 function test(){
+	// check context menu support, if not hide it
+	if(!chrome.contextMenus){
+		$("supportcontextmenus").className = "hidden";
+	}
+
 	default_opacity = $("interval").value;
 	$("slider").value = default_opacity;
 	$("interval").setAttribute("aria-valuenow", default_opacity);
