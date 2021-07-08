@@ -216,8 +216,13 @@ section>div:only-of-type{-webkit-box-flex:1}
 .ecogreen{background-color:#43A047;color:white;border-radius:2px;margin-top:10px;padding:10px 120px 10px 10px}
 #Eyesaver{margin:16px 0 16px 30px}
 #logogreen{position:absolute;right:15px;color:green;vertical-align:top;padding:18px}
-#multiopacitylist input[type=url]{width:215px;float:left}
-#multiopacityDomainsBox{width:235px}
+#multiopacitylist input[type=url]{width:100%;float:left;box-sizing:border-box}
+#multiopacitylist{width:100%}
+#multiopacitylist td:nth-child(1){width:55%}
+#multiopacitylist td:nth-child(2){width:15%}
+#multiopacitylist td:nth-child(3){width:30%}
+#multiopacitylist tr{width:100%}
+#multiopacityDomainsBox{width:100%}
 #multiopacitynumberBox{width:65px}
 /* Hyperlinks */
 #mainview-content section a{color:var(--totl-page-a);text-decoration:underline}
@@ -1026,7 +1031,7 @@ input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-rang
 .md-color label div{vertical-align:middle;display:inline;box-sizing:border-box}
 .md-color label{display:inline-block}
 /* Checkbox */
-.md-checkbox{position:relative;margin:16px 0;box-sizing:border-box;height:18px}
+.md-checkbox{position:relative;margin:16px 0;box-sizing:border-box}
 .md-checkbox label{cursor:pointer;box-sizing:border-box}
 .md-checkbox label div{vertical-align:middle;display:inline;box-sizing:border-box}
 .md-checkbox label::before,.md-checkbox label::after{content:"";position:absolute;left:0;top:0;box-sizing:border-box}
@@ -1037,7 +1042,7 @@ input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-rang
 .md-checkbox input[type=checkbox]:checked[disabled] + label::before{background:var(--totl-checkbox-checked-disabled);border:var(--totl-checkbox-checked-disabled-border)}
 .md-checkbox input[type=checkbox][disabled] + label::before{border:var(--totl-checkbox-checked-disabled-border)}
 /* Radio button */
-.md-radio{position:relative;margin:16px 0;box-sizing:border-box;height:18px}
+.md-radio{position:relative;margin:16px 0;box-sizing:border-box}
 .md-radio label{cursor:pointer;box-sizing:border-box}
 .md-radio label div{vertical-align:middle;display:inline;box-sizing:border-box}
 .md-radio label::before,.md-radio label::after{content:"";position:absolute;left:0;top:0;box-sizing:border-box}
@@ -1101,7 +1106,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .materialModalButton{-webkit-user-select:none;-moz-user-select:none;user-select:none;margin:8px 0;float:right;background:0 0;border:none;border-radius:2px;color:#2296f3;position:relative;height:36px;min-width:64px;padding:0 16px;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:36px;vertical-align:middle}
 .materialModalButton:active{background-color:rgba(158,158,158,.4)}
 .materialModalButton:hover{background-color:rgba(158,158,158,.2)}
-#multiopacityaddbutton,#multiopacityremovebutton{max-width:135px;text-overflow:ellipsis}
+#multiopacityaddbutton,#multiopacityremovebutton{max-width:135px;text-overflow:ellipsis;width:100%}
 #materialModal.hide,#materialModalRate.hide,#materialModalIntroduce.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none}
 #materialModal.hide #materialModalCentered,#materialModalRate.hide #materialModalRateCentered,#materialModalIntroduce.hide #materialModalIntroduceCentered{transform:scale(0.8);transition:transform 0.2s ease-out}
 #materialModal.show,#materialModalRate.show,#materialModalIntroduce.show{opacity:1;transition:opacity 0.2s ease-in}
@@ -1177,11 +1182,8 @@ only screen and (max-device-width:480px){
   #apicon{top:25px;left:108px}
   #apgetapp{right:15px}
   #aptllo{right:15px;top:5px;font-size:13px}
-  #multiopacityaddbutton,#multiopacityremovebutton{max-width:80px}
   #materialModalCentered,#materialModalRateCentered{padding:0}
   #materialModalContent,#materialModalRateContent{max-width:none;height:100%;width:100%;left:0;top:0;position:absolute;border-radius:0}
-  #multiopacitylist input[type=url]{width:105px}
-  #multiopacityDomainsBox{width:125px}
   .tabbar{overflow:scroll}
   .tabbarintern{width:795px}
   .sharestatsenergy .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
