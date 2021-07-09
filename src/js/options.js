@@ -2656,6 +2656,7 @@ function domcontentloaded(){
 	$("tabnight").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundnight(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabmotion").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundmotion(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabspeech").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabgamepad").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabguide").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = linkguide; $("managed-prefs-banner").className = "hidden"; guidekb = false; mobilecheck(); });
 	$("tabanalytics").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabhelp").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
