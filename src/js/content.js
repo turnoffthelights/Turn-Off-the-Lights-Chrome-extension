@@ -542,18 +542,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var vzoom = [];
 	var vrotate = [];
 
-	function videorefreshzoomcanvas(bomo){
-		// refresh the first frame layer
-		var testplayerstatus = document.getElementsByTagName("video")[bomo];
-		if(testplayerstatus.paused === false){
-			testplayerstatus.pause();
-			testplayerstatus.play();
-		}else{
-			testplayerstatus.play();
-			testplayerstatus.pause();
-		}
-	}
-
 	function runvideotoolbarcheck(){
 		if(videotool == true){
 			if(videotoolonly == true){
@@ -1025,7 +1013,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonreset.setAttribute("data-video", i);
 					newzoombuttonreset.addEventListener("click", function(){
 						var bomo = this.getAttribute("data-video");
-						videorefreshzoomcanvas(bomo);
 						$("stefanvdzoomstage" + bomo).style.display = "block";
 						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 						var onevideo = $("stefanvdzoomcanvas" + bomo);
@@ -4857,7 +4844,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	function resetzoom(videonum){
 		var bomo = videonum;
-		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
@@ -4870,7 +4856,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	function camerazoomrotate(a, b, c){
 		var bomo = a;
-		videorefreshzoomcanvas(bomo);
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
@@ -4884,7 +4869,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	// b: [top, left, bottom, right]
 	function zoompaddirection(a, b){
-		videorefreshzoomcanvas(a);
 		$("stefanvdzoomstage" + a).style.display = "block";
 		$("stefanvdzoomexit" + a).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + a);
