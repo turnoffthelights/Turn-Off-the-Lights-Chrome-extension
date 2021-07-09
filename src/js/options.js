@@ -65,23 +65,6 @@ var default_arangespread = 20;
 var youtubeembed = "https://www.youtube.com/embed/?listType=playlist&list=PLF155F53B3D8D07CB";
 var darkmode = false;
 
-window.addEventListener("message", (event) => {
-	if(event.origin == "https://www.turnoffthelights.com"){
-		if(event.source == window &&
-        event.data &&
-        event.data.direction == "from-page-script"){
-			// alert("Content script received message: \"" + event.data.message + "\"");
-			var myid = chrome.runtime.id;
-			var myversion = chrome.runtime.getManifest().version;
-			window.postMessage({
-				direction: "from-totl-script",
-				message: myid,
-				version: myversion
-			}, "https://www.turnoffthelights.com");
-		}
-	}
-});
-
 // Option to save current value to chrome.storage
 function save_options(){
 	chrome.runtime.sendMessage({name: "getallpermissions"});
@@ -2411,11 +2394,7 @@ window.addEventListener("load", function(){
 	$("loading").style.display = "none";
 });
 
-if(window.location.href != totloptionspage){
-	document.addEventListener("DOMContentLoaded", domcontentloaded);
-}else{
-	domcontentloaded();
-}
+document.addEventListener("DOMContentLoaded", domcontentloaded);
 
 function domcontentloaded(){
 	checkdarkmode();
@@ -2423,40 +2402,10 @@ function domcontentloaded(){
 		checkdarkmode();
 	});
 
-	if((window.location.href != totloptionspage) && devmode == false){
-
-		var condition = navigator.onLine ? "online" : "offline";
-		if(condition == "online"){
-			fetch(developerwebsite).then(function(response){
-				if(response.status === 200){
-					// website is online
-					// redirect to there
-					window.location.href = totloptionspage;
-				}else{
-					throw new Error(response.statusText);
-				}
-
-			}).catch(()=>{
-				// is not there
-				// use offline page
-				// Add the YouTube player
-				$("dont-turn-off-the-lights").src = youtubeembed;
-				read_options();
-				yearnow();
-			});
-		}else{
-			// Add the YouTube player
-			$("dont-turn-off-the-lights").src = youtubeembed;
-			read_options();
-			yearnow();
-		}
-
-	}else{
-		// Add the YouTube player
-		$("dont-turn-off-the-lights").src = youtubeembed;
-		read_options();
-		yearnow();
-	}
+	// Add the YouTube player
+	$("dont-turn-off-the-lights").src = youtubeembed;
+	read_options();
+	yearnow();
 
 	// browser check
 	var nAgt = navigator.userAgent;
