@@ -4830,7 +4830,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
-		onevideo.setAttribute("data-zoom", "false");
+		onevideo.setAttribute("data-zoom", "true");
 		vzoom[bomo] = 1;
 		vrotate[bomo] = 0;
 		onevideo.style.top = 0 + "px";
