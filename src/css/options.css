@@ -1037,6 +1037,8 @@ input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-rang
 .md-color input[type=color]{position:absolute;right:-25px;top:-5px;width:102px;height:30px;border:none;margin:0;padding:0}
 .md-color label div{vertical-align:middle;display:inline;box-sizing:border-box}
 .md-color label{display:inline-block}
+/* Description */
+.md-desbox{position:relative;margin:16px 0;box-sizing:border-box}
 /* Checkbox */
 .md-checkbox{position:relative;margin:16px 0;box-sizing:border-box}
 .md-checkbox label{cursor:pointer;box-sizing:border-box}
@@ -1200,6 +1202,7 @@ only screen and (max-device-width:480px){
   #tablesiteeng,#tablegamepad{table-layout:fixed}
   #tablesiteeng td,#tablegamepad td{overflow:hidden;text-overflow:ellipsis;word-wrap:break-word}
   .aboutbuttons button{margin:15px 0;display:block}
+  .tabledatalist td:first-child{width:50%}
   /* for mobile only */
   input[type=checkbox]:checked ~ #navbar-container{display:block;animation:slide-in 0.5s ease;animation-fill-mode:forwards}
   input[type=checkbox]:checked ~ #darkpanel{opacity:1;display:block;pointer-events:auto}

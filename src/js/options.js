@@ -2790,7 +2790,7 @@ function domcontentloaded(){
 	$("multiopacityremovebutton").addEventListener("click", function(){ multiopacityremoveSelectedExcludedDomain(); });
 
 	// Reset settings
-	$("resettotl").addEventListener("click", function(){ chrome.storage.sync.clear(); location.reload(); });
+	$("resettotl").addEventListener("click", function(){ chrome.storage.sync.clear(); chrome.runtime.sendMessage({name: "bckreload"}); location.reload(); });
 
 	// linearsq
 	$("linearsq").addEventListener("click", function(){ test(); ariacheck(); save_options(); });
