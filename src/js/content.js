@@ -832,11 +832,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if($("stefanvdzoomcanvas" + rock)){
 				if(!this.paused && !this.ended){
 					$("stefanvdzoomplay" + rock).textContent = "❙❙";
-					zoompaused = false;
+					zoompaused[rock] = false;
 					window.requestAnimFrame(function(){ drawframezoom(rock); });
 				}else{
 					$("stefanvdzoomplay" + rock).textContent = "►";
-					zoompaused = true;
+					zoompaused[rock] = true;
 				}
 			}
 		}
@@ -4838,9 +4838,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
-	var zoompaused = false;
+	var zoompaused = [];
 	function drawframezoom(a){
-		if(zoompaused){ return; }
+		if(zoompaused[a]){ return; }
 		var onevideo = document.getElementsByTagName("video")[a];
 		if($("stefanvdzoomcanvas" + a).getAttribute("data-zoom") == "true"){
 			var newzoomcontext = $("stefanvdzoomcanvas" + a).getContext("2d", {desynchronized: true});
