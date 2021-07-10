@@ -827,6 +827,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
+		function videoframestep(){
+			rock = this.getAttribute("data-video");
+			if($("stefanvdzoomcanvas" + rock)){
+				if(!this.paused && !this.ended){
+					$("stefanvdzoomplay" + rock).textContent = "❙❙";
+					zoompaused = false;
+					window.requestAnimFrame(function(){ drawframezoom(rock); });
+				}else{
+					$("stefanvdzoomplay" + rock).textContent = "►";
+					zoompaused = true;
+				}
+			}
+		}
+
 		function addvisual(){
 			var visualvideos = document.getElementsByTagName("video");
 			var i, l = visualvideos.length;
@@ -907,23 +921,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoomcanvas.height = tempheightvideo;
 					newzoomstage.appendChild(newzoomcanvas);
 
-					myElement.addEventListener("playing", function(){
-						rock = this.getAttribute("data-video");
-						if($("stefanvdzoomcanvas" + rock)){
-							var newzoomcontext = $("stefanvdzoomcanvas" + rock).getContext("2d", {desynchronized: true});
-							$("stefanvdzoomplay" + rock).textContent = "❙❙";
-
-							var $this = this; // cache
-							(function zoomloop(){
-								if(!$this.paused && !$this.ended){
-									newzoomcontext.drawImage($this, 0, 0, $this.offsetWidth, $this.clientHeight);
-									$("stefanvdzoomcanvas" + rock).style.width = $this.offsetWidth + "px";
-									$("stefanvdzoomcanvas" + rock).style.height = $this.clientHeight + "px";
-									window.setTimeout(zoomloop, 1000 / 30); // drawing at 30fps
-								}
-							})();
-						}
-					}, 0);
+					myElement.addEventListener("playing", videoframestep, 0);
+					myElement.addEventListener("pause", videoframestep, 0);
 					// End zoom canvas ---
 
 					var newzoombuttonplus = document.createElement("div");
@@ -1012,15 +1011,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonreset.title = "ctrl+alt+s";
 					newzoombuttonreset.setAttribute("data-video", i);
 					newzoombuttonreset.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						$("stefanvdzoomstage" + bomo).style.display = "block";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						vzoom[bomo] = 1;
-						vrotate[bomo] = 0;
-						onevideo.style.top = 0 + "px";
-						onevideo.style.left = 0 + "px";
-						onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+						resetzoom(this.getAttribute("data-video"));
 					}, false);
 					newzoompanel.appendChild(newzoombuttonreset);
 
@@ -1051,16 +1042,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoombuttonexit.textContent = "EXIT ZOOM EDIT";
 					newzoombuttonexit.style.display = "none";
 					newzoombuttonexit.addEventListener("click", function(){
-						var bomo = this.getAttribute("data-video");
-						var onevideo = $("stefanvdzoomcanvas" + bomo);
-						vzoom[bomo] = 1;
-						vrotate[bomo] = 0;
-						onevideo.style.top = 0 + "px";
-						onevideo.style.left = 0 + "px";
-						onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
-						$("stefanvdzoomstage" + bomo).style.display = "none";
-						$("stefanvdzoomexit" + bomo).style.setProperty("display", "none", "important");
-						$("stefanvdzoompanel" + bomo).style.display = "none";
+						exitzoom(this.getAttribute("data-video"));
 					}, false);
 					newzoompanel.appendChild(newzoombuttonexit);
 				}
@@ -4832,6 +4814,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function exitzoom(videonum){
 		var bomo = videonum;
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
+		onevideo.setAttribute("data-zoom", "false");
 		vzoom[bomo] = 1;
 		vrotate[bomo] = 0;
 		onevideo.style.top = 0 + "px";
@@ -4847,6 +4830,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
+		onevideo.setAttribute("data-zoom", "false");
 		vzoom[bomo] = 1;
 		vrotate[bomo] = 0;
 		onevideo.style.top = 0 + "px";
@@ -4854,17 +4838,33 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
 	}
 
+	var zoompaused = false;
+	function drawframezoom(a){
+		if(zoompaused){ return; }
+		var onevideo = document.getElementsByTagName("video")[a];
+		if($("stefanvdzoomcanvas" + a).getAttribute("data-zoom") == "true"){
+			var newzoomcontext = $("stefanvdzoomcanvas" + a).getContext("2d", {desynchronized: true});
+			newzoomcontext.drawImage(onevideo, 0, 0, onevideo.offsetWidth, onevideo.clientHeight);
+			$("stefanvdzoomcanvas" + a).style.width = onevideo.offsetWidth + "px";
+			$("stefanvdzoomcanvas" + a).style.height = onevideo.clientHeight + "px";
+			window.requestAnimFrame(function(){ drawframezoom(a); });
+		}
+	}
+
 	function camerazoomrotate(a, b, c){
 		var bomo = a;
 		$("stefanvdzoomstage" + bomo).style.display = "block";
 		$("stefanvdzoomexit" + bomo).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + bomo);
+		onevideo.setAttribute("data-zoom", "true");
 		if(b != ""){
 			vzoom[bomo] = vzoom[bomo] + b;
 		}else if(c != ""){
 			vrotate[bomo] = vrotate[bomo] + c;
 		}
 		onevideo.style["transform"] = "scale(" + vzoom[bomo] + ") rotate(" + vrotate[bomo] + "deg)";
+		// start zoom canvas animation
+		window.requestAnimFrame(function(){ drawframezoom(a); });
 	}
 
 	// b: [top, left, bottom, right]
@@ -4872,6 +4872,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		$("stefanvdzoomstage" + a).style.display = "block";
 		$("stefanvdzoomexit" + a).style.setProperty("display", "block", "important");
 		var onevideo = $("stefanvdzoomcanvas" + a);
+		onevideo.setAttribute("data-zoom", "true");
 		if(b[0] == 1){
 			onevideo.style.top = (parseInt(onevideo.style.top, 10) - 5) + "px";
 		}else if(b[1] == 1){
@@ -4881,6 +4882,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}else if(b[3] == 1){
 			onevideo.style.left = (parseInt(onevideo.style.left, 10) + 5) + "px";
 		}
+		// start zoom canvas animation
+		window.requestAnimFrame(function(){ drawframezoom(a); });
 	}
 
 	function gamepadplaypause(){
