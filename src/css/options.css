@@ -1167,10 +1167,10 @@ only screen and (max-device-width:480px){
   #beeld{position:relative;z-index:101;margin:auto;width:250px;height:140px}
   #loadingcenter{width:230px}
   #progressbar{width:230px}
-  #dont-turn-off-the-lights{width:100%;height:auto;aspect-ratio:16 / 9}
+  #dont-turn-off-the-lights{width:100%;height:auto;aspect-ratio:16/9}
   .suggpanel{width:100%}
   .videopreview{width:100%;padding-right:0}
-  .videopreview iframe{width:100%;height:auto;aspect-ratio:16 / 9}
+  .videopreview iframe{width:100%;height:auto;aspect-ratio:16/9}
   .youtubesuggpanel{display:none}
   #samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
   #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
