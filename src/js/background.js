@@ -230,7 +230,6 @@ chrome.browserAction.onClicked.addListener(function(tabs){
 				return;
 			}
 
-
 			// Set Click to  true
 			alreadyClicked = true;
 			chrome.browserAction.setPopup({tabId: tabs.id, popup:"palette.html"});
