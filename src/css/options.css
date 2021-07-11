@@ -299,7 +299,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubeinforbar{background:#fff}
 #dont-turn-off-the-lights{z-index:1000;position:relative;visibility:visible;width:340px;height:195px}
 /* Black div */
-#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99;background-size:cover}
+#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99}
 #example2{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:480px;opacity:1;position:absolute;background-color:#000;z-index:99}
 /* Blur */
 #stefanvdblurimage{pointer-events:none;width:100%;height:380px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}

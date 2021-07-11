@@ -1225,7 +1225,7 @@ function test(){
 	}
 
 	if($("lightimagea").checked == true){
-		$("lightimagen").checked = false; $("example1").style.background = $("example1").style.backgroundSize = $("example2").style.backgroundSize = "100% 100%"; $("example2").style.background = "url(" + $("lightimage").value + ")"; $("lightimage").disabled = false; $("lightcolor").disabled = true;
+		$("lightimagen").checked = false; $("example1").style.backgroundSize = $("example2").style.backgroundSize = "cover"; $("example2").style.backgroundImage = $("example1").style.backgroundImage = "url(" + $("lightimage").value + ")"; $("lightimage").disabled = false; $("lightcolor").disabled = true;
 		$("mousespotlighta").disabled = true; $("mousespotlightc").disabled = true; $("mousespotlighto").checked = true;
 	}else if($("lightimagen").checked == true){
 		$("lightimagen").checked = true; $("example1").style.background = $("lightcolor").value; $("example2").style.background = $("lightcolor").value; $("lightimage").disabled = true; $("lightcolor").disabled = false;
@@ -2527,19 +2527,17 @@ function domcontentloaded(){
 			var bkimage = new Image();
 			bkimage.onload = function(){
 				$("lightimagea").checked = true;
-				$("example1").style.background = "url(" + this.value + ")";
-				$("example2").style.background = "url(" + this.value + ")";
 				save_options();
 			};
 			bkimage.onerror = function(){
 				var optionwrongimg = chrome.i18n.getMessage("optionwrongimg"); window.alert(optionwrongimg);
 				$("lightimagea").checked = true;
 				$("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg";
-				$("example1").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
-				$("example2").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
+				$("example1").style.background = $("example2").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
 				save_options();
 			};
 			bkimage.src = url;
+			$("example1").style.backgroundSize = $("example2").style.backgroundSize = "cover";
 		}
 		getImage(this.value);
 	});
