@@ -2723,7 +2723,7 @@ function domcontentloaded(){
 	let dynn = 0;
 	while(dynn < 10){
 		dynn++;
-		$("totldynpaper" + dynn + "").addEventListener("click", function(){ $("dynamic" + dynn + "").checked = true; dynamictest(); save_options(); });
+		$("totldynpaper" + dynn + "").addEventListener("click", function(){ $("dynamic" + this.getAttribute("data-dyn") + "").checked = true; dynamictest(); save_options(); });
 	}
 	$("hoveroptiondyn5").addEventListener("click", function(){ $("dynamic5").checked = true; dynamictest(); save_options(); });
 
