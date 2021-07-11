@@ -172,7 +172,7 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["interval"] == null){ firstdefaultvalues["interval"] = 80; }
 
 	if(items["ambilightrangeblurradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 70; }
-	if(items["ambilightrangespreadradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 20; }
+	if(items["ambilightrangespreadradius"] == null){ firstdefaultvalues["ambilightrangespreadradius"] = 20; }
 
 	if(items["nightDomains"] == null){ firstdefaultvalues["nightDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true}); }
 
