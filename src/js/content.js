@@ -2683,7 +2683,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var counter = 0;
 	function convertwebnight(node){
 		var getthatid = node.id;
-		if(getthatid){
+		if(getthatid && getthatid.length >= 18){
 			getthatid = getthatid.substring(0, 18);
 		}else{ getthatid = ""; }
 
@@ -2755,7 +2755,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 							}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
 								// check if use more than 2X gradient white
 								var bla = occurrences(z, "rgb(255, 255, 255)");
-								if(bla >= 2){
+								if(bla >= 1){ // check if includes it 1 item or more
 									thatbckishere = true;
 								}
 							}else{
