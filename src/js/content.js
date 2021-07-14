@@ -2104,25 +2104,26 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		animate();
 	}
 
+	function atmostotlmode(){
+		if(atmosontotlmode == true){
+			if($("stefanvdlightareoff1")){
+				totlmode = true;
+			}else{
+				totlmode = false;
+			}
+		}else{
+			totlmode = true;
+		}
+	}
+
 	var totlmode = false;
 	function animate(){
-	// stop
+		// stop
 		if(stop){ return; }
 
 		// use only for "vivi mode" and "atmosfpsauto" are both enabled
 		if(atmosfpsauto == true && atmosvivid == true){
-		// draw stuff here
-		// regular HTML5 videos
-			if(atmosontotlmode == true){
-				if($("stefanvdlightareoff1")){
-					totlmode = true;
-				}else{
-					totlmode = false;
-				}
-			}else{
-				totlmode = true;
-			}
-
+			atmostotlmode();
 			if(document.visibilityState === "visible"){
 				var htmlplayer = document.getElementsByTagName("video") || null;
 				var playerid = null, item = null;
@@ -2155,18 +2156,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				// Also, adjust for fpsInterval not being multiple of 16.67
 				then = now - (elapsed % fpsInterval);
 
-				// draw stuff here
-				// regular HTML5 videos
-				if(atmosontotlmode == true){
-					if($("stefanvdlightareoff1")){
-						totlmode = true;
-					}else{
-						totlmode = false;
-					}
-				}else{
-					totlmode = true;
-				}
-
+				atmostotlmode();
 				if(document.visibilityState === "visible"){
 					let htmlplayer = document.getElementsByTagName("video") || null;
 					let playerid = null, item = null;
