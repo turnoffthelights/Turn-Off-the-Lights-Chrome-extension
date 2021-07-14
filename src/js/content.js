@@ -3569,17 +3569,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		});
 	}
 
-	// gogo night mode
-	function gogonightmode(){
-	// PDF detection
+	// convert pdf file in dark version
+	function convertpdfnight(){
 		if(isitdark == true){
 			if(document.getElementById("stefanvdnightpdf")){
 				document.getElementById("stefanvdnightpdf").style.display = "none";
 			}
 		}else{
-		// if current web page is a PDF file
+			// if current web page is a PDF file
 			if(window.location.href.indexOf(".pdf") != -1){
-			// it is a PDF file
+				// it is a PDF file
 				if(document.getElementById("stefanvdnightpdf")){
 					document.getElementById("stefanvdnightpdf").style.display = "block";
 				}else{
@@ -3591,6 +3590,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 			}
 		}
+	}
+
+	// gogo night mode
+	function gogonightmode(){
+		// PDF detection
+		convertpdfnight();
 		//---
 
 		if(sun == false){
@@ -4785,17 +4790,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 
 			if(a == "+"){
-				if(that.volume <= 0.99){
-					that.volume += videovolumesteps;
-				}
+				if(that.volume <= 0.99){ that.volume += videovolumesteps; }
 			}else{
-				if(that.volume > 0.00){
-					that.volume -= videovolumesteps;
-				}
+				if(that.volume > 0.00){ that.volume -= videovolumesteps; }
 			}
 			that.volume = Math.round(that.volume * 100) / 100;
 			setyoutubevolumemeter(that.volume);
-
 
 			document.getElementById("volumecontrol" + cdv).value = Math.round(that.volume * 100);
 			if(videovolumelabel == true){ document.getElementById("lblvolume" + cdv).textContent = Math.round(that.volume * 100) + "%"; }
