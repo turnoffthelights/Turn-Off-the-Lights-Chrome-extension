@@ -211,7 +211,7 @@ ul#navbar li a svg{margin-right:24px;fill:var(--totl-sidebar-icon-background)}
 #settings{-webkit-padding-end:24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:#333;cursor:pointer;font-size:200%;font-weight:400;margin:0;padding-bottom:14px;padding-top:13px;text-align:end}
 .page h2{-webkit-padding-end:24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:var(--totl-title-color);font-size:200%;font-weight:400;margin:0;padding-bottom:4px;padding-top:13px}
 .page{height:100%;width:100%;position:relative}
-section{position:relative;-webkit-box-orient:horizontal;border-bottom:var(--totl-section-border);display:-webkit-box;margin-top:17px;padding-bottom:20px;width:100%}
+section{position:relative;-webkit-box-orient:horizontal;border-bottom:var(--totl-section-border);display:-webkit-box;padding-top:20px;padding-bottom:20px;width:100%}
 section>h3{font-size:105%;font-weight:700;margin:0;vertical-align:middle;width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 section>div:only-of-type{-webkit-box-flex:1}
 #lightimage{box-sizing:border-box;width:100%}
@@ -1040,6 +1040,8 @@ input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-rang
 .md-color label{display:inline-block}
 /* Description */
 .md-desbox{position:relative;margin:16px 0;box-sizing:border-box}
+/* Form */
+form{position:relative;margin:16px 0;box-sizing:border-box}
 /* Checkbox */
 .md-checkbox{position:relative;margin:16px 0;box-sizing:border-box}
 .md-checkbox label{cursor:pointer;box-sizing:border-box;min-height:20px;display:grid;align-items:center}
