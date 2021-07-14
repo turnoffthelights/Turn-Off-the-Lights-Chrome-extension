@@ -1220,7 +1220,7 @@ function test(){
 	if("requestVideoFrameCallback" in HTMLVideoElement.prototype){
 		// do nothing
 	}else{
-		// the API is supported!
+		// the API is not supported
 		$("boxfpsauto").className = "hidden";
 	}
 
@@ -1350,7 +1350,6 @@ function test(){
 
 	// wizard user profile
 	$("ska").style.background = $("profileAcolor").value;
-	$("ska").style.opacity = $("profileAopacity").value / 100;
 	$("ska").style.opacity = $("profileAopacity").value / 100;
 	if($("profileAmouse").checked == true){
 		$("ska").style.pointerEvents = "none";
