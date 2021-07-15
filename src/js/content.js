@@ -3676,7 +3676,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				item.addEventListener("mouseout", function(){ item.style.opacity = ".2"; }, false);
 			}
 			// var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-			if(nmcustom == true){ newnight.style.left = nmcustomx; newnight.style.bottom = nmcustomy; }else if(nmtopleft == true){ newnight.style.left = "25px"; newnight.style.top = "25px"; }else if(nmtopright == true){ newnight.style.right = "25px"; newnight.style.top = "25px"; }else if(nmbottomright == true){ newnight.style.right = "25px"; newnight.style.bottom = "25px"; }else if(nmbottomleft == true){ newnight.style.left = "25px"; newnight.style.bottom = "25px"; }
+			if(nmcustom == true){ newnight.style.left = "calc(" + nmcustomx + " + env(safe-area-inset-left))"; newnight.style.bottom = "calc(" + nmcustomy + " + env(safe-area-inset-bottom))"; }else if(nmtopleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmtopright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmbottomright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }else if(nmbottomleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }
 
 			var newnightinput = document.createElement("input");
 			newnightinput.setAttribute("type", "checkbox");
