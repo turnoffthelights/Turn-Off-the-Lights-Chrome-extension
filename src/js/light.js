@@ -1113,8 +1113,7 @@ function moveSpot(e){
 		spotx = e.clientX; spoty = e.clientY;
 		oldspotx = spotx; oldspoty = spoty;
 	}
-
-	mousespotlightstyle = "-webkit-gradient(radial, " + spotx + " " + spoty + ", " + fullspotlightsize + ", " + spotx + " " + spoty + ", " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+	mousespotlightstyle = "radial-gradient(circle at " + spotx + "px " + spoty + "px, transparent " + borderspotlightsize + "px, " + lightcolor + " " + fullspotlightsize + "px)";
 	spot.style.opacity = default_opacity / 100;
 	spot.style.backgroundImage = mousespotlightstyle;
 }
@@ -1130,7 +1129,7 @@ function spotmousedown(){
 			mathfullsizeup = Math.abs(mathfullsizeup) + Math.abs(1);
 			mathbordersizeup = Math.abs(mathbordersizeup) + Math.abs(1);
 			spotx = oldspotx; spoty = oldspoty;
-			mousespotlightstyle = "-webkit-gradient(radial, " + spotx + " " + spoty + ", " + mathfullsizeup + ", " + spotx + " " + spoty + ", " + mathbordersizeup + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+			mousespotlightstyle = "radial-gradient(circle at " + spotx + "px " + spoty + "px, transparent " + mathbordersizeup + "px, " + lightcolor + " " + mathfullsizeup + "px)";
 			spot.style.backgroundImage = mousespotlightstyle;
 		}, 5);
 
@@ -1139,7 +1138,7 @@ function spotmousedown(){
 
 function spotmouseup(){
 	window.clearInterval(countupsizetimer); window.clearTimeout(presstimer);
-	mousespotlightstyle = "-webkit-gradient(radial, " + spotx + " " + spoty + ", " + fullspotlightsize + ", " + spotx + " " + spoty + ", " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+	mousespotlightstyle = "radial-gradient(circle at " + spotx + "px " + spoty + "px, transparent " + borderspotlightsize + "px, " + lightcolor + " " + fullspotlightsize + "px)";
 	spot.style.backgroundImage = mousespotlightstyle;
 	mathfullsizeup = fullspotlightsize;
 	mathbordersizeup = borderspotlightsize;
@@ -1885,7 +1884,7 @@ function lightsgoonoroff(){
 			setAttributes(newframe1always, {"id": "stefanvdlightareoff1", "class": "stefanvdlightareoff"});
 			fullspotlightsize = spotlightradius;
 			borderspotlightsize = spotlightradius - 8;
-			mousespotlightstyle = "-webkit-gradient(radial, -50 -50, " + fullspotlightsize + ", -50 -50, " + borderspotlightsize + ", from(" + lightcolor + "), to(rgba(0,0,0,0)))";
+			mousespotlightstyle = "radial-gradient(circle at " + spotx + "px " + spoty + "px, transparent " + borderspotlightsize + "px, " + lightcolor + " " + fullspotlightsize + "px)";
 
 			newframe1always.style.backgroundImage = mousespotlightstyle;
 			newframe1always.style.pointerEvents = "none"; // make it possible to click on a link
