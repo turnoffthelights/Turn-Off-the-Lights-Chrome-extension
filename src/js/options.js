@@ -159,7 +159,7 @@ chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex"
 	if(items["endtime"] == null){ firstdefaultvalues["endtime"] = "23:45"; }
 
 	if(items["nightmodeswitchhidetime"] == null){ firstdefaultvalues["nightmodeswitchhidetime"] = 3; }
-	if(items["playrateamount"] == null){ firstdefaultvalues["nightmodeswitchhidetime"] = 1; }
+	if(items["playrateamount"] == null){ firstdefaultvalues["playrateamount"] = 1; }
 
 	if(items["drawatmosfps"] == null){ firstdefaultvalues["drawatmosfps"] = 12; }
 

@@ -101,18 +101,18 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	videovolumecolor = response["videovolumecolor"]; if(videovolumecolor == null)videovolumecolor = "#167ac6";
 	videovolumesteps = response["videovolumesteps"]; if(videovolumesteps == null)videovolumesteps = 5;
 	videovolumelabel = response["videovolumelabel"]; if(videovolumelabel == null)videovolumelabel = true;
-	visopacity = response["visopacity"]; if(visopacity == null)visopacity = "80";
+	visopacity = response["visopacity"]; if(visopacity == null)visopacity = 80;
 	videotoolcolor = response["videotoolcolor"]; if(videotoolcolor == null)videotoolcolor = "#000000";
 	hovervideo = response["hovervideo"];
-	hovervideoamount = response["hovervideoamount"]; if(hovervideoamount == null)hovervideoamount = "3";
+	hovervideoamount = response["hovervideoamount"]; if(hovervideoamount == null)hovervideoamount = 3;
 	mousespotlights = response["mousespotlights"];
-	drawatmosfps = response["drawatmosfps"]; if(drawatmosfps == null)drawatmosfps = "12";
+	drawatmosfps = response["drawatmosfps"]; if(drawatmosfps == null)drawatmosfps = 12;
 	aplay = response["aplay"]; if(aplay == null)aplay = true;
 	apause = response["apause"]; if(apause == null)apause = true;
 	astop = response["astop"]; if(astop == null)astop = true;
 	videozoom = response["videozoom"];
 	playrate = response["playrate"];
-	playrateamount = response["playrateamount"]; if(playrateamount == null)playrateamount = "1";
+	playrateamount = response["playrateamount"]; if(playrateamount == null)playrateamount = 1;
 	speedtoolbar = response["speedtoolbar"];
 	atmosontotlmode = response["atmosontotlmode"];
 	vpause = response["vpause"];
@@ -125,7 +125,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	nightmodebypage = response["nightmodebypage"]; if(nightmodebypage == null)nightmodebypage = false;
 	nightmodegesture = response["nightmodegesture"];
 	nightmodeswitchhide = response["nightmodeswitchhide"];
-	nightmodeswitchhidetime = response["nightmodeswitchhidetime"]; if(nightmodeswitchhidetime == null)nightmodeswitchhidetime = "3";
+	nightmodeswitchhidetime = response["nightmodeswitchhidetime"]; if(nightmodeswitchhidetime == null)nightmodeswitchhidetime = 3;
 	atmosfpsauto = response["atmosfpsauto"]; if(atmosfpsauto == null)atmosfpsauto = false;
 	atmosfpsmanual = response["atmosfpsmanual"]; if(atmosfpsmanual == null)atmosfpsmanual = true;
 	videovolumeonly = response["videovolumeonly"];
@@ -3620,7 +3620,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var mousemoveswitchhide = function(){
 		window.clearTimeout(timernightswitch);
 		if($("stefanvdnighttheme")){
-			$("stefanvdnighttheme").classList.toggle("stefanvdswitchhidden");
+			if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){
+				$("stefanvdnighttheme").classList.remove("stefanvdswitchhidden");
+			}
 		}
 		timernightswitch = window.setTimeout(function(){
 			if($("stefanvdnighttheme")){
@@ -3639,7 +3641,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function goshowswitchonpause(){
 		if(!nightmodeswitchhide){ // auto hide switch is not enabled
 			if($("stefanvdnighttheme")){
-				$("stefanvdnighttheme").classList.toggle("stefanvdswitchhidden");
+				if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){ $("stefanvdnighttheme").classList.remove("stefanvdswitchhidden"); }
 			}
 		}
 	}
