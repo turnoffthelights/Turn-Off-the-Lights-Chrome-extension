@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var badge; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll;
+var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll;
 
 function save_options(){
 	var getpipvisualtype;
@@ -47,7 +47,7 @@ function save_options(){
 		getpipvisualtype = 3;
 	}
 
-	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "badge":$("badge").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
+	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
 }
 
 function executenightmode(){
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "badge", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
+	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 		interval = items["interval"]; if(interval == null)interval = 80; // default 80%
 		ambilight = items["ambilight"]; if(ambilight == null)ambilight = false; // default false
@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(typeof nightDomains == "undefined" || nightDomains == null)
 			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
 
-		badge = items["badge"]; if(badge == null)badge = false; // default false
 		pipvisualtype = items["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1; // default 1
 
 		if(pipvisualtype == 1){
@@ -174,8 +173,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		if(ambilight4color == true)$("ambilight4color").checked = true;
 		if(ambilightvarcolor == true)$("ambilightvarcolor").checked = true;
 		if(atmosvivid == true)$("atmosvivid").checked = true;
-
-		if(badge == true)$("badge").checked = true;
 
 		if(optionskipremember){ optionskipremember = items["optionskipremember"]; }
 		if(firstDate){ firstDate = items["firstDate"]; }
@@ -362,7 +359,6 @@ document.addEventListener("DOMContentLoaded", function(){
 	eventFunc("btnsupport", "click", opensupportpage);
 	eventFunc("btnauroraplayer", "click", openaurorapage);
 
-	eventFunc("analclick", "click", openoptionspage);
 	eventFunc("analtotal", "click", openoptionspage);
 
 	var stefanvdurl = developerwebsite;
@@ -370,33 +366,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	function add(a, b){ return a + b; }
 
-	// date today
-	var currenttoday = new Date();
-	var dd = currenttoday.getDate();
-	var mm = currenttoday.getMonth() + 1; // January is 0!
-
-	var yyyy = currenttoday.getFullYear();
-	if(dd < 10){ dd = "0" + dd; }
-	if(mm < 10){ mm = "0" + mm; }
-	var today = dd + "/" + mm + "/" + yyyy;
-
-	function search(nameKey, myArray){
-		var i, l = myArray.length;
-		for(i = 0; i < l; i++){
-			if(myArray[i].name === nameKey){
-				var thatarray = myArray[i];
-				return thatarray["details"]["active"];
-			}
-		}
-	}
-
 	var analytics;
 	var sharetext;
 	chrome.storage.sync.get("analytics", function(items){
 		if(items["analytics"]){
 			analytics = items["analytics"];
-			$("analclicktoday").innerText = JSON.stringify(search(today, analytics));
-
 			var timeeverything = analytics.map(function(a){
 				return a.details.time; // in minutes
 			});
@@ -527,8 +501,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		}
 	});
 
-	$("shareboxfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook", "width=600,height=460,menubar=no,location=no,status=no"); });
-	$("shareboxtwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no"); });
+	$("btnfacebook").addEventListener("click", function(){ window.open("https://www.facebook.com/sharer.php?u=" + stefanvdurl + "&t=" + sharetext + "", "Share to Facebook", "width=600,height=460,menubar=no,location=no,status=no"); });
+	$("btntwitter").addEventListener("click", function(){ window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + sharetext + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no"); });
 
 	eventFunc("energybox", "click", openoptionspage);
 

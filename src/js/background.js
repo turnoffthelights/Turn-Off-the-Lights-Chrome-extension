@@ -134,9 +134,6 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			});
 		}
 		break;
-	case"badgeon":
-		checkbadge();
-		break;
 	case"sendnightmodeindark":
 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
 		break;
@@ -173,9 +170,6 @@ chrome.tabs.onActivated.addListener(function(activeInfo){
 			if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
 			chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"], "38": items["icon"]}});
 		});
-		// for all tabs
-		// update the badge value
-		checkbadge();
 	});
 });
 
@@ -192,18 +186,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
 	chrome.storage.sync.get(["icon"], function(chromeset){
 		if(chromeset["icon"] == undefined){ chromeset["icon"] = "icons/iconstick38.png"; }
 		chrome.browserAction.setIcon({tabId : tabId, path : {"19": chromeset["icon"], "38": chromeset["icon"]}});
-	});
-	// for all tabs
-	// update the badge value
-	checkbadge();
-});
-
-chrome.tabs.onHighlighted.addListener(function(o){
-	var tabId = o.tabIds[0];
-	chrome.tabs.get(tabId, function(){
-		// for highlighted tab
-		// update the badge value
-		checkbadge();
 	});
 });
 
@@ -445,8 +427,6 @@ chrome.storage.onChanged.addListener(function(changes){
 			}
 		}
 
-		onchangestorage(changes, "badge", checkbadge, checkbadge);
-
 		var changenameautoplay = ["autoplay", "mousespotlights", "autoplayDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "autoplayonly", "aplay", "apause", "astop", "autoplaydelay", "autoplaydelaytime"];
 		if(changenameautoplay.includes(key)){
 			chromerefreshalltabs("gorefreshautoplay");
@@ -580,45 +560,6 @@ function omnidaynightmode(a){
 	});
 }
 
-// date today
-var currenttoday = new Date();
-var dd = currenttoday.getDate();
-var mm = currenttoday.getMonth() + 1; // January is 0!
-
-var yyyy = currenttoday.getFullYear();
-if(dd < 10){ dd = "0" + dd; }
-if(mm < 10){ mm = "0" + mm; }
-var today = dd + "/" + mm + "/" + yyyy;
-
-function search(nameKey, myArray){
-	var i, l = myArray.length;
-	for(i = 0; i < l; i++){
-		if(myArray[i].name === nameKey){
-			return myArray[i];
-		}
-	}
-}
-
-var analytics; var rest;
-function checkbadge(){
-	chrome.storage.sync.get(["analytics", "badge", "contextmenus"], function(items){
-		if(items["analytics"]){
-			analytics = items["analytics"];
-			var resultObject = search(today, analytics);
-			if(typeof resultObject === "undefined"){
-				rest = "";
-			}else{
-				rest = JSON.stringify(resultObject["details"]["active"]);
-			}
-			if(items["badge"] == true){ chrome.browserAction.setBadgeText({text: rest}); }else{ chrome.browserAction.setBadgeText({text: ""}); }
-			chrome.browserAction.setBadgeBackgroundColor({color: "#43A047"});
-		}else{ chrome.browserAction.setBadgeText({text: ""}); } // no data found, automatically clean this
-		if(items["contextmenus"]){
-			if(items["contextmenus"] == true){ checkcontextmenus(); }
-		}
-	});
-}
-
 chrome.runtime.setUninstallURL(linkuninstall);
 
 function initwelcome(){
@@ -720,13 +661,8 @@ function installation(){
 	}else{
 		initwelcome();
 	}
-	checkbadge();
 }
 
 chrome.runtime.onInstalled.addListener(function(){
 	installation();
 });
-// first run - check the badge new value for this day
-chrome.runtime.onStartup.addListener(checkbadge);
-
-checkbadge();
