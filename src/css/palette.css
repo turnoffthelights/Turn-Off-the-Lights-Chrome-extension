@@ -298,10 +298,10 @@ input:checked + .slider:before{-webkit-transform:translateX(22px);-ms-transform:
 .dash{height:2px;width:20px;background:var(--totl-primary-font-color);margin:5px;display:inline-block;opacity:.6}
 @media screen and (min-width: 301px){ 
     body{width:100%}
-    .nightheader video{position:absolute;top:-130px;left:0;width:100%;height:auto}
-    .atmosheader video{position:absolute;top:-90px;left:0;width:100%;height:auto}
-    .analyticsheader video{position:absolute;top:-90px;left:0;width:100%;height:auto}
-    .pipheader video{position:absolute;top:-90px;left:0;width:100%;height:auto}
+    .nightheader video{position:absolute;top:-80px;left:0;width:100%;height:auto}
+    .atmosheader video{position:absolute;top:-50px;left:0;width:100%;height:auto}
+    .analyticsheader video{position:absolute;top:-50px;left:0;width:100%;height:auto}
+    .pipheader video{position:absolute;top:-50px;left:0;width:100%;height:auto}
     #colorpal{max-width:270px;margin:20px auto}
     .oan{display:flex;justify-content:center;width:auto}
  }
