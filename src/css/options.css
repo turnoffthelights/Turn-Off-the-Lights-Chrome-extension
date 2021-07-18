@@ -744,7 +744,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .atmosrangebox .attitle{padding:0 20px 0px 0px;display:flex;align-items:center;height:48px}
 .atmosrangebox .atrest{display:flex;align-items:center;padding:0 20px}
 .atmosbox{display:flex;height:480px;width:100%}
-#beeld{position:relative;z-index:101;margin:auto;width:486px;height:273px}
+#beeld{position:relative;z-index:101;margin:auto;width:487px;aspect-ratio:16/9}
 .warning{font-weight:700}
 .warningambilight{border-radius:2px;background-color:#FFF59D;color:black;margin-top:7px;margin-bottom:10px;padding:10px;line-height:25px}
 /* html */
@@ -1169,7 +1169,7 @@ only screen and (max-device-width:480px){
   #mainview{padding-left:0px}
   #mainview-content{max-width:100%;min-width:100%}
   section{-webkit-box-orient:vertical}
-  #beeld{position:relative;z-index:101;margin:auto;width:250px;height:140px}
+  #beeld{position:relative;z-index:101;margin:auto;width:250px}
   #loadingcenter{width:230px}
   #progressbar{width:230px}
   #dont-turn-off-the-lights{width:100%;height:auto;aspect-ratio:16/9}
