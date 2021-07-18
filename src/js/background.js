@@ -33,6 +33,12 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"bckreload":
 		installation();
 		break;
+	case"redirectionoptions":
+		chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
+			chrome.tabs.remove(tabs[0].id);
+			chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true});
+		});
+		break;
 	case"automatic":
 		chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});
 		break;

@@ -237,6 +237,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	});
 
+	let redirectionHosts = ["https://www.turnoffthelights.com/extension/redirection/"];
+	if(redirectionHosts.includes(window.location.href)){
+		chrome.runtime.sendMessage({name: "redirectionoptions"});
+	}
+
 	// Shortcutlight
 	window.addEventListener("keydown", function(e){
 		if(e.key == "F8" && !e.ctrlKey && !e.shiftKey && e.altKey){
