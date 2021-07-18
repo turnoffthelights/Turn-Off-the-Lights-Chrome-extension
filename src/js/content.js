@@ -3882,11 +3882,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// night mode gesture
 	var bnode = document.body;
 	var presstimer = null;
-
+	var presstimeraction = null;
 	var cancelgesture = function(){
 		if(presstimer !== null){
-			clearTimeout(presstimer);
+			window.clearTimeout(presstimer);
 			presstimer = null;
+			window.clearTimeout(presstimeraction);
+			presstimeraction = null;
 		}
 
 		var elementList = bnode.getElementsByTagName("*");
@@ -3965,14 +3967,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			}
 		}
-		document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
 
-		presstimer = setTimeout(function(){
-			gogonightmode();
-			if(navigator.vibrate){
-				window.navigator.vibrate([100, 30, 200]);
-			}
-		}, 800);
+		// delay after 2.5 seconds start to work this code
+		presstimer = window.setTimeout(function(){
+			document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
+			presstimeraction = window.setTimeout(function(){
+				gogonightmode();
+				if(navigator.vibrate){
+					window.navigator.vibrate([100, 30, 200]);
+				}
+			}, 800);
+		}, 2500);
 
 		return false;
 	};
