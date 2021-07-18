@@ -3968,7 +3968,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
-		// delay after 2.5 seconds start to work this code
+		// delay after 1.5 seconds start to work this code
 		presstimer = window.setTimeout(function(){
 			document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
 			presstimeraction = window.setTimeout(function(){
@@ -3977,7 +3977,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					window.navigator.vibrate([100, 30, 200]);
 				}
 			}, 800);
-		}, 2500);
+		}, 1500);
 
 		return false;
 	};
