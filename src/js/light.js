@@ -1905,6 +1905,18 @@ function lightsgoonoroff(){
 			// var height = document.documentElement.clientHeight;
 
 			window.onmousemove = moveSpot;
+			window.addEventListener("touchmove", function(e){
+				// stop touch event
+				e.stopPropagation();
+
+				// translate to mouse event
+				var clkEvt = document.createEvent("MouseEvent");
+				clkEvt.initMouseEvent("mousemove", true, true, window, e.detail, e.touches[0].screenX, e.touches[0].screenY, e.touches[0].clientX, e.touches[0].clientY, false, false, false, false, 0, null);
+				window.dispatchEvent(clkEvt);
+
+				// or just handle touch event
+				moveSpot(e);
+			}, {passive: false});
 
 			// increase size by pressing
 			mathfullsizeup = fullspotlightsize;

@@ -239,7 +239,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	let redirectionHosts = ["https://www.turnoffthelights.com/extension/redirection/"];
 	if(redirectionHosts.includes(window.location.href)){
-		chrome.runtime.sendMessage({name: "redirectionoptions"});
+		if($("allowpermission")){
+			$("allowpermission").className = "";
+			chrome.runtime.sendMessage({name: "redirectionoptions"});
+		}
+		if($("disallowpermission")){
+			$("disallowpermission").className = "hidden";
+		}
 	}
 
 	// Shortcutlight
