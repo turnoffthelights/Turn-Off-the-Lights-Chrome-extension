@@ -535,5 +535,6 @@
     "titelgpconnect": {"message": "Connected"},
     "titelgpdisconnect": {"message": "Disconnected"},
     "desnightmodeos": {"message": "Automatically switch the current web page to night mode if the OS appearance is set to Dark"},
-    "titelonoff": {"message": "ON/OFF"}
+    "titelonoff": {"message": "ON/OFF"},
+    "titelnightmodeborder": {"message": "Border color"}
 }

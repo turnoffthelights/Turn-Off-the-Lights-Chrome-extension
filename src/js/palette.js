@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll;
+var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll; var nightmodeborder;
 
 function save_options(){
 	var getpipvisualtype;
@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		nightmodetxt = items["nightmodetxt"]; if(nightmodetxt == null)nightmodetxt = "#ffffff"; // default #ffffff
 		nightmodehyperlink = items["nightmodehyperlink"]; if(nightmodehyperlink == null)nightmodehyperlink = "#ffffff"; // default #ffffff
 		nightmodebutton = items["nightmodebutton"]; if(nightmodebutton == null)nightmodebutton = "#353535"; // default #353535
+		nightmodeborder = items["nightmodeborder"]; if(nightmodeborder == null)nightmodeborder = "#545454"; // default #545454
 		nightonly = items["nightonly"]; if(nightonly == null)nightonly = false; // default false
 		nightmodebydomain = items["nightmodebydomain"]; if(nightmodebydomain == null)nightmodebydomain = true; // default true
 		nightDomains = items["nightDomains"];
@@ -184,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		$("colornightmodetxtcustom").value = nightmodetxt;
 		$("colornightmodehyperlinkcustom").value = nightmodehyperlink;
 		$("colornightmodebuttoncustom").value = nightmodebutton;
+		$("colornightmodebordercustom").value = nightmodeborder;
 
 		if(nightonly == true)$("nightonly").checked = true;
 
@@ -335,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 	});
 
-	var arraynm = ["colornightmodebck1", "colornightmodebck2", "colornightmodebck3", "colornightmodebck4", "colornightmodebck5", "colornightmodebck6", "colornightmodebck7", "colornightmodebck8", "colortitelnightmodetxt1", "colortitelnightmodetxt2", "colortitelnightmodetxt3", "colortitelnightmodetxt4", "colortitelnightmodetxt5", "colortitelnightmodetxt6", "colortitelnightmodetxt7", "colortitelnightmodetxt8", "colortitelnightmodehyperlink1", "colortitelnightmodehyperlink2", "colortitelnightmodehyperlink3", "colortitelnightmodehyperlink4", "colortitelnightmodehyperlink5", "colortitelnightmodehyperlink6", "colortitelnightmodehyperlink7", "colortitelnightmodehyperlink8", "colortitelnightmodebutton1", "colortitelnightmodebutton2", "colortitelnightmodebutton3", "colortitelnightmodebutton4", "colortitelnightmodebutton5", "colortitelnightmodebutton6", "colortitelnightmodebutton7", "colortitelnightmodebutton8"];
+	var arraynm = ["colornightmodebck1", "colornightmodebck2", "colornightmodebck3", "colornightmodebck4", "colornightmodebck5", "colornightmodebck6", "colornightmodebck7", "colornightmodebck8", "colortitelnightmodetxt1", "colortitelnightmodetxt2", "colortitelnightmodetxt3", "colortitelnightmodetxt4", "colortitelnightmodetxt5", "colortitelnightmodetxt6", "colortitelnightmodetxt7", "colortitelnightmodetxt8", "colortitelnightmodehyperlink1", "colortitelnightmodehyperlink2", "colortitelnightmodehyperlink3", "colortitelnightmodehyperlink4", "colortitelnightmodehyperlink5", "colortitelnightmodehyperlink6", "colortitelnightmodehyperlink7", "colortitelnightmodehyperlink8", "colortitelnightmodebutton1", "colortitelnightmodebutton2", "colortitelnightmodebutton3", "colortitelnightmodebutton4", "colortitelnightmodebutton5", "colortitelnightmodebutton6", "colortitelnightmodebutton7", "colortitelnightmodebutton8", "colortitelnightmodeborder1", "colortitelnightmodeborder2", "colortitelnightmodeborder3", "colortitelnightmodeborder4", "colortitelnightmodeborder5", "colortitelnightmodeborder6", "colortitelnightmodeborder7", "colortitelnightmodeborder8"];
 	for(var inm = 0; inm < arraynm.length; inm++){
 		if(arraynm[inm].includes("colornightmodebck")){
 			document.getElementById(arraynm[inm]).addEventListener("click", nightmodebckcolorchange);
@@ -345,6 +347,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			document.getElementById(arraynm[inm]).addEventListener("click", nightmodelinkcolorchange);
 		}else if(arraynm[inm].includes("colortitelnightmodebutton")){
 			document.getElementById(arraynm[inm]).addEventListener("click", nightmodebuttoncolorchange);
+		}else if(arraynm[inm].includes("colortitelnightmodeborder")){
+			document.getElementById(arraynm[inm]).addEventListener("click", nightmodebordercolorchange);
 		}
 	}
 
@@ -352,6 +356,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	eventFunc("colornightmodetxtcustom", "input", nightmodetextcolorchangecustom);
 	eventFunc("colornightmodehyperlinkcustom", "input", nightmodelinkcolorchangecustom);
 	eventFunc("colornightmodebuttoncustom", "input", nightmodebuttoncolorchangecustom);
+	eventFunc("colornightmodebordercustom", "input", nightmodebordercolorchangecustom);
 
 	eventFunc("btngonight", "click", executenightmode);
 	eventFunc("btnoptions", "click", openoptionspage);
@@ -641,3 +646,5 @@ function nightmodelinkcolorchange(){ savecolorchange("nightmodehyperlink", "colo
 function nightmodelinkcolorchangecustom(){ savecolorcustom("nightmodehyperlink", "colornightmodehyperlinkcustom"); }
 function nightmodebuttoncolorchange(){ savecolorchange("nightmodebutton", "colornightmodebuttoncustom", this); }
 function nightmodebuttoncolorchangecustom(){ savecolorcustom("nightmodebutton", "colornightmodebuttoncustom"); }
+function nightmodebordercolorchange(){ savecolorchange("nightmodeborder", "colornightmodebordercustom", this); }
+function nightmodebordercolorchangecustom(){ savecolorcustom("nightmodeborder", "colornightmodebordercustom"); }
