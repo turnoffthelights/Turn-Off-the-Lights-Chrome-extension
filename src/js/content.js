@@ -2734,6 +2734,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					var y;
 					var z;
 					var x;
+					var w;
 					// if night class is already added, skip this node
 					// Else create it
 					if(node.classList.contains("stefanvdnightbck") == false){
@@ -2742,11 +2743,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 							y = node.currentStyle["background-color"];
 							z = node.currentStyle["background-image"];
 							x = node.currentStyle["border-color"];
+							w = node.currentStyle["box-shadow"];
 						}else if(window.getComputedStyle){
 							st = document.defaultView.getComputedStyle(node, null);
 							y = st.getPropertyValue("background-color");
 							z = st.getPropertyValue("background-image");
 							x = st.getPropertyValue("border-color");
+							w = st.getPropertyValue("box-shadow");
 						}
 
 						if(y == "rgba(0, 0, 0, 0)" || y.includes("rgba(0, 0, 0, 0")){
@@ -2792,6 +2795,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						if(x !== null){
 							node.classList.add("stefanvdnightborder");
 						}
+
+						// box shadow that look also as a single border line
+						var partw = w.includes("0px 0px 0px 1px");
+						if(partw){
+							node.classList.add("stefanvdnightboxshadow");
+						}
+
 					}
 				}
 			}
@@ -3236,6 +3246,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					[].forEach.call(elemsbrdr, function(el){
 						el.classList.remove("stefanvdnightborder");
 					});
+
+					var elemsbxshw = document.querySelectorAll(".stefanvdnightboxshadow");
+					[].forEach.call(elemsbxshw, function(el){
+						el.classList.remove("stefanvdnightboxshadow");
+					});
 				}
 				//---
 
@@ -3625,7 +3640,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			});
 		}
 
-		var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}";
+		var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
 
 		addcsstext("totlnightmodestyle", css);
 
@@ -5313,7 +5328,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(items["nightmodeborder"]){ nightmodeborder = items["nightmodeborder"]; }else{ nightmodeborder = "#545454"; }
 
 				if(document.getElementById("totlnightmodestyle")){
-					document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}";
+					document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
 				}
 			});
 		}else if(request.action == "goenablenightmode"){

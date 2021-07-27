@@ -192,14 +192,14 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 #color6f{background-color:rgba(61,173,247,1)}
 #color6g{background-color:rgba(65,193,247,1)}
 #color6h{background-color:rgba(121,215,250,1)}
-#colornightmodebck1,#colortitelnightmodetxt1,#colortitelnightmodehyperlink1,#colortitelnightmodebutton1{background-color:black}
-#colornightmodebck2,#colortitelnightmodetxt2,#colortitelnightmodehyperlink2,#colortitelnightmodebutton2{background-color:#212121}
-#colornightmodebck3,#colortitelnightmodetxt3,#colortitelnightmodehyperlink3,#colortitelnightmodebutton3{background-color:#353535}
-#colornightmodebck4,#colortitelnightmodetxt4,#colortitelnightmodehyperlink4,#colortitelnightmodebutton4{background-color:#424242}
-#colornightmodebck5,#colortitelnightmodetxt5,#colortitelnightmodehyperlink5,#colortitelnightmodebutton5{background-color:#616161}
-#colornightmodebck6,#colortitelnightmodetxt6,#colortitelnightmodehyperlink6,#colortitelnightmodebutton6{background-color:#757575}
-#colornightmodebck7,#colortitelnightmodetxt7,#colortitelnightmodehyperlink7,#colortitelnightmodebutton7{background-color:#9E9E9E}
-#colornightmodebck8,#colortitelnightmodetxt8,#colortitelnightmodehyperlink8,#colortitelnightmodebutton8{background-color:white}
+#colornightmodebck1,#colortitelnightmodetxt1,#colortitelnightmodehyperlink1,#colortitelnightmodebutton1,#colortitelnightmodeborder1{background-color:black}
+#colornightmodebck2,#colortitelnightmodetxt2,#colortitelnightmodehyperlink2,#colortitelnightmodebutton2,#colortitelnightmodeborder2{background-color:#212121}
+#colornightmodebck3,#colortitelnightmodetxt3,#colortitelnightmodehyperlink3,#colortitelnightmodebutton3,#colortitelnightmodeborder3{background-color:#353535}
+#colornightmodebck4,#colortitelnightmodetxt4,#colortitelnightmodehyperlink4,#colortitelnightmodebutton4,#colortitelnightmodeborder4{background-color:#424242}
+#colornightmodebck5,#colortitelnightmodetxt5,#colortitelnightmodehyperlink5,#colortitelnightmodebutton5,#colortitelnightmodeborder5{background-color:#616161}
+#colornightmodebck6,#colortitelnightmodetxt6,#colortitelnightmodehyperlink6,#colortitelnightmodebutton6,#colortitelnightmodeborder6{background-color:#757575}
+#colornightmodebck7,#colortitelnightmodetxt7,#colortitelnightmodehyperlink7,#colortitelnightmodebutton7,#colortitelnightmodeborder7{background-color:#9E9E9E}
+#colornightmodebck8,#colortitelnightmodetxt8,#colortitelnightmodehyperlink8,#colortitelnightmodebutton8,#colortitelnightmodeborder8{background-color:white}
 .nightheader{position:relative;height:105px;background:#01579B;color:white;font-size:20px;line-height:58px;padding:0 16px;overflow:hidden}
 .nightheader video{position:absolute;top:-65px;left:0}
 .nightheader span{position:absolute}
