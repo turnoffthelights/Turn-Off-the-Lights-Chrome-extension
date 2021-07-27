@@ -644,6 +644,8 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 			var ytplayercontrol = document.getElementById("player-control-overlay");
 			if(ytplayercontrol){ ytplayercontrol.classList.add("stefanvdvideocontrolsitem"); }
 
+			var ytdialogcont = document.querySelector(".dialog-container");
+			if(ytdialogcont){ ytdialogcont.classList.add("stefanvdvideocontrolsitem"); }
 		} // end YouTube
 
 		// iframe HTML5 video
