@@ -31,13 +31,12 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "js": ["js/constants.js", "js/content.js", "js/eco.js"],
       "run_at": "document_end"
     },
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.mycinema.pro/*", "*://*.turnoffthelights.com/extension/options.html"],
+      "exclude_matches": ["*://*.mycinema.pro/*"],
       "css" : ["css/light.css"],
       "run_at": "document_end",
       "all_frames": true,
@@ -46,7 +45,6 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "js": ["js/screenshader.js"],
-      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "run_at": "document_start"
     },
     {
@@ -57,7 +55,6 @@
     },
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.turnoffthelights.com/extension/options.html"],
       "js": ["js/autostop.js"],
       "run_at": "document_start",
       "all_frames": true,
@@ -66,11 +63,6 @@
     {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
-    },
-    {
-      "matches": ["*://*.turnoffthelights.com/extension/options.html"],
-      "js": ["js/constants.js","js/options.js","js/chart.js","js/eco-preview.js"],
-      "run_at": "document_end"
     }
   ],
   "commands": {
