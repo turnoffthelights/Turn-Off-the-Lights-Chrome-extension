@@ -2594,6 +2594,41 @@ function domcontentloaded(){
 		if(window.innerWidth < 480){ $("menuToggle").click(); }
 	}
 
+	function setmetatheme(a){
+		const metas = document.getElementsByTagName("meta");
+		var darktheme;
+		var lighttheme;
+
+		if(a == true){
+			darktheme = "#1c1c1c";
+			lighttheme = "#f5f5f5";
+		}else{
+			darktheme = "#232323";
+			lighttheme = "#ffffff";
+		}
+
+		let i, l = metas.length;
+		for(i = 0; i < l; i++){
+			if(metas[i].getAttribute("name") == "theme-color"){
+				if(metas[i].getAttribute("media")){
+					if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+						metas[i].setAttribute("content", lighttheme);
+					}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+						metas[i].setAttribute("content", darktheme);
+					}
+				}
+			}
+		}
+	}
+
+	$("reveal-menu").addEventListener("click", function(){
+		if(this.checked == true){
+			setmetatheme(true);
+		}else{
+			setmetatheme(false);
+		}
+	});
+
 	// Save KB download
 	$("tabbasic").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundbugfromsafari(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabvisual").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
