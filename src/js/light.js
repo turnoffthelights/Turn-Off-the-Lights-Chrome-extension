@@ -1078,6 +1078,7 @@ var i18nlockentername = chrome.i18n.getMessage("lockentername");
 var i18nlockwrongpassword = chrome.i18n.getMessage("lockwrongpassword");
 
 function lockscreen(){
+	setmetatheme(true);
 	var pwon2 = $("stefanvdlightareoffpw");
 	if(pwon2){
 		var entername = window.prompt(i18nlockentername, "");
@@ -1851,10 +1852,84 @@ function onResize(){
 	}
 }
 
+function addAlpha(color, opacity){
+	const stringopacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
+	return color + stringopacity.toString(16).toUpperCase();
+}
+
+var currentwebthemelight = "#ffffff";
+var currentwebthemedark = "#ffffff";
+function getdefaultmetatheme(){
+	if($("stefanvdtheme")){
+		var myElement = document.getElementById("stefanvdtheme");
+		currentwebthemelight = myElement.getAttribute("data-themelight");
+		currentwebthemedark = myElement.getAttribute("data-themedark");
+	}else{
+		const metas = document.getElementsByTagName("meta");
+		let i, l = metas.length;
+		for(i = 0; i < l; i++){
+			if(metas[i].getAttribute("name") == "theme-color"){
+				if(metas[i].getAttribute("media")){
+					if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+						currentwebthemelight = metas[i].getAttribute("content");
+					}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+						currentwebthemedark = metas[i].getAttribute("content");
+					}
+				}else{
+					currentwebthemedark = currentwebthemelight = metas[i].getAttribute("content");
+				}
+			}
+		}
+		const newDiv = document.createElement("div");
+		newDiv.id = "stefanvdtheme";
+		newDiv.className = "totltheme";
+		newDiv.setAttribute("data-themelight", currentwebthemelight);
+		newDiv.setAttribute("data-themedark", currentwebthemedark);
+		document.body.appendChild(newDiv);
+	}
+}
+
+function setmetatheme(a){
+	const metas = document.getElementsByTagName("meta");
+	var darktheme;
+	var lighttheme;
+
+	var newcolorstring = lightcolor.replace("#", "");
+	var newlightoffcolor = "#" + addAlpha(newcolorstring, interval / 100);
+	if(a == true){
+		// light is off
+		darktheme = currentwebthemedark;
+		lighttheme = currentwebthemelight;
+	}else{
+		// light is on
+		darktheme = newlightoffcolor;
+		lighttheme = newlightoffcolor;
+	}
+
+	let i, l = metas.length;
+	for(i = 0; i < l; i++){
+		if(metas[i].getAttribute("name") == "theme-color"){
+			if(metas[i].getAttribute("media")){
+				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+					metas[i].setAttribute("content", lighttheme);
+				}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+					metas[i].setAttribute("content", darktheme);
+				}
+			}else{
+				metas[i].setAttribute("content", lighttheme);
+			}
+		}
+	}
+}
+
 function lightsgoonoroff(){
+	// save default meta theme color
+	getdefaultmetatheme();
+
 	if(blackon){
 		lockscreen();
 	}else{
+		setmetatheme(false);
 		// lamp and night mode active with one click
 		if(lampandnightmode == true){
 			chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});

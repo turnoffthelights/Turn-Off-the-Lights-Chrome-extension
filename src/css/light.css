@@ -674,6 +674,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 .totlmousewheelvideo progress[value]::progress-bar{background-color:#eee!important;border-radius:2px!important;box-shadow:0 2px 5px rgba(0, 0, 0, 0.25)inset!important}
 .totlvideovolumeprogresshidden{display:none}
 .totlpointereventsnone{pointer-events:none!important}
+.totltheme{display:none!important}
 #stefanvdpipvisualizationcanvas{position:absolute;top:-320px;left:-640px;z-index:10000000}
 #stefanvdpipvisualizationvideo{position:absolute;top:-320px;left:-640px;z-index:10000000}
 :root{
