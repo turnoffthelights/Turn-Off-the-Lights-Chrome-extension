@@ -3640,7 +3640,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			});
 		}
 
-		var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
+		var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
 
 		addcsstext("totlnightmodestyle", css);
 
@@ -3923,6 +3923,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	var presstimer = null;
 	var presstimeraction = null;
 	var cancelgesture = function(){
+		touchstatus = false;
+
+		document.body.removeEventListener("pointermove", cancelmovegesture);
+
 		if(presstimer !== null){
 			window.clearTimeout(presstimer);
 			presstimer = null;
@@ -3939,7 +3943,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		document.getElementsByTagName("html")[0].classList.remove("stefanvdnightblur");
 	};
 
+	var cancelmovegesture = function(){
+		touchstatus = false;
+	};
+
+	var touchstatus = true;
 	var startgesture = function(e){
+		touchstatus = true;
 		if(e.type === "pointerdown" && e.button !== 0){
 			return;
 		}
@@ -3958,6 +3968,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		case"VIDEO":
 		case"AUDIO":
 			return;
+		}
+
+		// if click on night switch, then do nothing
+		if(e.target.id){
+			if(e.target.id.includes("stefanvdnighttheme")){
+				return;
+			}
 		}
 
 		var switchelements;
@@ -4007,16 +4024,20 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			}
 		}
 
-		// delay after 1.5 seconds start to work this code
+		// delay after 0.5 seconds start to work this code
 		presstimer = window.setTimeout(function(){
-			document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
-			presstimeraction = window.setTimeout(function(){
-				gogonightmode();
-				if(navigator.vibrate){
-					window.navigator.vibrate([100, 30, 200]);
-				}
-			}, 800);
-		}, 1500);
+			if(touchstatus == true){
+				document.getElementsByTagName("html")[0].classList.add("stefanvdnightblur");
+				presstimeraction = window.setTimeout(function(){
+					gogonightmode();
+					if(navigator.vibrate){
+						window.navigator.vibrate([100, 30, 200]);
+					}
+				}, 800);
+			}
+		}, 500);
+
+		document.addEventListener("pointermove", cancelmovegesture, false);
 
 		return false;
 	};
@@ -4042,10 +4063,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			document.addEventListener("selectionchange", nightseectionchange);
 
-			bnode.addEventListener("touchstart", startgesture);
-			bnode.addEventListener("touchend", cancelgesture);
-			bnode.addEventListener("touchcancel", cancelgesture);
-			bnode.addEventListener("touchmove", cancelgesture);
 			bnode.addEventListener("pointerdown", startgesture);
 			bnode.addEventListener("pointerup", cancelgesture);
 			bnode.addEventListener("contextmenu", cancelgesture);
@@ -5328,7 +5345,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(items["nightmodeborder"]){ nightmodeborder = items["nightmodeborder"]; }else{ nightmodeborder = "#545454"; }
 
 				if(document.getElementById("totlnightmodestyle")){
-					document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
+					document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
 				}
 			});
 		}else if(request.action == "goenablenightmode"){
@@ -5658,10 +5675,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 				document.removeEventListener("selectionchange", nightseectionchange);
 
-				document.body.removeEventListener("touchstart", startgesture);
-				document.body.removeEventListener("touchend", cancelgesture);
-				document.body.removeEventListener("touchcancel", cancelgesture);
-				document.body.removeEventListener("touchmove", cancelgesture);
 				document.body.removeEventListener("pointerdown", startgesture);
 				document.body.removeEventListener("pointerup", cancelgesture);
 				document.body.removeEventListener("contextmenu", cancelgesture);
