@@ -1047,7 +1047,7 @@ function removeClass(classelement){
 
 function removenewframe(){
 	// remove dark layers
-	var removedarklayerid = ["stefanvdlightareoff1", "stefanvdlightareoff2", "stefanvdlightareoff3", "stefanvdlightareoff4", "stefanvdtheater", "stefanvdblurimage", "stefanvdlightcorner"];
+	var removedarklayerid = ["stefanvdlightareoff1", "stefanvdlightareoff2", "stefanvdlightareoff3", "stefanvdlightareoff4", "stefanvdtheater", "stefanvdblurimage", "stefanvdlightcorner", "stefanvdtheme"];
 	removedarklayerid.forEach(removeId);
 
 	var csstotlpseudo = $("csstotlpseudo");
