@@ -2726,6 +2726,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				case"MAP":
 				case"TRACK":
 				case"AREA":
+				case"NOSCRIPT":
 					// do nothing
 					break;
 				default:
