@@ -2722,7 +2722,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				case"VIDEO":
 				case"AUDIO":
 				case"FIGURE":
-				case"A":
 				case"CANVAS":
 				case"MAP":
 				case"TRACK":
@@ -2788,6 +2787,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 								node.classList.add("stefanvdnightbck", "stefanvdnight");
 							}else{
 								node.classList.add("stefanvdnight");
+							}
+						}
+						// <a> with background change it to night button color
+						if(node.tagName == "A"){
+							if(y != "rgba(0, 0, 0, 0)"){
+								node.classList.add("stefanvdnightbutton");
 							}
 						}
 
