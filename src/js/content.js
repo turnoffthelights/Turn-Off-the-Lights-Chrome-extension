@@ -863,7 +863,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var tempwidthvideo = myElement.offsetWidth;
 				var tempheightvideo = myElement.offsetHeight;
 
-				myElement.addEventListener("mouseover", function(){
+				myElement.addEventListener("pointerover", function(){
 					rock = this.getAttribute("data-video");
 					hideshowdiv("stefanvdvispanel" + rock, "block");
 					if(this.classList.contains("stefanvdvideowindow")){
@@ -875,7 +875,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 				}, false);
 
-				myElement.addEventListener("mouseout", function(){
+				myElement.addEventListener("pointerout", function(){
 					hideshowdiv("stefanvdvispanel" + rock, "none");
 					hideshowdiv("stefanvdzoompanel" + rock, "none");
 					hideshowdiv("stefanvdspeedpanel" + rock, "none");
@@ -898,10 +898,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newzoompanel.style.width = "62px";
 					newzoompanel.style.height = tempheightvideo - 40 + "px";
 					newzoompanel.style.paddingTop = "40px";
-					newzoompanel.addEventListener("mouseover", function(){
+					newzoompanel.addEventListener("pointerover", function(){
 						stefanvdblockstatus("stefanvdzoompanel", rock, "block");
 					}, false);
-					newzoompanel.addEventListener("mouseout", function(){
+					newzoompanel.addEventListener("pointerout", function(){
 						stefanvdblockstatus("stefanvdzoompanel", rock, "none");
 					}, false);
 					document.body.appendChild(newzoompanel);
@@ -1095,10 +1095,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					newspeedpanel.style.width = 64 + "px";
 					newspeedpanel.style.height = tempheightvideo - 40 + "px";
 					newspeedpanel.style.paddingTop = "40px";
-					newspeedpanel.addEventListener("mouseover", function(){
+					newspeedpanel.addEventListener("pointerover", function(){
 						stefanvdblockstatus("stefanvdspeedpanel", rock, "block");
 					}, false);
-					newspeedpanel.addEventListener("mouseout", function(){
+					newspeedpanel.addEventListener("pointerout", function(){
 						stefanvdblockstatus("stefanvdspeedpanel", rock, "none");
 					}, false);
 					document.body.appendChild(newspeedpanel);
@@ -1265,10 +1265,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						newonvispanel.style.left = visposition.x + "px";
 						newonvispanel.style.width = tempwidthvideo + "px";
 						newonvispanel.style.height = 36 + "px";
-						newonvispanel.addEventListener("mouseover", function(){
+						newonvispanel.addEventListener("pointerover", function(){
 							stefanvdblockstatus("stefanvdvispanel", rock, "block");
 						}, false);
-						newonvispanel.addEventListener("mouseout", function(){
+						newonvispanel.addEventListener("pointerout", function(){
 							stefanvdblockstatus("stefanvdvispanel", rock, "none");
 						}, false);
 						document.body.appendChild(newonvispanel);
@@ -1434,7 +1434,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 										swicon.style.background = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACVUlEQVRoQ+2Z21EDMQxFryqADqAD6ACohNABdEAqACqAVAJ0AB1AB0kFYu7MesbjrNcvOQmw+snH+qFjKXrYgj8i8kc4MIMcmiVni/wai6jqI4CzCoXvRORjap6qngN4qFj7U0Rux+ZFXUtV3wBcVGx2JSKcGxVVvQTwWrH2u4hw7pb8W5A1gKfESb6IyFfCIqcAFhNjjgFcA+CvL6YWoaI3FW6RNUVVqTzdjv+jUJpBNgCOvFW7wEQgPr2g0wyyBEB3oLmdmMJEIFYAXrzA0A4iIveqykXNYWIQIrIIIpwNCE1hDTMFMeznh2o7EEuYFER3EAuYHIidgLTA5ELsDKQGpgRipyAlMKUQViDMrK5E+MooO8LQ/BRWqiOF6IohNlHOUAeX5dexytq0sfJCMyuBy3DToXxnZcwqIQmRVdMMg0xBBldgH8OsP9qTDDCLWF9Rorw/1hykVpHWeTNI6wlaz58tEjtRVX0GwOKO4XhLVJXh9sK6OTO1yADh8sJNCDNAEJRi2s9MXT4wCbmu8DsjIVJBP7lt5YmaFmCoBty11KY4IQZZeMnGKuFOkxBubilMt8YqhAnciZ+TGbsEZicgNRCllukO0gJRAtMVxAIiF6YbiCVEDkwXkB4QKRhzEAAnqTzRWj+NRTNGQcsLOl5e+xfKyRBbCzUCw77GdYjN91q+Xt0gJtzMfTID4emMvhh5pHxVogWjEpQdsXHsNMMbeTOQHI+ZX6wyTqnKImOmzdgLt5mPoVy/VD6KH0NLd9j3eNPGap8wM8g+T39s79kih2aRH8NkAVGMEdb6AAAAAElFTkSuQmCC)";
 										// remove action hover mode
 										window.clearTimeout(timeout);
-										window.onmousemove = null;
+										window.onpointermove = null;
 									}else{
 										// onevideo.pause();
 										videowindow = true;
@@ -1856,8 +1856,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var i;
 			var l = hvids.length;
 			for(i = 0; i < l; i++){
-				hvids.item(i).addEventListener("mouseover", hoveractionover);
-				hvids.item(i).addEventListener("mouseout", hoveractionout);
+				hvids.item(i).addEventListener("pointerover", hoveractionover);
+				hvids.item(i).addEventListener("pointerout", hoveractionout);
 			}
 		}
 	}
@@ -1988,7 +1988,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	function eyedojob(){
 		if(ecosaver == true){
-			window.addEventListener("mousemove", ecomousemove);
+			window.addEventListener("pointermove", ecomousemove);
 			window.addEventListener("keydown", ecomousekey);
 			window.addEventListener("wheel", ecomousescroll);
 		}else{ eyeprotection(); }
@@ -3720,8 +3720,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(nighthover == true){
 				newnight.style.opacity = ".2";
 				var item = document.getElementById("stefanvdnighttheme");
-				item.addEventListener("mouseover", function(){ item.style.opacity = "1"; }, false);
-				item.addEventListener("mouseout", function(){ item.style.opacity = ".2"; }, false);
+				item.addEventListener("pointerover", function(){ item.style.opacity = "1"; }, false);
+				item.addEventListener("pointerout", function(){ item.style.opacity = ".2"; }, false);
 			}
 			// var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 			if(nmcustom == true){ newnight.style.left = "calc(" + nmcustomx + " + env(safe-area-inset-left))"; newnight.style.bottom = "calc(" + nmcustomy + " + env(safe-area-inset-bottom))"; }else if(nmtopleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmtopright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmbottomright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }else if(nmbottomleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }
@@ -3761,7 +3761,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 			// automatically hide the switch
 			if(nightmodeswitchhide == true){
-				document.addEventListener("mousemove", mousemoveswitchhide);
+				document.addEventListener("pointermove", mousemoveswitchhide);
 			}
 
 			var x = document.getElementsByTagName("video")[0];
@@ -3874,25 +3874,29 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// draggable object for the Night Mode feature switch
 	var dragobject = {z: 0, x: 0, y: 0, offsetx : null, offsety : null, targetobj : null, dragapproved : 0,
 		initialize:function(){
-			document.addEventListener("mousedown", this.drag);
-			document.addEventListener("mouseup", this.dragup);
+			document.addEventListener("pointerdown", this.drag);
+			document.addEventListener("pointerup", this.dragup);
 		},
 		dragup:function(){
 			this.dragapproved = 0;
 			// save the x and y value
 			if(nmcustom == true){
-				chrome.runtime.sendMessage({name: "nmcustomvalues", valuex: $("stefanvdnighttheme").style.left, valuey: $("stefanvdnighttheme").style.bottom});
+				var left = window.getComputedStyle($("stefanvdnighttheme"), null).getPropertyValue("left");
+				var bottom = window.getComputedStyle($("stefanvdnighttheme"), null).getPropertyValue("bottom");
+				chrome.runtime.sendMessage({name: "nmcustomvalues", valuex: left, valuey: bottom});
 			}
 		},
 		drag:function(e){
 			var evtobj = window.event ? window.event : e;
 			if(e.target.className == "turnoffthelightsdrag"){
 				this.dragapproved = 1;
-				$("stefanvdnighttheme").offsetx = parseInt($("stefanvdnighttheme").style.left);
-				$("stefanvdnighttheme").offsety = parseInt($("stefanvdnighttheme").style.bottom);
+				var left = window.getComputedStyle($("stefanvdnighttheme"), null).getPropertyValue("left");
+				var bottom = window.getComputedStyle($("stefanvdnighttheme"), null).getPropertyValue("bottom");
+				$("stefanvdnighttheme").offsetx = parseInt(left);
+				$("stefanvdnighttheme").offsety = parseInt(bottom);
 				$("stefanvdnighttheme").x = evtobj.clientX; $("stefanvdnighttheme").y = evtobj.clientY;
 				if(evtobj.preventDefault)evtobj.preventDefault();
-				document.addEventListener("mousemove", dragobject.moveit);
+				document.addEventListener("pointermove", dragobject.moveit);
 			}
 		},
 		moveit:function(e){
@@ -4407,12 +4411,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 				};
 
-				document.body.addEventListener("mousedown", function(){
-					document.body.addEventListener("mousemove", myListener, false);
+				document.body.addEventListener("pointerdown", function(){
+					document.body.addEventListener("pointermove", myListener, false);
 				}, false);
 
-				document.body.addEventListener("mouseup", function(){
-					document.body.removeEventListener("mousemove", myListener, false);
+				document.body.addEventListener("pointerup", function(){
+					document.body.removeEventListener("pointermove", myListener, false);
 				}, false);
 			}
 
@@ -5381,7 +5385,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 				// remove
 				window.clearTimeout(timernightswitch);
-				document.removeEventListener("mousemove", mousemoveswitchhide);
+				document.removeEventListener("pointermove", mousemoveswitchhide);
 				document.removeEventListener("fullscreenchange", fullscreenswitch);
 
 				nightcurrentvideoplaying = false;
@@ -5391,9 +5395,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					x.removeEventListener("pause", pausenightfullscreen);
 				}
 
-				document.removeEventListener("mousedown", dragobject.drag);
-				document.removeEventListener("mouseup", dragobject.dragup);
-				document.removeEventListener("mouseover", dragobject.moveit);
+				document.removeEventListener("pointerdown", dragobject.drag);
+				document.removeEventListener("pointerup", dragobject.dragup);
+				document.removeEventListener("pointerover", dragobject.moveit);
 
 				sun = true; isitdark = false;
 				// search all elements and remove night class
@@ -5645,8 +5649,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var i;
 				var l = hvids.length;
 				for(i = 0; i < l; i++){
-					hvids.item(i).removeEventListener("mouseover", hoveractionover);
-					hvids.item(i).removeEventListener("mouseout", hoveractionout);
+					hvids.item(i).removeEventListener("pointerover", hoveractionover);
+					hvids.item(i).removeEventListener("pointerout", hoveractionout);
 				}
 
 				if(hovervideo == true){
@@ -5703,7 +5707,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.clearTimeout(ecothreadmove);
 				window.clearTimeout(ecothreadkey);
 				window.clearTimeout(ecothreadscroll);
-				window.removeEventListener("mousemove", ecomousemove);
+				window.removeEventListener("pointermove", ecomousemove);
 				window.removeEventListener("keydown", ecomousekey);
 				window.removeEventListener("wheel", ecomousescroll);
 
@@ -5723,7 +5727,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.clearTimeout(ecothreadmove);
 				window.clearTimeout(ecothreadkey);
 				window.clearTimeout(ecothreadscroll);
-				window.removeEventListener("mousemove", ecomousemove);
+				window.removeEventListener("pointermove", ecomousemove);
 				window.removeEventListener("keydown", ecomousekey);
 				window.removeEventListener("wheel", ecomousescroll);
 

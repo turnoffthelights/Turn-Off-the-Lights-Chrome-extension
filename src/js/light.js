@@ -896,7 +896,7 @@ function reader(){
 		document.body.removeChild(stefanvdlightareoffcustom);
 		document.body.style.cursor = "default";
 	}
-	window.onmousemove = null;
+	window.onpointermove = null;
 
 	function ytresettxtcolor(a){
 		if(a != null){ a.style.color = ""; }
@@ -1237,7 +1237,7 @@ function getMouse(obj, e){
 		posy = ev.clientY;
 	}else{ return 0; }
 
-	obj.addEventListener("mousedown", function(){
+	obj.addEventListener("pointerdown", function(){
 		initx = posx; inity = posy;
 		beginxcordinate = posx; beginycordinate = posy;
 		try{
@@ -1246,7 +1246,7 @@ function getMouse(obj, e){
 			document.body.appendChild(customview);
 		}catch(e){ console.log(e); }
 	});
-	obj.addEventListener("mouseup", function(){ initx = false; inity = false; });
+	obj.addEventListener("pointerup", function(){ initx = false; inity = false; });
 	if(initx){
 		customview.style.width = Math.abs(posx - initx) + "px"; customview.style.height = Math.abs(posy - inity) + "px";
 		customview.style.left = posx - initx < 0 ? posx + "px" : initx + "px";
@@ -1266,10 +1266,10 @@ function getMouse(obj, e){
 			document.body.appendChild(newcornerdiv);
 		}
 
-		rect = $("stefanvdlightcorner"); rect.onmousemove = watchMouse;
-		$("stefanvdlightcorner").addEventListener("mousedown", function(){ stretchable = true; }, false);
-		$("stefanvdlightcorner").addEventListener("mouseup", stretchout, false);
-		$("stefanvdlightcorner").addEventListener("mouseout", stretchout, false);
+		rect = $("stefanvdlightcorner"); rect.onpointermove = watchMouse;
+		$("stefanvdlightcorner").addEventListener("pointerdown", function(){ stretchable = true; }, false);
+		$("stefanvdlightcorner").addEventListener("pointerup", stretchout, false);
+		$("stefanvdlightcorner").addEventListener("pointerout", stretchout, false);
 
 		setAttributes($("stefanvdlightcorner"), {"top": parseInt(document.getElementById("stefanvdlightareoff1").style.height) - 10 + "px", "height": parseInt(document.getElementById("stefanvdlightareoff2").style.height) - 20 + "px", "left": parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 10 + "px", "width": parseInt(document.getElementById("stefanvdlightareoff3").style.left) - parseInt(document.getElementById("stefanvdlightareoff2").style.width) - 20 + "px"});
 
@@ -1998,14 +1998,14 @@ function lightsgoonoroff(){
 			// var width = document.documentElement.clientWidth;
 			// var height = document.documentElement.clientHeight;
 
-			window.onmousemove = moveSpot;
+			window.onpointermove = moveSpot;
 			window.addEventListener("touchmove", function(e){
 				// stop touch event
 				e.stopPropagation();
 
 				// translate to mouse event
 				var clkEvt = document.createEvent("MouseEvent");
-				clkEvt.initMouseEvent("mousemove", true, true, window, e.detail, e.touches[0].screenX, e.touches[0].screenY, e.touches[0].clientX, e.touches[0].clientY, false, false, false, false, 0, null);
+				clkEvt.initMouseEvent("pointermove", true, true, window, e.detail, e.touches[0].screenX, e.touches[0].screenY, e.touches[0].clientX, e.touches[0].clientY, false, false, false, false, 0, null);
 				window.dispatchEvent(clkEvt);
 
 				// or just handle touch event
@@ -2016,10 +2016,10 @@ function lightsgoonoroff(){
 			mathfullsizeup = fullspotlightsize;
 			mathbordersizeup = borderspotlightsize;
 
-			document.addEventListener("mousedown", function(){ spotmousedown(); });
-			document.addEventListener("mouseup", function(){ spotmouseup(); });
+			document.addEventListener("pointerdown", function(){ spotmousedown(); });
+			document.addEventListener("pointerup", function(){ spotmouseup(); });
 		}else if(mousespotlightc == true){
-			window.onmousemove = function(event){
+			window.onpointermove = function(event){
 				try{ getMouse(window, event); }catch(e){ console.log(e); }
 			};
 

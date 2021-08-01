@@ -3019,10 +3019,8 @@ function domcontentloaded(){
 			}
 		}, false);
 
-		this.canvas.addEventListener("touchstart", function(){ accelerate(0.05); }, false);
-		this.canvas.addEventListener("touchend", function(){ accelerate(-0.2); }, false);
-		this.canvas.addEventListener("mouseup", function(){ accelerate(0.05); }, false);
-		this.canvas.addEventListener("mousedown", function(){ accelerate(-0.2); }, false);
+		this.canvas.addEventListener("pointerup", function(){ accelerate(0.05); }, false);
+		this.canvas.addEventListener("pointerdown", function(){ accelerate(-0.2); }, false);
 
 		document.getElementById("stefanvdplayground").appendChild(this.canvas);
 		this.context = this.canvas.getContext("2d", {desynchronized: true});
