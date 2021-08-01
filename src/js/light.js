@@ -1852,9 +1852,20 @@ function onResize(){
 	}
 }
 
-function addAlpha(color, opacity){
-	const stringopacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
-	return color + stringopacity.toString(16).toUpperCase();
+var fg_red, fg_green, fg_blue, result_red, result_green, result_blue, result;
+function newconvertHex(hex, opacity){
+	hex = hex.replace("#", "");
+	var alpha = opacity / 100;
+	fg_red = parseInt(hex.substring(0, 2), 16);
+	fg_green = parseInt(hex.substring(2, 4), 16);
+	fg_blue = parseInt(hex.substring(4, 6), 16);
+
+	result_red = fg_red * alpha + 255 * (1 - alpha);
+	result_green = fg_green * alpha + 255 * (1 - alpha);
+	result_blue = fg_blue * alpha + 255 * (1 - alpha);
+
+	result = "rgb(" + result_red + "," + result_green + "," + result_blue + ")";
+	return result;
 }
 
 var currentwebthemelight = "#ffffff";
@@ -1894,8 +1905,7 @@ function setmetatheme(a){
 	var darktheme;
 	var lighttheme;
 
-	var newcolorstring = lightcolor.replace("#", "");
-	var newlightoffcolor = "#" + addAlpha(newcolorstring, interval / 100);
+	var newlightoffcolor = newconvertHex(lightcolor, interval);
 	if(a == true){
 		// light is off
 		darktheme = currentwebthemedark;
@@ -1919,6 +1929,15 @@ function setmetatheme(a){
 				metas[i].setAttribute("content", lighttheme);
 			}
 		}
+	}
+
+	var x = document.querySelector("meta[name=\"theme-color\"]");
+	if(x == null){
+		// create one theme-color
+		var newmeta = document.createElement("meta");
+		newmeta.name = "theme-color";
+		newmeta.setAttribute("content", lighttheme);
+		document.getElementsByTagName("head")[0].appendChild(newmeta);
 	}
 }
 

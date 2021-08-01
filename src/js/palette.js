@@ -614,8 +614,25 @@ function executelivechange(){
 		active: true,
 		currentWindow: true
 	}, function(tab){
-		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + $("oslider").value + "/100);}}"});
+		var newlightoffcolor = newconvertHex(currentlayercolor, $("oslider").value);
+		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + $("oslider").value + "/100);}}var metas = document.getElementsByTagName(\"meta\");var m, p = metas.length;for(m = 0; m < p; m++){if(metas[m].getAttribute(\"name\") == \"theme-color\"){if(metas[m].getAttribute(\"media\")){if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: light)\"){metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}else if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: dark)\"){metas[m].setAttribute(\"content\",'" + newlightoffcolor + "');}}else{metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}}}"});
 	});
+}
+
+var fg_red, fg_green, fg_blue, result_red, result_green, result_blue, result;
+function newconvertHex(hex, opacity){
+	hex = hex.replace("#", "");
+	var alpha = opacity / 100;
+	fg_red = parseInt(hex.substring(0, 2), 16);
+	fg_green = parseInt(hex.substring(2, 4), 16);
+	fg_blue = parseInt(hex.substring(4, 6), 16);
+
+	result_red = fg_red * alpha + 255 * (1 - alpha);
+	result_green = fg_green * alpha + 255 * (1 - alpha);
+	result_blue = fg_blue * alpha + 255 * (1 - alpha);
+
+	result = "rgb(" + result_red + "," + result_green + "," + result_blue + ")";
+	return result;
 }
 
 function rgb2hex(rgb){
