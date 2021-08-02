@@ -3833,7 +3833,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				currenturl = window.location.protocol + "//" + window.location.host;
 				currenturlb = currenturl; // copy
 			}else{
-			// WITH end slash
+				// WITH end slash
 				currenturl = window.location.href;
 				if(currenturl.substr(-1) === "/"){
 					// NO end slash
