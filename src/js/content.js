@@ -526,9 +526,49 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					var l = abuf.length;
 					for(i = 0; i < l; i++){
 						if(autoplaychecklistwhite == true){
-							if(currenturl == abuf[i]){ autoplayfunction(); }
+							if(abuf[i].includes("*")){
+								// regex test
+								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+								var prepUrl = ""; var m;
+								if((m = abuf[i].match(rxUrlSplit)) !== null){
+									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+									if(m[3]){
+										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+									}
+								}
+								if(prepUrl){
+									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+									var rx = RegExp("^" + prepUrl + "$", "i");
+									if(currenturl.match(rx)){
+										autoplayfunction();
+									}
+								}
+							}else{
+								// regular text
+								if(currenturl == abuf[i]){ autoplayfunction(); }
+							}
 						}else if(autoplaychecklistblack == true){
-							if(currenturl == abuf[i]){ blackrabbit = true; }
+							if(abuf[i].includes("*")){
+								// regex test
+								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+								var prepUrl = ""; var m;
+								if((m = abuf[i].match(rxUrlSplit)) !== null){
+									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+									if(m[3]){
+										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+									}
+								}
+								if(prepUrl){
+									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+									var rx = RegExp("^" + prepUrl + "$", "i");
+									if(currenturl.match(rx)){
+										blackrabbit = true;
+									}
+								}
+							}else{
+								// regular text
+								if(currenturl == abuf[i]){ blackrabbit = true; }
+							}
 						}
 					}
 				}
@@ -569,10 +609,53 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					vtbbuf.sort();
 					var i, l = vtbbuf.length;
 					for(i = 0; i < l; i++){
-						if((videotoolchecklistwhite == true) && (currenturl == vtbbuf[i])){
-							videotoolfunction();
-						}else if((videotoolchecklistblack == true) && (currenturl == vtbbuf[i])){
-							videotoolrabbit = true;
+						if(videotoolchecklistwhite == true){
+							if(vtbbuf[i].includes("*")){
+								// regex test
+								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+								var prepUrl = ""; var m;
+								if((m = vtbbuf[i].match(rxUrlSplit)) !== null){
+									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+									if(m[3]){
+										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+									}
+								}
+								if(prepUrl){
+									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+									var rx = RegExp("^" + prepUrl + "$", "i");
+									if(currenturl.match(rx)){
+										videotoolfunction();
+									}
+								}
+							}else{
+								// regular text
+								if(currenturl == vtbbuf[i]){
+									videotoolfunction();
+								}
+							}
+						}else if(videotoolchecklistblack == true){
+							if(vtbbuf[i].includes("*")){
+								// regex test
+								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+								var prepUrl = ""; var m;
+								if((m = vtbbuf[i].match(rxUrlSplit)) !== null){
+									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+									if(m[3]){
+										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+									}
+								}
+								if(prepUrl){
+									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+									var rx = RegExp("^" + prepUrl + "$", "i");
+									if(currenturl.match(rx)){
+										videotoolrabbit = true;
+									}
+								}
+							}else{
+								if(currenturl == vtbbuf[i]){
+									videotoolrabbit = true;
+								}
+							}
 						}
 					}
 				}
@@ -1886,9 +1969,49 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var l = eyebuf.length;
 				for(i = 0; i < l; i++){
 					if(eyechecklistwhite == true){
-						if(currenturl == eyebuf[i]){ chrome.runtime.sendMessage({name: "automatic"}); }
+						if(eyebuf[i].includes("*")){
+							// regex test
+							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+							var prepUrl = ""; var m;
+							if((m = eyebuf[i].match(rxUrlSplit)) !== null){
+								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+								if(m[3]){
+									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+								}
+							}
+							if(prepUrl){
+								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+								var rx = RegExp("^" + prepUrl + "$", "i");
+								if(currenturl.match(rx)){
+									chrome.runtime.sendMessage({name: "automatic"});
+								}
+							}
+						}else{
+							// regular text
+							if(currenturl == eyebuf[i]){ chrome.runtime.sendMessage({name: "automatic"}); }
+						}
 					}else if(eyechecklistblack == true){
-						if(currenturl == eyebuf[i]){ eyerabbit = true; }
+						if(eyebuf[i].includes("*")){
+							// regex test
+							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+							var prepUrl = ""; var m;
+							if((m = eyebuf[i].match(rxUrlSplit)) !== null){
+								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+								if(m[3]){
+									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+								}
+							}
+							if(prepUrl){
+								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+								var rx = RegExp("^" + prepUrl + "$", "i");
+								if(currenturl.match(rx)){
+									eyerabbit = true;
+								}
+							}
+						}else{
+							// regular text
+							if(currenturl == eyebuf[i]){ eyerabbit = true; }
+						}
 					}
 				}
 			}
@@ -2043,8 +2166,29 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					albuf.sort();
 					var i;
 					var l = albuf.length;
-					for(i = 0; i < l; i++)
-						if(currenturl == albuf[i]){ ambilightfunction(); }
+					for(i = 0; i < l; i++){
+						if(albuf[i].includes("*")){
+							// regex test
+							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+							var prepUrl = ""; var m;
+							if((m = albuf[i].match(rxUrlSplit)) !== null){
+								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+								if(m[3]){
+									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+								}
+							}
+							if(prepUrl){
+								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+								var rx = RegExp("^" + prepUrl + "$", "i");
+								if(currenturl.match(rx)){
+									ambilightfunction();
+								}
+							}
+						}else{
+							// regular text
+							if(currenturl == albuf[i]){ ambilightfunction(); }
+						}
+					}
 				}
 			}else{ ambilightfunction(); }
 		}
@@ -3822,7 +3966,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// show all options the night switch CSS
 	// but not the "only" websites
 	var currenturl;
-	var currenturlb;
 	function runnightmodecheck(){
 		if(nighttheme == true && nightonly != true){
 			showswitchtricker();
@@ -3830,14 +3973,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 		if(nightonly == true){
 			if(nightmodebydomain == true){
+				// Only the domain
 				currenturl = window.location.protocol + "//" + window.location.host;
-				currenturlb = currenturl; // copy
 			}else{
-				// WITH end slash
+				// The full URL
+				// WITH no end slash
 				currenturl = window.location.href;
 				if(currenturl.substr(-1) === "/"){
 					// NO end slash
-					currenturlb = currenturl.substr(0, currenturl.length - 1);
+					currenturl = currenturl.substr(0, currenturl.length - 1);
 				}
 			}
 
@@ -3851,13 +3995,54 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				var i, l = nbuf.length;
 				for(i = 0; i < l; i++){
 					if(nightmodechecklistwhite == true){
-						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
-							if(nighttheme == true){ showswitchtricker(); }
-							if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+						if(nbuf[i].includes("*")){
+							// regex test
+							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+							var prepUrl = ""; var m;
+							if((m = nbuf[i].match(rxUrlSplit)) !== null){
+								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+								if(m[3]){
+									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+								}
+							}
+							if(prepUrl){
+								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+								var rx = RegExp("^" + prepUrl + "$", "i");
+								if(currenturl.match(rx)){
+									if(nighttheme == true){ showswitchtricker(); }
+									if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+								}
+							}
+						}else{
+							// regular text
+							if(currenturl == nbuf[i]){
+								if(nighttheme == true){ showswitchtricker(); }
+								if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+							}
 						}
 					}else if(nightmodechecklistblack == true){
-						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
-							nightrabbit = true;
+						if(nbuf[i].includes("*")){
+							// regex test
+							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+							var prepUrl = ""; var m;
+							if((m = nbuf[i].match(rxUrlSplit)) !== null){
+								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+								if(m[3]){
+									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+								}
+							}
+							if(prepUrl){
+								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+								var rx = RegExp("^" + prepUrl + "$", "i");
+								if(currenturl.match(rx)){
+									nightrabbit = true;
+								}
+							}
+						}else{
+							// regular text
+							if(currenturl == nbuf[i]){
+								nightrabbit = true;
+							}
 						}
 					}
 				}
@@ -4541,9 +4726,48 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					var l = vvbbuf.length;
 					for(i = 0; i < l; i++){
 						if(videovolumechecklistwhite == true){
-							if(currenturl == vvbbuf[i]){ videovolumefunction(); }
+							if(vvbbuf[i].includes("*")){
+								// regex test
+								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+								var prepUrl = ""; var m;
+								if((m = vvbbuf[i].match(rxUrlSplit)) !== null){
+									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+									if(m[3]){
+										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+									}
+								}
+								if(prepUrl){
+									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+									var rx = RegExp("^" + prepUrl + "$", "i");
+									if(currenturl.match(rx)){
+										videovolumefunction();
+									}
+								}
+							}else{
+								if(currenturl == vvbbuf[i]){ videovolumefunction(); }
+							}
 						}else if(videovolumechecklistblack == true){
-							if(currenturl == vvbbuf[i]){ videovolumerabbit = true; }
+							if(vvbbuf[i].includes("*")){
+								// regex test
+								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+								var prepUrl = ""; var m;
+								if((m = vvbbuf[i].match(rxUrlSplit)) !== null){
+									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+									if(m[3]){
+										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+									}
+								}
+								if(prepUrl){
+									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+									var rx = RegExp("^" + prepUrl + "$", "i");
+									if(currenturl.match(rx)){
+										videovolumerabbit = true;
+									}
+								}
+							}else{
+								// regular text
+								if(currenturl == vvbbuf[i]){ videovolumerabbit = true; }
+							}
 						}
 					}
 				}
