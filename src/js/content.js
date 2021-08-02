@@ -164,6 +164,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 
 	function $(id){ return document.getElementById(id); }
 
+	var windark = window.matchMedia("(prefers-color-scheme: dark)");
+
 	function rgbToHex(r, g, b){
 		if(r > 255 || g > 255 || b > 255)
 			throw"Invalid color component";
@@ -3635,10 +3637,10 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		//---
 
 		if(sun == false){
-		// go back and disable this
+			// go back and disable this
 			nightcssobserver.disconnect();
 		}else{
-		// enable observe
+			// enable observe
 			nightcssobserver.observe(element, {
 				attributes: true,
 				childList: true,
@@ -3729,7 +3731,16 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			var newnightinput = document.createElement("input");
 			newnightinput.setAttribute("type", "checkbox");
 			newnightinput.setAttribute("id", "stefanvdnightthemecheckbox");
-			if(nightenabletheme == true){ newnightinput.setAttribute("checked", true); }
+			if(nightenabletheme == true){
+				if(nightmodeos == true){
+					if(window.matchMedia && windark.matches){
+						// dark mode
+						newnightinput.setAttribute("checked", false);
+					}
+				}else{
+					newnightinput.setAttribute("checked", true);
+				}
+			}
 			newnight.appendChild(newnightinput);
 
 			var newnightspan = document.createElement("span");
@@ -3842,7 +3853,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					if(nightmodechecklistwhite == true){
 						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
 							if(nighttheme == true){ showswitchtricker(); }
-							if(nightenabletheme == true){ timergonighttricker(); }
+							if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
 						}
 					}else if(nightmodechecklistblack == true){
 						if(currenturl == nbuf[i] || currenturlb == nbuf[i]){
@@ -3854,20 +3865,37 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(nightmodechecklistblack == true){
 				if(nightrabbit == false){
 					if(nighttheme == true){ showswitchtricker(); }
-					if(nightenabletheme == true){ timergonighttricker(); }
+					if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
 				}
 			}
 		}else{
-			if(nightenabletheme == true){
+			if(nightenabletheme == true || nightmodeos == true){
 				timergonighttricker();
 			} // auto the night mode
 		}
 	}
 	runnightmodecheck();
 
+	function osdarkmodecheck(e){
+		const newColorScheme = e.matches ? "dark" : "light";
+		if(newColorScheme == "dark"){
+			sun = true; gogonightmode(); // make it dark
+		}else if(newColorScheme == "light"){
+			sun = false; gogonightmode(); // sun go up
+		}
+	}
+
 	function timergonighttricker(){
 		if(checknightactivetime() == true){
-			gogonightmode();
+			if(nightmodeos == true){
+				if(window.matchMedia && windark.matches){
+					// dark mode
+					gogonightmode();
+				}
+				windark.addEventListener("change", osdarkmodecheck);
+			}else{
+				gogonightmode();
+			}
 		}
 	}
 
@@ -4080,24 +4108,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 	runnightmodegesturecheck();
-
-	function runnightmodeos(){
-		if(nightmodeos == true){
-			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
-				// dark mode
-				gogonightmode();
-			}
-			window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-				const newColorScheme = e.matches ? "dark" : "light";
-				if(newColorScheme == "dark"){
-					sun = true; gogonightmode(); // make it dark
-				}else if(newColorScheme == "light"){
-					sun = false; gogonightmode(); // sun go up
-				}
-			});
-		}
-	}
-	runnightmodeos();
 
 	// reflection
 	function drawReflection(reflectionid){
@@ -5387,6 +5397,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				window.clearTimeout(timernightswitch);
 				document.removeEventListener("pointermove", mousemoveswitchhide);
 				document.removeEventListener("fullscreenchange", fullscreenswitch);
+				windark.removeEventListener("change", osdarkmodecheck);
 
 				nightcurrentvideoplaying = false;
 				var x = document.getElementsByTagName("video")[0];
