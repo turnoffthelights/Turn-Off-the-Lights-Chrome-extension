@@ -510,6 +510,27 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
+	function checkregdomaininside(thaturl, websiteurl){
+		// regex test
+		var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
+		var prepUrl = ""; var m;
+		if((m = thaturl.match(rxUrlSplit)) !== null){
+			prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
+			if(m[3]){
+				prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
+			}
+		}
+		if(prepUrl){
+			// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
+			if(websiteurl.match(RegExp("^" + prepUrl + "$", "i"))){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		return false;
+	}
+
 	function runautoplaycheck(){
 		if(autoplay == true && mousespotlights != true){
 			if(autoplayonly == true){
@@ -528,20 +549,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						if(autoplaychecklistwhite == true){
 							if(abuf[i].includes("*")){
 								// regex test
-								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-								var prepUrl = ""; var m;
-								if((m = abuf[i].match(rxUrlSplit)) !== null){
-									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-									if(m[3]){
-										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-									}
-								}
-								if(prepUrl){
-									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-									var rx = RegExp("^" + prepUrl + "$", "i");
-									if(currenturl.match(rx)){
-										autoplayfunction();
-									}
+								if(checkregdomaininside(abuf[i], currenturl) == true){
+									autoplayfunction();
 								}
 							}else{
 								// regular text
@@ -550,20 +559,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}else if(autoplaychecklistblack == true){
 							if(abuf[i].includes("*")){
 								// regex test
-								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-								var prepUrl = ""; var m;
-								if((m = abuf[i].match(rxUrlSplit)) !== null){
-									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-									if(m[3]){
-										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-									}
-								}
-								if(prepUrl){
-									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-									var rx = RegExp("^" + prepUrl + "$", "i");
-									if(currenturl.match(rx)){
-										blackrabbit = true;
-									}
+								if(checkregdomaininside(abuf[i], currenturl) == true){
+									blackrabbit = true;
 								}
 							}else{
 								// regular text
@@ -612,20 +609,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						if(videotoolchecklistwhite == true){
 							if(vtbbuf[i].includes("*")){
 								// regex test
-								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-								var prepUrl = ""; var m;
-								if((m = vtbbuf[i].match(rxUrlSplit)) !== null){
-									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-									if(m[3]){
-										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-									}
-								}
-								if(prepUrl){
-									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-									var rx = RegExp("^" + prepUrl + "$", "i");
-									if(currenturl.match(rx)){
-										videotoolfunction();
-									}
+								if(checkregdomaininside(vtbbuf[i], currenturl) == true){
+									videotoolfunction();
 								}
 							}else{
 								// regular text
@@ -636,20 +621,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}else if(videotoolchecklistblack == true){
 							if(vtbbuf[i].includes("*")){
 								// regex test
-								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-								var prepUrl = ""; var m;
-								if((m = vtbbuf[i].match(rxUrlSplit)) !== null){
-									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-									if(m[3]){
-										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-									}
-								}
-								if(prepUrl){
-									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-									var rx = RegExp("^" + prepUrl + "$", "i");
-									if(currenturl.match(rx)){
-										videotoolrabbit = true;
-									}
+								if(checkregdomaininside(vtbbuf[i], currenturl) == true){
+									videotoolrabbit = true;
 								}
 							}else{
 								if(currenturl == vtbbuf[i]){
@@ -1971,20 +1944,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					if(eyechecklistwhite == true){
 						if(eyebuf[i].includes("*")){
 							// regex test
-							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-							var prepUrl = ""; var m;
-							if((m = eyebuf[i].match(rxUrlSplit)) !== null){
-								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-								if(m[3]){
-									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-								}
-							}
-							if(prepUrl){
-								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-								var rx = RegExp("^" + prepUrl + "$", "i");
-								if(currenturl.match(rx)){
-									chrome.runtime.sendMessage({name: "automatic"});
-								}
+							if(checkregdomaininside(eyebuf[i], currenturl) == true){
+								chrome.runtime.sendMessage({name: "automatic"});
 							}
 						}else{
 							// regular text
@@ -1993,20 +1954,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}else if(eyechecklistblack == true){
 						if(eyebuf[i].includes("*")){
 							// regex test
-							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-							var prepUrl = ""; var m;
-							if((m = eyebuf[i].match(rxUrlSplit)) !== null){
-								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-								if(m[3]){
-									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-								}
-							}
-							if(prepUrl){
-								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-								var rx = RegExp("^" + prepUrl + "$", "i");
-								if(currenturl.match(rx)){
-									eyerabbit = true;
-								}
+							if(checkregdomaininside(eyebuf[i], currenturl) == true){
+								eyerabbit = true;
 							}
 						}else{
 							// regular text
@@ -2169,20 +2118,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					for(i = 0; i < l; i++){
 						if(albuf[i].includes("*")){
 							// regex test
-							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-							var prepUrl = ""; var m;
-							if((m = albuf[i].match(rxUrlSplit)) !== null){
-								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-								if(m[3]){
-									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-								}
-							}
-							if(prepUrl){
-								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-								var rx = RegExp("^" + prepUrl + "$", "i");
-								if(currenturl.match(rx)){
-									ambilightfunction();
-								}
+							if(checkregdomaininside(albuf[i], currenturl) == true){
+								ambilightfunction();
 							}
 						}else{
 							// regular text
@@ -3997,21 +3934,9 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					if(nightmodechecklistwhite == true){
 						if(nbuf[i].includes("*")){
 							// regex test
-							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-							var prepUrl = ""; var m;
-							if((m = nbuf[i].match(rxUrlSplit)) !== null){
-								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-								if(m[3]){
-									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-								}
-							}
-							if(prepUrl){
-								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-								var rx = RegExp("^" + prepUrl + "$", "i");
-								if(currenturl.match(rx)){
-									if(nighttheme == true){ showswitchtricker(); }
-									if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
-								}
+							if(checkregdomaininside(nbuf[i], currenturl) == true){
+								if(nighttheme == true){ showswitchtricker(); }
+								if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
 							}
 						}else{
 							// regular text
@@ -4023,20 +3948,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}else if(nightmodechecklistblack == true){
 						if(nbuf[i].includes("*")){
 							// regex test
-							var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-							var prepUrl = ""; var m;
-							if((m = nbuf[i].match(rxUrlSplit)) !== null){
-								prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-								if(m[3]){
-									prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-								}
-							}
-							if(prepUrl){
-								// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-								var rx = RegExp("^" + prepUrl + "$", "i");
-								if(currenturl.match(rx)){
-									nightrabbit = true;
-								}
+							if(checkregdomaininside(nbuf[i], currenturl) == true){
+								nightrabbit = true;
 							}
 						}else{
 							// regular text
@@ -4728,20 +4641,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						if(videovolumechecklistwhite == true){
 							if(vvbbuf[i].includes("*")){
 								// regex test
-								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-								var prepUrl = ""; var m;
-								if((m = vvbbuf[i].match(rxUrlSplit)) !== null){
-									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-									if(m[3]){
-										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-									}
-								}
-								if(prepUrl){
-									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-									var rx = RegExp("^" + prepUrl + "$", "i");
-									if(currenturl.match(rx)){
-										videovolumefunction();
-									}
+								if(checkregdomaininside(vvbbuf[i], currenturl) == true){
+									videovolumefunction();
 								}
 							}else{
 								if(currenturl == vvbbuf[i]){ videovolumefunction(); }
@@ -4749,20 +4650,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}else if(videovolumechecklistblack == true){
 							if(vvbbuf[i].includes("*")){
 								// regex test
-								var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
-								var prepUrl = ""; var m;
-								if((m = vvbbuf[i].match(rxUrlSplit)) !== null){
-									prepUrl = m[1] + "://" + m[2].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\*\\./g, "(?:[^/]*\\.)*").replace(/\*$/, "[^/]*");
-									if(m[3]){
-										prepUrl += m[3].replace(/[?()[\]\\.+^$|]/g, "\\$&").replace(/\/\*(?=$|\/)/g, "(?:/[^]*)?");
-									}
-								}
-								if(prepUrl){
-									// console.log(prepUrl); // ^http://(?:[^/]*\.)*google\.com(?:/[^]*)?$
-									var rx = RegExp("^" + prepUrl + "$", "i");
-									if(currenturl.match(rx)){
-										videovolumerabbit = true;
-									}
+								if(checkregdomaininside(vvbbuf[i], currenturl) == true){
+									videovolumerabbit = true;
 								}
 							}else{
 								// regular text
