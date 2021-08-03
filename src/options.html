@@ -1609,35 +1609,31 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<section>
 				<h3 data-i18n="titelnighttheme"></h3>
 				<div>
-					<div class="md-checkbox">	
-						<input id="nighttheme" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nighttheme">
-						<label for="nighttheme"><div><span data-i18n="desnighttheme"></span></div></label>
-					</div>
-					<div class="md-color md-subin">
+					<div class="md-color">
 						<div class="input-color-container">
 							<input id="nightmodebck" type="color" class="color" list="datalightnightmode">
 						</div>
 						<label for="nightmodebck"><div><span data-i18n="titelnightmodebck"></span></div></label>
 					</div>
-					<div class="md-color md-subin">
+					<div class="md-color">
 						<div class="input-color-container">
 							<input id="nightmodetxt" type="color" class="color" list="datalightnightmode">
 						</div>
 						<label for="nightmodetxt"><div><span data-i18n="titelnightmodetxt"></span></div></label>
 					</div>
-					<div class="md-color md-subin">
+					<div class="md-color">
 						<div class="input-color-container">
 							<input id="nightmodehyperlink" type="color" class="color" list="datalightnightmode">
 						</div>
 						<label for="nightmodehyperlink"><div><span data-i18n="titelnightmodehyperlink"></span></div></label>
 					</div>
-					<div class="md-color md-subin">
+					<div class="md-color">
 						<div class="input-color-container">
 							<input id="nightmodebutton" type="color" class="color" list="datalightnightmode">
 						</div>
 						<label for="nightmodebutton"><div><span data-i18n="titelnightmodebutton"></span></div></label>
 					</div>
-					<div class="md-color md-subin">
+					<div class="md-color">
 						<div class="input-color-container">
 							<input id="nightmodeborder" type="color" class="color" list="datalightnightmode">
 						</div>
@@ -1655,14 +1651,25 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<option>#808080</option>
 						<option>#000000</option>
 					</datalist>
+					<div class="md-checkbox">	
+						<input id="nighttheme" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nighttheme">
+						<label for="nighttheme"><div><span data-i18n="desnighttheme"></span></div></label>
+					</div>
 					<div class="md-checkbox md-subin">	
-						<input id="lampandnightmode" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="lampandnightmode">
-						<label for="lampandnightmode"><div><span data-i18n="deslampandnightmode"></span></div></label>
+						<input id="nighthover" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nighthover">
+						<label for="nighthover"><div><span data-i18n="desnighthover"></span></div></label>
 					</div>
 					<div class="md-checkbox md-subin">	
 						<input id="nightmodeswitchhide" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightmodeswitchhide">
 						<label for="nightmodeswitchhide"><div><span data-i18n="desnightmodeswitchhide"></span> <input type="number" min="0" max="10" step="1" value="3" name="nightmodeswitchhidetime" id="nightmodeswitchhidetime" maxlength="3" size="4">s
 						</div></label>
+					</div>
+					<div class="md-checkbox md-subin">	
+						<input id="nightactivetime" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightactivetime">
+						<label for="nightactivetime"><div><span data-i18n="desnightactivetime"></span></div></label>
+					</div>
+					<div class="md-number md-subin">
+						<label for="nmtime"><div><input id="nmbegintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="nmendtime" type="time" name="time"></div></label>
 					</div>
 					<div class="md-checkbox">	
 						<input id="nightonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightonly">
@@ -1698,19 +1705,12 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<label for="nightmodebypage"><div><span data-i18n="titelnightmodepage"></span></div></label>
 					</div>
 					<div class="md-checkbox">	
-						<input id="nightactivetime" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightactivetime">
-						<label for="nightactivetime"><div><span data-i18n="desnightactivetime"></span></div></label>
-					</div>
-					<div class="md-number">
-						<label for="nmtime"><div><input id="nmbegintime" type="time" name="time"> <span data-i18n="desuntil"></span> <input id="nmendtime" type="time" name="time"></div></label>
-					</div>
-					<div class="md-checkbox">	
 						<input id="nightenabletheme" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightenabletheme">
 						<label for="nightenabletheme"><div><span data-i18n="desnightenabletheme"></span></div></label>
 					</div>
 					<div class="md-checkbox">	
-						<input id="nighthover" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nighthover">
-						<label for="nighthover"><div><span data-i18n="desnighthover"></span></div></label>
+						<input id="lampandnightmode" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="lampandnightmode">
+						<label for="lampandnightmode"><div><span data-i18n="deslampandnightmode"></span></div></label>
 					</div>
 					<div class="md-checkbox">	
 						<input id="nightmodegesture" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="nightmodegesture">
