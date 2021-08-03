@@ -2108,10 +2108,9 @@ function cameradomcontentloaded(){
 		delt = canvasgetcont.createImageData(width, height);
 		if(last !== false){
 			var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
-			var testcondition = pix -= 4;
 			// Any number that is not 0 evaluates to true
 			// if 0 evaluates to false
-			while(testcondition){
+			while((pix -= 4)){
 				var d = Math.abs(draw.data[pix] - last.data[pix]
 				) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
 				) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
@@ -2189,10 +2188,10 @@ function cameradomcontentloaded(){
 				}
 			}else if(dy < -movethresh && !dirx){
 				if(davg > overthresh){
-					// console.log('over down')
+					// console.log("over down")
 					// writeinlog("over down");
 				}else{
-					// console.log('down')
+					// console.log("down")
 					// writeinlog("down");
 				}
 			}

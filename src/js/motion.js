@@ -108,17 +108,23 @@ function cameramotionlights(){
 
 		var foundtheurlcamera = false;
 		function onlycammotionfunction(tab){
-			var currenturl = tab, thatwebsite = new URL(currenturl), thatpage = thatwebsite.protocol + "//" + thatwebsite.hostname;
+			var currenturl = tab;
+			var thatwebsite = new URL(currenturl);
+			var thatpage = thatwebsite.protocol + "//" + thatwebsite.hostname;
 			cammotionDomains = response["cammotionDomains"]; // get latest setting
 			if(typeof cammotionDomains == "string"){
 				cammotionDomains = JSON.parse(cammotionDomains);
-				var sbuf = [], domain;
+				var sbuf = [];
+				var domain;
 				for(domain in cammotionDomains)
 					sbuf.push(domain);
 				sbuf.sort();
-				var i, l = sbuf.length;
+				var i;
+				var l = sbuf.length;
 				for(i = 0; i < l; i++){
-					if(foundtheurlcamera == false && thatpage == sbuf[i]){ cammotionstartfunction(); foundtheurlcamera = true; }
+					if(foundtheurlcamera == false){
+						if(thatpage == sbuf[i]){ cammotionstartfunction(); foundtheurlcamera = true; }
+					}
 				}
 			}
 			// stop
@@ -130,7 +136,6 @@ function cameramotionlights(){
 		}
 
 		if(motion == true){
-
 			if(cammotiononly == true){
 				// on page update
 				chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
@@ -156,12 +161,13 @@ function cameramotionlights(){
 			}else{
 				cammotionstartfunction();
 			}
-
 		}else{
+
 			if(localMediaStream){
 				stopcamera();
 				location.reload(); // to make sure everything is removed of the motion camera
 			}
+
 		}
 	});
 }
@@ -199,9 +205,9 @@ function cammotionstartfunction(){
 		localMediaStream.getTracks().forEach((track) => track.stop());
 		localMediaStream = null;
 		document.getElementById("motionvideo").load();
-		canvas = document.getElementById("motioncanvas");
-		canvasgetcont = canvas.getContext("2d");
-		canvasgetcont.clearRect(0, 0, canvas.width, canvas.height);
+		motioncanvas = document.getElementById("motioncanvas");
+		canvasgetcont = motioncanvas.getContext("2d");
+		canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
 		ccanvas = document.getElementById("motioncomp");
 		ccgetcont = ccanvas.getContext("2d");
 		ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
@@ -248,7 +254,8 @@ function cammotionstartfunction(){
 	huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
 	function skinfilter(){
 		skin_filter = canvasgetcont.getImageData(0, 0, width, height);
-		var index_value;
+		var total_pixels = skin_filter.width * skin_filter.height;
+		var index_value = total_pixels * 4;
 
 		var count_data_big_array = 0;
 		var y;
@@ -271,8 +278,8 @@ function cammotionstartfunction(){
 					skin_filter[count_data_big_array + 3] = a;
 				}else{
 					skin_filter.data[count_data_big_array] =
-                        skin_filter.data[count_data_big_array + 1] =
-                        skin_filter.data[count_data_big_array + 2] = 0;
+					skin_filter.data[count_data_big_array + 1] =
+					skin_filter.data[count_data_big_array + 2] = 0;
 					skin_filter.data[count_data_big_array + 3] = 0;
 				}
 				count_data_big_array = index_value * 4;
@@ -308,13 +315,10 @@ function cammotionstartfunction(){
 		delt = canvasgetcont.createImageData(width, height);
 		if(last !== false){
 			var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
-			var testcondition = pix -= 4;
 			// Any number that is not 0 evaluates to true
 			// if 0 evaluates to false
-			while(testcondition){
-				var d = Math.abs(draw.data[pix] - last.data[pix]
-				) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
-				) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
+			while((pix -= 4)){
+				var d = Math.abs(draw.data[pix] - last.data[pix]) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
 				if(d > thresh){
 					delt.data[pix] = 160;
 					delt.data[pix + 1] = 255;
@@ -324,15 +328,21 @@ function cammotionstartfunction(){
 					totalx += ((pix / 4) % width);
 					totaly += (Math.floor((pix / 4) / delt.height));
 				}else{
-					delt.data[pix] = delt.data[pix + 1] = delt.data[pix + 2] = 0;
+					delt.data[pix] =
+                                delt.data[pix + 1] =
+                                delt.data[pix + 2] = 0;
 					delt.data[pix + 3] = 0;
 				}
 			}
 		}
-		// slide.setAttribute('style','display:initial')
-		// slide.value=(totalx/totald)/width
+		// slide.setAttribute("style", "display:initial")
+		// slide.value = (totalx / totald) / width
 		if(totald){
-			down = {x: totalx / totald, y: totaly / totald, d: totald};
+			down = {
+				x: totalx / totald,
+				y: totaly / totald,
+				d: totald
+			};
 			handledown();
 		}
 		// console.log(totald)
@@ -341,7 +351,11 @@ function cammotionstartfunction(){
 	}
 	movethresh = 2; brightthresh = 300; overthresh = 1000;
 	function calibrate(){
-		wasdown = {x: down.x, y: down.y, d: down.d};
+		wasdown = {
+			x: down.x,
+			y: down.y,
+			d: down.d
+		};
 	}
 	avg = 0;
 	state = 0;// States: 0 waiting for gesture, 1 waiting for next move after gesture, 2 waiting for gesture to end
@@ -356,7 +370,7 @@ function cammotionstartfunction(){
 				calibrate();
 			}
 			break;
-		case 2: // Wait for gesture to end
+		case 2:// Wait for gesture to end
 			if(!good){ // Gesture ended
 				state = 0;
 			}
@@ -366,13 +380,13 @@ function cammotionstartfunction(){
 			var dirx = Math.abs(dy) < Math.abs(dx); // (dx,dy) is on a bowtie
 			// console.log(good,davg)
 			if(dx < -movethresh && dirx){
-				// console.log('right')
+				// console.log("right")
 			}else if(dx > movethresh && dirx){
-				// console.log('left')
+				// console.log("left")
 			}
 			if(dy > movethresh && !dirx){
 				if(davg > overthresh){
-					// console.log('over up');
+					// console.log("over up");
 					// to enable the fall down effect
 					chrome.storage.sync.set({"slideeffect": true});
 					chrome.tabs.query({active: true}, function(tabs){
@@ -384,7 +398,7 @@ function cammotionstartfunction(){
 						}
 					});
 				}else{
-					// console.log('up');
+					// console.log("up");
 					// to enable the fall down effect
 					chrome.storage.sync.set({"slideeffect": true});
 					chrome.tabs.query({active: true}, function(tabs){
@@ -398,11 +412,9 @@ function cammotionstartfunction(){
 				}
 			}else if(dy < -movethresh && !dirx){
 				if(davg > overthresh){
-					// console.log('over down')
-					// writeinlog("over down");
+					// console.log("over down")
 				}else{
-					// console.log('down')
-					// writeinlog("down");
+					// console.log("down")
 				}
 			}
 			state = 2;
