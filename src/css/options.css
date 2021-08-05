@@ -203,7 +203,7 @@ body{min-width:1150px;min-height:800px;background:var(--totl-body-background);co
 #managed-prefs-icon{display:inline-block;padding:0px 15px 0px 0px}
 #managed-prefs-text{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;display:inline-block;margin-right:30px}
 #managed-prefs-text-close{float:right;display:inline-flex;cursor:pointer;color:#000;font-size:18px;line-height:10px;position:absolute;right:26px;padding:10px;align-items:center;flex-direction:column}
-#navbar-container{background:var(--totl-primary-sidebar-background);bottom:0;display:block;left:0;position:fixed;top:0;width:240px;z-index:398}
+#navbar-container{background:var(--totl-primary-sidebar-background);bottom:0;display:block;left:0;position:fixed;top:0;width:240px;z-index:398;content-visibility:auto}
 #navbar-container>ul{-webkit-user-select:none;-moz-user-select:none;user-select:none;list-style-type:none;padding:0;margin:68px 0 0 0}
 .navbar-item{color:var(--totl-nav-color);cursor:pointer;display:block;font-size:105%;outline:none;padding:7px 0}
 .navbar-item:hover{background:var(--totl-nav-background-hover);color:var(--totl-primary-font-color)}
