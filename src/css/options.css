@@ -1169,7 +1169,7 @@ only screen and (max-device-width:982px){
 @media only screen and (max-width:480px),
 only screen and (max-device-width:480px){
   .search{display:none}
-  #navbar-container{z-index:401;box-shadow:0 0 16px rgba(0,0,0,.28);animation:slide-out 0.5s ease;animation-fill-mode:forwards;display:none}
+  #navbar-container{z-index:401;box-shadow:0 0 16px rgba(0,0,0,.28);animation:slide-out 0.5s ease;animation-fill-mode:forwards}
   body{min-width:auto;min-height:auto}
   #mainview{padding-left:0px}
   #mainview-content{max-width:100%;min-width:100%}
