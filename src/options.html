@@ -478,23 +478,26 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				<h3 data-i18n="titelautoplay"></h3>
 				<div>
 				<div id="helpautoplay" class="helpwhatproblem" data-i18n="helpautoplay"></div>
-				<div class="md-checkbox md-subgroup">
+				<div class="md-checkbox">
 					<input id="autoplay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplay">
 					<label for="autoplay"><div><span data-i18n="desautoplay"></span></div></label>
 				</div>
-				&nbsp;&nbsp;&nbsp;(
-				<div class="md-checkbox md-subgroup">
-					<input id="aplay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="aplay">
-					<label for="aplay"><div><span data-i18n="desaplay"></span></div></label>
+				<div class="md-intgroup md-subin">
+					(
+					<div class="md-checkbox md-submarg">
+						<input id="aplay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="aplay">
+						<label for="aplay"><div><span data-i18n="desaplay"></span></div></label>
+					</div>
+					<div class="md-checkbox md-submarg">
+						<input id="apause" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="apause">
+						<label for="apause"><div><span data-i18n="desapause"></span></div></label>
+					</div>
+					<div class="md-checkbox md-submarg">
+						<input id="astop" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="astop">
+						<label for="astop"><div><span data-i18n="desastop"></span></div></label>
+					</div>
+					)
 				</div>
-				<div class="md-checkbox md-subgroup">
-					<input id="apause" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="apause">
-					<label for="apause"><div><span data-i18n="desapause"></span></div></label>
-				</div>
-				<div class="md-checkbox md-subgroup">
-					<input id="astop" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="astop">
-					<label for="astop"><div><span data-i18n="desastop"></span></div></label>
-				</div>)
 				<div class="md-checkbox md-subin">
 					<input id="autoplaydelay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplaydelay">
 					<label for="autoplaydelay"><div><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</div></label>
