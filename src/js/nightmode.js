@@ -196,6 +196,7 @@ const afterBodyReady = () => {
 			head.appendChild(style);
 
 			document.getElementsByTagName("html")[0].classList.add("stefanvdnightbck", "stefanvdnight");
+			document.getElementsByTagName("body")[0].classList.add("stefanvdnightbck", "stefanvdnight");
 
 			// search all elements and add night class
 			var n = document.body.getElementsByTagName("*");
