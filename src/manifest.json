@@ -48,6 +48,11 @@
       "run_at": "document_start"
     },
     {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/nightmode.js"],
+      "run_at": "document_start"
+    },
+    {
       "matches": ["*://*.youtube.com/*"],
       "js": [ "js/fps.js" ],
       "run_at": "document_start",
