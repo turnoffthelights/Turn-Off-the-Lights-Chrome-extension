@@ -499,7 +499,7 @@ function read_options(){
 		}
 	}
 
-	var settingsmain = ["firstDate", "speechlang", "speechcountry", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "mobilelastonversion", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube"];
+	var settingsmain = ["firstDate", "speechlang", "speechcountry", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "mobilelastonversion", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube", "firstsawnumber"];
 	var a = settingscheckboxarray, b = settingsinputrarray, c = settingsmain;
 	var allsettings = a.concat(b, c);
 	//---
@@ -554,6 +554,7 @@ function read_options(){
 		}
 
 		var firstday = false;
+		var startnum = items["firstsawnumber"];
 		if($("optionskipremember").checked != true){
 			var dateinstall = items["firstDate"];
 			var datenextday = dateinstall + (1 * 24 * 60 * 60 * 1000);
@@ -564,9 +565,15 @@ function read_options(){
 			}else{
 				// if the rate box is not visible, and never clicked, then show the YouTube channel box
 				if(items["firstsawrate"] != true && items["firstsawyoutube"] != true){
-					window.setTimeout(function(){
-						materialYouTubeAlert();
-					}, 2500);
+					if(typeof startnum == "undefined" || startnum == null){ startnum = 1; }
+					if(startnum == 4){
+						window.setTimeout(function(){
+							materialYouTubeAlert();
+						}, 2500);
+						startnum = 0;
+					}
+					startnum += 1;
+					chrome.storage.sync.set({"firstsawnumber": startnum});
 				}
 			}
 		}
