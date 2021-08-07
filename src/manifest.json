@@ -50,7 +50,7 @@
     {
       "matches": ["http://*/*", "https://*/*"],
       "js": ["js/nightmode.js"],
-      "run_at": "document_start"
+      "run_at": "document_end"
     },
     {
       "matches": ["*://*.youtube.com/*"],
