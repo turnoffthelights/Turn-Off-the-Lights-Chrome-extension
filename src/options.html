@@ -292,28 +292,30 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<input id="lightimagelin" type="radio" name="bcklightimage" value="linear" role="group" aria-checked="false" aria-labelledby="screen" aria-label="Set to lineair gradient background">
 								<label for="lightimagelin"><div><span data-i18n="titellinear"></span></div></label>
 							</div>
-							<div class="md-selectfield md-subgroup">
-								<select id="linearsq" role="listbox" class="browser-default">
-									<option value="top" data-i18n="top" role="option"></option>
-									<option value="bottom" data-i18n="bottom" role="option"></option>
-									<option value="right" data-i18n="right" role="option"></option>
-									<option value="left" data-i18n="left" role="option"></option>
-								</select>
-							</div>
-							<div class="md-color md-subgroup">
-								<div class="input-color-container">
-								<input id="colora" type="color" class="color" list="datalightcolor">
+							<div class="md-intgroup">
+								<div class="md-selectfield">
+									<select id="linearsq" role="listbox" class="browser-default">
+										<option value="top" data-i18n="top" role="option"></option>
+										<option value="bottom" data-i18n="bottom" role="option"></option>
+										<option value="right" data-i18n="right" role="option"></option>
+										<option value="left" data-i18n="left" role="option"></option>
+									</select>
 								</div>
-								<label for="colora"><div><span data-i18n="titelcolora"></span></div></label>
-							</div>
-							<input type="number" id="intervallina" min="0" max="100" step="1" value="0" maxlength="3" size="4">
-							<div class="md-color md-subgroup">
-								<div class="input-color-container">
-								<input id="colorb" type="color" class="color" list="datalightcolor">
+								<div class="md-color">
+									<div class="input-color-container">
+									<input id="colora" type="color" class="color" list="datalightcolor">
+									</div>
+									<label for="colora"><div><span data-i18n="titelcolora"></span></div></label>
 								</div>
-								<label for="colorb"><div><span data-i18n="titelcolorb"></span></div></label>
+								<input type="number" id="intervallina" min="0" max="100" step="1" value="0" maxlength="3" size="4">
+								<div class="md-color">
+									<div class="input-color-container">
+									<input id="colorb" type="color" class="color" list="datalightcolor">
+									</div>
+									<label for="colorb"><div><span data-i18n="titelcolorb"></span></div></label>
+								</div>
+								<input type="number" id="intervallinb" min="0" max="100" step="1" value="0" maxlength="3" size="4">
 							</div>
-							<input type="number" id="intervallinb" min="0" max="100" step="1" value="0" maxlength="3" size="4">
 						</div>
 						<div id="imagepanel" class="hidden">
 							<div class="md-radio md-subgroup">
@@ -656,13 +658,15 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 						<tr>
 							<td><span class="item" data-i18n="titelvideoheadline"></span></td>
 							<td>
-								<div class="md-checkbox md-subgroup">
-									<input id="videoheadline" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videoheadline">
-									<label for="videoheadline"><div><span data-i18n="desvideoheadline"></span></div></label>
-								</div>
-								<div class="md-color md-subgroup">
-									<div class="input-color-container">
-										<input id="titleinvertcolor" type="color" class="color" list="datalightcolor" aria-label="Choose the invert color for the video title">
+								<div class="md-intgroup">
+									<div class="md-checkbox">
+										<input id="videoheadline" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="videoheadline">
+										<label for="videoheadline"><div><span data-i18n="desvideoheadline"></span></div></label>
+									</div>
+									<div class="md-color">
+										<div class="input-color-container">
+											<input id="titleinvertcolor" type="color" class="color" list="datalightcolor" aria-label="Choose the invert color for the video title">
+										</div>
 									</div>
 								</div>
 							</td>
