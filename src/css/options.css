@@ -1035,7 +1035,6 @@ input[type="range"][disabled]::-moz-range-thumb{background-color:var(--totl-rang
 .md-color{position:relative;margin:16px 0;box-sizing:border-box;height:18px;display:flex;align-items:center;flex-direction:row}
 .md-color .input-color-container{position:relative;overflow:hidden;width:56px;height:16px;border:var(--totl-checkbox-label-border);border-radius:2px;display:inline-block;margin-right:10px}
 .md-color input[type=color]{position:absolute;right:-25px;top:-5px;width:102px;height:30px;border:none;margin:0;padding:0;opacity:1}
-.md-color label div{vertical-align:middle;display:inline;box-sizing:border-box}
 .md-color label{display:inline-block}
 /* Description */
 .md-desbox{position:relative;margin:16px 0;box-sizing:border-box}
