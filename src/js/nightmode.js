@@ -54,7 +54,6 @@ function returntimetoseconds(a){
 	return a.split(":")[0] * 3600 + a.split(":")[1] * 60;
 }
 
-
 function checkregdomaininside(thaturl, websiteurl){
 	// regex test
 	var rxUrlSplit = /((?:http|ftp)s?):\/\/([^/]+)(\/.*)?/;
@@ -138,57 +137,76 @@ const afterBodyReady = () => {
 		observeDOM(document.body, function(){
 			if(nighttheme == true){
 				if(nightonly != true){
-				// switch not available? then add it back!
+					// switch not available? then add it back!
 					if(!document.getElementById("stefanvdnighttheme")){
 						showswitchtricker();
-					}
-				}
-			}
-			// for the night mode live update
-			if(isitdark == true){
-				sun = true; gogonightmode(); // make it dark
-			}
-		});
-
-		function realtimewebgonightmode(na){
-			return new Promise(function(fulfill){
-				var aninside = na.getElementsByTagName("*");
-				var i;
-				var l = aninside.length;
-				for(i = 0; i < l; i++){
-					convertwebnight(aninside[i]);
-				}
-				// do stuff
-				fulfill(); // if the action succeeded
-			// reject(error); //if the action did not succeed
-			});
-		}
-
-		// night mode: stylesheet changed
-		var element = window.document;
-		var nightcssobserver = new MutationObserver(function(mutations){
-			mutations.forEach(function(mutation){
-				if((mutation.type === "attributes") && (mutation.attributeName === "class")){
-				// for the night mode live update
-					if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 						if(isitdark == true){
-							// console.log("Yeah " + mutation.target.className);
-							var na = mutation.target;
-							nightcssobserver.disconnect();
-							realtimewebgonightmode(na).then(function(){
-								// this function is executed after function
-								nightcssobserver.observe(element, {
-									attributes: true,
-									childList: true,
-									subtree: true,
-									attributeFilter: ["style", "class"]
-								});
-							});
+							sun = false;
+							if($("stefanvdnighti")){
+								$("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
+							}
+							if($("stefanvdnightthemecheckbox")){ $("stefanvdnightthemecheckbox").checked = true; }
+						}else{
+							sun = true;
+							if($("stefanvdnightin")){
+								$("stefanvdnightin").setAttribute("id", "stefanvdnighti"); // change night background button
+							}
+							if($("stefanvdnightthemecheckbox")){ $("stefanvdnightthemecheckbox").checked = false; }
 						}
 					}
 				}
+			}
+		});
+
+		var nightobserver = new MutationObserver(function(mutations){
+			mutations.forEach(function(mutation){
+
+				// console.log('Mutation type: ' + mutation.type);
+				if(mutation.type == "childList"){
+					if(mutation.addedNodes.length >= 1){
+						mutation.addedNodes.forEach(function(node){
+							if(typeof node.getElementsByTagName !== "function"){
+								return;
+							}
+							// parent node
+							convertwebnight(node);
+							// childs node
+							var aninside = node.getElementsByTagName("*");
+							var k;
+							var l = aninside.length;
+							for(k = 0; k < l; k++){
+								convertwebnight(aninside[k]);
+							}
+						});
+					}
+				}else if(mutation.type == "attributes"){
+					var attributeValue = mutation.target.getAttribute(mutation.attributeName);
+					if(attributeValue != null){
+						if(!attributeValue.includes("stefanvdnight")){
+							if(mutation.attributeName == "class"){
+								convertwebnight(mutation.target);
+							}
+						}
+					}
+					// night mode style changed
+					if(mutation.attributeName == "style"){
+						convertwebnight(mutation.target);
+					}
+				}
+
 			});
 		});
+
+		var observerConfig = {
+			subtree: true, // observe the subtree rooted at ...videolist...
+			childList: true, // include childNode insertion/removals
+			characterData: false, // include textContent changes
+			attributes: true, // include changes to attributes within the subtree
+			attributeFilter: ["style", "class"]
+		};
+
+		// Listen to all changes to body and child nodes
+		var targetNode = document.body;
 
 		function occurrences(string, subString, allowOverlapping){
 			string += "";
@@ -210,140 +228,126 @@ const afterBodyReady = () => {
 			return n;
 		}
 
-		var switchelements;
-		var startshow = false;
-		var counter = 0;
 		function convertwebnight(node){
-			var getthatid = node.id;
-			if(getthatid && getthatid.length >= 18){
-				getthatid = getthatid.substring(0, 18);
-			}else{ getthatid = ""; }
+			if(typeof(node) == "undefined" && node !== null){
+				return;
+			}
+			if(typeof(node.tagName) == "undefined" && node.tagName !== null){
+				return;
+			}
+			// console.log("node id:" + node.id + " tag:" + node.tagName + " class:" + node.className);
 
-			if(getthatid == "stefanvdnighttheme"){
-				if($("stefanvdnighttheme")){
-					startshow = true;
-				}
+			var parent = document.getElementById("stefanvdnighttheme");
+			if(parent.contains(node)){
+				// console.log("Node inside? = Yes " + node.className);
 			}else{
-
-				if(startshow == true){
-					if(counter <= switchelements){
-					// do nothing
-					}
-					counter += +1;
-
-					if(counter == switchelements){
-						counter = 0;
-						startshow = false;
-					}
-				}else{
-					switch(node.tagName){
-					case"IMG":
-					case"STYLE":
-					case"SCRIPT":
-					case"HEAD":
-					case"META":
-					case"LINK":
-					case"TITLE":
-					case"IFRAME":
-					case"svg":
-					case"path":
-					case"PICTURE":
-					case"SOURCE":
-					case"VIDEO":
-					case"AUDIO":
-					case"FIGURE":
-					case"CANVAS":
-					case"MAP":
-					case"TRACK":
-					case"AREA":
-					case"NOSCRIPT":
-					case"BASE":
-					case"BR":
-					// do nothing
-						break;
-					default:
-						var st;
-						var y;
-						var z;
-						var x;
-						var w;
-						// if night class is already added, skip this node
-						// Else create it
-						if(node.classList.contains("stefanvdnightbck") == false){
-							var thatbckishere = false;
-							if(node.currentStyle){
-								y = node.currentStyle["background-color"];
-								z = node.currentStyle["background-image"];
-								x = node.currentStyle["border-color"];
-								w = node.currentStyle["box-shadow"];
-							}else if(window.getComputedStyle){
-								st = document.defaultView.getComputedStyle(node, null);
-								y = st.getPropertyValue("background-color");
-								z = st.getPropertyValue("background-image");
-								x = st.getPropertyValue("border-color");
-								w = st.getPropertyValue("box-shadow");
-							}
-
-							if(y == "rgba(0, 0, 0, 0)" || y.includes("rgba(0, 0, 0, 0")){
-								thatbckishere = false;
-								if(z == "none"){
-									var alpha = y.replace(/^.*,(.+)\)/, "$1");
-									if(alpha > .1){
-									// alpha value higher than 10%
-										thatbckishere = true;
-									}
-								}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
-								// check if use more than 2X gradient white
-									var bla = occurrences(z, "rgb(255, 255, 255)");
-									if(bla >= 1){ // check if includes it 1 item or more
-										thatbckishere = true;
-									}
-								}else{
-								// div with background image url inside
-								// thatbckishere = true;
-								}
-							}else{
-								thatbckishere = true;
-							}
-
-							// background color is transparent, then add only the text color
-							if(node.tagName == "BUTTON" || (node.tagName == "INPUT" && node.type == "submit")){
-								if(thatbckishere == true){
-								// if no background then do nothing
-									node.classList.add("stefanvdnightbutton");
-								}else{
-								// if no background then do nothing
-									node.classList.add("stefanvdnight");
-								}
-							}else{
-								if(thatbckishere == true){
-									node.classList.add("stefanvdnightbck", "stefanvdnight");
-								}else{
-									node.classList.add("stefanvdnight");
-								}
-							}
-							// <a> with background change it to night button color
-							if(node.tagName == "A"){
-								if(y != "rgba(0, 0, 0, 0)"){
-									node.classList.add("stefanvdnightbutton");
-								}
-							}
-
-							// change border color
-							if(x !== null){
-								node.classList.add("stefanvdnightborder");
-							}
-
-							// box shadow that look also as a single border line
-							var partw = w.includes("0px 0px 0px 1px");
-							if(partw){
-								node.classList.add("stefanvdnightboxshadow");
-							}
-
+				// console.log("Node inside? = No " + node.className);
+				switch(node.tagName){
+				case"IMG":
+				case"STYLE":
+				case"SCRIPT":
+				case"HEAD":
+				case"META":
+				case"LINK":
+				case"TITLE":
+				case"IFRAME":
+				case"svg":
+				case"path":
+				case"PICTURE":
+				case"SOURCE":
+				case"VIDEO":
+				case"AUDIO":
+				case"FIGURE":
+				case"CANVAS":
+				case"MAP":
+				case"TRACK":
+				case"AREA":
+				case"NOSCRIPT":
+				case"BASE":
+				case"BR":
+				// do nothing
+					break;
+				default:
+					var st;
+					var y;
+					var z;
+					var x;
+					var w;
+					// if night class is already added, skip this node
+					// Else create it
+					if(node.classList.contains("stefanvdnightbck") == false){
+						var thatbckishere = false;
+						if(node.currentStyle){
+							y = node.currentStyle["background-color"];
+							z = node.currentStyle["background-image"];
+							x = node.currentStyle["border-color"];
+							w = node.currentStyle["box-shadow"];
+						}else if(window.getComputedStyle){
+							st = document.defaultView.getComputedStyle(node, null);
+							y = st.getPropertyValue("background-color");
+							z = st.getPropertyValue("background-image");
+							x = st.getPropertyValue("border-color");
+							w = st.getPropertyValue("box-shadow");
 						}
+
+						if(y == "rgba(0, 0, 0, 0)" || y.includes("rgba(0, 0, 0, 0")){
+							thatbckishere = false;
+							if(z == "none"){
+								var alpha = y.replace(/^.*,(.+)\)/, "$1");
+								if(alpha > .1){
+								// alpha value higher than 10%
+									thatbckishere = true;
+								}
+							}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
+							// check if use more than 2X gradient white
+								var bla = occurrences(z, "rgb(255, 255, 255)");
+								if(bla >= 1){ // check if includes it 1 item or more
+									thatbckishere = true;
+								}
+							}else{
+							// div with background image url inside
+							// thatbckishere = true;
+							}
+						}else{
+							thatbckishere = true;
+						}
+
+						// background color is transparent, then add only the text color
+						if(node.tagName == "BUTTON" || (node.tagName == "INPUT" && node.type == "submit")){
+							if(thatbckishere == true){
+								// if no background then do nothing
+								node.classList.add("stefanvdnightbutton");
+							}else{
+								// if no background then do nothing
+								node.classList.add("stefanvdnight");
+							}
+						}else{
+							if(thatbckishere == true){
+								node.classList.add("stefanvdnightbck", "stefanvdnight");
+							}else{
+								node.classList.add("stefanvdnight");
+							}
+						}
+						// <a> with background change it to night button color
+						if(node.tagName == "A"){
+							if(y != "rgba(0, 0, 0, 0)"){
+								node.classList.add("stefanvdnightbutton");
+							}
+						}
+
+						// change border color
+						if(x !== null){
+							node.classList.add("stefanvdnightborder");
+						}
+
+						// box shadow that look also as a single border line
+						var partw = w.includes("0px 0px 0px 1px");
+						if(partw){
+							node.classList.add("stefanvdnightboxshadow");
+						}
+
 					}
 				}
-
 			}
 		}
 
@@ -390,15 +394,6 @@ const afterBodyReady = () => {
 							document.body.classList.add("stefanvdnightbck", "stefanvdnight");
 						}
 
-						if(document.getElementById("stefanvdnighttheme")){
-							if(document.getElementById("stefanvdnighttheme").getElementsByTagName("*")){
-								switchelements = document.getElementById("stefanvdnighttheme").getElementsByTagName("*").length;
-							}else{
-								switchelements = 0;
-							}
-						}else{
-							switchelements = 0;
-						}
 						// search all elements and add night class
 						var n = document.body.getElementsByTagName("*");
 						var i;
@@ -751,6 +746,9 @@ const afterBodyReady = () => {
 					}
 				//-----
 				}else{
+					// End mutation observer
+					nightobserver.disconnect();
+
 					sun = true;
 					if($("stefanvdnightin")){
 						$("stefanvdnightin").setAttribute("id", "stefanvdnighti"); // change night background button
@@ -1165,28 +1163,17 @@ const afterBodyReady = () => {
 			convertpdfnight();
 			//---
 
-			if(sun == false){
-				// go back and disable this
-				nightcssobserver.disconnect();
-			}else{
-				// enable observe
-				nightcssobserver.observe(element, {
-					attributes: true,
-					childList: true,
-					subtree: true,
-					attributeFilter: ["style", "class"]
-				});
-			}
-
 			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
 
 			addcsstext("totlnightmodestyle", css);
 
 			//---
 			webgonightmode().then(function(){
-			// this function is executed after function
+				// this function is executed after function
 				if(sun == false){
 					isitdark = true;
+					// Start mutation observer
+					nightobserver.observe(targetNode, observerConfig);
 				}else{
 					isitdark = false;
 				}
@@ -1254,7 +1241,6 @@ const afterBodyReady = () => {
 					item.addEventListener("pointerover", function(){ item.style.opacity = "1"; }, false);
 					item.addEventListener("pointerout", function(){ item.style.opacity = ".2"; }, false);
 				}
-				// var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 				if(nmcustom == true){ newnight.style.left = "calc(" + nmcustomx + " + env(safe-area-inset-left))"; newnight.style.bottom = "calc(" + nmcustomy + " + env(safe-area-inset-bottom))"; }else if(nmtopleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmtopright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmbottomright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }else if(nmbottomleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }
 
 				var newnightinput = document.createElement("input");
@@ -1263,7 +1249,7 @@ const afterBodyReady = () => {
 				if(nightenabletheme == true){
 					if(nightmodeos == true){
 						if(window.matchMedia && windark.matches){
-						// dark mode
+							// dark mode
 							newnightinput.setAttribute("checked", false);
 						}
 					}else{
@@ -1559,53 +1545,6 @@ const afterBodyReady = () => {
 			if(e.target.id){
 				if(e.target.id.includes("stefanvdnighttheme")){
 					return;
-				}
-			}
-
-			var switchelements;
-			if(document.getElementById("stefanvdnighttheme")){
-				if(document.getElementById("stefanvdnighttheme").getElementsByTagName("*")){
-					switchelements = document.getElementById("stefanvdnighttheme").getElementsByTagName("*").length;
-				}else{
-					switchelements = 0;
-				}
-			}else{
-				switchelements = 0;
-			}
-			var forcestartshow = false;
-			var forcecounter = 0;
-			var elementList = bnode.getElementsByTagName("*");
-			var i;
-			var l = elementList.length;
-			for(i = 0; i < l; i++){
-				if(sun == true){
-
-					var forcegetthatid = elementList[i].id;
-					if(forcegetthatid){
-						forcegetthatid = forcegetthatid.substring(0, 18);
-					}else{ forcegetthatid = ""; }
-
-					if(forcegetthatid == "stefanvdnighttheme"){
-						if($("stefanvdnighttheme")){
-							forcestartshow = true;
-						}
-					}else{
-
-						if(forcestartshow == true){
-							if(forcecounter <= switchelements){
-							// do nothing
-							}
-							forcecounter += +1;
-
-							if(forcecounter == switchelements){
-								forcecounter = 0;
-								forcestartshow = false;
-							}
-						}else{
-						// elementList[i].classList.add("stefanvdlongpress");
-						}
-					}
-
 				}
 			}
 

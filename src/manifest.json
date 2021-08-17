@@ -48,11 +48,6 @@
       "run_at": "document_start"
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["js/nightmode.js"],
-      "run_at": "document_end"
-    },
-    {
       "matches": ["*://*.youtube.com/*"],
       "js": [ "js/fps.js" ],
       "run_at": "document_start",
@@ -94,5 +89,5 @@
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage" ]
+  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage", "webNavigation" ]
 }

@@ -164,6 +164,23 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	}
 });
 
+// Night Mode inject before displaying the website
+chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
+	// Filter out non main window events.
+	if(frameId !== 0)return;
+	injectScriptsTo(tabId);
+});
+
+const injectScriptsTo = (tabId) => {
+	chrome.tabs.executeScript(tabId, {
+		file: "js/nightmode.js",
+		runAt: "document_start",
+		// If the script injection fails (without the tab permission and so on) and is not checked in the callback` runtime.lastError `，
+		// It's a mistake. There is no other complicated logic in this example. You don't need to record the tab of successful injection. You can fool it like this.
+	}, () => void chrome.runtime.lastError);
+};
+//---
+
 function restcontent(path, name, sendertab){
 	var cssoReq = new XMLHttpRequest();
 	cssoReq.onreadystatechange = function(){ if(cssoReq.readyState == 4){ chrome.tabs.sendMessage(sendertab, {name: name, message: cssoReq.responseText}); } };
