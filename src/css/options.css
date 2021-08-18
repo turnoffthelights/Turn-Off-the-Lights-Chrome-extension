@@ -198,12 +198,12 @@ html{overflow:hidden}
 body{min-width:1150px;min-height:800px;background:var(--totl-body-background);color:var(--totl-primary-font-color);font-family:Arial,sans-serif;cursor:default;font-size:13px}
 #main-content{display:-webkit-box;position:absolute;left:0;right:0;top:0;bottom:0}
 #mainview{padding-left:240px;margin:0;position:fixed;left:0;right:0;top:0;bottom:0;z-index:1;overflow:auto;margin-top:56px}
-#mainview-content{box-sizing:border-box;max-width:1020px;min-width:600px;padding:0 24px;position:relative}
-#managed-prefs-banner{background:var(--totl-donation-bar);height:32px;margin:0;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:black;position:relative}
+#mainview-content{box-sizing:border-box;max-width:1020px;min-width:600px;padding:0 calc(24px + env(safe-area-inset-right)) 0 calc(24px + env(safe-area-inset-left));position:relative}
+#managed-prefs-banner{background:var(--totl-donation-bar);height:32px;margin:0;padding:0 calc(24px + env(safe-area-inset-right)) 0 calc(24px + env(safe-area-inset-left));-webkit-user-select:none;-moz-user-select:none;user-select:none;color:black;position:relative}
 #managed-prefs-icon{display:inline-block;padding:0px 15px 0px 0px}
 #managed-prefs-text{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;display:inline-block;margin-right:30px}
-#managed-prefs-text-close{float:right;display:inline-flex;cursor:pointer;color:#000;font-size:18px;position:absolute;right:26px;padding:10px;align-items:center;flex-direction:column}
-#navbar-container{background:var(--totl-primary-sidebar-background);bottom:0;display:block;left:0;position:fixed;top:0;width:240px;z-index:398;content-visibility:auto}
+#managed-prefs-text-close{float:right;display:inline-flex;cursor:pointer;color:#000;font-size:18px;position:absolute;right:calc(26px + env(safe-area-inset-right));padding:10px;align-items:center;flex-direction:column}
+#navbar-container{background:var(--totl-primary-sidebar-background);bottom:0;display:block;left:0;position:fixed;top:0;width:240px;z-index:398;content-visibility:auto;padding-left:env(safe-area-inset-left)}
 #navbar-container>ul{-webkit-user-select:none;-moz-user-select:none;user-select:none;list-style-type:none;padding:0;margin:68px 0 0 0}
 .navbar-item{color:var(--totl-nav-color);cursor:pointer;display:block;font-size:105%;outline:none;padding:7px 0}
 .navbar-item:hover{background:var(--totl-nav-background-hover);color:var(--totl-primary-font-color)}
@@ -966,28 +966,28 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .tablegamepadlist td:nth-child(3){width:50%}
 header{background:var(--totl-primary-background);color:var(--totl-primary-font-color);-webkit-user-select:none;-moz-user-select:none;user-select:none;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.26);display:block;flex-direction:row;align-items:center;z-index:399;position:fixed}
 header .messagehead{align-items:center;display:flex;width:100%;position:relative;margin:0;padding:0}
-header .masterhead{min-height:56px;align-items:center;display:flex;position:relative;margin:0;padding:0 16px}
+header .masterhead{min-height:56px;align-items:center;display:flex;position:relative;margin:0;padding:0 16px;margin-left:env(safe-area-inset-left)}
 header .icon{position:relative;display:inline-block;margin:0;top:2px;width:16px;height:16px}
 header .title{color:var(--totl-primary-font-color);-webkit-user-select:none;-moz-user-select:none;user-select:none;margin-left:54px;font-size:18px;position:absolute;top:18px;left:0;cursor:pointer}
-header .rightmenu{position:absolute;width:24px;height:24px;top:6px;right:20px;padding:10px;border-radius:50%}
+header .rightmenu{position:absolute;width:24px;height:24px;top:6px;right:calc(20px + env(safe-area-inset-right));padding:10px;border-radius:50%}
 header .rightmenu svg{fill:var(--totl-svg-fill-color)}
 header .rightmenu:hover{background:var(--totl-svg-fill-color-hover);cursor:pointer}
 #dropmenu.hide{display:none}
 #dropmenu.show{display:block}
 #dropmenu ul{line-height:48px;list-style:none;margin:0;padding:0}
-#dropmenu{box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 8px 0 rgba(0,0,0,0.12);position:absolute;top:42px;right:24px;width:200px;z-index:800;background:var(--totl-primary-background);padding:10px 0px}
+#dropmenu{box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 8px 0 rgba(0,0,0,0.12);position:absolute;top:42px;right:calc(24px + env(safe-area-inset-right));width:200px;z-index:800;background:var(--totl-primary-background);padding:10px 0px}
 #dropmenu svg{position:relative;top:3px;margin-right:10px;fill: var(--totl-sidebar-icon-background)}
 #dropmenu ul li{height:48px;user-select:none;padding:0px 16px;color:var(--totl-primary-font-color);cursor:pointer}
 #dropmenu ul li:hover{background-color:var(--totl-dropmenu-li-background-hover)}
 #dropmenu ul li:active{background-color:var(--totl-dropmenu-li-background-active)}
 #dropmenu ul li.topline{border-top:var(--totl-section-border)}
-#menu{-webkit-user-select:none;user-select:none;z-index:399;position:fixed;top:5px;left:5px;height:45px;width:45px;border-radius:50%}
+#menu{-webkit-user-select:none;user-select:none;z-index:399;position:fixed;top:5px;left:calc(5px + env(safe-area-inset-left));height:45px;width:45px;border-radius:50%}
 #menu:hover{ background:var(--totl-menu-background-hover);cursor:pointer}
 #menuToggle{height:12px;width:20px;border-radius:50%;position:absolute;top:0;bottom:0;margin:auto;left:0;right:0}
 #menuToggle span{display:block;width:20px;height:2px;margin-bottom:3px;position:relative;background:var(--totl-primary-font-color)}
 /* Mobile sidebar */
 input[type=checkbox]:checked ~ #navbar-container{display:none}
-input[type=checkbox]:checked ~ #mainview{padding-left:0px}
+input[type=checkbox]:checked ~ #mainview{padding-left:0}
 #darkpanel{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);opacity:0;transition:opacity 0.3s cubic-bezier(0,0,0.3,1);z-index:400;pointer-events:none}
 #reveal-menu{display:none}
 .minitable{line-height:48px;list-style:none;margin:0;padding:0}
@@ -1152,8 +1152,8 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 /* About */
 .aboutbuttons button{margin:15px 10px 0 0;display:inline-block}
 #permullist{padding-inline-start:15px}
-@keyframes slide-in{from{left:-280px}to{left:0}}
-@keyframes slide-out{from{left:0}to{left:-280px}}
+@keyframes slide-in{from{left:calc(-280px - env(safe-area-inset-left))}to{left:0}}
+@keyframes slide-out{from{left:0}to{left:calc(-280px - env(safe-area-inset-left))}}
 /* Gamepad */
 .gpbox{padding:15px;content-visibility:auto}
 .pslogo{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:var(--totl-svg-fill-color);stroke-miterlimit:10}
@@ -1174,7 +1174,6 @@ only screen and (max-device-width:480px){
   #beeld{position:relative;z-index:101;margin:auto;width:250px}
   #loadingcenter{width:230px}
   #progressbar{width:230px}
-  #dont-turn-off-the-lights{width:100%;height:auto;aspect-ratio:16/9}
   .suggpanel{width:100%}
   .videopreview{width:100%;padding-right:0}
   .videopreview iframe{width:100%;height:auto;aspect-ratio:16/9}
@@ -1213,4 +1212,11 @@ only screen and (max-device-width:480px){
   /* for mobile only */
   input[type=checkbox]:checked ~ #navbar-container{display:block;animation:slide-in 0.5s ease;animation-fill-mode:forwards}
   input[type=checkbox]:checked ~ #darkpanel{opacity:1;display:block;pointer-events:auto}
+}
+@media only screen and (max-height:330px){
+  #navbar-container{overflow:scroll}
+}
+@media only screen and (max-width:480px),
+only screen and (max-device-width:480px) and (orientation:portrait){
+  #dont-turn-off-the-lights{width:100%;height:auto;aspect-ratio:16/9}
 }

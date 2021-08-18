@@ -174,9 +174,7 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
 const injectScriptsTo = (tabId) => {
 	chrome.tabs.executeScript(tabId, {
 		file: "js/nightmode.js",
-		runAt: "document_start",
-		// If the script injection fails (without the tab permission and so on) and is not checked in the callback` runtime.lastError `，
-		// It's a mistake. There is no other complicated logic in this example. You don't need to record the tab of successful injection. You can fool it like this.
+		runAt: "document_start"
 	}, () => void chrome.runtime.lastError);
 };
 //---
