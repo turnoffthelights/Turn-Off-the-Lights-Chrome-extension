@@ -512,7 +512,7 @@
     "desgamepaddirdown": {"message": "Directional Down"},
     "desgamepaddirleft": {"message": "Directional Left"},
     "desgamepaddirright": {"message": "Directional Right"},
-    "desgamepadxboxlogo": {"message": "Xbox Light-Up Logo"},
+    "desgamepadxboxlogo": {"message": "Xbox Logo"},
     "desgamepadpslogo": {"message": "PlayStation Logo"},
     "desgpbuttonzoominout": {"message": "Zoom in or out"},
     "desgpbuttonzoompos": {"message": "Zoom position"},
