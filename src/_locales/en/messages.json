@@ -537,5 +537,6 @@
     "desnightmodeos": {"message": "Automatically switch the current web page to Night Mode if the OS appearance is set to Dark"},
     "titelonoff": {"message": "ON/OFF"},
     "titelnightmodeborder": {"message": "Border color"},
-    "titleinfobx": {"message": "Info"}
+    "titleinfobx": {"message": "Info"},
+    "permissionwebnav": {"message": "This is to add the Night Mode immediately before the web page loads."}
 }
