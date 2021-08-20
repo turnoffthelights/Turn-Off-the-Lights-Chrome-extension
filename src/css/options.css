@@ -109,6 +109,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-yt-disbar:#606060;
 --totl-donation-bar:#FFD54F;
 --totl-gray-text:#9e9e9e;
+--totl-modal-youtube-logo:grayscale(1) invert(1) brightness(2);
 }
 .light{
 --totl-primary-background:#fff;
@@ -192,6 +193,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 --totl-yt-disbar:#cccccc;
 --totl-donation-bar:#FFF59D;
 --totl-gray-text:#585858;
+--totl-modal-youtube-logo:none;
 }
 
 html{overflow:hidden}
@@ -1140,7 +1142,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 #materialModalYouTube.hide #materialModalYouTubeCentered{transform:scale(0.8);transition:transform 0.2s ease-out}
 #materialModalYouTube.show{opacity:1;transition:opacity 0.2s ease-in}
 #materialModalYouTube.show #materialModalYouTubeCentered{transform:scale(1);transition:transform 0.2s ease-in}
-#materialModalYouTubeContent img{margin:20px}
+#materialModalYouTubeContent img{margin:20px;filter:var(--totl-modal-youtube-logo)}
 #materialModalYouTube{font-family:Arial,sans-serif;position:fixed;top:0px;left:0px;width:100%;height:100%;background:rgba(0,0,0,0.5);display:table;z-index:1000}
 #materialModalYouTubeCentered{display:table-cell;vertical-align:middle;padding:20px}
 #materialModalYouTubeContent{padding:0px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:450px;min-height:385px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:15px;overflow:hidden}
