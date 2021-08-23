@@ -229,10 +229,10 @@ const afterBodyReady = () => {
 		}
 
 		function convertwebnight(node){
-			if(typeof(node) == "undefined" && node !== null){
+			if(typeof(node) == "undefined" && node != null){
 				return;
 			}
-			if(typeof(node.tagName) == "undefined" && node.tagName !== null){
+			if(typeof(node.tagName) == "undefined" && node.tagName != null){
 				return;
 			}
 			// console.log("node id:" + node.id + " tag:" + node.tagName + " class:" + node.className);
