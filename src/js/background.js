@@ -394,7 +394,7 @@ function checkcontextmenus(){
 function cleanrightclickmenu(menu){
 	if(menu.length > 0){
 		menu.forEach(function(item){
-			if(item != undefined){ chrome.contextMenus.remove(item); }
+			if(item != undefined && item != null){ chrome.contextMenus.remove(item); }
 		});
 	}
 	menu.length = 0;

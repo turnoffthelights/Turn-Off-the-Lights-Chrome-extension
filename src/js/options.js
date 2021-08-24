@@ -2527,12 +2527,10 @@ function domcontentloaded(){
 		function getImage(url){
 			var bkimage = new Image();
 			bkimage.onload = function(){
-				$("lightimagea").checked = true;
 				save_options();
 			};
 			bkimage.onerror = function(){
 				var optionwrongimg = chrome.i18n.getMessage("optionwrongimg"); window.alert(optionwrongimg);
-				$("lightimagea").checked = true;
 				$("lightimage").value = "https://www.turnoffthelights.com/extension/images/theater.jpg";
 				$("example1").style.background = $("example2").style.background = "url(https://www.turnoffthelights.com/extension/images/theater.jpg)";
 				save_options();
