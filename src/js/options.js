@@ -902,9 +902,6 @@ function drawAtmos(){
 					newvivid.style.bottom = 0;
 					newvivid.style.right = 0;
 					newvivid.style.left = 0;
-					newvivid.style.margin = "auto";
-					newvivid.style.width = "640px";
-					newvivid.style.height = "360px";
 					newvivid.style.opacity = .88;
 					newvivid.style.display = "block";
 					newvivid.width = Math.floor(tempwidthvideo * 0.08);
