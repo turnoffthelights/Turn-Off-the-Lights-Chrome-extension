@@ -999,7 +999,6 @@ input[type=checkbox]:checked ~ #mainview{padding-left:0}
 .tabbutton{cursor:pointer;margin:0;border:none;padding:0 20px;float:left;position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none;height:46px;line-height:46px;font-weight:500;font-size:14px;text-transform:uppercase;color:rgba(0,0,0,.54);overflow:hidden;min-width:calc(75px - 40px)}
 .tabbutton:active{background-color:rgba(158,158,158,0.4);border-bottom:2px solid rgba(158,158,158,0)}
 .tabbutton:hover{background-color:rgba(158,158,158,.2);border-bottom:2px solid rgba(158,158,158,0)}
-.tabspecial{float:right}
 .tabhighlight{border-bottom:2px solid rgb(68,138,255);height:46px;line-height:46px}
 .tabhighlight:hover{border-bottom:2px solid rgb(68,138,255);height:46px;line-height:46px}
 .tabicon{height:24px;display:flex}
