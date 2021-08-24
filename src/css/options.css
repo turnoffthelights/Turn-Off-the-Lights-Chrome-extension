@@ -741,7 +741,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #mstars3:after{content:" ";position:absolute;top:2000px;width:3px;height:3px;background:transparent;box-shadow:1503px 887px #FFF ,1894px 1881px #FFF ,1489px 1770px #FFF ,689px 576px #FFF ,63px 417px #FFF ,1427px 1311px #FFF ,1014px 1958px #FFF ,1323px 549px #FFF ,964px 759px #FFF ,146px 523px #FFF ,1028px 850px #FFF ,136px 10px #FFF ,509px 406px #FFF ,1786px 1042px #FFF ,181px 1536px #FFF ,25px 800px #FFF ,1701px 1906px #FFF ,1025px 150px #FFF ,446px 942px #FFF ,945px 118px #FFF ,1322px 711px #FFF ,981px 1769px #FFF ,145px 1347px #FFF ,983px 1858px #FFF ,1206px 1647px #FFF ,947px 284px #FFF ,771px 106px #FFF ,1687px 1651px #FFF ,1160px 102px #FFF ,1679px 16px #FFF ,88px 1175px #FFF ,611px 1137px #FFF ,1281px 351px #FFF ,1577px 887px #FFF ,472px 1780px #FFF ,1697px 235px #FFF ,1680px 195px #FFF ,76px 1220px #FFF ,922px 1137px #FFF ,571px 1040px #FFF ,528px 1941px #FFF ,1110px 677px #FFF ,1187px 531px #FFF ,62px 600px #FFF ,1432px 1768px #FFF ,767px 66px #FFF ,137px 559px #FFF ,1982px 379px #FFF ,1699px 1544px #FFF ,1796px 1621px #FFF ,831px 316px #FFF ,213px 807px #FFF ,860px 1921px #FFF ,898px 1769px #FFF ,1000px 178px #FFF ,451px 1910px #FFF ,1463px 990px #FFF ,1258px 1106px #FFF ,1940px 488px #FFF ,1566px 1986px #FFF ,1548px 509px #FFF ,1926px 773px #FFF ,419px 834px #FFF ,1221px 1108px #FFF ,860px 879px #FFF ,798px 1453px #FFF ,1347px 411px #FFF ,513px 723px #FFF ,529px 836px #FFF ,1249px 133px #FFF ,1437px 218px #FFF ,622px 1290px #FFF ,1164px 658px #FFF ,1139px 55px #FFF ,640px 757px #FFF ,839px 1000px #FFF ,1315px 1955px #FFF ,858px 1159px #FFF ,1240px 420px #FFF ,519px 1021px #FFF ,75px 671px #FFF ,1530px 1857px #FFF ,986px 1331px #FFF ,781px 847px #FFF ,596px 1667px #FFF ,822px 754px #FFF ,1893px 585px #FFF ,851px 826px #FFF ,1774px 382px #FFF ,757px 1808px #FFF ,1051px 838px #FFF ,1576px 798px #FFF ,1933px 1682px #FFF ,1307px 326px #FFF ,1699px 443px #FFF ,1900px 1396px #FFF ,49px 1797px #FFF ,1717px 1847px #FFF ,253px 685px #FFF ,711px 1290px #FFF}
 @keyframes animStar{from{transform:translateY(0px)}to{transform:translateY(-2000px)}}
 /* --- */
-.dimrange{height:48px;display:flex;float:right}
+.dimrange{height:48px;display:flex;margin-left:auto}
 .dimrange div{padding:0 20px;margin:auto;display:flex;align-items:center;height:48px}
 .dimrange .tabopacityslider{width:120px}
 .atmosrangebox{display:flex;height:48px}
@@ -995,7 +995,7 @@ input[type=checkbox]:checked ~ #mainview{padding-left:0}
 .minitable{line-height:48px;list-style:none;margin:0;padding:0}
 .minitable li{border-bottom:var(--totl-minitable-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tabbar{border-bottom:var(--totl-minitable-tab-border);height:48px}
-.tabbarintern{width:100%}
+.tabbarintern{width:100%;display:flex;overflow:scroll}
 .tabbutton{cursor:pointer;margin:0;border:none;padding:0 20px;float:left;position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none;height:46px;line-height:46px;font-weight:500;font-size:14px;text-transform:uppercase;color:rgba(0,0,0,.54);overflow:hidden;min-width:calc(75px - 40px)}
 .tabbutton:active{background-color:rgba(158,158,158,0.4);border-bottom:2px solid rgba(158,158,158,0)}
 .tabbutton:hover{background-color:rgba(158,158,158,.2);border-bottom:2px solid rgba(158,158,158,0)}
