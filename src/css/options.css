@@ -1198,8 +1198,6 @@ only screen and (max-device-width:480px){
   #aptllo{right:15px;top:5px;font-size:13px}
   #materialModalCentered,#materialModalRateCentered{padding:0}
   #materialModalContent,#materialModalRateContent{max-width:none;height:100%;width:100%;left:0;top:0;position:absolute;border-radius:0}
-  .tabbar{overflow:scroll}
-  .tabbarintern{width:795px}
   .sharestatsenergy .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
   .sharestatsenergy .text{font-size:14px}
   .sharestatslove .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
