@@ -27,6 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+function $(id){ return document.getElementById(id); }
 var nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, nightmodebck = null, nightmodetxt = null, nightmodehyperlink = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, nightmodebutton = null, nightmodeos = null, nightmodeborder = null;
 
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
@@ -49,6 +50,79 @@ var observeDOM = (function(){
 		}
 	};
 })();
+
+var currennightthemedark = "#ffffff";
+var currentnightthemelight = "#ffffff";
+function getdefaultnightmetatheme(){
+	if($("stefanvdtheme")){
+		var myElement = document.getElementById("stefanvdtheme");
+		currentnightthemelight = myElement.getAttribute("data-themelight");
+		currennightthemedark = myElement.getAttribute("data-themedark");
+	}else{
+		const metas = document.getElementsByTagName("meta");
+		let i, l = metas.length;
+		for(i = 0; i < l; i++){
+			if(metas[i].getAttribute("name") == "theme-color"){
+				if(metas[i].getAttribute("media")){
+					if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+						currentnightthemelight = metas[i].getAttribute("content");
+					}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+						currennightthemedark = metas[i].getAttribute("content");
+					}
+				}else{
+					currennightthemedark = currentnightthemelight = metas[i].getAttribute("content");
+				}
+			}
+		}
+		const newDiv = document.createElement("div");
+		newDiv.id = "stefanvdtheme";
+		newDiv.className = "totltheme";
+		newDiv.setAttribute("data-themelight", currentnightthemelight);
+		newDiv.setAttribute("data-themedark", currennightthemedark);
+		document.body.appendChild(newDiv);
+	}
+}
+
+function setnightmetatheme(a){
+	const metas = document.getElementsByTagName("meta");
+	var darktheme;
+	var lighttheme;
+
+	var newnightmodetcolor = nightmodebck;
+	if(a == true){
+		// night mode is disable
+		darktheme = currennightthemedark;
+		lighttheme = currentnightthemelight;
+	}else{
+		// night mode is active
+		darktheme = newnightmodetcolor;
+		lighttheme = newnightmodetcolor;
+	}
+
+	let i, l = metas.length;
+	for(i = 0; i < l; i++){
+		if(metas[i].getAttribute("name") == "theme-color"){
+			if(metas[i].getAttribute("media")){
+				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+					metas[i].setAttribute("content", lighttheme);
+				}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+					metas[i].setAttribute("content", darktheme);
+				}
+			}else{
+				metas[i].setAttribute("content", lighttheme);
+			}
+		}
+	}
+
+	var x = document.querySelector("meta[name=\"theme-color\"]");
+	if(x == null){
+		// create one theme-color
+		var newmeta = document.createElement("meta");
+		newmeta.name = "theme-color";
+		newmeta.setAttribute("content", lighttheme);
+		document.getElementsByTagName("head")[0].appendChild(newmeta);
+	}
+}
 
 function returntimetoseconds(a){
 	return a.split(":")[0] * 3600 + a.split(":")[1] * 60;
@@ -1167,15 +1241,18 @@ const afterBodyReady = () => {
 
 			addcsstext("totlnightmodestyle", css);
 
+			getdefaultnightmetatheme();
 			//---
 			webgonightmode().then(function(){
 				// this function is executed after function
 				if(sun == false){
 					isitdark = true;
+					setnightmetatheme(false);
 					// Start mutation observer
 					nightobserver.observe(targetNode, observerConfig);
 				}else{
 					isitdark = false;
+					setnightmetatheme(true);
 				}
 			});
 		}
@@ -1612,6 +1689,9 @@ const afterBodyReady = () => {
 					if(document.getElementById("totlnightmodestyle")){
 						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
 					}
+
+					// refresh the meta color
+					setnightmetatheme(false);
 				});
 			}else if(request.action == "goenablenightmode"){
 				chrome.storage.sync.get(["nighttheme", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos"], function(items){
