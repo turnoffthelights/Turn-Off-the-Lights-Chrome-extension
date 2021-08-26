@@ -238,7 +238,7 @@ const afterBodyReady = () => {
 			// console.log("node id:" + node.id + " tag:" + node.tagName + " class:" + node.className);
 
 			var parent = document.getElementById("stefanvdnighttheme");
-			if(parent.contains(node)){
+			if(parent && parent.contains(node)){
 				// console.log("Node inside? = Yes " + node.className);
 			}else{
 				// console.log("Node inside? = No " + node.className);

@@ -61,6 +61,11 @@
       "match_about_blank": true
     },
     {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/nightmode.js"],
+      "run_at": "document_end"
+    },
+    {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
     }
@@ -89,5 +94,5 @@
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage", "webNavigation" ]
+  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage" ]
 }
