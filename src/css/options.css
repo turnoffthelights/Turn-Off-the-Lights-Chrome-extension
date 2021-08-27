@@ -223,7 +223,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #EyeWhitelist{margin-left:20px}
 .ecogreen{background-color:#43A047;color:white;border-radius:2px;margin-top:10px;padding:10px 120px 10px 10px}
 #Eyesaver{margin:16px 0 16px 30px}
-#logogreen{position:absolute;right:15px;color:green;vertical-align:top;padding:18px}
+#logogreen{position:absolute;right:15px;color:green;padding:18px}
 #multiopacitylist input[type=url]{width:100%;float:left;box-sizing:border-box}
 #multiopacitylist{width:100%}
 #multiopacitylist td:nth-child(1){width:55%}
@@ -855,7 +855,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .nightworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
 .speechworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
 #stefanmotion p{margin:0}
-#motioncanvas, #motioncomp{box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);border-radius:2px}
+#motioncanvas,#motioncomp{box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);border-radius:2px;display:inline-block}
 /* lamp */
 #loadinglamp{margin-right:5px}
 #welcomelamp{margin-right:5px}
@@ -900,7 +900,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .profileineerbox{display:block;width:calc(100% - 60px);padding:30px;overflow-x:scroll;overflow-y:hidden}
 .profilebox{display:block;width:840px;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 .profilebox .desprofile{display:block;min-height:85px}
-.profilebox .profile{background:var(--totl-card-background);display:inline-block;width:250px;vertical-align:top;margin:5px 10px 5px 0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1)}
+.profilebox .profile{background:var(--totl-card-background);display:inline-block;width:250px;margin:5px 10px 5px 0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1)}
 .profilebox .profile:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .profilebox .profil .cardactionbox{position:relative;display:inline-block;width:100%}
 #expandprofileaicon,#expandprofilebicon,#expandprofilecicon,#expandcamtipicon{width:36px;height:36px;display:inline-block;transform:rotate(90deg);margin:8px 0;padding:0;right:8px;position:absolute}
@@ -910,7 +910,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 .cardokbutton:active{background-color:rgba(158,158,158,.4)}
 .cardokbutton:hover{background-color:rgba(158,158,158,.2)}
 .suggpanel .desprofile{display:block;min-height:85px}
-.suggpanel .profile{background:var(--totl-card-background);display:inline-block;vertical-align:top;margin:0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1);width:100%;min-height:270px}
+.suggpanel .profile{background:var(--totl-card-background);display:inline-block;margin:0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1);width:100%;min-height:270px}
 .suggpanel .profile:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .suggpanel .profile .cardactionbox{position:relative;display:inline-block;width:100%;height:50px}
 #expandprofilea,#expandprofileb,#expandprofilec,#expandcamtip{display:none}
@@ -936,13 +936,13 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .sharestatsenergy{height:200px;background:#43A047;color:white;position:relative}
 .sharestatsenergy .placeholder{position:absolute;top:0;bottom:0;left:0;right:0;width:580px;height:100px;margin:auto;display:inline-flex}
 .sharestatsenergy .icon{display:inline-block;width:100px}
-.sharestatsenergy .text{display:inline-block;vertical-align:top;font-size:20px;padding-top:10px}
+.sharestatsenergy .text{display:inline-block;font-size:20px;padding-top:10px}
 #sharestatsenergysaved,#sharestatslove{position:absolute;bottom:15%;left:0;right:0;margin:auto;width:200px}
 /* Share stats love */
 .sharestatslove{height:200px;background:#D32F2F;color:white;position:relative}
 .sharestatslove .placeholder{position:absolute;top:0;bottom:0;left:0;right:0;width:580px;height:100px;margin:auto;display:inline-flex}
 .sharestatslove .icon{display:inline-block;width:100px}
-.sharestatslove .text{display:inline-block;vertical-align:top;font-size:20px;padding-top:10px}
+.sharestatslove .text{display:inline-block;font-size:20px;padding-top:10px}
 /* chart */
 .analyticbox{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px}
 .esta .header{width:100%;display:block;font-size:14px}
