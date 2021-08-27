@@ -865,9 +865,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 .lampchoose:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .bcklampchoose{background:#000}
 /* share box */
-#shareboxyoutube{background:url(/images/youtube@2x.webp)left top no-repeat;background:-webkit-image-set(url(/images/youtube.webp) 1x,url(/images/youtube@2x.webp) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
-#shareboxfacebook{background:url(/images/facebook@2x.webp)left top no-repeat;background:-webkit-image-set(url(/images/facebook.webp) 1x,url(/images/facebook@2x.webp) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
-#shareboxtwitter{background:url(/images/twitter@2x.webp)left top no-repeat;background:-webkit-image-set(url(/images/twitter.webp) 1x,url(/images/twitter@2x.webp) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
+#shareboxyoutube{background:url(/images/youtube@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/youtube.webp) 1x,url(/images/youtube@2x.webp) 2x,url(/images/youtube.png) 1x, url(/images/youtube@2x.png) 2x);width:25px;height:18px;display:inline-block;background-size:cover;margin-left:10px;margin-right:10px;cursor:pointer}
+#shareboxfacebook{background:url(/images/facebook@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/facebook.webp) 1x,url(/images/facebook@2x.webp) 2x,url(/images/facebook.png) 1x,url(/images/facebook@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;margin-right:10px;cursor:pointer}
+#shareboxtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.webp) 1x,url(/images/twitter@2x.webp) 2x,url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #shareboxrate:hover,#shareboxyoutube:hover,#shareboxfacebook:hover,#shareboxtwitter:hover{opacity:.8;cursor:pointer}
 /* Review box */
 #reviewextensionbox{height:75px;position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;content-visibility:auto}
@@ -884,10 +884,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #apnt{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #apgetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
 /* Mobile app */
-#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner.webp);background-repeat:no-repeat;border-radius:2px;content-visibility:auto}
-@media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (min-device-pixel-ratio:2){
-#mobileappbox{height:75px;position:relative;background:black url(/images/mobilebanner@2x.webp);background-repeat:no-repeat;border-radius:2px;background-size:cover}
-}
+#mobileappbox{height:75px;position:relative;background:black -webkit-image-set(url(/images/mobilebanner.webp) 1x,url(/images/mobilebanner@2x.webp) 2x,url(/images/mobilebanner.png) 1x,url(/images/mobilebanner@2x.png) 2x);background-repeat:no-repeat;border-radius:2px;background-size:cover;content-visibility:auto}
 #matllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff;background:black}
 #mant{position:absolute;font-size:12px;font-weight:700;color:#fff;background:black;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #magetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;background:black;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
@@ -1197,7 +1194,7 @@ only screen and (max-device-width:480px){
   #apgetapp{right:15px}
   #aptllo{right:15px;top:5px;font-size:13px}
   #materialModalCentered,#materialModalRateCentered{padding:0}
-  #materialModalContent,#materialModalRateContent{max-width:none;height:100%;width:100%;left:0;top:0;position:absolute;border-radius:0}
+  #materialModalContent,#materialModalRateContent{max-width:none;height:100vh;width:100vw;left:0;top:0;position:absolute;border-radius:0}
   .sharestatsenergy .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
   .sharestatsenergy .text{font-size:14px}
   .sharestatslove .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}

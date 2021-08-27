@@ -29,6 +29,24 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 function $(id){ return document.getElementById(id); }
 
+// support for older web browsers such as Safari 14 on macOS 10.15
+var ft = ".png";
+function support_format_webp(){
+	var elem = document.createElement("canvas");
+	if(elem.getContext && elem.getContext("2d")){
+		// was able or not to get WebP representation
+		return elem.toDataURL("image/webp").indexOf("data:image/webp") == 0;
+	}else{
+		// very old browser like IE 8, canvas not supported
+		return false;
+	}
+}
+if(support_format_webp() == true){
+	ft = ".webp";
+}else{
+	ft = ".png";
+}
+
 function eventsubmitFunc(selector, callback){
 	document.getElementById(selector).addEventListener("submit", function(e){
 		e.preventDefault();
@@ -51,7 +69,7 @@ function setdynimages(a){
 		n++;
 		var path;
 		if(a == 1){
-			path = ["images/totldyn" + n + ".webp", "images/totldyn" + n + "@2x.webp"];
+			path = ["images/totldyn" + n + ft, "images/totldyn" + n + "@2x" + ft];
 		}else{
 			path = ["", ""];
 		}
@@ -1936,7 +1954,7 @@ function dynamictest(){
 			};
 
 			// Once the callback is arranged then set the source of the image
-			imageObj.src = "images/Smoke10.webp";
+			imageObj.src = "images/Smoke10" + ft;
 
 			// Initialize the scene
 			runsmoke();
@@ -2720,11 +2738,11 @@ function domcontentloaded(){
 	// Check screenshot
 	$("wallpaperhide").addEventListener("click", function(){
 		$("imagegallery").classList.remove("hidden"); $("wallpapershow").classList.remove("hidden"); $("wallpaperhide").className = "hidden";
-		$("bckimage1").setAttribute("src", "images/totlminis1.webp"); $("bckimage1").setAttribute("src", "images/totlminis1@2x.webp");
-		$("bckimage2").setAttribute("src", "images/totlminis2.webp"); $("bckimage2").setAttribute("src", "images/totlminis2@2x.webp");
-		$("bckimage3").setAttribute("src", "images/totlminis3.webp"); $("bckimage3").setAttribute("src", "images/totlminis3@2x.webp");
-		$("bckimage4").setAttribute("src", "images/totlminis4.webp"); $("bckimage4").setAttribute("src", "images/totlminis4@2x.webp");
-		$("bckimage5").setAttribute("src", "images/totlminis5.webp"); $("bckimage5").setAttribute("src", "images/totlminis5@2x.webp");
+		$("bckimage1").setAttribute("src", "images/totlminis1" + ft); $("bckimage1").setAttribute("src", "images/totlminis1@2x" + ft);
+		$("bckimage2").setAttribute("src", "images/totlminis2" + ft); $("bckimage2").setAttribute("src", "images/totlminis2@2x" + ft);
+		$("bckimage3").setAttribute("src", "images/totlminis3" + ft); $("bckimage3").setAttribute("src", "images/totlminis3@2x" + ft);
+		$("bckimage4").setAttribute("src", "images/totlminis4" + ft); $("bckimage4").setAttribute("src", "images/totlminis4@2x" + ft);
+		$("bckimage5").setAttribute("src", "images/totlminis5" + ft); $("bckimage5").setAttribute("src", "images/totlminis5@2x" + ft);
 	});
 	$("wallpapershow").addEventListener("click", function(){
 		$("imagegallery").className = "hidden"; $("wallpapershow").className = "hidden"; $("wallpaperhide").classList.remove("hidden");
@@ -2997,7 +3015,7 @@ function domcontentloaded(){
 
 	function startGame(){
 		myGameArea = new gamearea();
-		myGamePiece = new component(16, 30, "images/party-balloon@2x.webp", 15, 30, "image");
+		myGamePiece = new component(16, 30, "images/party-balloon@2x" + ft, 15, 30, "image");
 		myGamePiece.gravity = 0.05;
 		myScore = new component("15px", "Verdana", "black", 330, 25, "text");
 		myHighScore = new component("15px", "Verdana", "black", 330, 45, "text");

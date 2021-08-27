@@ -771,7 +771,13 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</section>
 				<section id="sectionauroraplayerappbox">			
 				<div id="auroraplayerappbox">
-					<div id="apicon"><img id="auroraplayericon" alt="Aurora Player" loading="lazy" width="32" height="32" src="images/aurora-player_32x32.webp" srcset="images/aurora-player_32x32.webp 1x, images/aurora-player_32x32@2x.webp 2x"></div>
+					<div id="apicon">
+						<picture>
+							<source srcset="/images/aurora-player_32x32.webp 1x, /images/aurora-player_32x32@2x.webp 2x" type="image/webp">
+							<source srcset="/images/aurora-player_32x32.png 1x, /images/aurora-player_32x32@2x.png 2x" type="image/png"> 
+							<img id="auroraplayericon" alt="Aurora Player" loading="lazy" width="32" height="32" src="/images/aurora-player_32x32@2x.png">
+						</picture>
+					</div>
 					<div id="apname"><span>Aurora Player</span></div>
 					<div id="aptllo"><span data-i18n="desauroraplayer"></span></div>
 					<div id="apnt"><span data-i18n="nothanks"></span></div>
@@ -2549,7 +2555,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 			<div id="materialModalYouTube" class="hide" role="dialog" aria-label="Learn more on the YouTube Channel" aria-describedby="materialModalYouTubeTitle" aria-disabled="true">
 				<div id="materialModalYouTubeCentered">
 					<div id="materialModalYouTubeContent">
-						<img loading="lazy" src="/images/youtube-blog.webp" srcset="/images/youtube-blog.webp 1x, /images/youtube-blog@2x.webp 2x" alt="YouTube Turn Off the Lights" height="49" width="117">
+						<picture>
+							<source srcset="/images/youtube-blog.webp 1x, /images/youtube-blog@2x.webp 2x" type="image/webp">
+							<source srcset="/images/youtube-blog.png 1x, /images/youtube-blog@2x.png 2x" type="image/png"> 
+							<img alt="YouTube Turn Off the Lights" loading="lazy" width="117" height="49" src="/images/youtube-blog@2x.png">
+						</picture>
 						<div id="materialModalYouTubeTitle"><span data-i18n="titleyoutube"></span></div>
 						<div id="materialModalYouTubeText">
 							<span data-i18n="desyoutube"></span>
