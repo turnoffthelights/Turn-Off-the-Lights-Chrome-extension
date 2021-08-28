@@ -884,9 +884,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 #apnt{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #apgetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
 /* YouTube app */
-#ytappbox{-webkit-user-select:none;-moz-user-select:none;user-select:none;background:var(--totl-primary-sidebar-background);height:115px;border-radius:2px;display:flex;cursor:pointer}
+#ytappbox{-webkit-user-select:none;-moz-user-select:none;user-select:none;background:var(--totl-primary-sidebar-background);height:115px;border-radius:2px;display:flex;cursor:pointer;padding:15px;box-sizing:border-box}
 #ytappbox:hover{background:var(--totl-nav-background-hover)}
-#ytappbox #ytlogo{display:flex;align-items:center;align-content:center;flex-wrap:nowrap;flex-direction:row;height:100%;margin-left:15px}
+#ytappbox #ytlogo{display:flex;align-items:center;align-content:center;flex-wrap:nowrap;flex-direction:row;height:100%}
 #ytappbox picture{background:white;border-radius:10px;width:45px;height:45px;display:flex;justify-content:center;align-items:center}
 #ytappbox #ytappdes{display:flex;align-items:center;margin-left:15px;font-size:16px}
 /* Atmosphere */
