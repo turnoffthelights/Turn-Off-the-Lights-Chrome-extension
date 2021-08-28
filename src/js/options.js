@@ -517,7 +517,7 @@ function read_options(){
 		}
 	}
 
-	var settingsmain = ["firstDate", "speechlang", "speechcountry", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "mobilelastonversion", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube", "firstsawnumber"];
+	var settingsmain = ["firstDate", "speechlang", "speechcountry", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube", "firstsawnumber"];
 	var a = settingscheckboxarray, b = settingsinputrarray, c = settingsmain;
 	var allsettings = a.concat(b, c);
 	//---
@@ -529,8 +529,6 @@ function read_options(){
 		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
 
 		if(items["applastonversion"] == chrome.runtime.getManifest().version){ $("sectionauroraplayerappbox").style.display = "none"; }
-
-		if(items["mobilelastonversion"] == chrome.runtime.getManifest().version){ $("sectionmobileappbox").style.display = "none"; }
 
 		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon", items["icon"]); }
 
@@ -2855,9 +2853,8 @@ function domcontentloaded(){
 	$("apgetapp").addEventListener("click", function(){ window.open(linkauroraplayerapp); $("sectionauroraplayerappbox").style.display = "none"; chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version}); });
 	$("apnt").addEventListener("click", function(){ $("sectionauroraplayerappbox").style.display = "none"; chrome.storage.sync.set({"applastonversion": chrome.runtime.getManifest().version}); });
 
-	// Mobile app box
-	$("magetapp").addEventListener("click", function(){ window.open(linktotlmobileapp); $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
-	$("mant").addEventListener("click", function(){ $("sectionmobileappbox").style.display = "none"; chrome.storage.sync.set({"mobilelastonversion": chrome.runtime.getManifest().version}); });
+	// YouTube app box
+	$("ytappbox").addEventListener("click", function(){ window.open(linkyoutube, "_blank"); });
 
 	// Lamp Icons
 	$("p1").addEventListener("click", function(){ setpreviewlampicon("icons/iconstick38.png"); });

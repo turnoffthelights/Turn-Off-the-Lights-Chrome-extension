@@ -883,11 +883,12 @@ section>div:only-of-type{-webkit-box-flex:1}
 #aptllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff}
 #apnt{position:absolute;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
 #apgetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
-/* Mobile app */
-#mobileappbox{height:75px;position:relative;background:black -webkit-image-set(url(/images/mobilebanner.webp) 1x,url(/images/mobilebanner@2x.webp) 2x,url(/images/mobilebanner.png) 1x,url(/images/mobilebanner@2x.png) 2x);background-repeat:no-repeat;border-radius:2px;background-size:cover;content-visibility:auto}
-#matllo{position:absolute;font-size:16px;top:28px;right:30px;color:#fff;background:black}
-#mant{position:absolute;font-size:12px;font-weight:700;color:#fff;background:black;text-transform:uppercase;top:60px;left:50px;cursor:pointer}
-#magetapp{position:absolute;font-size:12px;font-weight:700;color:#39F;background:black;text-transform:uppercase;top:60px;right:30px;cursor:pointer}
+/* YouTube app */
+#ytappbox{-webkit-user-select:none;-moz-user-select:none;user-select:none;background:var(--totl-primary-sidebar-background);height:115px;border-radius:2px;display:flex;cursor:pointer}
+#ytappbox:hover{background:var(--totl-nav-background-hover)}
+#ytappbox #ytlogo{display:flex;align-items:center;align-content:center;flex-wrap:nowrap;flex-direction:row;height:100%;margin-left:15px}
+#ytappbox picture{background:white;border-radius:10px;width:45px;height:45px;display:flex;justify-content:center;align-items:center}
+#ytappbox #ytappdes{display:flex;align-items:center;margin-left:15px;font-size:16px}
 /* Atmosphere */
 .stefanvdvivideffect{position:absolute!important;z-index:100!important;overflow:hidden;pointer-events:none;width:640px;height:360px;margin:auto}
 /* Profile */
@@ -1180,9 +1181,6 @@ only screen and (max-device-width:480px){
   #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
   #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:100%;float:left}
   #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:0px}
-  #matllo{font-size:13px;top:10px;right:15px;left:15px}
-  #mant{left:15px}
-  #magetapp{right:15px}
   #ayh{font-size:12px;right:15px}
   #tllo{font-size:11px;top:26px;right:15px}
   .stars{font-size:14px;top:22px;left:15px}
