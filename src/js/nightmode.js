@@ -373,9 +373,14 @@ const afterBodyReady = () => {
 									thatbckishere = true;
 								}
 							}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
-							// check if use more than 2X gradient white
+								// check if use more than 1X gradient white
 								var bla = occurrences(z, "rgb(255, 255, 255)");
 								if(bla >= 1){ // check if includes it 1 item or more
+									thatbckishere = true;
+								}
+								// check if use more than 1X transparent or rgba(0, 0, 0, 0)
+								var blb = occurrences(z, "rgba(0, 0, 0, 0)");
+								if(blb >= 1){ // check if includes it 1 item or more
 									thatbckishere = true;
 								}
 							}else{
