@@ -822,6 +822,26 @@ const afterBodyReady = () => {
 						var ytmiguidai;
 						var ytmiguidal = ytdminiguideentryrenderera.length;
 						for(ytmiguidai = 0; ytmiguidai < ytmiguidal; ytmiguidai++){ ytdminiguideentryrenderera[ytmiguidai].style.backgroundColor = nightmodebck; }
+						var ytchipcloudrenderera = document.querySelectorAll("yt-chip-cloud-renderer");
+						var ytchipi;
+						var ytchipl = ytchipcloudrenderera.length;
+						for(ytchipi = 0; ytchipi < ytchipl; ytchipi++){ ytchipcloudrenderera[ytchipi].style.backgroundColor = nightmodebck; }
+						var yttvfilmrenderera = document.querySelectorAll("ytd-tvfilm-offer-module-renderer");
+						var yttvfilmi;
+						var yttvfilml = yttvfilmrenderera.length;
+						for(yttvfilmi = 0; yttvfilmi < yttvfilml; yttvfilmi++){ yttvfilmrenderera[yttvfilmi].style.backgroundColor = nightmodebck; }
+						var ytheadtvfilmrenderera = document.querySelectorAll("#header.ytd-tvfilm-offer-module-renderer");
+						var ytheadtvfilmi;
+						var ytheadtvfilml = ytheadtvfilmrenderera.length;
+						for(ytheadtvfilmi = 0; ytheadtvfilmi < ytheadtvfilml; ytheadtvfilmi++){ ytheadtvfilmrenderera[ytheadtvfilmi].style.backgroundColor = nightmodebck; }
+						var ytleftchipclouda = document.querySelectorAll("#left-arrow-button.yt-chip-cloud-renderer");
+						var ytleftchipcloudi;
+						var ytleftchipcloudl = ytleftchipclouda.length;
+						for(ytleftchipcloudi = 0; ytleftchipcloudi < ytleftchipcloudl; ytleftchipcloudi++){ ytleftchipclouda[ytleftchipcloudi].style.backgroundColor = nightmodebck; }
+						var ytrightchipclouda = document.querySelectorAll("#right-arrow-button.yt-chip-cloud-renderer");
+						var ytrightchipcloudi;
+						var ytrightchipcloudl = ytrightchipclouda.length;
+						for(ytrightchipcloudi = 0; ytrightchipcloudi < ytrightchipcloudl; ytrightchipcloudi++){ ytrightchipclouda[ytrightchipcloudi].style.backgroundColor = nightmodebck; }
 					}
 				//-----
 				}else{
@@ -1204,6 +1224,26 @@ const afterBodyReady = () => {
 						var ytminiguideentryi;
 						var ytminiguideentryl = ytdminiguideentryrendererb.length;
 						for(ytminiguideentryi = 0; ytminiguideentryi < ytminiguideentryl; ytminiguideentryi++){ ytdminiguideentryrendererb[ytminiguideentryi].style.backgroundColor = ""; }
+						var ytchipcloudrendererb = document.querySelectorAll("yt-chip-cloud-renderer");
+						var ytchipbi;
+						var ytchipbl = ytchipcloudrendererb.length;
+						for(ytchipbi = 0; ytchipbi < ytchipbl; ytchipbi++){ ytchipcloudrendererb[ytchipbi].style.backgroundColor = ""; }
+						var yttvfilmrendererb = document.querySelectorAll("ytd-tvfilm-offer-module-renderer");
+						var yttvfilmbi;
+						var yttvfilmbl = yttvfilmrendererb.length;
+						for(yttvfilmbi = 0; yttvfilmbi < yttvfilmbl; yttvfilmbi++){ yttvfilmrendererb[yttvfilmbi].style.backgroundColor = ""; }
+						var ytheadtvfilmrendererb = document.querySelectorAll("#header.ytd-tvfilm-offer-module-renderer");
+						var ytheadtvfilmbi;
+						var ytheadtvfilmbl = ytheadtvfilmrendererb.length;
+						for(ytheadtvfilmbi = 0; ytheadtvfilmbi < ytheadtvfilmbl; ytheadtvfilmbi++){ ytheadtvfilmrendererb[ytheadtvfilmbi].style.backgroundColor = ""; }
+						var ytleftchipcloudb = document.querySelectorAll("#left-arrow-button.yt-chip-cloud-renderer");
+						var ytleftchipcloudbi;
+						var ytleftchipcloudbl = ytleftchipcloudb.length;
+						for(ytleftchipcloudbi = 0; ytleftchipcloudbi < ytleftchipcloudbl; ytleftchipcloudbi++){ ytleftchipcloudb[ytleftchipcloudbi].style.backgroundColor = ""; }
+						var ytrightchipcloudb = document.querySelectorAll("#right-arrow-button.yt-chip-cloud-renderer");
+						var ytrightchipcloudbi;
+						var ytrightchipcloudbl = ytrightchipcloudb.length;
+						for(ytrightchipcloudbi = 0; ytrightchipcloudbi < ytrightchipcloudbl; ytrightchipcloudbi++){ ytrightchipcloudb[ytrightchipcloudbi].style.backgroundColor = ""; }
 					}
 				}
 
