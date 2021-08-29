@@ -617,7 +617,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 @keyframes animStar{from{transform:translateY(0px)}to{transform:translateY(-2000px)}}
 /* Night Theme */
 #stefanvdnighttheme.stefanvdswitchhidden{display:none!important}
-#stefanvdnighttheme{transform:scale(0.7)!important;padding:0!important;margin:0!important;z-index:990!important;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important;background:#fff!important;border:1px solid #EBEBEB!important;box-shadow:#fff 0 0 10px;border-radius:5px!important;cursor:pointer!important;height:50px!important;margin:0!important;overflow:hidden!important;position:fixed!important;width:100px!important}
+#stefanvdnighttheme{transform:scale(0.7)!important;transform-origin:0% 100%!important;padding:0!important;margin:0!important;z-index:990!important;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important;background:#fff!important;border:1px solid #EBEBEB!important;box-shadow:#fff 0 0 10px;border-radius:5px!important;cursor:pointer!important;height:50px!important;margin:0!important;overflow:hidden!important;position:fixed!important;width:100px!important}
 #stefanvdnighttheme input{display:none!important}
 #stefanvdnighttheme input:checked + #stefanvdnightthemeslider{left:0!important}
 #stefanvdnighttheme #stefanvdnightthemeslider{left:-50px!important;position:absolute!important;top:0!important;-webkit-transition:left .25s ease-out;-moz-transition:left .25s ease-out;-o-transition:left .25s ease-out;-ms-transition:left .25s ease-out;transition:left .25s ease-out}

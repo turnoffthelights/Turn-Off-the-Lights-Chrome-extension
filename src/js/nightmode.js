@@ -165,8 +165,8 @@ const afterBodyReady = () => {
 		nmbottomright = response["nmbottomright"];
 		nmbottomleft = response["nmbottomleft"];
 		nmcustom = response["nmcustom"];
-		nmcustomx = response["nmcustomx"]; if(nmcustomx == null)nmcustomx = "25px";
-		nmcustomy = response["nmcustomy"]; if(nmcustomy == null)nmcustomy = "25px";
+		nmcustomx = response["nmcustomx"]; if(nmcustomx == null)nmcustomx = "15px";
+		nmcustomy = response["nmcustomy"]; if(nmcustomy == null)nmcustomy = "15px";
 		nightmodebck = response["nightmodebck"]; if(nightmodebck == null)nightmodebck = "#1e1e1e";
 		nightmodetxt = response["nightmodetxt"]; if(nightmodetxt == null)nightmodetxt = "#ffffff";
 		nightmodehyperlink = response["nightmodehyperlink"]; if(nightmodehyperlink == null)nightmodehyperlink = "#ffffff";
@@ -1323,7 +1323,7 @@ const afterBodyReady = () => {
 					item.addEventListener("pointerover", function(){ item.style.opacity = "1"; }, false);
 					item.addEventListener("pointerout", function(){ item.style.opacity = ".2"; }, false);
 				}
-				if(nmcustom == true){ newnight.style.left = "calc(" + nmcustomx + " + env(safe-area-inset-left))"; newnight.style.bottom = "calc(" + nmcustomy + " + env(safe-area-inset-bottom))"; }else if(nmtopleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmtopright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.top = "calc(25px + env(safe-area-inset-top))"; }else if(nmbottomright == true){ newnight.style.right = "calc(25px + env(safe-area-inset-right))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }else if(nmbottomleft == true){ newnight.style.left = "calc(25px + env(safe-area-inset-left))"; newnight.style.bottom = "calc(25px + env(safe-area-inset-bottom))"; }
+				if(nmcustom == true){ newnight.style.left = "calc(" + nmcustomx + " + env(safe-area-inset-left))"; newnight.style.bottom = "calc(" + nmcustomy + " + env(safe-area-inset-bottom))"; }else if(nmtopleft == true){ newnight.style.left = "calc(15px + env(safe-area-inset-left))"; newnight.style.top = "calc(15px + env(safe-area-inset-top))"; }else if(nmtopright == true){ newnight.style.right = "calc(15px + env(safe-area-inset-right))"; newnight.style.top = "calc(15px + env(safe-area-inset-top))"; }else if(nmbottomright == true){ newnight.style.right = "calc(15px + env(safe-area-inset-right))"; newnight.style.bottom = "calc(15px + env(safe-area-inset-bottom))"; }else if(nmbottomleft == true){ newnight.style.left = "calc(15px + env(safe-area-inset-left))"; newnight.style.bottom = "calc(15px + env(safe-area-inset-bottom))"; }
 
 				var newnightinput = document.createElement("input");
 				newnightinput.setAttribute("type", "checkbox");
