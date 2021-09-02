@@ -254,13 +254,16 @@ const afterBodyReady = () => {
 						});
 					}
 				}else if(mutation.type == "attributes"){
+					// only for class and style, disable temporally the mutation observer and then enable it back
 					var attributeValue = mutation.target.getAttribute(mutation.attributeName);
 					if(attributeValue != null){
-						if(!attributeValue.includes("stefanvdnight")){
-							if(mutation.attributeName == "class"){
-								convertwebnight(mutation.target);
-							}
+						// End mutation observer
+						nightobserver.disconnect();
+						if(mutation.attributeName === "class"){
+							convertwebnight(mutation.target);
 						}
+						// Start mutation observer
+						nightobserver.observe(targetNode, observerConfig);
 					}
 					// night mode style changed
 					if(mutation.attributeName == "style"){
