@@ -2596,6 +2596,20 @@ function domcontentloaded(){
 	// Save password
 	$("confirmpassword").addEventListener("click", function(){ save_options(); var optionpastemp = chrome.i18n.getMessage("optionpasswordsaved"); window.alert(optionpastemp); });
 
+	// Change Night Mode to dark switch
+	var nmcheckbox = $("samplestefanvdnighttheme").getElementsByTagName("input")[0];
+	nmcheckbox.addEventListener("change", function(){
+		if(nmcheckbox.checked == true){
+			if($("stefanvdnighti")){
+				$("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
+			}
+		}else{
+			if($("stefanvdnightin")){
+				$("stefanvdnightin").setAttribute("id", "stefanvdnighti"); // change night background button
+			}
+		}
+	});
+
 	var guidekb = true;
 	function memguide(){
 		if(guidekb == true){
