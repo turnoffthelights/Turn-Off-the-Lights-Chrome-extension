@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var darkmode; var interval; var nighttheme; var lampandnightmode; var ambilight; var ambilightfixcolor; var ambilight4color; var ambilightvarcolor; var atmosvivid; var nightmodetxt; var nightmodebck; var nightmodehyperlink; var multiopacall; var multiopacsel; var multiopacityDomains; var firstDate; var optionskipremember; var firstsawrate; var pipvisualtype; var nightmodebutton; var nightonly; var nightDomains; var nightmodebydomain; var firstsawscroll; var nightmodeborder;
+var lightcolor, darkmode, interval, nighttheme, lampandnightmode, ambilight, ambilightfixcolor, ambilight4color, ambilightvarcolor, atmosvivid, nightmodetxt, nightmodebck, nightmodehyperlink, multiopacall, multiopacsel, multiopacityDomains, firstDate, optionskipremember, firstsawrate, pipvisualtype, nightmodebutton, nightonly, nightDomains, nightmodebydomain, firstsawscroll, nightmodeborder;
 
 function save_options(){
 	var getpipvisualtype;
@@ -76,7 +76,9 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
+	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
+		lightcolor = items["lightcolor"]; if(lightcolor == null)lightcolor = "#000000"; // default color black
+		currentlayercolor = lightcolor;
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
 		interval = items["interval"]; if(interval == null)interval = 80; // default 80%
 		ambilight = items["ambilight"]; if(ambilight == null)ambilight = false; // default false
@@ -615,7 +617,8 @@ function executelivechange(){
 		currentWindow: true
 	}, function(tab){
 		var newlightoffcolor = newconvertHex(currentlayercolor, $("oslider").value);
-		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + $("oslider").value + "/100);}}var metas = document.getElementsByTagName(\"meta\");var m, p = metas.length;for(m = 0; m < p; m++){if(metas[m].getAttribute(\"name\") == \"theme-color\"){if(metas[m].getAttribute(\"media\")){if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: light)\"){metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}else if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: dark)\"){metas[m].setAttribute(\"content\",'" + newlightoffcolor + "');}}else{metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}}}"});
+		var currentopac = $("oslider").value;
+		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + currentopac + "/100);}}var metas = document.getElementsByTagName(\"meta\");var m, p = metas.length;for(m = 0; m < p; m++){if(metas[m].getAttribute(\"name\") == \"theme-color\"){if(metas[m].getAttribute(\"media\")){if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: light)\"){metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}else if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: dark)\"){metas[m].setAttribute(\"content\",'" + newlightoffcolor + "');}}else{metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}}}"});
 	});
 }
 

@@ -139,14 +139,16 @@ function PopupCenter(url, title, w, h){
 
 // Check for live API permissions
 try{
-	navigator.permissions.query({name:"microphone"})
-		.then(function(permissionStatus){
-			permissionStatus.onchange = function(){
-				if(this.state == "granted"){
-					speechrecognition();
-				}
-			};
-		});
+	if(navigator.permissions && navigator.permissions.query){
+		navigator.permissions.query({name:"microphone"})
+			.then(function(permissionStatus){
+				permissionStatus.onchange = function(){
+					if(this.state == "granted"){
+						speechrecognition();
+					}
+				};
+			});
+	}
 }catch(e){ console.error(e); }
 
 var interim_transcript = "";
