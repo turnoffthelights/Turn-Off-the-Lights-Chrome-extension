@@ -1308,14 +1308,18 @@ const afterBodyReady = () => {
 			});
 		}
 
-		var timernightswitch;
-		var mousemoveswitchhide = function(){
-			window.clearTimeout(timernightswitch);
+		function hideclassswitch(){
 			if($("stefanvdnighttheme")){
 				if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){
 					$("stefanvdnighttheme").classList.remove("stefanvdswitchhidden");
 				}
 			}
+		}
+
+		var timernightswitch;
+		var mousemoveswitchhide = function(){
+			window.clearTimeout(timernightswitch);
+			hideclassswitch();
 			timernightswitch = window.setTimeout(function(){
 				if($("stefanvdnighttheme")){
 					$("stefanvdnighttheme").classList.add("stefanvdswitchhidden");
@@ -1332,9 +1336,7 @@ const afterBodyReady = () => {
 
 		function goshowswitchonpause(){
 			if(!nightmodeswitchhide){ // auto hide switch is not enabled
-				if($("stefanvdnighttheme")){
-					if($("stefanvdnighttheme").classList.contains("stefanvdswitchhidden")){ $("stefanvdnighttheme").classList.remove("stefanvdswitchhidden"); }
-				}
+				hideclassswitch();
 			}
 		}
 
@@ -1489,6 +1491,11 @@ const afterBodyReady = () => {
 			}
 		}
 
+		function donightpack(){
+			if(nighttheme == true){ showswitchtricker(); }
+			if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+		}
+
 		// show all options the night switch CSS
 		// but not the "only" websites
 		var currenturl;
@@ -1499,11 +1506,11 @@ const afterBodyReady = () => {
 
 			if(nightonly == true){
 				if(nightmodebydomain == true){
-				// Only the domain
+					// Only the domain
 					currenturl = window.location.protocol + "//" + window.location.host;
 				}else{
-				// The full URL
-				// WITH no end slash
+					// The full URL
+					// WITH no end slash
 					currenturl = window.location.href;
 					if(currenturl.substr(-1) === "/"){
 					// NO end slash
@@ -1522,16 +1529,14 @@ const afterBodyReady = () => {
 					for(i = 0; i < l; i++){
 						if(nightmodechecklistwhite == true){
 							if(nbuf[i].includes("*")){
-							// regex test
+								// regex test
 								if(checkregdomaininside(nbuf[i], currenturl) == true){
-									if(nighttheme == true){ showswitchtricker(); }
-									if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+									donightpack();
 								}
 							}else{
-							// regular text
+								// regular text
 								if(currenturl == nbuf[i]){
-									if(nighttheme == true){ showswitchtricker(); }
-									if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+									donightpack();
 								}
 							}
 						}else if(nightmodechecklistblack == true){
@@ -1551,8 +1556,7 @@ const afterBodyReady = () => {
 				}
 				if(nightmodechecklistblack == true){
 					if(nightrabbit == false){
-						if(nighttheme == true){ showswitchtricker(); }
-						if(nightenabletheme == true || nightmodeos == true){ timergonighttricker(); }
+						donightpack();
 					}
 				}
 			}else{
