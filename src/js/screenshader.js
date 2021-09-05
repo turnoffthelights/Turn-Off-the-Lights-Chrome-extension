@@ -27,5 +27,45 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+var mousespotlights = null, screenshader = null, lightcolor = null, interval = null;
+
+function setAttributes(el, attrs){
+	for(var key in attrs){
+		el.setAttribute(key, attrs[key]);
+	}
+}
 // settings - screen shader
-var mousespotlights = null, screenshader = null; chrome.storage.sync.get(["mousespotlights", "screenshader"], function(response){ mousespotlights = response["mousespotlights"]; screenshader = response["screenshader"]; if(mousespotlights == true){ if(screenshader == true){ chrome.runtime.sendMessage({name:"automatic"}); } } });
+const afterBodyReadyShader = () => {
+	chrome.storage.sync.get(["mousespotlights", "screenshader", "lightcolor", "interval"], function(response){
+		mousespotlights = response["mousespotlights"];
+		screenshader = response["screenshader"];
+		lightcolor = response["lightcolor"]; if(lightcolor)lightcolor = response["lightcolor"]; else lightcolor = "#000000"; // default color black
+		interval = response["interval"]; if(interval == null)interval = 80; // default interval 80%
+		if(mousespotlights == true){
+			if(screenshader == true){
+				if(document.documentElement){
+					var newscreenshader = document.createElement("div");
+					setAttributes(newscreenshader, {"id": "stefanvdscreenshader", "class": "stefanvdscreenshader"});
+					newscreenshader.style.background = lightcolor;
+					newscreenshader.style.mixBlendMode = "multiply";
+					newscreenshader.style.opacity = interval / 100;
+					document.documentElement.insertBefore(newscreenshader, document.documentElement.firstChild);
+					chrome.storage.sync.set({"screenshader": true});
+				}
+			}
+		}
+	});
+}; // afterbody
+
+if(document.body){
+	afterBodyReadyShader();
+}else{
+	const bodyObserver = new MutationObserver((recordList, observer) => {
+		// Wait for 'document.body' get the definition
+		if(!document.body)return;
+
+		afterBodyReadyShader();
+		observer.disconnect();
+	});
+	bodyObserver.observe(document.documentElement, {childList: true});
+}

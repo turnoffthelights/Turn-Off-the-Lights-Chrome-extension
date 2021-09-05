@@ -43,11 +43,6 @@
       "match_about_blank": true
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["js/screenshader.js"],
-      "run_at": "document_start"
-    },
-    {
       "matches": ["*://*.youtube.com/*"],
       "js": [ "js/fps.js" ],
       "run_at": "document_start",
@@ -94,5 +89,5 @@
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage" ]
+  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage", "webNavigation" ]
 }
