@@ -538,5 +538,6 @@
     "titelonoff": {"message": "ON/OFF"},
     "titelnightmodeborder": {"message": "Border color"},
     "titleinfobx": {"message": "Info"},
-    "permissionwebnav": {"message": "This is to add the Night Mode immediately before the web page loads."}
+    "permissionwebnav": {"message": "This is to add the Night Mode immediately before the web page loads."},
+    "desnmautoclock": {"message": "Activate between the following hours:"}
 }

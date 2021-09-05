@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var lightcolor, darkmode, interval, nighttheme, lampandnightmode, ambilight, ambilightfixcolor, ambilight4color, ambilightvarcolor, atmosvivid, nightmodetxt, nightmodebck, nightmodehyperlink, multiopacall, multiopacsel, multiopacityDomains, firstDate, optionskipremember, firstsawrate, pipvisualtype, nightmodebutton, nightonly, nightDomains, nightmodebydomain, firstsawscroll, nightmodeborder;
+var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null;
 
 function save_options(){
 	var getpipvisualtype;
