@@ -149,7 +149,7 @@ function checkregdomaininside(thaturl, websiteurl){
 	return false;
 }
 
-const afterBodyReady = () => {
+const afterBodyReadyNight = () => {
 	chrome.storage.sync.get(["nighttheme", "nightonly", "nightDomains", "nightenabletheme", "nighthover", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightactivetime", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightmodebutton", "nightmodeos", "nightmodeborder", "nmautobegintime", "nmautoendtime", "nmautoclock"], function(response){
 		nighttheme = response["nighttheme"];
 		nightonly = response["nightonly"];
@@ -1866,13 +1866,13 @@ const afterBodyReady = () => {
 }; // afterbody
 
 if(document.body){
-	afterBodyReady();
+	afterBodyReadyNight();
 }else{
 	const bodyObserver = new MutationObserver((recordList, observer) => {
 		// Wait for 'document.body' get the definition
 		if(!document.body)return;
 
-		afterBodyReady();
+		afterBodyReadyNight();
 		observer.disconnect();
 	});
 	bodyObserver.observe(document.documentElement, {childList: true});
