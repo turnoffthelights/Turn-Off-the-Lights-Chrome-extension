@@ -675,6 +675,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 .totlvideovolumeprogresshidden{display:none}
 .totlpointereventsnone{pointer-events:none!important}
 .totltheme{display:none!important}
+#totldark{display:none!important}
 #stefanvdpipvisualizationcanvas{position:absolute;top:-320px;left:-640px;z-index:10000000}
 #stefanvdpipvisualizationvideo{position:absolute;top:-320px;left:-640px;z-index:10000000}
 :root{

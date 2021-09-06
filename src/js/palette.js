@@ -51,7 +51,11 @@ function save_options(){
 }
 
 function executenightmode(){
-	chrome.tabs.executeScript(null, {code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
+	if(lampandnightmode == true){
+		chrome.runtime.sendMessage({name: "mastertabnight"});
+	}else{
+		chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+	}
 }
 
 function openoptionspage(){
@@ -552,18 +556,6 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 });
 
-chrome.storage.onChanged.addListener(function(changes){
-	if(changes["nighttheme"]){
-		if(changes["nighttheme"].newValue == true){
-			$("btngonight").disabled = false;
-			$("lampandnightmode").disabled = false;
-		}else{
-			$("btngonight").disabled = true;
-			$("lampandnightmode").disabled = true;
-		}
-	}
-});
-
 function addtonight(){
 	var thatopenurl = document.getElementById("currentweburl").getAttribute("data-fullurl");
 	nightDomains[thatopenurl] = true;
@@ -575,11 +567,6 @@ function removetonight(){
 }
 
 function test(){
-	if($("nighttheme").checked == true){
-		$("btngonight").disabled = false; $("lampandnightmode").disabled = false;
-	}else{
-		$("btngonight").disabled = true; $("lampandnightmode").disabled = true;
-	}
 	$("nightonly").checked == true ? $("sitecheck").disabled = false : $("sitecheck").disabled = true;
 	$("sitecheck").checked == true ? addtonight() : removetonight();
 	if($("ambilight").checked == true){

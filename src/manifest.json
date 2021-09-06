@@ -56,6 +56,11 @@
       "match_about_blank": true
     },
     {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/screenshader.js"],
+      "run_at": "document_start"
+    },
+    {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
     }

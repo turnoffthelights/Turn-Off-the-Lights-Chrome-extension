@@ -319,6 +319,12 @@ const afterBodyReadyNight = () => {
 			if(node.className == "stefanvdlightareoff" && node != null){
 				return;
 			}
+			if(node.id == "stefanvdtheme" && node != null){
+				return;
+			}
+			if(node.id == "totldark" && node != null){
+				return;
+			}
 
 			var parent = document.getElementById("stefanvdnighttheme");
 			if(parent && parent.contains(node)){
@@ -467,6 +473,13 @@ const afterBodyReadyNight = () => {
 						$("stefanvdnighti").setAttribute("id", "stefanvdnightin"); // change day background button
 					}
 					if($("stefanvdnightthemecheckbox")){ $("stefanvdnightthemecheckbox").checked = true; }
+
+					// extern get that the Night Mode is activated
+					if(!$("totldark")){
+						const newDiv = document.createElement("div");
+						newDiv.id = "totldark";
+						document.body.appendChild(newDiv);
+					}
 
 					if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 
@@ -870,7 +883,7 @@ const afterBodyReadyNight = () => {
 						document.body.style.color = oldtextcolor;
 						document.querySelector("html").style.backgroundColor = oldbackgroundColorhtml;
 					}else{
-					// search all elements and remove night class
+						// search all elements and remove night class
 						var elemsnight = document.querySelectorAll(".stefanvdnight");
 						[].forEach.call(elemsnight, function(el){
 							el.classList.remove("stefanvdnight");
@@ -896,6 +909,13 @@ const afterBodyReadyNight = () => {
 							el.classList.remove("stefanvdnightboxshadow");
 						});
 					}
+
+					// remove the extern Night Mode is activated
+					if($("totldark")){
+						var elem = $("totldark");
+						elem.parentNode.removeChild(elem);
+					}
+					
 					//---
 
 					if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
@@ -1824,16 +1844,37 @@ const afterBodyReadyNight = () => {
 
 					sun = true; isitdark = false;
 					// search all elements and remove night class
-					var elemscolor = document.querySelectorAll(".stefanvdnight");
-					[].forEach.call(elemscolor, function(el){
+					var elemsnight = document.querySelectorAll(".stefanvdnight");
+					[].forEach.call(elemsnight, function(el){
 						el.classList.remove("stefanvdnight");
 					});
 
-					var elemsbck = document.querySelectorAll(".stefanvdnightbck");
-					[].forEach.call(elemsbck, function(el){
+					var elemsbcka = document.querySelectorAll(".stefanvdnightbck");
+					[].forEach.call(elemsbcka, function(el){
 						el.classList.remove("stefanvdnightbck");
 					});
 
+					var elemsbttn = document.querySelectorAll(".stefanvdnightbutton");
+					[].forEach.call(elemsbttn, function(el){
+						el.classList.remove("stefanvdnightbutton");
+					});
+
+					var elemsbrdr = document.querySelectorAll(".stefanvdnightborder");
+					[].forEach.call(elemsbrdr, function(el){
+						el.classList.remove("stefanvdnightborder");
+					});
+
+					var elemsbxshw = document.querySelectorAll(".stefanvdnightboxshadow");
+					[].forEach.call(elemsbxshw, function(el){
+						el.classList.remove("stefanvdnightboxshadow");
+					});
+
+					// remove the extern Night Mode is activated
+					if(document.getElementById("totldark")){
+						var elem = document.getElementById("totldark");
+						elem.parentNode.removeChild(elem);
+					}
+					
 					var elemstyle = document.getElementById("totlnightmodestyle");
 					if(elemstyle){ elemstyle.parentElement.removeChild(elemstyle); }
 					var elemswitch = document.getElementById("stefanvdnighttheme");

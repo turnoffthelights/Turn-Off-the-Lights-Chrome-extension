@@ -155,6 +155,9 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			});
 		}
 		break;
+	case"sendnightmodeindark":
+ 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
+ 		break;
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
@@ -183,15 +186,16 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
 	injectScriptsTo(tabId);
 });
 
+// Safari 15 bug => "js/screenshader.js" can not read multiple files. No actions for the 2nd script in array
+const scriptList = ["js/nightmode.js"];
+
 const injectScriptsTo = (tabId) => {
-	chrome.tabs.executeScript(tabId, {
-		file: "js/screenshader.js",
-		runAt: "document_start"
-	}, () => void chrome.runtime.lastError);
-	chrome.tabs.executeScript(tabId, {
-		file: "js/nightmode.js",
-		runAt: "document_start"
-	}, () => void chrome.runtime.lastError);
+	scriptList.forEach((script) => {
+	  chrome.tabs.executeScript(tabId, {
+		file: `${script}`,
+		runAt: "document_start",
+	  }, () => void chrome.runtime.lastError);
+	});
 };
 //---
 
@@ -294,7 +298,11 @@ chrome.browserAction.onClicked.addListener(function(tabs){
 
 chrome.commands.onCommand.addListener(function(command){
 	if(command == "toggle-feature-nightmode"){
-		chrome.tabs.executeScript(null, {code:"if(document.getElementById('stefanvdnightthemecheckbox')){document.getElementById('stefanvdnightthemecheckbox').click();}"});
+		if(lampandnightmode == true){
+			chrome.runtime.sendMessage({name: "mastertabnight"});
+		}else{
+			chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+		}
 	}
 });
 

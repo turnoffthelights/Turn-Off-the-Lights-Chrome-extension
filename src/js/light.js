@@ -1095,6 +1095,20 @@ function lockscreen(){
 			chrome.runtime.sendMessage({name: "browsertheme", value: "light"});
 		}
 	}
+	// lamp and night mode active with one click
+	if(lampandnightmode == true){
+		// deactivate the feature 
+		//chrome.runtime.sendMessage({name: "mastertabnight"});
+		var nightowlprofile, nightenabletheme;
+		chrome.storage.sync.get(["nightowlprofile", "nightenabletheme"], function(response){
+			nightowlprofile = response["nightowlprofile"];
+			nightenabletheme = response["nightenabletheme"];
+			if(nightowlprofile == true && nightenabletheme == true){
+				chrome.storage.sync.set({"nightowlprofile": false});
+				chrome.storage.sync.set({"nightenabletheme": false});
+			}
+		});
+	}
 }
 
 // Mouse Actions
@@ -1944,6 +1958,7 @@ function lightsgoonoroff(){
 	// lamp and night mode active with one click
 	if(lampandnightmode == true){
 		chrome.runtime.sendMessage({name: "mastertabnight"});
+		return;
 	}
 
 	if(blackon){
