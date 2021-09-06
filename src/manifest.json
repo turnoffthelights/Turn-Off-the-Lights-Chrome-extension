@@ -56,11 +56,6 @@
       "match_about_blank": true
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["js/nightmode.js"],
-      "run_at": "document_end"
-    },
-    {
       "matches": ["*://*.youtube.com/*"], 
       "css" : ["css/youtube.css"]
     }

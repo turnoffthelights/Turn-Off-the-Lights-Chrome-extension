@@ -188,6 +188,10 @@ const injectScriptsTo = (tabId) => {
 		file: "js/screenshader.js",
 		runAt: "document_start"
 	}, () => void chrome.runtime.lastError);
+	chrome.tabs.executeScript(tabId, {
+		file: "js/nightmode.js",
+		runAt: "document_start"
+	}, () => void chrome.runtime.lastError);
 };
 //---
 
