@@ -316,6 +316,9 @@ const afterBodyReadyNight = () => {
 				return;
 			}
 			// console.log("node id:" + node.id + " tag:" + node.tagName + " class:" + node.className);
+			if(node.className == "stefanvdlightareoff" && node != null){
+				return;
+			}
 
 			var parent = document.getElementById("stefanvdnighttheme");
 			if(parent && parent.contains(node)){

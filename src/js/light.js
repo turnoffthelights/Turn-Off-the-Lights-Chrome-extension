@@ -221,7 +221,7 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 
 				// push below the dark layer
 				if(y >= 1000){
-					var elementa = document.getElementsByTagName("screenshader")[0];// Stefan screenshader
+					var elementa = document.getElementsByTagName("screenshader")[0];// Stefan screenshader tag skip
 					var elementstefanvd = q[i].id; elementstefanvd = elementstefanvd.substring(0, 8); // everthing with stefanvd element is whitelist
 					if(elementa == q[i].parentNode || elementstefanvd == "stefanvd" || q[i].tagName == "VIDEO"){
 						// Do nothing
@@ -1095,10 +1095,6 @@ function lockscreen(){
 			chrome.runtime.sendMessage({name: "browsertheme", value: "light"});
 		}
 	}
-	// lamp and night mode active with one click
-	if(lampandnightmode == true){
-		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "day"});
-	}
 }
 
 // Mouse Actions
@@ -1945,14 +1941,15 @@ function lightsgoonoroff(){
 	// save default meta theme color
 	getdefaultmetatheme();
 
+	// lamp and night mode active with one click
+	if(lampandnightmode == true){
+		chrome.runtime.sendMessage({name: "mastertabnight"});
+	}
+
 	if(blackon){
 		lockscreen();
 	}else{
 		setmetatheme(false);
-		// lamp and night mode active with one click
-		if(lampandnightmode == true){
-			chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});
-		}
 
 		if(darkbrowsertheme == true){
 			chrome.runtime.sendMessage({name: "browsertheme", value: "dark"});
@@ -2373,7 +2370,7 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 	lampandnightmode = response["lampandnightmode"];
 
 	if(mousespotlights == true){
-	// the screen shader
+		// the screen shader
 		var stefanscreenshader = $("stefanvdscreenshader");
 		if(stefanscreenshader){
 			document.documentElement.removeChild(stefanscreenshader);
