@@ -1118,9 +1118,7 @@ var spotx = 0;
 var spoty = 0;
 var oldspotx = 0;
 var oldspoty = 0;
-var fullspotlightsize;
-var borderspotlightsize;
-var mousespotlightstyle;
+var fullspotlightsize, borderspotlightsize, mousespotlightstyle;
 function moveSpot(e){
 	if(e.clientX || e.clientY){
 		spotx = e.clientX; spoty = e.clientY;
@@ -1131,10 +1129,7 @@ function moveSpot(e){
 	spot.style.backgroundImage = mousespotlightstyle;
 }
 
-var presstimer;
-var countupsizetimer;
-var mathfullsizeup;
-var mathbordersizeup;
+var presstimer, countupsizetimer, mathfullsizeup, mathbordersizeup;
 function spotmousedown(){
 	presstimer = window.setTimeout(function(){
 
