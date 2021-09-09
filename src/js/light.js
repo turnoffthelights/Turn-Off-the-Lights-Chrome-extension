@@ -1097,8 +1097,8 @@ function lockscreen(){
 	}
 	// lamp and night mode active with one click
 	if(lampandnightmode == true){
-		// deactivate the feature 
-		//chrome.runtime.sendMessage({name: "mastertabnight"});
+		// deactivate the feature
+		// chrome.runtime.sendMessage({name: "mastertabnight"});
 		var nightowlprofile, nightenabletheme;
 		chrome.storage.sync.get(["nightowlprofile", "nightenabletheme"], function(response){
 			nightowlprofile = response["nightowlprofile"];
