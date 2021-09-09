@@ -915,7 +915,7 @@ const afterBodyReadyNight = () => {
 						var elem = $("totldark");
 						elem.parentNode.removeChild(elem);
 					}
-					
+
 					//---
 
 					if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
@@ -1874,7 +1874,7 @@ const afterBodyReadyNight = () => {
 						var elem = document.getElementById("totldark");
 						elem.parentNode.removeChild(elem);
 					}
-					
+
 					var elemstyle = document.getElementById("totlnightmodestyle");
 					if(elemstyle){ elemstyle.parentElement.removeChild(elemstyle); }
 					var elemswitch = document.getElementById("stefanvdnighttheme");

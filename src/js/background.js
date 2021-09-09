@@ -156,8 +156,8 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		}
 		break;
 	case"sendnightmodeindark":
- 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
- 		break;
+		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
+		break;
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
@@ -191,10 +191,10 @@ const scriptList = ["js/nightmode.js"];
 
 const injectScriptsTo = (tabId) => {
 	scriptList.forEach((script) => {
-	  chrome.tabs.executeScript(tabId, {
-		file: `${script}`,
-		runAt: "document_start",
-	  }, () => void chrome.runtime.lastError);
+		chrome.tabs.executeScript(tabId, {
+			file: `${script}`,
+			runAt: "document_start",
+		}, () => void chrome.runtime.lastError);
 	});
 };
 //---
@@ -296,13 +296,17 @@ chrome.browserAction.onClicked.addListener(function(tabs){
 	}
 });
 
+var lampandnightmode;
 chrome.commands.onCommand.addListener(function(command){
 	if(command == "toggle-feature-nightmode"){
-		if(lampandnightmode == true){
-			chrome.runtime.sendMessage({name: "mastertabnight"});
-		}else{
-			chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
-		}
+		chrome.storage.sync.get(["lampandnightmode"], function(response){
+			lampandnightmode = response["lampandnightmode"];
+			if(lampandnightmode == true){
+				chrome.runtime.sendMessage({name: "mastertabnight"});
+			}else{
+				chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+			}
+		});
 	}
 });
 
