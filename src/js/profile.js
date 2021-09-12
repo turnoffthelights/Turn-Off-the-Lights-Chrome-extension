@@ -91,8 +91,7 @@ function getdefaultnightmetatheme(){
 
 function setnightmetatheme(a){
 	const metas = document.getElementsByTagName("meta");
-	var darktheme;
-	var lighttheme;
+	var darktheme, lighttheme;
 
 	var newnightmodetcolor = nightmodebck;
 	if(a == true){
@@ -105,15 +104,11 @@ function setnightmetatheme(a){
 		lighttheme = newnightmodetcolor;
 	}
 
-	let i, l = metas.length;
+	var i, l = metas.length;
 	for(i = 0; i < l; i++){
 		if(metas[i].getAttribute("name") == "theme-color"){
 			if(metas[i].getAttribute("media")){
-				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
-					metas[i].setAttribute("content", lighttheme);
-				}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
-					metas[i].setAttribute("content", darktheme);
-				}
+				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){ metas[i].setAttribute("content", lighttheme); }else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){ metas[i].setAttribute("content", darktheme); }
 			}else{
 				metas[i].setAttribute("content", lighttheme);
 			}
