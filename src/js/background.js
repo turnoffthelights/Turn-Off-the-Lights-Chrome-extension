@@ -186,8 +186,9 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
 	injectScriptsTo(tabId);
 });
 
-// Safari 15 bug => "js/screenshader.js" can not read multiple files. No actions for the 2nd script in array
-const scriptList = ["js/nightmode.js"];
+// Safari 15 bug => can not read multiple files. No actions for the 2nd script in array
+// profile.js =  Night Mode and Screen Shader
+const scriptList = ["js/profile.js"];
 
 const injectScriptsTo = (tabId) => {
 	scriptList.forEach((script) => {
