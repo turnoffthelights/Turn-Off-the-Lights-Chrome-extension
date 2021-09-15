@@ -131,175 +131,178 @@ function save_options(){
 }
 
 var firstdefaultvalues = {};
-// Option default value to read if there is no current value from chrome.storage AND init default value
-chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "autostopDomains", "videotoolDomains", "videovolumeDomains", "multiopacityDomains", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "nightmodeborder", "nmautobegintime", "nmautoendtime"], function(items){
-	// find no localstore lightcolor
-	if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
-	// find no localstore ambilightcolorhex
-	if(items["ambilightcolorhex"] == null){ firstdefaultvalues["ambilightcolorhex"] = "#47C2FF"; }
-	// find no localstore ambilight1colorhex
-	if(items["ambilight1colorhex"] == null){ firstdefaultvalues["ambilight1colorhex"] = "#FF0000"; }
-	if(items["ambilight2colorhex"] == null){ firstdefaultvalues["ambilight2colorhex"] = "#FFEE00"; }
-	if(items["ambilight3colorhex"] == null){ firstdefaultvalues["ambilight3colorhex"] = "#00FF00"; }
-	if(items["ambilight4colorhex"] == null){ firstdefaultvalues["ambilight4colorhex"] = "#0000FF"; }
+function defaultgetsettings(){
+	// Option default value to read if there is no current value from chrome.storage AND init default value
+	chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "autostopDomains", "videotoolDomains", "videovolumeDomains", "multiopacityDomains", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "nightmodeborder", "nmautobegintime", "nmautoendtime"], function(items){
+		// find no localstore lightcolor
+		if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
+		// find no localstore ambilightcolorhex
+		if(items["ambilightcolorhex"] == null){ firstdefaultvalues["ambilightcolorhex"] = "#47C2FF"; }
+		// find no localstore ambilight1colorhex
+		if(items["ambilight1colorhex"] == null){ firstdefaultvalues["ambilight1colorhex"] = "#FF0000"; }
+		if(items["ambilight2colorhex"] == null){ firstdefaultvalues["ambilight2colorhex"] = "#FFEE00"; }
+		if(items["ambilight3colorhex"] == null){ firstdefaultvalues["ambilight3colorhex"] = "#00FF00"; }
+		if(items["ambilight4colorhex"] == null){ firstdefaultvalues["ambilight4colorhex"] = "#0000FF"; }
 
-	if(items["colora"] == null){ firstdefaultvalues["colora"] = "#000000"; }
-	if(items["colorb"] == null){ firstdefaultvalues["colorb"] = "#858585"; }
+		if(items["colora"] == null){ firstdefaultvalues["colora"] = "#000000"; }
+		if(items["colorb"] == null){ firstdefaultvalues["colorb"] = "#858585"; }
 
-	if(items["nightmodebck"] == null){ firstdefaultvalues["nightmodebck"] = "#1e1e1e"; }
-	if(items["nightmodetxt"] == null){ firstdefaultvalues["nightmodetxt"] = "#ffffff"; }
-	if(items["nightmodehyperlink"] == null){ firstdefaultvalues["nightmodehyperlink"] = "#ffffff"; }
+		if(items["nightmodebck"] == null){ firstdefaultvalues["nightmodebck"] = "#1e1e1e"; }
+		if(items["nightmodetxt"] == null){ firstdefaultvalues["nightmodetxt"] = "#ffffff"; }
+		if(items["nightmodehyperlink"] == null){ firstdefaultvalues["nightmodehyperlink"] = "#ffffff"; }
 
-	if(items["videovolumecolor"] == null){ firstdefaultvalues["videovolumecolor"] = "#167ac6"; }
+		if(items["videovolumecolor"] == null){ firstdefaultvalues["videovolumecolor"] = "#167ac6"; }
 
-	if(items["videotoolcolor"] == null){ firstdefaultvalues["videotoolcolor"] = "#000000"; }
+		if(items["videotoolcolor"] == null){ firstdefaultvalues["videotoolcolor"] = "#000000"; }
 
-	if(items["titleinvertcolor"] == null){ firstdefaultvalues["titleinvertcolor"] = "#ffffff"; }
+		if(items["titleinvertcolor"] == null){ firstdefaultvalues["titleinvertcolor"] = "#ffffff"; }
 
-	if(items["nightmodebutton"] == null){ firstdefaultvalues["nightmodebutton"] = "#353535"; }
+		if(items["nightmodebutton"] == null){ firstdefaultvalues["nightmodebutton"] = "#353535"; }
 
-	if(items["nightmodeborder"] == null){ firstdefaultvalues["nightmodeborder"] = "#545454"; }
+		if(items["nightmodeborder"] == null){ firstdefaultvalues["nightmodeborder"] = "#545454"; }
 
-	if(items["lightimage"] == null){ firstdefaultvalues["lightimage"] = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
+		if(items["lightimage"] == null){ firstdefaultvalues["lightimage"] = "https://www.turnoffthelights.com/extension/images/theater.jpg"; }
 
-	if(items["spotlightradius"] == null){ firstdefaultvalues["spotlightradius"] = 50; }
+		if(items["spotlightradius"] == null){ firstdefaultvalues["spotlightradius"] = 50; }
 
-	if(items["linearsq"] == null){ firstdefaultvalues["linearsq"] = "top"; }
-	if(items["intervallina"] == null){ firstdefaultvalues["intervallina"] = 0; }
-	if(items["intervallinb"] == null){ firstdefaultvalues["intervallinb"] = 100; }
-	if(items["reflectionamount"] == null){ firstdefaultvalues["reflectionamount"] = 20; }
-	if(items["videovolumesteps"] == null){ firstdefaultvalues["reflectionamount"] = 5; }
+		if(items["linearsq"] == null){ firstdefaultvalues["linearsq"] = "top"; }
+		if(items["intervallina"] == null){ firstdefaultvalues["intervallina"] = 0; }
+		if(items["intervallinb"] == null){ firstdefaultvalues["intervallinb"] = 100; }
+		if(items["reflectionamount"] == null){ firstdefaultvalues["reflectionamount"] = 20; }
+		if(items["videovolumesteps"] == null){ firstdefaultvalues["reflectionamount"] = 5; }
 
-	if(items["nmbegintime"] == null){ firstdefaultvalues["nmbegintime"] = "21:00"; }
-	if(items["nmendtime"] == null){ firstdefaultvalues["nmendtime"] = "23:45"; }
+		if(items["nmbegintime"] == null){ firstdefaultvalues["nmbegintime"] = "21:00"; }
+		if(items["nmendtime"] == null){ firstdefaultvalues["nmendtime"] = "23:45"; }
 
-	if(items["nmautobegintime"] == null){ firstdefaultvalues["nmautobegintime"] = "21:00"; }
-	if(items["nmautoendtime"] == null){ firstdefaultvalues["nmautoendtime"] = "23:45"; }
+		if(items["nmautobegintime"] == null){ firstdefaultvalues["nmautobegintime"] = "21:00"; }
+		if(items["nmautoendtime"] == null){ firstdefaultvalues["nmautoendtime"] = "23:45"; }
 
-	if(items["ecosavertime"] == null){ firstdefaultvalues["ecosavertime"] = 60; }
+		if(items["ecosavertime"] == null){ firstdefaultvalues["ecosavertime"] = 60; }
 
-	if(items["begintime"] == null){ firstdefaultvalues["begintime"] = "21:00"; }
-	if(items["endtime"] == null){ firstdefaultvalues["endtime"] = "23:45"; }
+		if(items["begintime"] == null){ firstdefaultvalues["begintime"] = "21:00"; }
+		if(items["endtime"] == null){ firstdefaultvalues["endtime"] = "23:45"; }
 
-	if(items["nightmodeswitchhidetime"] == null){ firstdefaultvalues["nightmodeswitchhidetime"] = 3; }
-	if(items["playrateamount"] == null){ firstdefaultvalues["playrateamount"] = 1; }
+		if(items["nightmodeswitchhidetime"] == null){ firstdefaultvalues["nightmodeswitchhidetime"] = 3; }
+		if(items["playrateamount"] == null){ firstdefaultvalues["playrateamount"] = 1; }
 
-	if(items["drawatmosfps"] == null){ firstdefaultvalues["drawatmosfps"] = 12; }
+		if(items["drawatmosfps"] == null){ firstdefaultvalues["drawatmosfps"] = 12; }
 
-	if(items["hovervideoamount"] == null){ firstdefaultvalues["hovervideoamount"] = 3; }
+		if(items["hovervideoamount"] == null){ firstdefaultvalues["hovervideoamount"] = 3; }
 
-	if(items["visopacity"] == null){ firstdefaultvalues["visopacity"] = 80; }
+		if(items["visopacity"] == null){ firstdefaultvalues["visopacity"] = 80; }
 
-	if(items["autoplaydelaytime"] == null){ firstdefaultvalues["autoplaydelaytime"] = 3; }
+		if(items["autoplaydelaytime"] == null){ firstdefaultvalues["autoplaydelaytime"] = 3; }
 
-	if(items["interval"] == null){ firstdefaultvalues["interval"] = 80; }
+		if(items["interval"] == null){ firstdefaultvalues["interval"] = 80; }
 
-	if(items["ambilightrangeblurradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 70; }
-	if(items["ambilightrangespreadradius"] == null){ firstdefaultvalues["ambilightrangespreadradius"] = 20; }
+		if(items["ambilightrangeblurradius"] == null){ firstdefaultvalues["ambilightrangeblurradius"] = 70; }
+		if(items["ambilightrangespreadradius"] == null){ firstdefaultvalues["ambilightrangespreadradius"] = 20; }
 
-	if(items["nightDomains"] == null){ firstdefaultvalues["nightDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true}); }
+		if(items["nightDomains"] == null){ firstdefaultvalues["nightDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true}); }
 
-	if(items["autoplayDomains"] == null || items["atmosphereDomains"] == null || items["cammotionDomains"] == null || items["speechDomains"] == null || items["autostopDomains"] == null || items["videotoolDomains"] == null || items["videovolumeDomains"] == null){
-		firstdefaultvalues["autoplayDomains"] = firstdefaultvalues["atmosphereDomains"] = firstdefaultvalues["cammotionDomains"] = firstdefaultvalues["speechDomains"] = firstdefaultvalues["autostopDomains"] = firstdefaultvalues["videotoolDomains"] = firstdefaultvalues["videovolumeDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
-	}
+		if(items["autoplayDomains"] == null || items["atmosphereDomains"] == null || items["cammotionDomains"] == null || items["speechDomains"] == null || items["autostopDomains"] == null || items["videotoolDomains"] == null || items["videovolumeDomains"] == null){
+			firstdefaultvalues["autoplayDomains"] = firstdefaultvalues["atmosphereDomains"] = firstdefaultvalues["cammotionDomains"] = firstdefaultvalues["speechDomains"] = firstdefaultvalues["autostopDomains"] = firstdefaultvalues["videotoolDomains"] = firstdefaultvalues["videovolumeDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		}
 
-	if(items["multiopacityDomains"] == null){ firstdefaultvalues["multiopacityDomains"] = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]}); }
+		if(items["multiopacityDomains"] == null){ firstdefaultvalues["multiopacityDomains"] = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]}); }
 
-	// find no localstore fadein
-	if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
-	// find no localstore fadeout
-	if(items["fadeout"] == null){ firstdefaultvalues["fadeout"] = true; }
-	// find no localstore reader
-	if(items["readera"] == null && items["readern"] == null){ firstdefaultvalues["readern"] = true; firstdefaultvalues["readera"] = false; }
-	// find no localstore lightimage
-	if(items["lightimagea"] == null && items["lightimagen"] == null){ firstdefaultvalues["lightimagen"] = true; firstdefaultvalues["lightimagea"] = false; }
-	// find no localstore mouse
-	if(items["mousespotlighta"] == null && items["mousespotlightc"] == null && items["mousespotlighto"] == null && items["mousespotlightt"] == null && items["mousespotlights"] == null){ firstdefaultvalues["mousespotlighto"] = true; firstdefaultvalues["mousespotlightc"] = false; firstdefaultvalues["mousespotlighta"] = false; firstdefaultvalues["mousespotlightt"] = false; firstdefaultvalues["mousespotlights"] = false; }
-	// find no localstore eye
-	if(items["eyea"] == null && items["eyen"] == null && items["eyealist"] == null){ firstdefaultvalues["eyen"] = true; firstdefaultvalues["eyea"] = false; firstdefaultvalues["eyealist"] = false; }
+		// find no localstore fadein
+		if(items["fadein"] == null){ firstdefaultvalues["fadein"] = true; }
+		// find no localstore fadeout
+		if(items["fadeout"] == null){ firstdefaultvalues["fadeout"] = true; }
+		// find no localstore reader
+		if(items["readera"] == null && items["readern"] == null){ firstdefaultvalues["readern"] = true; firstdefaultvalues["readera"] = false; }
+		// find no localstore lightimage
+		if(items["lightimagea"] == null && items["lightimagen"] == null){ firstdefaultvalues["lightimagen"] = true; firstdefaultvalues["lightimagea"] = false; }
+		// find no localstore mouse
+		if(items["mousespotlighta"] == null && items["mousespotlightc"] == null && items["mousespotlighto"] == null && items["mousespotlightt"] == null && items["mousespotlights"] == null){ firstdefaultvalues["mousespotlighto"] = true; firstdefaultvalues["mousespotlightc"] = false; firstdefaultvalues["mousespotlighta"] = false; firstdefaultvalues["mousespotlightt"] = false; firstdefaultvalues["mousespotlights"] = false; }
+		// find no localstore eye
+		if(items["eyea"] == null && items["eyen"] == null && items["eyealist"] == null){ firstdefaultvalues["eyen"] = true; firstdefaultvalues["eyea"] = false; firstdefaultvalues["eyealist"] = false; }
 
-	// find no localstore atmos
-	if(items["ambilightvarcolor"] == null && items["ambilightfixcolor"] == null && items["ambilight4color"] == null){ firstdefaultvalues["ambilightfixcolor"] = true; firstdefaultvalues["ambilightvarcolor"] = false; firstdefaultvalues["ambilight4color"] = false; }
-	// find no localstore flash
-	if(items["flash"] == null && items["noflash"] == null && items["noflash"] == null){ firstdefaultvalues["noflash"] = true; firstdefaultvalues["flash"] = false; firstdefaultvalues["hardflash"] = false; }
-	// find no localstore dynamic
-	if(items["dynamic1"] == null && items["dynamic2"] == null && items["dynamic3"] == null && items["dynamic4"] == null && items["dynamic5"] == null && items["dynamic6"] == null && items["dynamic7"] == null && items["dynamic8"] == null && items["dynamic9"] == null && items["dynamic10"] == null){ firstdefaultvalues["dynamic1"] = true; firstdefaultvalues["dynamic2"] = false; firstdefaultvalues["dynamic3"] = false; firstdefaultvalues["dynamic4"] = false; firstdefaultvalues["dynamic5"] = false; firstdefaultvalues["dynamic6"] = false; firstdefaultvalues["dynamic7"] = false; firstdefaultvalues["dynamic8"] = false; firstdefaultvalues["dynamic9"] = false; firstdefaultvalues["dynamic10"] = false; }
-	// find no localstore hoverdyn
-	if(items["hoveroptiondyn5"] == null){ firstdefaultvalues["hoveroptiondyn5"] = true; }
-	// find no localstore maxquality
-	if(items["maxquality"] == null){ firstdefaultvalues["maxquality"] = "hd1080"; }
-	// find no localstore autoplay whitelist
-	if(items["autoplaychecklistwhite"] == null && items["autoplaychecklistblack"] == null){ firstdefaultvalues["autoplaychecklistwhite"] = true; firstdefaultvalues["autoplaychecklistblack"] = false; }
-	// find no localstore autostop whitelist
-	if(items["autostopchecklistwhite"] == null && items["autostopchecklistblack"] == null){ firstdefaultvalues["autostopchecklistwhite"] = true; firstdefaultvalues["autostopchecklistblack"] = false; }
-	// find no localstore videotool whitelist
-	if(items["videotoolchecklistwhite"] == null && items["videotoolchecklistblack"] == null){ firstdefaultvalues["videotoolchecklistwhite"] = true; firstdefaultvalues["videotoolchecklistblack"] = false; }
-	// find no localstore nightmode whitelist
-	if(items["nightmodechecklistwhite"] == null && items["nightmodechecklistblack"] == null){ firstdefaultvalues["nightmodechecklistwhite"] = true; firstdefaultvalues["nightmodechecklistblack"] = false; }
-	// find no localstore eye
-	if(items["nmtopleft"] == null && items["nmtopright"] == null && items["nmbottomright"] == null && items["nmbottomleft"] == null && items["nmcustom"] == null){ firstdefaultvalues["nmtopleft"] = false; firstdefaultvalues["nmtopright"] = false; firstdefaultvalues["nmbottomright"] = false; firstdefaultvalues["nmbottomleft"] = true; firstdefaultvalues["nmcustom"] = false; }
-	// find no localstore eye whitelist
-	if(items["eyechecklistwhite"] == null && items["eyechecklistblack"] == null){ firstdefaultvalues["eyechecklistwhite"] = true; firstdefaultvalues["eyechecklistblack"] = false; }
-	if(items["videovolumechecklistwhite"] == null && items["videovolumechecklistblack"] == null){ firstdefaultvalues["videovolumechecklistwhite"] = true; firstdefaultvalues["videovolumechecklistblack"] = false; }
+		// find no localstore atmos
+		if(items["ambilightvarcolor"] == null && items["ambilightfixcolor"] == null && items["ambilight4color"] == null){ firstdefaultvalues["ambilightfixcolor"] = true; firstdefaultvalues["ambilightvarcolor"] = false; firstdefaultvalues["ambilight4color"] = false; }
+		// find no localstore flash
+		if(items["flash"] == null && items["noflash"] == null && items["noflash"] == null){ firstdefaultvalues["noflash"] = true; firstdefaultvalues["flash"] = false; firstdefaultvalues["hardflash"] = false; }
+		// find no localstore dynamic
+		if(items["dynamic1"] == null && items["dynamic2"] == null && items["dynamic3"] == null && items["dynamic4"] == null && items["dynamic5"] == null && items["dynamic6"] == null && items["dynamic7"] == null && items["dynamic8"] == null && items["dynamic9"] == null && items["dynamic10"] == null){ firstdefaultvalues["dynamic1"] = true; firstdefaultvalues["dynamic2"] = false; firstdefaultvalues["dynamic3"] = false; firstdefaultvalues["dynamic4"] = false; firstdefaultvalues["dynamic5"] = false; firstdefaultvalues["dynamic6"] = false; firstdefaultvalues["dynamic7"] = false; firstdefaultvalues["dynamic8"] = false; firstdefaultvalues["dynamic9"] = false; firstdefaultvalues["dynamic10"] = false; }
+		// find no localstore hoverdyn
+		if(items["hoveroptiondyn5"] == null){ firstdefaultvalues["hoveroptiondyn5"] = true; }
+		// find no localstore maxquality
+		if(items["maxquality"] == null){ firstdefaultvalues["maxquality"] = "hd1080"; }
+		// find no localstore autoplay whitelist
+		if(items["autoplaychecklistwhite"] == null && items["autoplaychecklistblack"] == null){ firstdefaultvalues["autoplaychecklistwhite"] = true; firstdefaultvalues["autoplaychecklistblack"] = false; }
+		// find no localstore autostop whitelist
+		if(items["autostopchecklistwhite"] == null && items["autostopchecklistblack"] == null){ firstdefaultvalues["autostopchecklistwhite"] = true; firstdefaultvalues["autostopchecklistblack"] = false; }
+		// find no localstore videotool whitelist
+		if(items["videotoolchecklistwhite"] == null && items["videotoolchecklistblack"] == null){ firstdefaultvalues["videotoolchecklistwhite"] = true; firstdefaultvalues["videotoolchecklistblack"] = false; }
+		// find no localstore nightmode whitelist
+		if(items["nightmodechecklistwhite"] == null && items["nightmodechecklistblack"] == null){ firstdefaultvalues["nightmodechecklistwhite"] = true; firstdefaultvalues["nightmodechecklistblack"] = false; }
+		// find no localstore eye
+		if(items["nmtopleft"] == null && items["nmtopright"] == null && items["nmbottomright"] == null && items["nmbottomleft"] == null && items["nmcustom"] == null){ firstdefaultvalues["nmtopleft"] = false; firstdefaultvalues["nmtopright"] = false; firstdefaultvalues["nmbottomright"] = false; firstdefaultvalues["nmbottomleft"] = true; firstdefaultvalues["nmcustom"] = false; }
+		// find no localstore eye whitelist
+		if(items["eyechecklistwhite"] == null && items["eyechecklistblack"] == null){ firstdefaultvalues["eyechecklistwhite"] = true; firstdefaultvalues["eyechecklistblack"] = false; }
+		if(items["videovolumechecklistwhite"] == null && items["videovolumechecklistblack"] == null){ firstdefaultvalues["videovolumechecklistwhite"] = true; firstdefaultvalues["videovolumechecklistblack"] = false; }
 
-	// find no localstore volume steps
-	if(items["videovolumesteps"] == null){ firstdefaultvalues["videovolumesteps"] = 5; }
-	// find no localstore volume label
-	if(items["videovolumelabel"] == null){ firstdefaultvalues["videovolumelabel"] = true; }
+		// find no localstore volume steps
+		if(items["videovolumesteps"] == null){ firstdefaultvalues["videovolumesteps"] = 5; }
+		// find no localstore volume label
+		if(items["videovolumelabel"] == null){ firstdefaultvalues["videovolumelabel"] = true; }
 
-	// find no localstore a play pause and stop button
-	if(items["aplay"] == null){ firstdefaultvalues["aplay"] = true; }
-	if(items["apause"] == null){ firstdefaultvalues["apause"] = true; }
-	if(items["astop"] == null){ firstdefaultvalues["astop"] = true; }
+		// find no localstore a play pause and stop button
+		if(items["aplay"] == null){ firstdefaultvalues["aplay"] = true; }
+		if(items["apause"] == null){ firstdefaultvalues["apause"] = true; }
+		if(items["astop"] == null){ firstdefaultvalues["astop"] = true; }
 
-	// find no localstore a autostopred
-	if(items["autostopred"] == null && items["autostoptrans"] == null){ firstdefaultvalues["autostopred"] = true; firstdefaultvalues["autostoptrans"] = false; }
+		// find no localstore a autostopred
+		if(items["autostopred"] == null && items["autostoptrans"] == null){ firstdefaultvalues["autostopred"] = true; firstdefaultvalues["autostoptrans"] = false; }
 
-	// find no localstore volume meter position
-	if(items["videovolumeposa"] == null && items["videovolumeposb"] == null && items["videovolumeposc"] == null && items["videovolumeposd"] == null && items["videovolumepose"] == null){ firstdefaultvalues["videovolumeposa"] = true; firstdefaultvalues["videovolumeposb"] = false; firstdefaultvalues["videovolumeposc"] = false; firstdefaultvalues["videovolumeposd"] = false; firstdefaultvalues["videovolumepose"] = false; }
+		// find no localstore volume meter position
+		if(items["videovolumeposa"] == null && items["videovolumeposb"] == null && items["videovolumeposc"] == null && items["videovolumeposd"] == null && items["videovolumepose"] == null){ firstdefaultvalues["videovolumeposa"] = true; firstdefaultvalues["videovolumeposb"] = false; firstdefaultvalues["videovolumeposc"] = false; firstdefaultvalues["videovolumeposd"] = false; firstdefaultvalues["videovolumepose"] = false; }
 
-	// find no localstore a multiopacity
-	if(items["multiopacall"] == null && items["multiopacsel"] == null){ firstdefaultvalues["multiopacall"] = true; firstdefaultvalues["multiopacsel"] = false; }
+		// find no localstore a multiopacity
+		if(items["multiopacall"] == null && items["multiopacsel"] == null){ firstdefaultvalues["multiopacall"] = true; firstdefaultvalues["multiopacsel"] = false; }
 
-	// find no localstore a nightmodebydomain
-	if(items["nightmodebydomain"] == null && items["nightmodebypage"] == null){ firstdefaultvalues["nightmodebydomain"] = true; firstdefaultvalues["nightmodebypage"] = false; }
+		// find no localstore a nightmodebydomain
+		if(items["nightmodebydomain"] == null && items["nightmodebypage"] == null){ firstdefaultvalues["nightmodebydomain"] = true; firstdefaultvalues["nightmodebypage"] = false; }
 
-	// find no localstore a seeanalytics
-	if(items["seeanalytics"] == null){ firstdefaultvalues["seeanalytics"] = true; }
+		// find no localstore a seeanalytics
+		if(items["seeanalytics"] == null){ firstdefaultvalues["seeanalytics"] = true; }
 
-	// find no localstore atmos fps
-	if(items["atmosfpsauto"] == null && items["atmosfpsmanual"] == null){ firstdefaultvalues["atmosfpsmanual"] = true; firstdefaultvalues["atmosfpsauto"] = false; }
+		// find no localstore atmos fps
+		if(items["atmosfpsauto"] == null && items["atmosfpsmanual"] == null){ firstdefaultvalues["atmosfpsmanual"] = true; firstdefaultvalues["atmosfpsauto"] = false; }
 
-	// find no localstore volume scroll direction
-	if(items["videovolumescrolla"] == null && items["videovolumescrollb"] == null && items["videovolumescrollc"] == null){ firstdefaultvalues["videovolumescrolla"] = true; firstdefaultvalues["videovolumescrollb"] = false; firstdefaultvalues["videovolumescrollc"] = false; }
+		// find no localstore volume scroll direction
+		if(items["videovolumescrolla"] == null && items["videovolumescrollb"] == null && items["videovolumescrollc"] == null){ firstdefaultvalues["videovolumescrolla"] = true; firstdefaultvalues["videovolumescrollb"] = false; firstdefaultvalues["videovolumescrollc"] = false; }
 
-	// find no localstore gp
-	if(items["gpleftstick"] == null){ firstdefaultvalues["gpleftstick"] = 0; }
-	if(items["gprightstick"] == null){ firstdefaultvalues["gprightstick"] = 1; }
+		// find no localstore gp
+		if(items["gpleftstick"] == null){ firstdefaultvalues["gpleftstick"] = 0; }
+		if(items["gprightstick"] == null){ firstdefaultvalues["gprightstick"] = 1; }
 
-	if(items["gpbtnx"] == null){ firstdefaultvalues["gpbtnx"] = 0; }
-	if(items["gpbtno"] == null){ firstdefaultvalues["gpbtno"] = 1; }
-	if(items["gpbtnsquare"] == null){ firstdefaultvalues["gpbtnsquare"] = 2; }
-	if(items["gpbtntriangle"] == null){ firstdefaultvalues["gpbtntriangle"] = 3; }
-	if(items["gpbtnlb"] == null){ firstdefaultvalues["gpbtnlb"] = 4; }
-	if(items["gpbtnrb"] == null){ firstdefaultvalues["gpbtnrb"] = 5; }
-	if(items["gpbtnlt"] == null){ firstdefaultvalues["gpbtnlt"] = 6; }
-	if(items["gpbtnrt"] == null){ firstdefaultvalues["gpbtnrt"] = 7; }
-	if(items["gpbtnshare"] == null){ firstdefaultvalues["gpbtnshare"] = 8; }
-	if(items["gpbtnmenu"] == null){ firstdefaultvalues["gpbtnmenu"] = 9; }
-	if(items["gpbtnrightstick"] == null){ firstdefaultvalues["gpbtnrightstick"] = 10; }
-	if(items["gpbtnleftstick"] == null){ firstdefaultvalues["gpbtnleftstick"] = 10; }
-	if(items["gpbtndirup"] == null){ firstdefaultvalues["gpbtndirup"] = 11; }
-	if(items["gpbtndirdown"] == null){ firstdefaultvalues["gpbtndirdown"] = 12; }
-	if(items["gpbtndirleft"] == null){ firstdefaultvalues["gpbtndirleft"] = 13; }
-	if(items["gpbtndirright"] == null){ firstdefaultvalues["gpbtndirright"] = 14; }
-	if(items["gpbtnlogo"] == null){ firstdefaultvalues["gpbtnlogo"] = 15; }
+		if(items["gpbtnx"] == null){ firstdefaultvalues["gpbtnx"] = 0; }
+		if(items["gpbtno"] == null){ firstdefaultvalues["gpbtno"] = 1; }
+		if(items["gpbtnsquare"] == null){ firstdefaultvalues["gpbtnsquare"] = 2; }
+		if(items["gpbtntriangle"] == null){ firstdefaultvalues["gpbtntriangle"] = 3; }
+		if(items["gpbtnlb"] == null){ firstdefaultvalues["gpbtnlb"] = 4; }
+		if(items["gpbtnrb"] == null){ firstdefaultvalues["gpbtnrb"] = 5; }
+		if(items["gpbtnlt"] == null){ firstdefaultvalues["gpbtnlt"] = 6; }
+		if(items["gpbtnrt"] == null){ firstdefaultvalues["gpbtnrt"] = 7; }
+		if(items["gpbtnshare"] == null){ firstdefaultvalues["gpbtnshare"] = 8; }
+		if(items["gpbtnmenu"] == null){ firstdefaultvalues["gpbtnmenu"] = 9; }
+		if(items["gpbtnrightstick"] == null){ firstdefaultvalues["gpbtnrightstick"] = 10; }
+		if(items["gpbtnleftstick"] == null){ firstdefaultvalues["gpbtnleftstick"] = 10; }
+		if(items["gpbtndirup"] == null){ firstdefaultvalues["gpbtndirup"] = 11; }
+		if(items["gpbtndirdown"] == null){ firstdefaultvalues["gpbtndirdown"] = 12; }
+		if(items["gpbtndirleft"] == null){ firstdefaultvalues["gpbtndirleft"] = 13; }
+		if(items["gpbtndirright"] == null){ firstdefaultvalues["gpbtndirright"] = 14; }
+		if(items["gpbtnlogo"] == null){ firstdefaultvalues["gpbtnlogo"] = 15; }
 
-	// Save the init value
-	chrome.storage.sync.set(firstdefaultvalues, function(){
-		// console.log('Settings saved');
+		// Save the init value
+		chrome.storage.sync.set(firstdefaultvalues, function(){
+			// console.log('Settings saved');
+			read_options();
+		});
 	});
-});
+}
 
 function read_options(){
 // speech
@@ -2428,7 +2431,7 @@ function domcontentloaded(){
 
 	// Add the YouTube player
 	$("dont-turn-off-the-lights").src = youtubeembed;
-	read_options();
+	defaultgetsettings();
 	yearnow();
 
 	// browser check
