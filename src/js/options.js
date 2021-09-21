@@ -2725,6 +2725,7 @@ function domcontentloaded(){
 
 	// wizard profile
 	$("submitbuttonA").addEventListener("click", function(){
+		$("nightenabletheme").checked = false;
 		if($("profileAmouse").checked == true){
 			$("mousespotlightt").checked = true;
 		}else{
@@ -2745,10 +2746,12 @@ function domcontentloaded(){
 		$("interval").value = 0; $("slider").value = 0; showValue(0);
 		$("mousespotlightt").checked = true;
 		$("lampandnightmode").checked = true;
+		chrome.runtime.sendMessage({name: "sendclearscreenshader"});
 		var profilesave = chrome.i18n.getMessage("optionprofilesaved"); window.alert(profilesave);
 		save_options(); test(); ariacheck();
 	});
 	$("submitbuttonC").addEventListener("click", function(){
+		$("nightenabletheme").checked = false;
 		$("lightcolor").value = $("profileCcolor").value;
 		$("interval").value = $("profileCopacity").value; $("slider").value = $("profileCopacity").value; showValue($("profileCopacity").value);
 		$("lampandnightmode").checked = false;

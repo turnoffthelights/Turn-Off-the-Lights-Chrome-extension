@@ -158,6 +158,10 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"sendnightmodeindark":
 		chrome.tabs.sendMessage(sender.tab.id, {action: "goinnightmode", value:request.value});
 		break;
+	case"sendclearscreenshader":
+		chrome.storage.sync.set({"screenshader": false});
+		chromerefreshalltabs("goclearscreenshader");
+		break;	
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){
@@ -187,8 +191,9 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
 });
 
 // Safari 15 bug => can not read multiple files. No actions for the 2nd script in array
-// profile.js =  Night Mode and Screen Shader
-const scriptList = ["js/profile.js"];
+// screenshader.js = Screen Shader
+// Night Mode bug skip this, because not work well with 'chrome.webNavigation.onCommitted' on Safari
+const scriptList = ["js/screenshader.js"];
 
 const injectScriptsTo = (tabId) => {
 	scriptList.forEach((script) => {

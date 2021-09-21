@@ -28,13 +28,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id){ return document.getElementById(id); }
-var nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, nightmodebck = null, nightmodetxt = null, nightmodehyperlink = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, nightmodebutton = null, nightmodeos = null, nightmodeborder = null, nmautobegintime = null, nmautoendtime = null, nmautoclock = null, mousespotlights = null, screenshader = null, lightcolor = null, interval = null;
-
-function setAttributes(el, attrs){
-	for(var key in attrs){
-		el.setAttribute(key, attrs[key]);
-	}
-}
+var nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, nightmodebck = null, nightmodetxt = null, nightmodehyperlink = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, nightmodebutton = null, nightmodeos = null, nightmodeborder = null, nmautobegintime = null, nmautoendtime = null, nmautoclock = null;
 
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 // observeDOM - dynamic check
@@ -151,7 +145,7 @@ function checkregdomaininside(thaturl, websiteurl){
 }
 
 const afterBodyReady = () => {
-	chrome.storage.sync.get(["nighttheme", "nightonly", "nightDomains", "nightenabletheme", "nighthover", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightactivetime", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightmodebutton", "nightmodeos", "nightmodeborder", "nmautobegintime", "nmautoendtime", "nmautoclock", "mousespotlights", "screenshader", "lightcolor", "interval"], function(response){
+	chrome.storage.sync.get(["nighttheme", "nightonly", "nightDomains", "nightenabletheme", "nighthover", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightactivetime", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightmodebutton", "nightmodeos", "nightmodeborder", "nmautobegintime", "nmautoendtime", "nmautoclock"], function(response){
 		nighttheme = response["nighttheme"];
 		nightonly = response["nightonly"];
 		nightDomains = response["nightDomains"];
@@ -183,25 +177,6 @@ const afterBodyReady = () => {
 		nmautobegintime = response["nmautobegintime"];
 		nmautoendtime = response["nmautoendtime"];
 		nmautoclock = response["nmautoclock"];
-
-		// screenshader
-		mousespotlights = response["mousespotlights"];
-		screenshader = response["screenshader"];
-		lightcolor = response["lightcolor"]; if(lightcolor)lightcolor = response["lightcolor"]; else lightcolor = "#000000"; // default color black
-		interval = response["interval"]; if(interval == null)interval = 80; // default interval 80%
-		if(mousespotlights == true){
-			if(screenshader == true){
-				if(document.documentElement){
-					var newscreenshader = document.createElement("div");
-					setAttributes(newscreenshader, {"id": "stefanvdscreenshader", "class": "stefanvdscreenshader"});
-					newscreenshader.style.background = lightcolor;
-					newscreenshader.style.mixBlendMode = "multiply";
-					newscreenshader.style.opacity = interval / 100;
-					document.documentElement.insertBefore(newscreenshader, document.documentElement.firstChild);
-					chrome.storage.sync.set({"screenshader": true});
-				}
-			}
-		}
 
 		var windark = window.matchMedia("(prefers-color-scheme: dark)");
 

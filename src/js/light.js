@@ -2379,12 +2379,14 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 	multiopacityDomains = JSON.parse(multiopacityDomains);
 	lampandnightmode = response["lampandnightmode"];
 
+	console.log("stefan autom mousespotlights="+mousespotlights);
 	if(mousespotlights == true){
 		// the screen shader
 		var stefanscreenshader = $("stefanvdscreenshader");
 		if(stefanscreenshader){
 			document.documentElement.removeChild(stefanscreenshader);
 			chrome.storage.sync.set({"screenshader": false});
+			setmetatheme(true);
 		}else{
 			if(document.documentElement){
 				var newscreenshader = document.createElement("div");
@@ -2394,6 +2396,7 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 				newscreenshader.style.opacity = default_opacity / 100;
 				document.documentElement.insertBefore(newscreenshader, document.documentElement.firstChild);
 				chrome.storage.sync.set({"screenshader": true});
+				setmetatheme(false);
 			}
 		}
 	}else{

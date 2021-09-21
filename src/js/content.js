@@ -3892,7 +3892,13 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(items["eyen"]){ eyen = items["eyen"]; }else{ eyen = items["eyen"]; }
 				gonighttime();
 			});
-		}else if(request.action == "goremovelightoff"){
+		}else if(request.action == "goclearscreenshader"){
+			var stefanscreenshader = $("stefanvdscreenshader");
+			if(stefanscreenshader){
+				document.documentElement.removeChild(stefanscreenshader);
+			}
+		}
+		else if(request.action == "goremovelightoff"){
 			let blackon = $("stefanvdlightareoff1");
 			if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
 		}else if(request.action == "goaddlightoff"){
