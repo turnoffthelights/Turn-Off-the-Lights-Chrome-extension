@@ -1642,5 +1642,8 @@
     },
     "permissionwebnav": {
         "message": "Això afegeix el Mode nit immediatament abans de carregar la pàgina."
+    },
+    "desnmautoclock": {
+        "message": "Activat durant aquesta franja horària:"
     }
 }

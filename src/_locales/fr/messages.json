@@ -825,7 +825,7 @@
         "message": "saturation"
     },
     "titelvideotoolhueroration": {
-        "message": "rotation 90° de la teinte"
+        "message": "rotation de la teinte"
     },
     "titelvideotoolbrightness": {
         "message": "50 % de luminosité"
@@ -1642,5 +1642,8 @@
     },
     "permissionwebnav": {
         "message": "Il s'agit d'ajouter le Mode Nuit immédiatement avant le chargement de la page web."
+    },
+    "desnmautoclock": {
+        "message": "Activer pendant les heures suivantes :"
     }
 }

@@ -464,6 +464,7 @@ function read_options(){
 	function showhidemodal(name, visible, status){
 		document.getElementById(name).className = visible;
 		document.getElementById(name).setAttribute("aria-disabled", status);
+		setmetathemepopup(status);
 	}
 
 	// dialog
@@ -2414,6 +2415,62 @@ chrome.runtime.onMessage.addListener(function(msg){
 	}
 });
 
+function setmetatheme(a){
+	const metas = document.getElementsByTagName("meta");
+	var darktheme;
+	var lighttheme;
+
+	if(a == true){
+		// top status bar color => if side bar is open
+		darktheme = "#1c1c1c";
+		lighttheme = "#f5f5f5";
+	}else{
+		darktheme = "#232323";
+		lighttheme = "#ffffff";
+	}
+
+	let i, l = metas.length;
+	for(i = 0; i < l; i++){
+		if(metas[i].getAttribute("name") == "theme-color"){
+			if(metas[i].getAttribute("media")){
+				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+					metas[i].setAttribute("content", lighttheme);
+				}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+					metas[i].setAttribute("content", darktheme);
+				}
+			}
+		}
+	}
+}
+
+function setmetathemepopup(a){
+	const metas = document.getElementsByTagName("meta");
+	var darktheme;
+	var lighttheme;
+
+	if(a == true){
+		// top status bar color => if popup is open
+		darktheme = "#111111";
+		lighttheme = "#7f7f7f";
+	}else{
+		darktheme = "#232323";
+		lighttheme = "#ffffff";
+	}
+
+	let i, l = metas.length;
+	for(i = 0; i < l; i++){
+		if(metas[i].getAttribute("name") == "theme-color"){
+			if(metas[i].getAttribute("media")){
+				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
+					metas[i].setAttribute("content", lighttheme);
+				}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
+					metas[i].setAttribute("content", darktheme);
+				}
+			}
+		}
+	}
+}
+
 /* Option page body action */
 // Read current value settings
 window.addEventListener("load", function(){
@@ -2633,33 +2690,6 @@ function domcontentloaded(){
 
 	function mobilecheck(){
 		if(window.innerWidth < 480){ $("menuToggle").click(); }
-	}
-
-	function setmetatheme(a){
-		const metas = document.getElementsByTagName("meta");
-		var darktheme;
-		var lighttheme;
-
-		if(a == true){
-			darktheme = "#1c1c1c";
-			lighttheme = "#f5f5f5";
-		}else{
-			darktheme = "#232323";
-			lighttheme = "#ffffff";
-		}
-
-		let i, l = metas.length;
-		for(i = 0; i < l; i++){
-			if(metas[i].getAttribute("name") == "theme-color"){
-				if(metas[i].getAttribute("media")){
-					if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){
-						metas[i].setAttribute("content", lighttheme);
-					}else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){
-						metas[i].setAttribute("content", darktheme);
-					}
-				}
-			}
-		}
 	}
 
 	$("reveal-menu").addEventListener("click", function(){

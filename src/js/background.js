@@ -36,7 +36,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"redirectionoptions":
 		chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
 			chrome.tabs.remove(tabs[0].id);
-			chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true});
+			chrome.tabs.create({url: chrome.runtime.getURL("options.html"), active:true});
 		});
 		break;
 	case"automatic":
@@ -161,7 +161,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"sendclearscreenshader":
 		chrome.storage.sync.set({"screenshader": false});
 		chromerefreshalltabs("goclearscreenshader");
-		break;	
+		break;
 	case"getallpermissions":
 		var result = "";
 		chrome.permissions.getAll(function(permissions){

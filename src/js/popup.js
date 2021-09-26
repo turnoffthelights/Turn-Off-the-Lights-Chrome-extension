@@ -28,7 +28,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function action1(){ chrome.tabs.create({url: linkyoutube, active:true}); }
-function action2(){ chrome.tabs.create({url: chrome.extension.getURL("options.html"), active:true}); }
+function action2(){ chrome.tabs.create({url: chrome.runtime.getURL("options.html"), active:true}); }
 function action3(){ chrome.tabs.create({url: linksupport, active:true}); }
 function action4(){ chrome.tabs.create({url: linkguide, active:true}); }
 

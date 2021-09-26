@@ -1642,5 +1642,8 @@
     },
     "permissionwebnav": {
         "message": "Questo serve per aggiungere la modalità notturna immediatamente prima che la pagina web venga caricata."
+    },
+    "desnmautoclock": {
+        "message": "Attivare tra i seguenti orari:"
     }
 }

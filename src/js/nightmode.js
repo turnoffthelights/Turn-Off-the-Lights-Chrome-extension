@@ -350,11 +350,7 @@ const afterBodyReady = () => {
 				// do nothing
 					break;
 				default:
-					var st;
-					var y;
-					var z;
-					var x;
-					var w;
+					var st, y, z, x, w, v;
 					// if night class is already added, skip this node
 					// Else create it
 					if(node.classList.contains("stefanvdnightbck") == false){
@@ -364,12 +360,14 @@ const afterBodyReady = () => {
 							z = node.currentStyle["background-image"];
 							x = node.currentStyle["border-color"];
 							w = node.currentStyle["box-shadow"];
+							v = node.currentStyle["text-shadow"];
 						}else if(window.getComputedStyle){
 							st = document.defaultView.getComputedStyle(node, null);
 							y = st.getPropertyValue("background-color");
 							z = st.getPropertyValue("background-image");
 							x = st.getPropertyValue("border-color");
 							w = st.getPropertyValue("box-shadow");
+							v = st.getPropertyValue("text-shadow");
 						}
 
 						if(y == "rgba(0, 0, 0, 0)" || y.includes("rgba(0, 0, 0, 0")){
@@ -431,6 +429,22 @@ const afterBodyReady = () => {
 						var partw = w.includes("0px 0px 0px 1px");
 						if(partw){
 							node.classList.add("stefanvdnightboxshadow");
+						}
+
+						// textshadow
+						var parts = v.includes("rgb(255, 255, 255)");
+						if(parts != "none"){
+							node.classList.add("stefanvdnighttextshadow");
+						}
+
+						// pseudo before
+						var pseudobefore = window.getComputedStyle(node, ":before").getPropertyValue("background");
+						if(pseudobefore.includes("rgb(255, 255, 255)")){
+							node.classList.add("stefanvdnightpseudobefore");
+						}else if(pseudobefore.includes(".svg")){
+							// do nothing
+						}else{
+							node.classList.add("stefanvdnightpseudobefore");
 						}
 
 					}
@@ -901,6 +915,16 @@ const afterBodyReady = () => {
 						[].forEach.call(elemsbxshw, function(el){
 							el.classList.remove("stefanvdnightboxshadow");
 						});
+
+						var elemstxshw = document.querySelectorAll(".stefanvdnighttextshadow");
+						[].forEach.call(elemstxshw, function(el){
+							el.classList.remove("stefanvdnighttextshadow");
+						});
+
+						var elemspseubefore = document.querySelectorAll(".stefanvdnightpseudobefore");
+						[].forEach.call(elemspseubefore, function(el){
+							el.classList.remove("stefanvdnightpseudobefore");
+						});
 					}
 
 					// remove the extern Night Mode is activated
@@ -1304,7 +1328,7 @@ const afterBodyReady = () => {
 			convertpdfnight();
 			//---
 
-			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
+			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before{background:transparent!important}";
 
 			addcsstext("totlnightmodestyle", css);
 
@@ -1785,7 +1809,7 @@ const afterBodyReady = () => {
 					if(items["nightmodeborder"]){ nightmodeborder = items["nightmodeborder"]; }else{ nightmodeborder = "#545454"; }
 
 					if(document.getElementById("totlnightmodestyle")){
-						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}";
+						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before{background:transparent!important}";
 					}
 
 					// refresh the meta color
@@ -1860,6 +1884,16 @@ const afterBodyReady = () => {
 					var elemsbxshw = document.querySelectorAll(".stefanvdnightboxshadow");
 					[].forEach.call(elemsbxshw, function(el){
 						el.classList.remove("stefanvdnightboxshadow");
+					});
+
+					var elemstxshw = document.querySelectorAll(".stefanvdnighttextshadow");
+					[].forEach.call(elemstxshw, function(el){
+						el.classList.remove("stefanvdnighttextshadow");
+					});
+
+					var elemspseubefore = document.querySelectorAll(".stefanvdnightpseudobefore");
+					[].forEach.call(elemspseubefore, function(el){
+						el.classList.remove("stefanvdnighttextshadow");
 					});
 
 					// remove the extern Night Mode is activated

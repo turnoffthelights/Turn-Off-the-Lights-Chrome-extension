@@ -1642,5 +1642,8 @@
     },
     "permissionwebnav": {
         "message": "Tällä lisäät yötilan juuri ennen web-sivun latauksia."
+    },
+    "desnmautoclock": {
+        "message": "Aktivoi seuraavien tuntien välillä:"
     }
 }

@@ -1642,5 +1642,8 @@
     },
     "permissionwebnav": {
         "message": "Dadurch wird der Nachtmodus unmittelbar vor dem Laden der Webseite aktiviert."
+    },
+    "desnmautoclock": {
+        "message": "Zu folgenden Zeiten aktivieren:"
     }
 }

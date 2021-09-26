@@ -197,7 +197,7 @@ function speechrecognition(){
 				if(event.timeStamp - start_timestamp < 100){
 				// Permission to use microphone is blocked
 				}else{
-					var speechpermissionpage = chrome.extension.getURL("speech.html");
+					var speechpermissionpage = chrome.runtime.getURL("speech.html");
 					PopupCenter(speechpermissionpage, "stefanpemspeech", "685", "380");
 				// Permission to use microphone was denied
 				}

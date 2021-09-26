@@ -1642,5 +1642,8 @@
     },
     "permissionwebnav": {
         "message": "Dit is om de nachtmodus onmiddellijk toe te voegen voordat de webpagina wordt geladen."
+    },
+    "desnmautoclock": {
+        "message": "Activeren tussen de volgende uren:"
     }
 }

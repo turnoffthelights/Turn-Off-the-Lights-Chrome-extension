@@ -224,7 +224,7 @@ function cammotionstartfunction(){
 			.catch(function(e){
 				// console.log(e.name + ": " + e.message);
 				if(e.name == "NotAllowedError"){
-					var motionpermissionpage = chrome.extension.getURL("motion.html");
+					var motionpermissionpage = chrome.runtime.getURL("motion.html");
 					PopupCenter(motionpermissionpage, "stefanpemmotion", "685", "380");
 				}
 			});
