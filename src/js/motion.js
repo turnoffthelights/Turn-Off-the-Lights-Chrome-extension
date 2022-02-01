@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -394,7 +394,10 @@ function cammotionstartfunction(){
 						var i, l = tabs.length;
 						for(i = 0; i < l; i++){
 							if(tabs[i].url.match(/^http/i)){
-								chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
+								chrome.scripting.executeScript({
+									target: {tabId: tabs[i].id},
+									files: ["js/light.js"]
+								});
 							}
 						}
 					});
@@ -406,7 +409,10 @@ function cammotionstartfunction(){
 						var i, l = tabs.length;
 						for(i = 0; i < l; i++){
 							if(tabs[i].url.match(/^http/i)){
-								chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
+								chrome.scripting.executeScript({
+									target: {tabId: tabs[i].id},
+									files: ["js/light.js"]
+								});
 							}
 						}
 					});

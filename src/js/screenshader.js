@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,48 +27,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id){ return document.getElementById(id); }
 var mousespotlights = null, screenshader = null, lightcolor = null, interval = null;
 
 function setAttributes(el, attrs){
 	for(var key in attrs){
 		el.setAttribute(key, attrs[key]);
-	}
-}
-
-function setnightmetatheme(a){
-	const metas = document.getElementsByTagName("meta");
-	var darktheme, lighttheme;
-
-	var newnightmodetcolor = nightmodebck;
-	if(a == true){
-		// night mode is disable
-		darktheme = currennightthemedark;
-		lighttheme = currentnightthemelight;
-	}else{
-		// night mode is active
-		darktheme = newnightmodetcolor;
-		lighttheme = newnightmodetcolor;
-	}
-
-	var i, l = metas.length;
-	for(i = 0; i < l; i++){
-		if(metas[i].getAttribute("name") == "theme-color"){
-			if(metas[i].getAttribute("media")){
-				if(metas[i].getAttribute("media") == "(prefers-color-scheme: light)"){ metas[i].setAttribute("content", lighttheme); }else if(metas[i].getAttribute("media") == "(prefers-color-scheme: dark)"){ metas[i].setAttribute("content", darktheme); }
-			}else{
-				metas[i].setAttribute("content", lighttheme);
-			}
-		}
-	}
-
-	var x = document.querySelector("meta[name=\"theme-color\"]");
-	if(x == null){
-		// create one theme-color
-		var newmeta = document.createElement("meta");
-		newmeta.name = "theme-color";
-		newmeta.setAttribute("content", lighttheme);
-		document.getElementsByTagName("head")[0].appendChild(newmeta);
 	}
 }
 

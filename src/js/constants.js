@@ -1,13 +1,5 @@
 /* eslint-disable no-unused-vars */
-function $(id){ return document.getElementById(id); }
-// Install on www.stefanvd.net
-// Install on www.turnoffthelights.com
-if(window.location.href.match(/^http(s)?:\/\/(www\.)?stefanvd.net/i) || window.location.href.match(/^http(s)?:\/\/(www\.)?turnoffthelights.com/i)){
-	if($("turnoffthelights-chrome-install-button")){
-		$("turnoffthelights-chrome-install-button").style.display = "none";
-		$("turnoffthelights-chrome-thanks-button").style.display = "block";
-	}
-}
+const exbrowser = "chrome";
 const totlscreenshotpage = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
 const developerwebsite = "https://www.turnoffthelights.com";
 const totloptionspage = "https://www.turnoffthelights.com/extension/options.html";

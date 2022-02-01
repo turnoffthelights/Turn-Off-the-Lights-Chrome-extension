@@ -464,6 +464,8 @@
     "permissionstorage": {"message": "This is to save the settings on your local computer, and to sync it to your web browser account."},
     "permissionallurl": {"message": "This is to control the lamp button on all websites that include http, https, file, and ftp."},
     "permissiontheme": {"message": "This is to change the web browser user interface in a dark or light theme."},
+    "permissionscripting": {"message": "This is to inject JavaScript and CSS into websites."},
+    "permissionalarms": {"message": "This is to schedule code to run periodically or at a specified time in the future."},
     "desnightmodeswitchhide": {"message": "Automatically hide the night switch after your chosen seconds"},
     "destrythiswebsite": {"message": "Try this web page"},
     "desatmosfpsmanual": {"message": "Manually"},

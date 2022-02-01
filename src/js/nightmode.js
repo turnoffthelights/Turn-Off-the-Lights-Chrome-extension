@@ -355,6 +355,7 @@ const afterBodyReady = () => {
 					// Else create it
 					if(node.classList.contains("stefanvdnightbck") == false){
 						var thatbckishere = false;
+						var thatskipimage = false;
 						if(node.currentStyle){
 							y = node.currentStyle["background-color"];
 							z = node.currentStyle["background-image"];
@@ -372,29 +373,40 @@ const afterBodyReady = () => {
 
 						if(y == "rgba(0, 0, 0, 0)" || y.includes("rgba(0, 0, 0, 0")){
 							thatbckishere = false;
+							thatskipimage = false;
 							if(z == "none"){
 								var alpha = y.replace(/^.*,(.+)\)/, "$1");
 								if(alpha > .1){
-								// alpha value higher than 10%
+									// alpha value higher than 10%
 									thatbckishere = true;
 								}
 							}else if(z.indexOf("linear-gradient") || z.indexOf("radial-gradient")){
-								// check if use more than 1X gradient white
-								var bla = occurrences(z, "rgb(255, 255, 255)");
-								if(bla >= 1){ // check if includes it 1 item or more
-									thatbckishere = true;
-								}
-								// check if use more than 1X transparent or rgba(0, 0, 0, 0)
-								var blb = occurrences(z, "rgba(0, 0, 0, 0)");
-								if(blb >= 1){ // check if includes it 1 item or more
-									thatbckishere = true;
+								// if bigger then width 24px
+								if(node.clientWidth >= 24){
+									// check if use more than 1X gradient white
+									var bla = occurrences(z, "rgb(255, 255, 255)");
+									if(bla >= 1){ // check if includes it 1 item or more
+										thatbckishere = true;
+									}
+									// check if use more than 1X transparent or rgba(0, 0, 0, 0)
+									var blb = occurrences(z, "rgba(0, 0, 0, 0)");
+									if(blb >= 1){ // check if includes it 1 item or more
+										thatbckishere = true;
+									}
 								}
 							}else{
-							// div with background image url inside
-							// thatbckishere = true;
+								// div with background image url inside
+								// thatbckishere = true;
 							}
 						}else{
 							thatbckishere = true;
+						}
+
+						// check div do have a background but is smaller then 150px
+						if(z != "none" && !z.indexOf("linear-gradient") && !z.indexOf("radial-gradient")){
+							if(node.clientHeight < 150 && node.clientWidth < 150){
+								thatskipimage = true;
+							}
 						}
 
 						// background color is transparent, then add only the text color
@@ -407,10 +419,13 @@ const afterBodyReady = () => {
 								node.classList.add("stefanvdnight");
 							}
 						}else{
-							if(thatbckishere == true){
-								node.classList.add("stefanvdnightbck", "stefanvdnight");
-							}else{
-								node.classList.add("stefanvdnight");
+							// skip image do not get the night background and text color
+							if(thatskipimage != true){
+								if(thatbckishere == true){
+									node.classList.add("stefanvdnightbck", "stefanvdnight");
+								}else{
+									node.classList.add("stefanvdnight");
+								}
 							}
 						}
 						// <a> with background change it to night button color
@@ -447,6 +462,14 @@ const afterBodyReady = () => {
 							node.classList.add("stefanvdnightpseudobefore");
 						}
 
+						var pseudoafter = window.getComputedStyle(node, ":after").getPropertyValue("background");
+						if(pseudoafter.includes("rgb(255, 255, 255)")){
+							node.classList.add("stefanvdnightpseudoafter");
+						}else if(pseudoafter.includes(".svg")){
+							// do nothing
+						}else{
+							node.classList.add("stefanvdnightpseudoafter");
+						}
 					}
 				}
 			}
@@ -925,6 +948,11 @@ const afterBodyReady = () => {
 						[].forEach.call(elemspseubefore, function(el){
 							el.classList.remove("stefanvdnightpseudobefore");
 						});
+
+						var elemspseuafter = document.querySelectorAll(".stefanvdnightpseudoafter");
+						[].forEach.call(elemspseuafter, function(el){
+							el.classList.remove("stefanvdnightpseudoafter");
+						});
 					}
 
 					// remove the extern Night Mode is activated
@@ -1328,7 +1356,7 @@ const afterBodyReady = () => {
 			convertpdfnight();
 			//---
 
-			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before{background:transparent!important}";
+			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before,.stefanvdnightpseudoafter:after{background:transparent!important}";
 
 			addcsstext("totlnightmodestyle", css);
 
@@ -1770,9 +1798,9 @@ const afterBodyReady = () => {
 				var selectObj = window.getSelection();
 				// if text selection, stop the function
 				if(selectObj.isCollapsed){
-				// console.log("NO TEXT selected here!");
+					// console.log("NO TEXT selected here!");
 				}else{
-				// console.log("TEXT selected here! + CANCEL");
+					// console.log("TEXT selected here! + CANCEL");
 					cancelgesture();
 				}
 			}
@@ -1809,7 +1837,7 @@ const afterBodyReady = () => {
 					if(items["nightmodeborder"]){ nightmodeborder = items["nightmodeborder"]; }else{ nightmodeborder = "#545454"; }
 
 					if(document.getElementById("totlnightmodestyle")){
-						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before{background:transparent!important}";
+						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before,.stefanvdnightpseudoafter:after{background:transparent!important}";
 					}
 
 					// refresh the meta color
@@ -1841,6 +1869,9 @@ const afterBodyReady = () => {
 					nmautoclock = items["nmautoclock"];
 					nmautobegintime = items["nmautobegintime"];
 					nmautoendtime = items["nmautoendtime"];
+
+					nightobserver.disconnect();
+					setnightmetatheme(true);
 
 					// remove
 					window.clearTimeout(timernightswitch);
@@ -1893,7 +1924,12 @@ const afterBodyReady = () => {
 
 					var elemspseubefore = document.querySelectorAll(".stefanvdnightpseudobefore");
 					[].forEach.call(elemspseubefore, function(el){
-						el.classList.remove("stefanvdnighttextshadow");
+						el.classList.remove("stefanvdnightpseudobefore");
+					});
+
+					var elemspseuafter = document.querySelectorAll(".stefanvdnightpseudoafter");
+					[].forEach.call(elemspseuafter, function(el){
+						el.classList.remove("stefanvdnightpseudoafter");
 					});
 
 					// remove the extern Night Mode is activated

@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -2406,7 +2406,7 @@ chrome.runtime.onMessage.addListener(function(msg){
 
 				var textperm = "";
 				var newpermspandes = document.createElement("span");
-				if(x == "activeTab"){ textperm = chrome.i18n.getMessage("permissionactivetab"); }else if(x == "contextMenus"){ textperm = chrome.i18n.getMessage("permissioncontextmenu"); }else if(x == "storage"){ textperm = chrome.i18n.getMessage("permissionstorage"); }else if(x == "tabs"){ textperm = chrome.i18n.getMessage("permissiontabs"); }else if(x == "theme"){ textperm = chrome.i18n.getMessage("permissiontheme"); }else if(x == "<all_urls>"){ textperm = chrome.i18n.getMessage("permissionallurl"); }else if(x == "webNavigation"){ textperm = chrome.i18n.getMessage("permissionwebnav"); }
+				if(x == "activeTab"){ textperm = chrome.i18n.getMessage("permissionactivetab"); }else if(x == "contextMenus"){ textperm = chrome.i18n.getMessage("permissioncontextmenu"); }else if(x == "storage"){ textperm = chrome.i18n.getMessage("permissionstorage"); }else if(x == "tabs"){ textperm = chrome.i18n.getMessage("permissiontabs"); }else if(x == "theme"){ textperm = chrome.i18n.getMessage("permissiontheme"); }else if(x == "<all_urls>"){ textperm = chrome.i18n.getMessage("permissionallurl"); }else if(x == "webNavigation"){ textperm = chrome.i18n.getMessage("permissionwebnav"); }else if(x == "scripting"){ textperm = chrome.i18n.getMessage("permissionscripting"); }else if(x == "alarms"){ textperm = chrome.i18n.getMessage("permissionalarms"); }
 				newpermspandes.textContent = textperm;
 				newpermspandes.className = "item";
 				newperm.appendChild(newpermspandes);
@@ -2914,11 +2914,31 @@ function domcontentloaded(){
 	$("ytappbox").addEventListener("click", function(){ window.open(linkyoutube, "_blank"); });
 
 	// Lamp Icons
-	$("p1").addEventListener("click", function(){ setpreviewlampicon("icons/iconstick38.png"); });
-	$("p2").addEventListener("click", function(){ setpreviewlampicon("icons/icongold38.png"); });
-	$("p3").addEventListener("click", function(){ setpreviewlampicon("icons/iconrose38.png"); });
-	$("p4").addEventListener("click", function(){ setpreviewlampicon("icons/iconrainbow38.png"); });
-	$("p5").addEventListener("click", function(){ setpreviewlampicon("icons/iconwhite38.png"); });
+	$("p1").addEventListener("click", function(){
+		var custombrowser = "";
+		if(exbrowser == "safari"){ custombrowser = "icons/iconstick38safari.png"; }else{ custombrowser = "icons/iconstick38.png"; }
+		setpreviewlampicon(custombrowser);
+	});
+	$("p2").addEventListener("click", function(){
+		var custombrowser = "";
+		if(exbrowser == "safari"){ custombrowser = "icons/icongold38safari.png"; }else{ custombrowser = "icons/icongold38.png"; }
+		setpreviewlampicon(custombrowser);
+	});
+	$("p3").addEventListener("click", function(){
+		var custombrowser = "";
+		if(exbrowser == "safari"){ custombrowser = "icons/iconrose38safari.png"; }else{ custombrowser = "icons/iconrose38.png"; }
+		setpreviewlampicon(custombrowser);
+	});
+	$("p4").addEventListener("click", function(){
+		var custombrowser = "";
+		if(exbrowser == "safari"){ custombrowser = "icons/iconrainbow38safari.png"; }else{ custombrowser = "icons/iconrainbow38.png"; }
+		setpreviewlampicon(custombrowser);
+	});
+	$("p5").addEventListener("click", function(){
+		var custombrowser = "";
+		if(exbrowser == "safari"){ custombrowser = "icons/iconwhite38safari.png"; }else{ custombrowser = "icons/iconwhite38.png"; }
+		setpreviewlampicon(custombrowser);
+	});
 
 	// get permission
 	$("darkbrowsertheme").addEventListener("click", function(){

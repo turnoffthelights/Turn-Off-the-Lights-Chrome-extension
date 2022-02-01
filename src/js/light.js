@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -2379,7 +2379,6 @@ chrome.storage.sync.get(["mousespotlighto", "mousespotlightc", "mousespotlighta"
 	multiopacityDomains = JSON.parse(multiopacityDomains);
 	lampandnightmode = response["lampandnightmode"];
 
-	console.log("stefan autom mousespotlights="+mousespotlights);
 	if(mousespotlights == true){
 		// the screen shader
 		var stefanscreenshader = $("stefanvdscreenshader");
@@ -2470,7 +2469,7 @@ function reduceOpacity(){
 	}else{
 		ReducingFinished = true;
 		// When finished, make sure the DIVElementById is set to remove element
-		if(DIVElementById.style.opacity <= 0){ document.body.removeChild(DIVElementById); removenewframe(); }
+		if(DIVElementById.style.opacity <= 0){ removenewframe(); }
 	}
 	setallopacity(opacity);
 }

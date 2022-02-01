@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -50,11 +50,27 @@ function save_options(){
 	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
 }
 
+function codenight(){
+	if(document.getElementById("totldark")){
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "day"});
+	}else{
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});
+	}
+}
+
 function executenightmode(){
 	if(lampandnightmode == true){
 		chrome.runtime.sendMessage({name: "mastertabnight"});
 	}else{
-		chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+		chrome.tabs.query({
+			active: true,
+			currentWindow: true
+		}, function(tabs){
+			chrome.scripting.executeScript({
+				target: {tabId: tabs[0].id},
+				func: codenight
+			});
+		});
 	}
 }
 
@@ -338,8 +354,11 @@ document.addEventListener("DOMContentLoaded", function(){
 		chrome.tabs.query({
 			active: true,
 			currentWindow: true
-		}, function(tab){
-			chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+		}, function(tabs){
+			chrome.scripting.executeScript({
+				target: {tabId: tabs[0].id},
+				files: ["js/light.js"]
+			});
 		});
 	});
 
@@ -598,14 +617,48 @@ function opacitychange(){
 	executelivechange();
 }
 
+function codetask(a, b, c){
+	var div = document.getElementsByTagName("div");
+	var i;
+	var l = div.length;
+	for(i = 0; i < l; i++){
+		if(div[i].className == ("stefanvdlightareoff")){
+			div[i].style.background = c;
+			div[i].style.opacity = (b / 100);
+		}
+	}
+	var metas = document.getElementsByTagName("meta");
+	var m, p = metas.length;
+	for(m = 0; m < p; m++){
+		if(metas[m].getAttribute("name") == "theme-color"){
+			if(metas[m].getAttribute("media")){
+				if(metas[m].getAttribute("media") == "(prefers-color-scheme: light)"){
+					metas[m].setAttribute("content", a);
+				}else if(metas[m].getAttribute("media") == "(prefers-color-scheme: dark)"){
+					metas[m].setAttribute("content", a);
+				}
+			}else{
+				metas[m].setAttribute("content", a);
+			}
+		}
+	}
+	if(document.getElementById("stefanvdscreenshader")){
+		document.getElementById("stefanvdscreenshader").style.opacity = b; document.getElementById("stefanvdscreenshader").style.background = a;
+	}
+}
+
 function executelivechange(){
 	chrome.tabs.query({
 		active: true,
 		currentWindow: true
-	}, function(tab){
+	}, function(tabs){
 		var newlightoffcolor = newconvertHex(currentlayercolor, $("oslider").value);
 		var currentopac = $("oslider").value;
-		chrome.tabs.executeScript(tab.id, {code:"var div = document.getElementsByTagName('div');var i;var l = div.length;for(i = 0; i < l; i++){if(div[i].className == ('stefanvdlightareoff')){div[i].style.background = '" + currentlayercolor + "';div[i].style.opacity = (" + currentopac + "/100);}}var metas = document.getElementsByTagName(\"meta\");var m, p = metas.length;for(m = 0; m < p; m++){if(metas[m].getAttribute(\"name\") == \"theme-color\"){if(metas[m].getAttribute(\"media\")){if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: light)\"){metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}else if(metas[m].getAttribute(\"media\") == \"(prefers-color-scheme: dark)\"){metas[m].setAttribute(\"content\",'" + newlightoffcolor + "');}}else{metas[m].setAttribute(\"content\", '" + newlightoffcolor + "');}}}if(document.getElementById(\"stefanvdscreenshader\")){document.getElementById(\"stefanvdscreenshader\").style.opacity = " + currentopac + "; document.getElementById(\"stefanvdscreenshader\").style.background = '" + newlightoffcolor + "'}"});
+		chrome.scripting.executeScript({
+			target: {tabId: tabs[0].id},
+			func: codetask,
+			args: [newlightoffcolor, currentopac, currentlayercolor]
+		});
 	});
 }
 

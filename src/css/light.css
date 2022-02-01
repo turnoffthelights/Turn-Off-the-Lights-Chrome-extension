@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -71,7 +71,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 .stefanvdspeed{z-index:200000000!important;position:absolute!important;color:rgba(255,255,255,0.8)!important;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important;overflow-y:scroll!important;overflow-x:hidden!important} 
 .stefanvdspeed div{display:block!important;float:left!important;line-height:normal!important;margin:5px 10px!important;text-align:left!important;width:44px!important;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important;cursor:pointer!important;font-size:14px!important}
 /* Atmosphere */
-.stefanvdvivideffect{position:absolute!important;z-index:1000!important;overflow:hidden;pointer-events:none}
+.stefanvdvivideffect{position:absolute!important;z-index:1000!important;overflow:hidden;pointer-events:none;transform:scale3d(0,0,0);transition:all 1.25s}
 /* Lights */
 .stefanvdlightareoff{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;opacity:0}
 /* Blur */

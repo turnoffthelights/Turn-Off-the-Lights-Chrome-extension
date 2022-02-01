@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -26,6 +26,23 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 
 */
 //================================================
+
+function $(id){ return document.getElementById(id); }
+
+function rgbToHex(r, g, b){
+	if(r > 255 || g > 255 || b > 255)
+		throw"Invalid color component";
+	return((r << 16) | (g << 8) | b).toString(16);
+}
+
+// Install on www.stefanvd.net
+// Install on www.turnoffthelights.com
+if(window.location.href.match(/^http(s)?:\/\/(www\.)?stefanvd.net/i) || window.location.href.match(/^http(s)?:\/\/(www\.)?turnoffthelights.com/i)){
+	if($("turnoffthelights-" + exbrowser + "-install-button")){
+		$("turnoffthelights-" + exbrowser + "-install-button").style.display = "none";
+		$("turnoffthelights-" + exbrowser + "-thanks-button").style.display = "block";
+	}
+}
 
 // settings
 var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, gamepad = null, gpleftstick = null, gprightstick = null, gpbtnx = null, gpbtno = null, gpbtnsquare = null, gpbtntriangle = null, gpbtnlb = null, gpbtnrb = null, gpbtnlt = null, gpbtnrt = null, gpbtnshare = null, gpbtnmenu = null, gpbtnrightstick = null, gpbtnleftstick = null, gpbtndirup = null, gpbtndirdown = null, gpbtndirleft = null, gpbtndirright = null, gpbtnlogo = null;
@@ -133,14 +150,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	gpbtndirleft = response["gpbtndirleft"]; if(gpbtndirleft == null)gpbtndirleft = 13;
 	gpbtndirright = response["gpbtndirright"]; if(gpbtndirright == null)gpbtndirright = 14;
 	gpbtnlogo = response["gpbtnlogo"]; if(gpbtnlogo == null)gpbtnlogo = 15;
-
-	function $(id){ return document.getElementById(id); }
-
-	function rgbToHex(r, g, b){
-		if(r > 255 || g > 255 || b > 255)
-			throw"Invalid color component";
-		return((r << 16) | (g << 8) | b).toString(16);
-	}
 
 	// inject script for autoplay
 	if(autoplay == true){
@@ -2273,7 +2282,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					var vividctx = stefanvdvivideffect.getContext("2d", {desynchronized: true}); var vividx = Math.floor(totlshowtime.offsetWidth * 0.08); var vividy = Math.floor(totlshowtime.offsetHeight * 0.08);
 					vividctx.drawImage(totlshowtime, 0, 0, vividx, vividy);
 					if(!totlshowtime.classList.contains("stefanvdvideotop")){ totlshowtime.classList.add("stefanvdvideotop"); }
-
+					// start first glow out
+					stefanvdvivideffect.style.transform = "scale3d(" + calcvividscale + "," + calcvividscale + "," + calcvividscale + ")";
 				}else{
 					// if first run, or paused or stoped video before
 					// create the vivid effect layer (again)
@@ -2312,7 +2322,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						newvivid.setAttribute("id", "stefanvdvivideffect" + totlshowtime.getAttribute("data-video"));
 						newvivid.setAttribute("data-video", totlshowtime.getAttribute("data-video"));
 						newvivid.setAttribute("class", "stefanvdvivideffect");
-						newvivid.style.transform = "scale3d(" + calcvividscale + "," + calcvividscale + "," + calcvividscale + ")";
+						newvivid.style.transform = "scale3d(0,0,0)";
 						newvivid.style.webkitFilter = "blur(" + ambilightrangeblurradius + "px)";
 						newvivid.style.filter = "blur(" + ambilightrangeblurradius + "px)";
 						newvivid.style.top = newpositionvivid.y + "px"; // with NO    +tempvisscrolltop
@@ -2403,7 +2413,14 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	function removeatmosvivid(playerid){
 		if($("stefanvdvivideffect" + playerid.getAttribute("data-video"))){
 			let stefanvdvivideffect = $("stefanvdvivideffect" + playerid.getAttribute("data-video"));
-			stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
+			stefanvdvivideffect.style.transform = "scale3d(0,0,0)"; // glow in
+			stefanvdvivideffect.addEventListener("transitionend", function(){
+				if(stefanvdvivideffect.parentNode){
+					if(stefanvdvivideffect.style.transform == "scale3d(0, 0, 0)"){
+						stefanvdvivideffect.parentNode.removeChild(stefanvdvivideffect);
+					}
+				}
+			});
 		}
 	}
 
@@ -2599,8 +2616,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 									if(document.getElementById("stefanvdvivideffect" + potvis)){
 										document.getElementById("stefanvdvivideffect" + potvis).style.width = mutation.target.offsetWidth + "px";
 										document.getElementById("stefanvdvivideffect" + potvis).style.height = mutation.target.offsetHeight + "px";
-										document.getElementById("stefanvdvivideffect" + potvis).style.top = visposition.y + "px";
-										document.getElementById("stefanvdvivideffect" + potvis).style.left = visposition.x + "px";
+										// only update is higher or equal to the value 0
+										// that to preven the animation on YouTube video ended to go upwards
+										if(visposition.y >= 0){
+											document.getElementById("stefanvdvivideffect" + potvis).style.top = visposition.y + "px";
+										}
+										if(visposition.x >= 0){
+											document.getElementById("stefanvdvivideffect" + potvis).style.left = visposition.x + "px";
+										}
+										//---
 									}
 									if(mutation.target.play){
 										animate();
@@ -3897,8 +3921,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(stefanscreenshader){
 				document.documentElement.removeChild(stefanscreenshader);
 			}
-		}
-		else if(request.action == "goremovelightoff"){
+		}else if(request.action == "goremovelightoff"){
 			let blackon = $("stefanvdlightareoff1");
 			if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
 		}else if(request.action == "goaddlightoff"){

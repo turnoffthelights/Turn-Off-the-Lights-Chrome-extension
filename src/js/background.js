@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,6 +27,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+// Importing the constants
+importScripts("constants.js");
+
 chrome.runtime.onMessage.addListener(function request(request, sender){
 // eye protection & autoplay & shortcut
 	switch(request.name){
@@ -40,7 +43,10 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		});
 		break;
 	case"automatic":
-		chrome.tabs.executeScript(sender.tab.id, {file: "js/light.js"});
+		chrome.scripting.executeScript({
+			target: {tabId: sender.tab.id},
+			files: ["js/light.js"]
+		});
 		break;
 	case"screenshot":
 		var checkcapturewebsite = totlscreenshotpage;
@@ -72,7 +78,10 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		chrome.tabs.query({}, function(tabs){
 			var i, l = tabs.length;
 			for(i = 0; i < l; i++){
-				chrome.tabs.executeScript(tabs[i].id, {file: "js/light.js"});
+				chrome.scripting.executeScript({
+					target: {tabId: tabs[i].id},
+					files: ["js/light.js"]
+				});
 			}
 		}
 		);
@@ -133,7 +142,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			chrome.tabs.query({}, function(tabs){
 				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
-					chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png", "38": "icons/iconwhite38.png"}});
+					chrome.action.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png", "38": "icons/iconwhite38.png"}});
 				}
 			});
 		}else{
@@ -145,11 +154,17 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			}
 			// return default icon
 			chrome.storage.sync.get(["icon"], function(items){
-				if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
+				if(items["icon"] == undefined){
+					if(exbrowser == "safari"){
+						items["icon"] = "icons/iconstick38safari.png";
+					}else{
+						items["icon"] = "icons/iconstick38.png";
+					}
+				}
 				chrome.tabs.query({}, function(tabs){
 					var i, l = tabs.length;
 					for(i = 0; i < l; i++){
-						chrome.browserAction.setIcon({tabId : tabs[i].id, path : {"19": items["icon"], "38": items["icon"]}});
+						chrome.action.setIcon({tabId : tabs[i].id, path : {"19": items["icon"], "38": items["icon"]}});
 					}
 				});
 			});
@@ -183,25 +198,42 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	}
 });
 
-// Screen Shader inject before displaying the website
-chrome.webNavigation.onCommitted.addListener(({tabId, frameId}) => {
+// Inject before displaying the website
+chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
 	// Filter out non main window events.
 	if(frameId !== 0)return;
-	injectScriptsTo(tabId);
+	injectScriptsTo(tabId, url);
 });
 
-// Safari 15 bug => can not read multiple files. No actions for the 2nd script in array
 // screenshader.js = Screen Shader
-// Night Mode bug skip this, because not work well with 'chrome.webNavigation.onCommitted' on Safari
-const scriptList = ["js/screenshader.js"];
+// nightmode.js = Night Mode
+const scriptList = ["js/screenshader.js", "js/nightmode.js"];
+const injectScriptsTo = (tabId, url) => {
+	if(url.match(/^http/i) || url.match(/^file/i)){
+		scriptList.forEach((script) => {
+			// TODO - change code - do this job at the "document_start"
+			chrome.scripting.executeScript({
+				target: {tabId: tabId},
+				files: [`${script}`],
+				// runAt: "document_start",
+			}, () => void chrome.runtime.lastError);
 
-const injectScriptsTo = (tabId) => {
-	scriptList.forEach((script) => {
-		chrome.tabs.executeScript(tabId, {
-			file: `${script}`,
-			runAt: "document_start",
-		}, () => void chrome.runtime.lastError);
-	});
+			// chrome.scripting.registerContentScript({
+			// 	target: {tabId: tabId},
+			// 	js: [`${script}`],
+			// 	runAt: "document_start"
+			// });
+			// OR
+			// chrome.scripting.registerContentScripts({
+			// 	scripts:[{
+			// 		target: {tabId: tabId},
+			// 		js: [`${script}`],
+			// 		runAt: "document_start"
+			// 	}]
+			// });
+
+		});
+	}
 };
 //---
 
@@ -211,16 +243,22 @@ function restcontent(path, name, sendertab){
 	cssoReq.open("GET", path, true); cssoReq.send();
 }
 
-chrome.tabs.onActivated.addListener(function(activeInfo){
-	chrome.tabs.get(activeInfo.tabId, function(){
+chrome.tabs.onActivated.addListener(async(activeInfo) => {
+	chrome.tabs.get(activeInfo.tabId).then((thattab) => {
 		chrome.storage.sync.get(["icon"], function(items){
-			if(items["icon"] == undefined){ items["icon"] = "icons/iconstick38.png"; }
-			chrome.browserAction.setIcon({tabId : activeInfo.tabId, path : {"19": items["icon"], "38": items["icon"]}});
+			if(items["icon"] == undefined){
+				if(exbrowser == "safari"){
+					items["icon"] = "icons/iconstick38safari.png";
+				}else{
+					items["icon"] = "icons/iconstick38.png";
+				}
+			}
+			chrome.action.setIcon({tabId : thattab.tabId, path : {"19": items["icon"], "38": items["icon"]}});
 		});
 	});
 });
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
+chrome.tabs.onUpdated.addListener(async(tabId, changeInfo) => {
 	// tab loaded, recheck all the video players on the current web page
 	if(changeInfo.status == "complete"){
 		chrome.tabs.query({}, function(tabs){
@@ -230,77 +268,83 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
 		});
 	}
 
-	chrome.storage.sync.get(["icon"], function(chromeset){
-		if(chromeset["icon"] == undefined){ chromeset["icon"] = "icons/iconstick38.png"; }
-		chrome.browserAction.setIcon({tabId : tabId, path : {"19": chromeset["icon"], "38": chromeset["icon"]}});
+	chrome.storage.sync.get(["icon"], function(items){
+		if(items["icon"] == undefined){
+			if(exbrowser == "safari"){
+				items["icon"] = "icons/iconstick38safari.png";
+			}else{
+				items["icon"] = "icons/iconstick38.png";
+			}
+		}
+		chrome.action.setIcon({tabId : tabId, path : {"19": items["icon"], "38": items["icon"]}});
 	});
 });
 
+async function getCurrentTab(){
+	let queryOptions = {active: true, currentWindow: true};
+	let tabs = await chrome.tabs.query(queryOptions);
+	return tabs[0];
+}
+
 // Set click to false at beginning
-var alreadyClicked = false;
-// Declare a timer variable
-var timer;
-chrome.browserAction.onClicked.addListener(function(tabs){
+var clickbutton = 0;
+chrome.action.onClicked.addListener(function(tabs){
 	if(tabs.url.match(/^http/i) || tabs.url.match(/^file/i)){
 		if(tabs.url == totloptionspage || (new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
-			chrome.browserAction.setPopup({tabId: tabs.id, popup:"popup.html"});
+			chrome.action.setPopup({tabId: tabs.id, popup:"popup.html"});
 		}else{
-
-			// Check for previous click
-			if(alreadyClicked){
-				// console.log("Doubleclick");
-				// Yes, Previous Click Detected
-				// Clear timer already set in earlier Click
-				window.clearTimeout(timer);
-				// Show the popup window
-				// Clear all Clicks
-				alreadyClicked = false;
-				chrome.browserAction.setPopup({tabId: tabs.id, popup:""});
-				return;
+			clickbutton += 1;
+			if(clickbutton == 2){
+				chrome.alarms.clear("myLights");
+				chrome.action.setPopup({tabId: tabs.id, popup:"palette.html"});
+				chrome.action.openPopup();
 			}
-
-			// Set Click to  true
-			alreadyClicked = true;
-			chrome.browserAction.setPopup({tabId: tabs.id, popup:"palette.html"});
-
-			// Add a timer to detect next click to a sample of 250
-			timer = window.setTimeout(function(){
-				// console.log("Singelclick");
-				var popups = chrome.extension.getViews({type: "popup"});
-				if(popups.length != 0){ // popup exist
-
-				}else{ // not exist
-					chrome.storage.sync.get(["alllightsoff", "mousespotlights"], function(chromeset){
-						if((chromeset["mousespotlights"] != true)){ // regular lamp
-							if((chromeset["alllightsoff"] != true)){
-								chrome.tabs.executeScript(tabs.id, {file: "js/light.js"}, function(){
-									if(chrome.runtime.lastError){
-									// console.error(chrome.runtime.lastError.message);
-									}
-								});
-							}else{
-								chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
-							}
-						}else{ // all tabs
-							// Night Mode profile
-							// Eye Protection profile
-							chrome.tabs.sendMessage(tabs.id, {action: "masterclick"});
-						}
-					});
-				}
-
-				// Clear all timers
-				window.clearTimeout(timer);
-				// Ignore clicks
-				alreadyClicked = false;
-				chrome.browserAction.setPopup({tabId: tabs.id, popup:""});
-			}, 250);
-
+			// Add a timer to detect next click to a sample of 250 = 0.004 minutes
+			chrome.alarms.create("myLights", {delayInMinutes: 0.004});
 		}
 	}else{
-		chrome.browserAction.setPopup({tabId: tabs.id, popup:"popup.html"});
+		chrome.action.setPopup({tabId: tabs.id, popup:"popup.html"});
 	}
 });
+
+chrome.alarms.onAlarm.addListener(alarmListener);
+function alarmListener(e){
+	if(e.name === "myLights"){
+		getCurrentTab().then((thattab) => {
+			if(clickbutton == 1){
+				chrome.storage.sync.get(["alllightsoff", "mousespotlights"], function(chromeset){
+					if((chromeset["mousespotlights"] != true)){ // regular lamp
+						if((chromeset["alllightsoff"] != true)){
+							chrome.scripting.executeScript({
+								target: {tabId: thattab.id},
+								files: ["js/light.js"]
+							});
+						}else{
+							chrome.tabs.sendMessage(thattab.id, {action: "masterclick"});
+						}
+					}else{
+						// all tabs
+						// Night Mode profile
+						// Eye Protection profile
+						chrome.tabs.sendMessage(thattab.id, {action: "masterclick"});
+					}
+				});
+			}
+			clickbutton = 0;
+			// Clear all timers
+			chrome.alarms.clear("myLights");
+			chrome.action.setPopup({tabId: thattab.id, popup:""});
+		});
+	}
+}
+
+function codenight(){
+	if(document.getElementById("totldark")){
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "day"});
+	}else{
+		chrome.runtime.sendMessage({name: "sendnightmodeindark", value: "night"});
+	}
+}
 
 var lampandnightmode;
 chrome.commands.onCommand.addListener(function(command){
@@ -310,7 +354,12 @@ chrome.commands.onCommand.addListener(function(command){
 			if(lampandnightmode == true){
 				chrome.runtime.sendMessage({name: "mastertabnight"});
 			}else{
-				chrome.tabs.executeScript(null, {code:"if(document.getElementById('totldark')){chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'day'});}else{chrome.runtime.sendMessage({name: 'sendnightmodeindark', value: 'night'});}"});
+				getCurrentTab().then((thattab) => {
+					chrome.scripting.executeScript({
+						target: {tabId: thattab.id},
+						func: codenight
+					});
+				});
 			}
 		});
 	}
@@ -320,7 +369,11 @@ chrome.commands.onCommand.addListener(function(command){
 function onClickHandler(info, tab){
 	var str = info.menuItemId;
 	switch(true){
-	case(str.includes("totlvideo") || str.includes("totlpage")): chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+	case(str.includes("totlvideo") || str.includes("totlpage")):
+		chrome.scripting.executeScript({
+			target: {tabId: tab.id},
+			files: ["js/light.js"]
+		});
 		break;
 	case(str.includes("totlguideemenu")): chrome.tabs.create({url: linkguide, active:true});
 		break;
@@ -380,7 +433,7 @@ if(chrome.contextMenus){
 	if(actionmenuadded == false){
 		actionmenuadded = true;
 
-		var contexts = ["browser_action"];
+		var contexts = ["action"];
 		browsercontext(sharemenuwelcomeguidetitle, "totlguideemenu", {"16": "images/IconGuide.png", "32": "images/IconGuide@2x.png"});
 		browsercontext(sharemenudonatetitle, "totldevelopmenu", {"16": "images/IconDonate.png", "32": "images/IconDonate@2x.png"});
 		browsercontext(sharemenuratetitle, "totlratemenu", {"16": "images/IconStar.png", "32": "images/IconStar@2x.png"});
@@ -472,7 +525,7 @@ chrome.storage.onChanged.addListener(function(changes){
 				chrome.tabs.query({}, function(tabs){
 					var i, l = tabs.length;
 					for(i = 0; i < l; i++){
-						chrome.browserAction.setIcon({tabId : tabs[i].id,
+						chrome.action.setIcon({tabId : tabs[i].id,
 							path : {
 								"19": changes["icon"].newValue,
 								"38": changes["icon"].newValue
@@ -600,14 +653,15 @@ if(typeof chrome.omnibox !== "undefined"){
 			}else if(onmniresult == i18nomnidaymode){
 				omnidaynightmode(0);
 			}else if(onmniresult == i18nomnilightoff || text == i18nomnilighton){
-				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-					var tab = tabs[0];
-					chrome.tabs.executeScript(tab.id, {file: "js/light.js"});
+				getCurrentTab().then((thattab) => {
+					chrome.scripting.executeScript({
+						target: {tabId: thattab.id},
+						files: ["js/light.js"]
+					});
 				});
 			}else if(onmniresult == i18nomnihelp){
-				chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-					var tab = tabs[0];
-					chrome.tabs.update(tab.id, {url: linksupport});
+				getCurrentTab().then((thattab) => {
+					chrome.tabs.update(thattab.id, {url: linksupport});
 				});
 			}
 		});
@@ -616,9 +670,8 @@ if(typeof chrome.omnibox !== "undefined"){
 function omnidaynightmode(a){
 	var result = "";
 	if(a == 0){ result = "day"; }else{ result = "night"; }
-	chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-		var tab = tabs[0];
-		chrome.tabs.sendMessage(tab.id, {action: "goinnightmode", value:result});
+	getCurrentTab().then((thattab) => {
+		chrome.tabs.sendMessage(thattab.id, {action: "goinnightmode", value:result});
 	});
 }
 
@@ -728,3 +781,21 @@ function installation(){
 chrome.runtime.onInstalled.addListener(function(){
 	installation();
 });
+
+/*
+BUG in Chrome manifest v3:
++ it work now v100 - chrome.i18n.getmessage -> not a function -> fixed in Chrome version 100
++ it work now v100 - omni suggestion error -> https://bugs.chromium.org/p/chromium/issues/detail?id=1186804
++ it work but show error seticon -> https://bugs.chromium.org/p/chromium/issues/detail?id=1262029&q=setIcon&can=2
++ NOT OK Chrome runat "document_start" not supported for scripting
+https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
+https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
+
+
+OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
+OK Done IMPROVEMENT double click lamp button action
+OK Done IMPROVEMENT panel information panel design
++ IMPROVE rate box to 5 stars
++ REMOVE Speech and Camera -> not possile anymore because of service worker background page
++ issue: no YouTube video detection right to left layout issue ARAB
+*/

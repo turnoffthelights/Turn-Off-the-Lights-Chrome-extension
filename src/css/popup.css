@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the videos as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -63,6 +63,7 @@ button:hover{background-color:var(--totl-button-background-hover)}
 hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .btnbox{margin:15px auto;left:0;right:0;width:calc(295px - 15px)}
 .btnbox .dbn{cursor:pointer;padding:5px;height:60px;width:60px;display:block;float:left;margin:5px 10px;border:1px solid transparent;position:relative}
-.btnbox .dbn:hover{border:1px solid #ccc}
+.btnbox .dbn:hover{background-color:#e8f0fe;border:1px solid transparent;border-radius:8px}
+.btnbox .dbn:hover .lbl{white-space:normal}
 .btnbox .dbn .lbl{color:var(--totl-primary-font-color);position:absolute;bottom:5px;font-size:11px;text-align:center;left:0;right:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 .textsettings{text-align:center;font-size:30px;top:10px;left:0;right:0;position:absolute}

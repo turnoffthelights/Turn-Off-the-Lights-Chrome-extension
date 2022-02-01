@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_name__",
   "short_name": "Turn Off the Lights",
-  "version": "4.3.0.0",
+  "version": "4.4.0.0",
   "description": "__MSG_description__",
   "author": "Stefan vd",
   "homepage_url": "https://www.turnoffthelights.com/support/",
@@ -16,7 +16,7 @@
       "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "browser_action": {
+  "action": {
       "default_title": "__MSG_pageatitle__",
       "default_icon": {
         "19": "icons/iconstick19.png",
@@ -24,10 +24,11 @@
       }
   },
   "background": {
-    "page": "background.html",
-	  "persistent": false
+    "service_worker": "js/background.js"
   },
-  "content_security_policy": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' https://www.turnoffthelights.com * data:; object-src 'none'",
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; style-src 'self'; media-src https://www.turnoffthelights.com; child-src https://www.youtube.com https://www.turnoffthelights.com; connect-src https://www.turnoffthelights.com; script-src 'self'; img-src 'self' https://www.turnoffthelights.com * data:; object-src 'none'"
+  },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
@@ -85,9 +86,10 @@
     "open_in_tab": true
   },
   "offline_enabled": true,
-  "minimum_chrome_version": "33",
+  "minimum_chrome_version": "100",
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "<all_urls>", "storage", "webNavigation" ]
+  "permissions": [ "contextMenus", "tabs", "storage", "webNavigation", "scripting", "alarms" ],
+  "host_permissions": ["<all_urls>"]
 }

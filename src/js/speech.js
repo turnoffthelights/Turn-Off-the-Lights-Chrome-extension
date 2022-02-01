@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2022 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -66,7 +66,10 @@ function removespeechinfo(){
 		var l = tabs.length;
 		for(i = 0; i < l; i++){
 			if(tabs[i].url.match(/^http/i)){
-				chrome.tabs.executeScript(tabs[i].id, {file: "js/speechbubbleremove.js"});
+				chrome.scripting.executeScript({
+					target: {tabId: tabs[i].id},
+					files: ["js/speechbubbleremove.js"]
+				});
 			}
 		}
 	});
@@ -80,7 +83,10 @@ function addspeechinfo(){
 		var l = tabs.length;
 		for(i = 0; i < l; i++){
 			if(tabs[i].url.match(/^http/i)){
-				chrome.tabs.executeScript(tabs[i].id, {file: "js/speechbubbleadd.js"});
+				chrome.scripting.executeScript({
+					target: {tabId: tabs[i].id},
+					files: ["js/speechbubbleadd.js"]
+				});
 			}
 		}
 	});
@@ -171,6 +177,36 @@ var i18nldesspeech3command = chrome.i18n.getMessage("desspeech3command"); // pla
 i18nldesspeech3command = i18nldesspeech3command.toLowerCase();
 var i18nldesspeech4command = chrome.i18n.getMessage("desspeech4command"); // pause video
 i18nldesspeech4command = i18nldesspeech4command.toLowerCase();
+
+function codespeechtask(a){
+	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+		var sp = document.getElementById("movie_player");
+		var video = document.querySelector("video");
+
+		if(typeof(sp.pauseVideo) === "function"){
+			if(a == true){
+				sp.playVideo();
+			}else{
+				sp.pauseVideo();
+			}
+		}else if(typeof(video.pause) === "function"){
+			if(a == true){
+				video.play();
+			}else{
+				video.pause();
+			}
+		}
+	}else{
+		var htmlplayer = document.getElementsByTagName("video")[0];
+		if(htmlplayer !== null){
+			if(a == true){
+				htmlplayer.play();
+			}else{
+				htmlplayer.pause();
+			}
+		}
+	}
+}
 
 function speechrecognition(){
 	const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -269,7 +305,10 @@ function speechrecognition(){
 			chrome.storage.sync.set({"slideeffect": true});
 			chrome.tabs.query({active: true}, function(tabs){
 				if(tabs[0].url.match(/^http/i)){
-					chrome.tabs.executeScript(tabs[0].id, {file: "js/light.js"});
+					chrome.scripting.executeScript({
+						target: {tabId: tabs[0].id},
+						files: ["js/light.js"]
+					});
 					actiondone();
 				}
 			});
@@ -278,17 +317,21 @@ function speechrecognition(){
 			chrome.storage.sync.set({"slideeffect": true});
 			chrome.tabs.query({active: true}, function(tabs){
 				if(tabs[0].url.match(/^http/i)){
-					chrome.tabs.executeScript(tabs[0].id, {file: "js/light.js"});
+					chrome.scripting.executeScript({
+						target: {tabId: tabs[0].id},
+						files: ["js/light.js"]
+					});
 					actiondone();
 				}
 			});
 		}else if(userSaid(final_transcript, i18nldesspeech3command)){ // Play the video
 			chrome.tabs.query({active: true}, function(tabs){
 				if(tabs[0].url.match(/^http/i)){
-					chrome.tabs.executeScript(tabs[0].id, {
-						code: "var speechsetplay = true;"
-					}, function(){
-						chrome.tabs.executeScript(tabs[0].id, {file: "js/video-player-set.js"});
+					var speechsetplay = true;
+					chrome.scripting.executeScript({
+						target: {tabId: tabs[0].id},
+						func: codespeechtask,
+						args: [speechsetplay]
 					});
 					actiondone();
 				}
@@ -296,10 +339,11 @@ function speechrecognition(){
 		}else if(userSaid(final_transcript, i18nldesspeech4command)){ // Stop the video
 			chrome.tabs.query({active: true}, function(tabs){
 				if(tabs[0].url.match(/^http/i)){
-					chrome.tabs.executeScript(tabs[0].id, {
-						code: "var speechsetplay = false;"
-					}, function(){
-						chrome.tabs.executeScript(tabs[0].id, {file: "js/video-player-set.js"});
+					var speechsetplay = false;
+					chrome.scripting.executeScript({
+						target: {tabId: tabs[0].id},
+						func: codespeechtask,
+						args: [speechsetplay]
 					});
 					actiondone();
 				}
