@@ -223,7 +223,9 @@ const injectScriptsTo = (tabId, url) => {
 			// 	js: [`${script}`],
 			// 	runAt: "document_start"
 			// });
+
 			// OR
+
 			// chrome.scripting.registerContentScripts({
 			// 	scripts:[{
 			// 		target: {tabId: tabId},
@@ -798,4 +800,5 @@ OK Done IMPROVEMENT panel information panel design
 + IMPROVE rate box to 5 stars
 + REMOVE Speech and Camera -> not possile anymore because of service worker background page
 + issue: no YouTube video detection right to left layout issue ARAB
++ issue PIP-mode
 */
