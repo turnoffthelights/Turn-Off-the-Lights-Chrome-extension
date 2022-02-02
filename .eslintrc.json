@@ -38,9 +38,9 @@
     },
     "globals": {
         "angular": "writable",
+        "exbrowser": "writable",
         "totlscreenshotpage": "writable",
         "developerwebsite": "writable",
-        "totloptionspage": "writable",
         "turnoffthelightsproduct": "writable",
         "donatewebsite": "writable",
         "writereview": "writable",

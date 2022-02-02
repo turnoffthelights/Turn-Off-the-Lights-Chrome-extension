@@ -28,6 +28,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 // Importing the constants
+// eslint-disable-next-line no-undef
 importScripts("constants.js");
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
