@@ -111,10 +111,6 @@ function save_options(){
 	var ytselq = document.getElementById("maxquality");
 	var html5volumesteps = document.getElementById("videovolumesteps");
 	var linearsq = document.getElementById("linearsq");
-	var webspeechlang = document.getElementById("select_language");
-	if(webspeechlang.selectedIndex != -1){ var savewebspeechlang = webspeechlang.options[webspeechlang.selectedIndex].value; }
-	var webspeechcountry = document.getElementById("select_dialect");
-	if(webspeechcountry.selectedIndex != -1){ var savewebspeechcountry = webspeechcountry.options[webspeechcountry.selectedIndex].value; }
 
 	// multiopacity Excluded domains
 	var multiopacityDomainsBox = $("multiopacityDomainsBox");
@@ -127,13 +123,13 @@ function save_options(){
 		websitemulti[multiopacityDomainsBox.options[multiopacityi].value] = getnumber;
 	}
 
-	chrome.storage.sync.set({"interval":$("interval").value, "lightcolor":$("lightcolor").value, "autoplay":$("autoplay").checked, "playlist":$("playlist").checked, "flash":$("flash").checked, "head":$("head").checked, "fadein":$("fadein").checked, "fadeout":$("fadeout").checked, "infobar":$("infobar").checked, "sharebutton":$("sharebutton").checked, "likebutton":$("likebutton").checked, "readera":$("readera").checked, "readern":$("readern").checked, "shortcutlight":$("shortcutlight").checked, "eyea":$("eyea").checked, "eyen":$("eyen").checked, "suggestions":$("suggestions").checked, "videoheadline":$("videoheadline").checked, "eastereggs":$("eastereggs").checked, "contextmenus":$("contextmenus").checked, "viewcount":$("viewcount").checked, "lightimage":$("lightimage").value, "lightimagea":$("lightimagea").checked, "lightimagen":$("lightimagen").checked, "eyealist":$("eyealist").checked, "mousespotlighto":$("mousespotlighto").checked, "mousespotlighta":$("mousespotlighta").checked, "mousespotlightc":$("mousespotlightc").checked, "nighttime":$("nighttime").checked, "begintime":$("begintime").value, "endtime":$("endtime").value, "addvideobutton":$("addvideobutton").checked, "likebar":$("likebar").checked, "ambilight":$("ambilight").checked, "ambilightrangeblurradius":$("ambilightrangeblurradius").value, "ambilightrangespreadradius":$("ambilightrangespreadradius").value, "mousespotlightt":$("mousespotlightt").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "ambilightcolorhex":$("ambilightcolorhex").value, "ambilight4color":$("ambilight4color").checked, "ambilight1colorhex":$("ambilight1colorhex").value, "ambilight2colorhex":$("ambilight2colorhex").value, "ambilight3colorhex":$("ambilight3colorhex").value, "ambilight4colorhex":$("ambilight4colorhex").value, "password":$("password").checked, "enterpassword":$("enterpassword").value, "noflash":$("noflash").checked, "hardflash":$("hardflash").checked, "ecosaver":$("ecosaver").checked, "ecosavertime":$("ecosavertime").value, "dynamic":$("dynamic").checked, "dynamic1":$("dynamic1").checked, "dynamic2":$("dynamic2").checked, "dynamic3":$("dynamic3").checked, "dynamic4":$("dynamic4").checked, "dynamic5":$("dynamic5").checked, "dynamic6":$("dynamic6").checked, "dynamic7":$("dynamic7").checked, "dynamic8":$("dynamic8").checked, "dynamic9":$("dynamic9").checked, "dynamic10":$("dynamic10").checked, "hoveroptiondyn5":$("hoveroptiondyn5").checked, "autoplayonly":$("autoplayonly").checked, "blur":$("blur").checked, "maxquality":ytselq.options[ytselq.selectedIndex].value, "autowidthyoutube":$("autowidthyoutube").checked, "customqualityyoutube":$("customqualityyoutube").checked, "cinemaontop":$("cinemaontop").checked, "alllightsoff":$("alllightsoff").checked, "spotlightradius":$("spotlightradius").value, "atmosphereonly":$("atmosphereonly").checked, "optionskipremember":$("optionskipremember").checked, "nighttheme":$("nighttheme").checked, "nightonly":$("nightonly").checked, "nightenabletheme":$("nightenabletheme").checked, "autoplaydelay":$("autoplaydelay").checked, "autoplaydelaytime":$("autoplaydelaytime").value, "motion":$("motion").checked, "lightimagelin":$("lightimagelin").checked, "linearsq":linearsq.options[linearsq.selectedIndex].value, "colora":$("colora").value, "intervallina":$("intervallina").value, "colorb":$("colorb").value, "intervallinb":$("intervallinb").value, "speech":$("speech").checked, "speechlang":savewebspeechlang, "speechcountry":savewebspeechcountry, "atmosvivid":$("atmosvivid").checked, "cammotiononly":$("cammotiononly").checked, "speechonly":$("speechonly").checked, "autoplaychecklistwhite":$("autoplaychecklistwhite").checked, "autoplaychecklistblack":$("autoplaychecklistblack").checked, "autostop":$("autostop").checked, "autostoponly":$("autostoponly").checked, "autostopchecklistwhite":$("autostopchecklistwhite").checked, "autostopchecklistblack":$("autostopchecklistblack").checked, "nighthover":$("nighthover").checked, "nightmodechecklistwhite":$("nightmodechecklistwhite").checked, "nightmodechecklistblack":$("nightmodechecklistblack").checked, "nmtopleft":$("nmtopleft").checked, "nmtopright":$("nmtopright").checked, "nmbottomright":$("nmbottomright").checked, "nmbottomleft":$("nmbottomleft").checked, "nmcustom":$("nmcustom").checked, "nightactivetime":$("nightactivetime").checked, "nmbegintime":$("nmbegintime").value, "nmendtime":$("nmendtime").value, "lampandnightmode":$("lampandnightmode").checked, "eyechecklistwhite":$("eyechecklistwhite").checked, "eyechecklistblack":$("eyechecklistblack").checked, "nightmodebck":$("nightmodebck").value, "nightmodetxt":$("nightmodetxt").value, "no360youtube":$("no360youtube").checked, "videotool":$("videotool").checked, "reflection":$("reflection").checked, "reflectionamount":$("reflectionamount").value, "videotoolonly":$("videotoolonly").checked, "videotoolchecklistwhite":$("videotoolchecklistwhite").checked, "videotoolchecklistblack":$("videotoolchecklistblack").checked, "nightmodehyperlink":$("nightmodehyperlink").value, "block60fps":$("block60fps").checked, "excludedDomains":getalldomains("excludedDomainsBox"), "autoplayDomains":getalldomains("autoplayDomainsBox"), "atmosphereDomains":getalldomains("atmosphereDomainsBox"), "nightDomains":getalldomains("nightDomainsBox"), "cammotionDomains":getalldomains("cammotionDomainsBox"), "speechDomains":getalldomains("speechDomainsBox"), "autostopDomains":getalldomains("autostopDomainsBox"), "videotoolDomains":getalldomains("videotoolDomainsBox"), "videovolume":$("videovolume").checked, "videovolumecolor":$("videovolumecolor").value, "videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value, "videovolumelabel":$("videovolumelabel").checked, "icon":$("btnpreview").getAttribute("data-icon"), "visopacity":$("visopacity").value, "videotoolcolor":$("videotoolcolor").value, "hovervideo":$("hovervideo").checked, "hovervideoamount":$("hovervideoamount").value, "mousespotlights":$("mousespotlights").checked, "drawatmosfps":$("drawatmosfps").value, "aplay":$("aplay").checked, "apause":$("apause").checked, "astop":$("astop").checked, "videozoom":$("videozoom").checked, "playrate":$("playrate").checked, "playrateamount":$("playrateamount").value, "speedtoolbar":$("speedtoolbar").checked, "atmosontotlmode":$("atmosontotlmode").checked, "titleinvertcolor":$("titleinvertcolor").value, "vpause":$("vpause").checked, "darkbrowsertheme":$("darkbrowsertheme").checked, "autostopred":$("autostopred").checked, "autostoptrans":$("autostoptrans").checked, "videovolumeposa":$("videovolumeposa").checked, "videovolumeposb":$("videovolumeposb").checked, "videovolumeposc":$("videovolumeposc").checked, "videovolumehold":$("videovolumehold").checked, "multiopacall":$("multiopacall").checked, "multiopacsel":$("multiopacsel").checked, "multiopacityDomains":JSON.stringify(websitemulti), "videovolumealt":$("videovolumealt").checked, "nightmodebydomain":$("nightmodebydomain").checked, "nightmodebypage":$("nightmodebypage").checked, "seeanalytics":$("seeanalytics").checked, "nightmodegesture":$("nightmodegesture").checked, "nightmodeswitchhide":$("nightmodeswitchhide").checked, "nightmodeswitchhidetime":$("nightmodeswitchhidetime").value, "atmosfpsauto":$("atmosfpsauto").checked, "atmosfpsmanual":$("atmosfpsmanual").checked, "videovolumeonly":$("videovolumeonly").checked, "videovolumechecklistwhite":$("videovolumechecklistwhite").checked, "videovolumechecklistblack":$("videovolumechecklistblack").checked, "videovolumeDomains":getalldomains("videovolumeDomainsBox"), "videovolumescrolla":$("videovolumescrolla").checked, "videovolumescrollb":$("videovolumescrollb").checked, "videovolumescrollc":$("videovolumescrollc").checked, "videovolumeposd":$("videovolumeposd").checked, "videovolumepose":$("videovolumepose").checked, "nightmodebutton":$("nightmodebutton").value, "gamepad":$("gamepad").checked, "nightmodeos":$("nightmodeos").checked, "gpleftstick":gpleftstick.options[gpleftstick.selectedIndex].value, "gprightstick":gprightstick.options[gprightstick.selectedIndex].value, "gpbtnx":gpbtnx.options[gpbtnx.selectedIndex].value, "gpbtno":gpbtno.options[gpbtno.selectedIndex].value, "gpbtnsquare":gpbtnsquare.options[gpbtnsquare.selectedIndex].value, "gpbtntriangle":gpbtntriangle.options[gpbtntriangle.selectedIndex].value, "gpbtnlb":gpbtnlb.options[gpbtnlb.selectedIndex].value, "gpbtnrb":gpbtnrb.options[gpbtnrb.selectedIndex].value, "gpbtnlt":gpbtnlt.options[gpbtnlt.selectedIndex].value, "gpbtnrt":gpbtnrt.options[gpbtnrt.selectedIndex].value, "gpbtnshare":gpbtnshare.options[gpbtnshare.selectedIndex].value, "gpbtnmenu":gpbtnmenu.options[gpbtnmenu.selectedIndex].value, "gpbtnrightstick":gpbtnrightstick.options[gpbtnrightstick.selectedIndex].value, "gpbtnleftstick":gpbtnleftstick.options[gpbtnleftstick.selectedIndex].value, "gpbtndirup":gpbtndirup.options[gpbtndirup.selectedIndex].value, "gpbtndirdown":gpbtndirdown.options[gpbtndirdown.selectedIndex].value, "gpbtndirleft":gpbtndirleft.options[gpbtndirleft.selectedIndex].value, "gpbtndirright":gpbtndirright.options[gpbtndirright.selectedIndex].value, "gpbtnlogo":gpbtnlogo.options[gpbtnlogo.selectedIndex].value, "nightmodeborder":$("nightmodeborder").value, "nmautobegintime":$("nmautobegintime").value, "nmautoendtime":$("nmautoendtime").value, "nmautoclock":$("nmautoclock").checked});
+	chrome.storage.sync.set({"interval":$("interval").value, "lightcolor":$("lightcolor").value, "autoplay":$("autoplay").checked, "playlist":$("playlist").checked, "flash":$("flash").checked, "head":$("head").checked, "fadein":$("fadein").checked, "fadeout":$("fadeout").checked, "infobar":$("infobar").checked, "sharebutton":$("sharebutton").checked, "likebutton":$("likebutton").checked, "readera":$("readera").checked, "readern":$("readern").checked, "shortcutlight":$("shortcutlight").checked, "eyea":$("eyea").checked, "eyen":$("eyen").checked, "suggestions":$("suggestions").checked, "videoheadline":$("videoheadline").checked, "eastereggs":$("eastereggs").checked, "contextmenus":$("contextmenus").checked, "viewcount":$("viewcount").checked, "lightimage":$("lightimage").value, "lightimagea":$("lightimagea").checked, "lightimagen":$("lightimagen").checked, "eyealist":$("eyealist").checked, "mousespotlighto":$("mousespotlighto").checked, "mousespotlighta":$("mousespotlighta").checked, "mousespotlightc":$("mousespotlightc").checked, "nighttime":$("nighttime").checked, "begintime":$("begintime").value, "endtime":$("endtime").value, "addvideobutton":$("addvideobutton").checked, "likebar":$("likebar").checked, "ambilight":$("ambilight").checked, "ambilightrangeblurradius":$("ambilightrangeblurradius").value, "ambilightrangespreadradius":$("ambilightrangespreadradius").value, "mousespotlightt":$("mousespotlightt").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "ambilightcolorhex":$("ambilightcolorhex").value, "ambilight4color":$("ambilight4color").checked, "ambilight1colorhex":$("ambilight1colorhex").value, "ambilight2colorhex":$("ambilight2colorhex").value, "ambilight3colorhex":$("ambilight3colorhex").value, "ambilight4colorhex":$("ambilight4colorhex").value, "password":$("password").checked, "enterpassword":$("enterpassword").value, "noflash":$("noflash").checked, "hardflash":$("hardflash").checked, "ecosaver":$("ecosaver").checked, "ecosavertime":$("ecosavertime").value, "dynamic":$("dynamic").checked, "dynamic1":$("dynamic1").checked, "dynamic2":$("dynamic2").checked, "dynamic3":$("dynamic3").checked, "dynamic4":$("dynamic4").checked, "dynamic5":$("dynamic5").checked, "dynamic6":$("dynamic6").checked, "dynamic7":$("dynamic7").checked, "dynamic8":$("dynamic8").checked, "dynamic9":$("dynamic9").checked, "dynamic10":$("dynamic10").checked, "hoveroptiondyn5":$("hoveroptiondyn5").checked, "autoplayonly":$("autoplayonly").checked, "blur":$("blur").checked, "maxquality":ytselq.options[ytselq.selectedIndex].value, "autowidthyoutube":$("autowidthyoutube").checked, "customqualityyoutube":$("customqualityyoutube").checked, "cinemaontop":$("cinemaontop").checked, "alllightsoff":$("alllightsoff").checked, "spotlightradius":$("spotlightradius").value, "atmosphereonly":$("atmosphereonly").checked, "optionskipremember":$("optionskipremember").checked, "nighttheme":$("nighttheme").checked, "nightonly":$("nightonly").checked, "nightenabletheme":$("nightenabletheme").checked, "autoplaydelay":$("autoplaydelay").checked, "autoplaydelaytime":$("autoplaydelaytime").value, "lightimagelin":$("lightimagelin").checked, "linearsq":linearsq.options[linearsq.selectedIndex].value, "colora":$("colora").value, "intervallina":$("intervallina").value, "colorb":$("colorb").value, "intervallinb":$("intervallinb").value, "atmosvivid":$("atmosvivid").checked, "autoplaychecklistwhite":$("autoplaychecklistwhite").checked, "autoplaychecklistblack":$("autoplaychecklistblack").checked, "autostop":$("autostop").checked, "autostoponly":$("autostoponly").checked, "autostopchecklistwhite":$("autostopchecklistwhite").checked, "autostopchecklistblack":$("autostopchecklistblack").checked, "nighthover":$("nighthover").checked, "nightmodechecklistwhite":$("nightmodechecklistwhite").checked, "nightmodechecklistblack":$("nightmodechecklistblack").checked, "nmtopleft":$("nmtopleft").checked, "nmtopright":$("nmtopright").checked, "nmbottomright":$("nmbottomright").checked, "nmbottomleft":$("nmbottomleft").checked, "nmcustom":$("nmcustom").checked, "nightactivetime":$("nightactivetime").checked, "nmbegintime":$("nmbegintime").value, "nmendtime":$("nmendtime").value, "lampandnightmode":$("lampandnightmode").checked, "eyechecklistwhite":$("eyechecklistwhite").checked, "eyechecklistblack":$("eyechecklistblack").checked, "nightmodebck":$("nightmodebck").value, "nightmodetxt":$("nightmodetxt").value, "no360youtube":$("no360youtube").checked, "videotool":$("videotool").checked, "reflection":$("reflection").checked, "reflectionamount":$("reflectionamount").value, "videotoolonly":$("videotoolonly").checked, "videotoolchecklistwhite":$("videotoolchecklistwhite").checked, "videotoolchecklistblack":$("videotoolchecklistblack").checked, "nightmodehyperlink":$("nightmodehyperlink").value, "block60fps":$("block60fps").checked, "excludedDomains":getalldomains("excludedDomainsBox"), "autoplayDomains":getalldomains("autoplayDomainsBox"), "atmosphereDomains":getalldomains("atmosphereDomainsBox"), "nightDomains":getalldomains("nightDomainsBox"), "autostopDomains":getalldomains("autostopDomainsBox"), "videotoolDomains":getalldomains("videotoolDomainsBox"), "videovolume":$("videovolume").checked, "videovolumecolor":$("videovolumecolor").value, "videovolumesteps":html5volumesteps.options[html5volumesteps.selectedIndex].value, "videovolumelabel":$("videovolumelabel").checked, "icon":$("btnpreview").getAttribute("data-icon"), "visopacity":$("visopacity").value, "videotoolcolor":$("videotoolcolor").value, "hovervideo":$("hovervideo").checked, "hovervideoamount":$("hovervideoamount").value, "mousespotlights":$("mousespotlights").checked, "drawatmosfps":$("drawatmosfps").value, "aplay":$("aplay").checked, "apause":$("apause").checked, "astop":$("astop").checked, "videozoom":$("videozoom").checked, "playrate":$("playrate").checked, "playrateamount":$("playrateamount").value, "speedtoolbar":$("speedtoolbar").checked, "atmosontotlmode":$("atmosontotlmode").checked, "titleinvertcolor":$("titleinvertcolor").value, "vpause":$("vpause").checked, "darkbrowsertheme":$("darkbrowsertheme").checked, "autostopred":$("autostopred").checked, "autostoptrans":$("autostoptrans").checked, "videovolumeposa":$("videovolumeposa").checked, "videovolumeposb":$("videovolumeposb").checked, "videovolumeposc":$("videovolumeposc").checked, "videovolumehold":$("videovolumehold").checked, "multiopacall":$("multiopacall").checked, "multiopacsel":$("multiopacsel").checked, "multiopacityDomains":JSON.stringify(websitemulti), "videovolumealt":$("videovolumealt").checked, "nightmodebydomain":$("nightmodebydomain").checked, "nightmodebypage":$("nightmodebypage").checked, "seeanalytics":$("seeanalytics").checked, "nightmodegesture":$("nightmodegesture").checked, "nightmodeswitchhide":$("nightmodeswitchhide").checked, "nightmodeswitchhidetime":$("nightmodeswitchhidetime").value, "atmosfpsauto":$("atmosfpsauto").checked, "atmosfpsmanual":$("atmosfpsmanual").checked, "videovolumeonly":$("videovolumeonly").checked, "videovolumechecklistwhite":$("videovolumechecklistwhite").checked, "videovolumechecklistblack":$("videovolumechecklistblack").checked, "videovolumeDomains":getalldomains("videovolumeDomainsBox"), "videovolumescrolla":$("videovolumescrolla").checked, "videovolumescrollb":$("videovolumescrollb").checked, "videovolumescrollc":$("videovolumescrollc").checked, "videovolumeposd":$("videovolumeposd").checked, "videovolumepose":$("videovolumepose").checked, "nightmodebutton":$("nightmodebutton").value, "gamepad":$("gamepad").checked, "nightmodeos":$("nightmodeos").checked, "gpleftstick":gpleftstick.options[gpleftstick.selectedIndex].value, "gprightstick":gprightstick.options[gprightstick.selectedIndex].value, "gpbtnx":gpbtnx.options[gpbtnx.selectedIndex].value, "gpbtno":gpbtno.options[gpbtno.selectedIndex].value, "gpbtnsquare":gpbtnsquare.options[gpbtnsquare.selectedIndex].value, "gpbtntriangle":gpbtntriangle.options[gpbtntriangle.selectedIndex].value, "gpbtnlb":gpbtnlb.options[gpbtnlb.selectedIndex].value, "gpbtnrb":gpbtnrb.options[gpbtnrb.selectedIndex].value, "gpbtnlt":gpbtnlt.options[gpbtnlt.selectedIndex].value, "gpbtnrt":gpbtnrt.options[gpbtnrt.selectedIndex].value, "gpbtnshare":gpbtnshare.options[gpbtnshare.selectedIndex].value, "gpbtnmenu":gpbtnmenu.options[gpbtnmenu.selectedIndex].value, "gpbtnrightstick":gpbtnrightstick.options[gpbtnrightstick.selectedIndex].value, "gpbtnleftstick":gpbtnleftstick.options[gpbtnleftstick.selectedIndex].value, "gpbtndirup":gpbtndirup.options[gpbtndirup.selectedIndex].value, "gpbtndirdown":gpbtndirdown.options[gpbtndirdown.selectedIndex].value, "gpbtndirleft":gpbtndirleft.options[gpbtndirleft.selectedIndex].value, "gpbtndirright":gpbtndirright.options[gpbtndirright.selectedIndex].value, "gpbtnlogo":gpbtnlogo.options[gpbtnlogo.selectedIndex].value, "nightmodeborder":$("nightmodeborder").value, "nmautobegintime":$("nmautobegintime").value, "nmautoendtime":$("nmautoendtime").value, "nmautoclock":$("nmautoclock").checked});
 }
 
 var firstdefaultvalues = {};
 function defaultgetsettings(){
 	// Option default value to read if there is no current value from chrome.storage AND init default value
-	chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "autostopDomains", "videotoolDomains", "videovolumeDomains", "multiopacityDomains", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "nightmodeborder", "nmautobegintime", "nmautoendtime"], function(items){
+	chrome.storage.sync.get(["lightcolor", "ambilightcolorhex", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "colora", "colorb", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "videovolumecolor", "videotoolcolor", "titleinvertcolor", "nightmodebutton", "lightimage", "spotlightradius", "linearsq", "intervallina", "intervallinb", "reflectionamount", "videovolumesteps", "nmbegintime", "nmendtime", "ecosavertime", "begintime", "endtime", "nightmodeswitchhidetime", "playrateamount", "drawatmosfps", "hovervideoamount", "visopacity", "autoplaydelaytime", "autoplayDomains", "atmosphereDomains", "nightDomains", "autostopDomains", "videotoolDomains", "videovolumeDomains", "multiopacityDomains", "fadein", "fadeout", "readera", "readern", "lightimagea", "lightimagen", "mousespotlighta", "mousespotlightc", "mousespotlighto", "mousespotlightt", "eyea", "eyen", "eyealist", "interval", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightvarcolor", "ambilightfixcolor", "ambilight4color", "flash", "noflash", "noflash", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "hoveroptiondyn5", "maxquality", "autoplaychecklistwhite", "autoplaychecklistblack", "autostopchecklistwhite", "autostopchecklistblack", "videotoolchecklistwhite", "videotoolchecklistblack", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "eyechecklistwhite", "eyechecklistblack", "videovolumesteps", "videovolumelabel", "mousespotlights", "aplay", "apause", "astop", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "multiopacall", "multiopacsel", "nightmodebydomain", "nightmodebypage", "seeanalytics", "atmosfpsauto", "atmosfpsmanual", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "nightmodeborder", "nmautobegintime", "nmautoendtime"], function(items){
 		// find no localstore lightcolor
 		if(items["lightcolor"] == null){ firstdefaultvalues["lightcolor"] = "#000000"; }
 		// find no localstore ambilightcolorhex
@@ -200,8 +196,8 @@ function defaultgetsettings(){
 
 		if(items["nightDomains"] == null){ firstdefaultvalues["nightDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true}); }
 
-		if(items["autoplayDomains"] == null || items["atmosphereDomains"] == null || items["cammotionDomains"] == null || items["speechDomains"] == null || items["autostopDomains"] == null || items["videotoolDomains"] == null || items["videovolumeDomains"] == null){
-			firstdefaultvalues["autoplayDomains"] = firstdefaultvalues["atmosphereDomains"] = firstdefaultvalues["cammotionDomains"] = firstdefaultvalues["speechDomains"] = firstdefaultvalues["autostopDomains"] = firstdefaultvalues["videotoolDomains"] = firstdefaultvalues["videovolumeDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
+		if(items["autoplayDomains"] == null || items["atmosphereDomains"] == null || items["autostopDomains"] == null || items["videotoolDomains"] == null || items["videovolumeDomains"] == null){
+			firstdefaultvalues["autoplayDomains"] = firstdefaultvalues["atmosphereDomains"] = firstdefaultvalues["autostopDomains"] = firstdefaultvalues["videotoolDomains"] = firstdefaultvalues["videovolumeDomains"] = JSON.stringify({"https://www.youtube.com": true, "https://vimeo.com": true});
 		}
 
 		if(items["multiopacityDomains"] == null){ firstdefaultvalues["multiopacityDomains"] = JSON.stringify({"https://www.example.com": ["90"], "https://www.nytimes.com": ["85"]}); }
@@ -305,104 +301,6 @@ function defaultgetsettings(){
 }
 
 function read_options(){
-// speech
-	var langs =
-[["Afrikaans", ["af-ZA"]],
-	["Bahasa Indonesia", ["id-ID"]],
-	["Bahasa Melayu", ["ms-MY"]],
-	["Català", ["ca-ES"]],
-	["Čeština", ["cs-CZ"]],
-	["Deutsch", ["de-DE"]],
-	["English", ["en-AU", "Australia"],
-		["en-CA", "Canada"],
-		["en-IN", "India"],
-		["en-NZ", "New Zealand"],
-		["en-ZA", "South Africa"],
-		["en-GB", "United Kingdom"],
-		["en-US", "United States"]],
-	["Español", ["es-AR", "Argentina"],
-		["es-BO", "Bolivia"],
-		["es-CL", "Chile"],
-		["es-CO", "Colombia"],
-		["es-CR", "Costa Rica"],
-		["es-EC", "Ecuador"],
-		["es-SV", "El Salvador"],
-		["es-ES", "España"],
-		["es-US", "Estados Unidos"],
-		["es-GT", "Guatemala"],
-		["es-HN", "Honduras"],
-		["es-MX", "México"],
-		["es-NI", "Nicaragua"],
-		["es-PA", "Panamá"],
-		["es-PY", "Paraguay"],
-		["es-PE", "Perú"],
-		["es-PR", "Puerto Rico"],
-		["es-DO", "República Dominicana"],
-		["es-UY", "Uruguay"],
-		["es-VE", "Venezuela"]],
-	["Euskara", ["eu-ES"]],
-	["Français", ["fr-FR"]],
-	["Galego", ["gl-ES"]],
-	["Hrvatski", ["hr_HR"]],
-	["IsiZulu", ["zu-ZA"]],
-	["Íslenska", ["is-IS"]],
-	["Italiano", ["it-IT", "Italia"],
-		["it-CH", "Svizzera"]],
-	["Magyar", ["hu-HU"]],
-	["Nederlands", ["nl-NL"]],
-	["Norsk bokmål", ["nb-NO"]],
-	["Polski", ["pl-PL"]],
-	["Português", ["pt-BR", "Brasil"],
-		["pt-PT", "Portugal"]],
-	["Română", ["ro-RO"]],
-	["Slovenčina", ["sk-SK"]],
-	["Suomi", ["fi-FI"]],
-	["Svenska", ["sv-SE"]],
-	["Türkçe", ["tr-TR"]],
-	["български", ["bg-BG"]],
-	["Pусский", ["ru-RU"]],
-	["Српски", ["sr-RS"]],
-	["한국어", ["ko-KR"]],
-	["中文", ["cmn-Hans-CN", "普通话 (中国大陆)"],
-		["cmn-Hans-HK", "普通话 (香港)"],
-		["cmn-Hant-TW", "中文 (台灣)"],
-		["yue-Hant-HK", "粵語 (香港)"]],
-	["日本語", ["ja-JP"]],
-	["Lingua latīna", ["la"]]];
-
-	var i;
-	var l = langs.length;
-	for(i = 0; i < l; i++){
-		if($("select_language")){ $("select_language").options[i] = new Option(langs[i][0], i); }
-	}
-
-	function updateCountry(){
-		var i;
-		for(i = $("select_dialect").options.length - 1; i >= 0; i--){
-			$("select_dialect").remove(i);
-		}
-		var list = langs[$("select_language").selectedIndex];
-		var listi;
-		var listl = list.length;
-		for(listi = 1; listi < listl; listi++){
-			$("select_dialect").options.add(new Option(list[listi][1], list[listi][0]));
-		}
-		$("select_dialect").style.visibility = list[1].length == 1 ? "hidden" : "visible";
-	}
-
-	// add default language for first run
-	// will be rewritten if there is a 'saved setting'
-	var webspeechlang = document.getElementById("select_language");
-	if(webspeechlang.selectedIndex != -1){ webspeechlang.selectedIndex = "6"; updateCountry(); }
-	var webspeechcountry = document.getElementById("select_dialect");
-	if(webspeechcountry.selectedIndex != -1){ webspeechcountry.selectedIndex = "6"; }
-	//---
-
-	$("select_language").addEventListener("click", function(){ updateCountry(); }, false);
-	$("select_language").addEventListener("change", function(){ updateCountry(); save_options(); });
-	$("select_dialect").addEventListener("change", function(){ save_options(); });
-
-	//---
 	// open multi opacity
 	$("btnmultiopacity").addEventListener("click", function(){
 		materialAlert();
@@ -510,7 +408,7 @@ function read_options(){
 		showhidemodal("materialModalYouTube", "hide", "true");
 	}
 
-	var settingscheckboxarray = ["lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "addvideobutton", "likebar", "ambilight", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilight4color", "password", "noflash", "hardflash", "ecosaver", "hoveroptiondyn5", "blur", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "optionskipremember", "nighttheme", "nightenabletheme", "autoplaydelay", "motion", "lightimagelin", "speech", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "autostop", "autostopchecklistwhite", "autostopchecklistblack", "nighthover", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "block60fps", "videovolume", "videovolumelabel", "hovervideo", "mousespotlights", "aplay", "apause", "astop", "videozoom", "playrate", "speedtoolbar", "atmosontotlmode", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacall", "multiopacsel", "videovolumealt", "nightmodebydomain", "nightmodebypage", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gamepad", "dynamic", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "autoplayonly", "atmosphereonly", "nightonly", "cammotiononly", "speechonly", "autostoponly", "lampandnightmode", "nightmodeos", "nmautoclock"];
+	var settingscheckboxarray = ["lightimagea", "lightimagen", "autoplay", "playlist", "flash", "head", "fadein", "fadeout", "infobar", "sharebutton", "likebutton", "readera", "readern", "shortcutlight", "eyea", "eyen", "suggestions", "videoheadline", "eastereggs", "contextmenus", "viewcount", "eyealist", "mousespotlighto", "mousespotlightc", "mousespotlighta", "nighttime", "addvideobutton", "likebar", "ambilight", "mousespotlightt", "ambilightfixcolor", "ambilightvarcolor", "ambilight4color", "password", "noflash", "hardflash", "ecosaver", "hoveroptiondyn5", "blur", "autowidthyoutube", "customqualityyoutube", "cinemaontop", "alllightsoff", "optionskipremember", "nighttheme", "nightenabletheme", "autoplaydelay", "lightimagelin", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "autostop", "autostopchecklistwhite", "autostopchecklistblack", "nighthover", "nightmodechecklistwhite", "nightmodechecklistblack", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightactivetime", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "videotoolonly", "videotoolchecklistwhite", "videotoolchecklistblack", "block60fps", "videovolume", "videovolumelabel", "hovervideo", "mousespotlights", "aplay", "apause", "astop", "videozoom", "playrate", "speedtoolbar", "atmosontotlmode", "vpause", "darkbrowsertheme", "autostopred", "autostoptrans", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "multiopacall", "multiopacsel", "videovolumealt", "nightmodebydomain", "nightmodebypage", "seeanalytics", "nightmodegesture", "nightmodeswitchhide", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "gamepad", "dynamic", "dynamic1", "dynamic2", "dynamic3", "dynamic4", "dynamic5", "dynamic6", "dynamic7", "dynamic8", "dynamic9", "dynamic10", "autoplayonly", "atmosphereonly", "nightonly", "autostoponly", "lampandnightmode", "nightmodeos", "nmautoclock"];
 	function setcheckboxoptions(a){
 		for(var iset = 0; iset < settingscheckboxarray.length; iset++){
 			if(a[settingscheckboxarray[iset]] == true){ $(settingscheckboxarray[iset]).checked = true; }
@@ -524,16 +422,13 @@ function read_options(){
 		}
 	}
 
-	var settingsmain = ["firstDate", "speechlang", "speechcountry", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "cammotionDomains", "speechDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube", "firstsawnumber"];
+	var settingsmain = ["firstDate", "countremember", "excludedDomains", "autoplayDomains", "atmosphereDomains", "nightDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube", "firstsawnumber"];
 	var a = settingscheckboxarray, b = settingsinputrarray, c = settingsmain;
 	var allsettings = a.concat(b, c);
 	//---
 	chrome.storage.sync.get(allsettings, function(items){
 		setcheckboxoptions(items);
 		setinputoptions(items);
-
-		if(items["speechlang"]){ $("select_language").selectedIndex = items["speechlang"]; updateCountry(); }
-		if(items["speechcountry"]){ $("select_dialect").value = items["speechcountry"]; }
 
 		if(items["applastonversion"] == chrome.runtime.getManifest().version){ $("sectionauroraplayerappbox").style.display = "none"; }
 
@@ -735,14 +630,6 @@ function read_options(){
 		// night - Excluded domains - sort these alphabetically
 		var nightDomains = items["nightDomains"];
 		setlistbox("nightDomainsBox", nightDomains);
-
-		// cammotion - Excluded domains - sort these alphabetically
-		var cammotionDomains = items["cammotionDomains"];
-		setlistbox("cammotionDomainsBox", cammotionDomains);
-
-		// speech - Excluded domains - sort these alphabetically
-		var speechDomains = items["speechDomains"];
-		setlistbox("speechDomainsBox", speechDomains);
 
 		// autostop - Excluded domains - sort these alphabetically
 		var autostopDomains = items["autostopDomains"];
@@ -1073,20 +960,6 @@ function nightaddWhitelistDomain(){
 	save_options();
 }
 
-// whitelist cam motion domain
-function cammotionaddWhitelistDomain(){
-	var domain = $("cammotionwebsiteurl").value;
-	appendToListBox("cammotionDomainsBox", domain);
-	save_options();
-}
-
-// whitelist speech domain
-function speechaddWhitelistDomain(){
-	var domain = $("speechwebsiteurl").value;
-	appendToListBox("speechDomainsBox", domain);
-	save_options();
-}
-
 // whitelist autostop domain
 function autostopaddWhitelistDomain(){
 	var domain = $("autostopwebsiteurl").value;
@@ -1309,24 +1182,6 @@ function test(){
 	}
 
 	if($("videovolume").checked == true){ $("videovolumealt").disabled = false; }else{ $("videovolumealt").disabled = true; }
-
-	if($("motion").checked == true){
-		cameramotionlights();
-		$("cammotiononly").disabled = false;
-		if($("cammotiononly").checked == true){ $("cammotiononly").checked = true; $("cammotionDomainsBox").disabled = false; $("cammotionwebsiteurl").disabled = false; $("cammotionaddbutton").disabled = false; $("cammotionremovebutton").disabled = false; }else{ $("cammotionDomainsBox").disabled = true; $("cammotionwebsiteurl").disabled = true; $("cammotionaddbutton").disabled = true; $("cammotionremovebutton").disabled = true; }
-	}else{
-		cameramotionlights();
-		$("cammotiononly").disabled = true; $("cammotionDomainsBox").disabled = true; $("cammotionwebsiteurl").disabled = true; $("cammotionaddbutton").disabled = true; $("cammotionremovebutton").disabled = true;
-	}
-
-	if($("speech").checked == true){
-		$("select_language").disabled = false; $("select_dialect").disabled = false;
-		$("speechonly").disabled = false;
-		if($("speechonly").checked == true){ $("speechDomainsBox").disabled = false; $("speechwebsiteurl").disabled = false; $("speechaddbutton").disabled = false; $("speechremovebutton").disabled = false; }else{ $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true; }
-	}else{
-		$("select_language").disabled = true; $("select_dialect").disabled = true;
-		$("speechonly").disabled = true; $("speechDomainsBox").disabled = true; $("speechwebsiteurl").disabled = true; $("speechaddbutton").disabled = true; $("speechremovebutton").disabled = true;
-	}
 
 	if($("nightactivetime").checked == true && $("nighttheme").checked == true){ $("nmbegintime").disabled = false; $("nmendtime").disabled = false; }else{ $("nmbegintime").disabled = true; $("nmendtime").disabled = true; }
 
@@ -2017,304 +1872,6 @@ function dynamictest(){
 	}
 }
 
-// Cam Motion
-var localMediaStream = null;
-
-var width; var height;
-var huemin; var huemax; var satmin; var satmax; var valmin; var valmax;
-var last; var thresh; var down; var wasdown;
-var movethresh; var brightthresh; var overthresh;
-var avg;
-var state;
-var intervalID;
-var draw;
-var skin_filter;
-var r; var g; var b; var a;
-var hsv;
-var delt;
-
-window.URL = window.URL || window.webkitURL;
-
-document.addEventListener("DOMContentLoaded", cameradomcontentloaded);
-
-function cameradomcontentloaded(){
-	var video = document.getElementById("motionvideo");
-	var motioncanvas = document.getElementById("motioncanvas");
-	var canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
-	var ccanvas = document.getElementById("motioncomp");
-	var ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-
-	// document.getElementById('motionvideo').addEventListener('timeupdate', function(){ dump(); });
-	document.getElementById("motionvideo").addEventListener("play", function(){ intervalID = window.setInterval(dump, 1000 / 25); });
-
-	var compression = 5;
-	width = height = 0;
-
-	function dump(){
-		if(localMediaStream){
-			if(motioncanvas.width != video.videoWidth){
-				width = Math.floor(video.videoWidth / compression);
-				height = Math.floor(video.videoHeight / compression);
-				motioncanvas.width = ccanvas.width = width;
-				motioncanvas.height = ccanvas.height = height;
-			}
-			if(width != 0){
-				canvasgetcont.drawImage(video, width, 0, -width, height);
-				draw = canvasgetcont.getImageData(0, 0, width, height);
-				// ccgetcont.putImageData(draw,0,0);
-				skinfilter();
-				camtest();
-			}
-		}
-	}
-
-	huemin = 0.0; huemax = 0.10; satmin = 0.0; satmax = 1.0; valmin = 0.4; valmax = 1.0;
-	var index_value, count_data_big_array = 0, x, y;
-	function skinfilter(){
-		skin_filter = canvasgetcont.getImageData(0, 0, width, height);
-		for(y = 0; y < height; y++){
-			for(x = 0; x < width; x++){
-				index_value = x + y * width;
-				r = draw.data[count_data_big_array];
-				g = draw.data[count_data_big_array + 1];
-				b = draw.data[count_data_big_array + 2];
-				a = draw.data[count_data_big_array + 3];
-
-				hsv = rgb2Hsv(r, g, b);
-				// When the hand is too lose (hsv[0] > 0.59 && hsv[0] < 1.0)
-				// Skin Range on HSV values
-				if(((hsv[0] > huemin && hsv[0] < huemax) || (hsv[0] > 0.59 && hsv[0] < 1.0)) && (hsv[1] > satmin && hsv[1] < satmax) && (hsv[2] > valmin && hsv[2] < valmax)){
-					skin_filter[count_data_big_array] = r;
-					skin_filter[count_data_big_array + 1] = g;
-					skin_filter[count_data_big_array + 2] = b;
-					skin_filter[count_data_big_array + 3] = a;
-				}else{
-					skin_filter.data[count_data_big_array] =
-                    skin_filter.data[count_data_big_array + 1] =
-                    skin_filter.data[count_data_big_array + 2] = 0;
-					skin_filter.data[count_data_big_array + 3] = 0;
-				}
-
-				count_data_big_array = index_value * 4;
-			}
-		}
-		draw = skin_filter;
-	}
-
-	function rgb2Hsv(r, g, b){
-		r = r / 255;
-		g = g / 255;
-		b = b / 255;
-
-		var max = Math.max(r, g, b);
-		var min = Math.min(r, g, b);
-
-		var h, s, v = max;
-
-		var d = max - min;
-
-		s = max == 0 ? 0 : d / max;
-
-		if(max == min){
-			h = 0; // achromatic
-		}else{
-
-			switch(max){
-			case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-			case g: h = (b - r) / d + 2; break;
-			case b: h = (r - g) / d + 4; break;
-			}
-			h /= 6;
-		}
-
-		return[h, s, v];
-	}
-
-	last = false; thresh = 150; down = false; wasdown = false;
-	function camtest(){
-		delt = canvasgetcont.createImageData(width, height);
-		if(last !== false){
-			var totalx = 0, totaly = 0, totald = 0, totaln = delt.width * delt.height, pix = totaln * 4;
-			// Any number that is not 0 evaluates to true
-			// if 0 evaluates to false
-			while((pix -= 4)){
-				var d = Math.abs(draw.data[pix] - last.data[pix]
-				) + Math.abs(draw.data[pix + 1] - last.data[pix + 1]
-				) + Math.abs(draw.data[pix + 2] - last.data[pix + 2]);
-				if(d > thresh){
-					delt.data[pix] = 160;
-					delt.data[pix + 1] = 255;
-					delt.data[pix + 2] = delt.data[pix + 3] = 255;
-					totald += 1;
-					totalx += ((pix / 4) % width);
-					totaly += (Math.floor((pix / 4) / delt.height));
-				}else{
-					delt.data[pix] =
-                                delt.data[pix + 1] =
-                                delt.data[pix + 2] = 0;
-					delt.data[pix + 3] = 0;
-				}
-			}
-		}
-		// slide.setAttribute('style','display:initial')
-		// slide.value=(totalx/totald)/width
-		if(totald){
-			down = {
-				x: totalx / totald,
-				y: totaly / totald,
-				d: totald
-			};
-			handledown();
-		}
-		// console.log(totald)
-		last = draw;
-		ccgetcont.putImageData(delt, 0, 0);
-	}
-	movethresh = 2; brightthresh = 300; overthresh = 1000;
-	function calibrate(){
-		wasdown = {
-			x: down.x,
-			y: down.y,
-			d: down.d
-		};
-	}
-	avg = 0;
-	state = 0;// States: 0 waiting for gesture, 1 waiting for next move after gesture, 2 waiting for gesture to end
-	function handledown(){
-		avg = 0.9 * avg + 0.1 * down.d;
-		var davg = down.d - avg, good = davg > brightthresh;
-		// console.log(davg)
-		switch(state){
-		case 0:
-			if(good){ // Found a gesture, waiting for next move
-				state = 1;
-				calibrate();
-			}
-			break;
-		case 2:// Wait for gesture to end
-			if(!good){ // Gesture ended
-				state = 0;
-			}
-			break;
-		case 1:// Got next move, do something based on direction
-			var dx = down.x - wasdown.x, dy = down.y - wasdown.y;
-			var dirx = Math.abs(dy) < Math.abs(dx); // (dx,dy) is on a bowtie
-			// console.log(good,davg)
-			if(dx < -movethresh && dirx){
-				// console.log('right')
-			}else if(dx > movethresh && dirx){
-				// console.log('left')
-			}
-			if(dy > movethresh && !dirx){
-				if(davg > overthresh){
-					// console.log('over up');
-					writeinlog("over up");
-				}else{
-					// console.log('up')
-					writeinlog("up");
-				}
-			}else if(dy < -movethresh && !dirx){
-				if(davg > overthresh){
-					// console.log("over down")
-					// writeinlog("over down");
-				}else{
-					// console.log("down")
-					// writeinlog("down");
-				}
-			}
-			state = 2;
-			break;
-		}
-	}
-
-	function writeinlog(text){
-		var currentdate = new Date();
-		var datetime = "Last Action: " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
-		var para = document.createElement("p"); para.textContent = datetime + " " + text;
-		var container = document.getElementById("stefanmotion"); container.insertBefore(para, container.firstChild);
-	}
-
-}
-
-var motioncanvas;
-var canvasgetcont;
-var ccanvas;
-var ccgetcont;
-function runcamerasettings(){
-	// reset everything
-	if(localMediaStream){
-		document.getElementById("motionvideo").pause();
-		document.getElementById("motionvideo").src = "";
-		localMediaStream.getTracks().forEach((track) => track.stop());
-		localMediaStream = null;
-		document.getElementById("motionvideo").load();
-		motioncanvas = document.getElementById("motioncanvas");
-		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
-		canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
-		ccanvas = document.getElementById("motioncomp");
-		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-		ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
-	}
-
-	if(navigator.mediaDevices.getUserMedia){
-		navigator.mediaDevices.getUserMedia({audio: false, video: true})
-			.then(function(stream){
-				// Display the video stream in the video object
-				localMediaStream = stream; // Store the video stream
-				video.srcObject = stream;
-			})
-			.catch(function(e){
-				console.log(e.name + ": " + e.message);
-			});
-	}
-}
-
-var video;
-function cameramotionlights(){
-	if($("motion").checked == true){
-		// Check for live API permissions
-		navigator.permissions.query({name:"camera"})
-			.then(function(permissionStatus){
-				if(permissionStatus.state == "granted"){
-					runcamerasettings();
-				}
-				permissionStatus.onchange = function(){
-					if(this.state == "granted"){
-						runcamerasettings();
-					}
-				};
-			});
-		video = document.getElementById("motionvideo");
-		motioncanvas = document.getElementById("motioncanvas");
-		canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
-		ccanvas = document.getElementById("motioncomp");
-		ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-	}else{
-		// remove everything
-		document.getElementById("stefanmotion").textContent = "";
-		if(localMediaStream){
-			if($("motionvideo")){
-				document.getElementById("motionvideo").pause();
-				document.getElementById("motionvideo").src = "";
-			}
-			localMediaStream.getTracks().forEach((track) => track.stop());
-			localMediaStream = null;
-			document.getElementById("motionvideo").load();
-			motioncanvas = document.getElementById("motioncanvas");
-			canvasgetcont = motioncanvas.getContext("2d", {desynchronized: true});
-			canvasgetcont.clearRect(0, 0, motioncanvas.width, motioncanvas.height);
-			motioncanvas.width = 0;
-			motioncanvas.height = 0;
-			ccanvas = document.getElementById("motioncomp");
-			ccgetcont = ccanvas.getContext("2d", {desynchronized: true});
-			ccgetcont.clearRect(0, 0, ccanvas.width, ccanvas.height);
-			ccanvas.width = 0;
-			ccanvas.height = 0;
-			window.clearInterval(intervalID);
-		}
-	}
-}
-
 // Current year
 function yearnow(){
 	var today = new Date(); var y0 = today.getFullYear(); $("yearnow").innerText = y0;
@@ -2486,38 +2043,6 @@ function domcontentloaded(){
 	$("dont-turn-off-the-lights").src = youtubeembed;
 	defaultgetsettings();
 	yearnow();
-
-	// browser check
-	var nAgt = navigator.userAgent;
-	var browserName;
-	var urlbrowservendor = window.navigator.vendor;
-	if((nAgt.indexOf("OPR/")) != -1){ browserName = "Opera"; }else if(urlbrowservendor.search("Yandex") >= 0){ browserName = "Yandex"; }else if(urlbrowservendor.search("Google") >= 0){ browserName = "Google Chrome"; }else if(urlbrowservendor.search("Apple Computer, Inc.") >= 0){ browserName = "Safari"; }else if(navigator.appCodeName == "Mozilla"){ browserName = "Firefox"; }else if((nAgt.indexOf("Maxthon/")) != -1){ browserName = "Maxthon"; }
-
-	// browser check
-	if(browserName == "Opera" || browserName == "Safari" || browserName == "Firefox"){
-		// feature check speech and camera
-		// no support
-		$("helpcameramotion").classList.remove("hidden");
-		$("helpspeech").classList.remove("hidden");
-		$("speech").disabled = true;
-		$("select_language").disabled = true;
-		$("select_dialect").disabled = true;
-		$("speechonly").disabled = true;
-		$("motion").disabled = true;
-		$("cammotiononly").disabled = true;
-		$("tabmotion").style.display = "none";
-		$("tabspeech").style.display = "none";
-	}else if(browserName == "Google Chrome"){
-		// feature check speech and camera
-		// support
-		$("helpcameramotion").classList.add("hidden");
-		$("helpspeech").classList.add("hidden");
-	}else{
-		// feature check speech and camera
-		// support
-		$("helpcameramotion").classList.add("hidden");
-		$("helpspeech").classList.add("hidden");
-	}
 
 	// Remove remember
 	var sharetext = chrome.i18n.getMessage("sharetextd");
@@ -2701,9 +2226,7 @@ function domcontentloaded(){
 	$("tabvisual").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabadvan").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabnight").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundnight(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-	$("tabmotion").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundmotion(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-	$("tabspeech").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
-	$("tabgamepad").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundspeech(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
+	$("tabgamepad").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); OFFworkaroundgamepad(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabguide").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = linkguide; $("managed-prefs-banner").className = "hidden"; guidekb = false; mobilecheck(); });
 	$("tabanalytics").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
 	$("tabhelp").addEventListener("click", function(){ Scrolltotop(); ONworkaroundbugpreview(); $("welcomeguide").src = ""; memguide(); guidekb = true; mobilecheck(); });
@@ -2724,7 +2247,7 @@ function domcontentloaded(){
 	function Scrolltotop(){ $("mainview").scrollTop = 0; }
 
 	// remove all videos
-	function ONworkaroundbugpreview(){ $("dont-turn-off-the-lights").src = ""; $("videopreviewA").src = ""; $("videopreviewB").src = ""; $("videopreviewC").src = ""; $("videopreviewnight").src = ""; $("videopreviewmotion").src = ""; $("videopreviewspeech").src = ""; }
+	function ONworkaroundbugpreview(){ $("dont-turn-off-the-lights").src = ""; $("videopreviewA").src = ""; $("videopreviewB").src = ""; $("videopreviewC").src = ""; $("videopreviewnight").src = ""; }
 
 	// add a video
 	function OFFworkaroundbugfromsafari(){
@@ -2741,12 +2264,8 @@ function domcontentloaded(){
 		$("videopreviewnight").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdC0jpbT-SOLhoRWcTZhIHcu&rel=0";
 	}
 
-	function OFFworkaroundmotion(){
-		$("videopreviewmotion").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdAUBYAjj8ZE-RZzStwUqFJm&rel=0";
-	}
-
-	function OFFworkaroundspeech(){
-		$("videopreviewspeech").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBRi5tDACN0R1a3uYWNBsU_&rel=0";
+	function OFFworkaroundgamepad(){
+		//$("videopreviewgamepad").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdAUBYAjj8ZE-RZzStwUqFJm&rel=0";
 	}
 
 	// wizard profile
@@ -2856,18 +2375,6 @@ function domcontentloaded(){
 
 	// night Remove website
 	$("nightremovebutton").addEventListener("click", function(){ removedselectedwebsite("nightDomainsBox"); });
-
-	// cam motion Add website
-	eventsubmitFunc("formcameramotion", cammotionaddWhitelistDomain);
-
-	// cam motion Remove website
-	$("cammotionremovebutton").addEventListener("click", function(){ removedselectedwebsite("cammotionDomainsBox"); });
-
-	// speech Add website
-	eventsubmitFunc("formspeech", speechaddWhitelistDomain);
-
-	// speech Remove website
-	$("speechremovebutton").addEventListener("click", function(){ removedselectedwebsite("speechDomainsBox"); });
 
 	// autostop Add website
 	eventsubmitFunc("formautostop", autostopaddWhitelistDomain);
@@ -3381,8 +2888,6 @@ function domcontentloaded(){
 			OFFworkaroundbugfromsafari();
 			OFFworkaroundbugpreview();
 			OFFworkaroundnight();
-			OFFworkaroundmotion();
-			OFFworkaroundspeech();
 
 			document.getElementsByClassName("tabbar")[0].classList.add("hidden");
 			$("colorpanel").className = "";
