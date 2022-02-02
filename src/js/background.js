@@ -40,7 +40,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"redirectionoptions":
 		chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
 			chrome.tabs.remove(tabs[0].id);
-			chrome.tabs.create({url: chrome.runtime.getURL("options.html"), active:true});
+			chrome.runtime.openOptionsPage();
 		});
 		break;
 	case"automatic":

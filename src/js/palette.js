@@ -75,7 +75,7 @@ function executenightmode(){
 }
 
 function openoptionspage(){
-	chrome.tabs.create({url: chrome.runtime.getURL("options.html"), active:true});
+	chrome.runtime.openOptionsPage();
 }
 
 function opendonationpage(){
