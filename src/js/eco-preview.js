@@ -107,11 +107,7 @@ var ct7sinminutes;
 var ct1sinminutes;
 var ct7favoritedayweek;
 
-if(window.location.href != totloptionspage){
-	document.addEventListener("DOMContentLoaded", domcontentloaded);
-}else{
-	domcontentloaded();
-}
+document.addEventListener("DOMContentLoaded", domcontentloaded);
 
 function shareanalytictwitter(message){
 	var stefanvdaacodeurl = encodeURIComponent(developerwebsite);

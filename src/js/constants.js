@@ -2,7 +2,6 @@
 const exbrowser = "chrome";
 const totlscreenshotpage = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
 const developerwebsite = "https://www.turnoffthelights.com";
-const totloptionspage = "https://www.turnoffthelights.com/extension/options.html";
 const ambientaureaproduct = "https://chrome.google.com/webstore/detail/ambient-aurea/pkaglmndhfgdaiaccjglghcbnfinfffa";
 const datetodayproduct = "https://chrome.google.com/webstore/detail/date-today/mhgknbehalhkedjgfhiaindklahhkccc";
 const turnoffthelightsproduct = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn";

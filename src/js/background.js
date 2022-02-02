@@ -292,7 +292,7 @@ async function getCurrentTab(){
 var clickbutton = 0;
 chrome.action.onClicked.addListener(function(tabs){
 	if(tabs.url.match(/^http/i) || tabs.url.match(/^file/i)){
-		if(tabs.url == totloptionspage || (new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
+		if((new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
 			chrome.action.setPopup({tabId: tabs.id, popup:"popup.html"});
 		}else{
 			clickbutton += 1;
@@ -619,9 +619,7 @@ function chromerefreshalltabs(name){
 		for(i = 0; i < l; i++){
 			var protocol = tabs[i].url.split(":")[0];
 			if(protocol == "http" || protocol == "https"){
-				if(tabs[i].url != totloptionspage){
-					chrome.tabs.sendMessage(tabs[i].id, {action: name});
-				}
+				chrome.tabs.sendMessage(tabs[i].id, {action: name});
 			}
 		}
 	});

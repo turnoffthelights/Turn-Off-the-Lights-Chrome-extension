@@ -2035,11 +2035,7 @@ var delt;
 
 window.URL = window.URL || window.webkitURL;
 
-if(window.location.href != totloptionspage){
-	document.addEventListener("DOMContentLoaded", cameradomcontentloaded);
-}else{
-	cameradomcontentloaded();
-}
+document.addEventListener("DOMContentLoaded", cameradomcontentloaded);
 
 function cameradomcontentloaded(){
 	var video = document.getElementById("motionvideo");
