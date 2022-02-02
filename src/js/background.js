@@ -229,7 +229,7 @@ const injectScriptsTo = (tabId, url) => {
 
 			// chrome.scripting.registerContentScripts({
 			// 	scripts:[{
-			// 		target: {tabId: tabId},
+			// 		matches: [],
 			// 		js: [`${script}`],
 			// 		runAt: "document_start"
 			// 	}]
