@@ -796,8 +796,8 @@ https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
 OK Done IMPROVEMENT double click lamp button action
 OK Done IMPROVEMENT panel information panel design
+OK Done REMOVEd Speech and Camera -> not possile anymore because of service worker background page
 + IMPROVE rate box to 5 stars
-+ REMOVE Speech and Camera -> not possile anymore because of service worker background page
 + issue: no YouTube video detection right to left layout issue ARAB
 + issue PIP-mode
 */
