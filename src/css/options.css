@@ -212,7 +212,6 @@ body{min-width:1150px;min-height:800px;background:var(--totl-body-background);co
 .navbar-item-selected{background:var(--totl-nav-background-hover);color:var(--totl-primary-font-color)}
 ul#navbar li a{display:flex;align-items:center;margin-right:0;padding:12px 24px 12px 24px;font-size:105%;cursor:pointer}
 ul#navbar li a svg{margin-right:24px;fill:var(--totl-sidebar-icon-background)}
-#settings{-webkit-padding-end:24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:#333;cursor:pointer;font-size:200%;font-weight:400;margin:0;padding-bottom:14px;padding-top:13px;text-align:end}
 .page h2{-webkit-padding-end:24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;color:var(--totl-title-color);font-size:200%;font-weight:400;margin:0;padding-bottom:4px;padding-top:13px}
 .page{height:100%;width:100%;position:relative}
 section{position:relative;-webkit-box-orient:horizontal;border-bottom:var(--totl-section-border);display:-webkit-box;padding-top:20px;padding-bottom:20px;width:100%}
@@ -259,10 +258,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubepreview{width:100%;height:380px;background:white;color:black;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:2px;border:var(--totl-section-border)}
 .youtubeviewpanel{width:475px;padding-left:15px;padding-right:15px}
 .youtubesuggpanel{border-left:1px #D9D9D9 solid;padding-left:15px}
-.youtube_player{text-align:center;padding-top:15px}
 .youtubetitel{padding:5px;font-weight:700;color:#000;font-size:18px}
 .youtubesuggestionbar{height:335px;background:#fff}
-.youtubesuggestionbartable{padding-top:5px;padding-bottom:5px}
 .youtubesuggestiontitel{font-size:12px;font-weight:700}
 .youtubesuggestionby{font-size:10px;color:#333}
 .youtubecommentsupload{font-size:11px;color:#000;font-weight:700;border-top:1px #D9D9D9 solid;padding-top:10px}
@@ -765,7 +762,6 @@ section>div:only-of-type{-webkit-box-flex:1}
 #wallpapershow{right:0;position:absolute;width:135px}
 #wallpaperhide{right:0;position:absolute;width:135px}
 #imagegallery{padding-left:20px;margin:16px 0 0 0;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)}
-.imageshaduw{margin:10px 12px;padding:1px;border:1px solid #bebebe}
 /* loading bar */
 #loadinghelp{bottom:10px;position:absolute;right:15px}
 #loadinghelp a,#loadinghelp a:active,#loadinghelp a:visited,#loadinghelp a:hover{color:var(--totl-page-a)}
@@ -796,15 +792,13 @@ section>div:only-of-type{-webkit-box-flex:1}
 /* autoplay only */
 /* atmosphere only */
 /* night only */
-/* cammotion only */
-/* speech only */
 /* auto stop only */
 /* video tool bar only */
 /* video volume bar only */
-#autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
-#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
-#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:16px}
-#autoplayaddbutton,#autoplayremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton,#cammotionaddbutton,#cammotionremovebutton,#speechaddbutton,#speechremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
+#autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
+#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
+#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:16px}
+#autoplayaddbutton,#autoplayremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
 /* Night Theme */
 #samplestefanvdnighttheme{padding:0;margin:20px 0;z-index:500;-webkit-user-select:none;-moz-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 7px;border-radius:4px;cursor:pointer;height:35px;overflow:hidden;width:70px;position:relative;display:block}
 #samplestefanvdnighttheme input{display:none}
@@ -822,44 +816,12 @@ section>div:only-of-type{-webkit-box-flex:1}
 #samplestefanvdnighttheme .sun{box-sizing:content-box;width:35px;height:32px;display:block;position:absolute;background:#E7F6FF;border-radius:3px;margin-top:50%;margin-left:13%;border-top:3px solid #CBEAFF}
 #samplestefanvdnighttheme .sun:before{content:" ";width:17px;height:17px;border-radius:8.5px;position:absolute;background:#FE0;box-shadow:0 0 21px rgba(255,220,0,1),0 0 10px rgba(255,220,0,1);top:-14px;margin-top:50%;left:-7px;margin-left:50%}
 #samplestefanvdnighttheme .sun:after{content:" ";width:28px;height:14px;border-radius:7px;background:rgba(255,255,255,0.75);position:absolute;top:-3px;margin-top:50%;left:-25px;margin-left:50%}
-/* Motion */
-#motionvideo{display:none}
-/* Tablet CSS */
-.tablet{border:1px solid #777;border-radius:2px;display:block;position:relative;float:right}
-.tablet .screencanvas{background:#fff}
-.screencanvas{display:block;overflow:hidden;position:relative;top:0;text-indent:-9999px;z-index:10}
-.monitor,.monitor .screencanvas{height:35px;width:60px}
-.monitor{background:#000;border:2px solid #000;border-radius:1px;float:left;position:relative}
-.camera{position:absolute;top:0px;left:30px;width:2px;height:2px;background:#0f0;border-radius:2px;z-index:20}
-.motionworks,.speechworks,.nightworks{display:inline-block;padding:24px 16px 0px 16px;position:relative;height:145px}
-.motionworks .step{height:55px;position:relative}
+/* Information box CSS */
+.nightworks{display:inline-block;padding:24px 16px 0px 16px;position:relative;height:145px}
 .nightworks .step{height:30px;position:relative}
-.speechworks .step{height:30px;position:relative}
-.screendimmer{animation:totlbounceInDown 12s 2.5s linear infinite;background:#000;opacity:0;height:35px;width:60px}
-@keyframes totlbounceInDown{0%{-webkit-transform:translateY(-100px);opacity:.8}5%{-webkit-transform:translateY(0px);opacity:.8}10%{-webkit-transform:translateY(-2px)}15%{-webkit-transform:translateY(0px);opacity:.8}20%{-webkit-transform:translateY(-1px);opacity:.8}25%{-webkit-transform:translateY(0);opacity:.8}78%{-webkit-transform:translateY(0);opacity:.8}80%{-webkit-transform:translateY(0);opacity:0}100%{-webkit-transform:translateY(0);opacity:0}}
-.handgreep{z-index:500;animation:movehanddown 12s 0s linear infinite;position:relative}
-.hand{position:absolute;top:20px;right:42px;display:inline-block}
-.hand .fingera{position:absolute;top:26px;left:0px;background:#fff;width:3px;height:14px;border:1pxsolidsilver;border-radius:5px;border:1px solid silver;border-radius:5px}
-.hand .fingerb{position:absolute;top:17px;left:4px;background:#fff;width:3px;height:20px;border:1px solid silver;border-radius:5px}
-.hand .fingerc{position:absolute;top:14px;left:8px;background:#fff;width:3px;height:25px;border:1px solid silver;border-radius:5px}
-.hand .fingerd{position:absolute;top:16px;left:12px;background:#fff;width:3px;height:24px;border:1px solid silver;border-radius:5px}
-.hand .fingere{position:absolute;top:20px;left:16px;background:#fff;width:3px;height:20px;border:1px solid silver;border-radius:5px}
-.hand .palm{position:absolute;top:32px;left:0;background:#fff;width:19px;height:16px;border:1px solid silver;border-radius:72px}
-@keyframes movehanddown{0%{-webkit-transform:translateY(-60px);opacity:1}15%{-webkit-transform:translateY(-30px);opacity:1}17%{opacity:0}100%{-webkit-transform:translateY(0);opacity:0}}
-@keyframes cameraglow{0%{background:rgba(0,255,0,0)}5%{background:rgba(0,255,0,1)}59%{background:rgba(0,255,0,1)}60%{background:rgba(0,255,0,0)}100%{background:rgba(0,255,0,0)}}
-.enablecameralamp{animation:cameraglow 12s 0s linear infinite}
-.cameracheclist{font-size:12px;font-weight:700}
-.cameracheclist ul{font-size:12px}
-.cameracheclist ul li{font-size:12px}
-.motionworks .step .stepdescription{font-size:13px;width:60%;text-align:left;float:left}
 .nightworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
-.speechworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
-#stefanmotion p{margin:0}
-#motioncanvas,#motioncomp{box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);border-radius:2px;display:inline-block}
 /* lamp */
 #loadinglamp{margin-right:5px}
-#welcomelamp{margin-right:5px}
-#rememberlamp{margin-right:5px}
 #btnpreview{display:none}
 .lampchoose{padding:10px;border:1px solid #EEE;background:#fff;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);margin: 5px 10px 5px 0px}
 .lampchoose:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
@@ -901,9 +863,9 @@ section>div:only-of-type{-webkit-box-flex:1}
 .profilebox .profile{background:var(--totl-card-background);display:inline-grid;width:250px;margin:5px 10px 5px 0px;position:relative;padding:0;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);transition:all 0.3s cubic-bezier(.25,.8,.25,1)}
 .profilebox .profile:hover{box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22)}
 .profilebox .profil .cardactionbox{position:relative;display:inline-block;width:100%}
-#expandprofileaicon,#expandprofilebicon,#expandprofilecicon,#expandcamtipicon{width:36px;height:36px;display:inline-block;transform:rotate(90deg);margin:8px 0;padding:0;right:8px;position:absolute}
-#expandprofileaicon:active,#expandprofilebicon:active,#expandprofilecicon:active,#expandcamtipicon:active{background-color:rgba(158,158,158,.4)}
-#expandprofileaicon:hover,#expandprofilebicon:hover,#expandprofilecicon:hover,#expandcamtipicon:hover{background-color:rgba(158,158,158,.2)}
+#expandprofileaicon,#expandprofilebicon,#expandprofilecicon{width:36px;height:36px;display:inline-block;transform:rotate(90deg);margin:8px 0;padding:0;right:8px;position:absolute}
+#expandprofileaicon:active,#expandprofilebicon:active,#expandprofilecicon:active{background-color:rgba(158,158,158,.4)}
+#expandprofileaicon:hover,#expandprofilebicon:hover,#expandprofilecicon:hover{background-color:rgba(158,158,158,.2)}
 .cardokbutton{display:block;-webkit-user-select:none;-moz-user-select:none;user-select:none;margin:8px 0;float:left;background:0 0;border:none;border-radius:2px;color:#2296f3;position:relative;height:36px;min-width:64px;padding:0 16px;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;outline:none;cursor:pointer;text-decoration:none;text-align:center;line-height:36px}
 .cardokbutton:active{background-color:rgba(158,158,158,.4)}
 .cardokbutton:hover{background-color:rgba(158,158,158,.2)}
@@ -943,7 +905,6 @@ input[type=checkbox]:checked ~ div #expandprofileaicon,input[type=checkbox]:chec
 .sharestatslove .text{display:inline-block;font-size:20px;padding-top:10px}
 /* chart */
 .analyticbox{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px}
-.esta .header{width:100%;display:block;font-size:14px}
 .esta{background:#1664c0;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px;width:calc( 100% - 30px);display:block;float:left;margin-right:30px;margin-top:20px;color:white}
 .esta div{width:calc(33% - 15px);display:block;float:left;margin-right:15px}
 .canvaschart:first-child{width:calc(50% - 42px);display:inline-block;margin:auto 10px 0px 0px;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);padding:15px}
@@ -1176,9 +1137,9 @@ only screen and (max-device-width:480px){
   .videopreview iframe{width:100%;height:auto;aspect-ratio:16/9}
   .youtubesuggpanel{display:none}
   #samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
-  #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#cammotionwhitelist,#speechwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
-  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#cammotionwhitelist input[type=url],#speechwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:100%;float:left}
-  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#cammotionwhitelist select,#speechwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:0px}
+  #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist{margin-left:25px}
+  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url]{width:100%;float:left}
+  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select{width:100%;margin-right:0px}
   #ayh{font-size:12px;right:15px}
   #tllo{font-size:11px;top:26px;right:15px}
   .stars{font-size:14px;top:22px;left:15px}
