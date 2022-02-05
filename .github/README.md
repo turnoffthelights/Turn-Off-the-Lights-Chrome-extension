@@ -50,8 +50,6 @@ Using Turn Off the Lights to dims the web page and reduces the eye strain caused
   * Alt + (arrow up) to increase the opacity
   * Alt + (arrow down) to decrease the opacity
   * Alt + * to toggle the lights on all open tabs
-* Option Camera Motion
-* Option Speech Recognition
 * Option for Mouse Wheel Volume Control for each HTML5 video player
 * Option to add a filter to the current HTML5 video player (grayscale, sepia, invert, contrast, saturate, hue rotation and brightness)
 * Option to show the Audio Visualization effect on top of the current HTML5 video (Blocks, Frequency and Music Tunnel)
