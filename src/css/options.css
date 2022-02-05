@@ -255,8 +255,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvdbtnplaygroundtwitter{background:url(/images/twitter@2x.png)left top no-repeat;background:-webkit-image-set(url(/images/twitter.png) 1x,url(/images/twitter@2x.png) 2x);width:18px;height:18px;display:inline-block;background-size:cover;cursor:pointer}
 #stefanvdbtnplaygroundfacebook:hover,#stefanvdbtnplaygroundtwitter:hover{opacity:.8;cursor:pointer}
 /* Video frame */
-.youtubepreview{width:100%;height:380px;background:white;color:black;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:2px;border:var(--totl-section-border)}
-.youtubeviewpanel{width:475px;padding-left:15px;padding-right:15px}
+.youtubepreview{width:100%;height:400px;background:white;color:black;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:2px;border:var(--totl-section-border);border-spacing:0}
+.youtubeviewpanel{width:475px;padding-left:15px;padding-right:15px;padding-top:15px;vertical-align:top}
 .youtubesuggpanel{border-left:1px #D9D9D9 solid;padding-left:15px}
 .youtubetitel{padding:5px;font-weight:700;color:#000;font-size:18px}
 .youtubesuggestionbar{height:335px;background:#fff}
@@ -300,16 +300,16 @@ section>div:only-of-type{-webkit-box-flex:1}
 .youtubeinforbar{background:#fff}
 #dont-turn-off-the-lights{z-index:1000;position:relative;visibility:visible;width:340px;height:195px}
 /* Black div */
-#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:380px;opacity:1;position:absolute;background-color:#000;z-index:99;border-radius:2px}
+#example1{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:400px;opacity:1;position:absolute;background-color:#000;z-index:99;border-radius:2px}
 #example2{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);width:100%;height:480px;opacity:1;position:absolute;background-color:#000;z-index:99;border-radius:2px}
 /* Blur */
-#stefanvdblurimage{pointer-events:none;width:100%;height:380px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}
+#stefanvdblurimage{pointer-events:none;width:100%;height:400px;position:absolute;z-index:98;overflow:hidden;backdrop-filter:blur(6px)}
 /* Dynamic */
-#stefanvddynamicbackground{pointer-events:none;width:100%;height:380px;position:absolute;z-index:99;overflow:hidden}
+#stefanvddynamicbackground{pointer-events:none;width:100%;height:400px;position:absolute;z-index:99;overflow:hidden}
 /* Dynamic Background Bubbles */
-#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleleft{height:380px;position:absolute}
-#stefanvddynamicbackground .stefanvddynamicbackgroundbubblemid{height:380px;position:absolute;left:200px;width:300px}
-#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleright{height:380px;left:840px;position:absolute;-webkit-transform:scaleX(-1);transform:scaleX(-1)}
+#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleleft{height:400px;position:absolute}
+#stefanvddynamicbackground .stefanvddynamicbackgroundbubblemid{height:400px;position:absolute;left:200px;width:300px}
+#stefanvddynamicbackground .stefanvddynamicbackgroundbubbleright{height:400px;left:840px;position:absolute;-webkit-transform:scaleX(-1);transform:scaleX(-1)}
 #stefanvddynamicbackground .stefanvddynamicbackgroundbubbles{background-color:rgba(255,255,255,0.16);border:1px solid rgba(88,88,88,0.2);border-radius:100px 100px 100px 100px;position:absolute}
 /* Left */
 #stefanvddynamicbackground .stefanvddynamicbubbles0{left:33px;bottom:0;height:17px;width:17px;animation:totlbubbles0 10s 0s linear infinite}
@@ -349,7 +349,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground .stefanvddynamicbubbles16{left:30px;bottom:0;height:20px;width:20px;animation:totlbubbles16 10s 0s linear infinite}
 @keyframes totlbubbles16{from{bottom:0;left:248px}5%{bottom:7%;left:232px}to{bottom:100%;left:236px}}
 /* Dynamic Background Squares */
-#stefanvddynamicbackground .stefanvddynamicbackgroundblockleft{height:380px;position:absolute;left:7px;width:700px}
+#stefanvddynamicbackground .stefanvddynamicbackgroundblockleft{height:400px;position:absolute;left:7px;width:700px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundblocks{background-color:rgba(255,255,255,0.16);border:1px solid rgba(88,88,88,0.2);position:absolute}
 /* Left */
 #stefanvddynamicbackground .stefanvddynamicblocks1{left:47px;top:60px;opacity:0;height:37px;width:37px;animation:totlblocks1 6s 0s ease-out infinite}
@@ -395,7 +395,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground .stefanvddynamicblocks21{left:47px;top:19px;opacity:0;height:37px;width:37px;animation:totlblocks21 6s 0s ease-out infinite}
 @keyframes totlblocks21{0%{transform:scale(0,0);opacity:0}10%{opacity:1}20%{opacity:0;transform:scale(1.2,1.2)}}
 /* Dynamic Background Raindrups */
-#stefanvddynamicbackground .stefanvddynamicbackgroundraindrupsleft{height:380px;position:absolute;left:12px}
+#stefanvddynamicbackground .stefanvddynamicbackgroundraindrupsleft{height:400px;position:absolute;left:12px}
 #stefanvddynamicbackground .stefanvddynamicbackgroundraindrups{position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);background:rgba(0,0,0,0.2);box-shadow:inset 1px 0 0 0 rgba(255,255,255,0.25),inset 0 1px 0 0 rgba(255,255,255,0.25),inset 1px 0 3px 0 rgba(255,255,255,0.25),inset 0 1px 3px 0 rgba(255,255,255,0.75),inset -1px 0 0 0 rgba(255,255,255,0.15),inset 0 -1px 0 0 rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.05)}
 @keyframes drups{0%{top:0;opacity:0}5%{top:5%;opacity:1}95%{top:95%;opacity:1}100%{top:99%;opacity:0}}
 #stefanvddynamicbackground .b0{width:18px;height:18px;border-radius:9px 18px 18px 18px;left:33px;top:0;animation:drups 15s 0s linear infinite}
@@ -415,13 +415,13 @@ section>div:only-of-type{-webkit-box-flex:1}
 #stefanvddynamicbackground .b14{width:6px;height:6px;border-radius:3px 6px 6px 6px;left:714px;top:0;animation:drups 15s 2s linear infinite}
 #stefanvddynamicbackground .b15{width:12px;height:12px;border-radius:6px 12px 12px 12px;left:760px;top:0;animation:drups 15s 0s linear infinite}
 /* Dynamic Background Cloud */
-#stefanvddynamicbackground #stefanvdworld{position:absolute;height:380px;width:840px;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
+#stefanvddynamicbackground #stefanvdworld{position:absolute;height:400px;width:840px;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld div{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
 #stefanvddynamicbackground #stefanvdworld .stefanvdcloudBase{position:absolute;left:256px;top:256px;width:20px;height:20px;margin-left:-10px;margin-top:-10px}
 #stefanvddynamicbackground #stefanvdworld .stefanvdcloudLayer{position:absolute;left:50%;top:50%;width:256px;height:256px;margin-left:-128px;margin-top:-128px;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out;background-image:url(/images/cloud.png)}
 /* Dynamic Background Space */
 #stefanvddynamicbackground #stefanvddynamicspace div{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
-#stefanvddynamicbackground #stefanvddynamicspace{height:380px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
+#stefanvddynamicbackground #stefanvddynamicspace{height:400px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
 #stefanvddynamicbackground #stefanvddynamicspace b{position:absolute;height:2px;width:2px;background:#FFF;box-shadow:0 0 5px #FFF}
 @keyframes totlspace{from{-webkit-transform:translateZ(-300px);opacity:0}50%{-webkit-transform:translateZ(00px);opacity:1}to{-webkit-transform:translateZ(300px);opacity:0}}
 #stefanvddynamicbackground #stefanvddynamicspace .s001{top:5%;left:92%;animation:totlspace 6s 0s linear infinite}
@@ -473,7 +473,7 @@ section>div:only-of-type{-webkit-box-flex:1}
 @keyframes totlspacepart{from{transform:translateZ(-300px);opacity:0}50%{transform:translateZ(0px);opacity:1}to{transform:translateZ(300px);opacity:0}}
 /* Dynamic Background Space with no flying */
 #stefanvddynamicbackground #stefanvddynamicspacenoflying div{position:absolute}
-#stefanvddynamicbackground #stefanvddynamicspacenoflying{height:380px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
+#stefanvddynamicbackground #stefanvddynamicspacenoflying{height:400px;width:840px;-webkit-perspective:700;perspective:700;background:-webkit-radial-gradient(rgba(119,106,127,0.15) 0,transparent 66%,rgba(127,18,148,0.2)98%);position:absolute;border-top-left-radius:5px 5px;border-top-right-radius:5px 5px;border-bottom-right-radius:0;border-bottom-left-radius:0}
 #stefanvddynamicbackground #stefanvddynamicspacenoflying b{position:absolute;height:2px;width:2px;background:#FFF;box-shadow:0 0 5px #FFF}
 @keyframes totlspacenoflying{from{transform:translateZ(-300px);opacity:0}50%{transform:translateZ(00px);opacity:1}to{transform:translateZ(300px);opacity:0}}
 #stefanvddynamicbackground #stefanvddynamicspacenoflying .ns001{top:5%;left:92%;animation:totlspacenoflying 6s 0s linear infinite}
