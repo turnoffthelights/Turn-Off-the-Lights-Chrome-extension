@@ -206,7 +206,7 @@
     "sharemenusendatweet": {"message": "Send a Tweet"},
     "sharemenupostonfacebook": {"message": "Post on Facebook"},
     "sharemenuratetitle": {"message": "Rate this extension"},
-    "sharemenudonatetitle": {"message": "Support Development"},
+    "sharemenudonatetitle": {"message": "Make a donation"},
     "titelautostop": {"message": "AutoStop"},
     "desautostop": {"message": "Stop playing the video automatically when I open a web page"},
     "areyouhappy": {"message": "Are you happy about Turn Off the Lights?"},
@@ -273,7 +273,7 @@
     "sharetexta": {"message": "Get this Cool Turn Off the Lights Browser Extension"},
     "sharetextb": {"message": "Hey, this is amazing! I tried the Turn Off the Lights browser extension just today."},
     "sharetextc": {"message": "The Best and Amazing Turn Off the Lights Browser extension"},
-    "sharetextd": {"message": "Turn Off the Lights extension is the Best Tool for use on YouTube. Download it and try it yourself!"},
+    "sharetextd": {"message": "Turn Off the Lights browser extension is the Best Tool for YouTube and beyond. Download it now and try it yourself!"},
     "titelsharethis": {"message": "Share this:"},
     "titellampchoose": {"message": "Choose your favorite lamp style"},
     "titeldoesntwork": {"message": "Turn Off the Lights does not work on this web page. Please try another page."},
@@ -516,5 +516,9 @@
     "titelnightmodeborder": {"message": "Border color"},
     "titleinfobx": {"message": "Info"},
     "permissionwebnav": {"message": "This is to add the Night Mode immediately before the web page loads."},
-    "desnmautoclock": {"message": "Activate between the following hours:"}
+    "desnmautoclock": {"message": "Activate between the following hours:"},
+    "sharemenupostonweibo": {"message": "Post on Weibo"},
+    "sharemenupostonvkontakte": {"message": "Post on Vkontakte"},
+    "sharemenupostonwhatsapp": {"message": "Post on WhatsApp"},
+    "sharemenupostonqq": {"message": "Post on QQ"}
 }
