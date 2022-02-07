@@ -823,6 +823,6 @@ OK Done IMPROVEMENT information panel design
 OK Done REMOVED Speech and Camera -> not possile anymore because of service worker background page
 OK Done ADDED Russian and Chinese share buttons
 OK Done IMPROVEMENT rate box to 5 stars in the Options page
+OK Done IMPROVEMENT PIP-mode
 + issue: no YouTube video detection right to left layout issue ARAB
-+ issue PIP-mode
 */
