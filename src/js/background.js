@@ -828,7 +828,7 @@ OK Done IMPROVEMENT double click lamp button action
 OK Done IMPROVEMENT information panel design
 OK Done REMOVED Speech and Camera -> not possile anymore because of service worker background page
 OK Done ADDED Russian and Chinese share buttons
-+ IMPROVE rate box to 5 stars
+OK Done IMPROVEMENT rate box to 5 stars in the Options page
 + issue: no YouTube video detection right to left layout issue ARAB
 + issue PIP-mode
 */

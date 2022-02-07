@@ -326,14 +326,44 @@ function read_options(){
 	$("materialModalRateContent").addEventListener("click", function(e){
 		e.stopPropagation();
 	});
-	$("materialModalRateButtonOK").addEventListener("click", function(e){
+	$("materialModalRateButtonWriteOK").addEventListener("click", function(e){
 		closeMaterialRateAlert(e);
 		window.open(writereview); $("sectionreviewbox").style.display = "none"; chrome.storage.sync.set({"reviewedlastonversion": chrome.runtime.getManifest().version});
+	});
+	$("materialModalRateButtonWriteCANCEL").addEventListener("click", function(e){
+		closeMaterialRateAlert(e);
+		chrome.storage.sync.set({"firstsawrate": false});
+	});
+	$("materialModalButtonSupportOK").addEventListener("click", function(e){
+		closeMaterialRateAlert(e);
+		window.open(linksupport);
+		chrome.storage.sync.set({"firstsawrate": false});
+	});
+	$("materialModalButtonSupportCANCEL").addEventListener("click", function(e){
+		closeMaterialRateAlert(e);
+		chrome.storage.sync.set({"firstsawrate": false});
 	});
 	$("materialModalRateButtonCANCEL").addEventListener("click", function(e){
 		closeMaterialRateAlert(e);
 		chrome.storage.sync.set({"firstsawrate": false});
 	});
+
+	if(document.querySelector("input[name=\"rating\"]")){
+		document.querySelectorAll("input[name=\"rating\"]").forEach((elem) => {
+			elem.addEventListener("change", function(event){
+				var item = event.target.value;
+				if(item == 5 || item == 4){
+					// good stars
+					$("ratepage0").classList.add("hidden");
+					$("ratepage1high").classList.remove("hidden");
+				}else if(item == 3 || item == 2 || item == 1){
+					// low stars
+					$("ratepage0").classList.add("hidden");
+					$("ratepage1low").classList.remove("hidden");
+				}
+			});
+		});
+	}
 
 	// introduce
 	$("materialModalIntroduce").addEventListener("click", function(e){

@@ -2379,19 +2379,50 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 			</div>
 			<div id="materialModalRate" class="hide" role="dialog" aria-label="Review this extension" aria-describedby="materialModalRateTitle" aria-disabled="true">
-						<div id="materialModalRateCentered">
-							<div id="materialModalRateContent">
-								<img loading="lazy" src="images/star.svg" alt="Review Turn Off the Lights to 5 stars">
-								<div id="materialModalRateTitle"><span data-i18n="friendlyremember"></span></div>
-								<div id="materialModalRateText">
-									<span data-i18n="desremrate"></span>
-								</div>
-								<div id="materialModalRateButtons">
-								<div id="materialModalRateButtonOK" class="materialModalButton"><span data-i18n="titlelratenow"></span></div>
-								<div id="materialModalRateButtonCANCEL" class="materialModalButton"><span data-i18n="titleratelater"></span></div>
+				<div id="materialModalRateCentered">
+					<div id="materialModalRateContent">
+						<div id="ratepage0">
+							<div class="ratetitle"><span data-i18n="desratetitle"></span></div>
+							<div class="ratedes" ><span data-i18n="destapstar"></span></div>
+							<div class="starrating">
+								<div class="rating">
+									<input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Awesome!">5 stars</label>
+									<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+									<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+									<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+									<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Very bad">1 star</label>
 								</div>
 							</div>
+							<div id="materialModalRateButtons">
+								<div id="materialModalRateButtonCANCEL" class="materialModalButton"><span data-i18n="desratenotnowthanks"></span></div>
+							</div>
 						</div>
+						<div id="ratepage1high" class="hidden">
+							<div class="rateactiontext">
+								<div class="ratetitle"><span data-i18n="desrategoodtitle"></span></div>
+								<div class="desrate">
+									<span data-i18n="desrategood"></span>
+								</div>
+							</div>
+							<div id="materialModalRateButtons">
+								<div id="materialModalRateButtonWriteOK" class="materialModalButton"><span data-i18n="desrategoodaction"></span></div>
+								<div id="materialModalRateButtonWriteCANCEL" class="materialModalButton"><span data-i18n="desratenothanks"></span></div>
+							</div>
+						</div>
+						<div id="ratepage1low" class="hidden">
+							<div class="rateactiontext">
+								<div class="ratetitle"><span data-i18n="desratebadtitle"></span></div>
+								<div class="desrate">
+									<span data-i18n="desratebad"></span>
+								</div>
+							</div>
+							<div id="materialModalRateButtons">
+								<div id="materialModalButtonSupportOK" class="materialModalButton"><span data-i18n="desratebadaction"></span></div>
+								<div id="materialModalButtonSupportCANCEL" class="materialModalButton"><span data-i18n="desratenothanks"></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="materialModalIntroduce" class="hide" role="dialog" aria-label="Introduce the new design" aria-describedby="materialModalIntroduceTitle" aria-disabled="true">
 					<div id="materialModalIntroduceCentered">

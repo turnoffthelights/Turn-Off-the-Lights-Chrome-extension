@@ -520,5 +520,15 @@
     "sharemenupostonweibo": {"message": "Post on Weibo"},
     "sharemenupostonvkontakte": {"message": "Post on Vkontakte"},
     "sharemenupostonwhatsapp": {"message": "Post on WhatsApp"},
-    "sharemenupostonqq": {"message": "Post on QQ"}
+    "sharemenupostonqq": {"message": "Post on QQ"},
+    "desratebad": {"message": "Sorry you have had this bad experience. Please let us know on how we can improve our extension for you."},
+    "desrategood": {"message": "Happy to hear that you love Turn Off the Lights! Will you take a moment to rate us in the browser extension store? Your browser extension store reviews make a difference!"},
+    "desratetitle": {"message": "Do you love this browser extension?"},
+    "desrategoodaction": {"message": "Write a Review"},
+    "desratenothanks": {"message": "No, thanks"},
+    "desratenotnowthanks": {"message": "Not now thanks"},
+    "desratebadaction": {"message": "Yes, I will give feedback"},
+    "desrategoodtitle": {"message": "Thank you!"},
+    "desratebadtitle": {"message": "How can we make it better?"},
+    "destapstar": {"message":"Tap a star to rate it on the browser extension store."}
 }

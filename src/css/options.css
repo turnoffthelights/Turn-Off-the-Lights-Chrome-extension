@@ -1107,6 +1107,26 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 #materialModalYouTubeButtons{width:calc(100% - 12px);position:absolute;bottom:0px}
 #materialModalYouTubeButtonOK{background:red;color:white;border-radius:5px}
 #materialModalYouTubeButtonOK:hover{opacity:.7}
+/* Rate */
+.ratetitle{font-size:28px;font-family:Arial;display:flex;justify-content:center;padding:14px;margin:10px;text-align:center}
+.ratedes{font-size:16px;font-family:Arial;display:flex;justify-content:center;margin-top:20px}
+.starrating{display:flex;justify-content:center;margin:50px}
+.desrate{display:flex;justify-content:center;margin:20px 24px;flex-direction:column;align-items:center}
+.rateactiontext{display:flex;justify-content:center;flex-direction:column;align-items:center;font-size:16px;text-align:center}
+.rating:not(:checked) > input{position:absolute;top:-9999px;clip:rect(0,0,0,0)}
+.rating:not(:checked) > label{float:right;width:1em;padding:0 .1em;overflow:hidden;white-space:nowrap;cursor:pointer;font-size:365%;line-height:1.2;color:#727272}
+.rating:not(:checked) > label:before{content:'★ '}
+.rating > input:checked ~ label{color:gold}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label{color:gold}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label{color:#ea0}
+.rating > label:active{position:relative;top:2px;left:2px}
+#materialModalRateButtonWriteOK,#materialModalButtonSupportOK{background:#4285f4;color:white;border-radius:5px}
+#materialModalRateButtonWriteOK:hover,#materialModalButtonSupportOK:hover{opacity:.7}
 /* About */
 .aboutbuttons button{margin:15px 10px 0 0;display:inline-block}
 #permullist{padding-inline-start:15px}
