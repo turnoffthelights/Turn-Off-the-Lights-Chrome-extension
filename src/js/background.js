@@ -825,7 +825,7 @@ https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
 
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
 OK Done IMPROVEMENT double click lamp button action
-OK Done IMPROVEMENT panel information panel design
+OK Done IMPROVEMENT information panel design
 OK Done REMOVED Speech and Camera -> not possile anymore because of service worker background page
 OK Done ADDED Russian and Chinese share buttons
 + IMPROVE rate box to 5 stars
