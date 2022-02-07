@@ -536,8 +536,79 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	eventFunc("energybox", "click", openoptionspage);
 
-	$("btnpipvideo").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pip", value: 1}); });
-	$("btnpipvisual").addEventListener("click", function(){ chrome.runtime.sendMessage({name: "pip", value: 2}); });
+	// PIP
+	function codepip(){
+		var i18ntitelpiperror = chrome.i18n.getMessage("titelpiperror");
+		var videotopipvideo = document.getElementsByTagName("video")[0];
+		if(videotopipvideo){
+			try{
+				if(videotopipvideo !== document.pictureInPictureElement){
+					videotopipvideo.requestPictureInPicture();
+				}else{
+					document.exitPictureInPicture();
+				}
+			}catch(reason){
+				console.error(reason);
+			}
+		}else{
+			window.alert(i18ntitelpiperror);
+		}
+	}
+	function codepipvisual(){
+		var i18ntitelpiperror = chrome.i18n.getMessage("titelpiperror");
+		var videotopipvideo = document.getElementsByTagName("video")[0];
+		var videopipvisual = document.getElementById("stefanvdpipvisualizationvideo");
+		if(videotopipvideo){
+			videopipvisual.addEventListener("loadedmetadata", () => {
+				if(document.pictureInPictureElement){
+					document.exitPictureInPicture();
+				}else{
+					if(document.pictureInPictureEnabled){
+						videopipvisual.requestPictureInPicture();
+					}
+				}
+			});
+			// Show a play/pause button in the Picture-in-Picture window
+			navigator.mediaSession.setActionHandler("play", function(){
+				document.getElementsByTagName("video")[0].play();
+				navigator.mediaSession.playbackState = "playing";
+			});
+
+			navigator.mediaSession.setActionHandler("pause", function(){
+				document.getElementsByTagName("video")[0].pause();
+				navigator.mediaSession.playbackState = "paused";
+			});
+		}else{
+			window.alert(i18ntitelpiperror);
+		}
+	}
+
+	$("btnpipvideo").addEventListener("click", function(){
+		chrome.tabs.query({
+			active: true,
+			currentWindow: true
+		}, function(tabs){
+			chrome.scripting.executeScript({
+				target: {tabId: tabs[0].id},
+				func: codepip
+			});
+		});
+	});
+	$("btnpipvisual").addEventListener("click", function(){
+		chrome.runtime.sendMessage({name: "pip", value: 1},
+			function(){
+				chrome.tabs.query({
+					active: true,
+					currentWindow: true
+				}, function(tabs){
+					chrome.scripting.executeScript({
+						target: {tabId: tabs[0].id},
+						func: codepipvisual
+					});
+				});
+			}
+		);
+	});
 
 	function showhidemodal(name, visible, status){
 		document.getElementById(name).className = visible;

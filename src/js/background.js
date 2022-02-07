@@ -187,13 +187,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		break;
 	case"pip":
 		chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs){
-			var task;
-			if(request.value == 1){
-				task = "gopipvideo";
-			}else{
-				task = "gopipvisual";
-			}
-			chrome.tabs.sendMessage(tabs[0].id, {action: task});
+			chrome.tabs.sendMessage(tabs[0].id, {action: "gopipvisual"});
 		});
 		break;
 	}
