@@ -825,4 +825,5 @@ OK Done ADDED Russian and Chinese share buttons
 OK Done IMPROVEMENT rate box to 5 stars in the Options page
 OK Done IMPROVEMENT PIP-mode
 + issue: no YouTube video detection right to left layout issue ARAB
++ add 2 help videos in options page
 */
