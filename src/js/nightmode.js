@@ -155,10 +155,10 @@ const afterBodyReady = () => {
 		nmendtime = response["nmendtime"];
 		nightmodechecklistblack = response["nightmodechecklistblack"];
 		nightmodechecklistwhite = response["nightmodechecklistwhite"];
-		nmtopleft = response["nmtopleft"];
-		nmtopright = response["nmtopright"];
-		nmbottomright = response["nmbottomright"];
-		nmbottomleft = response["nmbottomleft"];
+		nmtopleft = response["nmtopleft"]; if(nmtopleft == null)nmtopleft = false;
+		nmtopright = response["nmtopright"]; if(nmtopright == null)nmtopright = false;
+		nmbottomright = response["nmbottomright"]; if(nmbottomright == null)nmbottomright = false;
+		nmbottomleft = response["nmbottomleft"]; if(nmbottomleft == null)nmbottomleft = true;
 		nmcustom = response["nmcustom"];
 		nmcustomx = response["nmcustomx"]; if(nmcustomx == null)nmcustomx = "15px";
 		nmcustomy = response["nmcustomy"]; if(nmcustomy == null)nmcustomy = "15px";
