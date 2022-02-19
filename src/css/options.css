@@ -818,8 +818,8 @@ section>div:only-of-type{-webkit-box-flex:1}
 #samplestefanvdnighttheme .sun:after{content:" ";width:28px;height:14px;border-radius:7px;background:rgba(255,255,255,0.75);position:absolute;top:-3px;margin-top:50%;left:-25px;margin-left:50%}
 /* Information box CSS */
 .nightworks{display:inline-block;padding:24px 16px 0px 16px;position:relative;height:145px}
-.nightworks .step{height:30px;position:relative}
-.nightworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left}
+.nightworks .step{position:relative}
+.nightworks .step .stepdescription{font-size:13px;width:100%;text-align:left;float:left;margin-bottom:15px}
 /* lamp */
 #loadinglamp{margin-right:5px}
 #btnpreview{display:none}

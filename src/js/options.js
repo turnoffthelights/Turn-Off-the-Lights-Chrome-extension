@@ -2295,7 +2295,7 @@ function domcontentloaded(){
 	}
 
 	function OFFworkaroundgamepad(){
-		//$("videopreviewgamepad").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdAUBYAjj8ZE-RZzStwUqFJm&rel=0";
+		$("videopreviewgamepad").src = "https://www.youtube.com/embed/videoseries?list=PLxPzk_0jENdBo2_HFGOtu8lRv6hhA86kg&rel=0";
 	}
 
 	// wizard profile
@@ -2918,6 +2918,7 @@ function domcontentloaded(){
 			OFFworkaroundbugfromsafari();
 			OFFworkaroundbugpreview();
 			OFFworkaroundnight();
+			OFFworkaroundgamepad();
 
 			document.getElementsByClassName("tabbar")[0].classList.add("hidden");
 			$("colorpanel").className = "";

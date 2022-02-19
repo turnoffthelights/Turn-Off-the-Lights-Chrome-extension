@@ -530,5 +530,9 @@
     "desratebadaction": {"message": "Yes, I will give feedback"},
     "desrategoodtitle": {"message": "Thank you!"},
     "desratebadtitle": {"message": "How can we make it better?"},
-    "destapstar": {"message":"Tap a star to rate it on the browser extension store."}
+    "destapstar": {"message":"Tap a star to rate it on the browser extension store."},
+    "gamecontrollerstep1description": {"message": "Connect your Game Controller to your device via USB or Bluetooth."},
+    "gamecontrollerstep2description": {"message": "Enable the Game Controller feature."},
+    "gamecontrollerstep3description": {"message": "Open any web page, and press any button to activate the Game Controller."},
+    "gamecontrollerstep4description": {"message": "Now the Game Controller is active on the current web page."}
 }
