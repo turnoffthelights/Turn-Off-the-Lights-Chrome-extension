@@ -2188,6 +2188,7 @@ function domcontentloaded(){
 	// Slider
 	$("slider").addEventListener("change", function(){ showValue(this.value); save_options(); });
 	$("slider").addEventListener("input", function(){ showValue(this.value); save_options(); }, false);
+	$("slider").addEventListener("dblclick", function(){ showValue(80); save_options(); });
 
 	// Interval
 	$("interval").addEventListener("change", function(){ showValue(this.value); save_options(); });

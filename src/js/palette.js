@@ -345,6 +345,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	$("oslider").addEventListener("wheel", wheel); // for modern
 	$("oslider").addEventListener("change", opacitychange, false);
 	$("oslider").addEventListener("input", opacitychange, false);
+	$("oslider").addEventListener("dblclick", function(){ this.value = 80; opacitychange(); });
 
 	var arraycolor = ["color1a", "color1b", "color1c", "color1d", "color1e", "color1f", "color1g", "color1h", "color2a", "color2b", "color2c", "color2d", "color2e", "color2f", "color2g", "color2h", "color3a", "color3b", "color3c", "color3d", "color3e", "color3f", "color3g", "color3h", "color4a", "color4b", "color4c", "color4d", "color4e", "color4f", "color4g", "color4h", "color5a", "color5b", "color5c", "color5d", "color5e", "color5f", "color5g", "color5h", "color6a", "color6b", "color6c", "color6d", "color6e", "color6f", "color6g", "color6h"];
 	for(var icolor = 0; icolor < arraycolor.length; icolor++)

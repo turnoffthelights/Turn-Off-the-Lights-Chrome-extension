@@ -813,6 +813,8 @@ OK Done REMOVED Speech and Camera -> not possile anymore because of service work
 OK Done ADDED Russian and Chinese share buttons
 OK Done IMPROVEMENT rate box to 5 stars in the Options page
 OK Done IMPROVEMENT PIP-mode
+OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
 + issue: no YouTube video detection right to left layout issue ARAB
-+ add 2 help videos in options page
++ add autonightmode in double click panel
++ add whitelist/blacklist for game controller
 */
