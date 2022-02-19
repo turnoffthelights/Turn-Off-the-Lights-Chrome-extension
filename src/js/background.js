@@ -202,34 +202,23 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
 
 // screenshader.js = Screen Shader
 // nightmode.js = Night Mode
-const scriptList = ["js/screenshader.js", "js/nightmode.js"];
 const injectScriptsTo = (tabId, url) => {
 	if(url.match(/^http/i) || url.match(/^file/i)){
-		scriptList.forEach((script) => {
-			// TODO - change code - do this job at the "document_start"
-			chrome.scripting.executeScript({
-				target: {tabId: tabId},
-				files: [`${script}`],
-				// runAt: "document_start",
-			}, () => void chrome.runtime.lastError);
-
-			// chrome.scripting.registerContentScript({
-			// 	target: {tabId: tabId},
-			// 	js: [`${script}`],
-			// 	runAt: "document_start"
-			// });
-
-			// OR
-
-			// chrome.scripting.registerContentScripts({
-			// 	scripts:[{
-			// 		matches: [],
-			// 		js: [`${script}`],
-			// 		runAt: "document_start"
-			// 	}]
-			// });
-
-		});
+		const scriptsToRegister = [
+			{
+				id: "RT_1",
+				matches: ["*://*/*"],
+				js: ["js/screenshader.js"],
+				runAt: "document_start"
+			},
+			{
+				id: "RT_2",
+				matches: ["*://*/*"],
+				js: ["js/nightmode.js"],
+				runAt: "document_start"
+			}
+		];
+		chrome.scripting.registerContentScripts(scriptsToRegister);
 	}
 };
 //---
@@ -812,7 +801,7 @@ BUG in Chrome manifest v3:
 + it work now v100 - chrome.i18n.getmessage -> not a function -> fixed in Chrome version 100
 + it work now v100 - omni suggestion error -> https://bugs.chromium.org/p/chromium/issues/detail?id=1186804
 + it work but show error seticon -> https://bugs.chromium.org/p/chromium/issues/detail?id=1262029&q=setIcon&can=2
-+ NOT OK Chrome runat "document_start" not supported for scripting
++ it work but check later again for Chrome runat "document_start" not supported for scripting
 https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
 https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
 
