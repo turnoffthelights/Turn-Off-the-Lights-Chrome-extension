@@ -191,6 +191,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		});
 		break;
 	}
+	return true;
 });
 
 // Inject before displaying the website
