@@ -805,7 +805,8 @@ BUG in Chrome manifest v3:
 + it work but check later again for Chrome runat "document_start" not supported for scripting
 https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
 https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
-
++ service working shutdown every 5 minutes?
+https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
 
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
 OK Done IMPROVEMENT double click lamp button action
