@@ -797,6 +797,7 @@ chrome.runtime.onInstalled.addListener(function(){
 	installation();
 });
 
+
 /*
 BUG in Chrome manifest v3:
 + it work now v100 - chrome.i18n.getmessage -> not a function -> fixed in Chrome version 100
