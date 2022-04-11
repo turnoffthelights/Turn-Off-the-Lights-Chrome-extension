@@ -808,6 +808,8 @@ https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
 https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
 + service working shutdown every 5 minutes?
 https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
++ Bug youtube autohd script
++ Double click menu no smaller then 1 minute chrome.alarm timer
 
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
 OK Done IMPROVEMENT double click lamp button action

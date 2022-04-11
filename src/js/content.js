@@ -3594,9 +3594,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}else{
 						if(video_id.indexOf("?") != -1){ newvideoid = video_id + "&vq=" + maxquality + ""; }else{ newvideoid = video_id + "?vq=" + maxquality + ""; }
 					}
-					ytembed[z].src = "https://www.youtube.com/embed/" + newvideoid;
+					ytembed[z].src = "https://www.youtube.com/embed/" + encodeURIComponent(newvideoid);
 				}
-
 			}
 		}
 	}
