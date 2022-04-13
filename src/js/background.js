@@ -599,7 +599,7 @@ chrome.storage.onChanged.addListener(function(changes){
 			chromerefreshalltabs("gorefreshpipvisualtype");
 		}
 
-		var changenamegamepad = ["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo"];
+		var changenamegamepad = ["gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "gamepadonly", "gamepadDomains", "gamepadchecklistwhite", "gamepadchecklistblack"];
 		if(changenamegamepad.includes(key)){
 			chromerefreshalltabs("gorefreshgamepad");
 		}
@@ -810,5 +810,5 @@ OK Done ADDED doubleclick on slider to get the default 80% opacity in the palett
 + Bug youtube autohd script
 + issue: no YouTube video detection right to left layout issue ARAB
 + add autonightmode in double click panel
-+ add whitelist/blacklist for game controller
+
 */
