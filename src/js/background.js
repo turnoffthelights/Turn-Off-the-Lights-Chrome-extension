@@ -807,6 +807,7 @@ OK Done ADDED Russian and Chinese share buttons
 OK Done IMPROVEMENT rate box to 5 stars in the Options page
 OK Done IMPROVEMENT PIP-mode
 OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
+OK Done whitelist/blacklist the game controller
 + Bug youtube autohd script
 + issue: no YouTube video detection right to left layout issue ARAB
 + add autonightmode in double click panel
