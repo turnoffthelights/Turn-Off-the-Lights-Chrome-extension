@@ -203,23 +203,16 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
 
 // screenshader.js = Screen Shader
 // nightmode.js = Night Mode
+const scriptList = ["js/screenshader.js", "js/nightmode.js"];
 const injectScriptsTo = (tabId, url) => {
 	if(url.match(/^http/i) || url.match(/^file/i)){
-		const scriptsToRegister = [
-			{
-				id: "RT_1",
-				matches: ["*://*/*"],
-				js: ["js/screenshader.js"],
-				runAt: "document_start"
-			},
-			{
-				id: "RT_2",
-				matches: ["*://*/*"],
-				js: ["js/nightmode.js"],
-				runAt: "document_start"
-			}
-		];
-		chrome.scripting.registerContentScripts(scriptsToRegister);
+		scriptList.forEach((script) => {
+			chrome.scripting.executeScript({
+				target: {tabId: tabId},
+				files: [`${script}`],
+				injectImmediately: true
+			}, () => void chrome.runtime.lastError);
+		});
 	}
 };
 //---
@@ -273,57 +266,53 @@ async function getCurrentTab(){
 	return tabs[0];
 }
 
-// Set click to false at beginning
-var clickbutton = 0;
-chrome.action.onClicked.addListener(function(tabs){
-	if(tabs.url.match(/^http/i) || tabs.url.match(/^file/i)){
-		if((new URL(tabs.url)).origin == browserstore || tabs.url == browsernewtab){
-			chrome.action.setPopup({tabId: tabs.id, popup:"popup.html"});
+// Set click to zero at beginning
+let clickbutton = 0;
+// Declare a timer variable
+let timer;
+chrome.action.onClicked.addListener(function(tab){
+	if(tab.url.match(/^http/i) || tab.url.match(/^file/i)){
+		if((new URL(tab.url)).origin == browserstore || tab.url == browsernewtab){
+			chrome.action.setPopup({tabId: tab.id, popup:"popup.html"});
 		}else{
 			clickbutton += 1;
 			if(clickbutton == 2){
-				chrome.alarms.clear("myLights");
-				chrome.action.setPopup({tabId: tabs.id, popup:"palette.html"});
+				// console.log("Doubleclick");
+				clearTimeout(timer);
+				chrome.action.setPopup({tabId: tab.id, popup:"palette.html"});
 				chrome.action.openPopup();
 			}
-			// Add a timer to detect next click to a sample of 250 = 0.004 minutes
-			chrome.alarms.create("myLights", {delayInMinutes: 0.004});
+
+			timer = setTimeout(function(){
+				// console.log("Singelclick");
+				if(clickbutton == 1){
+					chrome.storage.sync.get(["alllightsoff", "mousespotlights"], function(chromeset){
+						if((chromeset["mousespotlights"] != true)){ // regular lamp
+							if((chromeset["alllightsoff"] != true)){
+								chrome.scripting.executeScript({
+									target: {tabId: tab.id},
+									files: ["js/light.js"]
+								});
+							}else{
+								chrome.tabs.sendMessage(tab.id, {action: "masterclick"});
+							}
+						}else{ // all tabs
+							// Night Mode profile
+							// Eye Protection profile
+							chrome.tabs.sendMessage(tab.id, {action: "masterclick"});
+						}
+					});
+				}
+				clickbutton = 0;
+				// Clear all timers
+				clearTimeout(timer);
+				chrome.action.setPopup({tabId: tab.id, popup:""});
+			}, 250);
 		}
 	}else{
-		chrome.action.setPopup({tabId: tabs.id, popup:"popup.html"});
+		chrome.action.setPopup({tabId: tab.id, popup:"popup.html"});
 	}
 });
-
-chrome.alarms.onAlarm.addListener(alarmListener);
-function alarmListener(e){
-	if(e.name === "myLights"){
-		getCurrentTab().then((thattab) => {
-			if(clickbutton == 1){
-				chrome.storage.sync.get(["alllightsoff", "mousespotlights"], function(chromeset){
-					if((chromeset["mousespotlights"] != true)){ // regular lamp
-						if((chromeset["alllightsoff"] != true)){
-							chrome.scripting.executeScript({
-								target: {tabId: thattab.id},
-								files: ["js/light.js"]
-							});
-						}else{
-							chrome.tabs.sendMessage(thattab.id, {action: "masterclick"});
-						}
-					}else{
-						// all tabs
-						// Night Mode profile
-						// Eye Protection profile
-						chrome.tabs.sendMessage(thattab.id, {action: "masterclick"});
-					}
-				});
-			}
-			clickbutton = 0;
-			// Clear all timers
-			chrome.alarms.clear("myLights");
-			chrome.action.setPopup({tabId: thattab.id, popup:""});
-		});
-	}
-}
 
 function codenight(){
 	if(document.getElementById("totldark")){
@@ -803,13 +792,12 @@ BUG in Chrome manifest v3:
 + it work now v100 - chrome.i18n.getmessage -> not a function -> fixed in Chrome version 100
 + it work now v100 - omni suggestion error -> https://bugs.chromium.org/p/chromium/issues/detail?id=1186804
 + it work but show error seticon -> https://bugs.chromium.org/p/chromium/issues/detail?id=1262029&q=setIcon&can=2
-+ it work but check later again for Chrome runat "document_start" not supported for scripting
++ it work now v102 and runat "document_start" is now "injectImmediately" for execute scripting
 https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
 https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
-+ service working shutdown every 5 minutes?
-https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
-+ Bug youtube autohd script
-+ Double click menu no smaller then 1 minute chrome.alarm timer
++ service working shutdown every 5 minutes? https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
++ shorcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
+
 
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
 OK Done IMPROVEMENT double click lamp button action
@@ -819,6 +807,7 @@ OK Done ADDED Russian and Chinese share buttons
 OK Done IMPROVEMENT rate box to 5 stars in the Options page
 OK Done IMPROVEMENT PIP-mode
 OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
++ Bug youtube autohd script
 + issue: no YouTube video detection right to left layout issue ARAB
 + add autonightmode in double click panel
 + add whitelist/blacklist for game controller

@@ -62,7 +62,7 @@
     }
   ],
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+L",
         "mac": "MacCtrl+Shift+L"
@@ -81,10 +81,10 @@
     "open_in_tab": true
   },
   "offline_enabled": true,
-  "minimum_chrome_version": "100",
+  "minimum_chrome_version": "102",
   "storage": {
     "managed_schema": "schema.json"
   },
-  "permissions": [ "contextMenus", "tabs", "storage", "webNavigation", "scripting", "alarms" ],
+  "permissions": ["contextMenus", "tabs", "storage", "webNavigation", "scripting"],
   "host_permissions": ["<all_urls>"]
 }
