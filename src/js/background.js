@@ -810,5 +810,6 @@ OK Done ADDED doubleclick on slider to get the default 80% opacity in the palett
 + Bug youtube autohd script
 + issue: no YouTube video detection right to left layout issue ARAB
 + add autonightmode in double click panel
++ update .html links
 
 */

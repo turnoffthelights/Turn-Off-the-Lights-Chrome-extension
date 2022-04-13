@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 const exbrowser = "chrome";
+// values: "chrome", "safari", "edge", "firefox", "opera", "yandex"
 const totlscreenshotpage = "https://www.turnoffthelights.com/extension/capture-screenshot-of-video.html";
 const developerwebsite = "https://www.turnoffthelights.com";
 const ambientaureaproduct = "https://chrome.google.com/webstore/detail/ambient-aurea/pkaglmndhfgdaiaccjglghcbnfinfffa";
