@@ -954,7 +954,7 @@ input[type=checkbox]:checked ~ #mainview{padding-left:0}
 .minitable{line-height:48px;list-style:none;margin:0;padding:0}
 .minitable li{border-bottom:var(--totl-minitable-border);height:48px;padding:0 24px;-webkit-user-select:none;-moz-user-select:none;user-select:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tabbar{border-bottom:var(--totl-minitable-tab-border);height:48px}
-.tabbarintern{width:100%;display:flex;overflow:scroll}
+.tabbarintern{width:100%;display:flex;overflow-x:auto;overflow-y:hidden}
 .tabbutton{cursor:pointer;margin:0;border:none;padding:0 20px;float:left;position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none;height:46px;line-height:46px;font-weight:500;font-size:14px;text-transform:uppercase;color:rgba(0,0,0,.54);overflow:hidden;min-width:calc(75px - 40px)}
 .tabbutton:active{background-color:rgba(158,158,158,0.4);border-bottom:2px solid rgba(158,158,158,0)}
 .tabbutton:hover{background-color:rgba(158,158,158,.2);border-bottom:2px solid rgba(158,158,158,0)}
