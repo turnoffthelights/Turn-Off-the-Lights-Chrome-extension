@@ -81,7 +81,7 @@
     "open_in_tab": true
   },
   "offline_enabled": true,
-  "minimum_chrome_version": "102",
+  "minimum_chrome_version": "103",
   "storage": {
     "managed_schema": "schema.json"
   },

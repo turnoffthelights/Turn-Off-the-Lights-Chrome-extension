@@ -795,9 +795,8 @@ BUG in Chrome manifest v3:
 + it work now v102 and runat "document_start" is now "injectImmediately" for execute scripting
 https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
 https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
++ it work now v103 - shorcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
 + service working shutdown every 5 minutes? https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
-+ shorcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
-
 
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
 OK Done IMPROVEMENT double click lamp button action
@@ -808,9 +807,9 @@ OK Done IMPROVEMENT rate box to 5 stars in the Options page
 OK Done IMPROVEMENT PIP-mode
 OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
 OK Done whitelist/blacklist the game controller
+OK Done ADDED autonightmode option in double click panel
 + Bug youtube autohd script
 + issue: no YouTube video detection right to left layout issue ARAB
-+ add autonightmode in double click panel
 + update .html links
 
 */

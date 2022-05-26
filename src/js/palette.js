@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null;
+var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null, nightenabletheme = null;
 
 function save_options(){
 	var getpipvisualtype;
@@ -47,7 +47,7 @@ function save_options(){
 		getpipvisualtype = 3;
 	}
 
-	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains)});
+	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains), "nightenabletheme":$("nightenabletheme").checked});
 }
 
 function codenight(){
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll"], function(items){
+	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll", "nightenabletheme"], function(items){
 		lightcolor = items["lightcolor"]; if(lightcolor == null)lightcolor = "#000000"; // default color black
 		currentlayercolor = lightcolor;
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		nightDomains = items["nightDomains"];
 		if(typeof nightDomains == "undefined" || nightDomains == null)
 			nightDomains = JSON.stringify({"https://www.youtube.com": true, "https://www.nytimes.com": true, "http://192.168.1.1": true});
+
+		nightenabletheme = items["nightenabletheme"]; if(nightenabletheme == null)nightenabletheme = false; // default false
 
 		pipvisualtype = items["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1; // default 1
 
@@ -191,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		if(nighttheme == true)$("nighttheme").checked = true;
 		if(lampandnightmode == true)$("lampandnightmode").checked = true;
+		if(nightenabletheme == true)$("nightenabletheme").checked = true;
 		if(ambilight == true)$("ambilight").checked = true;
 		if(ambilightfixcolor == true)$("ambilightfixcolor").checked = true;
 		if(ambilight4color == true)$("ambilight4color").checked = true;
