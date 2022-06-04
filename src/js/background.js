@@ -195,9 +195,9 @@ chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
 	injectScriptsTo(tabId, url);
 });
 
-// screenshader.js = Screen Shader
-// nightmode.js = Night Mode
-const scriptList = ["js/screenshader.js", "js/nightmode.js"];
+// screen-shader.js = Screen Shader
+// night-mode.js = Night Mode
+const scriptList = ["js/screen-shader.js", "js/night-mode.js"];
 const injectScriptsTo = (tabId, url) => {
 	if(url.match(/^http/i) || url.match(/^file/i)){
 		scriptList.forEach((script) => {
@@ -214,7 +214,7 @@ const injectScriptsTo = (tabId, url) => {
 function restcontent(path, name, sendertab){
 	fetch(path)
 		.then(function(response){
-			console.log("einde = " + response.text());
+			// console.log("The content = " + response.text());
 			chrome.tabs.sendMessage(sendertab, {name: name, message: response.text()});
 		});
 }
@@ -791,7 +791,7 @@ BUG in Chrome manifest v3:
 + it work now v102 and runat "document_start" is now "injectImmediately" for execute scripting
 https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
 https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
-+ it work now v103 - shorcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
++ it work now v103 - shortcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
 + service working shutdown every 5 minutes? https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
 
 OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
@@ -805,6 +805,7 @@ OK Done ADDED doubleclick on slider to get the default 80% opacity in the palett
 OK Done whitelist/blacklist the game controller
 OK Done ADDED autonightmode option in double click panel
 OK Done IMPROVEMENT Youtube AutoHD script / Block 60 FPS script / AutoDim script
+OK Done IMPROVEMENT Use the kebab-case file format
 + issue: no YouTube video detection right to left layout issue ARAB
 + update .html links
 + check for use activetabs permission and screenshot capture issue?

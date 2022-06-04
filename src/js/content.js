@@ -473,12 +473,12 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}, 1000); // 1000 refreshing it
 
 		var cinemahandler;
-		var messagediv = $("ytCinemaMessage");
+		var messagediv = $("stefanvdcinemamessage");
 		if(messagediv == null){
 			// injected code messaging
 			var message = document.createElement("div");
 			var bt = document.getElementsByTagName("body"); if(!bt.length)return;
-			message.setAttribute("id", "ytCinemaMessage");
+			message.setAttribute("id", "stefanvdcinemamessage");
 			message.style.display = "none";
 			if(!bt.length)return;
 			bt[0].appendChild(message);
@@ -4025,8 +4025,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				if(document.getElementById("totlautoplay")){
 					removeElement("totlautoplay");
 				}
-				if(document.getElementById("ytCinemaMessage")){
-					removeElement("ytCinemaMessage");
+				if(document.getElementById("stefanvdcinemamessage")){
+					removeElement("stefanvdcinemamessage");
 				}
 
 				if(autoplay == true){

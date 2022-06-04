@@ -30,9 +30,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 var ytCinema;
 (ytCinema = {
 	players: {objs: [], active: 0},
-	messageEvent: new Event("ytCinemaMessage"),
+	messageEvent: new Event("stefanvdcinemamessage"),
 	playerStateChange: function(stateId){
-		var message = document.getElementById("ytCinemaMessage"),
+		var message = document.getElementById("stefanvdcinemamessage"),
 			stateIO = "playerStateChange:".concat(stateId);
 		// console.log("Debug " + message.textContent + " " +stateIO);
 		if(message && message.textContent !== stateIO){
