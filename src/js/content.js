@@ -156,18 +156,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	gamepadchecklistblack = response["gamepadchecklistblack"];
 
 	// inject script for autoplay
-	if(autoplay == true){
-		chrome.runtime.sendMessage({name: "sendautoplay"});
+	function addautoplayfile(){
+		if(!document.getElementById("totlautoplay")){
+			var script = document.createElement("script"); script.id = "totlautoplay"; script.type = "text/javascript"; script.src = chrome.runtime.getURL("js/video-player-status.js"); document.getElementsByTagName("head")[0].appendChild(script);
+		}
 	}
 
-	chrome.runtime.onMessage.addListener(
-		function(request){
-			if(request.name == "injectvideostatus"){
-				if(!document.getElementById("totlautoplay")){
-					var script = document.createElement("script"); script.id = "totlautoplay"; script.type = "text/javascript"; script.textContent = request.message; document.getElementsByTagName("head")[0].appendChild(script);
-				}
-			}
-		});
+	if(autoplay == true){
+		addautoplayfile();
+	}
 
 	var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 	// observeDOM - dynamic check
@@ -237,7 +234,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	// Shortcutlight
 	window.addEventListener("keydown", function(e){
 		if(e.key == "F8" && !e.ctrlKey && !e.shiftKey && e.altKey){
-		// Run code for Alt+F8
+			// Run code for Alt+F8
 			// Shortcutlight
 			if(shortcutlight == true){
 				if($("stefanvdlightareoff1")){
@@ -251,7 +248,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 
 		if(e.key == "F9" && !e.ctrlKey && !e.shiftKey && e.altKey){
-		// Run code for Alt+F9
+			// Run code for Alt+F9
 			// Shortcutlight
 			if(shortcutlight == true){
 				if($("stefanvdlightareoff1")){
@@ -262,7 +259,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 
 		if(e.key == "ArrowUp" && !e.ctrlKey && !e.shiftKey && e.altKey){
-		// Run code for Alt+arrow up
+			// Run code for Alt+arrow up
 			// Shortcutlight
 			if(shortcutlight == true){
 				if($("stefanvdlightareoff1")){
@@ -280,7 +277,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 
 		if(e.key == "ArrowDown" && !e.ctrlKey && !e.shiftKey && e.altKey){
-		// Run code for Alt+arrow down
+			// Run code for Alt+arrow down
 			// Shortcutlight
 			if(shortcutlight == true){
 				if($("stefanvdlightareoff1")){
@@ -304,7 +301,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 
 		if(e.key == "*" && !e.ctrlKey && !e.shiftKey && e.altKey){
-		// Run code for Alt+*
+			// Run code for Alt+*
 			// Shortcutlight
 			if(shortcutlight == true){
 			// all tabs lights off
@@ -313,7 +310,7 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 
 		if(e.key == "F10" && !e.ctrlKey && !e.shiftKey && e.altKey){
-		// Run code for Alt+F10
+			// Run code for Alt+F10
 			// Shortcutlight
 			if(shortcutlight == true){
 				var i18neyedivoff = chrome.i18n.getMessage("eyedivoff");
@@ -407,17 +404,17 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 		function playerReady(player){
 			this.player = player;
-		// this.playerPause(player);
-		// this.playerReset(player);
+			// this.playerPause(player);
+			// this.playerReset(player);
 		}
 		/* function playerReset(player){
-		if(player !== null){
-			if(typeof(player.seekTo) === "function"){
-				player.seekTo(0, false);
-			}else if(typeof(player.currentTime) !== "undefined"){
-				player.currentTime = 0;
+			if(player !== null){
+				if(typeof(player.seekTo) === "function"){
+					player.seekTo(0, false);
+				}else if(typeof(player.currentTime) !== "undefined"){
+					player.currentTime = 0;
+				}
 			}
-		}
 		}
 		function playerStop(player){
 			if(player !== null){
@@ -3650,16 +3647,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}
 
-	function injectScript(codetext){
-		var messagescript = $("ytScriptMessage");
-		if(messagescript == null){
-			var ythdscript = document.createElement("script");
-			ythdscript.setAttribute("id", "ytScriptMessage");
-			ythdscript.textContent = codetext;
-			document.head.appendChild(ythdscript);
-		}
-	}
-
 	// YouTube auto width the video player content
 	// URL control for YouTube only
 	if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
@@ -3687,7 +3674,6 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		var fixselfyoutubeplayeroutline = $("movie_player");
 		if(fixselfyoutubeplayeroutline){ $("movie_player").style.outline = "none"; }
 
-		var donesetquality = false;
 		if(autowidthyoutube == true){
 			var yt = yt;
 			yt = yt || {};
@@ -3700,62 +3686,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if($("page")){ $("page").className = "  watch clearfix watch-stage-mode watch-wide"; }
 		}
 
-		var mplayer;
 		if(customqualityyoutube == true){
-			// see http://code.google.com/apis/youtube/flash_api_reference.html#setPlaybackQuality
-			// one of "highres", "hd1080", "hd720", "large", "medium", "small" or "default" to let youtube pick
-			var ythdinit = function onYouTubePlayerReady(player){
-				try{
-					donesetquality = false;
-					mplayer = player;
-					if(typeof mplayer == "string"){
-						mplayer = document.getElementById(mplayer);
-					}
-					if(typeof movie_player != "undefined"){
-						// eslint-disable-next-line no-undef
-						mplayer = movie_player;
-					}
-					mplayer.addEventListener("onStateChange", "onytplayerStateChange");
-					// eslint-disable-next-line no-undef
-					updateQuality();
-				}catch(e){ console.error(e); }
-			};
-
-			var ythdstatechange = function onytplayerStateChange(newState){
-				if(newState == 3 && !donesetquality){
-					// eslint-disable-next-line no-undef
-					updateQuality();
-				}
-				if(newState == -1){
-					donesetquality = false;
-				}
-			};
-
-			var ythduq = function updateQuality(){
-				var aq = mplayer.getAvailableQualityLevels();
-				if(aq.indexOf(maxquality) == -1){
-					if(mplayer.setPlaybackQualityRange !== undefined){
-						mplayer.setPlaybackQualityRange(aq[0], aq[0]);
-					}
-					// console.log("Set to highest available level: " + aq[0]);
-					mplayer.setPlaybackQuality(aq[0]);
-				}else{
-					if(mplayer.setPlaybackQualityRange !== undefined){
-						mplayer.setPlaybackQualityRange(maxquality, maxquality);
-					}
-					// console.log("Set to " + maxquality + " in accordance with user settings");
-					mplayer.setPlaybackQuality(maxquality);
-				}
-				donesetquality = true;
-			};
-
-			var codetext = "var maxquality = \"" + maxquality + "\";\n";
-			codetext += (ythdinit.toString() + "\n");
-			codetext += (ythdstatechange.toString() + "\n");
-			codetext += (ythduq.toString() + "\n");
-			injectScript(codetext);
+			const params = new URLSearchParams();
+			params.set("maxquality", maxquality);
+			var script = document.createElement("script"); script.type = "text/javascript"; script.src = chrome.runtime.getURL(`js/hdinject.js?${params}`); document.getElementsByTagName("head")[0].appendChild(script);
 		}
-
 	} // end check youtube.com website
 
 	function removeElement(elementId){
@@ -4095,8 +4030,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 				}
 
 				if(autoplay == true){
+					addautoplayfile();
 					runautoplaycheck();
-					chrome.runtime.sendMessage({name: "sendautoplay"});
 				}
 			});
 		}else if(request.action == "gorefreshvideotoolbar"){

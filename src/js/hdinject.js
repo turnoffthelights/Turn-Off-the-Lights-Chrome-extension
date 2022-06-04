@@ -27,11 +27,27 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-chrome.storage.sync.get(["block60fps"], function(response){
-	var block60fps = response["block60fps"];
-	if(block60fps == true){
-		try{
-			var script = document.createElement("script"); script.type = "text/javascript"; script.src = chrome.runtime.getURL("js/fpsinject.js"); document.getElementsByTagName("head")[0].appendChild(script);
-		}catch(e){ console.error(e); }
+const src = new URL(document.currentScript.src);
+const maxquality = src.searchParams.get("maxquality");
+// https://developers.google.com/youtube/iframe_api_reference?csw=1#setPlaybackQuality
+// one of "highres", "hd4320", "hd2880", "hd1080", "hd2160", "hd1440", "hd1080", "hd720", "large", "medium", "small", "tiny" or "default" to let YouTube pick
+const mplayer = document.getElementById("movie_player") || document.querySelector(".ytp-embed");
+
+function updateQuality(){
+	var aq = mplayer.getAvailableQualityLevels();
+	if(aq.indexOf(maxquality) == -1){
+		if(mplayer.setPlaybackQualityRange !== undefined){
+			mplayer.setPlaybackQualityRange(aq[0], aq[0]);
+		}
+		// console.log("Set to highest available level: " + aq[0]);
+		mplayer.setPlaybackQuality(aq[0]);
+	}else{
+		if(mplayer.setPlaybackQualityRange !== undefined){
+			mplayer.setPlaybackQualityRange(maxquality, maxquality);
+		}
+		// console.log("Set to " + maxquality + " in accordance with user settings");
+		mplayer.setPlaybackQuality(maxquality);
 	}
-});
+}
+
+updateQuality();

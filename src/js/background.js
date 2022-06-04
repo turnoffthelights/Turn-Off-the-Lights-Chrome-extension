@@ -66,12 +66,6 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	case"contextmenuoff":
 		removecontexmenus();
 		break;
-	case"sendautoplay":
-		restcontent("/js/video-player-status.js", "injectvideostatus", sender.tab.id);
-		break;
-	case"sendfps":
-		restcontent("/js/fpsinject.js", "injectfps", sender.tab.id);
-		break;
 	case"sendlightcss":
 		restcontent("/css/light.css", "injectlightcss", sender.tab.id);
 		break;
@@ -218,9 +212,11 @@ const injectScriptsTo = (tabId, url) => {
 //---
 
 function restcontent(path, name, sendertab){
-	var cssoReq = new XMLHttpRequest();
-	cssoReq.onreadystatechange = function(){ if(cssoReq.readyState == 4){ chrome.tabs.sendMessage(sendertab, {name: name, message: cssoReq.responseText}); } };
-	cssoReq.open("GET", path, true); cssoReq.send();
+	fetch(path)
+		.then(function(response){
+			console.log("einde = " + response.text());
+			chrome.tabs.sendMessage(sendertab, {name: name, message: response.text()});
+		});
 }
 
 chrome.tabs.onActivated.addListener(async(activeInfo) => {
@@ -808,8 +804,9 @@ OK Done IMPROVEMENT PIP-mode
 OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
 OK Done whitelist/blacklist the game controller
 OK Done ADDED autonightmode option in double click panel
-+ Bug youtube autohd script
+OK Done IMPROVEMENT Youtube AutoHD script / Block 60 FPS script / AutoDim script
 + issue: no YouTube video detection right to left layout issue ARAB
 + update .html links
++ check for use activetabs permission and screenshot capture issue?
 
 */

@@ -80,6 +80,16 @@
     "page": "options.html",
     "open_in_tab": true
   },
+  "web_accessible_resources": [{
+    "resources": ["/js/fpsinject.js", "/js/hdinject.js"],
+    "matches": ["*://www.youtube.com/*"],
+    "use_dynamic_url": true
+  },
+  {
+    "resources": ["/js/video-player-status.js"],
+    "matches": ["http://*/*", "https://*/*"],
+    "use_dynamic_url": true
+  }],
   "offline_enabled": true,
   "minimum_chrome_version": "103",
   "storage": {
