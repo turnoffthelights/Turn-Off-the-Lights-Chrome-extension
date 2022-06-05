@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Bekræft adgangskode"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Nedton kun følgende videowebsted(-er):"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Kræve adgangskode, for igen at tænde lyset."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "Tilstanden 'Øjenbeskyttelse' er aktiv. For at benytte nedenstående funktion, deaktivér først 'Øjenbeskyttelse'."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Bedøm"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Dæmp automatisk baggrunden, når du klikker på play-knappen og omvendt."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Vis Like/Dislike-bjælken under YouTube-videoer."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Auto-afspilning"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Nulstil indstillingerne for Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Forsink tilbagevenden til lys baggrund efter videoafslutning i"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "sekunder"
     },
     "motionoptions": {

@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Підтвердити пароль"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Затемнювати тільки слідуючі відео-сайти:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Запитувати пароль перед включенням світла."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "Активована опція 'Захист очей'. Щоб використовувати дану функцію, спочатку деактивуйте опцію 'Захист очей'."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Оцінка"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Автоматично включати затемнення, коли ви натискаєте на кнопку Play, і навпаки."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Показувати Подобається/Не подобається-панель під відеороликами YouTube."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Автовідтворення"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Скинути налаштування Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Прояснити фон знову, після того як відео закінчилось"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "секунд"
     },
     "motionoptions": {

@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Confirmă parola"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Întunecă numai următoarele site-uri:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Este necesară introducerea unei parole înainte de a aprinde luminile."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "\"Protecţia ochi\" este activată. Ca să foloseşti opţiune de mai jos, dezactivează opţiunea \"protecţie ochi\"."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Rată"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Întunecă automat fundalul când apeși butonul play și invers."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Afișează butoanele îmi place/nu-mi place sub video-urile YouTube."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Redare automată"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Reinițializați setările Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Luminați din nou fundalul când filmul s-a sfârșit după"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "secunde"
     },
     "motionoptions": {

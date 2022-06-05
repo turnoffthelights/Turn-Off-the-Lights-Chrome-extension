@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Wachtwoord bevestigen"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Alleen de volgende videowebsite(s) dimmen:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Invoer van wachtwoord is vereist voordat het licht weer wordt aangezet."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "De functie 'Oogbescherming' is ingeschakeld. Schakel deze uit om de onderstaande functie te gebruiken."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Beoordelen"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Automatisch de achtergrond dimmen bij het klikken op de afspeelknop en omgekeerd"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Leuk-/niet-leuk-balk onder YouTube-video's tonen"
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Automatisch afspelen"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Turn Off the Lights opnieuw instellen"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "De achtergrond weer helder maken als de video na"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "seconden is beëindigd"
     },
     "motionoptions": {

@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "パスワードの確認"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "次の動画サイトでのみ画面を暗くする："
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "ライトをもう一度つけるには、パスワードの入力が必要です。"
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "「目の保護」機能は有効です。以下の機能を利用するには、このオプションを無効にしてください。"
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "評価する"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "再生ボタンを押したときに自動的に背景を暗くする"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "YouTube の動画の下に、「好き/嫌い」バーを表示します。"
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "自動再生"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Turn Off the Lights を初期設定に戻す"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "動画再生が終了したら、再び背景を明るくする"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "秒数"
     },
     "motionoptions": {

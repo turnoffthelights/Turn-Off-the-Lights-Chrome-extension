@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "비밀번호 확인"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "다음 사이트에서만 어둡게 하기:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "불을 다시 켜기 전에 비밀번호 요구"
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "'시력 보호'가 활성화되었습니다. 아래의 기능을 사용하려면 눈 보호를 비활성화해주세요."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "평가하기"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "영상이 재생될때 자동으로 화면을 어둡게, 멈출때는 자동으로 화면을 밝게 합니다."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "YouTube 영상 아래의 좋아요/싫어요 바를 표시합니다."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "자동 재생"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Turn off the Lights 설정 초기화"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "비디오가 종료된 후 배경을 다시 밝게 하기"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "초"
     },
     "motionoptions": {

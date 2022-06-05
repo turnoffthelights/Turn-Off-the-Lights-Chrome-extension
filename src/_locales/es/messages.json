@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Confirmar contraseña"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Oscurecer solo en los siguientes sitios:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Es necesario introducir una contraseña antes de volver a encender las luces."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "La 'protección ocular' está activada. Para utilizar la función de abajo, desactiva la 'protección ocular'."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Valorar"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Oscurecer automáticamente el fondo cuando haces clic en el botón reproducir y viceversa."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Mostrar la barra de 'Me gusta'/'No me gusta' bajo los vídeos de YouTube."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Autorreproducción"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Reiniciar ajustes de Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Volver a iluminar el fondo cuando el vídeo haya finalizado"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "segundos"
     },
     "motionoptions": {

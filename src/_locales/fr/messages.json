@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Veuillez confirmer votre mot de passe"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Réduire la luminosité seulement sur le(s) site(s) web de vidéo suivant(s) :"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Exiger un mot de passe pour pouvoir rétablir la luminosité."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "L'option \"Protection des yeux\" est activée. Pour utiliser la fonction ci-dessous, il vous faut désactiver l'option \"Protection des yeux\"."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Évaluer"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Assombrir automatiquement l'arrière-plan lorsque vous cliquez sur le bouton de Lecture et inversement."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Montrer la barre des boutons \"J'aime\" et \"Je n'aime pas\" sous les vidéos de YouTube."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Lecture automatique"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Réinitialiser les paramètres de Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Ré-éclaircir l'arrière-plan lorsque la vidéo se termine après"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "secondes"
     },
     "motionoptions": {

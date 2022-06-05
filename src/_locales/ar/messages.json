@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "تأكيد كلمة المرور"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "خافت فقط في موقع/مواقع الفيديو التالية:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "يتطلب ادخال كلمة المرور قبل إعادة تشغيل الأضواء مرة أخرى."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "تم تمكين حماية العين. لاستخدام الخاصية بالأسفل، قم بتعطيل خيار 'حماية العين'."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "معدل"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "خفوت تلقائي للخلفية عند النقر على زر التشغيل والعكس."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "إظهار شريط الإعجاب/عدم الإعجاب تحت فيديوهات اليوتيوب."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "التشغيل التلقائي"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "استعادة اعدادات اغلاق الضوء"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "قم بإضاءة الخلفية مرة أخرى عندما ينتهي الفيديو بعد"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "ثواني"
     },
     "motionoptions": {

@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Подтвердить пароль"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Приглушать свет только на следующих видеосайтах:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Требовать ввода пароля при включении света."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "Включена защита глаз. Чтобы использовать функцию ниже, отключите опцию защиты глаз."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Оценить"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Автоматически затемнять страницу при нажатии на кнопку Play в Youtube."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Показывать полосу нравится/не нравится под видео YouTube."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Автовоспроизведение"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Сброс параматров Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Вернуть светлый фон, когда видео закончится"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "секунд"
     },
     "motionoptions": {

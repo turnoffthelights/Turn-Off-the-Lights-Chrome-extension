@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Zapisz hasło"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Przyciemniaj tylko następujące witryny:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Przed włączeniem oświetlenia będzie wymagane podanie hasła."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "Tryb ochrony oczu jest aktywny. Aby skorzystać z tej funkcji należy poniżej wyłączyć tryb ochrony oczu."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Ocena"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Automatycznie przyciemniaj/rozjaśniaj tło po naciśnięciu przycisku odtwarzania"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Wyświetlaj wskaźnik podoba mi się/nie podoba mi się pod filmem"
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Autoodtwarzanie"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Resetuj ustawienia Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Rozjaśnij tło ponownie, gdy film zakończył się po"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "sek."
     },
     "motionoptions": {

@@ -45,10 +45,10 @@ if(window.location.href.match(/^http(s)?:\/\/(www\.)?stefanvd.net/i) || window.l
 }
 
 // settings
-var autoplay = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autoplayonly = null, autoplayDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, autoplaydelay = null, autoplaydelaytime = null, atmosvivid = null, autoplaychecklistwhite = null, autoplaychecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, gamepad = null, gpleftstick = null, gprightstick = null, gpbtnx = null, gpbtno = null, gpbtnsquare = null, gpbtntriangle = null, gpbtnlb = null, gpbtnrb = null, gpbtnlt = null, gpbtnrt = null, gpbtnshare = null, gpbtnmenu = null, gpbtnrightstick = null, gpbtnleftstick = null, gpbtndirup = null, gpbtndirdown = null, gpbtndirleft = null, gpbtndirright = null, gpbtnlogo = null, gamepadonly = null, gamepadDomains = null, gamepadchecklistwhite = null, gamepadchecklistblack = null;
+var autodim = null, eastereggs = null, shortcutlight = null, eyen = null, eyea = null, eyealist = null, excludedDomains = null, nighttime = null, begintime = null, endtime = null, ambilight = null, ambilightrangeblurradius = null, ambilightrangespreadradius = null, ambilightfixcolor = null, ambilightvarcolor = null, ambilightcolorhex = null, ambilight4color = null, ambilight1colorhex = null, ambilight2colorhex = null, ambilight3colorhex = null, ambilight4colorhex = null, ecosaver = null, ecosavertime = null, autodimonly = null, autodimDomains = null, interval = null, autowidthyoutube = null, customqualityyoutube = null, maxquality = null, atmosphereonly = null, atmosphereDomains = null, autodimdelay = null, autodimdelaytime = null, atmosvivid = null, autodimchecklistwhite = null, autodimchecklistblack = null, eyechecklistwhite = null, eyechecklistblack = null, no360youtube = null, videotool = null, reflection = null, reflectionamount = null, videotoolonly = null, videotoolDomains = null, videotoolchecklistwhite = null, videotoolchecklistblack = null, videovolume = null, videovolumecolor = null, videovolumesteps = null, videovolumelabel = null, visopacity = null, videotoolcolor = null, hovervideo = null, hovervideoamount = null, mousespotlights = null, drawatmosfps = null, aplay = null, apause = null, astop = null, videozoom = null, playrate = null, playrateamount = null, speedtoolbar = null, atmosontotlmode = null, vpause = null, videovolumeposa = null, videovolumeposb = null, videovolumeposc = null, videovolumehold = null, videovolumealt = null, atmosfpsauto = null, atmosfpsmanual = null, videovolumeonly = null, videovolumeDomains = null, videovolumechecklistwhite = null, videovolumechecklistblack = null, videovolumescrolla = null, videovolumescrollb = null, videovolumescrollc = null, videovolumeposd = null, videovolumepose = null, pipvisualtype = null, gamepad = null, gpleftstick = null, gprightstick = null, gpbtnx = null, gpbtno = null, gpbtnsquare = null, gpbtntriangle = null, gpbtnlb = null, gpbtnrb = null, gpbtnlt = null, gpbtnrt = null, gpbtnshare = null, gpbtnmenu = null, gpbtnrightstick = null, gpbtnleftstick = null, gpbtndirup = null, gpbtndirdown = null, gpbtndirleft = null, gpbtndirright = null, gpbtnlogo = null, gamepadonly = null, gamepadDomains = null, gamepadchecklistwhite = null, gamepadchecklistblack = null;
 /* -------------------------------------------------- */
-chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eyea", "eyealist", "excludedDomains", "nighttime", "begintime", "endtime", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ecosaver", "ecosavertime", "autoplayonly", "autoplayDomains", "interval", "maxquality", "autowidthyoutube", "customqualityyoutube", "atmosphereonly", "atmosphereDomains", "autoplaydelay", "autoplaydelaytime", "atmosvivid", "autoplaychecklistwhite", "autoplaychecklistblack", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "vpause", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "videovolumealt", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "pipvisualtype", "gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "gamepadonly", "gamepadDomains", "gamepadchecklistwhite", "gamepadchecklistblack"], function(response){
-	autoplay = response["autoplay"];
+chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea", "eyealist", "excludedDomains", "nighttime", "begintime", "endtime", "ambilight", "ambilightrangeblurradius", "ambilightrangespreadradius", "ambilightfixcolor", "ambilightvarcolor", "ambilightcolorhex", "ambilight4color", "ambilight1colorhex", "ambilight2colorhex", "ambilight3colorhex", "ambilight4colorhex", "ecosaver", "ecosavertime", "autodimonly", "autodimDomains", "interval", "maxquality", "autowidthyoutube", "customqualityyoutube", "atmosphereonly", "atmosphereDomains", "autodimdelay", "autodimdelaytime", "atmosvivid", "autodimchecklistwhite", "autodimchecklistblack", "eyechecklistwhite", "eyechecklistblack", "no360youtube", "videotool", "reflection", "reflectionamount", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "videovolume", "videovolumecolor", "videovolumesteps", "videovolumelabel", "visopacity", "videotoolcolor", "hovervideo", "hovervideoamount", "mousespotlights", "drawatmosfps", "aplay", "apause", "astop", "videozoom", "playrate", "playrateamount", "speedtoolbar", "atmosontotlmode", "vpause", "videovolumeposa", "videovolumeposb", "videovolumeposc", "videovolumehold", "videovolumealt", "atmosfpsauto", "atmosfpsmanual", "videovolumeonly", "videovolumeDomains", "videovolumechecklistwhite", "videovolumechecklistblack", "videovolumescrolla", "videovolumescrollb", "videovolumescrollc", "videovolumeposd", "videovolumepose", "pipvisualtype", "gamepad", "gpleftstick", "gprightstick", "gpbtnx", "gpbtno", "gpbtnsquare", "gpbtntriangle", "gpbtnlb", "gpbtnrb", "gpbtnlt", "gpbtnrt", "gpbtnshare", "gpbtnmenu", "gpbtnrightstick", "gpbtnleftstick", "gpbtndirup", "gpbtndirdown", "gpbtndirleft", "gpbtndirright", "gpbtnlogo", "gamepadonly", "gamepadDomains", "gamepadchecklistwhite", "gamepadchecklistblack"], function(response){
+	autodim = response["autodim"];
 	eastereggs = response["eastereggs"];
 	shortcutlight = response["shortcutlight"];
 	eyen = response["eyen"];
@@ -71,19 +71,19 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	ambilight4colorhex = response["ambilight4colorhex"]; if(ambilight4colorhex == null)ambilight4colorhex = "#0000FF";
 	ecosaver = response["ecosaver"];
 	ecosavertime = response["ecosavertime"];
-	autoplayonly = response["autoplayonly"];
-	autoplayDomains = response["autoplayDomains"];
+	autodimonly = response["autodimonly"];
+	autodimDomains = response["autodimDomains"];
 	interval = response["interval"];
 	maxquality = response["maxquality"];
 	autowidthyoutube = response["autowidthyoutube"];
 	customqualityyoutube = response["customqualityyoutube"];
 	atmosphereonly = response["atmosphereonly"];
 	atmosphereDomains = response["atmosphereDomains"];
-	autoplaydelay = response["autoplaydelay"];
-	autoplaydelaytime = response["autoplaydelaytime"];
+	autodimdelay = response["autodimdelay"];
+	autodimdelaytime = response["autodimdelaytime"];
 	atmosvivid = response["atmosvivid"];
-	autoplaychecklistwhite = response["autoplaychecklistwhite"];
-	autoplaychecklistblack = response["autoplaychecklistblack"];
+	autodimchecklistwhite = response["autodimchecklistwhite"];
+	autodimchecklistblack = response["autodimchecklistblack"];
 	eyechecklistwhite = response["eyechecklistwhite"];
 	eyechecklistblack = response["eyechecklistblack"];
 	no360youtube = response["no360youtube"];
@@ -155,15 +155,15 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 	gamepadchecklistwhite = response["gamepadchecklistwhite"];
 	gamepadchecklistblack = response["gamepadchecklistblack"];
 
-	// inject script for autoplay
-	function addautoplayfile(){
-		if(!document.getElementById("totlautoplay")){
-			var script = document.createElement("script"); script.id = "totlautoplay"; script.type = "text/javascript"; script.src = chrome.runtime.getURL("js/video-player-status.js"); document.getElementsByTagName("head")[0].appendChild(script);
+	// inject script for autodim
+	function addautodimfile(){
+		if(!document.getElementById("totlautodim")){
+			var script = document.createElement("script"); script.id = "totlautodim"; script.type = "text/javascript"; script.src = chrome.runtime.getURL("js/video-player-status.js"); document.getElementsByTagName("head")[0].appendChild(script);
 		}
 	}
 
-	if(autoplay == true){
-		addautoplayfile();
+	if(autodim == true){
+		addautodimfile();
 	}
 
 	var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
@@ -352,8 +352,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		}
 	}, false);
 
-	var startautoplay;
-	function autoplayfunction(){
+	var startautodim;
+	function autodimfunction(){
 		var gracePeriod = 250, lastEvent = null, timeout = null;
 
 		function trigger(data){
@@ -429,8 +429,8 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		function shadesOff(player){
 			if(player !== null){
 				var blackon = $("stefanvdlightareoff1");
-				if(autoplaydelay == true){
-					var delaytime = autoplaydelaytime * 1000;
+				if(autodimdelay == true){
+					var delaytime = autodimdelaytime * 1000;
 					godelay = window.setTimeout(function(){
 						if(blackon){ chrome.runtime.sendMessage({name: "automatic"}); }
 						window.clearTimeout(godelay);
@@ -444,14 +444,14 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 			if(player !== null){
 				var blackon = $("stefanvdlightareoff1");
 				if(blackon == null){ chrome.runtime.sendMessage({name: "automatic"}); }
-				if(autoplaydelay == true){
+				if(autodimdelay == true){
 					try{ window.clearTimeout(godelay); }catch(e){ console.error(e); }
 				}
 			}
 		}
 
 		// player ready check
-		startautoplay = window.setInterval(function(){
+		startautodim = window.setInterval(function(){
 			try{
 				var youtubeplayer = $("movie_player") || null;
 				var htmlplayer = document.getElementsByTagName("video") || null;
@@ -511,32 +511,32 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 		return false;
 	}
 
-	function runautoplaycheck(){
-		if(autoplay == true && mousespotlights != true){
-			if(autoplayonly == true){
+	function runautodimcheck(){
+		if(autodim == true && mousespotlights != true){
+			if(autodimonly == true){
 				var currenturl = window.location.protocol + "//" + window.location.host;
 				var blackrabbit = false;
-				if(typeof autoplayDomains == "string"){
-					autoplayDomains = JSON.parse(autoplayDomains);
+				if(typeof autodimDomains == "string"){
+					autodimDomains = JSON.parse(autodimDomains);
 					var abuf = [];
 					var domain;
-					for(domain in autoplayDomains)
+					for(domain in autodimDomains)
 						abuf.push(domain);
 					abuf.sort();
 					var i;
 					var l = abuf.length;
 					for(i = 0; i < l; i++){
-						if(autoplaychecklistwhite == true){
+						if(autodimchecklistwhite == true){
 							if(abuf[i].includes("*")){
 								// regex test
 								if(checkregdomaininside(abuf[i], currenturl) == true){
-									autoplayfunction();
+									autodimfunction();
 								}
 							}else{
 								// regular text
-								if(currenturl == abuf[i]){ autoplayfunction(); }
+								if(currenturl == abuf[i]){ autodimfunction(); }
 							}
-						}else if(autoplaychecklistblack == true){
+						}else if(autodimchecklistblack == true){
 							if(abuf[i].includes("*")){
 								// regex test
 								if(checkregdomaininside(abuf[i], currenturl) == true){
@@ -549,11 +549,11 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 						}
 					}
 				}
-				if(autoplaychecklistblack == true && blackrabbit == false){ autoplayfunction(); }
-			}else{ autoplayfunction(); }
-		} // option autoplay on end
+				if(autodimchecklistblack == true && blackrabbit == false){ autodimfunction(); }
+			}else{ autodimfunction(); }
+		} // option autodim on end
 	}
-	runautoplaycheck();
+	runautodimcheck();
 
 	// general ID for each HTML5 video player
 	function adddatavideo(){
@@ -4006,32 +4006,32 @@ chrome.storage.sync.get(["autoplay", "eastereggs", "shortcutlight", "eyen", "eye
 					}
 				}
 			});
-		}else if(request.action == "gorefreshautoplay"){
-			chrome.storage.sync.get(["autoplay", "mousespotlights", "autoplayDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "autoplayonly", "aplay", "apause", "astop", "autoplaydelay", "autoplaydelaytime"], function(items){
-				autoplay = items["autoplay"];
+		}else if(request.action == "gorefreshautodim"){
+			chrome.storage.sync.get(["autodim", "mousespotlights", "autodimDomains", "autodimchecklistwhite", "autodimchecklistblack", "autodimonly", "aplay", "apause", "astop", "autodimdelay", "autodimdelaytime"], function(items){
+				autodim = items["autodim"];
 				mousespotlights = items["mousespotlights"];
-				autoplayDomains = response["autoplayDomains"];
-				autoplaychecklistwhite = items["autoplaychecklistwhite"];
-				autoplaychecklistblack = items["autoplaychecklistblack"];
-				autoplayonly = items["autoplayonly"];
+				autodimDomains = response["autodimDomains"];
+				autodimchecklistwhite = items["autodimchecklistwhite"];
+				autodimchecklistblack = items["autodimchecklistblack"];
+				autodimonly = items["autodimonly"];
 				aplay = items["aplay"];
 				apause = items["apause"];
 				astop = items["astop"];
-				autoplaydelay = items["autoplaydelay"];
-				autoplaydelaytime = items["autoplaydelaytime"];
+				autodimdelay = items["autodimdelay"];
+				autodimdelaytime = items["autodimdelaytime"];
 
 				// remove
-				window.clearInterval(startautoplay);
-				if(document.getElementById("totlautoplay")){
-					removeElement("totlautoplay");
+				window.clearInterval(startautodim);
+				if(document.getElementById("totlautodim")){
+					removeElement("totlautodim");
 				}
 				if(document.getElementById("stefanvdcinemamessage")){
 					removeElement("stefanvdcinemamessage");
 				}
 
-				if(autoplay == true){
-					addautoplayfile();
-					runautoplaycheck();
+				if(autodim == true){
+					addautodimfile();
+					runautodimcheck();
 				}
 			});
 		}else if(request.action == "gorefreshvideotoolbar"){

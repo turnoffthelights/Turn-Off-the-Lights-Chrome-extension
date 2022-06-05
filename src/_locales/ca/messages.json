@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Confirma paraula de pas"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Apaga els llums només als següents webs de vídeos:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Cal introduir una contrasenya abans de tornar a encendre els llums."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "L' opció de 'Protecció d'ulls' és activada. Per a poder usar aquesta funció, abans cal desactivar la 'Protecció d'ulls'."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Valori'ns"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Automàticament enfosqueix el fons en fer clic al botó de reproducció i viceversa."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Mostra la barra de M'agrada/No m'agrada sota els vídeos de YouTube"
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Reproducció automàtica"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Reinicia la configuració de Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Torna a il·luminar el fons quan el vídeo hagi finalitzat"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "segons"
     },
     "motionoptions": {

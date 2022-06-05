@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "确认密码"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "只有在以下视频站点变暗："
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "开灯之前需要输入密码。"
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "“视力保护”已经启用。要使用下面的功能，请先禁用“视力保护”模式"
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "评价"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "单击播放按钮时自动调暗背景"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "显示YouTube 视频下的“like/dislike”项目 。"
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "自动播放"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "重置Turn Off the Lights扩展的设置"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "当视频结束达指定时间后自动将背景亮起"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "秒"
     },
     "motionoptions": {

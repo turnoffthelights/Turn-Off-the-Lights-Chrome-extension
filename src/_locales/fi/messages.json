@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Vahvista salasana"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Himmennä vain seuraavat videosivustot:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Vaadi salasanaa ennen kuin valot pistetään takaisin päälle."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "Silmien suojaus on käytössä. Käyttääksesi alla olevia ominaisuuksia, poista Silmien suojaus -toiminto käytöstä."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Arvostele"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Automaattisesti himmentää taustan kun Toista-painiketta painetaan, ja päinvastoin"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Näytä tykkäyspalkki YouTube-videoiden alla."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "AutoToisto"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Resetoi Sammuta valot -asetukset"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Aika, jonka jälkeen tausta vaalennetaan videon loppumisen jälkeen"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "sekuntia"
     },
     "motionoptions": {

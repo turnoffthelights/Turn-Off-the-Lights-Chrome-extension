@@ -789,16 +789,16 @@ section>div:only-of-type{-webkit-box-flex:1}
 .hoveroptiondyn1,.hoveroptiondyn2,.hoveroptiondyn3,.hoveroptiondyn4,.hoveroptiondyn5,.hoveroptiondyn6,.hoveroptiondyn7,.hoveroptiondyn8,.hoveroptiondyn9,.hoveroptiondyn10,.hoveroptionwall1,.hoveroptionwall2,.hoveroptionwall3,.hoveroptionwall4,.hoveroptionwall5{position:absolute;width:100px;height:75px;color:#fff;text-align:center;margin:auto;left:0;right:0;bottom:0;top:0;line-height:75px}
 .dyn1showme,.dyn2showme,.dyn3showme,.dyn4showme,.dyn5showme,.dyn6showme,.dyn7showme,.dyn8showme,.dyn9showme,.dyn10showme,.wall1showme,.wall2showme,.wall3showme,.wall4showme,.wall5showme{display:none}
 .hoveroptiondyn1:hover .dyn1showme,.hoveroptiondyn2:hover .dyn2showme,.hoveroptiondyn3:hover .dyn3showme,.hoveroptiondyn4:hover .dyn4showme,.hoveroptiondyn5:hover .dyn5showme,.hoveroptiondyn6:hover .dyn6showme,.hoveroptiondyn7:hover .dyn7showme,.hoveroptiondyn8:hover .dyn8showme,.hoveroptiondyn9:hover .dyn9showme,.hoveroptiondyn10:hover .dyn10showme,.hoveroptionwall1:hover .wall1showme,.hoveroptionwall2:hover .wall2showme,.hoveroptionwall3:hover .wall3showme,.hoveroptionwall4:hover .wall4showme,.hoveroptionwall5:hover .wall5showme{display:block}
-/* autoplay only */
+/* autodim only */
 /* atmosphere only */
 /* night only */
-/* auto stop only */
+/* autostop only */
 /* video tool bar only */
 /* video volume bar only */
-#autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist,#gamepadwhitelist{margin-left:25px}
-#autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url],#gamepadwhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
-#autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select,#gamepadwhitelist select{width:100%;margin-right:16px}
-#autoplayaddbutton,#autoplayremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton,#gamepadaddbutton,#gamepadremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
+#autodimwhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist,#gamepadwhitelist{margin-left:25px}
+#autodimwhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url],#gamepadwhitelist input[type=url]{width:360px;float:left;box-sizing:border-box}
+#autodimwhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select,#gamepadwhitelist select{width:100%;margin-right:16px}
+#autodimaddbutton,#autodimremovebutton,#autostopaddbutton,#autostopremovebutton,#atmosphereaddbutton,#atmosphereremovebutton,#videovolumeaddbutton,#videovolumeremovebutton,#videotooladdbutton,#videotoolremovebutton,#addbutton,#removebutton,#nightaddbutton,#nightremovebutton,#gamepadaddbutton,#gamepadremovebutton{width:100%;max-width:123px;text-overflow:ellipsis;white-space:nowrap}
 /* Night Theme */
 #samplestefanvdnighttheme{padding:0;margin:20px 0;z-index:500;-webkit-user-select:none;-moz-user-select:none;user-select:none;background:#fff;border:1px solid #EBEBEB;box-shadow:#fff 0 0 7px;border-radius:4px;cursor:pointer;height:35px;overflow:hidden;width:70px;position:relative;display:block}
 #samplestefanvdnighttheme input{display:none}
@@ -1157,9 +1157,9 @@ only screen and (max-device-width:480px){
   .videopreview iframe{width:100%;height:auto;aspect-ratio:16/9}
   .youtubesuggpanel{display:none}
   #samplelikebar,#sampledislikebutton,#samplesharebutton,#sampleaddbutton{display:none}
-  #autoplaywhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist,#gamepadwhitelist{margin-left:25px}
-  #autoplaywhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url],#gamepadwhitelist input[type=url]{width:100%;float:left}
-  #autoplaywhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select,#gamepadwhitelist select{width:100%;margin-right:0px}
+  #autodimwhitelist,#atmospherewhitelist,#nightwhitelist,#autostopwhitelist,#videotoolwhitelist,#videovolumewhitelist,#gamepadwhitelist{margin-left:25px}
+  #autodimwhitelist input[type=url],#atmospherewhitelist input[type=url],#nightwhitelist input[type=url],#autostopwhitelist input[type=url],#videotoolwhitelist input[type=url],#EyeWhitelist input[type=url],#videovolumewhitelist input[type=url],#gamepadwhitelist input[type=url]{width:100%;float:left}
+  #autodimwhitelist select,#atmospherewhitelist select,#nightwhitelist select,#autostopwhitelist select,#videotoolwhitelist select,#EyeWhitelist select,#videovolumewhitelist select,#gamepadwhitelist select{width:100%;margin-right:0px}
   #ayh{font-size:12px;right:15px}
   #tllo{font-size:11px;top:26px;right:15px}
   .stars{font-size:14px;top:22px;left:15px}

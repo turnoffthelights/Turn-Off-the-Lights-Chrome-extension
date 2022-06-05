@@ -32,7 +32,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 importScripts("constants.js");
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
-// eye protection & autoplay & shortcut
+// eye protection & autodim & shortcut
 	switch(request.name){
 	case"bckreload":
 		installation();
@@ -544,9 +544,9 @@ chrome.storage.onChanged.addListener(function(changes){
 			}
 		}
 
-		var changenameautoplay = ["autoplay", "mousespotlights", "autoplayDomains", "autoplaychecklistwhite", "autoplaychecklistblack", "autoplayonly", "aplay", "apause", "astop", "autoplaydelay", "autoplaydelaytime"];
-		if(changenameautoplay.includes(key)){
-			chromerefreshalltabs("gorefreshautoplay");
+		var changenameautodim = ["autodim", "mousespotlights", "autodimDomains", "autodimchecklistwhite", "autodimchecklistblack", "autodimonly", "aplay", "apause", "astop", "autodimdelay", "autodimdelaytime"];
+		if(changenameautodim.includes(key)){
+			chromerefreshalltabs("gorefreshautodim");
 		}
 
 		var changenamevideotoolbar = ["videotool", "videotoolonly", "videotoolDomains", "videotoolchecklistwhite", "videotoolchecklistblack", "speedtoolbar", "videozoom", "visopacity", "videotoolcolor"];
@@ -602,7 +602,7 @@ chrome.storage.onChanged.addListener(function(changes){
 
 		// Group Policy
 		// check the values with group policy, if different values. Then change it back
-		checkreturnpolicyvalues(changes, "autoplay", "AutoPlay");
+		checkreturnpolicyvalues(changes, "autodim", "AutoDim");
 		checkreturnpolicyvalues(changes, "autostop", "AutoStop");
 		checkreturnpolicyvalues(changes, "customqualityyoutube", "AutoHD");
 		checkreturnpolicyvalues(changes, "maxquality", "AutoHDQuality");
@@ -707,7 +707,7 @@ function readgrouppolicy(items){
 			initwelcome();
 		}
 
-		setsavegroup(items.AutoPlay, "autoplay");
+		setsavegroup(items.AutoDim, "autodim");
 		setsavegroup(items.AutoStop, "autostop");
 		setsavegroup(items.AutoHD, "customqualityyoutube");
 
@@ -734,8 +734,8 @@ if(chrome.storage.managed){
 		// update saving group policy values
 		var updatesavinggroup = {};
 
-		if(changes["AutoPlay"]){
-			updatesavinggroup["autoplay"] = changes["AutoPlay"].newValue;
+		if(changes["AutoDim"]){
+			updatesavinggroup["autodim"] = changes["AutoDim"].newValue;
 		}
 		if(changes["AutoStop"]){
 			updatesavinggroup["autostop"] = changes["AutoStop"].newValue;
@@ -806,8 +806,10 @@ OK Done whitelist/blacklist the game controller
 OK Done ADDED autonightmode option in double click panel
 OK Done IMPROVEMENT Youtube AutoHD script / Block 60 FPS script / AutoDim script
 OK Done IMPROVEMENT Use the kebab-case file format
+OK Done IMPROVEMENT AutoPlay feature name to AutoDim
 + issue: no YouTube video detection right to left layout issue ARAB
 + update .html links
 + check for use activetabs permission and screenshot capture issue?
+
 
 */

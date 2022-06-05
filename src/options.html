@@ -476,12 +476,12 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 				</div>
 				</section>
 				<section>			
-				<h3 data-i18n="titelautoplay"></h3>
+				<h3 data-i18n="titelautodim"></h3>
 				<div>
-				<div id="helpautoplay" class="helpwhatproblem" data-i18n="helpautoplay"></div>
+				<div id="helpautodim" class="helpwhatproblem" data-i18n="helpautodim"></div>
 				<div class="md-checkbox">
-					<input id="autoplay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplay">
-					<label for="autoplay"><div><span data-i18n="desautoplay"></span></div></label>
+					<input id="autodim" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autodim">
+					<label for="autodim"><div><span data-i18n="desautodim"></span></div></label>
 				</div>
 				<div class="md-intgroup md-subin">
 					(
@@ -500,33 +500,33 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 					)
 				</div>
 				<div class="md-checkbox md-subin">
-					<input id="autoplaydelay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplaydelay">
-					<label for="autoplaydelay"><div><span data-i18n="desautoplaydelay"></span> <input id="autoplaydelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautoplaydelayend"></span>.</div></label>
+					<input id="autodimdelay" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autodimdelay">
+					<label for="autodimdelay"><div><span data-i18n="desautodimdelay"></span> <input id="autodimdelaytime" type="number" min="0" max="10" step="1" value="0" maxlength="1" size="1"> <span data-i18n="desautodimdelayend"></span>.</div></label>
 				</div>
 				<div class="md-checkbox">
-					<input id="autoplayonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autoplayonly">
-					<label for="autoplayonly"><div><span data-i18n="desautoplayonly"></span></div></label>
+					<input id="autodimonly" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="autodimonly">
+					<label for="autodimonly"><div><span data-i18n="desautodimonly"></span></div></label>
 				</div>
-				<div role="radiogroup" aria-labelledby="autoplayonly">
+				<div role="radiogroup" aria-labelledby="autodimonly">
 				<div class="md-radio md-subin">
-					<input id="autoplaychecklistwhite" type="radio" name="autoplaychecklist" value="white" role="radio" aria-labelledby="autoplayonly">
-					<label for="autoplaychecklistwhite"><div><span data-i18n="titelwhitelist"></span></div></label>
+					<input id="autodimchecklistwhite" type="radio" name="autodimchecklist" value="white" role="radio" aria-labelledby="autodimonly">
+					<label for="autodimchecklistwhite"><div><span data-i18n="titelwhitelist"></span></div></label>
 				</div>
 				<div class="md-radio md-subin">
-					<input id="autoplaychecklistblack" type="radio" name="autoplaychecklist" value="black" role="radio" aria-labelledby="autoplayonly">
-					<label for="autoplaychecklistblack"><div><span data-i18n="titelblacklist"></span></div></label>
+					<input id="autodimchecklistblack" type="radio" name="autodimchecklist" value="black" role="radio" aria-labelledby="autodimonly">
+					<label for="autodimchecklistblack"><div><span data-i18n="titelblacklist"></span></div></label>
 				</div>
 				</div>
-				<form id="formautoplay">
-					<table id="autoplaywhitelist">
+				<form id="formautodim">
+					<table id="autodimwhitelist">
 						<tr>
 							<td><span data-i18n="titelwebsite"></span></td>
-							<td><input id="autoplaywebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=*]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
-							<td><button type="submit" id="autoplayaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
+							<td><input id="autodimwebsiteurl" type="url" required pattern="(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=*]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|f(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|((https?|ftp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})tp)://)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))|https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)" placeholder="https://www.example.com" aria-label="The URL box to type a website for the AutoDim feature"></td>
+							<td><button type="submit" id="autodimaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 						</tr>
 						<tr>
-							<td colspan="2"><select id="autoplayDomainsBox" role="listbox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoDim feature"></select></td>
-							<td valign="top"><button type="button" id="autoplayremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
+							<td colspan="2"><select id="autodimDomainsBox" role="listbox" name="autodimentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoDim feature"></select></td>
+							<td valign="top"><button type="button" id="autodimremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>
 				</form>
@@ -571,7 +571,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<td><button type="submit" id="autostopaddbutton" name="add"><span data-i18n="addbutton"></span></button></td>
 						</tr>
 						<tr>
-							<td colspan="2"><select id="autostopDomainsBox" role="listbox" name="autoplayentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoStop feature"></select></td>
+							<td colspan="2"><select id="autostopDomainsBox" role="listbox" name="autodimentryList" size="5" multiple="" aria-label="All the URLs in the box for the AutoStop feature"></select></td>
 							<td valign="top"><button type="button" id="autostopremovebutton" name="delete"><span data-i18n="deletebutton"></span></button></td>
 						</tr>
 					</table>

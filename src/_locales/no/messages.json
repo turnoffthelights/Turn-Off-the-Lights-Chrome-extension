@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Bekreft passord"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Dim skjermen kun på følgende video-nettsted(er):"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Krev et passord før lysene kan slås på igjen."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "\"Øyebeskyttelse\" er satt på. For å bruke funksjonene under, skru av \"øyebeskyttelse\". "
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Gi karakter"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Senk lyset i bakgrunnen når du klikker spill knappen og versus"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Vis Liker/Liker ikke-linjen under YouTube-videoer."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Autokjør"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Tilbakestill innstillingen for å slå av lys"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Lys opp bakgrunnen igjen når videoen er avsluttet etter"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "sekunder"
     },
     "motionoptions": {

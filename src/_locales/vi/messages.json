@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Xác nhận mật khẩu"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Chỉ làm mờ (những) trang web video sau đây:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Yêu cầu nhập một mật khẩu trước khi bật đèn trở lại."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "'Bảo vệ mắt' đã được kích hoạt. Để sử dụng tính năng dưới đây, vô hiệu hóa tùy chọn 'Bảo vệ mắt'."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Xếp hạng"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Tự động mờ dần khi nhấn nút play và ngược lại"
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "Hiển thị các giống như/không thích thanh theo YouTube video"
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Phát tự động"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Đặt lại các thiết đặt Turn Off the Lights"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Làm sáng nền trở lại khi video đã kết thúc sau"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "vài giây"
     },
     "motionoptions": {

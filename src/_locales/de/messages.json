@@ -74,7 +74,7 @@
     "desconfirmpassword": {
         "message": "Passwort bestätigen"
     },
-    "desautoplayonly": {
+    "desautodimonly": {
         "message": "Nur die folgende(n) Video-Seite(n) abdunkeln:"
     },
     "helpeyeprotection": {
@@ -95,7 +95,7 @@
     "despassword": {
         "message": "Ein Passwort verlangen, bevor das Licht wieder eingeschaltet wird."
     },
-    "helpautoplay": {
+    "helpautodim": {
         "message": "Der »Augenschutz« ist aktiviert. Um die folgende Option zu benutzen, »Augenschutz«-Funktion bitte deaktivieren."
     },
     "name": {
@@ -188,7 +188,7 @@
     "rememberrate": {
         "message": "Bewertung"
     },
-    "desautoplay": {
+    "desautodim": {
         "message": "Automatisch abdunkeln, beim Drücken des Wiedergabeknopfes und umgekehrt."
     },
     "titelscreen": {
@@ -239,7 +239,7 @@
     "deslikebar": {
         "message": "»Gefällt mir« & »Gefällt mir nicht«-Leiste unter YouTube-Videos anzeigen."
     },
-    "titelautoplay": {
+    "titelautodim": {
         "message": "Automatische Wiedergabe"
     },
     "top": {
@@ -518,10 +518,10 @@
     "resetbrowserextension": {
         "message": "Turn-Off-the-Lights-Einstellungen zurücksetzen"
     },
-    "desautoplaydelay": {
+    "desautodimdelay": {
         "message": "Den Hintergrund wieder aufhellen, wenn das Video abgespielt wurde"
     },
-    "desautoplaydelayend": {
+    "desautodimdelayend": {
         "message": "Sekunden"
     },
     "motionoptions": {
