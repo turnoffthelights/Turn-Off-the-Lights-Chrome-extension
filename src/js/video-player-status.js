@@ -27,8 +27,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-var ytCinema;
-(ytCinema = {
+var totlCinema;
+(totlCinema = {
 	players: {objs: [], active: 0},
 	messageEvent: new Event("stefanvdcinemamessage"),
 	playerStateChange: function(stateId){
@@ -37,17 +37,17 @@ var ytCinema;
 		// console.log("Debug " + message.textContent + " " +stateIO);
 		if(message && message.textContent !== stateIO){
 			message.textContent = stateIO;
-			message.dispatchEvent(ytCinema.messageEvent);
+			message.dispatchEvent(totlCinema.messageEvent);
 		}
 	},
 	initialize: function(){
-		ytCinema.initvideoinject();
+		totlCinema.initvideoinject();
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 		if(MutationObserver){
 			var videolist = document.querySelector("body"), observer = new MutationObserver(function(mutations){
 				mutations.forEach(function(mutation){
 					if((mutation.target.tagName == "VIDEO" && mutation.attributeName === "src") || mutation.addedNodes == "VIDEO" || mutation.removedNodes == "VIDEO"){
-						ytCinema.initvideoinject();
+						totlCinema.initvideoinject();
 					}
 				});
 			});
@@ -59,14 +59,14 @@ var ytCinema;
 			});
 		}else{
 			// setup DOM event listeners
-			document.addEventListener("DOMNodeRemoved", ytCinema.initvideoinject, false);
-			document.addEventListener("DOMNodeInserted", ytCinema.initvideoinject, false);
+			document.addEventListener("DOMNodeRemoved", totlCinema.initvideoinject, false);
+			document.addEventListener("DOMNodeInserted", totlCinema.initvideoinject, false);
 		}
 	},
 	initvideoinject: function(){
 		var youtubeplayer = document.getElementById("movie_player") || null, htmlplayer = document.getElementsByTagName("video") || false;
 		if(youtubeplayer !== null){ // YouTube video element
-			var interval = window.setInterval(function(){ if(youtubeplayer.pause || youtubeplayer.pauseVideo){ window.clearInterval(interval); if(youtubeplayer.pauseVideo){ youtubeplayer.addEventListener("onStateChange", "ytCinema.playerStateChange"); } } }, 10);
+			var interval = window.setInterval(function(){ if(youtubeplayer.pause || youtubeplayer.pauseVideo){ window.clearInterval(interval); if(youtubeplayer.pauseVideo){ youtubeplayer.addEventListener("onStateChange", "totlCinema.playerStateChange"); } } }, 10);
 		}
 		if(htmlplayer && htmlplayer.length > 0){ // HTML5 video elements
 			var setPlayerEvents = function(players){
@@ -76,7 +76,7 @@ var ytCinema;
 						var ev = {pause: function(){ if(!p.ended){ o.players.active -= 1; }if(o.players.active < 1){ o.playerStateChange(2); } }, play: function(){ o.players.active += 1; o.playerStateChange(1); }, ended: function(){ o.players.active -= 1; if(o.players.active < 1){ o.playerStateChange(0); } }};
 						p.removeEventListener("pause", ev.pause); p.removeEventListener("play", ev.play); p.removeEventListener("ended", ev.ended); p.addEventListener("pause", ev.pause); p.addEventListener("play", ev.play); p.addEventListener("ended", ev.ended);
 						o.players.objs.push(p);
-					}(this.ytCinema, htmlplayer[j]));
+					}(this.totlCinema, htmlplayer[j]));
 				}
 			};
 			setPlayerEvents(htmlplayer);
