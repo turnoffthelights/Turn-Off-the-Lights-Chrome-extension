@@ -32,7 +32,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 importScripts("constants.js");
 
 chrome.runtime.onMessage.addListener(function request(request, sender){
-// eye protection & autodim & shortcut
+	// eye protection & autodim & shortcut
 	switch(request.name){
 	case"bckreload":
 		installation();
@@ -234,25 +234,25 @@ chrome.tabs.onActivated.addListener(async(activeInfo) => {
 	});
 });
 
-chrome.tabs.onUpdated.addListener(async(tabId, changeInfo) => {
-	// tab loaded, recheck all the video players on the current web page
-	if(changeInfo.status == "complete"){
-		chrome.tabs.query({}, function(tabs){
-			tabs.forEach(function(tab){
-				chrome.tabs.sendMessage(tab.id, {action: "gorefreshvideonumber"});
-			});
-		});
-	}
-
-	chrome.storage.sync.get(["icon"], function(items){
-		if(items["icon"] == undefined){
-			if(exbrowser == "safari"){
-				items["icon"] = "/icons/iconstick38safari.png";
-			}else{
-				items["icon"] = "/icons/iconstick38.png";
+chrome.tabs.onUpdated.addListener(function(){
+	console.log("TAB UPDATED");
+	getCurrentTab().then((thattab) => {
+		if(thattab.status == "complete"){
+			if(thattab.url.match(/^http/i)){
+				chrome.tabs.sendMessage(thattab.id, {action: "gorefreshvideonumber"});
 			}
 		}
-		chrome.action.setIcon({tabId : tabId, path : {"19": items["icon"], "38": items["icon"]}});
+
+		chrome.storage.sync.get(["icon"], function(items){
+			if(items["icon"] == undefined){
+				if(exbrowser == "safari"){
+					items["icon"] = "/icons/iconstick38safari.png";
+				}else{
+					items["icon"] = "/icons/iconstick38.png";
+				}
+			}
+			chrome.action.setIcon({tabId : thattab.id, path : {"19": items["icon"], "38": items["icon"]}});
+		});
 	});
 });
 

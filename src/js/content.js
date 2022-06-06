@@ -207,19 +207,6 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 		);
 	}();
 
-	// Listen for messages from the popup
-	chrome.runtime.onMessage.addListener(function(message){
-	// First, validate the message"s structure
-	// completed support hosts
-		let allowedHosts = [linkcapturescreenshot];
-		if(allowedHosts.includes(window.location.href)){
-			if((message.action === "receivescreenshot")){
-				if($("capturevideoframe")){ $("capturevideoframe").src = message.value; }
-				if($("browserextensioninstalled")){ $("browserextensioninstalled").style.display = "none"; }
-			}
-		}
-	});
-
 	let redirectionHosts = ["https://www.turnoffthelights.com/extension/redirection/"];
 	if(redirectionHosts.includes(window.location.href)){
 		if($("allowpermission")){
@@ -3881,9 +3868,15 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 	}
 
 	//---
-
 	chrome.runtime.onMessage.addListener(function(request){
-		if(request.action == "gorefresheyelight"){
+		if((request.action === "receivescreenshot")){
+			let allowedHosts = [linkcapturescreenshot];
+			// completed support hosts
+			if(allowedHosts.includes(window.location.href)){
+				if($("capturevideoframe")){ $("capturevideoframe").src = request.value; }
+				if($("browserextensioninstalled")){ $("browserextensioninstalled").style.display = "none"; }
+			}
+		}else if(request.action == "gorefresheyelight"){
 			chrome.storage.sync.get(["eyea", "eyen"], function(items){
 				if(items["eyea"]){ eyea = items["eyea"]; }else{ eyea = items["eyea"]; }
 				if(items["eyen"]){ eyen = items["eyen"]; }else{ eyen = items["eyen"]; }
