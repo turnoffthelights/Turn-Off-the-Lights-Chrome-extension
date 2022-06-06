@@ -151,9 +151,9 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			chrome.storage.sync.get(["icon"], function(items){
 				if(items["icon"] == undefined){
 					if(exbrowser == "safari"){
-						items["icon"] = "icons/iconstick38safari.png";
+						items["icon"] = "/icons/iconstick38safari.png";
 					}else{
-						items["icon"] = "icons/iconstick38.png";
+						items["icon"] = "/icons/iconstick38.png";
 					}
 				}
 				chrome.tabs.query({}, function(tabs){
@@ -224,9 +224,9 @@ chrome.tabs.onActivated.addListener(async(activeInfo) => {
 		chrome.storage.sync.get(["icon"], function(items){
 			if(items["icon"] == undefined){
 				if(exbrowser == "safari"){
-					items["icon"] = "icons/iconstick38safari.png";
+					items["icon"] = "/icons/iconstick38safari.png";
 				}else{
-					items["icon"] = "icons/iconstick38.png";
+					items["icon"] = "/icons/iconstick38.png";
 				}
 			}
 			chrome.action.setIcon({tabId : thattab.tabId, path : {"19": items["icon"], "38": items["icon"]}});
@@ -247,9 +247,9 @@ chrome.tabs.onUpdated.addListener(async(tabId, changeInfo) => {
 	chrome.storage.sync.get(["icon"], function(items){
 		if(items["icon"] == undefined){
 			if(exbrowser == "safari"){
-				items["icon"] = "icons/iconstick38safari.png";
+				items["icon"] = "/icons/iconstick38safari.png";
 			}else{
-				items["icon"] = "icons/iconstick38.png";
+				items["icon"] = "/icons/iconstick38.png";
 			}
 		}
 		chrome.action.setIcon({tabId : tabId, path : {"19": items["icon"], "38": items["icon"]}});
