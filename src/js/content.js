@@ -211,7 +211,7 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 	chrome.runtime.onMessage.addListener(function(message){
 	// First, validate the message"s structure
 	// completed support hosts
-		let allowedHosts = [totlscreenshotpage];
+		let allowedHosts = [linkscreenshotpage];
 		if(allowedHosts.includes(window.location.href)){
 			if((message.action === "receivescreenshot")){
 				if($("capturevideoframe")){ $("capturevideoframe").src = message.value; }

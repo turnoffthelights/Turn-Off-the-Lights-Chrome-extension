@@ -2091,7 +2091,7 @@ function domcontentloaded(){
 
 	// Remove remember
 	var sharetext = chrome.i18n.getMessage("sharetextd");
-	var stefanvdurl = turnoffthelightsproduct;
+	var stefanvdurl = linkproduct;
 	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
 
 	if($("shareboxyoutube")){
@@ -2131,7 +2131,7 @@ function domcontentloaded(){
 	});
 
 	$("titleex").addEventListener("click", function(){
-		window.open(developerwebsite);
+		window.open(linkdeveloperwebsite);
 	});
 
 	$("btnsupport").addEventListener("click", function(){
@@ -3010,12 +3010,12 @@ function domcontentloaded(){
 
 				var newbtnplaygroundfb = document.createElement("div");
 				newbtnplaygroundfb.setAttribute("id", "stefanvdbtnplaygroundfacebook");
-				newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true}); }, false);
+				newbtnplaygroundfb.addEventListener("click", function(){ chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + linkproduct, active:true}); }, false);
 				newplaygroundfilter.appendChild(newbtnplaygroundfb);
 
 				var newbtnplaygroundtw = document.createElement("div");
 				newbtnplaygroundtw.setAttribute("id", "stefanvdbtnplaygroundtwitter");
-				newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var sturnoffthelightsproductcodeurl = encodeURIComponent(stringgame + " " + turnoffthelightsproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + sturnoffthelightsproductcodeurl, active:true}); }, false);
+				newbtnplaygroundtw.addEventListener("click", function(){ var stringgame = chrome.i18n.getMessage("shareanalyticenergy", "" + previoushigh + ""); var slinkproductcodeurl = encodeURIComponent(stringgame + " " + linkproduct + "@turnoffthelight #chromeextension #firefoxextension #operaextension"); chrome.tabs.create({url: "https://twitter.com/home?status=" + slinkproductcodeurl, active:true}); }, false);
 				newplaygroundfilter.appendChild(newbtnplaygroundtw);
 
 				startGame();

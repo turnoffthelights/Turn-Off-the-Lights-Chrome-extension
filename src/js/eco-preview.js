@@ -110,7 +110,7 @@ var ct7favoritedayweek;
 document.addEventListener("DOMContentLoaded", domcontentloaded);
 
 function shareanalytictwitter(message){
-	var stefanvdaacodeurl = encodeURIComponent(developerwebsite);
+	var stefanvdaacodeurl = encodeURIComponent(linkdeveloperwebsite);
 	window.open("https://twitter.com/share?url=" + stefanvdaacodeurl + "&text=" + message + "&via=turnoffthelight", "Share to Twitter", "width=600,height=460,menubar=no,location=no,status=no");
 }
 

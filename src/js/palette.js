@@ -79,7 +79,7 @@ function openoptionspage(){
 }
 
 function opendonationpage(){
-	chrome.tabs.create({url: donatewebsite, active:true});
+	chrome.tabs.create({url: linkdonate, active:true});
 }
 
 function opensupportpage(){
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	eventFunc("analtotal", "click", openoptionspage);
 
-	var stefanvdurl = developerwebsite;
+	var stefanvdurl = linkdeveloperwebsite;
 	var stefanvdaacodeurl = encodeURIComponent(stefanvdurl);
 
 	function add(a, b){ return a + b; }

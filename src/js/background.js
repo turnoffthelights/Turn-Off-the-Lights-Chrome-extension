@@ -50,7 +50,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		});
 		break;
 	case"screenshot":
-		var checkcapturewebsite = totlscreenshotpage;
+		var checkcapturewebsite = linkscreenshotpage;
 		chrome.tabs.create({url: checkcapturewebsite}, function(tab){
 			var currenttabid = tab.id;
 			chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
@@ -349,25 +349,25 @@ function onClickHandler(info, tab){
 		break;
 	case(str.includes("totlguideemenu")): chrome.tabs.create({url: linkguide, active:true});
 		break;
-	case(str.includes("totldevelopmenu")): chrome.tabs.create({url: donatewebsite, active:true});
+	case(str.includes("totldevelopmenu")): chrome.tabs.create({url: linkdonate, active:true});
 		break;
 	case(str.includes("totlratemen")): chrome.tabs.create({url: writereview, active:true});
 		break;
-	case(str.includes("totlshareemail")): var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + turnoffthelightsproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
+	case(str.includes("totlshareemail")): var sturnoffthelightemail = "mailto:your@email.com?subject=" + chrome.i18n.getMessage("sharetexta") + "&body=" + chrome.i18n.getMessage("sharetextb") + " " + linkproduct; chrome.tabs.create({url: sturnoffthelightemail, active:true});
 		break;
-	case(str.includes("totlsharetwitter")): var sturnoffthelightsproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextd") + " " + turnoffthelightsproduct); chrome.tabs.create({url: "https://twitter.com/intent/tweet?text=" + sturnoffthelightsproductcodeurl, active:true});
+	case(str.includes("totlsharetwitter")): var slinkproductcodeurl = encodeURIComponent(chrome.i18n.getMessage("sharetextd") + " " + linkproduct); chrome.tabs.create({url: "https://twitter.com/intent/tweet?text=" + slinkproductcodeurl, active:true});
 		break;
-	case(str.includes("totlsharefacebook")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
+	case(str.includes("totlsharefacebook")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + linkproduct, active:true});
 		break;
-	case(str.includes("totlsharewechat")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + turnoffthelightsproduct, active:true});
+	case(str.includes("totlsharewechat")): chrome.tabs.create({url: "https://www.facebook.com/sharer/sharer.php?u=" + linkproduct, active:true});
 		break;
-	case(str.includes("totlshareqq")): chrome.tabs.create({url: "https://connect.qq.com/widget/shareqq/index.html?url=" + encodeURIComponent(turnoffthelightsproduct) + "&title=" + encodeURIComponent(chrome.i18n.getMessage("sharetextd")), active:true});
+	case(str.includes("totlshareqq")): chrome.tabs.create({url: "https://connect.qq.com/widget/shareqq/index.html?url=" + encodeURIComponent(linkproduct) + "&title=" + encodeURIComponent(chrome.i18n.getMessage("sharetextd")), active:true});
 		break;
-	case(str.includes("totlshareweibo")): chrome.tabs.create({url: "https://service.weibo.com/share/share.php?url=" + turnoffthelightsproduct + "&title=" + encodeURIComponent(chrome.i18n.getMessage("sharetextd")), active:true});
+	case(str.includes("totlshareweibo")): chrome.tabs.create({url: "https://service.weibo.com/share/share.php?url=" + linkproduct + "&title=" + encodeURIComponent(chrome.i18n.getMessage("sharetextd")), active:true});
 		break;
-	case(str.includes("totlsharevkontakte")): chrome.tabs.create({url: "https://vk.com/share.php?url=" + turnoffthelightsproduct, active:true});
+	case(str.includes("totlsharevkontakte")): chrome.tabs.create({url: "https://vk.com/share.php?url=" + linkproduct, active:true});
 		break;
-	case(str.includes("totlsharewhatsapp")): chrome.tabs.create({url: "https://api.whatsapp.com/send?text=" + chrome.i18n.getMessage("sharetextd") + "%0a" + turnoffthelightsproduct, active:true});
+	case(str.includes("totlsharewhatsapp")): chrome.tabs.create({url: "https://api.whatsapp.com/send?text=" + chrome.i18n.getMessage("sharetextd") + "%0a" + linkproduct, active:true});
 		break;
 	case(str.includes("totlsubscribe")): chrome.tabs.create({url: linkyoutube, active:true});
 		break;
@@ -807,9 +807,8 @@ OK Done ADDED autonightmode option in double click panel
 OK Done IMPROVEMENT Youtube AutoHD script / Block 60 FPS script / AutoDim script
 OK Done IMPROVEMENT Use the kebab-case file format
 OK Done IMPROVEMENT AutoPlay feature name to AutoDim
+OK Done IMPROVEMENT website .html links
 + issue: no YouTube video detection right to left layout issue ARAB
-+ update .html links
 + check for use activetabs permission and screenshot capture issue?
-
 
 */
