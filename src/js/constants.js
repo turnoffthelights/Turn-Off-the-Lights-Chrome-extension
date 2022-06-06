@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const exbrowser = "chrome";
 // values: "chrome", "safari", "edge", "firefox", "opera", "yandex", "whale"
-const linkscreenshotpage = "https://www.turnoffthelights.com/browser/extension/capture-screenshot-of-video/";
+const linkcapturescreenshot = "https://www.turnoffthelights.com/browser/extension/capture-screenshot-of-video/";
 const linkdeveloperwebsite = "https://www.turnoffthelights.com";
 const linkproduct = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
 const linkdonate = "https://www.turnoffthelights.com/donate/";
@@ -9,11 +9,11 @@ const writereview = "https://chrome.google.com/webstore/detail/turn-off-the-ligh
 const linkchangelog = "https://www.turnoffthelights.com/browser/extension/changelog/chrome/";
 const linktranslate = "https://www.turnoffthelights.com/browser/extension/translate/";
 const linksupport = "https://www.turnoffthelights.com/support/";
-const linkwelcomepage = "https://www.turnoffthelights.com/browser/extension/welcome/chrome/";
+const linkwelcome = "https://www.turnoffthelights.com/browser/extension/welcome/chrome/";
 const linkuninstall = "https://www.turnoffthelights.com/browser/extension/uninstall/chrome/";
 const linkguide = "https://www.turnoffthelights.com/browser/extension/guide/chrome/";
 const linkshare = "https://www.turnoffthelights.com/share/browser/extension/";
-const linkthemedownload = "https://www.turnoffthelights.com/browser/theme/";
+const linkbrowsertheme = "https://www.turnoffthelights.com/browser/theme/";
 const browsernewtab = "chrome://newtab/";
 const browserstore = "https://chrome.google.com";
 const linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";

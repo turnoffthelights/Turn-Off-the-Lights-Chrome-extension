@@ -50,7 +50,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 		});
 		break;
 	case"screenshot":
-		var checkcapturewebsite = linkscreenshotpage;
+		var checkcapturewebsite = linkcapturescreenshot;
 		chrome.tabs.create({url: checkcapturewebsite}, function(tab){
 			var currenttabid = tab.id;
 			chrome.tabs.onUpdated.addListener(function(tabId, changeInfo){
@@ -680,7 +680,7 @@ chrome.runtime.setUninstallURL(linkuninstall);
 function initwelcome(){
 	chrome.storage.sync.get(["firstRun"], function(chromeset){
 		if((chromeset["firstRun"] != "false") && (chromeset["firstRun"] != false)){
-			chrome.tabs.create({url: linkwelcomepage, active:true});
+			chrome.tabs.create({url: linkwelcome, active:true});
 			chrome.tabs.create({url: linkguide, active:false});
 			var crrinstall = new Date().getTime();
 			chrome.storage.sync.set({"firstRun": false, "version": "2.4", "firstDate": crrinstall});
