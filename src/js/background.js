@@ -235,7 +235,6 @@ chrome.tabs.onActivated.addListener(async(activeInfo) => {
 });
 
 chrome.tabs.onUpdated.addListener(function(){
-	console.log("TAB UPDATED");
 	getCurrentTab().then((thattab) => {
 		if(thattab.status == "complete"){
 			if(thattab.url.match(/^http/i)){
