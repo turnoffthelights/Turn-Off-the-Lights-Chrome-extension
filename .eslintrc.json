@@ -39,6 +39,7 @@
     "globals": {
         "angular": "writable",
         "exbrowser": "writable",
+        "linkredirectionoptions": "writable",
         "linkcapturescreenshot": "writable",
         "linkdeveloperwebsite": "writable",
         "linkproduct": "writable",

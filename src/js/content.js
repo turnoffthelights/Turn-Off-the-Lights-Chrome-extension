@@ -207,7 +207,7 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 		);
 	}();
 
-	let redirectionHosts = ["https://www.turnoffthelights.com/extension/redirection/"];
+	let redirectionHosts = [linkredirectionoptions];
 	if(redirectionHosts.includes(window.location.href)){
 		if($("allowpermission")){
 			$("allowpermission").className = "";

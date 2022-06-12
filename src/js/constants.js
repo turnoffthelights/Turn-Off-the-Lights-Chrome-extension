@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 const exbrowser = "chrome";
 // values: "chrome", "safari", "edge", "firefox", "opera", "yandex", "whale"
+const linkredirectionoptions = "https://www.turnoffthelights.com/extension/redirection/";
 const linkcapturescreenshot = "https://www.turnoffthelights.com/browser/extension/capture-screenshot-of-video/";
 const linkdeveloperwebsite = "https://www.turnoffthelights.com";
 const linkproduct = "https://chrome.google.com/webstore/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn";
