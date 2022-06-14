@@ -572,11 +572,11 @@ chrome.storage.onChanged.addListener(function(changes){
 		if(changes["playrate"] || changes["playrateamount"]){
 			chromerefreshalltabs("gorefreshplayrate");
 		}
-		if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"]){
+		if(changes["nightmodebck"] || changes["nightmodetxt"] || changes["nightmodehyperlink"] || changes["nightmodebutton"] || changes["nightmodeborder"] || changes["nmimagedark"] || changes["nmimagegray"]){
 			chromerefreshalltabs("gonightmodecolors");
 		}
 
-		var changenamenight = ["nighttheme", "lampandnightmode", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos", "nmautoclock", "nmautobegintime", "nmautoendtime"];
+		var changenamenight = ["nighttheme", "lampandnightmode", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos", "nmautoclock", "nmautobegintime", "nmautoendtime", "nightmodeimage"];
 		if(changenamenight.includes(key)){
 			chromerefreshalltabs("goenablenightmode");
 		}
@@ -807,6 +807,7 @@ OK Done IMPROVEMENT Youtube AutoHD script / Block 60 FPS script / AutoDim script
 OK Done IMPROVEMENT Use the kebab-case file format
 OK Done IMPROVEMENT AutoPlay feature name to AutoDim
 OK Done IMPROVEMENT website .html links
+OK Done ADDED Night Mode with dim images filter
 + issue: no YouTube video detection right to left layout issue ARAB
 + check for use activetabs permission and screenshot capture issue?
 

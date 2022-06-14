@@ -28,7 +28,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id){ return document.getElementById(id); }
-var nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, nightmodebck = null, nightmodetxt = null, nightmodehyperlink = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, nightmodebutton = null, nightmodeos = null, nightmodeborder = null, nmautobegintime = null, nmautoendtime = null, nmautoclock = null;
+var nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, nightmodebck = null, nightmodetxt = null, nightmodehyperlink = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, nightmodebutton = null, nightmodeos = null, nightmodeborder = null, nmautobegintime = null, nmautoendtime = null, nmautoclock = null, nightmodeimage = null, nmimagedark = null, nmimagegray = null;
 
 var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 // observeDOM - dynamic check
@@ -145,7 +145,7 @@ function checkregdomaininside(thaturl, websiteurl){
 }
 
 const afterBodyReady = () => {
-	chrome.storage.sync.get(["nighttheme", "nightonly", "nightDomains", "nightenabletheme", "nighthover", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightactivetime", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightmodebutton", "nightmodeos", "nightmodeborder", "nmautobegintime", "nmautoendtime", "nmautoclock"], function(response){
+	chrome.storage.sync.get(["nighttheme", "nightonly", "nightDomains", "nightenabletheme", "nighthover", "nmbegintime", "nmendtime", "nightmodechecklistblack", "nightmodechecklistwhite", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nmcustomx", "nmcustomy", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebydomain", "nightmodebypage", "nightmodegesture", "nightactivetime", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightmodebutton", "nightmodeos", "nightmodeborder", "nmautobegintime", "nmautoendtime", "nmautoclock", "nightmodeimage", "nmimagedark", "nmimagegray"], function(response){
 		nighttheme = response["nighttheme"];
 		nightonly = response["nightonly"];
 		nightDomains = response["nightDomains"];
@@ -177,6 +177,9 @@ const afterBodyReady = () => {
 		nmautobegintime = response["nmautobegintime"];
 		nmautoendtime = response["nmautoendtime"];
 		nmautoclock = response["nmautoclock"];
+		nightmodeimage = response["nightmodeimage"]; if(nightmodeimage == null)nightmodeimage = false;
+		nmimagedark = response["nmimagedark"]; nmimagedark = parseInt(100 - nmimagedark); if(nmimagedark == null)nmimagedark = 60;
+		nmimagegray = response["nmimagegray"]; if(nmimagegray == null)nmimagegray = 50;
 
 		var windark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -326,6 +329,11 @@ const afterBodyReady = () => {
 				// console.log("Node inside? = No " + node.className);
 				switch(node.tagName){
 				case"IMG":
+					// search all images and add dimmed effect
+					if(nightmodeimage == true){
+						node.classList.add("stefanvdnightimage");
+					}
+					break;
 				case"STYLE":
 				case"SCRIPT":
 				case"HEAD":
@@ -512,7 +520,6 @@ const afterBodyReady = () => {
 					}
 
 					if(!window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-
 						if(document.getElementsByTagName("html")[0].classList.contains("stefanvdnightbck") || document.getElementsByTagName("html")[0].classList.contains("stefanvdnight")){
 						// do nothing
 						}else{
@@ -953,6 +960,11 @@ const afterBodyReady = () => {
 						[].forEach.call(elemspseuafter, function(el){
 							el.classList.remove("stefanvdnightpseudoafter");
 						});
+
+						var elemsngimage = document.querySelectorAll(".stefanvdnightimage");
+						[].forEach.call(elemsngimage, function(el){
+							el.classList.remove("stefanvdnightimage");
+						});
 					}
 
 					// remove the extern Night Mode is activated
@@ -1356,7 +1368,7 @@ const afterBodyReady = () => {
 			convertpdfnight();
 			//---
 
-			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before,.stefanvdnightpseudoafter:after{background:transparent!important}";
+			var css = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before,.stefanvdnightpseudoafter:after{background:transparent!important}.stefanvdnightimage{filter:brightness(" + nmimagedark + "%) grayscale(" + nmimagegray + "%)!important}";
 
 			addcsstext("totlnightmodestyle", css);
 
@@ -1829,15 +1841,18 @@ const afterBodyReady = () => {
 					sun = true; gogonightmode(); // make it dark
 				}
 			}else if(request.action == "gonightmodecolors"){
-				chrome.storage.sync.get(["nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebutton", "nightmodeborder"], function(items){
+				chrome.storage.sync.get(["nightmodebck", "nightmodetxt", "nightmodehyperlink", "nightmodebutton", "nightmodeborder", "nmimagedark", "nmimagegray"], function(items){
 					if(items["nightmodebck"]){ nightmodebck = items["nightmodebck"]; }else{ nightmodebck = "#1e1e1e"; }
 					if(items["nightmodetxt"]){ nightmodetxt = items["nightmodetxt"]; }else{ nightmodetxt = "#ffffff"; }
 					if(items["nightmodehyperlink"]){ nightmodehyperlink = items["nightmodehyperlink"]; }else{ nightmodehyperlink = "#ffffff"; }
 					if(items["nightmodebutton"]){ nightmodebutton = items["nightmodebutton"]; }else{ nightmodebutton = "#353535"; }
 					if(items["nightmodeborder"]){ nightmodeborder = items["nightmodeborder"]; }else{ nightmodeborder = "#545454"; }
 
+					if(items["nmimagedark"]){ nmimagedark = parseInt(100 - items["nmimagedark"]); }else{ nmimagedark = 60; }
+					if(items["nmimagegray"]){ nmimagegray = items["nmimagegray"]; }else{ nmimagegray = 50; }
+
 					if(document.getElementById("totlnightmodestyle")){
-						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before,.stefanvdnightpseudoafter:after{background:transparent!important}";
+						document.getElementById("totlnightmodestyle").innerText = ".stefanvdnightbck{background:" + nightmodebck + "!important;background-color:" + nightmodebck + "!important;}.stefanvdnight::placeholder{color:" + nightmodetxt + "!important;}.stefanvdnight{color:" + nightmodetxt + "!important;}.stefanvdnight a{color:" + nightmodehyperlink + "!important}.stefanvdnight a *{color:" + nightmodehyperlink + "!important}.stefanvdnightbutton{background:" + nightmodebutton + "!important;background-color:" + nightmodebutton + "!important;color:" + nightmodetxt + "!important}.stefanvdnightborder{border-color:" + nightmodeborder + "!important}.stefanvdnightboxshadow{box-shadow: 0 0 0 1px " + nightmodeborder + "!important}.stefanvdnighttextshadow{text-shadow:inherit!important}.stefanvdnightpseudobefore:before,.stefanvdnightpseudoafter:after{background:transparent!important}.stefanvdnightimage{filter:brightness(" + nmimagedark + "%) grayscale(" + nmimagegray + "%)!important}";
 					}
 
 					// refresh the meta color
@@ -1930,6 +1945,11 @@ const afterBodyReady = () => {
 					var elemspseuafter = document.querySelectorAll(".stefanvdnightpseudoafter");
 					[].forEach.call(elemspseuafter, function(el){
 						el.classList.remove("stefanvdnightpseudoafter");
+					});
+
+					var elemsngimage = document.querySelectorAll(".stefanvdnightimage");
+					[].forEach.call(elemsngimage, function(el){
+						el.classList.remove("stefanvdnightimage");
 					});
 
 					// remove the extern Night Mode is activated

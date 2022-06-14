@@ -535,5 +535,8 @@
     "gamecontrollerstep2description": {"message": "Enable the Game Controller feature."},
     "gamecontrollerstep3description": {"message": "Open any web page, and press any button to activate the Game Controller."},
     "gamecontrollerstep4description": {"message": "Now the Game Controller is active on the current web page."},
-    "desgamepadonly": {"message": "Activate the Game Controller only on the following site(s):"}
+    "desgamepadonly": {"message": "Activate the Game Controller only on the following site(s):"},
+    "desnightmodeimage": {"message": "Dim images"},
+    "desnightmodeimagedarken": {"message": "Darkened"},
+    "desnightmodeimagegrayscale": {"message": "Grayscaled"}
 }
