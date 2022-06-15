@@ -35,7 +35,7 @@ function eventFunc(selector, event, callback){
 	});
 }
 
-var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null, nightenabletheme = null;
+var lightcolor = null, darkmode = null, interval = null, nighttheme = null, lampandnightmode = null, ambilight = null, ambilightfixcolor = null, ambilight4color = null, ambilightvarcolor = null, atmosvivid = null, nightmodetxt = null, nightmodebck = null, nightmodehyperlink = null, multiopacall = null, multiopacsel = null, multiopacityDomains = null, firstDate = null, optionskipremember = null, firstsawrate = null, pipvisualtype = null, nightmodebutton = null, nightonly = null, nightDomains = null, nightmodebydomain = null, firstsawscroll = null, nightmodeborder = null, nightenabletheme = null, nightmodeimage = null, nmimagedark = null, nmimagegray = null;
 
 function save_options(){
 	var getpipvisualtype;
@@ -47,7 +47,7 @@ function save_options(){
 		getpipvisualtype = 3;
 	}
 
-	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains), "nightenabletheme":$("nightenabletheme").checked});
+	chrome.storage.sync.set({"nighttheme":$("nighttheme").checked, "lampandnightmode":$("lampandnightmode").checked, "ambilight":$("ambilight").checked, "ambilightfixcolor":$("ambilightfixcolor").checked, "ambilight4color":$("ambilight4color").checked, "ambilightvarcolor":$("ambilightvarcolor").checked, "atmosvivid":$("atmosvivid").checked, "pipvisualtype": getpipvisualtype, "nightonly":$("nightonly").checked, "nightDomains": JSON.stringify(nightDomains), "nightenabletheme":$("nightenabletheme").checked, "nightmodeimage":$("nightmodeimage").checked, "nmimagedark":$("nmimagedark").value, "nmimagegray":$("nmimagegray").value});
 }
 
 function codenight(){
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 	}, false);
 
-	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll", "nightenabletheme"], function(items){
+	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll", "nightenabletheme", "nightmodeimage", "nmimagedark", "nmimagegray"], function(items){
 		lightcolor = items["lightcolor"]; if(lightcolor == null)lightcolor = "#000000"; // default color black
 		currentlayercolor = lightcolor;
 		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
@@ -130,6 +130,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		nightenabletheme = items["nightenabletheme"]; if(nightenabletheme == null)nightenabletheme = false; // default false
 
+		nightmodeimage = items["nightmodeimage"]; if(nightmodeimage == null)nightmodeimage = false; // default false
+		nmimagedark = items["nmimagedark"]; if(nmimagedark == null)nmimagedark = 60; // default 60
+		nmimagegray = items["nmimagegray"]; if(nmimagegray == null)nmimagegray = 50; // default 50
 		pipvisualtype = items["pipvisualtype"]; if(pipvisualtype == null)pipvisualtype = 1; // default 1
 
 		if(pipvisualtype == 1){
@@ -139,6 +142,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		}else if(pipvisualtype == 3){
 			document.getElementById("btnpipvisualC").checked = true;
 		}
+
+		if(nightmodeimage == true)$("nightmodeimage").checked = true;
+		document.getElementById("nmimagedark").value = nmimagedark;
+		document.getElementById("nmimagegray").value = nmimagegray;
 
 		// dark mode
 		var thattheme;
@@ -667,6 +674,13 @@ function test(){
 		atmosdisable(false); if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = false; }else{ $("atmosvivid").disabled = true; }
 	}else{
 		atmosdisable(true); if($("ambilightvarcolor").checked){ $("atmosvivid").disabled = true; }else{ $("atmosvivid").disabled = true; }
+	}
+	if($("nightmodeimage").checked == true){
+		$("nmimagedark").disabled = false;
+		$("nmimagegray").disabled = false;
+	}else{
+		$("nmimagedark").disabled = true;
+		$("nmimagegray").disabled = true;
 	}
 }
 

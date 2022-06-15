@@ -1859,7 +1859,7 @@ const afterBodyReady = () => {
 					setnightmetatheme(false);
 				});
 			}else if(request.action == "goenablenightmode"){
-				chrome.storage.sync.get(["nighttheme", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos", "nmautoclock", "nmautobegintime", "nmautoendtime"], function(items){
+				chrome.storage.sync.get(["nighttheme", "nightmodeswitchhide", "nightmodeswitchhidetime", "nightonly", "nightmodechecklistwhite", "nightmodechecklistblack", "nightDomains", "nightmodebydomain", "nightmodebypage", "nightactivetime", "nmbegintime", "nmendtime", "nightenabletheme", "nighthover", "nmtopleft", "nmtopright", "nmbottomright", "nmbottomleft", "nmcustom", "nightmodegesture", "nightmodeos", "nmautoclock", "nmautobegintime", "nmautoendtime", "nightmodeimage"], function(items){
 					nighttheme = items["nighttheme"];
 					nightmodeswitchhide = items["nightmodeswitchhide"];
 					nightmodeswitchhidetime = items["nightmodeswitchhidetime"];
@@ -1884,6 +1884,7 @@ const afterBodyReady = () => {
 					nmautoclock = items["nmautoclock"];
 					nmautobegintime = items["nmautobegintime"];
 					nmautoendtime = items["nmautoendtime"];
+					nightmodeimage = items["nightmodeimage"];
 
 					nightobserver.disconnect();
 					setnightmetatheme(true);
