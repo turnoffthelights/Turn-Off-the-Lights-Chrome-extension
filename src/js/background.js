@@ -808,6 +808,7 @@ OK Done IMPROVEMENT Use the kebab-case file format
 OK Done IMPROVEMENT AutoPlay feature name to AutoDim
 OK Done IMPROVEMENT website .html links
 OK Done ADDED Night Mode with dim images filter
++ issue welcome guide loading - web sercurity
 + issue: no YouTube video detection right to left layout issue ARAB
 + check for use activetabs permission and screenshot capture issue?
 
