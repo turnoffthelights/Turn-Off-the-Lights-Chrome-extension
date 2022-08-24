@@ -37,7 +37,6 @@
     },
     {
       "matches": ["http://*/*", "https://*/*"],
-      "exclude_matches": ["*://*.mycinema.pro/*"],
       "css" : ["css/light.css"],
       "run_at": "document_end",
       "all_frames": true,
