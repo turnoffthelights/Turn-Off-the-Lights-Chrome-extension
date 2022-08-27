@@ -859,8 +859,8 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 		}
 
 		function hideshowdiv(a, b){
-			if($(a)){
-				$(a).style.display = b;
+			if(document.getElementById(a)){
+				document.getElementById(a).style.display = b;
 			}
 		}
 
