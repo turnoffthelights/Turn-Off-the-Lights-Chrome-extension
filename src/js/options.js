@@ -371,20 +371,6 @@ function read_options(){
 		});
 	}
 
-	// introduce
-	$("materialModalIntroduce").addEventListener("click", function(e){
-		closeMaterialIntroduceAlert(e);
-	});
-	$("materialModalIntroduceContent").addEventListener("click", function(e){
-		e.stopPropagation();
-	});
-	$("materialModalIntroduceButtonOK").addEventListener("click", function(e){
-		closeMaterialIntroduceAlert(e);
-	});
-	$("materialModalIntroduceButtonCANCEL").addEventListener("click", function(e){
-		closeMaterialIntroduceAlert(e);
-	});
-
 	// youtube
 	$("materialModalYouTubeButtonOK").addEventListener("click", function(e){
 		closeMaterialYouTubeAlert(e);
@@ -420,16 +406,6 @@ function read_options(){
 		showhidemodal("materialModalRate", "hide", "true");
 	}
 
-	// introduce
-	function materialIntroduceAlert(){
-		document.getElementById("materialModalIntroduceButtonCANCEL").style.display = "none";
-		showhidemodal("materialModalIntroduce", "show", "false");
-	}
-	function closeMaterialIntroduceAlert(e){
-		e.stopPropagation();
-		showhidemodal("materialModalIntroduce", "hide", "true");
-	}
-
 	// youtube
 	function materialYouTubeAlert(){
 		showhidemodal("materialModalYouTube", "show", "false");
@@ -458,7 +434,7 @@ function read_options(){
 		}
 	}
 
-	var settingsmain = ["firstDate", "countremember", "excludedDomains", "autodimDomains", "atmosphereDomains", "nightDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "introduce", "videovolumeDomains", "firstsawyoutube", "firstsawnumber", "gamepadDomains"];
+	var settingsmain = ["firstDate", "countremember", "excludedDomains", "autodimDomains", "atmosphereDomains", "nightDomains", "reviewedlastonversion", "applastonversion", "autostopDomains", "videotoolDomains", "icon", "multiopacityDomains", "firstsawrate", "videovolumeDomains", "firstsawyoutube", "firstsawnumber", "gamepadDomains"];
 	var a = settingscheckboxarray, b = settingsinputrarray, c = settingsmain;
 	var allsettings = a.concat(b, c);
 	//---
@@ -469,14 +445,6 @@ function read_options(){
 		if(items["applastonversion"] == chrome.runtime.getManifest().version){ $("sectionauroraplayerappbox").style.display = "none"; }
 
 		if(items["icon"]){ $("btnpreview").src = items["icon"]; $("btnpreview").setAttribute("data-icon", items["icon"]); }
-
-		// show introduce
-		if(items["introduce"] != true){
-			window.setTimeout(function(){
-				materialIntroduceAlert();
-			}, 2500);
-			chrome.storage.sync.set({"introduce": true});
-		}
 
 		// show remember page
 		var firstmonth = false;

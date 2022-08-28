@@ -188,12 +188,16 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 	return true;
 });
 
+// Not for Safari web browser, it use the content script way in the manifest.json file
+// because Safari 15.4 and 16.0 do not support script "injectImmediately" and not stable "webNavigation.onCommitted" on iOS
 // Inject before displaying the website
-chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
-	// Filter out non main window events.
-	if(frameId !== 0)return;
-	injectScriptsTo(tabId, url);
-});
+if(exbrowser != "safari"){
+	chrome.webNavigation.onCommitted.addListener(({tabId, frameId, url}) => {
+		// Filter out non main window events.
+		if(frameId !== 0)return;
+		injectScriptsTo(tabId, url);
+	});
+}
 
 // screen-shader.js = Screen Shader
 // night-mode.js = Night Mode

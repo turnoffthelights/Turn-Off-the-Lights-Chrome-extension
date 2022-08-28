@@ -1072,7 +1072,7 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .md-intgroup{display:inline-flex;gap:15px;margin:0;align-items:center}
 .md-submarg{margin:0}
 /* Modal */
-#materialModal{font-family:Arial,sans-serif;position:fixed;top:0px;left:0px;width:100%;height:100%;background:rgba(0,0,0,0.5);display:table;z-index:1000}
+#materialModal{font-family:Arial,sans-serif;position:fixed;bottom:0px;left:0px;width:100%;height:100%;background:rgba(0,0,0,0.5);display:table;z-index:1000}
 #materialModalCentered{display:table-cell;vertical-align:middle;padding:20px}
 #materialModalContent{border-radius:2px;padding:14px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:485px;min-height:200px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none}
 #materialModalTitle{margin:10px;font-weight:bold;font-size:16px}
@@ -1082,24 +1082,20 @@ button[disabled],input[type=button][disabled],input[type=submit][disabled],butto
 .materialModalButton:active{background-color:rgba(158,158,158,.4)}
 .materialModalButton:hover{background-color:rgba(158,158,158,.2)}
 #multiopacityaddbutton,#multiopacityremovebutton{max-width:135px;text-overflow:ellipsis;width:100%}
-#materialModal.hide,#materialModalRate.hide,#materialModalIntroduce.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none;content-visibility:auto}
-#materialModal.hide #materialModalCentered,#materialModalRate.hide #materialModalRateCentered,#materialModalIntroduce.hide #materialModalIntroduceCentered,#materialModalYouTube.hide #materialModalYouTubeCentered{transform:scale(0.8);transition:transform 0.2s ease-out}
-#materialModal.show,#materialModalRate.show,#materialModalIntroduce.show{opacity:1;transition:opacity 0.2s ease-in}
-#materialModal.show #materialModalCentered,#materialModalRate.show #materialModalRateCentered,#materialModalIntroduce.show #materialModalIntroduceCentered,#materialModalYouTube.show #materialModalYouTubeCentered{transform:scale(1);transition:transform 0.2s ease-in}
+#materialModal.hide,#materialModalRate.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none;content-visibility:auto}
+#materialModal.hide #materialModalCentered,#materialModalRate.hide #materialModalRateCentered,#materialModalYouTube.hide #materialModalYouTubeCentered{transform:scale(0.8);transition:transform 0.2s ease-out}
+#materialModal.show,#materialModalRate.show{opacity:1;transition:opacity 0.2s ease-in}
+#materialModal.show #materialModalCentered,#materialModalRate.show #materialModalRateCentered,#materialModalYouTube.show #materialModalYouTubeCentered{transform:scale(1);transition:transform 0.2s ease-in}
 #materialModalRateTitle{margin:24px;font-weight:bold;font-size:16px}
 #materialModalRateText{margin:24px;margin-bottom:60px}
 #materialModalRateButtons{width:calc(100% - 8px);position:absolute;bottom:0px}
-#materialModalIntroduceContent img{background:#4285f4}
-#materialModalIntroduce,#materialModalRate{font-family:Arial,sans-serif;position:fixed;bottom:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
-#materialModalIntroduceCentered,#materialModalRateCentered{display:table-cell;vertical-align:middle;padding:20px}
-#materialModalIntroduceContent,#materialModalRateContent{padding:0px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:450px;min-height:385px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:15px;overflow:hidden}
-#materialModalIntroduceTitle{margin:15px;font-size:18px;text-align:center}
-#materialModalIntroduceText{margin:10px;margin-bottom:60px;text-align:center}
-#materialModalIntroduceButtons{width:calc(100% - 12px);position:absolute;bottom:0px}
+#materialModalRate{font-family:Arial,sans-serif;position:fixed;bottom:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
+#materialModalRateCentered{display:table-cell;vertical-align:middle;padding:20px}
+#materialModalRateContent{padding:0px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:450px;min-height:385px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:15px;overflow:hidden}
 #materialModalYouTube.hide{opacity:0;transition:opacity 0.2s ease-out;pointer-events:none}
 #materialModalYouTube.show{opacity:1;transition:opacity 0.2s ease-in}
 #materialModalYouTubeContent img{margin:20px;filter:var(--totl-modal-youtube-logo)}
-#materialModalYouTube{font-family:Arial,sans-serif;position:fixed;top:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
+#materialModalYouTube{font-family:Arial,sans-serif;position:fixed;bottom:0px;left:0px;width:100vw;height:100vh;background:rgba(0,0,0,0.5);display:table;z-index:1000}
 #materialModalYouTubeCentered{display:table-cell;vertical-align:middle;padding:20px}
 #materialModalYouTubeContent{padding:0px;position:relative;color:var(--totl-primary-font-color);background:var(--totl-primary-background);max-width:450px;min-height:385px;margin:auto;box-shadow:0px 10px 20px 0px rgba(0,0,0,0.4);box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;user-select:none;border-radius:15px;overflow:hidden}
 #materialModalYouTubeTitle{margin:15px;font-size:18px}
@@ -1170,10 +1166,10 @@ only screen and (max-device-width:480px){
   #apicon{top:25px;left:108px}
   #apgetapp{right:15px}
   #aptllo{right:15px;top:5px;font-size:13px}
-  #materialModal.hide #materialModalCentered,#materialModalRate.hide #materialModalRateCentered,#materialModalIntroduce.hide #materialModalIntroduceCentered,#materialModalYouTube.hide #materialModalYouTubeCentered{transform:translateY(200px);transition:transform 0.2s ease-out}
-  #materialModalCentered,#materialModalRateCentered,#materialModalYouTubeCentered,#materialModalIntroduceCentered{padding:0}
-  #materialModalContent,#materialModalRateContent,#materialModalYouTubeContent,#materialModalIntroduceContent{max-width:none;width:100vw;margin-top:5vh;left:0;bottom:0;position:absolute;border-radius:25px 25px 0 0}
-  #materialModal.show #materialModalCentered,#materialModalRate.show #materialModalRateCentered,#materialModalIntroduce.show #materialModalIntroduceCentered{transform:translateY(0px);transition:transform 0.2s ease-in}
+  #materialModal.hide #materialModalCentered,#materialModalRate.hide #materialModalRateCentered,#materialModalYouTube.hide #materialModalYouTubeCentered{transform:translateY(200px);transition:transform 0.2s ease-out}
+  #materialModalCentered,#materialModalRateCentered,#materialModalYouTubeCentered{padding:0}
+  #materialModalContent,#materialModalRateContent,#materialModalYouTubeContent{max-width:none;width:100vw;margin-top:5vh;left:0;bottom:0;position:absolute;border-radius:25px 25px 0 0}
+  #materialModal.show #materialModalCentered,#materialModalRate.show #materialModalRateCentered{transform:translateY(0px);transition:transform 0.2s ease-in}
   .sharestatsenergy .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
   .sharestatsenergy .text{font-size:14px}
   .sharestatslove .placeholder{width:calc(100% - 30px);padding:30px 15px;height:auto}
