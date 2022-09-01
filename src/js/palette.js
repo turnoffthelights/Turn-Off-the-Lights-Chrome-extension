@@ -707,27 +707,29 @@ function opacitychange(){
 }
 
 function codetask(a, b, c){
-	var div = document.getElementsByTagName("div");
-	var i;
-	var l = div.length;
-	for(i = 0; i < l; i++){
-		if(div[i].className == ("stefanvdlightareoff")){
-			div[i].style.background = c;
-			div[i].style.opacity = (b / 100);
+	if(document.getElementById("stefanvdlightareoff1")){
+		var div = document.getElementsByTagName("div");
+		var i;
+		var l = div.length;
+		for(i = 0; i < l; i++){
+			if(div[i].className == ("stefanvdlightareoff")){
+				div[i].style.background = c;
+				div[i].style.opacity = (b / 100);
+			}
 		}
-	}
-	var metas = document.getElementsByTagName("meta");
-	var m, p = metas.length;
-	for(m = 0; m < p; m++){
-		if(metas[m].getAttribute("name") == "theme-color"){
-			if(metas[m].getAttribute("media")){
-				if(metas[m].getAttribute("media") == "(prefers-color-scheme: light)"){
-					metas[m].setAttribute("content", a);
-				}else if(metas[m].getAttribute("media") == "(prefers-color-scheme: dark)"){
+		var metas = document.getElementsByTagName("meta");
+		var m, p = metas.length
+		for(m = 0; m < p; m++){
+			if(metas[m].getAttribute("name") == "theme-color"){
+				if(metas[m].getAttribute("media")){
+					if(metas[m].getAttribute("media") == "(prefers-color-scheme: light)"){
+						metas[m].setAttribute("content", a);
+					}else if(metas[m].getAttribute("media") == "(prefers-color-scheme: dark)"){
+						metas[m].setAttribute("content", a);
+					}
+				}else{
 					metas[m].setAttribute("content", a);
 				}
-			}else{
-				metas[m].setAttribute("content", a);
 			}
 		}
 	}

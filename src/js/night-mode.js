@@ -27,6 +27,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
+console.log("run de night mode script here");
 function $(id){ return document.getElementById(id); }
 var nighttheme = null, nightonly = null, nightDomains = null, nightenabletheme = null, nighthover = null, nmbegintime = null, nmendtime = null, nightmodechecklistblack = null, nightmodechecklistwhite = null, nmtopleft = null, nmtopright = null, nmbottomright = null, nmbottomleft = null, nmcustom = null, nmcustomx = null, nmcustomy = null, nightmodebck = null, nightmodetxt = null, nightmodehyperlink = null, nightmodebydomain = null, nightmodebypage = null, nightmodegesture = null, nightactivetime = null, nightmodeswitchhide = null, nightmodeswitchhidetime = null, nightmodebutton = null, nightmodeos = null, nightmodeborder = null, nmautobegintime = null, nmautoendtime = null, nmautoclock = null, nightmodeimage = null, nmimagedark = null, nmimagegray = null;
 
