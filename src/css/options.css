@@ -1024,7 +1024,7 @@ form{position:relative;margin:16px 0;box-sizing:border-box}
 .md-radio input[type=radio]:checked[disabled] + label::after{background:var(--totl-radio-checked-disabled)}
 .md-radio input[type=radio][disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
 /* Select Field */
-select:not([multiple]){background:var(--totl-select-only-background);font-family:inherit;width:100%;padding:4px 16px;font-size:16px;color:var(--totl-select-only-color);border:none;border-bottom:var(--totl-select-only-border);border-radius:0} 
+select:not([multiple]){background-image:linear-gradient(45deg,transparent 50%,var(--totl-select-only-color) 50%),linear-gradient(135deg,var(--totl-select-only-color) 50%,transparent 50%);background-position:calc(100% - 20px) calc(50% + 2px),calc(100% - 15px) calc(50% + 2px);background-size:5px 5px,5px 5px,1px 1.5em;background-repeat:no-repeat;appearance:none;background-color:var(--totl-select-only-background);font-family:inherit;width:100%;padding:4px 16px;font-size:16px;color:var(--totl-select-only-color);border:none;border-bottom:var(--totl-select-only-border);border-radius:0} 
 select:not([multiple]):hover{color:var(--totl-select-only-hover-color);border-bottom:var(--totl-select-only-hover-border)}
 select:not([multiple])[disabled]{box-shadow:none;color:var(--totl-select-disable-color);border-bottom:var(--totl-input-number-disabled-border)}
 /* Remove focus */
