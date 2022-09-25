@@ -39,9 +39,16 @@ tp-yt-app-drawer.ytd-app[persistent]{z-index:980!important}
 .ytp-preview{z-index:1001!important}
 .html5-video-info-panel{z-index:1001!important}
 .ytp-ad-overlay-slot{z-index:1005!important}
-.ytp-ad-preview-container, .ytp-ad-skip-button-container{z-index:1005!important}
-.ytp-ad-player-overlay-instream-info, .ytp-ad-survey-player-overlay-instream-info{z-index:1005!important}
+.ytp-ad-preview-container,.ytp-ad-skip-button-container{z-index:1005!important}
+.ytp-ad-player-overlay-instream-info,.ytp-ad-survey-player-overlay-instream-info{z-index:1005!important}
 .iv-promo{z-index:1005!important}
+/* Start iOS mobile show the player buttons */
+.player-controls-background{z-index:1001!important}
+#player-control-overlay{z-index:1001!important}
+.ytp-ad-player-overlay{z-index:1001!important}
+.ytp-unmute{z-index:1001!important}
+.dialog-container{z-index:1005!important}
+/* End Mobile */
 app-drawer[persistent].ytd-app{z-index:auto!important}
 ytd-mini-guide-renderer{z-index:900!important}
 ytd-channel-name{z-index:900!important}

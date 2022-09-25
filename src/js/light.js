@@ -609,9 +609,6 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 
 			// update 10 September 2018
 			// fix for the TrueView video
-			var ythtmlvideocontainer = document.querySelector(".html5-video-container");
-			if(ythtmlvideocontainer){ ythtmlvideocontainer.style.position = "absolute"; }
-
 			var ytdivvideoads = document.querySelector(".video-ads");
 			if(ytdivvideoads){ ytdivvideoads.classList.add("stefanvdvideocontrolsitem"); }
 			//---
@@ -636,16 +633,6 @@ chrome.storage.sync.get(["suggestions", "playlist", "videoheadline", "head", "in
 			// movie sidebar
 			var ytmovieside = document.querySelector(".ytp-ypc-player-content");
 			if(ytmovieside){ ytmovieside.classList.add("stefanvdvideocontrolsitem"); }
-
-			// iOS mobile show the player buttons
-			var ytplayerback = document.querySelector(".player-controls-background");
-			if(ytplayerback){ ytplayerback.classList.add("stefanvdvideocontrolsitem"); }
-
-			var ytplayercontrol = document.getElementById("player-control-overlay");
-			if(ytplayercontrol){ ytplayercontrol.classList.add("stefanvdvideocontrolsitem"); }
-
-			var ytdialogcont = document.querySelector(".dialog-container");
-			if(ytdialogcont){ ytdialogcont.classList.add("stefanvdvideocontrolsitem"); }
 		} // end YouTube
 
 		// iframe HTML5 video
