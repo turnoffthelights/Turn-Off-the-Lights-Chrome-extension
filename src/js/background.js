@@ -137,7 +137,7 @@ chrome.runtime.onMessage.addListener(function request(request, sender){
 			chrome.tabs.query({}, function(tabs){
 				var i, l = tabs.length;
 				for(i = 0; i < l; i++){
-					chrome.action.setIcon({tabId : tabs[i].id, path : {"19": "icons/iconwhite19.png", "38": "icons/iconwhite38.png"}});
+					chrome.action.setIcon({tabId : tabs[i].id, path : {"19": "/icons/iconwhite19.png", "38": "/icons/iconwhite38.png"}});
 				}
 			});
 		}else{

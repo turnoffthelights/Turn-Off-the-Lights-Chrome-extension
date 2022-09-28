@@ -8,20 +8,20 @@
   "homepage_url": "https://www.turnoffthelights.com/support/",
   "omnibox": { "keyword" : "totl" },
   "icons": {
-      "16": "icons/icon16.png",
-      "24": "icons/icon24.png",
-      "32": "icons/icon32.png",
-      "48": "icons/icon48.png",
-      "96": "icons/icon96.png",
-      "128": "icons/icon128.png"
+    "16": "icons/icon16.png",
+    "24": "icons/icon24.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png"
   },
   "default_locale": "en",
   "action": {
-      "default_title": "__MSG_pageatitle__",
-      "default_icon": {
-        "19": "icons/iconstick19.png",
-        "38": "icons/iconstick38.png"
-      }
+    "default_title": "__MSG_pageatitle__",
+    "default_icon": {
+      "19": "icons/iconstick19.png",
+      "38": "icons/iconstick38.png"
+    }
   },
   "background": {
     "service_worker": "js/background.js"
