@@ -784,37 +784,3 @@ function installation(){
 chrome.runtime.onInstalled.addListener(function(){
 	installation();
 });
-
-
-/*
-BUG in Chrome manifest v3:
-+ it work now v100 - chrome.i18n.getmessage -> not a function -> fixed in Chrome version 100
-+ it work now v100 - omni suggestion error -> https://bugs.chromium.org/p/chromium/issues/detail?id=1186804
-+ it work but show error seticon -> https://bugs.chromium.org/p/chromium/issues/detail?id=1262029&q=setIcon&can=2
-+ it work now v102 and runat "document_start" is now "injectImmediately" for execute scripting
-https://bugs.chromium.org/p/chromium/issues/detail?id=1054624
-https://bugs.chromium.org/p/chromium/issues/detail?id=1217895
-+ it work now v103 - shortcut key do not work https://bugs.chromium.org/p/chromium/issues/detail?id=1190476
-+ service working shutdown every 5 minutes? https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
-
-OK Done IMPROVEMENT atmos vivid, the glow fade in and fade out
-OK Done IMPROVEMENT double click lamp button action
-OK Done IMPROVEMENT information panel design
-OK Done REMOVED Speech and Camera -> not possile anymore because of service worker background page
-OK Done ADDED Russian and Chinese share buttons
-OK Done IMPROVEMENT rate box to 5 stars in the Options page
-OK Done IMPROVEMENT PIP-mode
-OK Done ADDED doubleclick on slider to get the default 80% opacity in the palette panel
-OK Done whitelist/blacklist the game controller
-OK Done ADDED autonightmode option in double click panel
-OK Done IMPROVEMENT Youtube AutoHD script / Block 60 FPS script / AutoDim script
-OK Done IMPROVEMENT Use the kebab-case file format
-OK Done IMPROVEMENT AutoPlay feature name to AutoDim
-OK Done IMPROVEMENT website .html links
-OK Done ADDED Night Mode with dim images filter
-OK Done Security improvement loading the welcome guide
-+ issue: no YouTube video detection right to left layout issue ARAB
-+ check for use activetabs permission and screenshot capture issue?
-+ issue: no video:hover focus course online
-
-*/
