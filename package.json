@@ -1,13 +1,14 @@
 {
   "name": "turn-off-the-lights-chrome-extension",
-  "version": "4.2.6.0",
+  "version": "4.4.1",
   "description": "Chrome extension",
   "homepage": "https://wwww.turnoffthelights.com",
   "author": "Stefan Van Damme",
+  "license": "GPL-2.0",
   "devDependencies": {
     "eslint": "^7.17.0"
   },
   "scripts": {
-    "create-zip": "zip -r dist/$npm_package_name-$npm_package_version.zip src"
+    "dist": "zip -r dist/$npm_package_name-$npm_package_version.zip src"
   }
 }
