@@ -718,7 +718,7 @@ function codetask(a, b, c){
 			}
 		}
 		var metas = document.getElementsByTagName("meta");
-		var m, p = metas.length
+		var m, p = metas.length;
 		for(m = 0; m < p; m++){
 			if(metas[m].getAttribute("name") == "theme-color"){
 				if(metas[m].getAttribute("media")){
