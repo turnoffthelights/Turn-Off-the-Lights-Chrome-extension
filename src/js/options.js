@@ -2201,6 +2201,19 @@ function domcontentloaded(){
 	// Remove website
 	$("removebutton").addEventListener("click", function(){ removedselectedwebsite("excludedDomainsBox"); });
 
+	// Password eye
+	$("eyeopen").addEventListener("click", function(){
+		$("eyeopen").classList.add("hidden");
+		$("eyeclose").classList.remove("hidden");
+		$("enterpassword").type = "text";
+	});
+
+	$("eyeclose").addEventListener("click", function(){
+		$("eyeopen").classList.remove("hidden");
+		$("eyeclose").classList.add("hidden");
+		$("enterpassword").type = "password";
+	});
+
 	// Save password
 	$("confirmpassword").addEventListener("click", function(){ save_options(); var optionpastemp = chrome.i18n.getMessage("optionpasswordsaved"); window.alert(optionpastemp); });
 

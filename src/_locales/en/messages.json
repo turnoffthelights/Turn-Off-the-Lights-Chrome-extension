@@ -538,5 +538,7 @@
     "desgamepadonly": {"message": "Activate the Game Controller only on the following site(s):"},
     "desnightmodeimage": {"message": "Dim images"},
     "desnightmodeimagedarken": {"message": "Darkened"},
-    "desnightmodeimagegrayscale": {"message": "Grayscaled"}
+    "desnightmodeimagegrayscale": {"message": "Grayscaled"},
+    "despasswordhide": {"message": "Hide password"},
+    "despasswordshow": {"message": "Show password"}
 }

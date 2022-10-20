@@ -1538,7 +1538,14 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							<input id="password" type="checkbox" role="checkbox" aria-checked="false" aria-labelledby="password">
 							<label for="password"><div><span data-i18n="desenterpassword"></span></div></label>
 						</div>
-						<label><input id="enterpassword" type="password" autocomplete="new-password"><button type="button" id="confirmpassword" data-i18n="desconfirmpassword"></button></label>						
+						<label>
+							<div class="passwordgroup">
+								<svg id="eyeopen" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title><span data-i18n="despasswordshow"></span></title><path d="M320,256a64,64,0,1,1-64-64A64.07,64.07,0,0,1,320,256Zm189.81,9.42C460.86,364.89,363.6,426.67,256,426.67S51.14,364.89,2.19,265.42a21.33,21.33,0,0,1,0-18.83C51.14,147.11,148.4,85.33,256,85.33s204.86,61.78,253.81,161.25A21.33,21.33,0,0,1,509.81,265.42ZM362.67,256A106.67,106.67,0,1,0,256,362.67,106.79,106.79,0,0,0,362.67,256Z"/></svg>
+								<svg id="eyeclose" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="hidden"><title><span data-i18n="despasswordhide"></span></title><path d="M409.84,132.33l95.91-95.91A21.33,21.33,0,1,0,475.58,6.25L6.25,475.58a21.33,21.33,0,1,0,30.17,30.17L140.77,401.4A275.84,275.84,0,0,0,256,426.67c107.6,0,204.85-61.78,253.81-161.25a21.33,21.33,0,0,0,0-18.83A291,291,0,0,0,409.84,132.33ZM256,362.67a105.78,105.78,0,0,1-58.7-17.8l31.21-31.21A63.29,63.29,0,0,0,256,320a64.07,64.07,0,0,0,64-64,63.28,63.28,0,0,0-6.34-27.49l31.21-31.21A106.45,106.45,0,0,1,256,362.67ZM2.19,265.42a21.33,21.33,0,0,1,0-18.83C51.15,147.11,148.4,85.33,256,85.33a277,277,0,0,1,70.4,9.22l-55.88,55.88A105.9,105.9,0,0,0,150.44,270.52L67.88,353.08A295.2,295.2,0,0,1,2.19,265.42Z"/></svg>
+								<input id="enterpassword" type="password" autocomplete="new-password">
+							</div>
+							<button type="button" id="confirmpassword" data-i18n="desconfirmpassword"></button>
+						</label>						
 					</form>
 					<div class="md-desbox">
 						<span data-i18n="despassword"></span>
@@ -1958,18 +1965,28 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 								<td><span data-i18n="desstickxbox"></span></td>
 								<td><span data-i18n="desactions"></span></td>
 							</tr>
-							<tr><td><span data-i18n="desleftstick"></span></td><td><span data-i18n="desleftstick"></span></td><td>
-								<select id="gpleftstick">
-									<option value="0" data-i18n="desgpbuttonzoominout"></option>
-									<option value="1" data-i18n="desgpbuttonzoompos"></option>
-								</select>
-							</td></tr>
-							<tr><td><span data-i18n="desrightstick"></span></td><td><span data-i18n="desrightstick"></span></td><td>
-								<select id="gprightstick">
-									<option value="0" data-i18n="desgpbuttonzoominout"></option>
-									<option value="1" data-i18n="desgpbuttonzoompos"></option>
-								</select>
-							</td></tr>
+							<tr>
+								<td><span data-i18n="desleftstick"></span></td><td><span data-i18n="desleftstick"></span></td>
+								<td>
+									<div class="md-selectfield">
+										<select id="gpleftstick">
+											<option value="0" data-i18n="desgpbuttonzoominout"></option>
+											<option value="1" data-i18n="desgpbuttonzoompos"></option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span data-i18n="desrightstick"></span></td><td><span data-i18n="desrightstick"></span></td>
+								<td>
+									<div class="md-selectfield">
+										<select id="gprightstick">
+											<option value="0" data-i18n="desgpbuttonzoominout"></option>
+											<option value="1" data-i18n="desgpbuttonzoompos"></option>
+										</select>
+									</div>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 					<br><br>
@@ -1982,360 +1999,394 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 							</tr>
 							<tr><td>X</td><td>A</td>
 							<td>
-								<select id="gpbtnx">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnx">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td>O</td><td>B</td>
 							<td>
-								<select id="gpbtno">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtno">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadsquare"></span></td><td>X</td>
 							<td>
-								<select id="gpbtnsquare">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnsquare">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadtriangle"></span></td><td>Y</td>
 								<td>
-								<select id="gpbtntriangle">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+									<div class="md-selectfield">
+										<select id="gpbtntriangle">
+											<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+											<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+											<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+											<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+											<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+											<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+											<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+											<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+											<option value="8" data-i18n="desgpbuttonshare"></option>
+											<option value="9" data-i18n="desgpbuttonplaypause"></option>
+											<option value="10" data-i18n="desgpbuttondirreset"></option>
+											<option value="11" data-i18n="desgpbuttondirup"></option>
+											<option value="12" data-i18n="desgpbuttondirdown"></option>
+											<option value="13" data-i18n="desgpbuttondirleft"></option>
+											<option value="14" data-i18n="desgpbuttondirright"></option>
+											<option value="15" data-i18n="desgpbuttonhome"></option>
+										</select>
+									</div>
 							</td></tr>
 							<tr><td>L1</td><td>LB</td>
 							<td>
-								<select id="gpbtnlb">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnlb">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td>R1</td><td>RB</td>
 							<td>
-								<select id="gpbtnrb">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnrb">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td>L2</td><td>LT</td>
 							<td>
-								<select id="gpbtnlt">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnlt">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td>R2</td><td>RT</td>
 							<td>
-								<select id="gpbtnrt">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnrt">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadshare"></span></td><td><span data-i18n="desgamepadshowaddress"></span></td>
 							<td>
-								<select id="gpbtnshare">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnshare">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadoptions"></span></td><td><span data-i18n="desgamepadshowmenu"></span></td>
 							<td>
-								<select id="gpbtnmenu">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnmenu">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadrightstickpress"></span></td><td><span data-i18n="desgamepadrightstickpress"></span></td>
 							<td>
-								<select id="gpbtnrightstick">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnrightstick">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadleftstickpress"></span></td><td><span data-i18n="desgamepadleftstickpress"></span></td>
 							<td>
-								<select id="gpbtnleftstick">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnleftstick">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepaddirup"></span></td><td><span data-i18n="desgamepaddirup"></span></td>
 							<td>
-								<select id="gpbtndirup">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtndirup">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepaddirdown"></span></td><td><span data-i18n="desgamepaddirdown"></span></td>
 							<td>
-								<select id="gpbtndirdown">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtndirdown">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepaddirleft"></span></td><td><span data-i18n="desgamepaddirleft"></span></td>
 							<td>
-								<select id="gpbtndirleft">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtndirleft">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepaddirright"></span></td><td><span data-i18n="desgamepaddirright"></span></td>
 							<td>
-								<select id="gpbtndirright">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtndirright">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 							<tr><td><span data-i18n="desgamepadpslogo"></span></td><td><span data-i18n="desgamepadxboxlogo"></span></td>
 							<td>
-								<select id="gpbtnlogo">
-									<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
-									<option value="1" data-i18n="desgpbuttonnextvideo"></option>
-									<option value="2" data-i18n="desgpbuttonprevvideo"></option>
-									<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
-									<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
-									<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
-									<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
-									<option value="7" data-i18n="desgpbuttonforwardbig"></option>
-									<option value="8" data-i18n="desgpbuttonshare"></option>
-									<option value="9" data-i18n="desgpbuttonplaypause"></option>
-									<option value="10" data-i18n="desgpbuttondirreset"></option>
-									<option value="11" data-i18n="desgpbuttondirup"></option>
-									<option value="12" data-i18n="desgpbuttondirdown"></option>
-									<option value="13" data-i18n="desgpbuttondirleft"></option>
-									<option value="14" data-i18n="desgpbuttondirright"></option>
-									<option value="15" data-i18n="desgpbuttonhome"></option>
-								</select>
+								<div class="md-selectfield">
+									<select id="gpbtnlogo">
+										<option value="0" data-i18n="desgpbuttonvolumedecrease"></option>
+										<option value="1" data-i18n="desgpbuttonnextvideo"></option>
+										<option value="2" data-i18n="desgpbuttonprevvideo"></option>
+										<option value="3" data-i18n="desgpbuttonvolumeincrease"></option>
+										<option value="4" data-i18n="desgpbuttonbackwardsmall"></option>
+										<option value="5" data-i18n="desgpbuttonforwardsmall"></option>
+										<option value="6" data-i18n="desgpbuttonbackwardbig"></option>
+										<option value="7" data-i18n="desgpbuttonforwardbig"></option>
+										<option value="8" data-i18n="desgpbuttonshare"></option>
+										<option value="9" data-i18n="desgpbuttonplaypause"></option>
+										<option value="10" data-i18n="desgpbuttondirreset"></option>
+										<option value="11" data-i18n="desgpbuttondirup"></option>
+										<option value="12" data-i18n="desgpbuttondirdown"></option>
+										<option value="13" data-i18n="desgpbuttondirleft"></option>
+										<option value="14" data-i18n="desgpbuttondirright"></option>
+										<option value="15" data-i18n="desgpbuttonhome"></option>
+									</select>
+								</div>
 							</td></tr>
 						</tbody>
 					</table>
