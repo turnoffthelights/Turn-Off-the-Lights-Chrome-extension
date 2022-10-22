@@ -255,10 +255,10 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .md-checkbox label::before,.md-checkbox label::after{content:"";position:absolute;left:0;top:0;box-sizing:border-box}
 .md-checkbox label::before{width:20px;height:20px;background:var(--totl-checkbox-label-background);border:var(--totl-checkbox-label-border);border-radius:2px;cursor:pointer;transition:background 0.3s;box-sizing:border-box}
 .md-checkbox input[type=checkbox]{outline:0;margin-right:15px;box-sizing:border-box;width:12px;height:12px;opacity:0;display:none;float:left}
-.md-checkbox input[type="checkbox"]:checked + label::before{background:var(--totl-checkbox-checked);border:none;box-sizing:border-box}
-.md-checkbox input[type="checkbox"]:checked + label::after{transform:rotate(-45deg);top:5px;left:4px;width:12px;height:6px;border:2px solid #fff;border-top-style:none;border-right-style:none;box-sizing:border-box}
-.md-checkbox input[type="checkbox"]:checked[disabled] + label::before{background:var(--totl-checkbox-checked-disabled);border:var(--totl-checkbox-checked-disabled-border)}
-.md-checkbox input[type="checkbox"][disabled] + label::before{border:var(--totl-checkbox-checked-disabled-border)}
+.md-checkbox input[type=checkbox]:checked + label::before{background:var(--totl-checkbox-checked);border:none;box-sizing:border-box}
+.md-checkbox input[type=checkbox]:checked + label::after{transform:rotate(-45deg);top:5px;left:4px;width:12px;height:6px;border:2px solid #fff;border-top-style:none;border-right-style:none;box-sizing:border-box}
+.md-checkbox input[type=checkbox]:checked[disabled] + label::before{background:var(--totl-checkbox-checked-disabled);border:var(--totl-checkbox-checked-disabled-border)}
+.md-checkbox input[type=checkbox][disabled] + label::before{border:var(--totl-checkbox-checked-disabled-border)}
 /* Radio button */
 .md-radio{position:relative;margin:16px 0;box-sizing:border-box}
 .md-radio label{cursor:pointer;box-sizing:border-box;min-height:20px;display:grid;align-items:center}
@@ -266,19 +266,19 @@ hr{margin:0;border:0px;height:1px;background:var(--totl-hr-border)}
 .md-radio label::before, .md-radio label::after{content:"";position:absolute;left:0;top:0;box-sizing:border-box}
 .md-radio label::before{width:20px;height:20px;background:var(--totl-radio-label-background);border:var(--totl-radio-label-border);border-radius:50%;transition:all .3s ease;transition-property:transform,border-color;box-sizing:border-box}
 .md-radio input[type=radio]{outline:0;margin-right:10px;box-sizing:border-box;width:12px;height:12px;opacity:0;display:none}
-.md-radio input[type="radio"]:checked + label::before{border-color:var(--totl-radio-checked-border);box-sizing:border-box}
-.md-radio input[type="radio"]:checked + label::after{transform:scale(1);top:5px;left:5px;width:10px;height:10px;border-radius:50%;background:var(--totl-radio-checked-border);box-sizing:border-box}
-.md-radio input[type="radio"]:checked[disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
-.md-radio input[type="radio"]:checked[disabled] + label::after{background:var(--totl-radio-checked-disabled)}
-.md-radio input[type="radio"][disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
+.md-radio input[type=radio]:checked + label::before{border-color:var(--totl-radio-checked-border);box-sizing:border-box}
+.md-radio input[type=radio]:checked + label::after{transform:scale(1);top:5px;left:5px;width:10px;height:10px;border-radius:50%;background:var(--totl-radio-checked-border);box-sizing:border-box}
+.md-radio input[type=radio]:checked[disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
+.md-radio input[type=radio]:checked[disabled] + label::after{background:var(--totl-radio-checked-disabled)}
+.md-radio input[type=radio][disabled] + label::before{border-color:var(--totl-radio-checked-disabled)}
 /* number */
 .md-number{position:relative;margin:16px 0;box-sizing:border-box;height:18px}
 /* input other */
 input[type=url]::placeholder{color:var(--totl-input-url-placeholder-color)}
 input[type=number]{width:40px;text-align:start}
-input[type="time"],input[type="number"],input[type="password"],input[type="text"],input:not([type]){background:var(--totl-input-other-background);height:18px;padding:2px 5px;border:none;border-bottom:var(--totl-input-other-border);font-size:inherit;outline:none;font-size:12px;color:var(--totl-input-other-color);-webkit-appearance:none;appearance:none;opacity:1;border-radius:2px}
-input[type="time"]:hover,input[type="number"]:hover,input[type="password"]:hover,input[type="text"]:hover,input:not([type]):hover{outline:none;border-bottom:var(--totl-input-number-hover-border);color:var(--totl-input-number-hover-color)}
-input[type="time"]:focus,input[type="number"]:focus,input[type="password"]:focus,input[type="text"]:focus,input:not([type]):focus{border-bottom:var(--totl-input-other-border-focus)}
+input[type=time],input[type=number],input[type=password],input[type=text],input:not([type]){background:var(--totl-input-other-background);height:18px;padding:2px 5px;border:none;border-bottom:var(--totl-input-other-border);font-size:inherit;outline:none;font-size:12px;color:var(--totl-input-other-color);-webkit-appearance:none;appearance:none;opacity:1;border-radius:2px}
+input[type=time]:hover,input[type=number]:hover,input[type=password]:hover,input[type=text]:hover,input:not([type]):hover{outline:none;border-bottom:var(--totl-input-number-hover-border);color:var(--totl-input-number-hover-color)}
+input[type=time]:focus,input[type=number]:focus,input[type=password]:focus,input[type=text]:focus,input:not([type]):focus{border-bottom:var(--totl-input-other-border-focus)}
 input[type=url]{background:var(--totl-input-url-background);color:var(--totl-input-url-color);padding:10px;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);border:none;outline:none;font-size:13px;border-radius:0;-webkit-appearance:none;appearance:none;opacity:1;border-radius:2px}
 /* Disable number */
 input[type=number][disabled], input[type=password][disabled]{border:none;border-bottom:var(--totl-input-number-disabled-border);color:var(--totl-input-number-disabled-color)}
@@ -300,9 +300,9 @@ input[type=number][disabled], input[type=password][disabled]{border:none;border-
 #materialModalRateButtons{width:calc(100% - 8px);position:absolute;bottom:0px}
 #materialModalRateContent img{height:150px;display:flex;margin:auto}
 /* Other colors */
-.customcolors input[type="color"]{-webkit-appearance:none;appearance:none;border:none;width:22px;height:22px;padding:0px;margin:2px;border-radius:22px;overflow:hidden}
-.customcolors input[type="color"]::-webkit-color-swatch-wrapper{padding:0}
-.customcolors input[type="color"]::-webkit-color-swatch{border:none}
+.customcolors input[type=color]{-webkit-appearance:none;appearance:none;border:none;width:22px;height:22px;padding:0px;margin:2px;border-radius:22px;overflow:hidden}
+.customcolors input[type=color]::-webkit-color-swatch-wrapper{padding:0}
+.customcolors input[type=color]::-webkit-color-swatch{border:none}
 .customcolors{height:26px;width:26px;background:conic-gradient(red,yellow,lime,aqua,blue,magenta,red);border-radius:20px;margin:2px;display:inline-block;vertical-align:top}
 /* Toggle */
 .switch{position:relative;display:inline-block;width:47px;height:24px}

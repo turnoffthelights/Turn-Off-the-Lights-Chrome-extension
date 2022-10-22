@@ -92,7 +92,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvdreaderbar #stefanvdreaderbarinnerbox .stefanvdreaderbaran{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;display:flex!important;float:left!important;width:calc(10% - 20px)!important;height:20px;align-items:center!important;background-color:transparent!important}
 #totlgammaVal{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;line-height:normal!important;background-color:transparent!important;color:white!important;border:none!important;padding:0!important;margin:0!important;outline:none!important;vertical-align:middle!important;height:14px!important}
 /* track */
-#stefanvdreaderbar input[type="range"]{-webkit-appearance:none!important;appearance:none!important;width:100%!important;height:20px!important;background:transparent!important;border:none!important;border-radius:10px!important;transition:all 400ms;outline:none!important;padding:0!important;margin:0!important;cursor:pointer!important}
+#stefanvdreaderbar input[type=range]{-webkit-appearance:none!important;appearance:none!important;width:100%!important;height:20px!important;background:transparent!important;border:none!important;border-radius:10px!important;transition:all 400ms;outline:none!important;padding:0!important;margin:0!important;cursor:pointer!important}
 #stefanvdreaderbar input[type=range]:focus{outline:none!important}
 #stefanvdreaderbar input[type=range]::-webkit-slider-runnable-track{width:100%!important;height:2px!important;background-color:#4285f4!important;border:none;border-radius:10px;transition:all 400ms;outline:none;padding:0!important;margin:0!important}
 #stefanvdreaderbar input[type=range]::-moz-range-track{width:100%!important;height:2px!important;background-color:#4285f4!important;border:none!important;border-radius:10px!important;transition:all 400ms;outline:none!important;padding:0!important;margin:0!important}
@@ -104,11 +104,11 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvdreaderbar input[type=range]::-moz-range-thumb{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;transform:scale(0.75)!important;width:20px!important;height:20px!important;border:none!important;background-color:#4285f4!important;border-radius:40px!important;box-shadow:0px 0px 0px green!important;transition:all 400ms;outline:none!important;margin-top:0px!important}
 #stefanvdreaderbar input[type=range]::-ms-thumb{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;transform:scale(0.75)!important;width:20px!important;height:20px!important;border:none!important;background:#4285f4!important;border-radius:40px!important;box-shadow:0px 0px 0px green!important;transition:all 400ms;outline:none!important;margin-top:0px!important}
 /* thumb hover */
-#stefanvdreaderbar input[type="range"]::-webkit-slider-thumb:hover{transform:scale(0.85)!important}
-#stefanvdreaderbar input[type="range"]::-moz-range-thumb:hover{transform:scale(0.85)!important}
+#stefanvdreaderbar input[type=range]::-webkit-slider-thumb:hover{transform:scale(0.85)!important}
+#stefanvdreaderbar input[type=range]::-moz-range-thumb:hover{transform:scale(0.85)!important}
 /* thumb active */
-#stefanvdreaderbar input[type="range"]::-webkit-slider-thumb:active{transform:scale(1)!important}
-#stefanvdreaderbar input[type="range"]::-moz-range-thumb:active{transform:scale(1)!important}
+#stefanvdreaderbar input[type=range]::-webkit-slider-thumb:active{transform:scale(1)!important}
+#stefanvdreaderbar input[type=range]::-moz-range-thumb:active{transform:scale(1)!important}
 #stefanvdreaderbar input[type=range]::-moz-focus-outer{border:0!important}
 /* top */
 #stefanvdreaderbar #stefanvdreaderbarinnerbox .stefanvdreaderbartop{box-sizing:content-box!important;-webkit-font-smoothing:auto!important;font-family:arial,sans-serif!important;font-size:12px!important;letter-spacing:normal!important;display:block!important;width:calc(100% - 20px)!important;height:25px!important;padding:5px 10px 0 10px!important;color:#808080!important;-webkit-user-select:none!important;-moz-user-select:none!important;user-select:none!important;background:transparent!important;line-height:25px!important}
@@ -651,17 +651,17 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 #stefanvdspeechbox ._ew{border:7px solid #666;border-radius:28px;bottom:27px;height:57px;left:0;pointer-events:none;position:absolute;width:38px;z-index:0}
 /* Stefan vd video tool control */
 /* track */
-.stefanvdvis input[type="range"]{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;width:100px!important;height:2px!important;background-color:#4285f4!important;border:none!important;border-radius:10px!important;margin:auto!important;transition:all 400ms;outline:none!important;padding:0!important;margin:17px 0px!important}
-.stefanvdvis input[type="range"]::-moz-range-track{width:100%!important;height:2px!important;background-color:#4285f4!important;border:none!important;border-radius:10px!important;margin:auto!important;transition:all 400ms;outline:none!important;padding:0!important;margin:0!important}
+.stefanvdvis input[type=range]{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;width:100px!important;height:2px!important;background-color:#4285f4!important;border:none!important;border-radius:10px!important;margin:auto!important;transition:all 400ms;outline:none!important;padding:0!important;margin:17px 0px!important}
+.stefanvdvis input[type=range]::-moz-range-track{width:100%!important;height:2px!important;background-color:#4285f4!important;border:none!important;border-radius:10px!important;margin:auto!important;transition:all 400ms;outline:none!important;padding:0!important;margin:0!important}
 /* thumb */
-.stefanvdvis input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;transform:scale(0.75)!important;width:20px!important;height:20px!important;border:none!important;background-color:#4285f4!important;border-radius:40px!important;box-shadow:0px 0px 0px green!important;transition:all 400ms;outline:none!important}
-.stefanvdvis input[type="range"]::-moz-range-thumb{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;transform:scale(0.75)!important;width:20px!important;height:20px!important;border:none!important;background-color:#4285f4!important;border-radius:40px!important;box-shadow:0px 0px 0px green!important;transition:all 400ms;outline:none!important}
+.stefanvdvis input[type=range]::-webkit-slider-thumb{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;transform:scale(0.75)!important;width:20px!important;height:20px!important;border:none!important;background-color:#4285f4!important;border-radius:40px!important;box-shadow:0px 0px 0px green!important;transition:all 400ms;outline:none!important}
+.stefanvdvis input[type=range]::-moz-range-thumb{-webkit-appearance:none!important;-moz-appearance:none!important;appearance:none!important;transform:scale(0.75)!important;width:20px!important;height:20px!important;border:none!important;background-color:#4285f4!important;border-radius:40px!important;box-shadow:0px 0px 0px green!important;transition:all 400ms;outline:none!important}
 /* thumb hover */
-.stefanvdvis input[type="range"]::-webkit-slider-thumb:hover{transform:scale(0.85)!important}
-.stefanvdvis input[type="range"]::-moz-range-thumb:hover{transform:scale(0.85)!important}
+.stefanvdvis input[type=range]::-webkit-slider-thumb:hover{transform:scale(0.85)!important}
+.stefanvdvis input[type=range]::-moz-range-thumb:hover{transform:scale(0.85)!important}
 /* thumb active */
-.stefanvdvis input[type="range"]::-webkit-slider-thumb:active{transform:scale(1)!important}
-.stefanvdvis input[type="range"]::-moz-range-thumb:active{transform:scale(1)!important}
+.stefanvdvis input[type=range]::-webkit-slider-thumb:active{transform:scale(1)!important}
+.stefanvdvis input[type=range]::-moz-range-thumb:active{transform:scale(1)!important}
 .stefanvdvis input[type=range]::-moz-focus-outer{border:0!important}
 #stefanvdvideowindow,.stefanvdvideowindow{background:black!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;z-index:50000!important}
 .totlhidevolume{display:none!important}
