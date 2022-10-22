@@ -787,9 +787,12 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 		var rock;
 		var currentvideostepfilter = 0;
 		var filtertype = "normal";
+
 		var videowindow = false;
 		var checktheatermode;
 		var initialtheatermode = false;
+		var thatPrevControlEnabled = false;
+
 		var timeout;
 
 		var i18ntitelvideotoolnormal = chrome.i18n.getMessage("titelvideotoolnormal");
@@ -1470,15 +1473,15 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 									// window action
 									if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
 										// YouTube website
-										var ytplayerapi = document.getElementById("player-api");
+										var playertheater = document.getElementById("player-theater-container");
+										var playercontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
 										var playercontainer = document.getElementById("player-container");
 
-										var pagemanager = $("page-manager");
-										if(pagemanager)$("page-manager").style.cssText = "z-index:auto !important";
+										var masthead = $("masthead-container");
+										if(masthead)masthead.style.cssText = "z-index:auto !important";
 
 										if(playercontainer){
 											var stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
-											var stefanyoutubecontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
 											var original = document.getElementsByClassName("ytp-size-button")[0];
 											var watchContainer = document.querySelector("ytd-watch") || document.querySelector("ytd-watch-flexy");
 											if(stefanvdregularhtmlplayer){
@@ -1486,6 +1489,8 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 													original.click();
 												}
 												playercontainer.classList.remove("stefanvdvideowindow");
+												playertheater.classList.remove("stefanvdvideotheather");
+												playercontrols.classList.remove("stefanvdvideocontrols");
 												document.getElementsByTagName("video")[0].classList.remove("stefanvdvideowindow");
 												videowindow = false;
 											}else{
@@ -1496,32 +1501,9 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 													checktheatermode = true;
 												}
 												playercontainer.classList.add("stefanvdvideowindow");
+												playertheater.classList.add("stefanvdvideotheather");
+												playercontrols.classList.add("stefanvdvideocontrols");
 												document.getElementsByTagName("video")[0].classList.add("stefanvdvideowindow");
-												stefanyoutubecontrols.style.cssText = "width:100% !important";
-												videowindow = true;
-											}
-										}else if(ytplayerapi){
-											var stefanvdregularhtmlplayerb = document.getElementsByClassName("stefanvdvideowindow")[0];
-											var stefanyoutubecontrolsb = document.getElementsByClassName("ytp-chrome-bottom")[0];
-											var originalb = document.getElementsByClassName("ytp-size-button")[0];
-											var watchContainerb = document.querySelector("ytd-watch") || document.querySelector("ytd-watch-flexy");
-											if(stefanvdregularhtmlplayerb){
-												checktheatermode = watchContainerb ? watchContainerb.hasAttribute("theater") : true;
-												initialtheatermode = checktheatermode;
-												if(!checktheatermode){
-													originalb.click();
-												}
-												ytplayerapi.classList.remove("stefanvdvideowindow");
-												document.getElementsByTagName("video")[0].classList.remove("stefanvdvideowindow");
-												videowindow = false;
-											}else{
-												if(!initialtheatermode){
-													originalb.click();
-													checktheatermode = true;
-												}
-												ytplayerapi.classList.add("stefanvdvideowindow");
-												document.getElementsByTagName("video")[0].classList.add("stefanvdvideowindow");
-												stefanyoutubecontrolsb.style.width = "98%";
 												videowindow = true;
 											}
 										}
@@ -1530,13 +1512,23 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 											refreshvolume();
 										}
 									}else{
-										// regular HTML5
-										if(onevideo.classList.contains("stefanvdvideowindow")){
+										// regular HTML5 video
+										var stefanvdregularhtmlplayerb = document.getElementsByClassName("stefanvdvideowindow")[0];
+										if(stefanvdregularhtmlplayerb){
 											onevideo.classList.remove("stefanvdvideowindow");
+											if(thatPrevControlEnabled == true){
+												onevideo.controls = true;
+											}else{
+												onevideo.controls = false;
+											}
+											videowindow = false;
 										}else{
 											onevideo.classList.add("stefanvdvideowindow");
+											if(onevideo.hasAttribute("controls")){
+												thatPrevControlEnabled = true;
+											}
 											onevideo.controls = true;
-											onevideo.style.background = "black";
+											videowindow = true;
 										}
 
 										if(videovolume == true || videovolumehold == true || gamepad == true){

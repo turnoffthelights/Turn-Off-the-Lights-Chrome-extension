@@ -663,7 +663,9 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 .stefanvdvis input[type=range]::-webkit-slider-thumb:active{transform:scale(1)!important}
 .stefanvdvis input[type=range]::-moz-range-thumb:active{transform:scale(1)!important}
 .stefanvdvis input[type=range]::-moz-focus-outer{border:0!important}
-#stefanvdvideowindow,.stefanvdvideowindow{background:black!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;z-index:50000!important}
+#stefanvdvideowindow,.stefanvdvideowindow{background:black!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:100%!important;z-index:50000!important;object-fit:contain!important}
+.stefanvdvideotheather{position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;height:100vh!important;z-index:1001!important;max-height:100vh!important}
+.stefanvdvideocontrols{position:fixed!important}
 .totlhidevolume{display:none!important}
 .totlvisiblevolume{display:block!important}
 .totlvideovolumelabel{line-height:1!important;font-size:14px!important;color:white!important;font-family:verdana!important;text-align:center!important;text-shadow:1px 1px 1px black!important}
