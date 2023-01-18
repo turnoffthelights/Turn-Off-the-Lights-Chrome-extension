@@ -4,11 +4,12 @@
   "description": "Chrome extension",
   "homepage": "https://wwww.turnoffthelights.com",
   "author": "Stefan Van Damme",
-  "packageManager": "pnpm@7.5.2",
   "devDependencies": {
     "eslint": "^7.17.0"
   },
   "scripts": {
-    "create-zip": "zip -r dist/$npm_package_name-$npm_package_version.zip src"
+    "create-zip": "zip -r dist/$npm_package_name-$npm_package_version.zip src",
+    "lint:js": "eslint src/**/*.js",
+    "lint": "npm run lint:js"
   }
 }
