@@ -9,9 +9,9 @@
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/bfbmjmiodbnnpllbbbfblcplfjjepjdn.svg?color=#44cc12&style=flat-square)
 
 Project<br>
-[![CodeQL](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv2-green.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/blob/master/LICENSE)
-
+[![CodeQL](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml)
+[![Lint](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/lint.yml/badge.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/lint.yml)
 
 Using Turn Off the Lights to dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page such as on YouTube.
 
