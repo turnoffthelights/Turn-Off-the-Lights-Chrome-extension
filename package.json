@@ -4,7 +4,7 @@
   "description": "Chrome extension",
   "homepage": "https://wwww.turnoffthelights.com",
   "author": "Stefan Van Damme",
-  "packageManager": "pnpm@7.5.2"
+  "packageManager": "pnpm@7.5.2",
   "devDependencies": {
     "eslint": "^7.17.0"
   },
