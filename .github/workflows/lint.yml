@@ -1,26 +1,23 @@
 name: Lint
 
 on:
-  - push
+  pull_request:
+  push:
+    branches:
+      - master
 
-env: # environment variables (available in any part of the action)
-  NODE_VERSION: 16
-
-jobs: # list of things to do
-  linting:
-    name: Linting # job name (unique id)
-    runs-on: ubuntu-latest # on which machine to run
-    steps: # list of steps
-      - name: Install NodeJS
-        uses: actions/setup-node@v2
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Code Checkout
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Code Linting
-        run: npm run lint
+          node-version: 16
+      - run: npm ci # or yarn install
+      - uses: sibiraj-s/action-eslint@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
+          eslint-args: '--ignore-path=.gitignore --quiet'
+          extensions: 'js,jsx,ts,tsx'
+          annotations: true
