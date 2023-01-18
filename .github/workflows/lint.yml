@@ -27,7 +27,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          run_install: false
+          run_install: true
 
       - name: Get pnpm store directory
         id: pnpm-cache
