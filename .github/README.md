@@ -75,4 +75,6 @@ The Browser extension is available in the following stores:
 * [Safari in the Safari Extension gallery](https://itunes.apple.com/us/app/turn-off-the-lights-for-safari/id1273998507?ls=1&mt=12&at=1010lwtb)
 * Available for Yandex: See Yandex built-in extension
 * [Maxthon in the Maxthon Extension gallery](http://extension.maxthon.com/detail/index.php?view_id=1813)
-* [Microsoft Edge in the Windows Store](https://microsoftedge.microsoft.com/addons/detail/turn-off-the-lights/fmamkbgpnienhphflfdamlhnljffjdgm)
+* [Microsoft Edge in the Microsoft Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/turn-off-the-lights/fmamkbgpnienhphflfdamlhnljffjdgm)
+* [Naver Whale in the Whale Store](https://store.whale.naver.com/detail/oplanocjcpankemphfllmlhglnloaolj)
+* [Samsung Internet in the Samsung Galaxy Store](https://galaxystore.samsung.com/detail/com.stefanvd.turnoffthelightssamsung)
