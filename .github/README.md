@@ -2,15 +2,15 @@
 
 <img alt="Turn Off the Lights Browser Extension Logo" src="https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/blob/master/src/icons/icon48.png" align="left" style="padding: 0 10px 5px 0">
 
-**Turn Off the Lights** is a popular browser extension that works on all major web browsers such as Google Chrome, Firefox, Opera, Safari, Yandex, Maxthon, Brave, Vivaldi, Cốc Cốc, and Microsoft Edge.
+**Turn Off the Lights** is a popular browser extension that works on all major web browsers such as Google Chrome, Firefox, Opera, Safari, Yandex, Maxthon, Brave, Vivaldi, Cốc Cốc, Samsung Internet, Naver Whale, and Microsoft Edge.
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/d/bfbmjmiodbnnpllbbbfblcplfjjepjdn.svg?color=#44cc12&style=flat-square)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/bfbmjmiodbnnpllbbbfblcplfjjepjdn?color=#44cc12&style=flat-square)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/bfbmjmiodbnnpllbbbfblcplfjjepjdn.svg?color=#44cc12&style=flat-square)
 
 Project<br>
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv2-green.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/blob/master/LICENSE)
 [![CodeQL](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/actions/workflows/codeql-analysis.yml)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/turnoffthelights/Turn-Off-the-Lights-Chrome-extension.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/turnoffthelights/Turn-Off-the-Lights-Chrome-extension/context:javascript)
 
 Using Turn Off the Lights to dims the web page and reduces the eye strain caused by the bright screen. And it will highlight the video player on that web page such as on YouTube.
 
@@ -19,7 +19,7 @@ Using Turn Off the Lights to dims the web page and reduces the eye strain caused
 
 **[Join our growing Translators community on Crowdin](https://www.crowdin.com/project/turnoffthelights) to stay up to date!**
 
-**[Please use and enjoy it, and if you can make a donation of any amount, I'd appreciate it immensely](https://www.turnoffthelights.com/donate.html)**
+**[Please use and enjoy it, and if you can make a donation of any amount, I'd appreciate it immensely](https://www.turnoffthelights.com/donate/)**
 
 <div style="text-align:center">
 <img alt="Turn Off the Lights Browser extension Screenshot in Google Chrome" src="https://www.turnoffthelights.com/images/turnoffthelights-twitter.png">
@@ -75,4 +75,6 @@ The Browser extension is available in the following stores:
 * [Safari in the Safari Extension gallery](https://itunes.apple.com/us/app/turn-off-the-lights-for-safari/id1273998507?ls=1&mt=12&at=1010lwtb)
 * Available for Yandex: See Yandex built-in extension
 * [Maxthon in the Maxthon Extension gallery](http://extension.maxthon.com/detail/index.php?view_id=1813)
-* [Microsoft Edge in the Windows Store](https://microsoftedge.microsoft.com/addons/detail/turn-off-the-lights/fmamkbgpnienhphflfdamlhnljffjdgm)
+* [Microsoft Edge in the Microsoft Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/detail/turn-off-the-lights/fmamkbgpnienhphflfdamlhnljffjdgm)
+* [Naver Whale in the Whale Store](https://store.whale.naver.com/detail/oplanocjcpankemphfllmlhglnloaolj)
+* [Samsung Internet in the Samsung Galaxy Store](https://galaxystore.samsung.com/detail/com.stefanvd.turnoffthelightssamsung)
