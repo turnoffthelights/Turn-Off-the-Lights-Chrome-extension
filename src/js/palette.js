@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2022 Stefan vd
+Copyright (C) 2023 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -92,9 +92,9 @@ function openaurorapage(){
 
 document.addEventListener("DOMContentLoaded", function(){
 	// disable context menu
-	document.addEventListener("contextmenu", function(e){
-		e.preventDefault();
-	}, false);
+	// document.addEventListener("contextmenu", function(e){
+	// 	e.preventDefault();
+	// }, false);
 
 	chrome.storage.sync.get(["lightcolor", "darkmode", "interval", "nighttheme", "lampandnightmode", "ambilight", "ambilightfixcolor", "ambilight4color", "ambilightvarcolor", "atmosvivid", "nightmodebck", "nightmodetxt", "nightmodehyperlink", "multiopacall", "multiopacsel", "multiopacityDomains", "firstDate", "optionskipremember", "firstsawrate", "pipvisualtype", "nightonly", "nightDomains", "nightmodebydomain", "firstsawscroll", "nightenabletheme", "nightmodeimage", "nmimagedark", "nmimagegray"], function(items){
 		lightcolor = items["lightcolor"]; if(lightcolor == null)lightcolor = "#000000"; // default color black
@@ -570,6 +570,12 @@ document.addEventListener("DOMContentLoaded", function(){
 		var videotopipvideo = document.getElementsByTagName("video")[0];
 		var videopipvisual = document.getElementById("stefanvdpipvisualizationvideo");
 		if(videotopipvideo){
+
+			// remove the open picture-in-picture if there is any
+			if(document.pictureInPictureElement){
+				document.exitPictureInPicture();
+			}
+
 			videopipvisual.addEventListener("loadedmetadata", () => {
 				if(document.pictureInPictureElement){
 					document.exitPictureInPicture();
@@ -606,19 +612,16 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 	});
 	$("btnpipvisual").addEventListener("click", function(){
-		chrome.runtime.sendMessage({name: "pip", value: 1},
-			function(){
-				chrome.tabs.query({
-					active: true,
-					currentWindow: true
-				}, function(tabs){
-					chrome.scripting.executeScript({
-						target: {tabId: tabs[0].id},
-						func: codepipvisual
-					});
+		chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+			var activeTab = tabs[0];
+			chrome.tabs.sendMessage(activeTab.id, {action: "gopipvisual"})
+			.then(() => {
+				chrome.scripting.executeScript({
+					target: {tabId: activeTab.id},
+					func: codepipvisual
 				});
-			}
-		);
+			})
+		});
 	});
 
 	function showhidemodal(name, visible, status){
