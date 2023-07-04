@@ -1,3 +1,4 @@
+import * as URI from "uri-js"
 import type {CodeGen, Code, Name, ScopeValueSets, ValueScopeName} from "../compile/codegen"
 import type {SchemaEnv, SchemaCxt, SchemaObjCxt} from "../compile"
 import type {JSONType} from "../compile/rules"
@@ -5,12 +6,14 @@ import type {KeywordCxt} from "../compile/validate"
 import type Ajv from "../core"
 
 interface _SchemaObject {
+  id?: string
   $id?: string
   $schema?: string
   [x: string]: any // TODO
 }
 
 export interface SchemaObject extends _SchemaObject {
+  id?: string
   $id?: string
   $schema?: string
   $async?: false
@@ -220,3 +223,18 @@ export type AddedFormat =
   | AsyncFormatDefinition<number>
 
 export type Format = AddedFormat | string
+
+export interface RegExpEngine {
+  (pattern: string, u: string): RegExpLike
+  code: string
+}
+
+export interface RegExpLike {
+  test: (s: string) => boolean
+}
+
+export interface UriResolver {
+  parse(uri: string): URI.URIComponents
+  resolve(base: string, path: string): string
+  serialize(component: URI.URIComponents): string
+}

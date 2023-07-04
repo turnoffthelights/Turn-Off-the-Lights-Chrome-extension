@@ -112,9 +112,8 @@ function resetEvaluated(it: SchemaObjCxt): void {
 }
 
 function funcSourceUrl(schema: AnySchema, opts: InstanceOptions): Code {
-  return typeof schema == "object" && schema.$id && (opts.code.source || opts.code.process)
-    ? _`/*# sourceURL=${schema.$id} */`
-    : nil
+  const schId = typeof schema == "object" && schema[opts.schemaId]
+  return schId && (opts.code.source || opts.code.process) ? _`/*# sourceURL=${schId} */` : nil
 }
 
 // schema compilation - this function is used recursively to generate code for sub-schemas
@@ -177,7 +176,8 @@ function checkNoDefault(it: SchemaObjCxt): void {
 }
 
 function updateContext(it: SchemaObjCxt): void {
-  if (it.schema.$id) it.baseId = resolveUrl(it.baseId, it.schema.$id)
+  const schId = it.schema[it.opts.schemaId]
+  if (schId) it.baseId = resolveUrl(it.opts.uriResolver, it.baseId, schId)
 }
 
 function checkAsyncSchema(it: SchemaObjCxt): void {
@@ -286,7 +286,7 @@ function checkContextTypes(it: SchemaObjCxt, types: JSONType[]): void {
       strictTypesError(it, `type "${t}" not allowed by context "${it.dataTypes.join(",")}"`)
     }
   })
-  it.dataTypes = it.dataTypes.filter((t) => includesType(types, t))
+  narrowSchemaTypes(it, types)
 }
 
 function checkMultipleTypes(it: SchemaObjCxt, ts: JSONType[]): void {
@@ -314,6 +314,15 @@ function hasApplicableType(schTs: JSONType[], kwdT: JSONType): boolean {
 
 function includesType(ts: JSONType[], t: JSONType): boolean {
   return ts.includes(t) || (t === "integer" && ts.includes("number"))
+}
+
+function narrowSchemaTypes(it: SchemaObjCxt, withTypes: JSONType[]): void {
+  const ts: JSONType[] = []
+  for (const t of it.dataTypes) {
+    if (includesType(withTypes, t)) ts.push(t)
+    else if (withTypes.includes("integer") && t === "number") ts.push("integer")
+  }
+  it.dataTypes = ts
 }
 
 function strictTypesError(it: SchemaObjCxt, msg: string): void {
@@ -369,7 +378,11 @@ export class KeywordCxt implements KeywordErrorCxt {
   }
 
   result(condition: Code, successAction?: () => void, failAction?: () => void): void {
-    this.gen.if(not(condition))
+    this.failResult(not(condition), successAction, failAction)
+  }
+
+  failResult(condition: Code, successAction?: () => void, failAction?: () => void): void {
+    this.gen.if(condition)
     if (failAction) failAction()
     else this.error()
     if (successAction) {
@@ -383,7 +396,7 @@ export class KeywordCxt implements KeywordErrorCxt {
   }
 
   pass(condition: Code, failAction?: () => void): void {
-    this.result(condition, undefined, failAction)
+    this.failResult(not(condition), undefined, failAction)
   }
 
   fail(condition?: Code): void {
