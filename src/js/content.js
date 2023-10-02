@@ -2105,7 +2105,9 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 			var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 			if(youtubewindow){ youtubewindow.classList.add("stefanvdvideocontrolsitem"); }
 			var youtubemovieplayer = $("movie_player"); // YouTube video page
-			if(youtubemovieplayer){ youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.classList.add("stefanvdvideocontrolsitem"); } // show the overflow out the video element
+			if(youtubemovieplayer){ youtubemovieplayer.style.borderRadius = "12px"; youtubemovieplayer.classList.add("stefanvdvideocontrolsitem"); } // show the overflow out the video element
+			var youtubeytdplayer = $("ytd-player"); // YouTube video page
+			if(youtubeytdplayer){ youtubeytdplayer.style.overflow = "visible"; }
 			var youtubeplayer = $("player"); // YouTube video page
 			if(youtubeplayer){ youtubeplayer.style.overflow = "visible"; }
 			var youtubeplayercontainerid = $("player-container-id"); // YouTube video page
