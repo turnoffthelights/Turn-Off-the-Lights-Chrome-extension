@@ -1475,7 +1475,7 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 										// YouTube website
 										var playertheater = document.getElementById("player-theater-container");
 										var playercontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
-										var playercontainer = document.getElementById("player-container");
+										var playercontainer = document.getElementById("ytd-player");
 
 										var masthead = $("masthead-container");
 										if(masthead)masthead.style.cssText = "z-index:auto !important";
@@ -1483,13 +1483,13 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 										if(playercontainer){
 											var stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
 											var original = document.getElementsByClassName("ytp-size-button")[0];
-											var watchContainer = document.querySelector("ytd-watch") || document.querySelector("ytd-watch-flexy");
+											var watchContainer = document.querySelector("ytd-watch-flexy");
 											if(stefanvdregularhtmlplayer){
 												if(!initialtheatermode){
 													original.click();
 												}
 												playercontainer.classList.remove("stefanvdvideowindow");
-												playertheater.classList.remove("stefanvdvideotheather");
+												//playertheater.classList.remove("stefanvdvideotheather");
 												playercontrols.classList.remove("stefanvdvideocontrols");
 												document.getElementsByTagName("video")[0].classList.remove("stefanvdvideowindow");
 												videowindow = false;
@@ -1501,7 +1501,7 @@ chrome.storage.sync.get(["autodim", "eastereggs", "shortcutlight", "eyen", "eyea
 													checktheatermode = true;
 												}
 												playercontainer.classList.add("stefanvdvideowindow");
-												playertheater.classList.add("stefanvdvideotheather");
+												//playertheater.classList.add("stefanvdvideotheather");
 												playercontrols.classList.add("stefanvdvideocontrols");
 												document.getElementsByTagName("video")[0].classList.add("stefanvdvideowindow");
 												videowindow = true;
