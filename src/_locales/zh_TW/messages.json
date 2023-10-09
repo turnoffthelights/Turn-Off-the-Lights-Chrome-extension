@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "告訴朋友"},
     "sharemenusendatweet": {"message": "發送 Tweet"},
     "sharemenupostonfacebook": {"message": "於Facebook 上發佈"},
+    "sharemenupostongoogleplus": {"message": "於 Google +上發佈"},
     "sharemenuratetitle": {"message": "擴充功能評分"},
     "sharemenudonatetitle": {"message": "支援開發"},
     "titelautostop": {"message": "自動停止"},

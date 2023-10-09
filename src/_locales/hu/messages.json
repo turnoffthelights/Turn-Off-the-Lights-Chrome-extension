@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Ajánlja ismerősének"},
     "sharemenusendatweet": {"message": "Küldjön egy tweet-et"},
     "sharemenupostonfacebook": {"message": "Megosztás a Facebook-on"},
+    "sharemenupostongoogleplus": {"message": "Megosztás a Google +-on"},
     "sharemenuratetitle": {"message": "Értékelje ezt a bővítményt"},
     "sharemenudonatetitle": {"message": "A fejlesztés támogatása"},
     "titelautostop": {"message": "Autostop"},

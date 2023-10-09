@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "บอกเพื่อน"},
     "sharemenusendatweet": {"message": "ส่งไปที่ Tweet"},
     "sharemenupostonfacebook": {"message": "โพสต์บน Facebook"},
+    "sharemenupostongoogleplus": {"message": "โพสต์บน Google +"},
     "sharemenuratetitle": {"message": "ให้คะแนนส่วนขยายนี้"},
     "sharemenudonatetitle": {"message": "สนับสนุนการพัฒนา"},
     "titelautostop": {"message": "หยุดอัตโนมัติ"},

@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Кажете на приятел"},
     "sharemenusendatweet": {"message": "Публикувайте в Twitter"},
     "sharemenupostonfacebook": {"message": "Публикувайте във Facebook"},
+    "sharemenupostongoogleplus": {"message": "Публикувайте в Google+"},
     "sharemenuratetitle": {"message": "Оценете това разширение"},
     "sharemenudonatetitle": {"message": "Подкрепете разработката"},
     "titelautostop": {"message": "Автоматично спиране"},

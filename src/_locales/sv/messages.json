@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Tipsa en vän"},
     "sharemenusendatweet": {"message": "Skicka en Tweet"},
     "sharemenupostonfacebook": {"message": "Gör ett inlägg på Facebook"},
+    "sharemenupostongoogleplus": {"message": "Gör ett inlägg på Google +"},
     "sharemenuratetitle": {"message": "Betygsätt detta tillägg"},
     "sharemenudonatetitle": {"message": "Stöd utvecklingen"},
     "titelautostop": {"message": "Autostopp"},

@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,39 +27,43 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-// var localMediaStream;
-var video;
 function startinit(){
-	// Check for live API permissions
-	navigator.permissions.query({name:"camera"})
-		.then(function(permissionStatus){
-			permissionStatus.onchange = function(){
-				if(this.state == "granted"){
-					var windowgranted = window.self; windowgranted.opener = window.self; windowgranted.close();
-				}else{
-					var windowdenied = window.self; windowdenied.opener = window.self; windowdenied.close();
-				}
-			};
-		});
+// Check for live API permissions  
+navigator.permissions.query({name:'camera'})
+.then(function(permissionStatus){
+  permissionStatus.onchange = function(){
+	if(this.state == "granted"){
+		var lol = window.self;
+		lol.opener = window.self;
+		lol.close();
+	}else{
+		var lol = window.self;
+		lol.opener = window.self;
+		lol.close();
+	}
+  };
+});
 
 	navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 	if(navigator.mediaDevices.getUserMedia){
 		navigator.mediaDevices.getUserMedia({audio: false, video: true})
-			.then(function(stream){
-			// Display the video stream in the video object
-			// localMediaStream = stream; // Store the video stream
-				video.srcObject = stream;
-			})
-			.catch(function(e){
-				console.log(e.name + ": " + e.message);
-			});
-	}else{
-		navigator.getWebcam({audio: false, video: true}, function(stream){
-			// Display the video stream in the video object
-			// localMediaStream = stream; // Store the video stream
+		.then(function(stream){
+			//Display the video stream in the video object
+			localMediaStream = stream; // Store the video stream
 			video.srcObject = stream;
-		}, function(){ console.log("Web cam is not accessible."); });
+		 })
+		 .catch(function(e){ console.log(e.name + ": " + e.message);
+		});
+	}
+	else{
+	navigator.getWebcam({audio: false, video: true}, 
+		 function(stream){
+			//Display the video stream in the video object
+			localMediaStream = stream; // Store the video stream
+			video.srcObject = stream;
+		 }, 
+		 function(){ console.log("Web cam is not accessible."); });
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function(){ startinit(); }, false);
+document.addEventListener('DOMContentLoaded', function(){startinit();},false);

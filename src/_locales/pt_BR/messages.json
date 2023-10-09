@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Indicar a um amigo"},
     "sharemenusendatweet": {"message": "Enviar um Tweet"},
     "sharemenupostonfacebook": {"message": "Postar no Facebook"},
+    "sharemenupostongoogleplus": {"message": "Postar no Google +"},
     "sharemenuratetitle": {"message": "Classificar esta extensão"},
     "sharemenudonatetitle": {"message": "Apoiar o Desenvolvimento"},
     "titelautostop": {"message": "Parar automaticamente"},

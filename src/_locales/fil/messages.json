@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Sabihin sa Kaibigan"},
     "sharemenusendatweet": {"message": "Magpadala ng Tweet"},
     "sharemenupostonfacebook": {"message": "I-post sa Facebook"},
+    "sharemenupostongoogleplus": {"message": "I-post sa Google+"},
     "sharemenuratetitle": {"message": "I-rate ang extension na ito"},
     "sharemenudonatetitle": {"message": "Support Development"},
     "titelautostop": {"message": "Kusang paghinto"},

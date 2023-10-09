@@ -28,5 +28,22 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 //================================================
 
 function $(id) { return document.getElementById(id); }
-var stefanvdspeechbox = $('stefanvdspeechbox');
-if(stefanvdspeechbox){document.body.removeChild(stefanvdspeechbox);}
+if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
+	var sp = document.getElementById('movie_player');
+	var video = document.querySelector('video');
+	
+	if(typeof(sp.pauseVideo) === "function"){
+		sp.pauseVideo();
+	}else if(typeof(video.pause) === "function"){
+		video.pause();
+	}
+} else{
+	var htmlplayer = document.getElementsByTagName("video");
+	if(htmlplayer !== null){
+		var j;
+		var l = htmlplayer.length;
+		for(j=0; j<l; j++){
+	   		if(htmlplayer[0]){ htmlplayer[0].pause(); }
+		}
+	}
+}

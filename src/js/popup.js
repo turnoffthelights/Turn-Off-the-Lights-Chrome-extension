@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,43 +27,30 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function action1(){ chrome.tabs.create({url: linkyoutube, active:true}); }
-function action2(){ chrome.tabs.create({url: chrome.runtime.getURL("options.html"), active:true}); }
-function action3(){ chrome.tabs.create({url: linksupport, active:true}); }
-function action4(){ chrome.tabs.create({url: linkguide, active:true}); }
-
-function eventFunc(selector, event, callback){
-	document.getElementById(selector).addEventListener(event, function(){
-		callback();
-	});
-}
+function $(id) { return document.getElementById(id); }
 
 var darkmode;
-document.addEventListener("DOMContentLoaded", function(){
-	// disable context menu
-	document.addEventListener("contextmenu", function(e){
-		e.preventDefault();
-	}, false);
 
-	chrome.storage.sync.get(["darkmode"], function(items){
-		darkmode = items["darkmode"]; if(darkmode == null)darkmode = 2; // default Operating System
+document.addEventListener('DOMContentLoaded', function(){
+    // disable context menu 
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    }, false);
 
-		// dark mode
-		if(darkmode == 1){
-			document.body.className = "dark";
-		}else if(darkmode == 0){
-			document.body.className = "light";
-		}else if(darkmode == 2){
-			if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
-				document.body.className = "dark";
-			}else{
-				document.body.className = "light";
-			}
-		}
-	});
+    chrome.storage.sync.get(['darkmode'], function(items){
+        darkmode = items['darkmode'];if(darkmode == null)darkmode = false; // default darkmode false
 
-	eventFunc("opentrywebsite", "click", action1);
-	eventFunc("openoptions", "click", action2);
-	eventFunc("opensupport", "click", action3);
-	eventFunc("openwelcomeguide", "click", action4);
+        // dark mode
+        if(darkmode == true){
+            document.body.className = 'dark';
+        }else{
+            document.body.className = 'light';
+        }
+    });
+$("opentrywebsite").addEventListener('click', function(){chrome.tabs.create({url: linkyoutube, active:true})});
+
+$("openoptions").addEventListener('click', function(){chrome.tabs.create({url: chrome.extension.getURL('options.html'), active:true})});
+$("opensupport").addEventListener('click', function(){chrome.tabs.create({url: linksupport, active:true})});
+$("openwelcomeguide").addEventListener('click', function(){chrome.tabs.create({url: linkguide, active:true})});
+
 });

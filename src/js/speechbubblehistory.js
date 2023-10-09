@@ -3,7 +3,7 @@
 
 Turn Off the Lights
 The entire page will be fading to dark, so you can watch the video as if you were in the cinema.
-Copyright (C) 2021 Stefan vd
+Copyright (C) 2020 Stefan vd
 www.stefanvd.net
 www.turnoffthelights.com
 
@@ -27,10 +27,10 @@ To view a copy of this license, visit http://creativecommons.org/licenses/GPL/2.
 */
 //================================================
 
-function $(id){ return document.getElementById(id); }
+function $(id) { return document.getElementById(id); }
 var speechhistory = "";
-chrome.storage.sync.get(["speechhistory"], function(items){
-	speechhistory = items["speechhistory"];
-	var stefanvdspeechsaidtext = $("stefanvdspeechsaidtext");
-	if(stefanvdspeechsaidtext){ stefanvdspeechsaidtext.innerText = "" + speechhistory + ""; }
+chrome.storage.sync.get(['speechhistory'], function(items){
+speechhistory = items['speechhistory'];
+var stefanvdspeechsaidtext = $('stefanvdspeechsaidtext');
+if(stefanvdspeechsaidtext){ stefanvdspeechsaidtext.innerText = "" + speechhistory + ""; }
 });

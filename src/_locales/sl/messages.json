@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Povej prijatelju"},
     "sharemenusendatweet": {"message": "Pošlji tvit"},
     "sharemenupostonfacebook": {"message": "Objavi na Facebooku"},
+    "sharemenupostongoogleplus": {"message": "Objavi na Googlu+"},
     "sharemenuratetitle": {"message": "Ocenite to razširitev"},
     "sharemenudonatetitle": {"message": "Podprite razvoj"},
     "titelautostop": {"message": "Samodejno ustavi"},

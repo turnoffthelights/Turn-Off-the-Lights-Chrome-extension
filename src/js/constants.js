@@ -33,6 +33,4 @@ const browserstore = "https://chrome.google.com";
 const linkyoutube = "https://www.youtube.com/c/turnoffthelights?sub_confirmation=1";
 const linkauroraplayerapp = "https://www.stefanvd.net/project/aurora-player/";
 const linktotlmobileapp = "https://www.turnoffthelights.com/mobile.html";
-const linkgamepad = "https://www.turnoffthelights.com/game-controller/";
-const devmode = true;
-const devdonate = false;
+const devmode = false;

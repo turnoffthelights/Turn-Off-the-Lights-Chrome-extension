@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Bir Arkadaşına Bahset"},
     "sharemenusendatweet": {"message": "Bir Tweet Gönder"},
     "sharemenupostonfacebook": {"message": "Facebook'ta Paylaş"},
+    "sharemenupostongoogleplus": {"message": "Google+'ta Paylaş"},
     "sharemenuratetitle": {"message": "Eklentiyi Derecelendir"},
     "sharemenudonatetitle": {"message": "Geliştirici Desteği"},
     "titelautostop": {"message": "Oto-Dur"},

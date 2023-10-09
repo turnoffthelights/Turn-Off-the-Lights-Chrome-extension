@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Beritahu Teman"},
     "sharemenusendatweet": {"message": "Kirim Tweet"},
     "sharemenupostonfacebook": {"message": "Kirim ke Facebook"},
+    "sharemenupostongoogleplus": {"message": "Kirim ke Google +"},
     "sharemenuratetitle": {"message": "Nilai ekstensi ini"},
     "sharemenudonatetitle": {"message": "Dukung Pengembangan"},
     "titelautostop": {"message": "AutoStop"},

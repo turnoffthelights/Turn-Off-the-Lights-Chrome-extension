@@ -228,6 +228,7 @@
     "sharemenutellafriend": {"message": "Ενημερώστε ένα φίλο"},
     "sharemenusendatweet": {"message": "Στείλτε ένα Tweet"},
     "sharemenupostonfacebook": {"message": "Ανάρτηση στο Facebook"},
+    "sharemenupostongoogleplus": {"message": "Ανάρτηση στο Google +"},
     "sharemenuratetitle": {"message": "Βαθμολογήστε αυτήν την επέκταση"},
     "sharemenudonatetitle": {"message": "Υποστήριξη Ανάπτυξης"},
     "titelautostop": {"message": "Αυτόματη διακοπή"},
