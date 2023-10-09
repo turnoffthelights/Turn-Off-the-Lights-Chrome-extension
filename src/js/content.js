@@ -1587,35 +1587,39 @@ var visualvideos = document.getElementsByTagName("video");
 
 				// window action
 					if(window.location.href.match(/((http:\/\/(.*youtube\.com\/.*))|(https:\/\/(.*youtube\.com\/.*)))/i)){
-					// YouTube website
-						var ytplayerapi = document.getElementById("player-api");
-						var playercontainer = document.getElementById("player-container");
+						// YouTube website
+						var playertheater = document.getElementById("player-theater-container");
+						var playercontrols = document.getElementsByClassName("ytp-chrome-bottom")[0];
+						var playercontainer = document.getElementById("ytd-player");
 
-						var pagemanager = $('page-manager');
-						if(pagemanager)$('page-manager').style.cssText = 'z-index:auto !important';
+						var masthead = $("masthead-container");
+						if(masthead)masthead.style.cssText = "z-index:auto !important";
 
 						if(playercontainer){
-							var stefanvdregularhtmlplayer = document.getElementsByClassName('stefanvdvideowindow')[0];
-							var stefanyoutubecontrols = document.getElementsByClassName('ytp-chrome-bottom')[0];
+							var stefanvdregularhtmlplayer = document.getElementsByClassName("stefanvdvideowindow")[0];
+							var original = document.getElementsByClassName("ytp-size-button")[0];
+							var watchContainer = document.querySelector("ytd-watch-flexy");
 							if(stefanvdregularhtmlplayer){
+								if(!initialtheatermode){
+									original.click();
+								}
 								playercontainer.classList.remove("stefanvdvideowindow");
-								onevideo.classList.remove("stefanvdvideowindow");
+								//playertheater.classList.remove("stefanvdvideotheather");
+								playercontrols.classList.remove("stefanvdvideocontrols");
+								document.getElementsByTagName("video")[0].classList.remove("stefanvdvideowindow");
+								videowindow = false;
 							}else{
-								playercontainer.classList.add('stefanvdvideowindow');
-								onevideo.classList.add('stefanvdvideowindow');
-								stefanyoutubecontrols.style.cssText = "width:100% !important";
-							}
-						}
-						else if(ytplayerapi){
-							var stefanvdregularhtmlplayer = document.getElementsByClassName('stefanvdvideowindow')[0];
-							var stefanyoutubecontrols = document.getElementsByClassName('ytp-chrome-bottom')[0];
-							if(stefanvdregularhtmlplayer){
-								ytplayerapi.classList.remove("stefanvdvideowindow");
-								onevideo.classList.remove("stefanvdvideowindow");
-							}else{
-								ytplayerapi.classList.add('stefanvdvideowindow');
-								onevideo.classList.add('stefanvdvideowindow');
-								stefanyoutubecontrols.style.width = "98%";
+								checktheatermode = watchContainer ? watchContainer.hasAttribute("theater") : true;
+								initialtheatermode = checktheatermode;
+								if(!checktheatermode){
+									original.click();
+									checktheatermode = true;
+								}
+								playercontainer.classList.add("stefanvdvideowindow");
+								//playertheater.classList.add("stefanvdvideotheather");
+								playercontrols.classList.add("stefanvdvideocontrols");
+								document.getElementsByTagName("video")[0].classList.add("stefanvdvideowindow");
+								videowindow = true;
 							}
 						}
 
@@ -2212,7 +2216,9 @@ function fixyoutubeatmos(){
 		var youtubewindow = $("watch-player") || $("watch7-player") || $("player-api");
 		if(youtubewindow){youtubewindow.classList.add('stefanvdvideocontrolsitem');}
 		var youtubemovieplayer = $("movie_player"); // YouTube video page
-		if(youtubemovieplayer){youtubemovieplayer.style.overflow = "hidden"; youtubemovieplayer.classList.add('stefanvdvideocontrolsitem');} // show the overflow out the video element
+		if(youtubemovieplayer){ youtubemovieplayer.style.borderRadius = "12px"; youtubemovieplayer.classList.add("stefanvdvideocontrolsitem"); } // show the overflow out the video element
+		var youtubeytdplayer = $("ytd-player"); // YouTube video page
+		if(youtubeytdplayer){ youtubeytdplayer.style.overflow = "visible"; }
 		var youtubeplayer = $("player"); // YouTube video page
 		if(youtubeplayer){youtubeplayer.style.overflow = "visible";}
 		var youtubeplayercontainerid = $("player-container-id"); // YouTube video page
